@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\AuditLogs\Provisioning\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get provisioning from auditLogs
+*/
 class ProvisioningObjectSummaryItemRequestBuilderGetQueryParameters 
 {
     /**

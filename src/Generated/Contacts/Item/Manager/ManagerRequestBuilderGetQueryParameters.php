@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Contacts\Item\Manager;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get this organizational contact's manager.
+*/
 class ManagerRequestBuilderGetQueryParameters 
 {
     /**

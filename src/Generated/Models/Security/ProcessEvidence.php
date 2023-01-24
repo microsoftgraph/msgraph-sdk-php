@@ -145,7 +145,7 @@ class ProcessEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the detectionStatus property value. The status of the detection.The possible values are: detected, blocked, prevented, unknownFutureValue.
-     *  @param DetectionStatus|null $value Value to set for the detectionStatus property.
+     * @param DetectionStatus|null $value Value to set for the detectionStatus property.
     */
     public function setDetectionStatus(?DetectionStatus $value): void {
         $this->getBackingStore()->set('detectionStatus', $value);
@@ -153,7 +153,7 @@ class ProcessEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the imageFile property value. Image file details.
-     *  @param FileDetails|null $value Value to set for the imageFile property.
+     * @param FileDetails|null $value Value to set for the imageFile property.
     */
     public function setImageFile(?FileDetails $value): void {
         $this->getBackingStore()->set('imageFile', $value);
@@ -161,7 +161,7 @@ class ProcessEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the mdeDeviceId property value. A unique identifier assigned to a device by Microsoft Defender for Endpoint.
-     *  @param string|null $value Value to set for the mdeDeviceId property.
+     * @param string|null $value Value to set for the mdeDeviceId property.
     */
     public function setMdeDeviceId(?string $value): void {
         $this->getBackingStore()->set('mdeDeviceId', $value);
@@ -169,7 +169,7 @@ class ProcessEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the parentProcessCreationDateTime property value. Date and time when the parent of the process was created.
-     *  @param DateTime|null $value Value to set for the parentProcessCreationDateTime property.
+     * @param DateTime|null $value Value to set for the parentProcessCreationDateTime property.
     */
     public function setParentProcessCreationDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('parentProcessCreationDateTime', $value);
@@ -177,7 +177,7 @@ class ProcessEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the parentProcessId property value. Process ID (PID) of the parent process that spawned the process.
-     *  @param int|null $value Value to set for the parentProcessId property.
+     * @param int|null $value Value to set for the parentProcessId property.
     */
     public function setParentProcessId(?int $value): void {
         $this->getBackingStore()->set('parentProcessId', $value);
@@ -185,7 +185,7 @@ class ProcessEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the parentProcessImageFile property value. Parent process image file details.
-     *  @param FileDetails|null $value Value to set for the parentProcessImageFile property.
+     * @param FileDetails|null $value Value to set for the parentProcessImageFile property.
     */
     public function setParentProcessImageFile(?FileDetails $value): void {
         $this->getBackingStore()->set('parentProcessImageFile', $value);
@@ -193,7 +193,7 @@ class ProcessEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the processCommandLine property value. Command line used to create the new process.
-     *  @param string|null $value Value to set for the processCommandLine property.
+     * @param string|null $value Value to set for the processCommandLine property.
     */
     public function setProcessCommandLine(?string $value): void {
         $this->getBackingStore()->set('processCommandLine', $value);
@@ -201,7 +201,7 @@ class ProcessEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the processCreationDateTime property value. Date and time the process was created.
-     *  @param DateTime|null $value Value to set for the processCreationDateTime property.
+     * @param DateTime|null $value Value to set for the processCreationDateTime property.
     */
     public function setProcessCreationDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('processCreationDateTime', $value);
@@ -209,7 +209,7 @@ class ProcessEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the processId property value. Process ID (PID) of the newly created process.
-     *  @param int|null $value Value to set for the processId property.
+     * @param int|null $value Value to set for the processId property.
     */
     public function setProcessId(?int $value): void {
         $this->getBackingStore()->set('processId', $value);
@@ -217,7 +217,7 @@ class ProcessEvidence extends AlertEvidence implements Parsable
 
     /**
      * Sets the userAccount property value. User details of the user that ran the process.
-     *  @param UserAccount|null $value Value to set for the userAccount property.
+     * @param UserAccount|null $value Value to set for the userAccount property.
     */
     public function setUserAccount(?UserAccount $value): void {
         $this->getBackingStore()->set('userAccount', $value);

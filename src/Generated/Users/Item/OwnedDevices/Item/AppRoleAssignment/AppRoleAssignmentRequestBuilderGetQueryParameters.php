@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\OwnedDevices\Item\AppRoleAssignme
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get the item of type microsoft.graph.directoryObject as microsoft.graph.appRoleAssignment
+*/
 class AppRoleAssignmentRequestBuilderGetQueryParameters 
 {
     /**

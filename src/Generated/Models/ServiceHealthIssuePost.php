@@ -111,7 +111,7 @@ class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -119,7 +119,7 @@ class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -127,7 +127,7 @@ class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the createdDateTime property value. The published time of the post.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -135,7 +135,7 @@ class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the description property value. The content of the service issue post. The supported value for the contentType property is html.
-     *  @param ItemBody|null $value Value to set for the description property.
+     * @param ItemBody|null $value Value to set for the description property.
     */
     public function setDescription(?ItemBody $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -143,7 +143,7 @@ class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -151,7 +151,7 @@ class ServiceHealthIssuePost implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the postType property value. The post type of the service issue historical post. Possible values are: regular, quick, strategic, unknownFutureValue.
-     *  @param PostType|null $value Value to set for the postType property.
+     * @param PostType|null $value Value to set for the postType property.
     */
     public function setPostType(?PostType $value): void {
         $this->getBackingStore()->set('postType', $value);

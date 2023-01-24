@@ -66,7 +66,7 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType imp
 
     /**
      * Sets the scheduledInstallDay property value. Possible values for a weekly schedule.
-     *  @param WeeklySchedule|null $value Value to set for the scheduledInstallDay property.
+     * @param WeeklySchedule|null $value Value to set for the scheduledInstallDay property.
     */
     public function setScheduledInstallDay(?WeeklySchedule $value): void {
         $this->getBackingStore()->set('scheduledInstallDay', $value);
@@ -74,7 +74,7 @@ class WindowsUpdateScheduledInstall extends WindowsUpdateInstallScheduleType imp
 
     /**
      * Sets the scheduledInstallTime property value. Scheduled Install Time during day
-     *  @param Time|null $value Value to set for the scheduledInstallTime property.
+     * @param Time|null $value Value to set for the scheduledInstallTime property.
     */
     public function setScheduledInstallTime(?Time $value): void {
         $this->getBackingStore()->set('scheduledInstallTime', $value);

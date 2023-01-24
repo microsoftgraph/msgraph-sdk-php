@@ -7,6 +7,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Entity which represents a connection to Mobile threat defense partner.
+*/
 class MobileThreatDefenseConnector extends Entity implements Parsable 
 {
     /**
@@ -125,7 +128,7 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
 
     /**
      * Sets the androidDeviceBlockedOnMissingPartnerData property value. For Android, set whether Intune must receive data from the data sync partner prior to marking a device compliant
-     *  @param bool|null $value Value to set for the androidDeviceBlockedOnMissingPartnerData property.
+     * @param bool|null $value Value to set for the androidDeviceBlockedOnMissingPartnerData property.
     */
     public function setAndroidDeviceBlockedOnMissingPartnerData(?bool $value): void {
         $this->getBackingStore()->set('androidDeviceBlockedOnMissingPartnerData', $value);
@@ -133,7 +136,7 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
 
     /**
      * Sets the androidEnabled property value. For Android, set whether data from the data sync partner should be used during compliance evaluations
-     *  @param bool|null $value Value to set for the androidEnabled property.
+     * @param bool|null $value Value to set for the androidEnabled property.
     */
     public function setAndroidEnabled(?bool $value): void {
         $this->getBackingStore()->set('androidEnabled', $value);
@@ -141,7 +144,7 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
 
     /**
      * Sets the iosDeviceBlockedOnMissingPartnerData property value. For IOS, set whether Intune must receive data from the data sync partner prior to marking a device compliant
-     *  @param bool|null $value Value to set for the iosDeviceBlockedOnMissingPartnerData property.
+     * @param bool|null $value Value to set for the iosDeviceBlockedOnMissingPartnerData property.
     */
     public function setIosDeviceBlockedOnMissingPartnerData(?bool $value): void {
         $this->getBackingStore()->set('iosDeviceBlockedOnMissingPartnerData', $value);
@@ -149,7 +152,7 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
 
     /**
      * Sets the iosEnabled property value. For IOS, get or set whether data from the data sync partner should be used during compliance evaluations
-     *  @param bool|null $value Value to set for the iosEnabled property.
+     * @param bool|null $value Value to set for the iosEnabled property.
     */
     public function setIosEnabled(?bool $value): void {
         $this->getBackingStore()->set('iosEnabled', $value);
@@ -157,7 +160,7 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
 
     /**
      * Sets the lastHeartbeatDateTime property value. DateTime of last Heartbeat recieved from the Data Sync Partner
-     *  @param DateTime|null $value Value to set for the lastHeartbeatDateTime property.
+     * @param DateTime|null $value Value to set for the lastHeartbeatDateTime property.
     */
     public function setLastHeartbeatDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastHeartbeatDateTime', $value);
@@ -165,7 +168,7 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
 
     /**
      * Sets the partnerState property value. Partner state of this tenant.
-     *  @param MobileThreatPartnerTenantState|null $value Value to set for the partnerState property.
+     * @param MobileThreatPartnerTenantState|null $value Value to set for the partnerState property.
     */
     public function setPartnerState(?MobileThreatPartnerTenantState $value): void {
         $this->getBackingStore()->set('partnerState', $value);
@@ -173,7 +176,7 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
 
     /**
      * Sets the partnerUnresponsivenessThresholdInDays property value. Get or Set days the per tenant tolerance to unresponsiveness for this partner integration
-     *  @param int|null $value Value to set for the partnerUnresponsivenessThresholdInDays property.
+     * @param int|null $value Value to set for the partnerUnresponsivenessThresholdInDays property.
     */
     public function setPartnerUnresponsivenessThresholdInDays(?int $value): void {
         $this->getBackingStore()->set('partnerUnresponsivenessThresholdInDays', $value);
@@ -181,7 +184,7 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
 
     /**
      * Sets the partnerUnsupportedOsVersionBlocked property value. Get or set whether to block devices on the enabled platforms that do not meet the minimum version requirements of the Data Sync Partner
-     *  @param bool|null $value Value to set for the partnerUnsupportedOsVersionBlocked property.
+     * @param bool|null $value Value to set for the partnerUnsupportedOsVersionBlocked property.
     */
     public function setPartnerUnsupportedOsVersionBlocked(?bool $value): void {
         $this->getBackingStore()->set('partnerUnsupportedOsVersionBlocked', $value);

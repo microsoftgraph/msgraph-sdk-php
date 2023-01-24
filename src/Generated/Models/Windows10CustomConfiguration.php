@@ -55,7 +55,7 @@ class Windows10CustomConfiguration extends DeviceConfiguration implements Parsab
 
     /**
      * Sets the omaSettings property value. OMA settings. This collection can contain a maximum of 1000 elements.
-     *  @param array<OmaSetting>|null $value Value to set for the omaSettings property.
+     * @param array<OmaSetting>|null $value Value to set for the omaSettings property.
     */
     public function setOmaSettings(?array $value): void {
         $this->getBackingStore()->set('omaSettings', $value);

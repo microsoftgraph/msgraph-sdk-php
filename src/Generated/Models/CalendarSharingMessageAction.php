@@ -110,7 +110,7 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the action property value. The action property
-     *  @param CalendarSharingAction|null $value Value to set for the action property.
+     * @param CalendarSharingAction|null $value Value to set for the action property.
     */
     public function setAction(?CalendarSharingAction $value): void {
         $this->getBackingStore()->set('action', $value);
@@ -118,7 +118,7 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the actionType property value. The actionType property
-     *  @param CalendarSharingActionType|null $value Value to set for the actionType property.
+     * @param CalendarSharingActionType|null $value Value to set for the actionType property.
     */
     public function setActionType(?CalendarSharingActionType $value): void {
         $this->getBackingStore()->set('actionType', $value);
@@ -126,7 +126,7 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -134,7 +134,7 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -142,7 +142,7 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the importance property value. The importance property
-     *  @param CalendarSharingActionImportance|null $value Value to set for the importance property.
+     * @param CalendarSharingActionImportance|null $value Value to set for the importance property.
     */
     public function setImportance(?CalendarSharingActionImportance $value): void {
         $this->getBackingStore()->set('importance', $value);
@@ -150,7 +150,7 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

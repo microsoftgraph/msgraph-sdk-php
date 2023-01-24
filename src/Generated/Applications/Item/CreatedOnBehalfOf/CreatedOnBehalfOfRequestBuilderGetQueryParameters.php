@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Applications\Item\CreatedOnBehalfOf;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Supports $filter (/$count eq 0, /$count ne 0). Read-only.
+*/
 class CreatedOnBehalfOfRequestBuilderGetQueryParameters 
 {
     /**

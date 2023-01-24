@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\EscapedPrint\TaskDefinitions\Item\Tasks\Item
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The printTaskDefinition that was used to create this task. Read-only.
+*/
 class DefinitionRequestBuilderGetQueryParameters 
 {
     /**

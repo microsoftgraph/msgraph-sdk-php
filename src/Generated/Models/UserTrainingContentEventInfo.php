@@ -131,7 +131,7 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -139,7 +139,7 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -147,7 +147,7 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the browser property value. Browser of the user from where the training event was generated.
-     *  @param string|null $value Value to set for the browser property.
+     * @param string|null $value Value to set for the browser property.
     */
     public function setBrowser(?string $value): void {
         $this->getBackingStore()->set('browser', $value);
@@ -155,7 +155,7 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the contentDateTime property value. Date and time of the training content playback by the user.
-     *  @param DateTime|null $value Value to set for the contentDateTime property.
+     * @param DateTime|null $value Value to set for the contentDateTime property.
     */
     public function setContentDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('contentDateTime', $value);
@@ -163,7 +163,7 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the ipAddress property value. IP address of the user for the training event.
-     *  @param string|null $value Value to set for the ipAddress property.
+     * @param string|null $value Value to set for the ipAddress property.
     */
     public function setIpAddress(?string $value): void {
         $this->getBackingStore()->set('ipAddress', $value);
@@ -171,7 +171,7 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -179,7 +179,7 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the osPlatformDeviceDetails property value. The operating system, platform, and device details of the user for the training event.
-     *  @param string|null $value Value to set for the osPlatformDeviceDetails property.
+     * @param string|null $value Value to set for the osPlatformDeviceDetails property.
     */
     public function setOsPlatformDeviceDetails(?string $value): void {
         $this->getBackingStore()->set('osPlatformDeviceDetails', $value);
@@ -187,7 +187,7 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the potentialScoreImpact property value. Potential improvement in the tenant security posture after completion of the training by the user.
-     *  @param float|null $value Value to set for the potentialScoreImpact property.
+     * @param float|null $value Value to set for the potentialScoreImpact property.
     */
     public function setPotentialScoreImpact(?float $value): void {
         $this->getBackingStore()->set('potentialScoreImpact', $value);

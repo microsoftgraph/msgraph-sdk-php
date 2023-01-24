@@ -66,7 +66,7 @@ class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType i
 
     /**
      * Sets the activeHoursEnd property value. Active Hours End
-     *  @param Time|null $value Value to set for the activeHoursEnd property.
+     * @param Time|null $value Value to set for the activeHoursEnd property.
     */
     public function setActiveHoursEnd(?Time $value): void {
         $this->getBackingStore()->set('activeHoursEnd', $value);
@@ -74,7 +74,7 @@ class WindowsUpdateActiveHoursInstall extends WindowsUpdateInstallScheduleType i
 
     /**
      * Sets the activeHoursStart property value. Active Hours Start
-     *  @param Time|null $value Value to set for the activeHoursStart property.
+     * @param Time|null $value Value to set for the activeHoursStart property.
     */
     public function setActiveHoursStart(?Time $value): void {
         $this->getBackingStore()->set('activeHoursStart', $value);

@@ -127,7 +127,7 @@ class Set extends Entity implements Parsable
 
     /**
      * Sets the children property value. Children terms of set in term [store].
-     *  @param array<Term>|null $value Value to set for the children property.
+     * @param array<Term>|null $value Value to set for the children property.
     */
     public function setChildren(?array $value): void {
         $this->getBackingStore()->set('children', $value);
@@ -135,7 +135,7 @@ class Set extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. Date and time of set creation. Read-only.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -143,7 +143,7 @@ class Set extends Entity implements Parsable
 
     /**
      * Sets the description property value. Description that gives details on the term usage.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -151,7 +151,7 @@ class Set extends Entity implements Parsable
 
     /**
      * Sets the localizedNames property value. Name of the set for each languageTag.
-     *  @param array<LocalizedName>|null $value Value to set for the localizedNames property.
+     * @param array<LocalizedName>|null $value Value to set for the localizedNames property.
     */
     public function setLocalizedNames(?array $value): void {
         $this->getBackingStore()->set('localizedNames', $value);
@@ -159,7 +159,7 @@ class Set extends Entity implements Parsable
 
     /**
      * Sets the parentGroup property value. The parentGroup property
-     *  @param Group|null $value Value to set for the parentGroup property.
+     * @param Group|null $value Value to set for the parentGroup property.
     */
     public function setParentGroup(?Group $value): void {
         $this->getBackingStore()->set('parentGroup', $value);
@@ -167,7 +167,7 @@ class Set extends Entity implements Parsable
 
     /**
      * Sets the properties property value. Custom properties for the set.
-     *  @param array<KeyValue>|null $value Value to set for the properties property.
+     * @param array<KeyValue>|null $value Value to set for the properties property.
     */
     public function setProperties(?array $value): void {
         $this->getBackingStore()->set('properties', $value);
@@ -175,7 +175,7 @@ class Set extends Entity implements Parsable
 
     /**
      * Sets the relations property value. Indicates which terms have been pinned or reused directly under the set.
-     *  @param array<Relation>|null $value Value to set for the relations property.
+     * @param array<Relation>|null $value Value to set for the relations property.
     */
     public function setRelations(?array $value): void {
         $this->getBackingStore()->set('relations', $value);
@@ -183,7 +183,7 @@ class Set extends Entity implements Parsable
 
     /**
      * Sets the terms property value. All the terms under the set.
-     *  @param array<Term>|null $value Value to set for the terms property.
+     * @param array<Term>|null $value Value to set for the terms property.
     */
     public function setTerms(?array $value): void {
         $this->getBackingStore()->set('terms', $value);

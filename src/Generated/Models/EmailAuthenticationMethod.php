@@ -55,7 +55,7 @@ class EmailAuthenticationMethod extends AuthenticationMethod implements Parsable
 
     /**
      * Sets the emailAddress property value. The email address registered to this user.
-     *  @param string|null $value Value to set for the emailAddress property.
+     * @param string|null $value Value to set for the emailAddress property.
     */
     public function setEmailAddress(?string $value): void {
         $this->getBackingStore()->set('emailAddress', $value);

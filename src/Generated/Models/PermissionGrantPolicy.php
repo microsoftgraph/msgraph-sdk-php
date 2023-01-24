@@ -65,7 +65,7 @@ class PermissionGrantPolicy extends PolicyBase implements Parsable
 
     /**
      * Sets the excludes property value. Condition sets which are excluded in this permission grant policy. Automatically expanded on GET.
-     *  @param array<PermissionGrantConditionSet>|null $value Value to set for the excludes property.
+     * @param array<PermissionGrantConditionSet>|null $value Value to set for the excludes property.
     */
     public function setExcludes(?array $value): void {
         $this->getBackingStore()->set('excludes', $value);
@@ -73,7 +73,7 @@ class PermissionGrantPolicy extends PolicyBase implements Parsable
 
     /**
      * Sets the includes property value. Condition sets which are included in this permission grant policy. Automatically expanded on GET.
-     *  @param array<PermissionGrantConditionSet>|null $value Value to set for the includes property.
+     * @param array<PermissionGrantConditionSet>|null $value Value to set for the includes property.
     */
     public function setIncludes(?array $value): void {
         $this->getBackingStore()->set('includes', $value);

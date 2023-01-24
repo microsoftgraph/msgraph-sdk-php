@@ -110,7 +110,7 @@ class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the aaGuids property value. A collection of Authenticator Attestation GUIDs. AADGUIDs define key types and manufacturers.
-     *  @param array<string>|null $value Value to set for the aaGuids property.
+     * @param array<string>|null $value Value to set for the aaGuids property.
     */
     public function setAaGuids(?array $value): void {
         $this->getBackingStore()->set('aaGuids', $value);
@@ -118,7 +118,7 @@ class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -126,7 +126,7 @@ class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -134,7 +134,7 @@ class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the enforcementType property value. Enforcement type. Possible values are: allow, block.
-     *  @param Fido2RestrictionEnforcementType|null $value Value to set for the enforcementType property.
+     * @param Fido2RestrictionEnforcementType|null $value Value to set for the enforcementType property.
     */
     public function setEnforcementType(?Fido2RestrictionEnforcementType $value): void {
         $this->getBackingStore()->set('enforcementType', $value);
@@ -142,7 +142,7 @@ class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the isEnforced property value. Determines if the configured key enforcement is enabled.
-     *  @param bool|null $value Value to set for the isEnforced property.
+     * @param bool|null $value Value to set for the isEnforced property.
     */
     public function setIsEnforced(?bool $value): void {
         $this->getBackingStore()->set('isEnforced', $value);
@@ -150,7 +150,7 @@ class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

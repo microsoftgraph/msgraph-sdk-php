@@ -91,7 +91,7 @@ class AssignLicensePostRequestBody implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -99,7 +99,7 @@ class AssignLicensePostRequestBody implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the addLicenses property value. The addLicenses property
-     *  @param array<AssignedLicense>|null $value Value to set for the addLicenses property.
+     * @param array<AssignedLicense>|null $value Value to set for the addLicenses property.
     */
     public function setAddLicenses(?array $value): void {
         $this->getBackingStore()->set('addLicenses', $value);
@@ -107,7 +107,7 @@ class AssignLicensePostRequestBody implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -115,7 +115,7 @@ class AssignLicensePostRequestBody implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the removeLicenses property value. The removeLicenses property
-     *  @param array<string>|null $value Value to set for the removeLicenses property.
+     * @param array<string>|null $value Value to set for the removeLicenses property.
     */
     public function setRemoveLicenses(?array $value): void {
         $this->getBackingStore()->set('removeLicenses', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\InstalledApps\It
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The apps installed in this team.
+*/
 class TeamsAppInstallationItemRequestBuilderGetQueryParameters 
 {
     /**

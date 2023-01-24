@@ -147,7 +147,7 @@ class CallRecord extends Entity implements Parsable
 
     /**
      * Sets the endDateTime property value. UTC time when the last user left the call. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the endDateTime property.
+     * @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('endDateTime', $value);
@@ -155,7 +155,7 @@ class CallRecord extends Entity implements Parsable
 
     /**
      * Sets the joinWebUrl property value. Meeting URL associated to the call. May not be available for a peerToPeer call record type.
-     *  @param string|null $value Value to set for the joinWebUrl property.
+     * @param string|null $value Value to set for the joinWebUrl property.
     */
     public function setJoinWebUrl(?string $value): void {
         $this->getBackingStore()->set('joinWebUrl', $value);
@@ -163,7 +163,7 @@ class CallRecord extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. UTC time when the call record was created. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -171,7 +171,7 @@ class CallRecord extends Entity implements Parsable
 
     /**
      * Sets the modalities property value. List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.
-     *  @param array<Modality>|null $value Value to set for the modalities property.
+     * @param array<Modality>|null $value Value to set for the modalities property.
     */
     public function setModalities(?array $value): void {
         $this->getBackingStore()->set('modalities', $value);
@@ -179,7 +179,7 @@ class CallRecord extends Entity implements Parsable
 
     /**
      * Sets the organizer property value. The organizing party's identity.
-     *  @param IdentitySet|null $value Value to set for the organizer property.
+     * @param IdentitySet|null $value Value to set for the organizer property.
     */
     public function setOrganizer(?IdentitySet $value): void {
         $this->getBackingStore()->set('organizer', $value);
@@ -187,7 +187,7 @@ class CallRecord extends Entity implements Parsable
 
     /**
      * Sets the participants property value. List of distinct identities involved in the call.
-     *  @param array<IdentitySet>|null $value Value to set for the participants property.
+     * @param array<IdentitySet>|null $value Value to set for the participants property.
     */
     public function setParticipants(?array $value): void {
         $this->getBackingStore()->set('participants', $value);
@@ -195,7 +195,7 @@ class CallRecord extends Entity implements Parsable
 
     /**
      * Sets the sessions property value. List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable.
-     *  @param array<Session>|null $value Value to set for the sessions property.
+     * @param array<Session>|null $value Value to set for the sessions property.
     */
     public function setSessions(?array $value): void {
         $this->getBackingStore()->set('sessions', $value);
@@ -203,7 +203,7 @@ class CallRecord extends Entity implements Parsable
 
     /**
      * Sets the startDateTime property value. UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     *  @param DateTime|null $value Value to set for the startDateTime property.
+     * @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('startDateTime', $value);
@@ -211,7 +211,7 @@ class CallRecord extends Entity implements Parsable
 
     /**
      * Sets the type property value. The type property
-     *  @param CallType|null $value Value to set for the type property.
+     * @param CallType|null $value Value to set for the type property.
     */
     public function setType(?CallType $value): void {
         $this->getBackingStore()->set('type', $value);
@@ -219,7 +219,7 @@ class CallRecord extends Entity implements Parsable
 
     /**
      * Sets the version property value. Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version.
-     *  @param int|null $value Value to set for the version property.
+     * @param int|null $value Value to set for the version property.
     */
     public function setVersion(?int $value): void {
         $this->getBackingStore()->set('version', $value);

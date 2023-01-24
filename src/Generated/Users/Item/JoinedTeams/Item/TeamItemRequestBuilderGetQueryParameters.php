@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get joinedTeams from users
+*/
 class TeamItemRequestBuilderGetQueryParameters 
 {
     /**

@@ -55,7 +55,7 @@ class ClientCertificateAuthentication extends ApiAuthenticationConfigurationBase
 
     /**
      * Sets the certificateList property value. The list of certificates uploaded for this API connector.
-     *  @param array<Pkcs12CertificateInformation>|null $value Value to set for the certificateList property.
+     * @param array<Pkcs12CertificateInformation>|null $value Value to set for the certificateList property.
     */
     public function setCertificateList(?array $value): void {
         $this->getBackingStore()->set('certificateList', $value);

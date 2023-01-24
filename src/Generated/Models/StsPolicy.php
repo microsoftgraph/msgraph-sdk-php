@@ -86,7 +86,7 @@ class StsPolicy extends PolicyBase implements Parsable
 
     /**
      * Sets the appliesTo property value. The appliesTo property
-     *  @param array<DirectoryObject>|null $value Value to set for the appliesTo property.
+     * @param array<DirectoryObject>|null $value Value to set for the appliesTo property.
     */
     public function setAppliesTo(?array $value): void {
         $this->getBackingStore()->set('appliesTo', $value);
@@ -94,7 +94,7 @@ class StsPolicy extends PolicyBase implements Parsable
 
     /**
      * Sets the definition property value. A string collection containing a JSON string that defines the rules and settings for a policy. The syntax for the definition differs for each derived policy type. Required.
-     *  @param array<string>|null $value Value to set for the definition property.
+     * @param array<string>|null $value Value to set for the definition property.
     */
     public function setDefinition(?array $value): void {
         $this->getBackingStore()->set('definition', $value);
@@ -102,7 +102,7 @@ class StsPolicy extends PolicyBase implements Parsable
 
     /**
      * Sets the isOrganizationDefault property value. If set to true, activates this policy. There can be many policies for the same policy type, but only one can be activated as the organization default. Optional, default value is false.
-     *  @param bool|null $value Value to set for the isOrganizationDefault property.
+     * @param bool|null $value Value to set for the isOrganizationDefault property.
     */
     public function setIsOrganizationDefault(?bool $value): void {
         $this->getBackingStore()->set('isOrganizationDefault', $value);

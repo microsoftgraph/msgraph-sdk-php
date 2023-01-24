@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Sites\Item\ExternalColumns;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get externalColumns from sites
+*/
 class ExternalColumnsRequestBuilderGetQueryParameters 
 {
     /**

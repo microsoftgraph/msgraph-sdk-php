@@ -155,7 +155,7 @@ class DirectoryAudit extends Entity implements Parsable
 
     /**
      * Sets the activityDateTime property value. Indicates the date and time the activity was performed. The Timestamp type is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     *  @param DateTime|null $value Value to set for the activityDateTime property.
+     * @param DateTime|null $value Value to set for the activityDateTime property.
     */
     public function setActivityDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('activityDateTime', $value);
@@ -163,7 +163,7 @@ class DirectoryAudit extends Entity implements Parsable
 
     /**
      * Sets the activityDisplayName property value. Indicates the activity name or the operation name (examples: 'Create User' and 'Add member to group'). For full list, see Azure AD activity list.
-     *  @param string|null $value Value to set for the activityDisplayName property.
+     * @param string|null $value Value to set for the activityDisplayName property.
     */
     public function setActivityDisplayName(?string $value): void {
         $this->getBackingStore()->set('activityDisplayName', $value);
@@ -171,7 +171,7 @@ class DirectoryAudit extends Entity implements Parsable
 
     /**
      * Sets the additionalDetails property value. Indicates additional details on the activity.
-     *  @param array<KeyValue>|null $value Value to set for the additionalDetails property.
+     * @param array<KeyValue>|null $value Value to set for the additionalDetails property.
     */
     public function setAdditionalDetails(?array $value): void {
         $this->getBackingStore()->set('additionalDetails', $value);
@@ -179,7 +179,7 @@ class DirectoryAudit extends Entity implements Parsable
 
     /**
      * Sets the category property value. Indicates which resource category that's targeted by the activity. For example: UserManagement, GroupManagement, ApplicationManagement, RoleManagement.
-     *  @param string|null $value Value to set for the category property.
+     * @param string|null $value Value to set for the category property.
     */
     public function setCategory(?string $value): void {
         $this->getBackingStore()->set('category', $value);
@@ -187,7 +187,7 @@ class DirectoryAudit extends Entity implements Parsable
 
     /**
      * Sets the correlationId property value. Indicates a unique ID that helps correlate activities that span across various services. Can be used to trace logs across services.
-     *  @param string|null $value Value to set for the correlationId property.
+     * @param string|null $value Value to set for the correlationId property.
     */
     public function setCorrelationId(?string $value): void {
         $this->getBackingStore()->set('correlationId', $value);
@@ -195,7 +195,7 @@ class DirectoryAudit extends Entity implements Parsable
 
     /**
      * Sets the initiatedBy property value. The initiatedBy property
-     *  @param AuditActivityInitiator|null $value Value to set for the initiatedBy property.
+     * @param AuditActivityInitiator|null $value Value to set for the initiatedBy property.
     */
     public function setInitiatedBy(?AuditActivityInitiator $value): void {
         $this->getBackingStore()->set('initiatedBy', $value);
@@ -203,7 +203,7 @@ class DirectoryAudit extends Entity implements Parsable
 
     /**
      * Sets the loggedByService property value. Indicates information on which service initiated the activity (For example: Self-service Password Management, Core Directory, B2C, Invited Users, Microsoft Identity Manager, Privileged Identity Management.
-     *  @param string|null $value Value to set for the loggedByService property.
+     * @param string|null $value Value to set for the loggedByService property.
     */
     public function setLoggedByService(?string $value): void {
         $this->getBackingStore()->set('loggedByService', $value);
@@ -211,7 +211,7 @@ class DirectoryAudit extends Entity implements Parsable
 
     /**
      * Sets the operationType property value. Indicates the type of operation that was performed. The possible values include but are not limited to the following: Add, Assign, Update, Unassign, and Delete.
-     *  @param string|null $value Value to set for the operationType property.
+     * @param string|null $value Value to set for the operationType property.
     */
     public function setOperationType(?string $value): void {
         $this->getBackingStore()->set('operationType', $value);
@@ -219,7 +219,7 @@ class DirectoryAudit extends Entity implements Parsable
 
     /**
      * Sets the result property value. Indicates the result of the activity. Possible values are: success, failure, timeout, unknownFutureValue.
-     *  @param OperationResult|null $value Value to set for the result property.
+     * @param OperationResult|null $value Value to set for the result property.
     */
     public function setResult(?OperationResult $value): void {
         $this->getBackingStore()->set('result', $value);
@@ -227,7 +227,7 @@ class DirectoryAudit extends Entity implements Parsable
 
     /**
      * Sets the resultReason property value. Indicates the reason for failure if the result is failure or timeout.
-     *  @param string|null $value Value to set for the resultReason property.
+     * @param string|null $value Value to set for the resultReason property.
     */
     public function setResultReason(?string $value): void {
         $this->getBackingStore()->set('resultReason', $value);
@@ -235,7 +235,7 @@ class DirectoryAudit extends Entity implements Parsable
 
     /**
      * Sets the targetResources property value. Indicates information on which resource was changed due to the activity. Target Resource Type can be User, Device, Directory, App, Role, Group, Policy or Other.
-     *  @param array<TargetResource>|null $value Value to set for the targetResources property.
+     * @param array<TargetResource>|null $value Value to set for the targetResources property.
     */
     public function setTargetResources(?array $value): void {
         $this->getBackingStore()->set('targetResources', $value);

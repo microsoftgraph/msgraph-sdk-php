@@ -100,7 +100,7 @@ class Bundle implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class Bundle implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the album property value. If the bundle is an [album][], then the album property is included
-     *  @param Album|null $value Value to set for the album property.
+     * @param Album|null $value Value to set for the album property.
     */
     public function setAlbum(?Album $value): void {
         $this->getBackingStore()->set('album', $value);
@@ -116,7 +116,7 @@ class Bundle implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -124,7 +124,7 @@ class Bundle implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the childCount property value. Number of children contained immediately within this container.
-     *  @param int|null $value Value to set for the childCount property.
+     * @param int|null $value Value to set for the childCount property.
     */
     public function setChildCount(?int $value): void {
         $this->getBackingStore()->set('childCount', $value);
@@ -132,7 +132,7 @@ class Bundle implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

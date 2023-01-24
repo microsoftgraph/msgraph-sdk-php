@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Drives\Item\Items\Item\ListItem\Versions\
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The list of previous versions of the list item.
+*/
 class ListItemVersionItemRequestBuilderGetQueryParameters 
 {
     /**

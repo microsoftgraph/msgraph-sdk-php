@@ -110,7 +110,7 @@ class Website implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class Website implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the address property value. The URL of the website.
-     *  @param string|null $value Value to set for the address property.
+     * @param string|null $value Value to set for the address property.
     */
     public function setAddress(?string $value): void {
         $this->getBackingStore()->set('address', $value);
@@ -126,7 +126,7 @@ class Website implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -134,7 +134,7 @@ class Website implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the displayName property value. The display name of the web site.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -142,7 +142,7 @@ class Website implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -150,7 +150,7 @@ class Website implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the type property value. The possible values are: other, home, work, blog, profile.
-     *  @param WebsiteType|null $value Value to set for the type property.
+     * @param WebsiteType|null $value Value to set for the type property.
     */
     public function setType(?WebsiteType $value): void {
         $this->getBackingStore()->set('type', $value);

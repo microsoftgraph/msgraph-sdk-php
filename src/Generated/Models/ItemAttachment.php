@@ -55,7 +55,7 @@ class ItemAttachment extends Attachment implements Parsable
 
     /**
      * Sets the item property value. The attached message or event. Navigation property.
-     *  @param OutlookItem|null $value Value to set for the item property.
+     * @param OutlookItem|null $value Value to set for the item property.
     */
     public function setItem(?OutlookItem $value): void {
         $this->getBackingStore()->set('item', $value);

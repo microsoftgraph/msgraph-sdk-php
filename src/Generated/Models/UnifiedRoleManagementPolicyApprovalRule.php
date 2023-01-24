@@ -55,7 +55,7 @@ class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManagementPolic
 
     /**
      * Sets the setting property value. The settings for approval of the role assignment.
-     *  @param ApprovalSettings|null $value Value to set for the setting property.
+     * @param ApprovalSettings|null $value Value to set for the setting property.
     */
     public function setSetting(?ApprovalSettings $value): void {
         $this->getBackingStore()->set('setting', $value);

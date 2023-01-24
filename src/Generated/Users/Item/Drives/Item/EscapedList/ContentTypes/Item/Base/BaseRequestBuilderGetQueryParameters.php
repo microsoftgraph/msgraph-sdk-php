@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Drives\Item\EscapedList\ContentTy
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Parent contentType from which this content type is derived.
+*/
 class BaseRequestBuilderGetQueryParameters 
 {
     /**

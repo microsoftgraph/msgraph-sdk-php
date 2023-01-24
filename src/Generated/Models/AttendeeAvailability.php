@@ -100,7 +100,7 @@ class AttendeeAvailability implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class AttendeeAvailability implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the attendee property value. The email address and type of attendee - whether it's a person or a resource, and whether required or optional if it's a person.
-     *  @param AttendeeBase|null $value Value to set for the attendee property.
+     * @param AttendeeBase|null $value Value to set for the attendee property.
     */
     public function setAttendee(?AttendeeBase $value): void {
         $this->getBackingStore()->set('attendee', $value);
@@ -116,7 +116,7 @@ class AttendeeAvailability implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the availability property value. The availability status of the attendee. The possible values are: free, tentative, busy, oof, workingElsewhere, unknown.
-     *  @param FreeBusyStatus|null $value Value to set for the availability property.
+     * @param FreeBusyStatus|null $value Value to set for the availability property.
     */
     public function setAvailability(?FreeBusyStatus $value): void {
         $this->getBackingStore()->set('availability', $value);
@@ -124,7 +124,7 @@ class AttendeeAvailability implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -132,7 +132,7 @@ class AttendeeAvailability implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

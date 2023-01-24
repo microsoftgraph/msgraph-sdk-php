@@ -300,7 +300,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -308,7 +308,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the averageInboundJitter property value. The average inbound stream network jitter.
-     *  @param DateInterval|null $value Value to set for the averageInboundJitter property.
+     * @param DateInterval|null $value Value to set for the averageInboundJitter property.
     */
     public function setAverageInboundJitter(?DateInterval $value): void {
         $this->getBackingStore()->set('averageInboundJitter', $value);
@@ -316,7 +316,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the averageInboundPacketLossRateInPercentage property value. The average inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
-     *  @param float|null $value Value to set for the averageInboundPacketLossRateInPercentage property.
+     * @param float|null $value Value to set for the averageInboundPacketLossRateInPercentage property.
     */
     public function setAverageInboundPacketLossRateInPercentage(?float $value): void {
         $this->getBackingStore()->set('averageInboundPacketLossRateInPercentage', $value);
@@ -324,7 +324,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the averageInboundRoundTripDelay property value. The average inbound stream network round trip delay.
-     *  @param DateInterval|null $value Value to set for the averageInboundRoundTripDelay property.
+     * @param DateInterval|null $value Value to set for the averageInboundRoundTripDelay property.
     */
     public function setAverageInboundRoundTripDelay(?DateInterval $value): void {
         $this->getBackingStore()->set('averageInboundRoundTripDelay', $value);
@@ -332,7 +332,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the averageOutboundJitter property value. The average outbound stream network jitter.
-     *  @param DateInterval|null $value Value to set for the averageOutboundJitter property.
+     * @param DateInterval|null $value Value to set for the averageOutboundJitter property.
     */
     public function setAverageOutboundJitter(?DateInterval $value): void {
         $this->getBackingStore()->set('averageOutboundJitter', $value);
@@ -340,7 +340,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the averageOutboundPacketLossRateInPercentage property value. The average outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
-     *  @param float|null $value Value to set for the averageOutboundPacketLossRateInPercentage property.
+     * @param float|null $value Value to set for the averageOutboundPacketLossRateInPercentage property.
     */
     public function setAverageOutboundPacketLossRateInPercentage(?float $value): void {
         $this->getBackingStore()->set('averageOutboundPacketLossRateInPercentage', $value);
@@ -348,7 +348,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the averageOutboundRoundTripDelay property value. The average outbound stream network round trip delay.
-     *  @param DateInterval|null $value Value to set for the averageOutboundRoundTripDelay property.
+     * @param DateInterval|null $value Value to set for the averageOutboundRoundTripDelay property.
     */
     public function setAverageOutboundRoundTripDelay(?DateInterval $value): void {
         $this->getBackingStore()->set('averageOutboundRoundTripDelay', $value);
@@ -356,7 +356,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -364,7 +364,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the channelIndex property value. The channel index of media. Indexing begins with 1.  If a media session contains 3 video modalities, channel indexes will be 1, 2, and 3.
-     *  @param int|null $value Value to set for the channelIndex property.
+     * @param int|null $value Value to set for the channelIndex property.
     */
     public function setChannelIndex(?int $value): void {
         $this->getBackingStore()->set('channelIndex', $value);
@@ -372,7 +372,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the inboundPackets property value. The total number of the inbound packets.
-     *  @param int|null $value Value to set for the inboundPackets property.
+     * @param int|null $value Value to set for the inboundPackets property.
     */
     public function setInboundPackets(?int $value): void {
         $this->getBackingStore()->set('inboundPackets', $value);
@@ -380,7 +380,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the localIPAddress property value. the local IP address for the media session.
-     *  @param string|null $value Value to set for the localIPAddress property.
+     * @param string|null $value Value to set for the localIPAddress property.
     */
     public function setLocalIPAddress(?string $value): void {
         $this->getBackingStore()->set('localIPAddress', $value);
@@ -388,7 +388,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the localPort property value. The local media port.
-     *  @param int|null $value Value to set for the localPort property.
+     * @param int|null $value Value to set for the localPort property.
     */
     public function setLocalPort(?int $value): void {
         $this->getBackingStore()->set('localPort', $value);
@@ -396,7 +396,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the maximumInboundJitter property value. The maximum inbound stream network jitter.
-     *  @param DateInterval|null $value Value to set for the maximumInboundJitter property.
+     * @param DateInterval|null $value Value to set for the maximumInboundJitter property.
     */
     public function setMaximumInboundJitter(?DateInterval $value): void {
         $this->getBackingStore()->set('maximumInboundJitter', $value);
@@ -404,7 +404,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the maximumInboundPacketLossRateInPercentage property value. The maximum inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
-     *  @param float|null $value Value to set for the maximumInboundPacketLossRateInPercentage property.
+     * @param float|null $value Value to set for the maximumInboundPacketLossRateInPercentage property.
     */
     public function setMaximumInboundPacketLossRateInPercentage(?float $value): void {
         $this->getBackingStore()->set('maximumInboundPacketLossRateInPercentage', $value);
@@ -412,7 +412,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the maximumInboundRoundTripDelay property value. The maximum inbound stream network round trip delay.
-     *  @param DateInterval|null $value Value to set for the maximumInboundRoundTripDelay property.
+     * @param DateInterval|null $value Value to set for the maximumInboundRoundTripDelay property.
     */
     public function setMaximumInboundRoundTripDelay(?DateInterval $value): void {
         $this->getBackingStore()->set('maximumInboundRoundTripDelay', $value);
@@ -420,7 +420,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the maximumOutboundJitter property value. The maximum outbound stream network jitter.
-     *  @param DateInterval|null $value Value to set for the maximumOutboundJitter property.
+     * @param DateInterval|null $value Value to set for the maximumOutboundJitter property.
     */
     public function setMaximumOutboundJitter(?DateInterval $value): void {
         $this->getBackingStore()->set('maximumOutboundJitter', $value);
@@ -428,7 +428,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the maximumOutboundPacketLossRateInPercentage property value. The maximum outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.
-     *  @param float|null $value Value to set for the maximumOutboundPacketLossRateInPercentage property.
+     * @param float|null $value Value to set for the maximumOutboundPacketLossRateInPercentage property.
     */
     public function setMaximumOutboundPacketLossRateInPercentage(?float $value): void {
         $this->getBackingStore()->set('maximumOutboundPacketLossRateInPercentage', $value);
@@ -436,7 +436,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the maximumOutboundRoundTripDelay property value. The maximum outbound stream network round trip delay.
-     *  @param DateInterval|null $value Value to set for the maximumOutboundRoundTripDelay property.
+     * @param DateInterval|null $value Value to set for the maximumOutboundRoundTripDelay property.
     */
     public function setMaximumOutboundRoundTripDelay(?DateInterval $value): void {
         $this->getBackingStore()->set('maximumOutboundRoundTripDelay', $value);
@@ -444,7 +444,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the mediaDuration property value. The total modality duration. If the media enabled and disabled multiple times, MediaDuration will the summation of all of the durations.
-     *  @param DateInterval|null $value Value to set for the mediaDuration property.
+     * @param DateInterval|null $value Value to set for the mediaDuration property.
     */
     public function setMediaDuration(?DateInterval $value): void {
         $this->getBackingStore()->set('mediaDuration', $value);
@@ -452,7 +452,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the networkLinkSpeedInBytes property value. The network link speed in bytes
-     *  @param int|null $value Value to set for the networkLinkSpeedInBytes property.
+     * @param int|null $value Value to set for the networkLinkSpeedInBytes property.
     */
     public function setNetworkLinkSpeedInBytes(?int $value): void {
         $this->getBackingStore()->set('networkLinkSpeedInBytes', $value);
@@ -460,7 +460,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -468,7 +468,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the outboundPackets property value. The total number of the outbound packets.
-     *  @param int|null $value Value to set for the outboundPackets property.
+     * @param int|null $value Value to set for the outboundPackets property.
     */
     public function setOutboundPackets(?int $value): void {
         $this->getBackingStore()->set('outboundPackets', $value);
@@ -476,7 +476,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the remoteIPAddress property value. The remote IP address for the media session.
-     *  @param string|null $value Value to set for the remoteIPAddress property.
+     * @param string|null $value Value to set for the remoteIPAddress property.
     */
     public function setRemoteIPAddress(?string $value): void {
         $this->getBackingStore()->set('remoteIPAddress', $value);
@@ -484,7 +484,7 @@ class TeleconferenceDeviceMediaQuality implements AdditionalDataHolder, BackedMo
 
     /**
      * Sets the remotePort property value. The remote media port.
-     *  @param int|null $value Value to set for the remotePort property.
+     * @param int|null $value Value to set for the remotePort property.
     */
     public function setRemotePort(?int $value): void {
         $this->getBackingStore()->set('remotePort', $value);

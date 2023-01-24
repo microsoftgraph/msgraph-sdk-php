@@ -84,7 +84,7 @@ class ConditionalAccessTemplate extends Entity implements Parsable
 
     /**
      * Sets the description property value. The user-friendly name of the template.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -92,7 +92,7 @@ class ConditionalAccessTemplate extends Entity implements Parsable
 
     /**
      * Sets the details property value. The details property
-     *  @param ConditionalAccessPolicyDetail|null $value Value to set for the details property.
+     * @param ConditionalAccessPolicyDetail|null $value Value to set for the details property.
     */
     public function setDetails(?ConditionalAccessPolicyDetail $value): void {
         $this->getBackingStore()->set('details', $value);
@@ -100,7 +100,7 @@ class ConditionalAccessTemplate extends Entity implements Parsable
 
     /**
      * Sets the name property value. The user-friendly name of the template.
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -108,7 +108,7 @@ class ConditionalAccessTemplate extends Entity implements Parsable
 
     /**
      * Sets the scenarios property value. The scenarios property
-     *  @param TemplateScenarios|null $value Value to set for the scenarios property.
+     * @param TemplateScenarios|null $value Value to set for the scenarios property.
     */
     public function setScenarios(?TemplateScenarios $value): void {
         $this->getBackingStore()->set('scenarios', $value);

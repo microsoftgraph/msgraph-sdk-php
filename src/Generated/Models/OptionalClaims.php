@@ -110,7 +110,7 @@ class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the accessToken property value. The optional claims returned in the JWT access token.
-     *  @param array<OptionalClaim>|null $value Value to set for the accessToken property.
+     * @param array<OptionalClaim>|null $value Value to set for the accessToken property.
     */
     public function setAccessToken(?array $value): void {
         $this->getBackingStore()->set('accessToken', $value);
@@ -118,7 +118,7 @@ class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -126,7 +126,7 @@ class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -134,7 +134,7 @@ class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the idToken property value. The optional claims returned in the JWT ID token.
-     *  @param array<OptionalClaim>|null $value Value to set for the idToken property.
+     * @param array<OptionalClaim>|null $value Value to set for the idToken property.
     */
     public function setIdToken(?array $value): void {
         $this->getBackingStore()->set('idToken', $value);
@@ -142,7 +142,7 @@ class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -150,7 +150,7 @@ class OptionalClaims implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the saml2Token property value. The optional claims returned in the SAML token.
-     *  @param array<OptionalClaim>|null $value Value to set for the saml2Token property.
+     * @param array<OptionalClaim>|null $value Value to set for the saml2Token property.
     */
     public function setSaml2Token(?array $value): void {
         $this->getBackingStore()->set('saml2Token', $value);

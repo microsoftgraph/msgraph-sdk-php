@@ -54,7 +54,7 @@ class AgreementFileLocalization extends AgreementFileProperties implements Parsa
 
     /**
      * Sets the versions property value. Read-only. Customized versions of the terms of use agreement in the Azure AD tenant.
-     *  @param array<AgreementFileVersion>|null $value Value to set for the versions property.
+     * @param array<AgreementFileVersion>|null $value Value to set for the versions property.
     */
     public function setVersions(?array $value): void {
         $this->getBackingStore()->set('versions', $value);

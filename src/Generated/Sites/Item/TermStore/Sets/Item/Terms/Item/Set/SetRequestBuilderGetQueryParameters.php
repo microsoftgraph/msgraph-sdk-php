@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\Terms\Item\Se
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The [set] in which the term is created.
+*/
 class SetRequestBuilderGetQueryParameters 
 {
     /**

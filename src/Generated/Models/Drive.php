@@ -160,7 +160,7 @@ class Drive extends BaseItem implements Parsable
 
     /**
      * Sets the bundles property value. Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
-     *  @param array<DriveItem>|null $value Value to set for the bundles property.
+     * @param array<DriveItem>|null $value Value to set for the bundles property.
     */
     public function setBundles(?array $value): void {
         $this->getBackingStore()->set('bundles', $value);
@@ -168,7 +168,7 @@ class Drive extends BaseItem implements Parsable
 
     /**
      * Sets the driveType property value. Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only.
-     *  @param string|null $value Value to set for the driveType property.
+     * @param string|null $value Value to set for the driveType property.
     */
     public function setDriveType(?string $value): void {
         $this->getBackingStore()->set('driveType', $value);
@@ -176,7 +176,7 @@ class Drive extends BaseItem implements Parsable
 
     /**
      * Sets the following property value. The list of items the user is following. Only in OneDrive for Business.
-     *  @param array<DriveItem>|null $value Value to set for the following property.
+     * @param array<DriveItem>|null $value Value to set for the following property.
     */
     public function setFollowing(?array $value): void {
         $this->getBackingStore()->set('following', $value);
@@ -184,7 +184,7 @@ class Drive extends BaseItem implements Parsable
 
     /**
      * Sets the items property value. All items contained in the drive. Read-only. Nullable.
-     *  @param array<DriveItem>|null $value Value to set for the items property.
+     * @param array<DriveItem>|null $value Value to set for the items property.
     */
     public function setItems(?array $value): void {
         $this->getBackingStore()->set('items', $value);
@@ -192,7 +192,7 @@ class Drive extends BaseItem implements Parsable
 
     /**
      * Sets the list property value. For drives in SharePoint, the underlying document library list. Read-only. Nullable.
-     *  @param EscapedList|null $value Value to set for the EscapedList property.
+     * @param EscapedList|null $value Value to set for the EscapedList property.
     */
     public function setList(?EscapedList $value): void {
         $this->getBackingStore()->set('escapedList', $value);
@@ -200,7 +200,7 @@ class Drive extends BaseItem implements Parsable
 
     /**
      * Sets the owner property value. Optional. The user account that owns the drive. Read-only.
-     *  @param IdentitySet|null $value Value to set for the owner property.
+     * @param IdentitySet|null $value Value to set for the owner property.
     */
     public function setOwner(?IdentitySet $value): void {
         $this->getBackingStore()->set('owner', $value);
@@ -208,7 +208,7 @@ class Drive extends BaseItem implements Parsable
 
     /**
      * Sets the quota property value. Optional. Information about the drive's storage space quota. Read-only.
-     *  @param Quota|null $value Value to set for the quota property.
+     * @param Quota|null $value Value to set for the quota property.
     */
     public function setQuota(?Quota $value): void {
         $this->getBackingStore()->set('quota', $value);
@@ -216,7 +216,7 @@ class Drive extends BaseItem implements Parsable
 
     /**
      * Sets the root property value. The root folder of the drive. Read-only.
-     *  @param DriveItem|null $value Value to set for the root property.
+     * @param DriveItem|null $value Value to set for the root property.
     */
     public function setRoot(?DriveItem $value): void {
         $this->getBackingStore()->set('root', $value);
@@ -224,7 +224,7 @@ class Drive extends BaseItem implements Parsable
 
     /**
      * Sets the sharePointIds property value. The sharePointIds property
-     *  @param SharepointIds|null $value Value to set for the sharePointIds property.
+     * @param SharepointIds|null $value Value to set for the sharePointIds property.
     */
     public function setSharePointIds(?SharepointIds $value): void {
         $this->getBackingStore()->set('sharePointIds', $value);
@@ -232,7 +232,7 @@ class Drive extends BaseItem implements Parsable
 
     /**
      * Sets the special property value. Collection of common folders available in OneDrive. Read-only. Nullable.
-     *  @param array<DriveItem>|null $value Value to set for the special property.
+     * @param array<DriveItem>|null $value Value to set for the special property.
     */
     public function setSpecial(?array $value): void {
         $this->getBackingStore()->set('special', $value);
@@ -240,7 +240,7 @@ class Drive extends BaseItem implements Parsable
 
     /**
      * Sets the system property value. If present, indicates that this is a system-managed drive. Read-only.
-     *  @param SystemFacet|null $value Value to set for the system property.
+     * @param SystemFacet|null $value Value to set for the system property.
     */
     public function setSystem(?SystemFacet $value): void {
         $this->getBackingStore()->set('system', $value);

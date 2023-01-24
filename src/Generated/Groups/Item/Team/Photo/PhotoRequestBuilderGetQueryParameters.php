@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Team\Photo;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The profile photo for the team.
+*/
 class PhotoRequestBuilderGetQueryParameters 
 {
     /**

@@ -255,7 +255,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the deviceThreatProtectionEnabled property value. Require that devices have enabled device threat protection.
-     *  @param bool|null $value Value to set for the deviceThreatProtectionEnabled property.
+     * @param bool|null $value Value to set for the deviceThreatProtectionEnabled property.
     */
     public function setDeviceThreatProtectionEnabled(?bool $value): void {
         $this->getBackingStore()->set('deviceThreatProtectionEnabled', $value);
@@ -263,7 +263,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the deviceThreatProtectionRequiredSecurityLevel property value. Device threat protection levels for the Device Threat Protection API.
-     *  @param DeviceThreatProtectionLevel|null $value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
+     * @param DeviceThreatProtectionLevel|null $value Value to set for the deviceThreatProtectionRequiredSecurityLevel property.
     */
     public function setDeviceThreatProtectionRequiredSecurityLevel(?DeviceThreatProtectionLevel $value): void {
         $this->getBackingStore()->set('deviceThreatProtectionRequiredSecurityLevel', $value);
@@ -271,7 +271,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the minAndroidSecurityPatchLevel property value. Minimum Android security patch level.
-     *  @param string|null $value Value to set for the minAndroidSecurityPatchLevel property.
+     * @param string|null $value Value to set for the minAndroidSecurityPatchLevel property.
     */
     public function setMinAndroidSecurityPatchLevel(?string $value): void {
         $this->getBackingStore()->set('minAndroidSecurityPatchLevel', $value);
@@ -279,7 +279,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the osMaximumVersion property value. Maximum Android version.
-     *  @param string|null $value Value to set for the osMaximumVersion property.
+     * @param string|null $value Value to set for the osMaximumVersion property.
     */
     public function setOsMaximumVersion(?string $value): void {
         $this->getBackingStore()->set('osMaximumVersion', $value);
@@ -287,7 +287,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the osMinimumVersion property value. Minimum Android version.
-     *  @param string|null $value Value to set for the osMinimumVersion property.
+     * @param string|null $value Value to set for the osMinimumVersion property.
     */
     public function setOsMinimumVersion(?string $value): void {
         $this->getBackingStore()->set('osMinimumVersion', $value);
@@ -295,7 +295,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the passwordExpirationDays property value. Number of days before the password expires. Valid values 1 to 365
-     *  @param int|null $value Value to set for the passwordExpirationDays property.
+     * @param int|null $value Value to set for the passwordExpirationDays property.
     */
     public function setPasswordExpirationDays(?int $value): void {
         $this->getBackingStore()->set('passwordExpirationDays', $value);
@@ -303,7 +303,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the passwordMinimumLength property value. Minimum password length. Valid values 4 to 16
-     *  @param int|null $value Value to set for the passwordMinimumLength property.
+     * @param int|null $value Value to set for the passwordMinimumLength property.
     */
     public function setPasswordMinimumLength(?int $value): void {
         $this->getBackingStore()->set('passwordMinimumLength', $value);
@@ -311,7 +311,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity before a password is required.
-     *  @param int|null $value Value to set for the passwordMinutesOfInactivityBeforeLock property.
+     * @param int|null $value Value to set for the passwordMinutesOfInactivityBeforeLock property.
     */
     public function setPasswordMinutesOfInactivityBeforeLock(?int $value): void {
         $this->getBackingStore()->set('passwordMinutesOfInactivityBeforeLock', $value);
@@ -319,7 +319,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 1 to 24
-     *  @param int|null $value Value to set for the passwordPreviousPasswordBlockCount property.
+     * @param int|null $value Value to set for the passwordPreviousPasswordBlockCount property.
     */
     public function setPasswordPreviousPasswordBlockCount(?int $value): void {
         $this->getBackingStore()->set('passwordPreviousPasswordBlockCount', $value);
@@ -327,7 +327,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the passwordRequired property value. Require a password to unlock device.
-     *  @param bool|null $value Value to set for the passwordRequired property.
+     * @param bool|null $value Value to set for the passwordRequired property.
     */
     public function setPasswordRequired(?bool $value): void {
         $this->getBackingStore()->set('passwordRequired', $value);
@@ -335,7 +335,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the passwordRequiredType property value. Android required password type.
-     *  @param AndroidRequiredPasswordType|null $value Value to set for the passwordRequiredType property.
+     * @param AndroidRequiredPasswordType|null $value Value to set for the passwordRequiredType property.
     */
     public function setPasswordRequiredType(?AndroidRequiredPasswordType $value): void {
         $this->getBackingStore()->set('passwordRequiredType', $value);
@@ -343,7 +343,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the securityBlockJailbrokenDevices property value. Devices must not be jailbroken or rooted.
-     *  @param bool|null $value Value to set for the securityBlockJailbrokenDevices property.
+     * @param bool|null $value Value to set for the securityBlockJailbrokenDevices property.
     */
     public function setSecurityBlockJailbrokenDevices(?bool $value): void {
         $this->getBackingStore()->set('securityBlockJailbrokenDevices', $value);
@@ -351,7 +351,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the securityDisableUsbDebugging property value. Disable USB debugging on Android devices.
-     *  @param bool|null $value Value to set for the securityDisableUsbDebugging property.
+     * @param bool|null $value Value to set for the securityDisableUsbDebugging property.
     */
     public function setSecurityDisableUsbDebugging(?bool $value): void {
         $this->getBackingStore()->set('securityDisableUsbDebugging', $value);
@@ -359,7 +359,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the securityPreventInstallAppsFromUnknownSources property value. Require that devices disallow installation of apps from unknown sources.
-     *  @param bool|null $value Value to set for the securityPreventInstallAppsFromUnknownSources property.
+     * @param bool|null $value Value to set for the securityPreventInstallAppsFromUnknownSources property.
     */
     public function setSecurityPreventInstallAppsFromUnknownSources(?bool $value): void {
         $this->getBackingStore()->set('securityPreventInstallAppsFromUnknownSources', $value);
@@ -367,7 +367,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the securityRequireCompanyPortalAppIntegrity property value. Require the device to pass the Company Portal client app runtime integrity check.
-     *  @param bool|null $value Value to set for the securityRequireCompanyPortalAppIntegrity property.
+     * @param bool|null $value Value to set for the securityRequireCompanyPortalAppIntegrity property.
     */
     public function setSecurityRequireCompanyPortalAppIntegrity(?bool $value): void {
         $this->getBackingStore()->set('securityRequireCompanyPortalAppIntegrity', $value);
@@ -375,7 +375,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the securityRequireGooglePlayServices property value. Require Google Play Services to be installed and enabled on the device.
-     *  @param bool|null $value Value to set for the securityRequireGooglePlayServices property.
+     * @param bool|null $value Value to set for the securityRequireGooglePlayServices property.
     */
     public function setSecurityRequireGooglePlayServices(?bool $value): void {
         $this->getBackingStore()->set('securityRequireGooglePlayServices', $value);
@@ -383,7 +383,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the securityRequireSafetyNetAttestationBasicIntegrity property value. Require the device to pass the SafetyNet basic integrity check.
-     *  @param bool|null $value Value to set for the securityRequireSafetyNetAttestationBasicIntegrity property.
+     * @param bool|null $value Value to set for the securityRequireSafetyNetAttestationBasicIntegrity property.
     */
     public function setSecurityRequireSafetyNetAttestationBasicIntegrity(?bool $value): void {
         $this->getBackingStore()->set('securityRequireSafetyNetAttestationBasicIntegrity', $value);
@@ -391,7 +391,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the securityRequireSafetyNetAttestationCertifiedDevice property value. Require the device to pass the SafetyNet certified device check.
-     *  @param bool|null $value Value to set for the securityRequireSafetyNetAttestationCertifiedDevice property.
+     * @param bool|null $value Value to set for the securityRequireSafetyNetAttestationCertifiedDevice property.
     */
     public function setSecurityRequireSafetyNetAttestationCertifiedDevice(?bool $value): void {
         $this->getBackingStore()->set('securityRequireSafetyNetAttestationCertifiedDevice', $value);
@@ -399,7 +399,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the securityRequireUpToDateSecurityProviders property value. Require the device to have up to date security providers. The device will require Google Play Services to be enabled and up to date.
-     *  @param bool|null $value Value to set for the securityRequireUpToDateSecurityProviders property.
+     * @param bool|null $value Value to set for the securityRequireUpToDateSecurityProviders property.
     */
     public function setSecurityRequireUpToDateSecurityProviders(?bool $value): void {
         $this->getBackingStore()->set('securityRequireUpToDateSecurityProviders', $value);
@@ -407,7 +407,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the securityRequireVerifyApps property value. Require the Android Verify apps feature is turned on.
-     *  @param bool|null $value Value to set for the securityRequireVerifyApps property.
+     * @param bool|null $value Value to set for the securityRequireVerifyApps property.
     */
     public function setSecurityRequireVerifyApps(?bool $value): void {
         $this->getBackingStore()->set('securityRequireVerifyApps', $value);
@@ -415,7 +415,7 @@ class AndroidCompliancePolicy extends DeviceCompliancePolicy implements Parsable
 
     /**
      * Sets the storageRequireEncryption property value. Require encryption on Android devices.
-     *  @param bool|null $value Value to set for the storageRequireEncryption property.
+     * @param bool|null $value Value to set for the storageRequireEncryption property.
     */
     public function setStorageRequireEncryption(?bool $value): void {
         $this->getBackingStore()->set('storageRequireEncryption', $value);

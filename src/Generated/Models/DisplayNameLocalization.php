@@ -100,7 +100,7 @@ class DisplayNameLocalization implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class DisplayNameLocalization implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class DisplayNameLocalization implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the displayName property value. If present, the value of this field contains the displayName string that has been set for the language present in the languageTag field.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -124,7 +124,7 @@ class DisplayNameLocalization implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the languageTag property value. Provides the language culture-code and friendly name of the language that the displayName field has been provided in.
-     *  @param string|null $value Value to set for the languageTag property.
+     * @param string|null $value Value to set for the languageTag property.
     */
     public function setLanguageTag(?string $value): void {
         $this->getBackingStore()->set('languageTag', $value);
@@ -132,7 +132,7 @@ class DisplayNameLocalization implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

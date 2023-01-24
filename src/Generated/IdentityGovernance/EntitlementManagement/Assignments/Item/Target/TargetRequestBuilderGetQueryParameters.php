@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Ass
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId.
+*/
 class TargetRequestBuilderGetQueryParameters 
 {
     /**

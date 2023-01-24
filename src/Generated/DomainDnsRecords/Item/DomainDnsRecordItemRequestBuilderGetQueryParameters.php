@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\DomainDnsRecords\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get entity from domainDnsRecords by key (id)
+*/
 class DomainDnsRecordItemRequestBuilderGetQueryParameters 
 {
     /**

@@ -74,7 +74,7 @@ class RiskyUserHistoryItem extends RiskyUser implements Parsable
 
     /**
      * Sets the activity property value. The activity related to user risk level change.
-     *  @param RiskUserActivity|null $value Value to set for the activity property.
+     * @param RiskUserActivity|null $value Value to set for the activity property.
     */
     public function setActivity(?RiskUserActivity $value): void {
         $this->getBackingStore()->set('activity', $value);
@@ -82,7 +82,7 @@ class RiskyUserHistoryItem extends RiskyUser implements Parsable
 
     /**
      * Sets the initiatedBy property value. The ID of actor that does the operation.
-     *  @param string|null $value Value to set for the initiatedBy property.
+     * @param string|null $value Value to set for the initiatedBy property.
     */
     public function setInitiatedBy(?string $value): void {
         $this->getBackingStore()->set('initiatedBy', $value);
@@ -90,7 +90,7 @@ class RiskyUserHistoryItem extends RiskyUser implements Parsable
 
     /**
      * Sets the userId property value. The ID of the user.
-     *  @param string|null $value Value to set for the userId property.
+     * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {
         $this->getBackingStore()->set('userId', $value);

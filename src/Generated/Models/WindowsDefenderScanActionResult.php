@@ -54,7 +54,7 @@ class WindowsDefenderScanActionResult extends DeviceActionResult implements Pars
 
     /**
      * Sets the scanType property value. Scan type either full scan or quick scan
-     *  @param string|null $value Value to set for the scanType property.
+     * @param string|null $value Value to set for the scanType property.
     */
     public function setScanType(?string $value): void {
         $this->getBackingStore()->set('scanType', $value);

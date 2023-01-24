@@ -55,7 +55,7 @@ class ChatMessageMentionedIdentitySet extends IdentitySet implements Parsable
 
     /**
      * Sets the conversation property value. If present, represents a conversation (for example, team or channel) @mentioned in a message.
-     *  @param TeamworkConversationIdentity|null $value Value to set for the conversation property.
+     * @param TeamworkConversationIdentity|null $value Value to set for the conversation property.
     */
     public function setConversation(?TeamworkConversationIdentity $value): void {
         $this->getBackingStore()->set('conversation', $value);

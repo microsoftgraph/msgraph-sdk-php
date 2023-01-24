@@ -95,7 +95,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
 
     /**
      * Sets the isDefaultRecipientsEnabled property value. Indicates whether a default recipient will receive the notification email.
-     *  @param bool|null $value Value to set for the isDefaultRecipientsEnabled property.
+     * @param bool|null $value Value to set for the isDefaultRecipientsEnabled property.
     */
     public function setIsDefaultRecipientsEnabled(?bool $value): void {
         $this->getBackingStore()->set('isDefaultRecipientsEnabled', $value);
@@ -103,7 +103,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
 
     /**
      * Sets the notificationLevel property value. The level of notification. The possible values are None, Critical, All.
-     *  @param string|null $value Value to set for the notificationLevel property.
+     * @param string|null $value Value to set for the notificationLevel property.
     */
     public function setNotificationLevel(?string $value): void {
         $this->getBackingStore()->set('notificationLevel', $value);
@@ -111,7 +111,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
 
     /**
      * Sets the notificationRecipients property value. The list of recipients of the email notifications.
-     *  @param array<string>|null $value Value to set for the notificationRecipients property.
+     * @param array<string>|null $value Value to set for the notificationRecipients property.
     */
     public function setNotificationRecipients(?array $value): void {
         $this->getBackingStore()->set('notificationRecipients', $value);
@@ -119,7 +119,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
 
     /**
      * Sets the notificationType property value. The type of notification. Only Email is supported.
-     *  @param string|null $value Value to set for the notificationType property.
+     * @param string|null $value Value to set for the notificationType property.
     */
     public function setNotificationType(?string $value): void {
         $this->getBackingStore()->set('notificationType', $value);
@@ -127,7 +127,7 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
 
     /**
      * Sets the recipientType property value. The type of recipient of the notification. The possible values are Requestor, Approver, Admin.
-     *  @param string|null $value Value to set for the recipientType property.
+     * @param string|null $value Value to set for the recipientType property.
     */
     public function setRecipientType(?string $value): void {
         $this->getBackingStore()->set('recipientType', $value);

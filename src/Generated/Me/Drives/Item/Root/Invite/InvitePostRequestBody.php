@@ -151,7 +151,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -159,7 +159,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -167,7 +167,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the expirationDateTime property value. The expirationDateTime property
-     *  @param string|null $value Value to set for the expirationDateTime property.
+     * @param string|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?string $value): void {
         $this->getBackingStore()->set('expirationDateTime', $value);
@@ -175,7 +175,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the message property value. The message property
-     *  @param string|null $value Value to set for the message property.
+     * @param string|null $value Value to set for the message property.
     */
     public function setMessage(?string $value): void {
         $this->getBackingStore()->set('message', $value);
@@ -183,7 +183,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the password property value. The password property
-     *  @param string|null $value Value to set for the password property.
+     * @param string|null $value Value to set for the password property.
     */
     public function setPassword(?string $value): void {
         $this->getBackingStore()->set('password', $value);
@@ -191,7 +191,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the recipients property value. The recipients property
-     *  @param array<DriveRecipient>|null $value Value to set for the recipients property.
+     * @param array<DriveRecipient>|null $value Value to set for the recipients property.
     */
     public function setRecipients(?array $value): void {
         $this->getBackingStore()->set('recipients', $value);
@@ -199,7 +199,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the requireSignIn property value. The requireSignIn property
-     *  @param bool|null $value Value to set for the requireSignIn property.
+     * @param bool|null $value Value to set for the requireSignIn property.
     */
     public function setRequireSignIn(?bool $value): void {
         $this->getBackingStore()->set('requireSignIn', $value);
@@ -207,7 +207,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the retainInheritedPermissions property value. The retainInheritedPermissions property
-     *  @param bool|null $value Value to set for the retainInheritedPermissions property.
+     * @param bool|null $value Value to set for the retainInheritedPermissions property.
     */
     public function setRetainInheritedPermissions(?bool $value): void {
         $this->getBackingStore()->set('retainInheritedPermissions', $value);
@@ -215,7 +215,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the roles property value. The roles property
-     *  @param array<string>|null $value Value to set for the roles property.
+     * @param array<string>|null $value Value to set for the roles property.
     */
     public function setRoles(?array $value): void {
         $this->getBackingStore()->set('roles', $value);
@@ -223,7 +223,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the sendInvitation property value. The sendInvitation property
-     *  @param bool|null $value Value to set for the sendInvitation property.
+     * @param bool|null $value Value to set for the sendInvitation property.
     */
     public function setSendInvitation(?bool $value): void {
         $this->getBackingStore()->set('sendInvitation', $value);

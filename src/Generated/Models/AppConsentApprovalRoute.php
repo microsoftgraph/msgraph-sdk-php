@@ -54,7 +54,7 @@ class AppConsentApprovalRoute extends Entity implements Parsable
 
     /**
      * Sets the appConsentRequests property value. A collection of userConsentRequest objects for a specific application.
-     *  @param array<AppConsentRequest>|null $value Value to set for the appConsentRequests property.
+     * @param array<AppConsentRequest>|null $value Value to set for the appConsentRequests property.
     */
     public function setAppConsentRequests(?array $value): void {
         $this->getBackingStore()->set('appConsentRequests', $value);

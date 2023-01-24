@@ -115,7 +115,7 @@ class ListItem extends BaseItem implements Parsable
 
     /**
      * Sets the analytics property value. Analytics about the view activities that took place on this item.
-     *  @param ItemAnalytics|null $value Value to set for the analytics property.
+     * @param ItemAnalytics|null $value Value to set for the analytics property.
     */
     public function setAnalytics(?ItemAnalytics $value): void {
         $this->getBackingStore()->set('analytics', $value);
@@ -123,7 +123,7 @@ class ListItem extends BaseItem implements Parsable
 
     /**
      * Sets the contentType property value. The content type of this list item
-     *  @param ContentTypeInfo|null $value Value to set for the contentType property.
+     * @param ContentTypeInfo|null $value Value to set for the contentType property.
     */
     public function setContentType(?ContentTypeInfo $value): void {
         $this->getBackingStore()->set('contentType', $value);
@@ -131,7 +131,7 @@ class ListItem extends BaseItem implements Parsable
 
     /**
      * Sets the documentSetVersions property value. Version information for a document set version created by a user.
-     *  @param array<DocumentSetVersion>|null $value Value to set for the documentSetVersions property.
+     * @param array<DocumentSetVersion>|null $value Value to set for the documentSetVersions property.
     */
     public function setDocumentSetVersions(?array $value): void {
         $this->getBackingStore()->set('documentSetVersions', $value);
@@ -139,7 +139,7 @@ class ListItem extends BaseItem implements Parsable
 
     /**
      * Sets the driveItem property value. For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
-     *  @param DriveItem|null $value Value to set for the driveItem property.
+     * @param DriveItem|null $value Value to set for the driveItem property.
     */
     public function setDriveItem(?DriveItem $value): void {
         $this->getBackingStore()->set('driveItem', $value);
@@ -147,7 +147,7 @@ class ListItem extends BaseItem implements Parsable
 
     /**
      * Sets the fields property value. The values of the columns set on this list item.
-     *  @param FieldValueSet|null $value Value to set for the fields property.
+     * @param FieldValueSet|null $value Value to set for the fields property.
     */
     public function setFields(?FieldValueSet $value): void {
         $this->getBackingStore()->set('fields', $value);
@@ -155,7 +155,7 @@ class ListItem extends BaseItem implements Parsable
 
     /**
      * Sets the sharepointIds property value. Returns identifiers useful for SharePoint REST compatibility. Read-only.
-     *  @param SharepointIds|null $value Value to set for the sharepointIds property.
+     * @param SharepointIds|null $value Value to set for the sharepointIds property.
     */
     public function setSharepointIds(?SharepointIds $value): void {
         $this->getBackingStore()->set('sharepointIds', $value);
@@ -163,7 +163,7 @@ class ListItem extends BaseItem implements Parsable
 
     /**
      * Sets the versions property value. The list of previous versions of the list item.
-     *  @param array<ListItemVersion>|null $value Value to set for the versions property.
+     * @param array<ListItemVersion>|null $value Value to set for the versions property.
     */
     public function setVersions(?array $value): void {
         $this->getBackingStore()->set('versions', $value);

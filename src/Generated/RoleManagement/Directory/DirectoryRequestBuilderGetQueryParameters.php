@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\RoleManagement\Directory;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get directory from roleManagement
+*/
 class DirectoryRequestBuilderGetQueryParameters 
 {
     /**

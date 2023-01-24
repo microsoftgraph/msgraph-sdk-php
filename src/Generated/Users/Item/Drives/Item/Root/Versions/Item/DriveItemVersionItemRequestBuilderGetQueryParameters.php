@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Drives\Item\Root\Versions\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The list of previous versions of the item. For more info, see [getting previous versions][]. Read-only. Nullable.
+*/
 class DriveItemVersionItemRequestBuilderGetQueryParameters 
 {
     /**

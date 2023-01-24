@@ -190,7 +190,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -198,7 +198,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
 
     /**
      * Sets the allowAutoFilter property value. Represents the worksheet protection option of allowing using auto filter feature.
-     *  @param bool|null $value Value to set for the allowAutoFilter property.
+     * @param bool|null $value Value to set for the allowAutoFilter property.
     */
     public function setAllowAutoFilter(?bool $value): void {
         $this->getBackingStore()->set('allowAutoFilter', $value);
@@ -206,7 +206,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
 
     /**
      * Sets the allowDeleteColumns property value. Represents the worksheet protection option of allowing deleting columns.
-     *  @param bool|null $value Value to set for the allowDeleteColumns property.
+     * @param bool|null $value Value to set for the allowDeleteColumns property.
     */
     public function setAllowDeleteColumns(?bool $value): void {
         $this->getBackingStore()->set('allowDeleteColumns', $value);
@@ -214,7 +214,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
 
     /**
      * Sets the allowDeleteRows property value. Represents the worksheet protection option of allowing deleting rows.
-     *  @param bool|null $value Value to set for the allowDeleteRows property.
+     * @param bool|null $value Value to set for the allowDeleteRows property.
     */
     public function setAllowDeleteRows(?bool $value): void {
         $this->getBackingStore()->set('allowDeleteRows', $value);
@@ -222,7 +222,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
 
     /**
      * Sets the allowFormatCells property value. Represents the worksheet protection option of allowing formatting cells.
-     *  @param bool|null $value Value to set for the allowFormatCells property.
+     * @param bool|null $value Value to set for the allowFormatCells property.
     */
     public function setAllowFormatCells(?bool $value): void {
         $this->getBackingStore()->set('allowFormatCells', $value);
@@ -230,7 +230,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
 
     /**
      * Sets the allowFormatColumns property value. Represents the worksheet protection option of allowing formatting columns.
-     *  @param bool|null $value Value to set for the allowFormatColumns property.
+     * @param bool|null $value Value to set for the allowFormatColumns property.
     */
     public function setAllowFormatColumns(?bool $value): void {
         $this->getBackingStore()->set('allowFormatColumns', $value);
@@ -238,7 +238,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
 
     /**
      * Sets the allowFormatRows property value. Represents the worksheet protection option of allowing formatting rows.
-     *  @param bool|null $value Value to set for the allowFormatRows property.
+     * @param bool|null $value Value to set for the allowFormatRows property.
     */
     public function setAllowFormatRows(?bool $value): void {
         $this->getBackingStore()->set('allowFormatRows', $value);
@@ -246,7 +246,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
 
     /**
      * Sets the allowInsertColumns property value. Represents the worksheet protection option of allowing inserting columns.
-     *  @param bool|null $value Value to set for the allowInsertColumns property.
+     * @param bool|null $value Value to set for the allowInsertColumns property.
     */
     public function setAllowInsertColumns(?bool $value): void {
         $this->getBackingStore()->set('allowInsertColumns', $value);
@@ -254,7 +254,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
 
     /**
      * Sets the allowInsertHyperlinks property value. Represents the worksheet protection option of allowing inserting hyperlinks.
-     *  @param bool|null $value Value to set for the allowInsertHyperlinks property.
+     * @param bool|null $value Value to set for the allowInsertHyperlinks property.
     */
     public function setAllowInsertHyperlinks(?bool $value): void {
         $this->getBackingStore()->set('allowInsertHyperlinks', $value);
@@ -262,7 +262,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
 
     /**
      * Sets the allowInsertRows property value. Represents the worksheet protection option of allowing inserting rows.
-     *  @param bool|null $value Value to set for the allowInsertRows property.
+     * @param bool|null $value Value to set for the allowInsertRows property.
     */
     public function setAllowInsertRows(?bool $value): void {
         $this->getBackingStore()->set('allowInsertRows', $value);
@@ -270,7 +270,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
 
     /**
      * Sets the allowPivotTables property value. Represents the worksheet protection option of allowing using pivot table feature.
-     *  @param bool|null $value Value to set for the allowPivotTables property.
+     * @param bool|null $value Value to set for the allowPivotTables property.
     */
     public function setAllowPivotTables(?bool $value): void {
         $this->getBackingStore()->set('allowPivotTables', $value);
@@ -278,7 +278,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
 
     /**
      * Sets the allowSort property value. Represents the worksheet protection option of allowing using sort feature.
-     *  @param bool|null $value Value to set for the allowSort property.
+     * @param bool|null $value Value to set for the allowSort property.
     */
     public function setAllowSort(?bool $value): void {
         $this->getBackingStore()->set('allowSort', $value);
@@ -286,7 +286,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -294,7 +294,7 @@ class WorkbookWorksheetProtectionOptions implements AdditionalDataHolder, Backed
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

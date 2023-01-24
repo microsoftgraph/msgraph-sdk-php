@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\Partners;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get a list of all partner configurations within a cross-tenant access policy.
+*/
 class PartnersRequestBuilderGetQueryParameters 
 {
     /**

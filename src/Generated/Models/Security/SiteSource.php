@@ -56,7 +56,7 @@ class SiteSource extends DataSource implements Parsable
 
     /**
      * Sets the site property value. The site property
-     *  @param Site|null $value Value to set for the site property.
+     * @param Site|null $value Value to set for the site property.
     */
     public function setSite(?Site $value): void {
         $this->getBackingStore()->set('site', $value);

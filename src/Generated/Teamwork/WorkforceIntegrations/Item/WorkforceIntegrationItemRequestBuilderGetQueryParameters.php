@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Teamwork\WorkforceIntegrations\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get workforceIntegrations from teamwork
+*/
 class WorkforceIntegrationItemRequestBuilderGetQueryParameters 
 {
     /**

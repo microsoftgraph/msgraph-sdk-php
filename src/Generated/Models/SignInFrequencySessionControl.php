@@ -85,7 +85,7 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
 
     /**
      * Sets the authenticationType property value. The possible values are primaryAndSecondaryAuthentication, secondaryAuthentication, unknownFutureValue.
-     *  @param SignInFrequencyAuthenticationType|null $value Value to set for the authenticationType property.
+     * @param SignInFrequencyAuthenticationType|null $value Value to set for the authenticationType property.
     */
     public function setAuthenticationType(?SignInFrequencyAuthenticationType $value): void {
         $this->getBackingStore()->set('authenticationType', $value);
@@ -93,7 +93,7 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
 
     /**
      * Sets the frequencyInterval property value. The possible values are timeBased, everyTime, unknownFutureValue.
-     *  @param SignInFrequencyInterval|null $value Value to set for the frequencyInterval property.
+     * @param SignInFrequencyInterval|null $value Value to set for the frequencyInterval property.
     */
     public function setFrequencyInterval(?SignInFrequencyInterval $value): void {
         $this->getBackingStore()->set('frequencyInterval', $value);
@@ -101,7 +101,7 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
 
     /**
      * Sets the type property value. Possible values are: days, hours.
-     *  @param SigninFrequencyType|null $value Value to set for the type property.
+     * @param SigninFrequencyType|null $value Value to set for the type property.
     */
     public function setType(?SigninFrequencyType $value): void {
         $this->getBackingStore()->set('type', $value);
@@ -109,7 +109,7 @@ class SignInFrequencySessionControl extends ConditionalAccessSessionControl impl
 
     /**
      * Sets the value property value. The number of days or hours.
-     *  @param int|null $value Value to set for the value property.
+     * @param int|null $value Value to set for the value property.
     */
     public function setValue(?int $value): void {
         $this->getBackingStore()->set('value', $value);

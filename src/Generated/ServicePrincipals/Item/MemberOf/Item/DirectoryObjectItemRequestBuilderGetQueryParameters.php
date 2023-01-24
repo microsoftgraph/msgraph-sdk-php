@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand.
+*/
 class DirectoryObjectItemRequestBuilderGetQueryParameters 
 {
     /**

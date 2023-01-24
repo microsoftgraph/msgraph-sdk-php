@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Contacts\Item\SingleValueExtended
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The collection of single-value extended properties defined for the contact. Read-only. Nullable.
+*/
 class SingleValueLegacyExtendedPropertyItemRequestBuilderGetQueryParameters 
 {
     /**

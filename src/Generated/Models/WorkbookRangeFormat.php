@@ -134,7 +134,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
 
     /**
      * Sets the borders property value. Collection of border objects that apply to the overall range selected Read-only.
-     *  @param array<WorkbookRangeBorder>|null $value Value to set for the borders property.
+     * @param array<WorkbookRangeBorder>|null $value Value to set for the borders property.
     */
     public function setBorders(?array $value): void {
         $this->getBackingStore()->set('borders', $value);
@@ -142,7 +142,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
 
     /**
      * Sets the columnWidth property value. Gets or sets the width of all colums within the range. If the column widths are not uniform, null will be returned.
-     *  @param float|null $value Value to set for the columnWidth property.
+     * @param float|null $value Value to set for the columnWidth property.
     */
     public function setColumnWidth(?float $value): void {
         $this->getBackingStore()->set('columnWidth', $value);
@@ -150,7 +150,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
 
     /**
      * Sets the fill property value. Returns the fill object defined on the overall range. Read-only.
-     *  @param WorkbookRangeFill|null $value Value to set for the fill property.
+     * @param WorkbookRangeFill|null $value Value to set for the fill property.
     */
     public function setFill(?WorkbookRangeFill $value): void {
         $this->getBackingStore()->set('fill', $value);
@@ -158,7 +158,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
 
     /**
      * Sets the font property value. Returns the font object defined on the overall range selected Read-only.
-     *  @param WorkbookRangeFont|null $value Value to set for the font property.
+     * @param WorkbookRangeFont|null $value Value to set for the font property.
     */
     public function setFont(?WorkbookRangeFont $value): void {
         $this->getBackingStore()->set('font', $value);
@@ -166,7 +166,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
 
     /**
      * Sets the horizontalAlignment property value. Represents the horizontal alignment for the specified object. The possible values are: General, Left, Center, Right, Fill, Justify, CenterAcrossSelection, Distributed.
-     *  @param string|null $value Value to set for the horizontalAlignment property.
+     * @param string|null $value Value to set for the horizontalAlignment property.
     */
     public function setHorizontalAlignment(?string $value): void {
         $this->getBackingStore()->set('horizontalAlignment', $value);
@@ -174,7 +174,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
 
     /**
      * Sets the protection property value. Returns the format protection object for a range. Read-only.
-     *  @param WorkbookFormatProtection|null $value Value to set for the protection property.
+     * @param WorkbookFormatProtection|null $value Value to set for the protection property.
     */
     public function setProtection(?WorkbookFormatProtection $value): void {
         $this->getBackingStore()->set('protection', $value);
@@ -182,7 +182,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
 
     /**
      * Sets the rowHeight property value. Gets or sets the height of all rows in the range. If the row heights are not uniform null will be returned.
-     *  @param float|null $value Value to set for the rowHeight property.
+     * @param float|null $value Value to set for the rowHeight property.
     */
     public function setRowHeight(?float $value): void {
         $this->getBackingStore()->set('rowHeight', $value);
@@ -190,7 +190,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
 
     /**
      * Sets the verticalAlignment property value. Represents the vertical alignment for the specified object. The possible values are: Top, Center, Bottom, Justify, Distributed.
-     *  @param string|null $value Value to set for the verticalAlignment property.
+     * @param string|null $value Value to set for the verticalAlignment property.
     */
     public function setVerticalAlignment(?string $value): void {
         $this->getBackingStore()->set('verticalAlignment', $value);
@@ -198,7 +198,7 @@ class WorkbookRangeFormat extends Entity implements Parsable
 
     /**
      * Sets the wrapText property value. Indicates if Excel wraps the text in the object. A null value indicates that the entire range doesn't have uniform wrap setting
-     *  @param bool|null $value Value to set for the wrapText property.
+     * @param bool|null $value Value to set for the wrapText property.
     */
     public function setWrapText(?bool $value): void {
         $this->getBackingStore()->set('wrapText', $value);

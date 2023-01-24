@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ServiceAnnouncement extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new serviceAnnouncement and sets the default values.
+     * Instantiates a new ServiceAnnouncement and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -74,7 +74,7 @@ class ServiceAnnouncement extends Entity implements Parsable
 
     /**
      * Sets the healthOverviews property value. A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.
-     *  @param array<ServiceHealth>|null $value Value to set for the healthOverviews property.
+     * @param array<ServiceHealth>|null $value Value to set for the healthOverviews property.
     */
     public function setHealthOverviews(?array $value): void {
         $this->getBackingStore()->set('healthOverviews', $value);
@@ -82,7 +82,7 @@ class ServiceAnnouncement extends Entity implements Parsable
 
     /**
      * Sets the issues property value. A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
-     *  @param array<ServiceHealthIssue>|null $value Value to set for the issues property.
+     * @param array<ServiceHealthIssue>|null $value Value to set for the issues property.
     */
     public function setIssues(?array $value): void {
         $this->getBackingStore()->set('issues', $value);
@@ -90,7 +90,7 @@ class ServiceAnnouncement extends Entity implements Parsable
 
     /**
      * Sets the messages property value. A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.
-     *  @param array<ServiceUpdateMessage>|null $value Value to set for the messages property.
+     * @param array<ServiceUpdateMessage>|null $value Value to set for the messages property.
     */
     public function setMessages(?array $value): void {
         $this->getBackingStore()->set('messages', $value);

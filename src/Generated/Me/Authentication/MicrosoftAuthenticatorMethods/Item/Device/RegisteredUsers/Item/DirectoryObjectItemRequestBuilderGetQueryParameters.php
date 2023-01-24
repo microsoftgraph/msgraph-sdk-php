@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Authentication\MicrosoftAuthenticatorMeth
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.
+*/
 class DirectoryObjectItemRequestBuilderGetQueryParameters 
 {
     /**

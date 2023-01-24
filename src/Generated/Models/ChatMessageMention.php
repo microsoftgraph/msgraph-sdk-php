@@ -110,7 +110,7 @@ class ChatMessageMention implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class ChatMessageMention implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class ChatMessageMention implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the id property value. Index of an entity being mentioned in the specified chatMessage. Matches the {index} value in the corresponding <at id='{index}'> tag in the message body.
-     *  @param int|null $value Value to set for the id property.
+     * @param int|null $value Value to set for the id property.
     */
     public function setId(?int $value): void {
         $this->getBackingStore()->set('id', $value);
@@ -134,7 +134,7 @@ class ChatMessageMention implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the mentioned property value. The entity (user, application, team, or channel) that was @mentioned.
-     *  @param ChatMessageMentionedIdentitySet|null $value Value to set for the mentioned property.
+     * @param ChatMessageMentionedIdentitySet|null $value Value to set for the mentioned property.
     */
     public function setMentioned(?ChatMessageMentionedIdentitySet $value): void {
         $this->getBackingStore()->set('mentioned', $value);
@@ -142,7 +142,7 @@ class ChatMessageMention implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the mentionText property value. String used to represent the mention. For example, a user's display name, a team name.
-     *  @param string|null $value Value to set for the mentionText property.
+     * @param string|null $value Value to set for the mentionText property.
     */
     public function setMentionText(?string $value): void {
         $this->getBackingStore()->set('mentionText', $value);
@@ -150,7 +150,7 @@ class ChatMessageMention implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

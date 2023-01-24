@@ -110,7 +110,7 @@ class DriveRecipient implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class DriveRecipient implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the alias property value. The alias of the domain object, for cases where an email address is unavailable (e.g. security groups).
-     *  @param string|null $value Value to set for the alias property.
+     * @param string|null $value Value to set for the alias property.
     */
     public function setAlias(?string $value): void {
         $this->getBackingStore()->set('alias', $value);
@@ -126,7 +126,7 @@ class DriveRecipient implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -134,7 +134,7 @@ class DriveRecipient implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the email property value. The email address for the recipient, if the recipient has an associated email address.
-     *  @param string|null $value Value to set for the email property.
+     * @param string|null $value Value to set for the email property.
     */
     public function setEmail(?string $value): void {
         $this->getBackingStore()->set('email', $value);
@@ -142,7 +142,7 @@ class DriveRecipient implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the objectId property value. The unique identifier for the recipient in the directory.
-     *  @param string|null $value Value to set for the objectId property.
+     * @param string|null $value Value to set for the objectId property.
     */
     public function setObjectId(?string $value): void {
         $this->getBackingStore()->set('objectId', $value);
@@ -150,7 +150,7 @@ class DriveRecipient implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

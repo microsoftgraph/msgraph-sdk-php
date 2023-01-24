@@ -105,7 +105,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable
 
     /**
      * Sets the parentNotebook property value. The notebook that contains the section group. Read-only.
-     *  @param Notebook|null $value Value to set for the parentNotebook property.
+     * @param Notebook|null $value Value to set for the parentNotebook property.
     */
     public function setParentNotebook(?Notebook $value): void {
         $this->getBackingStore()->set('parentNotebook', $value);
@@ -113,7 +113,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable
 
     /**
      * Sets the parentSectionGroup property value. The section group that contains the section group. Read-only.
-     *  @param SectionGroup|null $value Value to set for the parentSectionGroup property.
+     * @param SectionGroup|null $value Value to set for the parentSectionGroup property.
     */
     public function setParentSectionGroup(?SectionGroup $value): void {
         $this->getBackingStore()->set('parentSectionGroup', $value);
@@ -121,7 +121,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable
 
     /**
      * Sets the sectionGroups property value. The section groups in the section. Read-only. Nullable.
-     *  @param array<SectionGroup>|null $value Value to set for the sectionGroups property.
+     * @param array<SectionGroup>|null $value Value to set for the sectionGroups property.
     */
     public function setSectionGroups(?array $value): void {
         $this->getBackingStore()->set('sectionGroups', $value);
@@ -129,7 +129,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable
 
     /**
      * Sets the sectionGroupsUrl property value. The URL for the sectionGroups navigation property, which returns all the section groups in the section group. Read-only.
-     *  @param string|null $value Value to set for the sectionGroupsUrl property.
+     * @param string|null $value Value to set for the sectionGroupsUrl property.
     */
     public function setSectionGroupsUrl(?string $value): void {
         $this->getBackingStore()->set('sectionGroupsUrl', $value);
@@ -137,7 +137,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable
 
     /**
      * Sets the sections property value. The sections in the section group. Read-only. Nullable.
-     *  @param array<OnenoteSection>|null $value Value to set for the sections property.
+     * @param array<OnenoteSection>|null $value Value to set for the sections property.
     */
     public function setSections(?array $value): void {
         $this->getBackingStore()->set('sections', $value);
@@ -145,7 +145,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable
 
     /**
      * Sets the sectionsUrl property value. The URL for the sections navigation property, which returns all the sections in the section group. Read-only.
-     *  @param string|null $value Value to set for the sectionsUrl property.
+     * @param string|null $value Value to set for the sectionsUrl property.
     */
     public function setSectionsUrl(?string $value): void {
         $this->getBackingStore()->set('sectionsUrl', $value);

@@ -140,7 +140,7 @@ class Media implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -148,7 +148,7 @@ class Media implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -156,7 +156,7 @@ class Media implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the calleeDevice property value. Device information associated with the callee endpoint of this media.
-     *  @param DeviceInfo|null $value Value to set for the calleeDevice property.
+     * @param DeviceInfo|null $value Value to set for the calleeDevice property.
     */
     public function setCalleeDevice(?DeviceInfo $value): void {
         $this->getBackingStore()->set('calleeDevice', $value);
@@ -164,7 +164,7 @@ class Media implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the calleeNetwork property value. Network information associated with the callee endpoint of this media.
-     *  @param NetworkInfo|null $value Value to set for the calleeNetwork property.
+     * @param NetworkInfo|null $value Value to set for the calleeNetwork property.
     */
     public function setCalleeNetwork(?NetworkInfo $value): void {
         $this->getBackingStore()->set('calleeNetwork', $value);
@@ -172,7 +172,7 @@ class Media implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the callerDevice property value. Device information associated with the caller endpoint of this media.
-     *  @param DeviceInfo|null $value Value to set for the callerDevice property.
+     * @param DeviceInfo|null $value Value to set for the callerDevice property.
     */
     public function setCallerDevice(?DeviceInfo $value): void {
         $this->getBackingStore()->set('callerDevice', $value);
@@ -180,7 +180,7 @@ class Media implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the callerNetwork property value. Network information associated with the caller endpoint of this media.
-     *  @param NetworkInfo|null $value Value to set for the callerNetwork property.
+     * @param NetworkInfo|null $value Value to set for the callerNetwork property.
     */
     public function setCallerNetwork(?NetworkInfo $value): void {
         $this->getBackingStore()->set('callerNetwork', $value);
@@ -188,7 +188,7 @@ class Media implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the label property value. How the media was identified during media negotiation stage.
-     *  @param string|null $value Value to set for the label property.
+     * @param string|null $value Value to set for the label property.
     */
     public function setLabel(?string $value): void {
         $this->getBackingStore()->set('label', $value);
@@ -196,7 +196,7 @@ class Media implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -204,7 +204,7 @@ class Media implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the streams property value. Network streams associated with this media.
-     *  @param array<MediaStream>|null $value Value to set for the streams property.
+     * @param array<MediaStream>|null $value Value to set for the streams property.
     */
     public function setStreams(?array $value): void {
         $this->getBackingStore()->set('streams', $value);

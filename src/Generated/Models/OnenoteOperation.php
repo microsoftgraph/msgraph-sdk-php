@@ -84,7 +84,7 @@ class OnenoteOperation extends Operation implements Parsable
 
     /**
      * Sets the error property value. The error returned by the operation.
-     *  @param OnenoteOperationError|null $value Value to set for the error property.
+     * @param OnenoteOperationError|null $value Value to set for the error property.
     */
     public function setError(?OnenoteOperationError $value): void {
         $this->getBackingStore()->set('error', $value);
@@ -92,7 +92,7 @@ class OnenoteOperation extends Operation implements Parsable
 
     /**
      * Sets the percentComplete property value. The operation percent complete if the operation is still in running status.
-     *  @param string|null $value Value to set for the percentComplete property.
+     * @param string|null $value Value to set for the percentComplete property.
     */
     public function setPercentComplete(?string $value): void {
         $this->getBackingStore()->set('percentComplete', $value);
@@ -100,7 +100,7 @@ class OnenoteOperation extends Operation implements Parsable
 
     /**
      * Sets the resourceId property value. The resource id.
-     *  @param string|null $value Value to set for the resourceId property.
+     * @param string|null $value Value to set for the resourceId property.
     */
     public function setResourceId(?string $value): void {
         $this->getBackingStore()->set('resourceId', $value);
@@ -108,7 +108,7 @@ class OnenoteOperation extends Operation implements Parsable
 
     /**
      * Sets the resourceLocation property value. The resource URI for the object. For example, the resource URI for a copied page or section.
-     *  @param string|null $value Value to set for the resourceLocation property.
+     * @param string|null $value Value to set for the resourceLocation property.
     */
     public function setResourceLocation(?string $value): void {
         $this->getBackingStore()->set('resourceLocation', $value);

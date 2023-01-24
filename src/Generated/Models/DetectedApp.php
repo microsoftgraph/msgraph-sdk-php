@@ -6,6 +6,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * A managed or unmanaged app that is installed on a managed device. Unmanaged apps will only appear for devices marked as corporate owned.
+*/
 class DetectedApp extends Entity implements Parsable 
 {
     /**
@@ -114,7 +117,7 @@ class DetectedApp extends Entity implements Parsable
 
     /**
      * Sets the deviceCount property value. The number of devices that have installed this application
-     *  @param int|null $value Value to set for the deviceCount property.
+     * @param int|null $value Value to set for the deviceCount property.
     */
     public function setDeviceCount(?int $value): void {
         $this->getBackingStore()->set('deviceCount', $value);
@@ -122,7 +125,7 @@ class DetectedApp extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. Name of the discovered application. Read-only
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -130,7 +133,7 @@ class DetectedApp extends Entity implements Parsable
 
     /**
      * Sets the managedDevices property value. The devices that have the discovered application installed
-     *  @param array<ManagedDevice>|null $value Value to set for the managedDevices property.
+     * @param array<ManagedDevice>|null $value Value to set for the managedDevices property.
     */
     public function setManagedDevices(?array $value): void {
         $this->getBackingStore()->set('managedDevices', $value);
@@ -138,7 +141,7 @@ class DetectedApp extends Entity implements Parsable
 
     /**
      * Sets the platform property value. Indicates the operating system / platform of the discovered application.  Some possible values are Windows, iOS, macOS. The default value is unknown (0).
-     *  @param DetectedAppPlatformType|null $value Value to set for the platform property.
+     * @param DetectedAppPlatformType|null $value Value to set for the platform property.
     */
     public function setPlatform(?DetectedAppPlatformType $value): void {
         $this->getBackingStore()->set('platform', $value);
@@ -146,7 +149,7 @@ class DetectedApp extends Entity implements Parsable
 
     /**
      * Sets the publisher property value. Indicates the publisher of the discovered application. For example: 'Microsoft'.  The default value is an empty string.
-     *  @param string|null $value Value to set for the publisher property.
+     * @param string|null $value Value to set for the publisher property.
     */
     public function setPublisher(?string $value): void {
         $this->getBackingStore()->set('publisher', $value);
@@ -154,7 +157,7 @@ class DetectedApp extends Entity implements Parsable
 
     /**
      * Sets the sizeInByte property value. Discovered application size in bytes. Read-only
-     *  @param int|null $value Value to set for the sizeInByte property.
+     * @param int|null $value Value to set for the sizeInByte property.
     */
     public function setSizeInByte(?int $value): void {
         $this->getBackingStore()->set('sizeInByte', $value);
@@ -162,7 +165,7 @@ class DetectedApp extends Entity implements Parsable
 
     /**
      * Sets the version property value. Version of the discovered application. Read-only
-     *  @param string|null $value Value to set for the version property.
+     * @param string|null $value Value to set for the version property.
     */
     public function setVersion(?string $value): void {
         $this->getBackingStore()->set('version', $value);

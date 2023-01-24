@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\StaffMember
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get a list of bookingStaffMember objects in the specified bookingBusiness.
+*/
 class StaffMembersRequestBuilderGetQueryParameters 
 {
     /**

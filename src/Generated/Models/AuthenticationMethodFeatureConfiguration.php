@@ -110,7 +110,7 @@ class AuthenticationMethodFeatureConfiguration implements AdditionalDataHolder, 
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class AuthenticationMethodFeatureConfiguration implements AdditionalDataHolder, 
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class AuthenticationMethodFeatureConfiguration implements AdditionalDataHolder, 
 
     /**
      * Sets the excludeTarget property value. A single entity that is excluded from this feature.
-     *  @param FeatureTarget|null $value Value to set for the excludeTarget property.
+     * @param FeatureTarget|null $value Value to set for the excludeTarget property.
     */
     public function setExcludeTarget(?FeatureTarget $value): void {
         $this->getBackingStore()->set('excludeTarget', $value);
@@ -134,7 +134,7 @@ class AuthenticationMethodFeatureConfiguration implements AdditionalDataHolder, 
 
     /**
      * Sets the includeTarget property value. A single entity that is included in this feature.
-     *  @param FeatureTarget|null $value Value to set for the includeTarget property.
+     * @param FeatureTarget|null $value Value to set for the includeTarget property.
     */
     public function setIncludeTarget(?FeatureTarget $value): void {
         $this->getBackingStore()->set('includeTarget', $value);
@@ -142,7 +142,7 @@ class AuthenticationMethodFeatureConfiguration implements AdditionalDataHolder, 
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -150,7 +150,7 @@ class AuthenticationMethodFeatureConfiguration implements AdditionalDataHolder, 
 
     /**
      * Sets the state property value. Enable or disable the feature. Possible values are: default, enabled, disabled, unknownFutureValue. The default value is used when the configuration hasn't been explicitly set and uses the default behavior of Azure AD for the setting. The default value is disabled.
-     *  @param AdvancedConfigState|null $value Value to set for the state property.
+     * @param AdvancedConfigState|null $value Value to set for the state property.
     */
     public function setState(?AdvancedConfigState $value): void {
         $this->getBackingStore()->set('state', $value);

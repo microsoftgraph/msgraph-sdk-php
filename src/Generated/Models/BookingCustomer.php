@@ -85,7 +85,7 @@ class BookingCustomer extends BookingCustomerBase implements Parsable
 
     /**
      * Sets the addresses property value. Addresses associated with the customer. The attribute type of physicalAddress is not supported in v1.0. Internally we map the addresses to the type others.
-     *  @param array<PhysicalAddress>|null $value Value to set for the addresses property.
+     * @param array<PhysicalAddress>|null $value Value to set for the addresses property.
     */
     public function setAddresses(?array $value): void {
         $this->getBackingStore()->set('addresses', $value);
@@ -93,7 +93,7 @@ class BookingCustomer extends BookingCustomerBase implements Parsable
 
     /**
      * Sets the displayName property value. The name of the customer.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -101,7 +101,7 @@ class BookingCustomer extends BookingCustomerBase implements Parsable
 
     /**
      * Sets the emailAddress property value. The SMTP address of the customer.
-     *  @param string|null $value Value to set for the emailAddress property.
+     * @param string|null $value Value to set for the emailAddress property.
     */
     public function setEmailAddress(?string $value): void {
         $this->getBackingStore()->set('emailAddress', $value);
@@ -109,7 +109,7 @@ class BookingCustomer extends BookingCustomerBase implements Parsable
 
     /**
      * Sets the phones property value. Phone numbers associated with the customer, including home, business and mobile numbers.
-     *  @param array<Phone>|null $value Value to set for the phones property.
+     * @param array<Phone>|null $value Value to set for the phones property.
     */
     public function setPhones(?array $value): void {
         $this->getBackingStore()->set('phones', $value);

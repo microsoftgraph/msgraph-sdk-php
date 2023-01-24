@@ -55,7 +55,7 @@ class DeviceEnrollmentLimitConfiguration extends DeviceEnrollmentConfiguration i
 
     /**
      * Sets the limit property value. The maximum number of devices that a user can enroll
-     *  @param int|null $value Value to set for the limit property.
+     * @param int|null $value Value to set for the limit property.
     */
     public function setLimit(?int $value): void {
         $this->getBackingStore()->set('limit', $value);

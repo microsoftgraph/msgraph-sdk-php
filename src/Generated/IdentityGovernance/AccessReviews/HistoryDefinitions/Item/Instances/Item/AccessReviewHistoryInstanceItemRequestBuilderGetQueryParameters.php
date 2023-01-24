@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefi
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * If the accessReviewHistoryDefinition is a recurring definition, instances represent each recurrence. A definition that does not recur will have exactly one instance.
+*/
 class AccessReviewHistoryInstanceItemRequestBuilderGetQueryParameters 
 {
     /**

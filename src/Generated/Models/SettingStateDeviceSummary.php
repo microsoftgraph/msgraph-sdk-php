@@ -6,6 +6,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Device Compilance Policy and Configuration for a Setting State summary
+*/
 class SettingStateDeviceSummary extends Entity implements Parsable 
 {
     /**
@@ -134,7 +137,7 @@ class SettingStateDeviceSummary extends Entity implements Parsable
 
     /**
      * Sets the compliantDeviceCount property value. Device Compliant count for the setting
-     *  @param int|null $value Value to set for the compliantDeviceCount property.
+     * @param int|null $value Value to set for the compliantDeviceCount property.
     */
     public function setCompliantDeviceCount(?int $value): void {
         $this->getBackingStore()->set('compliantDeviceCount', $value);
@@ -142,7 +145,7 @@ class SettingStateDeviceSummary extends Entity implements Parsable
 
     /**
      * Sets the conflictDeviceCount property value. Device conflict error count for the setting
-     *  @param int|null $value Value to set for the conflictDeviceCount property.
+     * @param int|null $value Value to set for the conflictDeviceCount property.
     */
     public function setConflictDeviceCount(?int $value): void {
         $this->getBackingStore()->set('conflictDeviceCount', $value);
@@ -150,7 +153,7 @@ class SettingStateDeviceSummary extends Entity implements Parsable
 
     /**
      * Sets the errorDeviceCount property value. Device error count for the setting
-     *  @param int|null $value Value to set for the errorDeviceCount property.
+     * @param int|null $value Value to set for the errorDeviceCount property.
     */
     public function setErrorDeviceCount(?int $value): void {
         $this->getBackingStore()->set('errorDeviceCount', $value);
@@ -158,7 +161,7 @@ class SettingStateDeviceSummary extends Entity implements Parsable
 
     /**
      * Sets the instancePath property value. Name of the InstancePath for the setting
-     *  @param string|null $value Value to set for the instancePath property.
+     * @param string|null $value Value to set for the instancePath property.
     */
     public function setInstancePath(?string $value): void {
         $this->getBackingStore()->set('instancePath', $value);
@@ -166,7 +169,7 @@ class SettingStateDeviceSummary extends Entity implements Parsable
 
     /**
      * Sets the nonCompliantDeviceCount property value. Device NonCompliant count for the setting
-     *  @param int|null $value Value to set for the nonCompliantDeviceCount property.
+     * @param int|null $value Value to set for the nonCompliantDeviceCount property.
     */
     public function setNonCompliantDeviceCount(?int $value): void {
         $this->getBackingStore()->set('nonCompliantDeviceCount', $value);
@@ -174,7 +177,7 @@ class SettingStateDeviceSummary extends Entity implements Parsable
 
     /**
      * Sets the notApplicableDeviceCount property value. Device Not Applicable count for the setting
-     *  @param int|null $value Value to set for the notApplicableDeviceCount property.
+     * @param int|null $value Value to set for the notApplicableDeviceCount property.
     */
     public function setNotApplicableDeviceCount(?int $value): void {
         $this->getBackingStore()->set('notApplicableDeviceCount', $value);
@@ -182,7 +185,7 @@ class SettingStateDeviceSummary extends Entity implements Parsable
 
     /**
      * Sets the remediatedDeviceCount property value. Device Compliant count for the setting
-     *  @param int|null $value Value to set for the remediatedDeviceCount property.
+     * @param int|null $value Value to set for the remediatedDeviceCount property.
     */
     public function setRemediatedDeviceCount(?int $value): void {
         $this->getBackingStore()->set('remediatedDeviceCount', $value);
@@ -190,7 +193,7 @@ class SettingStateDeviceSummary extends Entity implements Parsable
 
     /**
      * Sets the settingName property value. Name of the setting
-     *  @param string|null $value Value to set for the settingName property.
+     * @param string|null $value Value to set for the settingName property.
     */
     public function setSettingName(?string $value): void {
         $this->getBackingStore()->set('settingName', $value);
@@ -198,7 +201,7 @@ class SettingStateDeviceSummary extends Entity implements Parsable
 
     /**
      * Sets the unknownDeviceCount property value. Device Unkown count for the setting
-     *  @param int|null $value Value to set for the unknownDeviceCount property.
+     * @param int|null $value Value to set for the unknownDeviceCount property.
     */
     public function setUnknownDeviceCount(?int $value): void {
         $this->getBackingStore()->set('unknownDeviceCount', $value);

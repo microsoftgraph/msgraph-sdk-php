@@ -55,7 +55,7 @@ class TokenMeetingInfo extends MeetingInfo implements Parsable
 
     /**
      * Sets the token property value. The token used to join the call.
-     *  @param string|null $value Value to set for the token property.
+     * @param string|null $value Value to set for the token property.
     */
     public function setToken(?string $value): void {
         $this->getBackingStore()->set('token', $value);

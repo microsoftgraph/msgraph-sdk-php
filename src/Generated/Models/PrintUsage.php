@@ -93,7 +93,7 @@ class PrintUsage extends Entity implements Parsable
 
     /**
      * Sets the completedBlackAndWhiteJobCount property value. The completedBlackAndWhiteJobCount property
-     *  @param int|null $value Value to set for the completedBlackAndWhiteJobCount property.
+     * @param int|null $value Value to set for the completedBlackAndWhiteJobCount property.
     */
     public function setCompletedBlackAndWhiteJobCount(?int $value): void {
         $this->getBackingStore()->set('completedBlackAndWhiteJobCount', $value);
@@ -101,7 +101,7 @@ class PrintUsage extends Entity implements Parsable
 
     /**
      * Sets the completedColorJobCount property value. The completedColorJobCount property
-     *  @param int|null $value Value to set for the completedColorJobCount property.
+     * @param int|null $value Value to set for the completedColorJobCount property.
     */
     public function setCompletedColorJobCount(?int $value): void {
         $this->getBackingStore()->set('completedColorJobCount', $value);
@@ -109,7 +109,7 @@ class PrintUsage extends Entity implements Parsable
 
     /**
      * Sets the incompleteJobCount property value. The incompleteJobCount property
-     *  @param int|null $value Value to set for the incompleteJobCount property.
+     * @param int|null $value Value to set for the incompleteJobCount property.
     */
     public function setIncompleteJobCount(?int $value): void {
         $this->getBackingStore()->set('incompleteJobCount', $value);
@@ -117,7 +117,7 @@ class PrintUsage extends Entity implements Parsable
 
     /**
      * Sets the usageDate property value. The usageDate property
-     *  @param Date|null $value Value to set for the usageDate property.
+     * @param Date|null $value Value to set for the usageDate property.
     */
     public function setUsageDate(?Date $value): void {
         $this->getBackingStore()->set('usageDate', $value);

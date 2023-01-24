@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefi
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.
+*/
 class HistoryDefinitionsRequestBuilderGetQueryParameters 
 {
     /**

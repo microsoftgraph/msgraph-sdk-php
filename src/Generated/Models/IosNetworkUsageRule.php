@@ -10,6 +10,9 @@ use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
+/**
+ * Network Usage Rules allow enterprises to specify how managed apps use networks, such as cellular data networks.
+*/
 class IosNetworkUsageRule implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -110,7 +113,7 @@ class IosNetworkUsageRule implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +121,7 @@ class IosNetworkUsageRule implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +129,7 @@ class IosNetworkUsageRule implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the cellularDataBlocked property value. If set to true, corresponding managed apps will not be allowed to use cellular data at any time.
-     *  @param bool|null $value Value to set for the cellularDataBlocked property.
+     * @param bool|null $value Value to set for the cellularDataBlocked property.
     */
     public function setCellularDataBlocked(?bool $value): void {
         $this->getBackingStore()->set('cellularDataBlocked', $value);
@@ -134,7 +137,7 @@ class IosNetworkUsageRule implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the cellularDataBlockWhenRoaming property value. If set to true, corresponding managed apps will not be allowed to use cellular data when roaming.
-     *  @param bool|null $value Value to set for the cellularDataBlockWhenRoaming property.
+     * @param bool|null $value Value to set for the cellularDataBlockWhenRoaming property.
     */
     public function setCellularDataBlockWhenRoaming(?bool $value): void {
         $this->getBackingStore()->set('cellularDataBlockWhenRoaming', $value);
@@ -142,7 +145,7 @@ class IosNetworkUsageRule implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the managedApps property value. Information about the managed apps that this rule is going to apply to. This collection can contain a maximum of 500 elements.
-     *  @param array<AppListItem>|null $value Value to set for the managedApps property.
+     * @param array<AppListItem>|null $value Value to set for the managedApps property.
     */
     public function setManagedApps(?array $value): void {
         $this->getBackingStore()->set('managedApps', $value);
@@ -150,7 +153,7 @@ class IosNetworkUsageRule implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

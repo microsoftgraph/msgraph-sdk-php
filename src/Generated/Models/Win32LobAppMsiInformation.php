@@ -10,6 +10,9 @@ use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
+/**
+ * Contains MSI app properties for a Win32 App.
+*/
 class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -150,7 +153,7 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -158,7 +161,7 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -166,7 +169,7 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -174,7 +177,7 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the packageType property value. Indicates the package type of an MSI Win32LobApp.
-     *  @param Win32LobAppMsiPackageType|null $value Value to set for the packageType property.
+     * @param Win32LobAppMsiPackageType|null $value Value to set for the packageType property.
     */
     public function setPackageType(?Win32LobAppMsiPackageType $value): void {
         $this->getBackingStore()->set('packageType', $value);
@@ -182,7 +185,7 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the productCode property value. The MSI product code.
-     *  @param string|null $value Value to set for the productCode property.
+     * @param string|null $value Value to set for the productCode property.
     */
     public function setProductCode(?string $value): void {
         $this->getBackingStore()->set('productCode', $value);
@@ -190,7 +193,7 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the productName property value. The MSI product name.
-     *  @param string|null $value Value to set for the productName property.
+     * @param string|null $value Value to set for the productName property.
     */
     public function setProductName(?string $value): void {
         $this->getBackingStore()->set('productName', $value);
@@ -198,7 +201,7 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the productVersion property value. The MSI product version.
-     *  @param string|null $value Value to set for the productVersion property.
+     * @param string|null $value Value to set for the productVersion property.
     */
     public function setProductVersion(?string $value): void {
         $this->getBackingStore()->set('productVersion', $value);
@@ -206,7 +209,7 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the publisher property value. The MSI publisher.
-     *  @param string|null $value Value to set for the publisher property.
+     * @param string|null $value Value to set for the publisher property.
     */
     public function setPublisher(?string $value): void {
         $this->getBackingStore()->set('publisher', $value);
@@ -214,7 +217,7 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the requiresReboot property value. Whether the MSI app requires the machine to reboot to complete installation.
-     *  @param bool|null $value Value to set for the requiresReboot property.
+     * @param bool|null $value Value to set for the requiresReboot property.
     */
     public function setRequiresReboot(?bool $value): void {
         $this->getBackingStore()->set('requiresReboot', $value);
@@ -222,7 +225,7 @@ class Win32LobAppMsiInformation implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the upgradeCode property value. The MSI upgrade code.
-     *  @param string|null $value Value to set for the upgradeCode property.
+     * @param string|null $value Value to set for the upgradeCode property.
     */
     public function setUpgradeCode(?string $value): void {
         $this->getBackingStore()->set('upgradeCode', $value);

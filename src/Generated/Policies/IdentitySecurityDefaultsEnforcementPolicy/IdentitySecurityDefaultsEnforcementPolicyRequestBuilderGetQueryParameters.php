@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Policies\IdentitySecurityDefaultsEnforcement
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object.
+*/
 class IdentitySecurityDefaultsEnforcementPolicyRequestBuilderGetQueryParameters 
 {
     /**

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\It
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Once published, there is a submission object for each student representing their work and grade.  Read-only. Nullable.
+*/
 class EducationSubmissionItemRequestBuilderGetQueryParameters 
 {
     /**

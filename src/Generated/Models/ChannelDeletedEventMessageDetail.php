@@ -75,7 +75,7 @@ class ChannelDeletedEventMessageDetail extends EventMessageDetail implements Par
 
     /**
      * Sets the channelDisplayName property value. Display name of the channel.
-     *  @param string|null $value Value to set for the channelDisplayName property.
+     * @param string|null $value Value to set for the channelDisplayName property.
     */
     public function setChannelDisplayName(?string $value): void {
         $this->getBackingStore()->set('channelDisplayName', $value);
@@ -83,7 +83,7 @@ class ChannelDeletedEventMessageDetail extends EventMessageDetail implements Par
 
     /**
      * Sets the channelId property value. Unique identifier of the channel.
-     *  @param string|null $value Value to set for the channelId property.
+     * @param string|null $value Value to set for the channelId property.
     */
     public function setChannelId(?string $value): void {
         $this->getBackingStore()->set('channelId', $value);
@@ -91,7 +91,7 @@ class ChannelDeletedEventMessageDetail extends EventMessageDetail implements Par
 
     /**
      * Sets the initiator property value. Initiator of the event.
-     *  @param IdentitySet|null $value Value to set for the initiator property.
+     * @param IdentitySet|null $value Value to set for the initiator property.
     */
     public function setInitiator(?IdentitySet $value): void {
         $this->getBackingStore()->set('initiator', $value);

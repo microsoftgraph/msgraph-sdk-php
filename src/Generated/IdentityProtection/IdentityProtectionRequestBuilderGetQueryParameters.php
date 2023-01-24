@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityProtection;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get identityProtection
+*/
 class IdentityProtectionRequestBuilderGetQueryParameters 
 {
     /**

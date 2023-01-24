@@ -64,7 +64,7 @@ class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal implements 
 
     /**
      * Sets the activity property value. The activity related to service principal risk level change.
-     *  @param RiskServicePrincipalActivity|null $value Value to set for the activity property.
+     * @param RiskServicePrincipalActivity|null $value Value to set for the activity property.
     */
     public function setActivity(?RiskServicePrincipalActivity $value): void {
         $this->getBackingStore()->set('activity', $value);
@@ -72,7 +72,7 @@ class RiskyServicePrincipalHistoryItem extends RiskyServicePrincipal implements 
 
     /**
      * Sets the initiatedBy property value. The identifier of the actor of the operation.
-     *  @param string|null $value Value to set for the initiatedBy property.
+     * @param string|null $value Value to set for the initiatedBy property.
     */
     public function setInitiatedBy(?string $value): void {
         $this->getBackingStore()->set('initiatedBy', $value);

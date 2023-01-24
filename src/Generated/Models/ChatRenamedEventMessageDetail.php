@@ -75,7 +75,7 @@ class ChatRenamedEventMessageDetail extends EventMessageDetail implements Parsab
 
     /**
      * Sets the chatDisplayName property value. The updated name of the chat.
-     *  @param string|null $value Value to set for the chatDisplayName property.
+     * @param string|null $value Value to set for the chatDisplayName property.
     */
     public function setChatDisplayName(?string $value): void {
         $this->getBackingStore()->set('chatDisplayName', $value);
@@ -83,7 +83,7 @@ class ChatRenamedEventMessageDetail extends EventMessageDetail implements Parsab
 
     /**
      * Sets the chatId property value. Unique identifier of the chat.
-     *  @param string|null $value Value to set for the chatId property.
+     * @param string|null $value Value to set for the chatId property.
     */
     public function setChatId(?string $value): void {
         $this->getBackingStore()->set('chatId', $value);
@@ -91,7 +91,7 @@ class ChatRenamedEventMessageDetail extends EventMessageDetail implements Parsab
 
     /**
      * Sets the initiator property value. Initiator of the event.
-     *  @param IdentitySet|null $value Value to set for the initiator property.
+     * @param IdentitySet|null $value Value to set for the initiator property.
     */
     public function setInitiator(?IdentitySet $value): void {
         $this->getBackingStore()->set('initiator', $value);

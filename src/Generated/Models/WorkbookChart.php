@@ -164,7 +164,7 @@ class WorkbookChart extends Entity implements Parsable
 
     /**
      * Sets the axes property value. Represents chart axes. Read-only.
-     *  @param WorkbookChartAxes|null $value Value to set for the axes property.
+     * @param WorkbookChartAxes|null $value Value to set for the axes property.
     */
     public function setAxes(?WorkbookChartAxes $value): void {
         $this->getBackingStore()->set('axes', $value);
@@ -172,7 +172,7 @@ class WorkbookChart extends Entity implements Parsable
 
     /**
      * Sets the dataLabels property value. Represents the datalabels on the chart. Read-only.
-     *  @param WorkbookChartDataLabels|null $value Value to set for the dataLabels property.
+     * @param WorkbookChartDataLabels|null $value Value to set for the dataLabels property.
     */
     public function setDataLabels(?WorkbookChartDataLabels $value): void {
         $this->getBackingStore()->set('dataLabels', $value);
@@ -180,7 +180,7 @@ class WorkbookChart extends Entity implements Parsable
 
     /**
      * Sets the format property value. Encapsulates the format properties for the chart area. Read-only.
-     *  @param WorkbookChartAreaFormat|null $value Value to set for the format property.
+     * @param WorkbookChartAreaFormat|null $value Value to set for the format property.
     */
     public function setFormat(?WorkbookChartAreaFormat $value): void {
         $this->getBackingStore()->set('format', $value);
@@ -188,7 +188,7 @@ class WorkbookChart extends Entity implements Parsable
 
     /**
      * Sets the height property value. Represents the height, in points, of the chart object.
-     *  @param float|null $value Value to set for the height property.
+     * @param float|null $value Value to set for the height property.
     */
     public function setHeight(?float $value): void {
         $this->getBackingStore()->set('height', $value);
@@ -196,7 +196,7 @@ class WorkbookChart extends Entity implements Parsable
 
     /**
      * Sets the left property value. The distance, in points, from the left side of the chart to the worksheet origin.
-     *  @param float|null $value Value to set for the left property.
+     * @param float|null $value Value to set for the left property.
     */
     public function setLeft(?float $value): void {
         $this->getBackingStore()->set('left', $value);
@@ -204,7 +204,7 @@ class WorkbookChart extends Entity implements Parsable
 
     /**
      * Sets the legend property value. Represents the legend for the chart. Read-only.
-     *  @param WorkbookChartLegend|null $value Value to set for the legend property.
+     * @param WorkbookChartLegend|null $value Value to set for the legend property.
     */
     public function setLegend(?WorkbookChartLegend $value): void {
         $this->getBackingStore()->set('legend', $value);
@@ -212,7 +212,7 @@ class WorkbookChart extends Entity implements Parsable
 
     /**
      * Sets the name property value. Represents the name of a chart object.
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -220,7 +220,7 @@ class WorkbookChart extends Entity implements Parsable
 
     /**
      * Sets the series property value. Represents either a single series or collection of series in the chart. Read-only.
-     *  @param array<WorkbookChartSeries>|null $value Value to set for the series property.
+     * @param array<WorkbookChartSeries>|null $value Value to set for the series property.
     */
     public function setSeries(?array $value): void {
         $this->getBackingStore()->set('series', $value);
@@ -228,7 +228,7 @@ class WorkbookChart extends Entity implements Parsable
 
     /**
      * Sets the title property value. Represents the title of the specified chart, including the text, visibility, position and formating of the title. Read-only.
-     *  @param WorkbookChartTitle|null $value Value to set for the title property.
+     * @param WorkbookChartTitle|null $value Value to set for the title property.
     */
     public function setTitle(?WorkbookChartTitle $value): void {
         $this->getBackingStore()->set('title', $value);
@@ -236,7 +236,7 @@ class WorkbookChart extends Entity implements Parsable
 
     /**
      * Sets the top property value. Represents the distance, in points, from the top edge of the object to the top of row 1 (on a worksheet) or the top of the chart area (on a chart).
-     *  @param float|null $value Value to set for the top property.
+     * @param float|null $value Value to set for the top property.
     */
     public function setTop(?float $value): void {
         $this->getBackingStore()->set('top', $value);
@@ -244,7 +244,7 @@ class WorkbookChart extends Entity implements Parsable
 
     /**
      * Sets the width property value. Represents the width, in points, of the chart object.
-     *  @param float|null $value Value to set for the width property.
+     * @param float|null $value Value to set for the width property.
     */
     public function setWidth(?float $value): void {
         $this->getBackingStore()->set('width', $value);
@@ -252,7 +252,7 @@ class WorkbookChart extends Entity implements Parsable
 
     /**
      * Sets the worksheet property value. The worksheet containing the current chart. Read-only.
-     *  @param WorkbookWorksheet|null $value Value to set for the worksheet property.
+     * @param WorkbookWorksheet|null $value Value to set for the worksheet property.
     */
     public function setWorksheet(?WorkbookWorksheet $value): void {
         $this->getBackingStore()->set('worksheet', $value);

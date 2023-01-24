@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\OnlineMeetings\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get onlineMeetings from me
+*/
 class OnlineMeetingItemRequestBuilderGetQueryParameters 
 {
     /**

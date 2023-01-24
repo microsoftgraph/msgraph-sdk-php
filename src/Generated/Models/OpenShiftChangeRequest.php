@@ -55,7 +55,7 @@ class OpenShiftChangeRequest extends ScheduleChangeRequest implements Parsable
 
     /**
      * Sets the openShiftId property value. ID for the open shift.
-     *  @param string|null $value Value to set for the openShiftId property.
+     * @param string|null $value Value to set for the openShiftId property.
     */
     public function setOpenShiftId(?string $value): void {
         $this->getBackingStore()->set('openShiftId', $value);

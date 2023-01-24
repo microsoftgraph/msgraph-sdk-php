@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAss
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Instances for active role assignments.
+*/
 class UnifiedRoleAssignmentScheduleInstanceItemRequestBuilderGetQueryParameters 
 {
     /**

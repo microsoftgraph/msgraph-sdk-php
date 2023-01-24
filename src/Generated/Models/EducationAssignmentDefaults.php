@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\Time;
 class EducationAssignmentDefaults extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new EducationAssignmentDefaults and sets the default values.
+     * Instantiates a new educationAssignmentDefaults and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -85,7 +85,7 @@ class EducationAssignmentDefaults extends Entity implements Parsable
 
     /**
      * Sets the addedStudentAction property value. Class-level default behavior for handling students who are added after the assignment is published. Possible values are: none, assignIfOpen.
-     *  @param EducationAddedStudentAction|null $value Value to set for the addedStudentAction property.
+     * @param EducationAddedStudentAction|null $value Value to set for the addedStudentAction property.
     */
     public function setAddedStudentAction(?EducationAddedStudentAction $value): void {
         $this->getBackingStore()->set('addedStudentAction', $value);
@@ -93,7 +93,7 @@ class EducationAssignmentDefaults extends Entity implements Parsable
 
     /**
      * Sets the addToCalendarAction property value. Optional field to control adding assignments to students' and teachers' calendars when the assignment is published. The possible values are: none, studentsAndPublisher, studentsAndTeamOwners, unknownFutureValue, and studentsOnly. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: studentsOnly. The default value is none.
-     *  @param EducationAddToCalendarOptions|null $value Value to set for the addToCalendarAction property.
+     * @param EducationAddToCalendarOptions|null $value Value to set for the addToCalendarAction property.
     */
     public function setAddToCalendarAction(?EducationAddToCalendarOptions $value): void {
         $this->getBackingStore()->set('addToCalendarAction', $value);
@@ -101,7 +101,7 @@ class EducationAssignmentDefaults extends Entity implements Parsable
 
     /**
      * Sets the dueTime property value. Class-level default value for due time field. Default value is 23:59:00.
-     *  @param Time|null $value Value to set for the dueTime property.
+     * @param Time|null $value Value to set for the dueTime property.
     */
     public function setDueTime(?Time $value): void {
         $this->getBackingStore()->set('dueTime', $value);
@@ -109,7 +109,7 @@ class EducationAssignmentDefaults extends Entity implements Parsable
 
     /**
      * Sets the notificationChannelUrl property value. Default Teams channel to which notifications will be sent. Default value is null.
-     *  @param string|null $value Value to set for the notificationChannelUrl property.
+     * @param string|null $value Value to set for the notificationChannelUrl property.
     */
     public function setNotificationChannelUrl(?string $value): void {
         $this->getBackingStore()->set('notificationChannelUrl', $value);

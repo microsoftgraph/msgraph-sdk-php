@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Reports\Security\GetAttackSimulationRepeatOf
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Invoke function getAttackSimulationRepeatOffenders
+*/
 class GetAttackSimulationRepeatOffendersRequestBuilderGetQueryParameters 
 {
     /**

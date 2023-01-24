@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Container for roles and assignments for entitlement management resources.
+*/
 class EntitlementManagementRequestBuilderGetQueryParameters 
 {
     /**

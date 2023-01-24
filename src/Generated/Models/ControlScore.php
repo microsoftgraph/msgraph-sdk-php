@@ -120,7 +120,7 @@ class ControlScore implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class ControlScore implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -136,7 +136,7 @@ class ControlScore implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the controlCategory property value. Control action category (Identity, Data, Device, Apps, Infrastructure).
-     *  @param string|null $value Value to set for the controlCategory property.
+     * @param string|null $value Value to set for the controlCategory property.
     */
     public function setControlCategory(?string $value): void {
         $this->getBackingStore()->set('controlCategory', $value);
@@ -144,7 +144,7 @@ class ControlScore implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the controlName property value. Control unique name.
-     *  @param string|null $value Value to set for the controlName property.
+     * @param string|null $value Value to set for the controlName property.
     */
     public function setControlName(?string $value): void {
         $this->getBackingStore()->set('controlName', $value);
@@ -152,7 +152,7 @@ class ControlScore implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the description property value. Description of the control.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -160,7 +160,7 @@ class ControlScore implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -168,7 +168,7 @@ class ControlScore implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the score property value. Tenant achieved score for the control (it varies day by day depending on tenant operations on the control).
-     *  @param float|null $value Value to set for the score property.
+     * @param float|null $value Value to set for the score property.
     */
     public function setScore(?float $value): void {
         $this->getBackingStore()->set('score', $value);

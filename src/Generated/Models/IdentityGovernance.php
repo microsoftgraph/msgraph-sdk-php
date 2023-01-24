@@ -120,7 +120,7 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the accessReviews property value. The accessReviews property
-     *  @param AccessReviewSet|null $value Value to set for the accessReviews property.
+     * @param AccessReviewSet|null $value Value to set for the accessReviews property.
     */
     public function setAccessReviews(?AccessReviewSet $value): void {
         $this->getBackingStore()->set('accessReviews', $value);
@@ -128,7 +128,7 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -136,7 +136,7 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the appConsent property value. The appConsent property
-     *  @param AppConsentApprovalRoute|null $value Value to set for the appConsent property.
+     * @param AppConsentApprovalRoute|null $value Value to set for the appConsent property.
     */
     public function setAppConsent(?AppConsentApprovalRoute $value): void {
         $this->getBackingStore()->set('appConsent', $value);
@@ -144,7 +144,7 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -152,7 +152,7 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the entitlementManagement property value. The entitlementManagement property
-     *  @param EntitlementManagement|null $value Value to set for the entitlementManagement property.
+     * @param EntitlementManagement|null $value Value to set for the entitlementManagement property.
     */
     public function setEntitlementManagement(?EntitlementManagement $value): void {
         $this->getBackingStore()->set('entitlementManagement', $value);
@@ -160,7 +160,7 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -168,7 +168,7 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the termsOfUse property value. The termsOfUse property
-     *  @param TermsOfUseContainer|null $value Value to set for the termsOfUse property.
+     * @param TermsOfUseContainer|null $value Value to set for the termsOfUse property.
     */
     public function setTermsOfUse(?TermsOfUseContainer $value): void {
         $this->getBackingStore()->set('termsOfUse', $value);

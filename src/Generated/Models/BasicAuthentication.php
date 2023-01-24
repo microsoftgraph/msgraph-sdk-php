@@ -65,7 +65,7 @@ class BasicAuthentication extends ApiAuthenticationConfigurationBase implements 
 
     /**
      * Sets the password property value. The password. It is not returned in the responses.
-     *  @param string|null $value Value to set for the password property.
+     * @param string|null $value Value to set for the password property.
     */
     public function setPassword(?string $value): void {
         $this->getBackingStore()->set('password', $value);
@@ -73,7 +73,7 @@ class BasicAuthentication extends ApiAuthenticationConfigurationBase implements 
 
     /**
      * Sets the username property value. The username.
-     *  @param string|null $value Value to set for the username property.
+     * @param string|null $value Value to set for the username property.
     */
     public function setUsername(?string $value): void {
         $this->getBackingStore()->set('username', $value);

@@ -132,7 +132,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the assignedTo property value. The assignedTo property
-     *  @param ScheduleChangeRequestActor|null $value Value to set for the assignedTo property.
+     * @param ScheduleChangeRequestActor|null $value Value to set for the assignedTo property.
     */
     public function setAssignedTo(?ScheduleChangeRequestActor $value): void {
         $this->getBackingStore()->set('assignedTo', $value);
@@ -140,7 +140,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the managerActionDateTime property value. The managerActionDateTime property
-     *  @param DateTime|null $value Value to set for the managerActionDateTime property.
+     * @param DateTime|null $value Value to set for the managerActionDateTime property.
     */
     public function setManagerActionDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('managerActionDateTime', $value);
@@ -148,7 +148,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the managerActionMessage property value. The managerActionMessage property
-     *  @param string|null $value Value to set for the managerActionMessage property.
+     * @param string|null $value Value to set for the managerActionMessage property.
     */
     public function setManagerActionMessage(?string $value): void {
         $this->getBackingStore()->set('managerActionMessage', $value);
@@ -156,7 +156,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the managerUserId property value. The managerUserId property
-     *  @param string|null $value Value to set for the managerUserId property.
+     * @param string|null $value Value to set for the managerUserId property.
     */
     public function setManagerUserId(?string $value): void {
         $this->getBackingStore()->set('managerUserId', $value);
@@ -164,7 +164,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the senderDateTime property value. The senderDateTime property
-     *  @param DateTime|null $value Value to set for the senderDateTime property.
+     * @param DateTime|null $value Value to set for the senderDateTime property.
     */
     public function setSenderDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('senderDateTime', $value);
@@ -172,7 +172,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the senderMessage property value. The senderMessage property
-     *  @param string|null $value Value to set for the senderMessage property.
+     * @param string|null $value Value to set for the senderMessage property.
     */
     public function setSenderMessage(?string $value): void {
         $this->getBackingStore()->set('senderMessage', $value);
@@ -180,7 +180,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the senderUserId property value. The senderUserId property
-     *  @param string|null $value Value to set for the senderUserId property.
+     * @param string|null $value Value to set for the senderUserId property.
     */
     public function setSenderUserId(?string $value): void {
         $this->getBackingStore()->set('senderUserId', $value);
@@ -188,7 +188,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the state property value. The state property
-     *  @param ScheduleChangeState|null $value Value to set for the state property.
+     * @param ScheduleChangeState|null $value Value to set for the state property.
     */
     public function setState(?ScheduleChangeState $value): void {
         $this->getBackingStore()->set('state', $value);

@@ -74,7 +74,7 @@ class AudioRoutingGroup extends Entity implements Parsable
 
     /**
      * Sets the receivers property value. The receivers property
-     *  @param array<string>|null $value Value to set for the receivers property.
+     * @param array<string>|null $value Value to set for the receivers property.
     */
     public function setReceivers(?array $value): void {
         $this->getBackingStore()->set('receivers', $value);
@@ -82,7 +82,7 @@ class AudioRoutingGroup extends Entity implements Parsable
 
     /**
      * Sets the routingMode property value. The routingMode property
-     *  @param RoutingMode|null $value Value to set for the routingMode property.
+     * @param RoutingMode|null $value Value to set for the routingMode property.
     */
     public function setRoutingMode(?RoutingMode $value): void {
         $this->getBackingStore()->set('routingMode', $value);
@@ -90,7 +90,7 @@ class AudioRoutingGroup extends Entity implements Parsable
 
     /**
      * Sets the sources property value. The sources property
-     *  @param array<string>|null $value Value to set for the sources property.
+     * @param array<string>|null $value Value to set for the sources property.
     */
     public function setSources(?array $value): void {
         $this->getBackingStore()->set('sources', $value);

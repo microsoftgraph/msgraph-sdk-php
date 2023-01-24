@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Drives\Item\Special\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Collection of common folders available in OneDrive. Read-only. Nullable.
+*/
 class DriveItemItemRequestBuilderGetQueryParameters 
 {
     /**

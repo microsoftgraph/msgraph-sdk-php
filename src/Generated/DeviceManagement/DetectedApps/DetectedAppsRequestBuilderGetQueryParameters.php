@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DetectedApps;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The list of detected apps associated with a device.
+*/
 class DetectedAppsRequestBuilderGetQueryParameters 
 {
     /**

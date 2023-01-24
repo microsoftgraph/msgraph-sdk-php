@@ -64,7 +64,7 @@ class AccessReviewSet extends Entity implements Parsable
 
     /**
      * Sets the definitions property value. Represents the template and scheduling for an access review.
-     *  @param array<AccessReviewScheduleDefinition>|null $value Value to set for the definitions property.
+     * @param array<AccessReviewScheduleDefinition>|null $value Value to set for the definitions property.
     */
     public function setDefinitions(?array $value): void {
         $this->getBackingStore()->set('definitions', $value);
@@ -72,7 +72,7 @@ class AccessReviewSet extends Entity implements Parsable
 
     /**
      * Sets the historyDefinitions property value. Represents a collection of access review history data and the scopes used to collect that data.
-     *  @param array<AccessReviewHistoryDefinition>|null $value Value to set for the historyDefinitions property.
+     * @param array<AccessReviewHistoryDefinition>|null $value Value to set for the historyDefinitions property.
     */
     public function setHistoryDefinitions(?array $value): void {
         $this->getBackingStore()->set('historyDefinitions', $value);

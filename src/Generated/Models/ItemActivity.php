@@ -85,7 +85,7 @@ class ItemActivity extends Entity implements Parsable
 
     /**
      * Sets the access property value. An item was accessed.
-     *  @param AccessAction|null $value Value to set for the access property.
+     * @param AccessAction|null $value Value to set for the access property.
     */
     public function setAccess(?AccessAction $value): void {
         $this->getBackingStore()->set('access', $value);
@@ -93,7 +93,7 @@ class ItemActivity extends Entity implements Parsable
 
     /**
      * Sets the activityDateTime property value. Details about when the activity took place. Read-only.
-     *  @param DateTime|null $value Value to set for the activityDateTime property.
+     * @param DateTime|null $value Value to set for the activityDateTime property.
     */
     public function setActivityDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('activityDateTime', $value);
@@ -101,7 +101,7 @@ class ItemActivity extends Entity implements Parsable
 
     /**
      * Sets the actor property value. Identity of who performed the action. Read-only.
-     *  @param IdentitySet|null $value Value to set for the actor property.
+     * @param IdentitySet|null $value Value to set for the actor property.
     */
     public function setActor(?IdentitySet $value): void {
         $this->getBackingStore()->set('actor', $value);
@@ -109,7 +109,7 @@ class ItemActivity extends Entity implements Parsable
 
     /**
      * Sets the driveItem property value. Exposes the driveItem that was the target of this activity.
-     *  @param DriveItem|null $value Value to set for the driveItem property.
+     * @param DriveItem|null $value Value to set for the driveItem property.
     */
     public function setDriveItem(?DriveItem $value): void {
         $this->getBackingStore()->set('driveItem', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Policies\TokenLifetimePolicies;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get a list of tokenLifetimePolicy objects.
+*/
 class TokenLifetimePoliciesRequestBuilderGetQueryParameters 
 {
     /**

@@ -101,7 +101,7 @@ class RedirectPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -109,7 +109,7 @@ class RedirectPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -117,7 +117,7 @@ class RedirectPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the callbackUri property value. The callbackUri property
-     *  @param string|null $value Value to set for the callbackUri property.
+     * @param string|null $value Value to set for the callbackUri property.
     */
     public function setCallbackUri(?string $value): void {
         $this->getBackingStore()->set('callbackUri', $value);
@@ -125,7 +125,7 @@ class RedirectPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the targets property value. The targets property
-     *  @param array<InvitationParticipantInfo>|null $value Value to set for the targets property.
+     * @param array<InvitationParticipantInfo>|null $value Value to set for the targets property.
     */
     public function setTargets(?array $value): void {
         $this->getBackingStore()->set('targets', $value);
@@ -133,7 +133,7 @@ class RedirectPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the timeout property value. The timeout property
-     *  @param int|null $value Value to set for the timeout property.
+     * @param int|null $value Value to set for the timeout property.
     */
     public function setTimeout(?int $value): void {
         $this->getBackingStore()->set('timeout', $value);

@@ -5,6 +5,9 @@ namespace Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Catego
 use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Categories\Item\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 
+/**
+ * Builds and executes requests for operations under /education/users/{educationUser-id}/assignments/{educationAssignment-id}/categories/{educationCategory-id}
+*/
 class EducationCategoryItemRequestBuilder 
 {
     /**

@@ -65,7 +65,7 @@ class FileAssessmentRequest extends ThreatAssessmentRequest implements Parsable
 
     /**
      * Sets the contentData property value. Base64 encoded file content. The file content cannot fetch back because it isn't stored.
-     *  @param string|null $value Value to set for the contentData property.
+     * @param string|null $value Value to set for the contentData property.
     */
     public function setContentData(?string $value): void {
         $this->getBackingStore()->set('contentData', $value);
@@ -73,7 +73,7 @@ class FileAssessmentRequest extends ThreatAssessmentRequest implements Parsable
 
     /**
      * Sets the fileName property value. The file name.
-     *  @param string|null $value Value to set for the fileName property.
+     * @param string|null $value Value to set for the fileName property.
     */
     public function setFileName(?string $value): void {
         $this->getBackingStore()->set('fileName', $value);

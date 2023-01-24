@@ -120,7 +120,7 @@ class DefaultUserRolePermissions implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class DefaultUserRolePermissions implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the allowedToCreateApps property value. Indicates whether the default user role can create applications.
-     *  @param bool|null $value Value to set for the allowedToCreateApps property.
+     * @param bool|null $value Value to set for the allowedToCreateApps property.
     */
     public function setAllowedToCreateApps(?bool $value): void {
         $this->getBackingStore()->set('allowedToCreateApps', $value);
@@ -136,7 +136,7 @@ class DefaultUserRolePermissions implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the allowedToCreateSecurityGroups property value. Indicates whether the default user role can create security groups.
-     *  @param bool|null $value Value to set for the allowedToCreateSecurityGroups property.
+     * @param bool|null $value Value to set for the allowedToCreateSecurityGroups property.
     */
     public function setAllowedToCreateSecurityGroups(?bool $value): void {
         $this->getBackingStore()->set('allowedToCreateSecurityGroups', $value);
@@ -144,7 +144,7 @@ class DefaultUserRolePermissions implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the allowedToReadOtherUsers property value. Indicates whether the default user role can read other users.
-     *  @param bool|null $value Value to set for the allowedToReadOtherUsers property.
+     * @param bool|null $value Value to set for the allowedToReadOtherUsers property.
     */
     public function setAllowedToReadOtherUsers(?bool $value): void {
         $this->getBackingStore()->set('allowedToReadOtherUsers', $value);
@@ -152,7 +152,7 @@ class DefaultUserRolePermissions implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -160,7 +160,7 @@ class DefaultUserRolePermissions implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -168,7 +168,7 @@ class DefaultUserRolePermissions implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the permissionGrantPoliciesAssigned property value. Indicates if user consent to apps is allowed, and if it is, which permission to grant consent and which app consent policy (permissionGrantPolicy) govern the permission for users to grant consent. Value should be in the format managePermissionGrantsForSelf.{id}, where {id} is the id of a built-in or custom app consent policy. An empty list indicates user consent to apps is disabled.
-     *  @param array<string>|null $value Value to set for the permissionGrantPoliciesAssigned property.
+     * @param array<string>|null $value Value to set for the permissionGrantPoliciesAssigned property.
     */
     public function setPermissionGrantPoliciesAssigned(?array $value): void {
         $this->getBackingStore()->set('permissionGrantPoliciesAssigned', $value);

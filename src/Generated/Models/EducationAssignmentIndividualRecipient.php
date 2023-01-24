@@ -55,7 +55,7 @@ class EducationAssignmentIndividualRecipient extends EducationAssignmentRecipien
 
     /**
      * Sets the recipients property value. A collection of IDs of the recipients.
-     *  @param array<string>|null $value Value to set for the recipients property.
+     * @param array<string>|null $value Value to set for the recipients property.
     */
     public function setRecipients(?array $value): void {
         $this->getBackingStore()->set('recipients', $value);

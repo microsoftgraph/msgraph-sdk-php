@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Noncusto
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * User source or SharePoint site data source as non-custodial data source.
+*/
 class DataSourceRequestBuilderGetQueryParameters 
 {
     /**

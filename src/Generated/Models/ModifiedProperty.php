@@ -110,7 +110,7 @@ class ModifiedProperty implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class ModifiedProperty implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class ModifiedProperty implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the displayName property value. Indicates the property name of the target attribute that was changed.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -134,7 +134,7 @@ class ModifiedProperty implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the newValue property value. Indicates the updated value for the propery.
-     *  @param string|null $value Value to set for the newValue property.
+     * @param string|null $value Value to set for the newValue property.
     */
     public function setNewValue(?string $value): void {
         $this->getBackingStore()->set('newValue', $value);
@@ -142,7 +142,7 @@ class ModifiedProperty implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -150,7 +150,7 @@ class ModifiedProperty implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the oldValue property value. Indicates the previous value (before the update) for the property.
-     *  @param string|null $value Value to set for the oldValue property.
+     * @param string|null $value Value to set for the oldValue property.
     */
     public function setOldValue(?string $value): void {
         $this->getBackingStore()->set('oldValue', $value);

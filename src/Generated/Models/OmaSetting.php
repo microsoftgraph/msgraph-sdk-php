@@ -10,6 +10,9 @@ use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
+/**
+ * OMA Settings definition.
+*/
 class OmaSetting implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -123,7 +126,7 @@ class OmaSetting implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -131,7 +134,7 @@ class OmaSetting implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -139,7 +142,7 @@ class OmaSetting implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the description property value. Description.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -147,7 +150,7 @@ class OmaSetting implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the displayName property value. Display Name.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -155,7 +158,7 @@ class OmaSetting implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -163,7 +166,7 @@ class OmaSetting implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the omaUri property value. OMA.
-     *  @param string|null $value Value to set for the omaUri property.
+     * @param string|null $value Value to set for the omaUri property.
     */
     public function setOmaUri(?string $value): void {
         $this->getBackingStore()->set('omaUri', $value);

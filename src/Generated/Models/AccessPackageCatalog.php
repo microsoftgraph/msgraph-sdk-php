@@ -125,7 +125,7 @@ class AccessPackageCatalog extends Entity implements Parsable
 
     /**
      * Sets the accessPackages property value. The access packages in this catalog. Read-only. Nullable.
-     *  @param array<AccessPackage>|null $value Value to set for the accessPackages property.
+     * @param array<AccessPackage>|null $value Value to set for the accessPackages property.
     */
     public function setAccessPackages(?array $value): void {
         $this->getBackingStore()->set('accessPackages', $value);
@@ -133,7 +133,7 @@ class AccessPackageCatalog extends Entity implements Parsable
 
     /**
      * Sets the catalogType property value. Whether the catalog is created by a user or entitlement management. The possible values are: userManaged, serviceDefault, serviceManaged, unknownFutureValue.
-     *  @param AccessPackageCatalogType|null $value Value to set for the catalogType property.
+     * @param AccessPackageCatalogType|null $value Value to set for the catalogType property.
     */
     public function setCatalogType(?AccessPackageCatalogType $value): void {
         $this->getBackingStore()->set('catalogType', $value);
@@ -141,7 +141,7 @@ class AccessPackageCatalog extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -149,7 +149,7 @@ class AccessPackageCatalog extends Entity implements Parsable
 
     /**
      * Sets the description property value. The description of the access package catalog.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -157,7 +157,7 @@ class AccessPackageCatalog extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The display name of the access package catalog.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -165,7 +165,7 @@ class AccessPackageCatalog extends Entity implements Parsable
 
     /**
      * Sets the isExternallyVisible property value. Whether the access packages in this catalog can be requested by users outside of the tenant.
-     *  @param bool|null $value Value to set for the isExternallyVisible property.
+     * @param bool|null $value Value to set for the isExternallyVisible property.
     */
     public function setIsExternallyVisible(?bool $value): void {
         $this->getBackingStore()->set('isExternallyVisible', $value);
@@ -173,7 +173,7 @@ class AccessPackageCatalog extends Entity implements Parsable
 
     /**
      * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     *  @param DateTime|null $value Value to set for the modifiedDateTime property.
+     * @param DateTime|null $value Value to set for the modifiedDateTime property.
     */
     public function setModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('modifiedDateTime', $value);
@@ -181,7 +181,7 @@ class AccessPackageCatalog extends Entity implements Parsable
 
     /**
      * Sets the state property value. Has the value published if the access packages are available for management. The possible values are: unpublished, published, unknownFutureValue.
-     *  @param AccessPackageCatalogState|null $value Value to set for the state property.
+     * @param AccessPackageCatalogState|null $value Value to set for the state property.
     */
     public function setState(?AccessPackageCatalogState $value): void {
         $this->getBackingStore()->set('state', $value);

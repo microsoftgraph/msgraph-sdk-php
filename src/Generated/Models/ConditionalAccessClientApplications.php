@@ -100,7 +100,7 @@ class ConditionalAccessClientApplications implements AdditionalDataHolder, Backe
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class ConditionalAccessClientApplications implements AdditionalDataHolder, Backe
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class ConditionalAccessClientApplications implements AdditionalDataHolder, Backe
 
     /**
      * Sets the excludeServicePrincipals property value. Service principal IDs excluded from the policy scope.
-     *  @param array<string>|null $value Value to set for the excludeServicePrincipals property.
+     * @param array<string>|null $value Value to set for the excludeServicePrincipals property.
     */
     public function setExcludeServicePrincipals(?array $value): void {
         $this->getBackingStore()->set('excludeServicePrincipals', $value);
@@ -124,7 +124,7 @@ class ConditionalAccessClientApplications implements AdditionalDataHolder, Backe
 
     /**
      * Sets the includeServicePrincipals property value. Service principal IDs included in the policy scope, or ServicePrincipalsInMyTenant.
-     *  @param array<string>|null $value Value to set for the includeServicePrincipals property.
+     * @param array<string>|null $value Value to set for the includeServicePrincipals property.
     */
     public function setIncludeServicePrincipals(?array $value): void {
         $this->getBackingStore()->set('includeServicePrincipals', $value);
@@ -132,7 +132,7 @@ class ConditionalAccessClientApplications implements AdditionalDataHolder, Backe
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

@@ -115,7 +115,7 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
 
     /**
      * Sets the activeSignInUri property value. URL of the endpoint used by active clients when authenticating with federated domains set up for single sign-on in Azure Active Directory (Azure AD). Corresponds to the ActiveLogOnUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
-     *  @param string|null $value Value to set for the activeSignInUri property.
+     * @param string|null $value Value to set for the activeSignInUri property.
     */
     public function setActiveSignInUri(?string $value): void {
         $this->getBackingStore()->set('activeSignInUri', $value);
@@ -123,7 +123,7 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
 
     /**
      * Sets the federatedIdpMfaBehavior property value. Determines whether Azure AD accepts the MFA performed by the federated IdP when a federated user accesses an application that is governed by a conditional access policy that requires MFA. The possible values are: acceptIfMfaDoneByFederatedIdp, enforceMfaByFederatedIdp, rejectMfaByFederatedIdp, unknownFutureValue. For more information, see federatedIdpMfaBehavior values.
-     *  @param FederatedIdpMfaBehavior|null $value Value to set for the federatedIdpMfaBehavior property.
+     * @param FederatedIdpMfaBehavior|null $value Value to set for the federatedIdpMfaBehavior property.
     */
     public function setFederatedIdpMfaBehavior(?FederatedIdpMfaBehavior $value): void {
         $this->getBackingStore()->set('federatedIdpMfaBehavior', $value);
@@ -131,7 +131,7 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
 
     /**
      * Sets the isSignedAuthenticationRequestRequired property value. If true, when SAML authentication requests are sent to the federated SAML IdP, Azure AD will sign those requests using the OrgID signing key. If false (default), the SAML authentication requests sent to the federated IdP are not signed.
-     *  @param bool|null $value Value to set for the isSignedAuthenticationRequestRequired property.
+     * @param bool|null $value Value to set for the isSignedAuthenticationRequestRequired property.
     */
     public function setIsSignedAuthenticationRequestRequired(?bool $value): void {
         $this->getBackingStore()->set('isSignedAuthenticationRequestRequired', $value);
@@ -139,7 +139,7 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
 
     /**
      * Sets the nextSigningCertificate property value. Fallback token signing certificate that is used to sign tokens when the primary signing certificate expires. Formatted as Base64 encoded strings of the public portion of the federated IdP's token signing certificate. Needs to be compatible with the X509Certificate2 class. Much like the signingCertificate, the nextSigningCertificate property is used if a rollover is required outside of the auto-rollover update, a new federation service is being set up, or if the new token signing certificate is not present in the federation properties after the federation service certificate has been updated.
-     *  @param string|null $value Value to set for the nextSigningCertificate property.
+     * @param string|null $value Value to set for the nextSigningCertificate property.
     */
     public function setNextSigningCertificate(?string $value): void {
         $this->getBackingStore()->set('nextSigningCertificate', $value);
@@ -147,7 +147,7 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
 
     /**
      * Sets the promptLoginBehavior property value. Sets the preferred behavior for the sign-in prompt. The possible values are: translateToFreshPasswordAuthentication, nativeSupport, disabled, unknownFutureValue.
-     *  @param PromptLoginBehavior|null $value Value to set for the promptLoginBehavior property.
+     * @param PromptLoginBehavior|null $value Value to set for the promptLoginBehavior property.
     */
     public function setPromptLoginBehavior(?PromptLoginBehavior $value): void {
         $this->getBackingStore()->set('promptLoginBehavior', $value);
@@ -155,7 +155,7 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
 
     /**
      * Sets the signingCertificateUpdateStatus property value. Provides status and timestamp of the last update of the signing certificate.
-     *  @param SigningCertificateUpdateStatus|null $value Value to set for the signingCertificateUpdateStatus property.
+     * @param SigningCertificateUpdateStatus|null $value Value to set for the signingCertificateUpdateStatus property.
     */
     public function setSigningCertificateUpdateStatus(?SigningCertificateUpdateStatus $value): void {
         $this->getBackingStore()->set('signingCertificateUpdateStatus', $value);
@@ -163,7 +163,7 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
 
     /**
      * Sets the signOutUri property value. URI that clients are redirected to when they sign out of Azure AD services. Corresponds to the LogOffUri property of the Set-MsolDomainFederationSettings MSOnline v1 PowerShell cmdlet.
-     *  @param string|null $value Value to set for the signOutUri property.
+     * @param string|null $value Value to set for the signOutUri property.
     */
     public function setSignOutUri(?string $value): void {
         $this->getBackingStore()->set('signOutUri', $value);

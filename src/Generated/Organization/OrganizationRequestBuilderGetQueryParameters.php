@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Organization;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve a list of organization objects.
+*/
 class OrganizationRequestBuilderGetQueryParameters 
 {
     /**

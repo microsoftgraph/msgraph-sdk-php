@@ -110,7 +110,7 @@ class UnifiedRolePermission implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class UnifiedRolePermission implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the allowedResourceActions property value. Set of tasks that can be performed on a resource. Required.
-     *  @param array<string>|null $value Value to set for the allowedResourceActions property.
+     * @param array<string>|null $value Value to set for the allowedResourceActions property.
     */
     public function setAllowedResourceActions(?array $value): void {
         $this->getBackingStore()->set('allowedResourceActions', $value);
@@ -126,7 +126,7 @@ class UnifiedRolePermission implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -134,7 +134,7 @@ class UnifiedRolePermission implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the condition property value. Optional constraints that must be met for the permission to be effective. Not supported for custom roles.
-     *  @param string|null $value Value to set for the condition property.
+     * @param string|null $value Value to set for the condition property.
     */
     public function setCondition(?string $value): void {
         $this->getBackingStore()->set('condition', $value);
@@ -142,7 +142,7 @@ class UnifiedRolePermission implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the excludedResourceActions property value. Set of tasks that may not be performed on a resource. Not yet supported.
-     *  @param array<string>|null $value Value to set for the excludedResourceActions property.
+     * @param array<string>|null $value Value to set for the excludedResourceActions property.
     */
     public function setExcludedResourceActions(?array $value): void {
         $this->getBackingStore()->set('excludedResourceActions', $value);
@@ -150,7 +150,7 @@ class UnifiedRolePermission implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

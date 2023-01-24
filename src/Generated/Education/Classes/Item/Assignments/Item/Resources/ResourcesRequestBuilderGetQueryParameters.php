@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Reso
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get all the educationAssignmentResource objects associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation.
+*/
 class ResourcesRequestBuilderGetQueryParameters 
 {
     /**

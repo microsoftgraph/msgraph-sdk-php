@@ -165,7 +165,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
 
     /**
      * Sets the daysWithoutContactBeforeUnenroll property value. Offline interval before app data is wiped (days)
-     *  @param int|null $value Value to set for the daysWithoutContactBeforeUnenroll property.
+     * @param int|null $value Value to set for the daysWithoutContactBeforeUnenroll property.
     */
     public function setDaysWithoutContactBeforeUnenroll(?int $value): void {
         $this->getBackingStore()->set('daysWithoutContactBeforeUnenroll', $value);
@@ -173,7 +173,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
 
     /**
      * Sets the mdmEnrollmentUrl property value. Enrollment url for the MDM
-     *  @param string|null $value Value to set for the mdmEnrollmentUrl property.
+     * @param string|null $value Value to set for the mdmEnrollmentUrl property.
     */
     public function setMdmEnrollmentUrl(?string $value): void {
         $this->getBackingStore()->set('mdmEnrollmentUrl', $value);
@@ -181,7 +181,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
 
     /**
      * Sets the minutesOfInactivityBeforeDeviceLock property value. Specifies the maximum amount of time (in minutes) allowed after the device is idle that will cause the device to become PIN or password locked.   Range is an integer X where 0 <= X <= 999.
-     *  @param int|null $value Value to set for the minutesOfInactivityBeforeDeviceLock property.
+     * @param int|null $value Value to set for the minutesOfInactivityBeforeDeviceLock property.
     */
     public function setMinutesOfInactivityBeforeDeviceLock(?int $value): void {
         $this->getBackingStore()->set('minutesOfInactivityBeforeDeviceLock', $value);
@@ -189,7 +189,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
 
     /**
      * Sets the numberOfPastPinsRemembered property value. Integer value that specifies the number of past PINs that can be associated to a user account that can't be reused. The largest number you can configure for this policy setting is 50. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then storage of previous PINs is not required. This node was added in Windows 10, version 1511. Default is 0.
-     *  @param int|null $value Value to set for the numberOfPastPinsRemembered property.
+     * @param int|null $value Value to set for the numberOfPastPinsRemembered property.
     */
     public function setNumberOfPastPinsRemembered(?int $value): void {
         $this->getBackingStore()->set('numberOfPastPinsRemembered', $value);
@@ -197,7 +197,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
 
     /**
      * Sets the passwordMaximumAttemptCount property value. The number of authentication failures allowed before the device will be wiped. A value of 0 disables device wipe functionality. Range is an integer X where 4 <= X <= 16 for desktop and 0 <= X <= 999 for mobile devices.
-     *  @param int|null $value Value to set for the passwordMaximumAttemptCount property.
+     * @param int|null $value Value to set for the passwordMaximumAttemptCount property.
     */
     public function setPasswordMaximumAttemptCount(?int $value): void {
         $this->getBackingStore()->set('passwordMaximumAttemptCount', $value);
@@ -205,7 +205,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
 
     /**
      * Sets the pinExpirationDays property value. Integer value specifies the period of time (in days) that a PIN can be used before the system requires the user to change it. The largest number you can configure for this policy setting is 730. The lowest number you can configure for this policy setting is 0. If this policy is set to 0, then the user's PIN will never expire. This node was added in Windows 10, version 1511. Default is 0.
-     *  @param int|null $value Value to set for the pinExpirationDays property.
+     * @param int|null $value Value to set for the pinExpirationDays property.
     */
     public function setPinExpirationDays(?int $value): void {
         $this->getBackingStore()->set('pinExpirationDays', $value);
@@ -213,7 +213,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
 
     /**
      * Sets the pinLowercaseLetters property value. Pin Character Requirements
-     *  @param WindowsInformationProtectionPinCharacterRequirements|null $value Value to set for the pinLowercaseLetters property.
+     * @param WindowsInformationProtectionPinCharacterRequirements|null $value Value to set for the pinLowercaseLetters property.
     */
     public function setPinLowercaseLetters(?WindowsInformationProtectionPinCharacterRequirements $value): void {
         $this->getBackingStore()->set('pinLowercaseLetters', $value);
@@ -221,7 +221,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
 
     /**
      * Sets the pinMinimumLength property value. Integer value that sets the minimum number of characters required for the PIN. Default value is 4. The lowest number you can configure for this policy setting is 4. The largest number you can configure must be less than the number configured in the Maximum PIN length policy setting or the number 127, whichever is the lowest.
-     *  @param int|null $value Value to set for the pinMinimumLength property.
+     * @param int|null $value Value to set for the pinMinimumLength property.
     */
     public function setPinMinimumLength(?int $value): void {
         $this->getBackingStore()->set('pinMinimumLength', $value);
@@ -229,7 +229,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
 
     /**
      * Sets the pinSpecialCharacters property value. Pin Character Requirements
-     *  @param WindowsInformationProtectionPinCharacterRequirements|null $value Value to set for the pinSpecialCharacters property.
+     * @param WindowsInformationProtectionPinCharacterRequirements|null $value Value to set for the pinSpecialCharacters property.
     */
     public function setPinSpecialCharacters(?WindowsInformationProtectionPinCharacterRequirements $value): void {
         $this->getBackingStore()->set('pinSpecialCharacters', $value);
@@ -237,7 +237,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
 
     /**
      * Sets the pinUppercaseLetters property value. Pin Character Requirements
-     *  @param WindowsInformationProtectionPinCharacterRequirements|null $value Value to set for the pinUppercaseLetters property.
+     * @param WindowsInformationProtectionPinCharacterRequirements|null $value Value to set for the pinUppercaseLetters property.
     */
     public function setPinUppercaseLetters(?WindowsInformationProtectionPinCharacterRequirements $value): void {
         $this->getBackingStore()->set('pinUppercaseLetters', $value);
@@ -245,7 +245,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
 
     /**
      * Sets the revokeOnMdmHandoffDisabled property value. New property in RS2, pending documentation
-     *  @param bool|null $value Value to set for the revokeOnMdmHandoffDisabled property.
+     * @param bool|null $value Value to set for the revokeOnMdmHandoffDisabled property.
     */
     public function setRevokeOnMdmHandoffDisabled(?bool $value): void {
         $this->getBackingStore()->set('revokeOnMdmHandoffDisabled', $value);
@@ -253,7 +253,7 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
 
     /**
      * Sets the windowsHelloForBusinessBlocked property value. Boolean value that sets Windows Hello for Business as a method for signing into Windows.
-     *  @param bool|null $value Value to set for the windowsHelloForBusinessBlocked property.
+     * @param bool|null $value Value to set for the windowsHelloForBusinessBlocked property.
     */
     public function setWindowsHelloForBusinessBlocked(?bool $value): void {
         $this->getBackingStore()->set('windowsHelloForBusinessBlocked', $value);

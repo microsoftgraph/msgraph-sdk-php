@@ -81,7 +81,7 @@ class PolicyBase extends DirectoryObject implements Parsable
 
     /**
      * Sets the description property value. Description for this policy. Required.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -89,7 +89,7 @@ class PolicyBase extends DirectoryObject implements Parsable
 
     /**
      * Sets the displayName property value. Display name for this policy. Required.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);

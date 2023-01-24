@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\GroupLifecyclePolicies\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve the properties and relationships of a groupLifecyclePolicies object.
+*/
 class GroupLifecyclePolicyItemRequestBuilderGetQueryParameters 
 {
     /**

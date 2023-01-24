@@ -110,7 +110,7 @@ class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the forceChangePasswordNextSignIn property value. true if the user must change her password on the next login; otherwise false.
-     *  @param bool|null $value Value to set for the forceChangePasswordNextSignIn property.
+     * @param bool|null $value Value to set for the forceChangePasswordNextSignIn property.
     */
     public function setForceChangePasswordNextSignIn(?bool $value): void {
         $this->getBackingStore()->set('forceChangePasswordNextSignIn', $value);
@@ -134,7 +134,7 @@ class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the forceChangePasswordNextSignInWithMfa property value. If true, at next sign-in, the user must perform a multi-factor authentication (MFA) before being forced to change their password. The behavior is identical to forceChangePasswordNextSignIn except that the user is required to first perform a multi-factor authentication before password change. After a password change, this property will be automatically reset to false. If not set, default is false.
-     *  @param bool|null $value Value to set for the forceChangePasswordNextSignInWithMfa property.
+     * @param bool|null $value Value to set for the forceChangePasswordNextSignInWithMfa property.
     */
     public function setForceChangePasswordNextSignInWithMfa(?bool $value): void {
         $this->getBackingStore()->set('forceChangePasswordNextSignInWithMfa', $value);
@@ -142,7 +142,7 @@ class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -150,7 +150,7 @@ class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the password property value. The password for the user. This property is required when a user is created. It can be updated, but the user will be required to change the password on the next login. The password must satisfy minimum requirements as specified by the user’s passwordPolicies property. By default, a strong password is required.
-     *  @param string|null $value Value to set for the password property.
+     * @param string|null $value Value to set for the password property.
     */
     public function setPassword(?string $value): void {
         $this->getBackingStore()->set('password', $value);

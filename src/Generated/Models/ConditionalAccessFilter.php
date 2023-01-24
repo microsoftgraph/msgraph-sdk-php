@@ -100,7 +100,7 @@ class ConditionalAccessFilter implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class ConditionalAccessFilter implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class ConditionalAccessFilter implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the mode property value. The mode property
-     *  @param FilterMode|null $value Value to set for the mode property.
+     * @param FilterMode|null $value Value to set for the mode property.
     */
     public function setMode(?FilterMode $value): void {
         $this->getBackingStore()->set('mode', $value);
@@ -124,7 +124,7 @@ class ConditionalAccessFilter implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -132,7 +132,7 @@ class ConditionalAccessFilter implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the rule property value. Rule syntax is similar to that used for membership rules for groups in Azure Active Directory (Azure AD). For details, see rules with multiple expressions
-     *  @param string|null $value Value to set for the rule property.
+     * @param string|null $value Value to set for the rule property.
     */
     public function setRule(?string $value): void {
         $this->getBackingStore()->set('rule', $value);

@@ -110,7 +110,7 @@ class AccessReviewReviewerScope implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class AccessReviewReviewerScope implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class AccessReviewReviewerScope implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -134,7 +134,7 @@ class AccessReviewReviewerScope implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the query property value. The query specifying who will be the reviewer.
-     *  @param string|null $value Value to set for the query property.
+     * @param string|null $value Value to set for the query property.
     */
     public function setQuery(?string $value): void {
         $this->getBackingStore()->set('query', $value);
@@ -142,7 +142,7 @@ class AccessReviewReviewerScope implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the queryRoot property value. In the scenario where reviewers need to be specified dynamically, this property is used to indicate the relative source of the query. This property is only required if a relative query, for example, ./manager, is specified. Possible value: decisions.
-     *  @param string|null $value Value to set for the queryRoot property.
+     * @param string|null $value Value to set for the queryRoot property.
     */
     public function setQueryRoot(?string $value): void {
         $this->getBackingStore()->set('queryRoot', $value);
@@ -150,7 +150,7 @@ class AccessReviewReviewerScope implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the queryType property value. The type of query. Examples include MicrosoftGraph and ARM.
-     *  @param string|null $value Value to set for the queryType property.
+     * @param string|null $value Value to set for the queryType property.
     */
     public function setQueryType(?string $value): void {
         $this->getBackingStore()->set('queryType', $value);

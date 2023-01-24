@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Drive\Items\Item\ListItem\Fields;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The values of the columns set on this list item.
+*/
 class FieldsRequestBuilderGetQueryParameters 
 {
     /**

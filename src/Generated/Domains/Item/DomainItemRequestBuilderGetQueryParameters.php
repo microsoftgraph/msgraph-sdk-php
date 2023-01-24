@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Domains\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve the properties and relationships of domain object.
+*/
 class DomainItemRequestBuilderGetQueryParameters 
 {
     /**

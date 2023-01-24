@@ -62,7 +62,7 @@ class AttendeeBase extends Recipient implements Parsable
 
     /**
      * Sets the type property value. The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person, findMeetingTimes always considers the person is of the Required type.
-     *  @param AttendeeType|null $value Value to set for the type property.
+     * @param AttendeeType|null $value Value to set for the type property.
     */
     public function setType(?AttendeeType $value): void {
         $this->getBackingStore()->set('type', $value);

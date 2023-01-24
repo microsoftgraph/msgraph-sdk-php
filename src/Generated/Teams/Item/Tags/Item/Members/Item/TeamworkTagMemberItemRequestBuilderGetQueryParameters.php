@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Teams\Item\Tags\Item\Members\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Users assigned to the tag.
+*/
 class TeamworkTagMemberItemRequestBuilderGetQueryParameters 
 {
     /**

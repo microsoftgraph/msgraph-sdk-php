@@ -140,7 +140,7 @@ class Quota implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -148,7 +148,7 @@ class Quota implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -156,7 +156,7 @@ class Quota implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the deleted property value. Total space consumed by files in the recycle bin, in bytes. Read-only.
-     *  @param int|null $value Value to set for the deleted property.
+     * @param int|null $value Value to set for the deleted property.
     */
     public function setDeleted(?int $value): void {
         $this->getBackingStore()->set('deleted', $value);
@@ -164,7 +164,7 @@ class Quota implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -172,7 +172,7 @@ class Quota implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the remaining property value. Total space remaining before reaching the quota limit, in bytes. Read-only.
-     *  @param int|null $value Value to set for the remaining property.
+     * @param int|null $value Value to set for the remaining property.
     */
     public function setRemaining(?int $value): void {
         $this->getBackingStore()->set('remaining', $value);
@@ -180,7 +180,7 @@ class Quota implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the state property value. Enumeration value that indicates the state of the storage space. Read-only.
-     *  @param string|null $value Value to set for the state property.
+     * @param string|null $value Value to set for the state property.
     */
     public function setState(?string $value): void {
         $this->getBackingStore()->set('state', $value);
@@ -188,7 +188,7 @@ class Quota implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the storagePlanInformation property value. Information about the drive's storage quota plans. Only in Personal OneDrive.
-     *  @param StoragePlanInformation|null $value Value to set for the storagePlanInformation property.
+     * @param StoragePlanInformation|null $value Value to set for the storagePlanInformation property.
     */
     public function setStoragePlanInformation(?StoragePlanInformation $value): void {
         $this->getBackingStore()->set('storagePlanInformation', $value);
@@ -196,7 +196,7 @@ class Quota implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the total property value. Total allowed storage space, in bytes. Read-only.
-     *  @param int|null $value Value to set for the total property.
+     * @param int|null $value Value to set for the total property.
     */
     public function setTotal(?int $value): void {
         $this->getBackingStore()->set('total', $value);
@@ -204,7 +204,7 @@ class Quota implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the used property value. Total space used, in bytes. Read-only.
-     *  @param int|null $value Value to set for the used property.
+     * @param int|null $value Value to set for the used property.
     */
     public function setUsed(?int $value): void {
         $this->getBackingStore()->set('used', $value);

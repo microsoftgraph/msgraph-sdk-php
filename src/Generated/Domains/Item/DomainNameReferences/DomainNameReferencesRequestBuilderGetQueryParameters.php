@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Domains\Item\DomainNameReferences;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve a list of directoryObject with a reference to the domain. The returned list will contain all directory objects that have a dependency on the domain.
+*/
 class DomainNameReferencesRequestBuilderGetQueryParameters 
 {
     /**

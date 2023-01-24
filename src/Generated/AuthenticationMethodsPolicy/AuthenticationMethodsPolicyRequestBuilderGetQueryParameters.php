@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\AuthenticationMethodsPolicy;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get authenticationMethodsPolicy
+*/
 class AuthenticationMethodsPolicyRequestBuilderGetQueryParameters 
 {
     /**

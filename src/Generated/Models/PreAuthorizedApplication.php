@@ -100,7 +100,7 @@ class PreAuthorizedApplication implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class PreAuthorizedApplication implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the appId property value. The unique identifier for the application.
-     *  @param string|null $value Value to set for the appId property.
+     * @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value): void {
         $this->getBackingStore()->set('appId', $value);
@@ -116,7 +116,7 @@ class PreAuthorizedApplication implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -124,7 +124,7 @@ class PreAuthorizedApplication implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the delegatedPermissionIds property value. The unique identifier for the oauth2PermissionScopes the application requires.
-     *  @param array<string>|null $value Value to set for the delegatedPermissionIds property.
+     * @param array<string>|null $value Value to set for the delegatedPermissionIds property.
     */
     public function setDelegatedPermissionIds(?array $value): void {
         $this->getBackingStore()->set('delegatedPermissionIds', $value);
@@ -132,7 +132,7 @@ class PreAuthorizedApplication implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

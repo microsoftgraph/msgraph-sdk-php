@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SchemaExtension extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new SchemaExtension and sets the default values.
+     * Instantiates a new schemaExtension and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -94,7 +94,7 @@ class SchemaExtension extends Entity implements Parsable
 
     /**
      * Sets the description property value. Description for the schema extension. Supports $filter (eq).
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -102,7 +102,7 @@ class SchemaExtension extends Entity implements Parsable
 
     /**
      * Sets the owner property value. The appId of the application that is the owner of the schema extension. This property can be supplied on creation, to set the owner.  If not supplied, then the calling application's appId will be set as the owner. In either case, the signed-in user must be the owner of the application. So, for example, if creating a new schema extension definition using Graph Explorer, you must supply the owner property. Once set, this property is read-only and cannot be changed. Supports $filter (eq).
-     *  @param string|null $value Value to set for the owner property.
+     * @param string|null $value Value to set for the owner property.
     */
     public function setOwner(?string $value): void {
         $this->getBackingStore()->set('owner', $value);
@@ -110,7 +110,7 @@ class SchemaExtension extends Entity implements Parsable
 
     /**
      * Sets the properties property value. The collection of property names and types that make up the schema extension definition.
-     *  @param array<ExtensionSchemaProperty>|null $value Value to set for the properties property.
+     * @param array<ExtensionSchemaProperty>|null $value Value to set for the properties property.
     */
     public function setProperties(?array $value): void {
         $this->getBackingStore()->set('properties', $value);
@@ -118,7 +118,7 @@ class SchemaExtension extends Entity implements Parsable
 
     /**
      * Sets the status property value. The lifecycle state of the schema extension. Possible states are InDevelopment, Available, and Deprecated. Automatically set to InDevelopment on creation. For more information about the possible state transitions and behaviors, see Schema extensions lifecycle. Supports $filter (eq).
-     *  @param string|null $value Value to set for the status property.
+     * @param string|null $value Value to set for the status property.
     */
     public function setStatus(?string $value): void {
         $this->getBackingStore()->set('status', $value);
@@ -126,7 +126,7 @@ class SchemaExtension extends Entity implements Parsable
 
     /**
      * Sets the targetTypes property value. Set of Microsoft Graph types (that can support extensions) that the schema extension can be applied to. Select from administrativeUnit, contact, device, event, group, message, organization, post, todoTask, todoTaskList, or user.
-     *  @param array<string>|null $value Value to set for the targetTypes property.
+     * @param array<string>|null $value Value to set for the targetTypes property.
     */
     public function setTargetTypes(?array $value): void {
         $this->getBackingStore()->set('targetTypes', $value);

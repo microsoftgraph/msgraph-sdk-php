@@ -76,7 +76,7 @@ class ManagedApp extends MobileApp implements Parsable
 
     /**
      * Sets the appAvailability property value. A managed (MAM) application's availability.
-     *  @param ManagedAppAvailability|null $value Value to set for the appAvailability property.
+     * @param ManagedAppAvailability|null $value Value to set for the appAvailability property.
     */
     public function setAppAvailability(?ManagedAppAvailability $value): void {
         $this->getBackingStore()->set('appAvailability', $value);
@@ -84,7 +84,7 @@ class ManagedApp extends MobileApp implements Parsable
 
     /**
      * Sets the version property value. The Application's version.
-     *  @param string|null $value Value to set for the version property.
+     * @param string|null $value Value to set for the version property.
     */
     public function setVersion(?string $value): void {
         $this->getBackingStore()->set('version', $value);

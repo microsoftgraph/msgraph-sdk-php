@@ -65,7 +65,7 @@ class AttributeRuleMembers extends SubjectSet implements Parsable
 
     /**
      * Sets the description property value. A description of the membership rule.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -73,7 +73,7 @@ class AttributeRuleMembers extends SubjectSet implements Parsable
 
     /**
      * Sets the membershipRule property value. Determines the allowed target users for this policy. For more information about the syntax of the membership rule, see Membership Rules syntax.
-     *  @param string|null $value Value to set for the membershipRule property.
+     * @param string|null $value Value to set for the membershipRule property.
     */
     public function setMembershipRule(?string $value): void {
         $this->getBackingStore()->set('membershipRule', $value);

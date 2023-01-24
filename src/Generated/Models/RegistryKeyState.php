@@ -180,7 +180,7 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -188,7 +188,7 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -196,7 +196,7 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the hive property value. A Windows registry hive : HKEY_CURRENT_CONFIG HKEY_CURRENT_USER HKEY_LOCAL_MACHINE/SAM HKEY_LOCAL_MACHINE/Security HKEY_LOCAL_MACHINE/Software HKEY_LOCAL_MACHINE/System HKEY_USERS/.Default. Possible values are: unknown, currentConfig, currentUser, localMachineSam, localMachineSecurity, localMachineSoftware, localMachineSystem, usersDefault.
-     *  @param RegistryHive|null $value Value to set for the hive property.
+     * @param RegistryHive|null $value Value to set for the hive property.
     */
     public function setHive(?RegistryHive $value): void {
         $this->getBackingStore()->set('hive', $value);
@@ -204,7 +204,7 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the key property value. Current (i.e. changed) registry key (excludes HIVE).
-     *  @param string|null $value Value to set for the key property.
+     * @param string|null $value Value to set for the key property.
     */
     public function setKey(?string $value): void {
         $this->getBackingStore()->set('key', $value);
@@ -212,7 +212,7 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -220,7 +220,7 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the oldKey property value. Previous (i.e. before changed) registry key (excludes HIVE).
-     *  @param string|null $value Value to set for the oldKey property.
+     * @param string|null $value Value to set for the oldKey property.
     */
     public function setOldKey(?string $value): void {
         $this->getBackingStore()->set('oldKey', $value);
@@ -228,7 +228,7 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the oldValueData property value. Previous (i.e. before changed) registry key value data (contents).
-     *  @param string|null $value Value to set for the oldValueData property.
+     * @param string|null $value Value to set for the oldValueData property.
     */
     public function setOldValueData(?string $value): void {
         $this->getBackingStore()->set('oldValueData', $value);
@@ -236,7 +236,7 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the oldValueName property value. Previous (i.e. before changed) registry key value name.
-     *  @param string|null $value Value to set for the oldValueName property.
+     * @param string|null $value Value to set for the oldValueName property.
     */
     public function setOldValueName(?string $value): void {
         $this->getBackingStore()->set('oldValueName', $value);
@@ -244,7 +244,7 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the operation property value. Operation that changed the registry key name and/or value. Possible values are: unknown, create, modify, delete.
-     *  @param RegistryOperation|null $value Value to set for the operation property.
+     * @param RegistryOperation|null $value Value to set for the operation property.
     */
     public function setOperation(?RegistryOperation $value): void {
         $this->getBackingStore()->set('operation', $value);
@@ -252,7 +252,7 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the processId property value. Process ID (PID) of the process that modified the registry key (process details will appear in the alert 'processes' collection).
-     *  @param int|null $value Value to set for the processId property.
+     * @param int|null $value Value to set for the processId property.
     */
     public function setProcessId(?int $value): void {
         $this->getBackingStore()->set('processId', $value);
@@ -260,7 +260,7 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the valueData property value. Current (i.e. changed) registry key value data (contents).
-     *  @param string|null $value Value to set for the valueData property.
+     * @param string|null $value Value to set for the valueData property.
     */
     public function setValueData(?string $value): void {
         $this->getBackingStore()->set('valueData', $value);
@@ -268,7 +268,7 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the valueName property value. Current (i.e. changed) registry key value name
-     *  @param string|null $value Value to set for the valueName property.
+     * @param string|null $value Value to set for the valueName property.
     */
     public function setValueName(?string $value): void {
         $this->getBackingStore()->set('valueName', $value);
@@ -276,7 +276,7 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the valueType property value. Registry key value type REG_BINARY REG_DWORD REG_DWORD_LITTLE_ENDIAN REG_DWORD_BIG_ENDIANREG_EXPAND_SZ REG_LINK REG_MULTI_SZ REG_NONE REG_QWORD REG_QWORD_LITTLE_ENDIAN REG_SZ Possible values are: unknown, binary, dword, dwordLittleEndian, dwordBigEndian, expandSz, link, multiSz, none, qword, qwordlittleEndian, sz.
-     *  @param RegistryValueType|null $value Value to set for the valueType property.
+     * @param RegistryValueType|null $value Value to set for the valueType property.
     */
     public function setValueType(?RegistryValueType $value): void {
         $this->getBackingStore()->set('valueType', $value);

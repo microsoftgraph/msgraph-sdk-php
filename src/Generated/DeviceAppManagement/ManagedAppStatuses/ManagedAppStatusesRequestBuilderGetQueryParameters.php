@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppStatuses;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The managed app statuses.
+*/
 class ManagedAppStatusesRequestBuilderGetQueryParameters 
 {
     /**

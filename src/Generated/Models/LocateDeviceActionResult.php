@@ -54,7 +54,7 @@ class LocateDeviceActionResult extends DeviceActionResult implements Parsable
 
     /**
      * Sets the deviceLocation property value. device location
-     *  @param DeviceGeoLocation|null $value Value to set for the deviceLocation property.
+     * @param DeviceGeoLocation|null $value Value to set for the deviceLocation property.
     */
     public function setDeviceLocation(?DeviceGeoLocation $value): void {
         $this->getBackingStore()->set('deviceLocation', $value);

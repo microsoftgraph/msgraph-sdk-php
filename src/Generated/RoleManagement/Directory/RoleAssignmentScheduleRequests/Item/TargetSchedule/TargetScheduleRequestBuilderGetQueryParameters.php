@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentSched
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The schedule for an eligible role assignment that is referenced through the targetScheduleId property. Supports $expand.
+*/
 class TargetScheduleRequestBuilderGetQueryParameters 
 {
     /**

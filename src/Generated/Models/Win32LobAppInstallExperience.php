@@ -10,6 +10,9 @@ use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
+/**
+ * Contains installation experience properties for a Win32 App
+*/
 class Win32LobAppInstallExperience implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -100,7 +103,7 @@ class Win32LobAppInstallExperience implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +111,7 @@ class Win32LobAppInstallExperience implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +119,7 @@ class Win32LobAppInstallExperience implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the deviceRestartBehavior property value. Indicates the type of restart action.
-     *  @param Win32LobAppRestartBehavior|null $value Value to set for the deviceRestartBehavior property.
+     * @param Win32LobAppRestartBehavior|null $value Value to set for the deviceRestartBehavior property.
     */
     public function setDeviceRestartBehavior(?Win32LobAppRestartBehavior $value): void {
         $this->getBackingStore()->set('deviceRestartBehavior', $value);
@@ -124,7 +127,7 @@ class Win32LobAppInstallExperience implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -132,7 +135,7 @@ class Win32LobAppInstallExperience implements AdditionalDataHolder, BackedModel,
 
     /**
      * Sets the runAsAccount property value. Indicates the type of execution context the app runs in.
-     *  @param RunAsAccountType|null $value Value to set for the runAsAccount property.
+     * @param RunAsAccountType|null $value Value to set for the runAsAccount property.
     */
     public function setRunAsAccount(?RunAsAccountType $value): void {
         $this->getBackingStore()->set('runAsAccount', $value);

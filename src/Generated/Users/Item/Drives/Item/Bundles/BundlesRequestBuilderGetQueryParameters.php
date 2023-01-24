@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Drives\Item\Bundles;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get a list of all the [bundles][bundle] in a user's drive.
+*/
 class BundlesRequestBuilderGetQueryParameters 
 {
     /**

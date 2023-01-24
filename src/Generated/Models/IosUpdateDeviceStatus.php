@@ -155,7 +155,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
 
     /**
      * Sets the complianceGracePeriodExpirationDateTime property value. The DateTime when device compliance grace period expires
-     *  @param DateTime|null $value Value to set for the complianceGracePeriodExpirationDateTime property.
+     * @param DateTime|null $value Value to set for the complianceGracePeriodExpirationDateTime property.
     */
     public function setComplianceGracePeriodExpirationDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('complianceGracePeriodExpirationDateTime', $value);
@@ -163,7 +163,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
 
     /**
      * Sets the deviceDisplayName property value. Device name of the DevicePolicyStatus.
-     *  @param string|null $value Value to set for the deviceDisplayName property.
+     * @param string|null $value Value to set for the deviceDisplayName property.
     */
     public function setDeviceDisplayName(?string $value): void {
         $this->getBackingStore()->set('deviceDisplayName', $value);
@@ -171,7 +171,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
 
     /**
      * Sets the deviceId property value. The device id that is being reported.
-     *  @param string|null $value Value to set for the deviceId property.
+     * @param string|null $value Value to set for the deviceId property.
     */
     public function setDeviceId(?string $value): void {
         $this->getBackingStore()->set('deviceId', $value);
@@ -179,7 +179,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
 
     /**
      * Sets the deviceModel property value. The device model that is being reported
-     *  @param string|null $value Value to set for the deviceModel property.
+     * @param string|null $value Value to set for the deviceModel property.
     */
     public function setDeviceModel(?string $value): void {
         $this->getBackingStore()->set('deviceModel', $value);
@@ -187,7 +187,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
 
     /**
      * Sets the installStatus property value. The installStatus property
-     *  @param IosUpdatesInstallStatus|null $value Value to set for the installStatus property.
+     * @param IosUpdatesInstallStatus|null $value Value to set for the installStatus property.
     */
     public function setInstallStatus(?IosUpdatesInstallStatus $value): void {
         $this->getBackingStore()->set('installStatus', $value);
@@ -195,7 +195,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
 
     /**
      * Sets the lastReportedDateTime property value. Last modified date time of the policy report.
-     *  @param DateTime|null $value Value to set for the lastReportedDateTime property.
+     * @param DateTime|null $value Value to set for the lastReportedDateTime property.
     */
     public function setLastReportedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastReportedDateTime', $value);
@@ -203,7 +203,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
 
     /**
      * Sets the osVersion property value. The device version that is being reported.
-     *  @param string|null $value Value to set for the osVersion property.
+     * @param string|null $value Value to set for the osVersion property.
     */
     public function setOsVersion(?string $value): void {
         $this->getBackingStore()->set('osVersion', $value);
@@ -211,7 +211,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status property
-     *  @param ComplianceStatus|null $value Value to set for the status property.
+     * @param ComplianceStatus|null $value Value to set for the status property.
     */
     public function setStatus(?ComplianceStatus $value): void {
         $this->getBackingStore()->set('status', $value);
@@ -219,7 +219,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
 
     /**
      * Sets the userId property value. The User id that is being reported.
-     *  @param string|null $value Value to set for the userId property.
+     * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {
         $this->getBackingStore()->set('userId', $value);
@@ -227,7 +227,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
 
     /**
      * Sets the userName property value. The User Name that is being reported
-     *  @param string|null $value Value to set for the userName property.
+     * @param string|null $value Value to set for the userName property.
     */
     public function setUserName(?string $value): void {
         $this->getBackingStore()->set('userName', $value);
@@ -235,7 +235,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
 
     /**
      * Sets the userPrincipalName property value. UserPrincipalName.
-     *  @param string|null $value Value to set for the userPrincipalName property.
+     * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {
         $this->getBackingStore()->set('userPrincipalName', $value);

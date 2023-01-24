@@ -84,7 +84,7 @@ class ThumbnailSet extends Entity implements Parsable
 
     /**
      * Sets the large property value. A 1920x1920 scaled thumbnail.
-     *  @param Thumbnail|null $value Value to set for the large property.
+     * @param Thumbnail|null $value Value to set for the large property.
     */
     public function setLarge(?Thumbnail $value): void {
         $this->getBackingStore()->set('large', $value);
@@ -92,7 +92,7 @@ class ThumbnailSet extends Entity implements Parsable
 
     /**
      * Sets the medium property value. A 176x176 scaled thumbnail.
-     *  @param Thumbnail|null $value Value to set for the medium property.
+     * @param Thumbnail|null $value Value to set for the medium property.
     */
     public function setMedium(?Thumbnail $value): void {
         $this->getBackingStore()->set('medium', $value);
@@ -100,7 +100,7 @@ class ThumbnailSet extends Entity implements Parsable
 
     /**
      * Sets the small property value. A 48x48 cropped thumbnail.
-     *  @param Thumbnail|null $value Value to set for the small property.
+     * @param Thumbnail|null $value Value to set for the small property.
     */
     public function setSmall(?Thumbnail $value): void {
         $this->getBackingStore()->set('small', $value);
@@ -108,7 +108,7 @@ class ThumbnailSet extends Entity implements Parsable
 
     /**
      * Sets the source property value. A custom thumbnail image or the original image used to generate other thumbnails.
-     *  @param Thumbnail|null $value Value to set for the source property.
+     * @param Thumbnail|null $value Value to set for the source property.
     */
     public function setSource(?Thumbnail $value): void {
         $this->getBackingStore()->set('source', $value);

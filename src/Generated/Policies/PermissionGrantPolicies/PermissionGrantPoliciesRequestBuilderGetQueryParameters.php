@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Policies\PermissionGrantPolicies;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve the list of permissionGrantPolicy objects.
+*/
 class PermissionGrantPoliciesRequestBuilderGetQueryParameters 
 {
     /**

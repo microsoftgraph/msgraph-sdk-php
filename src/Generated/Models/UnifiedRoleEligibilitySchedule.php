@@ -64,7 +64,7 @@ class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase implements 
 
     /**
      * Sets the memberType property value. How the role eligibility is inherited. It can either be Inherited, Direct, or Group. It can further imply whether the unifiedRoleEligibilitySchedule can be managed by the caller. Supports $filter (eq, ne).
-     *  @param string|null $value Value to set for the memberType property.
+     * @param string|null $value Value to set for the memberType property.
     */
     public function setMemberType(?string $value): void {
         $this->getBackingStore()->set('memberType', $value);
@@ -72,7 +72,7 @@ class UnifiedRoleEligibilitySchedule extends UnifiedRoleScheduleBase implements 
 
     /**
      * Sets the scheduleInfo property value. The period of the role eligibility.
-     *  @param RequestSchedule|null $value Value to set for the scheduleInfo property.
+     * @param RequestSchedule|null $value Value to set for the scheduleInfo property.
     */
     public function setScheduleInfo(?RequestSchedule $value): void {
         $this->getBackingStore()->set('scheduleInfo', $value);

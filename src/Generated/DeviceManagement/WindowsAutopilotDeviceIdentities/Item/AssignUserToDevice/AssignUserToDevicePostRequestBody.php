@@ -90,7 +90,7 @@ class AssignUserToDevicePostRequestBody implements AdditionalDataHolder, BackedM
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -98,7 +98,7 @@ class AssignUserToDevicePostRequestBody implements AdditionalDataHolder, BackedM
 
     /**
      * Sets the addressableUserName property value. The addressableUserName property
-     *  @param string|null $value Value to set for the addressableUserName property.
+     * @param string|null $value Value to set for the addressableUserName property.
     */
     public function setAddressableUserName(?string $value): void {
         $this->getBackingStore()->set('addressableUserName', $value);
@@ -106,7 +106,7 @@ class AssignUserToDevicePostRequestBody implements AdditionalDataHolder, BackedM
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -114,7 +114,7 @@ class AssignUserToDevicePostRequestBody implements AdditionalDataHolder, BackedM
 
     /**
      * Sets the userPrincipalName property value. The userPrincipalName property
-     *  @param string|null $value Value to set for the userPrincipalName property.
+     * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {
         $this->getBackingStore()->set('userPrincipalName', $value);

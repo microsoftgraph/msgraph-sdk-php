@@ -10,6 +10,9 @@ use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
+/**
+ * Device Compilance Policy Setting State for a given device.
+*/
 class DeviceCompliancePolicySettingState implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -200,7 +203,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Backed
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -208,7 +211,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Backed
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -216,7 +219,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Backed
 
     /**
      * Sets the currentValue property value. Current value of setting on device
-     *  @param string|null $value Value to set for the currentValue property.
+     * @param string|null $value Value to set for the currentValue property.
     */
     public function setCurrentValue(?string $value): void {
         $this->getBackingStore()->set('currentValue', $value);
@@ -224,7 +227,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Backed
 
     /**
      * Sets the errorCode property value. Error code for the setting
-     *  @param int|null $value Value to set for the errorCode property.
+     * @param int|null $value Value to set for the errorCode property.
     */
     public function setErrorCode(?int $value): void {
         $this->getBackingStore()->set('errorCode', $value);
@@ -232,7 +235,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Backed
 
     /**
      * Sets the errorDescription property value. Error description
-     *  @param string|null $value Value to set for the errorDescription property.
+     * @param string|null $value Value to set for the errorDescription property.
     */
     public function setErrorDescription(?string $value): void {
         $this->getBackingStore()->set('errorDescription', $value);
@@ -240,7 +243,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Backed
 
     /**
      * Sets the instanceDisplayName property value. Name of setting instance that is being reported.
-     *  @param string|null $value Value to set for the instanceDisplayName property.
+     * @param string|null $value Value to set for the instanceDisplayName property.
     */
     public function setInstanceDisplayName(?string $value): void {
         $this->getBackingStore()->set('instanceDisplayName', $value);
@@ -248,7 +251,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Backed
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -256,7 +259,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Backed
 
     /**
      * Sets the setting property value. The setting that is being reported
-     *  @param string|null $value Value to set for the setting property.
+     * @param string|null $value Value to set for the setting property.
     */
     public function setSetting(?string $value): void {
         $this->getBackingStore()->set('setting', $value);
@@ -264,7 +267,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Backed
 
     /**
      * Sets the settingName property value. Localized/user friendly setting name that is being reported
-     *  @param string|null $value Value to set for the settingName property.
+     * @param string|null $value Value to set for the settingName property.
     */
     public function setSettingName(?string $value): void {
         $this->getBackingStore()->set('settingName', $value);
@@ -272,7 +275,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Backed
 
     /**
      * Sets the sources property value. Contributing policies
-     *  @param array<SettingSource>|null $value Value to set for the sources property.
+     * @param array<SettingSource>|null $value Value to set for the sources property.
     */
     public function setSources(?array $value): void {
         $this->getBackingStore()->set('sources', $value);
@@ -280,7 +283,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Backed
 
     /**
      * Sets the state property value. The state property
-     *  @param ComplianceStatus|null $value Value to set for the state property.
+     * @param ComplianceStatus|null $value Value to set for the state property.
     */
     public function setState(?ComplianceStatus $value): void {
         $this->getBackingStore()->set('state', $value);
@@ -288,7 +291,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Backed
 
     /**
      * Sets the userEmail property value. UserEmail
-     *  @param string|null $value Value to set for the userEmail property.
+     * @param string|null $value Value to set for the userEmail property.
     */
     public function setUserEmail(?string $value): void {
         $this->getBackingStore()->set('userEmail', $value);
@@ -296,7 +299,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Backed
 
     /**
      * Sets the userId property value. UserId
-     *  @param string|null $value Value to set for the userId property.
+     * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {
         $this->getBackingStore()->set('userId', $value);
@@ -304,7 +307,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Backed
 
     /**
      * Sets the userName property value. UserName
-     *  @param string|null $value Value to set for the userName property.
+     * @param string|null $value Value to set for the userName property.
     */
     public function setUserName(?string $value): void {
         $this->getBackingStore()->set('userName', $value);
@@ -312,7 +315,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Backed
 
     /**
      * Sets the userPrincipalName property value. UserPrincipalName.
-     *  @param string|null $value Value to set for the userPrincipalName property.
+     * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {
         $this->getBackingStore()->set('userPrincipalName', $value);

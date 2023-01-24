@@ -7,6 +7,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Contains properties for a single Intune app category.
+*/
 class MobileAppCategory extends Entity implements Parsable 
 {
     /**
@@ -65,7 +68,7 @@ class MobileAppCategory extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The name of the app category.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -73,7 +76,7 @@ class MobileAppCategory extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. The date and time the mobileAppCategory was last modified.
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);

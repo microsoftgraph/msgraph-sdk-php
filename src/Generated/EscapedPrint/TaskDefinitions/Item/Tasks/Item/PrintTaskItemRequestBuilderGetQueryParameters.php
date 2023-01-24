@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\EscapedPrint\TaskDefinitions\Item\Tasks\Item
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
+*/
 class PrintTaskItemRequestBuilderGetQueryParameters 
 {
     /**

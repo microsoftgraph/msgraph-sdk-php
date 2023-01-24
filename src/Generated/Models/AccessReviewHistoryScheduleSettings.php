@@ -100,7 +100,7 @@ class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, Backe
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, Backe
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, Backe
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -124,7 +124,7 @@ class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, Backe
 
     /**
      * Sets the recurrence property value. The recurrence property
-     *  @param PatternedRecurrence|null $value Value to set for the recurrence property.
+     * @param PatternedRecurrence|null $value Value to set for the recurrence property.
     */
     public function setRecurrence(?PatternedRecurrence $value): void {
         $this->getBackingStore()->set('recurrence', $value);
@@ -132,7 +132,7 @@ class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, Backe
 
     /**
      * Sets the reportRange property value. A duration string in ISO 8601 duration format specifying the lookback period of the generated review history data. For example, if a history definition is scheduled to run on the 1st of every month, the reportRange is P1M. In this case, on the first of every month, access review history data will be collected containing only the previous month's review data. Note: Only years, months, and days ISO 8601 properties are supported. Required.
-     *  @param string|null $value Value to set for the reportRange property.
+     * @param string|null $value Value to set for the reportRange property.
     */
     public function setReportRange(?string $value): void {
         $this->getBackingStore()->set('reportRange', $value);

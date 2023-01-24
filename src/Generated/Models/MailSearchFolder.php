@@ -85,7 +85,7 @@ class MailSearchFolder extends MailFolder implements Parsable
 
     /**
      * Sets the filterQuery property value. The OData query to filter the messages.
-     *  @param string|null $value Value to set for the filterQuery property.
+     * @param string|null $value Value to set for the filterQuery property.
     */
     public function setFilterQuery(?string $value): void {
         $this->getBackingStore()->set('filterQuery', $value);
@@ -93,7 +93,7 @@ class MailSearchFolder extends MailFolder implements Parsable
 
     /**
      * Sets the includeNestedFolders property value. Indicates how the mailbox folder hierarchy should be traversed in the search. true means that a deep search should be done to include child folders in the hierarchy of each folder explicitly specified in sourceFolderIds. false means a shallow search of only each of the folders explicitly specified in sourceFolderIds.
-     *  @param bool|null $value Value to set for the includeNestedFolders property.
+     * @param bool|null $value Value to set for the includeNestedFolders property.
     */
     public function setIncludeNestedFolders(?bool $value): void {
         $this->getBackingStore()->set('includeNestedFolders', $value);
@@ -101,7 +101,7 @@ class MailSearchFolder extends MailFolder implements Parsable
 
     /**
      * Sets the isSupported property value. Indicates whether a search folder is editable using REST APIs.
-     *  @param bool|null $value Value to set for the isSupported property.
+     * @param bool|null $value Value to set for the isSupported property.
     */
     public function setIsSupported(?bool $value): void {
         $this->getBackingStore()->set('isSupported', $value);
@@ -109,7 +109,7 @@ class MailSearchFolder extends MailFolder implements Parsable
 
     /**
      * Sets the sourceFolderIds property value. The mailbox folders that should be mined.
-     *  @param array<string>|null $value Value to set for the sourceFolderIds property.
+     * @param array<string>|null $value Value to set for the sourceFolderIds property.
     */
     public function setSourceFolderIds(?array $value): void {
         $this->getBackingStore()->set('sourceFolderIds', $value);

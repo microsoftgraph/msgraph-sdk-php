@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Team\Schedule\SchedulingGroups;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get the list of schedulingGroups in this schedule.
+*/
 class SchedulingGroupsRequestBuilderGetQueryParameters 
 {
     /**

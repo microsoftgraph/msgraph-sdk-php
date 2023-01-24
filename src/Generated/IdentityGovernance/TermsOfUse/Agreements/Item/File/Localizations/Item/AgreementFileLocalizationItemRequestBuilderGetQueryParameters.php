@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Ite
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The localized version of the terms of use agreement files attached to the agreement.
+*/
 class AgreementFileLocalizationItemRequestBuilderGetQueryParameters 
 {
     /**

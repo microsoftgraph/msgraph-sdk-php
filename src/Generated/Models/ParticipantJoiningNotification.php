@@ -54,7 +54,7 @@ class ParticipantJoiningNotification extends Entity implements Parsable
 
     /**
      * Sets the call property value. The call property
-     *  @param Call|null $value Value to set for the call property.
+     * @param Call|null $value Value to set for the call property.
     */
     public function setCall(?Call $value): void {
         $this->getBackingStore()->set('call', $value);

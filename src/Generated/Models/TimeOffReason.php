@@ -75,7 +75,7 @@ class TimeOffReason extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the displayName property value. The name of the timeOffReason. Required.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -83,7 +83,7 @@ class TimeOffReason extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the iconType property value. Supported icon types are: none, car, calendar, running, plane, firstAid, doctor, notWorking, clock, juryDuty, globe, cup, phone, weather, umbrella, piggyBank, dog, cake, trafficCone, pin, sunny. Required.
-     *  @param TimeOffReasonIconType|null $value Value to set for the iconType property.
+     * @param TimeOffReasonIconType|null $value Value to set for the iconType property.
     */
     public function setIconType(?TimeOffReasonIconType $value): void {
         $this->getBackingStore()->set('iconType', $value);
@@ -91,7 +91,7 @@ class TimeOffReason extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the isActive property value. Indicates whether the timeOffReason can be used when creating new entities or updating existing ones. Required.
-     *  @param bool|null $value Value to set for the isActive property.
+     * @param bool|null $value Value to set for the isActive property.
     */
     public function setIsActive(?bool $value): void {
         $this->getBackingStore()->set('isActive', $value);

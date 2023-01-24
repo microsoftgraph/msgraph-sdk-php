@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Con
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Delete ref of navigation property internalSponsors for identityGovernance
+*/
 class RefRequestBuilderDeleteQueryParameters 
 {
     /**

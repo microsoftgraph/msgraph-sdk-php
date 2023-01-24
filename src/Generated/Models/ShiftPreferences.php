@@ -55,7 +55,7 @@ class ShiftPreferences extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the availability property value. Availability of the user to be scheduled for work and its recurrence pattern.
-     *  @param array<ShiftAvailability>|null $value Value to set for the availability property.
+     * @param array<ShiftAvailability>|null $value Value to set for the availability property.
     */
     public function setAvailability(?array $value): void {
         $this->getBackingStore()->set('availability', $value);

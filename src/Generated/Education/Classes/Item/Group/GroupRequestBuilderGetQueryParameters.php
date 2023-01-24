@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Education\Classes\Item\Group;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The underlying Microsoft 365 group object.
+*/
 class GroupRequestBuilderGetQueryParameters 
 {
     /**

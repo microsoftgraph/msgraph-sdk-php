@@ -55,7 +55,7 @@ class MicrosoftStoreForBusinessAppAssignmentSettings extends MobileAppAssignment
 
     /**
      * Sets the useDeviceContext property value. Whether or not to use device execution context for Microsoft Store for Business mobile app.
-     *  @param bool|null $value Value to set for the useDeviceContext property.
+     * @param bool|null $value Value to set for the useDeviceContext property.
     */
     public function setUseDeviceContext(?bool $value): void {
         $this->getBackingStore()->set('useDeviceContext', $value);

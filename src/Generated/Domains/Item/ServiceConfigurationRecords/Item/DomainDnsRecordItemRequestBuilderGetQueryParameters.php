@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\Ite
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable. Supports $expand.
+*/
 class DomainDnsRecordItemRequestBuilderGetQueryParameters 
 {
     /**

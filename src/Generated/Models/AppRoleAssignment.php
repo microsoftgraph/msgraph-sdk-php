@@ -116,7 +116,7 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
 
     /**
      * Sets the appRoleId property value. The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application's service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.
-     *  @param string|null $value Value to set for the appRoleId property.
+     * @param string|null $value Value to set for the appRoleId property.
     */
     public function setAppRoleId(?string $value): void {
         $this->getBackingStore()->set('appRoleId', $value);
@@ -124,7 +124,7 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
 
     /**
      * Sets the createdDateTime property value. The time when the app role assignment was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -132,7 +132,7 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
 
     /**
      * Sets the principalDisplayName property value. The display name of the user, group, or service principal that was granted the app role assignment. Read-only. Supports $filter (eq and startswith).
-     *  @param string|null $value Value to set for the principalDisplayName property.
+     * @param string|null $value Value to set for the principalDisplayName property.
     */
     public function setPrincipalDisplayName(?string $value): void {
         $this->getBackingStore()->set('principalDisplayName', $value);
@@ -140,7 +140,7 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
 
     /**
      * Sets the principalId property value. The unique identifier (id) for the user, security group, or service principal being granted the app role. Security groups with dynamic memberships are supported. Required on create.
-     *  @param string|null $value Value to set for the principalId property.
+     * @param string|null $value Value to set for the principalId property.
     */
     public function setPrincipalId(?string $value): void {
         $this->getBackingStore()->set('principalId', $value);
@@ -148,7 +148,7 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
 
     /**
      * Sets the principalType property value. The type of the assigned principal. This can either be User, Group, or ServicePrincipal. Read-only.
-     *  @param string|null $value Value to set for the principalType property.
+     * @param string|null $value Value to set for the principalType property.
     */
     public function setPrincipalType(?string $value): void {
         $this->getBackingStore()->set('principalType', $value);
@@ -156,7 +156,7 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
 
     /**
      * Sets the resourceDisplayName property value. The display name of the resource app's service principal to which the assignment is made.
-     *  @param string|null $value Value to set for the resourceDisplayName property.
+     * @param string|null $value Value to set for the resourceDisplayName property.
     */
     public function setResourceDisplayName(?string $value): void {
         $this->getBackingStore()->set('resourceDisplayName', $value);
@@ -164,7 +164,7 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
 
     /**
      * Sets the resourceId property value. The unique identifier (id) for the resource service principal for which the assignment is made. Required on create. Supports $filter (eq only).
-     *  @param string|null $value Value to set for the resourceId property.
+     * @param string|null $value Value to set for the resourceId property.
     */
     public function setResourceId(?string $value): void {
         $this->getBackingStore()->set('resourceId', $value);

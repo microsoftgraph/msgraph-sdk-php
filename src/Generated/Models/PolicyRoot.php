@@ -204,7 +204,7 @@ class PolicyRoot extends Entity implements Parsable
 
     /**
      * Sets the activityBasedTimeoutPolicies property value. The policy that controls the idle time out for web sessions for applications.
-     *  @param array<ActivityBasedTimeoutPolicy>|null $value Value to set for the activityBasedTimeoutPolicies property.
+     * @param array<ActivityBasedTimeoutPolicy>|null $value Value to set for the activityBasedTimeoutPolicies property.
     */
     public function setActivityBasedTimeoutPolicies(?array $value): void {
         $this->getBackingStore()->set('activityBasedTimeoutPolicies', $value);
@@ -212,7 +212,7 @@ class PolicyRoot extends Entity implements Parsable
 
     /**
      * Sets the adminConsentRequestPolicy property value. The policy by which consent requests are created and managed for the entire tenant.
-     *  @param AdminConsentRequestPolicy|null $value Value to set for the adminConsentRequestPolicy property.
+     * @param AdminConsentRequestPolicy|null $value Value to set for the adminConsentRequestPolicy property.
     */
     public function setAdminConsentRequestPolicy(?AdminConsentRequestPolicy $value): void {
         $this->getBackingStore()->set('adminConsentRequestPolicy', $value);
@@ -220,7 +220,7 @@ class PolicyRoot extends Entity implements Parsable
 
     /**
      * Sets the authenticationFlowsPolicy property value. The policy configuration of the self-service sign-up experience of external users.
-     *  @param AuthenticationFlowsPolicy|null $value Value to set for the authenticationFlowsPolicy property.
+     * @param AuthenticationFlowsPolicy|null $value Value to set for the authenticationFlowsPolicy property.
     */
     public function setAuthenticationFlowsPolicy(?AuthenticationFlowsPolicy $value): void {
         $this->getBackingStore()->set('authenticationFlowsPolicy', $value);
@@ -228,7 +228,7 @@ class PolicyRoot extends Entity implements Parsable
 
     /**
      * Sets the authenticationMethodsPolicy property value. The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD).
-     *  @param AuthenticationMethodsPolicy|null $value Value to set for the authenticationMethodsPolicy property.
+     * @param AuthenticationMethodsPolicy|null $value Value to set for the authenticationMethodsPolicy property.
     */
     public function setAuthenticationMethodsPolicy(?AuthenticationMethodsPolicy $value): void {
         $this->getBackingStore()->set('authenticationMethodsPolicy', $value);
@@ -236,7 +236,7 @@ class PolicyRoot extends Entity implements Parsable
 
     /**
      * Sets the authorizationPolicy property value. The policy that controls Azure AD authorization settings.
-     *  @param AuthorizationPolicy|null $value Value to set for the authorizationPolicy property.
+     * @param AuthorizationPolicy|null $value Value to set for the authorizationPolicy property.
     */
     public function setAuthorizationPolicy(?AuthorizationPolicy $value): void {
         $this->getBackingStore()->set('authorizationPolicy', $value);
@@ -244,7 +244,7 @@ class PolicyRoot extends Entity implements Parsable
 
     /**
      * Sets the claimsMappingPolicies property value. The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
-     *  @param array<ClaimsMappingPolicy>|null $value Value to set for the claimsMappingPolicies property.
+     * @param array<ClaimsMappingPolicy>|null $value Value to set for the claimsMappingPolicies property.
     */
     public function setClaimsMappingPolicies(?array $value): void {
         $this->getBackingStore()->set('claimsMappingPolicies', $value);
@@ -252,7 +252,7 @@ class PolicyRoot extends Entity implements Parsable
 
     /**
      * Sets the conditionalAccessPolicies property value. The custom rules that define an access scenario.
-     *  @param array<ConditionalAccessPolicy>|null $value Value to set for the conditionalAccessPolicies property.
+     * @param array<ConditionalAccessPolicy>|null $value Value to set for the conditionalAccessPolicies property.
     */
     public function setConditionalAccessPolicies(?array $value): void {
         $this->getBackingStore()->set('conditionalAccessPolicies', $value);
@@ -260,7 +260,7 @@ class PolicyRoot extends Entity implements Parsable
 
     /**
      * Sets the crossTenantAccessPolicy property value. The custom rules that define an access scenario when interacting with external Azure AD tenants.
-     *  @param CrossTenantAccessPolicy|null $value Value to set for the crossTenantAccessPolicy property.
+     * @param CrossTenantAccessPolicy|null $value Value to set for the crossTenantAccessPolicy property.
     */
     public function setCrossTenantAccessPolicy(?CrossTenantAccessPolicy $value): void {
         $this->getBackingStore()->set('crossTenantAccessPolicy', $value);
@@ -268,7 +268,7 @@ class PolicyRoot extends Entity implements Parsable
 
     /**
      * Sets the featureRolloutPolicies property value. The feature rollout policy associated with a directory object.
-     *  @param array<FeatureRolloutPolicy>|null $value Value to set for the featureRolloutPolicies property.
+     * @param array<FeatureRolloutPolicy>|null $value Value to set for the featureRolloutPolicies property.
     */
     public function setFeatureRolloutPolicies(?array $value): void {
         $this->getBackingStore()->set('featureRolloutPolicies', $value);
@@ -276,7 +276,7 @@ class PolicyRoot extends Entity implements Parsable
 
     /**
      * Sets the homeRealmDiscoveryPolicies property value. The policy to control Azure AD authentication behavior for federated users.
-     *  @param array<HomeRealmDiscoveryPolicy>|null $value Value to set for the homeRealmDiscoveryPolicies property.
+     * @param array<HomeRealmDiscoveryPolicy>|null $value Value to set for the homeRealmDiscoveryPolicies property.
     */
     public function setHomeRealmDiscoveryPolicies(?array $value): void {
         $this->getBackingStore()->set('homeRealmDiscoveryPolicies', $value);
@@ -284,7 +284,7 @@ class PolicyRoot extends Entity implements Parsable
 
     /**
      * Sets the identitySecurityDefaultsEnforcementPolicy property value. The policy that represents the security defaults that protect against common attacks.
-     *  @param IdentitySecurityDefaultsEnforcementPolicy|null $value Value to set for the identitySecurityDefaultsEnforcementPolicy property.
+     * @param IdentitySecurityDefaultsEnforcementPolicy|null $value Value to set for the identitySecurityDefaultsEnforcementPolicy property.
     */
     public function setIdentitySecurityDefaultsEnforcementPolicy(?IdentitySecurityDefaultsEnforcementPolicy $value): void {
         $this->getBackingStore()->set('identitySecurityDefaultsEnforcementPolicy', $value);
@@ -292,7 +292,7 @@ class PolicyRoot extends Entity implements Parsable
 
     /**
      * Sets the permissionGrantPolicies property value. The policy that specifies the conditions under which consent can be granted.
-     *  @param array<PermissionGrantPolicy>|null $value Value to set for the permissionGrantPolicies property.
+     * @param array<PermissionGrantPolicy>|null $value Value to set for the permissionGrantPolicies property.
     */
     public function setPermissionGrantPolicies(?array $value): void {
         $this->getBackingStore()->set('permissionGrantPolicies', $value);
@@ -300,7 +300,7 @@ class PolicyRoot extends Entity implements Parsable
 
     /**
      * Sets the roleManagementPolicies property value. Specifies the various policies associated with scopes and roles.
-     *  @param array<UnifiedRoleManagementPolicy>|null $value Value to set for the roleManagementPolicies property.
+     * @param array<UnifiedRoleManagementPolicy>|null $value Value to set for the roleManagementPolicies property.
     */
     public function setRoleManagementPolicies(?array $value): void {
         $this->getBackingStore()->set('roleManagementPolicies', $value);
@@ -308,7 +308,7 @@ class PolicyRoot extends Entity implements Parsable
 
     /**
      * Sets the roleManagementPolicyAssignments property value. The assignment of a role management policy to a role definition object.
-     *  @param array<UnifiedRoleManagementPolicyAssignment>|null $value Value to set for the roleManagementPolicyAssignments property.
+     * @param array<UnifiedRoleManagementPolicyAssignment>|null $value Value to set for the roleManagementPolicyAssignments property.
     */
     public function setRoleManagementPolicyAssignments(?array $value): void {
         $this->getBackingStore()->set('roleManagementPolicyAssignments', $value);
@@ -316,7 +316,7 @@ class PolicyRoot extends Entity implements Parsable
 
     /**
      * Sets the tokenIssuancePolicies property value. The policy that specifies the characteristics of SAML tokens issued by Azure AD.
-     *  @param array<TokenIssuancePolicy>|null $value Value to set for the tokenIssuancePolicies property.
+     * @param array<TokenIssuancePolicy>|null $value Value to set for the tokenIssuancePolicies property.
     */
     public function setTokenIssuancePolicies(?array $value): void {
         $this->getBackingStore()->set('tokenIssuancePolicies', $value);
@@ -324,7 +324,7 @@ class PolicyRoot extends Entity implements Parsable
 
     /**
      * Sets the tokenLifetimePolicies property value. The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
-     *  @param array<TokenLifetimePolicy>|null $value Value to set for the tokenLifetimePolicies property.
+     * @param array<TokenLifetimePolicy>|null $value Value to set for the tokenLifetimePolicies property.
     */
     public function setTokenLifetimePolicies(?array $value): void {
         $this->getBackingStore()->set('tokenLifetimePolicies', $value);

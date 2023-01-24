@@ -80,7 +80,7 @@ class CrossTenantAccessPolicy extends PolicyBase implements Parsable
 
     /**
      * Sets the allowedCloudEndpoints property value. The allowedCloudEndpoints property
-     *  @param array<string>|null $value Value to set for the allowedCloudEndpoints property.
+     * @param array<string>|null $value Value to set for the allowedCloudEndpoints property.
     */
     public function setAllowedCloudEndpoints(?array $value): void {
         $this->getBackingStore()->set('allowedCloudEndpoints', $value);
@@ -88,7 +88,7 @@ class CrossTenantAccessPolicy extends PolicyBase implements Parsable
 
     /**
      * Sets the default property value. Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
-     *  @param CrossTenantAccessPolicyConfigurationDefault|null $value Value to set for the EscapedDefault property.
+     * @param CrossTenantAccessPolicyConfigurationDefault|null $value Value to set for the EscapedDefault property.
     */
     public function setDefault(?CrossTenantAccessPolicyConfigurationDefault $value): void {
         $this->getBackingStore()->set('escapedDefault', $value);
@@ -96,7 +96,7 @@ class CrossTenantAccessPolicy extends PolicyBase implements Parsable
 
     /**
      * Sets the partners property value. Defines partner-specific configurations for external Azure Active Directory organizations.
-     *  @param array<CrossTenantAccessPolicyConfigurationPartner>|null $value Value to set for the partners property.
+     * @param array<CrossTenantAccessPolicyConfigurationPartner>|null $value Value to set for the partners property.
     */
     public function setPartners(?array $value): void {
         $this->getBackingStore()->set('partners', $value);

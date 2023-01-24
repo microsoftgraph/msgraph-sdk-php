@@ -66,7 +66,7 @@ class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPol
 
     /**
      * Sets the isExpirationRequired property value. Indicates whether expiration is required or if it's a permanently active assignment or eligibility.
-     *  @param bool|null $value Value to set for the isExpirationRequired property.
+     * @param bool|null $value Value to set for the isExpirationRequired property.
     */
     public function setIsExpirationRequired(?bool $value): void {
         $this->getBackingStore()->set('isExpirationRequired', $value);
@@ -74,7 +74,7 @@ class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPol
 
     /**
      * Sets the maximumDuration property value. The maximum duration allowed for eligibility or assignment which is not permanent. Required when isExpirationRequired is true.
-     *  @param DateInterval|null $value Value to set for the maximumDuration property.
+     * @param DateInterval|null $value Value to set for the maximumDuration property.
     */
     public function setMaximumDuration(?DateInterval $value): void {
         $this->getBackingStore()->set('maximumDuration', $value);

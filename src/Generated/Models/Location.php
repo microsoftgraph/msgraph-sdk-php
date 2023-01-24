@@ -167,7 +167,7 @@ class Location implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -175,7 +175,7 @@ class Location implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the address property value. The street address of the location.
-     *  @param PhysicalAddress|null $value Value to set for the address property.
+     * @param PhysicalAddress|null $value Value to set for the address property.
     */
     public function setAddress(?PhysicalAddress $value): void {
         $this->getBackingStore()->set('address', $value);
@@ -183,7 +183,7 @@ class Location implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -191,7 +191,7 @@ class Location implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the coordinates property value. The geographic coordinates and elevation of the location.
-     *  @param OutlookGeoCoordinates|null $value Value to set for the coordinates property.
+     * @param OutlookGeoCoordinates|null $value Value to set for the coordinates property.
     */
     public function setCoordinates(?OutlookGeoCoordinates $value): void {
         $this->getBackingStore()->set('coordinates', $value);
@@ -199,7 +199,7 @@ class Location implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the displayName property value. The name associated with the location.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -207,7 +207,7 @@ class Location implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the locationEmailAddress property value. Optional email address of the location.
-     *  @param string|null $value Value to set for the locationEmailAddress property.
+     * @param string|null $value Value to set for the locationEmailAddress property.
     */
     public function setLocationEmailAddress(?string $value): void {
         $this->getBackingStore()->set('locationEmailAddress', $value);
@@ -215,7 +215,7 @@ class Location implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the locationType property value. The type of location. The possible values are: default, conferenceRoom, homeAddress, businessAddress,geoCoordinates, streetAddress, hotel, restaurant, localBusiness, postalAddress. Read-only.
-     *  @param LocationType|null $value Value to set for the locationType property.
+     * @param LocationType|null $value Value to set for the locationType property.
     */
     public function setLocationType(?LocationType $value): void {
         $this->getBackingStore()->set('locationType', $value);
@@ -223,7 +223,7 @@ class Location implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the locationUri property value. Optional URI representing the location.
-     *  @param string|null $value Value to set for the locationUri property.
+     * @param string|null $value Value to set for the locationUri property.
     */
     public function setLocationUri(?string $value): void {
         $this->getBackingStore()->set('locationUri', $value);
@@ -231,7 +231,7 @@ class Location implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -239,7 +239,7 @@ class Location implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the uniqueId property value. For internal use only.
-     *  @param string|null $value Value to set for the uniqueId property.
+     * @param string|null $value Value to set for the uniqueId property.
     */
     public function setUniqueId(?string $value): void {
         $this->getBackingStore()->set('uniqueId', $value);
@@ -247,7 +247,7 @@ class Location implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the uniqueIdType property value. For internal use only.
-     *  @param LocationUniqueIdType|null $value Value to set for the uniqueIdType property.
+     * @param LocationUniqueIdType|null $value Value to set for the uniqueIdType property.
     */
     public function setUniqueIdType(?LocationUniqueIdType $value): void {
         $this->getBackingStore()->set('uniqueIdType', $value);

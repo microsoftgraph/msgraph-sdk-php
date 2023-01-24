@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Items;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Used to address any item contained in this site. This collection can't be enumerated.
+*/
 class ItemsRequestBuilderGetQueryParameters 
 {
     /**

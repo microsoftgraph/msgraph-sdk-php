@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessReviewHistoryDefinition extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new AccessReviewHistoryDefinition and sets the default values.
+     * Instantiates a new accessReviewHistoryDefinition and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -145,7 +145,7 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
 
     /**
      * Sets the createdBy property value. The createdBy property
-     *  @param UserIdentity|null $value Value to set for the createdBy property.
+     * @param UserIdentity|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?UserIdentity $value): void {
         $this->getBackingStore()->set('createdBy', $value);
@@ -153,7 +153,7 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. Timestamp when the access review definition was created.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -161,7 +161,7 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
 
     /**
      * Sets the decisions property value. Determines which review decisions will be included in the fetched review history data if specified. Optional on create. All decisions will be included by default if no decisions are provided on create. Possible values are: approve, deny, dontKnow, notReviewed, and notNotified.
-     *  @param array<AccessReviewHistoryDecisionFilter>|null $value Value to set for the decisions property.
+     * @param array<AccessReviewHistoryDecisionFilter>|null $value Value to set for the decisions property.
     */
     public function setDecisions(?array $value): void {
         $this->getBackingStore()->set('decisions', $value);
@@ -169,7 +169,7 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. Name for the access review history data collection. Required.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -177,7 +177,7 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
 
     /**
      * Sets the instances property value. If the accessReviewHistoryDefinition is a recurring definition, instances represent each recurrence. A definition that does not recur will have exactly one instance.
-     *  @param array<AccessReviewHistoryInstance>|null $value Value to set for the instances property.
+     * @param array<AccessReviewHistoryInstance>|null $value Value to set for the instances property.
     */
     public function setInstances(?array $value): void {
         $this->getBackingStore()->set('instances', $value);
@@ -185,7 +185,7 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
 
     /**
      * Sets the reviewHistoryPeriodEndDateTime property value. A timestamp. Reviews ending on or before this date will be included in the fetched history data. Only required if scheduleSettings is not defined.
-     *  @param DateTime|null $value Value to set for the reviewHistoryPeriodEndDateTime property.
+     * @param DateTime|null $value Value to set for the reviewHistoryPeriodEndDateTime property.
     */
     public function setReviewHistoryPeriodEndDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('reviewHistoryPeriodEndDateTime', $value);
@@ -193,7 +193,7 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
 
     /**
      * Sets the reviewHistoryPeriodStartDateTime property value. A timestamp. Reviews starting on or before this date will be included in the fetched history data. Only required if scheduleSettings is not defined.
-     *  @param DateTime|null $value Value to set for the reviewHistoryPeriodStartDateTime property.
+     * @param DateTime|null $value Value to set for the reviewHistoryPeriodStartDateTime property.
     */
     public function setReviewHistoryPeriodStartDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('reviewHistoryPeriodStartDateTime', $value);
@@ -201,7 +201,7 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
 
     /**
      * Sets the scheduleSettings property value. The settings for a recurring access review history definition series. Only required if reviewHistoryPeriodStartDateTime or reviewHistoryPeriodEndDateTime are not defined. Not supported yet.
-     *  @param AccessReviewHistoryScheduleSettings|null $value Value to set for the scheduleSettings property.
+     * @param AccessReviewHistoryScheduleSettings|null $value Value to set for the scheduleSettings property.
     */
     public function setScheduleSettings(?AccessReviewHistoryScheduleSettings $value): void {
         $this->getBackingStore()->set('scheduleSettings', $value);
@@ -209,7 +209,7 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
 
     /**
      * Sets the scopes property value. Used to scope what reviews are included in the fetched history data. Fetches reviews whose scope matches with this provided scope. Required.
-     *  @param array<AccessReviewScope>|null $value Value to set for the scopes property.
+     * @param array<AccessReviewScope>|null $value Value to set for the scopes property.
     */
     public function setScopes(?array $value): void {
         $this->getBackingStore()->set('scopes', $value);
@@ -217,7 +217,7 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
 
     /**
      * Sets the status property value. Represents the status of the review history data collection. The possible values are: done, inProgress, error, requested, unknownFutureValue.
-     *  @param AccessReviewHistoryStatus|null $value Value to set for the status property.
+     * @param AccessReviewHistoryStatus|null $value Value to set for the status property.
     */
     public function setStatus(?AccessReviewHistoryStatus $value): void {
         $this->getBackingStore()->set('status', $value);

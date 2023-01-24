@@ -5,6 +5,9 @@ namespace Microsoft\Graph\Generated\Applications\Item\TokenLifetimePolicies\Item
 use Microsoft\Graph\Generated\Applications\Item\TokenLifetimePolicies\Item\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 
+/**
+ * Builds and executes requests for operations under /applications/{application-id}/tokenLifetimePolicies/{tokenLifetimePolicy-id}
+*/
 class TokenLifetimePolicyItemRequestBuilder 
 {
     /**

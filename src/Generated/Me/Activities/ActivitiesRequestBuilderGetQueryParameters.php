@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Activities;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The user's activities across devices. Read-only. Nullable.
+*/
 class ActivitiesRequestBuilderGetQueryParameters 
 {
     /**

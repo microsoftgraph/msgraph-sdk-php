@@ -120,7 +120,7 @@ class AutomaticRepliesMailTips implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -128,7 +128,7 @@ class AutomaticRepliesMailTips implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -136,7 +136,7 @@ class AutomaticRepliesMailTips implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the message property value. The automatic reply message.
-     *  @param string|null $value Value to set for the message property.
+     * @param string|null $value Value to set for the message property.
     */
     public function setMessage(?string $value): void {
         $this->getBackingStore()->set('message', $value);
@@ -144,7 +144,7 @@ class AutomaticRepliesMailTips implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the messageLanguage property value. The language that the automatic reply message is in.
-     *  @param LocaleInfo|null $value Value to set for the messageLanguage property.
+     * @param LocaleInfo|null $value Value to set for the messageLanguage property.
     */
     public function setMessageLanguage(?LocaleInfo $value): void {
         $this->getBackingStore()->set('messageLanguage', $value);
@@ -152,7 +152,7 @@ class AutomaticRepliesMailTips implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -160,7 +160,7 @@ class AutomaticRepliesMailTips implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the scheduledEndTime property value. The date and time that automatic replies are set to end.
-     *  @param DateTimeTimeZone|null $value Value to set for the scheduledEndTime property.
+     * @param DateTimeTimeZone|null $value Value to set for the scheduledEndTime property.
     */
     public function setScheduledEndTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('scheduledEndTime', $value);
@@ -168,7 +168,7 @@ class AutomaticRepliesMailTips implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the scheduledStartTime property value. The date and time that automatic replies are set to begin.
-     *  @param DateTimeTimeZone|null $value Value to set for the scheduledStartTime property.
+     * @param DateTimeTimeZone|null $value Value to set for the scheduledStartTime property.
     */
     public function setScheduledStartTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('scheduledStartTime', $value);

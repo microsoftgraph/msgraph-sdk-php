@@ -131,7 +131,7 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -139,7 +139,7 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -147,7 +147,7 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the changedBy property value. Identity of the user who changed the  subject rights request.
-     *  @param IdentitySet|null $value Value to set for the changedBy property.
+     * @param IdentitySet|null $value Value to set for the changedBy property.
     */
     public function setChangedBy(?IdentitySet $value): void {
         $this->getBackingStore()->set('changedBy', $value);
@@ -155,7 +155,7 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the eventDateTime property value. Data and time when the entity was changed.
-     *  @param DateTime|null $value Value to set for the eventDateTime property.
+     * @param DateTime|null $value Value to set for the eventDateTime property.
     */
     public function setEventDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('eventDateTime', $value);
@@ -163,7 +163,7 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -171,7 +171,7 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the stage property value. The stage when the entity was changed. Possible values are: contentRetrieval, contentReview, generateReport, contentDeletion, caseResolved, unknownFutureValue.
-     *  @param SubjectRightsRequestStage|null $value Value to set for the stage property.
+     * @param SubjectRightsRequestStage|null $value Value to set for the stage property.
     */
     public function setStage(?SubjectRightsRequestStage $value): void {
         $this->getBackingStore()->set('stage', $value);
@@ -179,7 +179,7 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the stageStatus property value. The status of the stage when the entity was changed. Possible values are: notStarted, current, completed, failed, unknownFutureValue.
-     *  @param SubjectRightsRequestStageStatus|null $value Value to set for the stageStatus property.
+     * @param SubjectRightsRequestStageStatus|null $value Value to set for the stageStatus property.
     */
     public function setStageStatus(?SubjectRightsRequestStageStatus $value): void {
         $this->getBackingStore()->set('stageStatus', $value);
@@ -187,7 +187,7 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the type property value. Type of history.
-     *  @param string|null $value Value to set for the type property.
+     * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {
         $this->getBackingStore()->set('type', $value);

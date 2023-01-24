@@ -55,7 +55,7 @@ class EducationExcelResource extends EducationResource implements Parsable
 
     /**
      * Sets the fileUrl property value. Pointer to the Excel file object.
-     *  @param string|null $value Value to set for the fileUrl property.
+     * @param string|null $value Value to set for the fileUrl property.
     */
     public function setFileUrl(?string $value): void {
         $this->getBackingStore()->set('fileUrl', $value);

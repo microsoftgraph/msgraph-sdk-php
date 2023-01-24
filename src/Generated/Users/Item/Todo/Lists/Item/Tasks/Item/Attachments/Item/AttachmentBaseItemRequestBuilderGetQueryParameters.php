@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Attach
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get attachments from users
+*/
 class AttachmentBaseItemRequestBuilderGetQueryParameters 
 {
     /**

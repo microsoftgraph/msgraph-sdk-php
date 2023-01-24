@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Communications\Presences\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get presences from communications
+*/
 class PresenceItemRequestBuilderGetQueryParameters 
 {
     /**

@@ -4,10 +4,13 @@ namespace Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item\HostedCo
 
 use Microsoft\Kiota\Abstractions\RequestOption;
 
+/**
+ * Configuration for the request such as headers, query parameters, and middleware options.
+*/
 class HostedContentsRequestBuilderGetRequestConfiguration 
 {
     /**
-     * @var array<string, string>|null $headers Request headers
+     * @var array<string, array<string>|string>|null $headers Request headers
     */
     public ?array $headers = null;
     

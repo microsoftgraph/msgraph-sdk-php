@@ -85,7 +85,7 @@ class EducationRubricOutcome extends EducationOutcome implements Parsable
 
     /**
      * Sets the publishedRubricQualityFeedback property value. A copy of the rubricQualityFeedback property that is made when the grade is released to the student.
-     *  @param array<RubricQualityFeedbackModel>|null $value Value to set for the publishedRubricQualityFeedback property.
+     * @param array<RubricQualityFeedbackModel>|null $value Value to set for the publishedRubricQualityFeedback property.
     */
     public function setPublishedRubricQualityFeedback(?array $value): void {
         $this->getBackingStore()->set('publishedRubricQualityFeedback', $value);
@@ -93,7 +93,7 @@ class EducationRubricOutcome extends EducationOutcome implements Parsable
 
     /**
      * Sets the publishedRubricQualitySelectedLevels property value. A copy of the rubricQualitySelectedLevels property that is made when the grade is released to the student.
-     *  @param array<RubricQualitySelectedColumnModel>|null $value Value to set for the publishedRubricQualitySelectedLevels property.
+     * @param array<RubricQualitySelectedColumnModel>|null $value Value to set for the publishedRubricQualitySelectedLevels property.
     */
     public function setPublishedRubricQualitySelectedLevels(?array $value): void {
         $this->getBackingStore()->set('publishedRubricQualitySelectedLevels', $value);
@@ -101,7 +101,7 @@ class EducationRubricOutcome extends EducationOutcome implements Parsable
 
     /**
      * Sets the rubricQualityFeedback property value. A collection of specific feedback for each quality of this rubric.
-     *  @param array<RubricQualityFeedbackModel>|null $value Value to set for the rubricQualityFeedback property.
+     * @param array<RubricQualityFeedbackModel>|null $value Value to set for the rubricQualityFeedback property.
     */
     public function setRubricQualityFeedback(?array $value): void {
         $this->getBackingStore()->set('rubricQualityFeedback', $value);
@@ -109,7 +109,7 @@ class EducationRubricOutcome extends EducationOutcome implements Parsable
 
     /**
      * Sets the rubricQualitySelectedLevels property value. The level that the teacher has selected for each quality while grading this assignment.
-     *  @param array<RubricQualitySelectedColumnModel>|null $value Value to set for the rubricQualitySelectedLevels property.
+     * @param array<RubricQualitySelectedColumnModel>|null $value Value to set for the rubricQualitySelectedLevels property.
     */
     public function setRubricQualitySelectedLevels(?array $value): void {
         $this->getBackingStore()->set('rubricQualitySelectedLevels', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Shares\Item\ListItem;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Used to access the underlying listItem
+*/
 class ListItemRequestBuilderGetQueryParameters 
 {
     /**

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Policies\AdminConsentRequestPolicy;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Read the properties and relationships of an adminConsentRequestPolicy object.
+*/
 class AdminConsentRequestPolicyRequestBuilderGetQueryParameters 
 {
     /**

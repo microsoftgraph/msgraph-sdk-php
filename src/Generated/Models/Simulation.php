@@ -195,7 +195,7 @@ class Simulation extends Entity implements Parsable
 
     /**
      * Sets the attackTechnique property value. The social engineering technique used in the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, credentialHarvesting, attachmentMalware, driveByUrl, linkInAttachment, linkToMalwareFile, unknownFutureValue. For more information on the types of social engineering attack techniques, see simulations.
-     *  @param SimulationAttackTechnique|null $value Value to set for the attackTechnique property.
+     * @param SimulationAttackTechnique|null $value Value to set for the attackTechnique property.
     */
     public function setAttackTechnique(?SimulationAttackTechnique $value): void {
         $this->getBackingStore()->set('attackTechnique', $value);
@@ -203,7 +203,7 @@ class Simulation extends Entity implements Parsable
 
     /**
      * Sets the attackType property value. Attack type of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, social, cloud, endpoint, unknownFutureValue.
-     *  @param SimulationAttackType|null $value Value to set for the attackType property.
+     * @param SimulationAttackType|null $value Value to set for the attackType property.
     */
     public function setAttackType(?SimulationAttackType $value): void {
         $this->getBackingStore()->set('attackType', $value);
@@ -211,7 +211,7 @@ class Simulation extends Entity implements Parsable
 
     /**
      * Sets the automationId property value. Unique identifier for the attack simulation automation.
-     *  @param string|null $value Value to set for the automationId property.
+     * @param string|null $value Value to set for the automationId property.
     */
     public function setAutomationId(?string $value): void {
         $this->getBackingStore()->set('automationId', $value);
@@ -219,7 +219,7 @@ class Simulation extends Entity implements Parsable
 
     /**
      * Sets the completionDateTime property value. Date and time of completion of the attack simulation and training campaign. Supports $filter and $orderby.
-     *  @param DateTime|null $value Value to set for the completionDateTime property.
+     * @param DateTime|null $value Value to set for the completionDateTime property.
     */
     public function setCompletionDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('completionDateTime', $value);
@@ -227,7 +227,7 @@ class Simulation extends Entity implements Parsable
 
     /**
      * Sets the createdBy property value. Identity of the user who created the attack simulation and training campaign.
-     *  @param EmailIdentity|null $value Value to set for the createdBy property.
+     * @param EmailIdentity|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?EmailIdentity $value): void {
         $this->getBackingStore()->set('createdBy', $value);
@@ -235,7 +235,7 @@ class Simulation extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. Date and time of creation of the attack simulation and training campaign.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -243,7 +243,7 @@ class Simulation extends Entity implements Parsable
 
     /**
      * Sets the description property value. Description of the attack simulation and training campaign.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -251,7 +251,7 @@ class Simulation extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. Display name of the attack simulation and training campaign. Supports $filter and $orderby.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -259,7 +259,7 @@ class Simulation extends Entity implements Parsable
 
     /**
      * Sets the isAutomated property value. Flag that represents if the attack simulation and training campaign was created from a simulation automation flow. Supports $filter and $orderby.
-     *  @param bool|null $value Value to set for the isAutomated property.
+     * @param bool|null $value Value to set for the isAutomated property.
     */
     public function setIsAutomated(?bool $value): void {
         $this->getBackingStore()->set('isAutomated', $value);
@@ -267,7 +267,7 @@ class Simulation extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedBy property value. Identity of the user who most recently modified the attack simulation and training campaign.
-     *  @param EmailIdentity|null $value Value to set for the lastModifiedBy property.
+     * @param EmailIdentity|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?EmailIdentity $value): void {
         $this->getBackingStore()->set('lastModifiedBy', $value);
@@ -275,7 +275,7 @@ class Simulation extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. Date and time of the most recent modification of the attack simulation and training campaign.
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -283,7 +283,7 @@ class Simulation extends Entity implements Parsable
 
     /**
      * Sets the launchDateTime property value. Date and time of the launch/start of the attack simulation and training campaign. Supports $filter and $orderby.
-     *  @param DateTime|null $value Value to set for the launchDateTime property.
+     * @param DateTime|null $value Value to set for the launchDateTime property.
     */
     public function setLaunchDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('launchDateTime', $value);
@@ -291,7 +291,7 @@ class Simulation extends Entity implements Parsable
 
     /**
      * Sets the payloadDeliveryPlatform property value. Method of delivery of the phishing payload used in the attack simulation and training campaign. Possible values are: unknown, sms, email, teams, unknownFutureValue.
-     *  @param PayloadDeliveryPlatform|null $value Value to set for the payloadDeliveryPlatform property.
+     * @param PayloadDeliveryPlatform|null $value Value to set for the payloadDeliveryPlatform property.
     */
     public function setPayloadDeliveryPlatform(?PayloadDeliveryPlatform $value): void {
         $this->getBackingStore()->set('payloadDeliveryPlatform', $value);
@@ -299,7 +299,7 @@ class Simulation extends Entity implements Parsable
 
     /**
      * Sets the report property value. Report of the attack simulation and training campaign.
-     *  @param SimulationReport|null $value Value to set for the report property.
+     * @param SimulationReport|null $value Value to set for the report property.
     */
     public function setReport(?SimulationReport $value): void {
         $this->getBackingStore()->set('report', $value);
@@ -307,7 +307,7 @@ class Simulation extends Entity implements Parsable
 
     /**
      * Sets the status property value. Status of the attack simulation and training campaign. Supports $filter and $orderby. Possible values are: unknown, draft, running, scheduled, succeeded, failed, cancelled, excluded, unknownFutureValue.
-     *  @param SimulationStatus|null $value Value to set for the status property.
+     * @param SimulationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?SimulationStatus $value): void {
         $this->getBackingStore()->set('status', $value);

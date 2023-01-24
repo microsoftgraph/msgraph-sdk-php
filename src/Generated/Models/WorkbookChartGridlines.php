@@ -64,7 +64,7 @@ class WorkbookChartGridlines extends Entity implements Parsable
 
     /**
      * Sets the format property value. Represents the formatting of chart gridlines. Read-only.
-     *  @param WorkbookChartGridlinesFormat|null $value Value to set for the format property.
+     * @param WorkbookChartGridlinesFormat|null $value Value to set for the format property.
     */
     public function setFormat(?WorkbookChartGridlinesFormat $value): void {
         $this->getBackingStore()->set('format', $value);
@@ -72,7 +72,7 @@ class WorkbookChartGridlines extends Entity implements Parsable
 
     /**
      * Sets the visible property value. Boolean value representing if the axis gridlines are visible or not.
-     *  @param bool|null $value Value to set for the visible property.
+     * @param bool|null $value Value to set for the visible property.
     */
     public function setVisible(?bool $value): void {
         $this->getBackingStore()->set('visible', $value);

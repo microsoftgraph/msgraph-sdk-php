@@ -101,7 +101,7 @@ class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Backe
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -109,7 +109,7 @@ class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Backe
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -117,7 +117,7 @@ class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Backe
 
     /**
      * Sets the inputIds property value. The InputIds property
-     *  @param array<string>|null $value Value to set for the InputIds property.
+     * @param array<string>|null $value Value to set for the InputIds property.
     */
     public function setInputIds(?array $value): void {
         $this->getBackingStore()->set('inputIds', $value);
@@ -125,7 +125,7 @@ class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Backe
 
     /**
      * Sets the sourceIdType property value. The SourceIdType property
-     *  @param ExchangeIdFormat|null $value Value to set for the SourceIdType property.
+     * @param ExchangeIdFormat|null $value Value to set for the SourceIdType property.
     */
     public function setSourceIdType(?ExchangeIdFormat $value): void {
         $this->getBackingStore()->set('sourceIdType', $value);
@@ -133,7 +133,7 @@ class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Backe
 
     /**
      * Sets the targetIdType property value. The TargetIdType property
-     *  @param ExchangeIdFormat|null $value Value to set for the TargetIdType property.
+     * @param ExchangeIdFormat|null $value Value to set for the TargetIdType property.
     */
     public function setTargetIdType(?ExchangeIdFormat $value): void {
         $this->getBackingStore()->set('targetIdType', $value);

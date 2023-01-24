@@ -7,6 +7,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * The ManagedAppPolicy resource represents a base type for platform specific policies.
+*/
 class ManagedAppPolicy extends Entity implements Parsable 
 {
     /**
@@ -111,7 +114,7 @@ class ManagedAppPolicy extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. The date and time the policy was created.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -119,7 +122,7 @@ class ManagedAppPolicy extends Entity implements Parsable
 
     /**
      * Sets the description property value. The policy's description.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -127,7 +130,7 @@ class ManagedAppPolicy extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. Policy display name.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -135,7 +138,7 @@ class ManagedAppPolicy extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. Last time the policy was modified.
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -143,7 +146,7 @@ class ManagedAppPolicy extends Entity implements Parsable
 
     /**
      * Sets the version property value. Version of the entity.
-     *  @param string|null $value Value to set for the version property.
+     * @param string|null $value Value to set for the version property.
     */
     public function setVersion(?string $value): void {
         $this->getBackingStore()->set('version', $value);

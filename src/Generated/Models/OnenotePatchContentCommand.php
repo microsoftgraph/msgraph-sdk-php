@@ -120,7 +120,7 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the action property value. The action property
-     *  @param OnenotePatchActionType|null $value Value to set for the action property.
+     * @param OnenotePatchActionType|null $value Value to set for the action property.
     */
     public function setAction(?OnenotePatchActionType $value): void {
         $this->getBackingStore()->set('action', $value);
@@ -128,7 +128,7 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -136,7 +136,7 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -144,7 +144,7 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the content property value. A string of well-formed HTML to add to the page, and any image or file binary data. If the content contains binary data, the request must be sent using the multipart/form-data content type with a 'Commands' part.
-     *  @param string|null $value Value to set for the content property.
+     * @param string|null $value Value to set for the content property.
     */
     public function setContent(?string $value): void {
         $this->getBackingStore()->set('content', $value);
@@ -152,7 +152,7 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -160,7 +160,7 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the position property value. The location to add the supplied content, relative to the target element. The possible values are: after (default) or before.
-     *  @param OnenotePatchInsertPosition|null $value Value to set for the position property.
+     * @param OnenotePatchInsertPosition|null $value Value to set for the position property.
     */
     public function setPosition(?OnenotePatchInsertPosition $value): void {
         $this->getBackingStore()->set('position', $value);
@@ -168,7 +168,7 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, BackedModel, P
 
     /**
      * Sets the target property value. The element to update. Must be the #<data-id> or the generated <id> of the element, or the body or title keyword.
-     *  @param string|null $value Value to set for the target property.
+     * @param string|null $value Value to set for the target property.
     */
     public function setTarget(?string $value): void {
         $this->getBackingStore()->set('target', $value);

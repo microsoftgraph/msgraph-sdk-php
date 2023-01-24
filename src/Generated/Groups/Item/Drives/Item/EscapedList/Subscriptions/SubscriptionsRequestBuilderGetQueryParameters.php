@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Drives\Item\EscapedList\Subscrip
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The set of subscriptions on the list.
+*/
 class SubscriptionsRequestBuilderGetQueryParameters 
 {
     /**

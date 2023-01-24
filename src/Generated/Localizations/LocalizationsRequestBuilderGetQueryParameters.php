@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Localizations;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get entities from localizations
+*/
 class LocalizationsRequestBuilderGetQueryParameters 
 {
     /**

@@ -64,7 +64,7 @@ class WorkbookFunctionResult extends Entity implements Parsable
 
     /**
      * Sets the error property value. The error property
-     *  @param string|null $value Value to set for the error property.
+     * @param string|null $value Value to set for the error property.
     */
     public function setError(?string $value): void {
         $this->getBackingStore()->set('error', $value);
@@ -72,7 +72,7 @@ class WorkbookFunctionResult extends Entity implements Parsable
 
     /**
      * Sets the value property value. The value property
-     *  @param Json|null $value Value to set for the value property.
+     * @param Json|null $value Value to set for the value property.
     */
     public function setValue(?Json $value): void {
         $this->getBackingStore()->set('value', $value);

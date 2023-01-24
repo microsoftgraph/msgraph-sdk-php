@@ -10,6 +10,9 @@ use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
+/**
+ * Contains properties for App configuration setting item.
+*/
 class AppConfigurationSettingItem implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -110,7 +113,7 @@ class AppConfigurationSettingItem implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +121,7 @@ class AppConfigurationSettingItem implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the appConfigKey property value. app configuration key.
-     *  @param string|null $value Value to set for the appConfigKey property.
+     * @param string|null $value Value to set for the appConfigKey property.
     */
     public function setAppConfigKey(?string $value): void {
         $this->getBackingStore()->set('appConfigKey', $value);
@@ -126,7 +129,7 @@ class AppConfigurationSettingItem implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the appConfigKeyType property value. App configuration key types.
-     *  @param MdmAppConfigKeyType|null $value Value to set for the appConfigKeyType property.
+     * @param MdmAppConfigKeyType|null $value Value to set for the appConfigKeyType property.
     */
     public function setAppConfigKeyType(?MdmAppConfigKeyType $value): void {
         $this->getBackingStore()->set('appConfigKeyType', $value);
@@ -134,7 +137,7 @@ class AppConfigurationSettingItem implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the appConfigKeyValue property value. app configuration key value.
-     *  @param string|null $value Value to set for the appConfigKeyValue property.
+     * @param string|null $value Value to set for the appConfigKeyValue property.
     */
     public function setAppConfigKeyValue(?string $value): void {
         $this->getBackingStore()->set('appConfigKeyValue', $value);
@@ -142,7 +145,7 @@ class AppConfigurationSettingItem implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -150,7 +153,7 @@ class AppConfigurationSettingItem implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

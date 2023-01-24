@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\AppConsent;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get appConsent from identityGovernance
+*/
 class AppConsentRequestBuilderGetQueryParameters 
 {
     /**

@@ -85,7 +85,7 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
 
     /**
      * Sets the includeTargets property value. A collection of groups that are enabled to use the authentication method.
-     *  @param array<AuthenticationMethodTarget>|null $value Value to set for the includeTargets property.
+     * @param array<AuthenticationMethodTarget>|null $value Value to set for the includeTargets property.
     */
     public function setIncludeTargets(?array $value): void {
         $this->getBackingStore()->set('includeTargets', $value);
@@ -93,7 +93,7 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
 
     /**
      * Sets the isAttestationEnforced property value. Determines whether attestation must be enforced for FIDO2 security key registration.
-     *  @param bool|null $value Value to set for the isAttestationEnforced property.
+     * @param bool|null $value Value to set for the isAttestationEnforced property.
     */
     public function setIsAttestationEnforced(?bool $value): void {
         $this->getBackingStore()->set('isAttestationEnforced', $value);
@@ -101,7 +101,7 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
 
     /**
      * Sets the isSelfServiceRegistrationAllowed property value. Determines if users can register new FIDO2 security keys.
-     *  @param bool|null $value Value to set for the isSelfServiceRegistrationAllowed property.
+     * @param bool|null $value Value to set for the isSelfServiceRegistrationAllowed property.
     */
     public function setIsSelfServiceRegistrationAllowed(?bool $value): void {
         $this->getBackingStore()->set('isSelfServiceRegistrationAllowed', $value);
@@ -109,7 +109,7 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
 
     /**
      * Sets the keyRestrictions property value. Controls whether key restrictions are enforced on FIDO2 security keys, either allowing or disallowing certain key types as defined by Authenticator Attestation GUID (AAGUID), an identifier that indicates the type (e.g. make and model) of the authenticator.
-     *  @param Fido2KeyRestrictions|null $value Value to set for the keyRestrictions property.
+     * @param Fido2KeyRestrictions|null $value Value to set for the keyRestrictions property.
     */
     public function setKeyRestrictions(?Fido2KeyRestrictions $value): void {
         $this->getBackingStore()->set('keyRestrictions', $value);

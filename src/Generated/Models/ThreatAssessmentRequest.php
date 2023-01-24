@@ -135,7 +135,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
 
     /**
      * Sets the category property value. The category property
-     *  @param ThreatCategory|null $value Value to set for the category property.
+     * @param ThreatCategory|null $value Value to set for the category property.
     */
     public function setCategory(?ThreatCategory $value): void {
         $this->getBackingStore()->set('category', $value);
@@ -143,7 +143,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
 
     /**
      * Sets the contentType property value. The content type of threat assessment. Possible values are: mail, url, file.
-     *  @param ThreatAssessmentContentType|null $value Value to set for the contentType property.
+     * @param ThreatAssessmentContentType|null $value Value to set for the contentType property.
     */
     public function setContentType(?ThreatAssessmentContentType $value): void {
         $this->getBackingStore()->set('contentType', $value);
@@ -151,7 +151,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
 
     /**
      * Sets the createdBy property value. The threat assessment request creator.
-     *  @param IdentitySet|null $value Value to set for the createdBy property.
+     * @param IdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?IdentitySet $value): void {
         $this->getBackingStore()->set('createdBy', $value);
@@ -159,7 +159,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -167,7 +167,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
 
     /**
      * Sets the expectedAssessment property value. The expectedAssessment property
-     *  @param ThreatExpectedAssessment|null $value Value to set for the expectedAssessment property.
+     * @param ThreatExpectedAssessment|null $value Value to set for the expectedAssessment property.
     */
     public function setExpectedAssessment(?ThreatExpectedAssessment $value): void {
         $this->getBackingStore()->set('expectedAssessment', $value);
@@ -175,7 +175,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
 
     /**
      * Sets the requestSource property value. The source of the threat assessment request. Possible values are: administrator.
-     *  @param ThreatAssessmentRequestSource|null $value Value to set for the requestSource property.
+     * @param ThreatAssessmentRequestSource|null $value Value to set for the requestSource property.
     */
     public function setRequestSource(?ThreatAssessmentRequestSource $value): void {
         $this->getBackingStore()->set('requestSource', $value);
@@ -183,7 +183,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
 
     /**
      * Sets the results property value. A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.
-     *  @param array<ThreatAssessmentResult>|null $value Value to set for the results property.
+     * @param array<ThreatAssessmentResult>|null $value Value to set for the results property.
     */
     public function setResults(?array $value): void {
         $this->getBackingStore()->set('results', $value);
@@ -191,7 +191,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
 
     /**
      * Sets the status property value. The assessment process status. Possible values are: pending, completed.
-     *  @param ThreatAssessmentStatus|null $value Value to set for the status property.
+     * @param ThreatAssessmentStatus|null $value Value to set for the status property.
     */
     public function setStatus(?ThreatAssessmentStatus $value): void {
         $this->getBackingStore()->set('status', $value);

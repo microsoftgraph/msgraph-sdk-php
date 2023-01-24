@@ -11,6 +11,9 @@ use Microsoft\Graph\Generated\Groups\Item\Owners\Item\ServicePrincipal\ServicePr
 use Microsoft\Graph\Generated\Groups\Item\Owners\Item\User\UserRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 
+/**
+ * Builds and executes requests for operations under /groups/{group-id}/owners/{directoryObject-id}
+*/
 class DirectoryObjectItemRequestBuilder 
 {
     /**

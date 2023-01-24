@@ -85,7 +85,7 @@ class ClientUserAgent extends UserAgent implements Parsable
 
     /**
      * Sets the azureADAppId property value. The unique identifier of the Azure AD application used by this endpoint.
-     *  @param string|null $value Value to set for the azureADAppId property.
+     * @param string|null $value Value to set for the azureADAppId property.
     */
     public function setAzureADAppId(?string $value): void {
         $this->getBackingStore()->set('azureADAppId', $value);
@@ -93,7 +93,7 @@ class ClientUserAgent extends UserAgent implements Parsable
 
     /**
      * Sets the communicationServiceId property value. Immutable resource identifier of the Azure Communication Service associated with this endpoint based on Communication Services APIs.
-     *  @param string|null $value Value to set for the communicationServiceId property.
+     * @param string|null $value Value to set for the communicationServiceId property.
     */
     public function setCommunicationServiceId(?string $value): void {
         $this->getBackingStore()->set('communicationServiceId', $value);
@@ -101,7 +101,7 @@ class ClientUserAgent extends UserAgent implements Parsable
 
     /**
      * Sets the platform property value. The platform property
-     *  @param ClientPlatform|null $value Value to set for the platform property.
+     * @param ClientPlatform|null $value Value to set for the platform property.
     */
     public function setPlatform(?ClientPlatform $value): void {
         $this->getBackingStore()->set('platform', $value);
@@ -109,7 +109,7 @@ class ClientUserAgent extends UserAgent implements Parsable
 
     /**
      * Sets the productFamily property value. The productFamily property
-     *  @param ProductFamily|null $value Value to set for the productFamily property.
+     * @param ProductFamily|null $value Value to set for the productFamily property.
     */
     public function setProductFamily(?ProductFamily $value): void {
         $this->getBackingStore()->set('productFamily', $value);

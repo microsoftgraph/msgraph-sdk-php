@@ -84,7 +84,7 @@ class CalendarGroup extends Entity implements Parsable
 
     /**
      * Sets the calendars property value. The calendars in the calendar group. Navigation property. Read-only. Nullable.
-     *  @param array<Calendar>|null $value Value to set for the calendars property.
+     * @param array<Calendar>|null $value Value to set for the calendars property.
     */
     public function setCalendars(?array $value): void {
         $this->getBackingStore()->set('calendars', $value);
@@ -92,7 +92,7 @@ class CalendarGroup extends Entity implements Parsable
 
     /**
      * Sets the changeKey property value. Identifies the version of the calendar group. Every time the calendar group is changed, ChangeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
-     *  @param string|null $value Value to set for the changeKey property.
+     * @param string|null $value Value to set for the changeKey property.
     */
     public function setChangeKey(?string $value): void {
         $this->getBackingStore()->set('changeKey', $value);
@@ -100,7 +100,7 @@ class CalendarGroup extends Entity implements Parsable
 
     /**
      * Sets the classId property value. The class identifier. Read-only.
-     *  @param string|null $value Value to set for the classId property.
+     * @param string|null $value Value to set for the classId property.
     */
     public function setClassId(?string $value): void {
         $this->getBackingStore()->set('classId', $value);
@@ -108,7 +108,7 @@ class CalendarGroup extends Entity implements Parsable
 
     /**
      * Sets the name property value. The group name.
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);

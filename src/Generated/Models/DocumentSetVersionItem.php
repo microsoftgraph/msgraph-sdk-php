@@ -110,7 +110,7 @@ class DocumentSetVersionItem implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class DocumentSetVersionItem implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class DocumentSetVersionItem implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the itemId property value. The unique identifier for the item.
-     *  @param string|null $value Value to set for the itemId property.
+     * @param string|null $value Value to set for the itemId property.
     */
     public function setItemId(?string $value): void {
         $this->getBackingStore()->set('itemId', $value);
@@ -134,7 +134,7 @@ class DocumentSetVersionItem implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -142,7 +142,7 @@ class DocumentSetVersionItem implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the title property value. The title of the item.
-     *  @param string|null $value Value to set for the title property.
+     * @param string|null $value Value to set for the title property.
     */
     public function setTitle(?string $value): void {
         $this->getBackingStore()->set('title', $value);
@@ -150,7 +150,7 @@ class DocumentSetVersionItem implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the versionId property value. The version ID of the item.
-     *  @param string|null $value Value to set for the versionId property.
+     * @param string|null $value Value to set for the versionId property.
     */
     public function setVersionId(?string $value): void {
         $this->getBackingStore()->set('versionId', $value);

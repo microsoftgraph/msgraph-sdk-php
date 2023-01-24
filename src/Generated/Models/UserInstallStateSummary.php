@@ -6,6 +6,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Contains properties for the installation state summary for a user.
+*/
 class UserInstallStateSummary extends Entity implements Parsable 
 {
     /**
@@ -94,7 +97,7 @@ class UserInstallStateSummary extends Entity implements Parsable
 
     /**
      * Sets the deviceStates property value. The install state of the eBook.
-     *  @param array<DeviceInstallState>|null $value Value to set for the deviceStates property.
+     * @param array<DeviceInstallState>|null $value Value to set for the deviceStates property.
     */
     public function setDeviceStates(?array $value): void {
         $this->getBackingStore()->set('deviceStates', $value);
@@ -102,7 +105,7 @@ class UserInstallStateSummary extends Entity implements Parsable
 
     /**
      * Sets the failedDeviceCount property value. Failed Device Count.
-     *  @param int|null $value Value to set for the failedDeviceCount property.
+     * @param int|null $value Value to set for the failedDeviceCount property.
     */
     public function setFailedDeviceCount(?int $value): void {
         $this->getBackingStore()->set('failedDeviceCount', $value);
@@ -110,7 +113,7 @@ class UserInstallStateSummary extends Entity implements Parsable
 
     /**
      * Sets the installedDeviceCount property value. Installed Device Count.
-     *  @param int|null $value Value to set for the installedDeviceCount property.
+     * @param int|null $value Value to set for the installedDeviceCount property.
     */
     public function setInstalledDeviceCount(?int $value): void {
         $this->getBackingStore()->set('installedDeviceCount', $value);
@@ -118,7 +121,7 @@ class UserInstallStateSummary extends Entity implements Parsable
 
     /**
      * Sets the notInstalledDeviceCount property value. Not installed device count.
-     *  @param int|null $value Value to set for the notInstalledDeviceCount property.
+     * @param int|null $value Value to set for the notInstalledDeviceCount property.
     */
     public function setNotInstalledDeviceCount(?int $value): void {
         $this->getBackingStore()->set('notInstalledDeviceCount', $value);
@@ -126,7 +129,7 @@ class UserInstallStateSummary extends Entity implements Parsable
 
     /**
      * Sets the userName property value. User name.
-     *  @param string|null $value Value to set for the userName property.
+     * @param string|null $value Value to set for the userName property.
     */
     public function setUserName(?string $value): void {
         $this->getBackingStore()->set('userName', $value);

@@ -92,7 +92,7 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
 
     /**
      * Sets the recipientActionDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the recipientActionDateTime property.
+     * @param DateTime|null $value Value to set for the recipientActionDateTime property.
     */
     public function setRecipientActionDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('recipientActionDateTime', $value);
@@ -100,7 +100,7 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
 
     /**
      * Sets the recipientActionMessage property value. Custom message sent by recipient of the offer shift request.
-     *  @param string|null $value Value to set for the recipientActionMessage property.
+     * @param string|null $value Value to set for the recipientActionMessage property.
     */
     public function setRecipientActionMessage(?string $value): void {
         $this->getBackingStore()->set('recipientActionMessage', $value);
@@ -108,7 +108,7 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
 
     /**
      * Sets the recipientUserId property value. User ID of the recipient of the offer shift request.
-     *  @param string|null $value Value to set for the recipientUserId property.
+     * @param string|null $value Value to set for the recipientUserId property.
     */
     public function setRecipientUserId(?string $value): void {
         $this->getBackingStore()->set('recipientUserId', $value);
@@ -116,7 +116,7 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
 
     /**
      * Sets the senderShiftId property value. User ID of the sender of the offer shift request.
-     *  @param string|null $value Value to set for the senderShiftId property.
+     * @param string|null $value Value to set for the senderShiftId property.
     */
     public function setSenderShiftId(?string $value): void {
         $this->getBackingStore()->set('senderShiftId', $value);

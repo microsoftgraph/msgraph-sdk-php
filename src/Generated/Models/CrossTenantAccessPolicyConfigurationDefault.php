@@ -104,7 +104,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
 
     /**
      * Sets the b2bCollaborationInbound property value. Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
-     *  @param CrossTenantAccessPolicyB2BSetting|null $value Value to set for the b2bCollaborationInbound property.
+     * @param CrossTenantAccessPolicyB2BSetting|null $value Value to set for the b2bCollaborationInbound property.
     */
     public function setB2bCollaborationInbound(?CrossTenantAccessPolicyB2BSetting $value): void {
         $this->getBackingStore()->set('b2bCollaborationInbound', $value);
@@ -112,7 +112,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
 
     /**
      * Sets the b2bCollaborationOutbound property value. Defines your default configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B collaboration.
-     *  @param CrossTenantAccessPolicyB2BSetting|null $value Value to set for the b2bCollaborationOutbound property.
+     * @param CrossTenantAccessPolicyB2BSetting|null $value Value to set for the b2bCollaborationOutbound property.
     */
     public function setB2bCollaborationOutbound(?CrossTenantAccessPolicyB2BSetting $value): void {
         $this->getBackingStore()->set('b2bCollaborationOutbound', $value);
@@ -120,7 +120,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
 
     /**
      * Sets the b2bDirectConnectInbound property value. Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B direct connect.
-     *  @param CrossTenantAccessPolicyB2BSetting|null $value Value to set for the b2bDirectConnectInbound property.
+     * @param CrossTenantAccessPolicyB2BSetting|null $value Value to set for the b2bDirectConnectInbound property.
     */
     public function setB2bDirectConnectInbound(?CrossTenantAccessPolicyB2BSetting $value): void {
         $this->getBackingStore()->set('b2bDirectConnectInbound', $value);
@@ -128,7 +128,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
 
     /**
      * Sets the b2bDirectConnectOutbound property value. Defines your default configuration for users in your organization going outbound to access resources in another organization via Azure AD B2B direct connect.
-     *  @param CrossTenantAccessPolicyB2BSetting|null $value Value to set for the b2bDirectConnectOutbound property.
+     * @param CrossTenantAccessPolicyB2BSetting|null $value Value to set for the b2bDirectConnectOutbound property.
     */
     public function setB2bDirectConnectOutbound(?CrossTenantAccessPolicyB2BSetting $value): void {
         $this->getBackingStore()->set('b2bDirectConnectOutbound', $value);
@@ -136,7 +136,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
 
     /**
      * Sets the inboundTrust property value. Determines the default configuration for trusting other Conditional Access claims from external Azure AD organizations.
-     *  @param CrossTenantAccessPolicyInboundTrust|null $value Value to set for the inboundTrust property.
+     * @param CrossTenantAccessPolicyInboundTrust|null $value Value to set for the inboundTrust property.
     */
     public function setInboundTrust(?CrossTenantAccessPolicyInboundTrust $value): void {
         $this->getBackingStore()->set('inboundTrust', $value);
@@ -144,7 +144,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
 
     /**
      * Sets the isServiceDefault property value. If true, the default configuration is set to the system default configuration. If false, the default settings have been customized.
-     *  @param bool|null $value Value to set for the isServiceDefault property.
+     * @param bool|null $value Value to set for the isServiceDefault property.
     */
     public function setIsServiceDefault(?bool $value): void {
         $this->getBackingStore()->set('isServiceDefault', $value);

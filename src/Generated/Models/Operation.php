@@ -82,7 +82,7 @@ class Operation extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. The start time of the operation.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -90,7 +90,7 @@ class Operation extends Entity implements Parsable
 
     /**
      * Sets the lastActionDateTime property value. The time of the last action of the operation.
-     *  @param DateTime|null $value Value to set for the lastActionDateTime property.
+     * @param DateTime|null $value Value to set for the lastActionDateTime property.
     */
     public function setLastActionDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastActionDateTime', $value);
@@ -98,7 +98,7 @@ class Operation extends Entity implements Parsable
 
     /**
      * Sets the status property value. The current status of the operation: notStarted, running, completed, failed
-     *  @param OperationStatus|null $value Value to set for the status property.
+     * @param OperationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?OperationStatus $value): void {
         $this->getBackingStore()->set('status', $value);

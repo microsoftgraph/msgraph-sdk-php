@@ -110,7 +110,7 @@ class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the enabled property value. The number of units that are enabled for the active subscription of the service SKU.
-     *  @param int|null $value Value to set for the enabled property.
+     * @param int|null $value Value to set for the enabled property.
     */
     public function setEnabled(?int $value): void {
         $this->getBackingStore()->set('enabled', $value);
@@ -134,7 +134,7 @@ class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -142,7 +142,7 @@ class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the suspended property value. The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted.
-     *  @param int|null $value Value to set for the suspended property.
+     * @param int|null $value Value to set for the suspended property.
     */
     public function setSuspended(?int $value): void {
         $this->getBackingStore()->set('suspended', $value);
@@ -150,7 +150,7 @@ class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the warning property value. The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it is cancelled (moved to a suspended state).
-     *  @param int|null $value Value to set for the warning property.
+     * @param int|null $value Value to set for the warning property.
     */
     public function setWarning(?int $value): void {
         $this->getBackingStore()->set('warning', $value);

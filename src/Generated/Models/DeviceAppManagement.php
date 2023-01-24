@@ -225,7 +225,7 @@ class DeviceAppManagement extends Entity implements Parsable
 
     /**
      * Sets the androidManagedAppProtections property value. Android managed app policies.
-     *  @param array<AndroidManagedAppProtection>|null $value Value to set for the androidManagedAppProtections property.
+     * @param array<AndroidManagedAppProtection>|null $value Value to set for the androidManagedAppProtections property.
     */
     public function setAndroidManagedAppProtections(?array $value): void {
         $this->getBackingStore()->set('androidManagedAppProtections', $value);
@@ -233,7 +233,7 @@ class DeviceAppManagement extends Entity implements Parsable
 
     /**
      * Sets the defaultManagedAppProtections property value. Default managed app policies.
-     *  @param array<DefaultManagedAppProtection>|null $value Value to set for the defaultManagedAppProtections property.
+     * @param array<DefaultManagedAppProtection>|null $value Value to set for the defaultManagedAppProtections property.
     */
     public function setDefaultManagedAppProtections(?array $value): void {
         $this->getBackingStore()->set('defaultManagedAppProtections', $value);
@@ -241,7 +241,7 @@ class DeviceAppManagement extends Entity implements Parsable
 
     /**
      * Sets the iosManagedAppProtections property value. iOS managed app policies.
-     *  @param array<IosManagedAppProtection>|null $value Value to set for the iosManagedAppProtections property.
+     * @param array<IosManagedAppProtection>|null $value Value to set for the iosManagedAppProtections property.
     */
     public function setIosManagedAppProtections(?array $value): void {
         $this->getBackingStore()->set('iosManagedAppProtections', $value);
@@ -249,7 +249,7 @@ class DeviceAppManagement extends Entity implements Parsable
 
     /**
      * Sets the isEnabledForMicrosoftStoreForBusiness property value. Whether the account is enabled for syncing applications from the Microsoft Store for Business.
-     *  @param bool|null $value Value to set for the isEnabledForMicrosoftStoreForBusiness property.
+     * @param bool|null $value Value to set for the isEnabledForMicrosoftStoreForBusiness property.
     */
     public function setIsEnabledForMicrosoftStoreForBusiness(?bool $value): void {
         $this->getBackingStore()->set('isEnabledForMicrosoftStoreForBusiness', $value);
@@ -257,7 +257,7 @@ class DeviceAppManagement extends Entity implements Parsable
 
     /**
      * Sets the managedAppPolicies property value. Managed app policies.
-     *  @param array<ManagedAppPolicy>|null $value Value to set for the managedAppPolicies property.
+     * @param array<ManagedAppPolicy>|null $value Value to set for the managedAppPolicies property.
     */
     public function setManagedAppPolicies(?array $value): void {
         $this->getBackingStore()->set('managedAppPolicies', $value);
@@ -265,7 +265,7 @@ class DeviceAppManagement extends Entity implements Parsable
 
     /**
      * Sets the managedAppRegistrations property value. The managed app registrations.
-     *  @param array<ManagedAppRegistration>|null $value Value to set for the managedAppRegistrations property.
+     * @param array<ManagedAppRegistration>|null $value Value to set for the managedAppRegistrations property.
     */
     public function setManagedAppRegistrations(?array $value): void {
         $this->getBackingStore()->set('managedAppRegistrations', $value);
@@ -273,7 +273,7 @@ class DeviceAppManagement extends Entity implements Parsable
 
     /**
      * Sets the managedAppStatuses property value. The managed app statuses.
-     *  @param array<ManagedAppStatus>|null $value Value to set for the managedAppStatuses property.
+     * @param array<ManagedAppStatus>|null $value Value to set for the managedAppStatuses property.
     */
     public function setManagedAppStatuses(?array $value): void {
         $this->getBackingStore()->set('managedAppStatuses', $value);
@@ -281,7 +281,7 @@ class DeviceAppManagement extends Entity implements Parsable
 
     /**
      * Sets the managedEBooks property value. The Managed eBook.
-     *  @param array<ManagedEBook>|null $value Value to set for the managedEBooks property.
+     * @param array<ManagedEBook>|null $value Value to set for the managedEBooks property.
     */
     public function setManagedEBooks(?array $value): void {
         $this->getBackingStore()->set('managedEBooks', $value);
@@ -289,7 +289,7 @@ class DeviceAppManagement extends Entity implements Parsable
 
     /**
      * Sets the mdmWindowsInformationProtectionPolicies property value. Windows information protection for apps running on devices which are MDM enrolled.
-     *  @param array<MdmWindowsInformationProtectionPolicy>|null $value Value to set for the mdmWindowsInformationProtectionPolicies property.
+     * @param array<MdmWindowsInformationProtectionPolicy>|null $value Value to set for the mdmWindowsInformationProtectionPolicies property.
     */
     public function setMdmWindowsInformationProtectionPolicies(?array $value): void {
         $this->getBackingStore()->set('mdmWindowsInformationProtectionPolicies', $value);
@@ -297,7 +297,7 @@ class DeviceAppManagement extends Entity implements Parsable
 
     /**
      * Sets the microsoftStoreForBusinessLanguage property value. The locale information used to sync applications from the Microsoft Store for Business. Cultures that are specific to a country/region. The names of these cultures follow RFC 4646 (Windows Vista and later). The format is -<country/regioncode2>, where  is a lowercase two-letter code derived from ISO 639-1 and <country/regioncode2> is an uppercase two-letter code derived from ISO 3166. For example, en-US for English (United States) is a specific culture.
-     *  @param string|null $value Value to set for the microsoftStoreForBusinessLanguage property.
+     * @param string|null $value Value to set for the microsoftStoreForBusinessLanguage property.
     */
     public function setMicrosoftStoreForBusinessLanguage(?string $value): void {
         $this->getBackingStore()->set('microsoftStoreForBusinessLanguage', $value);
@@ -305,7 +305,7 @@ class DeviceAppManagement extends Entity implements Parsable
 
     /**
      * Sets the microsoftStoreForBusinessLastCompletedApplicationSyncTime property value. The last time an application sync from the Microsoft Store for Business was completed.
-     *  @param DateTime|null $value Value to set for the microsoftStoreForBusinessLastCompletedApplicationSyncTime property.
+     * @param DateTime|null $value Value to set for the microsoftStoreForBusinessLastCompletedApplicationSyncTime property.
     */
     public function setMicrosoftStoreForBusinessLastCompletedApplicationSyncTime(?DateTime $value): void {
         $this->getBackingStore()->set('microsoftStoreForBusinessLastCompletedApplicationSyncTime', $value);
@@ -313,7 +313,7 @@ class DeviceAppManagement extends Entity implements Parsable
 
     /**
      * Sets the microsoftStoreForBusinessLastSuccessfulSyncDateTime property value. The last time the apps from the Microsoft Store for Business were synced successfully for the account.
-     *  @param DateTime|null $value Value to set for the microsoftStoreForBusinessLastSuccessfulSyncDateTime property.
+     * @param DateTime|null $value Value to set for the microsoftStoreForBusinessLastSuccessfulSyncDateTime property.
     */
     public function setMicrosoftStoreForBusinessLastSuccessfulSyncDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('microsoftStoreForBusinessLastSuccessfulSyncDateTime', $value);
@@ -321,7 +321,7 @@ class DeviceAppManagement extends Entity implements Parsable
 
     /**
      * Sets the mobileAppCategories property value. The mobile app categories.
-     *  @param array<MobileAppCategory>|null $value Value to set for the mobileAppCategories property.
+     * @param array<MobileAppCategory>|null $value Value to set for the mobileAppCategories property.
     */
     public function setMobileAppCategories(?array $value): void {
         $this->getBackingStore()->set('mobileAppCategories', $value);
@@ -329,7 +329,7 @@ class DeviceAppManagement extends Entity implements Parsable
 
     /**
      * Sets the mobileAppConfigurations property value. The Managed Device Mobile Application Configurations.
-     *  @param array<ManagedDeviceMobileAppConfiguration>|null $value Value to set for the mobileAppConfigurations property.
+     * @param array<ManagedDeviceMobileAppConfiguration>|null $value Value to set for the mobileAppConfigurations property.
     */
     public function setMobileAppConfigurations(?array $value): void {
         $this->getBackingStore()->set('mobileAppConfigurations', $value);
@@ -337,7 +337,7 @@ class DeviceAppManagement extends Entity implements Parsable
 
     /**
      * Sets the mobileApps property value. The mobile apps.
-     *  @param array<MobileApp>|null $value Value to set for the mobileApps property.
+     * @param array<MobileApp>|null $value Value to set for the mobileApps property.
     */
     public function setMobileApps(?array $value): void {
         $this->getBackingStore()->set('mobileApps', $value);
@@ -345,7 +345,7 @@ class DeviceAppManagement extends Entity implements Parsable
 
     /**
      * Sets the targetedManagedAppConfigurations property value. Targeted managed app configurations.
-     *  @param array<TargetedManagedAppConfiguration>|null $value Value to set for the targetedManagedAppConfigurations property.
+     * @param array<TargetedManagedAppConfiguration>|null $value Value to set for the targetedManagedAppConfigurations property.
     */
     public function setTargetedManagedAppConfigurations(?array $value): void {
         $this->getBackingStore()->set('targetedManagedAppConfigurations', $value);
@@ -353,7 +353,7 @@ class DeviceAppManagement extends Entity implements Parsable
 
     /**
      * Sets the vppTokens property value. List of Vpp tokens for this organization.
-     *  @param array<VppToken>|null $value Value to set for the vppTokens property.
+     * @param array<VppToken>|null $value Value to set for the vppTokens property.
     */
     public function setVppTokens(?array $value): void {
         $this->getBackingStore()->set('vppTokens', $value);
@@ -361,7 +361,7 @@ class DeviceAppManagement extends Entity implements Parsable
 
     /**
      * Sets the windowsInformationProtectionPolicies property value. Windows information protection for apps running on devices which are not MDM enrolled.
-     *  @param array<WindowsInformationProtectionPolicy>|null $value Value to set for the windowsInformationProtectionPolicies property.
+     * @param array<WindowsInformationProtectionPolicy>|null $value Value to set for the windowsInformationProtectionPolicies property.
     */
     public function setWindowsInformationProtectionPolicies(?array $value): void {
         $this->getBackingStore()->set('windowsInformationProtectionPolicies', $value);

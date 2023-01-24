@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Devices;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve a list of device objects registered in the organization.
+*/
 class DevicesRequestBuilderGetQueryParameters 
 {
     /**

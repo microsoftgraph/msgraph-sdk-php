@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\External;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get external
+*/
 class ExternalRequestBuilderGetQueryParameters 
 {
     /**

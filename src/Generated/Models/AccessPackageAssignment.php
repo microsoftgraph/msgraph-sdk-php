@@ -115,7 +115,7 @@ class AccessPackageAssignment extends Entity implements Parsable
 
     /**
      * Sets the accessPackage property value. Read-only. Nullable. Supports $filter (eq) on the id property and $expand query parameters.
-     *  @param AccessPackage|null $value Value to set for the accessPackage property.
+     * @param AccessPackage|null $value Value to set for the accessPackage property.
     */
     public function setAccessPackage(?AccessPackage $value): void {
         $this->getBackingStore()->set('accessPackage', $value);
@@ -123,7 +123,7 @@ class AccessPackageAssignment extends Entity implements Parsable
 
     /**
      * Sets the assignmentPolicy property value. Read-only. Supports $filter (eq) on the id property and $expand query parameters.
-     *  @param AccessPackageAssignmentPolicy|null $value Value to set for the assignmentPolicy property.
+     * @param AccessPackageAssignmentPolicy|null $value Value to set for the assignmentPolicy property.
     */
     public function setAssignmentPolicy(?AccessPackageAssignmentPolicy $value): void {
         $this->getBackingStore()->set('assignmentPolicy', $value);
@@ -131,7 +131,7 @@ class AccessPackageAssignment extends Entity implements Parsable
 
     /**
      * Sets the expiredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     *  @param DateTime|null $value Value to set for the expiredDateTime property.
+     * @param DateTime|null $value Value to set for the expiredDateTime property.
     */
     public function setExpiredDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('expiredDateTime', $value);
@@ -139,7 +139,7 @@ class AccessPackageAssignment extends Entity implements Parsable
 
     /**
      * Sets the schedule property value. When the access assignment is to be in place. Read-only.
-     *  @param EntitlementManagementSchedule|null $value Value to set for the schedule property.
+     * @param EntitlementManagementSchedule|null $value Value to set for the schedule property.
     */
     public function setSchedule(?EntitlementManagementSchedule $value): void {
         $this->getBackingStore()->set('schedule', $value);
@@ -147,7 +147,7 @@ class AccessPackageAssignment extends Entity implements Parsable
 
     /**
      * Sets the state property value. The state of the access package assignment. The possible values are: delivering, partiallyDelivered, delivered, expired, deliveryFailed, unknownFutureValue. Read-only. Supports $filter (eq).
-     *  @param AccessPackageAssignmentState|null $value Value to set for the state property.
+     * @param AccessPackageAssignmentState|null $value Value to set for the state property.
     */
     public function setState(?AccessPackageAssignmentState $value): void {
         $this->getBackingStore()->set('state', $value);
@@ -155,7 +155,7 @@ class AccessPackageAssignment extends Entity implements Parsable
 
     /**
      * Sets the status property value. More information about the assignment lifecycle.  Possible values include Delivering, Delivered, NearExpiry1DayNotificationTriggered, or ExpiredNotificationTriggered.  Read-only.
-     *  @param string|null $value Value to set for the status property.
+     * @param string|null $value Value to set for the status property.
     */
     public function setStatus(?string $value): void {
         $this->getBackingStore()->set('status', $value);
@@ -163,7 +163,7 @@ class AccessPackageAssignment extends Entity implements Parsable
 
     /**
      * Sets the target property value. The subject of the access package assignment. Read-only. Nullable. Supports $expand. Supports $filter (eq) on objectId.
-     *  @param AccessPackageSubject|null $value Value to set for the target property.
+     * @param AccessPackageSubject|null $value Value to set for the target property.
     */
     public function setTarget(?AccessPackageSubject $value): void {
         $this->getBackingStore()->set('target', $value);

@@ -65,7 +65,7 @@ class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable
 
     /**
      * Sets the channel property value. The enum to specify the channels for Microsoft Edge apps.
-     *  @param MicrosoftEdgeChannel|null $value Value to set for the channel property.
+     * @param MicrosoftEdgeChannel|null $value Value to set for the channel property.
     */
     public function setChannel(?MicrosoftEdgeChannel $value): void {
         $this->getBackingStore()->set('channel', $value);
@@ -73,7 +73,7 @@ class WindowsMicrosoftEdgeApp extends MobileApp implements Parsable
 
     /**
      * Sets the displayLanguageLocale property value. The language locale to use when the Edge app displays text to the user.
-     *  @param string|null $value Value to set for the displayLanguageLocale property.
+     * @param string|null $value Value to set for the displayLanguageLocale property.
     */
     public function setDisplayLanguageLocale(?string $value): void {
         $this->getBackingStore()->set('displayLanguageLocale', $value);

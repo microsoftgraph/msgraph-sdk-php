@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\GetCompatible
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Invoke function getCompatibleHubContentTypes
+*/
 class GetCompatibleHubContentTypesRequestBuilderGetQueryParameters 
 {
     /**

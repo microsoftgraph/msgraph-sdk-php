@@ -175,7 +175,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
 
     /**
      * Sets the accessReviewId property value. The identifier of the accessReviewInstance parent. Supports $select. Read-only.
-     *  @param string|null $value Value to set for the accessReviewId property.
+     * @param string|null $value Value to set for the accessReviewId property.
     */
     public function setAccessReviewId(?string $value): void {
         $this->getBackingStore()->set('accessReviewId', $value);
@@ -183,7 +183,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
 
     /**
      * Sets the appliedBy property value. The identifier of the user who applied the decision. Read-only.
-     *  @param UserIdentity|null $value Value to set for the appliedBy property.
+     * @param UserIdentity|null $value Value to set for the appliedBy property.
     */
     public function setAppliedBy(?UserIdentity $value): void {
         $this->getBackingStore()->set('appliedBy', $value);
@@ -191,7 +191,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
 
     /**
      * Sets the appliedDateTime property value. The timestamp when the approval decision was applied.00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't applied the decision or it was automatically applied. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.  Supports $select. Read-only.
-     *  @param DateTime|null $value Value to set for the appliedDateTime property.
+     * @param DateTime|null $value Value to set for the appliedDateTime property.
     */
     public function setAppliedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('appliedDateTime', $value);
@@ -199,7 +199,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
 
     /**
      * Sets the applyResult property value. The result of applying the decision. Possible values: New, AppliedSuccessfully, AppliedWithUnknownFailure, AppliedSuccessfullyButObjectNotFound and ApplyNotSupported. Supports $select, $orderby, and $filter (eq only). Read-only.
-     *  @param string|null $value Value to set for the applyResult property.
+     * @param string|null $value Value to set for the applyResult property.
     */
     public function setApplyResult(?string $value): void {
         $this->getBackingStore()->set('applyResult', $value);
@@ -207,7 +207,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
 
     /**
      * Sets the decision property value. Result of the review. Possible values: Approve, Deny, NotReviewed, or DontKnow. Supports $select, $orderby, and $filter (eq only).
-     *  @param string|null $value Value to set for the decision property.
+     * @param string|null $value Value to set for the decision property.
     */
     public function setDecision(?string $value): void {
         $this->getBackingStore()->set('decision', $value);
@@ -215,7 +215,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
 
     /**
      * Sets the justification property value. Justification left by the reviewer when they made the decision.
-     *  @param string|null $value Value to set for the justification property.
+     * @param string|null $value Value to set for the justification property.
     */
     public function setJustification(?string $value): void {
         $this->getBackingStore()->set('justification', $value);
@@ -223,7 +223,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
 
     /**
      * Sets the principal property value. Every decision item in an access review represents a principal's access to a resource. This property represents details of the principal. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is 'Bob' and the resource is 'Sales'. Principals can be of two types - userIdentity and servicePrincipalIdentity. Supports $select. Read-only.
-     *  @param Identity|null $value Value to set for the principal property.
+     * @param Identity|null $value Value to set for the principal property.
     */
     public function setPrincipal(?Identity $value): void {
         $this->getBackingStore()->set('principal', $value);
@@ -231,7 +231,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
 
     /**
      * Sets the principalLink property value. A link to the principal object. For example, https://graph.microsoft.com/v1.0/users/a6c7aecb-cbfd-4763-87ef-e91b4bd509d9. Read-only.
-     *  @param string|null $value Value to set for the principalLink property.
+     * @param string|null $value Value to set for the principalLink property.
     */
     public function setPrincipalLink(?string $value): void {
         $this->getBackingStore()->set('principalLink', $value);
@@ -239,7 +239,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
 
     /**
      * Sets the recommendation property value. A system-generated recommendation for the approval decision based off last interactive sign-in to tenant. Recommend approve if sign-in is within thirty days of start of review. Recommend deny if sign-in is greater than thirty days of start of review. Recommendation not available otherwise. Possible values: Approve, Deny, or NoInfoAvailable. Supports $select, $orderby, and $filter (eq only). Read-only.
-     *  @param string|null $value Value to set for the recommendation property.
+     * @param string|null $value Value to set for the recommendation property.
     */
     public function setRecommendation(?string $value): void {
         $this->getBackingStore()->set('recommendation', $value);
@@ -247,7 +247,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
 
     /**
      * Sets the resource property value. Every decision item in an access review represents a principal's access to a resource. This property represents details of the resource. For example, if a decision item represents access of User 'Bob' to Group 'Sales' - The principal is Bob and the resource is 'Sales'. Resources can be of multiple types. See accessReviewInstanceDecisionItemResource. Read-only.
-     *  @param AccessReviewInstanceDecisionItemResource|null $value Value to set for the resource property.
+     * @param AccessReviewInstanceDecisionItemResource|null $value Value to set for the resource property.
     */
     public function setResource(?AccessReviewInstanceDecisionItemResource $value): void {
         $this->getBackingStore()->set('resource', $value);
@@ -255,7 +255,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
 
     /**
      * Sets the resourceLink property value. A link to the resource. For example, https://graph.microsoft.com/v1.0/servicePrincipals/c86300f3-8695-4320-9f6e-32a2555f5ff8. Supports $select. Read-only.
-     *  @param string|null $value Value to set for the resourceLink property.
+     * @param string|null $value Value to set for the resourceLink property.
     */
     public function setResourceLink(?string $value): void {
         $this->getBackingStore()->set('resourceLink', $value);
@@ -263,7 +263,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
 
     /**
      * Sets the reviewedBy property value. The identifier of the reviewer.00000000-0000-0000-0000-000000000000 if the assigned reviewer hasn't reviewed. Supports $select. Read-only.
-     *  @param UserIdentity|null $value Value to set for the reviewedBy property.
+     * @param UserIdentity|null $value Value to set for the reviewedBy property.
     */
     public function setReviewedBy(?UserIdentity $value): void {
         $this->getBackingStore()->set('reviewedBy', $value);
@@ -271,7 +271,7 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
 
     /**
      * Sets the reviewedDateTime property value. The timestamp when the review decision occurred. Supports $select. Read-only.
-     *  @param DateTime|null $value Value to set for the reviewedDateTime property.
+     * @param DateTime|null $value Value to set for the reviewedDateTime property.
     */
     public function setReviewedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('reviewedDateTime', $value);

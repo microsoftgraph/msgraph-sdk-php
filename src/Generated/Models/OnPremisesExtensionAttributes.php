@@ -230,7 +230,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -238,7 +238,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -246,7 +246,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the extensionAttribute1 property value. First customizable extension attribute.
-     *  @param string|null $value Value to set for the extensionAttribute1 property.
+     * @param string|null $value Value to set for the extensionAttribute1 property.
     */
     public function setExtensionAttribute1(?string $value): void {
         $this->getBackingStore()->set('extensionAttribute1', $value);
@@ -254,7 +254,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the extensionAttribute10 property value. Tenth customizable extension attribute.
-     *  @param string|null $value Value to set for the extensionAttribute10 property.
+     * @param string|null $value Value to set for the extensionAttribute10 property.
     */
     public function setExtensionAttribute10(?string $value): void {
         $this->getBackingStore()->set('extensionAttribute10', $value);
@@ -262,7 +262,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the extensionAttribute11 property value. Eleventh customizable extension attribute.
-     *  @param string|null $value Value to set for the extensionAttribute11 property.
+     * @param string|null $value Value to set for the extensionAttribute11 property.
     */
     public function setExtensionAttribute11(?string $value): void {
         $this->getBackingStore()->set('extensionAttribute11', $value);
@@ -270,7 +270,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the extensionAttribute12 property value. Twelfth customizable extension attribute.
-     *  @param string|null $value Value to set for the extensionAttribute12 property.
+     * @param string|null $value Value to set for the extensionAttribute12 property.
     */
     public function setExtensionAttribute12(?string $value): void {
         $this->getBackingStore()->set('extensionAttribute12', $value);
@@ -278,7 +278,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the extensionAttribute13 property value. Thirteenth customizable extension attribute.
-     *  @param string|null $value Value to set for the extensionAttribute13 property.
+     * @param string|null $value Value to set for the extensionAttribute13 property.
     */
     public function setExtensionAttribute13(?string $value): void {
         $this->getBackingStore()->set('extensionAttribute13', $value);
@@ -286,7 +286,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the extensionAttribute14 property value. Fourteenth customizable extension attribute.
-     *  @param string|null $value Value to set for the extensionAttribute14 property.
+     * @param string|null $value Value to set for the extensionAttribute14 property.
     */
     public function setExtensionAttribute14(?string $value): void {
         $this->getBackingStore()->set('extensionAttribute14', $value);
@@ -294,7 +294,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the extensionAttribute15 property value. Fifteenth customizable extension attribute.
-     *  @param string|null $value Value to set for the extensionAttribute15 property.
+     * @param string|null $value Value to set for the extensionAttribute15 property.
     */
     public function setExtensionAttribute15(?string $value): void {
         $this->getBackingStore()->set('extensionAttribute15', $value);
@@ -302,7 +302,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the extensionAttribute2 property value. Second customizable extension attribute.
-     *  @param string|null $value Value to set for the extensionAttribute2 property.
+     * @param string|null $value Value to set for the extensionAttribute2 property.
     */
     public function setExtensionAttribute2(?string $value): void {
         $this->getBackingStore()->set('extensionAttribute2', $value);
@@ -310,7 +310,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the extensionAttribute3 property value. Third customizable extension attribute.
-     *  @param string|null $value Value to set for the extensionAttribute3 property.
+     * @param string|null $value Value to set for the extensionAttribute3 property.
     */
     public function setExtensionAttribute3(?string $value): void {
         $this->getBackingStore()->set('extensionAttribute3', $value);
@@ -318,7 +318,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the extensionAttribute4 property value. Fourth customizable extension attribute.
-     *  @param string|null $value Value to set for the extensionAttribute4 property.
+     * @param string|null $value Value to set for the extensionAttribute4 property.
     */
     public function setExtensionAttribute4(?string $value): void {
         $this->getBackingStore()->set('extensionAttribute4', $value);
@@ -326,7 +326,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the extensionAttribute5 property value. Fifth customizable extension attribute.
-     *  @param string|null $value Value to set for the extensionAttribute5 property.
+     * @param string|null $value Value to set for the extensionAttribute5 property.
     */
     public function setExtensionAttribute5(?string $value): void {
         $this->getBackingStore()->set('extensionAttribute5', $value);
@@ -334,7 +334,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the extensionAttribute6 property value. Sixth customizable extension attribute.
-     *  @param string|null $value Value to set for the extensionAttribute6 property.
+     * @param string|null $value Value to set for the extensionAttribute6 property.
     */
     public function setExtensionAttribute6(?string $value): void {
         $this->getBackingStore()->set('extensionAttribute6', $value);
@@ -342,7 +342,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the extensionAttribute7 property value. Seventh customizable extension attribute.
-     *  @param string|null $value Value to set for the extensionAttribute7 property.
+     * @param string|null $value Value to set for the extensionAttribute7 property.
     */
     public function setExtensionAttribute7(?string $value): void {
         $this->getBackingStore()->set('extensionAttribute7', $value);
@@ -350,7 +350,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the extensionAttribute8 property value. Eighth customizable extension attribute.
-     *  @param string|null $value Value to set for the extensionAttribute8 property.
+     * @param string|null $value Value to set for the extensionAttribute8 property.
     */
     public function setExtensionAttribute8(?string $value): void {
         $this->getBackingStore()->set('extensionAttribute8', $value);
@@ -358,7 +358,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the extensionAttribute9 property value. Ninth customizable extension attribute.
-     *  @param string|null $value Value to set for the extensionAttribute9 property.
+     * @param string|null $value Value to set for the extensionAttribute9 property.
     */
     public function setExtensionAttribute9(?string $value): void {
         $this->getBackingStore()->set('extensionAttribute9', $value);
@@ -366,7 +366,7 @@ class OnPremisesExtensionAttributes implements AdditionalDataHolder, BackedModel
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

@@ -56,7 +56,7 @@ class ReminderViewWithStartDateTimeWithEndDateTimeResponse extends BaseCollectio
 
     /**
      * Sets the value property value. The value property
-     *  @param array<Reminder>|null $value Value to set for the value property.
+     * @param array<Reminder>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {
         $this->getBackingStore()->set('value', $value);

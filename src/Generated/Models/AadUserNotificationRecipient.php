@@ -55,7 +55,7 @@ class AadUserNotificationRecipient extends TeamworkNotificationRecipient impleme
 
     /**
      * Sets the userId property value. Azure AD user identifier. Use the List users method to get this ID.
-     *  @param string|null $value Value to set for the userId property.
+     * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {
         $this->getBackingStore()->set('userId', $value);

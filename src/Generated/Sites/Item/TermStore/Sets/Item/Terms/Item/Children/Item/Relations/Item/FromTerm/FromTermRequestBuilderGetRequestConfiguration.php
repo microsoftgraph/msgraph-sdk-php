@@ -4,10 +4,13 @@ namespace Microsoft\Graph\Generated\Sites\Item\TermStore\Sets\Item\Terms\Item\Ch
 
 use Microsoft\Kiota\Abstractions\RequestOption;
 
+/**
+ * Configuration for the request such as headers, query parameters, and middleware options.
+*/
 class FromTermRequestBuilderGetRequestConfiguration 
 {
     /**
-     * @var array<string, string>|null $headers Request headers
+     * @var array<string, array<string>|string>|null $headers Request headers
     */
     public ?array $headers = null;
     

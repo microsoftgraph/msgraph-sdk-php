@@ -130,7 +130,7 @@ class TeamMessagingSettings implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -138,7 +138,7 @@ class TeamMessagingSettings implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the allowChannelMentions property value. If set to true, @channel mentions are allowed.
-     *  @param bool|null $value Value to set for the allowChannelMentions property.
+     * @param bool|null $value Value to set for the allowChannelMentions property.
     */
     public function setAllowChannelMentions(?bool $value): void {
         $this->getBackingStore()->set('allowChannelMentions', $value);
@@ -146,7 +146,7 @@ class TeamMessagingSettings implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the allowOwnerDeleteMessages property value. If set to true, owners can delete any message.
-     *  @param bool|null $value Value to set for the allowOwnerDeleteMessages property.
+     * @param bool|null $value Value to set for the allowOwnerDeleteMessages property.
     */
     public function setAllowOwnerDeleteMessages(?bool $value): void {
         $this->getBackingStore()->set('allowOwnerDeleteMessages', $value);
@@ -154,7 +154,7 @@ class TeamMessagingSettings implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the allowTeamMentions property value. If set to true, @team mentions are allowed.
-     *  @param bool|null $value Value to set for the allowTeamMentions property.
+     * @param bool|null $value Value to set for the allowTeamMentions property.
     */
     public function setAllowTeamMentions(?bool $value): void {
         $this->getBackingStore()->set('allowTeamMentions', $value);
@@ -162,7 +162,7 @@ class TeamMessagingSettings implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the allowUserDeleteMessages property value. If set to true, users can delete their messages.
-     *  @param bool|null $value Value to set for the allowUserDeleteMessages property.
+     * @param bool|null $value Value to set for the allowUserDeleteMessages property.
     */
     public function setAllowUserDeleteMessages(?bool $value): void {
         $this->getBackingStore()->set('allowUserDeleteMessages', $value);
@@ -170,7 +170,7 @@ class TeamMessagingSettings implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the allowUserEditMessages property value. If set to true, users can edit their messages.
-     *  @param bool|null $value Value to set for the allowUserEditMessages property.
+     * @param bool|null $value Value to set for the allowUserEditMessages property.
     */
     public function setAllowUserEditMessages(?bool $value): void {
         $this->getBackingStore()->set('allowUserEditMessages', $value);
@@ -178,7 +178,7 @@ class TeamMessagingSettings implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -186,7 +186,7 @@ class TeamMessagingSettings implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

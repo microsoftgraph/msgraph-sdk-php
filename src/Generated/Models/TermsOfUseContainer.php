@@ -64,7 +64,7 @@ class TermsOfUseContainer extends Entity implements Parsable
 
     /**
      * Sets the agreementAcceptances property value. Represents the current status of a user's response to a company's customizable terms of use agreement.
-     *  @param array<AgreementAcceptance>|null $value Value to set for the agreementAcceptances property.
+     * @param array<AgreementAcceptance>|null $value Value to set for the agreementAcceptances property.
     */
     public function setAgreementAcceptances(?array $value): void {
         $this->getBackingStore()->set('agreementAcceptances', $value);
@@ -72,7 +72,7 @@ class TermsOfUseContainer extends Entity implements Parsable
 
     /**
      * Sets the agreements property value. Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
-     *  @param array<Agreement>|null $value Value to set for the agreements property.
+     * @param array<Agreement>|null $value Value to set for the agreements property.
     */
     public function setAgreements(?array $value): void {
         $this->getBackingStore()->set('agreements', $value);

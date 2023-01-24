@@ -84,7 +84,7 @@ class AppConsentRequest extends Entity implements Parsable
 
     /**
      * Sets the appDisplayName property value. The display name of the app for which consent is requested. Required. Supports $filter (eq only) and $orderby.
-     *  @param string|null $value Value to set for the appDisplayName property.
+     * @param string|null $value Value to set for the appDisplayName property.
     */
     public function setAppDisplayName(?string $value): void {
         $this->getBackingStore()->set('appDisplayName', $value);
@@ -92,7 +92,7 @@ class AppConsentRequest extends Entity implements Parsable
 
     /**
      * Sets the appId property value. The identifier of the application. Required. Supports $filter (eq only) and $orderby.
-     *  @param string|null $value Value to set for the appId property.
+     * @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value): void {
         $this->getBackingStore()->set('appId', $value);
@@ -100,7 +100,7 @@ class AppConsentRequest extends Entity implements Parsable
 
     /**
      * Sets the pendingScopes property value. A list of pending scopes waiting for approval. Required.
-     *  @param array<AppConsentRequestScope>|null $value Value to set for the pendingScopes property.
+     * @param array<AppConsentRequestScope>|null $value Value to set for the pendingScopes property.
     */
     public function setPendingScopes(?array $value): void {
         $this->getBackingStore()->set('pendingScopes', $value);
@@ -108,7 +108,7 @@ class AppConsentRequest extends Entity implements Parsable
 
     /**
      * Sets the userConsentRequests property value. A list of pending user consent requests. Supports $filter (eq).
-     *  @param array<UserConsentRequest>|null $value Value to set for the userConsentRequests property.
+     * @param array<UserConsentRequest>|null $value Value to set for the userConsentRequests property.
     */
     public function setUserConsentRequests(?array $value): void {
         $this->getBackingStore()->set('userConsentRequests', $value);

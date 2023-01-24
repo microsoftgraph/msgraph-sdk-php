@@ -7,6 +7,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * You purchase multiple licenses for iOS apps through the Apple Volume Purchase Program for Business or Education. This involves setting up an Apple VPP account from the Apple website and uploading the Apple VPP Business or Education token to Intune. You can then synchronize your volume purchase information with Intune and track your volume-purchased app use. You can upload multiple Apple VPP Business or Education tokens.
+*/
 class VppToken extends Entity implements Parsable 
 {
     /**
@@ -155,7 +158,7 @@ class VppToken extends Entity implements Parsable
 
     /**
      * Sets the appleId property value. The apple Id associated with the given Apple Volume Purchase Program Token.
-     *  @param string|null $value Value to set for the appleId property.
+     * @param string|null $value Value to set for the appleId property.
     */
     public function setAppleId(?string $value): void {
         $this->getBackingStore()->set('appleId', $value);
@@ -163,7 +166,7 @@ class VppToken extends Entity implements Parsable
 
     /**
      * Sets the automaticallyUpdateApps property value. Whether or not apps for the VPP token will be automatically updated.
-     *  @param bool|null $value Value to set for the automaticallyUpdateApps property.
+     * @param bool|null $value Value to set for the automaticallyUpdateApps property.
     */
     public function setAutomaticallyUpdateApps(?bool $value): void {
         $this->getBackingStore()->set('automaticallyUpdateApps', $value);
@@ -171,7 +174,7 @@ class VppToken extends Entity implements Parsable
 
     /**
      * Sets the countryOrRegion property value. Whether or not apps for the VPP token will be automatically updated.
-     *  @param string|null $value Value to set for the countryOrRegion property.
+     * @param string|null $value Value to set for the countryOrRegion property.
     */
     public function setCountryOrRegion(?string $value): void {
         $this->getBackingStore()->set('countryOrRegion', $value);
@@ -179,7 +182,7 @@ class VppToken extends Entity implements Parsable
 
     /**
      * Sets the expirationDateTime property value. The expiration date time of the Apple Volume Purchase Program Token.
-     *  @param DateTime|null $value Value to set for the expirationDateTime property.
+     * @param DateTime|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('expirationDateTime', $value);
@@ -187,7 +190,7 @@ class VppToken extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. Last modification date time associated with the Apple Volume Purchase Program Token.
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -195,7 +198,7 @@ class VppToken extends Entity implements Parsable
 
     /**
      * Sets the lastSyncDateTime property value. The last time when an application sync was done with the Apple volume purchase program service using the the Apple Volume Purchase Program Token.
-     *  @param DateTime|null $value Value to set for the lastSyncDateTime property.
+     * @param DateTime|null $value Value to set for the lastSyncDateTime property.
     */
     public function setLastSyncDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastSyncDateTime', $value);
@@ -203,7 +206,7 @@ class VppToken extends Entity implements Parsable
 
     /**
      * Sets the lastSyncStatus property value. Possible sync statuses associated with an Apple Volume Purchase Program token.
-     *  @param VppTokenSyncStatus|null $value Value to set for the lastSyncStatus property.
+     * @param VppTokenSyncStatus|null $value Value to set for the lastSyncStatus property.
     */
     public function setLastSyncStatus(?VppTokenSyncStatus $value): void {
         $this->getBackingStore()->set('lastSyncStatus', $value);
@@ -211,7 +214,7 @@ class VppToken extends Entity implements Parsable
 
     /**
      * Sets the organizationName property value. The organization associated with the Apple Volume Purchase Program Token
-     *  @param string|null $value Value to set for the organizationName property.
+     * @param string|null $value Value to set for the organizationName property.
     */
     public function setOrganizationName(?string $value): void {
         $this->getBackingStore()->set('organizationName', $value);
@@ -219,7 +222,7 @@ class VppToken extends Entity implements Parsable
 
     /**
      * Sets the state property value. Possible states associated with an Apple Volume Purchase Program token.
-     *  @param VppTokenState|null $value Value to set for the state property.
+     * @param VppTokenState|null $value Value to set for the state property.
     */
     public function setState(?VppTokenState $value): void {
         $this->getBackingStore()->set('state', $value);
@@ -227,7 +230,7 @@ class VppToken extends Entity implements Parsable
 
     /**
      * Sets the token property value. The Apple Volume Purchase Program Token string downloaded from the Apple Volume Purchase Program.
-     *  @param string|null $value Value to set for the token property.
+     * @param string|null $value Value to set for the token property.
     */
     public function setToken(?string $value): void {
         $this->getBackingStore()->set('token', $value);
@@ -235,7 +238,7 @@ class VppToken extends Entity implements Parsable
 
     /**
      * Sets the vppTokenAccountType property value. Possible types of an Apple Volume Purchase Program token.
-     *  @param VppTokenAccountType|null $value Value to set for the vppTokenAccountType property.
+     * @param VppTokenAccountType|null $value Value to set for the vppTokenAccountType property.
     */
     public function setVppTokenAccountType(?VppTokenAccountType $value): void {
         $this->getBackingStore()->set('vppTokenAccountType', $value);

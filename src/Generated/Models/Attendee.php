@@ -65,7 +65,7 @@ class Attendee extends AttendeeBase implements Parsable
 
     /**
      * Sets the proposedNewTime property value. An alternate date/time proposed by the attendee for a meeting request to start and end. If the attendee hasn't proposed another time, then this property is not included in a response of a GET event.
-     *  @param TimeSlot|null $value Value to set for the proposedNewTime property.
+     * @param TimeSlot|null $value Value to set for the proposedNewTime property.
     */
     public function setProposedNewTime(?TimeSlot $value): void {
         $this->getBackingStore()->set('proposedNewTime', $value);
@@ -73,7 +73,7 @@ class Attendee extends AttendeeBase implements Parsable
 
     /**
      * Sets the status property value. The attendee's response (none, accepted, declined, etc.) for the event and date-time that the response was sent.
-     *  @param ResponseStatus|null $value Value to set for the status property.
+     * @param ResponseStatus|null $value Value to set for the status property.
     */
     public function setStatus(?ResponseStatus $value): void {
         $this->getBackingStore()->set('status', $value);

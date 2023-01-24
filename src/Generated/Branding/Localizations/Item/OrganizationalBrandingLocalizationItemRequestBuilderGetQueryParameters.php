@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Branding\Localizations\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Add different branding based on a locale.
+*/
 class OrganizationalBrandingLocalizationItemRequestBuilderGetQueryParameters 
 {
     /**

@@ -170,7 +170,7 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -178,7 +178,7 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -186,7 +186,7 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the fqdn property value. Host FQDN (Fully Qualified Domain Name) (for example, machine.company.com).
-     *  @param string|null $value Value to set for the fqdn property.
+     * @param string|null $value Value to set for the fqdn property.
     */
     public function setFqdn(?string $value): void {
         $this->getBackingStore()->set('fqdn', $value);
@@ -194,7 +194,7 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the isAzureAdJoined property value. The isAzureAdJoined property
-     *  @param bool|null $value Value to set for the isAzureAdJoined property.
+     * @param bool|null $value Value to set for the isAzureAdJoined property.
     */
     public function setIsAzureAdJoined(?bool $value): void {
         $this->getBackingStore()->set('isAzureAdJoined', $value);
@@ -202,7 +202,7 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the isAzureAdRegistered property value. The isAzureAdRegistered property
-     *  @param bool|null $value Value to set for the isAzureAdRegistered property.
+     * @param bool|null $value Value to set for the isAzureAdRegistered property.
     */
     public function setIsAzureAdRegistered(?bool $value): void {
         $this->getBackingStore()->set('isAzureAdRegistered', $value);
@@ -210,7 +210,7 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the isHybridAzureDomainJoined property value. True if the host is domain joined to an on-premises Active Directory domain.
-     *  @param bool|null $value Value to set for the isHybridAzureDomainJoined property.
+     * @param bool|null $value Value to set for the isHybridAzureDomainJoined property.
     */
     public function setIsHybridAzureDomainJoined(?bool $value): void {
         $this->getBackingStore()->set('isHybridAzureDomainJoined', $value);
@@ -218,7 +218,7 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the netBiosName property value. The local host name, without the DNS domain name.
-     *  @param string|null $value Value to set for the netBiosName property.
+     * @param string|null $value Value to set for the netBiosName property.
     */
     public function setNetBiosName(?string $value): void {
         $this->getBackingStore()->set('netBiosName', $value);
@@ -226,7 +226,7 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -234,7 +234,7 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the os property value. Host Operating System. (For example, Windows10, MacOS, RHEL, etc.).
-     *  @param string|null $value Value to set for the os property.
+     * @param string|null $value Value to set for the os property.
     */
     public function setOs(?string $value): void {
         $this->getBackingStore()->set('os', $value);
@@ -242,7 +242,7 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the privateIpAddress property value. Private (not routable) IPv4 or IPv6 address (see RFC 1918) at the time of the alert.
-     *  @param string|null $value Value to set for the privateIpAddress property.
+     * @param string|null $value Value to set for the privateIpAddress property.
     */
     public function setPrivateIpAddress(?string $value): void {
         $this->getBackingStore()->set('privateIpAddress', $value);
@@ -250,7 +250,7 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the publicIpAddress property value. Publicly routable IPv4 or IPv6 address (see RFC 1918) at time of the alert.
-     *  @param string|null $value Value to set for the publicIpAddress property.
+     * @param string|null $value Value to set for the publicIpAddress property.
     */
     public function setPublicIpAddress(?string $value): void {
         $this->getBackingStore()->set('publicIpAddress', $value);
@@ -258,7 +258,7 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the riskScore property value. Provider-generated/calculated risk score of the host.  Recommended value range of 0-1, which equates to a percentage.
-     *  @param string|null $value Value to set for the riskScore property.
+     * @param string|null $value Value to set for the riskScore property.
     */
     public function setRiskScore(?string $value): void {
         $this->getBackingStore()->set('riskScore', $value);

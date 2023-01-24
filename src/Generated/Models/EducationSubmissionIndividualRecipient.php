@@ -55,7 +55,7 @@ class EducationSubmissionIndividualRecipient extends EducationSubmissionRecipien
 
     /**
      * Sets the userId property value. User ID of the user to whom the submission is assigned.
-     *  @param string|null $value Value to set for the userId property.
+     * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {
         $this->getBackingStore()->set('userId', $value);

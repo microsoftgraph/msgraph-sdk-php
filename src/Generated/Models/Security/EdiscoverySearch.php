@@ -105,7 +105,7 @@ class EdiscoverySearch extends Search implements Parsable
 
     /**
      * Sets the additionalSources property value. Adds an additional source to the eDiscovery search.
-     *  @param array<DataSource>|null $value Value to set for the additionalSources property.
+     * @param array<DataSource>|null $value Value to set for the additionalSources property.
     */
     public function setAdditionalSources(?array $value): void {
         $this->getBackingStore()->set('additionalSources', $value);
@@ -113,7 +113,7 @@ class EdiscoverySearch extends Search implements Parsable
 
     /**
      * Sets the addToReviewSetOperation property value. Adds the results of the eDiscovery search to the specified reviewSet.
-     *  @param EdiscoveryAddToReviewSetOperation|null $value Value to set for the addToReviewSetOperation property.
+     * @param EdiscoveryAddToReviewSetOperation|null $value Value to set for the addToReviewSetOperation property.
     */
     public function setAddToReviewSetOperation(?EdiscoveryAddToReviewSetOperation $value): void {
         $this->getBackingStore()->set('addToReviewSetOperation', $value);
@@ -121,7 +121,7 @@ class EdiscoverySearch extends Search implements Parsable
 
     /**
      * Sets the custodianSources property value. Custodian sources that are included in the eDiscovery search.
-     *  @param array<DataSource>|null $value Value to set for the custodianSources property.
+     * @param array<DataSource>|null $value Value to set for the custodianSources property.
     */
     public function setCustodianSources(?array $value): void {
         $this->getBackingStore()->set('custodianSources', $value);
@@ -129,7 +129,7 @@ class EdiscoverySearch extends Search implements Parsable
 
     /**
      * Sets the dataSourceScopes property value. When specified, the collection will span across a service for an entire workload. Possible values are: none, allTenantMailboxes, allTenantSites, allCaseCustodians, allCaseNoncustodialDataSources.
-     *  @param DataSourceScopes|null $value Value to set for the dataSourceScopes property.
+     * @param DataSourceScopes|null $value Value to set for the dataSourceScopes property.
     */
     public function setDataSourceScopes(?DataSourceScopes $value): void {
         $this->getBackingStore()->set('dataSourceScopes', $value);
@@ -137,7 +137,7 @@ class EdiscoverySearch extends Search implements Parsable
 
     /**
      * Sets the lastEstimateStatisticsOperation property value. The last estimate operation associated with the eDiscovery search.
-     *  @param EdiscoveryEstimateOperation|null $value Value to set for the lastEstimateStatisticsOperation property.
+     * @param EdiscoveryEstimateOperation|null $value Value to set for the lastEstimateStatisticsOperation property.
     */
     public function setLastEstimateStatisticsOperation(?EdiscoveryEstimateOperation $value): void {
         $this->getBackingStore()->set('lastEstimateStatisticsOperation', $value);
@@ -145,7 +145,7 @@ class EdiscoverySearch extends Search implements Parsable
 
     /**
      * Sets the noncustodialSources property value. noncustodialDataSource sources that are included in the eDiscovery search
-     *  @param array<EdiscoveryNoncustodialDataSource>|null $value Value to set for the noncustodialSources property.
+     * @param array<EdiscoveryNoncustodialDataSource>|null $value Value to set for the noncustodialSources property.
     */
     public function setNoncustodialSources(?array $value): void {
         $this->getBackingStore()->set('noncustodialSources', $value);

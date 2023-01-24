@@ -235,7 +235,7 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Sets the assignedTo property value. Identity that the request is assigned to.
-     *  @param Identity|null $value Value to set for the assignedTo property.
+     * @param Identity|null $value Value to set for the assignedTo property.
     */
     public function setAssignedTo(?Identity $value): void {
         $this->getBackingStore()->set('assignedTo', $value);
@@ -243,7 +243,7 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Sets the closedDateTime property value. The date and time when the request was closed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     *  @param DateTime|null $value Value to set for the closedDateTime property.
+     * @param DateTime|null $value Value to set for the closedDateTime property.
     */
     public function setClosedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('closedDateTime', $value);
@@ -251,7 +251,7 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Sets the createdBy property value. Identity information for the entity that created the request.
-     *  @param IdentitySet|null $value Value to set for the createdBy property.
+     * @param IdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?IdentitySet $value): void {
         $this->getBackingStore()->set('createdBy', $value);
@@ -259,7 +259,7 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. The date and time when the request was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -267,7 +267,7 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Sets the dataSubject property value. Information about the data subject.
-     *  @param DataSubject|null $value Value to set for the dataSubject property.
+     * @param DataSubject|null $value Value to set for the dataSubject property.
     */
     public function setDataSubject(?DataSubject $value): void {
         $this->getBackingStore()->set('dataSubject', $value);
@@ -275,7 +275,7 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Sets the dataSubjectType property value. The type of the data subject. Possible values are: customer, currentEmployee, formerEmployee, prospectiveEmployee, student, teacher, faculty, other, unknownFutureValue.
-     *  @param DataSubjectType|null $value Value to set for the dataSubjectType property.
+     * @param DataSubjectType|null $value Value to set for the dataSubjectType property.
     */
     public function setDataSubjectType(?DataSubjectType $value): void {
         $this->getBackingStore()->set('dataSubjectType', $value);
@@ -283,7 +283,7 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Sets the description property value. Description for the request.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -291,7 +291,7 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The name of the request.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -299,7 +299,7 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Sets the history property value. Collection of history change events.
-     *  @param array<SubjectRightsRequestHistory>|null $value Value to set for the history property.
+     * @param array<SubjectRightsRequestHistory>|null $value Value to set for the history property.
     */
     public function setHistory(?array $value): void {
         $this->getBackingStore()->set('history', $value);
@@ -307,7 +307,7 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Sets the insight property value. Insight about the request.
-     *  @param SubjectRightsRequestDetail|null $value Value to set for the insight property.
+     * @param SubjectRightsRequestDetail|null $value Value to set for the insight property.
     */
     public function setInsight(?SubjectRightsRequestDetail $value): void {
         $this->getBackingStore()->set('insight', $value);
@@ -315,7 +315,7 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Sets the internalDueDateTime property value. The date and time when the request is internally due. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     *  @param DateTime|null $value Value to set for the internalDueDateTime property.
+     * @param DateTime|null $value Value to set for the internalDueDateTime property.
     */
     public function setInternalDueDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('internalDueDateTime', $value);
@@ -323,7 +323,7 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedBy property value. Identity information for the entity that last modified the request.
-     *  @param IdentitySet|null $value Value to set for the lastModifiedBy property.
+     * @param IdentitySet|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?IdentitySet $value): void {
         $this->getBackingStore()->set('lastModifiedBy', $value);
@@ -331,7 +331,7 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. The date and time when the request was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -339,7 +339,7 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Sets the notes property value. List of notes associcated with the request.
-     *  @param array<AuthoredNote>|null $value Value to set for the notes property.
+     * @param array<AuthoredNote>|null $value Value to set for the notes property.
     */
     public function setNotes(?array $value): void {
         $this->getBackingStore()->set('notes', $value);
@@ -347,7 +347,7 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Sets the regulations property value. List of regulations that this request will fulfill.
-     *  @param array<string>|null $value Value to set for the regulations property.
+     * @param array<string>|null $value Value to set for the regulations property.
     */
     public function setRegulations(?array $value): void {
         $this->getBackingStore()->set('regulations', $value);
@@ -355,7 +355,7 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Sets the stages property value. Information about the different stages for the request.
-     *  @param array<SubjectRightsRequestStageDetail>|null $value Value to set for the stages property.
+     * @param array<SubjectRightsRequestStageDetail>|null $value Value to set for the stages property.
     */
     public function setStages(?array $value): void {
         $this->getBackingStore()->set('stages', $value);
@@ -363,7 +363,7 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status of the request.. Possible values are: active, closed, unknownFutureValue.
-     *  @param SubjectRightsRequestStatus|null $value Value to set for the status property.
+     * @param SubjectRightsRequestStatus|null $value Value to set for the status property.
     */
     public function setStatus(?SubjectRightsRequestStatus $value): void {
         $this->getBackingStore()->set('status', $value);
@@ -371,7 +371,7 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Sets the team property value. Information about the Microsoft Teams team that was created for the request.
-     *  @param Team|null $value Value to set for the team property.
+     * @param Team|null $value Value to set for the team property.
     */
     public function setTeam(?Team $value): void {
         $this->getBackingStore()->set('team', $value);
@@ -379,7 +379,7 @@ class SubjectRightsRequest extends Entity implements Parsable
 
     /**
      * Sets the type property value. The type of the request. Possible values are: export, delete,  access, tagForAction, unknownFutureValue.
-     *  @param SubjectRightsRequestType|null $value Value to set for the type property.
+     * @param SubjectRightsRequestType|null $value Value to set for the type property.
     */
     public function setType(?SubjectRightsRequestType $value): void {
         $this->getBackingStore()->set('type', $value);

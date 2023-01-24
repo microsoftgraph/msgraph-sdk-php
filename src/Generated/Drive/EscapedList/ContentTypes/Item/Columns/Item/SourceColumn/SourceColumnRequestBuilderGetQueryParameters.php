@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Drive\EscapedList\ContentTypes\Item\Columns\
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The source column for the content type column.
+*/
 class SourceColumnRequestBuilderGetQueryParameters 
 {
     /**

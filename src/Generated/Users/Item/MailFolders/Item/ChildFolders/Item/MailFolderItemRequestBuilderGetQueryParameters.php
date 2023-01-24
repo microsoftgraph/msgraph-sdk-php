@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Ite
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The collection of child folders in the mailFolder.
+*/
 class MailFolderItemRequestBuilderGetQueryParameters 
 {
     /**

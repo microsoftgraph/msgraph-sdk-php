@@ -110,7 +110,7 @@ class AlertTrigger implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class AlertTrigger implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class AlertTrigger implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the name property value. Name of the property serving as a detection trigger.
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -134,7 +134,7 @@ class AlertTrigger implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -142,7 +142,7 @@ class AlertTrigger implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the type property value. Type of the property in the key:value pair for interpretation. For example, String, Boolean etc.
-     *  @param string|null $value Value to set for the type property.
+     * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {
         $this->getBackingStore()->set('type', $value);
@@ -150,7 +150,7 @@ class AlertTrigger implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the value property value. Value of the property serving as a detection trigger.
-     *  @param string|null $value Value to set for the value property.
+     * @param string|null $value Value to set for the value property.
     */
     public function setValue(?string $value): void {
         $this->getBackingStore()->set('value', $value);

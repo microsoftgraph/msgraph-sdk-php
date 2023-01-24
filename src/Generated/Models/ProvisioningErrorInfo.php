@@ -130,7 +130,7 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -138,7 +138,7 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the additionalDetails property value. Additional details in case of error.
-     *  @param string|null $value Value to set for the additionalDetails property.
+     * @param string|null $value Value to set for the additionalDetails property.
     */
     public function setAdditionalDetails(?string $value): void {
         $this->getBackingStore()->set('additionalDetails', $value);
@@ -146,7 +146,7 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -154,7 +154,7 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the errorCategory property value. Categorizes the error code. Possible values are failure, nonServiceFailure, success, unknownFutureValue
-     *  @param ProvisioningStatusErrorCategory|null $value Value to set for the errorCategory property.
+     * @param ProvisioningStatusErrorCategory|null $value Value to set for the errorCategory property.
     */
     public function setErrorCategory(?ProvisioningStatusErrorCategory $value): void {
         $this->getBackingStore()->set('errorCategory', $value);
@@ -162,7 +162,7 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the errorCode property value. Unique error code if any occurred. Learn more
-     *  @param string|null $value Value to set for the errorCode property.
+     * @param string|null $value Value to set for the errorCode property.
     */
     public function setErrorCode(?string $value): void {
         $this->getBackingStore()->set('errorCode', $value);
@@ -170,7 +170,7 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -178,7 +178,7 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the reason property value. Summarizes the status and describes why the status happened.
-     *  @param string|null $value Value to set for the reason property.
+     * @param string|null $value Value to set for the reason property.
     */
     public function setReason(?string $value): void {
         $this->getBackingStore()->set('reason', $value);
@@ -186,7 +186,7 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the recommendedAction property value. Provides the resolution for the corresponding error.
-     *  @param string|null $value Value to set for the recommendedAction property.
+     * @param string|null $value Value to set for the recommendedAction property.
     */
     public function setRecommendedAction(?string $value): void {
         $this->getBackingStore()->set('recommendedAction', $value);

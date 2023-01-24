@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Conversations;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve the list of conversations in this group.
+*/
 class ConversationsRequestBuilderGetQueryParameters 
 {
     /**

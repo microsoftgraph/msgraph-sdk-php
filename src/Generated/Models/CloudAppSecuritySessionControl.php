@@ -55,7 +55,7 @@ class CloudAppSecuritySessionControl extends ConditionalAccessSessionControl imp
 
     /**
      * Sets the cloudAppSecurityType property value. Possible values are: mcasConfigured, monitorOnly, blockDownloads, unknownFutureValue. For more information, see Deploy Conditional Access App Control for featured apps.
-     *  @param CloudAppSecuritySessionControlType|null $value Value to set for the cloudAppSecurityType property.
+     * @param CloudAppSecuritySessionControlType|null $value Value to set for the cloudAppSecurityType property.
     */
     public function setCloudAppSecurityType(?CloudAppSecuritySessionControlType $value): void {
         $this->getBackingStore()->set('cloudAppSecurityType', $value);

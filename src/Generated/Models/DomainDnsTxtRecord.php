@@ -54,7 +54,7 @@ class DomainDnsTxtRecord extends DomainDnsRecord implements Parsable
 
     /**
      * Sets the text property value. Value used when configuring the text property at the DNS host.
-     *  @param string|null $value Value to set for the text property.
+     * @param string|null $value Value to set for the text property.
     */
     public function setText(?string $value): void {
         $this->getBackingStore()->set('text', $value);

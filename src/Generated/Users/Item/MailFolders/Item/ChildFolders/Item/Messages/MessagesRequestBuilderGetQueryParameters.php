@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Ite
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get all the messages in the specified user's mailbox, or those messages in a specified folder in the mailbox.
+*/
 class MessagesRequestBuilderGetQueryParameters 
 {
     /**

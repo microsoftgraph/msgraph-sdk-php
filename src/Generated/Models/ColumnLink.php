@@ -54,7 +54,7 @@ class ColumnLink extends Entity implements Parsable
 
     /**
      * Sets the name property value. The name of the column  in this content type.
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);

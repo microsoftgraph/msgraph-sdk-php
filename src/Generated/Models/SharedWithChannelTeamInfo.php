@@ -64,7 +64,7 @@ class SharedWithChannelTeamInfo extends TeamInfo implements Parsable
 
     /**
      * Sets the allowedMembers property value. A collection of team members who have access to the shared channel.
-     *  @param array<ConversationMember>|null $value Value to set for the allowedMembers property.
+     * @param array<ConversationMember>|null $value Value to set for the allowedMembers property.
     */
     public function setAllowedMembers(?array $value): void {
         $this->getBackingStore()->set('allowedMembers', $value);
@@ -72,7 +72,7 @@ class SharedWithChannelTeamInfo extends TeamInfo implements Parsable
 
     /**
      * Sets the isHostTeam property value. Indicates whether the team is the host of the channel.
-     *  @param bool|null $value Value to set for the isHostTeam property.
+     * @param bool|null $value Value to set for the isHostTeam property.
     */
     public function setIsHostTeam(?bool $value): void {
         $this->getBackingStore()->set('isHostTeam', $value);

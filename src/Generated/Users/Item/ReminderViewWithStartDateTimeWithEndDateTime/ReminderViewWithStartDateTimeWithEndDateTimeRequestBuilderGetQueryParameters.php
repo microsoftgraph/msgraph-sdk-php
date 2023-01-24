@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\ReminderViewWithStartDateTimeWith
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Invoke function reminderView
+*/
 class ReminderViewWithStartDateTimeWithEndDateTimeRequestBuilderGetQueryParameters 
 {
     /**

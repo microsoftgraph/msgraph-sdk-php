@@ -55,7 +55,7 @@ class TeamworkUserIdentity extends Identity implements Parsable
 
     /**
      * Sets the userIdentityType property value. Type of user. Possible values are: aadUser, onPremiseAadUser, anonymousGuest, federatedUser, personalMicrosoftAccountUser, skypeUser, phoneUser, unknownFutureValue and emailUser.
-     *  @param TeamworkUserIdentityType|null $value Value to set for the userIdentityType property.
+     * @param TeamworkUserIdentityType|null $value Value to set for the userIdentityType property.
     */
     public function setUserIdentityType(?TeamworkUserIdentityType $value): void {
         $this->getBackingStore()->set('userIdentityType', $value);

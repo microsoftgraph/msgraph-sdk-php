@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Subscriptions;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The set of subscriptions on the item. Only supported on the root of a drive.
+*/
 class SubscriptionsRequestBuilderGetQueryParameters 
 {
     /**

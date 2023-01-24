@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Solutions\BookingCurrencies\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get bookingCurrencies from solutions
+*/
 class BookingCurrencyItemRequestBuilderGetQueryParameters 
 {
     /**

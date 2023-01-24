@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Shares\Item\Permission;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Used to access the permission representing the underlying sharing link
+*/
 class PermissionRequestBuilderGetQueryParameters 
 {
     /**

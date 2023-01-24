@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AppScope extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new AppScope and sets the default values.
+     * Instantiates a new appScope and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -64,7 +64,7 @@ class AppScope extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. Provides the display name of the app-specific resource represented by the app scope. Provided for display purposes since appScopeId is often an immutable, non-human-readable id. Read-only.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -72,7 +72,7 @@ class AppScope extends Entity implements Parsable
 
     /**
      * Sets the type property value. Describes the type of app-specific resource represented by the app scope. Provided for display purposes, so a user interface can convey to the user the kind of app specific resource represented by the app scope. Read-only.
-     *  @param string|null $value Value to set for the type property.
+     * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {
         $this->getBackingStore()->set('type', $value);

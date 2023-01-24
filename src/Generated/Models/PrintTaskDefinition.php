@@ -74,7 +74,7 @@ class PrintTaskDefinition extends Entity implements Parsable
 
     /**
      * Sets the createdBy property value. The createdBy property
-     *  @param AppIdentity|null $value Value to set for the createdBy property.
+     * @param AppIdentity|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?AppIdentity $value): void {
         $this->getBackingStore()->set('createdBy', $value);
@@ -82,7 +82,7 @@ class PrintTaskDefinition extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The name of the printTaskDefinition.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -90,7 +90,7 @@ class PrintTaskDefinition extends Entity implements Parsable
 
     /**
      * Sets the tasks property value. A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
-     *  @param array<PrintTask>|null $value Value to set for the tasks property.
+     * @param array<PrintTask>|null $value Value to set for the tasks property.
     */
     public function setTasks(?array $value): void {
         $this->getBackingStore()->set('tasks', $value);

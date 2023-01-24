@@ -140,7 +140,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -148,7 +148,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -156,7 +156,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
 
     /**
      * Sets the caller property value. The type of caller that's the target of the policy rule. Allowed values are: None, Admin, EndUser.
-     *  @param string|null $value Value to set for the caller property.
+     * @param string|null $value Value to set for the caller property.
     */
     public function setCaller(?string $value): void {
         $this->getBackingStore()->set('caller', $value);
@@ -164,7 +164,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
 
     /**
      * Sets the enforcedSettings property value. The list of role settings that are enforced and cannot be overridden by child scopes. Use All for all settings.
-     *  @param array<string>|null $value Value to set for the enforcedSettings property.
+     * @param array<string>|null $value Value to set for the enforcedSettings property.
     */
     public function setEnforcedSettings(?array $value): void {
         $this->getBackingStore()->set('enforcedSettings', $value);
@@ -172,7 +172,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
 
     /**
      * Sets the inheritableSettings property value. The list of role settings that can be inherited by child scopes. Use All for all settings.
-     *  @param array<string>|null $value Value to set for the inheritableSettings property.
+     * @param array<string>|null $value Value to set for the inheritableSettings property.
     */
     public function setInheritableSettings(?array $value): void {
         $this->getBackingStore()->set('inheritableSettings', $value);
@@ -180,7 +180,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
 
     /**
      * Sets the level property value. The role assignment type that's the target of policy rule. Allowed values are: Eligibility, Assignment.
-     *  @param string|null $value Value to set for the level property.
+     * @param string|null $value Value to set for the level property.
     */
     public function setLevel(?string $value): void {
         $this->getBackingStore()->set('level', $value);
@@ -188,7 +188,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -196,7 +196,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
 
     /**
      * Sets the operations property value. The role management operations that are the target of the policy rule. Allowed values are: All, Activate, Deactivate, Assign, Update, Remove, Extend, Renew.
-     *  @param array<UnifiedRoleManagementPolicyRuleTargetOperations>|null $value Value to set for the operations property.
+     * @param array<UnifiedRoleManagementPolicyRuleTargetOperations>|null $value Value to set for the operations property.
     */
     public function setOperations(?array $value): void {
         $this->getBackingStore()->set('operations', $value);
@@ -204,7 +204,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
 
     /**
      * Sets the targetObjects property value. The targetObjects property
-     *  @param array<DirectoryObject>|null $value Value to set for the targetObjects property.
+     * @param array<DirectoryObject>|null $value Value to set for the targetObjects property.
     */
     public function setTargetObjects(?array $value): void {
         $this->getBackingStore()->set('targetObjects', $value);

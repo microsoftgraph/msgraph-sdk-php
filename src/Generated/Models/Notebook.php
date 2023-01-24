@@ -125,7 +125,7 @@ class Notebook extends OnenoteEntityHierarchyModel implements Parsable
 
     /**
      * Sets the isDefault property value. Indicates whether this is the user's default notebook. Read-only.
-     *  @param bool|null $value Value to set for the isDefault property.
+     * @param bool|null $value Value to set for the isDefault property.
     */
     public function setIsDefault(?bool $value): void {
         $this->getBackingStore()->set('isDefault', $value);
@@ -133,7 +133,7 @@ class Notebook extends OnenoteEntityHierarchyModel implements Parsable
 
     /**
      * Sets the isShared property value. Indicates whether the notebook is shared. If true, the contents of the notebook can be seen by people other than the owner. Read-only.
-     *  @param bool|null $value Value to set for the isShared property.
+     * @param bool|null $value Value to set for the isShared property.
     */
     public function setIsShared(?bool $value): void {
         $this->getBackingStore()->set('isShared', $value);
@@ -141,7 +141,7 @@ class Notebook extends OnenoteEntityHierarchyModel implements Parsable
 
     /**
      * Sets the links property value. Links for opening the notebook. The oneNoteClientURL link opens the notebook in the OneNote native client if it's installed. The oneNoteWebURL link opens the notebook in OneNote on the web.
-     *  @param NotebookLinks|null $value Value to set for the links property.
+     * @param NotebookLinks|null $value Value to set for the links property.
     */
     public function setLinks(?NotebookLinks $value): void {
         $this->getBackingStore()->set('links', $value);
@@ -149,7 +149,7 @@ class Notebook extends OnenoteEntityHierarchyModel implements Parsable
 
     /**
      * Sets the sectionGroups property value. The section groups in the notebook. Read-only. Nullable.
-     *  @param array<SectionGroup>|null $value Value to set for the sectionGroups property.
+     * @param array<SectionGroup>|null $value Value to set for the sectionGroups property.
     */
     public function setSectionGroups(?array $value): void {
         $this->getBackingStore()->set('sectionGroups', $value);
@@ -157,7 +157,7 @@ class Notebook extends OnenoteEntityHierarchyModel implements Parsable
 
     /**
      * Sets the sectionGroupsUrl property value. The URL for the sectionGroups navigation property, which returns all the section groups in the notebook. Read-only.
-     *  @param string|null $value Value to set for the sectionGroupsUrl property.
+     * @param string|null $value Value to set for the sectionGroupsUrl property.
     */
     public function setSectionGroupsUrl(?string $value): void {
         $this->getBackingStore()->set('sectionGroupsUrl', $value);
@@ -165,7 +165,7 @@ class Notebook extends OnenoteEntityHierarchyModel implements Parsable
 
     /**
      * Sets the sections property value. The sections in the notebook. Read-only. Nullable.
-     *  @param array<OnenoteSection>|null $value Value to set for the sections property.
+     * @param array<OnenoteSection>|null $value Value to set for the sections property.
     */
     public function setSections(?array $value): void {
         $this->getBackingStore()->set('sections', $value);
@@ -173,7 +173,7 @@ class Notebook extends OnenoteEntityHierarchyModel implements Parsable
 
     /**
      * Sets the sectionsUrl property value. The URL for the sections navigation property, which returns all the sections in the notebook. Read-only.
-     *  @param string|null $value Value to set for the sectionsUrl property.
+     * @param string|null $value Value to set for the sectionsUrl property.
     */
     public function setSectionsUrl(?string $value): void {
         $this->getBackingStore()->set('sectionsUrl', $value);
@@ -181,7 +181,7 @@ class Notebook extends OnenoteEntityHierarchyModel implements Parsable
 
     /**
      * Sets the userRole property value. Possible values are: Owner, Contributor, Reader, None. Owner represents owner-level access to the notebook. Contributor represents read/write access to the notebook. Reader represents read-only access to the notebook. Read-only.
-     *  @param OnenoteUserRole|null $value Value to set for the userRole property.
+     * @param OnenoteUserRole|null $value Value to set for the userRole property.
     */
     public function setUserRole(?OnenoteUserRole $value): void {
         $this->getBackingStore()->set('userRole', $value);

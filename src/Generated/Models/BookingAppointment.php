@@ -283,7 +283,7 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the additionalInformation property value. Additional information that is sent to the customer when an appointment is confirmed.
-     *  @param string|null $value Value to set for the additionalInformation property.
+     * @param string|null $value Value to set for the additionalInformation property.
     */
     public function setAdditionalInformation(?string $value): void {
         $this->getBackingStore()->set('additionalInformation', $value);
@@ -291,7 +291,7 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the anonymousJoinWebUrl property value. The URL of the meeting to join anonymously.
-     *  @param string|null $value Value to set for the anonymousJoinWebUrl property.
+     * @param string|null $value Value to set for the anonymousJoinWebUrl property.
     */
     public function setAnonymousJoinWebUrl(?string $value): void {
         $this->getBackingStore()->set('anonymousJoinWebUrl', $value);
@@ -299,7 +299,7 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the customers property value. A collection of customer properties for an appointment. An appointment will contain a list of customer information and each unit will indicate the properties of a customer who is part of that appointment. Optional.
-     *  @param array<BookingCustomerInformationBase>|null $value Value to set for the customers property.
+     * @param array<BookingCustomerInformationBase>|null $value Value to set for the customers property.
     */
     public function setCustomers(?array $value): void {
         $this->getBackingStore()->set('customers', $value);
@@ -307,7 +307,7 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the customerTimeZone property value. The time zone of the customer. For a list of possible values, see dateTimeTimeZone.
-     *  @param string|null $value Value to set for the customerTimeZone property.
+     * @param string|null $value Value to set for the customerTimeZone property.
     */
     public function setCustomerTimeZone(?string $value): void {
         $this->getBackingStore()->set('customerTimeZone', $value);
@@ -315,7 +315,7 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the duration property value. The length of the appointment, denoted in ISO8601 format.
-     *  @param DateInterval|null $value Value to set for the duration property.
+     * @param DateInterval|null $value Value to set for the duration property.
     */
     public function setDuration(?DateInterval $value): void {
         $this->getBackingStore()->set('duration', $value);
@@ -323,7 +323,7 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the endDateTime property value. The endDateTime property
-     *  @param DateTimeTimeZone|null $value Value to set for the endDateTime property.
+     * @param DateTimeTimeZone|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('endDateTime', $value);
@@ -331,7 +331,7 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the filledAttendeesCount property value. The current number of customers in the appointment
-     *  @param int|null $value Value to set for the filledAttendeesCount property.
+     * @param int|null $value Value to set for the filledAttendeesCount property.
     */
     public function setFilledAttendeesCount(?int $value): void {
         $this->getBackingStore()->set('filledAttendeesCount', $value);
@@ -339,7 +339,7 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the isLocationOnline property value. If true, indicates that the appointment will be held online. Default value is false.
-     *  @param bool|null $value Value to set for the isLocationOnline property.
+     * @param bool|null $value Value to set for the isLocationOnline property.
     */
     public function setIsLocationOnline(?bool $value): void {
         $this->getBackingStore()->set('isLocationOnline', $value);
@@ -347,7 +347,7 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the joinWebUrl property value. The URL of the online meeting for the appointment.
-     *  @param string|null $value Value to set for the joinWebUrl property.
+     * @param string|null $value Value to set for the joinWebUrl property.
     */
     public function setJoinWebUrl(?string $value): void {
         $this->getBackingStore()->set('joinWebUrl', $value);
@@ -355,7 +355,7 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the maximumAttendeesCount property value. The maximum number of customers allowed in an appointment. If maximumAttendeesCount of the service is greater than 1, pass valid customer IDs while creating or updating an appointment. To create a customer, use the Create bookingCustomer operation.
-     *  @param int|null $value Value to set for the maximumAttendeesCount property.
+     * @param int|null $value Value to set for the maximumAttendeesCount property.
     */
     public function setMaximumAttendeesCount(?int $value): void {
         $this->getBackingStore()->set('maximumAttendeesCount', $value);
@@ -363,7 +363,7 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the optOutOfCustomerEmail property value. If true indicates that the bookingCustomer for this appointment does not wish to receive a confirmation for this appointment.
-     *  @param bool|null $value Value to set for the optOutOfCustomerEmail property.
+     * @param bool|null $value Value to set for the optOutOfCustomerEmail property.
     */
     public function setOptOutOfCustomerEmail(?bool $value): void {
         $this->getBackingStore()->set('optOutOfCustomerEmail', $value);
@@ -371,7 +371,7 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the postBuffer property value. The amount of time to reserve after the appointment ends, for cleaning up, as an example. The value is expressed in ISO8601 format.
-     *  @param DateInterval|null $value Value to set for the postBuffer property.
+     * @param DateInterval|null $value Value to set for the postBuffer property.
     */
     public function setPostBuffer(?DateInterval $value): void {
         $this->getBackingStore()->set('postBuffer', $value);
@@ -379,7 +379,7 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the preBuffer property value. The amount of time to reserve before the appointment begins, for preparation, as an example. The value is expressed in ISO8601 format.
-     *  @param DateInterval|null $value Value to set for the preBuffer property.
+     * @param DateInterval|null $value Value to set for the preBuffer property.
     */
     public function setPreBuffer(?DateInterval $value): void {
         $this->getBackingStore()->set('preBuffer', $value);
@@ -387,7 +387,7 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the price property value. The regular price for an appointment for the specified bookingService.
-     *  @param float|null $value Value to set for the price property.
+     * @param float|null $value Value to set for the price property.
     */
     public function setPrice(?float $value): void {
         $this->getBackingStore()->set('price', $value);
@@ -395,7 +395,7 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the priceType property value. Represents the type of pricing of a booking service.
-     *  @param BookingPriceType|null $value Value to set for the priceType property.
+     * @param BookingPriceType|null $value Value to set for the priceType property.
     */
     public function setPriceType(?BookingPriceType $value): void {
         $this->getBackingStore()->set('priceType', $value);
@@ -403,7 +403,7 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the reminders property value. The collection of customer reminders sent for this appointment. The value of this property is available only when reading this bookingAppointment by its ID.
-     *  @param array<BookingReminder>|null $value Value to set for the reminders property.
+     * @param array<BookingReminder>|null $value Value to set for the reminders property.
     */
     public function setReminders(?array $value): void {
         $this->getBackingStore()->set('reminders', $value);
@@ -411,7 +411,7 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the selfServiceAppointmentId property value. An additional tracking ID for the appointment, if the appointment has been created directly by the customer on the scheduling page, as opposed to by a staff member on the behalf of the customer. Only supported for appointment if maxAttendeeCount is 1.
-     *  @param string|null $value Value to set for the selfServiceAppointmentId property.
+     * @param string|null $value Value to set for the selfServiceAppointmentId property.
     */
     public function setSelfServiceAppointmentId(?string $value): void {
         $this->getBackingStore()->set('selfServiceAppointmentId', $value);
@@ -419,7 +419,7 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the serviceId property value. The ID of the bookingService associated with this appointment.
-     *  @param string|null $value Value to set for the serviceId property.
+     * @param string|null $value Value to set for the serviceId property.
     */
     public function setServiceId(?string $value): void {
         $this->getBackingStore()->set('serviceId', $value);
@@ -427,7 +427,7 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the serviceLocation property value. The location where the service is delivered.
-     *  @param Location|null $value Value to set for the serviceLocation property.
+     * @param Location|null $value Value to set for the serviceLocation property.
     */
     public function setServiceLocation(?Location $value): void {
         $this->getBackingStore()->set('serviceLocation', $value);
@@ -435,7 +435,7 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the serviceName property value. The name of the bookingService associated with this appointment.This property is optional when creating a new appointment. If not specified, it is computed from the service associated with the appointment by the serviceId property.
-     *  @param string|null $value Value to set for the serviceName property.
+     * @param string|null $value Value to set for the serviceName property.
     */
     public function setServiceName(?string $value): void {
         $this->getBackingStore()->set('serviceName', $value);
@@ -443,7 +443,7 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the serviceNotes property value. Notes from a bookingStaffMember. The value of this property is available only when reading this bookingAppointment by its ID.
-     *  @param string|null $value Value to set for the serviceNotes property.
+     * @param string|null $value Value to set for the serviceNotes property.
     */
     public function setServiceNotes(?string $value): void {
         $this->getBackingStore()->set('serviceNotes', $value);
@@ -451,7 +451,7 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the smsNotificationsEnabled property value. If true, indicates SMS notifications will be sent to the customers for the appointment. Default value is false.
-     *  @param bool|null $value Value to set for the smsNotificationsEnabled property.
+     * @param bool|null $value Value to set for the smsNotificationsEnabled property.
     */
     public function setSmsNotificationsEnabled(?bool $value): void {
         $this->getBackingStore()->set('smsNotificationsEnabled', $value);
@@ -459,7 +459,7 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the staffMemberIds property value. The ID of each bookingStaffMember who is scheduled in this appointment.
-     *  @param array<string>|null $value Value to set for the staffMemberIds property.
+     * @param array<string>|null $value Value to set for the staffMemberIds property.
     */
     public function setStaffMemberIds(?array $value): void {
         $this->getBackingStore()->set('staffMemberIds', $value);
@@ -467,7 +467,7 @@ class BookingAppointment extends Entity implements Parsable
 
     /**
      * Sets the startDateTime property value. The startDateTime property
-     *  @param DateTimeTimeZone|null $value Value to set for the startDateTime property.
+     * @param DateTimeTimeZone|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('startDateTime', $value);

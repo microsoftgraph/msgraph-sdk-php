@@ -100,7 +100,7 @@ class EducationTeacher implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class EducationTeacher implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class EducationTeacher implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the externalId property value. ID of the teacher in the source system.
-     *  @param string|null $value Value to set for the externalId property.
+     * @param string|null $value Value to set for the externalId property.
     */
     public function setExternalId(?string $value): void {
         $this->getBackingStore()->set('externalId', $value);
@@ -124,7 +124,7 @@ class EducationTeacher implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -132,7 +132,7 @@ class EducationTeacher implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the teacherNumber property value. Teacher number.
-     *  @param string|null $value Value to set for the teacherNumber property.
+     * @param string|null $value Value to set for the teacherNumber property.
     */
     public function setTeacherNumber(?string $value): void {
         $this->getBackingStore()->set('teacherNumber', $value);

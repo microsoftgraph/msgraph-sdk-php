@@ -144,7 +144,7 @@ class Invitation extends Entity implements Parsable
 
     /**
      * Sets the invitedUser property value. The user created as part of the invitation creation. Read-Only
-     *  @param User|null $value Value to set for the invitedUser property.
+     * @param User|null $value Value to set for the invitedUser property.
     */
     public function setInvitedUser(?User $value): void {
         $this->getBackingStore()->set('invitedUser', $value);
@@ -152,7 +152,7 @@ class Invitation extends Entity implements Parsable
 
     /**
      * Sets the invitedUserDisplayName property value. The display name of the user being invited.
-     *  @param string|null $value Value to set for the invitedUserDisplayName property.
+     * @param string|null $value Value to set for the invitedUserDisplayName property.
     */
     public function setInvitedUserDisplayName(?string $value): void {
         $this->getBackingStore()->set('invitedUserDisplayName', $value);
@@ -160,7 +160,7 @@ class Invitation extends Entity implements Parsable
 
     /**
      * Sets the invitedUserEmailAddress property value. The email address of the user being invited. Required. The following special characters are not permitted in the email address:Tilde (~)Exclamation point (!)Number sign (#)Dollar sign ($)Percent (%)Circumflex (^)Ampersand (&)Asterisk (*)Parentheses (( ))Plus sign (+)Equal sign (=)Brackets ([ ])Braces ({ })Backslash (/)Slash mark (/)Pipe (/|)Semicolon (;)Colon (:)Quotation marks (')Angle brackets (< >)Question mark (?)Comma (,)However, the following exceptions apply:A period (.) or a hyphen (-) is permitted anywhere in the user name, except at the beginning or end of the name.An underscore (_) is permitted anywhere in the user name. This includes at the beginning or end of the name.
-     *  @param string|null $value Value to set for the invitedUserEmailAddress property.
+     * @param string|null $value Value to set for the invitedUserEmailAddress property.
     */
     public function setInvitedUserEmailAddress(?string $value): void {
         $this->getBackingStore()->set('invitedUserEmailAddress', $value);
@@ -168,7 +168,7 @@ class Invitation extends Entity implements Parsable
 
     /**
      * Sets the invitedUserMessageInfo property value. Additional configuration for the message being sent to the invited user, including customizing message text, language and cc recipient list.
-     *  @param InvitedUserMessageInfo|null $value Value to set for the invitedUserMessageInfo property.
+     * @param InvitedUserMessageInfo|null $value Value to set for the invitedUserMessageInfo property.
     */
     public function setInvitedUserMessageInfo(?InvitedUserMessageInfo $value): void {
         $this->getBackingStore()->set('invitedUserMessageInfo', $value);
@@ -176,7 +176,7 @@ class Invitation extends Entity implements Parsable
 
     /**
      * Sets the invitedUserType property value. The userType of the user being invited. By default, this is Guest. You can invite as Member if you are a company administrator.
-     *  @param string|null $value Value to set for the invitedUserType property.
+     * @param string|null $value Value to set for the invitedUserType property.
     */
     public function setInvitedUserType(?string $value): void {
         $this->getBackingStore()->set('invitedUserType', $value);
@@ -184,7 +184,7 @@ class Invitation extends Entity implements Parsable
 
     /**
      * Sets the inviteRedeemUrl property value. The URL the user can use to redeem their invitation. Read-only.
-     *  @param string|null $value Value to set for the inviteRedeemUrl property.
+     * @param string|null $value Value to set for the inviteRedeemUrl property.
     */
     public function setInviteRedeemUrl(?string $value): void {
         $this->getBackingStore()->set('inviteRedeemUrl', $value);
@@ -192,7 +192,7 @@ class Invitation extends Entity implements Parsable
 
     /**
      * Sets the inviteRedirectUrl property value. The URL the user should be redirected to once the invitation is redeemed. Required.
-     *  @param string|null $value Value to set for the inviteRedirectUrl property.
+     * @param string|null $value Value to set for the inviteRedirectUrl property.
     */
     public function setInviteRedirectUrl(?string $value): void {
         $this->getBackingStore()->set('inviteRedirectUrl', $value);
@@ -200,7 +200,7 @@ class Invitation extends Entity implements Parsable
 
     /**
      * Sets the resetRedemption property value. Reset the user's redemption status and reinvite a user while retaining their user identifier, group memberships, and app assignments. This property allows you to enable a user to sign-in using a different email address from the one in the previous invitation. For more information about using this property, see Reset redemption status for a guest user.
-     *  @param bool|null $value Value to set for the resetRedemption property.
+     * @param bool|null $value Value to set for the resetRedemption property.
     */
     public function setResetRedemption(?bool $value): void {
         $this->getBackingStore()->set('resetRedemption', $value);
@@ -208,7 +208,7 @@ class Invitation extends Entity implements Parsable
 
     /**
      * Sets the sendInvitationMessage property value. Indicates whether an email should be sent to the user being invited. The default is false.
-     *  @param bool|null $value Value to set for the sendInvitationMessage property.
+     * @param bool|null $value Value to set for the sendInvitationMessage property.
     */
     public function setSendInvitationMessage(?bool $value): void {
         $this->getBackingStore()->set('sendInvitationMessage', $value);
@@ -216,7 +216,7 @@ class Invitation extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status of the invitation. Possible values are: PendingAcceptance, Completed, InProgress, and Error.
-     *  @param string|null $value Value to set for the status property.
+     * @param string|null $value Value to set for the status property.
     */
     public function setStatus(?string $value): void {
         $this->getBackingStore()->set('status', $value);

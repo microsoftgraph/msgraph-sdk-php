@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\Devic
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The list of installation states for this eBook.
+*/
 class DeviceStatesRequestBuilderGetQueryParameters 
 {
     /**

@@ -86,7 +86,7 @@ class IosUpdateConfiguration extends DeviceConfiguration implements Parsable
 
     /**
      * Sets the activeHoursEnd property value. Active Hours End (active hours mean the time window when updates install should not happen)
-     *  @param Time|null $value Value to set for the activeHoursEnd property.
+     * @param Time|null $value Value to set for the activeHoursEnd property.
     */
     public function setActiveHoursEnd(?Time $value): void {
         $this->getBackingStore()->set('activeHoursEnd', $value);
@@ -94,7 +94,7 @@ class IosUpdateConfiguration extends DeviceConfiguration implements Parsable
 
     /**
      * Sets the activeHoursStart property value. Active Hours Start (active hours mean the time window when updates install should not happen)
-     *  @param Time|null $value Value to set for the activeHoursStart property.
+     * @param Time|null $value Value to set for the activeHoursStart property.
     */
     public function setActiveHoursStart(?Time $value): void {
         $this->getBackingStore()->set('activeHoursStart', $value);
@@ -102,7 +102,7 @@ class IosUpdateConfiguration extends DeviceConfiguration implements Parsable
 
     /**
      * Sets the scheduledInstallDays property value. Days in week for which active hours are configured. This collection can contain a maximum of 7 elements.
-     *  @param array<DayOfWeek>|null $value Value to set for the scheduledInstallDays property.
+     * @param array<DayOfWeek>|null $value Value to set for the scheduledInstallDays property.
     */
     public function setScheduledInstallDays(?array $value): void {
         $this->getBackingStore()->set('scheduledInstallDays', $value);
@@ -110,7 +110,7 @@ class IosUpdateConfiguration extends DeviceConfiguration implements Parsable
 
     /**
      * Sets the utcTimeOffsetInMinutes property value. UTC Time Offset indicated in minutes
-     *  @param int|null $value Value to set for the utcTimeOffsetInMinutes property.
+     * @param int|null $value Value to set for the utcTimeOffsetInMinutes property.
     */
     public function setUtcTimeOffsetInMinutes(?int $value): void {
         $this->getBackingStore()->set('utcTimeOffsetInMinutes', $value);

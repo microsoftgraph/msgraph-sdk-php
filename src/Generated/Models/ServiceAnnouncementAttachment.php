@@ -96,7 +96,7 @@ class ServiceAnnouncementAttachment extends Entity implements Parsable
 
     /**
      * Sets the content property value. The attachment content.
-     *  @param StreamInterface|null $value Value to set for the content property.
+     * @param StreamInterface|null $value Value to set for the content property.
     */
     public function setContent(?StreamInterface $value): void {
         $this->getBackingStore()->set('content', $value);
@@ -104,7 +104,7 @@ class ServiceAnnouncementAttachment extends Entity implements Parsable
 
     /**
      * Sets the contentType property value. The contentType property
-     *  @param string|null $value Value to set for the contentType property.
+     * @param string|null $value Value to set for the contentType property.
     */
     public function setContentType(?string $value): void {
         $this->getBackingStore()->set('contentType', $value);
@@ -112,7 +112,7 @@ class ServiceAnnouncementAttachment extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -120,7 +120,7 @@ class ServiceAnnouncementAttachment extends Entity implements Parsable
 
     /**
      * Sets the name property value. The name property
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -128,7 +128,7 @@ class ServiceAnnouncementAttachment extends Entity implements Parsable
 
     /**
      * Sets the size property value. The size property
-     *  @param int|null $value Value to set for the size property.
+     * @param int|null $value Value to set for the size property.
     */
     public function setSize(?int $value): void {
         $this->getBackingStore()->set('size', $value);

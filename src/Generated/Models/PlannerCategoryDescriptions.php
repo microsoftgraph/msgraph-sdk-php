@@ -330,7 +330,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -338,7 +338,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -346,7 +346,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category1 property value. The label associated with Category 1
-     *  @param string|null $value Value to set for the category1 property.
+     * @param string|null $value Value to set for the category1 property.
     */
     public function setCategory1(?string $value): void {
         $this->getBackingStore()->set('category1', $value);
@@ -354,7 +354,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category10 property value. The label associated with Category 10
-     *  @param string|null $value Value to set for the category10 property.
+     * @param string|null $value Value to set for the category10 property.
     */
     public function setCategory10(?string $value): void {
         $this->getBackingStore()->set('category10', $value);
@@ -362,7 +362,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category11 property value. The label associated with Category 11
-     *  @param string|null $value Value to set for the category11 property.
+     * @param string|null $value Value to set for the category11 property.
     */
     public function setCategory11(?string $value): void {
         $this->getBackingStore()->set('category11', $value);
@@ -370,7 +370,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category12 property value. The label associated with Category 12
-     *  @param string|null $value Value to set for the category12 property.
+     * @param string|null $value Value to set for the category12 property.
     */
     public function setCategory12(?string $value): void {
         $this->getBackingStore()->set('category12', $value);
@@ -378,7 +378,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category13 property value. The label associated with Category 13
-     *  @param string|null $value Value to set for the category13 property.
+     * @param string|null $value Value to set for the category13 property.
     */
     public function setCategory13(?string $value): void {
         $this->getBackingStore()->set('category13', $value);
@@ -386,7 +386,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category14 property value. The label associated with Category 14
-     *  @param string|null $value Value to set for the category14 property.
+     * @param string|null $value Value to set for the category14 property.
     */
     public function setCategory14(?string $value): void {
         $this->getBackingStore()->set('category14', $value);
@@ -394,7 +394,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category15 property value. The label associated with Category 15
-     *  @param string|null $value Value to set for the category15 property.
+     * @param string|null $value Value to set for the category15 property.
     */
     public function setCategory15(?string $value): void {
         $this->getBackingStore()->set('category15', $value);
@@ -402,7 +402,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category16 property value. The label associated with Category 16
-     *  @param string|null $value Value to set for the category16 property.
+     * @param string|null $value Value to set for the category16 property.
     */
     public function setCategory16(?string $value): void {
         $this->getBackingStore()->set('category16', $value);
@@ -410,7 +410,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category17 property value. The label associated with Category 17
-     *  @param string|null $value Value to set for the category17 property.
+     * @param string|null $value Value to set for the category17 property.
     */
     public function setCategory17(?string $value): void {
         $this->getBackingStore()->set('category17', $value);
@@ -418,7 +418,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category18 property value. The label associated with Category 18
-     *  @param string|null $value Value to set for the category18 property.
+     * @param string|null $value Value to set for the category18 property.
     */
     public function setCategory18(?string $value): void {
         $this->getBackingStore()->set('category18', $value);
@@ -426,7 +426,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category19 property value. The label associated with Category 19
-     *  @param string|null $value Value to set for the category19 property.
+     * @param string|null $value Value to set for the category19 property.
     */
     public function setCategory19(?string $value): void {
         $this->getBackingStore()->set('category19', $value);
@@ -434,7 +434,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category2 property value. The label associated with Category 2
-     *  @param string|null $value Value to set for the category2 property.
+     * @param string|null $value Value to set for the category2 property.
     */
     public function setCategory2(?string $value): void {
         $this->getBackingStore()->set('category2', $value);
@@ -442,7 +442,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category20 property value. The label associated with Category 20
-     *  @param string|null $value Value to set for the category20 property.
+     * @param string|null $value Value to set for the category20 property.
     */
     public function setCategory20(?string $value): void {
         $this->getBackingStore()->set('category20', $value);
@@ -450,7 +450,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category21 property value. The label associated with Category 21
-     *  @param string|null $value Value to set for the category21 property.
+     * @param string|null $value Value to set for the category21 property.
     */
     public function setCategory21(?string $value): void {
         $this->getBackingStore()->set('category21', $value);
@@ -458,7 +458,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category22 property value. The label associated with Category 22
-     *  @param string|null $value Value to set for the category22 property.
+     * @param string|null $value Value to set for the category22 property.
     */
     public function setCategory22(?string $value): void {
         $this->getBackingStore()->set('category22', $value);
@@ -466,7 +466,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category23 property value. The label associated with Category 23
-     *  @param string|null $value Value to set for the category23 property.
+     * @param string|null $value Value to set for the category23 property.
     */
     public function setCategory23(?string $value): void {
         $this->getBackingStore()->set('category23', $value);
@@ -474,7 +474,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category24 property value. The label associated with Category 24
-     *  @param string|null $value Value to set for the category24 property.
+     * @param string|null $value Value to set for the category24 property.
     */
     public function setCategory24(?string $value): void {
         $this->getBackingStore()->set('category24', $value);
@@ -482,7 +482,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category25 property value. The label associated with Category 25
-     *  @param string|null $value Value to set for the category25 property.
+     * @param string|null $value Value to set for the category25 property.
     */
     public function setCategory25(?string $value): void {
         $this->getBackingStore()->set('category25', $value);
@@ -490,7 +490,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category3 property value. The label associated with Category 3
-     *  @param string|null $value Value to set for the category3 property.
+     * @param string|null $value Value to set for the category3 property.
     */
     public function setCategory3(?string $value): void {
         $this->getBackingStore()->set('category3', $value);
@@ -498,7 +498,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category4 property value. The label associated with Category 4
-     *  @param string|null $value Value to set for the category4 property.
+     * @param string|null $value Value to set for the category4 property.
     */
     public function setCategory4(?string $value): void {
         $this->getBackingStore()->set('category4', $value);
@@ -506,7 +506,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category5 property value. The label associated with Category 5
-     *  @param string|null $value Value to set for the category5 property.
+     * @param string|null $value Value to set for the category5 property.
     */
     public function setCategory5(?string $value): void {
         $this->getBackingStore()->set('category5', $value);
@@ -514,7 +514,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category6 property value. The label associated with Category 6
-     *  @param string|null $value Value to set for the category6 property.
+     * @param string|null $value Value to set for the category6 property.
     */
     public function setCategory6(?string $value): void {
         $this->getBackingStore()->set('category6', $value);
@@ -522,7 +522,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category7 property value. The label associated with Category 7
-     *  @param string|null $value Value to set for the category7 property.
+     * @param string|null $value Value to set for the category7 property.
     */
     public function setCategory7(?string $value): void {
         $this->getBackingStore()->set('category7', $value);
@@ -530,7 +530,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category8 property value. The label associated with Category 8
-     *  @param string|null $value Value to set for the category8 property.
+     * @param string|null $value Value to set for the category8 property.
     */
     public function setCategory8(?string $value): void {
         $this->getBackingStore()->set('category8', $value);
@@ -538,7 +538,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the category9 property value. The label associated with Category 9
-     *  @param string|null $value Value to set for the category9 property.
+     * @param string|null $value Value to set for the category9 property.
     */
     public function setCategory9(?string $value): void {
         $this->getBackingStore()->set('category9', $value);
@@ -546,7 +546,7 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

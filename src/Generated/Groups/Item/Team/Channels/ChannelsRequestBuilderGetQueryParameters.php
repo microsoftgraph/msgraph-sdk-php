@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Team\Channels;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve the list of channels in this team.
+*/
 class ChannelsRequestBuilderGetQueryParameters 
 {
     /**

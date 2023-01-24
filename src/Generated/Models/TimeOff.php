@@ -75,7 +75,7 @@ class TimeOff extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the draftTimeOff property value. The draft version of this timeOff that is viewable by managers. Required.
-     *  @param TimeOffItem|null $value Value to set for the draftTimeOff property.
+     * @param TimeOffItem|null $value Value to set for the draftTimeOff property.
     */
     public function setDraftTimeOff(?TimeOffItem $value): void {
         $this->getBackingStore()->set('draftTimeOff', $value);
@@ -83,7 +83,7 @@ class TimeOff extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the sharedTimeOff property value. The shared version of this timeOff that is viewable by both employees and managers. Required.
-     *  @param TimeOffItem|null $value Value to set for the sharedTimeOff property.
+     * @param TimeOffItem|null $value Value to set for the sharedTimeOff property.
     */
     public function setSharedTimeOff(?TimeOffItem $value): void {
         $this->getBackingStore()->set('sharedTimeOff', $value);
@@ -91,7 +91,7 @@ class TimeOff extends ChangeTrackedEntity implements Parsable
 
     /**
      * Sets the userId property value. ID of the user assigned to the timeOff. Required.
-     *  @param string|null $value Value to set for the userId property.
+     * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {
         $this->getBackingStore()->set('userId', $value);

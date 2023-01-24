@@ -140,7 +140,7 @@ class TargetResource implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -148,7 +148,7 @@ class TargetResource implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -156,7 +156,7 @@ class TargetResource implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the displayName property value. Indicates the visible name defined for the resource. Typically specified when the resource is created.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -164,7 +164,7 @@ class TargetResource implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the groupType property value. When type is set to Group, this indicates the group type. Possible values are: unifiedGroups, azureAD, and unknownFutureValue
-     *  @param GroupType|null $value Value to set for the groupType property.
+     * @param GroupType|null $value Value to set for the groupType property.
     */
     public function setGroupType(?GroupType $value): void {
         $this->getBackingStore()->set('groupType', $value);
@@ -172,7 +172,7 @@ class TargetResource implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the id property value. Indicates the unique ID of the resource.
-     *  @param string|null $value Value to set for the id property.
+     * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {
         $this->getBackingStore()->set('id', $value);
@@ -180,7 +180,7 @@ class TargetResource implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the modifiedProperties property value. Indicates name, old value and new value of each attribute that changed. Property values depend on the operation type.
-     *  @param array<ModifiedProperty>|null $value Value to set for the modifiedProperties property.
+     * @param array<ModifiedProperty>|null $value Value to set for the modifiedProperties property.
     */
     public function setModifiedProperties(?array $value): void {
         $this->getBackingStore()->set('modifiedProperties', $value);
@@ -188,7 +188,7 @@ class TargetResource implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -196,7 +196,7 @@ class TargetResource implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the type property value. Describes the resource type.  Example values include Application, Group, ServicePrincipal, and User.
-     *  @param string|null $value Value to set for the type property.
+     * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {
         $this->getBackingStore()->set('type', $value);
@@ -204,7 +204,7 @@ class TargetResource implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the userPrincipalName property value. When type is set to User, this includes the user name that initiated the action; null for other types.
-     *  @param string|null $value Value to set for the userPrincipalName property.
+     * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {
         $this->getBackingStore()->set('userPrincipalName', $value);

@@ -101,7 +101,7 @@ class ResponseStatus implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -109,7 +109,7 @@ class ResponseStatus implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -117,7 +117,7 @@ class ResponseStatus implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -125,7 +125,7 @@ class ResponseStatus implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the response property value. The response type. Possible values are: none, organizer, tentativelyAccepted, accepted, declined, notResponded.To differentiate between none and notResponded:  none – from organizer's perspective. This value is used when the status of an attendee/participant is reported to the organizer of a meeting.  notResponded – from attendee's perspective. Indicates the attendee has not responded to the meeting request.  Clients can treat notResponded == none.  As an example, if attendee Alex hasn't responded to a meeting request, getting Alex' response status for that event in Alex' calendar returns notResponded. Getting Alex' response from the calendar of any other attendee or the organizer's returns none. Getting the organizer's response for the event in anybody's calendar also returns none.
-     *  @param ResponseType|null $value Value to set for the response property.
+     * @param ResponseType|null $value Value to set for the response property.
     */
     public function setResponse(?ResponseType $value): void {
         $this->getBackingStore()->set('response', $value);
@@ -133,7 +133,7 @@ class ResponseStatus implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the time property value. The date and time when the response was returned. It uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the time property.
+     * @param DateTime|null $value Value to set for the time property.
     */
     public function setTime(?DateTime $value): void {
         $this->getBackingStore()->set('time', $value);

@@ -55,7 +55,7 @@ class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable
 
     /**
      * Sets the edgeSearchEngineType property value. Allows IT admind to set a predefined default search engine for MDM-Controlled devices
-     *  @param EdgeSearchEngineType|null $value Value to set for the edgeSearchEngineType property.
+     * @param EdgeSearchEngineType|null $value Value to set for the edgeSearchEngineType property.
     */
     public function setEdgeSearchEngineType(?EdgeSearchEngineType $value): void {
         $this->getBackingStore()->set('edgeSearchEngineType', $value);

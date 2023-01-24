@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\MailFolders\Item\SingleValueExtendedPrope
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The collection of single-value extended properties defined for the mailFolder. Read-only. Nullable.
+*/
 class SingleValueExtendedPropertiesRequestBuilderGetQueryParameters 
 {
     /**

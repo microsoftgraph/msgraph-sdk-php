@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Authentication\Operations;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Represents the status of a long-running operation.
+*/
 class OperationsRequestBuilderGetQueryParameters 
 {
     /**

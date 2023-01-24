@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Item\Ref;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Delete ref of navigation property members for directoryRoles
+*/
 class RefRequestBuilderDeleteQueryParameters 
 {
     /**

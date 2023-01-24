@@ -6,6 +6,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Represents app protection and configuration status for the organization.
+*/
 class ManagedAppStatus extends Entity implements Parsable 
 {
     /**
@@ -71,7 +74,7 @@ class ManagedAppStatus extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. Friendly name of the status report.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -79,7 +82,7 @@ class ManagedAppStatus extends Entity implements Parsable
 
     /**
      * Sets the version property value. Version of the entity.
-     *  @param string|null $value Value to set for the version property.
+     * @param string|null $value Value to set for the version property.
     */
     public function setVersion(?string $value): void {
         $this->getBackingStore()->set('version', $value);

@@ -75,7 +75,7 @@ class CallTranscriptEventMessageDetail extends EventMessageDetail implements Par
 
     /**
      * Sets the callId property value. Unique identifier of the call.
-     *  @param string|null $value Value to set for the callId property.
+     * @param string|null $value Value to set for the callId property.
     */
     public function setCallId(?string $value): void {
         $this->getBackingStore()->set('callId', $value);
@@ -83,7 +83,7 @@ class CallTranscriptEventMessageDetail extends EventMessageDetail implements Par
 
     /**
      * Sets the callTranscriptICalUid property value. Unique identifier for a call transcript.
-     *  @param string|null $value Value to set for the callTranscriptICalUid property.
+     * @param string|null $value Value to set for the callTranscriptICalUid property.
     */
     public function setCallTranscriptICalUid(?string $value): void {
         $this->getBackingStore()->set('callTranscriptICalUid', $value);
@@ -91,7 +91,7 @@ class CallTranscriptEventMessageDetail extends EventMessageDetail implements Par
 
     /**
      * Sets the meetingOrganizer property value. The organizer of the meeting.
-     *  @param IdentitySet|null $value Value to set for the meetingOrganizer property.
+     * @param IdentitySet|null $value Value to set for the meetingOrganizer property.
     */
     public function setMeetingOrganizer(?IdentitySet $value): void {
         $this->getBackingStore()->set('meetingOrganizer', $value);

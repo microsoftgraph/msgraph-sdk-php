@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Chats\Item\Messages\Item\Replies\Item\Hosted
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve the list of chatMessageHostedContent objects from a message. This API only lists the hosted content objects. To get the content bytes, see get chatmessage hosted content
+*/
 class HostedContentsRequestBuilderGetQueryParameters 
 {
     /**

@@ -130,7 +130,7 @@ class VerifiedDomain implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -138,7 +138,7 @@ class VerifiedDomain implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -146,7 +146,7 @@ class VerifiedDomain implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the capabilities property value. For example, Email, OfficeCommunicationsOnline.
-     *  @param string|null $value Value to set for the capabilities property.
+     * @param string|null $value Value to set for the capabilities property.
     */
     public function setCapabilities(?string $value): void {
         $this->getBackingStore()->set('capabilities', $value);
@@ -154,7 +154,7 @@ class VerifiedDomain implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the isDefault property value. true if this is the default domain associated with the tenant; otherwise, false.
-     *  @param bool|null $value Value to set for the isDefault property.
+     * @param bool|null $value Value to set for the isDefault property.
     */
     public function setIsDefault(?bool $value): void {
         $this->getBackingStore()->set('isDefault', $value);
@@ -162,7 +162,7 @@ class VerifiedDomain implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the isInitial property value. true if this is the initial domain associated with the tenant; otherwise, false.
-     *  @param bool|null $value Value to set for the isInitial property.
+     * @param bool|null $value Value to set for the isInitial property.
     */
     public function setIsInitial(?bool $value): void {
         $this->getBackingStore()->set('isInitial', $value);
@@ -170,7 +170,7 @@ class VerifiedDomain implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the name property value. The domain name; for example, contoso.onmicrosoft.com.
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -178,7 +178,7 @@ class VerifiedDomain implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -186,7 +186,7 @@ class VerifiedDomain implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the type property value. For example, Managed.
-     *  @param string|null $value Value to set for the type property.
+     * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {
         $this->getBackingStore()->set('type', $value);

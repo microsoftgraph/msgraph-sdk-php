@@ -92,7 +92,7 @@ class PurgeDataPostRequestBody implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -100,7 +100,7 @@ class PurgeDataPostRequestBody implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -108,7 +108,7 @@ class PurgeDataPostRequestBody implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the purgeAreas property value. The purgeAreas property
-     *  @param PurgeAreas|null $value Value to set for the purgeAreas property.
+     * @param PurgeAreas|null $value Value to set for the purgeAreas property.
     */
     public function setPurgeAreas(?PurgeAreas $value): void {
         $this->getBackingStore()->set('purgeAreas', $value);
@@ -116,7 +116,7 @@ class PurgeDataPostRequestBody implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the purgeType property value. The purgeType property
-     *  @param PurgeType|null $value Value to set for the purgeType property.
+     * @param PurgeType|null $value Value to set for the purgeType property.
     */
     public function setPurgeType(?PurgeType $value): void {
         $this->getBackingStore()->set('purgeType', $value);

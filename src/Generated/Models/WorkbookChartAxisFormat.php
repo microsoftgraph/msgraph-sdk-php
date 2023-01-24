@@ -64,7 +64,7 @@ class WorkbookChartAxisFormat extends Entity implements Parsable
 
     /**
      * Sets the font property value. Represents the font attributes (font name, font size, color, etc.) for a chart axis element. Read-only.
-     *  @param WorkbookChartFont|null $value Value to set for the font property.
+     * @param WorkbookChartFont|null $value Value to set for the font property.
     */
     public function setFont(?WorkbookChartFont $value): void {
         $this->getBackingStore()->set('font', $value);
@@ -72,7 +72,7 @@ class WorkbookChartAxisFormat extends Entity implements Parsable
 
     /**
      * Sets the line property value. Represents chart line formatting. Read-only.
-     *  @param WorkbookChartLineFormat|null $value Value to set for the line property.
+     * @param WorkbookChartLineFormat|null $value Value to set for the line property.
     */
     public function setLine(?WorkbookChartLineFormat $value): void {
         $this->getBackingStore()->set('line', $value);

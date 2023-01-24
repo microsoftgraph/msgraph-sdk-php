@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\CertificateBasedAuthConfiguration\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get entity from certificateBasedAuthConfiguration by key (id)
+*/
 class CertificateBasedAuthConfigurationItemRequestBuilderGetQueryParameters 
 {
     /**

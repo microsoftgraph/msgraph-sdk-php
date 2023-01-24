@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Education\Classes\Item\AssignmentSettings;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Specifies class-level assignments settings.
+*/
 class AssignmentSettingsRequestBuilderGetQueryParameters 
 {
     /**

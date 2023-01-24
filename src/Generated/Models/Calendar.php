@@ -224,7 +224,7 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Sets the allowedOnlineMeetingProviders property value. Represent the online meeting service providers that can be used to create online meetings in this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
-     *  @param array<OnlineMeetingProviderType>|null $value Value to set for the allowedOnlineMeetingProviders property.
+     * @param array<OnlineMeetingProviderType>|null $value Value to set for the allowedOnlineMeetingProviders property.
     */
     public function setAllowedOnlineMeetingProviders(?array $value): void {
         $this->getBackingStore()->set('allowedOnlineMeetingProviders', $value);
@@ -232,7 +232,7 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Sets the calendarPermissions property value. The permissions of the users with whom the calendar is shared.
-     *  @param array<CalendarPermission>|null $value Value to set for the calendarPermissions property.
+     * @param array<CalendarPermission>|null $value Value to set for the calendarPermissions property.
     */
     public function setCalendarPermissions(?array $value): void {
         $this->getBackingStore()->set('calendarPermissions', $value);
@@ -240,7 +240,7 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Sets the calendarView property value. The calendar view for the calendar. Navigation property. Read-only.
-     *  @param array<Event>|null $value Value to set for the calendarView property.
+     * @param array<Event>|null $value Value to set for the calendarView property.
     */
     public function setCalendarView(?array $value): void {
         $this->getBackingStore()->set('calendarView', $value);
@@ -248,7 +248,7 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Sets the canEdit property value. true if the user can write to the calendar, false otherwise. This property is true for the user who created the calendar. This property is also true for a user who has been shared a calendar and granted write access.
-     *  @param bool|null $value Value to set for the canEdit property.
+     * @param bool|null $value Value to set for the canEdit property.
     */
     public function setCanEdit(?bool $value): void {
         $this->getBackingStore()->set('canEdit', $value);
@@ -256,7 +256,7 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Sets the canShare property value. true if the user has the permission to share the calendar, false otherwise. Only the user who created the calendar can share it.
-     *  @param bool|null $value Value to set for the canShare property.
+     * @param bool|null $value Value to set for the canShare property.
     */
     public function setCanShare(?bool $value): void {
         $this->getBackingStore()->set('canShare', $value);
@@ -264,7 +264,7 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Sets the canViewPrivateItems property value. true if the user can read calendar items that have been marked private, false otherwise.
-     *  @param bool|null $value Value to set for the canViewPrivateItems property.
+     * @param bool|null $value Value to set for the canViewPrivateItems property.
     */
     public function setCanViewPrivateItems(?bool $value): void {
         $this->getBackingStore()->set('canViewPrivateItems', $value);
@@ -272,7 +272,7 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Sets the changeKey property value. Identifies the version of the calendar object. Every time the calendar is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.
-     *  @param string|null $value Value to set for the changeKey property.
+     * @param string|null $value Value to set for the changeKey property.
     */
     public function setChangeKey(?string $value): void {
         $this->getBackingStore()->set('changeKey', $value);
@@ -280,7 +280,7 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Sets the color property value. Specifies the color theme to distinguish the calendar from other calendars in a UI. The property values are: auto, lightBlue, lightGreen, lightOrange, lightGray, lightYellow, lightTeal, lightPink, lightBrown, lightRed, maxColor.
-     *  @param CalendarColor|null $value Value to set for the color property.
+     * @param CalendarColor|null $value Value to set for the color property.
     */
     public function setColor(?CalendarColor $value): void {
         $this->getBackingStore()->set('color', $value);
@@ -288,7 +288,7 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Sets the defaultOnlineMeetingProvider property value. The default online meeting provider for meetings sent from this calendar. Possible values are: unknown, skypeForBusiness, skypeForConsumer, teamsForBusiness.
-     *  @param OnlineMeetingProviderType|null $value Value to set for the defaultOnlineMeetingProvider property.
+     * @param OnlineMeetingProviderType|null $value Value to set for the defaultOnlineMeetingProvider property.
     */
     public function setDefaultOnlineMeetingProvider(?OnlineMeetingProviderType $value): void {
         $this->getBackingStore()->set('defaultOnlineMeetingProvider', $value);
@@ -296,7 +296,7 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Sets the events property value. The events in the calendar. Navigation property. Read-only.
-     *  @param array<Event>|null $value Value to set for the events property.
+     * @param array<Event>|null $value Value to set for the events property.
     */
     public function setEvents(?array $value): void {
         $this->getBackingStore()->set('events', $value);
@@ -304,7 +304,7 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Sets the hexColor property value. The calendar color, expressed in a hex color code of three hexadecimal values, each ranging from 00 to FF and representing the red, green, or blue components of the color in the RGB color space. If the user has never explicitly set a color for the calendar, this property is empty. Read-only.
-     *  @param string|null $value Value to set for the hexColor property.
+     * @param string|null $value Value to set for the hexColor property.
     */
     public function setHexColor(?string $value): void {
         $this->getBackingStore()->set('hexColor', $value);
@@ -312,7 +312,7 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Sets the isDefaultCalendar property value. true if this is the default calendar where new events are created by default, false otherwise.
-     *  @param bool|null $value Value to set for the isDefaultCalendar property.
+     * @param bool|null $value Value to set for the isDefaultCalendar property.
     */
     public function setIsDefaultCalendar(?bool $value): void {
         $this->getBackingStore()->set('isDefaultCalendar', $value);
@@ -320,7 +320,7 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Sets the isRemovable property value. Indicates whether this user calendar can be deleted from the user mailbox.
-     *  @param bool|null $value Value to set for the isRemovable property.
+     * @param bool|null $value Value to set for the isRemovable property.
     */
     public function setIsRemovable(?bool $value): void {
         $this->getBackingStore()->set('isRemovable', $value);
@@ -328,7 +328,7 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Sets the isTallyingResponses property value. Indicates whether this user calendar supports tracking of meeting responses. Only meeting invites sent from users' primary calendars support tracking of meeting responses.
-     *  @param bool|null $value Value to set for the isTallyingResponses property.
+     * @param bool|null $value Value to set for the isTallyingResponses property.
     */
     public function setIsTallyingResponses(?bool $value): void {
         $this->getBackingStore()->set('isTallyingResponses', $value);
@@ -336,7 +336,7 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the calendar. Read-only. Nullable.
-     *  @param array<MultiValueLegacyExtendedProperty>|null $value Value to set for the multiValueExtendedProperties property.
+     * @param array<MultiValueLegacyExtendedProperty>|null $value Value to set for the multiValueExtendedProperties property.
     */
     public function setMultiValueExtendedProperties(?array $value): void {
         $this->getBackingStore()->set('multiValueExtendedProperties', $value);
@@ -344,7 +344,7 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Sets the name property value. The calendar name.
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -352,7 +352,7 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Sets the owner property value. If set, this represents the user who created or added the calendar. For a calendar that the user created or added, the owner property is set to the user. For a calendar shared with the user, the owner property is set to the person who shared that calendar with the user.
-     *  @param EmailAddress|null $value Value to set for the owner property.
+     * @param EmailAddress|null $value Value to set for the owner property.
     */
     public function setOwner(?EmailAddress $value): void {
         $this->getBackingStore()->set('owner', $value);
@@ -360,7 +360,7 @@ class Calendar extends Entity implements Parsable
 
     /**
      * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the calendar. Read-only. Nullable.
-     *  @param array<SingleValueLegacyExtendedProperty>|null $value Value to set for the singleValueExtendedProperties property.
+     * @param array<SingleValueLegacyExtendedProperty>|null $value Value to set for the singleValueExtendedProperties property.
     */
     public function setSingleValueExtendedProperties(?array $value): void {
         $this->getBackingStore()->set('singleValueExtendedProperties', $value);

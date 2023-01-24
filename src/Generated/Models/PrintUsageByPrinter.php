@@ -55,7 +55,7 @@ class PrintUsageByPrinter extends PrintUsage implements Parsable
 
     /**
      * Sets the printerId property value. The printerId property
-     *  @param string|null $value Value to set for the printerId property.
+     * @param string|null $value Value to set for the printerId property.
     */
     public function setPrinterId(?string $value): void {
         $this->getBackingStore()->set('printerId', $value);

@@ -5,6 +5,9 @@ namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserFlowIdentityP
 use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserFlowIdentityProviders\Item\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 
+/**
+ * Builds and executes requests for operations under /identity/b2xUserFlows/{b2xIdentityUserFlow-id}/userFlowIdentityProviders/{identityProviderBase-id}
+*/
 class IdentityProviderBaseItemRequestBuilder 
 {
     /**

@@ -55,7 +55,7 @@ class BuiltInIdentityProvider extends IdentityProviderBase implements Parsable
 
     /**
      * Sets the identityProviderType property value. The identity provider type. For a B2B scenario, possible values: AADSignup, MicrosoftAccount, EmailOTP. Required.
-     *  @param string|null $value Value to set for the identityProviderType property.
+     * @param string|null $value Value to set for the identityProviderType property.
     */
     public function setIdentityProviderType(?string $value): void {
         $this->getBackingStore()->set('identityProviderType', $value);

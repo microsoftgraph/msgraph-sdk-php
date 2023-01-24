@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\Tabs\Item\Tea
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The application that is linked to the tab. This cannot be changed after tab creation.
+*/
 class TeamsAppRequestBuilderGetQueryParameters 
 {
     /**

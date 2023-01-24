@@ -66,7 +66,7 @@ class DriveItemVersion extends BaseItemVersion implements Parsable
 
     /**
      * Sets the content property value. The content stream for this version of the item.
-     *  @param StreamInterface|null $value Value to set for the content property.
+     * @param StreamInterface|null $value Value to set for the content property.
     */
     public function setContent(?StreamInterface $value): void {
         $this->getBackingStore()->set('content', $value);
@@ -74,7 +74,7 @@ class DriveItemVersion extends BaseItemVersion implements Parsable
 
     /**
      * Sets the size property value. Indicates the size of the content stream for this version of the item.
-     *  @param int|null $value Value to set for the size property.
+     * @param int|null $value Value to set for the size property.
     */
     public function setSize(?int $value): void {
         $this->getBackingStore()->set('size', $value);

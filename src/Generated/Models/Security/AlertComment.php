@@ -111,7 +111,7 @@ class AlertComment implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -119,7 +119,7 @@ class AlertComment implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -127,7 +127,7 @@ class AlertComment implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the comment property value. The comment text.
-     *  @param string|null $value Value to set for the comment property.
+     * @param string|null $value Value to set for the comment property.
     */
     public function setComment(?string $value): void {
         $this->getBackingStore()->set('comment', $value);
@@ -135,7 +135,7 @@ class AlertComment implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the createdByDisplayName property value. The person or app name that submitted the comment.
-     *  @param string|null $value Value to set for the createdByDisplayName property.
+     * @param string|null $value Value to set for the createdByDisplayName property.
     */
     public function setCreatedByDisplayName(?string $value): void {
         $this->getBackingStore()->set('createdByDisplayName', $value);
@@ -143,7 +143,7 @@ class AlertComment implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the createdDateTime property value. The time when the comment was submitted.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -151,7 +151,7 @@ class AlertComment implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

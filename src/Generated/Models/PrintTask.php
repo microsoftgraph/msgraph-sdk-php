@@ -84,7 +84,7 @@ class PrintTask extends Entity implements Parsable
 
     /**
      * Sets the definition property value. The definition property
-     *  @param PrintTaskDefinition|null $value Value to set for the definition property.
+     * @param PrintTaskDefinition|null $value Value to set for the definition property.
     */
     public function setDefinition(?PrintTaskDefinition $value): void {
         $this->getBackingStore()->set('definition', $value);
@@ -92,7 +92,7 @@ class PrintTask extends Entity implements Parsable
 
     /**
      * Sets the parentUrl property value. The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/v1.0/print/printers/{printerId}/jobs/{jobId}. Read-only.
-     *  @param string|null $value Value to set for the parentUrl property.
+     * @param string|null $value Value to set for the parentUrl property.
     */
     public function setParentUrl(?string $value): void {
         $this->getBackingStore()->set('parentUrl', $value);
@@ -100,7 +100,7 @@ class PrintTask extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status property
-     *  @param PrintTaskStatus|null $value Value to set for the status property.
+     * @param PrintTaskStatus|null $value Value to set for the status property.
     */
     public function setStatus(?PrintTaskStatus $value): void {
         $this->getBackingStore()->set('status', $value);
@@ -108,7 +108,7 @@ class PrintTask extends Entity implements Parsable
 
     /**
      * Sets the trigger property value. The trigger property
-     *  @param PrintTaskTrigger|null $value Value to set for the trigger property.
+     * @param PrintTaskTrigger|null $value Value to set for the trigger property.
     */
     public function setTrigger(?PrintTaskTrigger $value): void {
         $this->getBackingStore()->set('trigger', $value);

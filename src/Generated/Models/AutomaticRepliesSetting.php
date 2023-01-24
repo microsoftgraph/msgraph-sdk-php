@@ -140,7 +140,7 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -148,7 +148,7 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -156,7 +156,7 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the externalAudience property value. The set of audience external to the signed-in user's organization who will receive the ExternalReplyMessage, if Status is AlwaysEnabled or Scheduled. The possible values are: none, contactsOnly, all.
-     *  @param ExternalAudienceScope|null $value Value to set for the externalAudience property.
+     * @param ExternalAudienceScope|null $value Value to set for the externalAudience property.
     */
     public function setExternalAudience(?ExternalAudienceScope $value): void {
         $this->getBackingStore()->set('externalAudience', $value);
@@ -164,7 +164,7 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the externalReplyMessage property value. The automatic reply to send to the specified external audience, if Status is AlwaysEnabled or Scheduled.
-     *  @param string|null $value Value to set for the externalReplyMessage property.
+     * @param string|null $value Value to set for the externalReplyMessage property.
     */
     public function setExternalReplyMessage(?string $value): void {
         $this->getBackingStore()->set('externalReplyMessage', $value);
@@ -172,7 +172,7 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the internalReplyMessage property value. The automatic reply to send to the audience internal to the signed-in user's organization, if Status is AlwaysEnabled or Scheduled.
-     *  @param string|null $value Value to set for the internalReplyMessage property.
+     * @param string|null $value Value to set for the internalReplyMessage property.
     */
     public function setInternalReplyMessage(?string $value): void {
         $this->getBackingStore()->set('internalReplyMessage', $value);
@@ -180,7 +180,7 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -188,7 +188,7 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the scheduledEndDateTime property value. The date and time that automatic replies are set to end, if Status is set to Scheduled.
-     *  @param DateTimeTimeZone|null $value Value to set for the scheduledEndDateTime property.
+     * @param DateTimeTimeZone|null $value Value to set for the scheduledEndDateTime property.
     */
     public function setScheduledEndDateTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('scheduledEndDateTime', $value);
@@ -196,7 +196,7 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the scheduledStartDateTime property value. The date and time that automatic replies are set to begin, if Status is set to Scheduled.
-     *  @param DateTimeTimeZone|null $value Value to set for the scheduledStartDateTime property.
+     * @param DateTimeTimeZone|null $value Value to set for the scheduledStartDateTime property.
     */
     public function setScheduledStartDateTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('scheduledStartDateTime', $value);
@@ -204,7 +204,7 @@ class AutomaticRepliesSetting implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the status property value. Configurations status for automatic replies. The possible values are: disabled, alwaysEnabled, scheduled.
-     *  @param AutomaticRepliesStatus|null $value Value to set for the status property.
+     * @param AutomaticRepliesStatus|null $value Value to set for the status property.
     */
     public function setStatus(?AutomaticRepliesStatus $value): void {
         $this->getBackingStore()->set('status', $value);

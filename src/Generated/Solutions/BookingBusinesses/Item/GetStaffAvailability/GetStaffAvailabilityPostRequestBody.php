@@ -101,7 +101,7 @@ class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder, Backe
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -109,7 +109,7 @@ class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder, Backe
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -117,7 +117,7 @@ class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder, Backe
 
     /**
      * Sets the endDateTime property value. The endDateTime property
-     *  @param DateTimeTimeZone|null $value Value to set for the endDateTime property.
+     * @param DateTimeTimeZone|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('endDateTime', $value);
@@ -125,7 +125,7 @@ class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder, Backe
 
     /**
      * Sets the staffIds property value. The staffIds property
-     *  @param array<string>|null $value Value to set for the staffIds property.
+     * @param array<string>|null $value Value to set for the staffIds property.
     */
     public function setStaffIds(?array $value): void {
         $this->getBackingStore()->set('staffIds', $value);
@@ -133,7 +133,7 @@ class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder, Backe
 
     /**
      * Sets the startDateTime property value. The startDateTime property
-     *  @param DateTimeTimeZone|null $value Value to set for the startDateTime property.
+     * @param DateTimeTimeZone|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTimeTimeZone $value): void {
         $this->getBackingStore()->set('startDateTime', $value);

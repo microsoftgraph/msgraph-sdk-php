@@ -145,7 +145,7 @@ class AccessPackage extends Entity implements Parsable
 
     /**
      * Sets the accessPackagesIncompatibleWith property value. The access packages that are incompatible with this package. Read-only.
-     *  @param array<AccessPackage>|null $value Value to set for the accessPackagesIncompatibleWith property.
+     * @param array<AccessPackage>|null $value Value to set for the accessPackagesIncompatibleWith property.
     */
     public function setAccessPackagesIncompatibleWith(?array $value): void {
         $this->getBackingStore()->set('accessPackagesIncompatibleWith', $value);
@@ -153,7 +153,7 @@ class AccessPackage extends Entity implements Parsable
 
     /**
      * Sets the assignmentPolicies property value. The assignmentPolicies property
-     *  @param array<AccessPackageAssignmentPolicy>|null $value Value to set for the assignmentPolicies property.
+     * @param array<AccessPackageAssignmentPolicy>|null $value Value to set for the assignmentPolicies property.
     */
     public function setAssignmentPolicies(?array $value): void {
         $this->getBackingStore()->set('assignmentPolicies', $value);
@@ -161,7 +161,7 @@ class AccessPackage extends Entity implements Parsable
 
     /**
      * Sets the catalog property value. The catalog property
-     *  @param AccessPackageCatalog|null $value Value to set for the catalog property.
+     * @param AccessPackageCatalog|null $value Value to set for the catalog property.
     */
     public function setCatalog(?AccessPackageCatalog $value): void {
         $this->getBackingStore()->set('catalog', $value);
@@ -169,7 +169,7 @@ class AccessPackage extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -177,7 +177,7 @@ class AccessPackage extends Entity implements Parsable
 
     /**
      * Sets the description property value. The description of the access package.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -185,7 +185,7 @@ class AccessPackage extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The display name of the access package. Supports $filter (eq, contains).
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -193,7 +193,7 @@ class AccessPackage extends Entity implements Parsable
 
     /**
      * Sets the incompatibleAccessPackages property value. The access packages whose assigned users are ineligible to be assigned this access package.
-     *  @param array<AccessPackage>|null $value Value to set for the incompatibleAccessPackages property.
+     * @param array<AccessPackage>|null $value Value to set for the incompatibleAccessPackages property.
     */
     public function setIncompatibleAccessPackages(?array $value): void {
         $this->getBackingStore()->set('incompatibleAccessPackages', $value);
@@ -201,7 +201,7 @@ class AccessPackage extends Entity implements Parsable
 
     /**
      * Sets the incompatibleGroups property value. The groups whose members are ineligible to be assigned this access package.
-     *  @param array<Group>|null $value Value to set for the incompatibleGroups property.
+     * @param array<Group>|null $value Value to set for the incompatibleGroups property.
     */
     public function setIncompatibleGroups(?array $value): void {
         $this->getBackingStore()->set('incompatibleGroups', $value);
@@ -209,7 +209,7 @@ class AccessPackage extends Entity implements Parsable
 
     /**
      * Sets the isHidden property value. Whether the access package is hidden from the requestor.
-     *  @param bool|null $value Value to set for the isHidden property.
+     * @param bool|null $value Value to set for the isHidden property.
     */
     public function setIsHidden(?bool $value): void {
         $this->getBackingStore()->set('isHidden', $value);
@@ -217,7 +217,7 @@ class AccessPackage extends Entity implements Parsable
 
     /**
      * Sets the modifiedDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
-     *  @param DateTime|null $value Value to set for the modifiedDateTime property.
+     * @param DateTime|null $value Value to set for the modifiedDateTime property.
     */
     public function setModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('modifiedDateTime', $value);

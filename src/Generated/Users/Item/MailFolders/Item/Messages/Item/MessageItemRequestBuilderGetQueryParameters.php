@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The collection of messages in the mailFolder.
+*/
 class MessageItemRequestBuilderGetQueryParameters 
 {
     /**

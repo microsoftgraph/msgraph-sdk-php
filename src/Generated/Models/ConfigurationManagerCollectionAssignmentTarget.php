@@ -55,7 +55,7 @@ class ConfigurationManagerCollectionAssignmentTarget extends DeviceAndAppManagem
 
     /**
      * Sets the collectionId property value. The collection Id that is the target of the assignment.
-     *  @param string|null $value Value to set for the collectionId property.
+     * @param string|null $value Value to set for the collectionId property.
     */
     public function setCollectionId(?string $value): void {
         $this->getBackingStore()->set('collectionId', $value);

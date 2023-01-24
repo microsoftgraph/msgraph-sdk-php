@@ -55,7 +55,7 @@ class OpenTypeExtension extends Extension implements Parsable
 
     /**
      * Sets the extensionName property value. A unique text identifier for an open type data extension. Required.
-     *  @param string|null $value Value to set for the extensionName property.
+     * @param string|null $value Value to set for the extensionName property.
     */
     public function setExtensionName(?string $value): void {
         $this->getBackingStore()->set('extensionName', $value);

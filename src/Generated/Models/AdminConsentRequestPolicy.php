@@ -104,7 +104,7 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
 
     /**
      * Sets the isEnabled property value. Specifies whether the admin consent request feature is enabled or disabled. Required.
-     *  @param bool|null $value Value to set for the isEnabled property.
+     * @param bool|null $value Value to set for the isEnabled property.
     */
     public function setIsEnabled(?bool $value): void {
         $this->getBackingStore()->set('isEnabled', $value);
@@ -112,7 +112,7 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
 
     /**
      * Sets the notifyReviewers property value. Specifies whether reviewers will receive notifications. Required.
-     *  @param bool|null $value Value to set for the notifyReviewers property.
+     * @param bool|null $value Value to set for the notifyReviewers property.
     */
     public function setNotifyReviewers(?bool $value): void {
         $this->getBackingStore()->set('notifyReviewers', $value);
@@ -120,7 +120,7 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
 
     /**
      * Sets the remindersEnabled property value. Specifies whether reviewers will receive reminder emails. Required.
-     *  @param bool|null $value Value to set for the remindersEnabled property.
+     * @param bool|null $value Value to set for the remindersEnabled property.
     */
     public function setRemindersEnabled(?bool $value): void {
         $this->getBackingStore()->set('remindersEnabled', $value);
@@ -128,7 +128,7 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
 
     /**
      * Sets the requestDurationInDays property value. Specifies the duration the request is active before it automatically expires if no decision is applied.
-     *  @param int|null $value Value to set for the requestDurationInDays property.
+     * @param int|null $value Value to set for the requestDurationInDays property.
     */
     public function setRequestDurationInDays(?int $value): void {
         $this->getBackingStore()->set('requestDurationInDays', $value);
@@ -136,7 +136,7 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
 
     /**
      * Sets the reviewers property value. The list of reviewers for the admin consent. Required.
-     *  @param array<AccessReviewReviewerScope>|null $value Value to set for the reviewers property.
+     * @param array<AccessReviewReviewerScope>|null $value Value to set for the reviewers property.
     */
     public function setReviewers(?array $value): void {
         $this->getBackingStore()->set('reviewers', $value);
@@ -144,7 +144,7 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
 
     /**
      * Sets the version property value. Specifies the version of this policy. When the policy is updated, this version is updated. Read-only.
-     *  @param int|null $value Value to set for the version property.
+     * @param int|null $value Value to set for the version property.
     */
     public function setVersion(?int $value): void {
         $this->getBackingStore()->set('version', $value);

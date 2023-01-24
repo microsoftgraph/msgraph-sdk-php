@@ -7,6 +7,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * An abstract class for Mobile app configuration for enrolled devices.
+*/
 class ManagedDeviceMobileAppConfiguration extends Entity implements Parsable 
 {
     /**
@@ -162,7 +165,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity implements Parsable
 
     /**
      * Sets the assignments property value. The list of group assignemenets for app configration.
-     *  @param array<ManagedDeviceMobileAppConfigurationAssignment>|null $value Value to set for the assignments property.
+     * @param array<ManagedDeviceMobileAppConfigurationAssignment>|null $value Value to set for the assignments property.
     */
     public function setAssignments(?array $value): void {
         $this->getBackingStore()->set('assignments', $value);
@@ -170,7 +173,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. DateTime the object was created.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -178,7 +181,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity implements Parsable
 
     /**
      * Sets the description property value. Admin provided description of the Device Configuration.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -186,7 +189,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity implements Parsable
 
     /**
      * Sets the deviceStatuses property value. List of ManagedDeviceMobileAppConfigurationDeviceStatus.
-     *  @param array<ManagedDeviceMobileAppConfigurationDeviceStatus>|null $value Value to set for the deviceStatuses property.
+     * @param array<ManagedDeviceMobileAppConfigurationDeviceStatus>|null $value Value to set for the deviceStatuses property.
     */
     public function setDeviceStatuses(?array $value): void {
         $this->getBackingStore()->set('deviceStatuses', $value);
@@ -194,7 +197,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity implements Parsable
 
     /**
      * Sets the deviceStatusSummary property value. App configuration device status summary.
-     *  @param ManagedDeviceMobileAppConfigurationDeviceSummary|null $value Value to set for the deviceStatusSummary property.
+     * @param ManagedDeviceMobileAppConfigurationDeviceSummary|null $value Value to set for the deviceStatusSummary property.
     */
     public function setDeviceStatusSummary(?ManagedDeviceMobileAppConfigurationDeviceSummary $value): void {
         $this->getBackingStore()->set('deviceStatusSummary', $value);
@@ -202,7 +205,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. Admin provided name of the device configuration.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -210,7 +213,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -218,7 +221,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity implements Parsable
 
     /**
      * Sets the targetedMobileApps property value. the associated app.
-     *  @param array<string>|null $value Value to set for the targetedMobileApps property.
+     * @param array<string>|null $value Value to set for the targetedMobileApps property.
     */
     public function setTargetedMobileApps(?array $value): void {
         $this->getBackingStore()->set('targetedMobileApps', $value);
@@ -226,7 +229,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity implements Parsable
 
     /**
      * Sets the userStatuses property value. List of ManagedDeviceMobileAppConfigurationUserStatus.
-     *  @param array<ManagedDeviceMobileAppConfigurationUserStatus>|null $value Value to set for the userStatuses property.
+     * @param array<ManagedDeviceMobileAppConfigurationUserStatus>|null $value Value to set for the userStatuses property.
     */
     public function setUserStatuses(?array $value): void {
         $this->getBackingStore()->set('userStatuses', $value);
@@ -234,7 +237,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity implements Parsable
 
     /**
      * Sets the userStatusSummary property value. App configuration user status summary.
-     *  @param ManagedDeviceMobileAppConfigurationUserSummary|null $value Value to set for the userStatusSummary property.
+     * @param ManagedDeviceMobileAppConfigurationUserSummary|null $value Value to set for the userStatusSummary property.
     */
     public function setUserStatusSummary(?ManagedDeviceMobileAppConfigurationUserSummary $value): void {
         $this->getBackingStore()->set('userStatusSummary', $value);
@@ -242,7 +245,7 @@ class ManagedDeviceMobileAppConfiguration extends Entity implements Parsable
 
     /**
      * Sets the version property value. Version of the device configuration.
-     *  @param int|null $value Value to set for the version property.
+     * @param int|null $value Value to set for the version property.
     */
     public function setVersion(?int $value): void {
         $this->getBackingStore()->set('version', $value);

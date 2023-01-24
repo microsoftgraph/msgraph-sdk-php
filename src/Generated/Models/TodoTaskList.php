@@ -104,7 +104,7 @@ class TodoTaskList extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The name of the task list.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -112,7 +112,7 @@ class TodoTaskList extends Entity implements Parsable
 
     /**
      * Sets the extensions property value. The collection of open extensions defined for the task list. Nullable.
-     *  @param array<Extension>|null $value Value to set for the extensions property.
+     * @param array<Extension>|null $value Value to set for the extensions property.
     */
     public function setExtensions(?array $value): void {
         $this->getBackingStore()->set('extensions', $value);
@@ -120,7 +120,7 @@ class TodoTaskList extends Entity implements Parsable
 
     /**
      * Sets the isOwner property value. True if the user is owner of the given task list.
-     *  @param bool|null $value Value to set for the isOwner property.
+     * @param bool|null $value Value to set for the isOwner property.
     */
     public function setIsOwner(?bool $value): void {
         $this->getBackingStore()->set('isOwner', $value);
@@ -128,7 +128,7 @@ class TodoTaskList extends Entity implements Parsable
 
     /**
      * Sets the isShared property value. True if the task list is shared with other users
-     *  @param bool|null $value Value to set for the isShared property.
+     * @param bool|null $value Value to set for the isShared property.
     */
     public function setIsShared(?bool $value): void {
         $this->getBackingStore()->set('isShared', $value);
@@ -136,7 +136,7 @@ class TodoTaskList extends Entity implements Parsable
 
     /**
      * Sets the tasks property value. The tasks in this task list. Read-only. Nullable.
-     *  @param array<TodoTask>|null $value Value to set for the tasks property.
+     * @param array<TodoTask>|null $value Value to set for the tasks property.
     */
     public function setTasks(?array $value): void {
         $this->getBackingStore()->set('tasks', $value);
@@ -144,7 +144,7 @@ class TodoTaskList extends Entity implements Parsable
 
     /**
      * Sets the wellknownListName property value. The wellknownListName property
-     *  @param WellknownListName|null $value Value to set for the wellknownListName property.
+     * @param WellknownListName|null $value Value to set for the wellknownListName property.
     */
     public function setWellknownListName(?WellknownListName $value): void {
         $this->getBackingStore()->set('wellknownListName', $value);

@@ -134,7 +134,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
 
     /**
      * Sets the format property value. Represents the format of chart data labels, which includes fill and font formatting. Read-only.
-     *  @param WorkbookChartDataLabelFormat|null $value Value to set for the format property.
+     * @param WorkbookChartDataLabelFormat|null $value Value to set for the format property.
     */
     public function setFormat(?WorkbookChartDataLabelFormat $value): void {
         $this->getBackingStore()->set('format', $value);
@@ -142,7 +142,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
 
     /**
      * Sets the position property value. DataLabelPosition value that represents the position of the data label. The possible values are: None, Center, InsideEnd, InsideBase, OutsideEnd, Left, Right, Top, Bottom, BestFit, Callout.
-     *  @param string|null $value Value to set for the position property.
+     * @param string|null $value Value to set for the position property.
     */
     public function setPosition(?string $value): void {
         $this->getBackingStore()->set('position', $value);
@@ -150,7 +150,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
 
     /**
      * Sets the separator property value. String representing the separator used for the data labels on a chart.
-     *  @param string|null $value Value to set for the separator property.
+     * @param string|null $value Value to set for the separator property.
     */
     public function setSeparator(?string $value): void {
         $this->getBackingStore()->set('separator', $value);
@@ -158,7 +158,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
 
     /**
      * Sets the showBubbleSize property value. Boolean value representing if the data label bubble size is visible or not.
-     *  @param bool|null $value Value to set for the showBubbleSize property.
+     * @param bool|null $value Value to set for the showBubbleSize property.
     */
     public function setShowBubbleSize(?bool $value): void {
         $this->getBackingStore()->set('showBubbleSize', $value);
@@ -166,7 +166,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
 
     /**
      * Sets the showCategoryName property value. Boolean value representing if the data label category name is visible or not.
-     *  @param bool|null $value Value to set for the showCategoryName property.
+     * @param bool|null $value Value to set for the showCategoryName property.
     */
     public function setShowCategoryName(?bool $value): void {
         $this->getBackingStore()->set('showCategoryName', $value);
@@ -174,7 +174,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
 
     /**
      * Sets the showLegendKey property value. Boolean value representing if the data label legend key is visible or not.
-     *  @param bool|null $value Value to set for the showLegendKey property.
+     * @param bool|null $value Value to set for the showLegendKey property.
     */
     public function setShowLegendKey(?bool $value): void {
         $this->getBackingStore()->set('showLegendKey', $value);
@@ -182,7 +182,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
 
     /**
      * Sets the showPercentage property value. Boolean value representing if the data label percentage is visible or not.
-     *  @param bool|null $value Value to set for the showPercentage property.
+     * @param bool|null $value Value to set for the showPercentage property.
     */
     public function setShowPercentage(?bool $value): void {
         $this->getBackingStore()->set('showPercentage', $value);
@@ -190,7 +190,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
 
     /**
      * Sets the showSeriesName property value. Boolean value representing if the data label series name is visible or not.
-     *  @param bool|null $value Value to set for the showSeriesName property.
+     * @param bool|null $value Value to set for the showSeriesName property.
     */
     public function setShowSeriesName(?bool $value): void {
         $this->getBackingStore()->set('showSeriesName', $value);
@@ -198,7 +198,7 @@ class WorkbookChartDataLabels extends Entity implements Parsable
 
     /**
      * Sets the showValue property value. Boolean value representing if the data label value is visible or not.
-     *  @param bool|null $value Value to set for the showValue property.
+     * @param bool|null $value Value to set for the showValue property.
     */
     public function setShowValue(?bool $value): void {
         $this->getBackingStore()->set('showValue', $value);

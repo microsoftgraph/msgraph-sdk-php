@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Organization\Item\CertificateBasedAuthConfig
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get a list of certificateBasedAuthConfiguration objects.
+*/
 class CertificateBasedAuthConfigurationRequestBuilderGetQueryParameters 
 {
     /**

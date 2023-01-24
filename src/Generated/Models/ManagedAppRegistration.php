@@ -7,6 +7,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * The ManagedAppEntity is the base entity type for all other entity types under app management workflow.
+*/
 class ManagedAppRegistration extends Entity implements Parsable 
 {
     /**
@@ -203,7 +206,7 @@ class ManagedAppRegistration extends Entity implements Parsable
 
     /**
      * Sets the appIdentifier property value. The app package Identifier
-     *  @param MobileAppIdentifier|null $value Value to set for the appIdentifier property.
+     * @param MobileAppIdentifier|null $value Value to set for the appIdentifier property.
     */
     public function setAppIdentifier(?MobileAppIdentifier $value): void {
         $this->getBackingStore()->set('appIdentifier', $value);
@@ -211,7 +214,7 @@ class ManagedAppRegistration extends Entity implements Parsable
 
     /**
      * Sets the applicationVersion property value. App version
-     *  @param string|null $value Value to set for the applicationVersion property.
+     * @param string|null $value Value to set for the applicationVersion property.
     */
     public function setApplicationVersion(?string $value): void {
         $this->getBackingStore()->set('applicationVersion', $value);
@@ -219,7 +222,7 @@ class ManagedAppRegistration extends Entity implements Parsable
 
     /**
      * Sets the appliedPolicies property value. Zero or more policys already applied on the registered app when it last synchronized with managment service.
-     *  @param array<ManagedAppPolicy>|null $value Value to set for the appliedPolicies property.
+     * @param array<ManagedAppPolicy>|null $value Value to set for the appliedPolicies property.
     */
     public function setAppliedPolicies(?array $value): void {
         $this->getBackingStore()->set('appliedPolicies', $value);
@@ -227,7 +230,7 @@ class ManagedAppRegistration extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. Date and time of creation
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -235,7 +238,7 @@ class ManagedAppRegistration extends Entity implements Parsable
 
     /**
      * Sets the deviceName property value. Host device name
-     *  @param string|null $value Value to set for the deviceName property.
+     * @param string|null $value Value to set for the deviceName property.
     */
     public function setDeviceName(?string $value): void {
         $this->getBackingStore()->set('deviceName', $value);
@@ -243,7 +246,7 @@ class ManagedAppRegistration extends Entity implements Parsable
 
     /**
      * Sets the deviceTag property value. App management SDK generated tag, which helps relate apps hosted on the same device. Not guaranteed to relate apps in all conditions.
-     *  @param string|null $value Value to set for the deviceTag property.
+     * @param string|null $value Value to set for the deviceTag property.
     */
     public function setDeviceTag(?string $value): void {
         $this->getBackingStore()->set('deviceTag', $value);
@@ -251,7 +254,7 @@ class ManagedAppRegistration extends Entity implements Parsable
 
     /**
      * Sets the deviceType property value. Host device type
-     *  @param string|null $value Value to set for the deviceType property.
+     * @param string|null $value Value to set for the deviceType property.
     */
     public function setDeviceType(?string $value): void {
         $this->getBackingStore()->set('deviceType', $value);
@@ -259,7 +262,7 @@ class ManagedAppRegistration extends Entity implements Parsable
 
     /**
      * Sets the flaggedReasons property value. Zero or more reasons an app registration is flagged. E.g. app running on rooted device
-     *  @param array<ManagedAppFlaggedReason>|null $value Value to set for the flaggedReasons property.
+     * @param array<ManagedAppFlaggedReason>|null $value Value to set for the flaggedReasons property.
     */
     public function setFlaggedReasons(?array $value): void {
         $this->getBackingStore()->set('flaggedReasons', $value);
@@ -267,7 +270,7 @@ class ManagedAppRegistration extends Entity implements Parsable
 
     /**
      * Sets the intendedPolicies property value. Zero or more policies admin intended for the app as of now.
-     *  @param array<ManagedAppPolicy>|null $value Value to set for the intendedPolicies property.
+     * @param array<ManagedAppPolicy>|null $value Value to set for the intendedPolicies property.
     */
     public function setIntendedPolicies(?array $value): void {
         $this->getBackingStore()->set('intendedPolicies', $value);
@@ -275,7 +278,7 @@ class ManagedAppRegistration extends Entity implements Parsable
 
     /**
      * Sets the lastSyncDateTime property value. Date and time of last the app synced with management service.
-     *  @param DateTime|null $value Value to set for the lastSyncDateTime property.
+     * @param DateTime|null $value Value to set for the lastSyncDateTime property.
     */
     public function setLastSyncDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastSyncDateTime', $value);
@@ -283,7 +286,7 @@ class ManagedAppRegistration extends Entity implements Parsable
 
     /**
      * Sets the managementSdkVersion property value. App management SDK version
-     *  @param string|null $value Value to set for the managementSdkVersion property.
+     * @param string|null $value Value to set for the managementSdkVersion property.
     */
     public function setManagementSdkVersion(?string $value): void {
         $this->getBackingStore()->set('managementSdkVersion', $value);
@@ -291,7 +294,7 @@ class ManagedAppRegistration extends Entity implements Parsable
 
     /**
      * Sets the operations property value. Zero or more long running operations triggered on the app registration.
-     *  @param array<ManagedAppOperation>|null $value Value to set for the operations property.
+     * @param array<ManagedAppOperation>|null $value Value to set for the operations property.
     */
     public function setOperations(?array $value): void {
         $this->getBackingStore()->set('operations', $value);
@@ -299,7 +302,7 @@ class ManagedAppRegistration extends Entity implements Parsable
 
     /**
      * Sets the platformVersion property value. Operating System version
-     *  @param string|null $value Value to set for the platformVersion property.
+     * @param string|null $value Value to set for the platformVersion property.
     */
     public function setPlatformVersion(?string $value): void {
         $this->getBackingStore()->set('platformVersion', $value);
@@ -307,7 +310,7 @@ class ManagedAppRegistration extends Entity implements Parsable
 
     /**
      * Sets the userId property value. The user Id to who this app registration belongs.
-     *  @param string|null $value Value to set for the userId property.
+     * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {
         $this->getBackingStore()->set('userId', $value);
@@ -315,7 +318,7 @@ class ManagedAppRegistration extends Entity implements Parsable
 
     /**
      * Sets the version property value. Version of the entity.
-     *  @param string|null $value Value to set for the version property.
+     * @param string|null $value Value to set for the version property.
     */
     public function setVersion(?string $value): void {
         $this->getBackingStore()->set('version', $value);

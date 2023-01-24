@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Photos;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve a list of profilePhoto objects.
+*/
 class PhotosRequestBuilderGetQueryParameters 
 {
     /**

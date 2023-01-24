@@ -110,7 +110,7 @@ class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the identity property value. Identity information of the participant.
-     *  @param IdentitySet|null $value Value to set for the identity property.
+     * @param IdentitySet|null $value Value to set for the identity property.
     */
     public function setIdentity(?IdentitySet $value): void {
         $this->getBackingStore()->set('identity', $value);
@@ -134,7 +134,7 @@ class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -142,7 +142,7 @@ class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the role property value. Specifies the participant's role in the meeting.  Possible values are attendee, presenter, producer, and unknownFutureValue.
-     *  @param OnlineMeetingRole|null $value Value to set for the role property.
+     * @param OnlineMeetingRole|null $value Value to set for the role property.
     */
     public function setRole(?OnlineMeetingRole $value): void {
         $this->getBackingStore()->set('role', $value);
@@ -150,7 +150,7 @@ class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * Sets the upn property value. User principal name of the participant.
-     *  @param string|null $value Value to set for the upn property.
+     * @param string|null $value Value to set for the upn property.
     */
     public function setUpn(?string $value): void {
         $this->getBackingStore()->set('upn', $value);

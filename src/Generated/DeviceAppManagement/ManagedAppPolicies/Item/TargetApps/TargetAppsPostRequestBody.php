@@ -81,7 +81,7 @@ class TargetAppsPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -89,7 +89,7 @@ class TargetAppsPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the apps property value. The apps property
-     *  @param array<ManagedMobileApp>|null $value Value to set for the apps property.
+     * @param array<ManagedMobileApp>|null $value Value to set for the apps property.
     */
     public function setApps(?array $value): void {
         $this->getBackingStore()->set('apps', $value);
@@ -97,7 +97,7 @@ class TargetAppsPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;

@@ -100,7 +100,7 @@ class PatternedRecurrence implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class PatternedRecurrence implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class PatternedRecurrence implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -124,7 +124,7 @@ class PatternedRecurrence implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the pattern property value. The frequency of an event.  For access reviews: Do not specify this property for a one-time access review.  Only interval, dayOfMonth, and type (weekly, absoluteMonthly) properties of recurrencePattern are supported.
-     *  @param RecurrencePattern|null $value Value to set for the pattern property.
+     * @param RecurrencePattern|null $value Value to set for the pattern property.
     */
     public function setPattern(?RecurrencePattern $value): void {
         $this->getBackingStore()->set('pattern', $value);
@@ -132,7 +132,7 @@ class PatternedRecurrence implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the range property value. The duration of an event.
-     *  @param RecurrenceRange|null $value Value to set for the range property.
+     * @param RecurrenceRange|null $value Value to set for the range property.
     */
     public function setRange(?RecurrenceRange $value): void {
         $this->getBackingStore()->set('range', $value);

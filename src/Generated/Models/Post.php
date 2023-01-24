@@ -176,7 +176,7 @@ class Post extends OutlookItem implements Parsable
 
     /**
      * Sets the attachments property value. Read-only. Nullable. Supports $expand.
-     *  @param array<Attachment>|null $value Value to set for the attachments property.
+     * @param array<Attachment>|null $value Value to set for the attachments property.
     */
     public function setAttachments(?array $value): void {
         $this->getBackingStore()->set('attachments', $value);
@@ -184,7 +184,7 @@ class Post extends OutlookItem implements Parsable
 
     /**
      * Sets the body property value. The contents of the post. This is a default property. This property can be null.
-     *  @param ItemBody|null $value Value to set for the body property.
+     * @param ItemBody|null $value Value to set for the body property.
     */
     public function setBody(?ItemBody $value): void {
         $this->getBackingStore()->set('body', $value);
@@ -192,7 +192,7 @@ class Post extends OutlookItem implements Parsable
 
     /**
      * Sets the conversationId property value. Unique ID of the conversation. Read-only.
-     *  @param string|null $value Value to set for the conversationId property.
+     * @param string|null $value Value to set for the conversationId property.
     */
     public function setConversationId(?string $value): void {
         $this->getBackingStore()->set('conversationId', $value);
@@ -200,7 +200,7 @@ class Post extends OutlookItem implements Parsable
 
     /**
      * Sets the conversationThreadId property value. Unique ID of the conversation thread. Read-only.
-     *  @param string|null $value Value to set for the conversationThreadId property.
+     * @param string|null $value Value to set for the conversationThreadId property.
     */
     public function setConversationThreadId(?string $value): void {
         $this->getBackingStore()->set('conversationThreadId', $value);
@@ -208,7 +208,7 @@ class Post extends OutlookItem implements Parsable
 
     /**
      * Sets the extensions property value. The collection of open extensions defined for the post. Read-only. Nullable. Supports $expand.
-     *  @param array<Extension>|null $value Value to set for the extensions property.
+     * @param array<Extension>|null $value Value to set for the extensions property.
     */
     public function setExtensions(?array $value): void {
         $this->getBackingStore()->set('extensions', $value);
@@ -216,7 +216,7 @@ class Post extends OutlookItem implements Parsable
 
     /**
      * Sets the from property value. The from property
-     *  @param Recipient|null $value Value to set for the from property.
+     * @param Recipient|null $value Value to set for the from property.
     */
     public function setFrom(?Recipient $value): void {
         $this->getBackingStore()->set('from', $value);
@@ -224,7 +224,7 @@ class Post extends OutlookItem implements Parsable
 
     /**
      * Sets the hasAttachments property value. Indicates whether the post has at least one attachment. This is a default property.
-     *  @param bool|null $value Value to set for the hasAttachments property.
+     * @param bool|null $value Value to set for the hasAttachments property.
     */
     public function setHasAttachments(?bool $value): void {
         $this->getBackingStore()->set('hasAttachments', $value);
@@ -232,7 +232,7 @@ class Post extends OutlookItem implements Parsable
 
     /**
      * Sets the inReplyTo property value. Read-only. Supports $expand.
-     *  @param Post|null $value Value to set for the inReplyTo property.
+     * @param Post|null $value Value to set for the inReplyTo property.
     */
     public function setInReplyTo(?Post $value): void {
         $this->getBackingStore()->set('inReplyTo', $value);
@@ -240,7 +240,7 @@ class Post extends OutlookItem implements Parsable
 
     /**
      * Sets the multiValueExtendedProperties property value. The collection of multi-value extended properties defined for the post. Read-only. Nullable.
-     *  @param array<MultiValueLegacyExtendedProperty>|null $value Value to set for the multiValueExtendedProperties property.
+     * @param array<MultiValueLegacyExtendedProperty>|null $value Value to set for the multiValueExtendedProperties property.
     */
     public function setMultiValueExtendedProperties(?array $value): void {
         $this->getBackingStore()->set('multiValueExtendedProperties', $value);
@@ -248,7 +248,7 @@ class Post extends OutlookItem implements Parsable
 
     /**
      * Sets the newParticipants property value. Conversation participants that were added to the thread as part of this post.
-     *  @param array<Recipient>|null $value Value to set for the newParticipants property.
+     * @param array<Recipient>|null $value Value to set for the newParticipants property.
     */
     public function setNewParticipants(?array $value): void {
         $this->getBackingStore()->set('newParticipants', $value);
@@ -256,7 +256,7 @@ class Post extends OutlookItem implements Parsable
 
     /**
      * Sets the receivedDateTime property value. Specifies when the post was received. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the receivedDateTime property.
+     * @param DateTime|null $value Value to set for the receivedDateTime property.
     */
     public function setReceivedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('receivedDateTime', $value);
@@ -264,7 +264,7 @@ class Post extends OutlookItem implements Parsable
 
     /**
      * Sets the sender property value. Contains the address of the sender. The value of Sender is assumed to be the address of the authenticated user in the case when Sender is not specified. This is a default property.
-     *  @param Recipient|null $value Value to set for the sender property.
+     * @param Recipient|null $value Value to set for the sender property.
     */
     public function setSender(?Recipient $value): void {
         $this->getBackingStore()->set('sender', $value);
@@ -272,7 +272,7 @@ class Post extends OutlookItem implements Parsable
 
     /**
      * Sets the singleValueExtendedProperties property value. The collection of single-value extended properties defined for the post. Read-only. Nullable.
-     *  @param array<SingleValueLegacyExtendedProperty>|null $value Value to set for the singleValueExtendedProperties property.
+     * @param array<SingleValueLegacyExtendedProperty>|null $value Value to set for the singleValueExtendedProperties property.
     */
     public function setSingleValueExtendedProperties(?array $value): void {
         $this->getBackingStore()->set('singleValueExtendedProperties', $value);

@@ -114,7 +114,7 @@ class Workbook extends Entity implements Parsable
 
     /**
      * Sets the application property value. The application property
-     *  @param WorkbookApplication|null $value Value to set for the application property.
+     * @param WorkbookApplication|null $value Value to set for the application property.
     */
     public function setApplication(?WorkbookApplication $value): void {
         $this->getBackingStore()->set('application', $value);
@@ -122,7 +122,7 @@ class Workbook extends Entity implements Parsable
 
     /**
      * Sets the comments property value. The comments property
-     *  @param array<WorkbookComment>|null $value Value to set for the comments property.
+     * @param array<WorkbookComment>|null $value Value to set for the comments property.
     */
     public function setComments(?array $value): void {
         $this->getBackingStore()->set('comments', $value);
@@ -130,7 +130,7 @@ class Workbook extends Entity implements Parsable
 
     /**
      * Sets the functions property value. The functions property
-     *  @param WorkbookFunctions|null $value Value to set for the functions property.
+     * @param WorkbookFunctions|null $value Value to set for the functions property.
     */
     public function setFunctions(?WorkbookFunctions $value): void {
         $this->getBackingStore()->set('functions', $value);
@@ -138,7 +138,7 @@ class Workbook extends Entity implements Parsable
 
     /**
      * Sets the names property value. Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
-     *  @param array<WorkbookNamedItem>|null $value Value to set for the names property.
+     * @param array<WorkbookNamedItem>|null $value Value to set for the names property.
     */
     public function setNames(?array $value): void {
         $this->getBackingStore()->set('names', $value);
@@ -146,7 +146,7 @@ class Workbook extends Entity implements Parsable
 
     /**
      * Sets the operations property value. The status of workbook operations. Getting an operation collection is not supported, but you can get the status of a long-running operation if the Location header is returned in the response. Read-only.
-     *  @param array<WorkbookOperation>|null $value Value to set for the operations property.
+     * @param array<WorkbookOperation>|null $value Value to set for the operations property.
     */
     public function setOperations(?array $value): void {
         $this->getBackingStore()->set('operations', $value);
@@ -154,7 +154,7 @@ class Workbook extends Entity implements Parsable
 
     /**
      * Sets the tables property value. Represents a collection of tables associated with the workbook. Read-only.
-     *  @param array<WorkbookTable>|null $value Value to set for the tables property.
+     * @param array<WorkbookTable>|null $value Value to set for the tables property.
     */
     public function setTables(?array $value): void {
         $this->getBackingStore()->set('tables', $value);
@@ -162,7 +162,7 @@ class Workbook extends Entity implements Parsable
 
     /**
      * Sets the worksheets property value. Represents a collection of worksheets associated with the workbook. Read-only.
-     *  @param array<WorkbookWorksheet>|null $value Value to set for the worksheets property.
+     * @param array<WorkbookWorksheet>|null $value Value to set for the worksheets property.
     */
     public function setWorksheets(?array $value): void {
         $this->getBackingStore()->set('worksheets', $value);

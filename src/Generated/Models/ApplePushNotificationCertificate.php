@@ -124,7 +124,7 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
 
     /**
      * Sets the appleIdentifier property value. Apple Id of the account used to create the MDM push certificate.
-     *  @param string|null $value Value to set for the appleIdentifier property.
+     * @param string|null $value Value to set for the appleIdentifier property.
     */
     public function setAppleIdentifier(?string $value): void {
         $this->getBackingStore()->set('appleIdentifier', $value);
@@ -132,7 +132,7 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
 
     /**
      * Sets the certificate property value. Not yet documented
-     *  @param string|null $value Value to set for the certificate property.
+     * @param string|null $value Value to set for the certificate property.
     */
     public function setCertificate(?string $value): void {
         $this->getBackingStore()->set('certificate', $value);
@@ -140,7 +140,7 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
 
     /**
      * Sets the certificateSerialNumber property value. Certificate serial number. This property is read-only.
-     *  @param string|null $value Value to set for the certificateSerialNumber property.
+     * @param string|null $value Value to set for the certificateSerialNumber property.
     */
     public function setCertificateSerialNumber(?string $value): void {
         $this->getBackingStore()->set('certificateSerialNumber', $value);
@@ -148,7 +148,7 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
 
     /**
      * Sets the certificateUploadFailureReason property value. The reason the certificate upload failed.
-     *  @param string|null $value Value to set for the certificateUploadFailureReason property.
+     * @param string|null $value Value to set for the certificateUploadFailureReason property.
     */
     public function setCertificateUploadFailureReason(?string $value): void {
         $this->getBackingStore()->set('certificateUploadFailureReason', $value);
@@ -156,7 +156,7 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
 
     /**
      * Sets the certificateUploadStatus property value. The certificate upload status.
-     *  @param string|null $value Value to set for the certificateUploadStatus property.
+     * @param string|null $value Value to set for the certificateUploadStatus property.
     */
     public function setCertificateUploadStatus(?string $value): void {
         $this->getBackingStore()->set('certificateUploadStatus', $value);
@@ -164,7 +164,7 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
 
     /**
      * Sets the expirationDateTime property value. The expiration date and time for Apple push notification certificate.
-     *  @param DateTime|null $value Value to set for the expirationDateTime property.
+     * @param DateTime|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('expirationDateTime', $value);
@@ -172,7 +172,7 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. Last modified date and time for Apple push notification certificate.
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -180,7 +180,7 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
 
     /**
      * Sets the topicIdentifier property value. Topic Id.
-     *  @param string|null $value Value to set for the topicIdentifier property.
+     * @param string|null $value Value to set for the topicIdentifier property.
     */
     public function setTopicIdentifier(?string $value): void {
         $this->getBackingStore()->set('topicIdentifier', $value);

@@ -165,7 +165,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
 
     /**
      * Sets the compliantAppListType property value. Possible values of the compliance app list.
-     *  @param AppListType|null $value Value to set for the compliantAppListType property.
+     * @param AppListType|null $value Value to set for the compliantAppListType property.
     */
     public function setCompliantAppListType(?AppListType $value): void {
         $this->getBackingStore()->set('compliantAppListType', $value);
@@ -173,7 +173,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
 
     /**
      * Sets the compliantAppsList property value. List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
-     *  @param array<AppListItem>|null $value Value to set for the compliantAppsList property.
+     * @param array<AppListItem>|null $value Value to set for the compliantAppsList property.
     */
     public function setCompliantAppsList(?array $value): void {
         $this->getBackingStore()->set('compliantAppsList', $value);
@@ -181,7 +181,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
 
     /**
      * Sets the emailInDomainSuffixes property value. An email address lacking a suffix that matches any of these strings will be considered out-of-domain.
-     *  @param array<string>|null $value Value to set for the emailInDomainSuffixes property.
+     * @param array<string>|null $value Value to set for the emailInDomainSuffixes property.
     */
     public function setEmailInDomainSuffixes(?array $value): void {
         $this->getBackingStore()->set('emailInDomainSuffixes', $value);
@@ -189,7 +189,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
 
     /**
      * Sets the passwordBlockSimple property value. Block simple passwords.
-     *  @param bool|null $value Value to set for the passwordBlockSimple property.
+     * @param bool|null $value Value to set for the passwordBlockSimple property.
     */
     public function setPasswordBlockSimple(?bool $value): void {
         $this->getBackingStore()->set('passwordBlockSimple', $value);
@@ -197,7 +197,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
 
     /**
      * Sets the passwordExpirationDays property value. Number of days before the password expires.
-     *  @param int|null $value Value to set for the passwordExpirationDays property.
+     * @param int|null $value Value to set for the passwordExpirationDays property.
     */
     public function setPasswordExpirationDays(?int $value): void {
         $this->getBackingStore()->set('passwordExpirationDays', $value);
@@ -205,7 +205,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
 
     /**
      * Sets the passwordMinimumCharacterSetCount property value. Number of character sets a password must contain. Valid values 0 to 4
-     *  @param int|null $value Value to set for the passwordMinimumCharacterSetCount property.
+     * @param int|null $value Value to set for the passwordMinimumCharacterSetCount property.
     */
     public function setPasswordMinimumCharacterSetCount(?int $value): void {
         $this->getBackingStore()->set('passwordMinimumCharacterSetCount', $value);
@@ -213,7 +213,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
 
     /**
      * Sets the passwordMinimumLength property value. Minimum length of passwords.
-     *  @param int|null $value Value to set for the passwordMinimumLength property.
+     * @param int|null $value Value to set for the passwordMinimumLength property.
     */
     public function setPasswordMinimumLength(?int $value): void {
         $this->getBackingStore()->set('passwordMinimumLength', $value);
@@ -221,7 +221,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
 
     /**
      * Sets the passwordMinutesOfInactivityBeforeLock property value. Minutes of inactivity required before a password is required.
-     *  @param int|null $value Value to set for the passwordMinutesOfInactivityBeforeLock property.
+     * @param int|null $value Value to set for the passwordMinutesOfInactivityBeforeLock property.
     */
     public function setPasswordMinutesOfInactivityBeforeLock(?int $value): void {
         $this->getBackingStore()->set('passwordMinutesOfInactivityBeforeLock', $value);
@@ -229,7 +229,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
 
     /**
      * Sets the passwordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity required before the screen times out.
-     *  @param int|null $value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
+     * @param int|null $value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
     */
     public function setPasswordMinutesOfInactivityBeforeScreenTimeout(?int $value): void {
         $this->getBackingStore()->set('passwordMinutesOfInactivityBeforeScreenTimeout', $value);
@@ -237,7 +237,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
 
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block.
-     *  @param int|null $value Value to set for the passwordPreviousPasswordBlockCount property.
+     * @param int|null $value Value to set for the passwordPreviousPasswordBlockCount property.
     */
     public function setPasswordPreviousPasswordBlockCount(?int $value): void {
         $this->getBackingStore()->set('passwordPreviousPasswordBlockCount', $value);
@@ -245,7 +245,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
 
     /**
      * Sets the passwordRequired property value. Whether or not to require a password.
-     *  @param bool|null $value Value to set for the passwordRequired property.
+     * @param bool|null $value Value to set for the passwordRequired property.
     */
     public function setPasswordRequired(?bool $value): void {
         $this->getBackingStore()->set('passwordRequired', $value);
@@ -253,7 +253,7 @@ class MacOSGeneralDeviceConfiguration extends DeviceConfiguration implements Par
 
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
-     *  @param RequiredPasswordType|null $value Value to set for the passwordRequiredType property.
+     * @param RequiredPasswordType|null $value Value to set for the passwordRequiredType property.
     */
     public function setPasswordRequiredType(?RequiredPasswordType $value): void {
         $this->getBackingStore()->set('passwordRequiredType', $value);

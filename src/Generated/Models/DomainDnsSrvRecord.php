@@ -104,7 +104,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable
 
     /**
      * Sets the nameTarget property value. Value to use when configuring the Target property of the SRV record at the DNS host.
-     *  @param string|null $value Value to set for the nameTarget property.
+     * @param string|null $value Value to set for the nameTarget property.
     */
     public function setNameTarget(?string $value): void {
         $this->getBackingStore()->set('nameTarget', $value);
@@ -112,7 +112,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable
 
     /**
      * Sets the port property value. Value to use when configuring the port property of the SRV record at the DNS host.
-     *  @param int|null $value Value to set for the port property.
+     * @param int|null $value Value to set for the port property.
     */
     public function setPort(?int $value): void {
         $this->getBackingStore()->set('port', $value);
@@ -120,7 +120,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable
 
     /**
      * Sets the priority property value. Value to use when configuring the priority property of the SRV record at the DNS host.
-     *  @param int|null $value Value to set for the priority property.
+     * @param int|null $value Value to set for the priority property.
     */
     public function setPriority(?int $value): void {
         $this->getBackingStore()->set('priority', $value);
@@ -128,7 +128,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable
 
     /**
      * Sets the protocol property value. Value to use when configuring the protocol property of the SRV record at the DNS host.
-     *  @param string|null $value Value to set for the protocol property.
+     * @param string|null $value Value to set for the protocol property.
     */
     public function setProtocol(?string $value): void {
         $this->getBackingStore()->set('protocol', $value);
@@ -136,7 +136,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable
 
     /**
      * Sets the service property value. Value to use when configuring the service property of the SRV record at the DNS host.
-     *  @param string|null $value Value to set for the service property.
+     * @param string|null $value Value to set for the service property.
     */
     public function setService(?string $value): void {
         $this->getBackingStore()->set('service', $value);
@@ -144,7 +144,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable
 
     /**
      * Sets the weight property value. Value to use when configuring the weight property of the SRV record at the DNS host.
-     *  @param int|null $value Value to set for the weight property.
+     * @param int|null $value Value to set for the weight property.
     */
     public function setWeight(?int $value): void {
         $this->getBackingStore()->set('weight', $value);

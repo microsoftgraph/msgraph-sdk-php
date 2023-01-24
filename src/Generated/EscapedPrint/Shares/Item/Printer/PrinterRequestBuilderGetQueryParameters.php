@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\EscapedPrint\Shares\Item\Printer;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The printer that this printer share is related to.
+*/
 class PrinterRequestBuilderGetQueryParameters 
 {
     /**

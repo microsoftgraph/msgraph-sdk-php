@@ -270,7 +270,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -278,7 +278,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -286,7 +286,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the collate property value. Whether the printer should collate pages wehen printing multiple copies of a multi-page document.
-     *  @param bool|null $value Value to set for the collate property.
+     * @param bool|null $value Value to set for the collate property.
     */
     public function setCollate(?bool $value): void {
         $this->getBackingStore()->set('collate', $value);
@@ -294,7 +294,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the colorMode property value. The color mode the printer should use to print the job. Valid values are described in the table below. Read-only.
-     *  @param PrintColorMode|null $value Value to set for the colorMode property.
+     * @param PrintColorMode|null $value Value to set for the colorMode property.
     */
     public function setColorMode(?PrintColorMode $value): void {
         $this->getBackingStore()->set('colorMode', $value);
@@ -302,7 +302,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the copies property value. The number of copies that should be printed. Read-only.
-     *  @param int|null $value Value to set for the copies property.
+     * @param int|null $value Value to set for the copies property.
     */
     public function setCopies(?int $value): void {
         $this->getBackingStore()->set('copies', $value);
@@ -310,7 +310,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the dpi property value. The resolution to use when printing the job, expressed in dots per inch (DPI). Read-only.
-     *  @param int|null $value Value to set for the dpi property.
+     * @param int|null $value Value to set for the dpi property.
     */
     public function setDpi(?int $value): void {
         $this->getBackingStore()->set('dpi', $value);
@@ -318,7 +318,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the duplexMode property value. The duplex mode the printer should use when printing the job. Valid values are described in the table below. Read-only.
-     *  @param PrintDuplexMode|null $value Value to set for the duplexMode property.
+     * @param PrintDuplexMode|null $value Value to set for the duplexMode property.
     */
     public function setDuplexMode(?PrintDuplexMode $value): void {
         $this->getBackingStore()->set('duplexMode', $value);
@@ -326,7 +326,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the feedOrientation property value. The orientation to use when feeding media into the printer. Valid values are described in the following table. Read-only.
-     *  @param PrinterFeedOrientation|null $value Value to set for the feedOrientation property.
+     * @param PrinterFeedOrientation|null $value Value to set for the feedOrientation property.
     */
     public function setFeedOrientation(?PrinterFeedOrientation $value): void {
         $this->getBackingStore()->set('feedOrientation', $value);
@@ -334,7 +334,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the finishings property value. Finishing processes to use when printing.
-     *  @param array<PrintFinishing>|null $value Value to set for the finishings property.
+     * @param array<PrintFinishing>|null $value Value to set for the finishings property.
     */
     public function setFinishings(?array $value): void {
         $this->getBackingStore()->set('finishings', $value);
@@ -342,7 +342,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the fitPdfToPage property value. The fitPdfToPage property
-     *  @param bool|null $value Value to set for the fitPdfToPage property.
+     * @param bool|null $value Value to set for the fitPdfToPage property.
     */
     public function setFitPdfToPage(?bool $value): void {
         $this->getBackingStore()->set('fitPdfToPage', $value);
@@ -350,7 +350,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the inputBin property value. The input bin (tray) to use when printing. See the printer's capabilities for a list of supported input bins.
-     *  @param string|null $value Value to set for the inputBin property.
+     * @param string|null $value Value to set for the inputBin property.
     */
     public function setInputBin(?string $value): void {
         $this->getBackingStore()->set('inputBin', $value);
@@ -358,7 +358,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the margin property value. The margin settings to use when printing.
-     *  @param PrintMargin|null $value Value to set for the margin property.
+     * @param PrintMargin|null $value Value to set for the margin property.
     */
     public function setMargin(?PrintMargin $value): void {
         $this->getBackingStore()->set('margin', $value);
@@ -366,7 +366,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the mediaSize property value. The media size to use when printing. Supports standard size names for ISO and ANSI media sizes.
-     *  @param string|null $value Value to set for the mediaSize property.
+     * @param string|null $value Value to set for the mediaSize property.
     */
     public function setMediaSize(?string $value): void {
         $this->getBackingStore()->set('mediaSize', $value);
@@ -374,7 +374,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the mediaType property value. The mediaType property
-     *  @param string|null $value Value to set for the mediaType property.
+     * @param string|null $value Value to set for the mediaType property.
     */
     public function setMediaType(?string $value): void {
         $this->getBackingStore()->set('mediaType', $value);
@@ -382,7 +382,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the multipageLayout property value. The multipageLayout property
-     *  @param PrintMultipageLayout|null $value Value to set for the multipageLayout property.
+     * @param PrintMultipageLayout|null $value Value to set for the multipageLayout property.
     */
     public function setMultipageLayout(?PrintMultipageLayout $value): void {
         $this->getBackingStore()->set('multipageLayout', $value);
@@ -390,7 +390,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -398,7 +398,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the orientation property value. The orientation property
-     *  @param PrintOrientation|null $value Value to set for the orientation property.
+     * @param PrintOrientation|null $value Value to set for the orientation property.
     */
     public function setOrientation(?PrintOrientation $value): void {
         $this->getBackingStore()->set('orientation', $value);
@@ -406,7 +406,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the outputBin property value. The outputBin property
-     *  @param string|null $value Value to set for the outputBin property.
+     * @param string|null $value Value to set for the outputBin property.
     */
     public function setOutputBin(?string $value): void {
         $this->getBackingStore()->set('outputBin', $value);
@@ -414,7 +414,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the pageRanges property value. The pageRanges property
-     *  @param array<IntegerRange>|null $value Value to set for the pageRanges property.
+     * @param array<IntegerRange>|null $value Value to set for the pageRanges property.
     */
     public function setPageRanges(?array $value): void {
         $this->getBackingStore()->set('pageRanges', $value);
@@ -422,7 +422,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the pagesPerSheet property value. The pagesPerSheet property
-     *  @param int|null $value Value to set for the pagesPerSheet property.
+     * @param int|null $value Value to set for the pagesPerSheet property.
     */
     public function setPagesPerSheet(?int $value): void {
         $this->getBackingStore()->set('pagesPerSheet', $value);
@@ -430,7 +430,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the quality property value. The quality property
-     *  @param PrintQuality|null $value Value to set for the quality property.
+     * @param PrintQuality|null $value Value to set for the quality property.
     */
     public function setQuality(?PrintQuality $value): void {
         $this->getBackingStore()->set('quality', $value);
@@ -438,7 +438,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * Sets the scaling property value. The scaling property
-     *  @param PrintScaling|null $value Value to set for the scaling property.
+     * @param PrintScaling|null $value Value to set for the scaling property.
     */
     public function setScaling(?PrintScaling $value): void {
         $this->getBackingStore()->set('scaling', $value);

@@ -140,7 +140,7 @@ class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -148,7 +148,7 @@ class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -156,7 +156,7 @@ class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the conferenceId property value. The ID of the conference.
-     *  @param string|null $value Value to set for the conferenceId property.
+     * @param string|null $value Value to set for the conferenceId property.
     */
     public function setConferenceId(?string $value): void {
         $this->getBackingStore()->set('conferenceId', $value);
@@ -164,7 +164,7 @@ class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the joinUrl property value. The external link that launches the online meeting. This is a URL that clients will launch into a browser and will redirect the user to join the meeting.
-     *  @param string|null $value Value to set for the joinUrl property.
+     * @param string|null $value Value to set for the joinUrl property.
     */
     public function setJoinUrl(?string $value): void {
         $this->getBackingStore()->set('joinUrl', $value);
@@ -172,7 +172,7 @@ class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -180,7 +180,7 @@ class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the phones property value. All of the phone numbers associated with this conference.
-     *  @param array<Phone>|null $value Value to set for the phones property.
+     * @param array<Phone>|null $value Value to set for the phones property.
     */
     public function setPhones(?array $value): void {
         $this->getBackingStore()->set('phones', $value);
@@ -188,7 +188,7 @@ class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the quickDial property value. The pre-formatted quickdial for this call.
-     *  @param string|null $value Value to set for the quickDial property.
+     * @param string|null $value Value to set for the quickDial property.
     */
     public function setQuickDial(?string $value): void {
         $this->getBackingStore()->set('quickDial', $value);
@@ -196,7 +196,7 @@ class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the tollFreeNumbers property value. The toll free numbers that can be used to join the conference.
-     *  @param array<string>|null $value Value to set for the tollFreeNumbers property.
+     * @param array<string>|null $value Value to set for the tollFreeNumbers property.
     */
     public function setTollFreeNumbers(?array $value): void {
         $this->getBackingStore()->set('tollFreeNumbers', $value);
@@ -204,7 +204,7 @@ class OnlineMeetingInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the tollNumber property value. The toll number that can be used to join the conference.
-     *  @param string|null $value Value to set for the tollNumber property.
+     * @param string|null $value Value to set for the tollNumber property.
     */
     public function setTollNumber(?string $value): void {
         $this->getBackingStore()->set('tollNumber', $value);

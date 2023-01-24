@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequ
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Invoke function filterByCurrentUser
+*/
 class FilterByCurrentUserWithOnRequestBuilderGetQueryParameters 
 {
     /**

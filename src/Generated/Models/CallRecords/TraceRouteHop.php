@@ -111,7 +111,7 @@ class TraceRouteHop implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -119,7 +119,7 @@ class TraceRouteHop implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -127,7 +127,7 @@ class TraceRouteHop implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the hopCount property value. The network path count of this hop that was used to compute the RTT.
-     *  @param int|null $value Value to set for the hopCount property.
+     * @param int|null $value Value to set for the hopCount property.
     */
     public function setHopCount(?int $value): void {
         $this->getBackingStore()->set('hopCount', $value);
@@ -135,7 +135,7 @@ class TraceRouteHop implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the ipAddress property value. IP address used for this hop in the network trace.
-     *  @param string|null $value Value to set for the ipAddress property.
+     * @param string|null $value Value to set for the ipAddress property.
     */
     public function setIpAddress(?string $value): void {
         $this->getBackingStore()->set('ipAddress', $value);
@@ -143,7 +143,7 @@ class TraceRouteHop implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -151,7 +151,7 @@ class TraceRouteHop implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the roundTripTime property value. The time from when the trace route packet was sent from the client to this hop and back to the client, denoted in [ISO 8601][] format. For example, 1 second is denoted as PT1S, where P is the duration designator, T is the time designator, and S is the second designator.
-     *  @param DateInterval|null $value Value to set for the roundTripTime property.
+     * @param DateInterval|null $value Value to set for the roundTripTime property.
     */
     public function setRoundTripTime(?DateInterval $value): void {
         $this->getBackingStore()->set('roundTripTime', $value);

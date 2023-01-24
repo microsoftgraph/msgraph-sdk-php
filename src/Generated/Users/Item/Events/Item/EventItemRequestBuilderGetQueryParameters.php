@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Events\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
+*/
 class EventItemRequestBuilderGetQueryParameters 
 {
     /**

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\AuditLogs;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get auditLogs
+*/
 class AuditLogsRequestBuilderGetQueryParameters 
 {
     /**

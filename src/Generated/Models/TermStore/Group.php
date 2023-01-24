@@ -106,7 +106,7 @@ class Group extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. Date and time of the group creation. Read-only.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -114,7 +114,7 @@ class Group extends Entity implements Parsable
 
     /**
      * Sets the description property value. Description that gives details on the term usage.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -122,7 +122,7 @@ class Group extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. Name of the group.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -130,7 +130,7 @@ class Group extends Entity implements Parsable
 
     /**
      * Sets the parentSiteId property value. ID of the parent site of this group.
-     *  @param string|null $value Value to set for the parentSiteId property.
+     * @param string|null $value Value to set for the parentSiteId property.
     */
     public function setParentSiteId(?string $value): void {
         $this->getBackingStore()->set('parentSiteId', $value);
@@ -138,7 +138,7 @@ class Group extends Entity implements Parsable
 
     /**
      * Sets the scope property value. Returns the type of the group. Possible values are: global, system, and siteCollection.
-     *  @param TermGroupScope|null $value Value to set for the scope property.
+     * @param TermGroupScope|null $value Value to set for the scope property.
     */
     public function setScope(?TermGroupScope $value): void {
         $this->getBackingStore()->set('scope', $value);
@@ -146,7 +146,7 @@ class Group extends Entity implements Parsable
 
     /**
      * Sets the sets property value. All sets under the group in a term [store].
-     *  @param array<Set>|null $value Value to set for the sets property.
+     * @param array<Set>|null $value Value to set for the sets property.
     */
     public function setSets(?array $value): void {
         $this->getBackingStore()->set('sets', $value);

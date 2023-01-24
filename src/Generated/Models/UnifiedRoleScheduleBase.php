@@ -173,7 +173,7 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
 
     /**
      * Sets the appScope property value. Read-only property with details of the app-specific scope when the role eligibility or assignment is scoped to an app. Nullable.
-     *  @param AppScope|null $value Value to set for the appScope property.
+     * @param AppScope|null $value Value to set for the appScope property.
     */
     public function setAppScope(?AppScope $value): void {
         $this->getBackingStore()->set('appScope', $value);
@@ -181,7 +181,7 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
 
     /**
      * Sets the appScopeId property value. Identifier of the app-specific scope when the assignment or eligibility is scoped to an app. The scope of an assignment or eligibility determines the set of resources for which the principal has been granted access. App scopes are scopes that are defined and understood by this application only. Use / for tenant-wide app scopes. Use directoryScopeId to limit the scope to particular directory objects, for example, administrative units.
-     *  @param string|null $value Value to set for the appScopeId property.
+     * @param string|null $value Value to set for the appScopeId property.
     */
     public function setAppScopeId(?string $value): void {
         $this->getBackingStore()->set('appScopeId', $value);
@@ -189,7 +189,7 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. When the schedule was created.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -197,7 +197,7 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
 
     /**
      * Sets the createdUsing property value. Identifier of the object through which this schedule was created.
-     *  @param string|null $value Value to set for the createdUsing property.
+     * @param string|null $value Value to set for the createdUsing property.
     */
     public function setCreatedUsing(?string $value): void {
         $this->getBackingStore()->set('createdUsing', $value);
@@ -205,7 +205,7 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
 
     /**
      * Sets the directoryScope property value. The directory object that is the scope of the role eligibility or assignment. Read-only.
-     *  @param DirectoryObject|null $value Value to set for the directoryScope property.
+     * @param DirectoryObject|null $value Value to set for the directoryScope property.
     */
     public function setDirectoryScope(?DirectoryObject $value): void {
         $this->getBackingStore()->set('directoryScope', $value);
@@ -213,7 +213,7 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
 
     /**
      * Sets the directoryScopeId property value. Identifier of the directory object representing the scope of the assignment or eligibility. The scope of an assignment or eligibility determines the set of resources for which the principal has been granted access. Directory scopes are shared scopes stored in the directory that are understood by multiple applications. Use / for tenant-wide scope. Use appScopeId to limit the scope to an application only.
-     *  @param string|null $value Value to set for the directoryScopeId property.
+     * @param string|null $value Value to set for the directoryScopeId property.
     */
     public function setDirectoryScopeId(?string $value): void {
         $this->getBackingStore()->set('directoryScopeId', $value);
@@ -221,7 +221,7 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
 
     /**
      * Sets the modifiedDateTime property value. When the schedule was last modified.
-     *  @param DateTime|null $value Value to set for the modifiedDateTime property.
+     * @param DateTime|null $value Value to set for the modifiedDateTime property.
     */
     public function setModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('modifiedDateTime', $value);
@@ -229,7 +229,7 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
 
     /**
      * Sets the principal property value. The principal that's getting a role assignment or that's eligible for a role through the request.
-     *  @param DirectoryObject|null $value Value to set for the principal property.
+     * @param DirectoryObject|null $value Value to set for the principal property.
     */
     public function setPrincipal(?DirectoryObject $value): void {
         $this->getBackingStore()->set('principal', $value);
@@ -237,7 +237,7 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
 
     /**
      * Sets the principalId property value. Identifier of the principal that has been granted the role assignment or eligibility.
-     *  @param string|null $value Value to set for the principalId property.
+     * @param string|null $value Value to set for the principalId property.
     */
     public function setPrincipalId(?string $value): void {
         $this->getBackingStore()->set('principalId', $value);
@@ -245,7 +245,7 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
 
     /**
      * Sets the roleDefinition property value. Detailed information for the roleDefinition object that is referenced through the roleDefinitionId property.
-     *  @param UnifiedRoleDefinition|null $value Value to set for the roleDefinition property.
+     * @param UnifiedRoleDefinition|null $value Value to set for the roleDefinition property.
     */
     public function setRoleDefinition(?UnifiedRoleDefinition $value): void {
         $this->getBackingStore()->set('roleDefinition', $value);
@@ -253,7 +253,7 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
 
     /**
      * Sets the roleDefinitionId property value. Identifier of the unifiedRoleDefinition object that is being assigned to the principal or that a principal is eligible for.
-     *  @param string|null $value Value to set for the roleDefinitionId property.
+     * @param string|null $value Value to set for the roleDefinitionId property.
     */
     public function setRoleDefinitionId(?string $value): void {
         $this->getBackingStore()->set('roleDefinitionId', $value);
@@ -261,7 +261,7 @@ class UnifiedRoleScheduleBase extends Entity implements Parsable
 
     /**
      * Sets the status property value. The status of the role assignment or eligibility request.
-     *  @param string|null $value Value to set for the status property.
+     * @param string|null $value Value to set for the status property.
     */
     public function setStatus(?string $value): void {
         $this->getBackingStore()->set('status', $value);

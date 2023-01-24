@@ -157,7 +157,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
 
     /**
      * Sets the actionRequiredByDateTime property value. The expected deadline of the action for the message.
-     *  @param DateTime|null $value Value to set for the actionRequiredByDateTime property.
+     * @param DateTime|null $value Value to set for the actionRequiredByDateTime property.
     */
     public function setActionRequiredByDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('actionRequiredByDateTime', $value);
@@ -165,7 +165,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
 
     /**
      * Sets the attachments property value. A collection of serviceAnnouncementAttachments.
-     *  @param array<ServiceAnnouncementAttachment>|null $value Value to set for the attachments property.
+     * @param array<ServiceAnnouncementAttachment>|null $value Value to set for the attachments property.
     */
     public function setAttachments(?array $value): void {
         $this->getBackingStore()->set('attachments', $value);
@@ -173,7 +173,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
 
     /**
      * Sets the attachmentsArchive property value. The zip file that contains all attachments for a message.
-     *  @param StreamInterface|null $value Value to set for the attachmentsArchive property.
+     * @param StreamInterface|null $value Value to set for the attachmentsArchive property.
     */
     public function setAttachmentsArchive(?StreamInterface $value): void {
         $this->getBackingStore()->set('attachmentsArchive', $value);
@@ -181,7 +181,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
 
     /**
      * Sets the body property value. The body property
-     *  @param ItemBody|null $value Value to set for the body property.
+     * @param ItemBody|null $value Value to set for the body property.
     */
     public function setBody(?ItemBody $value): void {
         $this->getBackingStore()->set('body', $value);
@@ -189,7 +189,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
 
     /**
      * Sets the category property value. The category property
-     *  @param ServiceUpdateCategory|null $value Value to set for the category property.
+     * @param ServiceUpdateCategory|null $value Value to set for the category property.
     */
     public function setCategory(?ServiceUpdateCategory $value): void {
         $this->getBackingStore()->set('category', $value);
@@ -197,7 +197,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
 
     /**
      * Sets the hasAttachments property value. Indicates whether the message has any attachment.
-     *  @param bool|null $value Value to set for the hasAttachments property.
+     * @param bool|null $value Value to set for the hasAttachments property.
     */
     public function setHasAttachments(?bool $value): void {
         $this->getBackingStore()->set('hasAttachments', $value);
@@ -205,7 +205,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
 
     /**
      * Sets the isMajorChange property value. Indicates whether the message describes a major update for the service.
-     *  @param bool|null $value Value to set for the isMajorChange property.
+     * @param bool|null $value Value to set for the isMajorChange property.
     */
     public function setIsMajorChange(?bool $value): void {
         $this->getBackingStore()->set('isMajorChange', $value);
@@ -213,7 +213,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
 
     /**
      * Sets the services property value. The affected services by the service message.
-     *  @param array<string>|null $value Value to set for the services property.
+     * @param array<string>|null $value Value to set for the services property.
     */
     public function setServices(?array $value): void {
         $this->getBackingStore()->set('services', $value);
@@ -221,7 +221,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
 
     /**
      * Sets the severity property value. The severity property
-     *  @param ServiceUpdateSeverity|null $value Value to set for the severity property.
+     * @param ServiceUpdateSeverity|null $value Value to set for the severity property.
     */
     public function setSeverity(?ServiceUpdateSeverity $value): void {
         $this->getBackingStore()->set('severity', $value);
@@ -229,7 +229,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
 
     /**
      * Sets the tags property value. A collection of tags for the service message. Tags are provided by the service team/support team who post the message to tell whether this message contains privacy data, or whether this message is for a service new feature update, and so on.
-     *  @param array<string>|null $value Value to set for the tags property.
+     * @param array<string>|null $value Value to set for the tags property.
     */
     public function setTags(?array $value): void {
         $this->getBackingStore()->set('tags', $value);
@@ -237,7 +237,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
 
     /**
      * Sets the viewPoint property value. Represents user viewpoints data of the service message. This data includes message status such as whether the user has archived, read, or marked the message as favorite. This property is null when accessed with application permissions.
-     *  @param ServiceUpdateMessageViewpoint|null $value Value to set for the viewPoint property.
+     * @param ServiceUpdateMessageViewpoint|null $value Value to set for the viewPoint property.
     */
     public function setViewPoint(?ServiceUpdateMessageViewpoint $value): void {
         $this->getBackingStore()->set('viewPoint', $value);

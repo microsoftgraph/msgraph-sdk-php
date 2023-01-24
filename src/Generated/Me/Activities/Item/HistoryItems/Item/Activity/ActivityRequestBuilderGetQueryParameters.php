@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\Activities\Item\HistoryItems\Item\Activit
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Optional. NavigationProperty/Containment; navigation property to the associated activity.
+*/
 class ActivityRequestBuilderGetQueryParameters 
 {
     /**

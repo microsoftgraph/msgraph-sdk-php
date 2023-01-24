@@ -334,7 +334,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the applyOnlyToWindowsPhone81 property value. Value indicating whether this policy only applies to Windows Phone 8.1. This property is read-only.
-     *  @param bool|null $value Value to set for the applyOnlyToWindowsPhone81 property.
+     * @param bool|null $value Value to set for the applyOnlyToWindowsPhone81 property.
     */
     public function setApplyOnlyToWindowsPhone81(?bool $value): void {
         $this->getBackingStore()->set('applyOnlyToWindowsPhone81', $value);
@@ -342,7 +342,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the appsBlockCopyPaste property value. Indicates whether or not to block copy paste.
-     *  @param bool|null $value Value to set for the appsBlockCopyPaste property.
+     * @param bool|null $value Value to set for the appsBlockCopyPaste property.
     */
     public function setAppsBlockCopyPaste(?bool $value): void {
         $this->getBackingStore()->set('appsBlockCopyPaste', $value);
@@ -350,7 +350,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the bluetoothBlocked property value. Indicates whether or not to block bluetooth.
-     *  @param bool|null $value Value to set for the bluetoothBlocked property.
+     * @param bool|null $value Value to set for the bluetoothBlocked property.
     */
     public function setBluetoothBlocked(?bool $value): void {
         $this->getBackingStore()->set('bluetoothBlocked', $value);
@@ -358,7 +358,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the cameraBlocked property value. Indicates whether or not to block camera.
-     *  @param bool|null $value Value to set for the cameraBlocked property.
+     * @param bool|null $value Value to set for the cameraBlocked property.
     */
     public function setCameraBlocked(?bool $value): void {
         $this->getBackingStore()->set('cameraBlocked', $value);
@@ -366,7 +366,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the cellularBlockWifiTethering property value. Indicates whether or not to block Wi-Fi tethering. Has no impact if Wi-Fi is blocked.
-     *  @param bool|null $value Value to set for the cellularBlockWifiTethering property.
+     * @param bool|null $value Value to set for the cellularBlockWifiTethering property.
     */
     public function setCellularBlockWifiTethering(?bool $value): void {
         $this->getBackingStore()->set('cellularBlockWifiTethering', $value);
@@ -374,7 +374,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the compliantAppListType property value. Possible values of the compliance app list.
-     *  @param AppListType|null $value Value to set for the compliantAppListType property.
+     * @param AppListType|null $value Value to set for the compliantAppListType property.
     */
     public function setCompliantAppListType(?AppListType $value): void {
         $this->getBackingStore()->set('compliantAppListType', $value);
@@ -382,7 +382,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the compliantAppsList property value. List of apps in the compliance (either allow list or block list, controlled by CompliantAppListType). This collection can contain a maximum of 10000 elements.
-     *  @param array<AppListItem>|null $value Value to set for the compliantAppsList property.
+     * @param array<AppListItem>|null $value Value to set for the compliantAppsList property.
     */
     public function setCompliantAppsList(?array $value): void {
         $this->getBackingStore()->set('compliantAppsList', $value);
@@ -390,7 +390,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the diagnosticDataBlockSubmission property value. Indicates whether or not to block diagnostic data submission.
-     *  @param bool|null $value Value to set for the diagnosticDataBlockSubmission property.
+     * @param bool|null $value Value to set for the diagnosticDataBlockSubmission property.
     */
     public function setDiagnosticDataBlockSubmission(?bool $value): void {
         $this->getBackingStore()->set('diagnosticDataBlockSubmission', $value);
@@ -398,7 +398,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the emailBlockAddingAccounts property value. Indicates whether or not to block custom email accounts.
-     *  @param bool|null $value Value to set for the emailBlockAddingAccounts property.
+     * @param bool|null $value Value to set for the emailBlockAddingAccounts property.
     */
     public function setEmailBlockAddingAccounts(?bool $value): void {
         $this->getBackingStore()->set('emailBlockAddingAccounts', $value);
@@ -406,7 +406,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the locationServicesBlocked property value. Indicates whether or not to block location services.
-     *  @param bool|null $value Value to set for the locationServicesBlocked property.
+     * @param bool|null $value Value to set for the locationServicesBlocked property.
     */
     public function setLocationServicesBlocked(?bool $value): void {
         $this->getBackingStore()->set('locationServicesBlocked', $value);
@@ -414,7 +414,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the microsoftAccountBlocked property value. Indicates whether or not to block using a Microsoft Account.
-     *  @param bool|null $value Value to set for the microsoftAccountBlocked property.
+     * @param bool|null $value Value to set for the microsoftAccountBlocked property.
     */
     public function setMicrosoftAccountBlocked(?bool $value): void {
         $this->getBackingStore()->set('microsoftAccountBlocked', $value);
@@ -422,7 +422,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the nfcBlocked property value. Indicates whether or not to block Near-Field Communication.
-     *  @param bool|null $value Value to set for the nfcBlocked property.
+     * @param bool|null $value Value to set for the nfcBlocked property.
     */
     public function setNfcBlocked(?bool $value): void {
         $this->getBackingStore()->set('nfcBlocked', $value);
@@ -430,7 +430,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the passwordBlockSimple property value. Indicates whether or not to block syncing the calendar.
-     *  @param bool|null $value Value to set for the passwordBlockSimple property.
+     * @param bool|null $value Value to set for the passwordBlockSimple property.
     */
     public function setPasswordBlockSimple(?bool $value): void {
         $this->getBackingStore()->set('passwordBlockSimple', $value);
@@ -438,7 +438,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the passwordExpirationDays property value. Number of days before the password expires.
-     *  @param int|null $value Value to set for the passwordExpirationDays property.
+     * @param int|null $value Value to set for the passwordExpirationDays property.
     */
     public function setPasswordExpirationDays(?int $value): void {
         $this->getBackingStore()->set('passwordExpirationDays', $value);
@@ -446,7 +446,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the passwordMinimumCharacterSetCount property value. Number of character sets a password must contain.
-     *  @param int|null $value Value to set for the passwordMinimumCharacterSetCount property.
+     * @param int|null $value Value to set for the passwordMinimumCharacterSetCount property.
     */
     public function setPasswordMinimumCharacterSetCount(?int $value): void {
         $this->getBackingStore()->set('passwordMinimumCharacterSetCount', $value);
@@ -454,7 +454,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the passwordMinimumLength property value. Minimum length of passwords.
-     *  @param int|null $value Value to set for the passwordMinimumLength property.
+     * @param int|null $value Value to set for the passwordMinimumLength property.
     */
     public function setPasswordMinimumLength(?int $value): void {
         $this->getBackingStore()->set('passwordMinimumLength', $value);
@@ -462,7 +462,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the passwordMinutesOfInactivityBeforeScreenTimeout property value. Minutes of inactivity before screen timeout.
-     *  @param int|null $value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
+     * @param int|null $value Value to set for the passwordMinutesOfInactivityBeforeScreenTimeout property.
     */
     public function setPasswordMinutesOfInactivityBeforeScreenTimeout(?int $value): void {
         $this->getBackingStore()->set('passwordMinutesOfInactivityBeforeScreenTimeout', $value);
@@ -470,7 +470,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the passwordPreviousPasswordBlockCount property value. Number of previous passwords to block. Valid values 0 to 24
-     *  @param int|null $value Value to set for the passwordPreviousPasswordBlockCount property.
+     * @param int|null $value Value to set for the passwordPreviousPasswordBlockCount property.
     */
     public function setPasswordPreviousPasswordBlockCount(?int $value): void {
         $this->getBackingStore()->set('passwordPreviousPasswordBlockCount', $value);
@@ -478,7 +478,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the passwordRequired property value. Indicates whether or not to require a password.
-     *  @param bool|null $value Value to set for the passwordRequired property.
+     * @param bool|null $value Value to set for the passwordRequired property.
     */
     public function setPasswordRequired(?bool $value): void {
         $this->getBackingStore()->set('passwordRequired', $value);
@@ -486,7 +486,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the passwordRequiredType property value. Possible values of required passwords.
-     *  @param RequiredPasswordType|null $value Value to set for the passwordRequiredType property.
+     * @param RequiredPasswordType|null $value Value to set for the passwordRequiredType property.
     */
     public function setPasswordRequiredType(?RequiredPasswordType $value): void {
         $this->getBackingStore()->set('passwordRequiredType', $value);
@@ -494,7 +494,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the passwordSignInFailureCountBeforeFactoryReset property value. Number of sign in failures allowed before factory reset.
-     *  @param int|null $value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
+     * @param int|null $value Value to set for the passwordSignInFailureCountBeforeFactoryReset property.
     */
     public function setPasswordSignInFailureCountBeforeFactoryReset(?int $value): void {
         $this->getBackingStore()->set('passwordSignInFailureCountBeforeFactoryReset', $value);
@@ -502,7 +502,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the screenCaptureBlocked property value. Indicates whether or not to block screenshots.
-     *  @param bool|null $value Value to set for the screenCaptureBlocked property.
+     * @param bool|null $value Value to set for the screenCaptureBlocked property.
     */
     public function setScreenCaptureBlocked(?bool $value): void {
         $this->getBackingStore()->set('screenCaptureBlocked', $value);
@@ -510,7 +510,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the storageBlockRemovableStorage property value. Indicates whether or not to block removable storage.
-     *  @param bool|null $value Value to set for the storageBlockRemovableStorage property.
+     * @param bool|null $value Value to set for the storageBlockRemovableStorage property.
     */
     public function setStorageBlockRemovableStorage(?bool $value): void {
         $this->getBackingStore()->set('storageBlockRemovableStorage', $value);
@@ -518,7 +518,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the storageRequireEncryption property value. Indicates whether or not to require encryption.
-     *  @param bool|null $value Value to set for the storageRequireEncryption property.
+     * @param bool|null $value Value to set for the storageRequireEncryption property.
     */
     public function setStorageRequireEncryption(?bool $value): void {
         $this->getBackingStore()->set('storageRequireEncryption', $value);
@@ -526,7 +526,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the webBrowserBlocked property value. Indicates whether or not to block the web browser.
-     *  @param bool|null $value Value to set for the webBrowserBlocked property.
+     * @param bool|null $value Value to set for the webBrowserBlocked property.
     */
     public function setWebBrowserBlocked(?bool $value): void {
         $this->getBackingStore()->set('webBrowserBlocked', $value);
@@ -534,7 +534,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the wifiBlockAutomaticConnectHotspots property value. Indicates whether or not to block automatically connecting to Wi-Fi hotspots. Has no impact if Wi-Fi is blocked.
-     *  @param bool|null $value Value to set for the wifiBlockAutomaticConnectHotspots property.
+     * @param bool|null $value Value to set for the wifiBlockAutomaticConnectHotspots property.
     */
     public function setWifiBlockAutomaticConnectHotspots(?bool $value): void {
         $this->getBackingStore()->set('wifiBlockAutomaticConnectHotspots', $value);
@@ -542,7 +542,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the wifiBlocked property value. Indicates whether or not to block Wi-Fi.
-     *  @param bool|null $value Value to set for the wifiBlocked property.
+     * @param bool|null $value Value to set for the wifiBlocked property.
     */
     public function setWifiBlocked(?bool $value): void {
         $this->getBackingStore()->set('wifiBlocked', $value);
@@ -550,7 +550,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the wifiBlockHotspotReporting property value. Indicates whether or not to block Wi-Fi hotspot reporting. Has no impact if Wi-Fi is blocked.
-     *  @param bool|null $value Value to set for the wifiBlockHotspotReporting property.
+     * @param bool|null $value Value to set for the wifiBlockHotspotReporting property.
     */
     public function setWifiBlockHotspotReporting(?bool $value): void {
         $this->getBackingStore()->set('wifiBlockHotspotReporting', $value);
@@ -558,7 +558,7 @@ class WindowsPhone81GeneralConfiguration extends DeviceConfiguration implements 
 
     /**
      * Sets the windowsStoreBlocked property value. Indicates whether or not to block the Windows Store.
-     *  @param bool|null $value Value to set for the windowsStoreBlocked property.
+     * @param bool|null $value Value to set for the windowsStoreBlocked property.
     */
     public function setWindowsStoreBlocked(?bool $value): void {
         $this->getBackingStore()->set('windowsStoreBlocked', $value);

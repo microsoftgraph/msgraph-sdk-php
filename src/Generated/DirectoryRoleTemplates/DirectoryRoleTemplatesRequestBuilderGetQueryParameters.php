@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\DirectoryRoleTemplates;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve a list of directoryRoleTemplate objects.
+*/
 class DirectoryRoleTemplatesRequestBuilderGetQueryParameters 
 {
     /**

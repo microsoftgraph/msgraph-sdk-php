@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Education\Me\Rubrics\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * When set, the grading rubric attached to the assignment.
+*/
 class EducationRubricItemRequestBuilderGetQueryParameters 
 {
     /**

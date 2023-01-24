@@ -11,6 +11,9 @@ use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
+/**
+ * This type represents the set of policies that dictate how bookings can be created in a Booking Calendar.
+*/
 class BookingSchedulingPolicy implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -131,7 +134,7 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -139,7 +142,7 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the allowStaffSelection property value. True if to allow customers to choose a specific person for the booking.
-     *  @param bool|null $value Value to set for the allowStaffSelection property.
+     * @param bool|null $value Value to set for the allowStaffSelection property.
     */
     public function setAllowStaffSelection(?bool $value): void {
         $this->getBackingStore()->set('allowStaffSelection', $value);
@@ -147,7 +150,7 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -155,7 +158,7 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the maximumAdvance property value. Maximum number of days in advance that a booking can be made. It follows the ISO 8601 format.
-     *  @param DateInterval|null $value Value to set for the maximumAdvance property.
+     * @param DateInterval|null $value Value to set for the maximumAdvance property.
     */
     public function setMaximumAdvance(?DateInterval $value): void {
         $this->getBackingStore()->set('maximumAdvance', $value);
@@ -163,7 +166,7 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the minimumLeadTime property value. The minimum amount of time before which bookings and cancellations must be made. It follows the ISO 8601 format.
-     *  @param DateInterval|null $value Value to set for the minimumLeadTime property.
+     * @param DateInterval|null $value Value to set for the minimumLeadTime property.
     */
     public function setMinimumLeadTime(?DateInterval $value): void {
         $this->getBackingStore()->set('minimumLeadTime', $value);
@@ -171,7 +174,7 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -179,7 +182,7 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the sendConfirmationsToOwner property value. True to notify the business via email when a booking is created or changed. Use the email address specified in the email property of the bookingBusiness entity for the business.
-     *  @param bool|null $value Value to set for the sendConfirmationsToOwner property.
+     * @param bool|null $value Value to set for the sendConfirmationsToOwner property.
     */
     public function setSendConfirmationsToOwner(?bool $value): void {
         $this->getBackingStore()->set('sendConfirmationsToOwner', $value);
@@ -187,7 +190,7 @@ class BookingSchedulingPolicy implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the timeSlotInterval property value. Duration of each time slot, denoted in ISO 8601 format.
-     *  @param DateInterval|null $value Value to set for the timeSlotInterval property.
+     * @param DateInterval|null $value Value to set for the timeSlotInterval property.
     */
     public function setTimeSlotInterval(?DateInterval $value): void {
         $this->getBackingStore()->set('timeSlotInterval', $value);

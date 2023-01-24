@@ -75,7 +75,7 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
 
     /**
      * Sets the binaryName property value. The binary name.
-     *  @param string|null $value Value to set for the binaryName property.
+     * @param string|null $value Value to set for the binaryName property.
     */
     public function setBinaryName(?string $value): void {
         $this->getBackingStore()->set('binaryName', $value);
@@ -83,7 +83,7 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
 
     /**
      * Sets the binaryVersionHigh property value. The high binary version.
-     *  @param string|null $value Value to set for the binaryVersionHigh property.
+     * @param string|null $value Value to set for the binaryVersionHigh property.
     */
     public function setBinaryVersionHigh(?string $value): void {
         $this->getBackingStore()->set('binaryVersionHigh', $value);
@@ -91,7 +91,7 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
 
     /**
      * Sets the binaryVersionLow property value. The lower binary version.
-     *  @param string|null $value Value to set for the binaryVersionLow property.
+     * @param string|null $value Value to set for the binaryVersionLow property.
     */
     public function setBinaryVersionLow(?string $value): void {
         $this->getBackingStore()->set('binaryVersionLow', $value);

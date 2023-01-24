@@ -131,7 +131,7 @@ class EducationRubric extends Entity implements Parsable
 
     /**
      * Sets the createdBy property value. The user who created this resource.
-     *  @param IdentitySet|null $value Value to set for the createdBy property.
+     * @param IdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?IdentitySet $value): void {
         $this->getBackingStore()->set('createdBy', $value);
@@ -139,7 +139,7 @@ class EducationRubric extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -147,7 +147,7 @@ class EducationRubric extends Entity implements Parsable
 
     /**
      * Sets the description property value. The description of this rubric.
-     *  @param EducationItemBody|null $value Value to set for the description property.
+     * @param EducationItemBody|null $value Value to set for the description property.
     */
     public function setDescription(?EducationItemBody $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -155,7 +155,7 @@ class EducationRubric extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The name of this rubric.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -163,7 +163,7 @@ class EducationRubric extends Entity implements Parsable
 
     /**
      * Sets the grading property value. The grading type of this rubric -- null for a no-points rubric, or educationAssignmentPointsGradeType for a points rubric.
-     *  @param EducationAssignmentGradeType|null $value Value to set for the grading property.
+     * @param EducationAssignmentGradeType|null $value Value to set for the grading property.
     */
     public function setGrading(?EducationAssignmentGradeType $value): void {
         $this->getBackingStore()->set('grading', $value);
@@ -171,7 +171,7 @@ class EducationRubric extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedBy property value. The last user to modify the resource.
-     *  @param IdentitySet|null $value Value to set for the lastModifiedBy property.
+     * @param IdentitySet|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?IdentitySet $value): void {
         $this->getBackingStore()->set('lastModifiedBy', $value);
@@ -179,7 +179,7 @@ class EducationRubric extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. Moment in time when the resource was last modified.  The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -187,7 +187,7 @@ class EducationRubric extends Entity implements Parsable
 
     /**
      * Sets the levels property value. The collection of levels making up this rubric.
-     *  @param array<RubricLevel>|null $value Value to set for the levels property.
+     * @param array<RubricLevel>|null $value Value to set for the levels property.
     */
     public function setLevels(?array $value): void {
         $this->getBackingStore()->set('levels', $value);
@@ -195,7 +195,7 @@ class EducationRubric extends Entity implements Parsable
 
     /**
      * Sets the qualities property value. The collection of qualities making up this rubric.
-     *  @param array<RubricQuality>|null $value Value to set for the qualities property.
+     * @param array<RubricQuality>|null $value Value to set for the qualities property.
     */
     public function setQualities(?array $value): void {
         $this->getBackingStore()->set('qualities', $value);

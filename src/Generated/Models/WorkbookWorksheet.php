@@ -124,7 +124,7 @@ class WorkbookWorksheet extends Entity implements Parsable
 
     /**
      * Sets the charts property value. Returns collection of charts that are part of the worksheet. Read-only.
-     *  @param array<WorkbookChart>|null $value Value to set for the charts property.
+     * @param array<WorkbookChart>|null $value Value to set for the charts property.
     */
     public function setCharts(?array $value): void {
         $this->getBackingStore()->set('charts', $value);
@@ -132,7 +132,7 @@ class WorkbookWorksheet extends Entity implements Parsable
 
     /**
      * Sets the name property value. The display name of the worksheet.
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -140,7 +140,7 @@ class WorkbookWorksheet extends Entity implements Parsable
 
     /**
      * Sets the names property value. Returns collection of names that are associated with the worksheet. Read-only.
-     *  @param array<WorkbookNamedItem>|null $value Value to set for the names property.
+     * @param array<WorkbookNamedItem>|null $value Value to set for the names property.
     */
     public function setNames(?array $value): void {
         $this->getBackingStore()->set('names', $value);
@@ -148,7 +148,7 @@ class WorkbookWorksheet extends Entity implements Parsable
 
     /**
      * Sets the pivotTables property value. Collection of PivotTables that are part of the worksheet.
-     *  @param array<WorkbookPivotTable>|null $value Value to set for the pivotTables property.
+     * @param array<WorkbookPivotTable>|null $value Value to set for the pivotTables property.
     */
     public function setPivotTables(?array $value): void {
         $this->getBackingStore()->set('pivotTables', $value);
@@ -156,7 +156,7 @@ class WorkbookWorksheet extends Entity implements Parsable
 
     /**
      * Sets the position property value. The zero-based position of the worksheet within the workbook.
-     *  @param int|null $value Value to set for the position property.
+     * @param int|null $value Value to set for the position property.
     */
     public function setPosition(?int $value): void {
         $this->getBackingStore()->set('position', $value);
@@ -164,7 +164,7 @@ class WorkbookWorksheet extends Entity implements Parsable
 
     /**
      * Sets the protection property value. Returns sheet protection object for a worksheet. Read-only.
-     *  @param WorkbookWorksheetProtection|null $value Value to set for the protection property.
+     * @param WorkbookWorksheetProtection|null $value Value to set for the protection property.
     */
     public function setProtection(?WorkbookWorksheetProtection $value): void {
         $this->getBackingStore()->set('protection', $value);
@@ -172,7 +172,7 @@ class WorkbookWorksheet extends Entity implements Parsable
 
     /**
      * Sets the tables property value. Collection of tables that are part of the worksheet. Read-only.
-     *  @param array<WorkbookTable>|null $value Value to set for the tables property.
+     * @param array<WorkbookTable>|null $value Value to set for the tables property.
     */
     public function setTables(?array $value): void {
         $this->getBackingStore()->set('tables', $value);
@@ -180,7 +180,7 @@ class WorkbookWorksheet extends Entity implements Parsable
 
     /**
      * Sets the visibility property value. The Visibility of the worksheet. The possible values are: Visible, Hidden, VeryHidden.
-     *  @param string|null $value Value to set for the visibility property.
+     * @param string|null $value Value to set for the visibility property.
     */
     public function setVisibility(?string $value): void {
         $this->getBackingStore()->set('visibility', $value);

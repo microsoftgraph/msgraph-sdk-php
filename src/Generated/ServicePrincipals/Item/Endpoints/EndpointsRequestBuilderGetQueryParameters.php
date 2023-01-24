@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\ServicePrincipals\Item\Endpoints;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get endpoints from servicePrincipals
+*/
 class EndpointsRequestBuilderGetQueryParameters 
 {
     /**

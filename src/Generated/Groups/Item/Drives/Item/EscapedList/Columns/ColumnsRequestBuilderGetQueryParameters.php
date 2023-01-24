@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Drives\Item\EscapedList\Columns;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [list][list].
+*/
 class ColumnsRequestBuilderGetQueryParameters 
 {
     /**

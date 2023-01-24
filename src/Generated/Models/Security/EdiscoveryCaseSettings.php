@@ -75,7 +75,7 @@ class EdiscoveryCaseSettings extends Entity implements Parsable
 
     /**
      * Sets the ocr property value. The OCR (Optical Character Recognition) settings for the case.
-     *  @param OcrSettings|null $value Value to set for the ocr property.
+     * @param OcrSettings|null $value Value to set for the ocr property.
     */
     public function setOcr(?OcrSettings $value): void {
         $this->getBackingStore()->set('ocr', $value);
@@ -83,7 +83,7 @@ class EdiscoveryCaseSettings extends Entity implements Parsable
 
     /**
      * Sets the redundancyDetection property value. The redundancy (near duplicate and email threading) detection settings for the case.
-     *  @param RedundancyDetectionSettings|null $value Value to set for the redundancyDetection property.
+     * @param RedundancyDetectionSettings|null $value Value to set for the redundancyDetection property.
     */
     public function setRedundancyDetection(?RedundancyDetectionSettings $value): void {
         $this->getBackingStore()->set('redundancyDetection', $value);
@@ -91,7 +91,7 @@ class EdiscoveryCaseSettings extends Entity implements Parsable
 
     /**
      * Sets the topicModeling property value. The Topic Modeling (Themes) settings for the case.
-     *  @param TopicModelingSettings|null $value Value to set for the topicModeling property.
+     * @param TopicModelingSettings|null $value Value to set for the topicModeling property.
     */
     public function setTopicModeling(?TopicModelingSettings $value): void {
         $this->getBackingStore()->set('topicModeling', $value);

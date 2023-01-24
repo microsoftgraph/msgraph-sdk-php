@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The task lists in the users mailbox.
+*/
 class TodoTaskListItemRequestBuilderGetQueryParameters 
 {
     /**

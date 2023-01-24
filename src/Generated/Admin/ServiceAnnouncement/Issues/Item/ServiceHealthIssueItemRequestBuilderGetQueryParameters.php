@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Issues\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
+*/
 class ServiceHealthIssueItemRequestBuilderGetQueryParameters 
 {
     /**

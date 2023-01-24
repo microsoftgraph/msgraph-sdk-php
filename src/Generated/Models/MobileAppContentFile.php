@@ -8,6 +8,9 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Psr\Http\Message\StreamInterface;
 
+/**
+ * Contains properties for a single installer file that is associated with a given mobileAppContent version.
+*/
 class MobileAppContentFile extends Entity implements Parsable 
 {
     /**
@@ -136,7 +139,7 @@ class MobileAppContentFile extends Entity implements Parsable
 
     /**
      * Sets the azureStorageUri property value. The Azure Storage URI.
-     *  @param string|null $value Value to set for the azureStorageUri property.
+     * @param string|null $value Value to set for the azureStorageUri property.
     */
     public function setAzureStorageUri(?string $value): void {
         $this->getBackingStore()->set('azureStorageUri', $value);
@@ -144,7 +147,7 @@ class MobileAppContentFile extends Entity implements Parsable
 
     /**
      * Sets the azureStorageUriExpirationDateTime property value. The time the Azure storage Uri expires.
-     *  @param DateTime|null $value Value to set for the azureStorageUriExpirationDateTime property.
+     * @param DateTime|null $value Value to set for the azureStorageUriExpirationDateTime property.
     */
     public function setAzureStorageUriExpirationDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('azureStorageUriExpirationDateTime', $value);
@@ -152,7 +155,7 @@ class MobileAppContentFile extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. The time the file was created.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -160,7 +163,7 @@ class MobileAppContentFile extends Entity implements Parsable
 
     /**
      * Sets the isCommitted property value. A value indicating whether the file is committed.
-     *  @param bool|null $value Value to set for the isCommitted property.
+     * @param bool|null $value Value to set for the isCommitted property.
     */
     public function setIsCommitted(?bool $value): void {
         $this->getBackingStore()->set('isCommitted', $value);
@@ -168,7 +171,7 @@ class MobileAppContentFile extends Entity implements Parsable
 
     /**
      * Sets the manifest property value. The manifest information.
-     *  @param StreamInterface|null $value Value to set for the manifest property.
+     * @param StreamInterface|null $value Value to set for the manifest property.
     */
     public function setManifest(?StreamInterface $value): void {
         $this->getBackingStore()->set('manifest', $value);
@@ -176,7 +179,7 @@ class MobileAppContentFile extends Entity implements Parsable
 
     /**
      * Sets the name property value. the file name.
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -184,7 +187,7 @@ class MobileAppContentFile extends Entity implements Parsable
 
     /**
      * Sets the size property value. The size of the file prior to encryption.
-     *  @param int|null $value Value to set for the size property.
+     * @param int|null $value Value to set for the size property.
     */
     public function setSize(?int $value): void {
         $this->getBackingStore()->set('size', $value);
@@ -192,7 +195,7 @@ class MobileAppContentFile extends Entity implements Parsable
 
     /**
      * Sets the sizeEncrypted property value. The size of the file after encryption.
-     *  @param int|null $value Value to set for the sizeEncrypted property.
+     * @param int|null $value Value to set for the sizeEncrypted property.
     */
     public function setSizeEncrypted(?int $value): void {
         $this->getBackingStore()->set('sizeEncrypted', $value);
@@ -200,7 +203,7 @@ class MobileAppContentFile extends Entity implements Parsable
 
     /**
      * Sets the uploadState property value. Contains properties for upload request states.
-     *  @param MobileAppContentFileUploadState|null $value Value to set for the uploadState property.
+     * @param MobileAppContentFileUploadState|null $value Value to set for the uploadState property.
     */
     public function setUploadState(?MobileAppContentFileUploadState $value): void {
         $this->getBackingStore()->set('uploadState', $value);

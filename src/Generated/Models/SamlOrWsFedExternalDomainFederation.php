@@ -55,7 +55,7 @@ class SamlOrWsFedExternalDomainFederation extends SamlOrWsFedProvider implements
 
     /**
      * Sets the domains property value. Collection of domain names of the external organizations that the tenant is federating with. Supports $filter (eq).
-     *  @param array<ExternalDomainName>|null $value Value to set for the domains property.
+     * @param array<ExternalDomainName>|null $value Value to set for the domains property.
     */
     public function setDomains(?array $value): void {
         $this->getBackingStore()->set('domains', $value);

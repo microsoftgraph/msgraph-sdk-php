@@ -85,7 +85,7 @@ class AadUserConversationMember extends ConversationMember implements Parsable
 
     /**
      * Sets the email property value. The email address of the user.
-     *  @param string|null $value Value to set for the email property.
+     * @param string|null $value Value to set for the email property.
     */
     public function setEmail(?string $value): void {
         $this->getBackingStore()->set('email', $value);
@@ -93,7 +93,7 @@ class AadUserConversationMember extends ConversationMember implements Parsable
 
     /**
      * Sets the tenantId property value. TenantId which the Azure AD user belongs to.
-     *  @param string|null $value Value to set for the tenantId property.
+     * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {
         $this->getBackingStore()->set('tenantId', $value);
@@ -101,7 +101,7 @@ class AadUserConversationMember extends ConversationMember implements Parsable
 
     /**
      * Sets the user property value. The user property
-     *  @param User|null $value Value to set for the user property.
+     * @param User|null $value Value to set for the user property.
     */
     public function setUser(?User $value): void {
         $this->getBackingStore()->set('user', $value);
@@ -109,7 +109,7 @@ class AadUserConversationMember extends ConversationMember implements Parsable
 
     /**
      * Sets the userId property value. The guid of the user.
-     *  @param string|null $value Value to set for the userId property.
+     * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {
         $this->getBackingStore()->set('userId', $value);

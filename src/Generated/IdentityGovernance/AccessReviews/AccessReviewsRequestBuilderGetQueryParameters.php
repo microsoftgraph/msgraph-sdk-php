@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get accessReviews from identityGovernance
+*/
 class AccessReviewsRequestBuilderGetQueryParameters 
 {
     /**

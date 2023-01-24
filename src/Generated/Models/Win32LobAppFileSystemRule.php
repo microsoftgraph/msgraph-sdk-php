@@ -105,7 +105,7 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable
 
     /**
      * Sets the check32BitOn64System property value. A value indicating whether to expand environment variables in the 32-bit context on 64-bit systems.
-     *  @param bool|null $value Value to set for the check32BitOn64System property.
+     * @param bool|null $value Value to set for the check32BitOn64System property.
     */
     public function setCheck32BitOn64System(?bool $value): void {
         $this->getBackingStore()->set('check32BitOn64System', $value);
@@ -113,7 +113,7 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable
 
     /**
      * Sets the comparisonValue property value. The file or folder comparison value.
-     *  @param string|null $value Value to set for the comparisonValue property.
+     * @param string|null $value Value to set for the comparisonValue property.
     */
     public function setComparisonValue(?string $value): void {
         $this->getBackingStore()->set('comparisonValue', $value);
@@ -121,7 +121,7 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable
 
     /**
      * Sets the fileOrFolderName property value. The file or folder name to look up.
-     *  @param string|null $value Value to set for the fileOrFolderName property.
+     * @param string|null $value Value to set for the fileOrFolderName property.
     */
     public function setFileOrFolderName(?string $value): void {
         $this->getBackingStore()->set('fileOrFolderName', $value);
@@ -129,7 +129,7 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable
 
     /**
      * Sets the operationType property value. Contains all supported file system detection type.
-     *  @param Win32LobAppFileSystemOperationType|null $value Value to set for the operationType property.
+     * @param Win32LobAppFileSystemOperationType|null $value Value to set for the operationType property.
     */
     public function setOperationType(?Win32LobAppFileSystemOperationType $value): void {
         $this->getBackingStore()->set('operationType', $value);
@@ -137,7 +137,7 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable
 
     /**
      * Sets the operator property value. Contains properties for detection operator.
-     *  @param Win32LobAppRuleOperator|null $value Value to set for the operator property.
+     * @param Win32LobAppRuleOperator|null $value Value to set for the operator property.
     */
     public function setOperator(?Win32LobAppRuleOperator $value): void {
         $this->getBackingStore()->set('operator', $value);
@@ -145,7 +145,7 @@ class Win32LobAppFileSystemRule extends Win32LobAppRule implements Parsable
 
     /**
      * Sets the path property value. The file or folder path to look up.
-     *  @param string|null $value Value to set for the path property.
+     * @param string|null $value Value to set for the path property.
     */
     public function setPath(?string $value): void {
         $this->getBackingStore()->set('path', $value);

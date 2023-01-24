@@ -171,7 +171,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -179,7 +179,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -187,7 +187,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the connectingIP property value. The connectingIP property
-     *  @param string|null $value Value to set for the connectingIP property.
+     * @param string|null $value Value to set for the connectingIP property.
     */
     public function setConnectingIP(?string $value): void {
         $this->getBackingStore()->set('connectingIP', $value);
@@ -195,7 +195,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the deliveryAction property value. The deliveryAction property
-     *  @param string|null $value Value to set for the deliveryAction property.
+     * @param string|null $value Value to set for the deliveryAction property.
     */
     public function setDeliveryAction(?string $value): void {
         $this->getBackingStore()->set('deliveryAction', $value);
@@ -203,7 +203,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the deliveryLocation property value. The deliveryLocation property
-     *  @param string|null $value Value to set for the deliveryLocation property.
+     * @param string|null $value Value to set for the deliveryLocation property.
     */
     public function setDeliveryLocation(?string $value): void {
         $this->getBackingStore()->set('deliveryLocation', $value);
@@ -211,7 +211,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the directionality property value. The directionality property
-     *  @param string|null $value Value to set for the directionality property.
+     * @param string|null $value Value to set for the directionality property.
     */
     public function setDirectionality(?string $value): void {
         $this->getBackingStore()->set('directionality', $value);
@@ -219,7 +219,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the internetMessageId property value. The internetMessageId property
-     *  @param string|null $value Value to set for the internetMessageId property.
+     * @param string|null $value Value to set for the internetMessageId property.
     */
     public function setInternetMessageId(?string $value): void {
         $this->getBackingStore()->set('internetMessageId', $value);
@@ -227,7 +227,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the messageFingerprint property value. The messageFingerprint property
-     *  @param string|null $value Value to set for the messageFingerprint property.
+     * @param string|null $value Value to set for the messageFingerprint property.
     */
     public function setMessageFingerprint(?string $value): void {
         $this->getBackingStore()->set('messageFingerprint', $value);
@@ -235,7 +235,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the messageReceivedDateTime property value. The messageReceivedDateTime property
-     *  @param DateTime|null $value Value to set for the messageReceivedDateTime property.
+     * @param DateTime|null $value Value to set for the messageReceivedDateTime property.
     */
     public function setMessageReceivedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('messageReceivedDateTime', $value);
@@ -243,7 +243,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the messageSubject property value. The messageSubject property
-     *  @param string|null $value Value to set for the messageSubject property.
+     * @param string|null $value Value to set for the messageSubject property.
     */
     public function setMessageSubject(?string $value): void {
         $this->getBackingStore()->set('messageSubject', $value);
@@ -251,7 +251,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the networkMessageId property value. The networkMessageId property
-     *  @param string|null $value Value to set for the networkMessageId property.
+     * @param string|null $value Value to set for the networkMessageId property.
     */
     public function setNetworkMessageId(?string $value): void {
         $this->getBackingStore()->set('networkMessageId', $value);
@@ -259,7 +259,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

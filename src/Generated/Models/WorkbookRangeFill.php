@@ -54,7 +54,7 @@ class WorkbookRangeFill extends Entity implements Parsable
 
     /**
      * Sets the color property value. HTML color code representing the color of the border line, of the form #RRGGBB (e.g. 'FFA500') or as a named HTML color (e.g. 'orange')
-     *  @param string|null $value Value to set for the color property.
+     * @param string|null $value Value to set for the color property.
     */
     public function setColor(?string $value): void {
         $this->getBackingStore()->set('color', $value);

@@ -81,7 +81,7 @@ class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Backed
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -89,7 +89,7 @@ class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Backed
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -97,7 +97,7 @@ class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Backed
 
     /**
      * Sets the item property value. The item property
-     *  @param DriveItemUploadableProperties|null $value Value to set for the item property.
+     * @param DriveItemUploadableProperties|null $value Value to set for the item property.
     */
     public function setItem(?DriveItemUploadableProperties $value): void {
         $this->getBackingStore()->set('item', $value);

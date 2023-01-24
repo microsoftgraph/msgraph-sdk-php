@@ -95,7 +95,7 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration impleme
 
     /**
      * Sets the allowPrinting property value. Indicates whether or not to allow the app from printing during the test.
-     *  @param bool|null $value Value to set for the allowPrinting property.
+     * @param bool|null $value Value to set for the allowPrinting property.
     */
     public function setAllowPrinting(?bool $value): void {
         $this->getBackingStore()->set('allowPrinting', $value);
@@ -103,7 +103,7 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration impleme
 
     /**
      * Sets the allowScreenCapture property value. Indicates whether or not to allow screen capture capability during a test.
-     *  @param bool|null $value Value to set for the allowScreenCapture property.
+     * @param bool|null $value Value to set for the allowScreenCapture property.
     */
     public function setAllowScreenCapture(?bool $value): void {
         $this->getBackingStore()->set('allowScreenCapture', $value);
@@ -111,7 +111,7 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration impleme
 
     /**
      * Sets the allowTextSuggestion property value. Indicates whether or not to allow text suggestions during the test.
-     *  @param bool|null $value Value to set for the allowTextSuggestion property.
+     * @param bool|null $value Value to set for the allowTextSuggestion property.
     */
     public function setAllowTextSuggestion(?bool $value): void {
         $this->getBackingStore()->set('allowTextSuggestion', $value);
@@ -119,7 +119,7 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration impleme
 
     /**
      * Sets the configurationAccount property value. The account used to configure the Windows device for taking the test. The user can be a domain account (domain/user), an AAD account (username@tenant.com) or a local account (username).
-     *  @param string|null $value Value to set for the configurationAccount property.
+     * @param string|null $value Value to set for the configurationAccount property.
     */
     public function setConfigurationAccount(?string $value): void {
         $this->getBackingStore()->set('configurationAccount', $value);
@@ -127,7 +127,7 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration impleme
 
     /**
      * Sets the launchUri property value. Url link to an assessment that's automatically loaded when the secure assessment browser is launched. It has to be a valid Url (http[s]://msdn.microsoft.com/).
-     *  @param string|null $value Value to set for the launchUri property.
+     * @param string|null $value Value to set for the launchUri property.
     */
     public function setLaunchUri(?string $value): void {
         $this->getBackingStore()->set('launchUri', $value);

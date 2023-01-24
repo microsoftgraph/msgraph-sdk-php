@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssi
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The user attribute that you want to add to your user flow.
+*/
 class UserAttributeRequestBuilderGetQueryParameters 
 {
     /**

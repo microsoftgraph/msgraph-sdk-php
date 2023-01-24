@@ -54,7 +54,7 @@ class AppCatalogs extends Entity implements Parsable
 
     /**
      * Sets the teamsApps property value. The teamsApps property
-     *  @param array<TeamsApp>|null $value Value to set for the teamsApps property.
+     * @param array<TeamsApp>|null $value Value to set for the teamsApps property.
     */
     public function setTeamsApps(?array $value): void {
         $this->getBackingStore()->set('teamsApps', $value);

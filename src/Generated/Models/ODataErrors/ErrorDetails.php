@@ -100,7 +100,7 @@ class ErrorDetails implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class ErrorDetails implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class ErrorDetails implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the code property value. The code property
-     *  @param string|null $value Value to set for the code property.
+     * @param string|null $value Value to set for the code property.
     */
     public function setCode(?string $value): void {
         $this->getBackingStore()->set('code', $value);
@@ -124,7 +124,7 @@ class ErrorDetails implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the message property value. The message property
-     *  @param string|null $value Value to set for the message property.
+     * @param string|null $value Value to set for the message property.
     */
     public function setMessage(?string $value): void {
         $this->getBackingStore()->set('message', $value);
@@ -132,7 +132,7 @@ class ErrorDetails implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the target property value. The target property
-     *  @param string|null $value Value to set for the target property.
+     * @param string|null $value Value to set for the target property.
     */
     public function setTarget(?string $value): void {
         $this->getBackingStore()->set('target', $value);

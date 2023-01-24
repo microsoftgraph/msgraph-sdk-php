@@ -64,7 +64,7 @@ class ParticipantLeftNotification extends Entity implements Parsable
 
     /**
      * Sets the call property value. The call property
-     *  @param Call|null $value Value to set for the call property.
+     * @param Call|null $value Value to set for the call property.
     */
     public function setCall(?Call $value): void {
         $this->getBackingStore()->set('call', $value);
@@ -72,7 +72,7 @@ class ParticipantLeftNotification extends Entity implements Parsable
 
     /**
      * Sets the participantId property value. ID of the participant under the policy who has left the meeting.
-     *  @param string|null $value Value to set for the participantId property.
+     * @param string|null $value Value to set for the participantId property.
     */
     public function setParticipantId(?string $value): void {
         $this->getBackingStore()->set('participantId', $value);

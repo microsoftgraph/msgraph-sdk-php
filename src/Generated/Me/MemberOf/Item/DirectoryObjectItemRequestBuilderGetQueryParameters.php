@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Me\MemberOf\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The groups and directory roles that the user is a member of. Read-only. Nullable. Supports $expand.
+*/
 class DirectoryObjectItemRequestBuilderGetQueryParameters 
 {
     /**

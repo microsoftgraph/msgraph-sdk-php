@@ -457,7 +457,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the addIns property value. Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its 'FileHandler' functionality. This will let services like Office 365 call the application in the context of a document the user is working on.
-     *  @param array<AddIn>|null $value Value to set for the addIns property.
+     * @param array<AddIn>|null $value Value to set for the addIns property.
     */
     public function setAddIns(?array $value): void {
         $this->getBackingStore()->set('addIns', $value);
@@ -465,7 +465,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the api property value. Specifies settings for an application that implements a web API.
-     *  @param ApiApplication|null $value Value to set for the api property.
+     * @param ApiApplication|null $value Value to set for the api property.
     */
     public function setApi(?ApiApplication $value): void {
         $this->getBackingStore()->set('api', $value);
@@ -473,7 +473,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the appId property value. The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only. Supports $filter (eq).
-     *  @param string|null $value Value to set for the appId property.
+     * @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value): void {
         $this->getBackingStore()->set('appId', $value);
@@ -481,7 +481,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the applicationTemplateId property value. Unique identifier of the applicationTemplate. Supports $filter (eq, not, ne).
-     *  @param string|null $value Value to set for the applicationTemplateId property.
+     * @param string|null $value Value to set for the applicationTemplateId property.
     */
     public function setApplicationTemplateId(?string $value): void {
         $this->getBackingStore()->set('applicationTemplateId', $value);
@@ -489,7 +489,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the appRoles property value. The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
-     *  @param array<AppRole>|null $value Value to set for the appRoles property.
+     * @param array<AppRole>|null $value Value to set for the appRoles property.
     */
     public function setAppRoles(?array $value): void {
         $this->getBackingStore()->set('appRoles', $value);
@@ -497,7 +497,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the certification property value. Specifies the certification status of the application.
-     *  @param Certification|null $value Value to set for the certification property.
+     * @param Certification|null $value Value to set for the certification property.
     */
     public function setCertification(?Certification $value): void {
         $this->getBackingStore()->set('certification', $value);
@@ -505,7 +505,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the createdDateTime property value. The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderBy.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -513,7 +513,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the createdOnBehalfOf property value. Supports $filter (/$count eq 0, /$count ne 0). Read-only.
-     *  @param DirectoryObject|null $value Value to set for the createdOnBehalfOf property.
+     * @param DirectoryObject|null $value Value to set for the createdOnBehalfOf property.
     */
     public function setCreatedOnBehalfOf(?DirectoryObject $value): void {
         $this->getBackingStore()->set('createdOnBehalfOf', $value);
@@ -521,7 +521,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the defaultRedirectUri property value. The defaultRedirectUri property
-     *  @param string|null $value Value to set for the defaultRedirectUri property.
+     * @param string|null $value Value to set for the defaultRedirectUri property.
     */
     public function setDefaultRedirectUri(?string $value): void {
         $this->getBackingStore()->set('defaultRedirectUri', $value);
@@ -529,7 +529,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the description property value. Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -537,7 +537,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the disabledByMicrosoftStatus property value. Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not).
-     *  @param string|null $value Value to set for the disabledByMicrosoftStatus property.
+     * @param string|null $value Value to set for the disabledByMicrosoftStatus property.
     */
     public function setDisabledByMicrosoftStatus(?string $value): void {
         $this->getBackingStore()->set('disabledByMicrosoftStatus', $value);
@@ -545,7 +545,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the displayName property value. The display name for the application. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -553,7 +553,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the extensionProperties property value. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0).
-     *  @param array<ExtensionProperty>|null $value Value to set for the extensionProperties property.
+     * @param array<ExtensionProperty>|null $value Value to set for the extensionProperties property.
     */
     public function setExtensionProperties(?array $value): void {
         $this->getBackingStore()->set('extensionProperties', $value);
@@ -561,7 +561,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the federatedIdentityCredentials property value. Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
-     *  @param array<FederatedIdentityCredential>|null $value Value to set for the federatedIdentityCredentials property.
+     * @param array<FederatedIdentityCredential>|null $value Value to set for the federatedIdentityCredentials property.
     */
     public function setFederatedIdentityCredentials(?array $value): void {
         $this->getBackingStore()->set('federatedIdentityCredentials', $value);
@@ -569,7 +569,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the groupMembershipClaims property value. Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).
-     *  @param string|null $value Value to set for the groupMembershipClaims property.
+     * @param string|null $value Value to set for the groupMembershipClaims property.
     */
     public function setGroupMembershipClaims(?string $value): void {
         $this->getBackingStore()->set('groupMembershipClaims', $value);
@@ -577,7 +577,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the homeRealmDiscoveryPolicies property value. The homeRealmDiscoveryPolicies property
-     *  @param array<HomeRealmDiscoveryPolicy>|null $value Value to set for the homeRealmDiscoveryPolicies property.
+     * @param array<HomeRealmDiscoveryPolicy>|null $value Value to set for the homeRealmDiscoveryPolicies property.
     */
     public function setHomeRealmDiscoveryPolicies(?array $value): void {
         $this->getBackingStore()->set('homeRealmDiscoveryPolicies', $value);
@@ -585,7 +585,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the identifierUris property value. Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you'll reference in your API's code, and it must be globally unique. You can use the default value provided, which is in the form api://<application-client-id>, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Azure AD application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).
-     *  @param array<string>|null $value Value to set for the identifierUris property.
+     * @param array<string>|null $value Value to set for the identifierUris property.
     */
     public function setIdentifierUris(?array $value): void {
         $this->getBackingStore()->set('identifierUris', $value);
@@ -593,7 +593,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the info property value. Basic profile information of the application such as  app's marketing, support, terms of service and privacy statement URLs. The terms of service and privacy statement are surfaced to users through the user consent experience. For more info, see How to: Add Terms of service and privacy statement for registered Azure AD apps. Supports $filter (eq, ne, not, ge, le, and eq on null values).
-     *  @param InformationalUrl|null $value Value to set for the info property.
+     * @param InformationalUrl|null $value Value to set for the info property.
     */
     public function setInfo(?InformationalUrl $value): void {
         $this->getBackingStore()->set('info', $value);
@@ -601,7 +601,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the isDeviceOnlyAuthSupported property value. Specifies whether this application supports device authentication without a user. The default is false.
-     *  @param bool|null $value Value to set for the isDeviceOnlyAuthSupported property.
+     * @param bool|null $value Value to set for the isDeviceOnlyAuthSupported property.
     */
     public function setIsDeviceOnlyAuthSupported(?bool $value): void {
         $this->getBackingStore()->set('isDeviceOnlyAuthSupported', $value);
@@ -609,7 +609,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the isFallbackPublicClient property value. Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where it is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.
-     *  @param bool|null $value Value to set for the isFallbackPublicClient property.
+     * @param bool|null $value Value to set for the isFallbackPublicClient property.
     */
     public function setIsFallbackPublicClient(?bool $value): void {
         $this->getBackingStore()->set('isFallbackPublicClient', $value);
@@ -617,7 +617,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the keyCredentials property value. The collection of key credentials associated with the application. Not nullable. Supports $filter (eq, not, ge, le).
-     *  @param array<KeyCredential>|null $value Value to set for the keyCredentials property.
+     * @param array<KeyCredential>|null $value Value to set for the keyCredentials property.
     */
     public function setKeyCredentials(?array $value): void {
         $this->getBackingStore()->set('keyCredentials', $value);
@@ -625,7 +625,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the logo property value. The main logo for the application. Not nullable.
-     *  @param StreamInterface|null $value Value to set for the logo property.
+     * @param StreamInterface|null $value Value to set for the logo property.
     */
     public function setLogo(?StreamInterface $value): void {
         $this->getBackingStore()->set('logo', $value);
@@ -633,7 +633,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the notes property value. Notes relevant for the management of the application.
-     *  @param string|null $value Value to set for the notes property.
+     * @param string|null $value Value to set for the notes property.
     */
     public function setNotes(?string $value): void {
         $this->getBackingStore()->set('notes', $value);
@@ -641,7 +641,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the oauth2RequirePostResponse property value. The oauth2RequirePostResponse property
-     *  @param bool|null $value Value to set for the oauth2RequirePostResponse property.
+     * @param bool|null $value Value to set for the oauth2RequirePostResponse property.
     */
     public function setOauth2RequirePostResponse(?bool $value): void {
         $this->getBackingStore()->set('oauth2RequirePostResponse', $value);
@@ -649,7 +649,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the optionalClaims property value. Application developers can configure optional claims in their Azure AD applications to specify the claims that are sent to their application by the Microsoft security token service. For more information, see How to: Provide optional claims to your app.
-     *  @param OptionalClaims|null $value Value to set for the optionalClaims property.
+     * @param OptionalClaims|null $value Value to set for the optionalClaims property.
     */
     public function setOptionalClaims(?OptionalClaims $value): void {
         $this->getBackingStore()->set('optionalClaims', $value);
@@ -657,7 +657,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the owners property value. Directory objects that are owners of the application. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).
-     *  @param array<DirectoryObject>|null $value Value to set for the owners property.
+     * @param array<DirectoryObject>|null $value Value to set for the owners property.
     */
     public function setOwners(?array $value): void {
         $this->getBackingStore()->set('owners', $value);
@@ -665,7 +665,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the parentalControlSettings property value. Specifies parental control settings for an application.
-     *  @param ParentalControlSettings|null $value Value to set for the parentalControlSettings property.
+     * @param ParentalControlSettings|null $value Value to set for the parentalControlSettings property.
     */
     public function setParentalControlSettings(?ParentalControlSettings $value): void {
         $this->getBackingStore()->set('parentalControlSettings', $value);
@@ -673,7 +673,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the passwordCredentials property value. The collection of password credentials associated with the application. Not nullable.
-     *  @param array<PasswordCredential>|null $value Value to set for the passwordCredentials property.
+     * @param array<PasswordCredential>|null $value Value to set for the passwordCredentials property.
     */
     public function setPasswordCredentials(?array $value): void {
         $this->getBackingStore()->set('passwordCredentials', $value);
@@ -681,7 +681,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the publicClient property value. Specifies settings for installed clients such as desktop or mobile devices.
-     *  @param PublicClientApplication|null $value Value to set for the publicClient property.
+     * @param PublicClientApplication|null $value Value to set for the publicClient property.
     */
     public function setPublicClient(?PublicClientApplication $value): void {
         $this->getBackingStore()->set('publicClient', $value);
@@ -689,7 +689,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the publisherDomain property value. The verified publisher domain for the application. Read-only. For more information, see How to: Configure an application's publisher domain. Supports $filter (eq, ne, ge, le, startsWith).
-     *  @param string|null $value Value to set for the publisherDomain property.
+     * @param string|null $value Value to set for the publisherDomain property.
     */
     public function setPublisherDomain(?string $value): void {
         $this->getBackingStore()->set('publisherDomain', $value);
@@ -697,7 +697,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the requiredResourceAccess property value. Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. For more information, see Limits on requested permissions per app. Not nullable. Supports $filter (eq, not, ge, le).
-     *  @param array<RequiredResourceAccess>|null $value Value to set for the requiredResourceAccess property.
+     * @param array<RequiredResourceAccess>|null $value Value to set for the requiredResourceAccess property.
     */
     public function setRequiredResourceAccess(?array $value): void {
         $this->getBackingStore()->set('requiredResourceAccess', $value);
@@ -705,7 +705,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the samlMetadataUrl property value. The URL where the service exposes SAML metadata for federation. This property is valid only for single-tenant applications. Nullable.
-     *  @param string|null $value Value to set for the samlMetadataUrl property.
+     * @param string|null $value Value to set for the samlMetadataUrl property.
     */
     public function setSamlMetadataUrl(?string $value): void {
         $this->getBackingStore()->set('samlMetadataUrl', $value);
@@ -713,7 +713,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the serviceManagementReference property value. References application or service contact information from a Service or Asset Management database. Nullable.
-     *  @param string|null $value Value to set for the serviceManagementReference property.
+     * @param string|null $value Value to set for the serviceManagementReference property.
     */
     public function setServiceManagementReference(?string $value): void {
         $this->getBackingStore()->set('serviceManagementReference', $value);
@@ -721,7 +721,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the signInAudience property value. Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table. The value of this object also limits the number of permissions an app can request. For more information, see Limits on requested permissions per app. The value for this property has implications on other app object properties. As a result, if you change this property, you may need to change other properties first. For more information, see Validation differences for signInAudience.Supports $filter (eq, ne, not).
-     *  @param string|null $value Value to set for the signInAudience property.
+     * @param string|null $value Value to set for the signInAudience property.
     */
     public function setSignInAudience(?string $value): void {
         $this->getBackingStore()->set('signInAudience', $value);
@@ -729,7 +729,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the spa property value. Specifies settings for a single-page application, including sign out URLs and redirect URIs for authorization codes and access tokens.
-     *  @param SpaApplication|null $value Value to set for the spa property.
+     * @param SpaApplication|null $value Value to set for the spa property.
     */
     public function setSpa(?SpaApplication $value): void {
         $this->getBackingStore()->set('spa', $value);
@@ -737,7 +737,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the tags property value. Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
-     *  @param array<string>|null $value Value to set for the tags property.
+     * @param array<string>|null $value Value to set for the tags property.
     */
     public function setTags(?array $value): void {
         $this->getBackingStore()->set('tags', $value);
@@ -745,7 +745,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the tokenEncryptionKeyId property value. Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.
-     *  @param string|null $value Value to set for the tokenEncryptionKeyId property.
+     * @param string|null $value Value to set for the tokenEncryptionKeyId property.
     */
     public function setTokenEncryptionKeyId(?string $value): void {
         $this->getBackingStore()->set('tokenEncryptionKeyId', $value);
@@ -753,7 +753,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the tokenIssuancePolicies property value. The tokenIssuancePolicies property
-     *  @param array<TokenIssuancePolicy>|null $value Value to set for the tokenIssuancePolicies property.
+     * @param array<TokenIssuancePolicy>|null $value Value to set for the tokenIssuancePolicies property.
     */
     public function setTokenIssuancePolicies(?array $value): void {
         $this->getBackingStore()->set('tokenIssuancePolicies', $value);
@@ -761,7 +761,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the tokenLifetimePolicies property value. The tokenLifetimePolicies property
-     *  @param array<TokenLifetimePolicy>|null $value Value to set for the tokenLifetimePolicies property.
+     * @param array<TokenLifetimePolicy>|null $value Value to set for the tokenLifetimePolicies property.
     */
     public function setTokenLifetimePolicies(?array $value): void {
         $this->getBackingStore()->set('tokenLifetimePolicies', $value);
@@ -769,7 +769,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the verifiedPublisher property value. Specifies the verified publisher of the application. For more information about how publisher verification helps support application security, trustworthiness, and compliance, see Publisher verification.
-     *  @param VerifiedPublisher|null $value Value to set for the verifiedPublisher property.
+     * @param VerifiedPublisher|null $value Value to set for the verifiedPublisher property.
     */
     public function setVerifiedPublisher(?VerifiedPublisher $value): void {
         $this->getBackingStore()->set('verifiedPublisher', $value);
@@ -777,7 +777,7 @@ class Application extends DirectoryObject implements Parsable
 
     /**
      * Sets the web property value. Specifies settings for a web application.
-     *  @param WebApplication|null $value Value to set for the web property.
+     * @param WebApplication|null $value Value to set for the web property.
     */
     public function setWeb(?WebApplication $value): void {
         $this->getBackingStore()->set('web', $value);

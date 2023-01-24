@@ -54,7 +54,7 @@ class InviteParticipantsOperation extends CommsOperation implements Parsable
 
     /**
      * Sets the participants property value. The participants to invite.
-     *  @param array<InvitationParticipantInfo>|null $value Value to set for the participants property.
+     * @param array<InvitationParticipantInfo>|null $value Value to set for the participants property.
     */
     public function setParticipants(?array $value): void {
         $this->getBackingStore()->set('participants', $value);

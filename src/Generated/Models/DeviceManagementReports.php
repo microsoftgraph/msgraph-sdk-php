@@ -54,7 +54,7 @@ class DeviceManagementReports extends Entity implements Parsable
 
     /**
      * Sets the exportJobs property value. Entity representing a job to export a report
-     *  @param array<DeviceManagementExportJob>|null $value Value to set for the exportJobs property.
+     * @param array<DeviceManagementExportJob>|null $value Value to set for the exportJobs property.
     */
     public function setExportJobs(?array $value): void {
         $this->getBackingStore()->set('exportJobs', $value);

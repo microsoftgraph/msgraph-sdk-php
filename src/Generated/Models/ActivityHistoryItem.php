@@ -135,7 +135,7 @@ class ActivityHistoryItem extends Entity implements Parsable
 
     /**
      * Sets the activeDurationSeconds property value. Optional. The duration of active user engagement. if not supplied, this is calculated from the startedDateTime and lastActiveDateTime.
-     *  @param int|null $value Value to set for the activeDurationSeconds property.
+     * @param int|null $value Value to set for the activeDurationSeconds property.
     */
     public function setActiveDurationSeconds(?int $value): void {
         $this->getBackingStore()->set('activeDurationSeconds', $value);
@@ -143,7 +143,7 @@ class ActivityHistoryItem extends Entity implements Parsable
 
     /**
      * Sets the activity property value. The activity property
-     *  @param UserActivity|null $value Value to set for the activity property.
+     * @param UserActivity|null $value Value to set for the activity property.
     */
     public function setActivity(?UserActivity $value): void {
         $this->getBackingStore()->set('activity', $value);
@@ -151,7 +151,7 @@ class ActivityHistoryItem extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. Set by the server. DateTime in UTC when the object was created on the server.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -159,7 +159,7 @@ class ActivityHistoryItem extends Entity implements Parsable
 
     /**
      * Sets the expirationDateTime property value. Optional. UTC DateTime when the historyItem will undergo hard-delete. Can be set by the client.
-     *  @param DateTime|null $value Value to set for the expirationDateTime property.
+     * @param DateTime|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('expirationDateTime', $value);
@@ -167,7 +167,7 @@ class ActivityHistoryItem extends Entity implements Parsable
 
     /**
      * Sets the lastActiveDateTime property value. Optional. UTC DateTime when the historyItem (activity session) was last understood as active or finished - if null, historyItem status should be Ongoing.
-     *  @param DateTime|null $value Value to set for the lastActiveDateTime property.
+     * @param DateTime|null $value Value to set for the lastActiveDateTime property.
     */
     public function setLastActiveDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastActiveDateTime', $value);
@@ -175,7 +175,7 @@ class ActivityHistoryItem extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. Set by the server. DateTime in UTC when the object was modified on the server.
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -183,7 +183,7 @@ class ActivityHistoryItem extends Entity implements Parsable
 
     /**
      * Sets the startedDateTime property value. Required. UTC DateTime when the historyItem (activity session) was started. Required for timeline history.
-     *  @param DateTime|null $value Value to set for the startedDateTime property.
+     * @param DateTime|null $value Value to set for the startedDateTime property.
     */
     public function setStartedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('startedDateTime', $value);
@@ -191,7 +191,7 @@ class ActivityHistoryItem extends Entity implements Parsable
 
     /**
      * Sets the status property value. Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
-     *  @param Status|null $value Value to set for the status property.
+     * @param Status|null $value Value to set for the status property.
     */
     public function setStatus(?Status $value): void {
         $this->getBackingStore()->set('status', $value);
@@ -199,7 +199,7 @@ class ActivityHistoryItem extends Entity implements Parsable
 
     /**
      * Sets the userTimezone property value. Optional. The timezone in which the user's device used to generate the activity was located at activity creation time. Values supplied as Olson IDs in order to support cross-platform representation.
-     *  @param string|null $value Value to set for the userTimezone property.
+     * @param string|null $value Value to set for the userTimezone property.
     */
     public function setUserTimezone(?string $value): void {
         $this->getBackingStore()->set('userTimezone', $value);

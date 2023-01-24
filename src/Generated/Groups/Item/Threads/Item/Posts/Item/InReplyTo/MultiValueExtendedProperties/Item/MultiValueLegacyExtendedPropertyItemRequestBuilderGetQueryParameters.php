@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyT
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The collection of multi-value extended properties defined for the post. Read-only. Nullable.
+*/
 class MultiValueLegacyExtendedPropertyItemRequestBuilderGetQueryParameters 
 {
     /**

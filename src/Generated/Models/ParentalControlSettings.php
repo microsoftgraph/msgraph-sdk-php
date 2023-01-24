@@ -100,7 +100,7 @@ class ParentalControlSettings implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -108,7 +108,7 @@ class ParentalControlSettings implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -116,7 +116,7 @@ class ParentalControlSettings implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the countriesBlockedForMinors property value. Specifies the two-letter ISO country codes. Access to the application will be blocked for minors from the countries specified in this list.
-     *  @param array<string>|null $value Value to set for the countriesBlockedForMinors property.
+     * @param array<string>|null $value Value to set for the countriesBlockedForMinors property.
     */
     public function setCountriesBlockedForMinors(?array $value): void {
         $this->getBackingStore()->set('countriesBlockedForMinors', $value);
@@ -124,7 +124,7 @@ class ParentalControlSettings implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the legalAgeGroupRule property value. Specifies the legal age group rule that applies to users of the app. Can be set to one of the following values: ValueDescriptionAllowDefault. Enforces the legal minimum. This means parental consent is required for minors in the European Union and Korea.RequireConsentForPrivacyServicesEnforces the user to specify date of birth to comply with COPPA rules. RequireConsentForMinorsRequires parental consent for ages below 18, regardless of country minor rules.RequireConsentForKidsRequires parental consent for ages below 14, regardless of country minor rules.BlockMinorsBlocks minors from using the app.
-     *  @param string|null $value Value to set for the legalAgeGroupRule property.
+     * @param string|null $value Value to set for the legalAgeGroupRule property.
     */
     public function setLegalAgeGroupRule(?string $value): void {
         $this->getBackingStore()->set('legalAgeGroupRule', $value);
@@ -132,7 +132,7 @@ class ParentalControlSettings implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);

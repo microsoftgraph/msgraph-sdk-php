@@ -425,7 +425,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the accountEnabled property value. True if the account is enabled; otherwise, false. This property is required when a user is created. Supports $filter.
-     *  @param bool|null $value Value to set for the accountEnabled property.
+     * @param bool|null $value Value to set for the accountEnabled property.
     */
     public function setAccountEnabled(?bool $value): void {
         $this->getBackingStore()->set('accountEnabled', $value);
@@ -433,7 +433,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the assignedLicenses property value. The licenses that are assigned to the user. Not nullable.
-     *  @param array<AssignedLicense>|null $value Value to set for the assignedLicenses property.
+     * @param array<AssignedLicense>|null $value Value to set for the assignedLicenses property.
     */
     public function setAssignedLicenses(?array $value): void {
         $this->getBackingStore()->set('assignedLicenses', $value);
@@ -441,7 +441,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the assignedPlans property value. The plans that are assigned to the user. Read-only. Not nullable.
-     *  @param array<AssignedPlan>|null $value Value to set for the assignedPlans property.
+     * @param array<AssignedPlan>|null $value Value to set for the assignedPlans property.
     */
     public function setAssignedPlans(?array $value): void {
         $this->getBackingStore()->set('assignedPlans', $value);
@@ -449,7 +449,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the assignments property value. Assignments belonging to the user.
-     *  @param array<EducationAssignment>|null $value Value to set for the assignments property.
+     * @param array<EducationAssignment>|null $value Value to set for the assignments property.
     */
     public function setAssignments(?array $value): void {
         $this->getBackingStore()->set('assignments', $value);
@@ -457,7 +457,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the businessPhones property value. The telephone numbers for the user. Note: Although this is a string collection, only one number can be set for this property.
-     *  @param array<string>|null $value Value to set for the businessPhones property.
+     * @param array<string>|null $value Value to set for the businessPhones property.
     */
     public function setBusinessPhones(?array $value): void {
         $this->getBackingStore()->set('businessPhones', $value);
@@ -465,7 +465,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the classes property value. Classes to which the user belongs. Nullable.
-     *  @param array<EducationClass>|null $value Value to set for the classes property.
+     * @param array<EducationClass>|null $value Value to set for the classes property.
     */
     public function setClasses(?array $value): void {
         $this->getBackingStore()->set('classes', $value);
@@ -473,7 +473,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the createdBy property value. The entity who created the user.
-     *  @param IdentitySet|null $value Value to set for the createdBy property.
+     * @param IdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?IdentitySet $value): void {
         $this->getBackingStore()->set('createdBy', $value);
@@ -481,7 +481,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the department property value. The name for the department in which the user works. Supports $filter.
-     *  @param string|null $value Value to set for the department property.
+     * @param string|null $value Value to set for the department property.
     */
     public function setDepartment(?string $value): void {
         $this->getBackingStore()->set('department', $value);
@@ -489,7 +489,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The name displayed in the address book for the user. This is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Supports $filter and $orderby.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -497,7 +497,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the externalSource property value. Where this user was created from. Possible values are: sis, manual.
-     *  @param EducationExternalSource|null $value Value to set for the externalSource property.
+     * @param EducationExternalSource|null $value Value to set for the externalSource property.
     */
     public function setExternalSource(?EducationExternalSource $value): void {
         $this->getBackingStore()->set('externalSource', $value);
@@ -505,7 +505,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the externalSourceDetail property value. The name of the external source this resource was generated from.
-     *  @param string|null $value Value to set for the externalSourceDetail property.
+     * @param string|null $value Value to set for the externalSourceDetail property.
     */
     public function setExternalSourceDetail(?string $value): void {
         $this->getBackingStore()->set('externalSourceDetail', $value);
@@ -513,7 +513,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the givenName property value. The given name (first name) of the user. Supports $filter.
-     *  @param string|null $value Value to set for the givenName property.
+     * @param string|null $value Value to set for the givenName property.
     */
     public function setGivenName(?string $value): void {
         $this->getBackingStore()->set('givenName', $value);
@@ -521,7 +521,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the mail property value. The SMTP address for the user, for example, jeff@contoso.onmicrosoft.com. Read-Only. Supports $filter.
-     *  @param string|null $value Value to set for the mail property.
+     * @param string|null $value Value to set for the mail property.
     */
     public function setMail(?string $value): void {
         $this->getBackingStore()->set('mail', $value);
@@ -529,7 +529,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the mailingAddress property value. The mail address of the user.
-     *  @param PhysicalAddress|null $value Value to set for the mailingAddress property.
+     * @param PhysicalAddress|null $value Value to set for the mailingAddress property.
     */
     public function setMailingAddress(?PhysicalAddress $value): void {
         $this->getBackingStore()->set('mailingAddress', $value);
@@ -537,7 +537,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the mailNickname property value. The mail alias for the user. This property must be specified when a user is created. Supports $filter.
-     *  @param string|null $value Value to set for the mailNickname property.
+     * @param string|null $value Value to set for the mailNickname property.
     */
     public function setMailNickname(?string $value): void {
         $this->getBackingStore()->set('mailNickname', $value);
@@ -545,7 +545,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the middleName property value. The middle name of the user.
-     *  @param string|null $value Value to set for the middleName property.
+     * @param string|null $value Value to set for the middleName property.
     */
     public function setMiddleName(?string $value): void {
         $this->getBackingStore()->set('middleName', $value);
@@ -553,7 +553,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the mobilePhone property value. The primary cellular telephone number for the user.
-     *  @param string|null $value Value to set for the mobilePhone property.
+     * @param string|null $value Value to set for the mobilePhone property.
     */
     public function setMobilePhone(?string $value): void {
         $this->getBackingStore()->set('mobilePhone', $value);
@@ -561,7 +561,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the officeLocation property value. The officeLocation property
-     *  @param string|null $value Value to set for the officeLocation property.
+     * @param string|null $value Value to set for the officeLocation property.
     */
     public function setOfficeLocation(?string $value): void {
         $this->getBackingStore()->set('officeLocation', $value);
@@ -569,7 +569,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the onPremisesInfo property value. Additional information used to associate the Azure Active Directory user with its Active Directory counterpart.
-     *  @param EducationOnPremisesInfo|null $value Value to set for the onPremisesInfo property.
+     * @param EducationOnPremisesInfo|null $value Value to set for the onPremisesInfo property.
     */
     public function setOnPremisesInfo(?EducationOnPremisesInfo $value): void {
         $this->getBackingStore()->set('onPremisesInfo', $value);
@@ -577,7 +577,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the passwordPolicies property value. Specifies password policies for the user. This value is an enumeration with one possible value being DisableStrongPassword, which allows weaker passwords than the default policy to be specified. DisablePasswordExpiration can also be specified. The two can be specified together; for example: DisablePasswordExpiration, DisableStrongPassword.
-     *  @param string|null $value Value to set for the passwordPolicies property.
+     * @param string|null $value Value to set for the passwordPolicies property.
     */
     public function setPasswordPolicies(?string $value): void {
         $this->getBackingStore()->set('passwordPolicies', $value);
@@ -585,7 +585,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the passwordProfile property value. Specifies the password profile for the user. The profile contains the user's password. This property is required when a user is created. The password in the profile must satisfy minimum requirements as specified by the passwordPolicies property. By default, a strong password is required.
-     *  @param PasswordProfile|null $value Value to set for the passwordProfile property.
+     * @param PasswordProfile|null $value Value to set for the passwordProfile property.
     */
     public function setPasswordProfile(?PasswordProfile $value): void {
         $this->getBackingStore()->set('passwordProfile', $value);
@@ -593,7 +593,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the preferredLanguage property value. The preferred language for the user that should follow the ISO 639-1 code, for example, en-US.
-     *  @param string|null $value Value to set for the preferredLanguage property.
+     * @param string|null $value Value to set for the preferredLanguage property.
     */
     public function setPreferredLanguage(?string $value): void {
         $this->getBackingStore()->set('preferredLanguage', $value);
@@ -601,7 +601,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the primaryRole property value. The primaryRole property
-     *  @param EducationUserRole|null $value Value to set for the primaryRole property.
+     * @param EducationUserRole|null $value Value to set for the primaryRole property.
     */
     public function setPrimaryRole(?EducationUserRole $value): void {
         $this->getBackingStore()->set('primaryRole', $value);
@@ -609,7 +609,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the provisionedPlans property value. The plans that are provisioned for the user. Read-only. Not nullable.
-     *  @param array<ProvisionedPlan>|null $value Value to set for the provisionedPlans property.
+     * @param array<ProvisionedPlan>|null $value Value to set for the provisionedPlans property.
     */
     public function setProvisionedPlans(?array $value): void {
         $this->getBackingStore()->set('provisionedPlans', $value);
@@ -617,7 +617,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the refreshTokensValidFromDateTime property value. The refreshTokensValidFromDateTime property
-     *  @param DateTime|null $value Value to set for the refreshTokensValidFromDateTime property.
+     * @param DateTime|null $value Value to set for the refreshTokensValidFromDateTime property.
     */
     public function setRefreshTokensValidFromDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('refreshTokensValidFromDateTime', $value);
@@ -625,7 +625,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the relatedContacts property value. Related records associated with the user. Read-only.
-     *  @param array<RelatedContact>|null $value Value to set for the relatedContacts property.
+     * @param array<RelatedContact>|null $value Value to set for the relatedContacts property.
     */
     public function setRelatedContacts(?array $value): void {
         $this->getBackingStore()->set('relatedContacts', $value);
@@ -633,7 +633,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the residenceAddress property value. The address where the user lives.
-     *  @param PhysicalAddress|null $value Value to set for the residenceAddress property.
+     * @param PhysicalAddress|null $value Value to set for the residenceAddress property.
     */
     public function setResidenceAddress(?PhysicalAddress $value): void {
         $this->getBackingStore()->set('residenceAddress', $value);
@@ -641,7 +641,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the rubrics property value. When set, the grading rubric attached to the assignment.
-     *  @param array<EducationRubric>|null $value Value to set for the rubrics property.
+     * @param array<EducationRubric>|null $value Value to set for the rubrics property.
     */
     public function setRubrics(?array $value): void {
         $this->getBackingStore()->set('rubrics', $value);
@@ -649,7 +649,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the schools property value. Schools to which the user belongs. Nullable.
-     *  @param array<EducationSchool>|null $value Value to set for the schools property.
+     * @param array<EducationSchool>|null $value Value to set for the schools property.
     */
     public function setSchools(?array $value): void {
         $this->getBackingStore()->set('schools', $value);
@@ -657,7 +657,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the showInAddressList property value. True if the Outlook Global Address List should contain this user; otherwise, false. If not set, this will be treated as true. For users invited through the invitation manager, this property will be set to false.
-     *  @param bool|null $value Value to set for the showInAddressList property.
+     * @param bool|null $value Value to set for the showInAddressList property.
     */
     public function setShowInAddressList(?bool $value): void {
         $this->getBackingStore()->set('showInAddressList', $value);
@@ -665,7 +665,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the student property value. If the primary role is student, this block will contain student specific data.
-     *  @param EducationStudent|null $value Value to set for the student property.
+     * @param EducationStudent|null $value Value to set for the student property.
     */
     public function setStudent(?EducationStudent $value): void {
         $this->getBackingStore()->set('student', $value);
@@ -673,7 +673,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the surname property value. The user's surname (family name or last name). Supports $filter.
-     *  @param string|null $value Value to set for the surname property.
+     * @param string|null $value Value to set for the surname property.
     */
     public function setSurname(?string $value): void {
         $this->getBackingStore()->set('surname', $value);
@@ -681,7 +681,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the taughtClasses property value. Classes for which the user is a teacher.
-     *  @param array<EducationClass>|null $value Value to set for the taughtClasses property.
+     * @param array<EducationClass>|null $value Value to set for the taughtClasses property.
     */
     public function setTaughtClasses(?array $value): void {
         $this->getBackingStore()->set('taughtClasses', $value);
@@ -689,7 +689,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the teacher property value. If the primary role is teacher, this block will contain teacher specific data.
-     *  @param EducationTeacher|null $value Value to set for the teacher property.
+     * @param EducationTeacher|null $value Value to set for the teacher property.
     */
     public function setTeacher(?EducationTeacher $value): void {
         $this->getBackingStore()->set('teacher', $value);
@@ -697,7 +697,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the usageLocation property value. A two-letter country code (ISO standard 3166). Required for users who will be assigned licenses due to a legal requirement to check for availability of services in countries or regions. Examples include: US, JP, and GB. Not nullable. Supports $filter.
-     *  @param string|null $value Value to set for the usageLocation property.
+     * @param string|null $value Value to set for the usageLocation property.
     */
     public function setUsageLocation(?string $value): void {
         $this->getBackingStore()->set('usageLocation', $value);
@@ -705,7 +705,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the user property value. The directory user that corresponds to this user.
-     *  @param User|null $value Value to set for the user property.
+     * @param User|null $value Value to set for the user property.
     */
     public function setUser(?User $value): void {
         $this->getBackingStore()->set('user', $value);
@@ -713,7 +713,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the userPrincipalName property value. The user principal name (UPN) of the user. The UPN is an internet-style login name for the user based on the internet standard RFC 822. By convention, this should map to the user's email name. The general format is alias@domain, where domain must be present in the tenant's collection of verified domains. This property is required when a user is created. The verified domains for the tenant can be accessed from the verifiedDomains property of the organization. Supports $filter and $orderby.
-     *  @param string|null $value Value to set for the userPrincipalName property.
+     * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {
         $this->getBackingStore()->set('userPrincipalName', $value);
@@ -721,7 +721,7 @@ class EducationUser extends Entity implements Parsable
 
     /**
      * Sets the userType property value. A string value that can be used to classify user types in your directory, such as Member and Guest. Supports $filter.
-     *  @param string|null $value Value to set for the userType property.
+     * @param string|null $value Value to set for the userType property.
     */
     public function setUserType(?string $value): void {
         $this->getBackingStore()->set('userType', $value);

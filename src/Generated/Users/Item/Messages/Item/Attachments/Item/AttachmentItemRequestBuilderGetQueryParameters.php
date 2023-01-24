@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Messages\Item\Attachments\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The fileAttachment and itemAttachment attachments for the message.
+*/
 class AttachmentItemRequestBuilderGetQueryParameters 
 {
     /**

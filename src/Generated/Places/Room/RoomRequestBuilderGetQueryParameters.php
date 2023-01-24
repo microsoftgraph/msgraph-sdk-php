@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Places\Room;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get the items of type microsoft.graph.room in the microsoft.graph.place collection
+*/
 class RoomRequestBuilderGetQueryParameters 
 {
     /**

@@ -75,7 +75,7 @@ class CallStartedEventMessageDetail extends EventMessageDetail implements Parsab
 
     /**
      * Sets the callEventType property value. Represents the call event type. Possible values are: call, meeting, screenShare, unknownFutureValue.
-     *  @param TeamworkCallEventType|null $value Value to set for the callEventType property.
+     * @param TeamworkCallEventType|null $value Value to set for the callEventType property.
     */
     public function setCallEventType(?TeamworkCallEventType $value): void {
         $this->getBackingStore()->set('callEventType', $value);
@@ -83,7 +83,7 @@ class CallStartedEventMessageDetail extends EventMessageDetail implements Parsab
 
     /**
      * Sets the callId property value. Unique identifier of the call.
-     *  @param string|null $value Value to set for the callId property.
+     * @param string|null $value Value to set for the callId property.
     */
     public function setCallId(?string $value): void {
         $this->getBackingStore()->set('callId', $value);
@@ -91,7 +91,7 @@ class CallStartedEventMessageDetail extends EventMessageDetail implements Parsab
 
     /**
      * Sets the initiator property value. Initiator of the event.
-     *  @param IdentitySet|null $value Value to set for the initiator property.
+     * @param IdentitySet|null $value Value to set for the initiator property.
     */
     public function setInitiator(?IdentitySet $value): void {
         $this->getBackingStore()->set('initiator', $value);

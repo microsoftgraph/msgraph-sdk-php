@@ -75,7 +75,7 @@ class EducationOutcome extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedBy property value. The individual who updated the resource.
-     *  @param IdentitySet|null $value Value to set for the lastModifiedBy property.
+     * @param IdentitySet|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?IdentitySet $value): void {
         $this->getBackingStore()->set('lastModifiedBy', $value);
@@ -83,7 +83,7 @@ class EducationOutcome extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. The moment in time when the resource was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2021 is 2021-01-01T00:00:00Z.
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);

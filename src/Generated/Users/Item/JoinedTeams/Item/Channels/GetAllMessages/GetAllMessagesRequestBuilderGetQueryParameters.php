@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\GetAllM
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Invoke function getAllMessages
+*/
 class GetAllMessagesRequestBuilderGetQueryParameters 
 {
     /**

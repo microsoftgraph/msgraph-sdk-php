@@ -55,7 +55,7 @@ class UserScopeTeamsAppInstallation extends TeamsAppInstallation implements Pars
 
     /**
      * Sets the chat property value. The chat between the user and Teams app.
-     *  @param Chat|null $value Value to set for the chat property.
+     * @param Chat|null $value Value to set for the chat property.
     */
     public function setChat(?Chat $value): void {
         $this->getBackingStore()->set('chat', $value);

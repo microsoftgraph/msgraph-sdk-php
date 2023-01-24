@@ -64,7 +64,7 @@ class WorkbookChartPoint extends Entity implements Parsable
 
     /**
      * Sets the format property value. Encapsulates the format properties chart point. Read-only.
-     *  @param WorkbookChartPointFormat|null $value Value to set for the format property.
+     * @param WorkbookChartPointFormat|null $value Value to set for the format property.
     */
     public function setFormat(?WorkbookChartPointFormat $value): void {
         $this->getBackingStore()->set('format', $value);
@@ -72,7 +72,7 @@ class WorkbookChartPoint extends Entity implements Parsable
 
     /**
      * Sets the value property value. Returns the value of a chart point. Read-only.
-     *  @param Json|null $value Value to set for the value property.
+     * @param Json|null $value Value to set for the value property.
     */
     public function setValue(?Json $value): void {
         $this->getBackingStore()->set('value', $value);

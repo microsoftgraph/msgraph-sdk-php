@@ -76,7 +76,7 @@ class AttachmentSession extends Entity implements Parsable
 
     /**
      * Sets the content property value. The content property
-     *  @param StreamInterface|null $value Value to set for the content property.
+     * @param StreamInterface|null $value Value to set for the content property.
     */
     public function setContent(?StreamInterface $value): void {
         $this->getBackingStore()->set('content', $value);
@@ -84,7 +84,7 @@ class AttachmentSession extends Entity implements Parsable
 
     /**
      * Sets the expirationDateTime property value. The expirationDateTime property
-     *  @param DateTime|null $value Value to set for the expirationDateTime property.
+     * @param DateTime|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('expirationDateTime', $value);
@@ -92,7 +92,7 @@ class AttachmentSession extends Entity implements Parsable
 
     /**
      * Sets the nextExpectedRanges property value. The nextExpectedRanges property
-     *  @param array<string>|null $value Value to set for the nextExpectedRanges property.
+     * @param array<string>|null $value Value to set for the nextExpectedRanges property.
     */
     public function setNextExpectedRanges(?array $value): void {
         $this->getBackingStore()->set('nextExpectedRanges', $value);

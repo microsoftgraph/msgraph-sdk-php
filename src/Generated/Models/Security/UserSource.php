@@ -75,7 +75,7 @@ class UserSource extends DataSource implements Parsable
 
     /**
      * Sets the email property value. Email address of the user's mailbox.
-     *  @param string|null $value Value to set for the email property.
+     * @param string|null $value Value to set for the email property.
     */
     public function setEmail(?string $value): void {
         $this->getBackingStore()->set('email', $value);
@@ -83,7 +83,7 @@ class UserSource extends DataSource implements Parsable
 
     /**
      * Sets the includedSources property value. Specifies which sources are included in this group. Possible values are: mailbox, site.
-     *  @param SourceType|null $value Value to set for the includedSources property.
+     * @param SourceType|null $value Value to set for the includedSources property.
     */
     public function setIncludedSources(?SourceType $value): void {
         $this->getBackingStore()->set('includedSources', $value);
@@ -91,7 +91,7 @@ class UserSource extends DataSource implements Parsable
 
     /**
      * Sets the siteWebUrl property value. The URL of the user's OneDrive for Business site. Read-only.
-     *  @param string|null $value Value to set for the siteWebUrl property.
+     * @param string|null $value Value to set for the siteWebUrl property.
     */
     public function setSiteWebUrl(?string $value): void {
         $this->getBackingStore()->set('siteWebUrl', $value);

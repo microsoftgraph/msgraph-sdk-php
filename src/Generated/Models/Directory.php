@@ -74,7 +74,7 @@ class Directory extends Entity implements Parsable
 
     /**
      * Sets the administrativeUnits property value. Conceptual container for user and group directory objects.
-     *  @param array<AdministrativeUnit>|null $value Value to set for the administrativeUnits property.
+     * @param array<AdministrativeUnit>|null $value Value to set for the administrativeUnits property.
     */
     public function setAdministrativeUnits(?array $value): void {
         $this->getBackingStore()->set('administrativeUnits', $value);
@@ -82,7 +82,7 @@ class Directory extends Entity implements Parsable
 
     /**
      * Sets the deletedItems property value. Recently deleted items. Read-only. Nullable.
-     *  @param array<DirectoryObject>|null $value Value to set for the deletedItems property.
+     * @param array<DirectoryObject>|null $value Value to set for the deletedItems property.
     */
     public function setDeletedItems(?array $value): void {
         $this->getBackingStore()->set('deletedItems', $value);
@@ -90,7 +90,7 @@ class Directory extends Entity implements Parsable
 
     /**
      * Sets the federationConfigurations property value. Configure domain federation with organizations whose identity provider (IdP) supports either the SAML or WS-Fed protocol.
-     *  @param array<IdentityProviderBase>|null $value Value to set for the federationConfigurations property.
+     * @param array<IdentityProviderBase>|null $value Value to set for the federationConfigurations property.
     */
     public function setFederationConfigurations(?array $value): void {
         $this->getBackingStore()->set('federationConfigurations', $value);

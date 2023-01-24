@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleDef
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles.
+*/
 class UnifiedRoleDefinitionItemRequestBuilderGetQueryParameters 
 {
     /**

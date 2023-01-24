@@ -65,7 +65,7 @@ class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings implements
 
     /**
      * Sets the useDeviceLicensing property value. Whether or not to use device licensing.
-     *  @param bool|null $value Value to set for the useDeviceLicensing property.
+     * @param bool|null $value Value to set for the useDeviceLicensing property.
     */
     public function setUseDeviceLicensing(?bool $value): void {
         $this->getBackingStore()->set('useDeviceLicensing', $value);
@@ -73,7 +73,7 @@ class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings implements
 
     /**
      * Sets the vpnConfigurationId property value. The VPN Configuration Id to apply for this app.
-     *  @param string|null $value Value to set for the vpnConfigurationId property.
+     * @param string|null $value Value to set for the vpnConfigurationId property.
     */
     public function setVpnConfigurationId(?string $value): void {
         $this->getBackingStore()->set('vpnConfigurationId', $value);

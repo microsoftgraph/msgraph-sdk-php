@@ -55,7 +55,7 @@ class SkypeUserConversationMember extends ConversationMember implements Parsable
 
     /**
      * Sets the skypeId property value. The skypeId property
-     *  @param string|null $value Value to set for the skypeId property.
+     * @param string|null $value Value to set for the skypeId property.
     */
     public function setSkypeId(?string $value): void {
         $this->getBackingStore()->set('skypeId', $value);

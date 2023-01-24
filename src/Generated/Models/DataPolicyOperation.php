@@ -105,7 +105,7 @@ class DataPolicyOperation extends Entity implements Parsable
 
     /**
      * Sets the completedDateTime property value. Represents when the request for this data policy operation was completed, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Null until the operation completes.
-     *  @param DateTime|null $value Value to set for the completedDateTime property.
+     * @param DateTime|null $value Value to set for the completedDateTime property.
     */
     public function setCompletedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('completedDateTime', $value);
@@ -113,7 +113,7 @@ class DataPolicyOperation extends Entity implements Parsable
 
     /**
      * Sets the progress property value. Specifies the progress of an operation.
-     *  @param float|null $value Value to set for the progress property.
+     * @param float|null $value Value to set for the progress property.
     */
     public function setProgress(?float $value): void {
         $this->getBackingStore()->set('progress', $value);
@@ -121,7 +121,7 @@ class DataPolicyOperation extends Entity implements Parsable
 
     /**
      * Sets the status property value. Possible values are: notStarted, running, complete, failed, unknownFutureValue.
-     *  @param DataPolicyOperationStatus|null $value Value to set for the status property.
+     * @param DataPolicyOperationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?DataPolicyOperationStatus $value): void {
         $this->getBackingStore()->set('status', $value);
@@ -129,7 +129,7 @@ class DataPolicyOperation extends Entity implements Parsable
 
     /**
      * Sets the storageLocation property value. The URL location to where data is being exported for export requests.
-     *  @param string|null $value Value to set for the storageLocation property.
+     * @param string|null $value Value to set for the storageLocation property.
     */
     public function setStorageLocation(?string $value): void {
         $this->getBackingStore()->set('storageLocation', $value);
@@ -137,7 +137,7 @@ class DataPolicyOperation extends Entity implements Parsable
 
     /**
      * Sets the submittedDateTime property value. Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the submittedDateTime property.
+     * @param DateTime|null $value Value to set for the submittedDateTime property.
     */
     public function setSubmittedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('submittedDateTime', $value);
@@ -145,7 +145,7 @@ class DataPolicyOperation extends Entity implements Parsable
 
     /**
      * Sets the userId property value. The id for the user on whom the operation is performed.
-     *  @param string|null $value Value to set for the userId property.
+     * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {
         $this->getBackingStore()->set('userId', $value);

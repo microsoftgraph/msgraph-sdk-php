@@ -74,7 +74,7 @@ class WorkbookChartSeries extends Entity implements Parsable
 
     /**
      * Sets the format property value. Represents the formatting of a chart series, which includes fill and line formatting. Read-only.
-     *  @param WorkbookChartSeriesFormat|null $value Value to set for the format property.
+     * @param WorkbookChartSeriesFormat|null $value Value to set for the format property.
     */
     public function setFormat(?WorkbookChartSeriesFormat $value): void {
         $this->getBackingStore()->set('format', $value);
@@ -82,7 +82,7 @@ class WorkbookChartSeries extends Entity implements Parsable
 
     /**
      * Sets the name property value. Represents the name of a series in a chart.
-     *  @param string|null $value Value to set for the name property.
+     * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
         $this->getBackingStore()->set('name', $value);
@@ -90,7 +90,7 @@ class WorkbookChartSeries extends Entity implements Parsable
 
     /**
      * Sets the points property value. Represents a collection of all points in the series. Read-only.
-     *  @param array<WorkbookChartPoint>|null $value Value to set for the points property.
+     * @param array<WorkbookChartPoint>|null $value Value to set for the points property.
     */
     public function setPoints(?array $value): void {
         $this->getBackingStore()->set('points', $value);

@@ -7,6 +7,9 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Device Configuration.
+*/
 class DeviceConfiguration extends Entity implements Parsable 
 {
     /**
@@ -187,7 +190,7 @@ class DeviceConfiguration extends Entity implements Parsable
 
     /**
      * Sets the assignments property value. The list of assignments for the device configuration profile.
-     *  @param array<DeviceConfigurationAssignment>|null $value Value to set for the assignments property.
+     * @param array<DeviceConfigurationAssignment>|null $value Value to set for the assignments property.
     */
     public function setAssignments(?array $value): void {
         $this->getBackingStore()->set('assignments', $value);
@@ -195,7 +198,7 @@ class DeviceConfiguration extends Entity implements Parsable
 
     /**
      * Sets the createdDateTime property value. DateTime the object was created.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -203,7 +206,7 @@ class DeviceConfiguration extends Entity implements Parsable
 
     /**
      * Sets the description property value. Admin provided description of the Device Configuration.
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -211,7 +214,7 @@ class DeviceConfiguration extends Entity implements Parsable
 
     /**
      * Sets the deviceSettingStateSummaries property value. Device Configuration Setting State Device Summary
-     *  @param array<SettingStateDeviceSummary>|null $value Value to set for the deviceSettingStateSummaries property.
+     * @param array<SettingStateDeviceSummary>|null $value Value to set for the deviceSettingStateSummaries property.
     */
     public function setDeviceSettingStateSummaries(?array $value): void {
         $this->getBackingStore()->set('deviceSettingStateSummaries', $value);
@@ -219,7 +222,7 @@ class DeviceConfiguration extends Entity implements Parsable
 
     /**
      * Sets the deviceStatuses property value. Device configuration installation status by device.
-     *  @param array<DeviceConfigurationDeviceStatus>|null $value Value to set for the deviceStatuses property.
+     * @param array<DeviceConfigurationDeviceStatus>|null $value Value to set for the deviceStatuses property.
     */
     public function setDeviceStatuses(?array $value): void {
         $this->getBackingStore()->set('deviceStatuses', $value);
@@ -227,7 +230,7 @@ class DeviceConfiguration extends Entity implements Parsable
 
     /**
      * Sets the deviceStatusOverview property value. Device Configuration devices status overview
-     *  @param DeviceConfigurationDeviceOverview|null $value Value to set for the deviceStatusOverview property.
+     * @param DeviceConfigurationDeviceOverview|null $value Value to set for the deviceStatusOverview property.
     */
     public function setDeviceStatusOverview(?DeviceConfigurationDeviceOverview $value): void {
         $this->getBackingStore()->set('deviceStatusOverview', $value);
@@ -235,7 +238,7 @@ class DeviceConfiguration extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. Admin provided name of the device configuration.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -243,7 +246,7 @@ class DeviceConfiguration extends Entity implements Parsable
 
     /**
      * Sets the lastModifiedDateTime property value. DateTime the object was last modified.
-     *  @param DateTime|null $value Value to set for the lastModifiedDateTime property.
+     * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
@@ -251,7 +254,7 @@ class DeviceConfiguration extends Entity implements Parsable
 
     /**
      * Sets the userStatuses property value. Device configuration installation status by user.
-     *  @param array<DeviceConfigurationUserStatus>|null $value Value to set for the userStatuses property.
+     * @param array<DeviceConfigurationUserStatus>|null $value Value to set for the userStatuses property.
     */
     public function setUserStatuses(?array $value): void {
         $this->getBackingStore()->set('userStatuses', $value);
@@ -259,7 +262,7 @@ class DeviceConfiguration extends Entity implements Parsable
 
     /**
      * Sets the userStatusOverview property value. Device Configuration users status overview
-     *  @param DeviceConfigurationUserOverview|null $value Value to set for the userStatusOverview property.
+     * @param DeviceConfigurationUserOverview|null $value Value to set for the userStatusOverview property.
     */
     public function setUserStatusOverview(?DeviceConfigurationUserOverview $value): void {
         $this->getBackingStore()->set('userStatusOverview', $value);
@@ -267,7 +270,7 @@ class DeviceConfiguration extends Entity implements Parsable
 
     /**
      * Sets the version property value. Version of the device configuration.
-     *  @param int|null $value Value to set for the version property.
+     * @param int|null $value Value to set for the version property.
     */
     public function setVersion(?int $value): void {
         $this->getBackingStore()->set('version', $value);

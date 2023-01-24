@@ -55,7 +55,7 @@ class IosMobileAppIdentifier extends MobileAppIdentifier implements Parsable
 
     /**
      * Sets the bundleId property value. The identifier for an app, as specified in the app store.
-     *  @param string|null $value Value to set for the bundleId property.
+     * @param string|null $value Value to set for the bundleId property.
     */
     public function setBundleId(?string $value): void {
         $this->getBackingStore()->set('bundleId', $value);

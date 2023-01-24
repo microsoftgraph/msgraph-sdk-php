@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Outlook;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get outlook from users
+*/
 class OutlookRequestBuilderGetQueryParameters 
 {
     /**

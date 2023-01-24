@@ -71,7 +71,7 @@ class TeamsAppInstallation extends Entity implements Parsable
 
     /**
      * Sets the teamsApp property value. The app that is installed.
-     *  @param TeamsApp|null $value Value to set for the teamsApp property.
+     * @param TeamsApp|null $value Value to set for the teamsApp property.
     */
     public function setTeamsApp(?TeamsApp $value): void {
         $this->getBackingStore()->set('teamsApp', $value);
@@ -79,7 +79,7 @@ class TeamsAppInstallation extends Entity implements Parsable
 
     /**
      * Sets the teamsAppDefinition property value. The details of this version of the app.
-     *  @param TeamsAppDefinition|null $value Value to set for the teamsAppDefinition property.
+     * @param TeamsAppDefinition|null $value Value to set for the teamsAppDefinition property.
     */
     public function setTeamsAppDefinition(?TeamsAppDefinition $value): void {
         $this->getBackingStore()->set('teamsAppDefinition', $value);

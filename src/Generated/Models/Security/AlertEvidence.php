@@ -161,7 +161,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -169,7 +169,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -177,7 +177,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the createdDateTime property value. The time the evidence was created and added to the alert.
-     *  @param DateTime|null $value Value to set for the createdDateTime property.
+     * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
@@ -185,7 +185,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -193,7 +193,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the remediationStatus property value. The remediationStatus property
-     *  @param EvidenceRemediationStatus|null $value Value to set for the remediationStatus property.
+     * @param EvidenceRemediationStatus|null $value Value to set for the remediationStatus property.
     */
     public function setRemediationStatus(?EvidenceRemediationStatus $value): void {
         $this->getBackingStore()->set('remediationStatus', $value);
@@ -201,7 +201,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the remediationStatusDetails property value. Details about the remediation status.
-     *  @param string|null $value Value to set for the remediationStatusDetails property.
+     * @param string|null $value Value to set for the remediationStatusDetails property.
     */
     public function setRemediationStatusDetails(?string $value): void {
         $this->getBackingStore()->set('remediationStatusDetails', $value);
@@ -209,7 +209,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the roles property value. The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role 'Attacker'.
-     *  @param array<EvidenceRole>|null $value Value to set for the roles property.
+     * @param array<EvidenceRole>|null $value Value to set for the roles property.
     */
     public function setRoles(?array $value): void {
         $this->getBackingStore()->set('roles', $value);
@@ -217,7 +217,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the tags property value. Array of custom tags associated with an evidence instance, for example to denote a group of devices, high value assets, etc.
-     *  @param array<string>|null $value Value to set for the tags property.
+     * @param array<string>|null $value Value to set for the tags property.
     */
     public function setTags(?array $value): void {
         $this->getBackingStore()->set('tags', $value);
@@ -225,7 +225,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the verdict property value. The verdict property
-     *  @param EvidenceVerdict|null $value Value to set for the verdict property.
+     * @param EvidenceVerdict|null $value Value to set for the verdict property.
     */
     public function setVerdict(?EvidenceVerdict $value): void {
         $this->getBackingStore()->set('verdict', $value);

@@ -84,7 +84,7 @@ class TeamsApp extends Entity implements Parsable
 
     /**
      * Sets the appDefinitions property value. The details for each version of the app.
-     *  @param array<TeamsAppDefinition>|null $value Value to set for the appDefinitions property.
+     * @param array<TeamsAppDefinition>|null $value Value to set for the appDefinitions property.
     */
     public function setAppDefinitions(?array $value): void {
         $this->getBackingStore()->set('appDefinitions', $value);
@@ -92,7 +92,7 @@ class TeamsApp extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The name of the catalog app provided by the app developer in the Microsoft Teams zip app package.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -100,7 +100,7 @@ class TeamsApp extends Entity implements Parsable
 
     /**
      * Sets the distributionMethod property value. The method of distribution for the app. Read-only.
-     *  @param TeamsAppDistributionMethod|null $value Value to set for the distributionMethod property.
+     * @param TeamsAppDistributionMethod|null $value Value to set for the distributionMethod property.
     */
     public function setDistributionMethod(?TeamsAppDistributionMethod $value): void {
         $this->getBackingStore()->set('distributionMethod', $value);
@@ -108,7 +108,7 @@ class TeamsApp extends Entity implements Parsable
 
     /**
      * Sets the externalId property value. The ID of the catalog provided by the app developer in the Microsoft Teams zip app package.
-     *  @param string|null $value Value to set for the externalId property.
+     * @param string|null $value Value to set for the externalId property.
     */
     public function setExternalId(?string $value): void {
         $this->getBackingStore()->set('externalId', $value);

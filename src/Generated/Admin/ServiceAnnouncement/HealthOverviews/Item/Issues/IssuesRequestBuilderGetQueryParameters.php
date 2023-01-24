@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews\It
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * A collection of issues that happened on the service, with detailed information for each issue.
+*/
 class IssuesRequestBuilderGetQueryParameters 
 {
     /**

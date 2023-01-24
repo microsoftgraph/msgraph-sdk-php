@@ -55,7 +55,7 @@ class OmaSettingFloatingPoint extends OmaSetting implements Parsable
 
     /**
      * Sets the value property value. Value.
-     *  @param float|null $value Value to set for the value property.
+     * @param float|null $value Value to set for the value property.
     */
     public function setValue(?float $value): void {
         $this->getBackingStore()->set('value', $value);

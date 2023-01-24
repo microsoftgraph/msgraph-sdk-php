@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Education\Schools\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get schools from education
+*/
 class EducationSchoolItemRequestBuilderGetQueryParameters 
 {
     /**

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Columns;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [site][site].
+*/
 class ColumnsRequestBuilderGetQueryParameters 
 {
     /**

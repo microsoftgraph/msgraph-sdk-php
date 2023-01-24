@@ -244,7 +244,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Sets the averageBlueScreens property value. Average (mean) number of Blue Screens per device in the last 30 days. Valid values 0 to 9999999
-     *  @param float|null $value Value to set for the averageBlueScreens property.
+     * @param float|null $value Value to set for the averageBlueScreens property.
     */
     public function setAverageBlueScreens(?float $value): void {
         $this->getBackingStore()->set('averageBlueScreens', $value);
@@ -252,7 +252,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Sets the averageRestarts property value. Average (mean) number of Restarts per device in the last 30 days. Valid values 0 to 9999999
-     *  @param float|null $value Value to set for the averageRestarts property.
+     * @param float|null $value Value to set for the averageRestarts property.
     */
     public function setAverageRestarts(?float $value): void {
         $this->getBackingStore()->set('averageRestarts', $value);
@@ -260,7 +260,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Sets the blueScreenCount property value. Number of Blue Screens in the last 30 days. Valid values 0 to 9999999
-     *  @param int|null $value Value to set for the blueScreenCount property.
+     * @param int|null $value Value to set for the blueScreenCount property.
     */
     public function setBlueScreenCount(?int $value): void {
         $this->getBackingStore()->set('blueScreenCount', $value);
@@ -268,7 +268,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Sets the bootScore property value. The user experience analytics device boot score.
-     *  @param int|null $value Value to set for the bootScore property.
+     * @param int|null $value Value to set for the bootScore property.
     */
     public function setBootScore(?int $value): void {
         $this->getBackingStore()->set('bootScore', $value);
@@ -276,7 +276,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Sets the coreBootTimeInMs property value. The user experience analytics device core boot time in milliseconds.
-     *  @param int|null $value Value to set for the coreBootTimeInMs property.
+     * @param int|null $value Value to set for the coreBootTimeInMs property.
     */
     public function setCoreBootTimeInMs(?int $value): void {
         $this->getBackingStore()->set('coreBootTimeInMs', $value);
@@ -284,7 +284,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Sets the coreLoginTimeInMs property value. The user experience analytics device core login time in milliseconds.
-     *  @param int|null $value Value to set for the coreLoginTimeInMs property.
+     * @param int|null $value Value to set for the coreLoginTimeInMs property.
     */
     public function setCoreLoginTimeInMs(?int $value): void {
         $this->getBackingStore()->set('coreLoginTimeInMs', $value);
@@ -292,7 +292,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Sets the deviceCount property value. User experience analytics summarized device count.
-     *  @param int|null $value Value to set for the deviceCount property.
+     * @param int|null $value Value to set for the deviceCount property.
     */
     public function setDeviceCount(?int $value): void {
         $this->getBackingStore()->set('deviceCount', $value);
@@ -300,7 +300,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Sets the deviceName property value. The user experience analytics device name.
-     *  @param string|null $value Value to set for the deviceName property.
+     * @param string|null $value Value to set for the deviceName property.
     */
     public function setDeviceName(?string $value): void {
         $this->getBackingStore()->set('deviceName', $value);
@@ -308,7 +308,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Sets the diskType property value. The diskType property
-     *  @param DiskType|null $value Value to set for the diskType property.
+     * @param DiskType|null $value Value to set for the diskType property.
     */
     public function setDiskType(?DiskType $value): void {
         $this->getBackingStore()->set('diskType', $value);
@@ -316,7 +316,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Sets the groupPolicyBootTimeInMs property value. The user experience analytics device group policy boot time in milliseconds.
-     *  @param int|null $value Value to set for the groupPolicyBootTimeInMs property.
+     * @param int|null $value Value to set for the groupPolicyBootTimeInMs property.
     */
     public function setGroupPolicyBootTimeInMs(?int $value): void {
         $this->getBackingStore()->set('groupPolicyBootTimeInMs', $value);
@@ -324,7 +324,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Sets the groupPolicyLoginTimeInMs property value. The user experience analytics device group policy login time in milliseconds.
-     *  @param int|null $value Value to set for the groupPolicyLoginTimeInMs property.
+     * @param int|null $value Value to set for the groupPolicyLoginTimeInMs property.
     */
     public function setGroupPolicyLoginTimeInMs(?int $value): void {
         $this->getBackingStore()->set('groupPolicyLoginTimeInMs', $value);
@@ -332,7 +332,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Sets the healthStatus property value. The healthStatus property
-     *  @param UserExperienceAnalyticsHealthState|null $value Value to set for the healthStatus property.
+     * @param UserExperienceAnalyticsHealthState|null $value Value to set for the healthStatus property.
     */
     public function setHealthStatus(?UserExperienceAnalyticsHealthState $value): void {
         $this->getBackingStore()->set('healthStatus', $value);
@@ -340,7 +340,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Sets the loginScore property value. The user experience analytics device login score.
-     *  @param int|null $value Value to set for the loginScore property.
+     * @param int|null $value Value to set for the loginScore property.
     */
     public function setLoginScore(?int $value): void {
         $this->getBackingStore()->set('loginScore', $value);
@@ -348,7 +348,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Sets the manufacturer property value. The user experience analytics device manufacturer.
-     *  @param string|null $value Value to set for the manufacturer property.
+     * @param string|null $value Value to set for the manufacturer property.
     */
     public function setManufacturer(?string $value): void {
         $this->getBackingStore()->set('manufacturer', $value);
@@ -356,7 +356,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Sets the model property value. The user experience analytics device model.
-     *  @param string|null $value Value to set for the model property.
+     * @param string|null $value Value to set for the model property.
     */
     public function setModel(?string $value): void {
         $this->getBackingStore()->set('model', $value);
@@ -364,7 +364,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Sets the modelStartupPerformanceScore property value. The user experience analytics model level startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     *  @param float|null $value Value to set for the modelStartupPerformanceScore property.
+     * @param float|null $value Value to set for the modelStartupPerformanceScore property.
     */
     public function setModelStartupPerformanceScore(?float $value): void {
         $this->getBackingStore()->set('modelStartupPerformanceScore', $value);
@@ -372,7 +372,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Sets the operatingSystemVersion property value. The user experience analytics device Operating System version.
-     *  @param string|null $value Value to set for the operatingSystemVersion property.
+     * @param string|null $value Value to set for the operatingSystemVersion property.
     */
     public function setOperatingSystemVersion(?string $value): void {
         $this->getBackingStore()->set('operatingSystemVersion', $value);
@@ -380,7 +380,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Sets the responsiveDesktopTimeInMs property value. The user experience analytics responsive desktop time in milliseconds.
-     *  @param int|null $value Value to set for the responsiveDesktopTimeInMs property.
+     * @param int|null $value Value to set for the responsiveDesktopTimeInMs property.
     */
     public function setResponsiveDesktopTimeInMs(?int $value): void {
         $this->getBackingStore()->set('responsiveDesktopTimeInMs', $value);
@@ -388,7 +388,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Sets the restartCount property value. Number of Restarts in the last 30 days. Valid values 0 to 9999999
-     *  @param int|null $value Value to set for the restartCount property.
+     * @param int|null $value Value to set for the restartCount property.
     */
     public function setRestartCount(?int $value): void {
         $this->getBackingStore()->set('restartCount', $value);
@@ -396,7 +396,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
 
     /**
      * Sets the startupPerformanceScore property value. The user experience analytics device startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
-     *  @param float|null $value Value to set for the startupPerformanceScore property.
+     * @param float|null $value Value to set for the startupPerformanceScore property.
     */
     public function setStartupPerformanceScore(?float $value): void {
         $this->getBackingStore()->set('startupPerformanceScore', $value);

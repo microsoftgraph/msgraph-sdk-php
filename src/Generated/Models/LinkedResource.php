@@ -84,7 +84,7 @@ class LinkedResource extends Entity implements Parsable
 
     /**
      * Sets the applicationName property value. Field indicating the app name of the source that is sending the linkedResource.
-     *  @param string|null $value Value to set for the applicationName property.
+     * @param string|null $value Value to set for the applicationName property.
     */
     public function setApplicationName(?string $value): void {
         $this->getBackingStore()->set('applicationName', $value);
@@ -92,7 +92,7 @@ class LinkedResource extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. Field indicating the title of the linkedResource.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -100,7 +100,7 @@ class LinkedResource extends Entity implements Parsable
 
     /**
      * Sets the externalId property value. Id of the object that is associated with this task on the third-party/partner system.
-     *  @param string|null $value Value to set for the externalId property.
+     * @param string|null $value Value to set for the externalId property.
     */
     public function setExternalId(?string $value): void {
         $this->getBackingStore()->set('externalId', $value);
@@ -108,7 +108,7 @@ class LinkedResource extends Entity implements Parsable
 
     /**
      * Sets the webUrl property value. Deep link to the linkedResource.
-     *  @param string|null $value Value to set for the webUrl property.
+     * @param string|null $value Value to set for the webUrl property.
     */
     public function setWebUrl(?string $value): void {
         $this->getBackingStore()->set('webUrl', $value);

@@ -101,7 +101,7 @@ class SharePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -109,7 +109,7 @@ class SharePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -117,7 +117,7 @@ class SharePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the endDateTime property value. The endDateTime property
-     *  @param DateTime|null $value Value to set for the endDateTime property.
+     * @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('endDateTime', $value);
@@ -125,7 +125,7 @@ class SharePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the notifyTeam property value. The notifyTeam property
-     *  @param bool|null $value Value to set for the notifyTeam property.
+     * @param bool|null $value Value to set for the notifyTeam property.
     */
     public function setNotifyTeam(?bool $value): void {
         $this->getBackingStore()->set('notifyTeam', $value);
@@ -133,7 +133,7 @@ class SharePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the startDateTime property value. The startDateTime property
-     *  @param DateTime|null $value Value to set for the startDateTime property.
+     * @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('startDateTime', $value);

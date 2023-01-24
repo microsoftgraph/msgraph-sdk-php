@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Authentication\PasswordMethods\It
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Represents the password that's registered to a user for authentication. For security, the password itself will never be returned in the object, but action can be taken to reset a password.
+*/
 class PasswordAuthenticationMethodItemRequestBuilderGetQueryParameters 
 {
     /**

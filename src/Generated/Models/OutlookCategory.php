@@ -64,7 +64,7 @@ class OutlookCategory extends Entity implements Parsable
 
     /**
      * Sets the color property value. A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. See the note below.
-     *  @param CategoryColor|null $value Value to set for the color property.
+     * @param CategoryColor|null $value Value to set for the color property.
     */
     public function setColor(?CategoryColor $value): void {
         $this->getBackingStore()->set('color', $value);
@@ -72,7 +72,7 @@ class OutlookCategory extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. A unique name that identifies a category in the user's mailbox. After a category is created, the name cannot be changed. Read-only.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);

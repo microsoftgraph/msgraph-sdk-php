@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get posts from groups
+*/
 class PostItemRequestBuilderGetQueryParameters 
 {
     /**

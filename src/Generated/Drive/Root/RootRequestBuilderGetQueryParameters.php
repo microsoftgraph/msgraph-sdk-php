@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Drive\Root;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Retrieve the metadata for a driveItem in a drive by file system path or ID.`item-id` is the ID of a driveItem. It may also be the unique ID of a SharePoint list item.
+*/
 class RootRequestBuilderGetQueryParameters 
 {
     /**

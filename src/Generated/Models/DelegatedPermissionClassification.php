@@ -74,7 +74,7 @@ class DelegatedPermissionClassification extends Entity implements Parsable
 
     /**
      * Sets the classification property value. The classification value being given. Possible value: low. Does not support $filter.
-     *  @param PermissionClassificationType|null $value Value to set for the classification property.
+     * @param PermissionClassificationType|null $value Value to set for the classification property.
     */
     public function setClassification(?PermissionClassificationType $value): void {
         $this->getBackingStore()->set('classification', $value);
@@ -82,7 +82,7 @@ class DelegatedPermissionClassification extends Entity implements Parsable
 
     /**
      * Sets the permissionId property value. The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
-     *  @param string|null $value Value to set for the permissionId property.
+     * @param string|null $value Value to set for the permissionId property.
     */
     public function setPermissionId(?string $value): void {
         $this->getBackingStore()->set('permissionId', $value);
@@ -90,7 +90,7 @@ class DelegatedPermissionClassification extends Entity implements Parsable
 
     /**
      * Sets the permissionName property value. The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Does not support $filter.
-     *  @param string|null $value Value to set for the permissionName property.
+     * @param string|null $value Value to set for the permissionName property.
     */
     public function setPermissionName(?string $value): void {
         $this->getBackingStore()->set('permissionName', $value);

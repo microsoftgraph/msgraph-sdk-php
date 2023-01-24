@@ -55,7 +55,7 @@ class Initiator extends Identity implements Parsable
 
     /**
      * Sets the initiatorType property value. Type of initiator. Possible values are: user, application, system, unknownFutureValue.
-     *  @param InitiatorType|null $value Value to set for the initiatorType property.
+     * @param InitiatorType|null $value Value to set for the initiatorType property.
     */
     public function setInitiatorType(?InitiatorType $value): void {
         $this->getBackingStore()->set('initiatorType', $value);

@@ -75,7 +75,7 @@ class EmailFileAssessmentRequest extends ThreatAssessmentRequest implements Pars
 
     /**
      * Sets the contentData property value. Base64 encoded .eml email file content. The file content cannot fetch back because it isn't stored.
-     *  @param string|null $value Value to set for the contentData property.
+     * @param string|null $value Value to set for the contentData property.
     */
     public function setContentData(?string $value): void {
         $this->getBackingStore()->set('contentData', $value);
@@ -83,7 +83,7 @@ class EmailFileAssessmentRequest extends ThreatAssessmentRequest implements Pars
 
     /**
      * Sets the destinationRoutingReason property value. The reason for mail routed to its destination. Possible values are: none, mailFlowRule, safeSender, blockedSender, advancedSpamFiltering, domainAllowList, domainBlockList, notInAddressBook, firstTimeSender, autoPurgeToInbox, autoPurgeToJunk, autoPurgeToDeleted, outbound, notJunk, junk.
-     *  @param MailDestinationRoutingReason|null $value Value to set for the destinationRoutingReason property.
+     * @param MailDestinationRoutingReason|null $value Value to set for the destinationRoutingReason property.
     */
     public function setDestinationRoutingReason(?MailDestinationRoutingReason $value): void {
         $this->getBackingStore()->set('destinationRoutingReason', $value);
@@ -91,7 +91,7 @@ class EmailFileAssessmentRequest extends ThreatAssessmentRequest implements Pars
 
     /**
      * Sets the recipientEmail property value. The mail recipient whose policies are used to assess the mail.
-     *  @param string|null $value Value to set for the recipientEmail property.
+     * @param string|null $value Value to set for the recipientEmail property.
     */
     public function setRecipientEmail(?string $value): void {
         $this->getBackingStore()->set('recipientEmail', $value);

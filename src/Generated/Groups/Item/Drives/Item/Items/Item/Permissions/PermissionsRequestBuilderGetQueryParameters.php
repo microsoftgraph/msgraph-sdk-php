@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Drives\Item\Items\Item\Permissio
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * List the effective sharing permissions on a driveItem.
+*/
 class PermissionsRequestBuilderGetQueryParameters 
 {
     /**

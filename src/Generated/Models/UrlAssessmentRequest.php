@@ -55,7 +55,7 @@ class UrlAssessmentRequest extends ThreatAssessmentRequest implements Parsable
 
     /**
      * Sets the url property value. The URL string.
-     *  @param string|null $value Value to set for the url property.
+     * @param string|null $value Value to set for the url property.
     */
     public function setUrl(?string $value): void {
         $this->getBackingStore()->set('url', $value);

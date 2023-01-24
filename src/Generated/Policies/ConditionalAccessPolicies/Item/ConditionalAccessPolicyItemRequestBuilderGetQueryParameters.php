@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Policies\ConditionalAccessPolicies\Item;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The custom rules that define an access scenario.
+*/
 class ConditionalAccessPolicyItemRequestBuilderGetQueryParameters 
 {
     /**

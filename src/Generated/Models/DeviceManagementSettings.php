@@ -110,7 +110,7 @@ class DeviceManagementSettings implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -118,7 +118,7 @@ class DeviceManagementSettings implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -126,7 +126,7 @@ class DeviceManagementSettings implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the deviceComplianceCheckinThresholdDays property value. The number of days a device is allowed to go without checking in to remain compliant.
-     *  @param int|null $value Value to set for the deviceComplianceCheckinThresholdDays property.
+     * @param int|null $value Value to set for the deviceComplianceCheckinThresholdDays property.
     */
     public function setDeviceComplianceCheckinThresholdDays(?int $value): void {
         $this->getBackingStore()->set('deviceComplianceCheckinThresholdDays', $value);
@@ -134,7 +134,7 @@ class DeviceManagementSettings implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the isScheduledActionEnabled property value. Is feature enabled or not for scheduled action for rule.
-     *  @param bool|null $value Value to set for the isScheduledActionEnabled property.
+     * @param bool|null $value Value to set for the isScheduledActionEnabled property.
     */
     public function setIsScheduledActionEnabled(?bool $value): void {
         $this->getBackingStore()->set('isScheduledActionEnabled', $value);
@@ -142,7 +142,7 @@ class DeviceManagementSettings implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -150,7 +150,7 @@ class DeviceManagementSettings implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * Sets the secureByDefault property value. Device should be noncompliant when there is no compliance policy targeted when this is true
-     *  @param bool|null $value Value to set for the secureByDefault property.
+     * @param bool|null $value Value to set for the secureByDefault property.
     */
     public function setSecureByDefault(?bool $value): void {
         $this->getBackingStore()->set('secureByDefault', $value);

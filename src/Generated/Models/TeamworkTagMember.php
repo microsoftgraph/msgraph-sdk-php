@@ -74,7 +74,7 @@ class TeamworkTagMember extends Entity implements Parsable
 
     /**
      * Sets the displayName property value. The member's display name.
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -82,7 +82,7 @@ class TeamworkTagMember extends Entity implements Parsable
 
     /**
      * Sets the tenantId property value. The ID of the tenant that the tag member is a part of.
-     *  @param string|null $value Value to set for the tenantId property.
+     * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {
         $this->getBackingStore()->set('tenantId', $value);
@@ -90,7 +90,7 @@ class TeamworkTagMember extends Entity implements Parsable
 
     /**
      * Sets the userId property value. The user ID of the member.
-     *  @param string|null $value Value to set for the userId property.
+     * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {
         $this->getBackingStore()->set('userId', $value);

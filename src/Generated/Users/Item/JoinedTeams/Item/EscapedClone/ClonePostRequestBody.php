@@ -132,7 +132,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -140,7 +140,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -148,7 +148,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the classification property value. The classification property
-     *  @param string|null $value Value to set for the classification property.
+     * @param string|null $value Value to set for the classification property.
     */
     public function setClassification(?string $value): void {
         $this->getBackingStore()->set('classification', $value);
@@ -156,7 +156,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the description property value. The description property
-     *  @param string|null $value Value to set for the description property.
+     * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
         $this->getBackingStore()->set('description', $value);
@@ -164,7 +164,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the displayName property value. The displayName property
-     *  @param string|null $value Value to set for the displayName property.
+     * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
@@ -172,7 +172,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the mailNickname property value. The mailNickname property
-     *  @param string|null $value Value to set for the mailNickname property.
+     * @param string|null $value Value to set for the mailNickname property.
     */
     public function setMailNickname(?string $value): void {
         $this->getBackingStore()->set('mailNickname', $value);
@@ -180,7 +180,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the partsToClone property value. The partsToClone property
-     *  @param ClonableTeamParts|null $value Value to set for the partsToClone property.
+     * @param ClonableTeamParts|null $value Value to set for the partsToClone property.
     */
     public function setPartsToClone(?ClonableTeamParts $value): void {
         $this->getBackingStore()->set('partsToClone', $value);
@@ -188,7 +188,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * Sets the visibility property value. The visibility property
-     *  @param TeamVisibilityType|null $value Value to set for the visibility property.
+     * @param TeamVisibilityType|null $value Value to set for the visibility property.
     */
     public function setVisibility(?TeamVisibilityType $value): void {
         $this->getBackingStore()->set('visibility', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\ServicePrincipals\Item\TokenIssuancePolicies
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The tokenIssuancePolicies assigned to this service principal.
+*/
 class TokenIssuancePoliciesRequestBuilderGetQueryParameters 
 {
     /**

@@ -54,7 +54,7 @@ class TimeOffItem extends ScheduleEntity implements Parsable
 
     /**
      * Sets the timeOffReasonId property value. ID of the timeOffReason for this timeOffItem. Required.
-     *  @param string|null $value Value to set for the timeOffReasonId property.
+     * @param string|null $value Value to set for the timeOffReasonId property.
     */
     public function setTimeOffReasonId(?string $value): void {
         $this->getBackingStore()->set('timeOffReasonId', $value);

@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Users\Item\Calendar\MultiValueExtendedProper
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * The collection of multi-value extended properties defined for the calendar. Read-only. Nullable.
+*/
 class MultiValueExtendedPropertiesRequestBuilderGetQueryParameters 
 {
     /**

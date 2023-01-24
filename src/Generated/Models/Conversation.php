@@ -105,7 +105,7 @@ class Conversation extends Entity implements Parsable
 
     /**
      * Sets the hasAttachments property value. Indicates whether any of the posts within this Conversation has at least one attachment. Supports $filter (eq, ne) and $search.
-     *  @param bool|null $value Value to set for the hasAttachments property.
+     * @param bool|null $value Value to set for the hasAttachments property.
     */
     public function setHasAttachments(?bool $value): void {
         $this->getBackingStore()->set('hasAttachments', $value);
@@ -113,7 +113,7 @@ class Conversation extends Entity implements Parsable
 
     /**
      * Sets the lastDeliveredDateTime property value. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
-     *  @param DateTime|null $value Value to set for the lastDeliveredDateTime property.
+     * @param DateTime|null $value Value to set for the lastDeliveredDateTime property.
     */
     public function setLastDeliveredDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastDeliveredDateTime', $value);
@@ -121,7 +121,7 @@ class Conversation extends Entity implements Parsable
 
     /**
      * Sets the preview property value. A short summary from the body of the latest post in this conversation. Supports $filter (eq, ne, le, ge).
-     *  @param string|null $value Value to set for the preview property.
+     * @param string|null $value Value to set for the preview property.
     */
     public function setPreview(?string $value): void {
         $this->getBackingStore()->set('preview', $value);
@@ -129,7 +129,7 @@ class Conversation extends Entity implements Parsable
 
     /**
      * Sets the threads property value. A collection of all the conversation threads in the conversation. A navigation property. Read-only. Nullable.
-     *  @param array<ConversationThread>|null $value Value to set for the threads property.
+     * @param array<ConversationThread>|null $value Value to set for the threads property.
     */
     public function setThreads(?array $value): void {
         $this->getBackingStore()->set('threads', $value);
@@ -137,7 +137,7 @@ class Conversation extends Entity implements Parsable
 
     /**
      * Sets the topic property value. The topic of the conversation. This property can be set when the conversation is created, but it cannot be updated.
-     *  @param string|null $value Value to set for the topic property.
+     * @param string|null $value Value to set for the topic property.
     */
     public function setTopic(?string $value): void {
         $this->getBackingStore()->set('topic', $value);
@@ -145,7 +145,7 @@ class Conversation extends Entity implements Parsable
 
     /**
      * Sets the uniqueSenders property value. All the users that sent a message to this Conversation.
-     *  @param array<string>|null $value Value to set for the uniqueSenders property.
+     * @param array<string>|null $value Value to set for the uniqueSenders property.
     */
     public function setUniqueSenders(?array $value): void {
         $this->getBackingStore()->set('uniqueSenders', $value);

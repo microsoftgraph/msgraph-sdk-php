@@ -160,7 +160,7 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     *  @param array<string,mixed> $value Value to set for the AdditionalData property.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
@@ -168,7 +168,7 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the backingStore property value. Stores model information.
-     *  @param BackingStore $value Value to set for the BackingStore property.
+     * @param BackingStore $value Value to set for the BackingStore property.
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
@@ -176,7 +176,7 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the fileName property value. The name of the file.
-     *  @param string|null $value Value to set for the fileName property.
+     * @param string|null $value Value to set for the fileName property.
     */
     public function setFileName(?string $value): void {
         $this->getBackingStore()->set('fileName', $value);
@@ -184,7 +184,7 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the filePath property value. The file path (location) of the file instance.
-     *  @param string|null $value Value to set for the filePath property.
+     * @param string|null $value Value to set for the filePath property.
     */
     public function setFilePath(?string $value): void {
         $this->getBackingStore()->set('filePath', $value);
@@ -192,7 +192,7 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the filePublisher property value. The publisher of the file.
-     *  @param string|null $value Value to set for the filePublisher property.
+     * @param string|null $value Value to set for the filePublisher property.
     */
     public function setFilePublisher(?string $value): void {
         $this->getBackingStore()->set('filePublisher', $value);
@@ -200,7 +200,7 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the fileSize property value. The size of the file in bytes.
-     *  @param int|null $value Value to set for the fileSize property.
+     * @param int|null $value Value to set for the fileSize property.
     */
     public function setFileSize(?int $value): void {
         $this->getBackingStore()->set('fileSize', $value);
@@ -208,7 +208,7 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the issuer property value. The certificate authority (CA) that issued the certificate.
-     *  @param string|null $value Value to set for the issuer property.
+     * @param string|null $value Value to set for the issuer property.
     */
     public function setIssuer(?string $value): void {
         $this->getBackingStore()->set('issuer', $value);
@@ -216,7 +216,7 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the @odata.type property value. The OdataType property
-     *  @param string|null $value Value to set for the OdataType property.
+     * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
@@ -224,7 +224,7 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the sha1 property value. The Sha1 cryptographic hash of the file content.
-     *  @param string|null $value Value to set for the sha1 property.
+     * @param string|null $value Value to set for the sha1 property.
     */
     public function setSha1(?string $value): void {
         $this->getBackingStore()->set('sha1', $value);
@@ -232,7 +232,7 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the sha256 property value. The Sha256 cryptographic hash of the file content.
-     *  @param string|null $value Value to set for the sha256 property.
+     * @param string|null $value Value to set for the sha256 property.
     */
     public function setSha256(?string $value): void {
         $this->getBackingStore()->set('sha256', $value);
@@ -240,7 +240,7 @@ class FileDetails implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Sets the signer property value. The signer of the signed file.
-     *  @param string|null $value Value to set for the signer property.
+     * @param string|null $value Value to set for the signer property.
     */
     public function setSigner(?string $value): void {
         $this->getBackingStore()->set('signer', $value);

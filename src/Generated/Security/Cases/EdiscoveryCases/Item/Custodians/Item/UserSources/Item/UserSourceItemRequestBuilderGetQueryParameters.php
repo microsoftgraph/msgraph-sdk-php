@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodia
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Data source entity for a the custodian. This is the container for a custodian's mailbox and OneDrive for Business site.
+*/
 class UserSourceItemRequestBuilderGetQueryParameters 
 {
     /**

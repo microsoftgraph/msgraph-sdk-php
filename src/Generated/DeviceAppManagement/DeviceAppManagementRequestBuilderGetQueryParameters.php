@@ -4,6 +4,9 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
+/**
+ * Get deviceAppManagement
+*/
 class DeviceAppManagementRequestBuilderGetQueryParameters 
 {
     /**

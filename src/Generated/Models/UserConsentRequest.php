@@ -64,7 +64,7 @@ class UserConsentRequest extends Request implements Parsable
 
     /**
      * Sets the approval property value. Approval decisions associated with a request.
-     *  @param Approval|null $value Value to set for the approval property.
+     * @param Approval|null $value Value to set for the approval property.
     */
     public function setApproval(?Approval $value): void {
         $this->getBackingStore()->set('approval', $value);
@@ -72,7 +72,7 @@ class UserConsentRequest extends Request implements Parsable
 
     /**
      * Sets the reason property value. The user's justification for requiring access to the app. Supports $filter (eq only) and $orderby.
-     *  @param string|null $value Value to set for the reason property.
+     * @param string|null $value Value to set for the reason property.
     */
     public function setReason(?string $value): void {
         $this->getBackingStore()->set('reason', $value);
