@@ -26,6 +26,7 @@ class AccountTargetContent extends Entity
 
     /**
     * Gets the type
+    * The type of account target content. Possible values are: unknown,includeAll, addressBook,  unknownFutureValue.
     *
     * @return AccountTargetContentType|null The type
     */
@@ -44,6 +45,7 @@ class AccountTargetContent extends Entity
 
     /**
     * Sets the type
+    * The type of account target content. Possible values are: unknown,includeAll, addressBook,  unknownFutureValue.
     *
     * @param AccountTargetContentType $val The value to assign to the type
     *

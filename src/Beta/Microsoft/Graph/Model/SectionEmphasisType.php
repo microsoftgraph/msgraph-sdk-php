@@ -30,7 +30,7 @@ class SectionEmphasisType extends Enum
     * The Enum SectionEmphasisType
     */
     const NONE = "none";
-    const NETURAL = "netural";
+    const NEUTRAL = "neutral";
     const SOFT = "soft";
     const STRONG = "strong";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";

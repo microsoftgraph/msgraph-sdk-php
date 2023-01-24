@@ -278,6 +278,7 @@ class Simulation extends Entity
 
     /**
     * Gets the durationInDays
+    * Simulation duration in days.
     *
     * @return int|null The durationInDays
     */
@@ -292,6 +293,7 @@ class Simulation extends Entity
 
     /**
     * Sets the durationInDays
+    * Simulation duration in days.
     *
     * @param int $val The durationInDays
     *
@@ -305,6 +307,7 @@ class Simulation extends Entity
 
     /**
     * Gets the excludedAccountTarget
+    * Users excluded from the simulation.
     *
     * @return AccountTargetContent|null The excludedAccountTarget
     */
@@ -323,6 +326,7 @@ class Simulation extends Entity
 
     /**
     * Sets the excludedAccountTarget
+    * Users excluded from the simulation.
     *
     * @param AccountTargetContent $val The excludedAccountTarget
     *
@@ -336,6 +340,7 @@ class Simulation extends Entity
 
     /**
     * Gets the includedAccountTarget
+    * Users targeted in the simulation.
     *
     * @return AccountTargetContent|null The includedAccountTarget
     */
@@ -354,6 +359,7 @@ class Simulation extends Entity
 
     /**
     * Sets the includedAccountTarget
+    * Users targeted in the simulation.
     *
     * @param AccountTargetContent $val The includedAccountTarget
     *
@@ -594,6 +600,7 @@ class Simulation extends Entity
 
     /**
     * Gets the payload
+    * The payload associated with a simulation during its creation.
     *
     * @return Payload|null The payload
     */
@@ -612,6 +619,7 @@ class Simulation extends Entity
 
     /**
     * Sets the payload
+    * The payload associated with a simulation during its creation.
     *
     * @param Payload $val The payload
     *

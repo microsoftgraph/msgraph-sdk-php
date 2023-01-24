@@ -506,6 +506,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Gets the virtualNetworkLocation
+    * Indicates resource location of the virtual target network. Read-only, computed value.
     *
     * @return string|null The virtualNetworkLocation
     */
@@ -520,6 +521,7 @@ class CloudPcOnPremisesConnection extends Entity
 
     /**
     * Sets the virtualNetworkLocation
+    * Indicates resource location of the virtual target network. Read-only, computed value.
     *
     * @param string $val The virtualNetworkLocation
     *
