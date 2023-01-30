@@ -8,7 +8,7 @@ This creates a default Graph client that uses `https://graph.microsoft.com` as t
 use Microsoft\Graph\GraphRequestAdapter;
 use Microsoft\Graph\GraphServiceClient;
 use Microsoft\Kiota\Authentication\Oauth\ClientCredentialContext;
-use Microsoft\Kiota\Authentication\PhpLeagueAuthenticationProvider;
+use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAuthenticationProvider;
 
 $tokenRequestContext = new AuthorizationCodeContext(
     'tenantId',
@@ -18,8 +18,7 @@ $tokenRequestContext = new AuthorizationCodeContext(
     'redirectUri'
 );
 $scopes = ['User.Read', 'Mail.ReadWrite'];
-$authProvider = new PhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
-$authProvider = new PhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
+$authProvider = new GraphPhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
 $requestAdapter = new GraphRequestAdapter($authProvider);
 $graphServiceClient = new GraphServiceClient($requestAdapter);
 
@@ -116,7 +115,7 @@ use Microsoft\Graph\GraphRequestAdapter;
 use Microsoft\Graph\GraphServiceClient;
 use Microsoft\Kiota\Abstractions\ApiException;
 use Microsoft\Kiota\Authentication\Oauth\AuthorizationCodeContext;
-use Microsoft\Kiota\Authentication\PhpLeagueAuthenticationProvider;
+use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAuthenticationProvider;
 
 
 $tokenRequestContext = new AuthorizationCodeContext(
@@ -127,7 +126,7 @@ $tokenRequestContext = new AuthorizationCodeContext(
     'redirectUri'
 );
 $scopes = ['Mail.Send'];
-$authProvider = new PhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
+$authProvider = new GraphPhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
 $requestAdapter = new GraphRequestAdapter($authProvider);
 $graphServiceClient = new GraphServiceClient($requestAdapter);
 
@@ -176,7 +175,7 @@ use Microsoft\Graph\GraphRequestAdapter;
 use Microsoft\Graph\GraphServiceClient;
 use Microsoft\Kiota\Abstractions\ApiException;
 use Microsoft\Kiota\Authentication\Oauth\AuthorizationCodeContext;
-use Microsoft\Kiota\Authentication\PhpLeagueAuthenticationProvider;
+use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAuthenticationProvider;
 
 $tokenRequestContext = new AuthorizationCodeContext(
     'tenantId',
@@ -186,7 +185,7 @@ $tokenRequestContext = new AuthorizationCodeContext(
     'redirectUri'
 );
 $scopes = ['Files.ReadWrite'];
-$authProvider = new PhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
+$authProvider = new GraphPhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
 $requestAdapter = new GraphRequestAdapter($authProvider);
 $graphServiceClient = new GraphServiceClient($requestAdapter);
 
