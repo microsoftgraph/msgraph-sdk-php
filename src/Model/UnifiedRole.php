@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* OpenTypeExtension File
+* UnifiedRole File
 * PHP version 7
 *
 * @category  Library
@@ -12,9 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
-
 /**
-* OpenTypeExtension class
+* UnifiedRole class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,35 +21,32 @@ namespace Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class OpenTypeExtension extends Extension
+class UnifiedRole extends Entity
 {
     /**
-    * Gets the extensionName
-    * A unique text identifier for an open type data extension. Optional.
+    * Gets the roleDefinitionId
     *
-    * @return string|null The extensionName
+    * @return string|null The roleDefinitionId
     */
-    public function getExtensionName()
+    public function getRoleDefinitionId()
     {
-        if (array_key_exists("extensionName", $this->_propDict)) {
-            return $this->_propDict["extensionName"];
+        if (array_key_exists("roleDefinitionId", $this->_propDict)) {
+            return $this->_propDict["roleDefinitionId"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the extensionName
-    * A unique text identifier for an open type data extension. Optional.
+    * Sets the roleDefinitionId
     *
-    * @param string $val The extensionName
+    * @param string $val The value of the roleDefinitionId
     *
-    * @return OpenTypeExtension
+    * @return UnifiedRole
     */
-    public function setExtensionName($val)
+    public function setRoleDefinitionId($val)
     {
-        $this->_propDict["extensionName"] = $val;
+        $this->_propDict["roleDefinitionId"] = $val;
         return $this;
     }
-
 }

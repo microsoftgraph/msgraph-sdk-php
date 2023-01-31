@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* IncidentStatus File
+* WeakAlgorithms File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Microsoft\Graph\SecurityNamespace\Model;
+namespace Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* IncidentStatus class
+* WeakAlgorithms class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +24,11 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class IncidentStatus extends Enum
+class WeakAlgorithms extends Enum
 {
     /**
-    * The Enum IncidentStatus
+    * The Enum WeakAlgorithms
     */
-    const ACTIVE = "active";
-    const RESOLVED = "resolved";
-    const IN_PROGRESS = "inProgress";
-    const REDIRECTED = "redirected";
+    const RSA_SHA1 = "rsaSha1";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

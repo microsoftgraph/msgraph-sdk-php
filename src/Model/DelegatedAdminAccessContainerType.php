@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* IncidentStatus File
+* DelegatedAdminAccessContainerType File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Microsoft\Graph\SecurityNamespace\Model;
+namespace Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* IncidentStatus class
+* DelegatedAdminAccessContainerType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +24,11 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class IncidentStatus extends Enum
+class DelegatedAdminAccessContainerType extends Enum
 {
     /**
-    * The Enum IncidentStatus
+    * The Enum DelegatedAdminAccessContainerType
     */
-    const ACTIVE = "active";
-    const RESOLVED = "resolved";
-    const IN_PROGRESS = "inProgress";
-    const REDIRECTED = "redirected";
+    const SECURITY_GROUP = "securityGroup";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

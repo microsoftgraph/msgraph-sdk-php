@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* IncidentStatus File
+* DelegatedAdminRelationshipRequestStatus File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Microsoft\Graph\SecurityNamespace\Model;
+namespace Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* IncidentStatus class
+* DelegatedAdminRelationshipRequestStatus class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +24,14 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class IncidentStatus extends Enum
+class DelegatedAdminRelationshipRequestStatus extends Enum
 {
     /**
-    * The Enum IncidentStatus
+    * The Enum DelegatedAdminRelationshipRequestStatus
     */
-    const ACTIVE = "active";
-    const RESOLVED = "resolved";
-    const IN_PROGRESS = "inProgress";
-    const REDIRECTED = "redirected";
+    const CREATED = "created";
+    const PENDING = "pending";
+    const SUCCEEDED = "succeeded";
+    const FAILED = "failed";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
