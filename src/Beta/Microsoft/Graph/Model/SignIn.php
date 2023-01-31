@@ -115,6 +115,7 @@ class SignIn extends Entity
 
      /**
      * Gets the appliedEventListeners
+    * Detailed information about the listeners, such as Azure Logic Apps and Azure Functions, that were triggered by the corresponding events in the sign-in event.
      *
      * @return array|null The appliedEventListeners
      */
@@ -129,6 +130,7 @@ class SignIn extends Entity
 
     /**
     * Sets the appliedEventListeners
+    * Detailed information about the listeners, such as Azure Logic Apps and Azure Functions, that were triggered by the corresponding events in the sign-in event.
     *
     * @param AppliedAuthenticationEventListener[] $val The appliedEventListeners
     *

@@ -185,6 +185,7 @@ class PrintJob extends Entity
 
     /**
     * Gets the displayName
+    * The name of the print job.
     *
     * @return string|null The displayName
     */
@@ -199,6 +200,7 @@ class PrintJob extends Entity
 
     /**
     * Sets the displayName
+    * The name of the print job.
     *
     * @param string $val The displayName
     *
