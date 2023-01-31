@@ -233,7 +233,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the serviceSource property value. The serviceSource property
+     * Gets the serviceSource property value. 
      * @return ServiceSource|null
     */
     public function getServiceSource(): ?ServiceSource {
@@ -241,7 +241,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the severity property value. The severity property
+     * Gets the severity property value. 
      * @return AlertSeverity|null
     */
     public function getSeverity(): ?AlertSeverity {
@@ -249,7 +249,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. 
      * @return AlertStatus|null
     */
     public function getStatus(): ?AlertStatus {
@@ -493,7 +493,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the serviceSource property value. The serviceSource property
+     * Sets the serviceSource property value. 
      * @param ServiceSource|null $value Value to set for the serviceSource property.
     */
     public function setServiceSource(?ServiceSource $value): void {
@@ -501,7 +501,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the severity property value. The severity property
+     * Sets the severity property value. 
      * @param AlertSeverity|null $value Value to set for the severity property.
     */
     public function setSeverity(?AlertSeverity $value): void {
@@ -509,7 +509,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. 
      * @param AlertStatus|null $value Value to set for the status property.
     */
     public function setStatus(?AlertStatus $value): void {

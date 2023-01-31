@@ -38,11 +38,15 @@ class UnifiedRoleManagementPolicyRuleItemRequestBuilder
      * Instantiates a new UnifiedRoleManagementPolicyRuleItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $unifiedRoleManagementPolicyRuleId key: id of unifiedRoleManagementPolicyRule
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $unifiedRoleManagementPolicyRuleId = null) {
         $this->urlTemplate = '{+baseurl}/policies/roleManagementPolicies/{unifiedRoleManagementPolicy%2Did}/effectiveRules/{unifiedRoleManagementPolicyRule%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['unifiedRoleManagementPolicyRuleId'] = $unifiedRoleManagementPolicyRuleId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class UnifiedRoleManagementPolicyRuleItemRequestBuilder
 
     /**
      * Update the navigation property effectiveRules in policies
-     * @param UnifiedRoleManagementPolicyRule $body The request body
      * @param UnifiedRoleManagementPolicyRuleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class UnifiedRoleManagementPolicyRuleItemRequestBuilder
 
     /**
      * Update the navigation property effectiveRules in policies
-     * @param UnifiedRoleManagementPolicyRule $body The request body
      * @param UnifiedRoleManagementPolicyRuleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

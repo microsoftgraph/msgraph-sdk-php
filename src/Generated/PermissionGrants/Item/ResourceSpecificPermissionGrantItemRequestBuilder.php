@@ -7,11 +7,11 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ResourceSpecificPermissionGrant;
-use Microsoft\Graph\Generated\PermissionGrants\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\PermissionGrants\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\PermissionGrants\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\PermissionGrants\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\PermissionGrants\Item\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Generated\PermissionGrants\Item\MicrosoftGraphCheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\PermissionGrants\Item\MicrosoftGraphCheckMemberObjects\CheckMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\PermissionGrants\Item\MicrosoftGraphGetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\PermissionGrants\Item\MicrosoftGraphGetMemberObjects\GetMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\PermissionGrants\Item\MicrosoftGraphRestore\RestoreRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -27,29 +27,36 @@ class ResourceSpecificPermissionGrantItemRequestBuilder
     /**
      * Provides operations to call the checkMemberGroups method.
     */
-    public function checkMemberGroups(): CheckMemberGroupsRequestBuilder {
+    public function microsoftGraphCheckMemberGroups(): CheckMemberGroupsRequestBuilder {
         return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the checkMemberObjects method.
     */
-    public function checkMemberObjects(): CheckMemberObjectsRequestBuilder {
+    public function microsoftGraphCheckMemberObjects(): CheckMemberObjectsRequestBuilder {
         return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getMemberGroups method.
     */
-    public function getMemberGroups(): GetMemberGroupsRequestBuilder {
+    public function microsoftGraphGetMemberGroups(): GetMemberGroupsRequestBuilder {
         return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getMemberObjects method.
     */
-    public function getMemberObjects(): GetMemberObjectsRequestBuilder {
+    public function microsoftGraphGetMemberObjects(): GetMemberObjectsRequestBuilder {
         return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the restore method.
+    */
+    public function microsoftGraphRestore(): RestoreRequestBuilder {
+        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -63,13 +70,6 @@ class ResourceSpecificPermissionGrantItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * Provides operations to call the restore method.
-    */
-    public function restore(): RestoreRequestBuilder {
-        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
@@ -78,15 +78,19 @@ class ResourceSpecificPermissionGrantItemRequestBuilder
      * Instantiates a new ResourceSpecificPermissionGrantItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $resourceSpecificPermissionGrantId key: id of resourceSpecificPermissionGrant
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $resourceSpecificPermissionGrantId = null) {
         $this->urlTemplate = '{+baseurl}/permissionGrants/{resourceSpecificPermissionGrant%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['resourceSpecificPermissionGrantId'] = $resourceSpecificPermissionGrantId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
-     * Delete entity from permissionGrants by key (id)
+     * Delete entity from permissionGrants
      * @param ResourceSpecificPermissionGrantItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -104,7 +108,7 @@ class ResourceSpecificPermissionGrantItemRequestBuilder
     }
 
     /**
-     * Get entity from permissionGrants by key (id)
+     * Get entity from permissionGrants by key
      * @param ResourceSpecificPermissionGrantItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -122,8 +126,7 @@ class ResourceSpecificPermissionGrantItemRequestBuilder
     }
 
     /**
-     * Update entity in permissionGrants by key (id)
-     * @param ResourceSpecificPermissionGrant $body The request body
+     * Update entity in permissionGrants
      * @param ResourceSpecificPermissionGrantItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -141,7 +144,7 @@ class ResourceSpecificPermissionGrantItemRequestBuilder
     }
 
     /**
-     * Delete entity from permissionGrants by key (id)
+     * Delete entity from permissionGrants
      * @param ResourceSpecificPermissionGrantItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -162,7 +165,7 @@ class ResourceSpecificPermissionGrantItemRequestBuilder
     }
 
     /**
-     * Get entity from permissionGrants by key (id)
+     * Get entity from permissionGrants by key
      * @param ResourceSpecificPermissionGrantItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -187,8 +190,7 @@ class ResourceSpecificPermissionGrantItemRequestBuilder
     }
 
     /**
-     * Update entity in permissionGrants by key (id)
-     * @param ResourceSpecificPermissionGrant $body The request body
+     * Update entity in permissionGrants
      * @param ResourceSpecificPermissionGrantItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -73,11 +73,15 @@ class ContactItemRequestBuilder
      * Instantiates a new ContactItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $contactId key: id of contact
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $contactId = null) {
         $this->urlTemplate = '{+baseurl}/users/{user%2Did}/contactFolders/{contactFolder%2Did}/contacts/{contact%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['contactId'] = $contactId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -140,7 +144,6 @@ class ContactItemRequestBuilder
 
     /**
      * Update the navigation property contacts in users
-     * @param Contact $body The request body
      * @param ContactItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -216,7 +219,6 @@ class ContactItemRequestBuilder
 
     /**
      * Update the navigation property contacts in users
-     * @param Contact $body The request body
      * @param ContactItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -74,7 +74,6 @@ class RelationsRequestBuilder
 
     /**
      * Create new navigation property to relations for sites
-     * @param Relation $body The request body
      * @param RelationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class RelationsRequestBuilder
 
     /**
      * Create new navigation property to relations for sites
-     * @param Relation $body The request body
      * @param RelationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

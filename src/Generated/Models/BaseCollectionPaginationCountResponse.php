@@ -63,7 +63,7 @@ class BaseCollectionPaginationCountResponse implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the @odata.count property value. The OdataCount property
+     * Gets the @odata.count property value. 
      * @return int|null
     */
     public function getOdataCount(): ?int {
@@ -71,7 +71,7 @@ class BaseCollectionPaginationCountResponse implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the @odata.nextLink property value. The OdataNextLink property
+     * Gets the @odata.nextLink property value. 
      * @return string|null
     */
     public function getOdataNextLink(): ?string {
@@ -105,7 +105,7 @@ class BaseCollectionPaginationCountResponse implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the @odata.count property value. The OdataCount property
+     * Sets the @odata.count property value. 
      * @param int|null $value Value to set for the OdataCount property.
     */
     public function setOdataCount(?int $value): void {
@@ -113,7 +113,7 @@ class BaseCollectionPaginationCountResponse implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the @odata.nextLink property value. The OdataNextLink property
+     * Sets the @odata.nextLink property value. 
      * @param string|null $value Value to set for the OdataNextLink property.
     */
     public function setOdataNextLink(?string $value): void {

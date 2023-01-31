@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\CopyToNotebook\CopyToNotebookRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\CopyToSectionGroup\CopyToSectionGroupRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\MicrosoftGraphCopyToNotebook\CopyToNotebookRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\MicrosoftGraphCopyToSectionGroup\CopyToSectionGroupRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\OnenotePageItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\PagesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\SectionGroups\Item\Sections\Item\ParentNotebook\ParentNotebookRequestBuilder;
@@ -28,14 +28,14 @@ class OnenoteSectionItemRequestBuilder
     /**
      * Provides operations to call the copyToNotebook method.
     */
-    public function copyToNotebook(): CopyToNotebookRequestBuilder {
+    public function microsoftGraphCopyToNotebook(): CopyToNotebookRequestBuilder {
         return new CopyToNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the copyToSectionGroup method.
     */
-    public function copyToSectionGroup(): CopyToSectionGroupRequestBuilder {
+    public function microsoftGraphCopyToSectionGroup(): CopyToSectionGroupRequestBuilder {
         return new CopyToSectionGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
@@ -79,11 +79,15 @@ class OnenoteSectionItemRequestBuilder
      * Instantiates a new OnenoteSectionItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $onenoteSectionId key: id of onenoteSection
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $onenoteSectionId = null) {
         $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/onenote/sectionGroups/{sectionGroup%2Did}/sections/{onenoteSection%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['onenoteSectionId'] = $onenoteSectionId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -135,7 +139,6 @@ class OnenoteSectionItemRequestBuilder
 
     /**
      * Update the navigation property sections in groups
-     * @param OnenoteSection $body The request body
      * @param OnenoteSectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -200,7 +203,6 @@ class OnenoteSectionItemRequestBuilder
 
     /**
      * Update the navigation property sections in groups
-     * @param OnenoteSection $body The request body
      * @param OnenoteSectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -155,7 +155,6 @@ class DirectoryRequestBuilder
 
     /**
      * Update the navigation property directory in roleManagement
-     * @param RbacApplication $body The request body
      * @param DirectoryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -308,7 +307,6 @@ class DirectoryRequestBuilder
 
     /**
      * Update the navigation property directory in roleManagement
-     * @param RbacApplication $body The request body
      * @param DirectoryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

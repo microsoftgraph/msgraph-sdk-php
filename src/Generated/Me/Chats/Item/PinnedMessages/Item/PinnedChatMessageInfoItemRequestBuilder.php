@@ -46,11 +46,15 @@ class PinnedChatMessageInfoItemRequestBuilder
      * Instantiates a new PinnedChatMessageInfoItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $pinnedChatMessageInfoId key: id of pinnedChatMessageInfo
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $pinnedChatMessageInfoId = null) {
         $this->urlTemplate = '{+baseurl}/me/chats/{chat%2Did}/pinnedMessages/{pinnedChatMessageInfo%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['pinnedChatMessageInfoId'] = $pinnedChatMessageInfoId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -91,7 +95,6 @@ class PinnedChatMessageInfoItemRequestBuilder
 
     /**
      * Update the navigation property pinnedMessages in me
-     * @param PinnedChatMessageInfo $body The request body
      * @param PinnedChatMessageInfoItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -156,7 +159,6 @@ class PinnedChatMessageInfoItemRequestBuilder
 
     /**
      * Update the navigation property pinnedMessages in me
-     * @param PinnedChatMessageInfo $body The request body
      * @param PinnedChatMessageInfoItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

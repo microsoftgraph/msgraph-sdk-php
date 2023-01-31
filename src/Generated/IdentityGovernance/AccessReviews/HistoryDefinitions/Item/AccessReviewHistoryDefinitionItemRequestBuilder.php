@@ -47,11 +47,15 @@ class AccessReviewHistoryDefinitionItemRequestBuilder
      * Instantiates a new AccessReviewHistoryDefinitionItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $accessReviewHistoryDefinitionId key: id of accessReviewHistoryDefinition
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $accessReviewHistoryDefinitionId = null) {
         $this->urlTemplate = '{+baseurl}/identityGovernance/accessReviews/historyDefinitions/{accessReviewHistoryDefinition%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['accessReviewHistoryDefinitionId'] = $accessReviewHistoryDefinitionId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -103,7 +107,6 @@ class AccessReviewHistoryDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property historyDefinitions in identityGovernance
-     * @param AccessReviewHistoryDefinition $body The request body
      * @param AccessReviewHistoryDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -168,7 +171,6 @@ class AccessReviewHistoryDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property historyDefinitions in identityGovernance
-     * @param AccessReviewHistoryDefinition $body The request body
      * @param AccessReviewHistoryDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

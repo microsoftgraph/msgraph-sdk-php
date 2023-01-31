@@ -70,11 +70,15 @@ class UnifiedRoleAssignmentItemRequestBuilder
      * Instantiates a new UnifiedRoleAssignmentItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $unifiedRoleAssignmentId key: id of unifiedRoleAssignment
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $unifiedRoleAssignmentId = null) {
         $this->urlTemplate = '{+baseurl}/roleManagement/entitlementManagement/roleAssignments/{unifiedRoleAssignment%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['unifiedRoleAssignmentId'] = $unifiedRoleAssignmentId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -115,7 +119,6 @@ class UnifiedRoleAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property roleAssignments in roleManagement
-     * @param UnifiedRoleAssignment $body The request body
      * @param UnifiedRoleAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -180,7 +183,6 @@ class UnifiedRoleAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property roleAssignments in roleManagement
-     * @param UnifiedRoleAssignment $body The request body
      * @param UnifiedRoleAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

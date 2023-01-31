@@ -38,11 +38,15 @@ class IdentityUserFlowAttributeItemRequestBuilder
      * Instantiates a new IdentityUserFlowAttributeItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $identityUserFlowAttributeId key: id of identityUserFlowAttribute
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $identityUserFlowAttributeId = null) {
         $this->urlTemplate = '{+baseurl}/identity/userFlowAttributes/{identityUserFlowAttribute%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['identityUserFlowAttributeId'] = $identityUserFlowAttributeId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class IdentityUserFlowAttributeItemRequestBuilder
 
     /**
      * Update the navigation property userFlowAttributes in identity
-     * @param IdentityUserFlowAttribute $body The request body
      * @param IdentityUserFlowAttributeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class IdentityUserFlowAttributeItemRequestBuilder
 
     /**
      * Update the navigation property userFlowAttributes in identity
-     * @param IdentityUserFlowAttribute $body The request body
      * @param IdentityUserFlowAttributeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

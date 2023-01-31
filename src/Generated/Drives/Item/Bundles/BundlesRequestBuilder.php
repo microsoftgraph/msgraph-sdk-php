@@ -54,10 +54,9 @@ class BundlesRequestBuilder
     }
 
     /**
-     * Get a list of all the [bundles][bundle] in a user's drive.
+     * Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
      * @param BundlesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/bundle-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?BundlesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -73,7 +72,7 @@ class BundlesRequestBuilder
     }
 
     /**
-     * Get a list of all the [bundles][bundle] in a user's drive.
+     * Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
      * @param BundlesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

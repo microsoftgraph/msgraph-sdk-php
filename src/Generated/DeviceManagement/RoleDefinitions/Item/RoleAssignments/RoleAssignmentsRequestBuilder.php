@@ -74,7 +74,6 @@ class RoleAssignmentsRequestBuilder
 
     /**
      * Create new navigation property to roleAssignments for deviceManagement
-     * @param RoleAssignment $body The request body
      * @param RoleAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class RoleAssignmentsRequestBuilder
 
     /**
      * Create new navigation property to roleAssignments for deviceManagement
-     * @param RoleAssignment $body The request body
      * @param RoleAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

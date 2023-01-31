@@ -84,7 +84,6 @@ class BucketTaskBoardFormatRequestBuilder
 
     /**
      * Update the properties of **plannerBucketTaskBoardTaskFormat** object.
-     * @param PlannerBucketTaskBoardTaskFormat $body The request body
      * @param BucketTaskBoardFormatRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/plannerbuckettaskboardtaskformat-update?view=graph-rest-1.0 Find more info here
@@ -150,7 +149,6 @@ class BucketTaskBoardFormatRequestBuilder
 
     /**
      * Update the properties of **plannerBucketTaskBoardTaskFormat** object.
-     * @param PlannerBucketTaskBoardTaskFormat $body The request body
      * @param BucketTaskBoardFormatRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

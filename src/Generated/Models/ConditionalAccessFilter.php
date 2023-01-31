@@ -64,7 +64,7 @@ class ConditionalAccessFilter implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the mode property value. The mode property
+     * Gets the mode property value. 
      * @return FilterMode|null
     */
     public function getMode(): ?FilterMode {
@@ -72,7 +72,7 @@ class ConditionalAccessFilter implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -115,7 +115,7 @@ class ConditionalAccessFilter implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the mode property value. The mode property
+     * Sets the mode property value. 
      * @param FilterMode|null $value Value to set for the mode property.
     */
     public function setMode(?FilterMode $value): void {
@@ -123,7 +123,7 @@ class ConditionalAccessFilter implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

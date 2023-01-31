@@ -9,7 +9,7 @@ use Microsoft\Graph\Generated\Models\OAuth2PermissionGrant;
 use Microsoft\Graph\Generated\Models\OAuth2PermissionGrantCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Oauth2PermissionGrants\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Oauth2PermissionGrants\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Oauth2PermissionGrants\MicrosoftGraphDelta\DeltaRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -27,6 +27,13 @@ class Oauth2PermissionGrantsRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the delta method.
+    */
+    public function microsoftGraphDelta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -56,14 +63,6 @@ class Oauth2PermissionGrantsRequestBuilder
     }
 
     /**
-     * Provides operations to call the delta method.
-     * @return DeltaRequestBuilder
-    */
-    public function delta(): DeltaRequestBuilder {
-        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
      * Retrieve a list of oAuth2PermissionGrant objects, representing delegated permissions which have been granted for client applications to access APIs on behalf of signed-in users.
      * @param Oauth2PermissionGrantsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -84,7 +83,6 @@ class Oauth2PermissionGrantsRequestBuilder
 
     /**
      * Create a delegated permission grant represented by an oAuth2PermissionGrant object. A delegated permission grant authorizes a client service principal (representing a client application) to access a resource service principal (representing an API), on behalf of a signed-in user, for the level of access limited by the delegated permissions which were granted.
-     * @param OAuth2PermissionGrant $body The request body
      * @param Oauth2PermissionGrantsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/oauth2permissiongrant-post?view=graph-rest-1.0 Find more info here
@@ -129,7 +127,6 @@ class Oauth2PermissionGrantsRequestBuilder
 
     /**
      * Create a delegated permission grant represented by an oAuth2PermissionGrant object. A delegated permission grant authorizes a client service principal (representing a client application) to access a resource service principal (representing an API), on behalf of a signed-in user, for the level of access limited by the delegated permissions which were granted.
-     * @param OAuth2PermissionGrant $body The request body
      * @param Oauth2PermissionGrantsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

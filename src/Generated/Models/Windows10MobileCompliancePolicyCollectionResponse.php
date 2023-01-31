@@ -36,7 +36,7 @@ class Windows10MobileCompliancePolicyCollectionResponse extends BaseCollectionPa
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return array<Windows10MobileCompliancePolicy>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class Windows10MobileCompliancePolicyCollectionResponse extends BaseCollectionPa
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param array<Windows10MobileCompliancePolicy>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

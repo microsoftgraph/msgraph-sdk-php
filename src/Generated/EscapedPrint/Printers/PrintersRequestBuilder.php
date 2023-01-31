@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Create\CreateRequestBuilder;
+use Microsoft\Graph\Generated\EscapedPrint\Printers\MicrosoftGraphCreate\CreateRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Printer;
 use Microsoft\Graph\Generated\Models\PrinterCollectionResponse;
@@ -32,7 +32,7 @@ class PrintersRequestBuilder
     /**
      * Provides operations to call the create method.
     */
-    public function create(): CreateRequestBuilder {
+    public function microsoftGraphCreate(): CreateRequestBuilder {
         return new CreateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
@@ -83,7 +83,6 @@ class PrintersRequestBuilder
 
     /**
      * Create new navigation property to printers for print
-     * @param Printer $body The request body
      * @param PrintersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -127,7 +126,6 @@ class PrintersRequestBuilder
 
     /**
      * Create new navigation property to printers for print
-     * @param Printer $body The request body
      * @param PrintersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

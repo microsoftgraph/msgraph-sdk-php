@@ -82,7 +82,7 @@ class ChatMessageInfo extends Entity implements Parsable
     }
 
     /**
-     * Gets the messageType property value. The messageType property
+     * Gets the messageType property value. 
      * @return ChatMessageType|null
     */
     public function getMessageType(): ?ChatMessageType {
@@ -144,7 +144,7 @@ class ChatMessageInfo extends Entity implements Parsable
     }
 
     /**
-     * Sets the messageType property value. The messageType property
+     * Sets the messageType property value. 
      * @param ChatMessageType|null $value Value to set for the messageType property.
     */
     public function setMessageType(?ChatMessageType $value): void {

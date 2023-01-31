@@ -75,7 +75,6 @@ class SwapShiftsChangeRequestsRequestBuilder
 
     /**
      * Create an instance of a swapShiftsChangeRequest object.
-     * @param SwapShiftsChangeRequest $body The request body
      * @param SwapShiftsChangeRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/swapshiftschangerequest-post?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class SwapShiftsChangeRequestsRequestBuilder
 
     /**
      * Create an instance of a swapShiftsChangeRequest object.
-     * @param SwapShiftsChangeRequest $body The request body
      * @param SwapShiftsChangeRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

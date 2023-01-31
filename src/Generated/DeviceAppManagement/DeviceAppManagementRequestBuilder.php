@@ -21,13 +21,13 @@ use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\ManagedEBoo
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\ManagedEBooksRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MdmWindowsInformationProtectionPolicies\Item\MdmWindowsInformationProtectionPolicyItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MdmWindowsInformationProtectionPolicies\MdmWindowsInformationProtectionPoliciesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MicrosoftGraphSyncMicrosoftStoreForBusinessApps\SyncMicrosoftStoreForBusinessAppsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppCategories\Item\MobileAppCategoryItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppCategories\MobileAppCategoriesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\ManagedDeviceMobileAppConfigurationItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\MobileAppConfigurationsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\MobileAppItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\MobileAppsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\SyncMicrosoftStoreForBusinessApps\SyncMicrosoftStoreForBusinessAppsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\TargetedManagedAppConfigurationItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\TargetedManagedAppConfigurationsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\VppTokens\Item\VppTokenItemRequestBuilder;
@@ -105,6 +105,13 @@ class DeviceAppManagementRequestBuilder
     }
     
     /**
+     * Provides operations to call the syncMicrosoftStoreForBusinessApps method.
+    */
+    public function microsoftGraphSyncMicrosoftStoreForBusinessApps(): SyncMicrosoftStoreForBusinessAppsRequestBuilder {
+        return new SyncMicrosoftStoreForBusinessAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the mobileAppCategories property of the microsoft.graph.deviceAppManagement entity.
     */
     public function mobileAppCategories(): MobileAppCategoriesRequestBuilder {
@@ -134,13 +141,6 @@ class DeviceAppManagementRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
-    
-    /**
-     * Provides operations to call the syncMicrosoftStoreForBusinessApps method.
-    */
-    public function syncMicrosoftStoreForBusinessApps(): SyncMicrosoftStoreForBusinessAppsRequestBuilder {
-        return new SyncMicrosoftStoreForBusinessAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * Provides operations to manage the targetedManagedAppConfigurations property of the microsoft.graph.deviceAppManagement entity.
@@ -320,7 +320,6 @@ class DeviceAppManagementRequestBuilder
 
     /**
      * Update deviceAppManagement
-     * @param DeviceAppManagement $body The request body
      * @param DeviceAppManagementRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -375,7 +374,6 @@ class DeviceAppManagementRequestBuilder
 
     /**
      * Update deviceAppManagement
-     * @param DeviceAppManagement $body The request body
      * @param DeviceAppManagementRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

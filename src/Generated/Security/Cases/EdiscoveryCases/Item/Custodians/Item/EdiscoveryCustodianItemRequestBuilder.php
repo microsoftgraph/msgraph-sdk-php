@@ -7,16 +7,16 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryCustodian;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\Activate\ActivateRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\ApplyHold\ApplyHoldRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\LastIndexOperation\LastIndexOperationRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\Release\ReleaseRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\RemoveHold\RemoveHoldRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\MicrosoftGraphSecurityActivate\ActivateRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\MicrosoftGraphSecurityApplyHold\ApplyHoldRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\MicrosoftGraphSecurityRelease\ReleaseRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\MicrosoftGraphSecurityRemoveHold\RemoveHoldRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\MicrosoftGraphSecurityUpdateIndex\UpdateIndexRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\SiteSources\Item\SiteSourceItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\SiteSources\SiteSourcesRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\UnifiedGroupSources\Item\UnifiedGroupSourceItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\UnifiedGroupSources\UnifiedGroupSourcesRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\UpdateIndex\UpdateIndexRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\UserSources\Item\UserSourceItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\UserSources\UserSourcesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -32,20 +32,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class EdiscoveryCustodianItemRequestBuilder 
 {
     /**
-     * Provides operations to call the activate method.
-    */
-    public function activate(): ActivateRequestBuilder {
-        return new ActivateRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the applyHold method.
-    */
-    public function applyHold(): ApplyHoldRequestBuilder {
-        return new ApplyHoldRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the lastIndexOperation property of the microsoft.graph.security.ediscoveryCustodian entity.
     */
     public function lastIndexOperation(): LastIndexOperationRequestBuilder {
@@ -53,23 +39,44 @@ class EdiscoveryCustodianItemRequestBuilder
     }
     
     /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
+     * Provides operations to call the activate method.
     */
-    private array $pathParameters;
+    public function microsoftGraphSecurityActivate(): ActivateRequestBuilder {
+        return new ActivateRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the applyHold method.
+    */
+    public function microsoftGraphSecurityApplyHold(): ApplyHoldRequestBuilder {
+        return new ApplyHoldRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * Provides operations to call the release method.
     */
-    public function release(): ReleaseRequestBuilder {
+    public function microsoftGraphSecurityRelease(): ReleaseRequestBuilder {
         return new ReleaseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the removeHold method.
     */
-    public function removeHold(): RemoveHoldRequestBuilder {
+    public function microsoftGraphSecurityRemoveHold(): RemoveHoldRequestBuilder {
         return new RemoveHoldRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
+    
+    /**
+     * Provides operations to call the updateIndex method.
+    */
+    public function microsoftGraphSecurityUpdateIndex(): UpdateIndexRequestBuilder {
+        return new UpdateIndexRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * @var array<string, mixed> $pathParameters Path parameters for the request
+    */
+    private array $pathParameters;
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -91,13 +98,6 @@ class EdiscoveryCustodianItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the updateIndex method.
-    */
-    public function updateIndex(): UpdateIndexRequestBuilder {
-        return new UpdateIndexRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
@@ -113,11 +113,15 @@ class EdiscoveryCustodianItemRequestBuilder
      * Instantiates a new EdiscoveryCustodianItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $ediscoveryCustodianId key: id of ediscoveryCustodian
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $ediscoveryCustodianId = null) {
         $this->urlTemplate = '{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['ediscoveryCustodianId'] = $ediscoveryCustodianId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -158,7 +162,6 @@ class EdiscoveryCustodianItemRequestBuilder
 
     /**
      * Update the navigation property custodians in security
-     * @param EdiscoveryCustodian $body The request body
      * @param EdiscoveryCustodianItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -234,7 +237,6 @@ class EdiscoveryCustodianItemRequestBuilder
 
     /**
      * Update the navigation property custodians in security
-     * @param EdiscoveryCustodian $body The request body
      * @param EdiscoveryCustodianItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

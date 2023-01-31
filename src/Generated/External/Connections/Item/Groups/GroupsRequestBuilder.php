@@ -74,7 +74,6 @@ class GroupsRequestBuilder
 
     /**
      * Create a new externalGroup object.
-     * @param ExternalGroup $body The request body
      * @param GroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/externalconnectors-externalconnection-post-groups?view=graph-rest-1.0 Find more info here
@@ -119,7 +118,6 @@ class GroupsRequestBuilder
 
     /**
      * Create a new externalGroup object.
-     * @param ExternalGroup $body The request body
      * @param GroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

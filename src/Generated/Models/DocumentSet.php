@@ -85,7 +85,7 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -101,7 +101,7 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the sharedColumns property value. The sharedColumns property
+     * Gets the sharedColumns property value. 
      * @return array<ColumnDefinition>|null
     */
     public function getSharedColumns(): ?array {
@@ -117,7 +117,7 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the welcomePageColumns property value. The welcomePageColumns property
+     * Gets the welcomePageColumns property value. 
      * @return array<ColumnDefinition>|null
     */
     public function getWelcomePageColumns(): ?array {
@@ -181,7 +181,7 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -197,7 +197,7 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the sharedColumns property value. The sharedColumns property
+     * Sets the sharedColumns property value. 
      * @param array<ColumnDefinition>|null $value Value to set for the sharedColumns property.
     */
     public function setSharedColumns(?array $value): void {
@@ -213,7 +213,7 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the welcomePageColumns property value. The welcomePageColumns property
+     * Sets the welcomePageColumns property value. 
      * @param array<ColumnDefinition>|null $value Value to set for the welcomePageColumns property.
     */
     public function setWelcomePageColumns(?array $value): void {

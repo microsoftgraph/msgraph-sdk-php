@@ -44,7 +44,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the assignedByGroup property value. The assignedByGroup property
+     * Gets the assignedByGroup property value. 
      * @return string|null
     */
     public function getAssignedByGroup(): ?string {
@@ -60,7 +60,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the disabledPlans property value. The disabledPlans property
+     * Gets the disabledPlans property value. 
      * @return array<string>|null
     */
     public function getDisabledPlans(): ?array {
@@ -68,7 +68,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the error property value. The error property
+     * Gets the error property value. 
      * @return string|null
     */
     public function getError(): ?string {
@@ -93,7 +93,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
+     * Gets the lastUpdatedDateTime property value. 
      * @return DateTime|null
     */
     public function getLastUpdatedDateTime(): ?DateTime {
@@ -101,7 +101,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -109,7 +109,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the skuId property value. The skuId property
+     * Gets the skuId property value. 
      * @return string|null
     */
     public function getSkuId(): ?string {
@@ -117,7 +117,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the state property value. The state property
+     * Gets the state property value. 
      * @return string|null
     */
     public function getState(): ?string {
@@ -148,7 +148,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the assignedByGroup property value. The assignedByGroup property
+     * Sets the assignedByGroup property value. 
      * @param string|null $value Value to set for the assignedByGroup property.
     */
     public function setAssignedByGroup(?string $value): void {
@@ -164,7 +164,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the disabledPlans property value. The disabledPlans property
+     * Sets the disabledPlans property value. 
      * @param array<string>|null $value Value to set for the disabledPlans property.
     */
     public function setDisabledPlans(?array $value): void {
@@ -172,7 +172,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the error property value. The error property
+     * Sets the error property value. 
      * @param string|null $value Value to set for the error property.
     */
     public function setError(?string $value): void {
@@ -180,7 +180,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the lastUpdatedDateTime property value. The lastUpdatedDateTime property
+     * Sets the lastUpdatedDateTime property value. 
      * @param DateTime|null $value Value to set for the lastUpdatedDateTime property.
     */
     public function setLastUpdatedDateTime(?DateTime $value): void {
@@ -188,7 +188,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -196,7 +196,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the skuId property value. The skuId property
+     * Sets the skuId property value. 
      * @param string|null $value Value to set for the skuId property.
     */
     public function setSkuId(?string $value): void {
@@ -204,7 +204,7 @@ class LicenseAssignmentState implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the state property value. The state property
+     * Sets the state property value. 
      * @param string|null $value Value to set for the state property.
     */
     public function setState(?string $value): void {

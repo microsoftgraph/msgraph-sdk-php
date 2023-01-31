@@ -56,7 +56,7 @@ class ClientUserAgent extends UserAgent implements Parsable
     }
 
     /**
-     * Gets the platform property value. The platform property
+     * Gets the platform property value. 
      * @return ClientPlatform|null
     */
     public function getPlatform(): ?ClientPlatform {
@@ -64,7 +64,7 @@ class ClientUserAgent extends UserAgent implements Parsable
     }
 
     /**
-     * Gets the productFamily property value. The productFamily property
+     * Gets the productFamily property value. 
      * @return ProductFamily|null
     */
     public function getProductFamily(): ?ProductFamily {
@@ -100,7 +100,7 @@ class ClientUserAgent extends UserAgent implements Parsable
     }
 
     /**
-     * Sets the platform property value. The platform property
+     * Sets the platform property value. 
      * @param ClientPlatform|null $value Value to set for the platform property.
     */
     public function setPlatform(?ClientPlatform $value): void {
@@ -108,7 +108,7 @@ class ClientUserAgent extends UserAgent implements Parsable
     }
 
     /**
-     * Sets the productFamily property value. The productFamily property
+     * Sets the productFamily property value. 
      * @param ProductFamily|null $value Value to set for the productFamily property.
     */
     public function setProductFamily(?ProductFamily $value): void {

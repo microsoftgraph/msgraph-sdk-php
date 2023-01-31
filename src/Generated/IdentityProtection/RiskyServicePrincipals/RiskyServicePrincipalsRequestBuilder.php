@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\IdentityProtection\RiskyServicePrincipals;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityProtection\RiskyServicePrincipals\ConfirmCompromised\ConfirmCompromisedRequestBuilder;
 use Microsoft\Graph\Generated\IdentityProtection\RiskyServicePrincipals\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\IdentityProtection\RiskyServicePrincipals\Dismiss\DismissRequestBuilder;
+use Microsoft\Graph\Generated\IdentityProtection\RiskyServicePrincipals\MicrosoftGraphConfirmCompromised\ConfirmCompromisedRequestBuilder;
+use Microsoft\Graph\Generated\IdentityProtection\RiskyServicePrincipals\MicrosoftGraphDismiss\DismissRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\RiskyServicePrincipal;
 use Microsoft\Graph\Generated\Models\RiskyServicePrincipalCollectionResponse;
@@ -24,13 +24,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class RiskyServicePrincipalsRequestBuilder 
 {
     /**
-     * Provides operations to call the confirmCompromised method.
-    */
-    public function confirmCompromised(): ConfirmCompromisedRequestBuilder {
-        return new ConfirmCompromisedRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
@@ -38,9 +31,16 @@ class RiskyServicePrincipalsRequestBuilder
     }
     
     /**
+     * Provides operations to call the confirmCompromised method.
+    */
+    public function microsoftGraphConfirmCompromised(): ConfirmCompromisedRequestBuilder {
+        return new ConfirmCompromisedRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to call the dismiss method.
     */
-    public function dismiss(): DismissRequestBuilder {
+    public function microsoftGraphDismiss(): DismissRequestBuilder {
         return new DismissRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
@@ -91,7 +91,6 @@ class RiskyServicePrincipalsRequestBuilder
 
     /**
      * Create new navigation property to riskyServicePrincipals for identityProtection
-     * @param RiskyServicePrincipal $body The request body
      * @param RiskyServicePrincipalsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -135,7 +134,6 @@ class RiskyServicePrincipalsRequestBuilder
 
     /**
      * Create new navigation property to riskyServicePrincipals for identityProtection
-     * @param RiskyServicePrincipal $body The request body
      * @param RiskyServicePrincipalsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

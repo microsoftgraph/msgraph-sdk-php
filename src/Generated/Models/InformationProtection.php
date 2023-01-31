@@ -51,7 +51,7 @@ class InformationProtection implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the bitlocker property value. The bitlocker property
+     * Gets the bitlocker property value. 
      * @return Bitlocker|null
     */
     public function getBitlocker(): ?Bitlocker {
@@ -72,7 +72,7 @@ class InformationProtection implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -80,7 +80,7 @@ class InformationProtection implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the threatAssessmentRequests property value. The threatAssessmentRequests property
+     * Gets the threatAssessmentRequests property value. 
      * @return array<ThreatAssessmentRequest>|null
     */
     public function getThreatAssessmentRequests(): ?array {
@@ -115,7 +115,7 @@ class InformationProtection implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the bitlocker property value. The bitlocker property
+     * Sets the bitlocker property value. 
      * @param Bitlocker|null $value Value to set for the bitlocker property.
     */
     public function setBitlocker(?Bitlocker $value): void {
@@ -123,7 +123,7 @@ class InformationProtection implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -131,7 +131,7 @@ class InformationProtection implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the threatAssessmentRequests property value. The threatAssessmentRequests property
+     * Sets the threatAssessmentRequests property value. 
      * @param array<ThreatAssessmentRequest>|null $value Value to set for the threatAssessmentRequests property.
     */
     public function setThreatAssessmentRequests(?array $value): void {

@@ -64,7 +64,7 @@ class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -72,7 +72,7 @@ class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Gets the recurrence property value. The recurrence property
+     * Gets the recurrence property value. 
      * @return PatternedRecurrence|null
     */
     public function getRecurrence(): ?PatternedRecurrence {
@@ -115,7 +115,7 @@ class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -123,7 +123,7 @@ class AccessReviewHistoryScheduleSettings implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Sets the recurrence property value. The recurrence property
+     * Sets the recurrence property value. 
      * @param PatternedRecurrence|null $value Value to set for the recurrence property.
     */
     public function setRecurrence(?PatternedRecurrence $value): void {

@@ -25,7 +25,7 @@ class WorkbookFunctionResult extends Entity implements Parsable
     }
 
     /**
-     * Gets the error property value. The error property
+     * Gets the error property value. 
      * @return string|null
     */
     public function getError(): ?string {
@@ -45,7 +45,7 @@ class WorkbookFunctionResult extends Entity implements Parsable
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return Json|null
     */
     public function getValue(): ?Json {
@@ -63,7 +63,7 @@ class WorkbookFunctionResult extends Entity implements Parsable
     }
 
     /**
-     * Sets the error property value. The error property
+     * Sets the error property value. 
      * @param string|null $value Value to set for the error property.
     */
     public function setError(?string $value): void {
@@ -71,7 +71,7 @@ class WorkbookFunctionResult extends Entity implements Parsable
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param Json|null $value Value to set for the value property.
     */
     public function setValue(?Json $value): void {

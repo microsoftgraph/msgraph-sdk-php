@@ -54,7 +54,7 @@ class TeamInfo extends Entity implements Parsable
     }
 
     /**
-     * Gets the team property value. The team property
+     * Gets the team property value. 
      * @return Team|null
     */
     public function getTeam(): ?Team {
@@ -89,7 +89,7 @@ class TeamInfo extends Entity implements Parsable
     }
 
     /**
-     * Sets the team property value. The team property
+     * Sets the team property value. 
      * @param Team|null $value Value to set for the team property.
     */
     public function setTeam(?Team $value): void {

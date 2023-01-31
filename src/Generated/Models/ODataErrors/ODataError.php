@@ -53,7 +53,7 @@ class ODataError extends ApiException implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the error property value. The error property
+     * Gets the error property value. 
      * @return MainError|null
     */
     public function getError(): ?MainError {
@@ -97,7 +97,7 @@ class ODataError extends ApiException implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the error property value. The error property
+     * Sets the error property value. 
      * @param MainError|null $value Value to set for the error property.
     */
     public function setError(?MainError $value): void {

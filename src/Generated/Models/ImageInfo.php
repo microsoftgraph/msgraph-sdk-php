@@ -59,7 +59,7 @@ class ImageInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the alternativeText property value. The alternativeText property
+     * Gets the alternativeText property value. 
      * @return string|null
     */
     public function getAlternativeText(): ?string {
@@ -98,7 +98,7 @@ class ImageInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -143,7 +143,7 @@ class ImageInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the alternativeText property value. The alternativeText property
+     * Sets the alternativeText property value. 
      * @param string|null $value Value to set for the alternativeText property.
     */
     public function setAlternativeText(?string $value): void {
@@ -167,7 +167,7 @@ class ImageInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

@@ -47,11 +47,15 @@ class ServiceHealthItemRequestBuilder
      * Instantiates a new ServiceHealthItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $serviceHealthId key: id of serviceHealth
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $serviceHealthId = null) {
         $this->urlTemplate = '{+baseurl}/admin/serviceAnnouncement/healthOverviews/{serviceHealth%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['serviceHealthId'] = $serviceHealthId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -103,7 +107,6 @@ class ServiceHealthItemRequestBuilder
 
     /**
      * Update the navigation property healthOverviews in admin
-     * @param ServiceHealth $body The request body
      * @param ServiceHealthItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -168,7 +171,6 @@ class ServiceHealthItemRequestBuilder
 
     /**
      * Update the navigation property healthOverviews in admin
-     * @param ServiceHealth $body The request body
      * @param ServiceHealthItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

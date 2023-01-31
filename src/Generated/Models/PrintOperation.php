@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrintOperation extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new printOperation and sets the default values.
+     * Instantiates a new PrintOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -53,7 +53,7 @@ class PrintOperation extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. 
      * @return PrintOperationStatus|null
     */
     public function getStatus(): ?PrintOperationStatus {
@@ -79,7 +79,7 @@ class PrintOperation extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. 
      * @param PrintOperationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?PrintOperationStatus $value): void {

@@ -75,7 +75,6 @@ class VerificationDnsRecordsRequestBuilder
 
     /**
      * Create new navigation property to verificationDnsRecords for domains
-     * @param DomainDnsRecord $body The request body
      * @param VerificationDnsRecordsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class VerificationDnsRecordsRequestBuilder
 
     /**
      * Create new navigation property to verificationDnsRecords for domains
-     * @param DomainDnsRecord $body The request body
      * @param VerificationDnsRecordsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

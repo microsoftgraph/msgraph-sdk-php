@@ -38,11 +38,15 @@ class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder
      * Instantiates a new UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $unifiedRoleEligibilityScheduleInstanceId key: id of unifiedRoleEligibilityScheduleInstance
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $unifiedRoleEligibilityScheduleInstanceId = null) {
         $this->urlTemplate = '{+baseurl}/roleManagement/directory/roleEligibilityScheduleInstances/{unifiedRoleEligibilityScheduleInstance%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['unifiedRoleEligibilityScheduleInstanceId'] = $unifiedRoleEligibilityScheduleInstanceId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder
 
     /**
      * Update the navigation property roleEligibilityScheduleInstances in roleManagement
-     * @param UnifiedRoleEligibilityScheduleInstance $body The request body
      * @param UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder
 
     /**
      * Update the navigation property roleEligibilityScheduleInstances in roleManagement
-     * @param UnifiedRoleEligibilityScheduleInstance $body The request body
      * @param UnifiedRoleEligibilityScheduleInstanceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

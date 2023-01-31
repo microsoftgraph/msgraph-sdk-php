@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\InstancesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\AccessReviewInstanceItemRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Stop\StopRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\MicrosoftGraphStop\StopRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessReviewScheduleDefinition;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -30,6 +30,13 @@ class AccessReviewScheduleDefinitionItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the stop method.
+    */
+    public function microsoftGraphStop(): StopRequestBuilder {
+        return new StopRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -40,13 +47,6 @@ class AccessReviewScheduleDefinitionItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * Provides operations to call the stop method.
-    */
-    public function stop(): StopRequestBuilder {
-        return new StopRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
@@ -55,11 +55,15 @@ class AccessReviewScheduleDefinitionItemRequestBuilder
      * Instantiates a new AccessReviewScheduleDefinitionItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $accessReviewScheduleDefinitionId key: id of accessReviewScheduleDefinition
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $accessReviewScheduleDefinitionId = null) {
         $this->urlTemplate = '{+baseurl}/identityGovernance/accessReviews/definitions/{accessReviewScheduleDefinition%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['accessReviewScheduleDefinitionId'] = $accessReviewScheduleDefinitionId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -111,7 +115,6 @@ class AccessReviewScheduleDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property definitions in identityGovernance
-     * @param AccessReviewScheduleDefinition $body The request body
      * @param AccessReviewScheduleDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -176,7 +179,6 @@ class AccessReviewScheduleDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property definitions in identityGovernance
-     * @param AccessReviewScheduleDefinition $body The request body
      * @param AccessReviewScheduleDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

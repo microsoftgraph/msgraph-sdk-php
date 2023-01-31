@@ -9,10 +9,10 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ServicePrincipal;
 use Microsoft\Graph\Generated\Models\ServicePrincipalCollectionResponse;
 use Microsoft\Graph\Generated\ServicePrincipals\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\GetByIds\GetByIdsRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\ValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\MicrosoftGraphDelta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\MicrosoftGraphGetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\MicrosoftGraphGetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\MicrosoftGraphValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -33,17 +33,31 @@ class ServicePrincipalsRequestBuilder
     }
     
     /**
+     * Provides operations to call the delta method.
+    */
+    public function microsoftGraphDelta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to call the getAvailableExtensionProperties method.
     */
-    public function getAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
+    public function microsoftGraphGetAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
         return new GetAvailableExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getByIds method.
     */
-    public function getByIds(): GetByIdsRequestBuilder {
+    public function microsoftGraphGetByIds(): GetByIdsRequestBuilder {
         return new GetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the validateProperties method.
+    */
+    public function microsoftGraphValidateProperties(): ValidatePropertiesRequestBuilder {
+        return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -62,13 +76,6 @@ class ServicePrincipalsRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Provides operations to call the validateProperties method.
-    */
-    public function validateProperties(): ValidatePropertiesRequestBuilder {
-        return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Instantiates a new ServicePrincipalsRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -77,14 +84,6 @@ class ServicePrincipalsRequestBuilder
         $this->urlTemplate = '{+baseurl}/servicePrincipals{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
-    }
-
-    /**
-     * Provides operations to call the delta method.
-     * @return DeltaRequestBuilder
-    */
-    public function delta(): DeltaRequestBuilder {
-        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
 
     /**
@@ -108,7 +107,6 @@ class ServicePrincipalsRequestBuilder
 
     /**
      * Create a new servicePrincipal object.
-     * @param ServicePrincipal $body The request body
      * @param ServicePrincipalsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/serviceprincipal-post-serviceprincipals?view=graph-rest-1.0 Find more info here
@@ -153,7 +151,6 @@ class ServicePrincipalsRequestBuilder
 
     /**
      * Create a new servicePrincipal object.
-     * @param ServicePrincipal $body The request body
      * @param ServicePrincipalsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

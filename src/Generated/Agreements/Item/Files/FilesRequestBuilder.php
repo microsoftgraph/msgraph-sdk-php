@@ -74,7 +74,6 @@ class FilesRequestBuilder
 
     /**
      * Create a new localized agreement file.
-     * @param AgreementFileLocalization $body The request body
      * @param FilesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/agreement-post-files?view=graph-rest-1.0 Find more info here
@@ -119,7 +118,6 @@ class FilesRequestBuilder
 
     /**
      * Create a new localized agreement file.
-     * @param AgreementFileLocalization $body The request body
      * @param FilesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

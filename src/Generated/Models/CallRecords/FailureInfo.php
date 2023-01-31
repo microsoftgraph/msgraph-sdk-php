@@ -64,7 +64,7 @@ class FailureInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -80,7 +80,7 @@ class FailureInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the stage property value. The stage property
+     * Gets the stage property value. 
      * @return FailureStage|null
     */
     public function getStage(): ?FailureStage {
@@ -115,7 +115,7 @@ class FailureInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -131,7 +131,7 @@ class FailureInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the stage property value. The stage property
+     * Sets the stage property value. 
      * @param FailureStage|null $value Value to set for the stage property.
     */
     public function setStage(?FailureStage $value): void {

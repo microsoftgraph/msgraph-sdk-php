@@ -75,7 +75,6 @@ class StaffMembersRequestBuilder
 
     /**
      * Create a new bookingStaffMember in the specified bookingBusiness.
-     * @param BookingStaffMemberBase $body The request body
      * @param StaffMembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/bookingbusiness-post-staffmembers?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class StaffMembersRequestBuilder
 
     /**
      * Create a new bookingStaffMember in the specified bookingBusiness.
-     * @param BookingStaffMemberBase $body The request body
      * @param StaffMembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

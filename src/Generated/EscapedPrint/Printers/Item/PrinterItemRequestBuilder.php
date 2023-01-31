@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Connectors\ConnectorsRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Connectors\Item\PrintConnectorItemRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\RestoreFactoryDefaults\RestoreFactoryDefaultsRequestBuilder;
+use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\MicrosoftGraphRestoreFactoryDefaults\RestoreFactoryDefaultsRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Shares\Item\PrinterShareItemRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Shares\SharesRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\TaskTriggers\Item\PrintTaskTriggerItemRequestBuilder;
@@ -34,6 +34,13 @@ class PrinterItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the restoreFactoryDefaults method.
+    */
+    public function microsoftGraphRestoreFactoryDefaults(): RestoreFactoryDefaultsRequestBuilder {
+        return new RestoreFactoryDefaultsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -42,13 +49,6 @@ class PrinterItemRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
-    
-    /**
-     * Provides operations to call the restoreFactoryDefaults method.
-    */
-    public function restoreFactoryDefaults(): RestoreFactoryDefaultsRequestBuilder {
-        return new RestoreFactoryDefaultsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * Provides operations to manage the shares property of the microsoft.graph.printer entity.
@@ -84,11 +84,15 @@ class PrinterItemRequestBuilder
      * Instantiates a new PrinterItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $printerId key: id of printer
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $printerId = null) {
         $this->urlTemplate = '{+baseurl}/print/printers/{printer%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['printerId'] = $printerId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -129,7 +133,6 @@ class PrinterItemRequestBuilder
 
     /**
      * Update the navigation property printers in print
-     * @param Printer $body The request body
      * @param PrinterItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -216,7 +219,6 @@ class PrinterItemRequestBuilder
 
     /**
      * Update the navigation property printers in print
-     * @param Printer $body The request body
      * @param PrinterItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

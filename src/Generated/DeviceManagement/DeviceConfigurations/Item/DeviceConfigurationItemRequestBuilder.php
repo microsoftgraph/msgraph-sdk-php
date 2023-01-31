@@ -5,7 +5,6 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\Assign\AssignRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\Assignments\AssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\Assignments\Item\DeviceConfigurationAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceSettingStateSummaries\DeviceSettingStateSummariesRequestBuilder;
@@ -13,7 +12,8 @@ use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceS
 use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceStatuses\DeviceStatusesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceStatuses\Item\DeviceConfigurationDeviceStatusItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceStatusOverview\DeviceStatusOverviewRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\GetOmaSettingPlainTextValueWithSecretReferenceValueId\GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\MicrosoftGraphAssign\AssignRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\MicrosoftGraphGetOmaSettingPlainTextValueWithSecretReferenceValueId\GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\UserStatuses\Item\DeviceConfigurationUserStatusItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\UserStatuses\UserStatusesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\UserStatusOverview\UserStatusOverviewRequestBuilder;
@@ -31,13 +31,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 */
 class DeviceConfigurationItemRequestBuilder 
 {
-    /**
-     * Provides operations to call the assign method.
-    */
-    public function assign(): AssignRequestBuilder {
-        return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.deviceConfiguration entity.
     */
@@ -64,6 +57,13 @@ class DeviceConfigurationItemRequestBuilder
     */
     public function deviceStatusOverview(): DeviceStatusOverviewRequestBuilder {
         return new DeviceStatusOverviewRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the assign method.
+    */
+    public function microsoftGraphAssign(): AssignRequestBuilder {
+        return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -110,11 +110,15 @@ class DeviceConfigurationItemRequestBuilder
      * Instantiates a new DeviceConfigurationItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $deviceConfigurationId key: id of deviceConfiguration
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $deviceConfigurationId = null) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/deviceConfigurations/{deviceConfiguration%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['deviceConfigurationId'] = $deviceConfigurationId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -180,13 +184,12 @@ class DeviceConfigurationItemRequestBuilder
      * @param string $secretReferenceValueId Usage: secretReferenceValueId='{secretReferenceValueId}'
      * @return GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder
     */
-    public function getOmaSettingPlainTextValueWithSecretReferenceValueId(string $secretReferenceValueId): GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder {
+    public function microsoftGraphGetOmaSettingPlainTextValueWithSecretReferenceValueId(string $secretReferenceValueId): GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder {
         return new GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder($this->pathParameters, $this->requestAdapter, $secretReferenceValueId);
     }
 
     /**
      * Update the navigation property deviceConfigurations in deviceManagement
-     * @param DeviceConfiguration $body The request body
      * @param DeviceConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -251,7 +254,6 @@ class DeviceConfigurationItemRequestBuilder
 
     /**
      * Update the navigation property deviceConfigurations in deviceManagement
-     * @param DeviceConfiguration $body The request body
      * @param DeviceConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

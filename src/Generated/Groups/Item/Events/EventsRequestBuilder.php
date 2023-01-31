@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Events\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Events\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Events\MicrosoftGraphDelta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Models\Event;
 use Microsoft\Graph\Generated\Models\EventCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -27,6 +27,13 @@ class EventsRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the delta method.
+    */
+    public function microsoftGraphDelta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -56,14 +63,6 @@ class EventsRequestBuilder
     }
 
     /**
-     * Provides operations to call the delta method.
-     * @return DeltaRequestBuilder
-    */
-    public function delta(): DeltaRequestBuilder {
-        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
      * Retrieve a list of event objects.
      * @param EventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -84,7 +83,6 @@ class EventsRequestBuilder
 
     /**
      * Use this API to create a new event.
-     * @param Event $body The request body
      * @param EventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/group-post-events?view=graph-rest-1.0 Find more info here
@@ -129,7 +127,6 @@ class EventsRequestBuilder
 
     /**
      * Use this API to create a new event.
-     * @param Event $body The request body
      * @param EventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

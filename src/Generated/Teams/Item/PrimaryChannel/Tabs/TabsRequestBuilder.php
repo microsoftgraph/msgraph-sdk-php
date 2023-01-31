@@ -75,7 +75,6 @@ class TabsRequestBuilder
 
     /**
      * Create new navigation property to tabs for teams
-     * @param TeamsTab $body The request body
      * @param TabsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class TabsRequestBuilder
 
     /**
      * Create new navigation property to tabs for teams
-     * @param TeamsTab $body The request body
      * @param TabsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

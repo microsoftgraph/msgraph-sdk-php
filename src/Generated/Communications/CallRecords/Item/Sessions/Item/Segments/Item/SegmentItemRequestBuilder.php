@@ -38,11 +38,15 @@ class SegmentItemRequestBuilder
      * Instantiates a new SegmentItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $segmentId key: id of segment
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $segmentId = null) {
         $this->urlTemplate = '{+baseurl}/communications/callRecords/{callRecord%2Did}/sessions/{session%2Did}/segments/{segment%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['segmentId'] = $segmentId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class SegmentItemRequestBuilder
 
     /**
      * Update the navigation property segments in communications
-     * @param Segment $body The request body
      * @param SegmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class SegmentItemRequestBuilder
 
     /**
      * Update the navigation property segments in communications
-     * @param Segment $body The request body
      * @param SegmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

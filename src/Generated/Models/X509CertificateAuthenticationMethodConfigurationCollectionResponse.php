@@ -36,7 +36,7 @@ class X509CertificateAuthenticationMethodConfigurationCollectionResponse extends
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return array<X509CertificateAuthenticationMethodConfiguration>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class X509CertificateAuthenticationMethodConfigurationCollectionResponse extends
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param array<X509CertificateAuthenticationMethodConfiguration>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

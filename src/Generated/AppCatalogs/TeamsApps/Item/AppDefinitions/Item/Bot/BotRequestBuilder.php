@@ -84,7 +84,6 @@ class BotRequestBuilder
 
     /**
      * Update the navigation property bot in appCatalogs
-     * @param TeamworkBot $body The request body
      * @param BotRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -149,7 +148,6 @@ class BotRequestBuilder
 
     /**
      * Update the navigation property bot in appCatalogs
-     * @param TeamworkBot $body The request body
      * @param BotRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

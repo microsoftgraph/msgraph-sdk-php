@@ -38,11 +38,15 @@ class TokenLifetimePolicyItemRequestBuilder
      * Instantiates a new TokenLifetimePolicyItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $tokenLifetimePolicyId key: id of tokenLifetimePolicy
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $tokenLifetimePolicyId = null) {
         $this->urlTemplate = '{+baseurl}/policies/tokenLifetimePolicies/{tokenLifetimePolicy%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['tokenLifetimePolicyId'] = $tokenLifetimePolicyId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class TokenLifetimePolicyItemRequestBuilder
 
     /**
      * Update the navigation property tokenLifetimePolicies in policies
-     * @param TokenLifetimePolicy $body The request body
      * @param TokenLifetimePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class TokenLifetimePolicyItemRequestBuilder
 
     /**
      * Update the navigation property tokenLifetimePolicies in policies
-     * @param TokenLifetimePolicy $body The request body
      * @param TokenLifetimePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

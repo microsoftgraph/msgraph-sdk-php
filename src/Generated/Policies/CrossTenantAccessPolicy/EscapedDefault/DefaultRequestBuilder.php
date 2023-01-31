@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\CrossTenantAccessPolicyConfigurationDefault;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\EscapedDefault\ResetToSystemDefault\ResetToSystemDefaultRequestBuilder;
+use Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\EscapedDefault\MicrosoftGraphResetToSystemDefault\ResetToSystemDefaultRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -21,6 +21,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class DefaultRequestBuilder 
 {
     /**
+     * Provides operations to call the resetToSystemDefault method.
+    */
+    public function microsoftGraphResetToSystemDefault(): ResetToSystemDefaultRequestBuilder {
+        return new ResetToSystemDefaultRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -29,13 +36,6 @@ class DefaultRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
-    
-    /**
-     * Provides operations to call the resetToSystemDefault method.
-    */
-    public function resetToSystemDefault(): ResetToSystemDefaultRequestBuilder {
-        return new ResetToSystemDefaultRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
@@ -92,7 +92,6 @@ class DefaultRequestBuilder
 
     /**
      * Update the default configuration of a cross-tenant access policy.
-     * @param CrossTenantAccessPolicyConfigurationDefault $body The request body
      * @param DefaultRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationdefault-update?view=graph-rest-1.0 Find more info here
@@ -158,7 +157,6 @@ class DefaultRequestBuilder
 
     /**
      * Update the default configuration of a cross-tenant access policy.
-     * @param CrossTenantAccessPolicyConfigurationDefault $body The request body
      * @param DefaultRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

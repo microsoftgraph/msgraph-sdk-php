@@ -37,7 +37,7 @@ class GroupCollectionResponse extends BaseCollectionPaginationCountResponse impl
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return array<Group>|null
     */
     public function getValue(): ?array {
@@ -54,7 +54,7 @@ class GroupCollectionResponse extends BaseCollectionPaginationCountResponse impl
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param array<Group>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

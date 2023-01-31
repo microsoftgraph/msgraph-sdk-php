@@ -39,7 +39,7 @@ class UnifiedGroupSource extends DataSource implements Parsable
     }
 
     /**
-     * Gets the group property value. The group property
+     * Gets the group property value. 
      * @return Group|null
     */
     public function getGroup(): ?Group {
@@ -65,7 +65,7 @@ class UnifiedGroupSource extends DataSource implements Parsable
     }
 
     /**
-     * Sets the group property value. The group property
+     * Sets the group property value. 
      * @param Group|null $value Value to set for the group property.
     */
     public function setGroup(?Group $value): void {

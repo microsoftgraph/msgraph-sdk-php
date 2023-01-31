@@ -75,7 +75,6 @@ class GroupLifecyclePoliciesRequestBuilder
 
     /**
      * Create new navigation property to groupLifecyclePolicies for groups
-     * @param GroupLifecyclePolicy $body The request body
      * @param GroupLifecyclePoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class GroupLifecyclePoliciesRequestBuilder
 
     /**
      * Create new navigation property to groupLifecyclePolicies for groups
-     * @param GroupLifecyclePolicy $body The request body
      * @param GroupLifecyclePoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

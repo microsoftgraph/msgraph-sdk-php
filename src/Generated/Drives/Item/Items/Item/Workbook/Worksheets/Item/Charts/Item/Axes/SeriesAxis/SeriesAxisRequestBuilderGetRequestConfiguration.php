@@ -1,0 +1,27 @@
+<?php
+
+namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Axes\SeriesAxis;
+
+use Microsoft\Kiota\Abstractions\RequestOption;
+
+/**
+ * Configuration for the request such as headers, query parameters, and middleware options.
+*/
+class SeriesAxisRequestBuilderGetRequestConfiguration 
+{
+    /**
+     * @var array<string, array<string>|string>|null $headers Request headers
+    */
+    public ?array $headers = null;
+    
+    /**
+     * @var array<string, RequestOption>|null $options Request options
+    */
+    public ?array $options = null;
+    
+    /**
+     * @var SeriesAxisRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?SeriesAxisRequestBuilderGetQueryParameters $queryParameters = null;
+    
+}

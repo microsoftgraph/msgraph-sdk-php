@@ -38,7 +38,7 @@ class EventMessageResponse extends EventMessage implements Parsable
     }
 
     /**
-     * Gets the proposedNewTime property value. The proposedNewTime property
+     * Gets the proposedNewTime property value. 
      * @return TimeSlot|null
     */
     public function getProposedNewTime(): ?TimeSlot {
@@ -46,7 +46,7 @@ class EventMessageResponse extends EventMessage implements Parsable
     }
 
     /**
-     * Gets the responseType property value. The responseType property
+     * Gets the responseType property value. 
      * @return ResponseType|null
     */
     public function getResponseType(): ?ResponseType {
@@ -64,7 +64,7 @@ class EventMessageResponse extends EventMessage implements Parsable
     }
 
     /**
-     * Sets the proposedNewTime property value. The proposedNewTime property
+     * Sets the proposedNewTime property value. 
      * @param TimeSlot|null $value Value to set for the proposedNewTime property.
     */
     public function setProposedNewTime(?TimeSlot $value): void {
@@ -72,7 +72,7 @@ class EventMessageResponse extends EventMessage implements Parsable
     }
 
     /**
-     * Sets the responseType property value. The responseType property
+     * Sets the responseType property value. 
      * @param ResponseType|null $value Value to set for the responseType property.
     */
     public function setResponseType(?ResponseType $value): void {

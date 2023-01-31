@@ -38,11 +38,15 @@ class CommsOperationItemRequestBuilder
      * Instantiates a new CommsOperationItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $commsOperationId key: id of commsOperation
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $commsOperationId = null) {
         $this->urlTemplate = '{+baseurl}/communications/calls/{call%2Did}/operations/{commsOperation%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['commsOperationId'] = $commsOperationId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class CommsOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in communications
-     * @param CommsOperation $body The request body
      * @param CommsOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class CommsOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in communications
-     * @param CommsOperation $body The request body
      * @param CommsOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

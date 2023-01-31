@@ -38,11 +38,15 @@ class SectionGroupItemRequestBuilder
      * Instantiates a new SectionGroupItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $sectionGroupId1 key: id of sectionGroup
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $sectionGroupId1 = null) {
         $this->urlTemplate = '{+baseurl}/users/{user%2Did}/onenote/notebooks/{notebook%2Did}/sectionGroups/{sectionGroup%2Did}/sectionGroups/{sectionGroup%2Did1}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['sectionGroupId1'] = $sectionGroupId1;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**

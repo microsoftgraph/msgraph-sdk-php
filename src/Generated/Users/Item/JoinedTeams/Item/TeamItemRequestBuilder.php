@@ -8,26 +8,26 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Team;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\AllChannels\AllChannelsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Archive\ArchiveRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\ChannelsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\CompleteMigration\CompleteMigrationRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\EscapedClone\CloneRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Group\GroupRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\IncomingChannels\IncomingChannelsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\InstalledApps\InstalledAppsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\InstalledApps\Item\TeamsAppInstallationItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Members\Item\ConversationMemberItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Members\MembersRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\MicrosoftGraphArchive\ArchiveRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\MicrosoftGraphClone\CloneRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\MicrosoftGraphCompleteMigration\CompleteMigrationRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\MicrosoftGraphSendActivityNotification\SendActivityNotificationRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\MicrosoftGraphUnarchive\UnarchiveRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Operations\Item\TeamsAsyncOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Operations\OperationsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Photo\PhotoRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\PrimaryChannelRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\ScheduleRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\SendActivityNotification\SendActivityNotificationRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Tags\Item\TeamworkTagItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Tags\TagsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Template\TemplateRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Unarchive\UnarchiveRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -48,31 +48,10 @@ class TeamItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the archive method.
-    */
-    public function archive(): ArchiveRequestBuilder {
-        return new ArchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the channels property of the microsoft.graph.team entity.
     */
     public function channels(): ChannelsRequestBuilder {
         return new ChannelsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the completeMigration method.
-    */
-    public function completeMigration(): CompleteMigrationRequestBuilder {
-        return new CompleteMigrationRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the clone method.
-    */
-    public function escapedClone(): CloneRequestBuilder {
-        return new CloneRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -101,6 +80,41 @@ class TeamItemRequestBuilder
     */
     public function members(): MembersRequestBuilder {
         return new MembersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the archive method.
+    */
+    public function microsoftGraphArchive(): ArchiveRequestBuilder {
+        return new ArchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the clone method.
+    */
+    public function microsoftGraphClone(): CloneRequestBuilder {
+        return new CloneRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the completeMigration method.
+    */
+    public function microsoftGraphCompleteMigration(): CompleteMigrationRequestBuilder {
+        return new CompleteMigrationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the sendActivityNotification method.
+    */
+    public function microsoftGraphSendActivityNotification(): SendActivityNotificationRequestBuilder {
+        return new SendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the unarchive method.
+    */
+    public function microsoftGraphUnarchive(): UnarchiveRequestBuilder {
+        return new UnarchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -142,13 +156,6 @@ class TeamItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the sendActivityNotification method.
-    */
-    public function sendActivityNotification(): SendActivityNotificationRequestBuilder {
-        return new SendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the tags property of the microsoft.graph.team entity.
     */
     public function tags(): TagsRequestBuilder {
@@ -160,13 +167,6 @@ class TeamItemRequestBuilder
     */
     public function template(): TemplateRequestBuilder {
         return new TemplateRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the unarchive method.
-    */
-    public function unarchive(): UnarchiveRequestBuilder {
-        return new UnarchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -200,11 +200,15 @@ class TeamItemRequestBuilder
      * Instantiates a new TeamItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $teamId key: id of team
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $teamId = null) {
         $this->urlTemplate = '{+baseurl}/users/{user%2Did}/joinedTeams/{team%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['teamId'] = $teamId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -289,7 +293,6 @@ class TeamItemRequestBuilder
 
     /**
      * Update the navigation property joinedTeams in users
-     * @param Team $body The request body
      * @param TeamItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -365,7 +368,6 @@ class TeamItemRequestBuilder
 
     /**
      * Update the navigation property joinedTeams in users
-     * @param Team $body The request body
      * @param TeamItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

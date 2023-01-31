@@ -167,7 +167,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the importance property value. The importance property
+     * Gets the importance property value. 
      * @return Importance|null
     */
     public function getImportance(): ?Importance {
@@ -183,7 +183,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the isAllDay property value. The isAllDay property
+     * Gets the isAllDay property value. 
      * @return bool|null
     */
     public function getIsAllDay(): ?bool {
@@ -191,7 +191,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the isCancelled property value. The isCancelled property
+     * Gets the isCancelled property value. 
      * @return bool|null
     */
     public function getIsCancelled(): ?bool {
@@ -199,7 +199,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the isDraft property value. The isDraft property
+     * Gets the isDraft property value. 
      * @return bool|null
     */
     public function getIsDraft(): ?bool {
@@ -207,7 +207,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the isOnlineMeeting property value. The isOnlineMeeting property
+     * Gets the isOnlineMeeting property value. 
      * @return bool|null
     */
     public function getIsOnlineMeeting(): ?bool {
@@ -215,7 +215,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the isOrganizer property value. The isOrganizer property
+     * Gets the isOrganizer property value. 
      * @return bool|null
     */
     public function getIsOrganizer(): ?bool {
@@ -223,7 +223,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the isReminderOn property value. The isReminderOn property
+     * Gets the isReminderOn property value. 
      * @return bool|null
     */
     public function getIsReminderOn(): ?bool {
@@ -231,7 +231,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the location property value. The location property
+     * Gets the location property value. 
      * @return Location|null
     */
     public function getLocation(): ?Location {
@@ -239,7 +239,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the locations property value. The locations property
+     * Gets the locations property value. 
      * @return array<Location>|null
     */
     public function getLocations(): ?array {
@@ -255,7 +255,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the onlineMeeting property value. The onlineMeeting property
+     * Gets the onlineMeeting property value. 
      * @return OnlineMeetingInfo|null
     */
     public function getOnlineMeeting(): ?OnlineMeetingInfo {
@@ -263,7 +263,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the onlineMeetingProvider property value. The onlineMeetingProvider property
+     * Gets the onlineMeetingProvider property value. 
      * @return OnlineMeetingProviderType|null
     */
     public function getOnlineMeetingProvider(): ?OnlineMeetingProviderType {
@@ -271,7 +271,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the onlineMeetingUrl property value. The onlineMeetingUrl property
+     * Gets the onlineMeetingUrl property value. 
      * @return string|null
     */
     public function getOnlineMeetingUrl(): ?string {
@@ -279,7 +279,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the organizer property value. The organizer property
+     * Gets the organizer property value. 
      * @return Recipient|null
     */
     public function getOrganizer(): ?Recipient {
@@ -287,7 +287,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the originalEndTimeZone property value. The originalEndTimeZone property
+     * Gets the originalEndTimeZone property value. 
      * @return string|null
     */
     public function getOriginalEndTimeZone(): ?string {
@@ -295,7 +295,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the originalStart property value. The originalStart property
+     * Gets the originalStart property value. 
      * @return DateTime|null
     */
     public function getOriginalStart(): ?DateTime {
@@ -303,7 +303,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the originalStartTimeZone property value. The originalStartTimeZone property
+     * Gets the originalStartTimeZone property value. 
      * @return string|null
     */
     public function getOriginalStartTimeZone(): ?string {
@@ -311,7 +311,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the recurrence property value. The recurrence property
+     * Gets the recurrence property value. 
      * @return PatternedRecurrence|null
     */
     public function getRecurrence(): ?PatternedRecurrence {
@@ -319,7 +319,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the reminderMinutesBeforeStart property value. The reminderMinutesBeforeStart property
+     * Gets the reminderMinutesBeforeStart property value. 
      * @return int|null
     */
     public function getReminderMinutesBeforeStart(): ?int {
@@ -327,7 +327,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the responseRequested property value. The responseRequested property
+     * Gets the responseRequested property value. 
      * @return bool|null
     */
     public function getResponseRequested(): ?bool {
@@ -335,7 +335,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the responseStatus property value. The responseStatus property
+     * Gets the responseStatus property value. 
      * @return ResponseStatus|null
     */
     public function getResponseStatus(): ?ResponseStatus {
@@ -343,7 +343,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the sensitivity property value. The sensitivity property
+     * Gets the sensitivity property value. 
      * @return Sensitivity|null
     */
     public function getSensitivity(): ?Sensitivity {
@@ -351,7 +351,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the seriesMasterId property value. The seriesMasterId property
+     * Gets the seriesMasterId property value. 
      * @return string|null
     */
     public function getSeriesMasterId(): ?string {
@@ -359,7 +359,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the showAs property value. The showAs property
+     * Gets the showAs property value. 
      * @return FreeBusyStatus|null
     */
     public function getShowAs(): ?FreeBusyStatus {
@@ -375,7 +375,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the start property value. The start property
+     * Gets the start property value. 
      * @return DateTimeTimeZone|null
     */
     public function getStart(): ?DateTimeTimeZone {
@@ -383,7 +383,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the subject property value. The subject property
+     * Gets the subject property value. 
      * @return string|null
     */
     public function getSubject(): ?string {
@@ -391,7 +391,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the transactionId property value. The transactionId property
+     * Gets the transactionId property value. 
      * @return string|null
     */
     public function getTransactionId(): ?string {
@@ -399,7 +399,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. 
      * @return EventType|null
     */
     public function getType(): ?EventType {
@@ -407,7 +407,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the webLink property value. The webLink property
+     * Gets the webLink property value. 
      * @return string|null
     */
     public function getWebLink(): ?string {
@@ -553,7 +553,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the importance property value. The importance property
+     * Sets the importance property value. 
      * @param Importance|null $value Value to set for the importance property.
     */
     public function setImportance(?Importance $value): void {
@@ -569,7 +569,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the isAllDay property value. The isAllDay property
+     * Sets the isAllDay property value. 
      * @param bool|null $value Value to set for the isAllDay property.
     */
     public function setIsAllDay(?bool $value): void {
@@ -577,7 +577,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the isCancelled property value. The isCancelled property
+     * Sets the isCancelled property value. 
      * @param bool|null $value Value to set for the isCancelled property.
     */
     public function setIsCancelled(?bool $value): void {
@@ -585,7 +585,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the isDraft property value. The isDraft property
+     * Sets the isDraft property value. 
      * @param bool|null $value Value to set for the isDraft property.
     */
     public function setIsDraft(?bool $value): void {
@@ -593,7 +593,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the isOnlineMeeting property value. The isOnlineMeeting property
+     * Sets the isOnlineMeeting property value. 
      * @param bool|null $value Value to set for the isOnlineMeeting property.
     */
     public function setIsOnlineMeeting(?bool $value): void {
@@ -601,7 +601,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the isOrganizer property value. The isOrganizer property
+     * Sets the isOrganizer property value. 
      * @param bool|null $value Value to set for the isOrganizer property.
     */
     public function setIsOrganizer(?bool $value): void {
@@ -609,7 +609,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the isReminderOn property value. The isReminderOn property
+     * Sets the isReminderOn property value. 
      * @param bool|null $value Value to set for the isReminderOn property.
     */
     public function setIsReminderOn(?bool $value): void {
@@ -617,7 +617,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the location property value. The location property
+     * Sets the location property value. 
      * @param Location|null $value Value to set for the location property.
     */
     public function setLocation(?Location $value): void {
@@ -625,7 +625,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the locations property value. The locations property
+     * Sets the locations property value. 
      * @param array<Location>|null $value Value to set for the locations property.
     */
     public function setLocations(?array $value): void {
@@ -641,7 +641,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the onlineMeeting property value. The onlineMeeting property
+     * Sets the onlineMeeting property value. 
      * @param OnlineMeetingInfo|null $value Value to set for the onlineMeeting property.
     */
     public function setOnlineMeeting(?OnlineMeetingInfo $value): void {
@@ -649,7 +649,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the onlineMeetingProvider property value. The onlineMeetingProvider property
+     * Sets the onlineMeetingProvider property value. 
      * @param OnlineMeetingProviderType|null $value Value to set for the onlineMeetingProvider property.
     */
     public function setOnlineMeetingProvider(?OnlineMeetingProviderType $value): void {
@@ -657,7 +657,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the onlineMeetingUrl property value. The onlineMeetingUrl property
+     * Sets the onlineMeetingUrl property value. 
      * @param string|null $value Value to set for the onlineMeetingUrl property.
     */
     public function setOnlineMeetingUrl(?string $value): void {
@@ -665,7 +665,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the organizer property value. The organizer property
+     * Sets the organizer property value. 
      * @param Recipient|null $value Value to set for the organizer property.
     */
     public function setOrganizer(?Recipient $value): void {
@@ -673,7 +673,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the originalEndTimeZone property value. The originalEndTimeZone property
+     * Sets the originalEndTimeZone property value. 
      * @param string|null $value Value to set for the originalEndTimeZone property.
     */
     public function setOriginalEndTimeZone(?string $value): void {
@@ -681,7 +681,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the originalStart property value. The originalStart property
+     * Sets the originalStart property value. 
      * @param DateTime|null $value Value to set for the originalStart property.
     */
     public function setOriginalStart(?DateTime $value): void {
@@ -689,7 +689,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the originalStartTimeZone property value. The originalStartTimeZone property
+     * Sets the originalStartTimeZone property value. 
      * @param string|null $value Value to set for the originalStartTimeZone property.
     */
     public function setOriginalStartTimeZone(?string $value): void {
@@ -697,7 +697,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the recurrence property value. The recurrence property
+     * Sets the recurrence property value. 
      * @param PatternedRecurrence|null $value Value to set for the recurrence property.
     */
     public function setRecurrence(?PatternedRecurrence $value): void {
@@ -705,7 +705,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the reminderMinutesBeforeStart property value. The reminderMinutesBeforeStart property
+     * Sets the reminderMinutesBeforeStart property value. 
      * @param int|null $value Value to set for the reminderMinutesBeforeStart property.
     */
     public function setReminderMinutesBeforeStart(?int $value): void {
@@ -713,7 +713,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the responseRequested property value. The responseRequested property
+     * Sets the responseRequested property value. 
      * @param bool|null $value Value to set for the responseRequested property.
     */
     public function setResponseRequested(?bool $value): void {
@@ -721,7 +721,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the responseStatus property value. The responseStatus property
+     * Sets the responseStatus property value. 
      * @param ResponseStatus|null $value Value to set for the responseStatus property.
     */
     public function setResponseStatus(?ResponseStatus $value): void {
@@ -729,7 +729,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the sensitivity property value. The sensitivity property
+     * Sets the sensitivity property value. 
      * @param Sensitivity|null $value Value to set for the sensitivity property.
     */
     public function setSensitivity(?Sensitivity $value): void {
@@ -737,7 +737,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the seriesMasterId property value. The seriesMasterId property
+     * Sets the seriesMasterId property value. 
      * @param string|null $value Value to set for the seriesMasterId property.
     */
     public function setSeriesMasterId(?string $value): void {
@@ -745,7 +745,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the showAs property value. The showAs property
+     * Sets the showAs property value. 
      * @param FreeBusyStatus|null $value Value to set for the showAs property.
     */
     public function setShowAs(?FreeBusyStatus $value): void {
@@ -761,7 +761,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the start property value. The start property
+     * Sets the start property value. 
      * @param DateTimeTimeZone|null $value Value to set for the start property.
     */
     public function setStart(?DateTimeTimeZone $value): void {
@@ -769,7 +769,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the subject property value. The subject property
+     * Sets the subject property value. 
      * @param string|null $value Value to set for the subject property.
     */
     public function setSubject(?string $value): void {
@@ -777,7 +777,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the transactionId property value. The transactionId property
+     * Sets the transactionId property value. 
      * @param string|null $value Value to set for the transactionId property.
     */
     public function setTransactionId(?string $value): void {
@@ -785,7 +785,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. 
      * @param EventType|null $value Value to set for the type property.
     */
     public function setType(?EventType $value): void {
@@ -793,7 +793,7 @@ class Event extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the webLink property value. The webLink property
+     * Sets the webLink property value. 
      * @param string|null $value Value to set for the webLink property.
     */
     public function setWebLink(?string $value): void {

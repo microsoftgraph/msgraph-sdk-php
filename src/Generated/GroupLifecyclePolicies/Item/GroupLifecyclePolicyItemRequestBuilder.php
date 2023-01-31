@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\GroupLifecyclePolicies\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\GroupLifecyclePolicies\Item\AddGroup\AddGroupRequestBuilder;
-use Microsoft\Graph\Generated\GroupLifecyclePolicies\Item\RemoveGroup\RemoveGroupRequestBuilder;
+use Microsoft\Graph\Generated\GroupLifecyclePolicies\Item\MicrosoftGraphAddGroup\AddGroupRequestBuilder;
+use Microsoft\Graph\Generated\GroupLifecyclePolicies\Item\MicrosoftGraphRemoveGroup\RemoveGroupRequestBuilder;
 use Microsoft\Graph\Generated\Models\GroupLifecyclePolicy;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -24,21 +24,21 @@ class GroupLifecyclePolicyItemRequestBuilder
     /**
      * Provides operations to call the addGroup method.
     */
-    public function addGroup(): AddGroupRequestBuilder {
+    public function microsoftGraphAddGroup(): AddGroupRequestBuilder {
         return new AddGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the removeGroup method.
+    */
+    public function microsoftGraphRemoveGroup(): RemoveGroupRequestBuilder {
+        return new RemoveGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
-    
-    /**
-     * Provides operations to call the removeGroup method.
-    */
-    public function removeGroup(): RemoveGroupRequestBuilder {
-        return new RemoveGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -54,11 +54,15 @@ class GroupLifecyclePolicyItemRequestBuilder
      * Instantiates a new GroupLifecyclePolicyItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $groupLifecyclePolicyId key: id of groupLifecyclePolicy
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $groupLifecyclePolicyId = null) {
         $this->urlTemplate = '{+baseurl}/groupLifecyclePolicies/{groupLifecyclePolicy%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['groupLifecyclePolicyId'] = $groupLifecyclePolicyId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -101,7 +105,6 @@ class GroupLifecyclePolicyItemRequestBuilder
 
     /**
      * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object.
-     * @param GroupLifecyclePolicy $body The request body
      * @param GroupLifecyclePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/grouplifecyclepolicy-update?view=graph-rest-1.0 Find more info here
@@ -167,7 +170,6 @@ class GroupLifecyclePolicyItemRequestBuilder
 
     /**
      * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object.
-     * @param GroupLifecyclePolicy $body The request body
      * @param GroupLifecyclePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

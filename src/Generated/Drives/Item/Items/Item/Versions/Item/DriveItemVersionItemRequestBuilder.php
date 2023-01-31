@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Versions\Item\Content\ContentRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Versions\Item\RestoreVersion\RestoreVersionRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Versions\Item\MicrosoftGraphRestoreVersion\RestoreVersionRequestBuilder;
 use Microsoft\Graph\Generated\Models\DriveItemVersion;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -29,6 +29,13 @@ class DriveItemVersionItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the restoreVersion method.
+    */
+    public function microsoftGraphRestoreVersion(): RestoreVersionRequestBuilder {
+        return new RestoreVersionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -39,13 +46,6 @@ class DriveItemVersionItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * Provides operations to call the restoreVersion method.
-    */
-    public function restoreVersion(): RestoreVersionRequestBuilder {
-        return new RestoreVersionRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
@@ -54,11 +54,15 @@ class DriveItemVersionItemRequestBuilder
      * Instantiates a new DriveItemVersionItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $driveItemVersionId key: id of driveItemVersion
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $driveItemVersionId = null) {
         $this->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/versions/{driveItemVersion%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['driveItemVersionId'] = $driveItemVersionId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -99,7 +103,6 @@ class DriveItemVersionItemRequestBuilder
 
     /**
      * Update the navigation property versions in drives
-     * @param DriveItemVersion $body The request body
      * @param DriveItemVersionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -164,7 +167,6 @@ class DriveItemVersionItemRequestBuilder
 
     /**
      * Update the navigation property versions in drives
-     * @param DriveItemVersion $body The request body
      * @param DriveItemVersionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

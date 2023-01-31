@@ -9,7 +9,7 @@ use Microsoft\Graph\Generated\Models\MailFolder;
 use Microsoft\Graph\Generated\Models\MailFolderCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\MicrosoftGraphDelta\DeltaRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -27,6 +27,13 @@ class ChildFoldersRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the delta method.
+    */
+    public function microsoftGraphDelta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -56,14 +63,6 @@ class ChildFoldersRequestBuilder
     }
 
     /**
-     * Provides operations to call the delta method.
-     * @return DeltaRequestBuilder
-    */
-    public function delta(): DeltaRequestBuilder {
-        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
      * Get the folder collection under the specified folder. You can use the `.../me/mailFolders` shortcut to get the top-level folder collection and navigate to another folder. By default, this operation does not return hidden folders. Use a query parameter _includeHiddenFolders_ to include them in the response.
      * @param ChildFoldersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -84,7 +83,6 @@ class ChildFoldersRequestBuilder
 
     /**
      * Use this API to create a new child mailFolder. If you intend a new folder to be hidden, you must set the **isHidden** property to `true` on creation.
-     * @param MailFolder $body The request body
      * @param ChildFoldersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/mailfolder-post-childfolders?view=graph-rest-1.0 Find more info here
@@ -129,7 +127,6 @@ class ChildFoldersRequestBuilder
 
     /**
      * Use this API to create a new child mailFolder. If you intend a new folder to be hidden, you must set the **isHidden** property to `true` on creation.
-     * @param MailFolder $body The request body
      * @param ChildFoldersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

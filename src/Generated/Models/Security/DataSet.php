@@ -35,7 +35,7 @@ class DataSet extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. 
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
@@ -43,7 +43,7 @@ class DataSet extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. 
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -51,7 +51,7 @@ class DataSet extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. 
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -83,7 +83,7 @@ class DataSet extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. 
      * @param IdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?IdentitySet $value): void {
@@ -91,7 +91,7 @@ class DataSet extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. 
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -99,7 +99,7 @@ class DataSet extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. 
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {

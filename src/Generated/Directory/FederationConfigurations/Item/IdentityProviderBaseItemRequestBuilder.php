@@ -38,11 +38,15 @@ class IdentityProviderBaseItemRequestBuilder
      * Instantiates a new IdentityProviderBaseItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $identityProviderBaseId key: id of identityProviderBase
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $identityProviderBaseId = null) {
         $this->urlTemplate = '{+baseurl}/directory/federationConfigurations/{identityProviderBase%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['identityProviderBaseId'] = $identityProviderBaseId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class IdentityProviderBaseItemRequestBuilder
 
     /**
      * Update the navigation property federationConfigurations in directory
-     * @param IdentityProviderBase $body The request body
      * @param IdentityProviderBaseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class IdentityProviderBaseItemRequestBuilder
 
     /**
      * Update the navigation property federationConfigurations in directory
-     * @param IdentityProviderBase $body The request body
      * @param IdentityProviderBaseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

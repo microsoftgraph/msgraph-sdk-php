@@ -75,7 +75,6 @@ class ExtensionPropertiesRequestBuilder
 
     /**
      * Create a new directory extension definition, represented by an extensionProperty object.
-     * @param ExtensionProperty $body The request body
      * @param ExtensionPropertiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/application-post-extensionproperty?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class ExtensionPropertiesRequestBuilder
 
     /**
      * Create a new directory extension definition, represented by an extensionProperty object.
-     * @param ExtensionProperty $body The request body
      * @param ExtensionPropertiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

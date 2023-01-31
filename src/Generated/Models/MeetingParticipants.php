@@ -43,7 +43,7 @@ class MeetingParticipants implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the attendees property value. The attendees property
+     * Gets the attendees property value. 
      * @return array<MeetingParticipantInfo>|null
     */
     public function getAttendees(): ?array {
@@ -72,7 +72,7 @@ class MeetingParticipants implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -80,7 +80,7 @@ class MeetingParticipants implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the organizer property value. The organizer property
+     * Gets the organizer property value. 
      * @return MeetingParticipantInfo|null
     */
     public function getOrganizer(): ?MeetingParticipantInfo {
@@ -107,7 +107,7 @@ class MeetingParticipants implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the attendees property value. The attendees property
+     * Sets the attendees property value. 
      * @param array<MeetingParticipantInfo>|null $value Value to set for the attendees property.
     */
     public function setAttendees(?array $value): void {
@@ -123,7 +123,7 @@ class MeetingParticipants implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -131,7 +131,7 @@ class MeetingParticipants implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the organizer property value. The organizer property
+     * Sets the organizer property value. 
      * @param MeetingParticipantInfo|null $value Value to set for the organizer property.
     */
     public function setOrganizer(?MeetingParticipantInfo $value): void {

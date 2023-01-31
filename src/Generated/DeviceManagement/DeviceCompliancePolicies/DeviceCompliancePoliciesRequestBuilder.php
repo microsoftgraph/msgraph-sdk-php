@@ -74,7 +74,6 @@ class DeviceCompliancePoliciesRequestBuilder
 
     /**
      * Create new navigation property to deviceCompliancePolicies for deviceManagement
-     * @param DeviceCompliancePolicy $body The request body
      * @param DeviceCompliancePoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class DeviceCompliancePoliciesRequestBuilder
 
     /**
      * Create new navigation property to deviceCompliancePolicies for deviceManagement
-     * @param DeviceCompliancePolicy $body The request body
      * @param DeviceCompliancePoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

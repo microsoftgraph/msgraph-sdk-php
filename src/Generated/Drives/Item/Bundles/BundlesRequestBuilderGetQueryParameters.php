@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Bundles;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of all the [bundles][bundle] in a user's drive.
+ * Collection of [bundles][bundle] (albums and multi-select-shared sets of items). Only in personal OneDrive.
 */
 class BundlesRequestBuilderGetQueryParameters 
 {

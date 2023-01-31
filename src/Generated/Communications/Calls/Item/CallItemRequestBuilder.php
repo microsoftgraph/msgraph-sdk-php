@@ -5,28 +5,28 @@ namespace Microsoft\Graph\Generated\Communications\Calls\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Communications\Calls\Item\AddLargeGalleryView\AddLargeGalleryViewRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Answer\AnswerRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\AudioRoutingGroups\AudioRoutingGroupsRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\AudioRoutingGroups\Item\AudioRoutingGroupItemRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\CancelMediaProcessing\CancelMediaProcessingRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\ChangeScreenSharingRole\ChangeScreenSharingRoleRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\ContentSharingSessions\ContentSharingSessionsRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\ContentSharingSessions\Item\ContentSharingSessionItemRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\KeepAlive\KeepAliveRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Mute\MuteRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\MicrosoftGraphAddLargeGalleryView\AddLargeGalleryViewRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\MicrosoftGraphAnswer\AnswerRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\MicrosoftGraphCancelMediaProcessing\CancelMediaProcessingRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\MicrosoftGraphChangeScreenSharingRole\ChangeScreenSharingRoleRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\MicrosoftGraphKeepAlive\KeepAliveRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\MicrosoftGraphMute\MuteRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\MicrosoftGraphPlayPrompt\PlayPromptRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\MicrosoftGraphRecordResponse\RecordResponseRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\MicrosoftGraphRedirect\RedirectRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\MicrosoftGraphReject\RejectRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\MicrosoftGraphSubscribeToTone\SubscribeToToneRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\MicrosoftGraphTransfer\TransferRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\MicrosoftGraphUnmute\UnmuteRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\MicrosoftGraphUpdateRecordingStatus\UpdateRecordingStatusRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Operations\Item\CommsOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Operations\OperationsRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\ParticipantItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\ParticipantsRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\PlayPrompt\PlayPromptRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\RecordResponse\RecordResponseRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Redirect\RedirectRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Reject\RejectRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\SubscribeToTone\SubscribeToToneRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Transfer\TransferRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Unmute\UnmuteRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\UpdateRecordingStatus\UpdateRecordingStatusRequestBuilder;
 use Microsoft\Graph\Generated\Models\Call;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -42,38 +42,10 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class CallItemRequestBuilder 
 {
     /**
-     * Provides operations to call the addLargeGalleryView method.
-    */
-    public function addLargeGalleryView(): AddLargeGalleryViewRequestBuilder {
-        return new AddLargeGalleryViewRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the answer method.
-    */
-    public function answer(): AnswerRequestBuilder {
-        return new AnswerRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the audioRoutingGroups property of the microsoft.graph.call entity.
     */
     public function audioRoutingGroups(): AudioRoutingGroupsRequestBuilder {
         return new AudioRoutingGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the cancelMediaProcessing method.
-    */
-    public function cancelMediaProcessing(): CancelMediaProcessingRequestBuilder {
-        return new CancelMediaProcessingRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the changeScreenSharingRole method.
-    */
-    public function changeScreenSharingRole(): ChangeScreenSharingRoleRequestBuilder {
-        return new ChangeScreenSharingRoleRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -84,17 +56,101 @@ class CallItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the addLargeGalleryView method.
+    */
+    public function microsoftGraphAddLargeGalleryView(): AddLargeGalleryViewRequestBuilder {
+        return new AddLargeGalleryViewRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the answer method.
+    */
+    public function microsoftGraphAnswer(): AnswerRequestBuilder {
+        return new AnswerRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the cancelMediaProcessing method.
+    */
+    public function microsoftGraphCancelMediaProcessing(): CancelMediaProcessingRequestBuilder {
+        return new CancelMediaProcessingRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the changeScreenSharingRole method.
+    */
+    public function microsoftGraphChangeScreenSharingRole(): ChangeScreenSharingRoleRequestBuilder {
+        return new ChangeScreenSharingRoleRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to call the keepAlive method.
     */
-    public function keepAlive(): KeepAliveRequestBuilder {
+    public function microsoftGraphKeepAlive(): KeepAliveRequestBuilder {
         return new KeepAliveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the mute method.
     */
-    public function mute(): MuteRequestBuilder {
+    public function microsoftGraphMute(): MuteRequestBuilder {
         return new MuteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the playPrompt method.
+    */
+    public function microsoftGraphPlayPrompt(): PlayPromptRequestBuilder {
+        return new PlayPromptRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the recordResponse method.
+    */
+    public function microsoftGraphRecordResponse(): RecordResponseRequestBuilder {
+        return new RecordResponseRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the redirect method.
+    */
+    public function microsoftGraphRedirect(): RedirectRequestBuilder {
+        return new RedirectRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the reject method.
+    */
+    public function microsoftGraphReject(): RejectRequestBuilder {
+        return new RejectRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the subscribeToTone method.
+    */
+    public function microsoftGraphSubscribeToTone(): SubscribeToToneRequestBuilder {
+        return new SubscribeToToneRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the transfer method.
+    */
+    public function microsoftGraphTransfer(): TransferRequestBuilder {
+        return new TransferRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the unmute method.
+    */
+    public function microsoftGraphUnmute(): UnmuteRequestBuilder {
+        return new UnmuteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the updateRecordingStatus method.
+    */
+    public function microsoftGraphUpdateRecordingStatus(): UpdateRecordingStatusRequestBuilder {
+        return new UpdateRecordingStatusRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -117,65 +173,9 @@ class CallItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * Provides operations to call the playPrompt method.
-    */
-    public function playPrompt(): PlayPromptRequestBuilder {
-        return new PlayPromptRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the recordResponse method.
-    */
-    public function recordResponse(): RecordResponseRequestBuilder {
-        return new RecordResponseRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the redirect method.
-    */
-    public function redirect(): RedirectRequestBuilder {
-        return new RedirectRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the reject method.
-    */
-    public function reject(): RejectRequestBuilder {
-        return new RejectRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
-    
-    /**
-     * Provides operations to call the subscribeToTone method.
-    */
-    public function subscribeToTone(): SubscribeToToneRequestBuilder {
-        return new SubscribeToToneRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the transfer method.
-    */
-    public function transfer(): TransferRequestBuilder {
-        return new TransferRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the unmute method.
-    */
-    public function unmute(): UnmuteRequestBuilder {
-        return new UnmuteRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the updateRecordingStatus method.
-    */
-    public function updateRecordingStatus(): UpdateRecordingStatusRequestBuilder {
-        return new UpdateRecordingStatusRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
@@ -197,11 +197,15 @@ class CallItemRequestBuilder
      * Instantiates a new CallItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $callId key: id of call
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $callId = null) {
         $this->urlTemplate = '{+baseurl}/communications/calls/{call%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['callId'] = $callId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -275,7 +279,6 @@ class CallItemRequestBuilder
 
     /**
      * Update the navigation property calls in communications
-     * @param Call $body The request body
      * @param CallItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -340,7 +343,6 @@ class CallItemRequestBuilder
 
     /**
      * Update the navigation property calls in communications
-     * @param Call $body The request body
      * @param CallItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

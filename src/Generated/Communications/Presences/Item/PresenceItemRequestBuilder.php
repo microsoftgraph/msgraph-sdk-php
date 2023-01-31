@@ -5,10 +5,10 @@ namespace Microsoft\Graph\Generated\Communications\Presences\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Communications\Presences\Item\ClearPresence\ClearPresenceRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Presences\Item\ClearUserPreferredPresence\ClearUserPreferredPresenceRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Presences\Item\SetPresence\SetPresenceRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Presences\Item\SetUserPreferredPresence\SetUserPreferredPresenceRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Presences\Item\MicrosoftGraphClearPresence\ClearPresenceRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Presences\Item\MicrosoftGraphClearUserPreferredPresence\ClearUserPreferredPresenceRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Presences\Item\MicrosoftGraphSetPresence\SetPresenceRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Presences\Item\MicrosoftGraphSetUserPreferredPresence\SetUserPreferredPresenceRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Presence;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -26,15 +26,29 @@ class PresenceItemRequestBuilder
     /**
      * Provides operations to call the clearPresence method.
     */
-    public function clearPresence(): ClearPresenceRequestBuilder {
+    public function microsoftGraphClearPresence(): ClearPresenceRequestBuilder {
         return new ClearPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the clearUserPreferredPresence method.
     */
-    public function clearUserPreferredPresence(): ClearUserPreferredPresenceRequestBuilder {
+    public function microsoftGraphClearUserPreferredPresence(): ClearUserPreferredPresenceRequestBuilder {
         return new ClearUserPreferredPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the setPresence method.
+    */
+    public function microsoftGraphSetPresence(): SetPresenceRequestBuilder {
+        return new SetPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the setUserPreferredPresence method.
+    */
+    public function microsoftGraphSetUserPreferredPresence(): SetUserPreferredPresenceRequestBuilder {
+        return new SetUserPreferredPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -48,20 +62,6 @@ class PresenceItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * Provides operations to call the setPresence method.
-    */
-    public function setPresence(): SetPresenceRequestBuilder {
-        return new SetPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the setUserPreferredPresence method.
-    */
-    public function setUserPreferredPresence(): SetUserPreferredPresenceRequestBuilder {
-        return new SetUserPreferredPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
@@ -70,11 +70,15 @@ class PresenceItemRequestBuilder
      * Instantiates a new PresenceItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $presenceId key: id of presence
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $presenceId = null) {
         $this->urlTemplate = '{+baseurl}/communications/presences/{presence%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['presenceId'] = $presenceId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -115,7 +119,6 @@ class PresenceItemRequestBuilder
 
     /**
      * Update the navigation property presences in communications
-     * @param Presence $body The request body
      * @param PresenceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -180,7 +183,6 @@ class PresenceItemRequestBuilder
 
     /**
      * Update the navigation property presences in communications
-     * @param Presence $body The request body
      * @param PresenceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

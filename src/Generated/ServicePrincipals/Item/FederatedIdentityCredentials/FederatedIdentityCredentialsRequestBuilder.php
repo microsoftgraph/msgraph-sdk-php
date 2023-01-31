@@ -74,7 +74,6 @@ class FederatedIdentityCredentialsRequestBuilder
 
     /**
      * Create new navigation property to federatedIdentityCredentials for servicePrincipals
-     * @param FederatedIdentityCredential $body The request body
      * @param FederatedIdentityCredentialsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class FederatedIdentityCredentialsRequestBuilder
 
     /**
      * Create new navigation property to federatedIdentityCredentials for servicePrincipals
-     * @param FederatedIdentityCredential $body The request body
      * @param FederatedIdentityCredentialsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

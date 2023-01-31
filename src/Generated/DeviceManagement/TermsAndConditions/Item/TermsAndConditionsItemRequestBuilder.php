@@ -78,11 +78,15 @@ class TermsAndConditionsItemRequestBuilder
      * Instantiates a new TermsAndConditionsItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $termsAndConditionsId key: id of termsAndConditions
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $termsAndConditionsId = null) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/termsAndConditions/{termsAndConditions%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['termsAndConditionsId'] = $termsAndConditionsId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -123,7 +127,6 @@ class TermsAndConditionsItemRequestBuilder
 
     /**
      * Update the navigation property termsAndConditions in deviceManagement
-     * @param TermsAndConditions $body The request body
      * @param TermsAndConditionsItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -188,7 +191,6 @@ class TermsAndConditionsItemRequestBuilder
 
     /**
      * Update the navigation property termsAndConditions in deviceManagement
-     * @param TermsAndConditions $body The request body
      * @param TermsAndConditionsItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -75,7 +75,6 @@ class AttendanceReportsRequestBuilder
 
     /**
      * Create new navigation property to attendanceReports for me
-     * @param MeetingAttendanceReport $body The request body
      * @param AttendanceReportsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class AttendanceReportsRequestBuilder
 
     /**
      * Create new navigation property to attendanceReports for me
-     * @param MeetingAttendanceReport $body The request body
      * @param AttendanceReportsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -5,7 +5,6 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\It
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\Assign\AssignRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\Assignments\AssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\Assignments\Item\DeviceCompliancePolicyAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\DeviceSettingStateSummaries\DeviceSettingStateSummariesRequestBuilder;
@@ -13,7 +12,8 @@ use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\Dev
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\DeviceStatuses\DeviceStatusesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\DeviceStatuses\Item\DeviceComplianceDeviceStatusItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\DeviceStatusOverview\DeviceStatusOverviewRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\ScheduleActionsForRules\ScheduleActionsForRulesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\MicrosoftGraphAssign\AssignRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\MicrosoftGraphScheduleActionsForRules\ScheduleActionsForRulesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\ScheduledActionsForRule\Item\DeviceComplianceScheduledActionForRuleItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\ScheduledActionsForRule\ScheduledActionsForRuleRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\UserStatuses\Item\DeviceComplianceUserStatusItemRequestBuilder;
@@ -33,13 +33,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 */
 class DeviceCompliancePolicyItemRequestBuilder 
 {
-    /**
-     * Provides operations to call the assign method.
-    */
-    public function assign(): AssignRequestBuilder {
-        return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.deviceCompliancePolicy entity.
     */
@@ -69,6 +62,20 @@ class DeviceCompliancePolicyItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the assign method.
+    */
+    public function microsoftGraphAssign(): AssignRequestBuilder {
+        return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the scheduleActionsForRules method.
+    */
+    public function microsoftGraphScheduleActionsForRules(): ScheduleActionsForRulesRequestBuilder {
+        return new ScheduleActionsForRulesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -77,13 +84,6 @@ class DeviceCompliancePolicyItemRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
-    
-    /**
-     * Provides operations to call the scheduleActionsForRules method.
-    */
-    public function scheduleActionsForRules(): ScheduleActionsForRulesRequestBuilder {
-        return new ScheduleActionsForRulesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * Provides operations to manage the scheduledActionsForRule property of the microsoft.graph.deviceCompliancePolicy entity.
@@ -126,11 +126,15 @@ class DeviceCompliancePolicyItemRequestBuilder
      * Instantiates a new DeviceCompliancePolicyItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $deviceCompliancePolicyId key: id of deviceCompliancePolicy
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $deviceCompliancePolicyId = null) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/deviceCompliancePolicies/{deviceCompliancePolicy%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['deviceCompliancePolicyId'] = $deviceCompliancePolicyId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -193,7 +197,6 @@ class DeviceCompliancePolicyItemRequestBuilder
 
     /**
      * Update the navigation property deviceCompliancePolicies in deviceManagement
-     * @param DeviceCompliancePolicy $body The request body
      * @param DeviceCompliancePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -269,7 +272,6 @@ class DeviceCompliancePolicyItemRequestBuilder
 
     /**
      * Update the navigation property deviceCompliancePolicies in deviceManagement
-     * @param DeviceCompliancePolicy $body The request body
      * @param DeviceCompliancePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

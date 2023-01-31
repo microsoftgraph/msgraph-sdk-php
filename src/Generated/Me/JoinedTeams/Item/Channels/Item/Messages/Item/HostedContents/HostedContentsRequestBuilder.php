@@ -75,7 +75,6 @@ class HostedContentsRequestBuilder
 
     /**
      * Create new navigation property to hostedContents for me
-     * @param ChatMessageHostedContent $body The request body
      * @param HostedContentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class HostedContentsRequestBuilder
 
     /**
      * Create new navigation property to hostedContents for me
-     * @param ChatMessageHostedContent $body The request body
      * @param HostedContentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

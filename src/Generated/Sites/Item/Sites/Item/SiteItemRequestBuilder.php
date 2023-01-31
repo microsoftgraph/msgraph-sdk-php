@@ -38,11 +38,15 @@ class SiteItemRequestBuilder
      * Instantiates a new SiteItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $siteId1 key: id of site
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $siteId1 = null) {
         $this->urlTemplate = '{+baseurl}/sites/{site%2Did}/sites/{site%2Did1}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['siteId1'] = $siteId1;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**

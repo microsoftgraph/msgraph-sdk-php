@@ -210,7 +210,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the officeLocation property value. The officeLocation property
+     * Gets the officeLocation property value. 
      * @return string|null
     */
     public function getOfficeLocation(): ?string {
@@ -250,7 +250,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the primaryRole property value. The primaryRole property
+     * Gets the primaryRole property value. 
      * @return EducationUserRole|null
     */
     public function getPrimaryRole(): ?EducationUserRole {
@@ -266,7 +266,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Gets the refreshTokensValidFromDateTime property value. The refreshTokensValidFromDateTime property
+     * Gets the refreshTokensValidFromDateTime property value. 
      * @return DateTime|null
     */
     public function getRefreshTokensValidFromDateTime(): ?DateTime {
@@ -560,7 +560,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the officeLocation property value. The officeLocation property
+     * Sets the officeLocation property value. 
      * @param string|null $value Value to set for the officeLocation property.
     */
     public function setOfficeLocation(?string $value): void {
@@ -600,7 +600,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the primaryRole property value. The primaryRole property
+     * Sets the primaryRole property value. 
      * @param EducationUserRole|null $value Value to set for the primaryRole property.
     */
     public function setPrimaryRole(?EducationUserRole $value): void {
@@ -616,7 +616,7 @@ class EducationUser extends Entity implements Parsable
     }
 
     /**
-     * Sets the refreshTokensValidFromDateTime property value. The refreshTokensValidFromDateTime property
+     * Sets the refreshTokensValidFromDateTime property value. 
      * @param DateTime|null $value Value to set for the refreshTokensValidFromDateTime property.
     */
     public function setRefreshTokensValidFromDateTime(?DateTime $value): void {

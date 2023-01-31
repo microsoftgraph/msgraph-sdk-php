@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Children\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Models\DriveItem;
 use Microsoft\Graph\Generated\Models\DriveItemCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -73,6 +74,25 @@ class ChildrenRequestBuilder
     }
 
     /**
+     * Create new navigation property to children for drives
+     * @param ChildrenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return Promise
+     * @link https://docs.microsoft.com/graph/api/driveitem-post-children?view=graph-rest-1.0 Find more info here
+    */
+    public function post(DriveItem $body, ?ChildrenRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
+        $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
+        try {
+            $errorMappings = [
+                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+            ];
+            return $this->requestAdapter->sendAsync($requestInfo, [DriveItem::class, 'createFromDiscriminatorValue'], $errorMappings);
+        } catch(Exception $ex) {
+            return new RejectedPromise($ex);
+        }
+    }
+
+    /**
      * Return a collection of DriveItems in the **children** relationship of a DriveItem. DriveItems with a non-null **folder** or **package** facet can have one or more child DriveItems.
      * @param ChildrenRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -94,6 +114,29 @@ class ChildrenRequestBuilder
                 $requestInfo->addRequestOptions(...$requestConfiguration->options);
             }
         }
+        return $requestInfo;
+    }
+
+    /**
+     * Create new navigation property to children for drives
+     * @param ChildrenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return RequestInformation
+    */
+    public function toPostRequestInformation(DriveItem $body, ?ChildrenRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
+        $requestInfo = new RequestInformation();
+        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->pathParameters = $this->pathParameters;
+        $requestInfo->httpMethod = HttpMethod::POST;
+        $requestInfo->addHeader('Accept', "application/json");
+        if ($requestConfiguration !== null) {
+            if ($requestConfiguration->headers !== null) {
+                $requestInfo->addHeaders($requestConfiguration->headers);
+            }
+            if ($requestConfiguration->options !== null) {
+                $requestInfo->addRequestOptions(...$requestConfiguration->options);
+            }
+        }
+        $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

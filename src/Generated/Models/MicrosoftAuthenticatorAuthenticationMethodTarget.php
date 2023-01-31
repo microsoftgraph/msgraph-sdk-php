@@ -25,7 +25,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
     }
 
     /**
-     * Gets the authenticationMode property value. The authenticationMode property
+     * Gets the authenticationMode property value. 
      * @return MicrosoftAuthenticatorAuthenticationMode|null
     */
     public function getAuthenticationMode(): ?MicrosoftAuthenticatorAuthenticationMode {
@@ -53,7 +53,7 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
     }
 
     /**
-     * Sets the authenticationMode property value. The authenticationMode property
+     * Sets the authenticationMode property value. 
      * @param MicrosoftAuthenticatorAuthenticationMode|null $value Value to set for the authenticationMode property.
     */
     public function setAuthenticationMode(?MicrosoftAuthenticatorAuthenticationMode $value): void {

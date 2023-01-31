@@ -75,7 +75,6 @@ class BucketsRequestBuilder
 
     /**
      * Create new navigation property to buckets for groups
-     * @param PlannerBucket $body The request body
      * @param BucketsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class BucketsRequestBuilder
 
     /**
      * Create new navigation property to buckets for groups
-     * @param PlannerBucket $body The request body
      * @param BucketsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

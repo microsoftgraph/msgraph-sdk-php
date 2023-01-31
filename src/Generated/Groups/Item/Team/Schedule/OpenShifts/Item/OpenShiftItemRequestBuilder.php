@@ -38,11 +38,15 @@ class OpenShiftItemRequestBuilder
      * Instantiates a new OpenShiftItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $openShiftId key: id of openShift
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $openShiftId = null) {
         $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/team/schedule/openShifts/{openShift%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['openShiftId'] = $openShiftId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class OpenShiftItemRequestBuilder
 
     /**
      * Update the navigation property openShifts in groups
-     * @param OpenShift $body The request body
      * @param OpenShiftItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class OpenShiftItemRequestBuilder
 
     /**
      * Update the navigation property openShifts in groups
-     * @param OpenShift $body The request body
      * @param OpenShiftItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

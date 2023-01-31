@@ -27,7 +27,7 @@ class AttachmentSession extends Entity implements Parsable
     }
 
     /**
-     * Gets the content property value. The content property
+     * Gets the content property value. 
      * @return StreamInterface|null
     */
     public function getContent(): ?StreamInterface {
@@ -35,7 +35,7 @@ class AttachmentSession extends Entity implements Parsable
     }
 
     /**
-     * Gets the expirationDateTime property value. The expirationDateTime property
+     * Gets the expirationDateTime property value. 
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
@@ -56,7 +56,7 @@ class AttachmentSession extends Entity implements Parsable
     }
 
     /**
-     * Gets the nextExpectedRanges property value. The nextExpectedRanges property
+     * Gets the nextExpectedRanges property value. 
      * @return array<string>|null
     */
     public function getNextExpectedRanges(): ?array {
@@ -75,7 +75,7 @@ class AttachmentSession extends Entity implements Parsable
     }
 
     /**
-     * Sets the content property value. The content property
+     * Sets the content property value. 
      * @param StreamInterface|null $value Value to set for the content property.
     */
     public function setContent(?StreamInterface $value): void {
@@ -83,7 +83,7 @@ class AttachmentSession extends Entity implements Parsable
     }
 
     /**
-     * Sets the expirationDateTime property value. The expirationDateTime property
+     * Sets the expirationDateTime property value. 
      * @param DateTime|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?DateTime $value): void {
@@ -91,7 +91,7 @@ class AttachmentSession extends Entity implements Parsable
     }
 
     /**
-     * Sets the nextExpectedRanges property value. The nextExpectedRanges property
+     * Sets the nextExpectedRanges property value. 
      * @param array<string>|null $value Value to set for the nextExpectedRanges property.
     */
     public function setNextExpectedRanges(?array $value): void {

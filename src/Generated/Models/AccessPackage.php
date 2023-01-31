@@ -34,7 +34,7 @@ class AccessPackage extends Entity implements Parsable
     }
 
     /**
-     * Gets the assignmentPolicies property value. The assignmentPolicies property
+     * Gets the assignmentPolicies property value. 
      * @return array<AccessPackageAssignmentPolicy>|null
     */
     public function getAssignmentPolicies(): ?array {
@@ -42,7 +42,7 @@ class AccessPackage extends Entity implements Parsable
     }
 
     /**
-     * Gets the catalog property value. The catalog property
+     * Gets the catalog property value. 
      * @return AccessPackageCatalog|null
     */
     public function getCatalog(): ?AccessPackageCatalog {
@@ -152,7 +152,7 @@ class AccessPackage extends Entity implements Parsable
     }
 
     /**
-     * Sets the assignmentPolicies property value. The assignmentPolicies property
+     * Sets the assignmentPolicies property value. 
      * @param array<AccessPackageAssignmentPolicy>|null $value Value to set for the assignmentPolicies property.
     */
     public function setAssignmentPolicies(?array $value): void {
@@ -160,7 +160,7 @@ class AccessPackage extends Entity implements Parsable
     }
 
     /**
-     * Sets the catalog property value. The catalog property
+     * Sets the catalog property value. 
      * @param AccessPackageCatalog|null $value Value to set for the catalog property.
     */
     public function setCatalog(?AccessPackageCatalog $value): void {

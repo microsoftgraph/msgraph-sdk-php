@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Communications\Calls\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\LogTeleconferenceDeviceQuality\LogTeleconferenceDeviceQualityRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\MicrosoftGraphLogTeleconferenceDeviceQuality\LogTeleconferenceDeviceQualityRequestBuilder;
 use Microsoft\Graph\Generated\Models\Call;
 use Microsoft\Graph\Generated\Models\CallCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -32,7 +32,7 @@ class CallsRequestBuilder
     /**
      * Provides operations to call the logTeleconferenceDeviceQuality method.
     */
-    public function logTeleconferenceDeviceQuality(): LogTeleconferenceDeviceQualityRequestBuilder {
+    public function microsoftGraphLogTeleconferenceDeviceQuality(): LogTeleconferenceDeviceQualityRequestBuilder {
         return new LogTeleconferenceDeviceQualityRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
@@ -82,7 +82,6 @@ class CallsRequestBuilder
 
     /**
      * Create call enables your bot to create a new outgoing peer-to-peer or group call, or join an existing meeting. You will need to register the calling bot and go through the list of permissions needed as mentioned below.
-     * @param Call $body The request body
      * @param CallsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/application-post-calls?view=graph-rest-1.0 Find more info here
@@ -127,7 +126,6 @@ class CallsRequestBuilder
 
     /**
      * Create call enables your bot to create a new outgoing peer-to-peer or group call, or join an existing meeting. You will need to register the calling bot and go through the list of permissions needed as mentioned below.
-     * @param Call $body The request body
      * @param CallsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -31,6 +31,7 @@ class MobileApp extends Entity implements Parsable
             switch ($mappingValue) {
                 case '#microsoft.graph.androidLobApp': return new AndroidLobApp();
                 case '#microsoft.graph.androidStoreApp': return new AndroidStoreApp();
+                case '#microsoft.graph.iosiPadOSWebClip': return new IosiPadOSWebClip();
                 case '#microsoft.graph.iosLobApp': return new IosLobApp();
                 case '#microsoft.graph.iosStoreApp': return new IosStoreApp();
                 case '#microsoft.graph.iosVppApp': return new IosVppApp();
@@ -50,6 +51,7 @@ class MobileApp extends Entity implements Parsable
                 case '#microsoft.graph.windowsMicrosoftEdgeApp': return new WindowsMicrosoftEdgeApp();
                 case '#microsoft.graph.windowsMobileMSI': return new WindowsMobileMSI();
                 case '#microsoft.graph.windowsUniversalAppX': return new WindowsUniversalAppX();
+                case '#microsoft.graph.windowsWebApp': return new WindowsWebApp();
             }
         }
         return new MobileApp();

@@ -45,6 +45,7 @@ class MobileAppAssignmentSettings implements AdditionalDataHolder, BackedModel, 
                 case '#microsoft.graph.microsoftStoreForBusinessAppAssignmentSettings': return new MicrosoftStoreForBusinessAppAssignmentSettings();
                 case '#microsoft.graph.win32LobAppAssignmentSettings': return new Win32LobAppAssignmentSettings();
                 case '#microsoft.graph.windowsAppXAppAssignmentSettings': return new WindowsAppXAppAssignmentSettings();
+                case '#microsoft.graph.windowsUniversalAppXAppAssignmentSettings': return new WindowsUniversalAppXAppAssignmentSettings();
             }
         }
         return new MobileAppAssignmentSettings();
@@ -78,7 +79,7 @@ class MobileAppAssignmentSettings implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -111,7 +112,7 @@ class MobileAppAssignmentSettings implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

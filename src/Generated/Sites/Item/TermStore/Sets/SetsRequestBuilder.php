@@ -74,7 +74,6 @@ class SetsRequestBuilder
 
     /**
      * Create new navigation property to sets for sites
-     * @param Set $body The request body
      * @param SetsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class SetsRequestBuilder
 
     /**
      * Create new navigation property to sets for sites
-     * @param Set $body The request body
      * @param SetsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

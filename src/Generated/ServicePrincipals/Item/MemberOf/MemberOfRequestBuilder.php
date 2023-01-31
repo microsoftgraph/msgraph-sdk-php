@@ -7,13 +7,13 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\Application\ApplicationRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\Device\DeviceRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\Group\GroupRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\OrgContact\OrgContactRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\ServicePrincipal\ServicePrincipalRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\User\UserRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\MicrosoftGraphApplication\ApplicationRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\MicrosoftGraphDevice\DeviceRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\MicrosoftGraphGroup\GroupRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\MicrosoftGraphOrgContact\OrgContactRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\MicrosoftGraphServicePrincipal\ServicePrincipalRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\MicrosoftGraphUser\UserRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -27,13 +27,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class MemberOfRequestBuilder 
 {
     /**
-     * Casts the previous resource to application.
-    */
-    public function application(): ApplicationRequestBuilder {
-        return new ApplicationRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
@@ -41,24 +34,45 @@ class MemberOfRequestBuilder
     }
     
     /**
+     * Casts the previous resource to application.
+    */
+    public function microsoftGraphApplication(): ApplicationRequestBuilder {
+        return new ApplicationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Casts the previous resource to device.
     */
-    public function device(): DeviceRequestBuilder {
+    public function microsoftGraphDevice(): DeviceRequestBuilder {
         return new DeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to group.
     */
-    public function group(): GroupRequestBuilder {
+    public function microsoftGraphGroup(): GroupRequestBuilder {
         return new GroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to orgContact.
     */
-    public function orgContact(): OrgContactRequestBuilder {
+    public function microsoftGraphOrgContact(): OrgContactRequestBuilder {
         return new OrgContactRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to servicePrincipal.
+    */
+    public function microsoftGraphServicePrincipal(): ServicePrincipalRequestBuilder {
+        return new ServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to user.
+    */
+    public function microsoftGraphUser(): UserRequestBuilder {
+        return new UserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -72,23 +86,9 @@ class MemberOfRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * Casts the previous resource to servicePrincipal.
-    */
-    public function servicePrincipal(): ServicePrincipalRequestBuilder {
-        return new ServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
-    
-    /**
-     * Casts the previous resource to user.
-    */
-    public function user(): UserRequestBuilder {
-        return new UserRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * Instantiates a new MemberOfRequestBuilder and sets the default values.

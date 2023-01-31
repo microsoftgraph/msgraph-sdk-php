@@ -66,7 +66,7 @@ class Phone implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the language property value. The language property
+     * Gets the language property value. 
      * @return string|null
     */
     public function getLanguage(): ?string {
@@ -82,7 +82,7 @@ class Phone implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -90,7 +90,7 @@ class Phone implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the region property value. The region property
+     * Gets the region property value. 
      * @return string|null
     */
     public function getRegion(): ?string {
@@ -135,7 +135,7 @@ class Phone implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the language property value. The language property
+     * Sets the language property value. 
      * @param string|null $value Value to set for the language property.
     */
     public function setLanguage(?string $value): void {
@@ -151,7 +151,7 @@ class Phone implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -159,7 +159,7 @@ class Phone implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the region property value. The region property
+     * Sets the region property value. 
      * @param string|null $value Value to set for the region property.
     */
     public function setRegion(?string $value): void {

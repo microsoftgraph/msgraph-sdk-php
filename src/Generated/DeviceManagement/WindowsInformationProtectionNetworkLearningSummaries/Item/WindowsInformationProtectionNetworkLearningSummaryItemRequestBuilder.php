@@ -38,11 +38,15 @@ class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder
      * Instantiates a new WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $windowsInformationProtectionNetworkLearningSummaryId key: id of windowsInformationProtectionNetworkLearningSummary
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $windowsInformationProtectionNetworkLearningSummaryId = null) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/windowsInformationProtectionNetworkLearningSummaries/{windowsInformationProtectionNetworkLearningSummary%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['windowsInformationProtectionNetworkLearningSummaryId'] = $windowsInformationProtectionNetworkLearningSummaryId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder
 
     /**
      * Update the navigation property windowsInformationProtectionNetworkLearningSummaries in deviceManagement
-     * @param WindowsInformationProtectionNetworkLearningSummary $body The request body
      * @param WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder
 
     /**
      * Update the navigation property windowsInformationProtectionNetworkLearningSummaries in deviceManagement
-     * @param WindowsInformationProtectionNetworkLearningSummary $body The request body
      * @param WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

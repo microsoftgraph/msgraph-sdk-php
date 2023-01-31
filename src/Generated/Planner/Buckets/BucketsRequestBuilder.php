@@ -75,7 +75,6 @@ class BucketsRequestBuilder
 
     /**
      * Create a new plannerBucket object.
-     * @param PlannerBucket $body The request body
      * @param BucketsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/planner-post-buckets?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class BucketsRequestBuilder
 
     /**
      * Create a new plannerBucket object.
-     * @param PlannerBucket $body The request body
      * @param BucketsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

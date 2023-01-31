@@ -46,11 +46,15 @@ class TeamsTabItemRequestBuilder
      * Instantiates a new TeamsTabItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $teamsTabId key: id of teamsTab
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $teamsTabId = null) {
         $this->urlTemplate = '{+baseurl}/teams/{team%2Did}/channels/{channel%2Did}/tabs/{teamsTab%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['teamsTabId'] = $teamsTabId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -91,7 +95,6 @@ class TeamsTabItemRequestBuilder
 
     /**
      * Update the navigation property tabs in teams
-     * @param TeamsTab $body The request body
      * @param TeamsTabItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -156,7 +159,6 @@ class TeamsTabItemRequestBuilder
 
     /**
      * Update the navigation property tabs in teams
-     * @param TeamsTab $body The request body
      * @param TeamsTabItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -138,7 +138,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the delegatedPermissionClassifications property value. The delegatedPermissionClassifications property
+     * Gets the delegatedPermissionClassifications property value. 
      * @return array<DelegatedPermissionClassification>|null
     */
     public function getDelegatedPermissionClassifications(): ?array {
@@ -170,7 +170,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the endpoints property value. The endpoints property
+     * Gets the endpoints property value. 
      * @return array<Endpoint>|null
     */
     public function getEndpoints(): ?array {
@@ -452,7 +452,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the transitiveMemberOf property value. The transitiveMemberOf property
+     * Gets the transitiveMemberOf property value. 
      * @return array<DirectoryObject>|null
     */
     public function getTransitiveMemberOf(): ?array {
@@ -636,7 +636,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the delegatedPermissionClassifications property value. The delegatedPermissionClassifications property
+     * Sets the delegatedPermissionClassifications property value. 
      * @param array<DelegatedPermissionClassification>|null $value Value to set for the delegatedPermissionClassifications property.
     */
     public function setDelegatedPermissionClassifications(?array $value): void {
@@ -668,7 +668,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the endpoints property value. The endpoints property
+     * Sets the endpoints property value. 
      * @param array<Endpoint>|null $value Value to set for the endpoints property.
     */
     public function setEndpoints(?array $value): void {
@@ -892,7 +892,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the transitiveMemberOf property value. The transitiveMemberOf property
+     * Sets the transitiveMemberOf property value. 
      * @param array<DirectoryObject>|null $value Value to set for the transitiveMemberOf property.
     */
     public function setTransitiveMemberOf(?array $value): void {

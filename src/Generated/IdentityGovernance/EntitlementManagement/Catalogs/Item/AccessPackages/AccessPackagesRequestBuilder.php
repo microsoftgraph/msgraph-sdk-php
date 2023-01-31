@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\MicrosoftGraphFilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessPackage;
 use Microsoft\Graph\Generated\Models\AccessPackageCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -56,15 +56,6 @@ class AccessPackagesRequestBuilder
     }
 
     /**
-     * Provides operations to call the filterByCurrentUser method.
-     * @param string $on Usage: on='{on}'
-     * @return FilterByCurrentUserWithOnRequestBuilder
-    */
-    public function filterByCurrentUserWithOn(string $on): FilterByCurrentUserWithOnRequestBuilder {
-        return new FilterByCurrentUserWithOnRequestBuilder($this->pathParameters, $this->requestAdapter, $on);
-    }
-
-    /**
      * The access packages in this catalog. Read-only. Nullable.
      * @param AccessPackagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -83,8 +74,16 @@ class AccessPackagesRequestBuilder
     }
 
     /**
+     * Provides operations to call the filterByCurrentUser method.
+     * @param string $on Usage: on='{on}'
+     * @return FilterByCurrentUserWithOnRequestBuilder
+    */
+    public function microsoftGraphFilterByCurrentUserWithOn(string $on): FilterByCurrentUserWithOnRequestBuilder {
+        return new FilterByCurrentUserWithOnRequestBuilder($this->pathParameters, $this->requestAdapter, $on);
+    }
+
+    /**
      * Create new navigation property to accessPackages for identityGovernance
-     * @param AccessPackage $body The request body
      * @param AccessPackagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -128,7 +127,6 @@ class AccessPackagesRequestBuilder
 
     /**
      * Create new navigation property to accessPackages for identityGovernance
-     * @param AccessPackage $body The request body
      * @param AccessPackagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -8,26 +8,26 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Team;
 use Microsoft\Graph\Generated\Teams\Item\AllChannels\AllChannelsRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Archive\ArchiveRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Channels\ChannelsRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\CompleteMigration\CompleteMigrationRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\EscapedClone\CloneRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Group\GroupRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\IncomingChannels\IncomingChannelsRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\InstalledApps\InstalledAppsRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\InstalledApps\Item\TeamsAppInstallationItemRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Members\Item\ConversationMemberItemRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Members\MembersRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\MicrosoftGraphArchive\ArchiveRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\MicrosoftGraphClone\CloneRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\MicrosoftGraphCompleteMigration\CompleteMigrationRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\MicrosoftGraphSendActivityNotification\SendActivityNotificationRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\MicrosoftGraphUnarchive\UnarchiveRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Operations\Item\TeamsAsyncOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Operations\OperationsRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Photo\PhotoRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\PrimaryChannelRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Schedule\ScheduleRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\SendActivityNotification\SendActivityNotificationRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Tags\Item\TeamworkTagItemRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Tags\TagsRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Template\TemplateRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Unarchive\UnarchiveRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -48,31 +48,10 @@ class TeamItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the archive method.
-    */
-    public function archive(): ArchiveRequestBuilder {
-        return new ArchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the channels property of the microsoft.graph.team entity.
     */
     public function channels(): ChannelsRequestBuilder {
         return new ChannelsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the completeMigration method.
-    */
-    public function completeMigration(): CompleteMigrationRequestBuilder {
-        return new CompleteMigrationRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the clone method.
-    */
-    public function escapedClone(): CloneRequestBuilder {
-        return new CloneRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -101,6 +80,41 @@ class TeamItemRequestBuilder
     */
     public function members(): MembersRequestBuilder {
         return new MembersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the archive method.
+    */
+    public function microsoftGraphArchive(): ArchiveRequestBuilder {
+        return new ArchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the clone method.
+    */
+    public function microsoftGraphClone(): CloneRequestBuilder {
+        return new CloneRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the completeMigration method.
+    */
+    public function microsoftGraphCompleteMigration(): CompleteMigrationRequestBuilder {
+        return new CompleteMigrationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the sendActivityNotification method.
+    */
+    public function microsoftGraphSendActivityNotification(): SendActivityNotificationRequestBuilder {
+        return new SendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the unarchive method.
+    */
+    public function microsoftGraphUnarchive(): UnarchiveRequestBuilder {
+        return new UnarchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -142,13 +156,6 @@ class TeamItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the sendActivityNotification method.
-    */
-    public function sendActivityNotification(): SendActivityNotificationRequestBuilder {
-        return new SendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the tags property of the microsoft.graph.team entity.
     */
     public function tags(): TagsRequestBuilder {
@@ -160,13 +167,6 @@ class TeamItemRequestBuilder
     */
     public function template(): TemplateRequestBuilder {
         return new TemplateRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the unarchive method.
-    */
-    public function unarchive(): UnarchiveRequestBuilder {
-        return new UnarchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -200,15 +200,19 @@ class TeamItemRequestBuilder
      * Instantiates a new TeamItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $teamId key: id of team
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $teamId = null) {
         $this->urlTemplate = '{+baseurl}/teams/{team%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['teamId'] = $teamId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
-     * Delete entity from teams by key (id)
+     * Delete entity from teams
      * @param TeamItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -290,7 +294,6 @@ class TeamItemRequestBuilder
 
     /**
      * Update the properties of the specified team.
-     * @param Team $body The request body
      * @param TeamItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/team-update?view=graph-rest-1.0 Find more info here
@@ -320,7 +323,7 @@ class TeamItemRequestBuilder
     }
 
     /**
-     * Delete entity from teams by key (id)
+     * Delete entity from teams
      * @param TeamItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -367,7 +370,6 @@ class TeamItemRequestBuilder
 
     /**
      * Update the properties of the specified team.
-     * @param Team $body The request body
      * @param TeamItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -38,11 +38,15 @@ class GroupSettingItemRequestBuilder
      * Instantiates a new GroupSettingItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $groupSettingId key: id of groupSetting
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $groupSettingId = null) {
         $this->urlTemplate = '{+baseurl}/groupSettings/{groupSetting%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['groupSettingId'] = $groupSettingId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -85,7 +89,6 @@ class GroupSettingItemRequestBuilder
 
     /**
      * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting.
-     * @param GroupSetting $body The request body
      * @param GroupSettingItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/groupsetting-update?view=graph-rest-1.0 Find more info here
@@ -151,7 +154,6 @@ class GroupSettingItemRequestBuilder
 
     /**
      * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting.
-     * @param GroupSetting $body The request body
      * @param GroupSettingItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

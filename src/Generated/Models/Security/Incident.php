@@ -139,7 +139,7 @@ class Incident extends Entity implements Parsable
     }
 
     /**
-     * Gets the severity property value. The severity property
+     * Gets the severity property value. 
      * @return AlertSeverity|null
     */
     public function getSeverity(): ?AlertSeverity {
@@ -147,7 +147,7 @@ class Incident extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. 
      * @return IncidentStatus|null
     */
     public function getStatus(): ?IncidentStatus {
@@ -273,7 +273,7 @@ class Incident extends Entity implements Parsable
     }
 
     /**
-     * Sets the severity property value. The severity property
+     * Sets the severity property value. 
      * @param AlertSeverity|null $value Value to set for the severity property.
     */
     public function setSeverity(?AlertSeverity $value): void {
@@ -281,7 +281,7 @@ class Incident extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. 
      * @param IncidentStatus|null $value Value to set for the status property.
     */
     public function setStatus(?IncidentStatus $value): void {

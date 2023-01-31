@@ -26,7 +26,7 @@ class OpenTypeExtension extends Extension implements Parsable
     }
 
     /**
-     * Gets the extensionName property value. A unique text identifier for an open type data extension. Required.
+     * Gets the extensionName property value. A unique text identifier for an open type data extension. Optional.
      * @return string|null
     */
     public function getExtensionName(): ?string {
@@ -54,7 +54,7 @@ class OpenTypeExtension extends Extension implements Parsable
     }
 
     /**
-     * Sets the extensionName property value. A unique text identifier for an open type data extension. Required.
+     * Sets the extensionName property value. A unique text identifier for an open type data extension. Optional.
      * @param string|null $value Value to set for the extensionName property.
     */
     public function setExtensionName(?string $value): void {

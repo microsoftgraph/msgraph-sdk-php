@@ -38,11 +38,15 @@ class BookingCurrencyItemRequestBuilder
      * Instantiates a new BookingCurrencyItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $bookingCurrencyId key: id of bookingCurrency
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $bookingCurrencyId = null) {
         $this->urlTemplate = '{+baseurl}/solutions/bookingCurrencies/{bookingCurrency%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['bookingCurrencyId'] = $bookingCurrencyId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class BookingCurrencyItemRequestBuilder
 
     /**
      * Update the navigation property bookingCurrencies in solutions
-     * @param BookingCurrency $body The request body
      * @param BookingCurrencyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class BookingCurrencyItemRequestBuilder
 
     /**
      * Update the navigation property bookingCurrencies in solutions
-     * @param BookingCurrency $body The request body
      * @param BookingCurrencyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

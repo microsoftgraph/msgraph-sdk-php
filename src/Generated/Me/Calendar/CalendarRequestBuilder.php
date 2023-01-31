@@ -5,12 +5,12 @@ namespace Microsoft\Graph\Generated\Me\Calendar;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\Calendar\AllowedCalendarSharingRolesWithUser\AllowedCalendarSharingRolesWithUserRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\CalendarPermissions\CalendarPermissionsRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\CalendarPermissions\Item\CalendarPermissionItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\CalendarView\CalendarViewRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\Events\EventsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Calendar\GetSchedule\GetScheduleRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendar\MicrosoftGraphAllowedCalendarSharingRolesWithUser\AllowedCalendarSharingRolesWithUserRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendar\MicrosoftGraphGetSchedule\GetScheduleRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
@@ -53,7 +53,7 @@ class CalendarRequestBuilder
     /**
      * Provides operations to call the getSchedule method.
     */
-    public function getSchedule(): GetScheduleRequestBuilder {
+    public function microsoftGraphGetSchedule(): GetScheduleRequestBuilder {
         return new GetScheduleRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
@@ -86,15 +86,6 @@ class CalendarRequestBuilder
     */
     private string $urlTemplate;
     
-    /**
-     * Provides operations to call the allowedCalendarSharingRoles method.
-     * @param string $user Usage: User='{User}'
-     * @return AllowedCalendarSharingRolesWithUserRequestBuilder
-    */
-    public function allowedCalendarSharingRolesWithUser(string $user): AllowedCalendarSharingRolesWithUserRequestBuilder {
-        return new AllowedCalendarSharingRolesWithUserRequestBuilder($this->pathParameters, $this->requestAdapter, $user);
-    }
-
     /**
      * Provides operations to manage the calendarPermissions property of the microsoft.graph.calendar entity.
      * @param string $id Unique identifier of the item
@@ -159,6 +150,15 @@ class CalendarRequestBuilder
     }
 
     /**
+     * Provides operations to call the allowedCalendarSharingRoles method.
+     * @param string $user Usage: User='{User}'
+     * @return AllowedCalendarSharingRolesWithUserRequestBuilder
+    */
+    public function microsoftGraphAllowedCalendarSharingRolesWithUser(string $user): AllowedCalendarSharingRolesWithUserRequestBuilder {
+        return new AllowedCalendarSharingRolesWithUserRequestBuilder($this->pathParameters, $this->requestAdapter, $user);
+    }
+
+    /**
      * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.calendar entity.
      * @param string $id Unique identifier of the item
      * @return MultiValueLegacyExtendedPropertyItemRequestBuilder
@@ -171,7 +171,6 @@ class CalendarRequestBuilder
 
     /**
      * Update the properties of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group.
-     * @param Calendar $body The request body
      * @param CalendarRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/calendar-update?view=graph-rest-1.0 Find more info here
@@ -227,7 +226,6 @@ class CalendarRequestBuilder
 
     /**
      * Update the properties of a calendar object. The calendar can be one for a user, or the default calendar of a Microsoft 365 group.
-     * @param Calendar $body The request body
      * @param CalendarRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

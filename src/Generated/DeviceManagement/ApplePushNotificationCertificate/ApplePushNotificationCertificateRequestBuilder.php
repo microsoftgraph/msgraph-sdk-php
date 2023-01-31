@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\ApplePushNotificationCertif
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\ApplePushNotificationCertificate\DownloadApplePushNotificationCertificateSigningRequest\DownloadApplePushNotificationCertificateSigningRequestRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ApplePushNotificationCertificate\MicrosoftGraphDownloadApplePushNotificationCertificateSigningRequest\DownloadApplePushNotificationCertificateSigningRequestRequestBuilder;
 use Microsoft\Graph\Generated\Models\ApplePushNotificationCertificate;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -20,6 +20,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 */
 class ApplePushNotificationCertificateRequestBuilder 
 {
+    /**
+     * Provides operations to call the downloadApplePushNotificationCertificateSigningRequest method.
+    */
+    public function microsoftGraphDownloadApplePushNotificationCertificateSigningRequest(): DownloadApplePushNotificationCertificateSigningRequestRequestBuilder {
+        return new DownloadApplePushNotificationCertificateSigningRequestRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
@@ -65,14 +72,6 @@ class ApplePushNotificationCertificateRequestBuilder
     }
 
     /**
-     * Provides operations to call the downloadApplePushNotificationCertificateSigningRequest method.
-     * @return DownloadApplePushNotificationCertificateSigningRequestRequestBuilder
-    */
-    public function downloadApplePushNotificationCertificateSigningRequest(): DownloadApplePushNotificationCertificateSigningRequestRequestBuilder {
-        return new DownloadApplePushNotificationCertificateSigningRequestRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
      * Apple push notification certificate.
      * @param ApplePushNotificationCertificateRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +91,6 @@ class ApplePushNotificationCertificateRequestBuilder
 
     /**
      * Update the navigation property applePushNotificationCertificate in deviceManagement
-     * @param ApplePushNotificationCertificate $body The request body
      * @param ApplePushNotificationCertificateRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -157,7 +155,6 @@ class ApplePushNotificationCertificateRequestBuilder
 
     /**
      * Update the navigation property applePushNotificationCertificate in deviceManagement
-     * @param ApplePushNotificationCertificate $body The request body
      * @param ApplePushNotificationCertificateRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

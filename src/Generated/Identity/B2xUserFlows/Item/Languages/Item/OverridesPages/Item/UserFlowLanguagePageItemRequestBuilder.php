@@ -46,11 +46,15 @@ class UserFlowLanguagePageItemRequestBuilder
      * Instantiates a new UserFlowLanguagePageItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $userFlowLanguagePageId key: id of userFlowLanguagePage
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $userFlowLanguagePageId = null) {
         $this->urlTemplate = '{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/languages/{userFlowLanguageConfiguration%2Did}/overridesPages/{userFlowLanguagePage%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['userFlowLanguagePageId'] = $userFlowLanguagePageId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -91,7 +95,6 @@ class UserFlowLanguagePageItemRequestBuilder
 
     /**
      * Update the navigation property overridesPages in identity
-     * @param UserFlowLanguagePage $body The request body
      * @param UserFlowLanguagePageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -156,7 +159,6 @@ class UserFlowLanguagePageItemRequestBuilder
 
     /**
      * Update the navigation property overridesPages in identity
-     * @param UserFlowLanguagePage $body The request body
      * @param UserFlowLanguagePageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

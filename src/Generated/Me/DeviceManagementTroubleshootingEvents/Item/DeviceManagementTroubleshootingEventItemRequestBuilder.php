@@ -38,11 +38,15 @@ class DeviceManagementTroubleshootingEventItemRequestBuilder
      * Instantiates a new DeviceManagementTroubleshootingEventItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $deviceManagementTroubleshootingEventId key: id of deviceManagementTroubleshootingEvent
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $deviceManagementTroubleshootingEventId = null) {
         $this->urlTemplate = '{+baseurl}/me/deviceManagementTroubleshootingEvents/{deviceManagementTroubleshootingEvent%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['deviceManagementTroubleshootingEventId'] = $deviceManagementTroubleshootingEventId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class DeviceManagementTroubleshootingEventItemRequestBuilder
 
     /**
      * Update the navigation property deviceManagementTroubleshootingEvents in me
-     * @param DeviceManagementTroubleshootingEvent $body The request body
      * @param DeviceManagementTroubleshootingEventItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class DeviceManagementTroubleshootingEventItemRequestBuilder
 
     /**
      * Update the navigation property deviceManagementTroubleshootingEvents in me
-     * @param DeviceManagementTroubleshootingEvent $body The request body
      * @param DeviceManagementTroubleshootingEventItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

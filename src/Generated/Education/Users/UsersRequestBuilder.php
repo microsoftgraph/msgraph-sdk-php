@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Users\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Education\Users\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Education\Users\MicrosoftGraphDelta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationUser;
 use Microsoft\Graph\Generated\Models\EducationUserCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -27,6 +27,13 @@ class UsersRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the delta method.
+    */
+    public function microsoftGraphDelta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -56,14 +63,6 @@ class UsersRequestBuilder
     }
 
     /**
-     * Provides operations to call the delta method.
-     * @return DeltaRequestBuilder
-    */
-    public function delta(): DeltaRequestBuilder {
-        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
      * Get a list of the educationUser objects and their properties.
      * @param UsersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -84,7 +83,6 @@ class UsersRequestBuilder
 
     /**
      * Create a new educationUser object.
-     * @param EducationUser $body The request body
      * @param UsersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/educationuser-post?view=graph-rest-1.0 Find more info here
@@ -129,7 +127,6 @@ class UsersRequestBuilder
 
     /**
      * Create a new educationUser object.
-     * @param EducationUser $body The request body
      * @param UsersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

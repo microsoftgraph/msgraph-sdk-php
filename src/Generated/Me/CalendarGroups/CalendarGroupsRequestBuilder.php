@@ -75,7 +75,6 @@ class CalendarGroupsRequestBuilder
 
     /**
      * Use this API to create a new CalendarGroup.
-     * @param CalendarGroup $body The request body
      * @param CalendarGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/user-post-calendargroups?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class CalendarGroupsRequestBuilder
 
     /**
      * Use this API to create a new CalendarGroup.
-     * @param CalendarGroup $body The request body
      * @param CalendarGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

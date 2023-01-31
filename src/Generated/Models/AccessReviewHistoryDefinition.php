@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AccessReviewHistoryDefinition extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new accessReviewHistoryDefinition and sets the default values.
+     * Instantiates a new AccessReviewHistoryDefinition and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -26,7 +26,7 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdBy property value. The createdBy property
+     * Gets the createdBy property value. 
      * @return UserIdentity|null
     */
     public function getCreatedBy(): ?UserIdentity {
@@ -144,7 +144,7 @@ class AccessReviewHistoryDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdBy property value. The createdBy property
+     * Sets the createdBy property value. 
      * @param UserIdentity|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?UserIdentity $value): void {

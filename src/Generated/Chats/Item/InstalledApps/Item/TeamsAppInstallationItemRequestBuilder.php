@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Chats\Item\InstalledApps\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Chats\Item\InstalledApps\Item\MicrosoftGraphUpgrade\UpgradeRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\InstalledApps\Item\TeamsApp\TeamsAppRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\InstalledApps\Item\TeamsAppDefinition\TeamsAppDefinitionRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\InstalledApps\Item\Upgrade\UpgradeRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TeamsAppInstallation;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -22,6 +22,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 */
 class TeamsAppInstallationItemRequestBuilder 
 {
+    /**
+     * Provides operations to call the upgrade method.
+    */
+    public function microsoftGraphUpgrade(): UpgradeRequestBuilder {
+        return new UpgradeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
@@ -47,13 +54,6 @@ class TeamsAppInstallationItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the upgrade method.
-    */
-    public function upgrade(): UpgradeRequestBuilder {
-        return new UpgradeRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
@@ -62,11 +62,15 @@ class TeamsAppInstallationItemRequestBuilder
      * Instantiates a new TeamsAppInstallationItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $teamsAppInstallationId key: id of teamsAppInstallation
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $teamsAppInstallationId = null) {
         $this->urlTemplate = '{+baseurl}/chats/{chat%2Did}/installedApps/{teamsAppInstallation%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['teamsAppInstallationId'] = $teamsAppInstallationId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -107,7 +111,6 @@ class TeamsAppInstallationItemRequestBuilder
 
     /**
      * Update the navigation property installedApps in chats
-     * @param TeamsAppInstallation $body The request body
      * @param TeamsAppInstallationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -172,7 +175,6 @@ class TeamsAppInstallationItemRequestBuilder
 
     /**
      * Update the navigation property installedApps in chats
-     * @param TeamsAppInstallation $body The request body
      * @param TeamsAppInstallationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

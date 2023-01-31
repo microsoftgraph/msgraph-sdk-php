@@ -25,7 +25,7 @@ class ItemAnalytics extends Entity implements Parsable
     }
 
     /**
-     * Gets the allTime property value. The allTime property
+     * Gets the allTime property value. 
      * @return ItemActivityStat|null
     */
     public function getAllTime(): ?ItemActivityStat {
@@ -46,7 +46,7 @@ class ItemAnalytics extends Entity implements Parsable
     }
 
     /**
-     * Gets the itemActivityStats property value. The itemActivityStats property
+     * Gets the itemActivityStats property value. 
      * @return array<ItemActivityStat>|null
     */
     public function getItemActivityStats(): ?array {
@@ -54,7 +54,7 @@ class ItemAnalytics extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastSevenDays property value. The lastSevenDays property
+     * Gets the lastSevenDays property value. 
      * @return ItemActivityStat|null
     */
     public function getLastSevenDays(): ?ItemActivityStat {
@@ -73,7 +73,7 @@ class ItemAnalytics extends Entity implements Parsable
     }
 
     /**
-     * Sets the allTime property value. The allTime property
+     * Sets the allTime property value. 
      * @param ItemActivityStat|null $value Value to set for the allTime property.
     */
     public function setAllTime(?ItemActivityStat $value): void {
@@ -81,7 +81,7 @@ class ItemAnalytics extends Entity implements Parsable
     }
 
     /**
-     * Sets the itemActivityStats property value. The itemActivityStats property
+     * Sets the itemActivityStats property value. 
      * @param array<ItemActivityStat>|null $value Value to set for the itemActivityStats property.
     */
     public function setItemActivityStats(?array $value): void {
@@ -89,7 +89,7 @@ class ItemAnalytics extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastSevenDays property value. The lastSevenDays property
+     * Sets the lastSevenDays property value. 
      * @param ItemActivityStat|null $value Value to set for the lastSevenDays property.
     */
     public function setLastSevenDays(?ItemActivityStat $value): void {

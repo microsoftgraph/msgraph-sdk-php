@@ -58,11 +58,15 @@ class TeamsAppItemRequestBuilder
      * Instantiates a new TeamsAppItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $teamsAppId key: id of teamsApp
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $teamsAppId = null) {
         $this->urlTemplate = '{+baseurl}/appCatalogs/teamsApps/{teamsApp%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['teamsAppId'] = $teamsAppId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -103,7 +107,6 @@ class TeamsAppItemRequestBuilder
 
     /**
      * Update the navigation property teamsApps in appCatalogs
-     * @param TeamsApp $body The request body
      * @param TeamsAppItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -168,7 +171,6 @@ class TeamsAppItemRequestBuilder
 
     /**
      * Update the navigation property teamsApps in appCatalogs
-     * @param TeamsApp $body The request body
      * @param TeamsAppItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

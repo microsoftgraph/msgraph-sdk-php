@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Schools\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Education\Schools\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Education\Schools\MicrosoftGraphDelta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationSchool;
 use Microsoft\Graph\Generated\Models\EducationSchoolCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -27,6 +27,13 @@ class SchoolsRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the delta method.
+    */
+    public function microsoftGraphDelta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -56,14 +63,6 @@ class SchoolsRequestBuilder
     }
 
     /**
-     * Provides operations to call the delta method.
-     * @return DeltaRequestBuilder
-    */
-    public function delta(): DeltaRequestBuilder {
-        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
      * Get a list of the educationSchool objects and their properties.
      * @param SchoolsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -84,7 +83,6 @@ class SchoolsRequestBuilder
 
     /**
      * Create a new educationSchool object.
-     * @param EducationSchool $body The request body
      * @param SchoolsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/educationschool-post?view=graph-rest-1.0 Find more info here
@@ -129,7 +127,6 @@ class SchoolsRequestBuilder
 
     /**
      * Create a new educationSchool object.
-     * @param EducationSchool $body The request body
      * @param SchoolsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

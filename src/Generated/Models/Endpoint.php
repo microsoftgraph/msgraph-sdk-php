@@ -26,7 +26,7 @@ class Endpoint extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the capability property value. The capability property
+     * Gets the capability property value. 
      * @return string|null
     */
     public function getCapability(): ?string {
@@ -49,7 +49,7 @@ class Endpoint extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the providerId property value. The providerId property
+     * Gets the providerId property value. 
      * @return string|null
     */
     public function getProviderId(): ?string {
@@ -57,7 +57,7 @@ class Endpoint extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the providerName property value. The providerName property
+     * Gets the providerName property value. 
      * @return string|null
     */
     public function getProviderName(): ?string {
@@ -65,7 +65,7 @@ class Endpoint extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the providerResourceId property value. The providerResourceId property
+     * Gets the providerResourceId property value. 
      * @return string|null
     */
     public function getProviderResourceId(): ?string {
@@ -73,7 +73,7 @@ class Endpoint extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the uri property value. The uri property
+     * Gets the uri property value. 
      * @return string|null
     */
     public function getUri(): ?string {
@@ -94,7 +94,7 @@ class Endpoint extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the capability property value. The capability property
+     * Sets the capability property value. 
      * @param string|null $value Value to set for the capability property.
     */
     public function setCapability(?string $value): void {
@@ -102,7 +102,7 @@ class Endpoint extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the providerId property value. The providerId property
+     * Sets the providerId property value. 
      * @param string|null $value Value to set for the providerId property.
     */
     public function setProviderId(?string $value): void {
@@ -110,7 +110,7 @@ class Endpoint extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the providerName property value. The providerName property
+     * Sets the providerName property value. 
      * @param string|null $value Value to set for the providerName property.
     */
     public function setProviderName(?string $value): void {
@@ -118,7 +118,7 @@ class Endpoint extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the providerResourceId property value. The providerResourceId property
+     * Sets the providerResourceId property value. 
      * @param string|null $value Value to set for the providerResourceId property.
     */
     public function setProviderResourceId(?string $value): void {
@@ -126,7 +126,7 @@ class Endpoint extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the uri property value. The uri property
+     * Sets the uri property value. 
      * @param string|null $value Value to set for the uri property.
     */
     public function setUri(?string $value): void {

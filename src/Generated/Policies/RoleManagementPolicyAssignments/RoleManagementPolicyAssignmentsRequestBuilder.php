@@ -75,7 +75,6 @@ class RoleManagementPolicyAssignmentsRequestBuilder
 
     /**
      * Create new navigation property to roleManagementPolicyAssignments for policies
-     * @param UnifiedRoleManagementPolicyAssignment $body The request body
      * @param RoleManagementPolicyAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class RoleManagementPolicyAssignmentsRequestBuilder
 
     /**
      * Create new navigation property to roleManagementPolicyAssignments for policies
-     * @param UnifiedRoleManagementPolicyAssignment $body The request body
      * @param RoleManagementPolicyAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

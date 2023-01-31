@@ -38,11 +38,15 @@ class BookingCustomQuestionItemRequestBuilder
      * Instantiates a new BookingCustomQuestionItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $bookingCustomQuestionId key: id of bookingCustomQuestion
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $bookingCustomQuestionId = null) {
         $this->urlTemplate = '{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/customQuestions/{bookingCustomQuestion%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['bookingCustomQuestionId'] = $bookingCustomQuestionId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class BookingCustomQuestionItemRequestBuilder
 
     /**
      * Update the navigation property customQuestions in solutions
-     * @param BookingCustomQuestion $body The request body
      * @param BookingCustomQuestionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class BookingCustomQuestionItemRequestBuilder
 
     /**
      * Update the navigation property customQuestions in solutions
-     * @param BookingCustomQuestion $body The request body
      * @param BookingCustomQuestionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

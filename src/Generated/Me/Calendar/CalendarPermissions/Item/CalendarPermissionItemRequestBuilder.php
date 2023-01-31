@@ -38,11 +38,15 @@ class CalendarPermissionItemRequestBuilder
      * Instantiates a new CalendarPermissionItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $calendarPermissionId key: id of calendarPermission
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $calendarPermissionId = null) {
         $this->urlTemplate = '{+baseurl}/me/calendar/calendarPermissions/{calendarPermission%2Did}{?%24select}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['calendarPermissionId'] = $calendarPermissionId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class CalendarPermissionItemRequestBuilder
 
     /**
      * Update the navigation property calendarPermissions in me
-     * @param CalendarPermission $body The request body
      * @param CalendarPermissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class CalendarPermissionItemRequestBuilder
 
     /**
      * Update the navigation property calendarPermissions in me
-     * @param CalendarPermission $body The request body
      * @param CalendarPermissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -7,13 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ServicePrincipal;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\AddKey\AddKeyRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\AddPassword\AddPasswordRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\AddTokenSigningCertificate\AddTokenSigningCertificateRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\AppRoleAssignedTo\AppRoleAssignedToRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\AppRoleAssignments\AppRoleAssignmentsRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\ClaimsMappingPolicies\ClaimsMappingPoliciesRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\ClaimsMappingPolicies\Item\ClaimsMappingPolicyItemRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\CreatedObjects\CreatedObjectsRequestBuilder;
@@ -23,18 +18,23 @@ use Microsoft\Graph\Generated\ServicePrincipals\Item\Endpoints\EndpointsRequestB
 use Microsoft\Graph\Generated\ServicePrincipals\Item\Endpoints\Item\EndpointItemRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\FederatedIdentityCredentials\FederatedIdentityCredentialsRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\FederatedIdentityCredentials\Item\FederatedIdentityCredentialItemRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\HomeRealmDiscoveryPolicies\HomeRealmDiscoveryPoliciesRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\HomeRealmDiscoveryPolicies\Item\HomeRealmDiscoveryPolicyItemRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\MemberOf\MemberOfRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\MicrosoftGraphAddKey\AddKeyRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\MicrosoftGraphAddPassword\AddPasswordRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\MicrosoftGraphAddTokenSigningCertificate\AddTokenSigningCertificateRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\MicrosoftGraphCheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\MicrosoftGraphCheckMemberObjects\CheckMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\MicrosoftGraphGetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\MicrosoftGraphGetMemberObjects\GetMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\MicrosoftGraphRemoveKey\RemoveKeyRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\MicrosoftGraphRemovePassword\RemovePasswordRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\MicrosoftGraphRestore\RestoreRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\Oauth2PermissionGrants\Item\OAuth2PermissionGrantItemRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\Oauth2PermissionGrants\Oauth2PermissionGrantsRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\OwnedObjects\OwnedObjectsRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\OwnersRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\RemoveKey\RemoveKeyRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\RemovePassword\RemovePasswordRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\Restore\RestoreRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\TokenIssuancePolicies\Item\TokenIssuancePolicyItemRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\TokenIssuancePolicies\TokenIssuancePoliciesRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\TokenLifetimePolicies\Item\TokenLifetimePolicyItemRequestBuilder;
@@ -53,27 +53,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ServicePrincipalItemRequestBuilder 
 {
     /**
-     * Provides operations to call the addKey method.
-    */
-    public function addKey(): AddKeyRequestBuilder {
-        return new AddKeyRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the addPassword method.
-    */
-    public function addPassword(): AddPasswordRequestBuilder {
-        return new AddPasswordRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the addTokenSigningCertificate method.
-    */
-    public function addTokenSigningCertificate(): AddTokenSigningCertificateRequestBuilder {
-        return new AddTokenSigningCertificateRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the appRoleAssignedTo property of the microsoft.graph.servicePrincipal entity.
     */
     public function appRoleAssignedTo(): AppRoleAssignedToRequestBuilder {
@@ -85,20 +64,6 @@ class ServicePrincipalItemRequestBuilder
     */
     public function appRoleAssignments(): AppRoleAssignmentsRequestBuilder {
         return new AppRoleAssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the checkMemberGroups method.
-    */
-    public function checkMemberGroups(): CheckMemberGroupsRequestBuilder {
-        return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the checkMemberObjects method.
-    */
-    public function checkMemberObjects(): CheckMemberObjectsRequestBuilder {
-        return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -137,20 +102,6 @@ class ServicePrincipalItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the getMemberGroups method.
-    */
-    public function getMemberGroups(): GetMemberGroupsRequestBuilder {
-        return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the getMemberObjects method.
-    */
-    public function getMemberObjects(): GetMemberObjectsRequestBuilder {
-        return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the homeRealmDiscoveryPolicies property of the microsoft.graph.servicePrincipal entity.
     */
     public function homeRealmDiscoveryPolicies(): HomeRealmDiscoveryPoliciesRequestBuilder {
@@ -162,6 +113,76 @@ class ServicePrincipalItemRequestBuilder
     */
     public function memberOf(): MemberOfRequestBuilder {
         return new MemberOfRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the addKey method.
+    */
+    public function microsoftGraphAddKey(): AddKeyRequestBuilder {
+        return new AddKeyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the addPassword method.
+    */
+    public function microsoftGraphAddPassword(): AddPasswordRequestBuilder {
+        return new AddPasswordRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the addTokenSigningCertificate method.
+    */
+    public function microsoftGraphAddTokenSigningCertificate(): AddTokenSigningCertificateRequestBuilder {
+        return new AddTokenSigningCertificateRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the checkMemberGroups method.
+    */
+    public function microsoftGraphCheckMemberGroups(): CheckMemberGroupsRequestBuilder {
+        return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the checkMemberObjects method.
+    */
+    public function microsoftGraphCheckMemberObjects(): CheckMemberObjectsRequestBuilder {
+        return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getMemberGroups method.
+    */
+    public function microsoftGraphGetMemberGroups(): GetMemberGroupsRequestBuilder {
+        return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getMemberObjects method.
+    */
+    public function microsoftGraphGetMemberObjects(): GetMemberObjectsRequestBuilder {
+        return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the removeKey method.
+    */
+    public function microsoftGraphRemoveKey(): RemoveKeyRequestBuilder {
+        return new RemoveKeyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the removePassword method.
+    */
+    public function microsoftGraphRemovePassword(): RemovePasswordRequestBuilder {
+        return new RemovePasswordRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the restore method.
+    */
+    public function microsoftGraphRestore(): RestoreRequestBuilder {
+        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -191,30 +212,9 @@ class ServicePrincipalItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * Provides operations to call the removeKey method.
-    */
-    public function removeKey(): RemoveKeyRequestBuilder {
-        return new RemoveKeyRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the removePassword method.
-    */
-    public function removePassword(): RemovePasswordRequestBuilder {
-        return new RemovePasswordRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
-    
-    /**
-     * Provides operations to call the restore method.
-    */
-    public function restore(): RestoreRequestBuilder {
-        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.servicePrincipal entity.
@@ -279,11 +279,15 @@ class ServicePrincipalItemRequestBuilder
      * Instantiates a new ServicePrincipalItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $servicePrincipalId key: id of servicePrincipal
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $servicePrincipalId = null) {
         $this->urlTemplate = '{+baseurl}/servicePrincipals/{servicePrincipal%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['servicePrincipalId'] = $servicePrincipalId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -424,8 +428,7 @@ class ServicePrincipalItemRequestBuilder
     }
 
     /**
-     * Update entity in servicePrincipals by key (id)
-     * @param ServicePrincipal $body The request body
+     * Update entity in servicePrincipals
      * @param ServicePrincipalItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -511,8 +514,7 @@ class ServicePrincipalItemRequestBuilder
     }
 
     /**
-     * Update entity in servicePrincipals by key (id)
-     * @param ServicePrincipal $body The request body
+     * Update entity in servicePrincipals
      * @param ServicePrincipalItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -72,7 +72,7 @@ class RecordingInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -80,7 +80,7 @@ class RecordingInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the recordingStatus property value. The recordingStatus property
+     * Gets the recordingStatus property value. 
      * @return RecordingStatus|null
     */
     public function getRecordingStatus(): ?RecordingStatus {
@@ -123,7 +123,7 @@ class RecordingInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -131,7 +131,7 @@ class RecordingInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the recordingStatus property value. The recordingStatus property
+     * Sets the recordingStatus property value. 
      * @param RecordingStatus|null $value Value to set for the recordingStatus property.
     */
     public function setRecordingStatus(?RecordingStatus $value): void {

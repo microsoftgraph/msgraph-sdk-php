@@ -29,6 +29,22 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
     }
 
     /**
+     * Gets the allowPartnerToCollectIOSApplicationMetadata property value. When TRUE, indicates the data sync partner may collect metadata about installed applications from Intune for IOS devices. When FALSE, indicates the data sync partner may not collect metadata about installed applications from Intune for IOS devices. Default value is FALSE.
+     * @return bool|null
+    */
+    public function getAllowPartnerToCollectIOSApplicationMetadata(): ?bool {
+        return $this->getBackingStore()->get('allowPartnerToCollectIOSApplicationMetadata');
+    }
+
+    /**
+     * Gets the allowPartnerToCollectIOSPersonalApplicationMetadata property value. When TRUE, indicates the data sync partner may collect metadata about personally installed applications from Intune for IOS devices. When FALSE, indicates the data sync partner may not collect metadata about personally installed applications from Intune for IOS devices. Default value is FALSE.
+     * @return bool|null
+    */
+    public function getAllowPartnerToCollectIOSPersonalApplicationMetadata(): ?bool {
+        return $this->getBackingStore()->get('allowPartnerToCollectIOSPersonalApplicationMetadata');
+    }
+
+    /**
      * Gets the androidDeviceBlockedOnMissingPartnerData property value. For Android, set whether Intune must receive data from the data sync partner prior to marking a device compliant
      * @return bool|null
     */
@@ -45,20 +61,35 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
     }
 
     /**
+     * Gets the androidMobileApplicationManagementEnabled property value. When TRUE, inidicates that data from the data sync partner can be used during Mobile Application Management (MAM) evaluations for Android devices. When FALSE, inidicates that data from the data sync partner should not be used during Mobile Application Management (MAM) evaluations for Android devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE.
+     * @return bool|null
+    */
+    public function getAndroidMobileApplicationManagementEnabled(): ?bool {
+        return $this->getBackingStore()->get('androidMobileApplicationManagementEnabled');
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'allowPartnerToCollectIOSApplicationMetadata' => fn(ParseNode $n) => $o->setAllowPartnerToCollectIOSApplicationMetadata($n->getBooleanValue()),
+            'allowPartnerToCollectIOSPersonalApplicationMetadata' => fn(ParseNode $n) => $o->setAllowPartnerToCollectIOSPersonalApplicationMetadata($n->getBooleanValue()),
             'androidDeviceBlockedOnMissingPartnerData' => fn(ParseNode $n) => $o->setAndroidDeviceBlockedOnMissingPartnerData($n->getBooleanValue()),
             'androidEnabled' => fn(ParseNode $n) => $o->setAndroidEnabled($n->getBooleanValue()),
+            'androidMobileApplicationManagementEnabled' => fn(ParseNode $n) => $o->setAndroidMobileApplicationManagementEnabled($n->getBooleanValue()),
             'iosDeviceBlockedOnMissingPartnerData' => fn(ParseNode $n) => $o->setIosDeviceBlockedOnMissingPartnerData($n->getBooleanValue()),
             'iosEnabled' => fn(ParseNode $n) => $o->setIosEnabled($n->getBooleanValue()),
+            'iosMobileApplicationManagementEnabled' => fn(ParseNode $n) => $o->setIosMobileApplicationManagementEnabled($n->getBooleanValue()),
             'lastHeartbeatDateTime' => fn(ParseNode $n) => $o->setLastHeartbeatDateTime($n->getDateTimeValue()),
+            'microsoftDefenderForEndpointAttachEnabled' => fn(ParseNode $n) => $o->setMicrosoftDefenderForEndpointAttachEnabled($n->getBooleanValue()),
             'partnerState' => fn(ParseNode $n) => $o->setPartnerState($n->getEnumValue(MobileThreatPartnerTenantState::class)),
             'partnerUnresponsivenessThresholdInDays' => fn(ParseNode $n) => $o->setPartnerUnresponsivenessThresholdInDays($n->getIntegerValue()),
             'partnerUnsupportedOsVersionBlocked' => fn(ParseNode $n) => $o->setPartnerUnsupportedOsVersionBlocked($n->getBooleanValue()),
+            'windowsDeviceBlockedOnMissingPartnerData' => fn(ParseNode $n) => $o->setWindowsDeviceBlockedOnMissingPartnerData($n->getBooleanValue()),
+            'windowsEnabled' => fn(ParseNode $n) => $o->setWindowsEnabled($n->getBooleanValue()),
         ]);
     }
 
@@ -79,11 +110,27 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
     }
 
     /**
+     * Gets the iosMobileApplicationManagementEnabled property value. When TRUE, inidicates that data from the data sync partner can be used during Mobile Application Management (MAM) evaluations for IOS devices. When FALSE, inidicates that data from the data sync partner should not be used during Mobile Application Management (MAM) evaluations for IOS devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE.
+     * @return bool|null
+    */
+    public function getIosMobileApplicationManagementEnabled(): ?bool {
+        return $this->getBackingStore()->get('iosMobileApplicationManagementEnabled');
+    }
+
+    /**
      * Gets the lastHeartbeatDateTime property value. DateTime of last Heartbeat recieved from the Data Sync Partner
      * @return DateTime|null
     */
     public function getLastHeartbeatDateTime(): ?DateTime {
         return $this->getBackingStore()->get('lastHeartbeatDateTime');
+    }
+
+    /**
+     * Gets the microsoftDefenderForEndpointAttachEnabled property value. When TRUE, inidicates that configuration profile management via Microsoft Defender for Endpoint is enabled. When FALSE, inidicates that configuration profile management via Microsoft Defender for Endpoint is disabled. Default value is FALSE.
+     * @return bool|null
+    */
+    public function getMicrosoftDefenderForEndpointAttachEnabled(): ?bool {
+        return $this->getBackingStore()->get('microsoftDefenderForEndpointAttachEnabled');
     }
 
     /**
@@ -111,19 +158,58 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
     }
 
     /**
+     * Gets the windowsDeviceBlockedOnMissingPartnerData property value. When TRUE, inidicates that Intune must receive data from the data sync partner prior to marking a device compliant for Windows. When FALSE, inidicates that Intune may make a device compliant without receiving data from the data sync partner for Windows. Default value is FALSE.
+     * @return bool|null
+    */
+    public function getWindowsDeviceBlockedOnMissingPartnerData(): ?bool {
+        return $this->getBackingStore()->get('windowsDeviceBlockedOnMissingPartnerData');
+    }
+
+    /**
+     * Gets the windowsEnabled property value. When TRUE, inidicates that data from the data sync partner can be used during compliance evaluations for Windows. When FALSE, inidicates that data from the data sync partner should not be used during compliance evaluations for Windows. Default value is FALSE.
+     * @return bool|null
+    */
+    public function getWindowsEnabled(): ?bool {
+        return $this->getBackingStore()->get('windowsEnabled');
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeBooleanValue('allowPartnerToCollectIOSApplicationMetadata', $this->getAllowPartnerToCollectIOSApplicationMetadata());
+        $writer->writeBooleanValue('allowPartnerToCollectIOSPersonalApplicationMetadata', $this->getAllowPartnerToCollectIOSPersonalApplicationMetadata());
         $writer->writeBooleanValue('androidDeviceBlockedOnMissingPartnerData', $this->getAndroidDeviceBlockedOnMissingPartnerData());
         $writer->writeBooleanValue('androidEnabled', $this->getAndroidEnabled());
+        $writer->writeBooleanValue('androidMobileApplicationManagementEnabled', $this->getAndroidMobileApplicationManagementEnabled());
         $writer->writeBooleanValue('iosDeviceBlockedOnMissingPartnerData', $this->getIosDeviceBlockedOnMissingPartnerData());
         $writer->writeBooleanValue('iosEnabled', $this->getIosEnabled());
+        $writer->writeBooleanValue('iosMobileApplicationManagementEnabled', $this->getIosMobileApplicationManagementEnabled());
         $writer->writeDateTimeValue('lastHeartbeatDateTime', $this->getLastHeartbeatDateTime());
+        $writer->writeBooleanValue('microsoftDefenderForEndpointAttachEnabled', $this->getMicrosoftDefenderForEndpointAttachEnabled());
         $writer->writeEnumValue('partnerState', $this->getPartnerState());
         $writer->writeIntegerValue('partnerUnresponsivenessThresholdInDays', $this->getPartnerUnresponsivenessThresholdInDays());
         $writer->writeBooleanValue('partnerUnsupportedOsVersionBlocked', $this->getPartnerUnsupportedOsVersionBlocked());
+        $writer->writeBooleanValue('windowsDeviceBlockedOnMissingPartnerData', $this->getWindowsDeviceBlockedOnMissingPartnerData());
+        $writer->writeBooleanValue('windowsEnabled', $this->getWindowsEnabled());
+    }
+
+    /**
+     * Sets the allowPartnerToCollectIOSApplicationMetadata property value. When TRUE, indicates the data sync partner may collect metadata about installed applications from Intune for IOS devices. When FALSE, indicates the data sync partner may not collect metadata about installed applications from Intune for IOS devices. Default value is FALSE.
+     * @param bool|null $value Value to set for the allowPartnerToCollectIOSApplicationMetadata property.
+    */
+    public function setAllowPartnerToCollectIOSApplicationMetadata(?bool $value): void {
+        $this->getBackingStore()->set('allowPartnerToCollectIOSApplicationMetadata', $value);
+    }
+
+    /**
+     * Sets the allowPartnerToCollectIOSPersonalApplicationMetadata property value. When TRUE, indicates the data sync partner may collect metadata about personally installed applications from Intune for IOS devices. When FALSE, indicates the data sync partner may not collect metadata about personally installed applications from Intune for IOS devices. Default value is FALSE.
+     * @param bool|null $value Value to set for the allowPartnerToCollectIOSPersonalApplicationMetadata property.
+    */
+    public function setAllowPartnerToCollectIOSPersonalApplicationMetadata(?bool $value): void {
+        $this->getBackingStore()->set('allowPartnerToCollectIOSPersonalApplicationMetadata', $value);
     }
 
     /**
@@ -143,6 +229,14 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
     }
 
     /**
+     * Sets the androidMobileApplicationManagementEnabled property value. When TRUE, inidicates that data from the data sync partner can be used during Mobile Application Management (MAM) evaluations for Android devices. When FALSE, inidicates that data from the data sync partner should not be used during Mobile Application Management (MAM) evaluations for Android devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE.
+     * @param bool|null $value Value to set for the androidMobileApplicationManagementEnabled property.
+    */
+    public function setAndroidMobileApplicationManagementEnabled(?bool $value): void {
+        $this->getBackingStore()->set('androidMobileApplicationManagementEnabled', $value);
+    }
+
+    /**
      * Sets the iosDeviceBlockedOnMissingPartnerData property value. For IOS, set whether Intune must receive data from the data sync partner prior to marking a device compliant
      * @param bool|null $value Value to set for the iosDeviceBlockedOnMissingPartnerData property.
     */
@@ -159,11 +253,27 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
     }
 
     /**
+     * Sets the iosMobileApplicationManagementEnabled property value. When TRUE, inidicates that data from the data sync partner can be used during Mobile Application Management (MAM) evaluations for IOS devices. When FALSE, inidicates that data from the data sync partner should not be used during Mobile Application Management (MAM) evaluations for IOS devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE.
+     * @param bool|null $value Value to set for the iosMobileApplicationManagementEnabled property.
+    */
+    public function setIosMobileApplicationManagementEnabled(?bool $value): void {
+        $this->getBackingStore()->set('iosMobileApplicationManagementEnabled', $value);
+    }
+
+    /**
      * Sets the lastHeartbeatDateTime property value. DateTime of last Heartbeat recieved from the Data Sync Partner
      * @param DateTime|null $value Value to set for the lastHeartbeatDateTime property.
     */
     public function setLastHeartbeatDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastHeartbeatDateTime', $value);
+    }
+
+    /**
+     * Sets the microsoftDefenderForEndpointAttachEnabled property value. When TRUE, inidicates that configuration profile management via Microsoft Defender for Endpoint is enabled. When FALSE, inidicates that configuration profile management via Microsoft Defender for Endpoint is disabled. Default value is FALSE.
+     * @param bool|null $value Value to set for the microsoftDefenderForEndpointAttachEnabled property.
+    */
+    public function setMicrosoftDefenderForEndpointAttachEnabled(?bool $value): void {
+        $this->getBackingStore()->set('microsoftDefenderForEndpointAttachEnabled', $value);
     }
 
     /**
@@ -188,6 +298,22 @@ class MobileThreatDefenseConnector extends Entity implements Parsable
     */
     public function setPartnerUnsupportedOsVersionBlocked(?bool $value): void {
         $this->getBackingStore()->set('partnerUnsupportedOsVersionBlocked', $value);
+    }
+
+    /**
+     * Sets the windowsDeviceBlockedOnMissingPartnerData property value. When TRUE, inidicates that Intune must receive data from the data sync partner prior to marking a device compliant for Windows. When FALSE, inidicates that Intune may make a device compliant without receiving data from the data sync partner for Windows. Default value is FALSE.
+     * @param bool|null $value Value to set for the windowsDeviceBlockedOnMissingPartnerData property.
+    */
+    public function setWindowsDeviceBlockedOnMissingPartnerData(?bool $value): void {
+        $this->getBackingStore()->set('windowsDeviceBlockedOnMissingPartnerData', $value);
+    }
+
+    /**
+     * Sets the windowsEnabled property value. When TRUE, inidicates that data from the data sync partner can be used during compliance evaluations for Windows. When FALSE, inidicates that data from the data sync partner should not be used during compliance evaluations for Windows. Default value is FALSE.
+     * @param bool|null $value Value to set for the windowsEnabled property.
+    */
+    public function setWindowsEnabled(?bool $value): void {
+        $this->getBackingStore()->set('windowsEnabled', $value);
     }
 
 }

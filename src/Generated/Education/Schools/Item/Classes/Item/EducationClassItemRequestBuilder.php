@@ -36,11 +36,15 @@ class EducationClassItemRequestBuilder
      * Instantiates a new EducationClassItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $educationClassId key: id of educationClass
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $educationClassId = null) {
         $this->urlTemplate = '{+baseurl}/education/schools/{educationSchool%2Did}/classes/{educationClass%2Did}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['educationClassId'] = $educationClassId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
 }

@@ -47,11 +47,15 @@ class UserActivityItemRequestBuilder
      * Instantiates a new UserActivityItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $userActivityId key: id of userActivity
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $userActivityId = null) {
         $this->urlTemplate = '{+baseurl}/me/activities/{userActivity%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['userActivityId'] = $userActivityId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -103,7 +107,6 @@ class UserActivityItemRequestBuilder
 
     /**
      * Update the navigation property activities in me
-     * @param UserActivity $body The request body
      * @param UserActivityItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -168,7 +171,6 @@ class UserActivityItemRequestBuilder
 
     /**
      * Update the navigation property activities in me
-     * @param UserActivity $body The request body
      * @param UserActivityItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

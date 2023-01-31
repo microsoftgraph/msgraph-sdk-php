@@ -66,11 +66,15 @@ class ServiceUpdateMessageItemRequestBuilder
      * Instantiates a new ServiceUpdateMessageItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $serviceUpdateMessageId key: id of serviceUpdateMessage
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $serviceUpdateMessageId = null) {
         $this->urlTemplate = '{+baseurl}/admin/serviceAnnouncement/messages/{serviceUpdateMessage%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['serviceUpdateMessageId'] = $serviceUpdateMessageId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -111,7 +115,6 @@ class ServiceUpdateMessageItemRequestBuilder
 
     /**
      * Update the navigation property messages in admin
-     * @param ServiceUpdateMessage $body The request body
      * @param ServiceUpdateMessageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -176,7 +179,6 @@ class ServiceUpdateMessageItemRequestBuilder
 
     /**
      * Update the navigation property messages in admin
-     * @param ServiceUpdateMessage $body The request body
      * @param ServiceUpdateMessageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

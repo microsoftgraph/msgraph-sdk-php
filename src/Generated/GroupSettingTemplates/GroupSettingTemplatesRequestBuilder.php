@@ -6,9 +6,9 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\GroupSettingTemplates\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\GroupSettingTemplates\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\GroupSettingTemplates\GetByIds\GetByIdsRequestBuilder;
-use Microsoft\Graph\Generated\GroupSettingTemplates\ValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\Graph\Generated\GroupSettingTemplates\MicrosoftGraphGetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\GroupSettingTemplates\MicrosoftGraphGetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\GroupSettingTemplates\MicrosoftGraphValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\GroupSettingTemplate;
 use Microsoft\Graph\Generated\Models\GroupSettingTemplateCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -34,15 +34,22 @@ class GroupSettingTemplatesRequestBuilder
     /**
      * Provides operations to call the getAvailableExtensionProperties method.
     */
-    public function getAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
+    public function microsoftGraphGetAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
         return new GetAvailableExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getByIds method.
     */
-    public function getByIds(): GetByIdsRequestBuilder {
+    public function microsoftGraphGetByIds(): GetByIdsRequestBuilder {
         return new GetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the validateProperties method.
+    */
+    public function microsoftGraphValidateProperties(): ValidatePropertiesRequestBuilder {
+        return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -59,13 +66,6 @@ class GroupSettingTemplatesRequestBuilder
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
-    
-    /**
-     * Provides operations to call the validateProperties method.
-    */
-    public function validateProperties(): ValidatePropertiesRequestBuilder {
-        return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * Instantiates a new GroupSettingTemplatesRequestBuilder and sets the default values.
@@ -99,7 +99,6 @@ class GroupSettingTemplatesRequestBuilder
 
     /**
      * Add new entity to groupSettingTemplates
-     * @param GroupSettingTemplate $body The request body
      * @param GroupSettingTemplatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -143,7 +142,6 @@ class GroupSettingTemplatesRequestBuilder
 
     /**
      * Add new entity to groupSettingTemplates
-     * @param GroupSettingTemplate $body The request body
      * @param GroupSettingTemplatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

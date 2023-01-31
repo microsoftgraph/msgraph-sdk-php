@@ -75,7 +75,6 @@ class ServicePrincipalRiskDetectionsRequestBuilder
 
     /**
      * Create new navigation property to servicePrincipalRiskDetections for identityProtection
-     * @param ServicePrincipalRiskDetection $body The request body
      * @param ServicePrincipalRiskDetectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class ServicePrincipalRiskDetectionsRequestBuilder
 
     /**
      * Create new navigation property to servicePrincipalRiskDetections for identityProtection
-     * @param ServicePrincipalRiskDetection $body The request body
      * @param ServicePrincipalRiskDetectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

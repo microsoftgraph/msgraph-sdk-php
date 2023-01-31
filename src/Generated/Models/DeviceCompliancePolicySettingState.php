@@ -109,7 +109,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -141,7 +141,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the state property value. The state property
+     * Gets the state property value. 
      * @return ComplianceStatus|null
     */
     public function getState(): ?ComplianceStatus {
@@ -250,7 +250,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -282,7 +282,7 @@ class DeviceCompliancePolicySettingState implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the state property value. The state property
+     * Sets the state property value. 
      * @param ComplianceStatus|null $value Value to set for the state property.
     */
     public function setState(?ComplianceStatus $value): void {

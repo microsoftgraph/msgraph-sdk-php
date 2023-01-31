@@ -75,7 +75,6 @@ class InstancesRequestBuilder
 
     /**
      * Create new navigation property to instances for identityGovernance
-     * @param AccessReviewHistoryInstance $body The request body
      * @param InstancesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class InstancesRequestBuilder
 
     /**
      * Create new navigation property to instances for identityGovernance
-     * @param AccessReviewHistoryInstance $body The request body
      * @param InstancesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

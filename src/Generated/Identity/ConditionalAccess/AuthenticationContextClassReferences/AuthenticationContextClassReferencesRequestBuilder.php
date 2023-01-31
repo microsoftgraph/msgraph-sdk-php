@@ -75,7 +75,6 @@ class AuthenticationContextClassReferencesRequestBuilder
 
     /**
      * Create new navigation property to authenticationContextClassReferences for identity
-     * @param AuthenticationContextClassReference $body The request body
      * @param AuthenticationContextClassReferencesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class AuthenticationContextClassReferencesRequestBuilder
 
     /**
      * Create new navigation property to authenticationContextClassReferences for identity
-     * @param AuthenticationContextClassReference $body The request body
      * @param AuthenticationContextClassReferencesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -26,7 +26,7 @@ class Chat extends Entity implements Parsable
     }
 
     /**
-     * Gets the chatType property value. The chatType property
+     * Gets the chatType property value. 
      * @return ChatType|null
     */
     public function getChatType(): ?ChatType {
@@ -184,7 +184,7 @@ class Chat extends Entity implements Parsable
     }
 
     /**
-     * Sets the chatType property value. The chatType property
+     * Sets the chatType property value. 
      * @param ChatType|null $value Value to set for the chatType property.
     */
     public function setChatType(?ChatType $value): void {

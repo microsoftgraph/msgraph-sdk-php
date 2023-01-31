@@ -47,11 +47,15 @@ class CallRecordItemRequestBuilder
      * Instantiates a new CallRecordItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $callRecordId key: id of callRecord
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $callRecordId = null) {
         $this->urlTemplate = '{+baseurl}/communications/callRecords/{callRecord%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['callRecordId'] = $callRecordId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -92,7 +96,6 @@ class CallRecordItemRequestBuilder
 
     /**
      * Update the navigation property callRecords in communications
-     * @param CallRecord $body The request body
      * @param CallRecordItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -168,7 +171,6 @@ class CallRecordItemRequestBuilder
 
     /**
      * Update the navigation property callRecords in communications
-     * @param CallRecord $body The request body
      * @param CallRecordItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

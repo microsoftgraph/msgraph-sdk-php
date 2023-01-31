@@ -75,7 +75,6 @@ class DocumentSetVersionsRequestBuilder
 
     /**
      * Create a new version of a document set item in a list.
-     * @param DocumentSetVersion $body The request body
      * @param DocumentSetVersionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/listitem-post-documentsetversions?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class DocumentSetVersionsRequestBuilder
 
     /**
      * Create a new version of a document set item in a list.
-     * @param DocumentSetVersion $body The request body
      * @param DocumentSetVersionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

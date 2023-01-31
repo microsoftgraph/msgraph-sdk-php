@@ -5,10 +5,10 @@ namespace Microsoft\Graph\Generated\Me\Presence;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\Presence\ClearPresence\ClearPresenceRequestBuilder;
-use Microsoft\Graph\Generated\Me\Presence\ClearUserPreferredPresence\ClearUserPreferredPresenceRequestBuilder;
-use Microsoft\Graph\Generated\Me\Presence\SetPresence\SetPresenceRequestBuilder;
-use Microsoft\Graph\Generated\Me\Presence\SetUserPreferredPresence\SetUserPreferredPresenceRequestBuilder;
+use Microsoft\Graph\Generated\Me\Presence\MicrosoftGraphClearPresence\ClearPresenceRequestBuilder;
+use Microsoft\Graph\Generated\Me\Presence\MicrosoftGraphClearUserPreferredPresence\ClearUserPreferredPresenceRequestBuilder;
+use Microsoft\Graph\Generated\Me\Presence\MicrosoftGraphSetPresence\SetPresenceRequestBuilder;
+use Microsoft\Graph\Generated\Me\Presence\MicrosoftGraphSetUserPreferredPresence\SetUserPreferredPresenceRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Presence;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -26,15 +26,29 @@ class PresenceRequestBuilder
     /**
      * Provides operations to call the clearPresence method.
     */
-    public function clearPresence(): ClearPresenceRequestBuilder {
+    public function microsoftGraphClearPresence(): ClearPresenceRequestBuilder {
         return new ClearPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the clearUserPreferredPresence method.
     */
-    public function clearUserPreferredPresence(): ClearUserPreferredPresenceRequestBuilder {
+    public function microsoftGraphClearUserPreferredPresence(): ClearUserPreferredPresenceRequestBuilder {
         return new ClearUserPreferredPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the setPresence method.
+    */
+    public function microsoftGraphSetPresence(): SetPresenceRequestBuilder {
+        return new SetPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the setUserPreferredPresence method.
+    */
+    public function microsoftGraphSetUserPreferredPresence(): SetUserPreferredPresenceRequestBuilder {
+        return new SetUserPreferredPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -46,20 +60,6 @@ class PresenceRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
-    
-    /**
-     * Provides operations to call the setPresence method.
-    */
-    public function setPresence(): SetPresenceRequestBuilder {
-        return new SetPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the setUserPreferredPresence method.
-    */
-    public function setUserPreferredPresence(): SetUserPreferredPresenceRequestBuilder {
-        return new SetUserPreferredPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
@@ -116,7 +116,6 @@ class PresenceRequestBuilder
 
     /**
      * Update the navigation property presence in me
-     * @param Presence $body The request body
      * @param PresenceRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -181,7 +180,6 @@ class PresenceRequestBuilder
 
     /**
      * Update the navigation property presence in me
-     * @param Presence $body The request body
      * @param PresenceRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -74,7 +74,6 @@ class TermsAndConditionsRequestBuilder
 
     /**
      * Create new navigation property to termsAndConditions for deviceManagement
-     * @param TermsAndConditions $body The request body
      * @param TermsAndConditionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class TermsAndConditionsRequestBuilder
 
     /**
      * Create new navigation property to termsAndConditions for deviceManagement
-     * @param TermsAndConditions $body The request body
      * @param TermsAndConditionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -81,7 +81,7 @@ class SettingSource implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -89,7 +89,7 @@ class SettingSource implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the sourceType property value. The sourceType property
+     * Gets the sourceType property value. 
      * @return SettingSourceType|null
     */
     public function getSourceType(): ?SettingSourceType {
@@ -141,7 +141,7 @@ class SettingSource implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -149,7 +149,7 @@ class SettingSource implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the sourceType property value. The sourceType property
+     * Sets the sourceType property value. 
      * @param SettingSourceType|null $value Value to set for the sourceType property.
     */
     public function setSourceType(?SettingSourceType $value): void {

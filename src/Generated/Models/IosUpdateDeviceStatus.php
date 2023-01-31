@@ -79,7 +79,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
     }
 
     /**
-     * Gets the installStatus property value. The installStatus property
+     * Gets the installStatus property value. 
      * @return IosUpdatesInstallStatus|null
     */
     public function getInstallStatus(): ?IosUpdatesInstallStatus {
@@ -103,7 +103,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. 
      * @return ComplianceStatus|null
     */
     public function getStatus(): ?ComplianceStatus {
@@ -186,7 +186,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
     }
 
     /**
-     * Sets the installStatus property value. The installStatus property
+     * Sets the installStatus property value. 
      * @param IosUpdatesInstallStatus|null $value Value to set for the installStatus property.
     */
     public function setInstallStatus(?IosUpdatesInstallStatus $value): void {
@@ -210,7 +210,7 @@ class IosUpdateDeviceStatus extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. 
      * @param ComplianceStatus|null $value Value to set for the status property.
     */
     public function setStatus(?ComplianceStatus $value): void {

@@ -75,7 +75,6 @@ class HistoryDefinitionsRequestBuilder
 
     /**
      * Create a new accessReviewHistoryDefinition object.
-     * @param AccessReviewHistoryDefinition $body The request body
      * @param HistoryDefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/accessreviewset-post-historydefinitions?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class HistoryDefinitionsRequestBuilder
 
     /**
      * Create a new accessReviewHistoryDefinition object.
-     * @param AccessReviewHistoryDefinition $body The request body
      * @param HistoryDefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

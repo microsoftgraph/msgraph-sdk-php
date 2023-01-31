@@ -9,8 +9,8 @@ use Microsoft\Graph\Generated\Models\Notebook;
 use Microsoft\Graph\Generated\Models\NotebookCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\GetNotebookFromWebUrl\GetNotebookFromWebUrlRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\GetRecentNotebooksWithIncludePersonalNotebooks\GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\MicrosoftGraphGetNotebookFromWebUrl\GetNotebookFromWebUrlRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\MicrosoftGraphGetRecentNotebooksWithIncludePersonalNotebooks\GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -33,7 +33,7 @@ class NotebooksRequestBuilder
     /**
      * Provides operations to call the getNotebookFromWebUrl method.
     */
-    public function getNotebookFromWebUrl(): GetNotebookFromWebUrlRequestBuilder {
+    public function microsoftGraphGetNotebookFromWebUrl(): GetNotebookFromWebUrlRequestBuilder {
         return new GetNotebookFromWebUrlRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
@@ -87,13 +87,12 @@ class NotebooksRequestBuilder
      * @param bool $includePersonalNotebooks Usage: includePersonalNotebooks={includePersonalNotebooks}
      * @return GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder
     */
-    public function getRecentNotebooksWithIncludePersonalNotebooks(bool $includePersonalNotebooks): GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder {
+    public function microsoftGraphGetRecentNotebooksWithIncludePersonalNotebooks(bool $includePersonalNotebooks): GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder {
         return new GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder($this->pathParameters, $this->requestAdapter, $includePersonalNotebooks);
     }
 
     /**
      * Create a new OneNote notebook.
-     * @param Notebook $body The request body
      * @param NotebooksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/onenote-post-notebooks?view=graph-rest-1.0 Find more info here
@@ -138,7 +137,6 @@ class NotebooksRequestBuilder
 
     /**
      * Create a new OneNote notebook.
-     * @param Notebook $body The request body
      * @param NotebooksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationSubmission extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new educationSubmission and sets the default values.
+     * Instantiates a new EducationSubmission and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -50,7 +50,7 @@ class EducationSubmission extends Entity implements Parsable
     }
 
     /**
-     * Gets the outcomes property value. The outcomes property
+     * Gets the outcomes property value. 
      * @return array<EducationOutcome>|null
     */
     public function getOutcomes(): ?array {
@@ -82,7 +82,7 @@ class EducationSubmission extends Entity implements Parsable
     }
 
     /**
-     * Gets the resources property value. The resources property
+     * Gets the resources property value. 
      * @return array<EducationSubmissionResource>|null
     */
     public function getResources(): ?array {
@@ -138,7 +138,7 @@ class EducationSubmission extends Entity implements Parsable
     }
 
     /**
-     * Gets the submittedResources property value. The submittedResources property
+     * Gets the submittedResources property value. 
      * @return array<EducationSubmissionResource>|null
     */
     public function getSubmittedResources(): ?array {
@@ -174,7 +174,7 @@ class EducationSubmission extends Entity implements Parsable
     }
 
     /**
-     * Sets the outcomes property value. The outcomes property
+     * Sets the outcomes property value. 
      * @param array<EducationOutcome>|null $value Value to set for the outcomes property.
     */
     public function setOutcomes(?array $value): void {
@@ -206,7 +206,7 @@ class EducationSubmission extends Entity implements Parsable
     }
 
     /**
-     * Sets the resources property value. The resources property
+     * Sets the resources property value. 
      * @param array<EducationSubmissionResource>|null $value Value to set for the resources property.
     */
     public function setResources(?array $value): void {
@@ -262,7 +262,7 @@ class EducationSubmission extends Entity implements Parsable
     }
 
     /**
-     * Sets the submittedResources property value. The submittedResources property
+     * Sets the submittedResources property value. 
      * @param array<EducationSubmissionResource>|null $value Value to set for the submittedResources property.
     */
     public function setSubmittedResources(?array $value): void {

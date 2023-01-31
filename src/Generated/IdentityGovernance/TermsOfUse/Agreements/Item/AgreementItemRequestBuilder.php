@@ -75,11 +75,15 @@ class AgreementItemRequestBuilder
      * Instantiates a new AgreementItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $agreementId key: id of agreement
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $agreementId = null) {
         $this->urlTemplate = '{+baseurl}/identityGovernance/termsOfUse/agreements/{agreement%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['agreementId'] = $agreementId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -131,7 +135,6 @@ class AgreementItemRequestBuilder
 
     /**
      * Update the navigation property agreements in identityGovernance
-     * @param Agreement $body The request body
      * @param AgreementItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -196,7 +199,6 @@ class AgreementItemRequestBuilder
 
     /**
      * Update the navigation property agreements in identityGovernance
-     * @param Agreement $body The request body
      * @param AgreementItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

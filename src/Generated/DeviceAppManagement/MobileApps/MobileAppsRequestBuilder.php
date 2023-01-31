@@ -6,8 +6,8 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\ManagedMobileLobApp\ManagedMobileLobAppRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\MobileLobApp\MobileLobAppRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\MicrosoftGraphManagedMobileLobApp\ManagedMobileLobAppRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\MicrosoftGraphMobileLobApp\MobileLobAppRequestBuilder;
 use Microsoft\Graph\Generated\Models\MobileApp;
 use Microsoft\Graph\Generated\Models\MobileAppCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -33,14 +33,14 @@ class MobileAppsRequestBuilder
     /**
      * Casts the previous resource to managedMobileLobApp.
     */
-    public function managedMobileLobApp(): ManagedMobileLobAppRequestBuilder {
+    public function microsoftGraphManagedMobileLobApp(): ManagedMobileLobAppRequestBuilder {
         return new ManagedMobileLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to mobileLobApp.
     */
-    public function mobileLobApp(): MobileLobAppRequestBuilder {
+    public function microsoftGraphMobileLobApp(): MobileLobAppRequestBuilder {
         return new MobileLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
@@ -90,7 +90,6 @@ class MobileAppsRequestBuilder
 
     /**
      * Create new navigation property to mobileApps for deviceAppManagement
-     * @param MobileApp $body The request body
      * @param MobileAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -134,7 +133,6 @@ class MobileAppsRequestBuilder
 
     /**
      * Create new navigation property to mobileApps for deviceAppManagement
-     * @param MobileApp $body The request body
      * @param MobileAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -75,7 +75,6 @@ class ProvisioningRequestBuilder
 
     /**
      * Create new navigation property to provisioning for auditLogs
-     * @param ProvisioningObjectSummary $body The request body
      * @param ProvisioningRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class ProvisioningRequestBuilder
 
     /**
      * Create new navigation property to provisioning for auditLogs
-     * @param ProvisioningObjectSummary $body The request body
      * @param ProvisioningRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

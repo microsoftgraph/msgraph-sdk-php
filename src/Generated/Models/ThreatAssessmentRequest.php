@@ -36,7 +36,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the category property value. The category property
+     * Gets the category property value. 
      * @return ThreatCategory|null
     */
     public function getCategory(): ?ThreatCategory {
@@ -68,7 +68,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the expectedAssessment property value. The expectedAssessment property
+     * Gets the expectedAssessment property value. 
      * @return ThreatExpectedAssessment|null
     */
     public function getExpectedAssessment(): ?ThreatExpectedAssessment {
@@ -134,7 +134,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the category property value. The category property
+     * Sets the category property value. 
      * @param ThreatCategory|null $value Value to set for the category property.
     */
     public function setCategory(?ThreatCategory $value): void {
@@ -166,7 +166,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the expectedAssessment property value. The expectedAssessment property
+     * Sets the expectedAssessment property value. 
      * @param ThreatExpectedAssessment|null $value Value to set for the expectedAssessment property.
     */
     public function setExpectedAssessment(?ThreatExpectedAssessment $value): void {

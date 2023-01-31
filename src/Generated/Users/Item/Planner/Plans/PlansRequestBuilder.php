@@ -75,7 +75,6 @@ class PlansRequestBuilder
 
     /**
      * Create new navigation property to plans for users
-     * @param PlannerPlan $body The request body
      * @param PlansRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class PlansRequestBuilder
 
     /**
      * Create new navigation property to plans for users
-     * @param PlannerPlan $body The request body
      * @param PlansRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

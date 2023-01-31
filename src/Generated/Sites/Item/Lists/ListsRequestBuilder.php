@@ -75,7 +75,6 @@ class ListsRequestBuilder
 
     /**
      * Create a new [list][] in a [site][].
-     * @param EscapedList $body The request body
      * @param ListsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/list-create?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class ListsRequestBuilder
 
     /**
      * Create a new [list][] in a [site][].
-     * @param EscapedList $body The request body
      * @param ListsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -51,7 +51,7 @@ class SearchAggregation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the buckets property value. The buckets property
+     * Gets the buckets property value. 
      * @return array<SearchBucket>|null
     */
     public function getBuckets(): ?array {
@@ -59,7 +59,7 @@ class SearchAggregation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the field property value. The field property
+     * Gets the field property value. 
      * @return string|null
     */
     public function getField(): ?string {
@@ -80,7 +80,7 @@ class SearchAggregation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -115,7 +115,7 @@ class SearchAggregation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the buckets property value. The buckets property
+     * Sets the buckets property value. 
      * @param array<SearchBucket>|null $value Value to set for the buckets property.
     */
     public function setBuckets(?array $value): void {
@@ -123,7 +123,7 @@ class SearchAggregation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the field property value. The field property
+     * Sets the field property value. 
      * @param string|null $value Value to set for the field property.
     */
     public function setField(?string $value): void {
@@ -131,7 +131,7 @@ class SearchAggregation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

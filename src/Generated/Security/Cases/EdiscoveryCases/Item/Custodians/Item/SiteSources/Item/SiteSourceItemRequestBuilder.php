@@ -46,11 +46,15 @@ class SiteSourceItemRequestBuilder
      * Instantiates a new SiteSourceItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $siteSourceId key: id of siteSource
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $siteSourceId = null) {
         $this->urlTemplate = '{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}/siteSources/{siteSource%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['siteSourceId'] = $siteSourceId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -91,7 +95,6 @@ class SiteSourceItemRequestBuilder
 
     /**
      * Update the navigation property siteSources in security
-     * @param SiteSource $body The request body
      * @param SiteSourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -156,7 +159,6 @@ class SiteSourceItemRequestBuilder
 
     /**
      * Update the navigation property siteSources in security
-     * @param SiteSource $body The request body
      * @param SiteSourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

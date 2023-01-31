@@ -38,11 +38,15 @@ class SecureScoreItemRequestBuilder
      * Instantiates a new SecureScoreItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $secureScoreId key: id of secureScore
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $secureScoreId = null) {
         $this->urlTemplate = '{+baseurl}/security/secureScores/{secureScore%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['secureScoreId'] = $secureScoreId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class SecureScoreItemRequestBuilder
 
     /**
      * Update the navigation property secureScores in security
-     * @param SecureScore $body The request body
      * @param SecureScoreItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class SecureScoreItemRequestBuilder
 
     /**
      * Update the navigation property secureScores in security
-     * @param SecureScore $body The request body
      * @param SecureScoreItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

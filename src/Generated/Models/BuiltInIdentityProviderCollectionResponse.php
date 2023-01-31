@@ -36,7 +36,7 @@ class BuiltInIdentityProviderCollectionResponse extends BaseCollectionPagination
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return array<BuiltInIdentityProvider>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class BuiltInIdentityProviderCollectionResponse extends BaseCollectionPagination
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param array<BuiltInIdentityProvider>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

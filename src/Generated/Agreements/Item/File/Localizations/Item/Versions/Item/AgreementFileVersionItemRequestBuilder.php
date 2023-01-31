@@ -38,11 +38,15 @@ class AgreementFileVersionItemRequestBuilder
      * Instantiates a new AgreementFileVersionItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $agreementFileVersionId key: id of agreementFileVersion
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $agreementFileVersionId = null) {
         $this->urlTemplate = '{+baseurl}/agreements/{agreement%2Did}/file/localizations/{agreementFileLocalization%2Did}/versions/{agreementFileVersion%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['agreementFileVersionId'] = $agreementFileVersionId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class AgreementFileVersionItemRequestBuilder
 
     /**
      * Update the navigation property versions in agreements
-     * @param AgreementFileVersion $body The request body
      * @param AgreementFileVersionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class AgreementFileVersionItemRequestBuilder
 
     /**
      * Update the navigation property versions in agreements
-     * @param AgreementFileVersion $body The request body
      * @param AgreementFileVersionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

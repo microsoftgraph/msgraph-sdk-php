@@ -38,15 +38,19 @@ class SubscribedSkuItemRequestBuilder
      * Instantiates a new SubscribedSkuItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $subscribedSkuId key: id of subscribedSku
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $subscribedSkuId = null) {
         $this->urlTemplate = '{+baseurl}/subscribedSkus/{subscribedSku%2Did}{?%24select}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['subscribedSkuId'] = $subscribedSkuId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
-     * Delete entity from subscribedSkus by key (id)
+     * Delete entity from subscribedSkus
      * @param SubscribedSkuItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -83,8 +87,7 @@ class SubscribedSkuItemRequestBuilder
     }
 
     /**
-     * Update entity in subscribedSkus by key (id)
-     * @param SubscribedSku $body The request body
+     * Update entity in subscribedSkus
      * @param SubscribedSkuItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -102,7 +105,7 @@ class SubscribedSkuItemRequestBuilder
     }
 
     /**
-     * Delete entity from subscribedSkus by key (id)
+     * Delete entity from subscribedSkus
      * @param SubscribedSkuItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -148,8 +151,7 @@ class SubscribedSkuItemRequestBuilder
     }
 
     /**
-     * Update entity in subscribedSkus by key (id)
-     * @param SubscribedSku $body The request body
+     * Update entity in subscribedSkus
      * @param SubscribedSkuItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

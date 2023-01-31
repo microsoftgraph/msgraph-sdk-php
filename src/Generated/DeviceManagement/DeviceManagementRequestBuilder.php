@@ -29,7 +29,6 @@ use Microsoft\Graph\Generated\DeviceManagement\DeviceManagementPartners\DeviceMa
 use Microsoft\Graph\Generated\DeviceManagement\DeviceManagementPartners\Item\DeviceManagementPartnerItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\ExchangeConnectors\ExchangeConnectorsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\ExchangeConnectors\Item\DeviceManagementExchangeConnectorItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\GetEffectivePermissionsWithScope\GetEffectivePermissionsWithScopeRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\Item\ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\IosUpdateStatuses\IosUpdateStatusesRequestBuilder;
@@ -37,6 +36,8 @@ use Microsoft\Graph\Generated\DeviceManagement\IosUpdateStatuses\Item\IosUpdateD
 use Microsoft\Graph\Generated\DeviceManagement\ManagedDeviceOverview\ManagedDeviceOverviewRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\ManagedDeviceItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\ManagedDevicesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\MicrosoftGraphGetEffectivePermissionsWithScope\GetEffectivePermissionsWithScopeRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\MicrosoftGraphVerifyWindowsEnrollmentAutoDiscoveryWithDomainName\VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\MobileThreatDefenseConnectors\Item\MobileThreatDefenseConnectorItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\MobileThreatDefenseConnectors\MobileThreatDefenseConnectorsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item\NotificationMessageTemplateItemRequestBuilder;
@@ -57,7 +58,6 @@ use Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\Item\TermsAndC
 use Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\TermsAndConditionsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\TroubleshootingEvents\Item\DeviceManagementTroubleshootingEventItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\TroubleshootingEvents\TroubleshootingEventsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\VerifyWindowsEnrollmentAutoDiscoveryWithDomainName\VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\WindowsAutopilotDeviceIdentityItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\WindowsAutopilotDeviceIdentitiesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\WindowsInformationProtectionAppLearningSummaries\Item\WindowsInformationProtectionAppLearningSummaryItemRequestBuilder;
@@ -457,15 +457,6 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Provides operations to call the getEffectivePermissions method.
-     * @param string $scope Usage: scope='{scope}'
-     * @return GetEffectivePermissionsWithScopeRequestBuilder
-    */
-    public function getEffectivePermissionsWithScope(string $scope): GetEffectivePermissionsWithScopeRequestBuilder {
-        return new GetEffectivePermissionsWithScopeRequestBuilder($this->pathParameters, $this->requestAdapter, $scope);
-    }
-
-    /**
      * Provides operations to manage the importedWindowsAutopilotDeviceIdentities property of the microsoft.graph.deviceManagement entity.
      * @param string $id Unique identifier of the item
      * @return ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder
@@ -499,6 +490,24 @@ class DeviceManagementRequestBuilder
     }
 
     /**
+     * Provides operations to call the getEffectivePermissions method.
+     * @param string $scope Usage: scope='{scope}'
+     * @return GetEffectivePermissionsWithScopeRequestBuilder
+    */
+    public function microsoftGraphGetEffectivePermissionsWithScope(string $scope): GetEffectivePermissionsWithScopeRequestBuilder {
+        return new GetEffectivePermissionsWithScopeRequestBuilder($this->pathParameters, $this->requestAdapter, $scope);
+    }
+
+    /**
+     * Provides operations to call the verifyWindowsEnrollmentAutoDiscovery method.
+     * @param string $domainName Usage: domainName='{domainName}'
+     * @return VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder
+    */
+    public function microsoftGraphVerifyWindowsEnrollmentAutoDiscoveryWithDomainName(string $domainName): VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder {
+        return new VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder($this->pathParameters, $this->requestAdapter, $domainName);
+    }
+
+    /**
      * Provides operations to manage the mobileThreatDefenseConnectors property of the microsoft.graph.deviceManagement entity.
      * @param string $id Unique identifier of the item
      * @return MobileThreatDefenseConnectorItemRequestBuilder
@@ -522,7 +531,6 @@ class DeviceManagementRequestBuilder
 
     /**
      * Update deviceManagement
-     * @param DeviceManagement $body The request body
      * @param DeviceManagementRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -632,7 +640,6 @@ class DeviceManagementRequestBuilder
 
     /**
      * Update deviceManagement
-     * @param DeviceManagement $body The request body
      * @param DeviceManagementRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -663,15 +670,6 @@ class DeviceManagementRequestBuilder
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceManagementTroubleshootingEvent%2Did'] = $id;
         return new DeviceManagementTroubleshootingEventItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to call the verifyWindowsEnrollmentAutoDiscovery method.
-     * @param string $domainName Usage: domainName='{domainName}'
-     * @return VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder
-    */
-    public function verifyWindowsEnrollmentAutoDiscoveryWithDomainName(string $domainName): VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder {
-        return new VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder($this->pathParameters, $this->requestAdapter, $domainName);
     }
 
     /**

@@ -51,7 +51,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the color property value. The color property
+     * Gets the color property value. 
      * @return string|null
     */
     public function getColor(): ?string {
@@ -59,7 +59,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the criterion1 property value. The criterion1 property
+     * Gets the criterion1 property value. 
      * @return string|null
     */
     public function getCriterion1(): ?string {
@@ -67,7 +67,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the criterion2 property value. The criterion2 property
+     * Gets the criterion2 property value. 
      * @return string|null
     */
     public function getCriterion2(): ?string {
@@ -75,7 +75,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the dynamicCriteria property value. The dynamicCriteria property
+     * Gets the dynamicCriteria property value. 
      * @return string|null
     */
     public function getDynamicCriteria(): ?string {
@@ -102,7 +102,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the filterOn property value. The filterOn property
+     * Gets the filterOn property value. 
      * @return string|null
     */
     public function getFilterOn(): ?string {
@@ -110,7 +110,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the icon property value. The icon property
+     * Gets the icon property value. 
      * @return WorkbookIcon|null
     */
     public function getIcon(): ?WorkbookIcon {
@@ -118,7 +118,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -126,7 +126,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the operator property value. The operator property
+     * Gets the operator property value. 
      * @return string|null
     */
     public function getOperator(): ?string {
@@ -134,7 +134,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the values property value. The values property
+     * Gets the values property value. 
      * @return Json|null
     */
     public function getValues(): ?Json {
@@ -175,7 +175,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the color property value. The color property
+     * Sets the color property value. 
      * @param string|null $value Value to set for the color property.
     */
     public function setColor(?string $value): void {
@@ -183,7 +183,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the criterion1 property value. The criterion1 property
+     * Sets the criterion1 property value. 
      * @param string|null $value Value to set for the criterion1 property.
     */
     public function setCriterion1(?string $value): void {
@@ -191,7 +191,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the criterion2 property value. The criterion2 property
+     * Sets the criterion2 property value. 
      * @param string|null $value Value to set for the criterion2 property.
     */
     public function setCriterion2(?string $value): void {
@@ -199,7 +199,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the dynamicCriteria property value. The dynamicCriteria property
+     * Sets the dynamicCriteria property value. 
      * @param string|null $value Value to set for the dynamicCriteria property.
     */
     public function setDynamicCriteria(?string $value): void {
@@ -207,7 +207,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the filterOn property value. The filterOn property
+     * Sets the filterOn property value. 
      * @param string|null $value Value to set for the filterOn property.
     */
     public function setFilterOn(?string $value): void {
@@ -215,7 +215,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the icon property value. The icon property
+     * Sets the icon property value. 
      * @param WorkbookIcon|null $value Value to set for the icon property.
     */
     public function setIcon(?WorkbookIcon $value): void {
@@ -223,7 +223,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -231,7 +231,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the operator property value. The operator property
+     * Sets the operator property value. 
      * @param string|null $value Value to set for the operator property.
     */
     public function setOperator(?string $value): void {
@@ -239,7 +239,7 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the values property value. The values property
+     * Sets the values property value. 
      * @param Json|null $value Value to set for the values property.
     */
     public function setValues(?Json $value): void {

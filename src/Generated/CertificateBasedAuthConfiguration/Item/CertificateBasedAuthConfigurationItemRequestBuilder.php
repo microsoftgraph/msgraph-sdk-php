@@ -38,15 +38,19 @@ class CertificateBasedAuthConfigurationItemRequestBuilder
      * Instantiates a new CertificateBasedAuthConfigurationItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $certificateBasedAuthConfigurationId key: id of certificateBasedAuthConfiguration
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $certificateBasedAuthConfigurationId = null) {
         $this->urlTemplate = '{+baseurl}/certificateBasedAuthConfiguration/{certificateBasedAuthConfiguration%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['certificateBasedAuthConfigurationId'] = $certificateBasedAuthConfigurationId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
-     * Delete entity from certificateBasedAuthConfiguration by key (id)
+     * Delete entity from certificateBasedAuthConfiguration
      * @param CertificateBasedAuthConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -64,7 +68,7 @@ class CertificateBasedAuthConfigurationItemRequestBuilder
     }
 
     /**
-     * Get entity from certificateBasedAuthConfiguration by key (id)
+     * Get entity from certificateBasedAuthConfiguration by key
      * @param CertificateBasedAuthConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -82,8 +86,7 @@ class CertificateBasedAuthConfigurationItemRequestBuilder
     }
 
     /**
-     * Update entity in certificateBasedAuthConfiguration by key (id)
-     * @param CertificateBasedAuthConfiguration $body The request body
+     * Update entity in certificateBasedAuthConfiguration
      * @param CertificateBasedAuthConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -101,7 +104,7 @@ class CertificateBasedAuthConfigurationItemRequestBuilder
     }
 
     /**
-     * Delete entity from certificateBasedAuthConfiguration by key (id)
+     * Delete entity from certificateBasedAuthConfiguration
      * @param CertificateBasedAuthConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +125,7 @@ class CertificateBasedAuthConfigurationItemRequestBuilder
     }
 
     /**
-     * Get entity from certificateBasedAuthConfiguration by key (id)
+     * Get entity from certificateBasedAuthConfiguration by key
      * @param CertificateBasedAuthConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -147,8 +150,7 @@ class CertificateBasedAuthConfigurationItemRequestBuilder
     }
 
     /**
-     * Update entity in certificateBasedAuthConfiguration by key (id)
-     * @param CertificateBasedAuthConfiguration $body The request body
+     * Update entity in certificateBasedAuthConfiguration
      * @param CertificateBasedAuthConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

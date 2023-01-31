@@ -92,7 +92,6 @@ class ParentGroupRequestBuilder
 
     /**
      * Update the navigation property parentGroup in groups
-     * @param Group $body The request body
      * @param ParentGroupRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -168,7 +167,6 @@ class ParentGroupRequestBuilder
 
     /**
      * Update the navigation property parentGroup in groups
-     * @param Group $body The request body
      * @param ParentGroupRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

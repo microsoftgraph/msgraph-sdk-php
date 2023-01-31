@@ -86,7 +86,7 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, BackedMo
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -164,7 +164,7 @@ class DeviceExchangeAccessStateSummary implements AdditionalDataHolder, BackedMo
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

@@ -47,11 +47,15 @@ class PlannerBucketItemRequestBuilder
      * Instantiates a new PlannerBucketItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $plannerBucketId key: id of plannerBucket
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $plannerBucketId = null) {
         $this->urlTemplate = '{+baseurl}/me/planner/plans/{plannerPlan%2Did}/buckets/{plannerBucket%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['plannerBucketId'] = $plannerBucketId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -92,7 +96,6 @@ class PlannerBucketItemRequestBuilder
 
     /**
      * Update the navigation property buckets in me
-     * @param PlannerBucket $body The request body
      * @param PlannerBucketItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -168,7 +171,6 @@ class PlannerBucketItemRequestBuilder
 
     /**
      * Update the navigation property buckets in me
-     * @param PlannerBucket $body The request body
      * @param PlannerBucketItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

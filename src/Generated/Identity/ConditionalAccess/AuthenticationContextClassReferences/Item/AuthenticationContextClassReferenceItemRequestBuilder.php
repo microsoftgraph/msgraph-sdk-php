@@ -38,11 +38,15 @@ class AuthenticationContextClassReferenceItemRequestBuilder
      * Instantiates a new AuthenticationContextClassReferenceItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $authenticationContextClassReferenceId key: id of authenticationContextClassReference
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $authenticationContextClassReferenceId = null) {
         $this->urlTemplate = '{+baseurl}/identity/conditionalAccess/authenticationContextClassReferences/{authenticationContextClassReference%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['authenticationContextClassReferenceId'] = $authenticationContextClassReferenceId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class AuthenticationContextClassReferenceItemRequestBuilder
 
     /**
      * Update the navigation property authenticationContextClassReferences in identity
-     * @param AuthenticationContextClassReference $body The request body
      * @param AuthenticationContextClassReferenceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class AuthenticationContextClassReferenceItemRequestBuilder
 
     /**
      * Update the navigation property authenticationContextClassReferences in identity
-     * @param AuthenticationContextClassReference $body The request body
      * @param AuthenticationContextClassReferenceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Instances\Item\Attachments\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Instances\Item\Attachments\CreateUploadSession\CreateUploadSessionRequestBuilder;
+use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\Instances\Item\Attachments\MicrosoftGraphCreateUploadSession\CreateUploadSessionRequestBuilder;
 use Microsoft\Graph\Generated\Models\Attachment;
 use Microsoft\Graph\Generated\Models\AttachmentCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -32,7 +32,7 @@ class AttachmentsRequestBuilder
     /**
      * Provides operations to call the createUploadSession method.
     */
-    public function createUploadSession(): CreateUploadSessionRequestBuilder {
+    public function microsoftGraphCreateUploadSession(): CreateUploadSessionRequestBuilder {
         return new CreateUploadSessionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
@@ -83,7 +83,6 @@ class AttachmentsRequestBuilder
 
     /**
      * Use this API to create a new Attachment. An attachment can be one of the following types: All these types of attachment resources are derived from the attachmentresource. 
-     * @param Attachment $body The request body
      * @param AttachmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/eventmessage-post-attachments?view=graph-rest-1.0 Find more info here
@@ -128,7 +127,6 @@ class AttachmentsRequestBuilder
 
     /**
      * Use this API to create a new Attachment. An attachment can be one of the following types: All these types of attachment resources are derived from the attachmentresource. 
-     * @param Attachment $body The request body
      * @param AttachmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -75,7 +75,6 @@ class TaskTriggersRequestBuilder
 
     /**
      * Create a new task trigger on the specified printer. Currently, only **one** task trigger can be specified per printer, but this limit might be removed in the future. 
-     * @param PrintTaskTrigger $body The request body
      * @param TaskTriggersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/printer-post-tasktriggers?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class TaskTriggersRequestBuilder
 
     /**
      * Create a new task trigger on the specified printer. Currently, only **one** task trigger can be specified per printer, but this limit might be removed in the future. 
-     * @param PrintTaskTrigger $body The request body
      * @param TaskTriggersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

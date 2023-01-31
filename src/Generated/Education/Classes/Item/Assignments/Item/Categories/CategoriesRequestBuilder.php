@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Categories\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Categories\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Categories\MicrosoftGraphDelta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Categories\Ref\RefRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationCategory;
 use Microsoft\Graph\Generated\Models\EducationCategoryCollectionResponse;
@@ -28,6 +28,13 @@ class CategoriesRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the delta method.
+    */
+    public function microsoftGraphDelta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -64,14 +71,6 @@ class CategoriesRequestBuilder
     }
 
     /**
-     * Provides operations to call the delta method.
-     * @return DeltaRequestBuilder
-    */
-    public function delta(): DeltaRequestBuilder {
-        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
      * List all the categories associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation.
      * @param CategoriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -92,7 +91,6 @@ class CategoriesRequestBuilder
 
     /**
      * Create new navigation property to categories for education
-     * @param EducationCategory $body The request body
      * @param CategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -136,7 +134,6 @@ class CategoriesRequestBuilder
 
     /**
      * Create new navigation property to categories for education
-     * @param EducationCategory $body The request body
      * @param CategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

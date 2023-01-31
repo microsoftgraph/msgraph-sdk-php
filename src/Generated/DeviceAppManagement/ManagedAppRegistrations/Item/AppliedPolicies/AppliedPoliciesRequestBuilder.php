@@ -74,7 +74,6 @@ class AppliedPoliciesRequestBuilder
 
     /**
      * Create new navigation property to appliedPolicies for deviceAppManagement
-     * @param ManagedAppPolicy $body The request body
      * @param AppliedPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class AppliedPoliciesRequestBuilder
 
     /**
      * Create new navigation property to appliedPolicies for deviceAppManagement
-     * @param ManagedAppPolicy $body The request body
      * @param AppliedPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

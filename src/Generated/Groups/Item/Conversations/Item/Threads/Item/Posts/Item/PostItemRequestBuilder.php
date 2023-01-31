@@ -9,11 +9,11 @@ use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\
 use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\Attachments\Item\AttachmentItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\Extensions\ExtensionsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\Extensions\Item\ExtensionItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\Forward\ForwardRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\InReplyTo\InReplyToRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\MicrosoftGraphForward\ForwardRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\MicrosoftGraphReply\ReplyRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\Reply\ReplyRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -45,17 +45,24 @@ class PostItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the forward method.
-    */
-    public function forward(): ForwardRequestBuilder {
-        return new ForwardRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the inReplyTo property of the microsoft.graph.post entity.
     */
     public function inReplyTo(): InReplyToRequestBuilder {
         return new InReplyToRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the forward method.
+    */
+    public function microsoftGraphForward(): ForwardRequestBuilder {
+        return new ForwardRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the reply method.
+    */
+    public function microsoftGraphReply(): ReplyRequestBuilder {
+        return new ReplyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -69,13 +76,6 @@ class PostItemRequestBuilder
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
-    
-    /**
-     * Provides operations to call the reply method.
-    */
-    public function reply(): ReplyRequestBuilder {
-        return new ReplyRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -109,11 +109,15 @@ class PostItemRequestBuilder
      * Instantiates a new PostItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $postId key: id of post
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $postId = null) {
         $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/conversations/{conversation%2Did}/threads/{conversationThread%2Did}/posts/{post%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['postId'] = $postId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**

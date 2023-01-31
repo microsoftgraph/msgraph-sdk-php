@@ -75,7 +75,6 @@ class TokenLifetimePoliciesRequestBuilder
 
     /**
      * Create a new tokenLifetimePolicy object.
-     * @param TokenLifetimePolicy $body The request body
      * @param TokenLifetimePoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/tokenlifetimepolicy-post-tokenlifetimepolicies?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class TokenLifetimePoliciesRequestBuilder
 
     /**
      * Create a new tokenLifetimePolicy object.
-     * @param TokenLifetimePolicy $body The request body
      * @param TokenLifetimePoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

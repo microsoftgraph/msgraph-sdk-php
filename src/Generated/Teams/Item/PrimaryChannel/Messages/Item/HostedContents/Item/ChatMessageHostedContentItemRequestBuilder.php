@@ -38,11 +38,15 @@ class ChatMessageHostedContentItemRequestBuilder
      * Instantiates a new ChatMessageHostedContentItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $chatMessageHostedContentId key: id of chatMessageHostedContent
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $chatMessageHostedContentId = null) {
         $this->urlTemplate = '{+baseurl}/teams/{team%2Did}/primaryChannel/messages/{chatMessage%2Did}/hostedContents/{chatMessageHostedContent%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['chatMessageHostedContentId'] = $chatMessageHostedContentId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class ChatMessageHostedContentItemRequestBuilder
 
     /**
      * Update the navigation property hostedContents in teams
-     * @param ChatMessageHostedContent $body The request body
      * @param ChatMessageHostedContentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class ChatMessageHostedContentItemRequestBuilder
 
     /**
      * Update the navigation property hostedContents in teams
-     * @param ChatMessageHostedContent $body The request body
      * @param ChatMessageHostedContentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

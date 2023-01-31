@@ -38,11 +38,15 @@ class OAuth2PermissionGrantItemRequestBuilder
      * Instantiates a new OAuth2PermissionGrantItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $oAuth2PermissionGrantId key: id of oAuth2PermissionGrant
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $oAuth2PermissionGrantId = null) {
         $this->urlTemplate = '{+baseurl}/oauth2PermissionGrants/{oAuth2PermissionGrant%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['oAuth2PermissionGrantId'] = $oAuth2PermissionGrantId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -85,7 +89,6 @@ class OAuth2PermissionGrantItemRequestBuilder
 
     /**
      * Update the properties of oAuth2PermissionGrant object, representing a delegated permission grant. An **oAuth2PermissionGrant** can be updated to change which delegated permissions are granted, by adding or removing items from the list in **scopes**.
-     * @param OAuth2PermissionGrant $body The request body
      * @param OAuth2PermissionGrantItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/oauth2permissiongrant-update?view=graph-rest-1.0 Find more info here
@@ -151,7 +154,6 @@ class OAuth2PermissionGrantItemRequestBuilder
 
     /**
      * Update the properties of oAuth2PermissionGrant object, representing a delegated permission grant. An **oAuth2PermissionGrant** can be updated to change which delegated permissions are granted, by adding or removing items from the list in **scopes**.
-     * @param OAuth2PermissionGrant $body The request body
      * @param OAuth2PermissionGrantItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

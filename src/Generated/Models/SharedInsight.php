@@ -49,7 +49,7 @@ class SharedInsight extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastSharedMethod property value. The lastSharedMethod property
+     * Gets the lastSharedMethod property value. 
      * @return Entity|null
     */
     public function getLastSharedMethod(): ?Entity {
@@ -81,7 +81,7 @@ class SharedInsight extends Entity implements Parsable
     }
 
     /**
-     * Gets the sharingHistory property value. The sharingHistory property
+     * Gets the sharingHistory property value. 
      * @return array<SharingDetail>|null
     */
     public function getSharingHistory(): ?array {
@@ -109,7 +109,7 @@ class SharedInsight extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastSharedMethod property value. The lastSharedMethod property
+     * Sets the lastSharedMethod property value. 
      * @param Entity|null $value Value to set for the lastSharedMethod property.
     */
     public function setLastSharedMethod(?Entity $value): void {
@@ -141,7 +141,7 @@ class SharedInsight extends Entity implements Parsable
     }
 
     /**
-     * Sets the sharingHistory property value. The sharingHistory property
+     * Sets the sharingHistory property value. 
      * @param array<SharingDetail>|null $value Value to set for the sharingHistory property.
     */
     public function setSharingHistory(?array $value): void {

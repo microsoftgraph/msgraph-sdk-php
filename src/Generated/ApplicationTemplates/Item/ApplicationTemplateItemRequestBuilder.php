@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\ApplicationTemplates\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\ApplicationTemplates\Item\Instantiate\InstantiateRequestBuilder;
+use Microsoft\Graph\Generated\ApplicationTemplates\Item\MicrosoftGraphInstantiate\InstantiateRequestBuilder;
 use Microsoft\Graph\Generated\Models\ApplicationTemplate;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,7 +23,7 @@ class ApplicationTemplateItemRequestBuilder
     /**
      * Provides operations to call the instantiate method.
     */
-    public function instantiate(): InstantiateRequestBuilder {
+    public function microsoftGraphInstantiate(): InstantiateRequestBuilder {
         return new InstantiateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
@@ -46,15 +46,19 @@ class ApplicationTemplateItemRequestBuilder
      * Instantiates a new ApplicationTemplateItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $applicationTemplateId key: id of applicationTemplate
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $applicationTemplateId = null) {
         $this->urlTemplate = '{+baseurl}/applicationTemplates/{applicationTemplate%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['applicationTemplateId'] = $applicationTemplateId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
-     * Delete entity from applicationTemplates by key (id)
+     * Delete entity from applicationTemplates
      * @param ApplicationTemplateItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -91,8 +95,7 @@ class ApplicationTemplateItemRequestBuilder
     }
 
     /**
-     * Update entity in applicationTemplates by key (id)
-     * @param ApplicationTemplate $body The request body
+     * Update entity in applicationTemplates
      * @param ApplicationTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -110,7 +113,7 @@ class ApplicationTemplateItemRequestBuilder
     }
 
     /**
-     * Delete entity from applicationTemplates by key (id)
+     * Delete entity from applicationTemplates
      * @param ApplicationTemplateItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -156,8 +159,7 @@ class ApplicationTemplateItemRequestBuilder
     }
 
     /**
-     * Update entity in applicationTemplates by key (id)
-     * @param ApplicationTemplate $body The request body
+     * Update entity in applicationTemplates
      * @param ApplicationTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -10,9 +10,6 @@ use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-/**
- * The resource that represents an instance of Enrollment Failure Reports.
-*/
 class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable 
 {
     /**
@@ -54,7 +51,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the dailyPrintUsageByPrinter property value. The dailyPrintUsageByPrinter property
+     * Gets the dailyPrintUsageByPrinter property value. 
      * @return array<PrintUsageByPrinter>|null
     */
     public function getDailyPrintUsageByPrinter(): ?array {
@@ -62,7 +59,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the dailyPrintUsageByUser property value. The dailyPrintUsageByUser property
+     * Gets the dailyPrintUsageByUser property value. 
      * @return array<PrintUsageByUser>|null
     */
     public function getDailyPrintUsageByUser(): ?array {
@@ -86,7 +83,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the monthlyPrintUsageByPrinter property value. The monthlyPrintUsageByPrinter property
+     * Gets the monthlyPrintUsageByPrinter property value. 
      * @return array<PrintUsageByPrinter>|null
     */
     public function getMonthlyPrintUsageByPrinter(): ?array {
@@ -94,7 +91,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the monthlyPrintUsageByUser property value. The monthlyPrintUsageByUser property
+     * Gets the monthlyPrintUsageByUser property value. 
      * @return array<PrintUsageByUser>|null
     */
     public function getMonthlyPrintUsageByUser(): ?array {
@@ -102,7 +99,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -110,7 +107,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the security property value. The security property
+     * Gets the security property value. 
      * @return SecurityReportsRoot|null
     */
     public function getSecurity(): ?SecurityReportsRoot {
@@ -148,7 +145,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the dailyPrintUsageByPrinter property value. The dailyPrintUsageByPrinter property
+     * Sets the dailyPrintUsageByPrinter property value. 
      * @param array<PrintUsageByPrinter>|null $value Value to set for the dailyPrintUsageByPrinter property.
     */
     public function setDailyPrintUsageByPrinter(?array $value): void {
@@ -156,7 +153,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the dailyPrintUsageByUser property value. The dailyPrintUsageByUser property
+     * Sets the dailyPrintUsageByUser property value. 
      * @param array<PrintUsageByUser>|null $value Value to set for the dailyPrintUsageByUser property.
     */
     public function setDailyPrintUsageByUser(?array $value): void {
@@ -164,7 +161,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the monthlyPrintUsageByPrinter property value. The monthlyPrintUsageByPrinter property
+     * Sets the monthlyPrintUsageByPrinter property value. 
      * @param array<PrintUsageByPrinter>|null $value Value to set for the monthlyPrintUsageByPrinter property.
     */
     public function setMonthlyPrintUsageByPrinter(?array $value): void {
@@ -172,7 +169,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the monthlyPrintUsageByUser property value. The monthlyPrintUsageByUser property
+     * Sets the monthlyPrintUsageByUser property value. 
      * @param array<PrintUsageByUser>|null $value Value to set for the monthlyPrintUsageByUser property.
     */
     public function setMonthlyPrintUsageByUser(?array $value): void {
@@ -180,7 +177,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -188,7 +185,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the security property value. The security property
+     * Sets the security property value. 
      * @param SecurityReportsRoot|null $value Value to set for the security property.
     */
     public function setSecurity(?SecurityReportsRoot $value): void {

@@ -38,11 +38,15 @@ class OpenShiftChangeRequestItemRequestBuilder
      * Instantiates a new OpenShiftChangeRequestItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $openShiftChangeRequestId key: id of openShiftChangeRequest
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $openShiftChangeRequestId = null) {
         $this->urlTemplate = '{+baseurl}/teams/{team%2Did}/schedule/openShiftChangeRequests/{openShiftChangeRequest%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['openShiftChangeRequestId'] = $openShiftChangeRequestId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class OpenShiftChangeRequestItemRequestBuilder
 
     /**
      * Update the navigation property openShiftChangeRequests in teams
-     * @param OpenShiftChangeRequest $body The request body
      * @param OpenShiftChangeRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class OpenShiftChangeRequestItemRequestBuilder
 
     /**
      * Update the navigation property openShiftChangeRequests in teams
-     * @param OpenShiftChangeRequest $body The request body
      * @param OpenShiftChangeRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

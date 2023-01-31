@@ -95,15 +95,19 @@ class SharedDriveItemItemRequestBuilder
      * Instantiates a new SharedDriveItemItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $sharedDriveItemId key: id of sharedDriveItem
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $sharedDriveItemId = null) {
         $this->urlTemplate = '{+baseurl}/shares/{sharedDriveItem%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['sharedDriveItemId'] = $sharedDriveItemId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
-     * Delete entity from shares by key (id)
+     * Delete entity from shares
      * @param SharedDriveItemItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,8 +155,7 @@ class SharedDriveItemItemRequestBuilder
     }
 
     /**
-     * Update entity in shares by key (id)
-     * @param SharedDriveItem $body The request body
+     * Update entity in shares
      * @param SharedDriveItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -170,7 +173,7 @@ class SharedDriveItemItemRequestBuilder
     }
 
     /**
-     * Delete entity from shares by key (id)
+     * Delete entity from shares
      * @param SharedDriveItemItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -216,8 +219,7 @@ class SharedDriveItemItemRequestBuilder
     }
 
     /**
-     * Update entity in shares by key (id)
-     * @param SharedDriveItem $body The request body
+     * Update entity in shares
      * @param SharedDriveItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

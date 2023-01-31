@@ -46,11 +46,15 @@ class AttachmentSessionItemRequestBuilder
      * Instantiates a new AttachmentSessionItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $attachmentSessionId key: id of attachmentSession
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $attachmentSessionId = null) {
         $this->urlTemplate = '{+baseurl}/me/todo/lists/{todoTaskList%2Did}/tasks/{todoTask%2Did}/attachmentSessions/{attachmentSession%2Did}{?%24select}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['attachmentSessionId'] = $attachmentSessionId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -91,7 +95,6 @@ class AttachmentSessionItemRequestBuilder
 
     /**
      * Update the navigation property attachmentSessions in me
-     * @param AttachmentSession $body The request body
      * @param AttachmentSessionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -156,7 +159,6 @@ class AttachmentSessionItemRequestBuilder
 
     /**
      * Update the navigation property attachmentSessions in me
-     * @param AttachmentSession $body The request body
      * @param AttachmentSessionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

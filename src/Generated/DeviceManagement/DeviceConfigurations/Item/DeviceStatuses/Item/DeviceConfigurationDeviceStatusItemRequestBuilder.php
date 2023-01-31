@@ -38,11 +38,15 @@ class DeviceConfigurationDeviceStatusItemRequestBuilder
      * Instantiates a new DeviceConfigurationDeviceStatusItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $deviceConfigurationDeviceStatusId key: id of deviceConfigurationDeviceStatus
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $deviceConfigurationDeviceStatusId = null) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/deviceConfigurations/{deviceConfiguration%2Did}/deviceStatuses/{deviceConfigurationDeviceStatus%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['deviceConfigurationDeviceStatusId'] = $deviceConfigurationDeviceStatusId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class DeviceConfigurationDeviceStatusItemRequestBuilder
 
     /**
      * Update the navigation property deviceStatuses in deviceManagement
-     * @param DeviceConfigurationDeviceStatus $body The request body
      * @param DeviceConfigurationDeviceStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class DeviceConfigurationDeviceStatusItemRequestBuilder
 
     /**
      * Update the navigation property deviceStatuses in deviceManagement
-     * @param DeviceConfigurationDeviceStatus $body The request body
      * @param DeviceConfigurationDeviceStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -54,11 +54,15 @@ class ConnectedOrganizationItemRequestBuilder
      * Instantiates a new ConnectedOrganizationItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $connectedOrganizationId key: id of connectedOrganization
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $connectedOrganizationId = null) {
         $this->urlTemplate = '{+baseurl}/identityGovernance/entitlementManagement/connectedOrganizations/{connectedOrganization%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['connectedOrganizationId'] = $connectedOrganizationId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -121,7 +125,6 @@ class ConnectedOrganizationItemRequestBuilder
 
     /**
      * Update the navigation property connectedOrganizations in identityGovernance
-     * @param ConnectedOrganization $body The request body
      * @param ConnectedOrganizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -186,7 +189,6 @@ class ConnectedOrganizationItemRequestBuilder
 
     /**
      * Update the navigation property connectedOrganizations in identityGovernance
-     * @param ConnectedOrganization $body The request body
      * @param ConnectedOrganizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -38,11 +38,15 @@ class MobileAppAssignmentItemRequestBuilder
      * Instantiates a new MobileAppAssignmentItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $mobileAppAssignmentId key: id of mobileAppAssignment
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $mobileAppAssignmentId = null) {
         $this->urlTemplate = '{+baseurl}/deviceAppManagement/mobileApps/{mobileApp%2Did}/assignments/{mobileAppAssignment%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['mobileAppAssignmentId'] = $mobileAppAssignmentId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class MobileAppAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property assignments in deviceAppManagement
-     * @param MobileAppAssignment $body The request body
      * @param MobileAppAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class MobileAppAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property assignments in deviceAppManagement
-     * @param MobileAppAssignment $body The request body
      * @param MobileAppAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

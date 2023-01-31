@@ -184,7 +184,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the partnerTenantType property value. The partnerTenantType property
+     * Gets the partnerTenantType property value. The type of partnership this tenant has with Microsoft. The possible values are: microsoftSupport, syndicatePartner, breadthPartner, breadthPartnerDelegatedAdmin, resellerPartnerDelegatedAdmin, valueAddedResellerPartnerDelegatedAdmin, unknownFutureValue. Nullable. For more information about the possible types, see partnerTenantType values.
      * @return PartnerTenantType|null
     */
     public function getPartnerTenantType(): ?PartnerTenantType {
@@ -224,7 +224,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the securityComplianceNotificationMails property value. The securityComplianceNotificationMails property
+     * Gets the securityComplianceNotificationMails property value. 
      * @return array<string>|null
     */
     public function getSecurityComplianceNotificationMails(): ?array {
@@ -232,7 +232,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the securityComplianceNotificationPhones property value. The securityComplianceNotificationPhones property
+     * Gets the securityComplianceNotificationPhones property value. 
      * @return array<string>|null
     */
     public function getSecurityComplianceNotificationPhones(): ?array {
@@ -264,7 +264,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the tenantType property value. The tenantType property
+     * Gets the tenantType property value. Not nullable. The tenant type option that was selected when the tenant was created. The possible values are:  AAD - An enterprise identity access management (IAM) service that serves business-to-employee and business-to-business (B2B) scenarios.  AAD B2C A customer identity access management (CIAM) service that serves business-to-consumer (B2C) scenarios.
      * @return string|null
     */
     public function getTenantType(): ?string {
@@ -435,7 +435,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the partnerTenantType property value. The partnerTenantType property
+     * Sets the partnerTenantType property value. The type of partnership this tenant has with Microsoft. The possible values are: microsoftSupport, syndicatePartner, breadthPartner, breadthPartnerDelegatedAdmin, resellerPartnerDelegatedAdmin, valueAddedResellerPartnerDelegatedAdmin, unknownFutureValue. Nullable. For more information about the possible types, see partnerTenantType values.
      * @param PartnerTenantType|null $value Value to set for the partnerTenantType property.
     */
     public function setPartnerTenantType(?PartnerTenantType $value): void {
@@ -475,7 +475,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the securityComplianceNotificationMails property value. The securityComplianceNotificationMails property
+     * Sets the securityComplianceNotificationMails property value. 
      * @param array<string>|null $value Value to set for the securityComplianceNotificationMails property.
     */
     public function setSecurityComplianceNotificationMails(?array $value): void {
@@ -483,7 +483,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the securityComplianceNotificationPhones property value. The securityComplianceNotificationPhones property
+     * Sets the securityComplianceNotificationPhones property value. 
      * @param array<string>|null $value Value to set for the securityComplianceNotificationPhones property.
     */
     public function setSecurityComplianceNotificationPhones(?array $value): void {
@@ -515,7 +515,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the tenantType property value. The tenantType property
+     * Sets the tenantType property value. Not nullable. The tenant type option that was selected when the tenant was created. The possible values are:  AAD - An enterprise identity access management (IAM) service that serves business-to-employee and business-to-business (B2B) scenarios.  AAD B2C A customer identity access management (CIAM) service that serves business-to-consumer (B2C) scenarios.
      * @param string|null $value Value to set for the tenantType property.
     */
     public function setTenantType(?string $value): void {

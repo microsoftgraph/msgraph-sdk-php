@@ -97,7 +97,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -105,7 +105,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the remediationStatus property value. The remediationStatus property
+     * Gets the remediationStatus property value. 
      * @return EvidenceRemediationStatus|null
     */
     public function getRemediationStatus(): ?EvidenceRemediationStatus {
@@ -137,7 +137,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the verdict property value. The verdict property
+     * Gets the verdict property value. 
      * @return EvidenceVerdict|null
     */
     public function getVerdict(): ?EvidenceVerdict {
@@ -184,7 +184,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -192,7 +192,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the remediationStatus property value. The remediationStatus property
+     * Sets the remediationStatus property value. 
      * @param EvidenceRemediationStatus|null $value Value to set for the remediationStatus property.
     */
     public function setRemediationStatus(?EvidenceRemediationStatus $value): void {
@@ -224,7 +224,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the verdict property value. The verdict property
+     * Sets the verdict property value. 
      * @param EvidenceVerdict|null $value Value to set for the verdict property.
     */
     public function setVerdict(?EvidenceVerdict $value): void {

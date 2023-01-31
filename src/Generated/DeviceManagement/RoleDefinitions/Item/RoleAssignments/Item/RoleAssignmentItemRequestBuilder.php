@@ -46,11 +46,15 @@ class RoleAssignmentItemRequestBuilder
      * Instantiates a new RoleAssignmentItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $roleAssignmentId key: id of roleAssignment
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $roleAssignmentId = null) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/roleDefinitions/{roleDefinition%2Did}/roleAssignments/{roleAssignment%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['roleAssignmentId'] = $roleAssignmentId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -91,7 +95,6 @@ class RoleAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property roleAssignments in deviceManagement
-     * @param RoleAssignment $body The request body
      * @param RoleAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -156,7 +159,6 @@ class RoleAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property roleAssignments in deviceManagement
-     * @param RoleAssignment $body The request body
      * @param RoleAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -74,7 +74,6 @@ class DeviceComplianceSettingStatesRequestBuilder
 
     /**
      * Create new navigation property to deviceComplianceSettingStates for deviceManagement
-     * @param DeviceComplianceSettingState $body The request body
      * @param DeviceComplianceSettingStatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class DeviceComplianceSettingStatesRequestBuilder
 
     /**
      * Create new navigation property to deviceComplianceSettingStates for deviceManagement
-     * @param DeviceComplianceSettingState $body The request body
      * @param DeviceComplianceSettingStatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -26,7 +26,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
     }
 
     /**
-     * Gets the classification property value. The classification property
+     * Gets the classification property value. 
      * @return ServiceHealthClassificationType|null
     */
     public function getClassification(): ?ServiceHealthClassificationType {
@@ -85,7 +85,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
     }
 
     /**
-     * Gets the origin property value. The origin property
+     * Gets the origin property value. 
      * @return ServiceHealthOrigin|null
     */
     public function getOrigin(): ?ServiceHealthOrigin {
@@ -109,7 +109,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
     }
 
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. 
      * @return ServiceHealthStatus|null
     */
     public function getStatus(): ?ServiceHealthStatus {
@@ -134,7 +134,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
     }
 
     /**
-     * Sets the classification property value. The classification property
+     * Sets the classification property value. 
      * @param ServiceHealthClassificationType|null $value Value to set for the classification property.
     */
     public function setClassification(?ServiceHealthClassificationType $value): void {
@@ -174,7 +174,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
     }
 
     /**
-     * Sets the origin property value. The origin property
+     * Sets the origin property value. 
      * @param ServiceHealthOrigin|null $value Value to set for the origin property.
     */
     public function setOrigin(?ServiceHealthOrigin $value): void {
@@ -198,7 +198,7 @@ class ServiceHealthIssue extends ServiceAnnouncementBase implements Parsable
     }
 
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. 
      * @param ServiceHealthStatus|null $value Value to set for the status property.
     */
     public function setStatus(?ServiceHealthStatus $value): void {

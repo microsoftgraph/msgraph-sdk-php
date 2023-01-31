@@ -38,15 +38,19 @@ class DataPolicyOperationItemRequestBuilder
      * Instantiates a new DataPolicyOperationItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $dataPolicyOperationId key: id of dataPolicyOperation
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $dataPolicyOperationId = null) {
         $this->urlTemplate = '{+baseurl}/dataPolicyOperations/{dataPolicyOperation%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['dataPolicyOperationId'] = $dataPolicyOperationId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
-     * Delete entity from dataPolicyOperations by key (id)
+     * Delete entity from dataPolicyOperations
      * @param DataPolicyOperationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -83,8 +87,7 @@ class DataPolicyOperationItemRequestBuilder
     }
 
     /**
-     * Update entity in dataPolicyOperations by key (id)
-     * @param DataPolicyOperation $body The request body
+     * Update entity in dataPolicyOperations
      * @param DataPolicyOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -102,7 +105,7 @@ class DataPolicyOperationItemRequestBuilder
     }
 
     /**
-     * Delete entity from dataPolicyOperations by key (id)
+     * Delete entity from dataPolicyOperations
      * @param DataPolicyOperationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -148,8 +151,7 @@ class DataPolicyOperationItemRequestBuilder
     }
 
     /**
-     * Update entity in dataPolicyOperations by key (id)
-     * @param DataPolicyOperation $body The request body
+     * Update entity in dataPolicyOperations
      * @param DataPolicyOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

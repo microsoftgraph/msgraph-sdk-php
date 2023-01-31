@@ -75,7 +75,6 @@ class ServicesRequestBuilder
 
     /**
      * Create new navigation property to services for print
-     * @param PrintService $body The request body
      * @param ServicesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class ServicesRequestBuilder
 
     /**
      * Create new navigation property to services for print
-     * @param PrintService $body The request body
      * @param ServicesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

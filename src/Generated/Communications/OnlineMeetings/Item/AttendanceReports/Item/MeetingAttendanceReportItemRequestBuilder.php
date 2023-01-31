@@ -58,11 +58,15 @@ class MeetingAttendanceReportItemRequestBuilder
      * Instantiates a new MeetingAttendanceReportItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $meetingAttendanceReportId key: id of meetingAttendanceReport
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $meetingAttendanceReportId = null) {
         $this->urlTemplate = '{+baseurl}/communications/onlineMeetings/{onlineMeeting%2Did}/attendanceReports/{meetingAttendanceReport%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['meetingAttendanceReportId'] = $meetingAttendanceReportId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -103,7 +107,6 @@ class MeetingAttendanceReportItemRequestBuilder
 
     /**
      * Update the navigation property attendanceReports in communications
-     * @param MeetingAttendanceReport $body The request body
      * @param MeetingAttendanceReportItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -168,7 +171,6 @@ class MeetingAttendanceReportItemRequestBuilder
 
     /**
      * Update the navigation property attendanceReports in communications
-     * @param MeetingAttendanceReport $body The request body
      * @param MeetingAttendanceReportItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

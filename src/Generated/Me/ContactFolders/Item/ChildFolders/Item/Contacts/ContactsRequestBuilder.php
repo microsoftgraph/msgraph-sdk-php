@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\ContactFolders\Item\ChildFolders\Item\Contacts\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Me\ContactFolders\Item\ChildFolders\Item\Contacts\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Me\ContactFolders\Item\ChildFolders\Item\Contacts\MicrosoftGraphDelta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Models\Contact;
 use Microsoft\Graph\Generated\Models\ContactCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -27,6 +27,13 @@ class ContactsRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the delta method.
+    */
+    public function microsoftGraphDelta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -56,14 +63,6 @@ class ContactsRequestBuilder
     }
 
     /**
-     * Provides operations to call the delta method.
-     * @return DeltaRequestBuilder
-    */
-    public function delta(): DeltaRequestBuilder {
-        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
      * Get a contact collection from the default Contacts folder of the signed-in user (`.../me/contacts`), or from the specified contact folder.
      * @param ContactsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -84,7 +83,6 @@ class ContactsRequestBuilder
 
     /**
      * Add a contact to the root Contacts folder or to the `contacts` endpoint of another contact folder.
-     * @param Contact $body The request body
      * @param ContactsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/contactfolder-post-contacts?view=graph-rest-1.0 Find more info here
@@ -129,7 +127,6 @@ class ContactsRequestBuilder
 
     /**
      * Add a contact to the root Contacts folder or to the `contacts` endpoint of another contact folder.
-     * @param Contact $body The request body
      * @param ContactsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

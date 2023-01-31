@@ -52,7 +52,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the connectingIP property value. The connectingIP property
+     * Gets the connectingIP property value. 
      * @return string|null
     */
     public function getConnectingIP(): ?string {
@@ -60,7 +60,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the deliveryAction property value. The deliveryAction property
+     * Gets the deliveryAction property value. 
      * @return string|null
     */
     public function getDeliveryAction(): ?string {
@@ -68,7 +68,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the deliveryLocation property value. The deliveryLocation property
+     * Gets the deliveryLocation property value. 
      * @return string|null
     */
     public function getDeliveryLocation(): ?string {
@@ -76,7 +76,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the directionality property value. The directionality property
+     * Gets the directionality property value. 
      * @return string|null
     */
     public function getDirectionality(): ?string {
@@ -104,7 +104,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the internetMessageId property value. The internetMessageId property
+     * Gets the internetMessageId property value. 
      * @return string|null
     */
     public function getInternetMessageId(): ?string {
@@ -112,7 +112,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the messageFingerprint property value. The messageFingerprint property
+     * Gets the messageFingerprint property value. 
      * @return string|null
     */
     public function getMessageFingerprint(): ?string {
@@ -120,7 +120,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the messageReceivedDateTime property value. The messageReceivedDateTime property
+     * Gets the messageReceivedDateTime property value. 
      * @return DateTime|null
     */
     public function getMessageReceivedDateTime(): ?DateTime {
@@ -128,7 +128,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the messageSubject property value. The messageSubject property
+     * Gets the messageSubject property value. 
      * @return string|null
     */
     public function getMessageSubject(): ?string {
@@ -136,7 +136,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the networkMessageId property value. The networkMessageId property
+     * Gets the networkMessageId property value. 
      * @return string|null
     */
     public function getNetworkMessageId(): ?string {
@@ -144,7 +144,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -186,7 +186,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the connectingIP property value. The connectingIP property
+     * Sets the connectingIP property value. 
      * @param string|null $value Value to set for the connectingIP property.
     */
     public function setConnectingIP(?string $value): void {
@@ -194,7 +194,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the deliveryAction property value. The deliveryAction property
+     * Sets the deliveryAction property value. 
      * @param string|null $value Value to set for the deliveryAction property.
     */
     public function setDeliveryAction(?string $value): void {
@@ -202,7 +202,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the deliveryLocation property value. The deliveryLocation property
+     * Sets the deliveryLocation property value. 
      * @param string|null $value Value to set for the deliveryLocation property.
     */
     public function setDeliveryLocation(?string $value): void {
@@ -210,7 +210,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the directionality property value. The directionality property
+     * Sets the directionality property value. 
      * @param string|null $value Value to set for the directionality property.
     */
     public function setDirectionality(?string $value): void {
@@ -218,7 +218,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the internetMessageId property value. The internetMessageId property
+     * Sets the internetMessageId property value. 
      * @param string|null $value Value to set for the internetMessageId property.
     */
     public function setInternetMessageId(?string $value): void {
@@ -226,7 +226,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the messageFingerprint property value. The messageFingerprint property
+     * Sets the messageFingerprint property value. 
      * @param string|null $value Value to set for the messageFingerprint property.
     */
     public function setMessageFingerprint(?string $value): void {
@@ -234,7 +234,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the messageReceivedDateTime property value. The messageReceivedDateTime property
+     * Sets the messageReceivedDateTime property value. 
      * @param DateTime|null $value Value to set for the messageReceivedDateTime property.
     */
     public function setMessageReceivedDateTime(?DateTime $value): void {
@@ -242,7 +242,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the messageSubject property value. The messageSubject property
+     * Sets the messageSubject property value. 
      * @param string|null $value Value to set for the messageSubject property.
     */
     public function setMessageSubject(?string $value): void {
@@ -250,7 +250,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the networkMessageId property value. The networkMessageId property
+     * Sets the networkMessageId property value. 
      * @param string|null $value Value to set for the networkMessageId property.
     */
     public function setNetworkMessageId(?string $value): void {
@@ -258,7 +258,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

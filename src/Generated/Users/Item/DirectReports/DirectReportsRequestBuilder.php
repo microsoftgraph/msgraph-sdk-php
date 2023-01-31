@@ -8,8 +8,8 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\DirectReports\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\DirectReports\OrgContact\OrgContactRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\DirectReports\User\UserRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\DirectReports\MicrosoftGraphOrgContact\OrgContactRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\DirectReports\MicrosoftGraphUser\UserRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -32,8 +32,15 @@ class DirectReportsRequestBuilder
     /**
      * Casts the previous resource to orgContact.
     */
-    public function orgContact(): OrgContactRequestBuilder {
+    public function microsoftGraphOrgContact(): OrgContactRequestBuilder {
         return new OrgContactRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to user.
+    */
+    public function microsoftGraphUser(): UserRequestBuilder {
+        return new UserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -50,13 +57,6 @@ class DirectReportsRequestBuilder
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
-    
-    /**
-     * Casts the previous resource to user.
-    */
-    public function user(): UserRequestBuilder {
-        return new UserRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * Instantiates a new DirectReportsRequestBuilder and sets the default values.

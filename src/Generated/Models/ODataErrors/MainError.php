@@ -51,7 +51,7 @@ class MainError implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the code property value. The code property
+     * Gets the code property value. 
      * @return string|null
     */
     public function getCode(): ?string {
@@ -59,7 +59,7 @@ class MainError implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the details property value. The details property
+     * Gets the details property value. 
      * @return array<ErrorDetails>|null
     */
     public function getDetails(): ?array {
@@ -82,7 +82,7 @@ class MainError implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the innererror property value. The innererror property
+     * Gets the innererror property value. 
      * @return InnerError|null
     */
     public function getInnererror(): ?InnerError {
@@ -90,7 +90,7 @@ class MainError implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the message property value. The message property
+     * Gets the message property value. 
      * @return string|null
     */
     public function getMessage(): ?string {
@@ -98,7 +98,7 @@ class MainError implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the target property value. The target property
+     * Gets the target property value. 
      * @return string|null
     */
     public function getTarget(): ?string {
@@ -135,7 +135,7 @@ class MainError implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the code property value. The code property
+     * Sets the code property value. 
      * @param string|null $value Value to set for the code property.
     */
     public function setCode(?string $value): void {
@@ -143,7 +143,7 @@ class MainError implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the details property value. The details property
+     * Sets the details property value. 
      * @param array<ErrorDetails>|null $value Value to set for the details property.
     */
     public function setDetails(?array $value): void {
@@ -151,7 +151,7 @@ class MainError implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the innererror property value. The innererror property
+     * Sets the innererror property value. 
      * @param InnerError|null $value Value to set for the innererror property.
     */
     public function setInnererror(?InnerError $value): void {
@@ -159,7 +159,7 @@ class MainError implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the message property value. The message property
+     * Sets the message property value. 
      * @param string|null $value Value to set for the message property.
     */
     public function setMessage(?string $value): void {
@@ -167,7 +167,7 @@ class MainError implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the target property value. The target property
+     * Sets the target property value. 
      * @param string|null $value Value to set for the target property.
     */
     public function setTarget(?string $value): void {

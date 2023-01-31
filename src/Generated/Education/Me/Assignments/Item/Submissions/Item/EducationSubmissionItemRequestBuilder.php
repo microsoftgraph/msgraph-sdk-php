@@ -5,15 +5,15 @@ namespace Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\It
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\EscapedReturn\ReturnRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\MicrosoftGraphReassign\ReassignRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\MicrosoftGraphReturn\ReturnRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\MicrosoftGraphSetUpResourcesFolder\SetUpResourcesFolderRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\MicrosoftGraphSubmit\SubmitRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\MicrosoftGraphUnsubmit\UnsubmitRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Outcomes\Item\EducationOutcomeItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Outcomes\OutcomesRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Reassign\ReassignRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Resources\ResourcesRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\SetUpResourcesFolder\SetUpResourcesFolderRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Submit\SubmitRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\SubmittedResources\SubmittedResourcesRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Unsubmit\UnsubmitRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationSubmission;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -29,10 +29,38 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class EducationSubmissionItemRequestBuilder 
 {
     /**
+     * Provides operations to call the reassign method.
+    */
+    public function microsoftGraphReassign(): ReassignRequestBuilder {
+        return new ReassignRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to call the return method.
     */
-    public function escapedReturn(): ReturnRequestBuilder {
+    public function microsoftGraphReturn(): ReturnRequestBuilder {
         return new ReturnRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the setUpResourcesFolder method.
+    */
+    public function microsoftGraphSetUpResourcesFolder(): SetUpResourcesFolderRequestBuilder {
+        return new SetUpResourcesFolderRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the submit method.
+    */
+    public function microsoftGraphSubmit(): SubmitRequestBuilder {
+        return new SubmitRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the unsubmit method.
+    */
+    public function microsoftGraphUnsubmit(): UnsubmitRequestBuilder {
+        return new UnsubmitRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -48,13 +76,6 @@ class EducationSubmissionItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * Provides operations to call the reassign method.
-    */
-    public function reassign(): ReassignRequestBuilder {
-        return new ReassignRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
@@ -67,31 +88,10 @@ class EducationSubmissionItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the setUpResourcesFolder method.
-    */
-    public function setUpResourcesFolder(): SetUpResourcesFolderRequestBuilder {
-        return new SetUpResourcesFolderRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the submit method.
-    */
-    public function submit(): SubmitRequestBuilder {
-        return new SubmitRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the submittedResources property of the microsoft.graph.educationSubmission entity.
     */
     public function submittedResources(): SubmittedResourcesRequestBuilder {
         return new SubmittedResourcesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the unsubmit method.
-    */
-    public function unsubmit(): UnsubmitRequestBuilder {
-        return new UnsubmitRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -103,11 +103,15 @@ class EducationSubmissionItemRequestBuilder
      * Instantiates a new EducationSubmissionItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $educationSubmissionId key: id of educationSubmission
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $educationSubmissionId = null) {
         $this->urlTemplate = '{+baseurl}/education/me/assignments/{educationAssignment%2Did}/submissions/{educationSubmission%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['educationSubmissionId'] = $educationSubmissionId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -159,7 +163,6 @@ class EducationSubmissionItemRequestBuilder
 
     /**
      * Update the navigation property submissions in education
-     * @param EducationSubmission $body The request body
      * @param EducationSubmissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -246,7 +249,6 @@ class EducationSubmissionItemRequestBuilder
 
     /**
      * Update the navigation property submissions in education
-     * @param EducationSubmission $body The request body
      * @param EducationSubmissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

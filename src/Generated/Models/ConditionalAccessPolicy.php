@@ -26,7 +26,7 @@ class ConditionalAccessPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the conditions property value. The conditions property
+     * Gets the conditions property value. 
      * @return ConditionalAccessConditionSet|null
     */
     public function getConditions(): ?ConditionalAccessConditionSet {
@@ -42,7 +42,7 @@ class ConditionalAccessPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. 
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -100,7 +100,7 @@ class ConditionalAccessPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the state property value. The state property
+     * Gets the state property value. 
      * @return ConditionalAccessPolicyState|null
     */
     public function getState(): ?ConditionalAccessPolicyState {
@@ -124,7 +124,7 @@ class ConditionalAccessPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the conditions property value. The conditions property
+     * Sets the conditions property value. 
      * @param ConditionalAccessConditionSet|null $value Value to set for the conditions property.
     */
     public function setConditions(?ConditionalAccessConditionSet $value): void {
@@ -140,7 +140,7 @@ class ConditionalAccessPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. 
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -180,7 +180,7 @@ class ConditionalAccessPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the state property value. The state property
+     * Sets the state property value. 
      * @param ConditionalAccessPolicyState|null $value Value to set for the state property.
     */
     public function setState(?ConditionalAccessPolicyState $value): void {

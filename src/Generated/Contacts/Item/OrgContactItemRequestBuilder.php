@@ -5,14 +5,14 @@ namespace Microsoft\Graph\Generated\Contacts\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Contacts\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Contacts\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\Item\DirectReports\DirectReportsRequestBuilder;
-use Microsoft\Graph\Generated\Contacts\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Contacts\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\Item\Manager\ManagerRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\Item\MemberOf\MemberOfRequestBuilder;
-use Microsoft\Graph\Generated\Contacts\Item\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\MicrosoftGraphCheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\MicrosoftGraphCheckMemberObjects\CheckMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\MicrosoftGraphGetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\MicrosoftGraphGetMemberObjects\GetMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\MicrosoftGraphRestore\RestoreRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf\TransitiveMemberOfRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OrgContact;
@@ -29,38 +29,10 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class OrgContactItemRequestBuilder 
 {
     /**
-     * Provides operations to call the checkMemberGroups method.
-    */
-    public function checkMemberGroups(): CheckMemberGroupsRequestBuilder {
-        return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the checkMemberObjects method.
-    */
-    public function checkMemberObjects(): CheckMemberObjectsRequestBuilder {
-        return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the directReports property of the microsoft.graph.orgContact entity.
     */
     public function directReports(): DirectReportsRequestBuilder {
         return new DirectReportsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the getMemberGroups method.
-    */
-    public function getMemberGroups(): GetMemberGroupsRequestBuilder {
-        return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the getMemberObjects method.
-    */
-    public function getMemberObjects(): GetMemberObjectsRequestBuilder {
-        return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -78,6 +50,41 @@ class OrgContactItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the checkMemberGroups method.
+    */
+    public function microsoftGraphCheckMemberGroups(): CheckMemberGroupsRequestBuilder {
+        return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the checkMemberObjects method.
+    */
+    public function microsoftGraphCheckMemberObjects(): CheckMemberObjectsRequestBuilder {
+        return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getMemberGroups method.
+    */
+    public function microsoftGraphGetMemberGroups(): GetMemberGroupsRequestBuilder {
+        return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getMemberObjects method.
+    */
+    public function microsoftGraphGetMemberObjects(): GetMemberObjectsRequestBuilder {
+        return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the restore method.
+    */
+    public function microsoftGraphRestore(): RestoreRequestBuilder {
+        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -86,13 +93,6 @@ class OrgContactItemRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
-    
-    /**
-     * Provides operations to call the restore method.
-    */
-    public function restore(): RestoreRequestBuilder {
-        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.orgContact entity.
@@ -110,15 +110,19 @@ class OrgContactItemRequestBuilder
      * Instantiates a new OrgContactItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $orgContactId key: id of orgContact
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $orgContactId = null) {
         $this->urlTemplate = '{+baseurl}/contacts/{orgContact%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['orgContactId'] = $orgContactId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
-     * Delete entity from contacts by key (id)
+     * Delete entity from contacts
      * @param OrgContactItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -177,8 +181,7 @@ class OrgContactItemRequestBuilder
     }
 
     /**
-     * Update entity in contacts by key (id)
-     * @param OrgContact $body The request body
+     * Update entity in contacts
      * @param OrgContactItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -196,7 +199,7 @@ class OrgContactItemRequestBuilder
     }
 
     /**
-     * Delete entity from contacts by key (id)
+     * Delete entity from contacts
      * @param OrgContactItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -242,8 +245,7 @@ class OrgContactItemRequestBuilder
     }
 
     /**
-     * Update entity in contacts by key (id)
-     * @param OrgContact $body The request body
+     * Update entity in contacts
      * @param OrgContactItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

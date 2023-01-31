@@ -36,7 +36,7 @@ class MdmWindowsInformationProtectionPolicyCollectionResponse extends BaseCollec
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return array<MdmWindowsInformationProtectionPolicy>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class MdmWindowsInformationProtectionPolicyCollectionResponse extends BaseCollec
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param array<MdmWindowsInformationProtectionPolicy>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

@@ -38,11 +38,15 @@ class InternalDomainFederationItemRequestBuilder
      * Instantiates a new InternalDomainFederationItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $internalDomainFederationId key: id of internalDomainFederation
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $internalDomainFederationId = null) {
         $this->urlTemplate = '{+baseurl}/domains/{domain%2Did}/federationConfiguration/{internalDomainFederation%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['internalDomainFederationId'] = $internalDomainFederationId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class InternalDomainFederationItemRequestBuilder
 
     /**
      * Update the navigation property federationConfiguration in domains
-     * @param InternalDomainFederation $body The request body
      * @param InternalDomainFederationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class InternalDomainFederationItemRequestBuilder
 
     /**
      * Update the navigation property federationConfiguration in domains
-     * @param InternalDomainFederation $body The request body
      * @param InternalDomainFederationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

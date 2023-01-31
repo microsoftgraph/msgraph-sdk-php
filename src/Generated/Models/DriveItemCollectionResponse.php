@@ -36,7 +36,7 @@ class DriveItemCollectionResponse extends BaseCollectionPaginationCountResponse 
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return array<DriveItem>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class DriveItemCollectionResponse extends BaseCollectionPaginationCountResponse 
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param array<DriveItem>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

@@ -7,9 +7,9 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SecurityReportsRoot;
-use Microsoft\Graph\Generated\Reports\Security\GetAttackSimulationRepeatOffenders\GetAttackSimulationRepeatOffendersRequestBuilder;
-use Microsoft\Graph\Generated\Reports\Security\GetAttackSimulationSimulationUserCoverage\GetAttackSimulationSimulationUserCoverageRequestBuilder;
-use Microsoft\Graph\Generated\Reports\Security\GetAttackSimulationTrainingUserCoverage\GetAttackSimulationTrainingUserCoverageRequestBuilder;
+use Microsoft\Graph\Generated\Reports\Security\MicrosoftGraphGetAttackSimulationRepeatOffenders\GetAttackSimulationRepeatOffendersRequestBuilder;
+use Microsoft\Graph\Generated\Reports\Security\MicrosoftGraphGetAttackSimulationSimulationUserCoverage\GetAttackSimulationSimulationUserCoverageRequestBuilder;
+use Microsoft\Graph\Generated\Reports\Security\MicrosoftGraphGetAttackSimulationTrainingUserCoverage\GetAttackSimulationTrainingUserCoverageRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -22,6 +22,27 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 */
 class SecurityRequestBuilder 
 {
+    /**
+     * Provides operations to call the getAttackSimulationRepeatOffenders method.
+    */
+    public function microsoftGraphGetAttackSimulationRepeatOffenders(): GetAttackSimulationRepeatOffendersRequestBuilder {
+        return new GetAttackSimulationRepeatOffendersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getAttackSimulationSimulationUserCoverage method.
+    */
+    public function microsoftGraphGetAttackSimulationSimulationUserCoverage(): GetAttackSimulationSimulationUserCoverageRequestBuilder {
+        return new GetAttackSimulationSimulationUserCoverageRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getAttackSimulationTrainingUserCoverage method.
+    */
+    public function microsoftGraphGetAttackSimulationTrainingUserCoverage(): GetAttackSimulationTrainingUserCoverageRequestBuilder {
+        return new GetAttackSimulationTrainingUserCoverageRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
@@ -85,32 +106,7 @@ class SecurityRequestBuilder
     }
 
     /**
-     * Provides operations to call the getAttackSimulationRepeatOffenders method.
-     * @return GetAttackSimulationRepeatOffendersRequestBuilder
-    */
-    public function getAttackSimulationRepeatOffenders(): GetAttackSimulationRepeatOffendersRequestBuilder {
-        return new GetAttackSimulationRepeatOffendersRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to call the getAttackSimulationSimulationUserCoverage method.
-     * @return GetAttackSimulationSimulationUserCoverageRequestBuilder
-    */
-    public function getAttackSimulationSimulationUserCoverage(): GetAttackSimulationSimulationUserCoverageRequestBuilder {
-        return new GetAttackSimulationSimulationUserCoverageRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to call the getAttackSimulationTrainingUserCoverage method.
-     * @return GetAttackSimulationTrainingUserCoverageRequestBuilder
-    */
-    public function getAttackSimulationTrainingUserCoverage(): GetAttackSimulationTrainingUserCoverageRequestBuilder {
-        return new GetAttackSimulationTrainingUserCoverageRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
      * Update the navigation property security in reports
-     * @param SecurityReportsRoot $body The request body
      * @param SecurityRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -175,7 +171,6 @@ class SecurityRequestBuilder
 
     /**
      * Update the navigation property security in reports
-     * @param SecurityReportsRoot $body The request body
      * @param SecurityRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

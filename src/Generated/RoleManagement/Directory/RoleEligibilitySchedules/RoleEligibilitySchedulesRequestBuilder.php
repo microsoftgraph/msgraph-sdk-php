@@ -9,7 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UnifiedRoleEligibilitySchedule;
 use Microsoft\Graph\Generated\Models\UnifiedRoleEligibilityScheduleCollectionResponse;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilitySchedules\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilitySchedules\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
+use Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilitySchedules\MicrosoftGraphFilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -56,15 +56,6 @@ class RoleEligibilitySchedulesRequestBuilder
     }
 
     /**
-     * Provides operations to call the filterByCurrentUser method.
-     * @param string $on Usage: on='{on}'
-     * @return FilterByCurrentUserWithOnRequestBuilder
-    */
-    public function filterByCurrentUserWithOn(string $on): FilterByCurrentUserWithOnRequestBuilder {
-        return new FilterByCurrentUserWithOnRequestBuilder($this->pathParameters, $this->requestAdapter, $on);
-    }
-
-    /**
      * Get the unifiedRoleEligibilitySchedule resources from the roleEligibilitySchedules navigation property.
      * @param RoleEligibilitySchedulesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -84,8 +75,16 @@ class RoleEligibilitySchedulesRequestBuilder
     }
 
     /**
+     * Provides operations to call the filterByCurrentUser method.
+     * @param string $on Usage: on='{on}'
+     * @return FilterByCurrentUserWithOnRequestBuilder
+    */
+    public function microsoftGraphFilterByCurrentUserWithOn(string $on): FilterByCurrentUserWithOnRequestBuilder {
+        return new FilterByCurrentUserWithOnRequestBuilder($this->pathParameters, $this->requestAdapter, $on);
+    }
+
+    /**
      * Create new navigation property to roleEligibilitySchedules for roleManagement
-     * @param UnifiedRoleEligibilitySchedule $body The request body
      * @param RoleEligibilitySchedulesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -129,7 +128,6 @@ class RoleEligibilitySchedulesRequestBuilder
 
     /**
      * Create new navigation property to roleEligibilitySchedules for roleManagement
-     * @param UnifiedRoleEligibilitySchedule $body The request body
      * @param RoleEligibilitySchedulesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

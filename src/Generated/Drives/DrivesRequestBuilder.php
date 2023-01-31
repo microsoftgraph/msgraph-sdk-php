@@ -74,7 +74,6 @@ class DrivesRequestBuilder
 
     /**
      * Add new entity to drives
-     * @param Drive $body The request body
      * @param DrivesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class DrivesRequestBuilder
 
     /**
      * Add new entity to drives
-     * @param Drive $body The request body
      * @param DrivesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -75,7 +75,6 @@ class CatalogsRequestBuilder
 
     /**
      * Create a new accessPackageCatalog object.
-     * @param AccessPackageCatalog $body The request body
      * @param CatalogsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/entitlementmanagement-post-catalogs?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class CatalogsRequestBuilder
 
     /**
      * Create a new accessPackageCatalog object.
-     * @param AccessPackageCatalog $body The request body
      * @param CatalogsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

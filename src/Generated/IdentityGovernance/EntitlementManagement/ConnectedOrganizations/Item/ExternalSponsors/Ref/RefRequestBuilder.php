@@ -67,7 +67,6 @@ class RefRequestBuilder
 
     /**
      * Create new navigation property ref to externalSponsors for identityGovernance
-     * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -111,7 +110,6 @@ class RefRequestBuilder
 
     /**
      * Create new navigation property ref to externalSponsors for identityGovernance
-     * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

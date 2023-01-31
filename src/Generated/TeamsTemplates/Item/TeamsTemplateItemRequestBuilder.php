@@ -38,15 +38,19 @@ class TeamsTemplateItemRequestBuilder
      * Instantiates a new TeamsTemplateItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $teamsTemplateId key: id of teamsTemplate
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $teamsTemplateId = null) {
         $this->urlTemplate = '{+baseurl}/teamsTemplates/{teamsTemplate%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['teamsTemplateId'] = $teamsTemplateId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
-     * Delete entity from teamsTemplates by key (id)
+     * Delete entity from teamsTemplates
      * @param TeamsTemplateItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -64,7 +68,7 @@ class TeamsTemplateItemRequestBuilder
     }
 
     /**
-     * Get entity from teamsTemplates by key (id)
+     * Get entity from teamsTemplates by key
      * @param TeamsTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -82,8 +86,7 @@ class TeamsTemplateItemRequestBuilder
     }
 
     /**
-     * Update entity in teamsTemplates by key (id)
-     * @param TeamsTemplate $body The request body
+     * Update entity in teamsTemplates
      * @param TeamsTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -101,7 +104,7 @@ class TeamsTemplateItemRequestBuilder
     }
 
     /**
-     * Delete entity from teamsTemplates by key (id)
+     * Delete entity from teamsTemplates
      * @param TeamsTemplateItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +125,7 @@ class TeamsTemplateItemRequestBuilder
     }
 
     /**
-     * Get entity from teamsTemplates by key (id)
+     * Get entity from teamsTemplates by key
      * @param TeamsTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -147,8 +150,7 @@ class TeamsTemplateItemRequestBuilder
     }
 
     /**
-     * Update entity in teamsTemplates by key (id)
-     * @param TeamsTemplate $body The request body
+     * Update entity in teamsTemplates
      * @param TeamsTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -6,11 +6,11 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Onenote\Pages\Item\Content\ContentRequestBuilder;
-use Microsoft\Graph\Generated\Me\Onenote\Pages\Item\CopyToSection\CopyToSectionRequestBuilder;
-use Microsoft\Graph\Generated\Me\Onenote\Pages\Item\OnenotePatchContent\OnenotePatchContentRequestBuilder;
+use Microsoft\Graph\Generated\Me\Onenote\Pages\Item\MicrosoftGraphCopyToSection\CopyToSectionRequestBuilder;
+use Microsoft\Graph\Generated\Me\Onenote\Pages\Item\MicrosoftGraphOnenotePatchContent\OnenotePatchContentRequestBuilder;
+use Microsoft\Graph\Generated\Me\Onenote\Pages\Item\MicrosoftGraphPreview\PreviewRequestBuilder;
 use Microsoft\Graph\Generated\Me\Onenote\Pages\Item\ParentNotebook\ParentNotebookRequestBuilder;
 use Microsoft\Graph\Generated\Me\Onenote\Pages\Item\ParentSection\ParentSectionRequestBuilder;
-use Microsoft\Graph\Generated\Me\Onenote\Pages\Item\Preview\PreviewRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OnenotePage;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -35,15 +35,22 @@ class OnenotePageItemRequestBuilder
     /**
      * Provides operations to call the copyToSection method.
     */
-    public function copyToSection(): CopyToSectionRequestBuilder {
+    public function microsoftGraphCopyToSection(): CopyToSectionRequestBuilder {
         return new CopyToSectionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the onenotePatchContent method.
     */
-    public function onenotePatchContent(): OnenotePatchContentRequestBuilder {
+    public function microsoftGraphOnenotePatchContent(): OnenotePatchContentRequestBuilder {
         return new OnenotePatchContentRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the preview method.
+    */
+    public function microsoftGraphPreview(): PreviewRequestBuilder {
+        return new PreviewRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -79,11 +86,15 @@ class OnenotePageItemRequestBuilder
      * Instantiates a new OnenotePageItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $onenotePageId key: id of onenotePage
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $onenotePageId = null) {
         $this->urlTemplate = '{+baseurl}/me/onenote/pages/{onenotePage%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['onenotePageId'] = $onenotePageId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -124,7 +135,6 @@ class OnenotePageItemRequestBuilder
 
     /**
      * Update the navigation property pages in me
-     * @param OnenotePage $body The request body
      * @param OnenotePageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -139,14 +149,6 @@ class OnenotePageItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to call the preview method.
-     * @return PreviewRequestBuilder
-    */
-    public function preview(): PreviewRequestBuilder {
-        return new PreviewRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
 
     /**
@@ -197,7 +199,6 @@ class OnenotePageItemRequestBuilder
 
     /**
      * Update the navigation property pages in me
-     * @param OnenotePage $body The request body
      * @param OnenotePageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

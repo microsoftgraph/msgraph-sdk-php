@@ -9,8 +9,8 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UnifiedRoleAssignmentScheduleRequest;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentScheduleRequests\Item\ActivatedUsing\ActivatedUsingRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentScheduleRequests\Item\AppScope\AppScopeRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentScheduleRequests\Item\Cancel\CancelRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentScheduleRequests\Item\DirectoryScope\DirectoryScopeRequestBuilder;
+use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentScheduleRequests\Item\MicrosoftGraphCancel\CancelRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentScheduleRequests\Item\Principal\PrincipalRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentScheduleRequests\Item\RoleDefinition\RoleDefinitionRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentScheduleRequests\Item\TargetSchedule\TargetScheduleRequestBuilder;
@@ -41,17 +41,17 @@ class UnifiedRoleAssignmentScheduleRequestItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the cancel method.
-    */
-    public function cancel(): CancelRequestBuilder {
-        return new CancelRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the directoryScope property of the microsoft.graph.unifiedRoleAssignmentScheduleRequest entity.
     */
     public function directoryScope(): DirectoryScopeRequestBuilder {
         return new DirectoryScopeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the cancel method.
+    */
+    public function microsoftGraphCancel(): CancelRequestBuilder {
+        return new CancelRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -94,11 +94,15 @@ class UnifiedRoleAssignmentScheduleRequestItemRequestBuilder
      * Instantiates a new UnifiedRoleAssignmentScheduleRequestItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $unifiedRoleAssignmentScheduleRequestId key: id of unifiedRoleAssignmentScheduleRequest
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $unifiedRoleAssignmentScheduleRequestId = null) {
         $this->urlTemplate = '{+baseurl}/roleManagement/directory/roleAssignmentScheduleRequests/{unifiedRoleAssignmentScheduleRequest%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['unifiedRoleAssignmentScheduleRequestId'] = $unifiedRoleAssignmentScheduleRequestId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -139,7 +143,6 @@ class UnifiedRoleAssignmentScheduleRequestItemRequestBuilder
 
     /**
      * Update the navigation property roleAssignmentScheduleRequests in roleManagement
-     * @param UnifiedRoleAssignmentScheduleRequest $body The request body
      * @param UnifiedRoleAssignmentScheduleRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -204,7 +207,6 @@ class UnifiedRoleAssignmentScheduleRequestItemRequestBuilder
 
     /**
      * Update the navigation property roleAssignmentScheduleRequests in roleManagement
-     * @param UnifiedRoleAssignmentScheduleRequest $body The request body
      * @param UnifiedRoleAssignmentScheduleRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

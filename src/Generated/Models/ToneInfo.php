@@ -64,7 +64,7 @@ class ToneInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -80,7 +80,7 @@ class ToneInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the tone property value. The tone property
+     * Gets the tone property value. 
      * @return Tone|null
     */
     public function getTone(): ?Tone {
@@ -115,7 +115,7 @@ class ToneInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -131,7 +131,7 @@ class ToneInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the tone property value. The tone property
+     * Sets the tone property value. 
      * @param Tone|null $value Value to set for the tone property.
     */
     public function setTone(?Tone $value): void {

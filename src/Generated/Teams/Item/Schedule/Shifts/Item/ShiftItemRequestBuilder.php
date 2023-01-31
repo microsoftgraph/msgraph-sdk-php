@@ -38,11 +38,15 @@ class ShiftItemRequestBuilder
      * Instantiates a new ShiftItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $shiftId key: id of shift
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $shiftId = null) {
         $this->urlTemplate = '{+baseurl}/teams/{team%2Did}/schedule/shifts/{shift%2Did}{?%24select}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['shiftId'] = $shiftId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class ShiftItemRequestBuilder
 
     /**
      * Update the navigation property shifts in teams
-     * @param Shift $body The request body
      * @param ShiftItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class ShiftItemRequestBuilder
 
     /**
      * Update the navigation property shifts in teams
-     * @param Shift $body The request body
      * @param ShiftItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

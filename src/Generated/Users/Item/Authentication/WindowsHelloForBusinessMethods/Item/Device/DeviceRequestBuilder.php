@@ -7,17 +7,6 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\Device;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\Extensions\ExtensionsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\Extensions\Item\ExtensionItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\GetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\GetMemberObjects\GetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\MemberOf\MemberOfRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\RegisteredOwners\RegisteredOwnersRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\RegisteredUsers\RegisteredUsersRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\Restore\RestoreRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\TransitiveMemberOf\TransitiveMemberOfRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -31,84 +20,14 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class DeviceRequestBuilder 
 {
     /**
-     * Provides operations to call the checkMemberGroups method.
-    */
-    public function checkMemberGroups(): CheckMemberGroupsRequestBuilder {
-        return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the checkMemberObjects method.
-    */
-    public function checkMemberObjects(): CheckMemberObjectsRequestBuilder {
-        return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the extensions property of the microsoft.graph.device entity.
-    */
-    public function extensions(): ExtensionsRequestBuilder {
-        return new ExtensionsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the getMemberGroups method.
-    */
-    public function getMemberGroups(): GetMemberGroupsRequestBuilder {
-        return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the getMemberObjects method.
-    */
-    public function getMemberObjects(): GetMemberObjectsRequestBuilder {
-        return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the memberOf property of the microsoft.graph.device entity.
-    */
-    public function memberOf(): MemberOfRequestBuilder {
-        return new MemberOfRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
     
     /**
-     * Provides operations to manage the registeredOwners property of the microsoft.graph.device entity.
-    */
-    public function registeredOwners(): RegisteredOwnersRequestBuilder {
-        return new RegisteredOwnersRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the registeredUsers property of the microsoft.graph.device entity.
-    */
-    public function registeredUsers(): RegisteredUsersRequestBuilder {
-        return new RegisteredUsersRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
-    
-    /**
-     * Provides operations to call the restore method.
-    */
-    public function restore(): RestoreRequestBuilder {
-        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.device entity.
-    */
-    public function transitiveMemberOf(): TransitiveMemberOfRequestBuilder {
-        return new TransitiveMemberOfRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
@@ -127,35 +46,6 @@ class DeviceRequestBuilder
     }
 
     /**
-     * Delete navigation property device for users
-     * @param DeviceRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
-    */
-    public function delete(?DeviceRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
-        $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
-    }
-
-    /**
-     * Provides operations to manage the extensions property of the microsoft.graph.device entity.
-     * @param string $id Unique identifier of the item
-     * @return ExtensionItemRequestBuilder
-    */
-    public function extensionsById(string $id): ExtensionItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['extension%2Did'] = $id;
-        return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user's Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.
      * @param DeviceRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -171,79 +61,6 @@ class DeviceRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the memberOf property of the microsoft.graph.device entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\MemberOf\Item\DirectoryObjectItemRequestBuilder
-    */
-    public function memberOfById(string $id): \Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\MemberOf\Item\DirectoryObjectItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['directoryObject%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\MemberOf\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Update the navigation property device in users
-     * @param Device $body The request body
-     * @param DeviceRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
-    */
-    public function patch(Device $body, ?DeviceRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
-        $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendAsync($requestInfo, [Device::class, 'createFromDiscriminatorValue'], $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
-    }
-
-    /**
-     * Gets an item from the Microsoft/Graph/Generated.users.item.authentication.windowsHelloForBusinessMethods.item.device.registeredOwners.item collection
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\RegisteredOwners\Item\DirectoryObjectItemRequestBuilder
-    */
-    public function registeredOwnersById(string $id): \Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\RegisteredOwners\Item\DirectoryObjectItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['directoryObject%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\RegisteredOwners\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the registeredUsers property of the microsoft.graph.device entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\RegisteredUsers\Item\DirectoryObjectItemRequestBuilder
-    */
-    public function registeredUsersById(string $id): \Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\RegisteredUsers\Item\DirectoryObjectItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['directoryObject%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\RegisteredUsers\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Delete navigation property device for users
-     * @param DeviceRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return RequestInformation
-    */
-    public function toDeleteRequestInformation(?DeviceRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
-        $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
-        $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::DELETE;
-        if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
-        }
-        return $requestInfo;
     }
 
     /**
@@ -269,41 +86,6 @@ class DeviceRequestBuilder
             }
         }
         return $requestInfo;
-    }
-
-    /**
-     * Update the navigation property device in users
-     * @param Device $body The request body
-     * @param DeviceRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return RequestInformation
-    */
-    public function toPatchRequestInformation(Device $body, ?DeviceRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
-        $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
-        $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::PATCH;
-        $requestInfo->addHeader('Accept', "application/json");
-        if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
-        }
-        $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
-        return $requestInfo;
-    }
-
-    /**
-     * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.device entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder
-    */
-    public function transitiveMemberOfById(string $id): \Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['directoryObject%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\Device\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

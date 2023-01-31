@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\MicrosoftGraphFilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessReviewScheduleDefinition;
 use Microsoft\Graph\Generated\Models\AccessReviewScheduleDefinitionCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -56,15 +56,6 @@ class DefinitionsRequestBuilder
     }
 
     /**
-     * Provides operations to call the filterByCurrentUser method.
-     * @param string $on Usage: on='{on}'
-     * @return FilterByCurrentUserWithOnRequestBuilder
-    */
-    public function filterByCurrentUserWithOn(string $on): FilterByCurrentUserWithOnRequestBuilder {
-        return new FilterByCurrentUserWithOnRequestBuilder($this->pathParameters, $this->requestAdapter, $on);
-    }
-
-    /**
      * Get a list of the accessReviewScheduleDefinition objects and their properties.
      * @param DefinitionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -84,8 +75,16 @@ class DefinitionsRequestBuilder
     }
 
     /**
+     * Provides operations to call the filterByCurrentUser method.
+     * @param string $on Usage: on='{on}'
+     * @return FilterByCurrentUserWithOnRequestBuilder
+    */
+    public function microsoftGraphFilterByCurrentUserWithOn(string $on): FilterByCurrentUserWithOnRequestBuilder {
+        return new FilterByCurrentUserWithOnRequestBuilder($this->pathParameters, $this->requestAdapter, $on);
+    }
+
+    /**
      * Create a new accessReviewScheduleDefinition object.
-     * @param AccessReviewScheduleDefinition $body The request body
      * @param DefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/accessreviewset-post-definitions?view=graph-rest-1.0 Find more info here
@@ -130,7 +129,6 @@ class DefinitionsRequestBuilder
 
     /**
      * Create a new accessReviewScheduleDefinition object.
-     * @param AccessReviewScheduleDefinition $body The request body
      * @param DefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

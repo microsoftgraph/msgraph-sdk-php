@@ -75,7 +75,6 @@ class ScopedMembersRequestBuilder
 
     /**
      * Create new navigation property to scopedMembers for directoryRoles
-     * @param ScopedRoleMembership $body The request body
      * @param ScopedMembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class ScopedMembersRequestBuilder
 
     /**
      * Create new navigation property to scopedMembers for directoryRoles
-     * @param ScopedRoleMembership $body The request body
      * @param ScopedMembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

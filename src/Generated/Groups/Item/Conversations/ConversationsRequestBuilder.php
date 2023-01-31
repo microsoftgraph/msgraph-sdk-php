@@ -75,7 +75,6 @@ class ConversationsRequestBuilder
 
     /**
      * Use reply thread or reply post to further post to that conversation.
-     * @param Conversation $body The request body
      * @param ConversationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/group-post-conversations?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class ConversationsRequestBuilder
 
     /**
      * Use reply thread or reply post to further post to that conversation.
-     * @param Conversation $body The request body
      * @param ConversationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

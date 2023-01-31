@@ -9,4 +9,5 @@ class DeviceManagementExchangeConnectorStatus extends Enum {
     public const CONNECTION_PENDING = 'connectionPending';
     public const CONNECTED = 'connected';
     public const DISCONNECTED = 'disconnected';
+    public const UNKNOWN_FUTURE_VALUE = 'unknownFutureValue';
 }

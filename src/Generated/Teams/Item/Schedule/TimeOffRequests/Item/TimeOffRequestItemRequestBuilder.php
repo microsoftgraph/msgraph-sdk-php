@@ -38,11 +38,15 @@ class TimeOffRequestItemRequestBuilder
      * Instantiates a new TimeOffRequestItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $timeOffRequestId key: id of timeOffRequest
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $timeOffRequestId = null) {
         $this->urlTemplate = '{+baseurl}/teams/{team%2Did}/schedule/timeOffRequests/{timeOffRequest%2Did}{?%24select}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['timeOffRequestId'] = $timeOffRequestId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class TimeOffRequestItemRequestBuilder
 
     /**
      * Update the navigation property timeOffRequests in teams
-     * @param TimeOffRequest $body The request body
      * @param TimeOffRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class TimeOffRequestItemRequestBuilder
 
     /**
      * Update the navigation property timeOffRequests in teams
-     * @param TimeOffRequest $body The request body
      * @param TimeOffRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

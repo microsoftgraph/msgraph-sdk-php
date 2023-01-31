@@ -56,7 +56,7 @@ class AadUserConversationMember extends ConversationMember implements Parsable
     }
 
     /**
-     * Gets the user property value. The user property
+     * Gets the user property value. 
      * @return User|null
     */
     public function getUser(): ?User {
@@ -100,7 +100,7 @@ class AadUserConversationMember extends ConversationMember implements Parsable
     }
 
     /**
-     * Sets the user property value. The user property
+     * Sets the user property value. 
      * @param User|null $value Value to set for the user property.
     */
     public function setUser(?User $value): void {

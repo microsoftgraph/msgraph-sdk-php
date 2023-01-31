@@ -98,7 +98,7 @@ class DeviceComplianceSettingState extends Entity implements Parsable
     }
 
     /**
-     * Gets the state property value. The state property
+     * Gets the state property value. 
      * @return ComplianceStatus|null
     */
     public function getState(): ?ComplianceStatus {
@@ -205,7 +205,7 @@ class DeviceComplianceSettingState extends Entity implements Parsable
     }
 
     /**
-     * Sets the state property value. The state property
+     * Sets the state property value. 
      * @param ComplianceStatus|null $value Value to set for the state property.
     */
     public function setState(?ComplianceStatus $value): void {

@@ -75,7 +75,6 @@ class InstalledAppsRequestBuilder
 
     /**
      * Install an app in the personal scope of the specified user.
-     * @param UserScopeTeamsAppInstallation $body The request body
      * @param InstalledAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/userteamwork-post-installedapps?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class InstalledAppsRequestBuilder
 
     /**
      * Install an app in the personal scope of the specified user.
-     * @param UserScopeTeamsAppInstallation $body The request body
      * @param InstalledAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

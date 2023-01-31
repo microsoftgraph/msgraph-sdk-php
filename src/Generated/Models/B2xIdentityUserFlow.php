@@ -72,7 +72,7 @@ class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable
     }
 
     /**
-     * Gets the userFlowIdentityProviders property value. The userFlowIdentityProviders property
+     * Gets the userFlowIdentityProviders property value. 
      * @return array<IdentityProviderBase>|null
     */
     public function getUserFlowIdentityProviders(): ?array {
@@ -125,7 +125,7 @@ class B2xIdentityUserFlow extends IdentityUserFlow implements Parsable
     }
 
     /**
-     * Sets the userFlowIdentityProviders property value. The userFlowIdentityProviders property
+     * Sets the userFlowIdentityProviders property value. 
      * @param array<IdentityProviderBase>|null $value Value to set for the userFlowIdentityProviders property.
     */
     public function setUserFlowIdentityProviders(?array $value): void {

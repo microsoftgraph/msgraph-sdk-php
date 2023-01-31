@@ -8,8 +8,8 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UnifiedRoleEligibilityScheduleRequest;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEligibilityScheduleRequests\Item\AppScope\AppScopeRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEligibilityScheduleRequests\Item\Cancel\CancelRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEligibilityScheduleRequests\Item\DirectoryScope\DirectoryScopeRequestBuilder;
+use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEligibilityScheduleRequests\Item\MicrosoftGraphCancel\CancelRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEligibilityScheduleRequests\Item\Principal\PrincipalRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEligibilityScheduleRequests\Item\RoleDefinition\RoleDefinitionRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEligibilityScheduleRequests\Item\TargetSchedule\TargetScheduleRequestBuilder;
@@ -33,17 +33,17 @@ class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the cancel method.
-    */
-    public function cancel(): CancelRequestBuilder {
-        return new CancelRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the directoryScope property of the microsoft.graph.unifiedRoleEligibilityScheduleRequest entity.
     */
     public function directoryScope(): DirectoryScopeRequestBuilder {
         return new DirectoryScopeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the cancel method.
+    */
+    public function microsoftGraphCancel(): CancelRequestBuilder {
+        return new CancelRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -86,11 +86,15 @@ class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder
      * Instantiates a new UnifiedRoleEligibilityScheduleRequestItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $unifiedRoleEligibilityScheduleRequestId key: id of unifiedRoleEligibilityScheduleRequest
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $unifiedRoleEligibilityScheduleRequestId = null) {
         $this->urlTemplate = '{+baseurl}/roleManagement/entitlementManagement/roleEligibilityScheduleRequests/{unifiedRoleEligibilityScheduleRequest%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['unifiedRoleEligibilityScheduleRequestId'] = $unifiedRoleEligibilityScheduleRequestId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -131,7 +135,6 @@ class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder
 
     /**
      * Update the navigation property roleEligibilityScheduleRequests in roleManagement
-     * @param UnifiedRoleEligibilityScheduleRequest $body The request body
      * @param UnifiedRoleEligibilityScheduleRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -196,7 +199,6 @@ class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder
 
     /**
      * Update the navigation property roleEligibilityScheduleRequests in roleManagement
-     * @param UnifiedRoleEligibilityScheduleRequest $body The request body
      * @param UnifiedRoleEligibilityScheduleRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -38,11 +38,15 @@ class DeviceCategoryItemRequestBuilder
      * Instantiates a new DeviceCategoryItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $deviceCategoryId key: id of deviceCategory
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $deviceCategoryId = null) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/deviceCategories/{deviceCategory%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['deviceCategoryId'] = $deviceCategoryId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class DeviceCategoryItemRequestBuilder
 
     /**
      * Update the navigation property deviceCategories in deviceManagement
-     * @param DeviceCategory $body The request body
      * @param DeviceCategoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class DeviceCategoryItemRequestBuilder
 
     /**
      * Update the navigation property deviceCategories in deviceManagement
-     * @param DeviceCategory $body The request body
      * @param DeviceCategoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -38,11 +38,15 @@ class ThumbnailSetItemRequestBuilder
      * Instantiates a new ThumbnailSetItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $thumbnailSetId key: id of thumbnailSet
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $thumbnailSetId = null) {
         $this->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/thumbnails/{thumbnailSet%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['thumbnailSetId'] = $thumbnailSetId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class ThumbnailSetItemRequestBuilder
 
     /**
      * Update the navigation property thumbnails in drives
-     * @param ThumbnailSet $body The request body
      * @param ThumbnailSetItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class ThumbnailSetItemRequestBuilder
 
     /**
      * Update the navigation property thumbnails in drives
-     * @param ThumbnailSet $body The request body
      * @param ThumbnailSetItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

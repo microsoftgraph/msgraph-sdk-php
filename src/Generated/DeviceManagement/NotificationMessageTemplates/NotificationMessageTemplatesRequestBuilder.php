@@ -74,7 +74,6 @@ class NotificationMessageTemplatesRequestBuilder
 
     /**
      * Create new navigation property to notificationMessageTemplates for deviceManagement
-     * @param NotificationMessageTemplate $body The request body
      * @param NotificationMessageTemplatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class NotificationMessageTemplatesRequestBuilder
 
     /**
      * Create new navigation property to notificationMessageTemplates for deviceManagement
-     * @param NotificationMessageTemplate $body The request body
      * @param NotificationMessageTemplatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

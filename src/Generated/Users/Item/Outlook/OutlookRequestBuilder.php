@@ -9,9 +9,9 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OutlookUser;
 use Microsoft\Graph\Generated\Users\Item\Outlook\MasterCategories\Item\OutlookCategoryItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Outlook\MasterCategories\MasterCategoriesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Outlook\SupportedLanguages\SupportedLanguagesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Outlook\SupportedTimeZones\SupportedTimeZonesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Outlook\SupportedTimeZonesWithTimeZoneStandard\SupportedTimeZonesWithTimeZoneStandardRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Outlook\MicrosoftGraphSupportedLanguages\SupportedLanguagesRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Outlook\MicrosoftGraphSupportedTimeZones\SupportedTimeZonesRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Outlook\MicrosoftGraphSupportedTimeZonesWithTimeZoneStandard\SupportedTimeZonesWithTimeZoneStandardRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -29,6 +29,20 @@ class OutlookRequestBuilder
     */
     public function masterCategories(): MasterCategoriesRequestBuilder {
         return new MasterCategoriesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the supportedLanguages method.
+    */
+    public function microsoftGraphSupportedLanguages(): SupportedLanguagesRequestBuilder {
+        return new SupportedLanguagesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the supportedTimeZones method.
+    */
+    public function microsoftGraphSupportedTimeZones(): SupportedTimeZonesRequestBuilder {
+        return new SupportedTimeZonesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -87,27 +101,11 @@ class OutlookRequestBuilder
     }
 
     /**
-     * Provides operations to call the supportedLanguages method.
-     * @return SupportedLanguagesRequestBuilder
-    */
-    public function supportedLanguages(): SupportedLanguagesRequestBuilder {
-        return new SupportedLanguagesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to call the supportedTimeZones method.
-     * @return SupportedTimeZonesRequestBuilder
-    */
-    public function supportedTimeZones(): SupportedTimeZonesRequestBuilder {
-        return new SupportedTimeZonesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
      * Provides operations to call the supportedTimeZones method.
      * @param string $timeZoneStandard Usage: TimeZoneStandard='{TimeZoneStandard}'
      * @return SupportedTimeZonesWithTimeZoneStandardRequestBuilder
     */
-    public function supportedTimeZonesWithTimeZoneStandard(string $timeZoneStandard): SupportedTimeZonesWithTimeZoneStandardRequestBuilder {
+    public function microsoftGraphSupportedTimeZonesWithTimeZoneStandard(string $timeZoneStandard): SupportedTimeZonesWithTimeZoneStandardRequestBuilder {
         return new SupportedTimeZonesWithTimeZoneStandardRequestBuilder($this->pathParameters, $this->requestAdapter, $timeZoneStandard);
     }
 

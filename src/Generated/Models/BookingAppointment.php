@@ -66,7 +66,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Gets the endDateTime property value. The endDateTime property
+     * Gets the endDateTime property value. 
      * @return DateTimeTimeZone|null
     */
     public function getEndDateTime(): ?DateTimeTimeZone {
@@ -244,7 +244,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Gets the startDateTime property value. The startDateTime property
+     * Gets the startDateTime property value. 
      * @return DateTimeTimeZone|null
     */
     public function getStartDateTime(): ?DateTimeTimeZone {
@@ -322,7 +322,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Sets the endDateTime property value. The endDateTime property
+     * Sets the endDateTime property value. 
      * @param DateTimeTimeZone|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTimeTimeZone $value): void {
@@ -466,7 +466,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Sets the startDateTime property value. The startDateTime property
+     * Sets the startDateTime property value. 
      * @param DateTimeTimeZone|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTimeTimeZone $value): void {

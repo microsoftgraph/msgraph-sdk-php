@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\Attachments\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\Attachments\CreateUploadSession\CreateUploadSessionRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\Attachments\MicrosoftGraphCreateUploadSession\CreateUploadSessionRequestBuilder;
 use Microsoft\Graph\Generated\Models\Attachment;
 use Microsoft\Graph\Generated\Models\AttachmentCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -32,7 +32,7 @@ class AttachmentsRequestBuilder
     /**
      * Provides operations to call the createUploadSession method.
     */
-    public function createUploadSession(): CreateUploadSessionRequestBuilder {
+    public function microsoftGraphCreateUploadSession(): CreateUploadSessionRequestBuilder {
         return new CreateUploadSessionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
@@ -83,7 +83,6 @@ class AttachmentsRequestBuilder
 
     /**
      * Create new navigation property to attachments for groups
-     * @param Attachment $body The request body
      * @param AttachmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -127,7 +126,6 @@ class AttachmentsRequestBuilder
 
     /**
      * Create new navigation property to attachments for groups
-     * @param Attachment $body The request body
      * @param AttachmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

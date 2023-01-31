@@ -75,7 +75,6 @@ class AppRoleAssignmentsRequestBuilder
 
     /**
      * Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers:
-     * @param AppRoleAssignment $body The request body
      * @param AppRoleAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/user-post-approleassignments?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class AppRoleAssignmentsRequestBuilder
 
     /**
      * Use this API to assign an app role to a user. To grant an app role assignment to a user, you need three identifiers:
-     * @param AppRoleAssignment $body The request body
      * @param AppRoleAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

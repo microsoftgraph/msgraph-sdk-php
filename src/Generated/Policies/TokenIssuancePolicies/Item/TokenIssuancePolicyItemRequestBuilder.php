@@ -38,11 +38,15 @@ class TokenIssuancePolicyItemRequestBuilder
      * Instantiates a new TokenIssuancePolicyItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $tokenIssuancePolicyId key: id of tokenIssuancePolicy
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $tokenIssuancePolicyId = null) {
         $this->urlTemplate = '{+baseurl}/policies/tokenIssuancePolicies/{tokenIssuancePolicy%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['tokenIssuancePolicyId'] = $tokenIssuancePolicyId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class TokenIssuancePolicyItemRequestBuilder
 
     /**
      * Update the navigation property tokenIssuancePolicies in policies
-     * @param TokenIssuancePolicy $body The request body
      * @param TokenIssuancePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class TokenIssuancePolicyItemRequestBuilder
 
     /**
      * Update the navigation property tokenIssuancePolicies in policies
-     * @param TokenIssuancePolicy $body The request body
      * @param TokenIssuancePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

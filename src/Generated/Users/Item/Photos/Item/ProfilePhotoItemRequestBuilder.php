@@ -46,11 +46,15 @@ class ProfilePhotoItemRequestBuilder
      * Instantiates a new ProfilePhotoItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $profilePhotoId key: id of profilePhoto
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $profilePhotoId = null) {
         $this->urlTemplate = '{+baseurl}/users/{user%2Did}/photos/{profilePhoto%2Did}{?%24select}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['profilePhotoId'] = $profilePhotoId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**

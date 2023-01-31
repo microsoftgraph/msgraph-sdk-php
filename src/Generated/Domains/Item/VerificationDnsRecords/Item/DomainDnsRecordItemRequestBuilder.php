@@ -38,11 +38,15 @@ class DomainDnsRecordItemRequestBuilder
      * Instantiates a new DomainDnsRecordItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $domainDnsRecordId key: id of domainDnsRecord
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $domainDnsRecordId = null) {
         $this->urlTemplate = '{+baseurl}/domains/{domain%2Did}/verificationDnsRecords/{domainDnsRecord%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['domainDnsRecordId'] = $domainDnsRecordId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class DomainDnsRecordItemRequestBuilder
 
     /**
      * Update the navigation property verificationDnsRecords in domains
-     * @param DomainDnsRecord $body The request body
      * @param DomainDnsRecordItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class DomainDnsRecordItemRequestBuilder
 
     /**
      * Update the navigation property verificationDnsRecords in domains
-     * @param DomainDnsRecord $body The request body
      * @param DomainDnsRecordItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

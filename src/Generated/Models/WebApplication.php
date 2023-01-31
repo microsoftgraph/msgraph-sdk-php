@@ -91,7 +91,7 @@ class WebApplication implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -107,7 +107,7 @@ class WebApplication implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the redirectUriSettings property value. The redirectUriSettings property
+     * Gets the redirectUriSettings property value. 
      * @return array<RedirectUriSettings>|null
     */
     public function getRedirectUriSettings(): ?array {
@@ -169,7 +169,7 @@ class WebApplication implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -185,7 +185,7 @@ class WebApplication implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the redirectUriSettings property value. The redirectUriSettings property
+     * Sets the redirectUriSettings property value. 
      * @param array<RedirectUriSettings>|null $value Value to set for the redirectUriSettings property.
     */
     public function setRedirectUriSettings(?array $value): void {

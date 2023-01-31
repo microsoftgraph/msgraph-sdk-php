@@ -6,26 +6,26 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Team\AllChannels\AllChannelsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Archive\ArchiveRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Channels\ChannelsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\CompleteMigration\CompleteMigrationRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\EscapedClone\CloneRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Group\GroupRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\IncomingChannels\IncomingChannelsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\InstalledApps\InstalledAppsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\InstalledApps\Item\TeamsAppInstallationItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Members\Item\ConversationMemberItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Members\MembersRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\MicrosoftGraphArchive\ArchiveRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\MicrosoftGraphClone\CloneRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\MicrosoftGraphCompleteMigration\CompleteMigrationRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\MicrosoftGraphSendActivityNotification\SendActivityNotificationRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\MicrosoftGraphUnarchive\UnarchiveRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Operations\Item\TeamsAsyncOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Operations\OperationsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Photo\PhotoRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\PrimaryChannelRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\ScheduleRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\SendActivityNotification\SendActivityNotificationRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Tags\Item\TeamworkTagItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Tags\TagsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Template\TemplateRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Unarchive\UnarchiveRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Team;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -48,31 +48,10 @@ class TeamRequestBuilder
     }
     
     /**
-     * Provides operations to call the archive method.
-    */
-    public function archive(): ArchiveRequestBuilder {
-        return new ArchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the channels property of the microsoft.graph.team entity.
     */
     public function channels(): ChannelsRequestBuilder {
         return new ChannelsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the completeMigration method.
-    */
-    public function completeMigration(): CompleteMigrationRequestBuilder {
-        return new CompleteMigrationRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the clone method.
-    */
-    public function escapedClone(): CloneRequestBuilder {
-        return new CloneRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -101,6 +80,41 @@ class TeamRequestBuilder
     */
     public function members(): MembersRequestBuilder {
         return new MembersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the archive method.
+    */
+    public function microsoftGraphArchive(): ArchiveRequestBuilder {
+        return new ArchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the clone method.
+    */
+    public function microsoftGraphClone(): CloneRequestBuilder {
+        return new CloneRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the completeMigration method.
+    */
+    public function microsoftGraphCompleteMigration(): CompleteMigrationRequestBuilder {
+        return new CompleteMigrationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the sendActivityNotification method.
+    */
+    public function microsoftGraphSendActivityNotification(): SendActivityNotificationRequestBuilder {
+        return new SendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the unarchive method.
+    */
+    public function microsoftGraphUnarchive(): UnarchiveRequestBuilder {
+        return new UnarchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -142,13 +156,6 @@ class TeamRequestBuilder
     }
     
     /**
-     * Provides operations to call the sendActivityNotification method.
-    */
-    public function sendActivityNotification(): SendActivityNotificationRequestBuilder {
-        return new SendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the tags property of the microsoft.graph.team entity.
     */
     public function tags(): TagsRequestBuilder {
@@ -160,13 +167,6 @@ class TeamRequestBuilder
     */
     public function template(): TemplateRequestBuilder {
         return new TemplateRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the unarchive method.
-    */
-    public function unarchive(): UnarchiveRequestBuilder {
-        return new UnarchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -289,7 +289,6 @@ class TeamRequestBuilder
 
     /**
      * Create a new team under a group. In order to create a team, the group must have a least one owner. If the group was created less than 15 minutes ago, it's possible for the Create team call to fail with a 404 error code due to replication delays. The recommended pattern is to retry the Create team call three times, with a 10 second delay between calls.
-     * @param Team $body The request body
      * @param TeamRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/team-put-teams?view=graph-rest-1.0 Find more info here
@@ -366,7 +365,6 @@ class TeamRequestBuilder
 
     /**
      * Create a new team under a group. In order to create a team, the group must have a least one owner. If the group was created less than 15 minutes ago, it's possible for the Create team call to fail with a 404 error code due to replication delays. The recommended pattern is to retry the Create team call three times, with a 10 second delay between calls.
-     * @param Team $body The request body
      * @param TeamRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

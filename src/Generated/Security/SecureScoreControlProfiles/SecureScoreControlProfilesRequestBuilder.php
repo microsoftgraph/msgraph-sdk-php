@@ -75,7 +75,6 @@ class SecureScoreControlProfilesRequestBuilder
 
     /**
      * Create new navigation property to secureScoreControlProfiles for security
-     * @param SecureScoreControlProfile $body The request body
      * @param SecureScoreControlProfilesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class SecureScoreControlProfilesRequestBuilder
 
     /**
      * Create new navigation property to secureScoreControlProfiles for security
-     * @param SecureScoreControlProfile $body The request body
      * @param SecureScoreControlProfilesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

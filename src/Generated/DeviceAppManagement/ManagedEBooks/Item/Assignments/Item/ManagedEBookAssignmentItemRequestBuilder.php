@@ -38,11 +38,15 @@ class ManagedEBookAssignmentItemRequestBuilder
      * Instantiates a new ManagedEBookAssignmentItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $managedEBookAssignmentId key: id of managedEBookAssignment
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $managedEBookAssignmentId = null) {
         $this->urlTemplate = '{+baseurl}/deviceAppManagement/managedEBooks/{managedEBook%2Did}/assignments/{managedEBookAssignment%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['managedEBookAssignmentId'] = $managedEBookAssignmentId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class ManagedEBookAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property assignments in deviceAppManagement
-     * @param ManagedEBookAssignment $body The request body
      * @param ManagedEBookAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class ManagedEBookAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property assignments in deviceAppManagement
-     * @param ManagedEBookAssignment $body The request body
      * @param ManagedEBookAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

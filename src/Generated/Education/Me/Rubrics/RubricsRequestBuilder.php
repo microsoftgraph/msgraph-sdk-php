@@ -75,7 +75,6 @@ class RubricsRequestBuilder
 
     /**
      * Create a new educationRubric object.
-     * @param EducationRubric $body The request body
      * @param RubricsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/educationuser-post-rubrics?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class RubricsRequestBuilder
 
     /**
      * Create a new educationRubric object.
-     * @param EducationRubric $body The request body
      * @param RubricsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

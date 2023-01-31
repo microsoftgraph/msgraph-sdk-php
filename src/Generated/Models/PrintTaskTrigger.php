@@ -25,7 +25,7 @@ class PrintTaskTrigger extends Entity implements Parsable
     }
 
     /**
-     * Gets the definition property value. The definition property
+     * Gets the definition property value. 
      * @return PrintTaskDefinition|null
     */
     public function getDefinition(): ?PrintTaskDefinition {
@@ -33,7 +33,7 @@ class PrintTaskTrigger extends Entity implements Parsable
     }
 
     /**
-     * Gets the event property value. The event property
+     * Gets the event property value. 
      * @return PrintEvent|null
     */
     public function getEvent(): ?PrintEvent {
@@ -63,7 +63,7 @@ class PrintTaskTrigger extends Entity implements Parsable
     }
 
     /**
-     * Sets the definition property value. The definition property
+     * Sets the definition property value. 
      * @param PrintTaskDefinition|null $value Value to set for the definition property.
     */
     public function setDefinition(?PrintTaskDefinition $value): void {
@@ -71,7 +71,7 @@ class PrintTaskTrigger extends Entity implements Parsable
     }
 
     /**
-     * Sets the event property value. The event property
+     * Sets the event property value. 
      * @param PrintEvent|null $value Value to set for the event property.
     */
     public function setEvent(?PrintEvent $value): void {

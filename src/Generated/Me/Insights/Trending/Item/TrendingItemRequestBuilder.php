@@ -46,11 +46,15 @@ class TrendingItemRequestBuilder
      * Instantiates a new TrendingItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $trendingId key: id of trending
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $trendingId = null) {
         $this->urlTemplate = '{+baseurl}/me/insights/trending/{trending%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['trendingId'] = $trendingId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -91,7 +95,6 @@ class TrendingItemRequestBuilder
 
     /**
      * Update the navigation property trending in me
-     * @param Trending $body The request body
      * @param TrendingItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -156,7 +159,6 @@ class TrendingItemRequestBuilder
 
     /**
      * Update the navigation property trending in me
-     * @param Trending $body The request body
      * @param TrendingItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

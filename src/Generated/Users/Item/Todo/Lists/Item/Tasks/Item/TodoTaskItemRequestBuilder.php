@@ -116,11 +116,15 @@ class TodoTaskItemRequestBuilder
      * Instantiates a new TodoTaskItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $todoTaskId key: id of todoTask
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $todoTaskId = null) {
         $this->urlTemplate = '{+baseurl}/users/{user%2Did}/todo/lists/{todoTaskList%2Did}/tasks/{todoTask%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['todoTaskId'] = $todoTaskId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -183,7 +187,6 @@ class TodoTaskItemRequestBuilder
 
     /**
      * Update the navigation property tasks in users
-     * @param TodoTask $body The request body
      * @param TodoTaskItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -248,7 +251,6 @@ class TodoTaskItemRequestBuilder
 
     /**
      * Update the navigation property tasks in users
-     * @param TodoTask $body The request body
      * @param TodoTaskItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

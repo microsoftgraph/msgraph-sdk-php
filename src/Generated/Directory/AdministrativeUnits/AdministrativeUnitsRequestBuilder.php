@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Directory\AdministrativeUnits\MicrosoftGraphDelta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Models\AdministrativeUnit;
 use Microsoft\Graph\Generated\Models\AdministrativeUnitCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -27,6 +27,13 @@ class AdministrativeUnitsRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the delta method.
+    */
+    public function microsoftGraphDelta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -56,14 +63,6 @@ class AdministrativeUnitsRequestBuilder
     }
 
     /**
-     * Provides operations to call the delta method.
-     * @return DeltaRequestBuilder
-    */
-    public function delta(): DeltaRequestBuilder {
-        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
      * Retrieve a list of administrativeUnit objects.
      * @param AdministrativeUnitsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -84,7 +83,6 @@ class AdministrativeUnitsRequestBuilder
 
     /**
      * Use this API to create a new administrativeUnit.
-     * @param AdministrativeUnit $body The request body
      * @param AdministrativeUnitsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/directory-post-administrativeunits?view=graph-rest-1.0 Find more info here
@@ -129,7 +127,6 @@ class AdministrativeUnitsRequestBuilder
 
     /**
      * Use this API to create a new administrativeUnit.
-     * @param AdministrativeUnit $body The request body
      * @param AdministrativeUnitsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

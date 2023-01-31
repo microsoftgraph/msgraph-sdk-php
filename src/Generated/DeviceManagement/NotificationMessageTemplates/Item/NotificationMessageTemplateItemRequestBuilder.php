@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item\LocalizedNotificationMessages\Item\LocalizedNotificationMessageItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item\LocalizedNotificationMessages\LocalizedNotificationMessagesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item\SendTestMessage\SendTestMessageRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item\MicrosoftGraphSendTestMessage\SendTestMessageRequestBuilder;
 use Microsoft\Graph\Generated\Models\NotificationMessageTemplate;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -30,6 +30,13 @@ class NotificationMessageTemplateItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the sendTestMessage method.
+    */
+    public function microsoftGraphSendTestMessage(): SendTestMessageRequestBuilder {
+        return new SendTestMessageRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -40,13 +47,6 @@ class NotificationMessageTemplateItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * Provides operations to call the sendTestMessage method.
-    */
-    public function sendTestMessage(): SendTestMessageRequestBuilder {
-        return new SendTestMessageRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
@@ -55,11 +55,15 @@ class NotificationMessageTemplateItemRequestBuilder
      * Instantiates a new NotificationMessageTemplateItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $notificationMessageTemplateId key: id of notificationMessageTemplate
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $notificationMessageTemplateId = null) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/notificationMessageTemplates/{notificationMessageTemplate%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['notificationMessageTemplateId'] = $notificationMessageTemplateId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -111,7 +115,6 @@ class NotificationMessageTemplateItemRequestBuilder
 
     /**
      * Update the navigation property notificationMessageTemplates in deviceManagement
-     * @param NotificationMessageTemplate $body The request body
      * @param NotificationMessageTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -176,7 +179,6 @@ class NotificationMessageTemplateItemRequestBuilder
 
     /**
      * Update the navigation property notificationMessageTemplates in deviceManagement
-     * @param NotificationMessageTemplate $body The request body
      * @param NotificationMessageTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

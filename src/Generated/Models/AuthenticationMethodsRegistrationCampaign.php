@@ -82,7 +82,7 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -98,7 +98,7 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
     }
 
     /**
-     * Gets the state property value. The state property
+     * Gets the state property value. 
      * @return AdvancedConfigState|null
     */
     public function getState(): ?AdvancedConfigState {
@@ -151,7 +151,7 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -167,7 +167,7 @@ class AuthenticationMethodsRegistrationCampaign implements AdditionalDataHolder,
     }
 
     /**
-     * Sets the state property value. The state property
+     * Sets the state property value. 
      * @param AdvancedConfigState|null $value Value to set for the state property.
     */
     public function setState(?AdvancedConfigState $value): void {

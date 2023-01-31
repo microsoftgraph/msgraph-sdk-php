@@ -65,7 +65,7 @@ class AddIn implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the id property value. The id property
+     * Gets the id property value. 
      * @return string|null
     */
     public function getId(): ?string {
@@ -73,7 +73,7 @@ class AddIn implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -81,7 +81,7 @@ class AddIn implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the properties property value. The properties property
+     * Gets the properties property value. 
      * @return array<KeyValue>|null
     */
     public function getProperties(): ?array {
@@ -89,7 +89,7 @@ class AddIn implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. 
      * @return string|null
     */
     public function getType(): ?string {
@@ -125,7 +125,7 @@ class AddIn implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the id property value. The id property
+     * Sets the id property value. 
      * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {
@@ -133,7 +133,7 @@ class AddIn implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -141,7 +141,7 @@ class AddIn implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the properties property value. The properties property
+     * Sets the properties property value. 
      * @param array<KeyValue>|null $value Value to set for the properties property.
     */
     public function setProperties(?array $value): void {
@@ -149,7 +149,7 @@ class AddIn implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. 
      * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationClass extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new educationClass and sets the default values.
+     * Instantiates a new EducationClass and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -65,7 +65,7 @@ class EducationClass extends Entity implements Parsable
     }
 
     /**
-     * Gets the course property value. The course property
+     * Gets the course property value. 
      * @return EducationCourse|null
     */
     public function getCourse(): ?EducationCourse {
@@ -283,7 +283,7 @@ class EducationClass extends Entity implements Parsable
     }
 
     /**
-     * Sets the course property value. The course property
+     * Sets the course property value. 
      * @param EducationCourse|null $value Value to set for the course property.
     */
     public function setCourse(?EducationCourse $value): void {

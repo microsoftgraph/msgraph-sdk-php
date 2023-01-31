@@ -74,7 +74,6 @@ class HistoryItemsRequestBuilder
 
     /**
      * Create new navigation property to historyItems for me
-     * @param ActivityHistoryItem $body The request body
      * @param HistoryItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class HistoryItemsRequestBuilder
 
     /**
      * Create new navigation property to historyItems for me
-     * @param ActivityHistoryItem $body The request body
      * @param HistoryItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

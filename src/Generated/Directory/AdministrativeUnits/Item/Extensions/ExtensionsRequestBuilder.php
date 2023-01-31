@@ -74,7 +74,6 @@ class ExtensionsRequestBuilder
 
     /**
      * Create new navigation property to extensions for directory
-     * @param Extension $body The request body
      * @param ExtensionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class ExtensionsRequestBuilder
 
     /**
      * Create new navigation property to extensions for directory
-     * @param Extension $body The request body
      * @param ExtensionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

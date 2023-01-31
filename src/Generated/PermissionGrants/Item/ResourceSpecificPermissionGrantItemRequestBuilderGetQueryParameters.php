@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\PermissionGrants\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get entity from permissionGrants by key (id)
+ * Get entity from permissionGrants by key
 */
 class ResourceSpecificPermissionGrantItemRequestBuilderGetQueryParameters 
 {

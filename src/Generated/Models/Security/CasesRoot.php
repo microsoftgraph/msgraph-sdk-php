@@ -26,7 +26,7 @@ class CasesRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the ediscoveryCases property value. The ediscoveryCases property
+     * Gets the ediscoveryCases property value. 
      * @return array<EdiscoveryCase>|null
     */
     public function getEdiscoveryCases(): ?array {
@@ -54,7 +54,7 @@ class CasesRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the ediscoveryCases property value. The ediscoveryCases property
+     * Sets the ediscoveryCases property value. 
      * @param array<EdiscoveryCase>|null $value Value to set for the ediscoveryCases property.
     */
     public function setEdiscoveryCases(?array $value): void {

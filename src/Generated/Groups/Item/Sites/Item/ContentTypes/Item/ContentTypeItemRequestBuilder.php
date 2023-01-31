@@ -5,17 +5,17 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\Item\AssociateWithHubSites\AssociateWithHubSitesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\Item\Base\BaseRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\Item\BaseTypes\BaseTypesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\Item\ColumnLinks\ColumnLinksRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\Item\ColumnLinks\Item\ColumnLinkItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\Item\ColumnPositions\ColumnPositionsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\Item\Columns\ColumnsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\Item\CopyToDefaultContentLocation\CopyToDefaultContentLocationRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\Item\IsPublished\IsPublishedRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\Item\Publish\PublishRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\Item\Unpublish\UnpublishRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\Item\MicrosoftGraphAssociateWithHubSites\AssociateWithHubSitesRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\Item\MicrosoftGraphCopyToDefaultContentLocation\CopyToDefaultContentLocationRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\Item\MicrosoftGraphIsPublished\IsPublishedRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\Item\MicrosoftGraphPublish\PublishRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\Item\MicrosoftGraphUnpublish\UnpublishRequestBuilder;
 use Microsoft\Graph\Generated\Models\ContentType;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -30,13 +30,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 */
 class ContentTypeItemRequestBuilder 
 {
-    /**
-     * Provides operations to call the associateWithHubSites method.
-    */
-    public function associateWithHubSites(): AssociateWithHubSitesRequestBuilder {
-        return new AssociateWithHubSitesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
     /**
      * Provides operations to manage the base property of the microsoft.graph.contentType entity.
     */
@@ -73,10 +66,38 @@ class ContentTypeItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the associateWithHubSites method.
+    */
+    public function microsoftGraphAssociateWithHubSites(): AssociateWithHubSitesRequestBuilder {
+        return new AssociateWithHubSitesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to call the copyToDefaultContentLocation method.
     */
-    public function copyToDefaultContentLocation(): CopyToDefaultContentLocationRequestBuilder {
+    public function microsoftGraphCopyToDefaultContentLocation(): CopyToDefaultContentLocationRequestBuilder {
         return new CopyToDefaultContentLocationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the isPublished method.
+    */
+    public function microsoftGraphIsPublished(): IsPublishedRequestBuilder {
+        return new IsPublishedRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the publish method.
+    */
+    public function microsoftGraphPublish(): PublishRequestBuilder {
+        return new PublishRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the unpublish method.
+    */
+    public function microsoftGraphUnpublish(): UnpublishRequestBuilder {
+        return new UnpublishRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -85,23 +106,9 @@ class ContentTypeItemRequestBuilder
     private array $pathParameters;
     
     /**
-     * Provides operations to call the publish method.
-    */
-    public function publish(): PublishRequestBuilder {
-        return new PublishRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
-    
-    /**
-     * Provides operations to call the unpublish method.
-    */
-    public function unpublish(): UnpublishRequestBuilder {
-        return new UnpublishRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
@@ -156,11 +163,15 @@ class ContentTypeItemRequestBuilder
      * Instantiates a new ContentTypeItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $contentTypeId key: id of contentType
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $contentTypeId = null) {
         $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/contentTypes/{contentType%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['contentTypeId'] = $contentTypeId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -200,16 +211,7 @@ class ContentTypeItemRequestBuilder
     }
 
     /**
-     * Provides operations to call the isPublished method.
-     * @return IsPublishedRequestBuilder
-    */
-    public function isPublished(): IsPublishedRequestBuilder {
-        return new IsPublishedRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
      * Update the navigation property contentTypes in groups
-     * @param ContentType $body The request body
      * @param ContentTypeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -274,7 +276,6 @@ class ContentTypeItemRequestBuilder
 
     /**
      * Update the navigation property contentTypes in groups
-     * @param ContentType $body The request body
      * @param ContentTypeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

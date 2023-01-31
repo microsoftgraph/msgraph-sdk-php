@@ -47,7 +47,7 @@ class PlannerBucket extends Entity implements Parsable
     }
 
     /**
-     * Gets the orderHint property value. Hint used to order items of this type in a list view. The format is defined as outlined here.
+     * Gets the orderHint property value. Hint used to order items of this type in a list view. For details about the supported format, see Using order hints in Planner.
      * @return string|null
     */
     public function getOrderHint(): ?string {
@@ -91,7 +91,7 @@ class PlannerBucket extends Entity implements Parsable
     }
 
     /**
-     * Sets the orderHint property value. Hint used to order items of this type in a list view. The format is defined as outlined here.
+     * Sets the orderHint property value. Hint used to order items of this type in a list view. For details about the supported format, see Using order hints in Planner.
      * @param string|null $value Value to set for the orderHint property.
     */
     public function setOrderHint(?string $value): void {

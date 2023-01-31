@@ -43,7 +43,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the aggregationFilters property value. The aggregationFilters property
+     * Gets the aggregationFilters property value. 
      * @return array<string>|null
     */
     public function getAggregationFilters(): ?array {
@@ -51,7 +51,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the aggregations property value. The aggregations property
+     * Gets the aggregations property value. 
      * @return array<AggregationOption>|null
     */
     public function getAggregations(): ?array {
@@ -67,7 +67,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the contentSources property value. The contentSources property
+     * Gets the contentSources property value. 
      * @return array<string>|null
     */
     public function getContentSources(): ?array {
@@ -75,7 +75,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the enableTopResults property value. The enableTopResults property
+     * Gets the enableTopResults property value. 
      * @return bool|null
     */
     public function getEnableTopResults(): ?bool {
@@ -83,7 +83,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the entityTypes property value. The entityTypes property
+     * Gets the entityTypes property value. 
      * @return array<EntityType>|null
     */
     public function getEntityTypes(): ?array {
@@ -114,7 +114,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the fields property value. The fields property
+     * Gets the fields property value. 
      * @return array<string>|null
     */
     public function getFields(): ?array {
@@ -122,7 +122,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the from property value. The from property
+     * Gets the from property value. 
      * @return int|null
     */
     public function getFrom(): ?int {
@@ -130,7 +130,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -138,7 +138,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the query property value. The query property
+     * Gets the query property value. 
      * @return SearchQuery|null
     */
     public function getQuery(): ?SearchQuery {
@@ -146,7 +146,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the queryAlterationOptions property value. The queryAlterationOptions property
+     * Gets the queryAlterationOptions property value. 
      * @return SearchAlterationOptions|null
     */
     public function getQueryAlterationOptions(): ?SearchAlterationOptions {
@@ -154,7 +154,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the resultTemplateOptions property value. The resultTemplateOptions property
+     * Gets the resultTemplateOptions property value. 
      * @return ResultTemplateOption|null
     */
     public function getResultTemplateOptions(): ?ResultTemplateOption {
@@ -162,7 +162,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the size property value. The size property
+     * Gets the size property value. 
      * @return int|null
     */
     public function getSize(): ?int {
@@ -170,7 +170,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the sortProperties property value. The sortProperties property
+     * Gets the sortProperties property value. 
      * @return array<SortProperty>|null
     */
     public function getSortProperties(): ?array {
@@ -207,7 +207,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the aggregationFilters property value. The aggregationFilters property
+     * Sets the aggregationFilters property value. 
      * @param array<string>|null $value Value to set for the aggregationFilters property.
     */
     public function setAggregationFilters(?array $value): void {
@@ -215,7 +215,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the aggregations property value. The aggregations property
+     * Sets the aggregations property value. 
      * @param array<AggregationOption>|null $value Value to set for the aggregations property.
     */
     public function setAggregations(?array $value): void {
@@ -231,7 +231,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the contentSources property value. The contentSources property
+     * Sets the contentSources property value. 
      * @param array<string>|null $value Value to set for the contentSources property.
     */
     public function setContentSources(?array $value): void {
@@ -239,7 +239,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the enableTopResults property value. The enableTopResults property
+     * Sets the enableTopResults property value. 
      * @param bool|null $value Value to set for the enableTopResults property.
     */
     public function setEnableTopResults(?bool $value): void {
@@ -247,7 +247,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the entityTypes property value. The entityTypes property
+     * Sets the entityTypes property value. 
      * @param array<EntityType>|null $value Value to set for the entityTypes property.
     */
     public function setEntityTypes(?array $value): void {
@@ -255,7 +255,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the fields property value. The fields property
+     * Sets the fields property value. 
      * @param array<string>|null $value Value to set for the fields property.
     */
     public function setFields(?array $value): void {
@@ -263,7 +263,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the from property value. The from property
+     * Sets the from property value. 
      * @param int|null $value Value to set for the from property.
     */
     public function setFrom(?int $value): void {
@@ -271,7 +271,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -279,7 +279,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the query property value. The query property
+     * Sets the query property value. 
      * @param SearchQuery|null $value Value to set for the query property.
     */
     public function setQuery(?SearchQuery $value): void {
@@ -287,7 +287,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the queryAlterationOptions property value. The queryAlterationOptions property
+     * Sets the queryAlterationOptions property value. 
      * @param SearchAlterationOptions|null $value Value to set for the queryAlterationOptions property.
     */
     public function setQueryAlterationOptions(?SearchAlterationOptions $value): void {
@@ -295,7 +295,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the resultTemplateOptions property value. The resultTemplateOptions property
+     * Sets the resultTemplateOptions property value. 
      * @param ResultTemplateOption|null $value Value to set for the resultTemplateOptions property.
     */
     public function setResultTemplateOptions(?ResultTemplateOption $value): void {
@@ -303,7 +303,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the size property value. The size property
+     * Sets the size property value. 
      * @param int|null $value Value to set for the size property.
     */
     public function setSize(?int $value): void {
@@ -311,7 +311,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the sortProperties property value. The sortProperties property
+     * Sets the sortProperties property value. 
      * @param array<SortProperty>|null $value Value to set for the sortProperties property.
     */
     public function setSortProperties(?array $value): void {

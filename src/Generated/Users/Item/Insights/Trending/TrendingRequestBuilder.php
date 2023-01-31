@@ -74,7 +74,6 @@ class TrendingRequestBuilder
 
     /**
      * Create new navigation property to trending for users
-     * @param Trending $body The request body
      * @param TrendingRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class TrendingRequestBuilder
 
     /**
      * Create new navigation property to trending for users
-     * @param Trending $body The request body
      * @param TrendingRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

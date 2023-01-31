@@ -74,7 +74,6 @@ class EffectiveRulesRequestBuilder
 
     /**
      * Create new navigation property to effectiveRules for policies
-     * @param UnifiedRoleManagementPolicyRule $body The request body
      * @param EffectiveRulesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class EffectiveRulesRequestBuilder
 
     /**
      * Create new navigation property to effectiveRules for policies
-     * @param UnifiedRoleManagementPolicyRule $body The request body
      * @param EffectiveRulesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

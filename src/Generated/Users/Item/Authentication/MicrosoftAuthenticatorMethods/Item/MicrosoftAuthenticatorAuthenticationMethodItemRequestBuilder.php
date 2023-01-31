@@ -46,11 +46,15 @@ class MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder
      * Instantiates a new MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $microsoftAuthenticatorAuthenticationMethodId key: id of microsoftAuthenticatorAuthenticationMethod
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $microsoftAuthenticatorAuthenticationMethodId = null) {
         $this->urlTemplate = '{+baseurl}/users/{user%2Did}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['microsoftAuthenticatorAuthenticationMethodId'] = $microsoftAuthenticatorAuthenticationMethodId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**

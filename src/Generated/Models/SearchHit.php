@@ -84,7 +84,7 @@ class SearchHit implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -100,7 +100,7 @@ class SearchHit implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the resource property value. The resource property
+     * Gets the resource property value. 
      * @return Entity|null
     */
     public function getResource(): ?Entity {
@@ -171,7 +171,7 @@ class SearchHit implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -187,7 +187,7 @@ class SearchHit implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the resource property value. The resource property
+     * Sets the resource property value. 
      * @param Entity|null $value Value to set for the resource property.
     */
     public function setResource(?Entity $value): void {

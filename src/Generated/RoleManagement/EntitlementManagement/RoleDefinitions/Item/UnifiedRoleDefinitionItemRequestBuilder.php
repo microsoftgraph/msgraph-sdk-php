@@ -46,11 +46,15 @@ class UnifiedRoleDefinitionItemRequestBuilder
      * Instantiates a new UnifiedRoleDefinitionItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $unifiedRoleDefinitionId key: id of unifiedRoleDefinition
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $unifiedRoleDefinitionId = null) {
         $this->urlTemplate = '{+baseurl}/roleManagement/entitlementManagement/roleDefinitions/{unifiedRoleDefinition%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['unifiedRoleDefinitionId'] = $unifiedRoleDefinitionId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -102,7 +106,6 @@ class UnifiedRoleDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property roleDefinitions in roleManagement
-     * @param UnifiedRoleDefinition $body The request body
      * @param UnifiedRoleDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -167,7 +170,6 @@ class UnifiedRoleDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property roleDefinitions in roleManagement
-     * @param UnifiedRoleDefinition $body The request body
      * @param UnifiedRoleDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

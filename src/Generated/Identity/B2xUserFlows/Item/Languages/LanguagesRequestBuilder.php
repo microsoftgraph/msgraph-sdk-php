@@ -75,7 +75,6 @@ class LanguagesRequestBuilder
 
     /**
      * Create new navigation property to languages for identity
-     * @param UserFlowLanguageConfiguration $body The request body
      * @param LanguagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class LanguagesRequestBuilder
 
     /**
      * Create new navigation property to languages for identity
-     * @param UserFlowLanguageConfiguration $body The request body
      * @param LanguagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

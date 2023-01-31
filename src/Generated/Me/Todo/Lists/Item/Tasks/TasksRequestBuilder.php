@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\MicrosoftGraphDelta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TodoTask;
 use Microsoft\Graph\Generated\Models\TodoTaskCollectionResponse;
@@ -27,6 +27,13 @@ class TasksRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the delta method.
+    */
+    public function microsoftGraphDelta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -56,14 +63,6 @@ class TasksRequestBuilder
     }
 
     /**
-     * Provides operations to call the delta method.
-     * @return DeltaRequestBuilder
-    */
-    public function delta(): DeltaRequestBuilder {
-        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
      * Get the **todoTask** resources from the **tasks** navigation property of a specified todoTaskList.
      * @param TasksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -84,7 +83,6 @@ class TasksRequestBuilder
 
     /**
      * Create a new task object in a specified todoTaskList.
-     * @param TodoTask $body The request body
      * @param TasksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/todotasklist-post-tasks?view=graph-rest-1.0 Find more info here
@@ -129,7 +127,6 @@ class TasksRequestBuilder
 
     /**
      * Create a new task object in a specified todoTaskList.
-     * @param TodoTask $body The request body
      * @param TasksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

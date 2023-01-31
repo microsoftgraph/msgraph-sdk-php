@@ -74,7 +74,6 @@ class SharedRequestBuilder
 
     /**
      * Create new navigation property to shared for users
-     * @param SharedInsight $body The request body
      * @param SharedRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class SharedRequestBuilder
 
     /**
      * Create new navigation property to shared for users
-     * @param SharedInsight $body The request body
      * @param SharedRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -75,7 +75,6 @@ class SharedWithTeamsRequestBuilder
 
     /**
      * Create new navigation property to sharedWithTeams for groups
-     * @param SharedWithChannelTeamInfo $body The request body
      * @param SharedWithTeamsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class SharedWithTeamsRequestBuilder
 
     /**
      * Create new navigation property to sharedWithTeams for groups
-     * @param SharedWithChannelTeamInfo $body The request body
      * @param SharedWithTeamsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

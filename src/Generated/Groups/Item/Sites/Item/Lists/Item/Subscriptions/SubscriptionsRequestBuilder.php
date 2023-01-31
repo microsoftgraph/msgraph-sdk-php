@@ -74,7 +74,6 @@ class SubscriptionsRequestBuilder
 
     /**
      * Create new navigation property to subscriptions for groups
-     * @param Subscription $body The request body
      * @param SubscriptionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class SubscriptionsRequestBuilder
 
     /**
      * Create new navigation property to subscriptions for groups
-     * @param Subscription $body The request body
      * @param SubscriptionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

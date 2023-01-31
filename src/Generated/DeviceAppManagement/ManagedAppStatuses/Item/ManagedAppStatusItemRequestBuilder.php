@@ -38,11 +38,15 @@ class ManagedAppStatusItemRequestBuilder
      * Instantiates a new ManagedAppStatusItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $managedAppStatusId key: id of managedAppStatus
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $managedAppStatusId = null) {
         $this->urlTemplate = '{+baseurl}/deviceAppManagement/managedAppStatuses/{managedAppStatus%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['managedAppStatusId'] = $managedAppStatusId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class ManagedAppStatusItemRequestBuilder
 
     /**
      * Update the navigation property managedAppStatuses in deviceAppManagement
-     * @param ManagedAppStatus $body The request body
      * @param ManagedAppStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class ManagedAppStatusItemRequestBuilder
 
     /**
      * Update the navigation property managedAppStatuses in deviceAppManagement
-     * @param ManagedAppStatus $body The request body
      * @param ManagedAppStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

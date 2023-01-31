@@ -75,7 +75,6 @@ class OverridesRequestBuilder
 
     /**
      * Create an override for a sender identified by an SMTP address. Future messages from that SMTP address will be consistently classifiedas specified in the override. **Note**
-     * @param InferenceClassificationOverride $body The request body
      * @param OverridesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/inferenceclassification-post-overrides?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class OverridesRequestBuilder
 
     /**
      * Create an override for a sender identified by an SMTP address. Future messages from that SMTP address will be consistently classifiedas specified in the override. **Note**
-     * @param InferenceClassificationOverride $body The request body
      * @param OverridesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

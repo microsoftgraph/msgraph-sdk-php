@@ -38,15 +38,19 @@ class AgreementAcceptanceItemRequestBuilder
      * Instantiates a new AgreementAcceptanceItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $agreementAcceptanceId key: id of agreementAcceptance
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $agreementAcceptanceId = null) {
         $this->urlTemplate = '{+baseurl}/agreementAcceptances/{agreementAcceptance%2Did}{?%24select}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['agreementAcceptanceId'] = $agreementAcceptanceId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
-     * Delete entity from agreementAcceptances by key (id)
+     * Delete entity from agreementAcceptances
      * @param AgreementAcceptanceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -64,7 +68,7 @@ class AgreementAcceptanceItemRequestBuilder
     }
 
     /**
-     * Get entity from agreementAcceptances by key (id)
+     * Get entity from agreementAcceptances by key
      * @param AgreementAcceptanceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -82,8 +86,7 @@ class AgreementAcceptanceItemRequestBuilder
     }
 
     /**
-     * Update entity in agreementAcceptances by key (id)
-     * @param AgreementAcceptance $body The request body
+     * Update entity in agreementAcceptances
      * @param AgreementAcceptanceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -101,7 +104,7 @@ class AgreementAcceptanceItemRequestBuilder
     }
 
     /**
-     * Delete entity from agreementAcceptances by key (id)
+     * Delete entity from agreementAcceptances
      * @param AgreementAcceptanceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +125,7 @@ class AgreementAcceptanceItemRequestBuilder
     }
 
     /**
-     * Get entity from agreementAcceptances by key (id)
+     * Get entity from agreementAcceptances by key
      * @param AgreementAcceptanceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -147,8 +150,7 @@ class AgreementAcceptanceItemRequestBuilder
     }
 
     /**
-     * Update entity in agreementAcceptances by key (id)
-     * @param AgreementAcceptance $body The request body
+     * Update entity in agreementAcceptances
      * @param AgreementAcceptanceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

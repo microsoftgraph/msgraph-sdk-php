@@ -47,11 +47,15 @@ class PrintTaskDefinitionItemRequestBuilder
      * Instantiates a new PrintTaskDefinitionItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $printTaskDefinitionId key: id of printTaskDefinition
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $printTaskDefinitionId = null) {
         $this->urlTemplate = '{+baseurl}/print/taskDefinitions/{printTaskDefinition%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['printTaskDefinitionId'] = $printTaskDefinitionId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -92,7 +96,6 @@ class PrintTaskDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property taskDefinitions in print
-     * @param PrintTaskDefinition $body The request body
      * @param PrintTaskDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -168,7 +171,6 @@ class PrintTaskDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property taskDefinitions in print
-     * @param PrintTaskDefinition $body The request body
      * @param PrintTaskDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

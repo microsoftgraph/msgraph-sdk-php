@@ -6,10 +6,10 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\InternalSponsors\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\InternalSponsors\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\InternalSponsors\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\InternalSponsors\MicrosoftGraphGetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\InternalSponsors\MicrosoftGraphGetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\InternalSponsors\MicrosoftGraphValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\InternalSponsors\Ref\RefRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\InternalSponsors\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryObject;
 use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -35,15 +35,22 @@ class InternalSponsorsRequestBuilder
     /**
      * Provides operations to call the getAvailableExtensionProperties method.
     */
-    public function getAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
+    public function microsoftGraphGetAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
         return new GetAvailableExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getByIds method.
     */
-    public function getByIds(): GetByIdsRequestBuilder {
+    public function microsoftGraphGetByIds(): GetByIdsRequestBuilder {
         return new GetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the validateProperties method.
+    */
+    public function microsoftGraphValidateProperties(): ValidatePropertiesRequestBuilder {
+        return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -67,13 +74,6 @@ class InternalSponsorsRequestBuilder
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
-    
-    /**
-     * Provides operations to call the validateProperties method.
-    */
-    public function validateProperties(): ValidatePropertiesRequestBuilder {
-        return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * Instantiates a new InternalSponsorsRequestBuilder and sets the default values.
@@ -107,7 +107,6 @@ class InternalSponsorsRequestBuilder
 
     /**
      * Create new navigation property to internalSponsors for identityGovernance
-     * @param DirectoryObject $body The request body
      * @param InternalSponsorsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,7 +150,6 @@ class InternalSponsorsRequestBuilder
 
     /**
      * Create new navigation property to internalSponsors for identityGovernance
-     * @param DirectoryObject $body The request body
      * @param InternalSponsorsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

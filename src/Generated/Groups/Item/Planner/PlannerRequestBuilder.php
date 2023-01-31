@@ -92,7 +92,6 @@ class PlannerRequestBuilder
 
     /**
      * Update the navigation property planner in groups
-     * @param PlannerGroup $body The request body
      * @param PlannerRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -168,7 +167,6 @@ class PlannerRequestBuilder
 
     /**
      * Update the navigation property planner in groups
-     * @param PlannerGroup $body The request body
      * @param PlannerRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

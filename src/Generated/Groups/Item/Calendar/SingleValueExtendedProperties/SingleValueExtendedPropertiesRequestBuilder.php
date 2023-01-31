@@ -74,7 +74,6 @@ class SingleValueExtendedPropertiesRequestBuilder
 
     /**
      * Create new navigation property to singleValueExtendedProperties for groups
-     * @param SingleValueLegacyExtendedProperty $body The request body
      * @param SingleValueExtendedPropertiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class SingleValueExtendedPropertiesRequestBuilder
 
     /**
      * Create new navigation property to singleValueExtendedProperties for groups
-     * @param SingleValueLegacyExtendedProperty $body The request body
      * @param SingleValueExtendedPropertiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

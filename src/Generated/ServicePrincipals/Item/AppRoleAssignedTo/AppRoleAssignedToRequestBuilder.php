@@ -75,7 +75,6 @@ class AppRoleAssignedToRequestBuilder
 
     /**
      * Assign an app role for a resource service principal, to a user, group, or client service principal. App roles that are assigned to service principals are also known as application permissions. Application permissions can be granted directly with app role assignments, or through a consent experience. To grant an app role assignment, you need three identifiers:
-     * @param AppRoleAssignment $body The request body
      * @param AppRoleAssignedToRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/serviceprincipal-post-approleassignedto?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class AppRoleAssignedToRequestBuilder
 
     /**
      * Assign an app role for a resource service principal, to a user, group, or client service principal. App roles that are assigned to service principals are also known as application permissions. Application permissions can be granted directly with app role assignments, or through a consent experience. To grant an app role assignment, you need three identifiers:
-     * @param AppRoleAssignment $body The request body
      * @param AppRoleAssignedToRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

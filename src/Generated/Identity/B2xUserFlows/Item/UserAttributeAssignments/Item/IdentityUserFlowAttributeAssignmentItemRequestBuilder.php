@@ -46,11 +46,15 @@ class IdentityUserFlowAttributeAssignmentItemRequestBuilder
      * Instantiates a new IdentityUserFlowAttributeAssignmentItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $identityUserFlowAttributeAssignmentId key: id of identityUserFlowAttributeAssignment
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $identityUserFlowAttributeAssignmentId = null) {
         $this->urlTemplate = '{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/userAttributeAssignments/{identityUserFlowAttributeAssignment%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['identityUserFlowAttributeAssignmentId'] = $identityUserFlowAttributeAssignmentId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -91,7 +95,6 @@ class IdentityUserFlowAttributeAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property userAttributeAssignments in identity
-     * @param IdentityUserFlowAttributeAssignment $body The request body
      * @param IdentityUserFlowAttributeAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -156,7 +159,6 @@ class IdentityUserFlowAttributeAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property userAttributeAssignments in identity
-     * @param IdentityUserFlowAttributeAssignment $body The request body
      * @param IdentityUserFlowAttributeAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

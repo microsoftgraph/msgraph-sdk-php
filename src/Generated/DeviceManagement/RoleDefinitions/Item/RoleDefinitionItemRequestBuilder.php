@@ -47,11 +47,15 @@ class RoleDefinitionItemRequestBuilder
      * Instantiates a new RoleDefinitionItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $roleDefinitionId key: id of roleDefinition
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $roleDefinitionId = null) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/roleDefinitions/{roleDefinition%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['roleDefinitionId'] = $roleDefinitionId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -92,7 +96,6 @@ class RoleDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property roleDefinitions in deviceManagement
-     * @param RoleDefinition $body The request body
      * @param RoleDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -168,7 +171,6 @@ class RoleDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property roleDefinitions in deviceManagement
-     * @param RoleDefinition $body The request body
      * @param RoleDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

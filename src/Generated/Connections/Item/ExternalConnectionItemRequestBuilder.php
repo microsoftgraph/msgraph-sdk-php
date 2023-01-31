@@ -73,15 +73,19 @@ class ExternalConnectionItemRequestBuilder
      * Instantiates a new ExternalConnectionItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $externalConnectionId key: id of externalConnection
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $externalConnectionId = null) {
         $this->urlTemplate = '{+baseurl}/connections/{externalConnection%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['externalConnectionId'] = $externalConnectionId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
-     * Delete entity from connections by key (id)
+     * Delete entity from connections
      * @param ExternalConnectionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -99,7 +103,7 @@ class ExternalConnectionItemRequestBuilder
     }
 
     /**
-     * Get entity from connections by key (id)
+     * Get entity from connections by key
      * @param ExternalConnectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -150,8 +154,7 @@ class ExternalConnectionItemRequestBuilder
     }
 
     /**
-     * Update entity in connections by key (id)
-     * @param ExternalConnection $body The request body
+     * Update entity in connections
      * @param ExternalConnectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -169,7 +172,7 @@ class ExternalConnectionItemRequestBuilder
     }
 
     /**
-     * Delete entity from connections by key (id)
+     * Delete entity from connections
      * @param ExternalConnectionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -190,7 +193,7 @@ class ExternalConnectionItemRequestBuilder
     }
 
     /**
-     * Get entity from connections by key (id)
+     * Get entity from connections by key
      * @param ExternalConnectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -215,8 +218,7 @@ class ExternalConnectionItemRequestBuilder
     }
 
     /**
-     * Update entity in connections by key (id)
-     * @param ExternalConnection $body The request body
+     * Update entity in connections
      * @param ExternalConnectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

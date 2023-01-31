@@ -38,11 +38,15 @@ class PrinterShareItemRequestBuilder
      * Instantiates a new PrinterShareItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $printerShareId key: id of printerShare
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $printerShareId = null) {
         $this->urlTemplate = '{+baseurl}/print/printers/{printer%2Did}/shares/{printerShare%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['printerShareId'] = $printerShareId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**

@@ -38,11 +38,15 @@ class ManagedMobileAppItemRequestBuilder
      * Instantiates a new ManagedMobileAppItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $managedMobileAppId key: id of managedMobileApp
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $managedMobileAppId = null) {
         $this->urlTemplate = '{+baseurl}/deviceAppManagement/targetedManagedAppConfigurations/{targetedManagedAppConfiguration%2Did}/apps/{managedMobileApp%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['managedMobileAppId'] = $managedMobileAppId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class ManagedMobileAppItemRequestBuilder
 
     /**
      * Update the navigation property apps in deviceAppManagement
-     * @param ManagedMobileApp $body The request body
      * @param ManagedMobileAppItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class ManagedMobileAppItemRequestBuilder
 
     /**
      * Update the navigation property apps in deviceAppManagement
-     * @param ManagedMobileApp $body The request body
      * @param ManagedMobileAppItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

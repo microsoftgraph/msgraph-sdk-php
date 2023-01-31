@@ -75,7 +75,6 @@ class ThreatAssessmentRequestsRequestBuilder
 
     /**
      * Create a new threat assessment request. A threat assessment request can be one of the following types:
-     * @param ThreatAssessmentRequest $body The request body
      * @param ThreatAssessmentRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/informationprotection-post-threatassessmentrequests?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class ThreatAssessmentRequestsRequestBuilder
 
     /**
      * Create a new threat assessment request. A threat assessment request can be one of the following types:
-     * @param ThreatAssessmentRequest $body The request body
      * @param ThreatAssessmentRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

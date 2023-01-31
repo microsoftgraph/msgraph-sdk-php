@@ -74,7 +74,6 @@ class DeviceConfigurationStatesRequestBuilder
 
     /**
      * Create new navigation property to deviceConfigurationStates for me
-     * @param DeviceConfigurationState $body The request body
      * @param DeviceConfigurationStatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class DeviceConfigurationStatesRequestBuilder
 
     /**
      * Create new navigation property to deviceConfigurationStates for me
-     * @param DeviceConfigurationState $body The request body
      * @param DeviceConfigurationStatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

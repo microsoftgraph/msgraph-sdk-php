@@ -83,7 +83,6 @@ class FieldsRequestBuilder
 
     /**
      * Update the navigation property fields in drives
-     * @param FieldValueSet $body The request body
      * @param FieldsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +147,6 @@ class FieldsRequestBuilder
 
     /**
      * Update the navigation property fields in drives
-     * @param FieldValueSet $body The request body
      * @param FieldsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

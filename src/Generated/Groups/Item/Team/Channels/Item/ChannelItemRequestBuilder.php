@@ -5,15 +5,15 @@ namespace Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\CompleteMigration\CompleteMigrationRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\FilesFolder\FilesFolderRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\Members\Item\ConversationMemberItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\Messages\Item\ChatMessageItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\Messages\MessagesRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\ProvisionEmail\ProvisionEmailRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\RemoveEmail\RemoveEmailRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\MicrosoftGraphCompleteMigration\CompleteMigrationRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\MicrosoftGraphDoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\MicrosoftGraphProvisionEmail\ProvisionEmailRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\MicrosoftGraphRemoveEmail\RemoveEmailRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\SharedWithTeams\Item\SharedWithChannelTeamInfoItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\SharedWithTeams\SharedWithTeamsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\Tabs\Item\TeamsTabItemRequestBuilder;
@@ -32,13 +32,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 */
 class ChannelItemRequestBuilder 
 {
-    /**
-     * Provides operations to call the completeMigration method.
-    */
-    public function completeMigration(): CompleteMigrationRequestBuilder {
-        return new CompleteMigrationRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
     /**
      * Provides operations to manage the filesFolder property of the microsoft.graph.channel entity.
     */
@@ -61,23 +54,37 @@ class ChannelItemRequestBuilder
     }
     
     /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
+     * Provides operations to call the completeMigration method.
     */
-    private array $pathParameters;
+    public function microsoftGraphCompleteMigration(): CompleteMigrationRequestBuilder {
+        return new CompleteMigrationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the doesUserHaveAccess method.
+    */
+    public function microsoftGraphDoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName(): DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder {
+        return new DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * Provides operations to call the provisionEmail method.
     */
-    public function provisionEmail(): ProvisionEmailRequestBuilder {
+    public function microsoftGraphProvisionEmail(): ProvisionEmailRequestBuilder {
         return new ProvisionEmailRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the removeEmail method.
     */
-    public function removeEmail(): RemoveEmailRequestBuilder {
+    public function microsoftGraphRemoveEmail(): RemoveEmailRequestBuilder {
         return new RemoveEmailRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
+    
+    /**
+     * @var array<string, mixed> $pathParameters Path parameters for the request
+    */
+    private array $pathParameters;
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -107,11 +114,15 @@ class ChannelItemRequestBuilder
      * Instantiates a new ChannelItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $channelId key: id of channel
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $channelId = null) {
         $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/team/channels/{channel%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['channelId'] = $channelId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -130,14 +141,6 @@ class ChannelItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to call the doesUserHaveAccess method.
-     * @return DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder
-    */
-    public function doesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName(): DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder {
-        return new DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
 
     /**
@@ -182,7 +185,6 @@ class ChannelItemRequestBuilder
 
     /**
      * Update the navigation property channels in groups
-     * @param Channel $body The request body
      * @param ChannelItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -269,7 +271,6 @@ class ChannelItemRequestBuilder
 
     /**
      * Update the navigation property channels in groups
-     * @param Channel $body The request body
      * @param ChannelItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

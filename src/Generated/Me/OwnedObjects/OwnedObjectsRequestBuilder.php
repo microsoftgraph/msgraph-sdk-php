@@ -5,10 +5,10 @@ namespace Microsoft\Graph\Generated\Me\OwnedObjects;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\OwnedObjects\Application\ApplicationRequestBuilder;
 use Microsoft\Graph\Generated\Me\OwnedObjects\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Me\OwnedObjects\Group\GroupRequestBuilder;
-use Microsoft\Graph\Generated\Me\OwnedObjects\ServicePrincipal\ServicePrincipalRequestBuilder;
+use Microsoft\Graph\Generated\Me\OwnedObjects\MicrosoftGraphApplication\ApplicationRequestBuilder;
+use Microsoft\Graph\Generated\Me\OwnedObjects\MicrosoftGraphGroup\GroupRequestBuilder;
+use Microsoft\Graph\Generated\Me\OwnedObjects\MicrosoftGraphServicePrincipal\ServicePrincipalRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -24,13 +24,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class OwnedObjectsRequestBuilder 
 {
     /**
-     * Casts the previous resource to application.
-    */
-    public function application(): ApplicationRequestBuilder {
-        return new ApplicationRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
@@ -38,10 +31,24 @@ class OwnedObjectsRequestBuilder
     }
     
     /**
+     * Casts the previous resource to application.
+    */
+    public function microsoftGraphApplication(): ApplicationRequestBuilder {
+        return new ApplicationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Casts the previous resource to group.
     */
-    public function group(): GroupRequestBuilder {
+    public function microsoftGraphGroup(): GroupRequestBuilder {
         return new GroupRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to servicePrincipal.
+    */
+    public function microsoftGraphServicePrincipal(): ServicePrincipalRequestBuilder {
+        return new ServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -53,13 +60,6 @@ class OwnedObjectsRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
-    
-    /**
-     * Casts the previous resource to servicePrincipal.
-    */
-    public function servicePrincipal(): ServicePrincipalRequestBuilder {
-        return new ServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder

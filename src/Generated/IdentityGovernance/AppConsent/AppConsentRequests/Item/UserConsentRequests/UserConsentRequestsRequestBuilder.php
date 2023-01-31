@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequests\Item\UserConsentRequests\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequests\Item\UserConsentRequests\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequests\Item\UserConsentRequests\MicrosoftGraphFilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UserConsentRequest;
 use Microsoft\Graph\Generated\Models\UserConsentRequestCollectionResponse;
@@ -56,15 +56,6 @@ class UserConsentRequestsRequestBuilder
     }
 
     /**
-     * Provides operations to call the filterByCurrentUser method.
-     * @param string $on Usage: on='{on}'
-     * @return FilterByCurrentUserWithOnRequestBuilder
-    */
-    public function filterByCurrentUserWithOn(string $on): FilterByCurrentUserWithOnRequestBuilder {
-        return new FilterByCurrentUserWithOnRequestBuilder($this->pathParameters, $this->requestAdapter, $on);
-    }
-
-    /**
      * Retrieve a collection of userConsentRequest objects and their properties.
      * @param UserConsentRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -84,8 +75,16 @@ class UserConsentRequestsRequestBuilder
     }
 
     /**
+     * Provides operations to call the filterByCurrentUser method.
+     * @param string $on Usage: on='{on}'
+     * @return FilterByCurrentUserWithOnRequestBuilder
+    */
+    public function microsoftGraphFilterByCurrentUserWithOn(string $on): FilterByCurrentUserWithOnRequestBuilder {
+        return new FilterByCurrentUserWithOnRequestBuilder($this->pathParameters, $this->requestAdapter, $on);
+    }
+
+    /**
      * Create new navigation property to userConsentRequests for identityGovernance
-     * @param UserConsentRequest $body The request body
      * @param UserConsentRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -129,7 +128,6 @@ class UserConsentRequestsRequestBuilder
 
     /**
      * Create new navigation property to userConsentRequests for identityGovernance
-     * @param UserConsentRequest $body The request body
      * @param UserConsentRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

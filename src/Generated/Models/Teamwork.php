@@ -36,7 +36,7 @@ class Teamwork extends Entity implements Parsable
     }
 
     /**
-     * Gets the workforceIntegrations property value. The workforceIntegrations property
+     * Gets the workforceIntegrations property value. 
      * @return array<WorkforceIntegration>|null
     */
     public function getWorkforceIntegrations(): ?array {
@@ -53,7 +53,7 @@ class Teamwork extends Entity implements Parsable
     }
 
     /**
-     * Sets the workforceIntegrations property value. The workforceIntegrations property
+     * Sets the workforceIntegrations property value. 
      * @param array<WorkforceIntegration>|null $value Value to set for the workforceIntegrations property.
     */
     public function setWorkforceIntegrations(?array $value): void {

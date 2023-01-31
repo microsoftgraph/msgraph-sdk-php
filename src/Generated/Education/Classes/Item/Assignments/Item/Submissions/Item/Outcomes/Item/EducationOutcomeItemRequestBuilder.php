@@ -38,11 +38,15 @@ class EducationOutcomeItemRequestBuilder
      * Instantiates a new EducationOutcomeItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $educationOutcomeId key: id of educationOutcome
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $educationOutcomeId = null) {
         $this->urlTemplate = '{+baseurl}/education/classes/{educationClass%2Did}/assignments/{educationAssignment%2Did}/submissions/{educationSubmission%2Did}/outcomes/{educationOutcome%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['educationOutcomeId'] = $educationOutcomeId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class EducationOutcomeItemRequestBuilder
 
     /**
      * Update the navigation property outcomes in education
-     * @param EducationOutcome $body The request body
      * @param EducationOutcomeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class EducationOutcomeItemRequestBuilder
 
     /**
      * Update the navigation property outcomes in education
-     * @param EducationOutcome $body The request body
      * @param EducationOutcomeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

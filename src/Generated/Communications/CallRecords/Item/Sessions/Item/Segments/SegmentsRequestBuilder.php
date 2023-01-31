@@ -74,7 +74,6 @@ class SegmentsRequestBuilder
 
     /**
      * Create new navigation property to segments for communications
-     * @param Segment $body The request body
      * @param SegmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class SegmentsRequestBuilder
 
     /**
      * Create new navigation property to segments for communications
-     * @param Segment $body The request body
      * @param SegmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

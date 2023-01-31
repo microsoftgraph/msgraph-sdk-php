@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\AccessPackage\AccessPackageRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\Assignment\AssignmentRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\Cancel\CancelRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\Reprocess\ReprocessRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\MicrosoftGraphCancel\CancelRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\MicrosoftGraphReprocess\ReprocessRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\Requestor\RequestorRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessPackageAssignmentRequest;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -41,21 +41,21 @@ class AccessPackageAssignmentRequestItemRequestBuilder
     /**
      * Provides operations to call the cancel method.
     */
-    public function cancel(): CancelRequestBuilder {
+    public function microsoftGraphCancel(): CancelRequestBuilder {
         return new CancelRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the reprocess method.
+    */
+    public function microsoftGraphReprocess(): ReprocessRequestBuilder {
+        return new ReprocessRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
-    
-    /**
-     * Provides operations to call the reprocess method.
-    */
-    public function reprocess(): ReprocessRequestBuilder {
-        return new ReprocessRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -78,11 +78,15 @@ class AccessPackageAssignmentRequestItemRequestBuilder
      * Instantiates a new AccessPackageAssignmentRequestItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $accessPackageAssignmentRequestId key: id of accessPackageAssignmentRequest
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $accessPackageAssignmentRequestId = null) {
         $this->urlTemplate = '{+baseurl}/identityGovernance/entitlementManagement/assignmentRequests/{accessPackageAssignmentRequest%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['accessPackageAssignmentRequestId'] = $accessPackageAssignmentRequestId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -123,7 +127,6 @@ class AccessPackageAssignmentRequestItemRequestBuilder
 
     /**
      * Update the navigation property assignmentRequests in identityGovernance
-     * @param AccessPackageAssignmentRequest $body The request body
      * @param AccessPackageAssignmentRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -188,7 +191,6 @@ class AccessPackageAssignmentRequestItemRequestBuilder
 
     /**
      * Update the navigation property assignmentRequests in identityGovernance
-     * @param AccessPackageAssignmentRequest $body The request body
      * @param AccessPackageAssignmentRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

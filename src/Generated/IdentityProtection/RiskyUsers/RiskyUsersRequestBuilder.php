@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\IdentityProtection\RiskyUsers;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\ConfirmCompromised\ConfirmCompromisedRequestBuilder;
 use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Dismiss\DismissRequestBuilder;
+use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\MicrosoftGraphConfirmCompromised\ConfirmCompromisedRequestBuilder;
+use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\MicrosoftGraphDismiss\DismissRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\RiskyUser;
 use Microsoft\Graph\Generated\Models\RiskyUserCollectionResponse;
@@ -24,13 +24,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class RiskyUsersRequestBuilder 
 {
     /**
-     * Provides operations to call the confirmCompromised method.
-    */
-    public function confirmCompromised(): ConfirmCompromisedRequestBuilder {
-        return new ConfirmCompromisedRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
@@ -38,9 +31,16 @@ class RiskyUsersRequestBuilder
     }
     
     /**
+     * Provides operations to call the confirmCompromised method.
+    */
+    public function microsoftGraphConfirmCompromised(): ConfirmCompromisedRequestBuilder {
+        return new ConfirmCompromisedRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to call the dismiss method.
     */
-    public function dismiss(): DismissRequestBuilder {
+    public function microsoftGraphDismiss(): DismissRequestBuilder {
         return new DismissRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
@@ -91,7 +91,6 @@ class RiskyUsersRequestBuilder
 
     /**
      * Create new navigation property to riskyUsers for identityProtection
-     * @param RiskyUser $body The request body
      * @param RiskyUsersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -135,7 +134,6 @@ class RiskyUsersRequestBuilder
 
     /**
      * Create new navigation property to riskyUsers for identityProtection
-     * @param RiskyUser $body The request body
      * @param RiskyUsersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

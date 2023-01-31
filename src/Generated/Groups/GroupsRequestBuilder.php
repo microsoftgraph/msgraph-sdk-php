@@ -6,10 +6,10 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\Groups\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Groups\GetByIds\GetByIdsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\ValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Groups\MicrosoftGraphDelta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Groups\MicrosoftGraphGetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Groups\MicrosoftGraphGetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\MicrosoftGraphValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\Group;
 use Microsoft\Graph\Generated\Models\GroupCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -33,17 +33,31 @@ class GroupsRequestBuilder
     }
     
     /**
+     * Provides operations to call the delta method.
+    */
+    public function microsoftGraphDelta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to call the getAvailableExtensionProperties method.
     */
-    public function getAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
+    public function microsoftGraphGetAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
         return new GetAvailableExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getByIds method.
     */
-    public function getByIds(): GetByIdsRequestBuilder {
+    public function microsoftGraphGetByIds(): GetByIdsRequestBuilder {
         return new GetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the validateProperties method.
+    */
+    public function microsoftGraphValidateProperties(): ValidatePropertiesRequestBuilder {
+        return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -62,13 +76,6 @@ class GroupsRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Provides operations to call the validateProperties method.
-    */
-    public function validateProperties(): ValidatePropertiesRequestBuilder {
-        return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Instantiates a new GroupsRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -77,14 +84,6 @@ class GroupsRequestBuilder
         $this->urlTemplate = '{+baseurl}/groups{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
-    }
-
-    /**
-     * Provides operations to call the delta method.
-     * @return DeltaRequestBuilder
-    */
-    public function delta(): DeltaRequestBuilder {
-        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
 
     /**
@@ -108,7 +107,6 @@ class GroupsRequestBuilder
 
     /**
      * Create a new group as specified in the request body. You can create the following types of groups: This operation returns by default only a subset of the properties for each group. These default properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation and specify the properties in a `$select` OData query option.
-     * @param Group $body The request body
      * @param GroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/group-post-groups?view=graph-rest-1.0 Find more info here
@@ -153,7 +151,6 @@ class GroupsRequestBuilder
 
     /**
      * Create a new group as specified in the request body. You can create the following types of groups: This operation returns by default only a subset of the properties for each group. These default properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation and specify the properties in a `$select` OData query option.
-     * @param Group $body The request body
      * @param GroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

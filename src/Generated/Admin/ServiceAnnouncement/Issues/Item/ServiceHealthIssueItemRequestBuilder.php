@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Issues\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Issues\Item\IncidentReport\IncidentReportRequestBuilder;
+use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Issues\Item\MicrosoftGraphIncidentReport\IncidentReportRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ServiceHealthIssue;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -20,6 +20,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 */
 class ServiceHealthIssueItemRequestBuilder 
 {
+    /**
+     * Provides operations to call the incidentReport method.
+    */
+    public function microsoftGraphIncidentReport(): IncidentReportRequestBuilder {
+        return new IncidentReportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
@@ -39,11 +46,15 @@ class ServiceHealthIssueItemRequestBuilder
      * Instantiates a new ServiceHealthIssueItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $serviceHealthIssueId key: id of serviceHealthIssue
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $serviceHealthIssueId = null) {
         $this->urlTemplate = '{+baseurl}/admin/serviceAnnouncement/issues/{serviceHealthIssue%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['serviceHealthIssueId'] = $serviceHealthIssueId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,16 +94,7 @@ class ServiceHealthIssueItemRequestBuilder
     }
 
     /**
-     * Provides operations to call the incidentReport method.
-     * @return IncidentReportRequestBuilder
-    */
-    public function incidentReport(): IncidentReportRequestBuilder {
-        return new IncidentReportRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
      * Update the navigation property issues in admin
-     * @param ServiceHealthIssue $body The request body
      * @param ServiceHealthIssueItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -157,7 +159,6 @@ class ServiceHealthIssueItemRequestBuilder
 
     /**
      * Update the navigation property issues in admin
-     * @param ServiceHealthIssue $body The request body
      * @param ServiceHealthIssueItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

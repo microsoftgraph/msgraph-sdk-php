@@ -66,7 +66,7 @@ class AuthorizationPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Gets the defaultUserRolePermissions property value. The defaultUserRolePermissions property
+     * Gets the defaultUserRolePermissions property value. 
      * @return DefaultUserRolePermissions|null
     */
     public function getDefaultUserRolePermissions(): ?DefaultUserRolePermissions {
@@ -154,7 +154,7 @@ class AuthorizationPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Sets the defaultUserRolePermissions property value. The defaultUserRolePermissions property
+     * Sets the defaultUserRolePermissions property value. 
      * @param DefaultUserRolePermissions|null $value Value to set for the defaultUserRolePermissions property.
     */
     public function setDefaultUserRolePermissions(?DefaultUserRolePermissions $value): void {

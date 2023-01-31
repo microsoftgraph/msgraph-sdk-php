@@ -46,11 +46,15 @@ class TeamsAppDefinitionItemRequestBuilder
      * Instantiates a new TeamsAppDefinitionItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $teamsAppDefinitionId key: id of teamsAppDefinition
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $teamsAppDefinitionId = null) {
         $this->urlTemplate = '{+baseurl}/appCatalogs/teamsApps/{teamsApp%2Did}/appDefinitions/{teamsAppDefinition%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['teamsAppDefinitionId'] = $teamsAppDefinitionId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -91,7 +95,6 @@ class TeamsAppDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property appDefinitions in appCatalogs
-     * @param TeamsAppDefinition $body The request body
      * @param TeamsAppDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -156,7 +159,6 @@ class TeamsAppDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property appDefinitions in appCatalogs
-     * @param TeamsAppDefinition $body The request body
      * @param TeamsAppDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
