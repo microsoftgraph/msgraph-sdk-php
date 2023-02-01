@@ -75,7 +75,6 @@ class TasksRequestBuilder
 
     /**
      * Create a new **plannerTask**.
-     * @param PlannerTask $body The request body
      * @param TasksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/planner-post-tasks?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class TasksRequestBuilder
 
     /**
      * Create a new **plannerTask**.
-     * @param PlannerTask $body The request body
      * @param TasksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

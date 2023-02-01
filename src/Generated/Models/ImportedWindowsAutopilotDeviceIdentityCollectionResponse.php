@@ -36,7 +36,7 @@ class ImportedWindowsAutopilotDeviceIdentityCollectionResponse extends BaseColle
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return array<ImportedWindowsAutopilotDeviceIdentity>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class ImportedWindowsAutopilotDeviceIdentityCollectionResponse extends BaseColle
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param array<ImportedWindowsAutopilotDeviceIdentity>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

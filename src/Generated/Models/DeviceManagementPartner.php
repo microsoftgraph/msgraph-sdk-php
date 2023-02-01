@@ -44,6 +44,7 @@ class DeviceManagementPartner extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'groupsRequiringPartnerEnrollment' => fn(ParseNode $n) => $o->setGroupsRequiringPartnerEnrollment($n->getCollectionOfObjectValues([DeviceManagementPartnerAssignment::class, 'createFromDiscriminatorValue'])),
             'isConfigured' => fn(ParseNode $n) => $o->setIsConfigured($n->getBooleanValue()),
             'lastHeartbeatDateTime' => fn(ParseNode $n) => $o->setLastHeartbeatDateTime($n->getDateTimeValue()),
             'partnerAppType' => fn(ParseNode $n) => $o->setPartnerAppType($n->getEnumValue(DeviceManagementPartnerAppType::class)),
@@ -52,6 +53,14 @@ class DeviceManagementPartner extends Entity implements Parsable
             'whenPartnerDevicesWillBeMarkedAsNonCompliantDateTime' => fn(ParseNode $n) => $o->setWhenPartnerDevicesWillBeMarkedAsNonCompliantDateTime($n->getDateTimeValue()),
             'whenPartnerDevicesWillBeRemovedDateTime' => fn(ParseNode $n) => $o->setWhenPartnerDevicesWillBeRemovedDateTime($n->getDateTimeValue()),
         ]);
+    }
+
+    /**
+     * Gets the groupsRequiringPartnerEnrollment property value. User groups that specifies whether enrollment is through partner.
+     * @return array<DeviceManagementPartnerAssignment>|null
+    */
+    public function getGroupsRequiringPartnerEnrollment(): ?array {
+        return $this->getBackingStore()->get('groupsRequiringPartnerEnrollment');
     }
 
     /**
@@ -117,6 +126,7 @@ class DeviceManagementPartner extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeCollectionOfObjectValues('groupsRequiringPartnerEnrollment', $this->getGroupsRequiringPartnerEnrollment());
         $writer->writeBooleanValue('isConfigured', $this->getIsConfigured());
         $writer->writeDateTimeValue('lastHeartbeatDateTime', $this->getLastHeartbeatDateTime());
         $writer->writeEnumValue('partnerAppType', $this->getPartnerAppType());
@@ -132,6 +142,14 @@ class DeviceManagementPartner extends Entity implements Parsable
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
+    }
+
+    /**
+     * Sets the groupsRequiringPartnerEnrollment property value. User groups that specifies whether enrollment is through partner.
+     * @param array<DeviceManagementPartnerAssignment>|null $value Value to set for the groupsRequiringPartnerEnrollment property.
+    */
+    public function setGroupsRequiringPartnerEnrollment(?array $value): void {
+        $this->getBackingStore()->set('groupsRequiringPartnerEnrollment', $value);
     }
 
     /**

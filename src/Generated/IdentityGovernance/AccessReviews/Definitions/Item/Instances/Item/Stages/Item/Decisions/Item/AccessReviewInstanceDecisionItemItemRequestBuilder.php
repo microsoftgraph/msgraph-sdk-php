@@ -38,11 +38,15 @@ class AccessReviewInstanceDecisionItemItemRequestBuilder
      * Instantiates a new AccessReviewInstanceDecisionItemItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $accessReviewInstanceDecisionItemId key: id of accessReviewInstanceDecisionItem
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $accessReviewInstanceDecisionItemId = null) {
         $this->urlTemplate = '{+baseurl}/identityGovernance/accessReviews/definitions/{accessReviewScheduleDefinition%2Did}/instances/{accessReviewInstance%2Did}/stages/{accessReviewStage%2Did}/decisions/{accessReviewInstanceDecisionItem%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['accessReviewInstanceDecisionItemId'] = $accessReviewInstanceDecisionItemId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class AccessReviewInstanceDecisionItemItemRequestBuilder
 
     /**
      * Update the navigation property decisions in identityGovernance
-     * @param AccessReviewInstanceDecisionItem $body The request body
      * @param AccessReviewInstanceDecisionItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class AccessReviewInstanceDecisionItemItemRequestBuilder
 
     /**
      * Update the navigation property decisions in identityGovernance
-     * @param AccessReviewInstanceDecisionItem $body The request body
      * @param AccessReviewInstanceDecisionItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

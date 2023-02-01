@@ -75,7 +75,7 @@ class InvitationParticipantInfo implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the identity property value. The identity property
+     * Gets the identity property value. 
      * @return IdentitySet|null
     */
     public function getIdentity(): ?IdentitySet {
@@ -83,7 +83,7 @@ class InvitationParticipantInfo implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -153,7 +153,7 @@ class InvitationParticipantInfo implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the identity property value. The identity property
+     * Sets the identity property value. 
      * @param IdentitySet|null $value Value to set for the identity property.
     */
     public function setIdentity(?IdentitySet $value): void {
@@ -161,7 +161,7 @@ class InvitationParticipantInfo implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

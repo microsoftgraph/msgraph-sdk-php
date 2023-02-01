@@ -75,7 +75,6 @@ class EndpointsRequestBuilder
 
     /**
      * Create new navigation property to endpoints for print
-     * @param PrintServiceEndpoint $body The request body
      * @param EndpointsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class EndpointsRequestBuilder
 
     /**
      * Create new navigation property to endpoints for print
-     * @param PrintServiceEndpoint $body The request body
      * @param EndpointsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

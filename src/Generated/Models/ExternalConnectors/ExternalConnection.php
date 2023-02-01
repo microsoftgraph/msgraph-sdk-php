@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ExternalConnection extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new ExternalConnection and sets the default values.
+     * Instantiates a new externalConnection and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -60,7 +60,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Gets the groups property value. The groups property
+     * Gets the groups property value. 
      * @return array<ExternalGroup>|null
     */
     public function getGroups(): ?array {
@@ -68,7 +68,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Gets the items property value. The items property
+     * Gets the items property value. 
      * @return array<ExternalItem>|null
     */
     public function getItems(): ?array {
@@ -84,7 +84,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Gets the operations property value. The operations property
+     * Gets the operations property value. 
      * @return array<ConnectionOperation>|null
     */
     public function getOperations(): ?array {
@@ -92,7 +92,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Gets the schema property value. The schema property
+     * Gets the schema property value. 
      * @return Schema|null
     */
     public function getSchema(): ?Schema {
@@ -139,7 +139,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Sets the groups property value. The groups property
+     * Sets the groups property value. 
      * @param array<ExternalGroup>|null $value Value to set for the groups property.
     */
     public function setGroups(?array $value): void {
@@ -147,7 +147,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Sets the items property value. The items property
+     * Sets the items property value. 
      * @param array<ExternalItem>|null $value Value to set for the items property.
     */
     public function setItems(?array $value): void {
@@ -163,7 +163,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Sets the operations property value. The operations property
+     * Sets the operations property value. 
      * @param array<ConnectionOperation>|null $value Value to set for the operations property.
     */
     public function setOperations(?array $value): void {
@@ -171,7 +171,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Sets the schema property value. The schema property
+     * Sets the schema property value. 
      * @param Schema|null $value Value to set for the schema property.
     */
     public function setSchema(?Schema $value): void {

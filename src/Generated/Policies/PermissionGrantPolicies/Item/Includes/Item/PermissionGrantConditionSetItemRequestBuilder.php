@@ -38,11 +38,15 @@ class PermissionGrantConditionSetItemRequestBuilder
      * Instantiates a new PermissionGrantConditionSetItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $permissionGrantConditionSetId key: id of permissionGrantConditionSet
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $permissionGrantConditionSetId = null) {
         $this->urlTemplate = '{+baseurl}/policies/permissionGrantPolicies/{permissionGrantPolicy%2Did}/includes/{permissionGrantConditionSet%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['permissionGrantConditionSetId'] = $permissionGrantConditionSetId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class PermissionGrantConditionSetItemRequestBuilder
 
     /**
      * Update the navigation property includes in policies
-     * @param PermissionGrantConditionSet $body The request body
      * @param PermissionGrantConditionSetItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class PermissionGrantConditionSetItemRequestBuilder
 
     /**
      * Update the navigation property includes in policies
-     * @param PermissionGrantConditionSet $body The request body
      * @param PermissionGrantConditionSetItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

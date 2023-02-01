@@ -46,11 +46,15 @@ class ServiceAnnouncementAttachmentItemRequestBuilder
      * Instantiates a new ServiceAnnouncementAttachmentItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $serviceAnnouncementAttachmentId key: id of serviceAnnouncementAttachment
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $serviceAnnouncementAttachmentId = null) {
         $this->urlTemplate = '{+baseurl}/admin/serviceAnnouncement/messages/{serviceUpdateMessage%2Did}/attachments/{serviceAnnouncementAttachment%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['serviceAnnouncementAttachmentId'] = $serviceAnnouncementAttachmentId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -91,7 +95,6 @@ class ServiceAnnouncementAttachmentItemRequestBuilder
 
     /**
      * Update the navigation property attachments in admin
-     * @param ServiceAnnouncementAttachment $body The request body
      * @param ServiceAnnouncementAttachmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -156,7 +159,6 @@ class ServiceAnnouncementAttachmentItemRequestBuilder
 
     /**
      * Update the navigation property attachments in admin
-     * @param ServiceAnnouncementAttachment $body The request body
      * @param ServiceAnnouncementAttachmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

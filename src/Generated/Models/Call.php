@@ -25,7 +25,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the audioRoutingGroups property value. The audioRoutingGroups property
+     * Gets the audioRoutingGroups property value. 
      * @return array<AudioRoutingGroup>|null
     */
     public function getAudioRoutingGroups(): ?array {
@@ -73,7 +73,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the contentSharingSessions property value. The contentSharingSessions property
+     * Gets the contentSharingSessions property value. 
      * @return array<ContentSharingSession>|null
     */
     public function getContentSharingSessions(): ?array {
@@ -155,7 +155,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the myParticipantId property value. The myParticipantId property
+     * Gets the myParticipantId property value. 
      * @return string|null
     */
     public function getMyParticipantId(): ?string {
@@ -163,7 +163,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the operations property value. The operations property
+     * Gets the operations property value. 
      * @return array<CommsOperation>|null
     */
     public function getOperations(): ?array {
@@ -171,7 +171,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the participants property value. The participants property
+     * Gets the participants property value. 
      * @return array<Participant>|null
     */
     public function getParticipants(): ?array {
@@ -227,7 +227,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. 
      * @return string|null
     */
     public function getTenantId(): ?string {
@@ -235,7 +235,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Gets the toneInfo property value. The toneInfo property
+     * Gets the toneInfo property value. 
      * @return ToneInfo|null
     */
     public function getToneInfo(): ?ToneInfo {
@@ -283,7 +283,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the audioRoutingGroups property value. The audioRoutingGroups property
+     * Sets the audioRoutingGroups property value. 
      * @param array<AudioRoutingGroup>|null $value Value to set for the audioRoutingGroups property.
     */
     public function setAudioRoutingGroups(?array $value): void {
@@ -331,7 +331,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the contentSharingSessions property value. The contentSharingSessions property
+     * Sets the contentSharingSessions property value. 
      * @param array<ContentSharingSession>|null $value Value to set for the contentSharingSessions property.
     */
     public function setContentSharingSessions(?array $value): void {
@@ -379,7 +379,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the myParticipantId property value. The myParticipantId property
+     * Sets the myParticipantId property value. 
      * @param string|null $value Value to set for the myParticipantId property.
     */
     public function setMyParticipantId(?string $value): void {
@@ -387,7 +387,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the operations property value. The operations property
+     * Sets the operations property value. 
      * @param array<CommsOperation>|null $value Value to set for the operations property.
     */
     public function setOperations(?array $value): void {
@@ -395,7 +395,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the participants property value. The participants property
+     * Sets the participants property value. 
      * @param array<Participant>|null $value Value to set for the participants property.
     */
     public function setParticipants(?array $value): void {
@@ -451,7 +451,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. 
      * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {
@@ -459,7 +459,7 @@ class Call extends Entity implements Parsable
     }
 
     /**
-     * Sets the toneInfo property value. The toneInfo property
+     * Sets the toneInfo property value. 
      * @param ToneInfo|null $value Value to set for the toneInfo property.
     */
     public function setToneInfo(?ToneInfo $value): void {

@@ -74,7 +74,6 @@ class PagesRequestBuilder
 
     /**
      * Create new navigation property to pages for sites
-     * @param OnenotePage $body The request body
      * @param PagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class PagesRequestBuilder
 
     /**
      * Create new navigation property to pages for sites
-     * @param OnenotePage $body The request body
      * @param PagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

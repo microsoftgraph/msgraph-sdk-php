@@ -101,7 +101,6 @@ class IdentityProtectionRequestBuilder
 
     /**
      * Update identityProtection
-     * @param IdentityProtectionRoot $body The request body
      * @param IdentityProtectionRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -189,7 +188,6 @@ class IdentityProtectionRequestBuilder
 
     /**
      * Update identityProtection
-     * @param IdentityProtectionRoot $body The request body
      * @param IdentityProtectionRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

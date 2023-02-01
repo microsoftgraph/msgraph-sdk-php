@@ -67,7 +67,6 @@ class SubscribedSkusRequestBuilder
 
     /**
      * Add new entity to subscribedSkus
-     * @param SubscribedSku $body The request body
      * @param SubscribedSkusRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -111,7 +110,6 @@ class SubscribedSkusRequestBuilder
 
     /**
      * Add new entity to subscribedSkus
-     * @param SubscribedSku $body The request body
      * @param SubscribedSkusRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

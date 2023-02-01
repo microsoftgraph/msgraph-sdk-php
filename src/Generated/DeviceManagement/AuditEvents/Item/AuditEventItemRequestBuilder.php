@@ -38,11 +38,15 @@ class AuditEventItemRequestBuilder
      * Instantiates a new AuditEventItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $auditEventId key: id of auditEvent
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $auditEventId = null) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/auditEvents/{auditEvent%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['auditEventId'] = $auditEventId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class AuditEventItemRequestBuilder
 
     /**
      * Update the navigation property auditEvents in deviceManagement
-     * @param AuditEvent $body The request body
      * @param AuditEventItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class AuditEventItemRequestBuilder
 
     /**
      * Update the navigation property auditEvents in deviceManagement
-     * @param AuditEvent $body The request body
      * @param AuditEventItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

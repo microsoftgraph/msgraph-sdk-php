@@ -38,11 +38,15 @@ class RiskDetectionItemRequestBuilder
      * Instantiates a new RiskDetectionItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $riskDetectionId key: id of riskDetection
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $riskDetectionId = null) {
         $this->urlTemplate = '{+baseurl}/identityProtection/riskDetections/{riskDetection%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['riskDetectionId'] = $riskDetectionId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class RiskDetectionItemRequestBuilder
 
     /**
      * Update the navigation property riskDetections in identityProtection
-     * @param RiskDetection $body The request body
      * @param RiskDetectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class RiskDetectionItemRequestBuilder
 
     /**
      * Update the navigation property riskDetections in identityProtection
-     * @param RiskDetection $body The request body
      * @param RiskDetectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

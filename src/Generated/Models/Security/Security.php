@@ -30,7 +30,7 @@ class Security extends Entity implements Parsable
     }
 
     /**
-     * Gets the alerts property value. The alerts property
+     * Gets the alerts property value. 
      * @return array<Alert>|null
     */
     public function getAlerts(): ?array {
@@ -46,7 +46,7 @@ class Security extends Entity implements Parsable
     }
 
     /**
-     * Gets the attackSimulation property value. The attackSimulation property
+     * Gets the attackSimulation property value. 
      * @return AttackSimulationRoot|null
     */
     public function getAttackSimulation(): ?AttackSimulationRoot {
@@ -54,7 +54,7 @@ class Security extends Entity implements Parsable
     }
 
     /**
-     * Gets the cases property value. The cases property
+     * Gets the cases property value. 
      * @return CasesRoot|null
     */
     public function getCases(): ?CasesRoot {
@@ -87,7 +87,7 @@ class Security extends Entity implements Parsable
     }
 
     /**
-     * Gets the secureScoreControlProfiles property value. The secureScoreControlProfiles property
+     * Gets the secureScoreControlProfiles property value. 
      * @return array<SecureScoreControlProfile>|null
     */
     public function getSecureScoreControlProfiles(): ?array {
@@ -95,7 +95,7 @@ class Security extends Entity implements Parsable
     }
 
     /**
-     * Gets the secureScores property value. The secureScores property
+     * Gets the secureScores property value. 
      * @return array<SecureScore>|null
     */
     public function getSecureScores(): ?array {
@@ -118,7 +118,7 @@ class Security extends Entity implements Parsable
     }
 
     /**
-     * Sets the alerts property value. The alerts property
+     * Sets the alerts property value. 
      * @param array<Alert>|null $value Value to set for the alerts property.
     */
     public function setAlerts(?array $value): void {
@@ -134,7 +134,7 @@ class Security extends Entity implements Parsable
     }
 
     /**
-     * Sets the attackSimulation property value. The attackSimulation property
+     * Sets the attackSimulation property value. 
      * @param AttackSimulationRoot|null $value Value to set for the attackSimulation property.
     */
     public function setAttackSimulation(?AttackSimulationRoot $value): void {
@@ -142,7 +142,7 @@ class Security extends Entity implements Parsable
     }
 
     /**
-     * Sets the cases property value. The cases property
+     * Sets the cases property value. 
      * @param CasesRoot|null $value Value to set for the cases property.
     */
     public function setCases(?CasesRoot $value): void {
@@ -158,7 +158,7 @@ class Security extends Entity implements Parsable
     }
 
     /**
-     * Sets the secureScoreControlProfiles property value. The secureScoreControlProfiles property
+     * Sets the secureScoreControlProfiles property value. 
      * @param array<SecureScoreControlProfile>|null $value Value to set for the secureScoreControlProfiles property.
     */
     public function setSecureScoreControlProfiles(?array $value): void {
@@ -166,7 +166,7 @@ class Security extends Entity implements Parsable
     }
 
     /**
-     * Sets the secureScores property value. The secureScores property
+     * Sets the secureScores property value. 
      * @param array<SecureScore>|null $value Value to set for the secureScores property.
     */
     public function setSecureScores(?array $value): void {

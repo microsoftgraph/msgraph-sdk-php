@@ -61,7 +61,7 @@ class ScheduleEntity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the endDateTime property value. The endDateTime property
+     * Gets the endDateTime property value. 
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
@@ -83,7 +83,7 @@ class ScheduleEntity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -91,7 +91,7 @@ class ScheduleEntity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the startDateTime property value. The startDateTime property
+     * Gets the startDateTime property value. 
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
@@ -99,7 +99,7 @@ class ScheduleEntity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the theme property value. The theme property
+     * Gets the theme property value. 
      * @return ScheduleEntityTheme|null
     */
     public function getTheme(): ?ScheduleEntityTheme {
@@ -135,7 +135,7 @@ class ScheduleEntity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the endDateTime property value. The endDateTime property
+     * Sets the endDateTime property value. 
      * @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value): void {
@@ -143,7 +143,7 @@ class ScheduleEntity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -151,7 +151,7 @@ class ScheduleEntity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the startDateTime property value. The startDateTime property
+     * Sets the startDateTime property value. 
      * @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value): void {
@@ -159,7 +159,7 @@ class ScheduleEntity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the theme property value. The theme property
+     * Sets the theme property value. 
      * @param ScheduleEntityTheme|null $value Value to set for the theme property.
     */
     public function setTheme(?ScheduleEntityTheme $value): void {

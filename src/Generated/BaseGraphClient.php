@@ -46,7 +46,6 @@ use Microsoft\Graph\Generated\DomainDnsRecords\DomainDnsRecordsRequestBuilder;
 use Microsoft\Graph\Generated\DomainDnsRecords\Item\DomainDnsRecordItemRequestBuilder;
 use Microsoft\Graph\Generated\Domains\DomainsRequestBuilder;
 use Microsoft\Graph\Generated\Domains\Item\DomainItemRequestBuilder;
-use Microsoft\Graph\Generated\Drive\DriveRequestBuilder;
 use Microsoft\Graph\Generated\Drives\DrivesRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\DriveItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\EducationRequestBuilder;
@@ -106,6 +105,7 @@ use Microsoft\Graph\Generated\Teams\TeamsRequestBuilder;
 use Microsoft\Graph\Generated\TeamsTemplates\Item\TeamsTemplateItemRequestBuilder;
 use Microsoft\Graph\Generated\TeamsTemplates\TeamsTemplatesRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\TeamworkRequestBuilder;
+use Microsoft\Graph\Generated\TenantRelationships\TenantRelationshipsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\UserItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\UsersRequestBuilder;
 use Microsoft\Kiota\Abstractions\ApiClientBuilder;
@@ -309,13 +309,6 @@ class BaseGraphClient
     */
     public function domains(): DomainsRequestBuilder {
         return new DomainsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the drive singleton.
-    */
-    public function drive(): DriveRequestBuilder {
-        return new DriveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -592,6 +585,13 @@ class BaseGraphClient
     */
     public function teamwork(): TeamworkRequestBuilder {
         return new TeamworkRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the tenantRelationship singleton.
+    */
+    public function tenantRelationships(): TenantRelationshipsRequestBuilder {
+        return new TenantRelationshipsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

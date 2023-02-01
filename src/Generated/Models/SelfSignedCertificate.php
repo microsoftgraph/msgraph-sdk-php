@@ -53,7 +53,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the customKeyIdentifier property value. The customKeyIdentifier property
+     * Gets the customKeyIdentifier property value. 
      * @return StreamInterface|null
     */
     public function getCustomKeyIdentifier(): ?StreamInterface {
@@ -61,7 +61,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. 
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -69,7 +69,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the endDateTime property value. The endDateTime property
+     * Gets the endDateTime property value. 
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
@@ -97,7 +97,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the key property value. The key property
+     * Gets the key property value. 
      * @return StreamInterface|null
     */
     public function getKey(): ?StreamInterface {
@@ -105,7 +105,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the keyId property value. The keyId property
+     * Gets the keyId property value. 
      * @return string|null
     */
     public function getKeyId(): ?string {
@@ -113,7 +113,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -121,7 +121,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the startDateTime property value. The startDateTime property
+     * Gets the startDateTime property value. 
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
@@ -129,7 +129,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the thumbprint property value. The thumbprint property
+     * Gets the thumbprint property value. 
      * @return string|null
     */
     public function getThumbprint(): ?string {
@@ -137,7 +137,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. 
      * @return string|null
     */
     public function getType(): ?string {
@@ -145,7 +145,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the usage property value. The usage property
+     * Gets the usage property value. 
      * @return string|null
     */
     public function getUsage(): ?string {
@@ -187,7 +187,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the customKeyIdentifier property value. The customKeyIdentifier property
+     * Sets the customKeyIdentifier property value. 
      * @param StreamInterface|null $value Value to set for the customKeyIdentifier property.
     */
     public function setCustomKeyIdentifier(?StreamInterface $value): void {
@@ -195,7 +195,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. 
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -203,7 +203,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the endDateTime property value. The endDateTime property
+     * Sets the endDateTime property value. 
      * @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value): void {
@@ -211,7 +211,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the key property value. The key property
+     * Sets the key property value. 
      * @param StreamInterface|null $value Value to set for the key property.
     */
     public function setKey(?StreamInterface $value): void {
@@ -219,7 +219,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the keyId property value. The keyId property
+     * Sets the keyId property value. 
      * @param string|null $value Value to set for the keyId property.
     */
     public function setKeyId(?string $value): void {
@@ -227,7 +227,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -235,7 +235,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the startDateTime property value. The startDateTime property
+     * Sets the startDateTime property value. 
      * @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value): void {
@@ -243,7 +243,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the thumbprint property value. The thumbprint property
+     * Sets the thumbprint property value. 
      * @param string|null $value Value to set for the thumbprint property.
     */
     public function setThumbprint(?string $value): void {
@@ -251,7 +251,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. 
      * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {
@@ -259,7 +259,7 @@ class SelfSignedCertificate implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the usage property value. The usage property
+     * Sets the usage property value. 
      * @param string|null $value Value to set for the usage property.
     */
     public function setUsage(?string $value): void {

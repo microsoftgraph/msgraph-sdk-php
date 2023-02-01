@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Channels\Item\Members;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Channels\Item\Members\Add\AddRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Channels\Item\Members\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Channels\Item\Members\MicrosoftGraphAdd\AddRequestBuilder;
 use Microsoft\Graph\Generated\Models\ConversationMember;
 use Microsoft\Graph\Generated\Models\ConversationMemberCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -23,17 +23,17 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class MembersRequestBuilder 
 {
     /**
-     * Provides operations to call the add method.
-    */
-    public function add(): AddRequestBuilder {
-        return new AddRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the add method.
+    */
+    public function microsoftGraphAdd(): AddRequestBuilder {
+        return new AddRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -83,7 +83,6 @@ class MembersRequestBuilder
 
     /**
      * Add a conversationMember to a channel.
-     * @param ConversationMember $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/conversationmember-add?view=graph-rest-1.0 Find more info here
@@ -128,7 +127,6 @@ class MembersRequestBuilder
 
     /**
      * Add a conversationMember to a channel.
-     * @param ConversationMember $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

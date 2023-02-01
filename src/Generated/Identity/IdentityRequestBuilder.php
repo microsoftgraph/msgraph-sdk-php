@@ -142,7 +142,6 @@ class IdentityRequestBuilder
 
     /**
      * Update identity
-     * @param IdentityContainer $body The request body
      * @param IdentityRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -186,7 +185,6 @@ class IdentityRequestBuilder
 
     /**
      * Update identity
-     * @param IdentityContainer $body The request body
      * @param IdentityRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

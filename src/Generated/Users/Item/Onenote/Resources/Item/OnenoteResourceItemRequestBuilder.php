@@ -46,11 +46,15 @@ class OnenoteResourceItemRequestBuilder
      * Instantiates a new OnenoteResourceItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $onenoteResourceId key: id of onenoteResource
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $onenoteResourceId = null) {
         $this->urlTemplate = '{+baseurl}/users/{user%2Did}/onenote/resources/{onenoteResource%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['onenoteResourceId'] = $onenoteResourceId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -91,7 +95,6 @@ class OnenoteResourceItemRequestBuilder
 
     /**
      * Update the navigation property resources in users
-     * @param OnenoteResource $body The request body
      * @param OnenoteResourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -156,7 +159,6 @@ class OnenoteResourceItemRequestBuilder
 
     /**
      * Update the navigation property resources in users
-     * @param OnenoteResource $body The request body
      * @param OnenoteResourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

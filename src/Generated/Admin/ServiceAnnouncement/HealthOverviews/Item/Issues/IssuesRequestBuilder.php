@@ -74,7 +74,6 @@ class IssuesRequestBuilder
 
     /**
      * Create new navigation property to issues for admin
-     * @param ServiceHealthIssue $body The request body
      * @param IssuesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class IssuesRequestBuilder
 
     /**
      * Create new navigation property to issues for admin
-     * @param ServiceHealthIssue $body The request body
      * @param IssuesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

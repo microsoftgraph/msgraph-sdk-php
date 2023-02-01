@@ -38,11 +38,15 @@ class SchedulingGroupItemRequestBuilder
      * Instantiates a new SchedulingGroupItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $schedulingGroupId key: id of schedulingGroup
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $schedulingGroupId = null) {
         $this->urlTemplate = '{+baseurl}/me/joinedTeams/{team%2Did}/schedule/schedulingGroups/{schedulingGroup%2Did}{?%24select}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['schedulingGroupId'] = $schedulingGroupId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class SchedulingGroupItemRequestBuilder
 
     /**
      * Update the navigation property schedulingGroups in me
-     * @param SchedulingGroup $body The request body
      * @param SchedulingGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class SchedulingGroupItemRequestBuilder
 
     /**
      * Update the navigation property schedulingGroups in me
-     * @param SchedulingGroup $body The request body
      * @param SchedulingGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\Mute\MuteRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\StartHoldMusic\StartHoldMusicRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\StopHoldMusic\StopHoldMusicRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\MicrosoftGraphMute\MuteRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\MicrosoftGraphStartHoldMusic\StartHoldMusicRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\MicrosoftGraphStopHoldMusic\StopHoldMusicRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Participant;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -25,8 +25,22 @@ class ParticipantItemRequestBuilder
     /**
      * Provides operations to call the mute method.
     */
-    public function mute(): MuteRequestBuilder {
+    public function microsoftGraphMute(): MuteRequestBuilder {
         return new MuteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the startHoldMusic method.
+    */
+    public function microsoftGraphStartHoldMusic(): StartHoldMusicRequestBuilder {
+        return new StartHoldMusicRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the stopHoldMusic method.
+    */
+    public function microsoftGraphStopHoldMusic(): StopHoldMusicRequestBuilder {
+        return new StopHoldMusicRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -40,20 +54,6 @@ class ParticipantItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * Provides operations to call the startHoldMusic method.
-    */
-    public function startHoldMusic(): StartHoldMusicRequestBuilder {
-        return new StartHoldMusicRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the stopHoldMusic method.
-    */
-    public function stopHoldMusic(): StopHoldMusicRequestBuilder {
-        return new StopHoldMusicRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
@@ -62,11 +62,15 @@ class ParticipantItemRequestBuilder
      * Instantiates a new ParticipantItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $participantId key: id of participant
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $participantId = null) {
         $this->urlTemplate = '{+baseurl}/communications/calls/{call%2Did}/participants/{participant%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['participantId'] = $participantId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -107,7 +111,6 @@ class ParticipantItemRequestBuilder
 
     /**
      * Update the navigation property participants in communications
-     * @param Participant $body The request body
      * @param ParticipantItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -172,7 +175,6 @@ class ParticipantItemRequestBuilder
 
     /**
      * Update the navigation property participants in communications
-     * @param Participant $body The request body
      * @param ParticipantItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -38,11 +38,15 @@ class DeviceConfigurationUserStatusItemRequestBuilder
      * Instantiates a new DeviceConfigurationUserStatusItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $deviceConfigurationUserStatusId key: id of deviceConfigurationUserStatus
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $deviceConfigurationUserStatusId = null) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/deviceConfigurations/{deviceConfiguration%2Did}/userStatuses/{deviceConfigurationUserStatus%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['deviceConfigurationUserStatusId'] = $deviceConfigurationUserStatusId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class DeviceConfigurationUserStatusItemRequestBuilder
 
     /**
      * Update the navigation property userStatuses in deviceManagement
-     * @param DeviceConfigurationUserStatus $body The request body
      * @param DeviceConfigurationUserStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class DeviceConfigurationUserStatusItemRequestBuilder
 
     /**
      * Update the navigation property userStatuses in deviceManagement
-     * @param DeviceConfigurationUserStatus $body The request body
      * @param DeviceConfigurationUserStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Domain extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new domain and sets the default values.
+     * Instantiates a new Domain and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -124,7 +124,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Gets the manufacturer property value. The manufacturer property
+     * Gets the manufacturer property value. 
      * @return string|null
     */
     public function getManufacturer(): ?string {
@@ -132,7 +132,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Gets the model property value. The model property
+     * Gets the model property value. 
      * @return string|null
     */
     public function getModel(): ?string {
@@ -285,7 +285,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Sets the manufacturer property value. The manufacturer property
+     * Sets the manufacturer property value. 
      * @param string|null $value Value to set for the manufacturer property.
     */
     public function setManufacturer(?string $value): void {
@@ -293,7 +293,7 @@ class Domain extends Entity implements Parsable
     }
 
     /**
-     * Sets the model property value. The model property
+     * Sets the model property value. 
      * @param string|null $value Value to set for the model property.
     */
     public function setModel(?string $value): void {

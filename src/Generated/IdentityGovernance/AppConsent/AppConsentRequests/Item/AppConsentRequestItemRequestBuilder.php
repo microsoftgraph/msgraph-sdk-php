@@ -47,11 +47,15 @@ class AppConsentRequestItemRequestBuilder
      * Instantiates a new AppConsentRequestItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $appConsentRequestId key: id of appConsentRequest
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $appConsentRequestId = null) {
         $this->urlTemplate = '{+baseurl}/identityGovernance/appConsent/appConsentRequests/{appConsentRequest%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['appConsentRequestId'] = $appConsentRequestId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -92,7 +96,6 @@ class AppConsentRequestItemRequestBuilder
 
     /**
      * Update the navigation property appConsentRequests in identityGovernance
-     * @param AppConsentRequest $body The request body
      * @param AppConsentRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -157,7 +160,6 @@ class AppConsentRequestItemRequestBuilder
 
     /**
      * Update the navigation property appConsentRequests in identityGovernance
-     * @param AppConsentRequest $body The request body
      * @param AppConsentRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

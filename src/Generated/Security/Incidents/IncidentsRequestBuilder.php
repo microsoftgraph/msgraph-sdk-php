@@ -75,7 +75,6 @@ class IncidentsRequestBuilder
 
     /**
      * Create new navigation property to incidents for security
-     * @param Incident $body The request body
      * @param IncidentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class IncidentsRequestBuilder
 
     /**
      * Create new navigation property to incidents for security
-     * @param Incident $body The request body
      * @param IncidentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

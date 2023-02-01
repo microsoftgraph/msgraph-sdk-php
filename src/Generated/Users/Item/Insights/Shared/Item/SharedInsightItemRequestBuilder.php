@@ -54,11 +54,15 @@ class SharedInsightItemRequestBuilder
      * Instantiates a new SharedInsightItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $sharedInsightId key: id of sharedInsight
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $sharedInsightId = null) {
         $this->urlTemplate = '{+baseurl}/users/{user%2Did}/insights/shared/{sharedInsight%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['sharedInsightId'] = $sharedInsightId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -99,7 +103,6 @@ class SharedInsightItemRequestBuilder
 
     /**
      * Update the navigation property shared in users
-     * @param SharedInsight $body The request body
      * @param SharedInsightItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -164,7 +167,6 @@ class SharedInsightItemRequestBuilder
 
     /**
      * Update the navigation property shared in users
-     * @param SharedInsight $body The request body
      * @param SharedInsightItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

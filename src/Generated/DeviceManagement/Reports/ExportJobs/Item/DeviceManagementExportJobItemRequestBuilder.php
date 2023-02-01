@@ -38,11 +38,15 @@ class DeviceManagementExportJobItemRequestBuilder
      * Instantiates a new DeviceManagementExportJobItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $deviceManagementExportJobId key: id of deviceManagementExportJob
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $deviceManagementExportJobId = null) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/reports/exportJobs/{deviceManagementExportJob%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['deviceManagementExportJobId'] = $deviceManagementExportJobId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class DeviceManagementExportJobItemRequestBuilder
 
     /**
      * Update the navigation property exportJobs in deviceManagement
-     * @param DeviceManagementExportJob $body The request body
      * @param DeviceManagementExportJobItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class DeviceManagementExportJobItemRequestBuilder
 
     /**
      * Update the navigation property exportJobs in deviceManagement
-     * @param DeviceManagementExportJob $body The request body
      * @param DeviceManagementExportJobItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

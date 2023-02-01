@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AppCatalogs extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new appCatalogs and sets the default values.
+     * Instantiates a new AppCatalogs and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -36,7 +36,7 @@ class AppCatalogs extends Entity implements Parsable
     }
 
     /**
-     * Gets the teamsApps property value. The teamsApps property
+     * Gets the teamsApps property value. 
      * @return array<TeamsApp>|null
     */
     public function getTeamsApps(): ?array {
@@ -53,7 +53,7 @@ class AppCatalogs extends Entity implements Parsable
     }
 
     /**
-     * Sets the teamsApps property value. The teamsApps property
+     * Sets the teamsApps property value. 
      * @param array<TeamsApp>|null $value Value to set for the teamsApps property.
     */
     public function setTeamsApps(?array $value): void {

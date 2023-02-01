@@ -84,7 +84,6 @@ class ProgressTaskBoardFormatRequestBuilder
 
     /**
      * Update the properties of **plannerProgressTaskBoardTaskFormat** object.
-     * @param PlannerProgressTaskBoardTaskFormat $body The request body
      * @param ProgressTaskBoardFormatRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/plannerprogresstaskboardtaskformat-update?view=graph-rest-1.0 Find more info here
@@ -150,7 +149,6 @@ class ProgressTaskBoardFormatRequestBuilder
 
     /**
      * Update the properties of **plannerProgressTaskBoardTaskFormat** object.
-     * @param PlannerProgressTaskBoardTaskFormat $body The request body
      * @param ProgressTaskBoardFormatRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

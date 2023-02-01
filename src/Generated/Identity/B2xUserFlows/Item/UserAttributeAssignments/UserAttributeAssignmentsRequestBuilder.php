@@ -6,8 +6,8 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments\GetOrder\GetOrderRequestBuilder;
-use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments\SetOrder\SetOrderRequestBuilder;
+use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments\MicrosoftGraphGetOrder\GetOrderRequestBuilder;
+use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments\MicrosoftGraphSetOrder\SetOrderRequestBuilder;
 use Microsoft\Graph\Generated\Models\IdentityUserFlowAttributeAssignment;
 use Microsoft\Graph\Generated\Models\IdentityUserFlowAttributeAssignmentCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -31,6 +31,20 @@ class UserAttributeAssignmentsRequestBuilder
     }
     
     /**
+     * Provides operations to call the getOrder method.
+    */
+    public function microsoftGraphGetOrder(): GetOrderRequestBuilder {
+        return new GetOrderRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the setOrder method.
+    */
+    public function microsoftGraphSetOrder(): SetOrderRequestBuilder {
+        return new SetOrderRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -39,13 +53,6 @@ class UserAttributeAssignmentsRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
-    
-    /**
-     * Provides operations to call the setOrder method.
-    */
-    public function setOrder(): SetOrderRequestBuilder {
-        return new SetOrderRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
@@ -83,16 +90,7 @@ class UserAttributeAssignmentsRequestBuilder
     }
 
     /**
-     * Provides operations to call the getOrder method.
-     * @return GetOrderRequestBuilder
-    */
-    public function getOrder(): GetOrderRequestBuilder {
-        return new GetOrderRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
      * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
-     * @param IdentityUserFlowAttributeAssignment $body The request body
      * @param UserAttributeAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/b2xidentityuserflow-post-userattributeassignments?view=graph-rest-1.0 Find more info here
@@ -137,7 +135,6 @@ class UserAttributeAssignmentsRequestBuilder
 
     /**
      * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
-     * @param IdentityUserFlowAttributeAssignment $body The request body
      * @param UserAttributeAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

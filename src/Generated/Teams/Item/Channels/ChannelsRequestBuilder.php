@@ -9,7 +9,7 @@ use Microsoft\Graph\Generated\Models\Channel;
 use Microsoft\Graph\Generated\Models\ChannelCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Teams\Item\Channels\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Channels\GetAllMessages\GetAllMessagesRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\Channels\MicrosoftGraphGetAllMessages\GetAllMessagesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -27,6 +27,13 @@ class ChannelsRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getAllMessages method.
+    */
+    public function microsoftGraphGetAllMessages(): GetAllMessagesRequestBuilder {
+        return new GetAllMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -75,16 +82,7 @@ class ChannelsRequestBuilder
     }
 
     /**
-     * Provides operations to call the getAllMessages method.
-     * @return GetAllMessagesRequestBuilder
-    */
-    public function getAllMessages(): GetAllMessagesRequestBuilder {
-        return new GetAllMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
      * Create a new channel in a team, as specified in the request body.  When you create a channel, the maximum length of the channel's `displayName` is 50 characters. This is the name that appears to the user in Microsoft Teams. If you're creating a private channel, you can add a maximum of 200 members.
-     * @param Channel $body The request body
      * @param ChannelsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/channel-post?view=graph-rest-1.0 Find more info here
@@ -129,7 +127,6 @@ class ChannelsRequestBuilder
 
     /**
      * Create a new channel in a team, as specified in the request body.  When you create a channel, the maximum length of the channel's `displayName` is 50 characters. This is the name that appears to the user in Microsoft Teams. If you're creating a private channel, you can add a maximum of 200 members.
-     * @param Channel $body The request body
      * @param ChannelsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

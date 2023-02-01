@@ -36,7 +36,7 @@ class ResourcePermissionCollectionResponse extends BaseCollectionPaginationCount
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return array<ResourcePermission>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class ResourcePermissionCollectionResponse extends BaseCollectionPaginationCount
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param array<ResourcePermission>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

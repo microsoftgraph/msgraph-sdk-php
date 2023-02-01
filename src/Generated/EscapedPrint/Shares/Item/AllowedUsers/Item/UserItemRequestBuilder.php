@@ -36,11 +36,15 @@ class UserItemRequestBuilder
      * Instantiates a new UserItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $userId key: id of user
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $userId = null) {
         $this->urlTemplate = '{+baseurl}/print/shares/{printerShare%2Did}/allowedUsers/{user%2Did}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['userId'] = $userId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
 }

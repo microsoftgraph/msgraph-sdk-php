@@ -101,7 +101,6 @@ class PlannerRequestBuilder
 
     /**
      * Update the navigation property planner in me
-     * @param PlannerUser $body The request body
      * @param PlannerRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -188,7 +187,6 @@ class PlannerRequestBuilder
 
     /**
      * Update the navigation property planner in me
-     * @param PlannerUser $body The request body
      * @param PlannerRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

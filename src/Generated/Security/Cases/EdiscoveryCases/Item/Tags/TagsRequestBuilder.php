@@ -8,8 +8,8 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryReviewTag;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryReviewTagCollectionResponse;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\AsHierarchy\AsHierarchyRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\MicrosoftGraphSecurityAsHierarchy\AsHierarchyRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -30,6 +30,13 @@ class TagsRequestBuilder
     }
     
     /**
+     * Provides operations to call the asHierarchy method.
+    */
+    public function microsoftGraphSecurityAsHierarchy(): AsHierarchyRequestBuilder {
+        return new AsHierarchyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -44,14 +51,6 @@ class TagsRequestBuilder
     */
     private string $urlTemplate;
     
-    /**
-     * Provides operations to call the asHierarchy method.
-     * @return AsHierarchyRequestBuilder
-    */
-    public function asHierarchy(): AsHierarchyRequestBuilder {
-        return new AsHierarchyRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
     /**
      * Instantiates a new TagsRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
@@ -84,7 +83,6 @@ class TagsRequestBuilder
 
     /**
      * Create a new ediscoveryReviewTag object.
-     * @param EdiscoveryReviewTag $body The request body
      * @param TagsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/security-ediscoverycase-post-tags?view=graph-rest-1.0 Find more info here
@@ -129,7 +127,6 @@ class TagsRequestBuilder
 
     /**
      * Create a new ediscoveryReviewTag object.
-     * @param EdiscoveryReviewTag $body The request body
      * @param TagsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

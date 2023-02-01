@@ -83,7 +83,6 @@ class AppScopeRequestBuilder
 
     /**
      * Update the navigation property appScope in roleManagement
-     * @param AppScope $body The request body
      * @param AppScopeRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +147,6 @@ class AppScopeRequestBuilder
 
     /**
      * Update the navigation property appScope in roleManagement
-     * @param AppScope $body The request body
      * @param AppScopeRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

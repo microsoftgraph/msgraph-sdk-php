@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Channels\Item\Messages\Item\Replies\Item\HostedContents\HostedContentsRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Channels\Item\Messages\Item\Replies\Item\HostedContents\Item\ChatMessageHostedContentItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Channels\Item\Messages\Item\Replies\Item\SoftDelete\SoftDeleteRequestBuilder;
-use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Channels\Item\Messages\Item\Replies\Item\UndoSoftDelete\UndoSoftDeleteRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Channels\Item\Messages\Item\Replies\Item\MicrosoftGraphSoftDelete\SoftDeleteRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Channels\Item\Messages\Item\Replies\Item\MicrosoftGraphUndoSoftDelete\UndoSoftDeleteRequestBuilder;
 use Microsoft\Graph\Generated\Models\ChatMessage;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -31,6 +31,20 @@ class ChatMessageItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the softDelete method.
+    */
+    public function microsoftGraphSoftDelete(): SoftDeleteRequestBuilder {
+        return new SoftDeleteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the undoSoftDelete method.
+    */
+    public function microsoftGraphUndoSoftDelete(): UndoSoftDeleteRequestBuilder {
+        return new UndoSoftDeleteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -41,20 +55,6 @@ class ChatMessageItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * Provides operations to call the softDelete method.
-    */
-    public function softDelete(): SoftDeleteRequestBuilder {
-        return new SoftDeleteRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the undoSoftDelete method.
-    */
-    public function undoSoftDelete(): UndoSoftDeleteRequestBuilder {
-        return new UndoSoftDeleteRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
@@ -63,11 +63,15 @@ class ChatMessageItemRequestBuilder
      * Instantiates a new ChatMessageItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $chatMessageId1 key: id of chatMessage
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $chatMessageId1 = null) {
         $this->urlTemplate = '{+baseurl}/me/joinedTeams/{team%2Did}/channels/{channel%2Did}/messages/{chatMessage%2Did}/replies/{chatMessage%2Did1}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['chatMessageId1'] = $chatMessageId1;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -119,7 +123,6 @@ class ChatMessageItemRequestBuilder
 
     /**
      * Update the navigation property replies in me
-     * @param ChatMessage $body The request body
      * @param ChatMessageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -184,7 +187,6 @@ class ChatMessageItemRequestBuilder
 
     /**
      * Update the navigation property replies in me
-     * @param ChatMessage $body The request body
      * @param ChatMessageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

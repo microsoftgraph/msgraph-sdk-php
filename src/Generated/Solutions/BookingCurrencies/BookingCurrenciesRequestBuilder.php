@@ -75,7 +75,6 @@ class BookingCurrenciesRequestBuilder
 
     /**
      * Create new navigation property to bookingCurrencies for solutions
-     * @param BookingCurrency $body The request body
      * @param BookingCurrenciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class BookingCurrenciesRequestBuilder
 
     /**
      * Create new navigation property to bookingCurrencies for solutions
-     * @param BookingCurrency $body The request body
      * @param BookingCurrenciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

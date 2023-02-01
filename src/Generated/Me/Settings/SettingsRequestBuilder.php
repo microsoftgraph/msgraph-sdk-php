@@ -91,7 +91,6 @@ class SettingsRequestBuilder
 
     /**
      * Update the navigation property settings in me
-     * @param UserSettings $body The request body
      * @param SettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -156,7 +155,6 @@ class SettingsRequestBuilder
 
     /**
      * Update the navigation property settings in me
-     * @param UserSettings $body The request body
      * @param SettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

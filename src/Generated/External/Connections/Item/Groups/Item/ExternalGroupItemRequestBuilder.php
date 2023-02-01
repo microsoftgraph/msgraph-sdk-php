@@ -47,11 +47,15 @@ class ExternalGroupItemRequestBuilder
      * Instantiates a new ExternalGroupItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $externalGroupId key: id of externalGroup
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $externalGroupId = null) {
         $this->urlTemplate = '{+baseurl}/external/connections/{externalConnection%2Did}/groups/{externalGroup%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['externalGroupId'] = $externalGroupId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -103,7 +107,6 @@ class ExternalGroupItemRequestBuilder
 
     /**
      * Update the navigation property groups in external
-     * @param ExternalGroup $body The request body
      * @param ExternalGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -168,7 +171,6 @@ class ExternalGroupItemRequestBuilder
 
     /**
      * Update the navigation property groups in external
-     * @param ExternalGroup $body The request body
      * @param ExternalGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

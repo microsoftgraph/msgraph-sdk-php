@@ -5,12 +5,12 @@ namespace Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\Copy\CopyRequestBuilder;
 use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\MessageRules\Item\MessageRuleItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\MessageRules\MessageRulesRequestBuilder;
 use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\Messages\Item\MessageItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\Messages\MessagesRequestBuilder;
-use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\Move\MoveRequestBuilder;
+use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\MicrosoftGraphCopy\CopyRequestBuilder;
+use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\MicrosoftGraphMove\MoveRequestBuilder;
 use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
@@ -30,13 +30,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class MailFolderItemRequestBuilder 
 {
     /**
-     * Provides operations to call the copy method.
-    */
-    public function copy(): CopyRequestBuilder {
-        return new CopyRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the messageRules property of the microsoft.graph.mailFolder entity.
     */
     public function messageRules(): MessageRulesRequestBuilder {
@@ -51,9 +44,16 @@ class MailFolderItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the copy method.
+    */
+    public function microsoftGraphCopy(): CopyRequestBuilder {
+        return new CopyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to call the move method.
     */
-    public function move(): MoveRequestBuilder {
+    public function microsoftGraphMove(): MoveRequestBuilder {
         return new MoveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
@@ -90,11 +90,15 @@ class MailFolderItemRequestBuilder
      * Instantiates a new MailFolderItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $mailFolderId1 key: id of mailFolder
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $mailFolderId1 = null) {
         $this->urlTemplate = '{+baseurl}/me/mailFolders/{mailFolder%2Did}/childFolders/{mailFolder%2Did1}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['mailFolderId1'] = $mailFolderId1;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -168,7 +172,6 @@ class MailFolderItemRequestBuilder
 
     /**
      * Update the navigation property childFolders in me
-     * @param MailFolder $body The request body
      * @param MailFolderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -244,7 +247,6 @@ class MailFolderItemRequestBuilder
 
     /**
      * Update the navigation property childFolders in me
-     * @param MailFolder $body The request body
      * @param MailFolderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

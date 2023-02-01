@@ -5,12 +5,12 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\Assign\AssignRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\Assignments\AssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\Assignments\Item\ManagedEBookAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\DeviceStates\DeviceStatesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\DeviceStates\Item\DeviceInstallStateItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\InstallSummary\InstallSummaryRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\MicrosoftGraphAssign\AssignRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\UserStateSummary\Item\UserInstallStateSummaryItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\UserStateSummary\UserStateSummaryRequestBuilder;
 use Microsoft\Graph\Generated\Models\ManagedEBook;
@@ -27,13 +27,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 */
 class ManagedEBookItemRequestBuilder 
 {
-    /**
-     * Provides operations to call the assign method.
-    */
-    public function assign(): AssignRequestBuilder {
-        return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.managedEBook entity.
     */
@@ -53,6 +46,13 @@ class ManagedEBookItemRequestBuilder
     */
     public function installSummary(): InstallSummaryRequestBuilder {
         return new InstallSummaryRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the assign method.
+    */
+    public function microsoftGraphAssign(): AssignRequestBuilder {
+        return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -92,11 +92,15 @@ class ManagedEBookItemRequestBuilder
      * Instantiates a new ManagedEBookItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $managedEBookId key: id of managedEBook
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $managedEBookId = null) {
         $this->urlTemplate = '{+baseurl}/deviceAppManagement/managedEBooks/{managedEBook%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['managedEBookId'] = $managedEBookId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -148,7 +152,6 @@ class ManagedEBookItemRequestBuilder
 
     /**
      * Update the navigation property managedEBooks in deviceAppManagement
-     * @param ManagedEBook $body The request body
      * @param ManagedEBookItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -213,7 +216,6 @@ class ManagedEBookItemRequestBuilder
 
     /**
      * Update the navigation property managedEBooks in deviceAppManagement
-     * @param ManagedEBook $body The request body
      * @param ManagedEBookItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

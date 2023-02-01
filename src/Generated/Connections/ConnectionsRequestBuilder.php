@@ -74,7 +74,6 @@ class ConnectionsRequestBuilder
 
     /**
      * Add new entity to connections
-     * @param ExternalConnection $body The request body
      * @param ConnectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class ConnectionsRequestBuilder
 
     /**
      * Add new entity to connections
-     * @param ExternalConnection $body The request body
      * @param ConnectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -7,12 +7,12 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Categories\CategoriesRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Categories\Item\EducationCategoryItemRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Publish\PublishRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\MicrosoftGraphPublish\PublishRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\MicrosoftGraphSetUpFeedbackResourcesFolder\SetUpFeedbackResourcesFolderRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\MicrosoftGraphSetUpResourcesFolder\SetUpResourcesFolderRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Resources\Item\EducationAssignmentResourceItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Resources\ResourcesRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Rubric\RubricRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\SetUpFeedbackResourcesFolder\SetUpFeedbackResourcesFolderRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\SetUpResourcesFolder\SetUpResourcesFolderRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\EducationSubmissionItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\SubmissionsRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationAssignment;
@@ -37,16 +37,30 @@ class EducationAssignmentItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the publish method.
+    */
+    public function microsoftGraphPublish(): PublishRequestBuilder {
+        return new PublishRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the setUpFeedbackResourcesFolder method.
+    */
+    public function microsoftGraphSetUpFeedbackResourcesFolder(): SetUpFeedbackResourcesFolderRequestBuilder {
+        return new SetUpFeedbackResourcesFolderRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the setUpResourcesFolder method.
+    */
+    public function microsoftGraphSetUpResourcesFolder(): SetUpResourcesFolderRequestBuilder {
+        return new SetUpResourcesFolderRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
-    
-    /**
-     * Provides operations to call the publish method.
-    */
-    public function publish(): PublishRequestBuilder {
-        return new PublishRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -65,20 +79,6 @@ class EducationAssignmentItemRequestBuilder
     */
     public function rubric(): RubricRequestBuilder {
         return new RubricRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the setUpFeedbackResourcesFolder method.
-    */
-    public function setUpFeedbackResourcesFolder(): SetUpFeedbackResourcesFolderRequestBuilder {
-        return new SetUpFeedbackResourcesFolderRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the setUpResourcesFolder method.
-    */
-    public function setUpResourcesFolder(): SetUpResourcesFolderRequestBuilder {
-        return new SetUpResourcesFolderRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -108,11 +108,15 @@ class EducationAssignmentItemRequestBuilder
      * Instantiates a new EducationAssignmentItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $educationAssignmentId key: id of educationAssignment
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $educationAssignmentId = null) {
         $this->urlTemplate = '{+baseurl}/education/me/assignments/{educationAssignment%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['educationAssignmentId'] = $educationAssignmentId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -153,7 +157,6 @@ class EducationAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property assignments in education
-     * @param EducationAssignment $body The request body
      * @param EducationAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -240,7 +243,6 @@ class EducationAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property assignments in education
-     * @param EducationAssignment $body The request body
      * @param EducationAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

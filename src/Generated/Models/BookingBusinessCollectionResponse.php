@@ -36,7 +36,7 @@ class BookingBusinessCollectionResponse extends BaseCollectionPaginationCountRes
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return array<BookingBusiness>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class BookingBusinessCollectionResponse extends BaseCollectionPaginationCountRes
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param array<BookingBusiness>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

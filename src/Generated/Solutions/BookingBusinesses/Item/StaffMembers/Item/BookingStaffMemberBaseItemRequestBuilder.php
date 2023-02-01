@@ -38,11 +38,15 @@ class BookingStaffMemberBaseItemRequestBuilder
      * Instantiates a new BookingStaffMemberBaseItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $bookingStaffMemberBaseId key: id of bookingStaffMemberBase
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $bookingStaffMemberBaseId = null) {
         $this->urlTemplate = '{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/staffMembers/{bookingStaffMemberBase%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['bookingStaffMemberBaseId'] = $bookingStaffMemberBaseId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class BookingStaffMemberBaseItemRequestBuilder
 
     /**
      * Update the navigation property staffMembers in solutions
-     * @param BookingStaffMemberBase $body The request body
      * @param BookingStaffMemberBaseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class BookingStaffMemberBaseItemRequestBuilder
 
     /**
      * Update the navigation property staffMembers in solutions
-     * @param BookingStaffMemberBase $body The request body
      * @param BookingStaffMemberBaseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

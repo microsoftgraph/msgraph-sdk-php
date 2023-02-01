@@ -74,7 +74,6 @@ class MdmWindowsInformationProtectionPoliciesRequestBuilder
 
     /**
      * Create new navigation property to mdmWindowsInformationProtectionPolicies for deviceAppManagement
-     * @param MdmWindowsInformationProtectionPolicy $body The request body
      * @param MdmWindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class MdmWindowsInformationProtectionPoliciesRequestBuilder
 
     /**
      * Create new navigation property to mdmWindowsInformationProtectionPolicies for deviceAppManagement
-     * @param MdmWindowsInformationProtectionPolicy $body The request body
      * @param MdmWindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

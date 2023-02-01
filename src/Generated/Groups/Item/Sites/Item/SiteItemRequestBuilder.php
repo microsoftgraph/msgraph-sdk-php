@@ -13,14 +13,14 @@ use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Drive\DriveRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Drives\DrivesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Drives\Item\DriveItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ExternalColumns\ExternalColumnsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetApplicableContentTypesForListWithListId\GetApplicableContentTypesForListWithListIdRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\GetByPathWithPath\GetByPathWithPathRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Items\Item\BaseItemItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Items\ItemsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\ListItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\ListsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\MicrosoftGraphGetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\MicrosoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\MicrosoftGraphGetApplicableContentTypesForListWithListId\GetApplicableContentTypesForListWithListIdRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\MicrosoftGraphGetByPathWithPath\GetByPathWithPathRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\OnenoteRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Operations\Item\RichLongRunningOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Operations\OperationsRequestBuilder;
@@ -101,6 +101,13 @@ class SiteItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the getActivitiesByInterval method.
+    */
+    public function microsoftGraphGetActivitiesByInterval(): GetActivitiesByIntervalRequestBuilder {
+        return new GetActivitiesByIntervalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the onenote property of the microsoft.graph.site entity.
     */
     public function onenote(): OnenoteRequestBuilder {
@@ -172,11 +179,15 @@ class SiteItemRequestBuilder
      * Instantiates a new SiteItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $siteId key: id of site
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $siteId = null) {
         $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['siteId'] = $siteId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -231,43 +242,6 @@ class SiteItemRequestBuilder
     }
 
     /**
-     * Provides operations to call the getActivitiesByInterval method.
-     * @return GetActivitiesByIntervalRequestBuilder
-    */
-    public function getActivitiesByInterval(): GetActivitiesByIntervalRequestBuilder {
-        return new GetActivitiesByIntervalRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to call the getActivitiesByInterval method.
-     * @param string $endDateTime Usage: endDateTime='{endDateTime}'
-     * @param string $interval Usage: interval='{interval}'
-     * @param string $startDateTime Usage: startDateTime='{startDateTime}'
-     * @return GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
-    */
-    public function getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(string $endDateTime, string $interval, string $startDateTime): GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder {
-        return new GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder($this->pathParameters, $this->requestAdapter, $endDateTime, $interval, $startDateTime);
-    }
-
-    /**
-     * Provides operations to call the getApplicableContentTypesForList method.
-     * @param string $listId Usage: listId='{listId}'
-     * @return GetApplicableContentTypesForListWithListIdRequestBuilder
-    */
-    public function getApplicableContentTypesForListWithListId(string $listId): GetApplicableContentTypesForListWithListIdRequestBuilder {
-        return new GetApplicableContentTypesForListWithListIdRequestBuilder($this->pathParameters, $this->requestAdapter, $listId);
-    }
-
-    /**
-     * Provides operations to call the getByPath method.
-     * @param string $path Usage: path='{path}'
-     * @return GetByPathWithPathRequestBuilder
-    */
-    public function getByPathWithPath(string $path): GetByPathWithPathRequestBuilder {
-        return new GetByPathWithPathRequestBuilder($this->pathParameters, $this->requestAdapter, $path);
-    }
-
-    /**
      * Provides operations to manage the items property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
      * @return BaseItemItemRequestBuilder
@@ -290,6 +264,35 @@ class SiteItemRequestBuilder
     }
 
     /**
+     * Provides operations to call the getActivitiesByInterval method.
+     * @param string $endDateTime Usage: endDateTime='{endDateTime}'
+     * @param string $interval Usage: interval='{interval}'
+     * @param string $startDateTime Usage: startDateTime='{startDateTime}'
+     * @return GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
+    */
+    public function microsoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(string $endDateTime, string $interval, string $startDateTime): GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder {
+        return new GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder($this->pathParameters, $this->requestAdapter, $endDateTime, $interval, $startDateTime);
+    }
+
+    /**
+     * Provides operations to call the getApplicableContentTypesForList method.
+     * @param string $listId Usage: listId='{listId}'
+     * @return GetApplicableContentTypesForListWithListIdRequestBuilder
+    */
+    public function microsoftGraphGetApplicableContentTypesForListWithListId(string $listId): GetApplicableContentTypesForListWithListIdRequestBuilder {
+        return new GetApplicableContentTypesForListWithListIdRequestBuilder($this->pathParameters, $this->requestAdapter, $listId);
+    }
+
+    /**
+     * Provides operations to call the getByPath method.
+     * @param string $path Usage: path='{path}'
+     * @return GetByPathWithPathRequestBuilder
+    */
+    public function microsoftGraphGetByPathWithPath(string $path): GetByPathWithPathRequestBuilder {
+        return new GetByPathWithPathRequestBuilder($this->pathParameters, $this->requestAdapter, $path);
+    }
+
+    /**
      * Provides operations to manage the operations property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
      * @return RichLongRunningOperationItemRequestBuilder
@@ -302,7 +305,6 @@ class SiteItemRequestBuilder
 
     /**
      * Update the navigation property sites in groups
-     * @param Site $body The request body
      * @param SiteItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -379,7 +381,6 @@ class SiteItemRequestBuilder
 
     /**
      * Update the navigation property sites in groups
-     * @param Site $body The request body
      * @param SiteItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

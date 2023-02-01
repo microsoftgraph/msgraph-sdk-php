@@ -74,7 +74,6 @@ class ScheduledActionConfigurationsRequestBuilder
 
     /**
      * Create new navigation property to scheduledActionConfigurations for deviceManagement
-     * @param DeviceComplianceActionItem $body The request body
      * @param ScheduledActionConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class ScheduledActionConfigurationsRequestBuilder
 
     /**
      * Create new navigation property to scheduledActionConfigurations for deviceManagement
-     * @param DeviceComplianceActionItem $body The request body
      * @param ScheduledActionConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

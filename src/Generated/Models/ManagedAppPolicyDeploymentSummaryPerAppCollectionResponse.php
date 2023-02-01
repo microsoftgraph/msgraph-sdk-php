@@ -36,7 +36,7 @@ class ManagedAppPolicyDeploymentSummaryPerAppCollectionResponse extends BaseColl
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return array<ManagedAppPolicyDeploymentSummaryPerApp>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class ManagedAppPolicyDeploymentSummaryPerAppCollectionResponse extends BaseColl
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param array<ManagedAppPolicyDeploymentSummaryPerApp>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

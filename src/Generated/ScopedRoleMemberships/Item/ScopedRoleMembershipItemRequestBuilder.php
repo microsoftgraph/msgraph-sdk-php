@@ -38,15 +38,19 @@ class ScopedRoleMembershipItemRequestBuilder
      * Instantiates a new ScopedRoleMembershipItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $scopedRoleMembershipId key: id of scopedRoleMembership
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $scopedRoleMembershipId = null) {
         $this->urlTemplate = '{+baseurl}/scopedRoleMemberships/{scopedRoleMembership%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['scopedRoleMembershipId'] = $scopedRoleMembershipId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
-     * Delete entity from scopedRoleMemberships by key (id)
+     * Delete entity from scopedRoleMemberships
      * @param ScopedRoleMembershipItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -64,7 +68,7 @@ class ScopedRoleMembershipItemRequestBuilder
     }
 
     /**
-     * Get entity from scopedRoleMemberships by key (id)
+     * Get entity from scopedRoleMemberships by key
      * @param ScopedRoleMembershipItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -82,8 +86,7 @@ class ScopedRoleMembershipItemRequestBuilder
     }
 
     /**
-     * Update entity in scopedRoleMemberships by key (id)
-     * @param ScopedRoleMembership $body The request body
+     * Update entity in scopedRoleMemberships
      * @param ScopedRoleMembershipItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -101,7 +104,7 @@ class ScopedRoleMembershipItemRequestBuilder
     }
 
     /**
-     * Delete entity from scopedRoleMemberships by key (id)
+     * Delete entity from scopedRoleMemberships
      * @param ScopedRoleMembershipItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +125,7 @@ class ScopedRoleMembershipItemRequestBuilder
     }
 
     /**
-     * Get entity from scopedRoleMemberships by key (id)
+     * Get entity from scopedRoleMemberships by key
      * @param ScopedRoleMembershipItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -147,8 +150,7 @@ class ScopedRoleMembershipItemRequestBuilder
     }
 
     /**
-     * Update entity in scopedRoleMemberships by key (id)
-     * @param ScopedRoleMembership $body The request body
+     * Update entity in scopedRoleMemberships
      * @param ScopedRoleMembershipItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

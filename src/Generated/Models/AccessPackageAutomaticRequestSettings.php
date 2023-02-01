@@ -66,7 +66,7 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the gracePeriodBeforeAccessRemoval property value. The gracePeriodBeforeAccessRemoval property
+     * Gets the gracePeriodBeforeAccessRemoval property value. 
      * @return DateInterval|null
     */
     public function getGracePeriodBeforeAccessRemoval(): ?DateInterval {
@@ -74,7 +74,7 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -82,7 +82,7 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the removeAccessWhenTargetLeavesAllowedTargets property value. The removeAccessWhenTargetLeavesAllowedTargets property
+     * Gets the removeAccessWhenTargetLeavesAllowedTargets property value. 
      * @return bool|null
     */
     public function getRemoveAccessWhenTargetLeavesAllowedTargets(): ?bool {
@@ -126,7 +126,7 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the gracePeriodBeforeAccessRemoval property value. The gracePeriodBeforeAccessRemoval property
+     * Sets the gracePeriodBeforeAccessRemoval property value. 
      * @param DateInterval|null $value Value to set for the gracePeriodBeforeAccessRemoval property.
     */
     public function setGracePeriodBeforeAccessRemoval(?DateInterval $value): void {
@@ -134,7 +134,7 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -142,7 +142,7 @@ class AccessPackageAutomaticRequestSettings implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the removeAccessWhenTargetLeavesAllowedTargets property value. The removeAccessWhenTargetLeavesAllowedTargets property
+     * Sets the removeAccessWhenTargetLeavesAllowedTargets property value. 
      * @param bool|null $value Value to set for the removeAccessWhenTargetLeavesAllowedTargets property.
     */
     public function setRemoveAccessWhenTargetLeavesAllowedTargets(?bool $value): void {

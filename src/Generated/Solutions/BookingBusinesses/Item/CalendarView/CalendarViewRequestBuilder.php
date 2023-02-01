@@ -75,7 +75,6 @@ class CalendarViewRequestBuilder
 
     /**
      * Create new navigation property to calendarView for solutions
-     * @param BookingAppointment $body The request body
      * @param CalendarViewRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class CalendarViewRequestBuilder
 
     /**
      * Create new navigation property to calendarView for solutions
-     * @param BookingAppointment $body The request body
      * @param CalendarViewRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

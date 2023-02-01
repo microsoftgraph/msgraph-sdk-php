@@ -38,11 +38,15 @@ class DeviceComplianceActionItemItemRequestBuilder
      * Instantiates a new DeviceComplianceActionItemItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $deviceComplianceActionItemId key: id of deviceComplianceActionItem
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $deviceComplianceActionItemId = null) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/deviceCompliancePolicies/{deviceCompliancePolicy%2Did}/scheduledActionsForRule/{deviceComplianceScheduledActionForRule%2Did}/scheduledActionConfigurations/{deviceComplianceActionItem%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['deviceComplianceActionItemId'] = $deviceComplianceActionItemId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class DeviceComplianceActionItemItemRequestBuilder
 
     /**
      * Update the navigation property scheduledActionConfigurations in deviceManagement
-     * @param DeviceComplianceActionItem $body The request body
      * @param DeviceComplianceActionItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class DeviceComplianceActionItemItemRequestBuilder
 
     /**
      * Update the navigation property scheduledActionConfigurations in deviceManagement
-     * @param DeviceComplianceActionItem $body The request body
      * @param DeviceComplianceActionItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

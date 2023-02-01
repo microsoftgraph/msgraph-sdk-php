@@ -9,7 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Team;
 use Microsoft\Graph\Generated\Models\TeamCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\GetAllMessages\GetAllMessagesRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\JoinedTeams\MicrosoftGraphGetAllMessages\GetAllMessagesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -27,6 +27,13 @@ class JoinedTeamsRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getAllMessages method.
+    */
+    public function microsoftGraphGetAllMessages(): GetAllMessagesRequestBuilder {
+        return new GetAllMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -75,16 +82,7 @@ class JoinedTeamsRequestBuilder
     }
 
     /**
-     * Provides operations to call the getAllMessages method.
-     * @return GetAllMessagesRequestBuilder
-    */
-    public function getAllMessages(): GetAllMessagesRequestBuilder {
-        return new GetAllMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
      * Create new navigation property to joinedTeams for users
-     * @param Team $body The request body
      * @param JoinedTeamsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -128,7 +126,6 @@ class JoinedTeamsRequestBuilder
 
     /**
      * Create new navigation property to joinedTeams for users
-     * @param Team $body The request body
      * @param JoinedTeamsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

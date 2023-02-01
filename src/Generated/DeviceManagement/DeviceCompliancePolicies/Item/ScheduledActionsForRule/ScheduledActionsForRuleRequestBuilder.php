@@ -74,7 +74,6 @@ class ScheduledActionsForRuleRequestBuilder
 
     /**
      * Create new navigation property to scheduledActionsForRule for deviceManagement
-     * @param DeviceComplianceScheduledActionForRule $body The request body
      * @param ScheduledActionsForRuleRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class ScheduledActionsForRuleRequestBuilder
 
     /**
      * Create new navigation property to scheduledActionsForRule for deviceManagement
-     * @param DeviceComplianceScheduledActionForRule $body The request body
      * @param ScheduledActionsForRuleRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

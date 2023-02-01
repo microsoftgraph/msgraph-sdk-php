@@ -143,7 +143,6 @@ class ServiceAnnouncementRequestBuilder
 
     /**
      * Update the navigation property serviceAnnouncement in admin
-     * @param ServiceAnnouncement $body The request body
      * @param ServiceAnnouncementRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -208,7 +207,6 @@ class ServiceAnnouncementRequestBuilder
 
     /**
      * Update the navigation property serviceAnnouncement in admin
-     * @param ServiceAnnouncement $body The request body
      * @param ServiceAnnouncementRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

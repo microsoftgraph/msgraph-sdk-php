@@ -5,12 +5,12 @@ namespace Microsoft\Graph\Generated\Me\Calendars\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\Calendars\Item\AllowedCalendarSharingRolesWithUser\AllowedCalendarSharingRolesWithUserRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendars\Item\CalendarPermissions\CalendarPermissionsRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendars\Item\CalendarPermissions\Item\CalendarPermissionItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendars\Item\CalendarView\CalendarViewRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendars\Item\Events\EventsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Calendars\Item\GetSchedule\GetScheduleRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendars\Item\MicrosoftGraphAllowedCalendarSharingRolesWithUser\AllowedCalendarSharingRolesWithUserRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendars\Item\MicrosoftGraphGetSchedule\GetScheduleRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendars\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendars\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendars\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
@@ -53,7 +53,7 @@ class CalendarItemRequestBuilder
     /**
      * Provides operations to call the getSchedule method.
     */
-    public function getSchedule(): GetScheduleRequestBuilder {
+    public function microsoftGraphGetSchedule(): GetScheduleRequestBuilder {
         return new GetScheduleRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
@@ -87,15 +87,6 @@ class CalendarItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Provides operations to call the allowedCalendarSharingRoles method.
-     * @param string $user Usage: User='{User}'
-     * @return AllowedCalendarSharingRolesWithUserRequestBuilder
-    */
-    public function allowedCalendarSharingRolesWithUser(string $user): AllowedCalendarSharingRolesWithUserRequestBuilder {
-        return new AllowedCalendarSharingRolesWithUserRequestBuilder($this->pathParameters, $this->requestAdapter, $user);
-    }
-
-    /**
      * Provides operations to manage the calendarPermissions property of the microsoft.graph.calendar entity.
      * @param string $id Unique identifier of the item
      * @return CalendarPermissionItemRequestBuilder
@@ -121,11 +112,15 @@ class CalendarItemRequestBuilder
      * Instantiates a new CalendarItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $calendarId key: id of calendar
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $calendarId = null) {
         $this->urlTemplate = '{+baseurl}/me/calendars/{calendar%2Did}{?%24select}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['calendarId'] = $calendarId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -176,6 +171,15 @@ class CalendarItemRequestBuilder
     }
 
     /**
+     * Provides operations to call the allowedCalendarSharingRoles method.
+     * @param string $user Usage: User='{User}'
+     * @return AllowedCalendarSharingRolesWithUserRequestBuilder
+    */
+    public function microsoftGraphAllowedCalendarSharingRolesWithUser(string $user): AllowedCalendarSharingRolesWithUserRequestBuilder {
+        return new AllowedCalendarSharingRolesWithUserRequestBuilder($this->pathParameters, $this->requestAdapter, $user);
+    }
+
+    /**
      * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.calendar entity.
      * @param string $id Unique identifier of the item
      * @return MultiValueLegacyExtendedPropertyItemRequestBuilder
@@ -188,7 +192,6 @@ class CalendarItemRequestBuilder
 
     /**
      * Update the navigation property calendars in me
-     * @param Calendar $body The request body
      * @param CalendarItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -264,7 +267,6 @@ class CalendarItemRequestBuilder
 
     /**
      * Update the navigation property calendars in me
-     * @param Calendar $body The request body
      * @param CalendarItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

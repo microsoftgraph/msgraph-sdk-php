@@ -46,11 +46,15 @@ class ActivityHistoryItemItemRequestBuilder
      * Instantiates a new ActivityHistoryItemItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $activityHistoryItemId key: id of activityHistoryItem
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $activityHistoryItemId = null) {
         $this->urlTemplate = '{+baseurl}/me/activities/{userActivity%2Did}/historyItems/{activityHistoryItem%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['activityHistoryItemId'] = $activityHistoryItemId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -91,7 +95,6 @@ class ActivityHistoryItemItemRequestBuilder
 
     /**
      * Update the navigation property historyItems in me
-     * @param ActivityHistoryItem $body The request body
      * @param ActivityHistoryItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -156,7 +159,6 @@ class ActivityHistoryItemItemRequestBuilder
 
     /**
      * Update the navigation property historyItems in me
-     * @param ActivityHistoryItem $body The request body
      * @param ActivityHistoryItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

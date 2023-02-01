@@ -75,7 +75,6 @@ class PasswordMethodsRequestBuilder
 
     /**
      * Create new navigation property to passwordMethods for users
-     * @param PasswordAuthenticationMethod $body The request body
      * @param PasswordMethodsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class PasswordMethodsRequestBuilder
 
     /**
      * Create new navigation property to passwordMethods for users
-     * @param PasswordAuthenticationMethod $body The request body
      * @param PasswordMethodsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

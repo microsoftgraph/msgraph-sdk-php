@@ -38,11 +38,15 @@ class EducationAssignmentResourceItemRequestBuilder
      * Instantiates a new EducationAssignmentResourceItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $educationAssignmentResourceId key: id of educationAssignmentResource
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $educationAssignmentResourceId = null) {
         $this->urlTemplate = '{+baseurl}/education/classes/{educationClass%2Did}/assignments/{educationAssignment%2Did}/resources/{educationAssignmentResource%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['educationAssignmentResourceId'] = $educationAssignmentResourceId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class EducationAssignmentResourceItemRequestBuilder
 
     /**
      * Update the navigation property resources in education
-     * @param EducationAssignmentResource $body The request body
      * @param EducationAssignmentResourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class EducationAssignmentResourceItemRequestBuilder
 
     /**
      * Update the navigation property resources in education
-     * @param EducationAssignmentResource $body The request body
      * @param EducationAssignmentResourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

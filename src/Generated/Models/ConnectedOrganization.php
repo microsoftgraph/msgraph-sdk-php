@@ -50,7 +50,7 @@ class ConnectedOrganization extends Entity implements Parsable
     }
 
     /**
-     * Gets the externalSponsors property value. The externalSponsors property
+     * Gets the externalSponsors property value. 
      * @return array<DirectoryObject>|null
     */
     public function getExternalSponsors(): ?array {
@@ -84,7 +84,7 @@ class ConnectedOrganization extends Entity implements Parsable
     }
 
     /**
-     * Gets the internalSponsors property value. The internalSponsors property
+     * Gets the internalSponsors property value. 
      * @return array<DirectoryObject>|null
     */
     public function getInternalSponsors(): ?array {
@@ -148,7 +148,7 @@ class ConnectedOrganization extends Entity implements Parsable
     }
 
     /**
-     * Sets the externalSponsors property value. The externalSponsors property
+     * Sets the externalSponsors property value. 
      * @param array<DirectoryObject>|null $value Value to set for the externalSponsors property.
     */
     public function setExternalSponsors(?array $value): void {
@@ -164,7 +164,7 @@ class ConnectedOrganization extends Entity implements Parsable
     }
 
     /**
-     * Sets the internalSponsors property value. The internalSponsors property
+     * Sets the internalSponsors property value. 
      * @param array<DirectoryObject>|null $value Value to set for the internalSponsors property.
     */
     public function setInternalSponsors(?array $value): void {

@@ -54,11 +54,15 @@ class UserFlowLanguageConfigurationItemRequestBuilder
      * Instantiates a new UserFlowLanguageConfigurationItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $userFlowLanguageConfigurationId key: id of userFlowLanguageConfiguration
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $userFlowLanguageConfigurationId = null) {
         $this->urlTemplate = '{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/languages/{userFlowLanguageConfiguration%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['userFlowLanguageConfigurationId'] = $userFlowLanguageConfigurationId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -121,7 +125,6 @@ class UserFlowLanguageConfigurationItemRequestBuilder
 
     /**
      * Update the navigation property languages in identity
-     * @param UserFlowLanguageConfiguration $body The request body
      * @param UserFlowLanguageConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -186,7 +189,6 @@ class UserFlowLanguageConfigurationItemRequestBuilder
 
     /**
      * Update the navigation property languages in identity
-     * @param UserFlowLanguageConfiguration $body The request body
      * @param UserFlowLanguageConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -83,7 +83,6 @@ class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder
 
     /**
      * Update the navigation property deviceCompliancePolicyDeviceStateSummary in deviceManagement
-     * @param DeviceCompliancePolicyDeviceStateSummary $body The request body
      * @param DeviceCompliancePolicyDeviceStateSummaryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +147,6 @@ class DeviceCompliancePolicyDeviceStateSummaryRequestBuilder
 
     /**
      * Update the navigation property deviceCompliancePolicyDeviceStateSummary in deviceManagement
-     * @param DeviceCompliancePolicyDeviceStateSummary $body The request body
      * @param DeviceCompliancePolicyDeviceStateSummaryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

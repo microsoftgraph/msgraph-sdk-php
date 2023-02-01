@@ -75,7 +75,6 @@ class ChildrenRequestBuilder
 
     /**
      * Create a new term object.
-     * @param Term $body The request body
      * @param ChildrenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/termstore-term-post?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class ChildrenRequestBuilder
 
     /**
      * Create a new term object.
-     * @param Term $body The request body
      * @param ChildrenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

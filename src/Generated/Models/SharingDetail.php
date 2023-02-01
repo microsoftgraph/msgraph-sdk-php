@@ -68,7 +68,7 @@ class SharingDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -92,7 +92,7 @@ class SharingDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the sharingReference property value. The sharingReference property
+     * Gets the sharingReference property value. 
      * @return ResourceReference|null
     */
     public function getSharingReference(): ?ResourceReference {
@@ -145,7 +145,7 @@ class SharingDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -169,7 +169,7 @@ class SharingDetail implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the sharingReference property value. The sharingReference property
+     * Sets the sharingReference property value. 
      * @param ResourceReference|null $value Value to set for the sharingReference property.
     */
     public function setSharingReference(?ResourceReference $value): void {

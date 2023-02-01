@@ -9,7 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Place;
 use Microsoft\Graph\Generated\Models\PlaceCollectionResponse;
 use Microsoft\Graph\Generated\Places\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Places\Room\RoomRequestBuilder;
+use Microsoft\Graph\Generated\Places\MicrosoftGraphRoom\RoomRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -30,6 +30,13 @@ class PlacesRequestBuilder
     }
     
     /**
+     * Casts the previous resource to room.
+    */
+    public function microsoftGraphRoom(): RoomRequestBuilder {
+        return new RoomRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -38,13 +45,6 @@ class PlacesRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
-    
-    /**
-     * Casts the previous resource to room.
-    */
-    public function room(): RoomRequestBuilder {
-        return new RoomRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
@@ -82,7 +82,6 @@ class PlacesRequestBuilder
 
     /**
      * Add new entity to places
-     * @param Place $body The request body
      * @param PlacesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -126,7 +125,6 @@ class PlacesRequestBuilder
 
     /**
      * Add new entity to places
-     * @param Place $body The request body
      * @param PlacesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

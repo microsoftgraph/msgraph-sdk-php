@@ -75,7 +75,6 @@ class CustomersRequestBuilder
 
     /**
      * Create a new bookingCustomer object.
-     * @param BookingCustomerBase $body The request body
      * @param CustomersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/bookingbusiness-post-customers?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class CustomersRequestBuilder
 
     /**
      * Create a new bookingCustomer object.
-     * @param BookingCustomerBase $body The request body
      * @param CustomersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

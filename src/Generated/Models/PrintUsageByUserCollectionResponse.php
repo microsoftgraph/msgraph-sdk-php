@@ -36,7 +36,7 @@ class PrintUsageByUserCollectionResponse extends BaseCollectionPaginationCountRe
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return array<PrintUsageByUser>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class PrintUsageByUserCollectionResponse extends BaseCollectionPaginationCountRe
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param array<PrintUsageByUser>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

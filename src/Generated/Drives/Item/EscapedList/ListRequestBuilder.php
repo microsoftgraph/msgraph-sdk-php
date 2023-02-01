@@ -180,7 +180,6 @@ class ListRequestBuilder
 
     /**
      * Update the navigation property list in drives
-     * @param EscapedList $body The request body
      * @param ListRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -256,7 +255,6 @@ class ListRequestBuilder
 
     /**
      * Update the navigation property list in drives
-     * @param EscapedList $body The request body
      * @param ListRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

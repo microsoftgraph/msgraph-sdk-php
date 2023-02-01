@@ -37,7 +37,7 @@ class PrintUsageByPrinter extends PrintUsage implements Parsable
     }
 
     /**
-     * Gets the printerId property value. The printerId property
+     * Gets the printerId property value. 
      * @return string|null
     */
     public function getPrinterId(): ?string {
@@ -54,7 +54,7 @@ class PrintUsageByPrinter extends PrintUsage implements Parsable
     }
 
     /**
-     * Sets the printerId property value. The printerId property
+     * Sets the printerId property value. 
      * @param string|null $value Value to set for the printerId property.
     */
     public function setPrinterId(?string $value): void {

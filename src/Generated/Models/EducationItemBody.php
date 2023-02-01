@@ -51,7 +51,7 @@ class EducationItemBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the content property value. The content property
+     * Gets the content property value. 
      * @return string|null
     */
     public function getContent(): ?string {
@@ -59,7 +59,7 @@ class EducationItemBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the contentType property value. The contentType property
+     * Gets the contentType property value. 
      * @return BodyType|null
     */
     public function getContentType(): ?BodyType {
@@ -80,7 +80,7 @@ class EducationItemBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -115,7 +115,7 @@ class EducationItemBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the content property value. The content property
+     * Sets the content property value. 
      * @param string|null $value Value to set for the content property.
     */
     public function setContent(?string $value): void {
@@ -123,7 +123,7 @@ class EducationItemBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the contentType property value. The contentType property
+     * Sets the contentType property value. 
      * @param BodyType|null $value Value to set for the contentType property.
     */
     public function setContentType(?BodyType $value): void {
@@ -131,7 +131,7 @@ class EducationItemBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

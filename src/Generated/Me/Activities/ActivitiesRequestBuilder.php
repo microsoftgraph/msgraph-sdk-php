@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Activities\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Me\Activities\Recent\RecentRequestBuilder;
+use Microsoft\Graph\Generated\Me\Activities\MicrosoftGraphRecent\RecentRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UserActivity;
 use Microsoft\Graph\Generated\Models\UserActivityCollectionResponse;
@@ -27,6 +27,13 @@ class ActivitiesRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the recent method.
+    */
+    public function microsoftGraphRecent(): RecentRequestBuilder {
+        return new RecentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -75,7 +82,6 @@ class ActivitiesRequestBuilder
 
     /**
      * Create new navigation property to activities for me
-     * @param UserActivity $body The request body
      * @param ActivitiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -90,14 +96,6 @@ class ActivitiesRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to call the recent method.
-     * @return RecentRequestBuilder
-    */
-    public function recent(): RecentRequestBuilder {
-        return new RecentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
 
     /**
@@ -127,7 +125,6 @@ class ActivitiesRequestBuilder
 
     /**
      * Create new navigation property to activities for me
-     * @param UserActivity $body The request body
      * @param ActivitiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

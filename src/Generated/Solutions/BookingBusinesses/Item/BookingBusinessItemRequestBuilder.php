@@ -13,13 +13,13 @@ use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Customers\Custome
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Customers\Item\BookingCustomerBaseItemRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CustomQuestions\CustomQuestionsRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CustomQuestions\Item\BookingCustomQuestionItemRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\GetStaffAvailability\GetStaffAvailabilityRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Publish\PublishRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\MicrosoftGraphGetStaffAvailability\GetStaffAvailabilityRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\MicrosoftGraphPublish\PublishRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\MicrosoftGraphUnpublish\UnpublishRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Services\Item\BookingServiceItemRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Services\ServicesRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\StaffMembers\Item\BookingStaffMemberBaseItemRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\StaffMembers\StaffMembersRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Unpublish\UnpublishRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -63,21 +63,28 @@ class BookingBusinessItemRequestBuilder
     /**
      * Provides operations to call the getStaffAvailability method.
     */
-    public function getStaffAvailability(): GetStaffAvailabilityRequestBuilder {
+    public function microsoftGraphGetStaffAvailability(): GetStaffAvailabilityRequestBuilder {
         return new GetStaffAvailabilityRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the publish method.
+    */
+    public function microsoftGraphPublish(): PublishRequestBuilder {
+        return new PublishRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the unpublish method.
+    */
+    public function microsoftGraphUnpublish(): UnpublishRequestBuilder {
+        return new UnpublishRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
-    
-    /**
-     * Provides operations to call the publish method.
-    */
-    public function publish(): PublishRequestBuilder {
-        return new PublishRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -96,13 +103,6 @@ class BookingBusinessItemRequestBuilder
     */
     public function staffMembers(): StaffMembersRequestBuilder {
         return new StaffMembersRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the unpublish method.
-    */
-    public function unpublish(): UnpublishRequestBuilder {
-        return new UnpublishRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -136,11 +136,15 @@ class BookingBusinessItemRequestBuilder
      * Instantiates a new BookingBusinessItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $bookingBusinessId key: id of bookingBusiness
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $bookingBusinessId = null) {
         $this->urlTemplate = '{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['bookingBusinessId'] = $bookingBusinessId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -203,7 +207,6 @@ class BookingBusinessItemRequestBuilder
 
     /**
      * Update the navigation property bookingBusinesses in solutions
-     * @param BookingBusiness $body The request body
      * @param BookingBusinessItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -290,7 +293,6 @@ class BookingBusinessItemRequestBuilder
 
     /**
      * Update the navigation property bookingBusinesses in solutions
-     * @param BookingBusiness $body The request body
      * @param BookingBusinessItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

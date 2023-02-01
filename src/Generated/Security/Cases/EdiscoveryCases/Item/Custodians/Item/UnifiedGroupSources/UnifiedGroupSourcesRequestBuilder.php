@@ -75,7 +75,6 @@ class UnifiedGroupSourcesRequestBuilder
 
     /**
      * Create a new unifiedGroupSource object associated with an eDiscovery custodian.
-     * @param UnifiedGroupSource $body The request body
      * @param UnifiedGroupSourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/security-ediscoverycustodian-post-unifiedgroupsources?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class UnifiedGroupSourcesRequestBuilder
 
     /**
      * Create a new unifiedGroupSource object associated with an eDiscovery custodian.
-     * @param UnifiedGroupSource $body The request body
      * @param UnifiedGroupSourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

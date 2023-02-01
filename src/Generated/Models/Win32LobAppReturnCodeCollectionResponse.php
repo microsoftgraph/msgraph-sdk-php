@@ -36,7 +36,7 @@ class Win32LobAppReturnCodeCollectionResponse extends BaseCollectionPaginationCo
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return array<Win32LobAppReturnCode>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class Win32LobAppReturnCodeCollectionResponse extends BaseCollectionPaginationCo
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param array<Win32LobAppReturnCode>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

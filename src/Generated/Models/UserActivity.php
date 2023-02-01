@@ -154,7 +154,7 @@ class UserActivity extends Entity implements Parsable
     }
 
     /**
-     * Gets the visualElements property value. The visualElements property
+     * Gets the visualElements property value. 
      * @return VisualInfo|null
     */
     public function getVisualElements(): ?VisualInfo {
@@ -288,7 +288,7 @@ class UserActivity extends Entity implements Parsable
     }
 
     /**
-     * Sets the visualElements property value. The visualElements property
+     * Sets the visualElements property value. 
      * @param VisualInfo|null $value Value to set for the visualElements property.
     */
     public function setVisualElements(?VisualInfo $value): void {

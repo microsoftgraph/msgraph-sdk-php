@@ -51,7 +51,7 @@ class VmMetadata implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the cloudProvider property value. The cloudProvider property
+     * Gets the cloudProvider property value. 
      * @return VmCloudProvider|null
     */
     public function getCloudProvider(): ?VmCloudProvider {
@@ -74,7 +74,7 @@ class VmMetadata implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -135,7 +135,7 @@ class VmMetadata implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the cloudProvider property value. The cloudProvider property
+     * Sets the cloudProvider property value. 
      * @param VmCloudProvider|null $value Value to set for the cloudProvider property.
     */
     public function setCloudProvider(?VmCloudProvider $value): void {
@@ -143,7 +143,7 @@ class VmMetadata implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

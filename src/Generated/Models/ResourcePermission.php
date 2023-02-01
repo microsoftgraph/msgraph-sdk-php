@@ -64,7 +64,7 @@ class ResourcePermission implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -72,7 +72,7 @@ class ResourcePermission implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. 
      * @return string|null
     */
     public function getType(): ?string {
@@ -80,7 +80,7 @@ class ResourcePermission implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return string|null
     */
     public function getValue(): ?string {
@@ -115,7 +115,7 @@ class ResourcePermission implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -123,7 +123,7 @@ class ResourcePermission implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. 
      * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {
@@ -131,7 +131,7 @@ class ResourcePermission implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param string|null $value Value to set for the value property.
     */
     public function setValue(?string $value): void {

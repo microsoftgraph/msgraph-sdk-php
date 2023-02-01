@@ -38,11 +38,15 @@ class OfferShiftRequestItemRequestBuilder
      * Instantiates a new OfferShiftRequestItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $offerShiftRequestId key: id of offerShiftRequest
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $offerShiftRequestId = null) {
         $this->urlTemplate = '{+baseurl}/teams/{team%2Did}/schedule/offerShiftRequests/{offerShiftRequest%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['offerShiftRequestId'] = $offerShiftRequestId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class OfferShiftRequestItemRequestBuilder
 
     /**
      * Update the navigation property offerShiftRequests in teams
-     * @param OfferShiftRequest $body The request body
      * @param OfferShiftRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class OfferShiftRequestItemRequestBuilder
 
     /**
      * Update the navigation property offerShiftRequests in teams
-     * @param OfferShiftRequest $body The request body
      * @param OfferShiftRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

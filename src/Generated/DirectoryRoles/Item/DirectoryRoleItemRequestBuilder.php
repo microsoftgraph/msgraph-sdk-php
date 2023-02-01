@@ -5,13 +5,13 @@ namespace Microsoft\Graph\Generated\DirectoryRoles\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DirectoryRoles\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoles\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoles\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoles\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
 use Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Item\DirectoryObjectItemRequestBuilder;
 use Microsoft\Graph\Generated\DirectoryRoles\Item\Members\MembersRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoles\Item\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\MicrosoftGraphCheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\MicrosoftGraphCheckMemberObjects\CheckMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\MicrosoftGraphGetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\MicrosoftGraphGetMemberObjects\GetMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\MicrosoftGraphRestore\RestoreRequestBuilder;
 use Microsoft\Graph\Generated\DirectoryRoles\Item\ScopedMembers\Item\ScopedRoleMembershipItemRequestBuilder;
 use Microsoft\Graph\Generated\DirectoryRoles\Item\ScopedMembers\ScopedMembersRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryRole;
@@ -29,38 +29,45 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class DirectoryRoleItemRequestBuilder 
 {
     /**
+     * Provides operations to manage the members property of the microsoft.graph.directoryRole entity.
+    */
+    public function members(): MembersRequestBuilder {
+        return new MembersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to call the checkMemberGroups method.
     */
-    public function checkMemberGroups(): CheckMemberGroupsRequestBuilder {
+    public function microsoftGraphCheckMemberGroups(): CheckMemberGroupsRequestBuilder {
         return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the checkMemberObjects method.
     */
-    public function checkMemberObjects(): CheckMemberObjectsRequestBuilder {
+    public function microsoftGraphCheckMemberObjects(): CheckMemberObjectsRequestBuilder {
         return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getMemberGroups method.
     */
-    public function getMemberGroups(): GetMemberGroupsRequestBuilder {
+    public function microsoftGraphGetMemberGroups(): GetMemberGroupsRequestBuilder {
         return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getMemberObjects method.
     */
-    public function getMemberObjects(): GetMemberObjectsRequestBuilder {
+    public function microsoftGraphGetMemberObjects(): GetMemberObjectsRequestBuilder {
         return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * Provides operations to manage the members property of the microsoft.graph.directoryRole entity.
+     * Provides operations to call the restore method.
     */
-    public function members(): MembersRequestBuilder {
-        return new MembersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRestore(): RestoreRequestBuilder {
+        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -72,13 +79,6 @@ class DirectoryRoleItemRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
-    
-    /**
-     * Provides operations to call the restore method.
-    */
-    public function restore(): RestoreRequestBuilder {
-        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * Provides operations to manage the scopedMembers property of the microsoft.graph.directoryRole entity.
@@ -96,15 +96,19 @@ class DirectoryRoleItemRequestBuilder
      * Instantiates a new DirectoryRoleItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $directoryRoleId key: id of directoryRole
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $directoryRoleId = null) {
         $this->urlTemplate = '{+baseurl}/directoryRoles/{directoryRole%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['directoryRoleId'] = $directoryRoleId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
-     * Delete entity from directoryRoles by key (id)
+     * Delete entity from directoryRoles
      * @param DirectoryRoleItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -152,8 +156,7 @@ class DirectoryRoleItemRequestBuilder
     }
 
     /**
-     * Update entity in directoryRoles by key (id)
-     * @param DirectoryRole $body The request body
+     * Update entity in directoryRoles
      * @param DirectoryRoleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -182,7 +185,7 @@ class DirectoryRoleItemRequestBuilder
     }
 
     /**
-     * Delete entity from directoryRoles by key (id)
+     * Delete entity from directoryRoles
      * @param DirectoryRoleItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -228,8 +231,7 @@ class DirectoryRoleItemRequestBuilder
     }
 
     /**
-     * Update entity in directoryRoles by key (id)
-     * @param DirectoryRole $body The request body
+     * Update entity in directoryRoles
      * @param DirectoryRoleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -64,7 +64,7 @@ class OnenotePagePreview implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the links property value. The links property
+     * Gets the links property value. 
      * @return OnenotePagePreviewLinks|null
     */
     public function getLinks(): ?OnenotePagePreviewLinks {
@@ -72,7 +72,7 @@ class OnenotePagePreview implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -80,7 +80,7 @@ class OnenotePagePreview implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the previewText property value. The previewText property
+     * Gets the previewText property value. 
      * @return string|null
     */
     public function getPreviewText(): ?string {
@@ -115,7 +115,7 @@ class OnenotePagePreview implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the links property value. The links property
+     * Sets the links property value. 
      * @param OnenotePagePreviewLinks|null $value Value to set for the links property.
     */
     public function setLinks(?OnenotePagePreviewLinks $value): void {
@@ -123,7 +123,7 @@ class OnenotePagePreview implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -131,7 +131,7 @@ class OnenotePagePreview implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the previewText property value. The previewText property
+     * Sets the previewText property value. 
      * @param string|null $value Value to set for the previewText property.
     */
     public function setPreviewText(?string $value): void {

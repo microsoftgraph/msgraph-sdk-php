@@ -47,11 +47,15 @@ class AgreementFileLocalizationItemRequestBuilder
      * Instantiates a new AgreementFileLocalizationItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $agreementFileLocalizationId key: id of agreementFileLocalization
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $agreementFileLocalizationId = null) {
         $this->urlTemplate = '{+baseurl}/agreements/{agreement%2Did}/file/localizations/{agreementFileLocalization%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['agreementFileLocalizationId'] = $agreementFileLocalizationId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -92,7 +96,6 @@ class AgreementFileLocalizationItemRequestBuilder
 
     /**
      * Update the navigation property localizations in agreements
-     * @param AgreementFileLocalization $body The request body
      * @param AgreementFileLocalizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -157,7 +160,6 @@ class AgreementFileLocalizationItemRequestBuilder
 
     /**
      * Update the navigation property localizations in agreements
-     * @param AgreementFileLocalization $body The request body
      * @param AgreementFileLocalizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

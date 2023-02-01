@@ -38,11 +38,15 @@ class PrintOperationItemRequestBuilder
      * Instantiates a new PrintOperationItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $printOperationId key: id of printOperation
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $printOperationId = null) {
         $this->urlTemplate = '{+baseurl}/print/operations/{printOperation%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['printOperationId'] = $printOperationId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class PrintOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in print
-     * @param PrintOperation $body The request body
      * @param PrintOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class PrintOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in print
-     * @param PrintOperation $body The request body
      * @param PrintOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

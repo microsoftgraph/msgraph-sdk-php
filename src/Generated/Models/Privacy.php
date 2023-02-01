@@ -63,7 +63,7 @@ class Privacy implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -71,7 +71,7 @@ class Privacy implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the subjectRightsRequests property value. The subjectRightsRequests property
+     * Gets the subjectRightsRequests property value. 
      * @return array<SubjectRightsRequest>|null
     */
     public function getSubjectRightsRequests(): ?array {
@@ -105,7 +105,7 @@ class Privacy implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -113,7 +113,7 @@ class Privacy implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the subjectRightsRequests property value. The subjectRightsRequests property
+     * Sets the subjectRightsRequests property value. 
      * @param array<SubjectRightsRequest>|null $value Value to set for the subjectRightsRequests property.
     */
     public function setSubjectRightsRequests(?array $value): void {

@@ -74,7 +74,6 @@ class TermStoresRequestBuilder
 
     /**
      * Create new navigation property to termStores for groups
-     * @param Store $body The request body
      * @param TermStoresRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class TermStoresRequestBuilder
 
     /**
      * Create new navigation property to termStores for groups
-     * @param Store $body The request body
      * @param TermStoresRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

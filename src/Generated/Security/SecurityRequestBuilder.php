@@ -13,7 +13,7 @@ use Microsoft\Graph\Generated\Security\AttackSimulation\AttackSimulationRequestB
 use Microsoft\Graph\Generated\Security\Cases\CasesRequestBuilder;
 use Microsoft\Graph\Generated\Security\Incidents\IncidentsRequestBuilder;
 use Microsoft\Graph\Generated\Security\Incidents\Item\IncidentItemRequestBuilder;
-use Microsoft\Graph\Generated\Security\RunHuntingQuery\RunHuntingQueryRequestBuilder;
+use Microsoft\Graph\Generated\Security\MicrosoftGraphSecurityRunHuntingQuery\RunHuntingQueryRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecureScoreControlProfiles\Item\SecureScoreControlProfileItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecureScoreControlProfiles\SecureScoreControlProfilesRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecureScores\Item\SecureScoreItemRequestBuilder;
@@ -66,6 +66,13 @@ class SecurityRequestBuilder
     }
     
     /**
+     * Provides operations to call the runHuntingQuery method.
+    */
+    public function microsoftGraphSecurityRunHuntingQuery(): RunHuntingQueryRequestBuilder {
+        return new RunHuntingQueryRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -74,13 +81,6 @@ class SecurityRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
-    
-    /**
-     * Provides operations to call the runHuntingQuery method.
-    */
-    public function runHuntingQuery(): RunHuntingQueryRequestBuilder {
-        return new RunHuntingQueryRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * Provides operations to manage the secureScoreControlProfiles property of the microsoft.graph.security entity.
@@ -165,7 +165,6 @@ class SecurityRequestBuilder
 
     /**
      * Update security
-     * @param Security $body The request body
      * @param SecurityRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -231,7 +230,6 @@ class SecurityRequestBuilder
 
     /**
      * Update security
-     * @param Security $body The request body
      * @param SecurityRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

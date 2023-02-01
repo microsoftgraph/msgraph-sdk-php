@@ -143,7 +143,7 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -215,7 +215,7 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the subunit property value. The subunit property
+     * Gets the subunit property value. 
      * @return array<string>|null
     */
     public function getSubunit(): ?array {
@@ -329,7 +329,7 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -401,7 +401,7 @@ class PrinterLocation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the subunit property value. The subunit property
+     * Sets the subunit property value. 
      * @param array<string>|null $value Value to set for the subunit property.
     */
     public function setSubunit(?array $value): void {

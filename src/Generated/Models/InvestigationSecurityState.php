@@ -64,7 +64,7 @@ class InvestigationSecurityState implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. 
      * @return string|null
     */
     public function getName(): ?string {
@@ -72,7 +72,7 @@ class InvestigationSecurityState implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -80,7 +80,7 @@ class InvestigationSecurityState implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. 
      * @return string|null
     */
     public function getStatus(): ?string {
@@ -115,7 +115,7 @@ class InvestigationSecurityState implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. 
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -123,7 +123,7 @@ class InvestigationSecurityState implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -131,7 +131,7 @@ class InvestigationSecurityState implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. 
      * @param string|null $value Value to set for the status property.
     */
     public function setStatus(?string $value): void {

@@ -5,10 +5,10 @@ namespace Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\AddCopy\AddCopyRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\AddCopyFromContentTypeHub\AddCopyFromContentTypeHubRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\GetCompatibleHubContentTypes\GetCompatibleHubContentTypesRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\MicrosoftGraphAddCopy\AddCopyRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\MicrosoftGraphAddCopyFromContentTypeHub\AddCopyFromContentTypeHubRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\MicrosoftGraphGetCompatibleHubContentTypes\GetCompatibleHubContentTypesRequestBuilder;
 use Microsoft\Graph\Generated\Models\ContentType;
 use Microsoft\Graph\Generated\Models\ContentTypeCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -25,24 +25,31 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ContentTypesRequestBuilder 
 {
     /**
+     * Provides operations to count the resources in the collection.
+    */
+    public function count(): CountRequestBuilder {
+        return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to call the addCopy method.
     */
-    public function addCopy(): AddCopyRequestBuilder {
+    public function microsoftGraphAddCopy(): AddCopyRequestBuilder {
         return new AddCopyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the addCopyFromContentTypeHub method.
     */
-    public function addCopyFromContentTypeHub(): AddCopyFromContentTypeHubRequestBuilder {
+    public function microsoftGraphAddCopyFromContentTypeHub(): AddCopyFromContentTypeHubRequestBuilder {
         return new AddCopyFromContentTypeHubRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * Provides operations to count the resources in the collection.
+     * Provides operations to call the getCompatibleHubContentTypes method.
     */
-    public function count(): CountRequestBuilder {
-        return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetCompatibleHubContentTypes(): GetCompatibleHubContentTypesRequestBuilder {
+        return new GetCompatibleHubContentTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -91,16 +98,7 @@ class ContentTypesRequestBuilder
     }
 
     /**
-     * Provides operations to call the getCompatibleHubContentTypes method.
-     * @return GetCompatibleHubContentTypesRequestBuilder
-    */
-    public function getCompatibleHubContentTypes(): GetCompatibleHubContentTypesRequestBuilder {
-        return new GetCompatibleHubContentTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
      * Create new navigation property to contentTypes for drives
-     * @param ContentType $body The request body
      * @param ContentTypesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -144,7 +142,6 @@ class ContentTypesRequestBuilder
 
     /**
      * Create new navigation property to contentTypes for drives
-     * @param ContentType $body The request body
      * @param ContentTypesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -25,7 +25,7 @@ class UserSettings extends Entity implements Parsable
     }
 
     /**
-     * Gets the contributionToContentDiscoveryAsOrganizationDisabled property value. The contributionToContentDiscoveryAsOrganizationDisabled property
+     * Gets the contributionToContentDiscoveryAsOrganizationDisabled property value. 
      * @return bool|null
     */
     public function getContributionToContentDiscoveryAsOrganizationDisabled(): ?bool {
@@ -33,7 +33,7 @@ class UserSettings extends Entity implements Parsable
     }
 
     /**
-     * Gets the contributionToContentDiscoveryDisabled property value. The contributionToContentDiscoveryDisabled property
+     * Gets the contributionToContentDiscoveryDisabled property value. 
      * @return bool|null
     */
     public function getContributionToContentDiscoveryDisabled(): ?bool {
@@ -54,7 +54,7 @@ class UserSettings extends Entity implements Parsable
     }
 
     /**
-     * Gets the shiftPreferences property value. The shiftPreferences property
+     * Gets the shiftPreferences property value. 
      * @return ShiftPreferences|null
     */
     public function getShiftPreferences(): ?ShiftPreferences {
@@ -73,7 +73,7 @@ class UserSettings extends Entity implements Parsable
     }
 
     /**
-     * Sets the contributionToContentDiscoveryAsOrganizationDisabled property value. The contributionToContentDiscoveryAsOrganizationDisabled property
+     * Sets the contributionToContentDiscoveryAsOrganizationDisabled property value. 
      * @param bool|null $value Value to set for the contributionToContentDiscoveryAsOrganizationDisabled property.
     */
     public function setContributionToContentDiscoveryAsOrganizationDisabled(?bool $value): void {
@@ -81,7 +81,7 @@ class UserSettings extends Entity implements Parsable
     }
 
     /**
-     * Sets the contributionToContentDiscoveryDisabled property value. The contributionToContentDiscoveryDisabled property
+     * Sets the contributionToContentDiscoveryDisabled property value. 
      * @param bool|null $value Value to set for the contributionToContentDiscoveryDisabled property.
     */
     public function setContributionToContentDiscoveryDisabled(?bool $value): void {
@@ -89,7 +89,7 @@ class UserSettings extends Entity implements Parsable
     }
 
     /**
-     * Sets the shiftPreferences property value. The shiftPreferences property
+     * Sets the shiftPreferences property value. 
      * @param ShiftPreferences|null $value Value to set for the shiftPreferences property.
     */
     public function setShiftPreferences(?ShiftPreferences $value): void {

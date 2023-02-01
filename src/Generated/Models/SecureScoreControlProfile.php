@@ -175,7 +175,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Gets the tier property value. The tier property
+     * Gets the tier property value. 
      * @return string|null
     */
     public function getTier(): ?string {
@@ -183,7 +183,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Gets the title property value. The title property
+     * Gets the title property value. 
      * @return string|null
     */
     public function getTitle(): ?string {
@@ -191,7 +191,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Gets the userImpact property value. The userImpact property
+     * Gets the userImpact property value. 
      * @return string|null
     */
     public function getUserImpact(): ?string {
@@ -199,7 +199,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Gets the vendorInformation property value. The vendorInformation property
+     * Gets the vendorInformation property value. 
      * @return SecurityVendorInformation|null
     */
     public function getVendorInformation(): ?SecurityVendorInformation {
@@ -354,7 +354,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Sets the tier property value. The tier property
+     * Sets the tier property value. 
      * @param string|null $value Value to set for the tier property.
     */
     public function setTier(?string $value): void {
@@ -362,7 +362,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Sets the title property value. The title property
+     * Sets the title property value. 
      * @param string|null $value Value to set for the title property.
     */
     public function setTitle(?string $value): void {
@@ -370,7 +370,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Sets the userImpact property value. The userImpact property
+     * Sets the userImpact property value. 
      * @param string|null $value Value to set for the userImpact property.
     */
     public function setUserImpact(?string $value): void {
@@ -378,7 +378,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Sets the vendorInformation property value. The vendorInformation property
+     * Sets the vendorInformation property value. 
      * @param SecurityVendorInformation|null $value Value to set for the vendorInformation property.
     */
     public function setVendorInformation(?SecurityVendorInformation $value): void {

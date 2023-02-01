@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Subscription;
-use Microsoft\Graph\Generated\Subscriptions\Item\Reauthorize\ReauthorizeRequestBuilder;
+use Microsoft\Graph\Generated\Subscriptions\Item\MicrosoftGraphReauthorize\ReauthorizeRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -21,16 +21,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class SubscriptionItemRequestBuilder 
 {
     /**
+     * Provides operations to call the reauthorize method.
+    */
+    public function microsoftGraphReauthorize(): ReauthorizeRequestBuilder {
+        return new ReauthorizeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
-    
-    /**
-     * Provides operations to call the reauthorize method.
-    */
-    public function reauthorize(): ReauthorizeRequestBuilder {
-        return new ReauthorizeRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -46,11 +46,15 @@ class SubscriptionItemRequestBuilder
      * Instantiates a new SubscriptionItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $subscriptionId key: id of subscription
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $subscriptionId = null) {
         $this->urlTemplate = '{+baseurl}/subscriptions/{subscription%2Did}{?%24select}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['subscriptionId'] = $subscriptionId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -93,7 +97,6 @@ class SubscriptionItemRequestBuilder
 
     /**
      * Renew a subscription by extending its expiry time. The table in the Permissions section lists the resources that support subscribing to change notifications. Subscriptions expire after a length of time that varies by resource type. In order to avoid missing change notifications, an app should renew its subscriptions well in advance of their expiry date. See subscription for maximum length of a subscription for each resource type.
-     * @param Subscription $body The request body
      * @param SubscriptionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/subscription-update?view=graph-rest-1.0 Find more info here
@@ -159,7 +162,6 @@ class SubscriptionItemRequestBuilder
 
     /**
      * Renew a subscription by extending its expiry time. The table in the Permissions section lists the resources that support subscribing to change notifications. Subscriptions expire after a length of time that varies by resource type. In order to avoid missing change notifications, an app should renew its subscriptions well in advance of their expiry date. See subscription for maximum length of a subscription for each resource type.
-     * @param Subscription $body The request body
      * @param SubscriptionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

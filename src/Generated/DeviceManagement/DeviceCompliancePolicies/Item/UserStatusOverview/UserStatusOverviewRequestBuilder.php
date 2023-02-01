@@ -83,7 +83,6 @@ class UserStatusOverviewRequestBuilder
 
     /**
      * Update the navigation property userStatusOverview in deviceManagement
-     * @param DeviceComplianceUserOverview $body The request body
      * @param UserStatusOverviewRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +147,6 @@ class UserStatusOverviewRequestBuilder
 
     /**
      * Update the navigation property userStatusOverview in deviceManagement
-     * @param DeviceComplianceUserOverview $body The request body
      * @param UserStatusOverviewRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

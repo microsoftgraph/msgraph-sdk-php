@@ -74,7 +74,6 @@ class DeviceStatesRequestBuilder
 
     /**
      * Create new navigation property to deviceStates for deviceAppManagement
-     * @param DeviceInstallState $body The request body
      * @param DeviceStatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class DeviceStatesRequestBuilder
 
     /**
      * Create new navigation property to deviceStates for deviceAppManagement
-     * @param DeviceInstallState $body The request body
      * @param DeviceStatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

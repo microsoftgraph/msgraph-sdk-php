@@ -36,7 +36,7 @@ class UsedInsightCollectionResponse extends BaseCollectionPaginationCountRespons
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return array<UsedInsight>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class UsedInsightCollectionResponse extends BaseCollectionPaginationCountRespons
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param array<UsedInsight>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

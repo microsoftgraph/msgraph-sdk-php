@@ -103,7 +103,6 @@ class TodoRequestBuilder
 
     /**
      * Update the navigation property todo in users
-     * @param Todo $body The request body
      * @param TodoRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -168,7 +167,6 @@ class TodoRequestBuilder
 
     /**
      * Update the navigation property todo in users
-     * @param Todo $body The request body
      * @param TodoRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

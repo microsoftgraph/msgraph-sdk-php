@@ -46,11 +46,15 @@ class PrintTaskTriggerItemRequestBuilder
      * Instantiates a new PrintTaskTriggerItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $printTaskTriggerId key: id of printTaskTrigger
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $printTaskTriggerId = null) {
         $this->urlTemplate = '{+baseurl}/print/printers/{printer%2Did}/taskTriggers/{printTaskTrigger%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['printTaskTriggerId'] = $printTaskTriggerId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -91,7 +95,6 @@ class PrintTaskTriggerItemRequestBuilder
 
     /**
      * Update the navigation property taskTriggers in print
-     * @param PrintTaskTrigger $body The request body
      * @param PrintTaskTriggerItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -156,7 +159,6 @@ class PrintTaskTriggerItemRequestBuilder
 
     /**
      * Update the navigation property taskTriggers in print
-     * @param PrintTaskTrigger $body The request body
      * @param PrintTaskTriggerItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

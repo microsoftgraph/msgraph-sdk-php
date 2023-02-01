@@ -46,11 +46,15 @@ class UnifiedRoleAssignmentScheduleItemRequestBuilder
      * Instantiates a new UnifiedRoleAssignmentScheduleItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $unifiedRoleAssignmentScheduleId key: id of unifiedRoleAssignmentSchedule
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $unifiedRoleAssignmentScheduleId = null) {
         $this->urlTemplate = '{+baseurl}/roleManagement/directory/roleAssignmentSchedules/{unifiedRoleAssignmentSchedule%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['unifiedRoleAssignmentScheduleId'] = $unifiedRoleAssignmentScheduleId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -91,7 +95,6 @@ class UnifiedRoleAssignmentScheduleItemRequestBuilder
 
     /**
      * Update the navigation property roleAssignmentSchedules in roleManagement
-     * @param UnifiedRoleAssignmentSchedule $body The request body
      * @param UnifiedRoleAssignmentScheduleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -156,7 +159,6 @@ class UnifiedRoleAssignmentScheduleItemRequestBuilder
 
     /**
      * Update the navigation property roleAssignmentSchedules in roleManagement
-     * @param UnifiedRoleAssignmentSchedule $body The request body
      * @param UnifiedRoleAssignmentScheduleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SearchEntity;
-use Microsoft\Graph\Generated\Search\Query\QueryRequestBuilder;
+use Microsoft\Graph\Generated\Search\MicrosoftGraphQuery\QueryRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -21,16 +21,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class SearchRequestBuilder 
 {
     /**
+     * Provides operations to call the query method.
+    */
+    public function microsoftGraphQuery(): QueryRequestBuilder {
+        return new QueryRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
-    
-    /**
-     * Provides operations to call the query method.
-    */
-    public function query(): QueryRequestBuilder {
-        return new QueryRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -73,7 +73,6 @@ class SearchRequestBuilder
 
     /**
      * Update search
-     * @param SearchEntity $body The request body
      * @param SearchRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,7 +116,6 @@ class SearchRequestBuilder
 
     /**
      * Update search
-     * @param SearchEntity $body The request body
      * @param SearchRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

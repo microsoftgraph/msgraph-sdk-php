@@ -9,7 +9,7 @@ use Microsoft\Graph\Generated\Me\Teamwork\AssociatedTeams\AssociatedTeamsRequest
 use Microsoft\Graph\Generated\Me\Teamwork\AssociatedTeams\Item\AssociatedTeamInfoItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Teamwork\InstalledApps\InstalledAppsRequestBuilder;
 use Microsoft\Graph\Generated\Me\Teamwork\InstalledApps\Item\UserScopeTeamsAppInstallationItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\Teamwork\SendActivityNotification\SendActivityNotificationRequestBuilder;
+use Microsoft\Graph\Generated\Me\Teamwork\MicrosoftGraphSendActivityNotification\SendActivityNotificationRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UserTeamwork;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -39,6 +39,13 @@ class TeamworkRequestBuilder
     }
     
     /**
+     * Provides operations to call the sendActivityNotification method.
+    */
+    public function microsoftGraphSendActivityNotification(): SendActivityNotificationRequestBuilder {
+        return new SendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -47,13 +54,6 @@ class TeamworkRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
-    
-    /**
-     * Provides operations to call the sendActivityNotification method.
-    */
-    public function sendActivityNotification(): SendActivityNotificationRequestBuilder {
-        return new SendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
@@ -131,7 +131,6 @@ class TeamworkRequestBuilder
 
     /**
      * Update the navigation property teamwork in me
-     * @param UserTeamwork $body The request body
      * @param TeamworkRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -196,7 +195,6 @@ class TeamworkRequestBuilder
 
     /**
      * Update the navigation property teamwork in me
-     * @param UserTeamwork $body The request body
      * @param TeamworkRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

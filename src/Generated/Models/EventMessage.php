@@ -34,7 +34,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Gets the endDateTime property value. The endDateTime property
+     * Gets the endDateTime property value. 
      * @return DateTimeTimeZone|null
     */
     public function getEndDateTime(): ?DateTimeTimeZone {
@@ -70,7 +70,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Gets the isAllDay property value. The isAllDay property
+     * Gets the isAllDay property value. 
      * @return bool|null
     */
     public function getIsAllDay(): ?bool {
@@ -78,7 +78,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Gets the isDelegated property value. The isDelegated property
+     * Gets the isDelegated property value. 
      * @return bool|null
     */
     public function getIsDelegated(): ?bool {
@@ -86,7 +86,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Gets the isOutOfDate property value. The isOutOfDate property
+     * Gets the isOutOfDate property value. 
      * @return bool|null
     */
     public function getIsOutOfDate(): ?bool {
@@ -94,7 +94,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Gets the location property value. The location property
+     * Gets the location property value. 
      * @return Location|null
     */
     public function getLocation(): ?Location {
@@ -102,7 +102,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Gets the meetingMessageType property value. The meetingMessageType property
+     * Gets the meetingMessageType property value. 
      * @return MeetingMessageType|null
     */
     public function getMeetingMessageType(): ?MeetingMessageType {
@@ -110,7 +110,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Gets the recurrence property value. The recurrence property
+     * Gets the recurrence property value. 
      * @return PatternedRecurrence|null
     */
     public function getRecurrence(): ?PatternedRecurrence {
@@ -118,7 +118,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Gets the startDateTime property value. The startDateTime property
+     * Gets the startDateTime property value. 
      * @return DateTimeTimeZone|null
     */
     public function getStartDateTime(): ?DateTimeTimeZone {
@@ -126,7 +126,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. 
      * @return EventType|null
     */
     public function getType(): ?EventType {
@@ -152,7 +152,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Sets the endDateTime property value. The endDateTime property
+     * Sets the endDateTime property value. 
      * @param DateTimeTimeZone|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTimeTimeZone $value): void {
@@ -168,7 +168,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Sets the isAllDay property value. The isAllDay property
+     * Sets the isAllDay property value. 
      * @param bool|null $value Value to set for the isAllDay property.
     */
     public function setIsAllDay(?bool $value): void {
@@ -176,7 +176,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Sets the isDelegated property value. The isDelegated property
+     * Sets the isDelegated property value. 
      * @param bool|null $value Value to set for the isDelegated property.
     */
     public function setIsDelegated(?bool $value): void {
@@ -184,7 +184,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Sets the isOutOfDate property value. The isOutOfDate property
+     * Sets the isOutOfDate property value. 
      * @param bool|null $value Value to set for the isOutOfDate property.
     */
     public function setIsOutOfDate(?bool $value): void {
@@ -192,7 +192,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Sets the location property value. The location property
+     * Sets the location property value. 
      * @param Location|null $value Value to set for the location property.
     */
     public function setLocation(?Location $value): void {
@@ -200,7 +200,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Sets the meetingMessageType property value. The meetingMessageType property
+     * Sets the meetingMessageType property value. 
      * @param MeetingMessageType|null $value Value to set for the meetingMessageType property.
     */
     public function setMeetingMessageType(?MeetingMessageType $value): void {
@@ -208,7 +208,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Sets the recurrence property value. The recurrence property
+     * Sets the recurrence property value. 
      * @param PatternedRecurrence|null $value Value to set for the recurrence property.
     */
     public function setRecurrence(?PatternedRecurrence $value): void {
@@ -216,7 +216,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Sets the startDateTime property value. The startDateTime property
+     * Sets the startDateTime property value. 
      * @param DateTimeTimeZone|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTimeTimeZone $value): void {
@@ -224,7 +224,7 @@ class EventMessage extends Message implements Parsable
     }
 
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. 
      * @param EventType|null $value Value to set for the type property.
     */
     public function setType(?EventType $value): void {

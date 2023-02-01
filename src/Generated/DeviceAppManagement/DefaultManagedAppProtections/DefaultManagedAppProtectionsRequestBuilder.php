@@ -74,7 +74,6 @@ class DefaultManagedAppProtectionsRequestBuilder
 
     /**
      * Create new navigation property to defaultManagedAppProtections for deviceAppManagement
-     * @param DefaultManagedAppProtection $body The request body
      * @param DefaultManagedAppProtectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class DefaultManagedAppProtectionsRequestBuilder
 
     /**
      * Create new navigation property to defaultManagedAppProtections for deviceAppManagement
-     * @param DefaultManagedAppProtection $body The request body
      * @param DefaultManagedAppProtectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

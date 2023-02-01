@@ -38,11 +38,15 @@ class EnrollmentConfigurationAssignmentItemRequestBuilder
      * Instantiates a new EnrollmentConfigurationAssignmentItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $enrollmentConfigurationAssignmentId key: id of enrollmentConfigurationAssignment
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $enrollmentConfigurationAssignmentId = null) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/deviceEnrollmentConfigurations/{deviceEnrollmentConfiguration%2Did}/assignments/{enrollmentConfigurationAssignment%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['enrollmentConfigurationAssignmentId'] = $enrollmentConfigurationAssignmentId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class EnrollmentConfigurationAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property assignments in deviceManagement
-     * @param EnrollmentConfigurationAssignment $body The request body
      * @param EnrollmentConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class EnrollmentConfigurationAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property assignments in deviceManagement
-     * @param EnrollmentConfigurationAssignment $body The request body
      * @param EnrollmentConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

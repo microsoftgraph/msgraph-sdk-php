@@ -75,7 +75,6 @@ class RoleAssignmentsRequestBuilder
 
     /**
      * Create a new unifiedRoleAssignment object.
-     * @param UnifiedRoleAssignment $body The request body
      * @param RoleAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/rbacapplication-post-roleassignments?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class RoleAssignmentsRequestBuilder
 
     /**
      * Create a new unifiedRoleAssignment object.
-     * @param UnifiedRoleAssignment $body The request body
      * @param RoleAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

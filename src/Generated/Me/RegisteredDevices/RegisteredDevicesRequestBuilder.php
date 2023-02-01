@@ -5,10 +5,10 @@ namespace Microsoft\Graph\Generated\Me\RegisteredDevices;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\RegisteredDevices\AppRoleAssignment\AppRoleAssignmentRequestBuilder;
 use Microsoft\Graph\Generated\Me\RegisteredDevices\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Me\RegisteredDevices\Device\DeviceRequestBuilder;
-use Microsoft\Graph\Generated\Me\RegisteredDevices\Endpoint\EndpointRequestBuilder;
+use Microsoft\Graph\Generated\Me\RegisteredDevices\MicrosoftGraphAppRoleAssignment\AppRoleAssignmentRequestBuilder;
+use Microsoft\Graph\Generated\Me\RegisteredDevices\MicrosoftGraphDevice\DeviceRequestBuilder;
+use Microsoft\Graph\Generated\Me\RegisteredDevices\MicrosoftGraphEndpoint\EndpointRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -24,13 +24,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class RegisteredDevicesRequestBuilder 
 {
     /**
-     * Casts the previous resource to appRoleAssignment.
-    */
-    public function appRoleAssignment(): AppRoleAssignmentRequestBuilder {
-        return new AppRoleAssignmentRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
@@ -38,16 +31,23 @@ class RegisteredDevicesRequestBuilder
     }
     
     /**
+     * Casts the previous resource to appRoleAssignment.
+    */
+    public function microsoftGraphAppRoleAssignment(): AppRoleAssignmentRequestBuilder {
+        return new AppRoleAssignmentRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Casts the previous resource to device.
     */
-    public function device(): DeviceRequestBuilder {
+    public function microsoftGraphDevice(): DeviceRequestBuilder {
         return new DeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to endpoint.
     */
-    public function endpoint(): EndpointRequestBuilder {
+    public function microsoftGraphEndpoint(): EndpointRequestBuilder {
         return new EndpointRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     

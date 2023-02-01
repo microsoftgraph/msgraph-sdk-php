@@ -38,11 +38,15 @@ class ThreatAssessmentResultItemRequestBuilder
      * Instantiates a new ThreatAssessmentResultItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $threatAssessmentResultId key: id of threatAssessmentResult
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $threatAssessmentResultId = null) {
         $this->urlTemplate = '{+baseurl}/informationProtection/threatAssessmentRequests/{threatAssessmentRequest%2Did}/results/{threatAssessmentResult%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['threatAssessmentResultId'] = $threatAssessmentResultId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class ThreatAssessmentResultItemRequestBuilder
 
     /**
      * Update the navigation property results in informationProtection
-     * @param ThreatAssessmentResult $body The request body
      * @param ThreatAssessmentResultItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class ThreatAssessmentResultItemRequestBuilder
 
     /**
      * Update the navigation property results in informationProtection
-     * @param ThreatAssessmentResult $body The request body
      * @param ThreatAssessmentResultItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

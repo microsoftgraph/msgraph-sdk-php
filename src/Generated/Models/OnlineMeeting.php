@@ -123,7 +123,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Gets the externalId property value. The externalId property
+     * Gets the externalId property value. 
      * @return string|null
     */
     public function getExternalId(): ?string {
@@ -381,7 +381,7 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Sets the externalId property value. The externalId property
+     * Sets the externalId property value. 
      * @param string|null $value Value to set for the externalId property.
     */
     public function setExternalId(?string $value): void {

@@ -74,7 +74,6 @@ class ChildrenRequestBuilder
 
     /**
      * Create new navigation property to children for sites
-     * @param Term $body The request body
      * @param ChildrenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class ChildrenRequestBuilder
 
     /**
      * Create new navigation property to children for sites
-     * @param Term $body The request body
      * @param ChildrenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -76,7 +76,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     }
 
     /**
-     * Gets the role property value. The role property
+     * Gets the role property value. 
      * @return BookingStaffRole|null
     */
     public function getRole(): ?BookingStaffRole {
@@ -156,7 +156,7 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
     }
 
     /**
-     * Sets the role property value. The role property
+     * Sets the role property value. 
      * @param BookingStaffRole|null $value Value to set for the role property.
     */
     public function setRole(?BookingStaffRole $value): void {

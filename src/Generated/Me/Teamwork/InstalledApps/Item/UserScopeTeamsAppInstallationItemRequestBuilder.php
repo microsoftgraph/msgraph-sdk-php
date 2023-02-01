@@ -46,11 +46,15 @@ class UserScopeTeamsAppInstallationItemRequestBuilder
      * Instantiates a new UserScopeTeamsAppInstallationItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $userScopeTeamsAppInstallationId key: id of userScopeTeamsAppInstallation
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $userScopeTeamsAppInstallationId = null) {
         $this->urlTemplate = '{+baseurl}/me/teamwork/installedApps/{userScopeTeamsAppInstallation%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['userScopeTeamsAppInstallationId'] = $userScopeTeamsAppInstallationId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -91,7 +95,6 @@ class UserScopeTeamsAppInstallationItemRequestBuilder
 
     /**
      * Update the navigation property installedApps in me
-     * @param UserScopeTeamsAppInstallation $body The request body
      * @param UserScopeTeamsAppInstallationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -156,7 +159,6 @@ class UserScopeTeamsAppInstallationItemRequestBuilder
 
     /**
      * Update the navigation property installedApps in me
-     * @param UserScopeTeamsAppInstallation $body The request body
      * @param UserScopeTeamsAppInstallationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

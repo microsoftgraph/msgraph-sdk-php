@@ -36,7 +36,7 @@ class AndroidManagedAppProtectionCollectionResponse extends BaseCollectionPagina
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return array<AndroidManagedAppProtection>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class AndroidManagedAppProtectionCollectionResponse extends BaseCollectionPagina
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param array<AndroidManagedAppProtection>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

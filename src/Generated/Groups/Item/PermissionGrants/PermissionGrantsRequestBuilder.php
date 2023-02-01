@@ -6,9 +6,9 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\GetByIds\GetByIdsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\ValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\MicrosoftGraphGetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\MicrosoftGraphGetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\MicrosoftGraphValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ResourceSpecificPermissionGrant;
 use Microsoft\Graph\Generated\Models\ResourceSpecificPermissionGrantCollectionResponse;
@@ -34,15 +34,22 @@ class PermissionGrantsRequestBuilder
     /**
      * Provides operations to call the getAvailableExtensionProperties method.
     */
-    public function getAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
+    public function microsoftGraphGetAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
         return new GetAvailableExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getByIds method.
     */
-    public function getByIds(): GetByIdsRequestBuilder {
+    public function microsoftGraphGetByIds(): GetByIdsRequestBuilder {
         return new GetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the validateProperties method.
+    */
+    public function microsoftGraphValidateProperties(): ValidatePropertiesRequestBuilder {
+        return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -59,13 +66,6 @@ class PermissionGrantsRequestBuilder
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
-    
-    /**
-     * Provides operations to call the validateProperties method.
-    */
-    public function validateProperties(): ValidatePropertiesRequestBuilder {
-        return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * Instantiates a new PermissionGrantsRequestBuilder and sets the default values.
@@ -99,7 +99,6 @@ class PermissionGrantsRequestBuilder
 
     /**
      * Create new navigation property to permissionGrants for groups
-     * @param ResourceSpecificPermissionGrant $body The request body
      * @param PermissionGrantsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -143,7 +142,6 @@ class PermissionGrantsRequestBuilder
 
     /**
      * Create new navigation property to permissionGrants for groups
-     * @param ResourceSpecificPermissionGrant $body The request body
      * @param PermissionGrantsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

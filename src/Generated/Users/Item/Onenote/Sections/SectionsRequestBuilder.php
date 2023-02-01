@@ -75,7 +75,6 @@ class SectionsRequestBuilder
 
     /**
      * Create new navigation property to sections for users
-     * @param OnenoteSection $body The request body
      * @param SectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class SectionsRequestBuilder
 
     /**
      * Create new navigation property to sections for users
-     * @param OnenoteSection $body The request body
      * @param SectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

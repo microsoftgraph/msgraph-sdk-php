@@ -38,11 +38,15 @@ class DelegatedPermissionClassificationItemRequestBuilder
      * Instantiates a new DelegatedPermissionClassificationItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $delegatedPermissionClassificationId key: id of delegatedPermissionClassification
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $delegatedPermissionClassificationId = null) {
         $this->urlTemplate = '{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/delegatedPermissionClassifications/{delegatedPermissionClassification%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['delegatedPermissionClassificationId'] = $delegatedPermissionClassificationId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class DelegatedPermissionClassificationItemRequestBuilder
 
     /**
      * Update the navigation property delegatedPermissionClassifications in servicePrincipals
-     * @param DelegatedPermissionClassification $body The request body
      * @param DelegatedPermissionClassificationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class DelegatedPermissionClassificationItemRequestBuilder
 
     /**
      * Update the navigation property delegatedPermissionClassifications in servicePrincipals
-     * @param DelegatedPermissionClassification $body The request body
      * @param DelegatedPermissionClassificationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

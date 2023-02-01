@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AuthenticationMethodsPolicy extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new authenticationMethodsPolicy and sets the default values.
+     * Instantiates a new AuthenticationMethodsPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -83,7 +83,7 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the reconfirmationInDays property value. The reconfirmationInDays property
+     * Gets the reconfirmationInDays property value. 
      * @return int|null
     */
     public function getReconfirmationInDays(): ?int {
@@ -154,7 +154,7 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the reconfirmationInDays property value. The reconfirmationInDays property
+     * Sets the reconfirmationInDays property value. 
      * @param int|null $value Value to set for the reconfirmationInDays property.
     */
     public function setReconfirmationInDays(?int $value): void {

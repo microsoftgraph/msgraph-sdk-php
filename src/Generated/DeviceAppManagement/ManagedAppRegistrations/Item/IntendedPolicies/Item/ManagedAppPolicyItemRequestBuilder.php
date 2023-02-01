@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\IntendedPolicies\Item\TargetApps\TargetAppsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\IntendedPolicies\Item\MicrosoftGraphTargetApps\TargetAppsRequestBuilder;
 use Microsoft\Graph\Generated\Models\ManagedAppPolicy;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -21,6 +21,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ManagedAppPolicyItemRequestBuilder 
 {
     /**
+     * Provides operations to call the targetApps method.
+    */
+    public function microsoftGraphTargetApps(): TargetAppsRequestBuilder {
+        return new TargetAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -31,13 +38,6 @@ class ManagedAppPolicyItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * Provides operations to call the targetApps method.
-    */
-    public function targetApps(): TargetAppsRequestBuilder {
-        return new TargetAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
@@ -46,11 +46,15 @@ class ManagedAppPolicyItemRequestBuilder
      * Instantiates a new ManagedAppPolicyItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $managedAppPolicyId key: id of managedAppPolicy
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $managedAppPolicyId = null) {
         $this->urlTemplate = '{+baseurl}/deviceAppManagement/managedAppRegistrations/{managedAppRegistration%2Did}/intendedPolicies/{managedAppPolicy%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['managedAppPolicyId'] = $managedAppPolicyId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -91,7 +95,6 @@ class ManagedAppPolicyItemRequestBuilder
 
     /**
      * Update the navigation property intendedPolicies in deviceAppManagement
-     * @param ManagedAppPolicy $body The request body
      * @param ManagedAppPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -156,7 +159,6 @@ class ManagedAppPolicyItemRequestBuilder
 
     /**
      * Update the navigation property intendedPolicies in deviceAppManagement
-     * @param ManagedAppPolicy $body The request body
      * @param ManagedAppPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

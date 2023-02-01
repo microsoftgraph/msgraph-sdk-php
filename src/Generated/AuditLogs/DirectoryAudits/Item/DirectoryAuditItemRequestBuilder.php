@@ -38,11 +38,15 @@ class DirectoryAuditItemRequestBuilder
      * Instantiates a new DirectoryAuditItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $directoryAuditId key: id of directoryAudit
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $directoryAuditId = null) {
         $this->urlTemplate = '{+baseurl}/auditLogs/directoryAudits/{directoryAudit%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['directoryAuditId'] = $directoryAuditId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class DirectoryAuditItemRequestBuilder
 
     /**
      * Update the navigation property directoryAudits in auditLogs
-     * @param DirectoryAudit $body The request body
      * @param DirectoryAuditItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class DirectoryAuditItemRequestBuilder
 
     /**
      * Update the navigation property directoryAudits in auditLogs
-     * @param DirectoryAudit $body The request body
      * @param DirectoryAuditItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

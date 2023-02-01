@@ -36,7 +36,7 @@ class DomainDnsRecordCollectionResponse extends BaseCollectionPaginationCountRes
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return array<DomainDnsRecord>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class DomainDnsRecordCollectionResponse extends BaseCollectionPaginationCountRes
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param array<DomainDnsRecord>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

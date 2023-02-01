@@ -75,7 +75,6 @@ class RunsRequestBuilder
 
     /**
      * Create new navigation property to runs for security
-     * @param SimulationAutomationRun $body The request body
      * @param RunsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class RunsRequestBuilder
 
     /**
      * Create new navigation property to runs for security
-     * @param SimulationAutomationRun $body The request body
      * @param RunsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

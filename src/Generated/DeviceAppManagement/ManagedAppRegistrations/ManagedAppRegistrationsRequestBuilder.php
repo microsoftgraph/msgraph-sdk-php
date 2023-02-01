@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\GetUserIdsWithFlaggedAppRegistration\GetUserIdsWithFlaggedAppRegistrationRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\MicrosoftGraphGetUserIdsWithFlaggedAppRegistration\GetUserIdsWithFlaggedAppRegistrationRequestBuilder;
 use Microsoft\Graph\Generated\Models\ManagedAppRegistration;
 use Microsoft\Graph\Generated\Models\ManagedAppRegistrationCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -27,6 +27,13 @@ class ManagedAppRegistrationsRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getUserIdsWithFlaggedAppRegistration method.
+    */
+    public function microsoftGraphGetUserIdsWithFlaggedAppRegistration(): GetUserIdsWithFlaggedAppRegistrationRequestBuilder {
+        return new GetUserIdsWithFlaggedAppRegistrationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -74,16 +81,7 @@ class ManagedAppRegistrationsRequestBuilder
     }
 
     /**
-     * Provides operations to call the getUserIdsWithFlaggedAppRegistration method.
-     * @return GetUserIdsWithFlaggedAppRegistrationRequestBuilder
-    */
-    public function getUserIdsWithFlaggedAppRegistration(): GetUserIdsWithFlaggedAppRegistrationRequestBuilder {
-        return new GetUserIdsWithFlaggedAppRegistrationRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
      * Create new navigation property to managedAppRegistrations for deviceAppManagement
-     * @param ManagedAppRegistration $body The request body
      * @param ManagedAppRegistrationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -127,7 +125,6 @@ class ManagedAppRegistrationsRequestBuilder
 
     /**
      * Create new navigation property to managedAppRegistrations for deviceAppManagement
-     * @param ManagedAppRegistration $body The request body
      * @param ManagedAppRegistrationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

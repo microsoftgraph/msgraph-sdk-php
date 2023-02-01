@@ -113,7 +113,6 @@ class TermStoreRequestBuilder
 
     /**
      * Update the properties of a store object.
-     * @param Store $body The request body
      * @param TermStoreRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/termstore-store-update?view=graph-rest-1.0 Find more info here
@@ -190,7 +189,6 @@ class TermStoreRequestBuilder
 
     /**
      * Update the properties of a store object.
-     * @param Store $body The request body
      * @param TermStoreRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

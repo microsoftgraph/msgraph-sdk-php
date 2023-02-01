@@ -74,7 +74,6 @@ class RemoteAssistancePartnersRequestBuilder
 
     /**
      * Create new navigation property to remoteAssistancePartners for deviceManagement
-     * @param RemoteAssistancePartner $body The request body
      * @param RemoteAssistancePartnersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class RemoteAssistancePartnersRequestBuilder
 
     /**
      * Create new navigation property to remoteAssistancePartners for deviceManagement
-     * @param RemoteAssistancePartner $body The request body
      * @param RemoteAssistancePartnersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

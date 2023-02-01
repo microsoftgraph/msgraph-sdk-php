@@ -47,11 +47,15 @@ class RiskyServicePrincipalItemRequestBuilder
      * Instantiates a new RiskyServicePrincipalItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $riskyServicePrincipalId key: id of riskyServicePrincipal
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $riskyServicePrincipalId = null) {
         $this->urlTemplate = '{+baseurl}/identityProtection/riskyServicePrincipals/{riskyServicePrincipal%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['riskyServicePrincipalId'] = $riskyServicePrincipalId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -103,7 +107,6 @@ class RiskyServicePrincipalItemRequestBuilder
 
     /**
      * Update the navigation property riskyServicePrincipals in identityProtection
-     * @param RiskyServicePrincipal $body The request body
      * @param RiskyServicePrincipalItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -168,7 +171,6 @@ class RiskyServicePrincipalItemRequestBuilder
 
     /**
      * Update the navigation property riskyServicePrincipals in identityProtection
-     * @param RiskyServicePrincipal $body The request body
      * @param RiskyServicePrincipalItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -75,7 +75,6 @@ class OpenShiftsRequestBuilder
 
     /**
      * Create new navigation property to openShifts for groups
-     * @param OpenShift $body The request body
      * @param OpenShiftsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class OpenShiftsRequestBuilder
 
     /**
      * Create new navigation property to openShifts for groups
-     * @param OpenShift $body The request body
      * @param OpenShiftsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -73,7 +73,6 @@ class AdminRequestBuilder
 
     /**
      * Update admin
-     * @param Admin $body The request body
      * @param AdminRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,7 +116,6 @@ class AdminRequestBuilder
 
     /**
      * Update admin
-     * @param Admin $body The request body
      * @param AdminRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

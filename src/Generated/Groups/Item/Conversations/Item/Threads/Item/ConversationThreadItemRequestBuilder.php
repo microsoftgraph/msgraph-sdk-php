@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\MicrosoftGraphReply\ReplyRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\PostItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\PostsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Reply\ReplyRequestBuilder;
 use Microsoft\Graph\Generated\Models\ConversationThread;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,6 +23,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ConversationThreadItemRequestBuilder 
 {
     /**
+     * Provides operations to call the reply method.
+    */
+    public function microsoftGraphReply(): ReplyRequestBuilder {
+        return new ReplyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -32,13 +39,6 @@ class ConversationThreadItemRequestBuilder
     */
     public function posts(): PostsRequestBuilder {
         return new PostsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the reply method.
-    */
-    public function reply(): ReplyRequestBuilder {
-        return new ReplyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -55,11 +55,15 @@ class ConversationThreadItemRequestBuilder
      * Instantiates a new ConversationThreadItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $conversationThreadId key: id of conversationThread
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $conversationThreadId = null) {
         $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/conversations/{conversation%2Did}/threads/{conversationThread%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['conversationThreadId'] = $conversationThreadId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -100,7 +104,6 @@ class ConversationThreadItemRequestBuilder
 
     /**
      * Update the navigation property threads in groups
-     * @param ConversationThread $body The request body
      * @param ConversationThreadItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -176,7 +179,6 @@ class ConversationThreadItemRequestBuilder
 
     /**
      * Update the navigation property threads in groups
-     * @param ConversationThread $body The request body
      * @param ConversationThreadItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

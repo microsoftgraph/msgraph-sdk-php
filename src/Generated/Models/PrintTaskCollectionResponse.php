@@ -36,7 +36,7 @@ class PrintTaskCollectionResponse extends BaseCollectionPaginationCountResponse 
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return array<PrintTask>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class PrintTaskCollectionResponse extends BaseCollectionPaginationCountResponse 
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param array<PrintTask>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

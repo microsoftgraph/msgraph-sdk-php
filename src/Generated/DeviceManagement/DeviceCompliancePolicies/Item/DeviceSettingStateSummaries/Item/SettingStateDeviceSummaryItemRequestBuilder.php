@@ -38,11 +38,15 @@ class SettingStateDeviceSummaryItemRequestBuilder
      * Instantiates a new SettingStateDeviceSummaryItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $settingStateDeviceSummaryId key: id of settingStateDeviceSummary
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $settingStateDeviceSummaryId = null) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/deviceCompliancePolicies/{deviceCompliancePolicy%2Did}/deviceSettingStateSummaries/{settingStateDeviceSummary%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['settingStateDeviceSummaryId'] = $settingStateDeviceSummaryId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class SettingStateDeviceSummaryItemRequestBuilder
 
     /**
      * Update the navigation property deviceSettingStateSummaries in deviceManagement
-     * @param SettingStateDeviceSummary $body The request body
      * @param SettingStateDeviceSummaryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class SettingStateDeviceSummaryItemRequestBuilder
 
     /**
      * Update the navigation property deviceSettingStateSummaries in deviceManagement
-     * @param SettingStateDeviceSummary $body The request body
      * @param SettingStateDeviceSummaryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

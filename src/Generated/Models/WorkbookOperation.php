@@ -54,7 +54,7 @@ class WorkbookOperation extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. 
      * @return WorkbookOperationStatus|null
     */
     public function getStatus(): ?WorkbookOperationStatus {
@@ -89,7 +89,7 @@ class WorkbookOperation extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. 
      * @param WorkbookOperationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?WorkbookOperationStatus $value): void {

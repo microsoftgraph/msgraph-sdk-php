@@ -47,11 +47,15 @@ class DeviceComplianceScheduledActionForRuleItemRequestBuilder
      * Instantiates a new DeviceComplianceScheduledActionForRuleItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $deviceComplianceScheduledActionForRuleId key: id of deviceComplianceScheduledActionForRule
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $deviceComplianceScheduledActionForRuleId = null) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/deviceCompliancePolicies/{deviceCompliancePolicy%2Did}/scheduledActionsForRule/{deviceComplianceScheduledActionForRule%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['deviceComplianceScheduledActionForRuleId'] = $deviceComplianceScheduledActionForRuleId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -92,7 +96,6 @@ class DeviceComplianceScheduledActionForRuleItemRequestBuilder
 
     /**
      * Update the navigation property scheduledActionsForRule in deviceManagement
-     * @param DeviceComplianceScheduledActionForRule $body The request body
      * @param DeviceComplianceScheduledActionForRuleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -168,7 +171,6 @@ class DeviceComplianceScheduledActionForRuleItemRequestBuilder
 
     /**
      * Update the navigation property scheduledActionsForRule in deviceManagement
-     * @param DeviceComplianceScheduledActionForRule $body The request body
      * @param DeviceComplianceScheduledActionForRuleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

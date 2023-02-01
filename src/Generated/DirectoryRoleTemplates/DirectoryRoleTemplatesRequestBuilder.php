@@ -6,9 +6,9 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DirectoryRoleTemplates\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoleTemplates\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoleTemplates\GetByIds\GetByIdsRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoleTemplates\ValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoleTemplates\MicrosoftGraphGetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoleTemplates\MicrosoftGraphGetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoleTemplates\MicrosoftGraphValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryRoleTemplate;
 use Microsoft\Graph\Generated\Models\DirectoryRoleTemplateCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -34,15 +34,22 @@ class DirectoryRoleTemplatesRequestBuilder
     /**
      * Provides operations to call the getAvailableExtensionProperties method.
     */
-    public function getAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
+    public function microsoftGraphGetAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
         return new GetAvailableExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getByIds method.
     */
-    public function getByIds(): GetByIdsRequestBuilder {
+    public function microsoftGraphGetByIds(): GetByIdsRequestBuilder {
         return new GetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the validateProperties method.
+    */
+    public function microsoftGraphValidateProperties(): ValidatePropertiesRequestBuilder {
+        return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -59,13 +66,6 @@ class DirectoryRoleTemplatesRequestBuilder
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
-    
-    /**
-     * Provides operations to call the validateProperties method.
-    */
-    public function validateProperties(): ValidatePropertiesRequestBuilder {
-        return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * Instantiates a new DirectoryRoleTemplatesRequestBuilder and sets the default values.
@@ -99,7 +99,6 @@ class DirectoryRoleTemplatesRequestBuilder
 
     /**
      * Add new entity to directoryRoleTemplates
-     * @param DirectoryRoleTemplate $body The request body
      * @param DirectoryRoleTemplatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -143,7 +142,6 @@ class DirectoryRoleTemplatesRequestBuilder
 
     /**
      * Add new entity to directoryRoleTemplates
-     * @param DirectoryRoleTemplate $body The request body
      * @param DirectoryRoleTemplatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -81,7 +81,7 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the userInputType property value. The userInputType property
+     * Gets the userInputType property value. 
      * @return IdentityUserFlowAttributeInputType|null
     */
     public function getUserInputType(): ?IdentityUserFlowAttributeInputType {
@@ -143,7 +143,7 @@ class IdentityUserFlowAttributeAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the userInputType property value. The userInputType property
+     * Sets the userInputType property value. 
      * @param IdentityUserFlowAttributeInputType|null $value Value to set for the userInputType property.
     */
     public function setUserInputType(?IdentityUserFlowAttributeInputType $value): void {

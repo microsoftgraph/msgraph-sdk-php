@@ -38,11 +38,15 @@ class LocalizedNotificationMessageItemRequestBuilder
      * Instantiates a new LocalizedNotificationMessageItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $localizedNotificationMessageId key: id of localizedNotificationMessage
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $localizedNotificationMessageId = null) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/notificationMessageTemplates/{notificationMessageTemplate%2Did}/localizedNotificationMessages/{localizedNotificationMessage%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['localizedNotificationMessageId'] = $localizedNotificationMessageId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class LocalizedNotificationMessageItemRequestBuilder
 
     /**
      * Update the navigation property localizedNotificationMessages in deviceManagement
-     * @param LocalizedNotificationMessage $body The request body
      * @param LocalizedNotificationMessageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class LocalizedNotificationMessageItemRequestBuilder
 
     /**
      * Update the navigation property localizedNotificationMessages in deviceManagement
-     * @param LocalizedNotificationMessage $body The request body
      * @param LocalizedNotificationMessageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

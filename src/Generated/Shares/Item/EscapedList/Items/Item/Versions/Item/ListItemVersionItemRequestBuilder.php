@@ -8,7 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ListItemVersion;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\Versions\Item\Fields\FieldsRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\Versions\Item\RestoreVersion\RestoreVersionRequestBuilder;
+use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\Versions\Item\MicrosoftGraphRestoreVersion\RestoreVersionRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -29,6 +29,13 @@ class ListItemVersionItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the restoreVersion method.
+    */
+    public function microsoftGraphRestoreVersion(): RestoreVersionRequestBuilder {
+        return new RestoreVersionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -39,13 +46,6 @@ class ListItemVersionItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * Provides operations to call the restoreVersion method.
-    */
-    public function restoreVersion(): RestoreVersionRequestBuilder {
-        return new RestoreVersionRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
@@ -54,11 +54,15 @@ class ListItemVersionItemRequestBuilder
      * Instantiates a new ListItemVersionItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $listItemVersionId key: id of listItemVersion
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $listItemVersionId = null) {
         $this->urlTemplate = '{+baseurl}/shares/{sharedDriveItem%2Did}/list/items/{listItem%2Did}/versions/{listItemVersion%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['listItemVersionId'] = $listItemVersionId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -99,7 +103,6 @@ class ListItemVersionItemRequestBuilder
 
     /**
      * Update the navigation property versions in shares
-     * @param ListItemVersion $body The request body
      * @param ListItemVersionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -164,7 +167,6 @@ class ListItemVersionItemRequestBuilder
 
     /**
      * Update the navigation property versions in shares
-     * @param ListItemVersion $body The request body
      * @param ListItemVersionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -137,7 +137,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the fitPdfToPage property value. The fitPdfToPage property
+     * Gets the fitPdfToPage property value. 
      * @return bool|null
     */
     public function getFitPdfToPage(): ?bool {
@@ -169,7 +169,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the mediaType property value. The mediaType property
+     * Gets the mediaType property value. 
      * @return string|null
     */
     public function getMediaType(): ?string {
@@ -177,7 +177,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the multipageLayout property value. The multipageLayout property
+     * Gets the multipageLayout property value. 
      * @return PrintMultipageLayout|null
     */
     public function getMultipageLayout(): ?PrintMultipageLayout {
@@ -185,7 +185,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -193,7 +193,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the orientation property value. The orientation property
+     * Gets the orientation property value. 
      * @return PrintOrientation|null
     */
     public function getOrientation(): ?PrintOrientation {
@@ -201,7 +201,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the outputBin property value. The outputBin property
+     * Gets the outputBin property value. 
      * @return string|null
     */
     public function getOutputBin(): ?string {
@@ -209,7 +209,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the pageRanges property value. The pageRanges property
+     * Gets the pageRanges property value. 
      * @return array<IntegerRange>|null
     */
     public function getPageRanges(): ?array {
@@ -217,7 +217,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the pagesPerSheet property value. The pagesPerSheet property
+     * Gets the pagesPerSheet property value. 
      * @return int|null
     */
     public function getPagesPerSheet(): ?int {
@@ -225,7 +225,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the quality property value. The quality property
+     * Gets the quality property value. 
      * @return PrintQuality|null
     */
     public function getQuality(): ?PrintQuality {
@@ -233,7 +233,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the scaling property value. The scaling property
+     * Gets the scaling property value. 
      * @return PrintScaling|null
     */
     public function getScaling(): ?PrintScaling {
@@ -341,7 +341,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the fitPdfToPage property value. The fitPdfToPage property
+     * Sets the fitPdfToPage property value. 
      * @param bool|null $value Value to set for the fitPdfToPage property.
     */
     public function setFitPdfToPage(?bool $value): void {
@@ -373,7 +373,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the mediaType property value. The mediaType property
+     * Sets the mediaType property value. 
      * @param string|null $value Value to set for the mediaType property.
     */
     public function setMediaType(?string $value): void {
@@ -381,7 +381,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the multipageLayout property value. The multipageLayout property
+     * Sets the multipageLayout property value. 
      * @param PrintMultipageLayout|null $value Value to set for the multipageLayout property.
     */
     public function setMultipageLayout(?PrintMultipageLayout $value): void {
@@ -389,7 +389,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -397,7 +397,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the orientation property value. The orientation property
+     * Sets the orientation property value. 
      * @param PrintOrientation|null $value Value to set for the orientation property.
     */
     public function setOrientation(?PrintOrientation $value): void {
@@ -405,7 +405,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the outputBin property value. The outputBin property
+     * Sets the outputBin property value. 
      * @param string|null $value Value to set for the outputBin property.
     */
     public function setOutputBin(?string $value): void {
@@ -413,7 +413,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the pageRanges property value. The pageRanges property
+     * Sets the pageRanges property value. 
      * @param array<IntegerRange>|null $value Value to set for the pageRanges property.
     */
     public function setPageRanges(?array $value): void {
@@ -421,7 +421,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the pagesPerSheet property value. The pagesPerSheet property
+     * Sets the pagesPerSheet property value. 
      * @param int|null $value Value to set for the pagesPerSheet property.
     */
     public function setPagesPerSheet(?int $value): void {
@@ -429,7 +429,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the quality property value. The quality property
+     * Sets the quality property value. 
      * @param PrintQuality|null $value Value to set for the quality property.
     */
     public function setQuality(?PrintQuality $value): void {
@@ -437,7 +437,7 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the scaling property value. The scaling property
+     * Sets the scaling property value. 
      * @param PrintScaling|null $value Value to set for the scaling property.
     */
     public function setScaling(?PrintScaling $value): void {

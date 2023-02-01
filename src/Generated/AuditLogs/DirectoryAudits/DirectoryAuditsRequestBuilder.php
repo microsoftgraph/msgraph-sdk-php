@@ -75,7 +75,6 @@ class DirectoryAuditsRequestBuilder
 
     /**
      * Create new navigation property to directoryAudits for auditLogs
-     * @param DirectoryAudit $body The request body
      * @param DirectoryAuditsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class DirectoryAuditsRequestBuilder
 
     /**
      * Create new navigation property to directoryAudits for auditLogs
-     * @param DirectoryAudit $body The request body
      * @param DirectoryAuditsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

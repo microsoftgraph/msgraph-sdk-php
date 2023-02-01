@@ -47,11 +47,15 @@ class SimulationAutomationItemRequestBuilder
      * Instantiates a new SimulationAutomationItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $simulationAutomationId key: id of simulationAutomation
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $simulationAutomationId = null) {
         $this->urlTemplate = '{+baseurl}/security/attackSimulation/simulationAutomations/{simulationAutomation%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['simulationAutomationId'] = $simulationAutomationId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -92,7 +96,6 @@ class SimulationAutomationItemRequestBuilder
 
     /**
      * Update the navigation property simulationAutomations in security
-     * @param SimulationAutomation $body The request body
      * @param SimulationAutomationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -168,7 +171,6 @@ class SimulationAutomationItemRequestBuilder
 
     /**
      * Update the navigation property simulationAutomations in security
-     * @param SimulationAutomation $body The request body
      * @param SimulationAutomationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

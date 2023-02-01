@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Identity\ApiConnectors\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Identity\ApiConnectors\Item\UploadClientCertificate\UploadClientCertificateRequestBuilder;
+use Microsoft\Graph\Generated\Identity\ApiConnectors\Item\MicrosoftGraphUploadClientCertificate\UploadClientCertificateRequestBuilder;
 use Microsoft\Graph\Generated\Models\IdentityApiConnector;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -21,6 +21,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class IdentityApiConnectorItemRequestBuilder 
 {
     /**
+     * Provides operations to call the uploadClientCertificate method.
+    */
+    public function microsoftGraphUploadClientCertificate(): UploadClientCertificateRequestBuilder {
+        return new UploadClientCertificateRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -31,13 +38,6 @@ class IdentityApiConnectorItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * Provides operations to call the uploadClientCertificate method.
-    */
-    public function uploadClientCertificate(): UploadClientCertificateRequestBuilder {
-        return new UploadClientCertificateRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
@@ -46,11 +46,15 @@ class IdentityApiConnectorItemRequestBuilder
      * Instantiates a new IdentityApiConnectorItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $identityApiConnectorId key: id of identityApiConnector
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $identityApiConnectorId = null) {
         $this->urlTemplate = '{+baseurl}/identity/apiConnectors/{identityApiConnector%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['identityApiConnectorId'] = $identityApiConnectorId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -91,7 +95,6 @@ class IdentityApiConnectorItemRequestBuilder
 
     /**
      * Update the navigation property apiConnectors in identity
-     * @param IdentityApiConnector $body The request body
      * @param IdentityApiConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -156,7 +159,6 @@ class IdentityApiConnectorItemRequestBuilder
 
     /**
      * Update the navigation property apiConnectors in identity
-     * @param IdentityApiConnector $body The request body
      * @param IdentityApiConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

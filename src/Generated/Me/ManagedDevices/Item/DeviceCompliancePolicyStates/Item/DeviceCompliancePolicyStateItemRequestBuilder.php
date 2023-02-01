@@ -38,11 +38,15 @@ class DeviceCompliancePolicyStateItemRequestBuilder
      * Instantiates a new DeviceCompliancePolicyStateItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $deviceCompliancePolicyStateId key: id of deviceCompliancePolicyState
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $deviceCompliancePolicyStateId = null) {
         $this->urlTemplate = '{+baseurl}/me/managedDevices/{managedDevice%2Did}/deviceCompliancePolicyStates/{deviceCompliancePolicyState%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['deviceCompliancePolicyStateId'] = $deviceCompliancePolicyStateId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class DeviceCompliancePolicyStateItemRequestBuilder
 
     /**
      * Update the navigation property deviceCompliancePolicyStates in me
-     * @param DeviceCompliancePolicyState $body The request body
      * @param DeviceCompliancePolicyStateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class DeviceCompliancePolicyStateItemRequestBuilder
 
     /**
      * Update the navigation property deviceCompliancePolicyStates in me
-     * @param DeviceCompliancePolicyState $body The request body
      * @param DeviceCompliancePolicyStateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -38,11 +38,15 @@ class LicenseDetailsItemRequestBuilder
      * Instantiates a new LicenseDetailsItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $licenseDetailsId key: id of licenseDetails
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $licenseDetailsId = null) {
         $this->urlTemplate = '{+baseurl}/me/licenseDetails/{licenseDetails%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['licenseDetailsId'] = $licenseDetailsId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class LicenseDetailsItemRequestBuilder
 
     /**
      * Update the navigation property licenseDetails in me
-     * @param LicenseDetails $body The request body
      * @param LicenseDetailsItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class LicenseDetailsItemRequestBuilder
 
     /**
      * Update the navigation property licenseDetails in me
-     * @param LicenseDetails $body The request body
      * @param LicenseDetailsItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

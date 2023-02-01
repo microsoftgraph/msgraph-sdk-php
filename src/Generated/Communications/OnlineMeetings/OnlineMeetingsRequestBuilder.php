@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Communications\OnlineMeetings\CreateOrGet\CreateOrGetRequestBuilder;
+use Microsoft\Graph\Generated\Communications\OnlineMeetings\MicrosoftGraphCreateOrGet\CreateOrGetRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OnlineMeeting;
 use Microsoft\Graph\Generated\Models\OnlineMeetingCollectionResponse;
@@ -32,7 +32,7 @@ class OnlineMeetingsRequestBuilder
     /**
      * Provides operations to call the createOrGet method.
     */
-    public function createOrGet(): CreateOrGetRequestBuilder {
+    public function microsoftGraphCreateOrGet(): CreateOrGetRequestBuilder {
         return new CreateOrGetRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
@@ -83,7 +83,6 @@ class OnlineMeetingsRequestBuilder
 
     /**
      * Create new navigation property to onlineMeetings for communications
-     * @param OnlineMeeting $body The request body
      * @param OnlineMeetingsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -127,7 +126,6 @@ class OnlineMeetingsRequestBuilder
 
     /**
      * Create new navigation property to onlineMeetings for communications
-     * @param OnlineMeeting $body The request body
      * @param OnlineMeetingsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

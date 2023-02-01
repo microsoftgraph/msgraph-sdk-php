@@ -10,102 +10,102 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ReportRoot;
 use Microsoft\Graph\Generated\Reports\DailyPrintUsageByPrinter\DailyPrintUsageByPrinterRequestBuilder;
 use Microsoft\Graph\Generated\Reports\DailyPrintUsageByUser\DailyPrintUsageByUserRequestBuilder;
-use Microsoft\Graph\Generated\Reports\DeviceConfigurationDeviceActivity\DeviceConfigurationDeviceActivityRequestBuilder;
-use Microsoft\Graph\Generated\Reports\DeviceConfigurationUserActivity\DeviceConfigurationUserActivityRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetEmailActivityCountsWithPeriod\GetEmailActivityCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetEmailActivityUserCountsWithPeriod\GetEmailActivityUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetEmailActivityUserDetailWithDate\GetEmailActivityUserDetailWithDateRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetEmailActivityUserDetailWithPeriod\GetEmailActivityUserDetailWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetEmailAppUsageAppsUserCountsWithPeriod\GetEmailAppUsageAppsUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetEmailAppUsageUserCountsWithPeriod\GetEmailAppUsageUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetEmailAppUsageUserDetailWithDate\GetEmailAppUsageUserDetailWithDateRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetEmailAppUsageUserDetailWithPeriod\GetEmailAppUsageUserDetailWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetEmailAppUsageVersionsUserCountsWithPeriod\GetEmailAppUsageVersionsUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTime\GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetM365AppPlatformUserCountsWithPeriod\GetM365AppPlatformUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetM365AppUserCountsWithPeriod\GetM365AppUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetM365AppUserDetailWithDate\GetM365AppUserDetailWithDateRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetM365AppUserDetailWithPeriod\GetM365AppUserDetailWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetMailboxUsageDetailWithPeriod\GetMailboxUsageDetailWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetMailboxUsageMailboxCountsWithPeriod\GetMailboxUsageMailboxCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetMailboxUsageQuotaStatusMailboxCountsWithPeriod\GetMailboxUsageQuotaStatusMailboxCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetMailboxUsageStorageWithPeriod\GetMailboxUsageStorageWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetOffice365ActivationCounts\GetOffice365ActivationCountsRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetOffice365ActivationsUserCounts\GetOffice365ActivationsUserCountsRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetOffice365ActivationsUserDetail\GetOffice365ActivationsUserDetailRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetOffice365ActiveUserCountsWithPeriod\GetOffice365ActiveUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetOffice365ActiveUserDetailWithDate\GetOffice365ActiveUserDetailWithDateRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetOffice365ActiveUserDetailWithPeriod\GetOffice365ActiveUserDetailWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetOffice365GroupsActivityCountsWithPeriod\GetOffice365GroupsActivityCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetOffice365GroupsActivityDetailWithDate\GetOffice365GroupsActivityDetailWithDateRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetOffice365GroupsActivityDetailWithPeriod\GetOffice365GroupsActivityDetailWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetOffice365GroupsActivityFileCountsWithPeriod\GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetOffice365GroupsActivityGroupCountsWithPeriod\GetOffice365GroupsActivityGroupCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetOffice365GroupsActivityStorageWithPeriod\GetOffice365GroupsActivityStorageWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetOffice365ServicesUserCountsWithPeriod\GetOffice365ServicesUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetOneDriveActivityFileCountsWithPeriod\GetOneDriveActivityFileCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetOneDriveActivityUserCountsWithPeriod\GetOneDriveActivityUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetOneDriveActivityUserDetailWithDate\GetOneDriveActivityUserDetailWithDateRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetOneDriveActivityUserDetailWithPeriod\GetOneDriveActivityUserDetailWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetOneDriveUsageAccountCountsWithPeriod\GetOneDriveUsageAccountCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetOneDriveUsageAccountDetailWithDate\GetOneDriveUsageAccountDetailWithDateRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetOneDriveUsageAccountDetailWithPeriod\GetOneDriveUsageAccountDetailWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetOneDriveUsageFileCountsWithPeriod\GetOneDriveUsageFileCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetOneDriveUsageStorageWithPeriod\GetOneDriveUsageStorageWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTime\GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSharePointActivityFileCountsWithPeriod\GetSharePointActivityFileCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSharePointActivityPagesWithPeriod\GetSharePointActivityPagesWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSharePointActivityUserCountsWithPeriod\GetSharePointActivityUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSharePointActivityUserDetailWithDate\GetSharePointActivityUserDetailWithDateRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSharePointActivityUserDetailWithPeriod\GetSharePointActivityUserDetailWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSharePointSiteUsageDetailWithDate\GetSharePointSiteUsageDetailWithDateRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSharePointSiteUsageDetailWithPeriod\GetSharePointSiteUsageDetailWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSharePointSiteUsageFileCountsWithPeriod\GetSharePointSiteUsageFileCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSharePointSiteUsagePagesWithPeriod\GetSharePointSiteUsagePagesWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSharePointSiteUsageSiteCountsWithPeriod\GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSharePointSiteUsageStorageWithPeriod\GetSharePointSiteUsageStorageWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessActivityCountsWithPeriod\GetSkypeForBusinessActivityCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessActivityUserCountsWithPeriod\GetSkypeForBusinessActivityUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessActivityUserDetailWithDate\GetSkypeForBusinessActivityUserDetailWithDateRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessActivityUserDetailWithPeriod\GetSkypeForBusinessActivityUserDetailWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriod\GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessDeviceUsageUserCountsWithPeriod\GetSkypeForBusinessDeviceUsageUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessDeviceUsageUserDetailWithDate\GetSkypeForBusinessDeviceUsageUserDetailWithDateRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessDeviceUsageUserDetailWithPeriod\GetSkypeForBusinessDeviceUsageUserDetailWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessOrganizerActivityCountsWithPeriod\GetSkypeForBusinessOrganizerActivityCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessOrganizerActivityMinuteCountsWithPeriod\GetSkypeForBusinessOrganizerActivityMinuteCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessOrganizerActivityUserCountsWithPeriod\GetSkypeForBusinessOrganizerActivityUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessParticipantActivityCountsWithPeriod\GetSkypeForBusinessParticipantActivityCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessParticipantActivityMinuteCountsWithPeriod\GetSkypeForBusinessParticipantActivityMinuteCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessParticipantActivityUserCountsWithPeriod\GetSkypeForBusinessParticipantActivityUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessPeerToPeerActivityCountsWithPeriod\GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriod\GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeriod\GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetTeamsDeviceUsageDistributionUserCountsWithPeriod\GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetTeamsDeviceUsageUserCountsWithPeriod\GetTeamsDeviceUsageUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetTeamsDeviceUsageUserDetailWithDate\GetTeamsDeviceUsageUserDetailWithDateRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetTeamsDeviceUsageUserDetailWithPeriod\GetTeamsDeviceUsageUserDetailWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetTeamsUserActivityCountsWithPeriod\GetTeamsUserActivityCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetTeamsUserActivityUserCountsWithPeriod\GetTeamsUserActivityUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetTeamsUserActivityUserDetailWithDate\GetTeamsUserActivityUserDetailWithDateRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetTeamsUserActivityUserDetailWithPeriod\GetTeamsUserActivityUserDetailWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTime\GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetYammerActivityCountsWithPeriod\GetYammerActivityCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetYammerActivityUserCountsWithPeriod\GetYammerActivityUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetYammerActivityUserDetailWithDate\GetYammerActivityUserDetailWithDateRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetYammerActivityUserDetailWithPeriod\GetYammerActivityUserDetailWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetYammerDeviceUsageDistributionUserCountsWithPeriod\GetYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetYammerDeviceUsageUserCountsWithPeriod\GetYammerDeviceUsageUserCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetYammerDeviceUsageUserDetailWithDate\GetYammerDeviceUsageUserDetailWithDateRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetYammerDeviceUsageUserDetailWithPeriod\GetYammerDeviceUsageUserDetailWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetYammerGroupsActivityCountsWithPeriod\GetYammerGroupsActivityCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetYammerGroupsActivityDetailWithDate\GetYammerGroupsActivityDetailWithDateRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetYammerGroupsActivityDetailWithPeriod\GetYammerGroupsActivityDetailWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\GetYammerGroupsActivityGroupCountsWithPeriod\GetYammerGroupsActivityGroupCountsWithPeriodRequestBuilder;
-use Microsoft\Graph\Generated\Reports\ManagedDeviceEnrollmentFailureDetails\ManagedDeviceEnrollmentFailureDetailsRequestBuilder;
-use Microsoft\Graph\Generated\Reports\ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipToken\ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder;
-use Microsoft\Graph\Generated\Reports\ManagedDeviceEnrollmentTopFailures\ManagedDeviceEnrollmentTopFailuresRequestBuilder;
-use Microsoft\Graph\Generated\Reports\ManagedDeviceEnrollmentTopFailuresWithPeriod\ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphDeviceConfigurationDeviceActivity\DeviceConfigurationDeviceActivityRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphDeviceConfigurationUserActivity\DeviceConfigurationUserActivityRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetEmailActivityCountsWithPeriod\GetEmailActivityCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetEmailActivityUserCountsWithPeriod\GetEmailActivityUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetEmailActivityUserDetailWithDate\GetEmailActivityUserDetailWithDateRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetEmailActivityUserDetailWithPeriod\GetEmailActivityUserDetailWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetEmailAppUsageAppsUserCountsWithPeriod\GetEmailAppUsageAppsUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetEmailAppUsageUserCountsWithPeriod\GetEmailAppUsageUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetEmailAppUsageUserDetailWithDate\GetEmailAppUsageUserDetailWithDateRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetEmailAppUsageUserDetailWithPeriod\GetEmailAppUsageUserDetailWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetEmailAppUsageVersionsUserCountsWithPeriod\GetEmailAppUsageVersionsUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTime\GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetM365AppPlatformUserCountsWithPeriod\GetM365AppPlatformUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetM365AppUserCountsWithPeriod\GetM365AppUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetM365AppUserDetailWithDate\GetM365AppUserDetailWithDateRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetM365AppUserDetailWithPeriod\GetM365AppUserDetailWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetMailboxUsageDetailWithPeriod\GetMailboxUsageDetailWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetMailboxUsageMailboxCountsWithPeriod\GetMailboxUsageMailboxCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetMailboxUsageQuotaStatusMailboxCountsWithPeriod\GetMailboxUsageQuotaStatusMailboxCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetMailboxUsageStorageWithPeriod\GetMailboxUsageStorageWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetOffice365ActivationCounts\GetOffice365ActivationCountsRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetOffice365ActivationsUserCounts\GetOffice365ActivationsUserCountsRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetOffice365ActivationsUserDetail\GetOffice365ActivationsUserDetailRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetOffice365ActiveUserCountsWithPeriod\GetOffice365ActiveUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetOffice365ActiveUserDetailWithDate\GetOffice365ActiveUserDetailWithDateRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetOffice365ActiveUserDetailWithPeriod\GetOffice365ActiveUserDetailWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetOffice365GroupsActivityCountsWithPeriod\GetOffice365GroupsActivityCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetOffice365GroupsActivityDetailWithDate\GetOffice365GroupsActivityDetailWithDateRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetOffice365GroupsActivityDetailWithPeriod\GetOffice365GroupsActivityDetailWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetOffice365GroupsActivityFileCountsWithPeriod\GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetOffice365GroupsActivityGroupCountsWithPeriod\GetOffice365GroupsActivityGroupCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetOffice365GroupsActivityStorageWithPeriod\GetOffice365GroupsActivityStorageWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetOffice365ServicesUserCountsWithPeriod\GetOffice365ServicesUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetOneDriveActivityFileCountsWithPeriod\GetOneDriveActivityFileCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetOneDriveActivityUserCountsWithPeriod\GetOneDriveActivityUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetOneDriveActivityUserDetailWithDate\GetOneDriveActivityUserDetailWithDateRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetOneDriveActivityUserDetailWithPeriod\GetOneDriveActivityUserDetailWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetOneDriveUsageAccountCountsWithPeriod\GetOneDriveUsageAccountCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetOneDriveUsageAccountDetailWithDate\GetOneDriveUsageAccountDetailWithDateRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetOneDriveUsageAccountDetailWithPeriod\GetOneDriveUsageAccountDetailWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetOneDriveUsageFileCountsWithPeriod\GetOneDriveUsageFileCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetOneDriveUsageStorageWithPeriod\GetOneDriveUsageStorageWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTime\GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSharePointActivityFileCountsWithPeriod\GetSharePointActivityFileCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSharePointActivityPagesWithPeriod\GetSharePointActivityPagesWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSharePointActivityUserCountsWithPeriod\GetSharePointActivityUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSharePointActivityUserDetailWithDate\GetSharePointActivityUserDetailWithDateRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSharePointActivityUserDetailWithPeriod\GetSharePointActivityUserDetailWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSharePointSiteUsageDetailWithDate\GetSharePointSiteUsageDetailWithDateRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSharePointSiteUsageDetailWithPeriod\GetSharePointSiteUsageDetailWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSharePointSiteUsageFileCountsWithPeriod\GetSharePointSiteUsageFileCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSharePointSiteUsagePagesWithPeriod\GetSharePointSiteUsagePagesWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSharePointSiteUsageSiteCountsWithPeriod\GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSharePointSiteUsageStorageWithPeriod\GetSharePointSiteUsageStorageWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSkypeForBusinessActivityCountsWithPeriod\GetSkypeForBusinessActivityCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSkypeForBusinessActivityUserCountsWithPeriod\GetSkypeForBusinessActivityUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSkypeForBusinessActivityUserDetailWithDate\GetSkypeForBusinessActivityUserDetailWithDateRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSkypeForBusinessActivityUserDetailWithPeriod\GetSkypeForBusinessActivityUserDetailWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriod\GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSkypeForBusinessDeviceUsageUserCountsWithPeriod\GetSkypeForBusinessDeviceUsageUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSkypeForBusinessDeviceUsageUserDetailWithDate\GetSkypeForBusinessDeviceUsageUserDetailWithDateRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSkypeForBusinessDeviceUsageUserDetailWithPeriod\GetSkypeForBusinessDeviceUsageUserDetailWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSkypeForBusinessOrganizerActivityCountsWithPeriod\GetSkypeForBusinessOrganizerActivityCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSkypeForBusinessOrganizerActivityMinuteCountsWithPeriod\GetSkypeForBusinessOrganizerActivityMinuteCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSkypeForBusinessOrganizerActivityUserCountsWithPeriod\GetSkypeForBusinessOrganizerActivityUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSkypeForBusinessParticipantActivityCountsWithPeriod\GetSkypeForBusinessParticipantActivityCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSkypeForBusinessParticipantActivityMinuteCountsWithPeriod\GetSkypeForBusinessParticipantActivityMinuteCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSkypeForBusinessParticipantActivityUserCountsWithPeriod\GetSkypeForBusinessParticipantActivityUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSkypeForBusinessPeerToPeerActivityCountsWithPeriod\GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriod\GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetSkypeForBusinessPeerToPeerActivityUserCountsWithPeriod\GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetTeamsDeviceUsageDistributionUserCountsWithPeriod\GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetTeamsDeviceUsageUserCountsWithPeriod\GetTeamsDeviceUsageUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetTeamsDeviceUsageUserDetailWithDate\GetTeamsDeviceUsageUserDetailWithDateRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetTeamsDeviceUsageUserDetailWithPeriod\GetTeamsDeviceUsageUserDetailWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetTeamsUserActivityCountsWithPeriod\GetTeamsUserActivityCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetTeamsUserActivityUserCountsWithPeriod\GetTeamsUserActivityUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetTeamsUserActivityUserDetailWithDate\GetTeamsUserActivityUserDetailWithDateRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetTeamsUserActivityUserDetailWithPeriod\GetTeamsUserActivityUserDetailWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTime\GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetYammerActivityCountsWithPeriod\GetYammerActivityCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetYammerActivityUserCountsWithPeriod\GetYammerActivityUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetYammerActivityUserDetailWithDate\GetYammerActivityUserDetailWithDateRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetYammerActivityUserDetailWithPeriod\GetYammerActivityUserDetailWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetYammerDeviceUsageDistributionUserCountsWithPeriod\GetYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetYammerDeviceUsageUserCountsWithPeriod\GetYammerDeviceUsageUserCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetYammerDeviceUsageUserDetailWithDate\GetYammerDeviceUsageUserDetailWithDateRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetYammerDeviceUsageUserDetailWithPeriod\GetYammerDeviceUsageUserDetailWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetYammerGroupsActivityCountsWithPeriod\GetYammerGroupsActivityCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetYammerGroupsActivityDetailWithDate\GetYammerGroupsActivityDetailWithDateRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetYammerGroupsActivityDetailWithPeriod\GetYammerGroupsActivityDetailWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphGetYammerGroupsActivityGroupCountsWithPeriod\GetYammerGroupsActivityGroupCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphManagedDeviceEnrollmentFailureDetails\ManagedDeviceEnrollmentFailureDetailsRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipToken\ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphManagedDeviceEnrollmentTopFailures\ManagedDeviceEnrollmentTopFailuresRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MicrosoftGraphManagedDeviceEnrollmentTopFailuresWithPeriod\ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByPrinter\MonthlyPrintUsageByPrinterRequestBuilder;
 use Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByUser\MonthlyPrintUsageByUserRequestBuilder;
 use Microsoft\Graph\Generated\Reports\Security\SecurityRequestBuilder;
@@ -134,6 +134,55 @@ class ReportsRequestBuilder
     */
     public function dailyPrintUsageByUser(): DailyPrintUsageByUserRequestBuilder {
         return new DailyPrintUsageByUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the deviceConfigurationDeviceActivity method.
+    */
+    public function microsoftGraphDeviceConfigurationDeviceActivity(): DeviceConfigurationDeviceActivityRequestBuilder {
+        return new DeviceConfigurationDeviceActivityRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the deviceConfigurationUserActivity method.
+    */
+    public function microsoftGraphDeviceConfigurationUserActivity(): DeviceConfigurationUserActivityRequestBuilder {
+        return new DeviceConfigurationUserActivityRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getOffice365ActivationCounts method.
+    */
+    public function microsoftGraphGetOffice365ActivationCounts(): GetOffice365ActivationCountsRequestBuilder {
+        return new GetOffice365ActivationCountsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getOffice365ActivationsUserCounts method.
+    */
+    public function microsoftGraphGetOffice365ActivationsUserCounts(): GetOffice365ActivationsUserCountsRequestBuilder {
+        return new GetOffice365ActivationsUserCountsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getOffice365ActivationsUserDetail method.
+    */
+    public function microsoftGraphGetOffice365ActivationsUserDetail(): GetOffice365ActivationsUserDetailRequestBuilder {
+        return new GetOffice365ActivationsUserDetailRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the managedDeviceEnrollmentFailureDetails method.
+    */
+    public function microsoftGraphManagedDeviceEnrollmentFailureDetails(): ManagedDeviceEnrollmentFailureDetailsRequestBuilder {
+        return new ManagedDeviceEnrollmentFailureDetailsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the managedDeviceEnrollmentTopFailures method.
+    */
+    public function microsoftGraphManagedDeviceEnrollmentTopFailures(): ManagedDeviceEnrollmentTopFailuresRequestBuilder {
+        return new ManagedDeviceEnrollmentTopFailuresRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -206,22 +255,6 @@ class ReportsRequestBuilder
     }
 
     /**
-     * Provides operations to call the deviceConfigurationDeviceActivity method.
-     * @return DeviceConfigurationDeviceActivityRequestBuilder
-    */
-    public function deviceConfigurationDeviceActivity(): DeviceConfigurationDeviceActivityRequestBuilder {
-        return new DeviceConfigurationDeviceActivityRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to call the deviceConfigurationUserActivity method.
-     * @return DeviceConfigurationUserActivityRequestBuilder
-    */
-    public function deviceConfigurationUserActivity(): DeviceConfigurationUserActivityRequestBuilder {
-        return new DeviceConfigurationUserActivityRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
      * Get reports
      * @param ReportsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -244,7 +277,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetEmailActivityCountsWithPeriodRequestBuilder
     */
-    public function getEmailActivityCountsWithPeriod(string $period): GetEmailActivityCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetEmailActivityCountsWithPeriod(string $period): GetEmailActivityCountsWithPeriodRequestBuilder {
         return new GetEmailActivityCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -253,7 +286,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetEmailActivityUserCountsWithPeriodRequestBuilder
     */
-    public function getEmailActivityUserCountsWithPeriod(string $period): GetEmailActivityUserCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetEmailActivityUserCountsWithPeriod(string $period): GetEmailActivityUserCountsWithPeriodRequestBuilder {
         return new GetEmailActivityUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -262,7 +295,7 @@ class ReportsRequestBuilder
      * @param Date $date Usage: date={date}
      * @return GetEmailActivityUserDetailWithDateRequestBuilder
     */
-    public function getEmailActivityUserDetailWithDate(Date $date): GetEmailActivityUserDetailWithDateRequestBuilder {
+    public function microsoftGraphGetEmailActivityUserDetailWithDate(Date $date): GetEmailActivityUserDetailWithDateRequestBuilder {
         return new GetEmailActivityUserDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -271,7 +304,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetEmailActivityUserDetailWithPeriodRequestBuilder
     */
-    public function getEmailActivityUserDetailWithPeriod(string $period): GetEmailActivityUserDetailWithPeriodRequestBuilder {
+    public function microsoftGraphGetEmailActivityUserDetailWithPeriod(string $period): GetEmailActivityUserDetailWithPeriodRequestBuilder {
         return new GetEmailActivityUserDetailWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -280,7 +313,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetEmailAppUsageAppsUserCountsWithPeriodRequestBuilder
     */
-    public function getEmailAppUsageAppsUserCountsWithPeriod(string $period): GetEmailAppUsageAppsUserCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetEmailAppUsageAppsUserCountsWithPeriod(string $period): GetEmailAppUsageAppsUserCountsWithPeriodRequestBuilder {
         return new GetEmailAppUsageAppsUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -289,7 +322,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetEmailAppUsageUserCountsWithPeriodRequestBuilder
     */
-    public function getEmailAppUsageUserCountsWithPeriod(string $period): GetEmailAppUsageUserCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetEmailAppUsageUserCountsWithPeriod(string $period): GetEmailAppUsageUserCountsWithPeriodRequestBuilder {
         return new GetEmailAppUsageUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -298,7 +331,7 @@ class ReportsRequestBuilder
      * @param Date $date Usage: date={date}
      * @return GetEmailAppUsageUserDetailWithDateRequestBuilder
     */
-    public function getEmailAppUsageUserDetailWithDate(Date $date): GetEmailAppUsageUserDetailWithDateRequestBuilder {
+    public function microsoftGraphGetEmailAppUsageUserDetailWithDate(Date $date): GetEmailAppUsageUserDetailWithDateRequestBuilder {
         return new GetEmailAppUsageUserDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -307,7 +340,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetEmailAppUsageUserDetailWithPeriodRequestBuilder
     */
-    public function getEmailAppUsageUserDetailWithPeriod(string $period): GetEmailAppUsageUserDetailWithPeriodRequestBuilder {
+    public function microsoftGraphGetEmailAppUsageUserDetailWithPeriod(string $period): GetEmailAppUsageUserDetailWithPeriodRequestBuilder {
         return new GetEmailAppUsageUserDetailWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -316,7 +349,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetEmailAppUsageVersionsUserCountsWithPeriodRequestBuilder
     */
-    public function getEmailAppUsageVersionsUserCountsWithPeriod(string $period): GetEmailAppUsageVersionsUserCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetEmailAppUsageVersionsUserCountsWithPeriod(string $period): GetEmailAppUsageVersionsUserCountsWithPeriodRequestBuilder {
         return new GetEmailAppUsageVersionsUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -327,7 +360,7 @@ class ReportsRequestBuilder
      * @param DateTime $startDateTime Usage: startDateTime={startDateTime}
      * @return GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder
     */
-    public function getGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTime(DateTime $endDateTime, string $groupId, DateTime $startDateTime): GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder {
+    public function microsoftGraphGetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTime(DateTime $endDateTime, string $groupId, DateTime $startDateTime): GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder {
         return new GetGroupArchivedPrintJobsWithGroupIdWithStartDateTimeWithEndDateTimeRequestBuilder($this->pathParameters, $this->requestAdapter, $endDateTime, $groupId, $startDateTime);
     }
 
@@ -336,7 +369,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetM365AppPlatformUserCountsWithPeriodRequestBuilder
     */
-    public function getM365AppPlatformUserCountsWithPeriod(string $period): GetM365AppPlatformUserCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetM365AppPlatformUserCountsWithPeriod(string $period): GetM365AppPlatformUserCountsWithPeriodRequestBuilder {
         return new GetM365AppPlatformUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -345,7 +378,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetM365AppUserCountsWithPeriodRequestBuilder
     */
-    public function getM365AppUserCountsWithPeriod(string $period): GetM365AppUserCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetM365AppUserCountsWithPeriod(string $period): GetM365AppUserCountsWithPeriodRequestBuilder {
         return new GetM365AppUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -354,7 +387,7 @@ class ReportsRequestBuilder
      * @param Date $date Usage: date={date}
      * @return GetM365AppUserDetailWithDateRequestBuilder
     */
-    public function getM365AppUserDetailWithDate(Date $date): GetM365AppUserDetailWithDateRequestBuilder {
+    public function microsoftGraphGetM365AppUserDetailWithDate(Date $date): GetM365AppUserDetailWithDateRequestBuilder {
         return new GetM365AppUserDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -363,7 +396,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetM365AppUserDetailWithPeriodRequestBuilder
     */
-    public function getM365AppUserDetailWithPeriod(string $period): GetM365AppUserDetailWithPeriodRequestBuilder {
+    public function microsoftGraphGetM365AppUserDetailWithPeriod(string $period): GetM365AppUserDetailWithPeriodRequestBuilder {
         return new GetM365AppUserDetailWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -372,7 +405,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetMailboxUsageDetailWithPeriodRequestBuilder
     */
-    public function getMailboxUsageDetailWithPeriod(string $period): GetMailboxUsageDetailWithPeriodRequestBuilder {
+    public function microsoftGraphGetMailboxUsageDetailWithPeriod(string $period): GetMailboxUsageDetailWithPeriodRequestBuilder {
         return new GetMailboxUsageDetailWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -381,7 +414,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetMailboxUsageMailboxCountsWithPeriodRequestBuilder
     */
-    public function getMailboxUsageMailboxCountsWithPeriod(string $period): GetMailboxUsageMailboxCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetMailboxUsageMailboxCountsWithPeriod(string $period): GetMailboxUsageMailboxCountsWithPeriodRequestBuilder {
         return new GetMailboxUsageMailboxCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -390,7 +423,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetMailboxUsageQuotaStatusMailboxCountsWithPeriodRequestBuilder
     */
-    public function getMailboxUsageQuotaStatusMailboxCountsWithPeriod(string $period): GetMailboxUsageQuotaStatusMailboxCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetMailboxUsageQuotaStatusMailboxCountsWithPeriod(string $period): GetMailboxUsageQuotaStatusMailboxCountsWithPeriodRequestBuilder {
         return new GetMailboxUsageQuotaStatusMailboxCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -399,32 +432,8 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetMailboxUsageStorageWithPeriodRequestBuilder
     */
-    public function getMailboxUsageStorageWithPeriod(string $period): GetMailboxUsageStorageWithPeriodRequestBuilder {
+    public function microsoftGraphGetMailboxUsageStorageWithPeriod(string $period): GetMailboxUsageStorageWithPeriodRequestBuilder {
         return new GetMailboxUsageStorageWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
-    }
-
-    /**
-     * Provides operations to call the getOffice365ActivationCounts method.
-     * @return GetOffice365ActivationCountsRequestBuilder
-    */
-    public function getOffice365ActivationCounts(): GetOffice365ActivationCountsRequestBuilder {
-        return new GetOffice365ActivationCountsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to call the getOffice365ActivationsUserCounts method.
-     * @return GetOffice365ActivationsUserCountsRequestBuilder
-    */
-    public function getOffice365ActivationsUserCounts(): GetOffice365ActivationsUserCountsRequestBuilder {
-        return new GetOffice365ActivationsUserCountsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to call the getOffice365ActivationsUserDetail method.
-     * @return GetOffice365ActivationsUserDetailRequestBuilder
-    */
-    public function getOffice365ActivationsUserDetail(): GetOffice365ActivationsUserDetailRequestBuilder {
-        return new GetOffice365ActivationsUserDetailRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
 
     /**
@@ -432,7 +441,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetOffice365ActiveUserCountsWithPeriodRequestBuilder
     */
-    public function getOffice365ActiveUserCountsWithPeriod(string $period): GetOffice365ActiveUserCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetOffice365ActiveUserCountsWithPeriod(string $period): GetOffice365ActiveUserCountsWithPeriodRequestBuilder {
         return new GetOffice365ActiveUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -441,7 +450,7 @@ class ReportsRequestBuilder
      * @param Date $date Usage: date={date}
      * @return GetOffice365ActiveUserDetailWithDateRequestBuilder
     */
-    public function getOffice365ActiveUserDetailWithDate(Date $date): GetOffice365ActiveUserDetailWithDateRequestBuilder {
+    public function microsoftGraphGetOffice365ActiveUserDetailWithDate(Date $date): GetOffice365ActiveUserDetailWithDateRequestBuilder {
         return new GetOffice365ActiveUserDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -450,7 +459,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetOffice365ActiveUserDetailWithPeriodRequestBuilder
     */
-    public function getOffice365ActiveUserDetailWithPeriod(string $period): GetOffice365ActiveUserDetailWithPeriodRequestBuilder {
+    public function microsoftGraphGetOffice365ActiveUserDetailWithPeriod(string $period): GetOffice365ActiveUserDetailWithPeriodRequestBuilder {
         return new GetOffice365ActiveUserDetailWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -459,7 +468,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetOffice365GroupsActivityCountsWithPeriodRequestBuilder
     */
-    public function getOffice365GroupsActivityCountsWithPeriod(string $period): GetOffice365GroupsActivityCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetOffice365GroupsActivityCountsWithPeriod(string $period): GetOffice365GroupsActivityCountsWithPeriodRequestBuilder {
         return new GetOffice365GroupsActivityCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -468,7 +477,7 @@ class ReportsRequestBuilder
      * @param Date $date Usage: date={date}
      * @return GetOffice365GroupsActivityDetailWithDateRequestBuilder
     */
-    public function getOffice365GroupsActivityDetailWithDate(Date $date): GetOffice365GroupsActivityDetailWithDateRequestBuilder {
+    public function microsoftGraphGetOffice365GroupsActivityDetailWithDate(Date $date): GetOffice365GroupsActivityDetailWithDateRequestBuilder {
         return new GetOffice365GroupsActivityDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -477,7 +486,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetOffice365GroupsActivityDetailWithPeriodRequestBuilder
     */
-    public function getOffice365GroupsActivityDetailWithPeriod(string $period): GetOffice365GroupsActivityDetailWithPeriodRequestBuilder {
+    public function microsoftGraphGetOffice365GroupsActivityDetailWithPeriod(string $period): GetOffice365GroupsActivityDetailWithPeriodRequestBuilder {
         return new GetOffice365GroupsActivityDetailWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -486,7 +495,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilder
     */
-    public function getOffice365GroupsActivityFileCountsWithPeriod(string $period): GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetOffice365GroupsActivityFileCountsWithPeriod(string $period): GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilder {
         return new GetOffice365GroupsActivityFileCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -495,7 +504,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetOffice365GroupsActivityGroupCountsWithPeriodRequestBuilder
     */
-    public function getOffice365GroupsActivityGroupCountsWithPeriod(string $period): GetOffice365GroupsActivityGroupCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetOffice365GroupsActivityGroupCountsWithPeriod(string $period): GetOffice365GroupsActivityGroupCountsWithPeriodRequestBuilder {
         return new GetOffice365GroupsActivityGroupCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -504,7 +513,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetOffice365GroupsActivityStorageWithPeriodRequestBuilder
     */
-    public function getOffice365GroupsActivityStorageWithPeriod(string $period): GetOffice365GroupsActivityStorageWithPeriodRequestBuilder {
+    public function microsoftGraphGetOffice365GroupsActivityStorageWithPeriod(string $period): GetOffice365GroupsActivityStorageWithPeriodRequestBuilder {
         return new GetOffice365GroupsActivityStorageWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -513,7 +522,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetOffice365ServicesUserCountsWithPeriodRequestBuilder
     */
-    public function getOffice365ServicesUserCountsWithPeriod(string $period): GetOffice365ServicesUserCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetOffice365ServicesUserCountsWithPeriod(string $period): GetOffice365ServicesUserCountsWithPeriodRequestBuilder {
         return new GetOffice365ServicesUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -522,7 +531,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetOneDriveActivityFileCountsWithPeriodRequestBuilder
     */
-    public function getOneDriveActivityFileCountsWithPeriod(string $period): GetOneDriveActivityFileCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetOneDriveActivityFileCountsWithPeriod(string $period): GetOneDriveActivityFileCountsWithPeriodRequestBuilder {
         return new GetOneDriveActivityFileCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -531,7 +540,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetOneDriveActivityUserCountsWithPeriodRequestBuilder
     */
-    public function getOneDriveActivityUserCountsWithPeriod(string $period): GetOneDriveActivityUserCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetOneDriveActivityUserCountsWithPeriod(string $period): GetOneDriveActivityUserCountsWithPeriodRequestBuilder {
         return new GetOneDriveActivityUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -540,7 +549,7 @@ class ReportsRequestBuilder
      * @param Date $date Usage: date={date}
      * @return GetOneDriveActivityUserDetailWithDateRequestBuilder
     */
-    public function getOneDriveActivityUserDetailWithDate(Date $date): GetOneDriveActivityUserDetailWithDateRequestBuilder {
+    public function microsoftGraphGetOneDriveActivityUserDetailWithDate(Date $date): GetOneDriveActivityUserDetailWithDateRequestBuilder {
         return new GetOneDriveActivityUserDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -549,7 +558,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetOneDriveActivityUserDetailWithPeriodRequestBuilder
     */
-    public function getOneDriveActivityUserDetailWithPeriod(string $period): GetOneDriveActivityUserDetailWithPeriodRequestBuilder {
+    public function microsoftGraphGetOneDriveActivityUserDetailWithPeriod(string $period): GetOneDriveActivityUserDetailWithPeriodRequestBuilder {
         return new GetOneDriveActivityUserDetailWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -558,7 +567,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetOneDriveUsageAccountCountsWithPeriodRequestBuilder
     */
-    public function getOneDriveUsageAccountCountsWithPeriod(string $period): GetOneDriveUsageAccountCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetOneDriveUsageAccountCountsWithPeriod(string $period): GetOneDriveUsageAccountCountsWithPeriodRequestBuilder {
         return new GetOneDriveUsageAccountCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -567,7 +576,7 @@ class ReportsRequestBuilder
      * @param Date $date Usage: date={date}
      * @return GetOneDriveUsageAccountDetailWithDateRequestBuilder
     */
-    public function getOneDriveUsageAccountDetailWithDate(Date $date): GetOneDriveUsageAccountDetailWithDateRequestBuilder {
+    public function microsoftGraphGetOneDriveUsageAccountDetailWithDate(Date $date): GetOneDriveUsageAccountDetailWithDateRequestBuilder {
         return new GetOneDriveUsageAccountDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -576,7 +585,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetOneDriveUsageAccountDetailWithPeriodRequestBuilder
     */
-    public function getOneDriveUsageAccountDetailWithPeriod(string $period): GetOneDriveUsageAccountDetailWithPeriodRequestBuilder {
+    public function microsoftGraphGetOneDriveUsageAccountDetailWithPeriod(string $period): GetOneDriveUsageAccountDetailWithPeriodRequestBuilder {
         return new GetOneDriveUsageAccountDetailWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -585,7 +594,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetOneDriveUsageFileCountsWithPeriodRequestBuilder
     */
-    public function getOneDriveUsageFileCountsWithPeriod(string $period): GetOneDriveUsageFileCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetOneDriveUsageFileCountsWithPeriod(string $period): GetOneDriveUsageFileCountsWithPeriodRequestBuilder {
         return new GetOneDriveUsageFileCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -594,7 +603,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetOneDriveUsageStorageWithPeriodRequestBuilder
     */
-    public function getOneDriveUsageStorageWithPeriod(string $period): GetOneDriveUsageStorageWithPeriodRequestBuilder {
+    public function microsoftGraphGetOneDriveUsageStorageWithPeriod(string $period): GetOneDriveUsageStorageWithPeriodRequestBuilder {
         return new GetOneDriveUsageStorageWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -605,7 +614,7 @@ class ReportsRequestBuilder
      * @param DateTime $startDateTime Usage: startDateTime={startDateTime}
      * @return GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder
     */
-    public function getPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTime(DateTime $endDateTime, string $printerId, DateTime $startDateTime): GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder {
+    public function microsoftGraphGetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTime(DateTime $endDateTime, string $printerId, DateTime $startDateTime): GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder {
         return new GetPrinterArchivedPrintJobsWithPrinterIdWithStartDateTimeWithEndDateTimeRequestBuilder($this->pathParameters, $this->requestAdapter, $endDateTime, $printerId, $startDateTime);
     }
 
@@ -614,7 +623,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetSharePointActivityFileCountsWithPeriodRequestBuilder
     */
-    public function getSharePointActivityFileCountsWithPeriod(string $period): GetSharePointActivityFileCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetSharePointActivityFileCountsWithPeriod(string $period): GetSharePointActivityFileCountsWithPeriodRequestBuilder {
         return new GetSharePointActivityFileCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -623,7 +632,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetSharePointActivityPagesWithPeriodRequestBuilder
     */
-    public function getSharePointActivityPagesWithPeriod(string $period): GetSharePointActivityPagesWithPeriodRequestBuilder {
+    public function microsoftGraphGetSharePointActivityPagesWithPeriod(string $period): GetSharePointActivityPagesWithPeriodRequestBuilder {
         return new GetSharePointActivityPagesWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -632,7 +641,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetSharePointActivityUserCountsWithPeriodRequestBuilder
     */
-    public function getSharePointActivityUserCountsWithPeriod(string $period): GetSharePointActivityUserCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetSharePointActivityUserCountsWithPeriod(string $period): GetSharePointActivityUserCountsWithPeriodRequestBuilder {
         return new GetSharePointActivityUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -641,7 +650,7 @@ class ReportsRequestBuilder
      * @param Date $date Usage: date={date}
      * @return GetSharePointActivityUserDetailWithDateRequestBuilder
     */
-    public function getSharePointActivityUserDetailWithDate(Date $date): GetSharePointActivityUserDetailWithDateRequestBuilder {
+    public function microsoftGraphGetSharePointActivityUserDetailWithDate(Date $date): GetSharePointActivityUserDetailWithDateRequestBuilder {
         return new GetSharePointActivityUserDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -650,7 +659,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetSharePointActivityUserDetailWithPeriodRequestBuilder
     */
-    public function getSharePointActivityUserDetailWithPeriod(string $period): GetSharePointActivityUserDetailWithPeriodRequestBuilder {
+    public function microsoftGraphGetSharePointActivityUserDetailWithPeriod(string $period): GetSharePointActivityUserDetailWithPeriodRequestBuilder {
         return new GetSharePointActivityUserDetailWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -659,7 +668,7 @@ class ReportsRequestBuilder
      * @param Date $date Usage: date={date}
      * @return GetSharePointSiteUsageDetailWithDateRequestBuilder
     */
-    public function getSharePointSiteUsageDetailWithDate(Date $date): GetSharePointSiteUsageDetailWithDateRequestBuilder {
+    public function microsoftGraphGetSharePointSiteUsageDetailWithDate(Date $date): GetSharePointSiteUsageDetailWithDateRequestBuilder {
         return new GetSharePointSiteUsageDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -668,7 +677,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetSharePointSiteUsageDetailWithPeriodRequestBuilder
     */
-    public function getSharePointSiteUsageDetailWithPeriod(string $period): GetSharePointSiteUsageDetailWithPeriodRequestBuilder {
+    public function microsoftGraphGetSharePointSiteUsageDetailWithPeriod(string $period): GetSharePointSiteUsageDetailWithPeriodRequestBuilder {
         return new GetSharePointSiteUsageDetailWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -677,7 +686,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetSharePointSiteUsageFileCountsWithPeriodRequestBuilder
     */
-    public function getSharePointSiteUsageFileCountsWithPeriod(string $period): GetSharePointSiteUsageFileCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetSharePointSiteUsageFileCountsWithPeriod(string $period): GetSharePointSiteUsageFileCountsWithPeriodRequestBuilder {
         return new GetSharePointSiteUsageFileCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -686,7 +695,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetSharePointSiteUsagePagesWithPeriodRequestBuilder
     */
-    public function getSharePointSiteUsagePagesWithPeriod(string $period): GetSharePointSiteUsagePagesWithPeriodRequestBuilder {
+    public function microsoftGraphGetSharePointSiteUsagePagesWithPeriod(string $period): GetSharePointSiteUsagePagesWithPeriodRequestBuilder {
         return new GetSharePointSiteUsagePagesWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -695,7 +704,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilder
     */
-    public function getSharePointSiteUsageSiteCountsWithPeriod(string $period): GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetSharePointSiteUsageSiteCountsWithPeriod(string $period): GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilder {
         return new GetSharePointSiteUsageSiteCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -704,7 +713,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetSharePointSiteUsageStorageWithPeriodRequestBuilder
     */
-    public function getSharePointSiteUsageStorageWithPeriod(string $period): GetSharePointSiteUsageStorageWithPeriodRequestBuilder {
+    public function microsoftGraphGetSharePointSiteUsageStorageWithPeriod(string $period): GetSharePointSiteUsageStorageWithPeriodRequestBuilder {
         return new GetSharePointSiteUsageStorageWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -713,7 +722,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetSkypeForBusinessActivityCountsWithPeriodRequestBuilder
     */
-    public function getSkypeForBusinessActivityCountsWithPeriod(string $period): GetSkypeForBusinessActivityCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetSkypeForBusinessActivityCountsWithPeriod(string $period): GetSkypeForBusinessActivityCountsWithPeriodRequestBuilder {
         return new GetSkypeForBusinessActivityCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -722,7 +731,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetSkypeForBusinessActivityUserCountsWithPeriodRequestBuilder
     */
-    public function getSkypeForBusinessActivityUserCountsWithPeriod(string $period): GetSkypeForBusinessActivityUserCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetSkypeForBusinessActivityUserCountsWithPeriod(string $period): GetSkypeForBusinessActivityUserCountsWithPeriodRequestBuilder {
         return new GetSkypeForBusinessActivityUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -731,7 +740,7 @@ class ReportsRequestBuilder
      * @param Date $date Usage: date={date}
      * @return GetSkypeForBusinessActivityUserDetailWithDateRequestBuilder
     */
-    public function getSkypeForBusinessActivityUserDetailWithDate(Date $date): GetSkypeForBusinessActivityUserDetailWithDateRequestBuilder {
+    public function microsoftGraphGetSkypeForBusinessActivityUserDetailWithDate(Date $date): GetSkypeForBusinessActivityUserDetailWithDateRequestBuilder {
         return new GetSkypeForBusinessActivityUserDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -740,7 +749,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetSkypeForBusinessActivityUserDetailWithPeriodRequestBuilder
     */
-    public function getSkypeForBusinessActivityUserDetailWithPeriod(string $period): GetSkypeForBusinessActivityUserDetailWithPeriodRequestBuilder {
+    public function microsoftGraphGetSkypeForBusinessActivityUserDetailWithPeriod(string $period): GetSkypeForBusinessActivityUserDetailWithPeriodRequestBuilder {
         return new GetSkypeForBusinessActivityUserDetailWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -749,7 +758,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuilder
     */
-    public function getSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriod(string $period): GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriod(string $period): GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuilder {
         return new GetSkypeForBusinessDeviceUsageDistributionUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -758,7 +767,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetSkypeForBusinessDeviceUsageUserCountsWithPeriodRequestBuilder
     */
-    public function getSkypeForBusinessDeviceUsageUserCountsWithPeriod(string $period): GetSkypeForBusinessDeviceUsageUserCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetSkypeForBusinessDeviceUsageUserCountsWithPeriod(string $period): GetSkypeForBusinessDeviceUsageUserCountsWithPeriodRequestBuilder {
         return new GetSkypeForBusinessDeviceUsageUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -767,7 +776,7 @@ class ReportsRequestBuilder
      * @param Date $date Usage: date={date}
      * @return GetSkypeForBusinessDeviceUsageUserDetailWithDateRequestBuilder
     */
-    public function getSkypeForBusinessDeviceUsageUserDetailWithDate(Date $date): GetSkypeForBusinessDeviceUsageUserDetailWithDateRequestBuilder {
+    public function microsoftGraphGetSkypeForBusinessDeviceUsageUserDetailWithDate(Date $date): GetSkypeForBusinessDeviceUsageUserDetailWithDateRequestBuilder {
         return new GetSkypeForBusinessDeviceUsageUserDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -776,7 +785,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetSkypeForBusinessDeviceUsageUserDetailWithPeriodRequestBuilder
     */
-    public function getSkypeForBusinessDeviceUsageUserDetailWithPeriod(string $period): GetSkypeForBusinessDeviceUsageUserDetailWithPeriodRequestBuilder {
+    public function microsoftGraphGetSkypeForBusinessDeviceUsageUserDetailWithPeriod(string $period): GetSkypeForBusinessDeviceUsageUserDetailWithPeriodRequestBuilder {
         return new GetSkypeForBusinessDeviceUsageUserDetailWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -785,7 +794,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetSkypeForBusinessOrganizerActivityCountsWithPeriodRequestBuilder
     */
-    public function getSkypeForBusinessOrganizerActivityCountsWithPeriod(string $period): GetSkypeForBusinessOrganizerActivityCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetSkypeForBusinessOrganizerActivityCountsWithPeriod(string $period): GetSkypeForBusinessOrganizerActivityCountsWithPeriodRequestBuilder {
         return new GetSkypeForBusinessOrganizerActivityCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -794,7 +803,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetSkypeForBusinessOrganizerActivityMinuteCountsWithPeriodRequestBuilder
     */
-    public function getSkypeForBusinessOrganizerActivityMinuteCountsWithPeriod(string $period): GetSkypeForBusinessOrganizerActivityMinuteCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetSkypeForBusinessOrganizerActivityMinuteCountsWithPeriod(string $period): GetSkypeForBusinessOrganizerActivityMinuteCountsWithPeriodRequestBuilder {
         return new GetSkypeForBusinessOrganizerActivityMinuteCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -803,7 +812,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetSkypeForBusinessOrganizerActivityUserCountsWithPeriodRequestBuilder
     */
-    public function getSkypeForBusinessOrganizerActivityUserCountsWithPeriod(string $period): GetSkypeForBusinessOrganizerActivityUserCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetSkypeForBusinessOrganizerActivityUserCountsWithPeriod(string $period): GetSkypeForBusinessOrganizerActivityUserCountsWithPeriodRequestBuilder {
         return new GetSkypeForBusinessOrganizerActivityUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -812,7 +821,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetSkypeForBusinessParticipantActivityCountsWithPeriodRequestBuilder
     */
-    public function getSkypeForBusinessParticipantActivityCountsWithPeriod(string $period): GetSkypeForBusinessParticipantActivityCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetSkypeForBusinessParticipantActivityCountsWithPeriod(string $period): GetSkypeForBusinessParticipantActivityCountsWithPeriodRequestBuilder {
         return new GetSkypeForBusinessParticipantActivityCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -821,7 +830,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetSkypeForBusinessParticipantActivityMinuteCountsWithPeriodRequestBuilder
     */
-    public function getSkypeForBusinessParticipantActivityMinuteCountsWithPeriod(string $period): GetSkypeForBusinessParticipantActivityMinuteCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetSkypeForBusinessParticipantActivityMinuteCountsWithPeriod(string $period): GetSkypeForBusinessParticipantActivityMinuteCountsWithPeriodRequestBuilder {
         return new GetSkypeForBusinessParticipantActivityMinuteCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -830,7 +839,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetSkypeForBusinessParticipantActivityUserCountsWithPeriodRequestBuilder
     */
-    public function getSkypeForBusinessParticipantActivityUserCountsWithPeriod(string $period): GetSkypeForBusinessParticipantActivityUserCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetSkypeForBusinessParticipantActivityUserCountsWithPeriod(string $period): GetSkypeForBusinessParticipantActivityUserCountsWithPeriodRequestBuilder {
         return new GetSkypeForBusinessParticipantActivityUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -839,7 +848,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRequestBuilder
     */
-    public function getSkypeForBusinessPeerToPeerActivityCountsWithPeriod(string $period): GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetSkypeForBusinessPeerToPeerActivityCountsWithPeriod(string $period): GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRequestBuilder {
         return new GetSkypeForBusinessPeerToPeerActivityCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -848,7 +857,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriodRequestBuilder
     */
-    public function getSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriod(string $period): GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriod(string $period): GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriodRequestBuilder {
         return new GetSkypeForBusinessPeerToPeerActivityMinuteCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -857,7 +866,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeriodRequestBuilder
     */
-    public function getSkypeForBusinessPeerToPeerActivityUserCountsWithPeriod(string $period): GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetSkypeForBusinessPeerToPeerActivityUserCountsWithPeriod(string $period): GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeriodRequestBuilder {
         return new GetSkypeForBusinessPeerToPeerActivityUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -866,7 +875,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequestBuilder
     */
-    public function getTeamsDeviceUsageDistributionUserCountsWithPeriod(string $period): GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetTeamsDeviceUsageDistributionUserCountsWithPeriod(string $period): GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequestBuilder {
         return new GetTeamsDeviceUsageDistributionUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -875,7 +884,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetTeamsDeviceUsageUserCountsWithPeriodRequestBuilder
     */
-    public function getTeamsDeviceUsageUserCountsWithPeriod(string $period): GetTeamsDeviceUsageUserCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetTeamsDeviceUsageUserCountsWithPeriod(string $period): GetTeamsDeviceUsageUserCountsWithPeriodRequestBuilder {
         return new GetTeamsDeviceUsageUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -884,7 +893,7 @@ class ReportsRequestBuilder
      * @param Date $date Usage: date={date}
      * @return GetTeamsDeviceUsageUserDetailWithDateRequestBuilder
     */
-    public function getTeamsDeviceUsageUserDetailWithDate(Date $date): GetTeamsDeviceUsageUserDetailWithDateRequestBuilder {
+    public function microsoftGraphGetTeamsDeviceUsageUserDetailWithDate(Date $date): GetTeamsDeviceUsageUserDetailWithDateRequestBuilder {
         return new GetTeamsDeviceUsageUserDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -893,7 +902,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetTeamsDeviceUsageUserDetailWithPeriodRequestBuilder
     */
-    public function getTeamsDeviceUsageUserDetailWithPeriod(string $period): GetTeamsDeviceUsageUserDetailWithPeriodRequestBuilder {
+    public function microsoftGraphGetTeamsDeviceUsageUserDetailWithPeriod(string $period): GetTeamsDeviceUsageUserDetailWithPeriodRequestBuilder {
         return new GetTeamsDeviceUsageUserDetailWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -902,7 +911,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetTeamsUserActivityCountsWithPeriodRequestBuilder
     */
-    public function getTeamsUserActivityCountsWithPeriod(string $period): GetTeamsUserActivityCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetTeamsUserActivityCountsWithPeriod(string $period): GetTeamsUserActivityCountsWithPeriodRequestBuilder {
         return new GetTeamsUserActivityCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -911,7 +920,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetTeamsUserActivityUserCountsWithPeriodRequestBuilder
     */
-    public function getTeamsUserActivityUserCountsWithPeriod(string $period): GetTeamsUserActivityUserCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetTeamsUserActivityUserCountsWithPeriod(string $period): GetTeamsUserActivityUserCountsWithPeriodRequestBuilder {
         return new GetTeamsUserActivityUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -920,7 +929,7 @@ class ReportsRequestBuilder
      * @param Date $date Usage: date={date}
      * @return GetTeamsUserActivityUserDetailWithDateRequestBuilder
     */
-    public function getTeamsUserActivityUserDetailWithDate(Date $date): GetTeamsUserActivityUserDetailWithDateRequestBuilder {
+    public function microsoftGraphGetTeamsUserActivityUserDetailWithDate(Date $date): GetTeamsUserActivityUserDetailWithDateRequestBuilder {
         return new GetTeamsUserActivityUserDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -929,7 +938,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetTeamsUserActivityUserDetailWithPeriodRequestBuilder
     */
-    public function getTeamsUserActivityUserDetailWithPeriod(string $period): GetTeamsUserActivityUserDetailWithPeriodRequestBuilder {
+    public function microsoftGraphGetTeamsUserActivityUserDetailWithPeriod(string $period): GetTeamsUserActivityUserDetailWithPeriodRequestBuilder {
         return new GetTeamsUserActivityUserDetailWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -940,7 +949,7 @@ class ReportsRequestBuilder
      * @param string $userId Usage: userId='{userId}'
      * @return GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder
     */
-    public function getUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTime(DateTime $endDateTime, DateTime $startDateTime, string $userId): GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder {
+    public function microsoftGraphGetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTime(DateTime $endDateTime, DateTime $startDateTime, string $userId): GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder {
         return new GetUserArchivedPrintJobsWithUserIdWithStartDateTimeWithEndDateTimeRequestBuilder($this->pathParameters, $this->requestAdapter, $endDateTime, $startDateTime, $userId);
     }
 
@@ -949,7 +958,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetYammerActivityCountsWithPeriodRequestBuilder
     */
-    public function getYammerActivityCountsWithPeriod(string $period): GetYammerActivityCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetYammerActivityCountsWithPeriod(string $period): GetYammerActivityCountsWithPeriodRequestBuilder {
         return new GetYammerActivityCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -958,7 +967,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetYammerActivityUserCountsWithPeriodRequestBuilder
     */
-    public function getYammerActivityUserCountsWithPeriod(string $period): GetYammerActivityUserCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetYammerActivityUserCountsWithPeriod(string $period): GetYammerActivityUserCountsWithPeriodRequestBuilder {
         return new GetYammerActivityUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -967,7 +976,7 @@ class ReportsRequestBuilder
      * @param Date $date Usage: date={date}
      * @return GetYammerActivityUserDetailWithDateRequestBuilder
     */
-    public function getYammerActivityUserDetailWithDate(Date $date): GetYammerActivityUserDetailWithDateRequestBuilder {
+    public function microsoftGraphGetYammerActivityUserDetailWithDate(Date $date): GetYammerActivityUserDetailWithDateRequestBuilder {
         return new GetYammerActivityUserDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -976,7 +985,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetYammerActivityUserDetailWithPeriodRequestBuilder
     */
-    public function getYammerActivityUserDetailWithPeriod(string $period): GetYammerActivityUserDetailWithPeriodRequestBuilder {
+    public function microsoftGraphGetYammerActivityUserDetailWithPeriod(string $period): GetYammerActivityUserDetailWithPeriodRequestBuilder {
         return new GetYammerActivityUserDetailWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -985,7 +994,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilder
     */
-    public function getYammerDeviceUsageDistributionUserCountsWithPeriod(string $period): GetYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetYammerDeviceUsageDistributionUserCountsWithPeriod(string $period): GetYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilder {
         return new GetYammerDeviceUsageDistributionUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -994,7 +1003,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetYammerDeviceUsageUserCountsWithPeriodRequestBuilder
     */
-    public function getYammerDeviceUsageUserCountsWithPeriod(string $period): GetYammerDeviceUsageUserCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetYammerDeviceUsageUserCountsWithPeriod(string $period): GetYammerDeviceUsageUserCountsWithPeriodRequestBuilder {
         return new GetYammerDeviceUsageUserCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -1003,7 +1012,7 @@ class ReportsRequestBuilder
      * @param Date $date Usage: date={date}
      * @return GetYammerDeviceUsageUserDetailWithDateRequestBuilder
     */
-    public function getYammerDeviceUsageUserDetailWithDate(Date $date): GetYammerDeviceUsageUserDetailWithDateRequestBuilder {
+    public function microsoftGraphGetYammerDeviceUsageUserDetailWithDate(Date $date): GetYammerDeviceUsageUserDetailWithDateRequestBuilder {
         return new GetYammerDeviceUsageUserDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -1012,7 +1021,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetYammerDeviceUsageUserDetailWithPeriodRequestBuilder
     */
-    public function getYammerDeviceUsageUserDetailWithPeriod(string $period): GetYammerDeviceUsageUserDetailWithPeriodRequestBuilder {
+    public function microsoftGraphGetYammerDeviceUsageUserDetailWithPeriod(string $period): GetYammerDeviceUsageUserDetailWithPeriodRequestBuilder {
         return new GetYammerDeviceUsageUserDetailWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -1021,7 +1030,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetYammerGroupsActivityCountsWithPeriodRequestBuilder
     */
-    public function getYammerGroupsActivityCountsWithPeriod(string $period): GetYammerGroupsActivityCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetYammerGroupsActivityCountsWithPeriod(string $period): GetYammerGroupsActivityCountsWithPeriodRequestBuilder {
         return new GetYammerGroupsActivityCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -1030,7 +1039,7 @@ class ReportsRequestBuilder
      * @param Date $date Usage: date={date}
      * @return GetYammerGroupsActivityDetailWithDateRequestBuilder
     */
-    public function getYammerGroupsActivityDetailWithDate(Date $date): GetYammerGroupsActivityDetailWithDateRequestBuilder {
+    public function microsoftGraphGetYammerGroupsActivityDetailWithDate(Date $date): GetYammerGroupsActivityDetailWithDateRequestBuilder {
         return new GetYammerGroupsActivityDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
     }
 
@@ -1039,7 +1048,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetYammerGroupsActivityDetailWithPeriodRequestBuilder
     */
-    public function getYammerGroupsActivityDetailWithPeriod(string $period): GetYammerGroupsActivityDetailWithPeriodRequestBuilder {
+    public function microsoftGraphGetYammerGroupsActivityDetailWithPeriod(string $period): GetYammerGroupsActivityDetailWithPeriodRequestBuilder {
         return new GetYammerGroupsActivityDetailWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -1048,16 +1057,8 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return GetYammerGroupsActivityGroupCountsWithPeriodRequestBuilder
     */
-    public function getYammerGroupsActivityGroupCountsWithPeriod(string $period): GetYammerGroupsActivityGroupCountsWithPeriodRequestBuilder {
+    public function microsoftGraphGetYammerGroupsActivityGroupCountsWithPeriod(string $period): GetYammerGroupsActivityGroupCountsWithPeriodRequestBuilder {
         return new GetYammerGroupsActivityGroupCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
-    }
-
-    /**
-     * Provides operations to call the managedDeviceEnrollmentFailureDetails method.
-     * @return ManagedDeviceEnrollmentFailureDetailsRequestBuilder
-    */
-    public function managedDeviceEnrollmentFailureDetails(): ManagedDeviceEnrollmentFailureDetailsRequestBuilder {
-        return new ManagedDeviceEnrollmentFailureDetailsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
 
     /**
@@ -1068,16 +1069,8 @@ class ReportsRequestBuilder
      * @param int $top Usage: top={top}
      * @return ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder
     */
-    public function managedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipToken(string $filter, int $skip, string $skipToken, int $top): ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder {
+    public function microsoftGraphManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipToken(string $filter, int $skip, string $skipToken, int $top): ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder {
         return new ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipTokenRequestBuilder($this->pathParameters, $this->requestAdapter, $filter, $skip, $skipToken, $top);
-    }
-
-    /**
-     * Provides operations to call the managedDeviceEnrollmentTopFailures method.
-     * @return ManagedDeviceEnrollmentTopFailuresRequestBuilder
-    */
-    public function managedDeviceEnrollmentTopFailures(): ManagedDeviceEnrollmentTopFailuresRequestBuilder {
-        return new ManagedDeviceEnrollmentTopFailuresRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
 
     /**
@@ -1085,7 +1078,7 @@ class ReportsRequestBuilder
      * @param string $period Usage: period='{period}'
      * @return ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder
     */
-    public function managedDeviceEnrollmentTopFailuresWithPeriod(string $period): ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder {
+    public function microsoftGraphManagedDeviceEnrollmentTopFailuresWithPeriod(string $period): ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder {
         return new ManagedDeviceEnrollmentTopFailuresWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
     }
 
@@ -1113,7 +1106,6 @@ class ReportsRequestBuilder
 
     /**
      * Update reports
-     * @param ReportRoot $body The resource that represents an instance of Enrollment Failure Reports.
      * @param ReportsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -1157,7 +1149,6 @@ class ReportsRequestBuilder
 
     /**
      * Update reports
-     * @param ReportRoot $body The resource that represents an instance of Enrollment Failure Reports.
      * @param ReportsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

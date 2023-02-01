@@ -38,11 +38,15 @@ class EndpointItemRequestBuilder
      * Instantiates a new EndpointItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $endpointId key: id of endpoint
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $endpointId = null) {
         $this->urlTemplate = '{+baseurl}/servicePrincipals/{servicePrincipal%2Did}/endpoints/{endpoint%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['endpointId'] = $endpointId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class EndpointItemRequestBuilder
 
     /**
      * Update the navigation property endpoints in servicePrincipals
-     * @param Endpoint $body The request body
      * @param EndpointItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class EndpointItemRequestBuilder
 
     /**
      * Update the navigation property endpoints in servicePrincipals
-     * @param Endpoint $body The request body
      * @param EndpointItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

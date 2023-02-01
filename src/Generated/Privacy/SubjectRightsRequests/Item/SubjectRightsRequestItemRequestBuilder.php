@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SubjectRightsRequest;
-use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\GetFinalAttachment\GetFinalAttachmentRequestBuilder;
-use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\GetFinalReport\GetFinalReportRequestBuilder;
+use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\MicrosoftGraphGetFinalAttachment\GetFinalAttachmentRequestBuilder;
+use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\MicrosoftGraphGetFinalReport\GetFinalReportRequestBuilder;
 use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Notes\Item\AuthoredNoteItemRequestBuilder;
 use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Notes\NotesRequestBuilder;
 use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Team\TeamRequestBuilder;
@@ -24,6 +24,20 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 */
 class SubjectRightsRequestItemRequestBuilder 
 {
+    /**
+     * Provides operations to call the getFinalAttachment method.
+    */
+    public function microsoftGraphGetFinalAttachment(): GetFinalAttachmentRequestBuilder {
+        return new GetFinalAttachmentRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getFinalReport method.
+    */
+    public function microsoftGraphGetFinalReport(): GetFinalReportRequestBuilder {
+        return new GetFinalReportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the notes property of the microsoft.graph.subjectRightsRequest entity.
     */
@@ -57,11 +71,15 @@ class SubjectRightsRequestItemRequestBuilder
      * Instantiates a new SubjectRightsRequestItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $subjectRightsRequestId key: id of subjectRightsRequest
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $subjectRightsRequestId = null) {
         $this->urlTemplate = '{+baseurl}/privacy/subjectRightsRequests/{subjectRightsRequest%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['subjectRightsRequestId'] = $subjectRightsRequestId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -101,22 +119,6 @@ class SubjectRightsRequestItemRequestBuilder
     }
 
     /**
-     * Provides operations to call the getFinalAttachment method.
-     * @return GetFinalAttachmentRequestBuilder
-    */
-    public function getFinalAttachment(): GetFinalAttachmentRequestBuilder {
-        return new GetFinalAttachmentRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to call the getFinalReport method.
-     * @return GetFinalReportRequestBuilder
-    */
-    public function getFinalReport(): GetFinalReportRequestBuilder {
-        return new GetFinalReportRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
      * Provides operations to manage the notes property of the microsoft.graph.subjectRightsRequest entity.
      * @param string $id Unique identifier of the item
      * @return AuthoredNoteItemRequestBuilder
@@ -129,7 +131,6 @@ class SubjectRightsRequestItemRequestBuilder
 
     /**
      * Update the navigation property subjectRightsRequests in privacy
-     * @param SubjectRightsRequest $body The request body
      * @param SubjectRightsRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -194,7 +195,6 @@ class SubjectRightsRequestItemRequestBuilder
 
     /**
      * Update the navigation property subjectRightsRequests in privacy
-     * @param SubjectRightsRequest $body The request body
      * @param SubjectRightsRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

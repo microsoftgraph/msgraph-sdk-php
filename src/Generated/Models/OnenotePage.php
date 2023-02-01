@@ -129,7 +129,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
     }
 
     /**
-     * Gets the userTags property value. The userTags property
+     * Gets the userTags property value. 
      * @return array<string>|null
     */
     public function getUserTags(): ?array {
@@ -236,7 +236,7 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
     }
 
     /**
-     * Sets the userTags property value. The userTags property
+     * Sets the userTags property value. 
      * @param array<string>|null $value Value to set for the userTags property.
     */
     public function setUserTags(?array $value): void {

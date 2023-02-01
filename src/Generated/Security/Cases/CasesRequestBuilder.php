@@ -103,7 +103,6 @@ class CasesRequestBuilder
 
     /**
      * Update the navigation property cases in security
-     * @param CasesRoot $body The request body
      * @param CasesRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -168,7 +167,6 @@ class CasesRequestBuilder
 
     /**
      * Update the navigation property cases in security
-     * @param CasesRoot $body The request body
      * @param CasesRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

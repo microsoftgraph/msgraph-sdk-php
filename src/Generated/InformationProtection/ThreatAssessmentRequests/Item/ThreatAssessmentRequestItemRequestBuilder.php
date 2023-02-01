@@ -47,11 +47,15 @@ class ThreatAssessmentRequestItemRequestBuilder
      * Instantiates a new ThreatAssessmentRequestItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $threatAssessmentRequestId key: id of threatAssessmentRequest
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $threatAssessmentRequestId = null) {
         $this->urlTemplate = '{+baseurl}/informationProtection/threatAssessmentRequests/{threatAssessmentRequest%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['threatAssessmentRequestId'] = $threatAssessmentRequestId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -92,7 +96,6 @@ class ThreatAssessmentRequestItemRequestBuilder
 
     /**
      * Update the navigation property threatAssessmentRequests in informationProtection
-     * @param ThreatAssessmentRequest $body The request body
      * @param ThreatAssessmentRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -168,7 +171,6 @@ class ThreatAssessmentRequestItemRequestBuilder
 
     /**
      * Update the navigation property threatAssessmentRequests in informationProtection
-     * @param ThreatAssessmentRequest $body The request body
      * @param ThreatAssessmentRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

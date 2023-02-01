@@ -111,7 +111,7 @@ class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -135,7 +135,7 @@ class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the userPurpose property value. The userPurpose property
+     * Gets the userPurpose property value. 
      * @return UserPurpose|null
     */
     public function getUserPurpose(): ?UserPurpose {
@@ -225,7 +225,7 @@ class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -249,7 +249,7 @@ class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the userPurpose property value. The userPurpose property
+     * Sets the userPurpose property value. 
      * @param UserPurpose|null $value Value to set for the userPurpose property.
     */
     public function setUserPurpose(?UserPurpose $value): void {

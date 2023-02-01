@@ -5,13 +5,13 @@ namespace Microsoft\Graph\Generated\Directory\DeletedItems;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Application\ApplicationRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\GetByIds\GetByIdsRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Group\GroupRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\User\UserRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\ValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\MicrosoftGraphApplication\ApplicationRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\MicrosoftGraphGetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\MicrosoftGraphGetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\MicrosoftGraphGroup\GroupRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\MicrosoftGraphUser\UserRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\MicrosoftGraphValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryObject;
 use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -28,13 +28,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class DeletedItemsRequestBuilder 
 {
     /**
-     * Casts the previous resource to application.
-    */
-    public function application(): ApplicationRequestBuilder {
-        return new ApplicationRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
@@ -42,24 +35,45 @@ class DeletedItemsRequestBuilder
     }
     
     /**
+     * Casts the previous resource to application.
+    */
+    public function microsoftGraphApplication(): ApplicationRequestBuilder {
+        return new ApplicationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to call the getAvailableExtensionProperties method.
     */
-    public function getAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
+    public function microsoftGraphGetAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
         return new GetAvailableExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getByIds method.
     */
-    public function getByIds(): GetByIdsRequestBuilder {
+    public function microsoftGraphGetByIds(): GetByIdsRequestBuilder {
         return new GetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to group.
     */
-    public function group(): GroupRequestBuilder {
+    public function microsoftGraphGroup(): GroupRequestBuilder {
         return new GroupRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to user.
+    */
+    public function microsoftGraphUser(): UserRequestBuilder {
+        return new UserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the validateProperties method.
+    */
+    public function microsoftGraphValidateProperties(): ValidatePropertiesRequestBuilder {
+        return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -76,20 +90,6 @@ class DeletedItemsRequestBuilder
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
-    
-    /**
-     * Casts the previous resource to user.
-    */
-    public function user(): UserRequestBuilder {
-        return new UserRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the validateProperties method.
-    */
-    public function validateProperties(): ValidatePropertiesRequestBuilder {
-        return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * Instantiates a new DeletedItemsRequestBuilder and sets the default values.
@@ -122,7 +122,6 @@ class DeletedItemsRequestBuilder
 
     /**
      * Create new navigation property to deletedItems for directory
-     * @param DirectoryObject $body The request body
      * @param DeletedItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -166,7 +165,6 @@ class DeletedItemsRequestBuilder
 
     /**
      * Create new navigation property to deletedItems for directory
-     * @param DirectoryObject $body The request body
      * @param DeletedItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

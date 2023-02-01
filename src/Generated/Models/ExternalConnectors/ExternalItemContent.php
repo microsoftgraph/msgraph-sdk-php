@@ -64,7 +64,7 @@ class ExternalItemContent implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -72,7 +72,7 @@ class ExternalItemContent implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. 
      * @return ExternalItemContentType|null
     */
     public function getType(): ?ExternalItemContentType {
@@ -115,7 +115,7 @@ class ExternalItemContent implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -123,7 +123,7 @@ class ExternalItemContent implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. 
      * @param ExternalItemContentType|null $value Value to set for the type property.
     */
     public function setType(?ExternalItemContentType $value): void {

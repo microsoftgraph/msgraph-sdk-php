@@ -116,7 +116,7 @@ class PrinterBase extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. 
      * @return PrinterStatus|null
     */
     public function getStatus(): ?PrinterStatus {
@@ -205,7 +205,7 @@ class PrinterBase extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. 
      * @param PrinterStatus|null $value Value to set for the status property.
     */
     public function setStatus(?PrinterStatus $value): void {

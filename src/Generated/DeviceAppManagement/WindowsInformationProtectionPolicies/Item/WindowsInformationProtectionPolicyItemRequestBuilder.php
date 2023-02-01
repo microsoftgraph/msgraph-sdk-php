@@ -38,11 +38,15 @@ class WindowsInformationProtectionPolicyItemRequestBuilder
      * Instantiates a new WindowsInformationProtectionPolicyItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $windowsInformationProtectionPolicyId key: id of windowsInformationProtectionPolicy
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $windowsInformationProtectionPolicyId = null) {
         $this->urlTemplate = '{+baseurl}/deviceAppManagement/windowsInformationProtectionPolicies/{windowsInformationProtectionPolicy%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['windowsInformationProtectionPolicyId'] = $windowsInformationProtectionPolicyId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class WindowsInformationProtectionPolicyItemRequestBuilder
 
     /**
      * Update the navigation property windowsInformationProtectionPolicies in deviceAppManagement
-     * @param WindowsInformationProtectionPolicy $body The request body
      * @param WindowsInformationProtectionPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class WindowsInformationProtectionPolicyItemRequestBuilder
 
     /**
      * Update the navigation property windowsInformationProtectionPolicies in deviceAppManagement
-     * @param WindowsInformationProtectionPolicy $body The request body
      * @param WindowsInformationProtectionPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

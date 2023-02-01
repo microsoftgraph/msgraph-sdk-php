@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\It
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Item\BeginOnboarding\BeginOnboardingRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Item\Disconnect\DisconnectRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Item\MicrosoftGraphBeginOnboarding\BeginOnboardingRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Item\MicrosoftGraphDisconnect\DisconnectRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\RemoteAssistancePartner;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -24,14 +24,14 @@ class RemoteAssistancePartnerItemRequestBuilder
     /**
      * Provides operations to call the beginOnboarding method.
     */
-    public function beginOnboarding(): BeginOnboardingRequestBuilder {
+    public function microsoftGraphBeginOnboarding(): BeginOnboardingRequestBuilder {
         return new BeginOnboardingRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the disconnect method.
     */
-    public function disconnect(): DisconnectRequestBuilder {
+    public function microsoftGraphDisconnect(): DisconnectRequestBuilder {
         return new DisconnectRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
@@ -54,11 +54,15 @@ class RemoteAssistancePartnerItemRequestBuilder
      * Instantiates a new RemoteAssistancePartnerItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $remoteAssistancePartnerId key: id of remoteAssistancePartner
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $remoteAssistancePartnerId = null) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/remoteAssistancePartners/{remoteAssistancePartner%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['remoteAssistancePartnerId'] = $remoteAssistancePartnerId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -99,7 +103,6 @@ class RemoteAssistancePartnerItemRequestBuilder
 
     /**
      * Update the navigation property remoteAssistancePartners in deviceManagement
-     * @param RemoteAssistancePartner $body The request body
      * @param RemoteAssistancePartnerItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -164,7 +167,6 @@ class RemoteAssistancePartnerItemRequestBuilder
 
     /**
      * Update the navigation property remoteAssistancePartners in deviceManagement
-     * @param RemoteAssistancePartner $body The request body
      * @param RemoteAssistancePartnerItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

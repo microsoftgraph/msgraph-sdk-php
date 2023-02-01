@@ -37,7 +37,7 @@ class TermCollectionResponse extends BaseCollectionPaginationCountResponse imple
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return array<Term>|null
     */
     public function getValue(): ?array {
@@ -54,7 +54,7 @@ class TermCollectionResponse extends BaseCollectionPaginationCountResponse imple
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param array<Term>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

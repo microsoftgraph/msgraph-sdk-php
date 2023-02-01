@@ -75,7 +75,6 @@ class RiskDetectionsRequestBuilder
 
     /**
      * Create new navigation property to riskDetections for identityProtection
-     * @param RiskDetection $body The request body
      * @param RiskDetectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class RiskDetectionsRequestBuilder
 
     /**
      * Create new navigation property to riskDetections for identityProtection
-     * @param RiskDetection $body The request body
      * @param RiskDetectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

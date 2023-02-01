@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Permissions\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Permissions\Item\Grant\GrantRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Permissions\Item\MicrosoftGraphGrant\GrantRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Permission;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,7 +23,7 @@ class PermissionItemRequestBuilder
     /**
      * Provides operations to call the grant method.
     */
-    public function grant(): GrantRequestBuilder {
+    public function microsoftGraphGrant(): GrantRequestBuilder {
         return new GrantRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
@@ -46,11 +46,15 @@ class PermissionItemRequestBuilder
      * Instantiates a new PermissionItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $permissionId key: id of permission
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $permissionId = null) {
         $this->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/permissions/{permission%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['permissionId'] = $permissionId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -91,7 +95,6 @@ class PermissionItemRequestBuilder
 
     /**
      * Update the navigation property permissions in drives
-     * @param Permission $body The request body
      * @param PermissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -156,7 +159,6 @@ class PermissionItemRequestBuilder
 
     /**
      * Update the navigation property permissions in drives
-     * @param Permission $body The request body
      * @param PermissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

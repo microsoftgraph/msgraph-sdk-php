@@ -5,10 +5,10 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurati
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assign\AssignRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assignments\AssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assignments\Item\EnrollmentConfigurationAssignmentItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\SetPriority\SetPriorityRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\MicrosoftGraphAssign\AssignRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\MicrosoftGraphSetPriority\SetPriorityRequestBuilder;
 use Microsoft\Graph\Generated\Models\DeviceEnrollmentConfiguration;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -24,17 +24,24 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class DeviceEnrollmentConfigurationItemRequestBuilder 
 {
     /**
-     * Provides operations to call the assign method.
-    */
-    public function assign(): AssignRequestBuilder {
-        return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the assignments property of the microsoft.graph.deviceEnrollmentConfiguration entity.
     */
     public function assignments(): AssignmentsRequestBuilder {
         return new AssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the assign method.
+    */
+    public function microsoftGraphAssign(): AssignRequestBuilder {
+        return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the setPriority method.
+    */
+    public function microsoftGraphSetPriority(): SetPriorityRequestBuilder {
+        return new SetPriorityRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -46,13 +53,6 @@ class DeviceEnrollmentConfigurationItemRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
-    
-    /**
-     * Provides operations to call the setPriority method.
-    */
-    public function setPriority(): SetPriorityRequestBuilder {
-        return new SetPriorityRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
@@ -74,11 +74,15 @@ class DeviceEnrollmentConfigurationItemRequestBuilder
      * Instantiates a new DeviceEnrollmentConfigurationItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $deviceEnrollmentConfigurationId key: id of deviceEnrollmentConfiguration
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $deviceEnrollmentConfigurationId = null) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/deviceEnrollmentConfigurations/{deviceEnrollmentConfiguration%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['deviceEnrollmentConfigurationId'] = $deviceEnrollmentConfigurationId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -119,7 +123,6 @@ class DeviceEnrollmentConfigurationItemRequestBuilder
 
     /**
      * Update the navigation property deviceEnrollmentConfigurations in deviceManagement
-     * @param DeviceEnrollmentConfiguration $body The request body
      * @param DeviceEnrollmentConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -184,7 +187,6 @@ class DeviceEnrollmentConfigurationItemRequestBuilder
 
     /**
      * Update the navigation property deviceEnrollmentConfigurations in deviceManagement
-     * @param DeviceEnrollmentConfiguration $body The request body
      * @param DeviceEnrollmentConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

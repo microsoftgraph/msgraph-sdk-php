@@ -75,7 +75,6 @@ class DailyPrintUsageByUserRequestBuilder
 
     /**
      * Create new navigation property to dailyPrintUsageByUser for reports
-     * @param PrintUsageByUser $body The request body
      * @param DailyPrintUsageByUserRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class DailyPrintUsageByUserRequestBuilder
 
     /**
      * Create new navigation property to dailyPrintUsageByUser for reports
-     * @param PrintUsageByUser $body The request body
      * @param DailyPrintUsageByUserRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -64,6 +64,7 @@ class NotificationMessageTemplate extends Entity implements Parsable
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
             'localizedNotificationMessages' => fn(ParseNode $n) => $o->setLocalizedNotificationMessages($n->getCollectionOfObjectValues([LocalizedNotificationMessage::class, 'createFromDiscriminatorValue'])),
+            'roleScopeTagIds' => fn(ParseNode $n) => $o->setRoleScopeTagIds($n->getCollectionOfPrimitiveValues()),
         ]);
     }
 
@@ -84,6 +85,14 @@ class NotificationMessageTemplate extends Entity implements Parsable
     }
 
     /**
+     * Gets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
+     * @return array<string>|null
+    */
+    public function getRoleScopeTagIds(): ?array {
+        return $this->getBackingStore()->get('roleScopeTagIds');
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -94,6 +103,7 @@ class NotificationMessageTemplate extends Entity implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
         $writer->writeCollectionOfObjectValues('localizedNotificationMessages', $this->getLocalizedNotificationMessages());
+        $writer->writeCollectionOfPrimitiveValues('roleScopeTagIds', $this->getRoleScopeTagIds());
     }
 
     /**
@@ -134,6 +144,14 @@ class NotificationMessageTemplate extends Entity implements Parsable
     */
     public function setLocalizedNotificationMessages(?array $value): void {
         $this->getBackingStore()->set('localizedNotificationMessages', $value);
+    }
+
+    /**
+     * Sets the roleScopeTagIds property value. List of Scope Tags for this Entity instance.
+     * @param array<string>|null $value Value to set for the roleScopeTagIds property.
+    */
+    public function setRoleScopeTagIds(?array $value): void {
+        $this->getBackingStore()->set('roleScopeTagIds', $value);
     }
 
 }

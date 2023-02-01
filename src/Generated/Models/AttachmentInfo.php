@@ -43,7 +43,7 @@ class AttachmentInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the attachmentType property value. The attachmentType property
+     * Gets the attachmentType property value. 
      * @return AttachmentType|null
     */
     public function getAttachmentType(): ?AttachmentType {
@@ -59,7 +59,7 @@ class AttachmentInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the contentType property value. The contentType property
+     * Gets the contentType property value. 
      * @return string|null
     */
     public function getContentType(): ?string {
@@ -82,7 +82,7 @@ class AttachmentInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. 
      * @return string|null
     */
     public function getName(): ?string {
@@ -90,7 +90,7 @@ class AttachmentInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -98,7 +98,7 @@ class AttachmentInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the size property value. The size property
+     * Gets the size property value. 
      * @return int|null
     */
     public function getSize(): ?int {
@@ -127,7 +127,7 @@ class AttachmentInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the attachmentType property value. The attachmentType property
+     * Sets the attachmentType property value. 
      * @param AttachmentType|null $value Value to set for the attachmentType property.
     */
     public function setAttachmentType(?AttachmentType $value): void {
@@ -143,7 +143,7 @@ class AttachmentInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the contentType property value. The contentType property
+     * Sets the contentType property value. 
      * @param string|null $value Value to set for the contentType property.
     */
     public function setContentType(?string $value): void {
@@ -151,7 +151,7 @@ class AttachmentInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. 
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -159,7 +159,7 @@ class AttachmentInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -167,7 +167,7 @@ class AttachmentInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the size property value. The size property
+     * Sets the size property value. 
      * @param int|null $value Value to set for the size property.
     */
     public function setSize(?int $value): void {

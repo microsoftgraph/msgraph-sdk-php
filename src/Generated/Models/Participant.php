@@ -41,7 +41,7 @@ class Participant extends Entity implements Parsable
     }
 
     /**
-     * Gets the info property value. The info property
+     * Gets the info property value. 
      * @return ParticipantInfo|null
     */
     public function getInfo(): ?ParticipantInfo {
@@ -103,7 +103,7 @@ class Participant extends Entity implements Parsable
     }
 
     /**
-     * Sets the info property value. The info property
+     * Sets the info property value. 
      * @param ParticipantInfo|null $value Value to set for the info property.
     */
     public function setInfo(?ParticipantInfo $value): void {

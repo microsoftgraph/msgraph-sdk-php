@@ -38,11 +38,15 @@ class MobileThreatDefenseConnectorItemRequestBuilder
      * Instantiates a new MobileThreatDefenseConnectorItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $mobileThreatDefenseConnectorId key: id of mobileThreatDefenseConnector
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $mobileThreatDefenseConnectorId = null) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/mobileThreatDefenseConnectors/{mobileThreatDefenseConnector%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['mobileThreatDefenseConnectorId'] = $mobileThreatDefenseConnectorId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class MobileThreatDefenseConnectorItemRequestBuilder
 
     /**
      * Update the navigation property mobileThreatDefenseConnectors in deviceManagement
-     * @param MobileThreatDefenseConnector $body The request body
      * @param MobileThreatDefenseConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class MobileThreatDefenseConnectorItemRequestBuilder
 
     /**
      * Update the navigation property mobileThreatDefenseConnectors in deviceManagement
-     * @param MobileThreatDefenseConnector $body The request body
      * @param MobileThreatDefenseConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

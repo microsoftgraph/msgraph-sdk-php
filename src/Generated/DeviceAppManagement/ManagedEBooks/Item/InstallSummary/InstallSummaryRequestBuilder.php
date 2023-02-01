@@ -83,7 +83,6 @@ class InstallSummaryRequestBuilder
 
     /**
      * Update the navigation property installSummary in deviceAppManagement
-     * @param EBookInstallSummary $body The request body
      * @param InstallSummaryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +147,6 @@ class InstallSummaryRequestBuilder
 
     /**
      * Update the navigation property installSummary in deviceAppManagement
-     * @param EBookInstallSummary $body The request body
      * @param InstallSummaryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

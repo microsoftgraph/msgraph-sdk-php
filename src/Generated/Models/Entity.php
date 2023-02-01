@@ -200,6 +200,12 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.crossTenantAccessPolicyConfigurationDefault': return new CrossTenantAccessPolicyConfigurationDefault();
                 case '#microsoft.graph.dataPolicyOperation': return new DataPolicyOperation();
                 case '#microsoft.graph.defaultManagedAppProtection': return new DefaultManagedAppProtection();
+                case '#microsoft.graph.delegatedAdminAccessAssignment': return new DelegatedAdminAccessAssignment();
+                case '#microsoft.graph.delegatedAdminCustomer': return new DelegatedAdminCustomer();
+                case '#microsoft.graph.delegatedAdminRelationship': return new DelegatedAdminRelationship();
+                case '#microsoft.graph.delegatedAdminRelationshipOperation': return new DelegatedAdminRelationshipOperation();
+                case '#microsoft.graph.delegatedAdminRelationshipRequest': return new DelegatedAdminRelationshipRequest();
+                case '#microsoft.graph.delegatedAdminServiceManagementDetail': return new DelegatedAdminServiceManagementDetail();
                 case '#microsoft.graph.delegatedPermissionClassification': return new DelegatedPermissionClassification();
                 case '#microsoft.graph.detectedApp': return new DetectedApp();
                 case '#microsoft.graph.device': return new Device();
@@ -329,6 +335,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.iosCustomConfiguration': return new IosCustomConfiguration();
                 case '#microsoft.graph.iosDeviceFeaturesConfiguration': return new IosDeviceFeaturesConfiguration();
                 case '#microsoft.graph.iosGeneralDeviceConfiguration': return new IosGeneralDeviceConfiguration();
+                case '#microsoft.graph.iosiPadOSWebClip': return new IosiPadOSWebClip();
                 case '#microsoft.graph.iosLobApp': return new IosLobApp();
                 case '#microsoft.graph.iosManagedAppProtection': return new IosManagedAppProtection();
                 case '#microsoft.graph.iosManagedAppRegistration': return new IosManagedAppRegistration();
@@ -671,6 +678,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.windowsUniversalAppX': return new WindowsUniversalAppX();
                 case '#microsoft.graph.windowsUniversalAppXContainedApp': return new WindowsUniversalAppXContainedApp();
                 case '#microsoft.graph.windowsUpdateForBusinessConfiguration': return new WindowsUpdateForBusinessConfiguration();
+                case '#microsoft.graph.windowsWebApp': return new WindowsWebApp();
                 case '#microsoft.graph.workbook': return new Workbook();
                 case '#microsoft.graph.workbookApplication': return new WorkbookApplication();
                 case '#microsoft.graph.workbookChart': return new WorkbookChart();
@@ -761,7 +769,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -803,7 +811,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

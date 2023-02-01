@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Site extends BaseItem implements Parsable 
 {
     /**
-     * Instantiates a new Site and sets the default values.
+     * Instantiates a new site and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -75,7 +75,7 @@ class Site extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the error property value. The error property
+     * Gets the error property value. 
      * @return PublicError|null
     */
     public function getError(): ?PublicError {
@@ -83,7 +83,7 @@ class Site extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the externalColumns property value. The externalColumns property
+     * Gets the externalColumns property value. 
      * @return array<ColumnDefinition>|null
     */
     public function getExternalColumns(): ?array {
@@ -283,7 +283,7 @@ class Site extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the error property value. The error property
+     * Sets the error property value. 
      * @param PublicError|null $value Value to set for the error property.
     */
     public function setError(?PublicError $value): void {
@@ -291,7 +291,7 @@ class Site extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the externalColumns property value. The externalColumns property
+     * Sets the externalColumns property value. 
      * @param array<ColumnDefinition>|null $value Value to set for the externalColumns property.
     */
     public function setExternalColumns(?array $value): void {

@@ -5,22 +5,22 @@ namespace Microsoft\Graph\Generated\Chats\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Chats\Item\HideForUser\HideForUserRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\InstalledApps\InstalledAppsRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\InstalledApps\Item\TeamsAppInstallationItemRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\LastMessagePreview\LastMessagePreviewRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\MarkChatReadForUser\MarkChatReadForUserRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\MarkChatUnreadForUser\MarkChatUnreadForUserRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\Members\Item\ConversationMemberItemRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\Messages\Item\ChatMessageItemRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\Messages\MessagesRequestBuilder;
+use Microsoft\Graph\Generated\Chats\Item\MicrosoftGraphHideForUser\HideForUserRequestBuilder;
+use Microsoft\Graph\Generated\Chats\Item\MicrosoftGraphMarkChatReadForUser\MarkChatReadForUserRequestBuilder;
+use Microsoft\Graph\Generated\Chats\Item\MicrosoftGraphMarkChatUnreadForUser\MarkChatUnreadForUserRequestBuilder;
+use Microsoft\Graph\Generated\Chats\Item\MicrosoftGraphSendActivityNotification\SendActivityNotificationRequestBuilder;
+use Microsoft\Graph\Generated\Chats\Item\MicrosoftGraphUnhideForUser\UnhideForUserRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\PinnedMessages\Item\PinnedChatMessageInfoItemRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\PinnedMessages\PinnedMessagesRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\SendActivityNotification\SendActivityNotificationRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\Tabs\Item\TeamsTabItemRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\Tabs\TabsRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\UnhideForUser\UnhideForUserRequestBuilder;
 use Microsoft\Graph\Generated\Models\Chat;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -36,13 +36,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ChatItemRequestBuilder 
 {
     /**
-     * Provides operations to call the hideForUser method.
-    */
-    public function hideForUser(): HideForUserRequestBuilder {
-        return new HideForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the installedApps property of the microsoft.graph.chat entity.
     */
     public function installedApps(): InstalledAppsRequestBuilder {
@@ -57,20 +50,6 @@ class ChatItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the markChatReadForUser method.
-    */
-    public function markChatReadForUser(): MarkChatReadForUserRequestBuilder {
-        return new MarkChatReadForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the markChatUnreadForUser method.
-    */
-    public function markChatUnreadForUser(): MarkChatUnreadForUserRequestBuilder {
-        return new MarkChatUnreadForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the members property of the microsoft.graph.chat entity.
     */
     public function members(): MembersRequestBuilder {
@@ -82,6 +61,41 @@ class ChatItemRequestBuilder
     */
     public function messages(): MessagesRequestBuilder {
         return new MessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the hideForUser method.
+    */
+    public function microsoftGraphHideForUser(): HideForUserRequestBuilder {
+        return new HideForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the markChatReadForUser method.
+    */
+    public function microsoftGraphMarkChatReadForUser(): MarkChatReadForUserRequestBuilder {
+        return new MarkChatReadForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the markChatUnreadForUser method.
+    */
+    public function microsoftGraphMarkChatUnreadForUser(): MarkChatUnreadForUserRequestBuilder {
+        return new MarkChatUnreadForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the sendActivityNotification method.
+    */
+    public function microsoftGraphSendActivityNotification(): SendActivityNotificationRequestBuilder {
+        return new SendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the unhideForUser method.
+    */
+    public function microsoftGraphUnhideForUser(): UnhideForUserRequestBuilder {
+        return new UnhideForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -102,24 +116,10 @@ class ChatItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * Provides operations to call the sendActivityNotification method.
-    */
-    public function sendActivityNotification(): SendActivityNotificationRequestBuilder {
-        return new SendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the tabs property of the microsoft.graph.chat entity.
     */
     public function tabs(): TabsRequestBuilder {
         return new TabsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the unhideForUser method.
-    */
-    public function unhideForUser(): UnhideForUserRequestBuilder {
-        return new UnhideForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -131,15 +131,19 @@ class ChatItemRequestBuilder
      * Instantiates a new ChatItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $chatId key: id of chat
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $chatId = null) {
         $this->urlTemplate = '{+baseurl}/chats/{chat%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['chatId'] = $chatId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
-     * Delete entity from chats by key (id)
+     * Delete entity from chats
      * @param ChatItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -210,7 +214,6 @@ class ChatItemRequestBuilder
 
     /**
      * Update the properties of a chat object.
-     * @param Chat $body The request body
      * @param ChatItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/chat-patch?view=graph-rest-1.0 Find more info here
@@ -251,7 +254,7 @@ class ChatItemRequestBuilder
     }
 
     /**
-     * Delete entity from chats by key (id)
+     * Delete entity from chats
      * @param ChatItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -298,7 +301,6 @@ class ChatItemRequestBuilder
 
     /**
      * Update the properties of a chat object.
-     * @param Chat $body The request body
      * @param ChatItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

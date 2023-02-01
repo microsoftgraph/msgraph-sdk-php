@@ -75,7 +75,6 @@ class RoleDefinitionsRequestBuilder
 
     /**
      * Create a new custom unifiedRoleDefinition object. This feature requires an Azure AD Premium P1 or P2 license.
-     * @param UnifiedRoleDefinition $body The request body
      * @param RoleDefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/rbacapplication-post-roledefinitions?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class RoleDefinitionsRequestBuilder
 
     /**
      * Create a new custom unifiedRoleDefinition object. This feature requires an Azure AD Premium P1 or P2 license.
-     * @param UnifiedRoleDefinition $body The request body
      * @param RoleDefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

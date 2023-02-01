@@ -49,7 +49,7 @@ class FeatureRolloutPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the feature property value. The feature property
+     * Gets the feature property value. 
      * @return StagedFeatureName|null
     */
     public function getFeature(): ?StagedFeatureName {
@@ -127,7 +127,7 @@ class FeatureRolloutPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the feature property value. The feature property
+     * Sets the feature property value. 
      * @param StagedFeatureName|null $value Value to set for the feature property.
     */
     public function setFeature(?StagedFeatureName $value): void {

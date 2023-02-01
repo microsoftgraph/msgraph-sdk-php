@@ -75,7 +75,6 @@ class TagsRequestBuilder
 
     /**
      * Create a standard tag for members in a team.
-     * @param TeamworkTag $body The request body
      * @param TagsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/teamworktag-post?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class TagsRequestBuilder
 
     /**
      * Create a standard tag for members in a team.
-     * @param TeamworkTag $body The request body
      * @param TagsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

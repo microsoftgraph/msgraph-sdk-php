@@ -38,11 +38,15 @@ class AssociatedTeamInfoItemRequestBuilder
      * Instantiates a new AssociatedTeamInfoItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $associatedTeamInfoId key: id of associatedTeamInfo
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $associatedTeamInfoId = null) {
         $this->urlTemplate = '{+baseurl}/users/{user%2Did}/teamwork/associatedTeams/{associatedTeamInfo%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['associatedTeamInfoId'] = $associatedTeamInfoId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class AssociatedTeamInfoItemRequestBuilder
 
     /**
      * Update the navigation property associatedTeams in users
-     * @param AssociatedTeamInfo $body The request body
      * @param AssociatedTeamInfoItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class AssociatedTeamInfoItemRequestBuilder
 
     /**
      * Update the navigation property associatedTeams in users
-     * @param AssociatedTeamInfo $body The request body
      * @param AssociatedTeamInfoItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

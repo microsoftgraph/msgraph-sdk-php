@@ -109,7 +109,6 @@ class BrandingRequestBuilder
 
     /**
      * Update branding
-     * @param OrganizationalBranding $body The request body
      * @param BrandingRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -153,7 +152,6 @@ class BrandingRequestBuilder
 
     /**
      * Update branding
-     * @param OrganizationalBranding $body The request body
      * @param BrandingRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

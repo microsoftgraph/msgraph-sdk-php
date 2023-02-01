@@ -34,7 +34,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the alertDetections property value. The alertDetections property
+     * Gets the alertDetections property value. 
      * @return array<AlertDetection>|null
     */
     public function getAlertDetections(): ?array {
@@ -203,7 +203,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the historyStates property value. The historyStates property
+     * Gets the historyStates property value. 
      * @return array<AlertHistoryState>|null
     */
     public function getHistoryStates(): ?array {
@@ -227,7 +227,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the investigationSecurityStates property value. The investigationSecurityStates property
+     * Gets the investigationSecurityStates property value. 
      * @return array<InvestigationSecurityState>|null
     */
     public function getInvestigationSecurityStates(): ?array {
@@ -235,7 +235,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastEventDateTime property value. The lastEventDateTime property
+     * Gets the lastEventDateTime property value. 
      * @return DateTime|null
     */
     public function getLastEventDateTime(): ?DateTime {
@@ -259,7 +259,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the messageSecurityStates property value. The messageSecurityStates property
+     * Gets the messageSecurityStates property value. 
      * @return array<MessageSecurityState>|null
     */
     public function getMessageSecurityStates(): ?array {
@@ -307,7 +307,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the severity property value. The severity property
+     * Gets the severity property value. 
      * @return AlertSeverity|null
     */
     public function getSeverity(): ?AlertSeverity {
@@ -323,7 +323,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. 
      * @return AlertStatus|null
     */
     public function getStatus(): ?AlertStatus {
@@ -355,7 +355,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Gets the uriClickSecurityStates property value. The uriClickSecurityStates property
+     * Gets the uriClickSecurityStates property value. 
      * @return array<UriClickSecurityState>|null
     */
     public function getUriClickSecurityStates(): ?array {
@@ -442,7 +442,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the alertDetections property value. The alertDetections property
+     * Sets the alertDetections property value. 
      * @param array<AlertDetection>|null $value Value to set for the alertDetections property.
     */
     public function setAlertDetections(?array $value): void {
@@ -562,7 +562,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the historyStates property value. The historyStates property
+     * Sets the historyStates property value. 
      * @param array<AlertHistoryState>|null $value Value to set for the historyStates property.
     */
     public function setHistoryStates(?array $value): void {
@@ -586,7 +586,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the investigationSecurityStates property value. The investigationSecurityStates property
+     * Sets the investigationSecurityStates property value. 
      * @param array<InvestigationSecurityState>|null $value Value to set for the investigationSecurityStates property.
     */
     public function setInvestigationSecurityStates(?array $value): void {
@@ -594,7 +594,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastEventDateTime property value. The lastEventDateTime property
+     * Sets the lastEventDateTime property value. 
      * @param DateTime|null $value Value to set for the lastEventDateTime property.
     */
     public function setLastEventDateTime(?DateTime $value): void {
@@ -618,7 +618,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the messageSecurityStates property value. The messageSecurityStates property
+     * Sets the messageSecurityStates property value. 
      * @param array<MessageSecurityState>|null $value Value to set for the messageSecurityStates property.
     */
     public function setMessageSecurityStates(?array $value): void {
@@ -666,7 +666,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the severity property value. The severity property
+     * Sets the severity property value. 
      * @param AlertSeverity|null $value Value to set for the severity property.
     */
     public function setSeverity(?AlertSeverity $value): void {
@@ -682,7 +682,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. 
      * @param AlertStatus|null $value Value to set for the status property.
     */
     public function setStatus(?AlertStatus $value): void {
@@ -714,7 +714,7 @@ class Alert extends Entity implements Parsable
     }
 
     /**
-     * Sets the uriClickSecurityStates property value. The uriClickSecurityStates property
+     * Sets the uriClickSecurityStates property value. 
      * @param array<UriClickSecurityState>|null $value Value to set for the uriClickSecurityStates property.
     */
     public function setUriClickSecurityStates(?array $value): void {

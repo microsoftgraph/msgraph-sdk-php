@@ -38,11 +38,15 @@ class SwapShiftsChangeRequestItemRequestBuilder
      * Instantiates a new SwapShiftsChangeRequestItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $swapShiftsChangeRequestId key: id of swapShiftsChangeRequest
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $swapShiftsChangeRequestId = null) {
         $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/team/schedule/swapShiftsChangeRequests/{swapShiftsChangeRequest%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['swapShiftsChangeRequestId'] = $swapShiftsChangeRequestId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class SwapShiftsChangeRequestItemRequestBuilder
 
     /**
      * Update the navigation property swapShiftsChangeRequests in groups
-     * @param SwapShiftsChangeRequest $body The request body
      * @param SwapShiftsChangeRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class SwapShiftsChangeRequestItemRequestBuilder
 
     /**
      * Update the navigation property swapShiftsChangeRequests in groups
-     * @param SwapShiftsChangeRequest $body The request body
      * @param SwapShiftsChangeRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

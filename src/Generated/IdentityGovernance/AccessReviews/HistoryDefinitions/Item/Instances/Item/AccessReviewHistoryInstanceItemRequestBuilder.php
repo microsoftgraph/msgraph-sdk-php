@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefi
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions\Item\Instances\Item\GenerateDownloadUri\GenerateDownloadUriRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions\Item\Instances\Item\MicrosoftGraphGenerateDownloadUri\GenerateDownloadUriRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessReviewHistoryInstance;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,7 +23,7 @@ class AccessReviewHistoryInstanceItemRequestBuilder
     /**
      * Provides operations to call the generateDownloadUri method.
     */
-    public function generateDownloadUri(): GenerateDownloadUriRequestBuilder {
+    public function microsoftGraphGenerateDownloadUri(): GenerateDownloadUriRequestBuilder {
         return new GenerateDownloadUriRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
@@ -46,11 +46,15 @@ class AccessReviewHistoryInstanceItemRequestBuilder
      * Instantiates a new AccessReviewHistoryInstanceItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $accessReviewHistoryInstanceId key: id of accessReviewHistoryInstance
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $accessReviewHistoryInstanceId = null) {
         $this->urlTemplate = '{+baseurl}/identityGovernance/accessReviews/historyDefinitions/{accessReviewHistoryDefinition%2Did}/instances/{accessReviewHistoryInstance%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['accessReviewHistoryInstanceId'] = $accessReviewHistoryInstanceId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -91,7 +95,6 @@ class AccessReviewHistoryInstanceItemRequestBuilder
 
     /**
      * Update the navigation property instances in identityGovernance
-     * @param AccessReviewHistoryInstance $body The request body
      * @param AccessReviewHistoryInstanceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -156,7 +159,6 @@ class AccessReviewHistoryInstanceItemRequestBuilder
 
     /**
      * Update the navigation property instances in identityGovernance
-     * @param AccessReviewHistoryInstance $body The request body
      * @param AccessReviewHistoryInstanceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -36,7 +36,7 @@ class DirectoryObjectCollectionResponse extends BaseCollectionPaginationCountRes
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return array<DirectoryObject>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class DirectoryObjectCollectionResponse extends BaseCollectionPaginationCountRes
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param array<DirectoryObject>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

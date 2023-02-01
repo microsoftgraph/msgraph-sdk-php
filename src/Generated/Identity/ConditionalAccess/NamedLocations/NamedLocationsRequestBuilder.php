@@ -75,7 +75,6 @@ class NamedLocationsRequestBuilder
 
     /**
      * Create a new namedLocation object. Named locations can be either ipNamedLocation or countryNamedLocation objects.
-     * @param NamedLocation $body The request body
      * @param NamedLocationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/conditionalaccessroot-post-namedlocations?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class NamedLocationsRequestBuilder
 
     /**
      * Create a new namedLocation object. Named locations can be either ipNamedLocation or countryNamedLocation objects.
-     * @param NamedLocation $body The request body
      * @param NamedLocationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

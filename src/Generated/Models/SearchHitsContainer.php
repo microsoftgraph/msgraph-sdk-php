@@ -43,7 +43,7 @@ class SearchHitsContainer implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the aggregations property value. The aggregations property
+     * Gets the aggregations property value. 
      * @return array<SearchAggregation>|null
     */
     public function getAggregations(): ?array {
@@ -90,7 +90,7 @@ class SearchHitsContainer implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -127,7 +127,7 @@ class SearchHitsContainer implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the aggregations property value. The aggregations property
+     * Sets the aggregations property value. 
      * @param array<SearchAggregation>|null $value Value to set for the aggregations property.
     */
     public function setAggregations(?array $value): void {
@@ -159,7 +159,7 @@ class SearchHitsContainer implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

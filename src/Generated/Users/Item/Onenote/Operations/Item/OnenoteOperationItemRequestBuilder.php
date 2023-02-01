@@ -38,11 +38,15 @@ class OnenoteOperationItemRequestBuilder
      * Instantiates a new OnenoteOperationItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $onenoteOperationId key: id of onenoteOperation
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $onenoteOperationId = null) {
         $this->urlTemplate = '{+baseurl}/users/{user%2Did}/onenote/operations/{onenoteOperation%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['onenoteOperationId'] = $onenoteOperationId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class OnenoteOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in users
-     * @param OnenoteOperation $body The request body
      * @param OnenoteOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class OnenoteOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in users
-     * @param OnenoteOperation $body The request body
      * @param OnenoteOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

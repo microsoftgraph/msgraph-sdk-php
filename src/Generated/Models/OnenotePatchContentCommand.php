@@ -35,7 +35,7 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the action property value. The action property
+     * Gets the action property value. 
      * @return OnenotePatchActionType|null
     */
     public function getAction(): ?OnenotePatchActionType {
@@ -82,7 +82,7 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -119,7 +119,7 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the action property value. The action property
+     * Sets the action property value. 
      * @param OnenotePatchActionType|null $value Value to set for the action property.
     */
     public function setAction(?OnenotePatchActionType $value): void {
@@ -151,7 +151,7 @@ class OnenotePatchContentCommand implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Chats\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Me\Chats\GetAllMessages\GetAllMessagesRequestBuilder;
+use Microsoft\Graph\Generated\Me\Chats\MicrosoftGraphGetAllMessages\GetAllMessagesRequestBuilder;
 use Microsoft\Graph\Generated\Models\Chat;
 use Microsoft\Graph\Generated\Models\ChatCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -27,6 +27,13 @@ class ChatsRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getAllMessages method.
+    */
+    public function microsoftGraphGetAllMessages(): GetAllMessagesRequestBuilder {
+        return new GetAllMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -75,16 +82,7 @@ class ChatsRequestBuilder
     }
 
     /**
-     * Provides operations to call the getAllMessages method.
-     * @return GetAllMessagesRequestBuilder
-    */
-    public function getAllMessages(): GetAllMessagesRequestBuilder {
-        return new GetAllMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
      * Create new navigation property to chats for me
-     * @param Chat $body The request body
      * @param ChatsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -128,7 +126,6 @@ class ChatsRequestBuilder
 
     /**
      * Create new navigation property to chats for me
-     * @param Chat $body The request body
      * @param ChatsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

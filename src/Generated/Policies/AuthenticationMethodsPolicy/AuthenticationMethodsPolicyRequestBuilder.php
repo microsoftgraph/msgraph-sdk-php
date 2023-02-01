@@ -104,7 +104,6 @@ class AuthenticationMethodsPolicyRequestBuilder
 
     /**
      * Update the properties of an authenticationMethodsPolicy object.
-     * @param AuthenticationMethodsPolicy $body The request body
      * @param AuthenticationMethodsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/authenticationmethodspolicy-update?view=graph-rest-1.0 Find more info here
@@ -170,7 +169,6 @@ class AuthenticationMethodsPolicyRequestBuilder
 
     /**
      * Update the properties of an authenticationMethodsPolicy object.
-     * @param AuthenticationMethodsPolicy $body The request body
      * @param AuthenticationMethodsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

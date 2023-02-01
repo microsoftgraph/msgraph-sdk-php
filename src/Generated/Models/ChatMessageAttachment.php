@@ -109,7 +109,7 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -117,7 +117,7 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the teamsAppId property value. The teamsAppId property
+     * Gets the teamsAppId property value. The ID of the Teams app that is associated with the attachment. The property is specifically used to attribute a Teams message card to the specified app.
      * @return string|null
     */
     public function getTeamsAppId(): ?string {
@@ -205,7 +205,7 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -213,7 +213,7 @@ class ChatMessageAttachment implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the teamsAppId property value. The teamsAppId property
+     * Sets the teamsAppId property value. The ID of the Teams app that is associated with the attachment. The property is specifically used to attribute a Teams message card to the specified app.
      * @param string|null $value Value to set for the teamsAppId property.
     */
     public function setTeamsAppId(?string $value): void {

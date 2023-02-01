@@ -38,11 +38,15 @@ class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
      * Instantiates a new CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $crossTenantAccessPolicyConfigurationPartnerTenantId key: tenantId of crossTenantAccessPolicyConfigurationPartner
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $crossTenantAccessPolicyConfigurationPartnerTenantId = null) {
         $this->urlTemplate = '{+baseurl}/policies/crossTenantAccessPolicy/partners/{crossTenantAccessPolicyConfigurationPartner%2DtenantId}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['crossTenantAccessPolicyConfigurationPartnerTenantId'] = $crossTenantAccessPolicyConfigurationPartnerTenantId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
 
     /**
      * Update the navigation property partners in policies
-     * @param CrossTenantAccessPolicyConfigurationPartner $body The request body
      * @param CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
 
     /**
      * Update the navigation property partners in policies
-     * @param CrossTenantAccessPolicyConfigurationPartner $body The request body
      * @param CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

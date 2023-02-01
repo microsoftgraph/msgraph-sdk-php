@@ -75,7 +75,6 @@ class HealthOverviewsRequestBuilder
 
     /**
      * Create new navigation property to healthOverviews for admin
-     * @param ServiceHealth $body The request body
      * @param HealthOverviewsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class HealthOverviewsRequestBuilder
 
     /**
      * Create new navigation property to healthOverviews for admin
-     * @param ServiceHealth $body The request body
      * @param HealthOverviewsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

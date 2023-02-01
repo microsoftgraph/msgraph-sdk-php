@@ -55,7 +55,7 @@ class Permission extends Entity implements Parsable
     }
 
     /**
-     * Gets the grantedTo property value. The grantedTo property
+     * Gets the grantedTo property value. 
      * @return IdentitySet|null
     */
     public function getGrantedTo(): ?IdentitySet {
@@ -63,7 +63,7 @@ class Permission extends Entity implements Parsable
     }
 
     /**
-     * Gets the grantedToIdentities property value. The grantedToIdentities property
+     * Gets the grantedToIdentities property value. 
      * @return array<IdentitySet>|null
     */
     public function getGrantedToIdentities(): ?array {
@@ -162,7 +162,7 @@ class Permission extends Entity implements Parsable
     }
 
     /**
-     * Sets the grantedTo property value. The grantedTo property
+     * Sets the grantedTo property value. 
      * @param IdentitySet|null $value Value to set for the grantedTo property.
     */
     public function setGrantedTo(?IdentitySet $value): void {
@@ -170,7 +170,7 @@ class Permission extends Entity implements Parsable
     }
 
     /**
-     * Sets the grantedToIdentities property value. The grantedToIdentities property
+     * Sets the grantedToIdentities property value. 
      * @param array<IdentitySet>|null $value Value to set for the grantedToIdentities property.
     */
     public function setGrantedToIdentities(?array $value): void {

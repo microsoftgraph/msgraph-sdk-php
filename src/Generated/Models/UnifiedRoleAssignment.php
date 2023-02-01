@@ -41,7 +41,7 @@ class UnifiedRoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the condition property value. The condition property
+     * Gets the condition property value. 
      * @return string|null
     */
     public function getCondition(): ?string {
@@ -149,7 +149,7 @@ class UnifiedRoleAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the condition property value. The condition property
+     * Sets the condition property value. 
      * @param string|null $value Value to set for the condition property.
     */
     public function setCondition(?string $value): void {

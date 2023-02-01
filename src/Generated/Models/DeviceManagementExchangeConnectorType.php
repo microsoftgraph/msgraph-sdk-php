@@ -9,4 +9,5 @@ class DeviceManagementExchangeConnectorType extends Enum {
     public const HOSTED = 'hosted';
     public const SERVICE_TO_SERVICE = 'serviceToService';
     public const DEDICATED = 'dedicated';
+    public const UNKNOWN_FUTURE_VALUE = 'unknownFutureValue';
 }

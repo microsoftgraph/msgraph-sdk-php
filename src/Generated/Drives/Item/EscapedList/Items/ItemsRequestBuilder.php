@@ -75,7 +75,6 @@ class ItemsRequestBuilder
 
     /**
      * Create a new [listItem][] in a [list][].
-     * @param ListItem $body The request body
      * @param ItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/listitem-create?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class ItemsRequestBuilder
 
     /**
      * Create a new [listItem][] in a [list][].
-     * @param ListItem $body The request body
      * @param ItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

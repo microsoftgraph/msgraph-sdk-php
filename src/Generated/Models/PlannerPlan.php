@@ -84,7 +84,7 @@ class PlannerPlan extends Entity implements Parsable
     }
 
     /**
-     * Gets the owner property value. The owner property
+     * Gets the owner property value. 
      * @return string|null
     */
     public function getOwner(): ?string {
@@ -164,7 +164,7 @@ class PlannerPlan extends Entity implements Parsable
     }
 
     /**
-     * Sets the owner property value. The owner property
+     * Sets the owner property value. 
      * @param string|null $value Value to set for the owner property.
     */
     public function setOwner(?string $value): void {

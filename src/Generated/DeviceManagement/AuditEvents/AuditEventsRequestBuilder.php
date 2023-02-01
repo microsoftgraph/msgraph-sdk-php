@@ -6,8 +6,8 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\AuditEvents\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\AuditEvents\GetAuditActivityTypesWithCategory\GetAuditActivityTypesWithCategoryRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\AuditEvents\GetAuditCategories\GetAuditCategoriesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\AuditEvents\MicrosoftGraphGetAuditActivityTypesWithCategory\GetAuditActivityTypesWithCategoryRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\AuditEvents\MicrosoftGraphGetAuditCategories\GetAuditCategoriesRequestBuilder;
 use Microsoft\Graph\Generated\Models\AuditEvent;
 use Microsoft\Graph\Generated\Models\AuditEventCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -28,6 +28,13 @@ class AuditEventsRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getAuditCategories method.
+    */
+    public function microsoftGraphGetAuditCategories(): GetAuditCategoriesRequestBuilder {
+        return new GetAuditCategoriesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -79,21 +86,12 @@ class AuditEventsRequestBuilder
      * @param string $category Usage: category='{category}'
      * @return GetAuditActivityTypesWithCategoryRequestBuilder
     */
-    public function getAuditActivityTypesWithCategory(string $category): GetAuditActivityTypesWithCategoryRequestBuilder {
+    public function microsoftGraphGetAuditActivityTypesWithCategory(string $category): GetAuditActivityTypesWithCategoryRequestBuilder {
         return new GetAuditActivityTypesWithCategoryRequestBuilder($this->pathParameters, $this->requestAdapter, $category);
     }
 
     /**
-     * Provides operations to call the getAuditCategories method.
-     * @return GetAuditCategoriesRequestBuilder
-    */
-    public function getAuditCategories(): GetAuditCategoriesRequestBuilder {
-        return new GetAuditCategoriesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
      * Create new navigation property to auditEvents for deviceManagement
-     * @param AuditEvent $body The request body
      * @param AuditEventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -137,7 +135,6 @@ class AuditEventsRequestBuilder
 
     /**
      * Create new navigation property to auditEvents for deviceManagement
-     * @param AuditEvent $body The request body
      * @param AuditEventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

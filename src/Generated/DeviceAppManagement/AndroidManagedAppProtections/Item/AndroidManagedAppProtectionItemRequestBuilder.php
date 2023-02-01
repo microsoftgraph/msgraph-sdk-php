@@ -66,11 +66,15 @@ class AndroidManagedAppProtectionItemRequestBuilder
      * Instantiates a new AndroidManagedAppProtectionItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $androidManagedAppProtectionId key: id of androidManagedAppProtection
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $androidManagedAppProtectionId = null) {
         $this->urlTemplate = '{+baseurl}/deviceAppManagement/androidManagedAppProtections/{androidManagedAppProtection%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['androidManagedAppProtectionId'] = $androidManagedAppProtectionId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -111,7 +115,6 @@ class AndroidManagedAppProtectionItemRequestBuilder
 
     /**
      * Update the navigation property androidManagedAppProtections in deviceAppManagement
-     * @param AndroidManagedAppProtection $body The request body
      * @param AndroidManagedAppProtectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -176,7 +179,6 @@ class AndroidManagedAppProtectionItemRequestBuilder
 
     /**
      * Update the navigation property androidManagedAppProtections in deviceAppManagement
-     * @param AndroidManagedAppProtection $body The request body
      * @param AndroidManagedAppProtectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

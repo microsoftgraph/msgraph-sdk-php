@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Directory\FederationConfigurations;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Directory\FederationConfigurations\AvailableProviderTypes\AvailableProviderTypesRequestBuilder;
 use Microsoft\Graph\Generated\Directory\FederationConfigurations\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Directory\FederationConfigurations\MicrosoftGraphAvailableProviderTypes\AvailableProviderTypesRequestBuilder;
 use Microsoft\Graph\Generated\Models\IdentityProviderBase;
 use Microsoft\Graph\Generated\Models\IdentityProviderBaseCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -30,6 +30,13 @@ class FederationConfigurationsRequestBuilder
     }
     
     /**
+     * Provides operations to call the availableProviderTypes method.
+    */
+    public function microsoftGraphAvailableProviderTypes(): AvailableProviderTypesRequestBuilder {
+        return new AvailableProviderTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -44,14 +51,6 @@ class FederationConfigurationsRequestBuilder
     */
     private string $urlTemplate;
     
-    /**
-     * Provides operations to call the availableProviderTypes method.
-     * @return AvailableProviderTypesRequestBuilder
-    */
-    public function availableProviderTypes(): AvailableProviderTypesRequestBuilder {
-        return new AvailableProviderTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
     /**
      * Instantiates a new FederationConfigurationsRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
@@ -83,7 +82,6 @@ class FederationConfigurationsRequestBuilder
 
     /**
      * Create new navigation property to federationConfigurations for directory
-     * @param IdentityProviderBase $body The request body
      * @param FederationConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -127,7 +125,6 @@ class FederationConfigurationsRequestBuilder
 
     /**
      * Create new navigation property to federationConfigurations for directory
-     * @param IdentityProviderBase $body The request body
      * @param FederationConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

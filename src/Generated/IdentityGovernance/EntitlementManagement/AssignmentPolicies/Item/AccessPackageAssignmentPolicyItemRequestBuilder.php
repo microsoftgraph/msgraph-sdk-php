@@ -54,11 +54,15 @@ class AccessPackageAssignmentPolicyItemRequestBuilder
      * Instantiates a new AccessPackageAssignmentPolicyItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $accessPackageAssignmentPolicyId key: id of accessPackageAssignmentPolicy
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $accessPackageAssignmentPolicyId = null) {
         $this->urlTemplate = '{+baseurl}/identityGovernance/entitlementManagement/assignmentPolicies/{accessPackageAssignmentPolicy%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['accessPackageAssignmentPolicyId'] = $accessPackageAssignmentPolicyId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -99,7 +103,6 @@ class AccessPackageAssignmentPolicyItemRequestBuilder
 
     /**
      * Update the navigation property assignmentPolicies in identityGovernance
-     * @param AccessPackageAssignmentPolicy $body The request body
      * @param AccessPackageAssignmentPolicyItemRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -164,7 +167,6 @@ class AccessPackageAssignmentPolicyItemRequestBuilder
 
     /**
      * Update the navigation property assignmentPolicies in identityGovernance
-     * @param AccessPackageAssignmentPolicy $body The request body
      * @param AccessPackageAssignmentPolicyItemRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

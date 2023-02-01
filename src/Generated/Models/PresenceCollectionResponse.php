@@ -36,7 +36,7 @@ class PresenceCollectionResponse extends BaseCollectionPaginationCountResponse i
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return array<Presence>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class PresenceCollectionResponse extends BaseCollectionPaginationCountResponse i
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param array<Presence>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

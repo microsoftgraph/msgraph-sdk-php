@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryReviewSetQuery;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSets\Item\Queries\Item\ApplyTags\ApplyTagsRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSets\Item\Queries\Item\MicrosoftGraphSecurityApplyTags\ApplyTagsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -23,7 +23,7 @@ class EdiscoveryReviewSetQueryItemRequestBuilder
     /**
      * Provides operations to call the applyTags method.
     */
-    public function applyTags(): ApplyTagsRequestBuilder {
+    public function microsoftGraphSecurityApplyTags(): ApplyTagsRequestBuilder {
         return new ApplyTagsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
@@ -46,11 +46,15 @@ class EdiscoveryReviewSetQueryItemRequestBuilder
      * Instantiates a new EdiscoveryReviewSetQueryItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $ediscoveryReviewSetQueryId key: id of ediscoveryReviewSetQuery
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $ediscoveryReviewSetQueryId = null) {
         $this->urlTemplate = '{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/reviewSets/{ediscoveryReviewSet%2Did}/queries/{ediscoveryReviewSetQuery%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['ediscoveryReviewSetQueryId'] = $ediscoveryReviewSetQueryId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -91,7 +95,6 @@ class EdiscoveryReviewSetQueryItemRequestBuilder
 
     /**
      * Update the navigation property queries in security
-     * @param EdiscoveryReviewSetQuery $body The request body
      * @param EdiscoveryReviewSetQueryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -156,7 +159,6 @@ class EdiscoveryReviewSetQueryItemRequestBuilder
 
     /**
      * Update the navigation property queries in security
-     * @param EdiscoveryReviewSetQuery $body The request body
      * @param EdiscoveryReviewSetQueryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

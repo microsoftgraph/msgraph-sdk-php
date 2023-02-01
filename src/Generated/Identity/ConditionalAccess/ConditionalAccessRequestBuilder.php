@@ -141,7 +141,6 @@ class ConditionalAccessRequestBuilder
 
     /**
      * Update the navigation property conditionalAccess in identity
-     * @param ConditionalAccessRoot $body The request body
      * @param ConditionalAccessRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -228,7 +227,6 @@ class ConditionalAccessRequestBuilder
 
     /**
      * Update the navigation property conditionalAccess in identity
-     * @param ConditionalAccessRoot $body The request body
      * @param ConditionalAccessRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

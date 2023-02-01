@@ -75,7 +75,6 @@ class SharesRequestBuilder
 
     /**
      * Create a new **printerShare** for the specified printer.
-     * @param PrinterShare $body The request body
      * @param SharesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/print-post-shares?view=graph-rest-1.0 Find more info here
@@ -120,7 +119,6 @@ class SharesRequestBuilder
 
     /**
      * Create a new **printerShare** for the specified printer.
-     * @param PrinterShare $body The request body
      * @param SharesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

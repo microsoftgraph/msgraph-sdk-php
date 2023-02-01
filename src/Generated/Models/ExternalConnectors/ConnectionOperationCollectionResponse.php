@@ -37,7 +37,7 @@ class ConnectionOperationCollectionResponse extends BaseCollectionPaginationCoun
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return array<ConnectionOperation>|null
     */
     public function getValue(): ?array {
@@ -54,7 +54,7 @@ class ConnectionOperationCollectionResponse extends BaseCollectionPaginationCoun
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param array<ConnectionOperation>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

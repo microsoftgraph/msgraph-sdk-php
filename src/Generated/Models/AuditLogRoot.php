@@ -25,7 +25,7 @@ class AuditLogRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the directoryAudits property value. The directoryAudits property
+     * Gets the directoryAudits property value. 
      * @return array<DirectoryAudit>|null
     */
     public function getDirectoryAudits(): ?array {
@@ -46,7 +46,7 @@ class AuditLogRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the provisioning property value. The provisioning property
+     * Gets the provisioning property value. 
      * @return array<ProvisioningObjectSummary>|null
     */
     public function getProvisioning(): ?array {
@@ -54,7 +54,7 @@ class AuditLogRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the signIns property value. The signIns property
+     * Gets the signIns property value. 
      * @return array<SignIn>|null
     */
     public function getSignIns(): ?array {
@@ -73,7 +73,7 @@ class AuditLogRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the directoryAudits property value. The directoryAudits property
+     * Sets the directoryAudits property value. 
      * @param array<DirectoryAudit>|null $value Value to set for the directoryAudits property.
     */
     public function setDirectoryAudits(?array $value): void {
@@ -81,7 +81,7 @@ class AuditLogRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the provisioning property value. The provisioning property
+     * Sets the provisioning property value. 
      * @param array<ProvisioningObjectSummary>|null $value Value to set for the provisioning property.
     */
     public function setProvisioning(?array $value): void {
@@ -89,7 +89,7 @@ class AuditLogRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the signIns property value. The signIns property
+     * Sets the signIns property value. 
      * @param array<SignIn>|null $value Value to set for the signIns property.
     */
     public function setSignIns(?array $value): void {

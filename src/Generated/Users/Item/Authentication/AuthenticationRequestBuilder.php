@@ -239,7 +239,6 @@ class AuthenticationRequestBuilder
 
     /**
      * Update the navigation property authentication in users
-     * @param Authentication $body The request body
      * @param AuthenticationRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -337,7 +336,6 @@ class AuthenticationRequestBuilder
 
     /**
      * Update the navigation property authentication in users
-     * @param Authentication $body The request body
      * @param AuthenticationRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

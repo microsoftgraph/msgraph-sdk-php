@@ -64,7 +64,7 @@ class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -72,7 +72,7 @@ class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Gets the postAttributeCollection property value. The postAttributeCollection property
+     * Gets the postAttributeCollection property value. 
      * @return IdentityApiConnector|null
     */
     public function getPostAttributeCollection(): ?IdentityApiConnector {
@@ -80,7 +80,7 @@ class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Gets the postFederationSignup property value. The postFederationSignup property
+     * Gets the postFederationSignup property value. 
      * @return IdentityApiConnector|null
     */
     public function getPostFederationSignup(): ?IdentityApiConnector {
@@ -115,7 +115,7 @@ class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -123,7 +123,7 @@ class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Sets the postAttributeCollection property value. The postAttributeCollection property
+     * Sets the postAttributeCollection property value. 
      * @param IdentityApiConnector|null $value Value to set for the postAttributeCollection property.
     */
     public function setPostAttributeCollection(?IdentityApiConnector $value): void {
@@ -131,7 +131,7 @@ class UserFlowApiConnectorConfiguration implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Sets the postFederationSignup property value. The postFederationSignup property
+     * Sets the postFederationSignup property value. 
      * @param IdentityApiConnector|null $value Value to set for the postFederationSignup property.
     */
     public function setPostFederationSignup(?IdentityApiConnector $value): void {

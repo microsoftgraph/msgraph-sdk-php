@@ -5,13 +5,13 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Assign\AssignRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Assignments\AssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Assignments\Item\MobileAppAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Categories\CategoriesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Categories\Item\MobileAppCategoryItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\ManagedMobileLobApp\ManagedMobileLobAppRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\MobileLobApp\MobileLobAppRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\MicrosoftGraphAssign\AssignRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\MicrosoftGraphManagedMobileLobApp\ManagedMobileLobAppRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\MicrosoftGraphMobileLobApp\MobileLobAppRequestBuilder;
 use Microsoft\Graph\Generated\Models\MobileApp;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -27,13 +27,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class MobileAppItemRequestBuilder 
 {
     /**
-     * Provides operations to call the assign method.
-    */
-    public function assign(): AssignRequestBuilder {
-        return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the assignments property of the microsoft.graph.mobileApp entity.
     */
     public function assignments(): AssignmentsRequestBuilder {
@@ -48,16 +41,23 @@ class MobileAppItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the assign method.
+    */
+    public function microsoftGraphAssign(): AssignRequestBuilder {
+        return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Casts the previous resource to managedMobileLobApp.
     */
-    public function managedMobileLobApp(): ManagedMobileLobAppRequestBuilder {
+    public function microsoftGraphManagedMobileLobApp(): ManagedMobileLobAppRequestBuilder {
         return new ManagedMobileLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to mobileLobApp.
     */
-    public function mobileLobApp(): MobileLobAppRequestBuilder {
+    public function microsoftGraphMobileLobApp(): MobileLobAppRequestBuilder {
         return new MobileLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
@@ -102,11 +102,15 @@ class MobileAppItemRequestBuilder
      * Instantiates a new MobileAppItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $mobileAppId key: id of mobileApp
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $mobileAppId = null) {
         $this->urlTemplate = '{+baseurl}/deviceAppManagement/mobileApps/{mobileApp%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['mobileAppId'] = $mobileAppId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -147,7 +151,6 @@ class MobileAppItemRequestBuilder
 
     /**
      * Update the navigation property mobileApps in deviceAppManagement
-     * @param MobileApp $body The request body
      * @param MobileAppItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -212,7 +215,6 @@ class MobileAppItemRequestBuilder
 
     /**
      * Update the navigation property mobileApps in deviceAppManagement
-     * @param MobileApp $body The request body
      * @param MobileAppItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

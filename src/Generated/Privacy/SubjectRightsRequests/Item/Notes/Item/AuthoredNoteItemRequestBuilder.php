@@ -38,11 +38,15 @@ class AuthoredNoteItemRequestBuilder
      * Instantiates a new AuthoredNoteItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $authoredNoteId key: id of authoredNote
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $authoredNoteId = null) {
         $this->urlTemplate = '{+baseurl}/privacy/subjectRightsRequests/{subjectRightsRequest%2Did}/notes/{authoredNote%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['authoredNoteId'] = $authoredNoteId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class AuthoredNoteItemRequestBuilder
 
     /**
      * Update the navigation property notes in privacy
-     * @param AuthoredNote $body The request body
      * @param AuthoredNoteItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class AuthoredNoteItemRequestBuilder
 
     /**
      * Update the navigation property notes in privacy
-     * @param AuthoredNote $body The request body
      * @param AuthoredNoteItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

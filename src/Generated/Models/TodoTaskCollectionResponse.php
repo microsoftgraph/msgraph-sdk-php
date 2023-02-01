@@ -36,7 +36,7 @@ class TodoTaskCollectionResponse extends BaseCollectionPaginationCountResponse i
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return array<TodoTask>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class TodoTaskCollectionResponse extends BaseCollectionPaginationCountResponse i
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param array<TodoTask>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

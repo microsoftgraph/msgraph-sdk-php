@@ -9,7 +9,7 @@ use Microsoft\Graph\Generated\Communications\CallRecords\CallRecordsRequestBuild
 use Microsoft\Graph\Generated\Communications\CallRecords\Item\CallRecordItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\CallsRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\CallItemRequestBuilder;
-use Microsoft\Graph\Generated\Communications\GetPresencesByUserId\GetPresencesByUserIdRequestBuilder;
+use Microsoft\Graph\Generated\Communications\MicrosoftGraphGetPresencesByUserId\GetPresencesByUserIdRequestBuilder;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\OnlineMeetingItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\OnlineMeetingsRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Presences\Item\PresenceItemRequestBuilder;
@@ -45,7 +45,7 @@ class CommunicationsRequestBuilder
     /**
      * Provides operations to call the getPresencesByUserId method.
     */
-    public function getPresencesByUserId(): GetPresencesByUserIdRequestBuilder {
+    public function microsoftGraphGetPresencesByUserId(): GetPresencesByUserIdRequestBuilder {
         return new GetPresencesByUserIdRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
@@ -142,7 +142,6 @@ class CommunicationsRequestBuilder
 
     /**
      * Update communications
-     * @param CloudCommunications $body The request body
      * @param CommunicationsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -197,7 +196,6 @@ class CommunicationsRequestBuilder
 
     /**
      * Update communications
-     * @param CloudCommunications $body The request body
      * @param CommunicationsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

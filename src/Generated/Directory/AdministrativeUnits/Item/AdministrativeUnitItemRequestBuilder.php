@@ -65,11 +65,15 @@ class AdministrativeUnitItemRequestBuilder
      * Instantiates a new AdministrativeUnitItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $administrativeUnitId key: id of administrativeUnit
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $administrativeUnitId = null) {
         $this->urlTemplate = '{+baseurl}/directory/administrativeUnits/{administrativeUnit%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['administrativeUnitId'] = $administrativeUnitId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -132,7 +136,6 @@ class AdministrativeUnitItemRequestBuilder
 
     /**
      * Update the navigation property administrativeUnits in directory
-     * @param AdministrativeUnit $body The request body
      * @param AdministrativeUnitItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -208,7 +211,6 @@ class AdministrativeUnitItemRequestBuilder
 
     /**
      * Update the navigation property administrativeUnits in directory
-     * @param AdministrativeUnit $body The request body
      * @param AdministrativeUnitItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

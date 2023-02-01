@@ -5,12 +5,12 @@ namespace Microsoft\Graph\Generated\Applications\Item\Owners;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Applications\Item\Owners\AppRoleAssignment\AppRoleAssignmentRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\Owners\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\Owners\Endpoint\EndpointRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\Owners\MicrosoftGraphAppRoleAssignment\AppRoleAssignmentRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\Owners\MicrosoftGraphEndpoint\EndpointRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\Owners\MicrosoftGraphServicePrincipal\ServicePrincipalRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\Owners\MicrosoftGraphUser\UserRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\Owners\Ref\RefRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\Owners\ServicePrincipal\ServicePrincipalRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\Owners\User\UserRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -26,13 +26,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class OwnersRequestBuilder 
 {
     /**
-     * Casts the previous resource to appRoleAssignment.
-    */
-    public function appRoleAssignment(): AppRoleAssignmentRequestBuilder {
-        return new AppRoleAssignmentRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
@@ -40,10 +33,31 @@ class OwnersRequestBuilder
     }
     
     /**
+     * Casts the previous resource to appRoleAssignment.
+    */
+    public function microsoftGraphAppRoleAssignment(): AppRoleAssignmentRequestBuilder {
+        return new AppRoleAssignmentRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Casts the previous resource to endpoint.
     */
-    public function endpoint(): EndpointRequestBuilder {
+    public function microsoftGraphEndpoint(): EndpointRequestBuilder {
         return new EndpointRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to servicePrincipal.
+    */
+    public function microsoftGraphServicePrincipal(): ServicePrincipalRequestBuilder {
+        return new ServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to user.
+    */
+    public function microsoftGraphUser(): UserRequestBuilder {
+        return new UserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -64,23 +78,9 @@ class OwnersRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * Casts the previous resource to servicePrincipal.
-    */
-    public function servicePrincipal(): ServicePrincipalRequestBuilder {
-        return new ServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
-    
-    /**
-     * Casts the previous resource to user.
-    */
-    public function user(): UserRequestBuilder {
-        return new UserRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * Instantiates a new OwnersRequestBuilder and sets the default values.

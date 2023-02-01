@@ -62,7 +62,7 @@ class Schedule extends Entity implements Parsable
     }
 
     /**
-     * Gets the offerShiftRequests property value. The offerShiftRequests property
+     * Gets the offerShiftRequests property value. 
      * @return array<OfferShiftRequest>|null
     */
     public function getOfferShiftRequests(): ?array {
@@ -78,7 +78,7 @@ class Schedule extends Entity implements Parsable
     }
 
     /**
-     * Gets the openShiftChangeRequests property value. The openShiftChangeRequests property
+     * Gets the openShiftChangeRequests property value. 
      * @return array<OpenShiftChangeRequest>|null
     */
     public function getOpenShiftChangeRequests(): ?array {
@@ -86,7 +86,7 @@ class Schedule extends Entity implements Parsable
     }
 
     /**
-     * Gets the openShifts property value. The openShifts property
+     * Gets the openShifts property value. 
      * @return array<OpenShift>|null
     */
     public function getOpenShifts(): ?array {
@@ -134,7 +134,7 @@ class Schedule extends Entity implements Parsable
     }
 
     /**
-     * Gets the swapShiftsChangeRequests property value. The swapShiftsChangeRequests property
+     * Gets the swapShiftsChangeRequests property value. 
      * @return array<SwapShiftsChangeRequest>|null
     */
     public function getSwapShiftsChangeRequests(): ?array {
@@ -166,7 +166,7 @@ class Schedule extends Entity implements Parsable
     }
 
     /**
-     * Gets the timeOffRequests property value. The timeOffRequests property
+     * Gets the timeOffRequests property value. 
      * @return array<TimeOffRequest>|null
     */
     public function getTimeOffRequests(): ?array {
@@ -198,7 +198,7 @@ class Schedule extends Entity implements Parsable
     }
 
     /**
-     * Gets the workforceIntegrationIds property value. The workforceIntegrationIds property
+     * Gets the workforceIntegrationIds property value. 
      * @return array<string>|null
     */
     public function getWorkforceIntegrationIds(): ?array {
@@ -239,7 +239,7 @@ class Schedule extends Entity implements Parsable
     }
 
     /**
-     * Sets the offerShiftRequests property value. The offerShiftRequests property
+     * Sets the offerShiftRequests property value. 
      * @param array<OfferShiftRequest>|null $value Value to set for the offerShiftRequests property.
     */
     public function setOfferShiftRequests(?array $value): void {
@@ -255,7 +255,7 @@ class Schedule extends Entity implements Parsable
     }
 
     /**
-     * Sets the openShiftChangeRequests property value. The openShiftChangeRequests property
+     * Sets the openShiftChangeRequests property value. 
      * @param array<OpenShiftChangeRequest>|null $value Value to set for the openShiftChangeRequests property.
     */
     public function setOpenShiftChangeRequests(?array $value): void {
@@ -263,7 +263,7 @@ class Schedule extends Entity implements Parsable
     }
 
     /**
-     * Sets the openShifts property value. The openShifts property
+     * Sets the openShifts property value. 
      * @param array<OpenShift>|null $value Value to set for the openShifts property.
     */
     public function setOpenShifts(?array $value): void {
@@ -311,7 +311,7 @@ class Schedule extends Entity implements Parsable
     }
 
     /**
-     * Sets the swapShiftsChangeRequests property value. The swapShiftsChangeRequests property
+     * Sets the swapShiftsChangeRequests property value. 
      * @param array<SwapShiftsChangeRequest>|null $value Value to set for the swapShiftsChangeRequests property.
     */
     public function setSwapShiftsChangeRequests(?array $value): void {
@@ -343,7 +343,7 @@ class Schedule extends Entity implements Parsable
     }
 
     /**
-     * Sets the timeOffRequests property value. The timeOffRequests property
+     * Sets the timeOffRequests property value. 
      * @param array<TimeOffRequest>|null $value Value to set for the timeOffRequests property.
     */
     public function setTimeOffRequests(?array $value): void {
@@ -375,7 +375,7 @@ class Schedule extends Entity implements Parsable
     }
 
     /**
-     * Sets the workforceIntegrationIds property value. The workforceIntegrationIds property
+     * Sets the workforceIntegrationIds property value. 
      * @param array<string>|null $value Value to set for the workforceIntegrationIds property.
     */
     public function setWorkforceIntegrationIds(?array $value): void {

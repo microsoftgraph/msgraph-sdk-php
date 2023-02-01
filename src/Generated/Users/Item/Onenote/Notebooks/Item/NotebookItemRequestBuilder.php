@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\Notebook;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\CopyNotebook\CopyNotebookRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\MicrosoftGraphCopyNotebook\CopyNotebookRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\SectionGroups\Item\SectionGroupItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\SectionGroups\SectionGroupsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\Sections\Item\OnenoteSectionItemRequestBuilder;
@@ -27,7 +27,7 @@ class NotebookItemRequestBuilder
     /**
      * Provides operations to call the copyNotebook method.
     */
-    public function copyNotebook(): CopyNotebookRequestBuilder {
+    public function microsoftGraphCopyNotebook(): CopyNotebookRequestBuilder {
         return new CopyNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
@@ -64,11 +64,15 @@ class NotebookItemRequestBuilder
      * Instantiates a new NotebookItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $notebookId key: id of notebook
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $notebookId = null) {
         $this->urlTemplate = '{+baseurl}/users/{user%2Did}/onenote/notebooks/{notebook%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['notebookId'] = $notebookId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -109,7 +113,6 @@ class NotebookItemRequestBuilder
 
     /**
      * Update the navigation property notebooks in users
-     * @param Notebook $body The request body
      * @param NotebookItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -196,7 +199,6 @@ class NotebookItemRequestBuilder
 
     /**
      * Update the navigation property notebooks in users
-     * @param Notebook $body The request body
      * @param NotebookItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

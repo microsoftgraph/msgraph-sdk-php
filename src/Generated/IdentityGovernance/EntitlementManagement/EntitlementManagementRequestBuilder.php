@@ -231,7 +231,6 @@ class EntitlementManagementRequestBuilder
 
     /**
      * Update the navigation property entitlementManagement in identityGovernance
-     * @param EntitlementManagement $body The request body
      * @param EntitlementManagementRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -296,7 +295,6 @@ class EntitlementManagementRequestBuilder
 
     /**
      * Update the navigation property entitlementManagement in identityGovernance
-     * @param EntitlementManagement $body The request body
      * @param EntitlementManagementRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -74,7 +74,6 @@ class SharesRequestBuilder
 
     /**
      * Add new entity to shares
-     * @param SharedDriveItem $body The request body
      * @param SharesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class SharesRequestBuilder
 
     /**
      * Add new entity to shares
-     * @param SharedDriveItem $body The request body
      * @param SharesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

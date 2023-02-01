@@ -38,11 +38,15 @@ class MdmWindowsInformationProtectionPolicyItemRequestBuilder
      * Instantiates a new MdmWindowsInformationProtectionPolicyItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $mdmWindowsInformationProtectionPolicyId key: id of mdmWindowsInformationProtectionPolicy
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $mdmWindowsInformationProtectionPolicyId = null) {
         $this->urlTemplate = '{+baseurl}/deviceAppManagement/mdmWindowsInformationProtectionPolicies/{mdmWindowsInformationProtectionPolicy%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['mdmWindowsInformationProtectionPolicyId'] = $mdmWindowsInformationProtectionPolicyId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class MdmWindowsInformationProtectionPolicyItemRequestBuilder
 
     /**
      * Update the navigation property mdmWindowsInformationProtectionPolicies in deviceAppManagement
-     * @param MdmWindowsInformationProtectionPolicy $body The request body
      * @param MdmWindowsInformationProtectionPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class MdmWindowsInformationProtectionPolicyItemRequestBuilder
 
     /**
      * Update the navigation property mdmWindowsInformationProtectionPolicies in deviceAppManagement
-     * @param MdmWindowsInformationProtectionPolicy $body The request body
      * @param MdmWindowsInformationProtectionPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

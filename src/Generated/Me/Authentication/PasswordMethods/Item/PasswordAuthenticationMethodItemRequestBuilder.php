@@ -38,11 +38,15 @@ class PasswordAuthenticationMethodItemRequestBuilder
      * Instantiates a new PasswordAuthenticationMethodItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $passwordAuthenticationMethodId key: id of passwordAuthenticationMethod
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $passwordAuthenticationMethodId = null) {
         $this->urlTemplate = '{+baseurl}/me/authentication/passwordMethods/{passwordAuthenticationMethod%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['passwordAuthenticationMethodId'] = $passwordAuthenticationMethodId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**

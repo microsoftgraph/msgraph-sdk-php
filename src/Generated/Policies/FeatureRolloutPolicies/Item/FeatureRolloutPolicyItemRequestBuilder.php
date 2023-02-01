@@ -58,11 +58,15 @@ class FeatureRolloutPolicyItemRequestBuilder
      * Instantiates a new FeatureRolloutPolicyItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $featureRolloutPolicyId key: id of featureRolloutPolicy
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $featureRolloutPolicyId = null) {
         $this->urlTemplate = '{+baseurl}/policies/featureRolloutPolicies/{featureRolloutPolicy%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['featureRolloutPolicyId'] = $featureRolloutPolicyId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -103,7 +107,6 @@ class FeatureRolloutPolicyItemRequestBuilder
 
     /**
      * Update the navigation property featureRolloutPolicies in policies
-     * @param FeatureRolloutPolicy $body The request body
      * @param FeatureRolloutPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -168,7 +171,6 @@ class FeatureRolloutPolicyItemRequestBuilder
 
     /**
      * Update the navigation property featureRolloutPolicies in policies
-     * @param FeatureRolloutPolicy $body The request body
      * @param FeatureRolloutPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

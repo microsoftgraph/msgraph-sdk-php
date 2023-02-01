@@ -51,7 +51,7 @@ class ConditionalAccessPolicyDetail implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the conditions property value. The conditions property
+     * Gets the conditions property value. 
      * @return ConditionalAccessConditionSet|null
     */
     public function getConditions(): ?ConditionalAccessConditionSet {
@@ -81,7 +81,7 @@ class ConditionalAccessPolicyDetail implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -125,7 +125,7 @@ class ConditionalAccessPolicyDetail implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the conditions property value. The conditions property
+     * Sets the conditions property value. 
      * @param ConditionalAccessConditionSet|null $value Value to set for the conditions property.
     */
     public function setConditions(?ConditionalAccessConditionSet $value): void {
@@ -141,7 +141,7 @@ class ConditionalAccessPolicyDetail implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

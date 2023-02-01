@@ -74,7 +74,6 @@ class PresencesRequestBuilder
 
     /**
      * Create new navigation property to presences for communications
-     * @param Presence $body The request body
      * @param PresencesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class PresencesRequestBuilder
 
     /**
      * Create new navigation property to presences for communications
-     * @param Presence $body The request body
      * @param PresencesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

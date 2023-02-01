@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\VppTokens\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceAppManagement\VppTokens\Item\SyncLicenses\SyncLicensesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\VppTokens\Item\MicrosoftGraphSyncLicenses\SyncLicensesRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\VppToken;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -21,6 +21,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class VppTokenItemRequestBuilder 
 {
     /**
+     * Provides operations to call the syncLicenses method.
+    */
+    public function microsoftGraphSyncLicenses(): SyncLicensesRequestBuilder {
+        return new SyncLicensesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -31,13 +38,6 @@ class VppTokenItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * Provides operations to call the syncLicenses method.
-    */
-    public function syncLicenses(): SyncLicensesRequestBuilder {
-        return new SyncLicensesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
@@ -46,11 +46,15 @@ class VppTokenItemRequestBuilder
      * Instantiates a new VppTokenItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $vppTokenId key: id of vppToken
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $vppTokenId = null) {
         $this->urlTemplate = '{+baseurl}/deviceAppManagement/vppTokens/{vppToken%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['vppTokenId'] = $vppTokenId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -91,7 +95,6 @@ class VppTokenItemRequestBuilder
 
     /**
      * Update the navigation property vppTokens in deviceAppManagement
-     * @param VppToken $body The request body
      * @param VppTokenItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -156,7 +159,6 @@ class VppTokenItemRequestBuilder
 
     /**
      * Update the navigation property vppTokens in deviceAppManagement
-     * @param VppToken $body The request body
      * @param VppTokenItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

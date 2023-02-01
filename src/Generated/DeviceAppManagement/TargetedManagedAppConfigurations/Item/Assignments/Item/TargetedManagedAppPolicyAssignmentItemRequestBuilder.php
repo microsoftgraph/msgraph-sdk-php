@@ -38,11 +38,15 @@ class TargetedManagedAppPolicyAssignmentItemRequestBuilder
      * Instantiates a new TargetedManagedAppPolicyAssignmentItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $targetedManagedAppPolicyAssignmentId key: id of targetedManagedAppPolicyAssignment
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $targetedManagedAppPolicyAssignmentId = null) {
         $this->urlTemplate = '{+baseurl}/deviceAppManagement/targetedManagedAppConfigurations/{targetedManagedAppConfiguration%2Did}/assignments/{targetedManagedAppPolicyAssignment%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['targetedManagedAppPolicyAssignmentId'] = $targetedManagedAppPolicyAssignmentId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -83,7 +87,6 @@ class TargetedManagedAppPolicyAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property assignments in deviceAppManagement
-     * @param TargetedManagedAppPolicyAssignment $body The request body
      * @param TargetedManagedAppPolicyAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +151,6 @@ class TargetedManagedAppPolicyAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property assignments in deviceAppManagement
-     * @param TargetedManagedAppPolicyAssignment $body The request body
      * @param TargetedManagedAppPolicyAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

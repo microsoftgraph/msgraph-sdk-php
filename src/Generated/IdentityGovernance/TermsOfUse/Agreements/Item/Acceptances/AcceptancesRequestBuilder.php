@@ -75,7 +75,6 @@ class AcceptancesRequestBuilder
 
     /**
      * Create new navigation property to acceptances for identityGovernance
-     * @param AgreementAcceptance $body The request body
      * @param AcceptancesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -119,7 +118,6 @@ class AcceptancesRequestBuilder
 
     /**
      * Create new navigation property to acceptances for identityGovernance
-     * @param AgreementAcceptance $body The request body
      * @param AcceptancesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

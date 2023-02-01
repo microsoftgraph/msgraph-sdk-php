@@ -36,7 +36,7 @@ class ShiftCollectionResponse extends BaseCollectionPaginationCountResponse impl
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return array<Shift>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class ShiftCollectionResponse extends BaseCollectionPaginationCountResponse impl
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param array<Shift>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

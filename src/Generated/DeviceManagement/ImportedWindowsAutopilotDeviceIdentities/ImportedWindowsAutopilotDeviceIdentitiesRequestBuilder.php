@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\Import\ImportRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\MicrosoftGraphImport\ImportRequestBuilder;
 use Microsoft\Graph\Generated\Models\ImportedWindowsAutopilotDeviceIdentity;
 use Microsoft\Graph\Generated\Models\ImportedWindowsAutopilotDeviceIdentityCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -32,7 +32,7 @@ class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder
     /**
      * Provides operations to call the import method.
     */
-    public function import(): ImportRequestBuilder {
+    public function microsoftGraphImport(): ImportRequestBuilder {
         return new ImportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
@@ -82,7 +82,6 @@ class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder
 
     /**
      * Create new navigation property to importedWindowsAutopilotDeviceIdentities for deviceManagement
-     * @param ImportedWindowsAutopilotDeviceIdentity $body The request body
      * @param ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -126,7 +125,6 @@ class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder
 
     /**
      * Create new navigation property to importedWindowsAutopilotDeviceIdentities for deviceManagement
-     * @param ImportedWindowsAutopilotDeviceIdentity $body The request body
      * @param ImportedWindowsAutopilotDeviceIdentitiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

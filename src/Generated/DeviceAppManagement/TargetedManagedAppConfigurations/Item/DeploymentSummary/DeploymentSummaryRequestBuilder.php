@@ -83,7 +83,6 @@ class DeploymentSummaryRequestBuilder
 
     /**
      * Update the navigation property deploymentSummary in deviceAppManagement
-     * @param ManagedAppPolicyDeploymentSummary $body The request body
      * @param DeploymentSummaryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,7 +147,6 @@ class DeploymentSummaryRequestBuilder
 
     /**
      * Update the navigation property deploymentSummary in deviceAppManagement
-     * @param ManagedAppPolicyDeploymentSummary $body The request body
      * @param DeploymentSummaryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

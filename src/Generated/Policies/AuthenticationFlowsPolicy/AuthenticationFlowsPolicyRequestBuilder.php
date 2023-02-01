@@ -84,7 +84,6 @@ class AuthenticationFlowsPolicyRequestBuilder
 
     /**
      * Update the **selfServiceSignUp** property of an authenticationFlowsPolicy object. The properties **id**, **type**, and **description** cannot be modified.
-     * @param AuthenticationFlowsPolicy $body The request body
      * @param AuthenticationFlowsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/authenticationflowspolicy-update?view=graph-rest-1.0 Find more info here
@@ -150,7 +149,6 @@ class AuthenticationFlowsPolicyRequestBuilder
 
     /**
      * Update the **selfServiceSignUp** property of an authenticationFlowsPolicy object. The properties **id**, **type**, and **description** cannot be modified.
-     * @param AuthenticationFlowsPolicy $body The request body
      * @param AuthenticationFlowsPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

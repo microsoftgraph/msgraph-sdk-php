@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Add\AddRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Remove\RemoveRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\MicrosoftGraphAdd\AddRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\MicrosoftGraphRemove\RemoveRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SiteCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,13 +23,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class SitesRequestBuilder 
 {
     /**
-     * Provides operations to call the add method.
-    */
-    public function add(): AddRequestBuilder {
-        return new AddRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
@@ -37,16 +30,23 @@ class SitesRequestBuilder
     }
     
     /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
+     * Provides operations to call the add method.
     */
-    private array $pathParameters;
+    public function microsoftGraphAdd(): AddRequestBuilder {
+        return new AddRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * Provides operations to call the remove method.
     */
-    public function remove(): RemoveRequestBuilder {
+    public function microsoftGraphRemove(): RemoveRequestBuilder {
         return new RemoveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
+    
+    /**
+     * @var array<string, mixed> $pathParameters Path parameters for the request
+    */
+    private array $pathParameters;
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.

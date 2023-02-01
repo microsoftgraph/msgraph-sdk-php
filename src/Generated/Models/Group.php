@@ -390,7 +390,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the onenote property value. The onenote property
+     * Gets the onenote property value. 
      * @return Onenote|null
     */
     public function getOnenote(): ?Onenote {
@@ -398,7 +398,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the onPremisesDomainName property value. The onPremisesDomainName property
+     * Gets the onPremisesDomainName property value. 
      * @return string|null
     */
     public function getOnPremisesDomainName(): ?string {
@@ -414,7 +414,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the onPremisesNetBiosName property value. The onPremisesNetBiosName property
+     * Gets the onPremisesNetBiosName property value. 
      * @return string|null
     */
     public function getOnPremisesNetBiosName(): ?string {
@@ -983,7 +983,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the onenote property value. The onenote property
+     * Sets the onenote property value. 
      * @param Onenote|null $value Value to set for the onenote property.
     */
     public function setOnenote(?Onenote $value): void {
@@ -991,7 +991,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the onPremisesDomainName property value. The onPremisesDomainName property
+     * Sets the onPremisesDomainName property value. 
      * @param string|null $value Value to set for the onPremisesDomainName property.
     */
     public function setOnPremisesDomainName(?string $value): void {
@@ -1007,7 +1007,7 @@ class Group extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the onPremisesNetBiosName property value. The onPremisesNetBiosName property
+     * Sets the onPremisesNetBiosName property value. 
      * @param string|null $value Value to set for the onPremisesNetBiosName property.
     */
     public function setOnPremisesNetBiosName(?string $value): void {

@@ -51,7 +51,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the direction property value. The direction property
+     * Gets the direction property value. 
      * @return MediaDirection|null
     */
     public function getDirection(): ?MediaDirection {
@@ -83,7 +83,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the mediaType property value. The mediaType property
+     * Gets the mediaType property value. 
      * @return Modality|null
     */
     public function getMediaType(): ?Modality {
@@ -91,7 +91,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -145,7 +145,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the direction property value. The direction property
+     * Sets the direction property value. 
      * @param MediaDirection|null $value Value to set for the direction property.
     */
     public function setDirection(?MediaDirection $value): void {
@@ -161,7 +161,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the mediaType property value. The mediaType property
+     * Sets the mediaType property value. 
      * @param Modality|null $value Value to set for the mediaType property.
     */
     public function setMediaType(?Modality $value): void {
@@ -169,7 +169,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

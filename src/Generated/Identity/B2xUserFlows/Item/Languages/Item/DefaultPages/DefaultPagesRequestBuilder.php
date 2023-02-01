@@ -74,7 +74,6 @@ class DefaultPagesRequestBuilder
 
     /**
      * Create new navigation property to defaultPages for identity
-     * @param UserFlowLanguagePage $body The request body
      * @param DefaultPagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class DefaultPagesRequestBuilder
 
     /**
      * Create new navigation property to defaultPages for identity
-     * @param UserFlowLanguagePage $body The request body
      * @param DefaultPagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

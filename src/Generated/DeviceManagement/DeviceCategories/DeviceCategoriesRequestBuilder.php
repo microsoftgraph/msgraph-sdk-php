@@ -74,7 +74,6 @@ class DeviceCategoriesRequestBuilder
 
     /**
      * Create new navigation property to deviceCategories for deviceManagement
-     * @param DeviceCategory $body The request body
      * @param DeviceCategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class DeviceCategoriesRequestBuilder
 
     /**
      * Create new navigation property to deviceCategories for deviceManagement
-     * @param DeviceCategory $body The request body
      * @param DeviceCategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

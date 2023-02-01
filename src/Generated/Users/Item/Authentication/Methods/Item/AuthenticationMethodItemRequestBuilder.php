@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\AuthenticationMethod;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\Authentication\Methods\Item\ResetPassword\ResetPasswordRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Authentication\Methods\Item\MicrosoftGraphResetPassword\ResetPasswordRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -21,6 +21,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class AuthenticationMethodItemRequestBuilder 
 {
     /**
+     * Provides operations to call the resetPassword method.
+    */
+    public function microsoftGraphResetPassword(): ResetPasswordRequestBuilder {
+        return new ResetPasswordRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -31,13 +38,6 @@ class AuthenticationMethodItemRequestBuilder
     private RequestAdapter $requestAdapter;
     
     /**
-     * Provides operations to call the resetPassword method.
-    */
-    public function resetPassword(): ResetPasswordRequestBuilder {
-        return new ResetPasswordRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
@@ -46,11 +46,15 @@ class AuthenticationMethodItemRequestBuilder
      * Instantiates a new AuthenticationMethodItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $authenticationMethodId key: id of authenticationMethod
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $authenticationMethodId = null) {
         $this->urlTemplate = '{+baseurl}/users/{user%2Did}/authentication/methods/{authenticationMethod%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['authenticationMethodId'] = $authenticationMethodId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -73,7 +77,6 @@ class AuthenticationMethodItemRequestBuilder
 
     /**
      * Update the navigation property methods in users
-     * @param AuthenticationMethod $body The request body
      * @param AuthenticationMethodItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,7 +120,6 @@ class AuthenticationMethodItemRequestBuilder
 
     /**
      * Update the navigation property methods in users
-     * @param AuthenticationMethod $body The request body
      * @param AuthenticationMethodItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

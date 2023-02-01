@@ -123,7 +123,6 @@ class TermsOfUseRequestBuilder
 
     /**
      * Update the navigation property termsOfUse in identityGovernance
-     * @param TermsOfUseContainer $body The request body
      * @param TermsOfUseRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -188,7 +187,6 @@ class TermsOfUseRequestBuilder
 
     /**
      * Update the navigation property termsOfUse in identityGovernance
-     * @param TermsOfUseContainer $body The request body
      * @param TermsOfUseRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

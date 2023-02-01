@@ -25,7 +25,7 @@ class ParticipantJoiningNotification extends Entity implements Parsable
     }
 
     /**
-     * Gets the call property value. The call property
+     * Gets the call property value. 
      * @return Call|null
     */
     public function getCall(): ?Call {
@@ -53,7 +53,7 @@ class ParticipantJoiningNotification extends Entity implements Parsable
     }
 
     /**
-     * Sets the call property value. The call property
+     * Sets the call property value. 
      * @param Call|null $value Value to set for the call property.
     */
     public function setCall(?Call $value): void {

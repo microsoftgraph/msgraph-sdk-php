@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\IdentityProviders;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityProviders\AvailableProviderTypes\AvailableProviderTypesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityProviders\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\IdentityProviders\MicrosoftGraphAvailableProviderTypes\AvailableProviderTypesRequestBuilder;
 use Microsoft\Graph\Generated\Models\IdentityProvider;
 use Microsoft\Graph\Generated\Models\IdentityProviderCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -30,6 +30,13 @@ class IdentityProvidersRequestBuilder
     }
     
     /**
+     * Provides operations to call the availableProviderTypes method.
+    */
+    public function microsoftGraphAvailableProviderTypes(): AvailableProviderTypesRequestBuilder {
+        return new AvailableProviderTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -44,14 +51,6 @@ class IdentityProvidersRequestBuilder
     */
     private string $urlTemplate;
     
-    /**
-     * Provides operations to call the availableProviderTypes method.
-     * @return AvailableProviderTypesRequestBuilder
-    */
-    public function availableProviderTypes(): AvailableProviderTypesRequestBuilder {
-        return new AvailableProviderTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
     /**
      * Instantiates a new IdentityProvidersRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
@@ -84,7 +83,6 @@ class IdentityProvidersRequestBuilder
 
     /**
      * Add new entity to identityProviders
-     * @param IdentityProvider $body The request body
      * @param IdentityProvidersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -128,7 +126,6 @@ class IdentityProvidersRequestBuilder
 
     /**
      * Add new entity to identityProviders
-     * @param IdentityProvider $body The request body
      * @param IdentityProvidersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

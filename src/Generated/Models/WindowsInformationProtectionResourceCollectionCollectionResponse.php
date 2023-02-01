@@ -36,7 +36,7 @@ class WindowsInformationProtectionResourceCollectionCollectionResponse extends B
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return array<WindowsInformationProtectionResourceCollection>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class WindowsInformationProtectionResourceCollectionCollectionResponse extends B
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param array<WindowsInformationProtectionResourceCollection>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

@@ -92,7 +92,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the defaultRedirectUri property value. The defaultRedirectUri property
+     * Gets the defaultRedirectUri property value. 
      * @return string|null
     */
     public function getDefaultRedirectUri(): ?string {
@@ -176,6 +176,7 @@ class Application extends DirectoryObject implements Parsable
             'passwordCredentials' => fn(ParseNode $n) => $o->setPasswordCredentials($n->getCollectionOfObjectValues([PasswordCredential::class, 'createFromDiscriminatorValue'])),
             'publicClient' => fn(ParseNode $n) => $o->setPublicClient($n->getObjectValue([PublicClientApplication::class, 'createFromDiscriminatorValue'])),
             'publisherDomain' => fn(ParseNode $n) => $o->setPublisherDomain($n->getStringValue()),
+            'requestSignatureVerification' => fn(ParseNode $n) => $o->setRequestSignatureVerification($n->getObjectValue([RequestSignatureVerification::class, 'createFromDiscriminatorValue'])),
             'requiredResourceAccess' => fn(ParseNode $n) => $o->setRequiredResourceAccess($n->getCollectionOfObjectValues([RequiredResourceAccess::class, 'createFromDiscriminatorValue'])),
             'samlMetadataUrl' => fn(ParseNode $n) => $o->setSamlMetadataUrl($n->getStringValue()),
             'serviceManagementReference' => fn(ParseNode $n) => $o->setServiceManagementReference($n->getStringValue()),
@@ -199,7 +200,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the homeRealmDiscoveryPolicies property value. The homeRealmDiscoveryPolicies property
+     * Gets the homeRealmDiscoveryPolicies property value. 
      * @return array<HomeRealmDiscoveryPolicy>|null
     */
     public function getHomeRealmDiscoveryPolicies(): ?array {
@@ -263,7 +264,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the oauth2RequirePostResponse property value. The oauth2RequirePostResponse property
+     * Gets the oauth2RequirePostResponse property value. 
      * @return bool|null
     */
     public function getOauth2RequirePostResponse(): ?bool {
@@ -316,6 +317,14 @@ class Application extends DirectoryObject implements Parsable
     */
     public function getPublisherDomain(): ?string {
         return $this->getBackingStore()->get('publisherDomain');
+    }
+
+    /**
+     * Gets the requestSignatureVerification property value. 
+     * @return RequestSignatureVerification|null
+    */
+    public function getRequestSignatureVerification(): ?RequestSignatureVerification {
+        return $this->getBackingStore()->get('requestSignatureVerification');
     }
 
     /**
@@ -375,7 +384,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the tokenIssuancePolicies property value. The tokenIssuancePolicies property
+     * Gets the tokenIssuancePolicies property value. 
      * @return array<TokenIssuancePolicy>|null
     */
     public function getTokenIssuancePolicies(): ?array {
@@ -383,7 +392,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the tokenLifetimePolicies property value. The tokenLifetimePolicies property
+     * Gets the tokenLifetimePolicies property value. 
      * @return array<TokenLifetimePolicy>|null
     */
     public function getTokenLifetimePolicies(): ?array {
@@ -442,6 +451,7 @@ class Application extends DirectoryObject implements Parsable
         $writer->writeCollectionOfObjectValues('passwordCredentials', $this->getPasswordCredentials());
         $writer->writeObjectValue('publicClient', $this->getPublicClient());
         $writer->writeStringValue('publisherDomain', $this->getPublisherDomain());
+        $writer->writeObjectValue('requestSignatureVerification', $this->getRequestSignatureVerification());
         $writer->writeCollectionOfObjectValues('requiredResourceAccess', $this->getRequiredResourceAccess());
         $writer->writeStringValue('samlMetadataUrl', $this->getSamlMetadataUrl());
         $writer->writeStringValue('serviceManagementReference', $this->getServiceManagementReference());
@@ -520,7 +530,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the defaultRedirectUri property value. The defaultRedirectUri property
+     * Sets the defaultRedirectUri property value. 
      * @param string|null $value Value to set for the defaultRedirectUri property.
     */
     public function setDefaultRedirectUri(?string $value): void {
@@ -576,7 +586,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the homeRealmDiscoveryPolicies property value. The homeRealmDiscoveryPolicies property
+     * Sets the homeRealmDiscoveryPolicies property value. 
      * @param array<HomeRealmDiscoveryPolicy>|null $value Value to set for the homeRealmDiscoveryPolicies property.
     */
     public function setHomeRealmDiscoveryPolicies(?array $value): void {
@@ -640,7 +650,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the oauth2RequirePostResponse property value. The oauth2RequirePostResponse property
+     * Sets the oauth2RequirePostResponse property value. 
      * @param bool|null $value Value to set for the oauth2RequirePostResponse property.
     */
     public function setOauth2RequirePostResponse(?bool $value): void {
@@ -693,6 +703,14 @@ class Application extends DirectoryObject implements Parsable
     */
     public function setPublisherDomain(?string $value): void {
         $this->getBackingStore()->set('publisherDomain', $value);
+    }
+
+    /**
+     * Sets the requestSignatureVerification property value. 
+     * @param RequestSignatureVerification|null $value Value to set for the requestSignatureVerification property.
+    */
+    public function setRequestSignatureVerification(?RequestSignatureVerification $value): void {
+        $this->getBackingStore()->set('requestSignatureVerification', $value);
     }
 
     /**
@@ -752,7 +770,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the tokenIssuancePolicies property value. The tokenIssuancePolicies property
+     * Sets the tokenIssuancePolicies property value. 
      * @param array<TokenIssuancePolicy>|null $value Value to set for the tokenIssuancePolicies property.
     */
     public function setTokenIssuancePolicies(?array $value): void {
@@ -760,7 +778,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the tokenLifetimePolicies property value. The tokenLifetimePolicies property
+     * Sets the tokenLifetimePolicies property value. 
      * @param array<TokenLifetimePolicy>|null $value Value to set for the tokenLifetimePolicies property.
     */
     public function setTokenLifetimePolicies(?array $value): void {

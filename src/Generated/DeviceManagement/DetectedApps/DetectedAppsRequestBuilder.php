@@ -74,7 +74,6 @@ class DetectedAppsRequestBuilder
 
     /**
      * Create new navigation property to detectedApps for deviceManagement
-     * @param DetectedApp $body The request body
      * @param DetectedAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,7 +117,6 @@ class DetectedAppsRequestBuilder
 
     /**
      * Create new navigation property to detectedApps for deviceManagement
-     * @param DetectedApp $body The request body
      * @param DetectedAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

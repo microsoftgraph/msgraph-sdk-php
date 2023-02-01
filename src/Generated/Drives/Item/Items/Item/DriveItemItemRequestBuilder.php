@@ -6,33 +6,34 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Analytics\AnalyticsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Checkin\CheckinRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Checkout\CheckoutRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Children\ChildrenRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Content\ContentRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Copy\CopyRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\CreateLink\CreateLinkRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\CreateUploadSession\CreateUploadSessionRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Delta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\DeltaWithToken\DeltaWithTokenRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Follow\FollowRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Invite\InviteRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\ListItem\ListItemRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\MicrosoftGraphCheckin\CheckinRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\MicrosoftGraphCheckout\CheckoutRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\MicrosoftGraphCopy\CopyRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\MicrosoftGraphCreateLink\CreateLinkRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\MicrosoftGraphCreateUploadSession\CreateUploadSessionRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\MicrosoftGraphDelta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\MicrosoftGraphDeltaWithToken\DeltaWithTokenRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\MicrosoftGraphFollow\FollowRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\MicrosoftGraphGetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\MicrosoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\MicrosoftGraphInvite\InviteRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\MicrosoftGraphPreview\PreviewRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\MicrosoftGraphRestore\RestoreRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\MicrosoftGraphSearchWithQ\SearchWithQRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\MicrosoftGraphUnfollow\UnfollowRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\MicrosoftGraphValidatePermission\ValidatePermissionRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Permissions\Item\PermissionItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Permissions\PermissionsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Preview\PreviewRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Restore\RestoreRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\SearchWithQ\SearchWithQRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Subscriptions\Item\SubscriptionItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Subscriptions\SubscriptionsRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Thumbnails\Item\ThumbnailSetItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Thumbnails\ThumbnailsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Unfollow\UnfollowRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\ValidatePermission\ValidatePermissionRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Versions\Item\DriveItemVersionItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Versions\VersionsRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\WorkbookRequestBuilder;
 use Microsoft\Graph\Generated\Models\DriveItem;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -55,20 +56,6 @@ class DriveItemItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the checkin method.
-    */
-    public function checkin(): CheckinRequestBuilder {
-        return new CheckinRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the checkout method.
-    */
-    public function checkout(): CheckoutRequestBuilder {
-        return new CheckoutRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to manage the children property of the microsoft.graph.driveItem entity.
     */
     public function children(): ChildrenRequestBuilder {
@@ -83,45 +70,101 @@ class DriveItemItemRequestBuilder
     }
     
     /**
+     * Provides operations to manage the listItem property of the microsoft.graph.driveItem entity.
+    */
+    public function listItem(): ListItemRequestBuilder {
+        return new ListItemRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the checkin method.
+    */
+    public function microsoftGraphCheckin(): CheckinRequestBuilder {
+        return new CheckinRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the checkout method.
+    */
+    public function microsoftGraphCheckout(): CheckoutRequestBuilder {
+        return new CheckoutRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to call the copy method.
     */
-    public function copy(): CopyRequestBuilder {
+    public function microsoftGraphCopy(): CopyRequestBuilder {
         return new CopyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the createLink method.
     */
-    public function createLink(): CreateLinkRequestBuilder {
+    public function microsoftGraphCreateLink(): CreateLinkRequestBuilder {
         return new CreateLinkRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the createUploadSession method.
     */
-    public function createUploadSession(): CreateUploadSessionRequestBuilder {
+    public function microsoftGraphCreateUploadSession(): CreateUploadSessionRequestBuilder {
         return new CreateUploadSessionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the delta method.
+    */
+    public function microsoftGraphDelta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the follow method.
     */
-    public function follow(): FollowRequestBuilder {
+    public function microsoftGraphFollow(): FollowRequestBuilder {
         return new FollowRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getActivitiesByInterval method.
+    */
+    public function microsoftGraphGetActivitiesByInterval(): GetActivitiesByIntervalRequestBuilder {
+        return new GetActivitiesByIntervalRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the invite method.
     */
-    public function invite(): InviteRequestBuilder {
+    public function microsoftGraphInvite(): InviteRequestBuilder {
         return new InviteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * Provides operations to manage the listItem property of the microsoft.graph.driveItem entity.
+     * Provides operations to call the preview method.
     */
-    public function listItem(): ListItemRequestBuilder {
-        return new ListItemRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphPreview(): PreviewRequestBuilder {
+        return new PreviewRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the restore method.
+    */
+    public function microsoftGraphRestore(): RestoreRequestBuilder {
+        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the unfollow method.
+    */
+    public function microsoftGraphUnfollow(): UnfollowRequestBuilder {
+        return new UnfollowRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the validatePermission method.
+    */
+    public function microsoftGraphValidatePermission(): ValidatePermissionRequestBuilder {
+        return new ValidatePermissionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -137,23 +180,9 @@ class DriveItemItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the preview method.
-    */
-    public function preview(): PreviewRequestBuilder {
-        return new PreviewRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
-    
-    /**
-     * Provides operations to call the restore method.
-    */
-    public function restore(): RestoreRequestBuilder {
-        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * Provides operations to manage the subscriptions property of the microsoft.graph.driveItem entity.
@@ -170,29 +199,22 @@ class DriveItemItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the unfollow method.
-    */
-    public function unfollow(): UnfollowRequestBuilder {
-        return new UnfollowRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
-    
-    /**
-     * Provides operations to call the validatePermission method.
-    */
-    public function validatePermission(): ValidatePermissionRequestBuilder {
-        return new ValidatePermissionRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * Provides operations to manage the versions property of the microsoft.graph.driveItem entity.
     */
     public function versions(): VersionsRequestBuilder {
         return new VersionsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the workbook property of the microsoft.graph.driveItem entity.
+    */
+    public function workbook(): WorkbookRequestBuilder {
+        return new WorkbookRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -210,11 +232,15 @@ class DriveItemItemRequestBuilder
      * Instantiates a new DriveItemItemRequestBuilder and sets the default values.
      * @param array<string, mixed> $pathParameters Path parameters for the request
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * @param string|null $driveItemId key: id of driveItem
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $driveItemId = null) {
         $this->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         $this->pathParameters = $pathParameters;
+        $urlTplParams = $pathParameters;
+        $urlTplParams['driveItemId'] = $driveItemId;
+        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
     }
 
     /**
@@ -236,23 +262,6 @@ class DriveItemItemRequestBuilder
     }
 
     /**
-     * Provides operations to call the delta method.
-     * @return DeltaRequestBuilder
-    */
-    public function delta(): DeltaRequestBuilder {
-        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to call the delta method.
-     * @param string $token Usage: token='{token}'
-     * @return DeltaWithTokenRequestBuilder
-    */
-    public function deltaWithToken(string $token): DeltaWithTokenRequestBuilder {
-        return new DeltaWithTokenRequestBuilder($this->pathParameters, $this->requestAdapter, $token);
-    }
-
-    /**
      * All items contained in the drive. Read-only. Nullable.
      * @param DriveItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -271,11 +280,12 @@ class DriveItemItemRequestBuilder
     }
 
     /**
-     * Provides operations to call the getActivitiesByInterval method.
-     * @return GetActivitiesByIntervalRequestBuilder
+     * Provides operations to call the delta method.
+     * @param string $token Usage: token='{token}'
+     * @return DeltaWithTokenRequestBuilder
     */
-    public function getActivitiesByInterval(): GetActivitiesByIntervalRequestBuilder {
-        return new GetActivitiesByIntervalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDeltaWithToken(string $token): DeltaWithTokenRequestBuilder {
+        return new DeltaWithTokenRequestBuilder($this->pathParameters, $this->requestAdapter, $token);
     }
 
     /**
@@ -285,13 +295,21 @@ class DriveItemItemRequestBuilder
      * @param string $startDateTime Usage: startDateTime='{startDateTime}'
      * @return GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
     */
-    public function getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(string $endDateTime, string $interval, string $startDateTime): GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder {
+    public function microsoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(string $endDateTime, string $interval, string $startDateTime): GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder {
         return new GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder($this->pathParameters, $this->requestAdapter, $endDateTime, $interval, $startDateTime);
     }
 
     /**
+     * Provides operations to call the search method.
+     * @param string $q Usage: q='{q}'
+     * @return SearchWithQRequestBuilder
+    */
+    public function microsoftGraphSearchWithQ(string $q): SearchWithQRequestBuilder {
+        return new SearchWithQRequestBuilder($this->pathParameters, $this->requestAdapter, $q);
+    }
+
+    /**
      * Update the navigation property items in drives
-     * @param DriveItem $body The request body
      * @param DriveItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -317,15 +335,6 @@ class DriveItemItemRequestBuilder
         $urlTplParams = $this->pathParameters;
         $urlTplParams['permission%2Did'] = $id;
         return new PermissionItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to call the search method.
-     * @param string $q Usage: q='{q}'
-     * @return SearchWithQRequestBuilder
-    */
-    public function searchWithQ(string $q): SearchWithQRequestBuilder {
-        return new SearchWithQRequestBuilder($this->pathParameters, $this->requestAdapter, $q);
     }
 
     /**
@@ -398,7 +407,6 @@ class DriveItemItemRequestBuilder
 
     /**
      * Update the navigation property items in drives
-     * @param DriveItem $body The request body
      * @param DriveItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

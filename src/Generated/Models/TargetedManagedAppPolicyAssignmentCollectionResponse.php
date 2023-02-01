@@ -36,7 +36,7 @@ class TargetedManagedAppPolicyAssignmentCollectionResponse extends BaseCollectio
     }
 
     /**
-     * Gets the value property value. The value property
+     * Gets the value property value. 
      * @return array<TargetedManagedAppPolicyAssignment>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class TargetedManagedAppPolicyAssignmentCollectionResponse extends BaseCollectio
     }
 
     /**
-     * Sets the value property value. The value property
+     * Sets the value property value. 
      * @param array<TargetedManagedAppPolicyAssignment>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

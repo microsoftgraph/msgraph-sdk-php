@@ -53,7 +53,7 @@ class WindowsAutopilotDeviceIdentity extends Entity implements Parsable
     }
 
     /**
-     * Gets the enrollmentState property value. The enrollmentState property
+     * Gets the enrollmentState property value. 
      * @return EnrollmentState|null
     */
     public function getEnrollmentState(): ?EnrollmentState {
@@ -231,7 +231,7 @@ class WindowsAutopilotDeviceIdentity extends Entity implements Parsable
     }
 
     /**
-     * Sets the enrollmentState property value. The enrollmentState property
+     * Sets the enrollmentState property value. 
      * @param EnrollmentState|null $value Value to set for the enrollmentState property.
     */
     public function setEnrollmentState(?EnrollmentState $value): void {

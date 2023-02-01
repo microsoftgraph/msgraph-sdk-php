@@ -44,7 +44,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the appId property value. The appId property
+     * Gets the appId property value. 
      * @return string|null
     */
     public function getAppId(): ?string {
@@ -52,7 +52,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the assignedTo property value. The assignedTo property
+     * Gets the assignedTo property value. 
      * @return string|null
     */
     public function getAssignedTo(): ?string {
@@ -68,7 +68,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the comments property value. The comments property
+     * Gets the comments property value. 
      * @return array<string>|null
     */
     public function getComments(): ?array {
@@ -76,7 +76,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the feedback property value. The feedback property
+     * Gets the feedback property value. 
      * @return AlertFeedback|null
     */
     public function getFeedback(): ?AlertFeedback {
@@ -102,7 +102,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -110,7 +110,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. 
      * @return AlertStatus|null
     */
     public function getStatus(): ?AlertStatus {
@@ -118,7 +118,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the updatedDateTime property value. The updatedDateTime property
+     * Gets the updatedDateTime property value. 
      * @return DateTime|null
     */
     public function getUpdatedDateTime(): ?DateTime {
@@ -126,7 +126,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the user property value. The user property
+     * Gets the user property value. 
      * @return string|null
     */
     public function getUser(): ?string {
@@ -158,7 +158,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the appId property value. The appId property
+     * Sets the appId property value. 
      * @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value): void {
@@ -166,7 +166,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the assignedTo property value. The assignedTo property
+     * Sets the assignedTo property value. 
      * @param string|null $value Value to set for the assignedTo property.
     */
     public function setAssignedTo(?string $value): void {
@@ -182,7 +182,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the comments property value. The comments property
+     * Sets the comments property value. 
      * @param array<string>|null $value Value to set for the comments property.
     */
     public function setComments(?array $value): void {
@@ -190,7 +190,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the feedback property value. The feedback property
+     * Sets the feedback property value. 
      * @param AlertFeedback|null $value Value to set for the feedback property.
     */
     public function setFeedback(?AlertFeedback $value): void {
@@ -198,7 +198,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -206,7 +206,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. 
      * @param AlertStatus|null $value Value to set for the status property.
     */
     public function setStatus(?AlertStatus $value): void {
@@ -214,7 +214,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the updatedDateTime property value. The updatedDateTime property
+     * Sets the updatedDateTime property value. 
      * @param DateTime|null $value Value to set for the updatedDateTime property.
     */
     public function setUpdatedDateTime(?DateTime $value): void {
@@ -222,7 +222,7 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the user property value. The user property
+     * Sets the user property value. 
      * @param string|null $value Value to set for the user property.
     */
     public function setUser(?string $value): void {

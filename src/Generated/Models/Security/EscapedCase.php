@@ -35,7 +35,7 @@ class EscapedCase extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. 
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -43,7 +43,7 @@ class EscapedCase extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. 
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -51,7 +51,7 @@ class EscapedCase extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. 
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -75,7 +75,7 @@ class EscapedCase extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedBy property value. The lastModifiedBy property
+     * Gets the lastModifiedBy property value. 
      * @return IdentitySet|null
     */
     public function getLastModifiedBy(): ?IdentitySet {
@@ -83,7 +83,7 @@ class EscapedCase extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. 
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -91,7 +91,7 @@ class EscapedCase extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. 
      * @return CaseStatus|null
     */
     public function getStatus(): ?CaseStatus {
@@ -113,7 +113,7 @@ class EscapedCase extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. 
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -121,7 +121,7 @@ class EscapedCase extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. 
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -129,7 +129,7 @@ class EscapedCase extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. 
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -137,7 +137,7 @@ class EscapedCase extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedBy property value. The lastModifiedBy property
+     * Sets the lastModifiedBy property value. 
      * @param IdentitySet|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?IdentitySet $value): void {
@@ -145,7 +145,7 @@ class EscapedCase extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. 
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
@@ -153,7 +153,7 @@ class EscapedCase extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. 
      * @param CaseStatus|null $value Value to set for the status property.
     */
     public function setStatus(?CaseStatus $value): void {

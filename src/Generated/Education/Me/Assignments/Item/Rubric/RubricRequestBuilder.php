@@ -92,7 +92,6 @@ class RubricRequestBuilder
 
     /**
      * Update the navigation property rubric in education
-     * @param EducationRubric $body The request body
      * @param RubricRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -157,7 +156,6 @@ class RubricRequestBuilder
 
     /**
      * Update the navigation property rubric in education
-     * @param EducationRubric $body The request body
      * @param RubricRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

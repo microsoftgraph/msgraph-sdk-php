@@ -84,7 +84,6 @@ class AdminConsentRequestPolicyRequestBuilder
 
     /**
      * Update the properties of an adminConsentRequestPolicy object.
-     * @param AdminConsentRequestPolicy $body The request body
      * @param AdminConsentRequestPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/adminconsentrequestpolicy-update?view=graph-rest-1.0 Find more info here
@@ -150,7 +149,6 @@ class AdminConsentRequestPolicyRequestBuilder
 
     /**
      * Update the properties of an adminConsentRequestPolicy object.
-     * @param AdminConsentRequestPolicy $body The request body
      * @param AdminConsentRequestPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

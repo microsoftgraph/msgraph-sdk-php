@@ -73,7 +73,7 @@ class WorkbookOperationError implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the innerError property value. The innerError property
+     * Gets the innerError property value. 
      * @return WorkbookOperationError|null
     */
     public function getInnerError(): ?WorkbookOperationError {
@@ -89,7 +89,7 @@ class WorkbookOperationError implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the @odata.type property value. The OdataType property
+     * Gets the @odata.type property value. 
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -133,7 +133,7 @@ class WorkbookOperationError implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the innerError property value. The innerError property
+     * Sets the innerError property value. 
      * @param WorkbookOperationError|null $value Value to set for the innerError property.
     */
     public function setInnerError(?WorkbookOperationError $value): void {
@@ -149,7 +149,7 @@ class WorkbookOperationError implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the @odata.type property value. The OdataType property
+     * Sets the @odata.type property value. 
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
