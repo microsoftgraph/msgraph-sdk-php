@@ -38,15 +38,15 @@ The following sample creates an authentication provider that [gets access withou
 ```php
 
 use Microsoft\Kiota\Authentication\Oauth\ClientCredentialContext;
-use Microsoft\Kiota\Authentication\PhpLeagueAuthenticationProvider;
+use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAuthenticationProvider;
 
 $tokenRequestContext = new ClientCredentialContext(
     'tenantId',
     'clientId',
     'clientSecret'
 );
-$scopes = ['https://graph.microsoft.com/.default'];
-$authProvider = new PhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
+// uses https://graph.microsoft.com/.default scopes
+$authProvider = new GraphPhpLeagueAuthenticationProvider($tokenRequestContext);
 
 ```
 
@@ -54,7 +54,7 @@ To create an authentication provider that [gets access on behalf of a user](http
 ```php
 
 use Microsoft\Kiota\Authentication\Oauth\AuthorizationCodeContext;
-use Microsoft\Kiota\Authentication\PhpLeagueAuthenticationProvider;
+use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAuthenticationProvider;
 
 $tokenRequestContext = new AuthorizationCodeContext(
     'tenantId',
@@ -64,7 +64,7 @@ $tokenRequestContext = new AuthorizationCodeContext(
     'redirectUri'
 );
 $scopes = ['User.Read', 'Mail.Read'];
-$authProvider = new PhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
+$authProvider = new GraphPhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
 
 ```
 Note that your application will need to handle redirecting the user to the Microsoft Identity login page to get the `authorization_code` that's passed into the `AuthorizationCodeContext`.
@@ -110,7 +110,7 @@ The following is an example that shows how to fetch a user from Microsoft Graph
 use Microsoft\Graph\GraphRequestAdapter;
 use Microsoft\Graph\GraphServiceClient;
 use Microsoft\Kiota\Abstractions\ApiException;
-use Microsoft\Kiota\Authentication\PhpLeagueAuthenticationProvider;
+use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAuthenticationProvider;
 use Microsoft\Kiota\Authentication\Oauth\ClientCredentialContext;
 
 $tokenRequestContext = new ClientCredentialContext(
@@ -119,7 +119,7 @@ $tokenRequestContext = new ClientCredentialContext(
     'clientSecret'
 );
 $scopes = ['https://graph.microsoft.com/.default'];
-$authProvider = new PhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
+$authProvider = new GraphPhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
 $requestAdapter = new GraphRequestAdapter($authProvider);
 $graphServiceClient = new GraphServiceClient($requestAdapter);
 
@@ -141,7 +141,7 @@ use Microsoft\Graph\GraphRequestAdapter;
 use Microsoft\Graph\GraphServiceClient;
 use Microsoft\Kiota\Abstractions\ApiException;
 use Microsoft\Kiota\Authentication\Oauth\AuthorizationCodeContext;
-use Microsoft\Kiota\Authentication\PhpLeagueAuthenticationProvider;
+use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAuthenticationProvider;
 
 $tokenRequestContext = new AuthorizationCodeContext(
     'tenantId',
@@ -151,7 +151,7 @@ $tokenRequestContext = new AuthorizationCodeContext(
     'redirectUri'
 );
 $scopes = ['User.Read'];
-$authProvider = new PhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
+$authProvider = new GraphPhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
 $requestAdapter = new GraphRequestAdapter($authProvider);
 $graphServiceClient = new GraphServiceClient($requestAdapter);
 
