@@ -104,6 +104,7 @@ class FileRequestBuilder
 
     /**
      * Update the navigation property file in agreements
+     * @param AgreementFile $body The request body
      * @param FileRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -168,6 +169,7 @@ class FileRequestBuilder
 
     /**
      * Update the navigation property file in agreements
+     * @param AgreementFile $body The request body
      * @param FileRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

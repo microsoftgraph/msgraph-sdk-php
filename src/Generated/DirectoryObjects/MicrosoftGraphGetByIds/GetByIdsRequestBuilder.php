@@ -46,6 +46,7 @@ class GetByIdsRequestBuilder
 
     /**
      * Return the directory objects specified in a list of IDs. Some common uses for this function are to:
+     * @param GetByIdsPostRequestBody $body The request body
      * @param GetByIdsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/directoryobject-getbyids?view=graph-rest-1.0 Find more info here
@@ -65,6 +66,7 @@ class GetByIdsRequestBuilder
 
     /**
      * Return the directory objects specified in a list of IDs. Some common uses for this function are to:
+     * @param GetByIdsPostRequestBody $body The request body
      * @param GetByIdsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

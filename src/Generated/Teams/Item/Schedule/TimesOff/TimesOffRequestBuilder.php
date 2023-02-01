@@ -75,6 +75,7 @@ class TimesOffRequestBuilder
 
     /**
      * Create a new timeOff instance in a schedule.
+     * @param TimeOff $body The request body
      * @param TimesOffRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/schedule-post-timesoff?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class TimesOffRequestBuilder
 
     /**
      * Create a new timeOff instance in a schedule.
+     * @param TimeOff $body The request body
      * @param TimesOffRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

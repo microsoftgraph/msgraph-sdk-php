@@ -87,6 +87,7 @@ class InferenceClassificationOverrideItemRequestBuilder
 
     /**
      * Update the navigation property overrides in users
+     * @param InferenceClassificationOverride $body The request body
      * @param InferenceClassificationOverrideItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class InferenceClassificationOverrideItemRequestBuilder
 
     /**
      * Update the navigation property overrides in users
+     * @param InferenceClassificationOverride $body The request body
      * @param InferenceClassificationOverrideItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

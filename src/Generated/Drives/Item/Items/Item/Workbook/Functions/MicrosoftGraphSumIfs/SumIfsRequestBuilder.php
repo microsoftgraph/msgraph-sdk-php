@@ -47,6 +47,7 @@ class SumIfsRequestBuilder
 
     /**
      * Invoke action sumIfs
+     * @param SumIfsPostRequestBody $body The request body
      * @param SumIfsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class SumIfsRequestBuilder
 
     /**
      * Invoke action sumIfs
+     * @param SumIfsPostRequestBody $body The request body
      * @param SumIfsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

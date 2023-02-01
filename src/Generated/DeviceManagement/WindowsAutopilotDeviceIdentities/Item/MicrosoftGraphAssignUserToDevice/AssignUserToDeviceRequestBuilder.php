@@ -46,6 +46,7 @@ class AssignUserToDeviceRequestBuilder
 
     /**
      * Assigns user to Autopilot devices.
+     * @param AssignUserToDevicePostRequestBody $body The request body
      * @param AssignUserToDeviceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -64,6 +65,7 @@ class AssignUserToDeviceRequestBuilder
 
     /**
      * Assigns user to Autopilot devices.
+     * @param AssignUserToDevicePostRequestBody $body The request body
      * @param AssignUserToDeviceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

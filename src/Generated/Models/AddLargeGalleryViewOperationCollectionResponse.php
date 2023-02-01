@@ -36,7 +36,7 @@ class AddLargeGalleryViewOperationCollectionResponse extends BaseCollectionPagin
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<AddLargeGalleryViewOperation>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class AddLargeGalleryViewOperationCollectionResponse extends BaseCollectionPagin
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param array<AddLargeGalleryViewOperation>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

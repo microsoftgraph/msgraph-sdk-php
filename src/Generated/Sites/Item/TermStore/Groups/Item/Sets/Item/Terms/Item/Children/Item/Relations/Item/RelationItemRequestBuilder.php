@@ -111,6 +111,7 @@ class RelationItemRequestBuilder
 
     /**
      * Update the navigation property relations in sites
+     * @param Relation $body The request body
      * @param RelationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -175,6 +176,7 @@ class RelationItemRequestBuilder
 
     /**
      * Update the navigation property relations in sites
+     * @param Relation $body The request body
      * @param RelationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

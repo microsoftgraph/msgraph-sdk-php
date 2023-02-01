@@ -68,7 +68,7 @@ class DeviceConfigurationState extends Entity implements Parsable
     }
 
     /**
-     * Gets the settingStates property value. 
+     * Gets the settingStates property value. The settingStates property
      * @return array<DeviceConfigurationSettingState>|null
     */
     public function getSettingStates(): ?array {
@@ -76,7 +76,7 @@ class DeviceConfigurationState extends Entity implements Parsable
     }
 
     /**
-     * Gets the state property value. 
+     * Gets the state property value. The state property
      * @return ComplianceStatus|null
     */
     public function getState(): ?ComplianceStatus {
@@ -130,7 +130,7 @@ class DeviceConfigurationState extends Entity implements Parsable
     }
 
     /**
-     * Sets the settingStates property value. 
+     * Sets the settingStates property value. The settingStates property
      * @param array<DeviceConfigurationSettingState>|null $value Value to set for the settingStates property.
     */
     public function setSettingStates(?array $value): void {
@@ -138,7 +138,7 @@ class DeviceConfigurationState extends Entity implements Parsable
     }
 
     /**
-     * Sets the state property value. 
+     * Sets the state property value. The state property
      * @param ComplianceStatus|null $value Value to set for the state property.
     */
     public function setState(?ComplianceStatus $value): void {

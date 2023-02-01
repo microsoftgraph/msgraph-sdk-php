@@ -52,7 +52,7 @@ class CopyToDefaultContentLocationPostRequestBody implements AdditionalDataHolde
     }
 
     /**
-     * Gets the destinationFileName property value. 
+     * Gets the destinationFileName property value. The destinationFileName property
      * @return string|null
     */
     public function getDestinationFileName(): ?string {
@@ -72,7 +72,7 @@ class CopyToDefaultContentLocationPostRequestBody implements AdditionalDataHolde
     }
 
     /**
-     * Gets the sourceFile property value. 
+     * Gets the sourceFile property value. The sourceFile property
      * @return ItemReference|null
     */
     public function getSourceFile(): ?ItemReference {
@@ -106,7 +106,7 @@ class CopyToDefaultContentLocationPostRequestBody implements AdditionalDataHolde
     }
 
     /**
-     * Sets the destinationFileName property value. 
+     * Sets the destinationFileName property value. The destinationFileName property
      * @param string|null $value Value to set for the destinationFileName property.
     */
     public function setDestinationFileName(?string $value): void {
@@ -114,7 +114,7 @@ class CopyToDefaultContentLocationPostRequestBody implements AdditionalDataHolde
     }
 
     /**
-     * Sets the sourceFile property value. 
+     * Sets the sourceFile property value. The sourceFile property
      * @param ItemReference|null $value Value to set for the sourceFile property.
     */
     public function setSourceFile(?ItemReference $value): void {

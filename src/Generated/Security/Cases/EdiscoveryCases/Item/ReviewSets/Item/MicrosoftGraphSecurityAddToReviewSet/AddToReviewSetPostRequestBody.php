@@ -45,7 +45,7 @@ class AddToReviewSetPostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the additionalDataOptions property value. 
+     * Gets the additionalDataOptions property value. The additionalDataOptions property
      * @return AdditionalDataOptions|null
     */
     public function getAdditionalDataOptions(): ?AdditionalDataOptions {
@@ -73,7 +73,7 @@ class AddToReviewSetPostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the search property value. 
+     * Gets the search property value. The search property
      * @return EdiscoverySearch|null
     */
     public function getSearch(): ?EdiscoverySearch {
@@ -99,7 +99,7 @@ class AddToReviewSetPostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the additionalDataOptions property value. 
+     * Sets the additionalDataOptions property value. The additionalDataOptions property
      * @param AdditionalDataOptions|null $value Value to set for the additionalDataOptions property.
     */
     public function setAdditionalDataOptions(?AdditionalDataOptions $value): void {
@@ -115,7 +115,7 @@ class AddToReviewSetPostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the search property value. 
+     * Sets the search property value. The search property
      * @param EdiscoverySearch|null $value Value to set for the search property.
     */
     public function setSearch(?EdiscoverySearch $value): void {

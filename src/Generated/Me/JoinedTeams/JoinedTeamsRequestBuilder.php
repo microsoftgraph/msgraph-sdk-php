@@ -83,6 +83,7 @@ class JoinedTeamsRequestBuilder
 
     /**
      * Create new navigation property to joinedTeams for me
+     * @param Team $body The request body
      * @param JoinedTeamsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -126,6 +127,7 @@ class JoinedTeamsRequestBuilder
 
     /**
      * Create new navigation property to joinedTeams for me
+     * @param Team $body The request body
      * @param JoinedTeamsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

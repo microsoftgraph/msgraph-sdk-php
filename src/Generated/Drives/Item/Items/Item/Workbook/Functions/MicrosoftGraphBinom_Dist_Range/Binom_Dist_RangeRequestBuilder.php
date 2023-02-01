@@ -47,6 +47,7 @@ class Binom_Dist_RangeRequestBuilder
 
     /**
      * Invoke action binom_Dist_Range
+     * @param Binom_Dist_RangePostRequestBody $body The request body
      * @param Binom_Dist_RangeRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Binom_Dist_RangeRequestBuilder
 
     /**
      * Invoke action binom_Dist_Range
+     * @param Binom_Dist_RangePostRequestBody $body The request body
      * @param Binom_Dist_RangeRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

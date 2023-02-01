@@ -82,7 +82,7 @@ class SharingInvitation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -90,7 +90,7 @@ class SharingInvitation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the redeemedBy property value. 
+     * Gets the redeemedBy property value. The redeemedBy property
      * @return string|null
     */
     public function getRedeemedBy(): ?string {
@@ -151,7 +151,7 @@ class SharingInvitation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -159,7 +159,7 @@ class SharingInvitation implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the redeemedBy property value. 
+     * Sets the redeemedBy property value. The redeemedBy property
      * @param string|null $value Value to set for the redeemedBy property.
     */
     public function setRedeemedBy(?string $value): void {

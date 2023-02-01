@@ -51,7 +51,7 @@ class TenantRelationship implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the delegatedAdminCustomers property value. 
+     * Gets the delegatedAdminCustomers property value. The delegatedAdminCustomers property
      * @return array<DelegatedAdminCustomer>|null
     */
     public function getDelegatedAdminCustomers(): ?array {
@@ -59,7 +59,7 @@ class TenantRelationship implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the delegatedAdminRelationships property value. 
+     * Gets the delegatedAdminRelationships property value. The delegatedAdminRelationships property
      * @return array<DelegatedAdminRelationship>|null
     */
     public function getDelegatedAdminRelationships(): ?array {
@@ -80,7 +80,7 @@ class TenantRelationship implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -115,7 +115,7 @@ class TenantRelationship implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the delegatedAdminCustomers property value. 
+     * Sets the delegatedAdminCustomers property value. The delegatedAdminCustomers property
      * @param array<DelegatedAdminCustomer>|null $value Value to set for the delegatedAdminCustomers property.
     */
     public function setDelegatedAdminCustomers(?array $value): void {
@@ -123,7 +123,7 @@ class TenantRelationship implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the delegatedAdminRelationships property value. 
+     * Sets the delegatedAdminRelationships property value. The delegatedAdminRelationships property
      * @param array<DelegatedAdminRelationship>|null $value Value to set for the delegatedAdminRelationships property.
     */
     public function setDelegatedAdminRelationships(?array $value): void {
@@ -131,7 +131,7 @@ class TenantRelationship implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

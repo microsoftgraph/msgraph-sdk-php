@@ -36,7 +36,7 @@ class LocalizedNotificationMessageCollectionResponse extends BaseCollectionPagin
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<LocalizedNotificationMessage>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class LocalizedNotificationMessageCollectionResponse extends BaseCollectionPagin
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param array<LocalizedNotificationMessage>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

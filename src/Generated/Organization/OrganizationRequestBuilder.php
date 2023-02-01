@@ -99,6 +99,7 @@ class OrganizationRequestBuilder
 
     /**
      * Add new entity to organization
+     * @param Organization $body The request body
      * @param OrganizationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -142,6 +143,7 @@ class OrganizationRequestBuilder
 
     /**
      * Add new entity to organization
+     * @param Organization $body The request body
      * @param OrganizationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

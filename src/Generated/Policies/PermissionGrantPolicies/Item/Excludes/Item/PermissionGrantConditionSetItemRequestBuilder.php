@@ -87,6 +87,7 @@ class PermissionGrantConditionSetItemRequestBuilder
 
     /**
      * Update the navigation property excludes in policies
+     * @param PermissionGrantConditionSet $body The request body
      * @param PermissionGrantConditionSetItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class PermissionGrantConditionSetItemRequestBuilder
 
     /**
      * Update the navigation property excludes in policies
+     * @param PermissionGrantConditionSet $body The request body
      * @param PermissionGrantConditionSetItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

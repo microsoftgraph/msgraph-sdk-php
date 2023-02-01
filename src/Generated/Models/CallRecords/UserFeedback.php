@@ -65,7 +65,7 @@ class UserFeedback implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -73,7 +73,7 @@ class UserFeedback implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the rating property value. 
+     * Gets the rating property value. The rating property
      * @return UserFeedbackRating|null
     */
     public function getRating(): ?UserFeedbackRating {
@@ -125,7 +125,7 @@ class UserFeedback implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -133,7 +133,7 @@ class UserFeedback implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the rating property value. 
+     * Sets the rating property value. The rating property
      * @param UserFeedbackRating|null $value Value to set for the rating property.
     */
     public function setRating(?UserFeedbackRating $value): void {

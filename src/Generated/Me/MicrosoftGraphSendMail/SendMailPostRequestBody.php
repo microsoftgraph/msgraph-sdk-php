@@ -64,7 +64,7 @@ class SendMailPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the message property value. 
+     * Gets the message property value. The Message property
      * @return Message|null
     */
     public function getMessage(): ?Message {
@@ -72,7 +72,7 @@ class SendMailPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the saveToSentItems property value. 
+     * Gets the saveToSentItems property value. The SaveToSentItems property
      * @return bool|null
     */
     public function getSaveToSentItems(): ?bool {
@@ -106,7 +106,7 @@ class SendMailPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the message property value. 
+     * Sets the message property value. The Message property
      * @param Message|null $value Value to set for the Message property.
     */
     public function setMessage(?Message $value): void {
@@ -114,7 +114,7 @@ class SendMailPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the saveToSentItems property value. 
+     * Sets the saveToSentItems property value. The SaveToSentItems property
      * @param bool|null $value Value to set for the SaveToSentItems property.
     */
     public function setSaveToSentItems(?bool $value): void {

@@ -65,7 +65,7 @@ class MidPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the numChars property value. 
+     * Gets the numChars property value. The numChars property
      * @return Json|null
     */
     public function getNumChars(): ?Json {
@@ -73,7 +73,7 @@ class MidPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the startNum property value. 
+     * Gets the startNum property value. The startNum property
      * @return Json|null
     */
     public function getStartNum(): ?Json {
@@ -81,7 +81,7 @@ class MidPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the text property value. 
+     * Gets the text property value. The text property
      * @return Json|null
     */
     public function getText(): ?Json {
@@ -116,7 +116,7 @@ class MidPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the numChars property value. 
+     * Sets the numChars property value. The numChars property
      * @param Json|null $value Value to set for the numChars property.
     */
     public function setNumChars(?Json $value): void {
@@ -124,7 +124,7 @@ class MidPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the startNum property value. 
+     * Sets the startNum property value. The startNum property
      * @param Json|null $value Value to set for the startNum property.
     */
     public function setStartNum(?Json $value): void {
@@ -132,7 +132,7 @@ class MidPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the text property value. 
+     * Sets the text property value. The text property
      * @param Json|null $value Value to set for the text property.
     */
     public function setText(?Json $value): void {

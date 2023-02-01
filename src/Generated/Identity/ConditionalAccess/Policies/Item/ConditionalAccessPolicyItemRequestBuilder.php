@@ -87,6 +87,7 @@ class ConditionalAccessPolicyItemRequestBuilder
 
     /**
      * Update the navigation property policies in identity
+     * @param ConditionalAccessPolicy $body The request body
      * @param ConditionalAccessPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class ConditionalAccessPolicyItemRequestBuilder
 
     /**
      * Update the navigation property policies in identity
+     * @param ConditionalAccessPolicy $body The request body
      * @param ConditionalAccessPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

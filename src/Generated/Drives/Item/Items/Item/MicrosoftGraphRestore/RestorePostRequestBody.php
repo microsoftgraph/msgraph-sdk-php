@@ -64,7 +64,7 @@ class RestorePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the name property value. 
+     * Gets the name property value. The name property
      * @return string|null
     */
     public function getName(): ?string {
@@ -72,7 +72,7 @@ class RestorePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the parentReference property value. 
+     * Gets the parentReference property value. The parentReference property
      * @return ItemReference|null
     */
     public function getParentReference(): ?ItemReference {
@@ -106,7 +106,7 @@ class RestorePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the name property value. 
+     * Sets the name property value. The name property
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -114,7 +114,7 @@ class RestorePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the parentReference property value. 
+     * Sets the parentReference property value. The parentReference property
      * @param ItemReference|null $value Value to set for the parentReference property.
     */
     public function setParentReference(?ItemReference $value): void {

@@ -63,7 +63,7 @@ class TimevaluePostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the timeText property value. 
+     * Gets the timeText property value. The timeText property
      * @return Json|null
     */
     public function getTimeText(): ?Json {
@@ -96,7 +96,7 @@ class TimevaluePostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the timeText property value. 
+     * Sets the timeText property value. The timeText property
      * @param Json|null $value Value to set for the timeText property.
     */
     public function setTimeText(?Json $value): void {

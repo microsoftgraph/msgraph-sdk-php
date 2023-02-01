@@ -84,6 +84,7 @@ class DetailsRequestBuilder
 
     /**
      * Update the properties of **plannerplandetails** object.
+     * @param PlannerPlanDetails $body The request body
      * @param DetailsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/plannerplandetails-update?view=graph-rest-1.0 Find more info here
@@ -149,6 +150,7 @@ class DetailsRequestBuilder
 
     /**
      * Update the properties of **plannerplandetails** object.
+     * @param PlannerPlanDetails $body The request body
      * @param DetailsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

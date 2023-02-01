@@ -51,7 +51,7 @@ class AcceptPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the comment property value. 
+     * Gets the comment property value. The Comment property
      * @return string|null
     */
     public function getComment(): ?string {
@@ -71,7 +71,7 @@ class AcceptPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the sendResponse property value. 
+     * Gets the sendResponse property value. The SendResponse property
      * @return bool|null
     */
     public function getSendResponse(): ?bool {
@@ -105,7 +105,7 @@ class AcceptPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the comment property value. 
+     * Sets the comment property value. The Comment property
      * @param string|null $value Value to set for the Comment property.
     */
     public function setComment(?string $value): void {
@@ -113,7 +113,7 @@ class AcceptPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the sendResponse property value. 
+     * Sets the sendResponse property value. The SendResponse property
      * @param bool|null $value Value to set for the SendResponse property.
     */
     public function setSendResponse(?bool $value): void {

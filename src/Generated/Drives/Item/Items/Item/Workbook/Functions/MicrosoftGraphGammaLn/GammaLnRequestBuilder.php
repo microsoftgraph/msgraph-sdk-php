@@ -47,6 +47,7 @@ class GammaLnRequestBuilder
 
     /**
      * Invoke action gammaLn
+     * @param GammaLnPostRequestBody $body The request body
      * @param GammaLnRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class GammaLnRequestBuilder
 
     /**
      * Invoke action gammaLn
+     * @param GammaLnPostRequestBody $body The request body
      * @param GammaLnRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

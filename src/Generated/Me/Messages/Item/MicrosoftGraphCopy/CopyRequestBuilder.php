@@ -47,6 +47,7 @@ class CopyRequestBuilder
 
     /**
      * Copy a message to a folder within the user's mailbox.
+     * @param CopyPostRequestBody $body The request body
      * @param CopyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/message-copy?view=graph-rest-1.0 Find more info here
@@ -66,6 +67,7 @@ class CopyRequestBuilder
 
     /**
      * Copy a message to a folder within the user's mailbox.
+     * @param CopyPostRequestBody $body The request body
      * @param CopyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

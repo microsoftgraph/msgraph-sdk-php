@@ -87,6 +87,7 @@ class SimulationAutomationRunItemRequestBuilder
 
     /**
      * Update the navigation property runs in security
+     * @param SimulationAutomationRun $body The request body
      * @param SimulationAutomationRunItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class SimulationAutomationRunItemRequestBuilder
 
     /**
      * Update the navigation property runs in security
+     * @param SimulationAutomationRun $body The request body
      * @param SimulationAutomationRunItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

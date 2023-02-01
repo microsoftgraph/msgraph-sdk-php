@@ -47,6 +47,7 @@ class RandBetweenRequestBuilder
 
     /**
      * Invoke action randBetween
+     * @param RandBetweenPostRequestBody $body The request body
      * @param RandBetweenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class RandBetweenRequestBuilder
 
     /**
      * Invoke action randBetween
+     * @param RandBetweenPostRequestBody $body The request body
      * @param RandBetweenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -62,7 +62,7 @@ class SetPriorityPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the priority property value. 
+     * Gets the priority property value. The priority property
      * @return int|null
     */
     public function getPriority(): ?int {
@@ -95,7 +95,7 @@ class SetPriorityPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the priority property value. 
+     * Sets the priority property value. The priority property
      * @param int|null $value Value to set for the priority property.
     */
     public function setPriority(?int $value): void {

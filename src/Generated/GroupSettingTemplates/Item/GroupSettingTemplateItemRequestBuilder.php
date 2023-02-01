@@ -128,6 +128,7 @@ class GroupSettingTemplateItemRequestBuilder
 
     /**
      * Update entity in groupSettingTemplates
+     * @param GroupSettingTemplate $body The request body
      * @param GroupSettingTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -192,6 +193,7 @@ class GroupSettingTemplateItemRequestBuilder
 
     /**
      * Update entity in groupSettingTemplates
+     * @param GroupSettingTemplate $body The request body
      * @param GroupSettingTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

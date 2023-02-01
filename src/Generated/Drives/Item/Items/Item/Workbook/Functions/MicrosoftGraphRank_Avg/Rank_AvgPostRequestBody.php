@@ -65,7 +65,7 @@ class Rank_AvgPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the number property value. 
+     * Gets the number property value. The number property
      * @return Json|null
     */
     public function getNumber(): ?Json {
@@ -73,7 +73,7 @@ class Rank_AvgPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the order property value. 
+     * Gets the order property value. The order property
      * @return Json|null
     */
     public function getOrder(): ?Json {
@@ -81,7 +81,7 @@ class Rank_AvgPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the ref property value. 
+     * Gets the ref property value. The ref property
      * @return Json|null
     */
     public function getRef(): ?Json {
@@ -116,7 +116,7 @@ class Rank_AvgPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the number property value. 
+     * Sets the number property value. The number property
      * @param Json|null $value Value to set for the number property.
     */
     public function setNumber(?Json $value): void {
@@ -124,7 +124,7 @@ class Rank_AvgPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the order property value. 
+     * Sets the order property value. The order property
      * @param Json|null $value Value to set for the order property.
     */
     public function setOrder(?Json $value): void {
@@ -132,7 +132,7 @@ class Rank_AvgPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the ref property value. 
+     * Sets the ref property value. The ref property
      * @param Json|null $value Value to set for the ref property.
     */
     public function setRef(?Json $value): void {

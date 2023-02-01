@@ -47,6 +47,7 @@ class OddLPriceRequestBuilder
 
     /**
      * Invoke action oddLPrice
+     * @param OddLPricePostRequestBody $body The request body
      * @param OddLPriceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class OddLPriceRequestBuilder
 
     /**
      * Invoke action oddLPrice
+     * @param OddLPricePostRequestBody $body The request body
      * @param OddLPriceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -63,7 +63,7 @@ class HideForUserPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the user property value. 
+     * Gets the user property value. The user property
      * @return TeamworkUserIdentity|null
     */
     public function getUser(): ?TeamworkUserIdentity {
@@ -96,7 +96,7 @@ class HideForUserPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the user property value. 
+     * Sets the user property value. The user property
      * @param TeamworkUserIdentity|null $value Value to set for the user property.
     */
     public function setUser(?TeamworkUserIdentity $value): void {

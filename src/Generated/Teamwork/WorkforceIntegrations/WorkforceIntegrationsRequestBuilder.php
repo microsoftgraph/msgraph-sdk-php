@@ -75,6 +75,7 @@ class WorkforceIntegrationsRequestBuilder
 
     /**
      * Create a new workforceIntegration object.You can set up which entities you want to receive Shifts synchronous change notifications on and set entities to configure filtering by WFM rules eligibility for, including swap requests.
+     * @param WorkforceIntegration $body The request body
      * @param WorkforceIntegrationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/workforceintegration-post?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class WorkforceIntegrationsRequestBuilder
 
     /**
      * Create a new workforceIntegration object.You can set up which entities you want to receive Shifts synchronous change notifications on and set entities to configure filtering by WFM rules eligibility for, including swap requests.
+     * @param WorkforceIntegration $body The request body
      * @param WorkforceIntegrationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

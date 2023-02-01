@@ -47,6 +47,7 @@ class UnicodeRequestBuilder
 
     /**
      * Invoke action unicode
+     * @param UnicodePostRequestBody $body The request body
      * @param UnicodeRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class UnicodeRequestBuilder
 
     /**
      * Invoke action unicode
+     * @param UnicodePostRequestBody $body The request body
      * @param UnicodeRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

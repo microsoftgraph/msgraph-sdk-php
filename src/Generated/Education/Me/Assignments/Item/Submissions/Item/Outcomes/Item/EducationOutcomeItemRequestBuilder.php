@@ -87,6 +87,7 @@ class EducationOutcomeItemRequestBuilder
 
     /**
      * Update the navigation property outcomes in education
+     * @param EducationOutcome $body The request body
      * @param EducationOutcomeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class EducationOutcomeItemRequestBuilder
 
     /**
      * Update the navigation property outcomes in education
+     * @param EducationOutcome $body The request body
      * @param EducationOutcomeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

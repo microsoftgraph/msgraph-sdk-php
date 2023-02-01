@@ -74,6 +74,7 @@ class RequestsRequestBuilder
 
     /**
      * Create new navigation property to requests for tenantRelationships
+     * @param DelegatedAdminRelationshipRequest $body The request body
      * @param RequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class RequestsRequestBuilder
 
     /**
      * Create new navigation property to requests for tenantRelationships
+     * @param DelegatedAdminRelationshipRequest $body The request body
      * @param RequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

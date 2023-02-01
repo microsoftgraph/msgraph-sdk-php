@@ -75,6 +75,7 @@ class AppointmentsRequestBuilder
 
     /**
      * Create a new bookingAppointment for the specified bookingBusiness.
+     * @param BookingAppointment $body The request body
      * @param AppointmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/bookingbusiness-post-appointments?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class AppointmentsRequestBuilder
 
     /**
      * Create a new bookingAppointment for the specified bookingBusiness.
+     * @param BookingAppointment $body The request body
      * @param AppointmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

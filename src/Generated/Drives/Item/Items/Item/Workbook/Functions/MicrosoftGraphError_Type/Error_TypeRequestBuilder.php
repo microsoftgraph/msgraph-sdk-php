@@ -47,6 +47,7 @@ class Error_TypeRequestBuilder
 
     /**
      * Invoke action error_Type
+     * @param Error_TypePostRequestBody $body The request body
      * @param Error_TypeRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Error_TypeRequestBuilder
 
     /**
      * Invoke action error_Type
+     * @param Error_TypePostRequestBody $body The request body
      * @param Error_TypeRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -64,7 +64,7 @@ class PowerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the number property value. 
+     * Gets the number property value. The number property
      * @return Json|null
     */
     public function getNumber(): ?Json {
@@ -72,7 +72,7 @@ class PowerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the power property value. 
+     * Gets the power property value. The power property
      * @return Json|null
     */
     public function getPower(): ?Json {
@@ -106,7 +106,7 @@ class PowerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the number property value. 
+     * Sets the number property value. The number property
      * @param Json|null $value Value to set for the number property.
     */
     public function setNumber(?Json $value): void {
@@ -114,7 +114,7 @@ class PowerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the power property value. 
+     * Sets the power property value. The power property
      * @param Json|null $value Value to set for the power property.
     */
     public function setPower(?Json $value): void {

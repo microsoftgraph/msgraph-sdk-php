@@ -133,6 +133,7 @@ class PrinterItemRequestBuilder
 
     /**
      * Update the navigation property printers in print
+     * @param Printer $body The request body
      * @param PrinterItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -219,6 +220,7 @@ class PrinterItemRequestBuilder
 
     /**
      * Update the navigation property printers in print
+     * @param Printer $body The request body
      * @param PrinterItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

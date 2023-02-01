@@ -47,6 +47,7 @@ class NetworkDays_IntlRequestBuilder
 
     /**
      * Invoke action networkDays_Intl
+     * @param NetworkDays_IntlPostRequestBody $body The request body
      * @param NetworkDays_IntlRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class NetworkDays_IntlRequestBuilder
 
     /**
      * Invoke action networkDays_Intl
+     * @param NetworkDays_IntlPostRequestBody $body The request body
      * @param NetworkDays_IntlRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

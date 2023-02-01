@@ -125,6 +125,7 @@ class ConnectedOrganizationItemRequestBuilder
 
     /**
      * Update the navigation property connectedOrganizations in identityGovernance
+     * @param ConnectedOrganization $body The request body
      * @param ConnectedOrganizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -189,6 +190,7 @@ class ConnectedOrganizationItemRequestBuilder
 
     /**
      * Update the navigation property connectedOrganizations in identityGovernance
+     * @param ConnectedOrganization $body The request body
      * @param ConnectedOrganizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

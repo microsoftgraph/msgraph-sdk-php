@@ -47,6 +47,7 @@ class ChiSq_InvRequestBuilder
 
     /**
      * Invoke action chiSq_Inv
+     * @param ChiSq_InvPostRequestBody $body The request body
      * @param ChiSq_InvRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ChiSq_InvRequestBuilder
 
     /**
      * Invoke action chiSq_Inv
+     * @param ChiSq_InvPostRequestBody $body The request body
      * @param ChiSq_InvRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

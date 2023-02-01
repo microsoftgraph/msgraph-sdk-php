@@ -36,7 +36,7 @@ class DocumentSetVersionCollectionResponse extends BaseCollectionPaginationCount
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<DocumentSetVersion>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class DocumentSetVersionCollectionResponse extends BaseCollectionPaginationCount
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param array<DocumentSetVersion>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

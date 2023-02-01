@@ -47,6 +47,7 @@ class DminRequestBuilder
 
     /**
      * Invoke action dmin
+     * @param DminPostRequestBody $body The request body
      * @param DminRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class DminRequestBuilder
 
     /**
      * Invoke action dmin
+     * @param DminPostRequestBody $body The request body
      * @param DminRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

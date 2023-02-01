@@ -91,6 +91,7 @@ class RiskyUsersRequestBuilder
 
     /**
      * Create new navigation property to riskyUsers for identityProtection
+     * @param RiskyUser $body The request body
      * @param RiskyUsersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -134,6 +135,7 @@ class RiskyUsersRequestBuilder
 
     /**
      * Create new navigation property to riskyUsers for identityProtection
+     * @param RiskyUser $body The request body
      * @param RiskyUsersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

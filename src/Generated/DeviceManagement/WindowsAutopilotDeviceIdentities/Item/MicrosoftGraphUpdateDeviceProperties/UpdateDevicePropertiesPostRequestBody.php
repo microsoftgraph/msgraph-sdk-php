@@ -43,7 +43,7 @@ class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the addressableUserName property value. 
+     * Gets the addressableUserName property value. The addressableUserName property
      * @return string|null
     */
     public function getAddressableUserName(): ?string {
@@ -59,7 +59,7 @@ class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the displayName property value. 
+     * Gets the displayName property value. The displayName property
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -81,7 +81,7 @@ class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the groupTag property value. 
+     * Gets the groupTag property value. The groupTag property
      * @return string|null
     */
     public function getGroupTag(): ?string {
@@ -89,7 +89,7 @@ class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the userPrincipalName property value. 
+     * Gets the userPrincipalName property value. The userPrincipalName property
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
@@ -117,7 +117,7 @@ class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the addressableUserName property value. 
+     * Sets the addressableUserName property value. The addressableUserName property
      * @param string|null $value Value to set for the addressableUserName property.
     */
     public function setAddressableUserName(?string $value): void {
@@ -133,7 +133,7 @@ class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the displayName property value. 
+     * Sets the displayName property value. The displayName property
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -141,7 +141,7 @@ class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the groupTag property value. 
+     * Sets the groupTag property value. The groupTag property
      * @param string|null $value Value to set for the groupTag property.
     */
     public function setGroupTag(?string $value): void {
@@ -149,7 +149,7 @@ class UpdateDevicePropertiesPostRequestBody implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the userPrincipalName property value. 
+     * Sets the userPrincipalName property value. The userPrincipalName property
      * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {

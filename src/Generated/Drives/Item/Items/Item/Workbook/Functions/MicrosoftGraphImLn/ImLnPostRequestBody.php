@@ -63,7 +63,7 @@ class ImLnPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the inumber property value. 
+     * Gets the inumber property value. The inumber property
      * @return Json|null
     */
     public function getInumber(): ?Json {
@@ -96,7 +96,7 @@ class ImLnPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the inumber property value. 
+     * Sets the inumber property value. The inumber property
      * @param Json|null $value Value to set for the inumber property.
     */
     public function setInumber(?Json $value): void {

@@ -95,6 +95,7 @@ class BookingAppointmentItemRequestBuilder
 
     /**
      * Update the navigation property appointments in solutions
+     * @param BookingAppointment $body The request body
      * @param BookingAppointmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class BookingAppointmentItemRequestBuilder
 
     /**
      * Update the navigation property appointments in solutions
+     * @param BookingAppointment $body The request body
      * @param BookingAppointmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -47,6 +47,7 @@ class T_Dist_2TRequestBuilder
 
     /**
      * Invoke action t_Dist_2T
+     * @param T_Dist_2TPostRequestBody $body The request body
      * @param T_Dist_2TRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class T_Dist_2TRequestBuilder
 
     /**
      * Invoke action t_Dist_2T
+     * @param T_Dist_2TPostRequestBody $body The request body
      * @param T_Dist_2TRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

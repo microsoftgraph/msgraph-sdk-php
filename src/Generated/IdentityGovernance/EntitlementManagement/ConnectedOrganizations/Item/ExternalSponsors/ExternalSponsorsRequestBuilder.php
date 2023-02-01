@@ -107,6 +107,7 @@ class ExternalSponsorsRequestBuilder
 
     /**
      * Create new navigation property to externalSponsors for identityGovernance
+     * @param DirectoryObject $body The request body
      * @param ExternalSponsorsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -150,6 +151,7 @@ class ExternalSponsorsRequestBuilder
 
     /**
      * Create new navigation property to externalSponsors for identityGovernance
+     * @param DirectoryObject $body The request body
      * @param ExternalSponsorsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

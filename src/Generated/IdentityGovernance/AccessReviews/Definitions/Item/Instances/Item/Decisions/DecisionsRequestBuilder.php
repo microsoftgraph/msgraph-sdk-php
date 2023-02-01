@@ -85,6 +85,7 @@ class DecisionsRequestBuilder
 
     /**
      * Create new navigation property to decisions for identityGovernance
+     * @param AccessReviewInstanceDecisionItem $body The request body
      * @param DecisionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -128,6 +129,7 @@ class DecisionsRequestBuilder
 
     /**
      * Create new navigation property to decisions for identityGovernance
+     * @param AccessReviewInstanceDecisionItem $body The request body
      * @param DecisionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

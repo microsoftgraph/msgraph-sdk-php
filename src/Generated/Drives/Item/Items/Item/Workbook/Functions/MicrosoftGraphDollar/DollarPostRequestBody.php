@@ -52,7 +52,7 @@ class DollarPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the decimals property value. 
+     * Gets the decimals property value. The decimals property
      * @return Json|null
     */
     public function getDecimals(): ?Json {
@@ -72,7 +72,7 @@ class DollarPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the number property value. 
+     * Gets the number property value. The number property
      * @return Json|null
     */
     public function getNumber(): ?Json {
@@ -106,7 +106,7 @@ class DollarPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the decimals property value. 
+     * Sets the decimals property value. The decimals property
      * @param Json|null $value Value to set for the decimals property.
     */
     public function setDecimals(?Json $value): void {
@@ -114,7 +114,7 @@ class DollarPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the number property value. 
+     * Sets the number property value. The number property
      * @param Json|null $value Value to set for the number property.
     */
     public function setNumber(?Json $value): void {

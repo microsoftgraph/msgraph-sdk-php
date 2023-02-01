@@ -100,7 +100,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -116,7 +116,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the targetObjects property value. 
+     * Gets the targetObjects property value. The targetObjects property
      * @return array<DirectoryObject>|null
     */
     public function getTargetObjects(): ?array {
@@ -187,7 +187,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -203,7 +203,7 @@ class UnifiedRoleManagementPolicyRuleTarget implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the targetObjects property value. 
+     * Sets the targetObjects property value. The targetObjects property
      * @param array<DirectoryObject>|null $value Value to set for the targetObjects property.
     */
     public function setTargetObjects(?array $value): void {

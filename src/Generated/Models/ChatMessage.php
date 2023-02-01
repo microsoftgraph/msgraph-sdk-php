@@ -34,7 +34,7 @@ class ChatMessage extends Entity implements Parsable
     }
 
     /**
-     * Gets the body property value. 
+     * Gets the body property value. The body property
      * @return ItemBody|null
     */
     public function getBody(): ?ItemBody {
@@ -139,7 +139,7 @@ class ChatMessage extends Entity implements Parsable
     }
 
     /**
-     * Gets the importance property value. 
+     * Gets the importance property value. The importance property
      * @return ChatMessageImportance|null
     */
     public function getImportance(): ?ChatMessageImportance {
@@ -179,7 +179,7 @@ class ChatMessage extends Entity implements Parsable
     }
 
     /**
-     * Gets the messageType property value. 
+     * Gets the messageType property value. The messageType property
      * @return ChatMessageType|null
     */
     public function getMessageType(): ?ChatMessageType {
@@ -282,7 +282,7 @@ class ChatMessage extends Entity implements Parsable
     }
 
     /**
-     * Sets the body property value. 
+     * Sets the body property value. The body property
      * @param ItemBody|null $value Value to set for the body property.
     */
     public function setBody(?ItemBody $value): void {
@@ -354,7 +354,7 @@ class ChatMessage extends Entity implements Parsable
     }
 
     /**
-     * Sets the importance property value. 
+     * Sets the importance property value. The importance property
      * @param ChatMessageImportance|null $value Value to set for the importance property.
     */
     public function setImportance(?ChatMessageImportance $value): void {
@@ -394,7 +394,7 @@ class ChatMessage extends Entity implements Parsable
     }
 
     /**
-     * Sets the messageType property value. 
+     * Sets the messageType property value. The messageType property
      * @param ChatMessageType|null $value Value to set for the messageType property.
     */
     public function setMessageType(?ChatMessageType $value): void {

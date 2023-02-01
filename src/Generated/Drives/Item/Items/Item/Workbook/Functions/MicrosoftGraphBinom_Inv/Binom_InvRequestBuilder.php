@@ -47,6 +47,7 @@ class Binom_InvRequestBuilder
 
     /**
      * Invoke action binom_Inv
+     * @param Binom_InvPostRequestBody $body The request body
      * @param Binom_InvRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Binom_InvRequestBuilder
 
     /**
      * Invoke action binom_Inv
+     * @param Binom_InvPostRequestBody $body The request body
      * @param Binom_InvRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

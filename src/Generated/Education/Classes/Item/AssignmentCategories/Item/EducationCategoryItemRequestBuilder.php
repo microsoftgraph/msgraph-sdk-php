@@ -87,6 +87,7 @@ class EducationCategoryItemRequestBuilder
 
     /**
      * Update the navigation property assignmentCategories in education
+     * @param EducationCategory $body The request body
      * @param EducationCategoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class EducationCategoryItemRequestBuilder
 
     /**
      * Update the navigation property assignmentCategories in education
+     * @param EducationCategory $body The request body
      * @param EducationCategoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

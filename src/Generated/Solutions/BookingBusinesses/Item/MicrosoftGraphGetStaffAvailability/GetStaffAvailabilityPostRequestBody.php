@@ -52,7 +52,7 @@ class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Gets the endDateTime property value. 
+     * Gets the endDateTime property value. The endDateTime property
      * @return DateTimeTimeZone|null
     */
     public function getEndDateTime(): ?DateTimeTimeZone {
@@ -73,7 +73,7 @@ class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Gets the staffIds property value. 
+     * Gets the staffIds property value. The staffIds property
      * @return array<string>|null
     */
     public function getStaffIds(): ?array {
@@ -81,7 +81,7 @@ class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Gets the startDateTime property value. 
+     * Gets the startDateTime property value. The startDateTime property
      * @return DateTimeTimeZone|null
     */
     public function getStartDateTime(): ?DateTimeTimeZone {
@@ -116,7 +116,7 @@ class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Sets the endDateTime property value. 
+     * Sets the endDateTime property value. The endDateTime property
      * @param DateTimeTimeZone|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTimeTimeZone $value): void {
@@ -124,7 +124,7 @@ class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Sets the staffIds property value. 
+     * Sets the staffIds property value. The staffIds property
      * @param array<string>|null $value Value to set for the staffIds property.
     */
     public function setStaffIds(?array $value): void {
@@ -132,7 +132,7 @@ class GetStaffAvailabilityPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Sets the startDateTime property value. 
+     * Sets the startDateTime property value. The startDateTime property
      * @param DateTimeTimeZone|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTimeTimeZone $value): void {

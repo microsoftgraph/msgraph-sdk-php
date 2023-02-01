@@ -74,6 +74,7 @@ class ScopedRoleMemberOfRequestBuilder
 
     /**
      * Create new navigation property to scopedRoleMemberOf for me
+     * @param ScopedRoleMembership $body The request body
      * @param ScopedRoleMemberOfRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class ScopedRoleMemberOfRequestBuilder
 
     /**
      * Create new navigation property to scopedRoleMemberOf for me
+     * @param ScopedRoleMembership $body The request body
      * @param ScopedRoleMemberOfRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

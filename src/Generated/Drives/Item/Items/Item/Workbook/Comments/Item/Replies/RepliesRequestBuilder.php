@@ -74,6 +74,7 @@ class RepliesRequestBuilder
 
     /**
      * Create new navigation property to replies for drives
+     * @param WorkbookCommentReply $body The request body
      * @param RepliesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class RepliesRequestBuilder
 
     /**
      * Create new navigation property to replies for drives
+     * @param WorkbookCommentReply $body The request body
      * @param RepliesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

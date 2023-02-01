@@ -47,6 +47,7 @@ class TypeRequestBuilder
 
     /**
      * Invoke action type
+     * @param TypePostRequestBody $body The request body
      * @param TypeRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class TypeRequestBuilder
 
     /**
      * Invoke action type
+     * @param TypePostRequestBody $body The request body
      * @param TypeRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

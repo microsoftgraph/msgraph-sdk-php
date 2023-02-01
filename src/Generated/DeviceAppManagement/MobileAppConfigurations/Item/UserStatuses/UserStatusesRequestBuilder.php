@@ -74,6 +74,7 @@ class UserStatusesRequestBuilder
 
     /**
      * Create new navigation property to userStatuses for deviceAppManagement
+     * @param ManagedDeviceMobileAppConfigurationUserStatus $body The request body
      * @param UserStatusesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class UserStatusesRequestBuilder
 
     /**
      * Create new navigation property to userStatuses for deviceAppManagement
+     * @param ManagedDeviceMobileAppConfigurationUserStatus $body The request body
      * @param UserStatusesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -65,7 +65,7 @@ class MirrPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the financeRate property value. 
+     * Gets the financeRate property value. The financeRate property
      * @return Json|null
     */
     public function getFinanceRate(): ?Json {
@@ -73,7 +73,7 @@ class MirrPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the reinvestRate property value. 
+     * Gets the reinvestRate property value. The reinvestRate property
      * @return Json|null
     */
     public function getReinvestRate(): ?Json {
@@ -81,7 +81,7 @@ class MirrPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the values property value. 
+     * Gets the values property value. The values property
      * @return Json|null
     */
     public function getValues(): ?Json {
@@ -116,7 +116,7 @@ class MirrPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the financeRate property value. 
+     * Sets the financeRate property value. The financeRate property
      * @param Json|null $value Value to set for the financeRate property.
     */
     public function setFinanceRate(?Json $value): void {
@@ -124,7 +124,7 @@ class MirrPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the reinvestRate property value. 
+     * Sets the reinvestRate property value. The reinvestRate property
      * @param Json|null $value Value to set for the reinvestRate property.
     */
     public function setReinvestRate(?Json $value): void {
@@ -132,7 +132,7 @@ class MirrPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the values property value. 
+     * Sets the values property value. The values property
      * @param Json|null $value Value to set for the values property.
     */
     public function setValues(?Json $value): void {

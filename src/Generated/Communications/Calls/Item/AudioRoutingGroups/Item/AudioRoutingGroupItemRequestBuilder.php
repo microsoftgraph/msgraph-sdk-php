@@ -87,6 +87,7 @@ class AudioRoutingGroupItemRequestBuilder
 
     /**
      * Update the navigation property audioRoutingGroups in communications
+     * @param AudioRoutingGroup $body The request body
      * @param AudioRoutingGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class AudioRoutingGroupItemRequestBuilder
 
     /**
      * Update the navigation property audioRoutingGroups in communications
+     * @param AudioRoutingGroup $body The request body
      * @param AudioRoutingGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

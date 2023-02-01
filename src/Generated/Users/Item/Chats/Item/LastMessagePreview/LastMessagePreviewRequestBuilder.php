@@ -83,6 +83,7 @@ class LastMessagePreviewRequestBuilder
 
     /**
      * Update the navigation property lastMessagePreview in users
+     * @param ChatMessageInfo $body The request body
      * @param LastMessagePreviewRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -147,6 +148,7 @@ class LastMessagePreviewRequestBuilder
 
     /**
      * Update the navigation property lastMessagePreview in users
+     * @param ChatMessageInfo $body The request body
      * @param LastMessagePreviewRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

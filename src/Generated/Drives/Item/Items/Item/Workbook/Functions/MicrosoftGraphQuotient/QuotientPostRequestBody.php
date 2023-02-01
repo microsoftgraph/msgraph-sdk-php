@@ -52,7 +52,7 @@ class QuotientPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the denominator property value. 
+     * Gets the denominator property value. The denominator property
      * @return Json|null
     */
     public function getDenominator(): ?Json {
@@ -72,7 +72,7 @@ class QuotientPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the numerator property value. 
+     * Gets the numerator property value. The numerator property
      * @return Json|null
     */
     public function getNumerator(): ?Json {
@@ -106,7 +106,7 @@ class QuotientPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the denominator property value. 
+     * Sets the denominator property value. The denominator property
      * @param Json|null $value Value to set for the denominator property.
     */
     public function setDenominator(?Json $value): void {
@@ -114,7 +114,7 @@ class QuotientPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the numerator property value. 
+     * Sets the numerator property value. The numerator property
      * @param Json|null $value Value to set for the numerator property.
     */
     public function setNumerator(?Json $value): void {

@@ -96,6 +96,7 @@ class SessionItemRequestBuilder
 
     /**
      * Update the navigation property sessions in communications
+     * @param Session $body The request body
      * @param SessionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -171,6 +172,7 @@ class SessionItemRequestBuilder
 
     /**
      * Update the navigation property sessions in communications
+     * @param Session $body The request body
      * @param SessionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

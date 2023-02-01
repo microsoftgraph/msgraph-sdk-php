@@ -95,6 +95,7 @@ class ColumnDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property columns in drives
+     * @param ColumnDefinition $body The request body
      * @param ColumnDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class ColumnDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property columns in drives
+     * @param ColumnDefinition $body The request body
      * @param ColumnDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

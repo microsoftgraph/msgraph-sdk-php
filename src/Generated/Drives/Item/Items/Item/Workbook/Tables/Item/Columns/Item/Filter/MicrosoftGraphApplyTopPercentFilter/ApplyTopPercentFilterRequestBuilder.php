@@ -46,6 +46,7 @@ class ApplyTopPercentFilterRequestBuilder
 
     /**
      * Invoke action applyTopPercentFilter
+     * @param ApplyTopPercentFilterPostRequestBody $body The request body
      * @param ApplyTopPercentFilterRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -64,6 +65,7 @@ class ApplyTopPercentFilterRequestBuilder
 
     /**
      * Invoke action applyTopPercentFilter
+     * @param ApplyTopPercentFilterPostRequestBody $body The request body
      * @param ApplyTopPercentFilterRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

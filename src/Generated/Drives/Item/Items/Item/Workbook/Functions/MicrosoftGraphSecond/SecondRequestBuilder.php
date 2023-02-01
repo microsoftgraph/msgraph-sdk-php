@@ -47,6 +47,7 @@ class SecondRequestBuilder
 
     /**
      * Invoke action second
+     * @param SecondPostRequestBody $body The request body
      * @param SecondRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class SecondRequestBuilder
 
     /**
      * Invoke action second
+     * @param SecondPostRequestBody $body The request body
      * @param SecondRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

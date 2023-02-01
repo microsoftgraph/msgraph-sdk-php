@@ -47,6 +47,7 @@ class QuotientRequestBuilder
 
     /**
      * Invoke action quotient
+     * @param QuotientPostRequestBody $body The request body
      * @param QuotientRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class QuotientRequestBuilder
 
     /**
      * Invoke action quotient
+     * @param QuotientPostRequestBody $body The request body
      * @param QuotientRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

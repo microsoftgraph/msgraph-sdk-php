@@ -44,7 +44,7 @@ class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the attachmentItem property value. 
+     * Gets the attachmentItem property value. The AttachmentItem property
      * @return AttachmentItem|null
     */
     public function getAttachmentItem(): ?AttachmentItem {
@@ -88,7 +88,7 @@ class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the attachmentItem property value. 
+     * Sets the attachmentItem property value. The AttachmentItem property
      * @param AttachmentItem|null $value Value to set for the AttachmentItem property.
     */
     public function setAttachmentItem(?AttachmentItem $value): void {

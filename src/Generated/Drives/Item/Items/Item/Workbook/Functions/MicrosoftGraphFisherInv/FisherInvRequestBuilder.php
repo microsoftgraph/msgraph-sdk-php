@@ -47,6 +47,7 @@ class FisherInvRequestBuilder
 
     /**
      * Invoke action fisherInv
+     * @param FisherInvPostRequestBody $body The request body
      * @param FisherInvRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class FisherInvRequestBuilder
 
     /**
      * Invoke action fisherInv
+     * @param FisherInvPostRequestBody $body The request body
      * @param FisherInvRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

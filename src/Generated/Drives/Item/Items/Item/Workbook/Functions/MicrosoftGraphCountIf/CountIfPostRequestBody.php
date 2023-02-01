@@ -52,7 +52,7 @@ class CountIfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the criteria property value. 
+     * Gets the criteria property value. The criteria property
      * @return Json|null
     */
     public function getCriteria(): ?Json {
@@ -72,7 +72,7 @@ class CountIfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the range property value. 
+     * Gets the range property value. The range property
      * @return Json|null
     */
     public function getRange(): ?Json {
@@ -106,7 +106,7 @@ class CountIfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the criteria property value. 
+     * Sets the criteria property value. The criteria property
      * @param Json|null $value Value to set for the criteria property.
     */
     public function setCriteria(?Json $value): void {
@@ -114,7 +114,7 @@ class CountIfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the range property value. 
+     * Sets the range property value. The range property
      * @param Json|null $value Value to set for the range property.
     */
     public function setRange(?Json $value): void {

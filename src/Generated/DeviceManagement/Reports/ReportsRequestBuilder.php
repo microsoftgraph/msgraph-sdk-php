@@ -247,6 +247,7 @@ class ReportsRequestBuilder
 
     /**
      * Update the navigation property reports in deviceManagement
+     * @param DeviceManagementReports $body The request body
      * @param ReportsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -311,6 +312,7 @@ class ReportsRequestBuilder
 
     /**
      * Update the navigation property reports in deviceManagement
+     * @param DeviceManagementReports $body The request body
      * @param ReportsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

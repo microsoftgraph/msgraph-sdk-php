@@ -95,6 +95,7 @@ class ItemActivityItemRequestBuilder
 
     /**
      * Update the navigation property activities in drives
+     * @param ItemActivity $body The request body
      * @param ItemActivityItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class ItemActivityItemRequestBuilder
 
     /**
      * Update the navigation property activities in drives
+     * @param ItemActivity $body The request body
      * @param ItemActivityItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

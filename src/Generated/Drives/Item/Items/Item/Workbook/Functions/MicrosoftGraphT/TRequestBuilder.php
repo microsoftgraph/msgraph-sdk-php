@@ -47,6 +47,7 @@ class TRequestBuilder
 
     /**
      * Invoke action t
+     * @param TPostRequestBody $body The request body
      * @param TRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class TRequestBuilder
 
     /**
      * Invoke action t
+     * @param TPostRequestBody $body The request body
      * @param TRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

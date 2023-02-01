@@ -82,6 +82,7 @@ class PlacesRequestBuilder
 
     /**
      * Add new entity to places
+     * @param Place $body The request body
      * @param PlacesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -125,6 +126,7 @@ class PlacesRequestBuilder
 
     /**
      * Add new entity to places
+     * @param Place $body The request body
      * @param PlacesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

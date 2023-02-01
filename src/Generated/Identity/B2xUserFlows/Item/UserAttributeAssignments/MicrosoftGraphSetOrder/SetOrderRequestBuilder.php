@@ -46,6 +46,7 @@ class SetOrderRequestBuilder
 
     /**
      * Set the order of identityUserFlowAttributeAssignments being collected within a user flow.
+     * @param SetOrderPostRequestBody $body The request body
      * @param SetOrderRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/identityuserflowattributeassignment-setorder?view=graph-rest-1.0 Find more info here
@@ -65,6 +66,7 @@ class SetOrderRequestBuilder
 
     /**
      * Set the order of identityUserFlowAttributeAssignments being collected within a user flow.
+     * @param SetOrderPostRequestBody $body The request body
      * @param SetOrderRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -47,6 +47,7 @@ class Skew_pRequestBuilder
 
     /**
      * Invoke action skew_p
+     * @param Skew_pPostRequestBody $body The request body
      * @param Skew_pRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Skew_pRequestBuilder
 
     /**
      * Invoke action skew_p
+     * @param Skew_pPostRequestBody $body The request body
      * @param Skew_pRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

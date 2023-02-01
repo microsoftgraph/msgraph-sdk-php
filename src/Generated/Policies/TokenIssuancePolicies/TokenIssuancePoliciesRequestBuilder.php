@@ -75,6 +75,7 @@ class TokenIssuancePoliciesRequestBuilder
 
     /**
      * Create a new tokenIssuancePolicy object.
+     * @param TokenIssuancePolicy $body The request body
      * @param TokenIssuancePoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/tokenissuancepolicy-post-tokenissuancepolicy?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class TokenIssuancePoliciesRequestBuilder
 
     /**
      * Create a new tokenIssuancePolicy object.
+     * @param TokenIssuancePolicy $body The request body
      * @param TokenIssuancePoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

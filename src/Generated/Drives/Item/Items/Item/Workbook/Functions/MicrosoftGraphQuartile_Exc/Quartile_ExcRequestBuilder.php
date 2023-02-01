@@ -47,6 +47,7 @@ class Quartile_ExcRequestBuilder
 
     /**
      * Invoke action quartile_Exc
+     * @param Quartile_ExcPostRequestBody $body The request body
      * @param Quartile_ExcRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Quartile_ExcRequestBuilder
 
     /**
      * Invoke action quartile_Exc
+     * @param Quartile_ExcPostRequestBody $body The request body
      * @param Quartile_ExcRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

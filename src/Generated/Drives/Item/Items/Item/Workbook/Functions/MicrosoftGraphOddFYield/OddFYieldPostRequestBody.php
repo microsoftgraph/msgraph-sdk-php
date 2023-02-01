@@ -52,7 +52,7 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the basis property value. 
+     * Gets the basis property value. The basis property
      * @return Json|null
     */
     public function getBasis(): ?Json {
@@ -79,7 +79,7 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the firstCoupon property value. 
+     * Gets the firstCoupon property value. The firstCoupon property
      * @return Json|null
     */
     public function getFirstCoupon(): ?Json {
@@ -87,7 +87,7 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the frequency property value. 
+     * Gets the frequency property value. The frequency property
      * @return Json|null
     */
     public function getFrequency(): ?Json {
@@ -95,7 +95,7 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the issue property value. 
+     * Gets the issue property value. The issue property
      * @return Json|null
     */
     public function getIssue(): ?Json {
@@ -103,7 +103,7 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the maturity property value. 
+     * Gets the maturity property value. The maturity property
      * @return Json|null
     */
     public function getMaturity(): ?Json {
@@ -111,7 +111,7 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the pr property value. 
+     * Gets the pr property value. The pr property
      * @return Json|null
     */
     public function getPr(): ?Json {
@@ -119,7 +119,7 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the rate property value. 
+     * Gets the rate property value. The rate property
      * @return Json|null
     */
     public function getRate(): ?Json {
@@ -127,7 +127,7 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the redemption property value. 
+     * Gets the redemption property value. The redemption property
      * @return Json|null
     */
     public function getRedemption(): ?Json {
@@ -135,7 +135,7 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the settlement property value. 
+     * Gets the settlement property value. The settlement property
      * @return Json|null
     */
     public function getSettlement(): ?Json {
@@ -176,7 +176,7 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the basis property value. 
+     * Sets the basis property value. The basis property
      * @param Json|null $value Value to set for the basis property.
     */
     public function setBasis(?Json $value): void {
@@ -184,7 +184,7 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the firstCoupon property value. 
+     * Sets the firstCoupon property value. The firstCoupon property
      * @param Json|null $value Value to set for the firstCoupon property.
     */
     public function setFirstCoupon(?Json $value): void {
@@ -192,7 +192,7 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the frequency property value. 
+     * Sets the frequency property value. The frequency property
      * @param Json|null $value Value to set for the frequency property.
     */
     public function setFrequency(?Json $value): void {
@@ -200,7 +200,7 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the issue property value. 
+     * Sets the issue property value. The issue property
      * @param Json|null $value Value to set for the issue property.
     */
     public function setIssue(?Json $value): void {
@@ -208,7 +208,7 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the maturity property value. 
+     * Sets the maturity property value. The maturity property
      * @param Json|null $value Value to set for the maturity property.
     */
     public function setMaturity(?Json $value): void {
@@ -216,7 +216,7 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the pr property value. 
+     * Sets the pr property value. The pr property
      * @param Json|null $value Value to set for the pr property.
     */
     public function setPr(?Json $value): void {
@@ -224,7 +224,7 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the rate property value. 
+     * Sets the rate property value. The rate property
      * @param Json|null $value Value to set for the rate property.
     */
     public function setRate(?Json $value): void {
@@ -232,7 +232,7 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the redemption property value. 
+     * Sets the redemption property value. The redemption property
      * @param Json|null $value Value to set for the redemption property.
     */
     public function setRedemption(?Json $value): void {
@@ -240,7 +240,7 @@ class OddFYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the settlement property value. 
+     * Sets the settlement property value. The settlement property
      * @param Json|null $value Value to set for the settlement property.
     */
     public function setSettlement(?Json $value): void {

@@ -75,6 +75,7 @@ class NotesRequestBuilder
 
     /**
      * Create a new authoredNote object.
+     * @param AuthoredNote $body The request body
      * @param NotesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/subjectrightsrequest-post-notes?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class NotesRequestBuilder
 
     /**
      * Create a new authoredNote object.
+     * @param AuthoredNote $body The request body
      * @param NotesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

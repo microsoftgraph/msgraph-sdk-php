@@ -36,7 +36,7 @@ class Windows10CompliancePolicyCollectionResponse extends BaseCollectionPaginati
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<Windows10CompliancePolicy>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class Windows10CompliancePolicyCollectionResponse extends BaseCollectionPaginati
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param array<Windows10CompliancePolicy>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

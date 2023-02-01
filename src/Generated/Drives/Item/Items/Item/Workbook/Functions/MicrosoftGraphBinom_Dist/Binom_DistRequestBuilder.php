@@ -47,6 +47,7 @@ class Binom_DistRequestBuilder
 
     /**
      * Invoke action binom_Dist
+     * @param Binom_DistPostRequestBody $body The request body
      * @param Binom_DistRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Binom_DistRequestBuilder
 
     /**
      * Invoke action binom_Dist
+     * @param Binom_DistPostRequestBody $body The request body
      * @param Binom_DistRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

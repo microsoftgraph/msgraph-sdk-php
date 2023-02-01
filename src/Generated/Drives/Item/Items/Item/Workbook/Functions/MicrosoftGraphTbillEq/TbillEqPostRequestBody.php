@@ -52,7 +52,7 @@ class TbillEqPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the discount property value. 
+     * Gets the discount property value. The discount property
      * @return Json|null
     */
     public function getDiscount(): ?Json {
@@ -73,7 +73,7 @@ class TbillEqPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the maturity property value. 
+     * Gets the maturity property value. The maturity property
      * @return Json|null
     */
     public function getMaturity(): ?Json {
@@ -81,7 +81,7 @@ class TbillEqPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the settlement property value. 
+     * Gets the settlement property value. The settlement property
      * @return Json|null
     */
     public function getSettlement(): ?Json {
@@ -116,7 +116,7 @@ class TbillEqPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the discount property value. 
+     * Sets the discount property value. The discount property
      * @param Json|null $value Value to set for the discount property.
     */
     public function setDiscount(?Json $value): void {
@@ -124,7 +124,7 @@ class TbillEqPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the maturity property value. 
+     * Sets the maturity property value. The maturity property
      * @param Json|null $value Value to set for the maturity property.
     */
     public function setMaturity(?Json $value): void {
@@ -132,7 +132,7 @@ class TbillEqPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the settlement property value. 
+     * Sets the settlement property value. The settlement property
      * @param Json|null $value Value to set for the settlement property.
     */
     public function setSettlement(?Json $value): void {

@@ -47,6 +47,7 @@ class CotRequestBuilder
 
     /**
      * Invoke action cot
+     * @param CotPostRequestBody $body The request body
      * @param CotRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class CotRequestBuilder
 
     /**
      * Invoke action cot
+     * @param CotPostRequestBody $body The request body
      * @param CotRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

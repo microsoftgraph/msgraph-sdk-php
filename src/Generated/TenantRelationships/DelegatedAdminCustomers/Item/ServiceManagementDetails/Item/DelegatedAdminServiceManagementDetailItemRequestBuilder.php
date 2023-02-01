@@ -87,6 +87,7 @@ class DelegatedAdminServiceManagementDetailItemRequestBuilder
 
     /**
      * Update the navigation property serviceManagementDetails in tenantRelationships
+     * @param DelegatedAdminServiceManagementDetail $body The request body
      * @param DelegatedAdminServiceManagementDetailItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class DelegatedAdminServiceManagementDetailItemRequestBuilder
 
     /**
      * Update the navigation property serviceManagementDetails in tenantRelationships
+     * @param DelegatedAdminServiceManagementDetail $body The request body
      * @param DelegatedAdminServiceManagementDetailItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

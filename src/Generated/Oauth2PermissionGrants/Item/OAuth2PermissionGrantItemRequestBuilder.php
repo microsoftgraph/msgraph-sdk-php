@@ -89,6 +89,7 @@ class OAuth2PermissionGrantItemRequestBuilder
 
     /**
      * Update the properties of oAuth2PermissionGrant object, representing a delegated permission grant. An **oAuth2PermissionGrant** can be updated to change which delegated permissions are granted, by adding or removing items from the list in **scopes**.
+     * @param OAuth2PermissionGrant $body The request body
      * @param OAuth2PermissionGrantItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/oauth2permissiongrant-update?view=graph-rest-1.0 Find more info here
@@ -154,6 +155,7 @@ class OAuth2PermissionGrantItemRequestBuilder
 
     /**
      * Update the properties of oAuth2PermissionGrant object, representing a delegated permission grant. An **oAuth2PermissionGrant** can be updated to change which delegated permissions are granted, by adding or removing items from the list in **scopes**.
+     * @param OAuth2PermissionGrant $body The request body
      * @param OAuth2PermissionGrantItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

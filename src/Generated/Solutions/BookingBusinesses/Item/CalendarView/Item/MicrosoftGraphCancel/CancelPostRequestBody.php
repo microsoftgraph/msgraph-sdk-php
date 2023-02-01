@@ -51,7 +51,7 @@ class CancelPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the cancellationMessage property value. 
+     * Gets the cancellationMessage property value. The cancellationMessage property
      * @return string|null
     */
     public function getCancellationMessage(): ?string {
@@ -95,7 +95,7 @@ class CancelPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the cancellationMessage property value. 
+     * Sets the cancellationMessage property value. The cancellationMessage property
      * @param string|null $value Value to set for the cancellationMessage property.
     */
     public function setCancellationMessage(?string $value): void {

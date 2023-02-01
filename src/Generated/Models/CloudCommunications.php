@@ -26,7 +26,7 @@ class CloudCommunications extends Entity implements Parsable
     }
 
     /**
-     * Gets the callRecords property value. 
+     * Gets the callRecords property value. The callRecords property
      * @return array<CallRecord>|null
     */
     public function getCallRecords(): ?array {
@@ -34,7 +34,7 @@ class CloudCommunications extends Entity implements Parsable
     }
 
     /**
-     * Gets the calls property value. 
+     * Gets the calls property value. The calls property
      * @return array<Call>|null
     */
     public function getCalls(): ?array {
@@ -56,7 +56,7 @@ class CloudCommunications extends Entity implements Parsable
     }
 
     /**
-     * Gets the onlineMeetings property value. 
+     * Gets the onlineMeetings property value. The onlineMeetings property
      * @return array<OnlineMeeting>|null
     */
     public function getOnlineMeetings(): ?array {
@@ -64,7 +64,7 @@ class CloudCommunications extends Entity implements Parsable
     }
 
     /**
-     * Gets the presences property value. 
+     * Gets the presences property value. The presences property
      * @return array<Presence>|null
     */
     public function getPresences(): ?array {
@@ -84,7 +84,7 @@ class CloudCommunications extends Entity implements Parsable
     }
 
     /**
-     * Sets the callRecords property value. 
+     * Sets the callRecords property value. The callRecords property
      * @param array<CallRecord>|null $value Value to set for the callRecords property.
     */
     public function setCallRecords(?array $value): void {
@@ -92,7 +92,7 @@ class CloudCommunications extends Entity implements Parsable
     }
 
     /**
-     * Sets the calls property value. 
+     * Sets the calls property value. The calls property
      * @param array<Call>|null $value Value to set for the calls property.
     */
     public function setCalls(?array $value): void {
@@ -100,7 +100,7 @@ class CloudCommunications extends Entity implements Parsable
     }
 
     /**
-     * Sets the onlineMeetings property value. 
+     * Sets the onlineMeetings property value. The onlineMeetings property
      * @param array<OnlineMeeting>|null $value Value to set for the onlineMeetings property.
     */
     public function setOnlineMeetings(?array $value): void {
@@ -108,7 +108,7 @@ class CloudCommunications extends Entity implements Parsable
     }
 
     /**
-     * Sets the presences property value. 
+     * Sets the presences property value. The presences property
      * @param array<Presence>|null $value Value to set for the presences property.
     */
     public function setPresences(?array $value): void {

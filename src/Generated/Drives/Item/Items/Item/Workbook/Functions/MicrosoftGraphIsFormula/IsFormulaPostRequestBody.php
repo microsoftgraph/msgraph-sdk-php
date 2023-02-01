@@ -63,7 +63,7 @@ class IsFormulaPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the reference property value. 
+     * Gets the reference property value. The reference property
      * @return Json|null
     */
     public function getReference(): ?Json {
@@ -96,7 +96,7 @@ class IsFormulaPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the reference property value. 
+     * Sets the reference property value. The reference property
      * @param Json|null $value Value to set for the reference property.
     */
     public function setReference(?Json $value): void {

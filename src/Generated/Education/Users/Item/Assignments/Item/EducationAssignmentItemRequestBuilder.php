@@ -157,6 +157,7 @@ class EducationAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property assignments in education
+     * @param EducationAssignment $body The request body
      * @param EducationAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -243,6 +244,7 @@ class EducationAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property assignments in education
+     * @param EducationAssignment $body The request body
      * @param EducationAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

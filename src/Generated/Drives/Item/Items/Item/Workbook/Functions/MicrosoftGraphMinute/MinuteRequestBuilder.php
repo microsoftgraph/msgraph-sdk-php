@@ -47,6 +47,7 @@ class MinuteRequestBuilder
 
     /**
      * Invoke action minute
+     * @param MinutePostRequestBody $body The request body
      * @param MinuteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class MinuteRequestBuilder
 
     /**
      * Invoke action minute
+     * @param MinutePostRequestBody $body The request body
      * @param MinuteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -310,6 +310,7 @@ class DriveItemItemRequestBuilder
 
     /**
      * Update the navigation property items in drives
+     * @param DriveItem $body The request body
      * @param DriveItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -407,6 +408,7 @@ class DriveItemItemRequestBuilder
 
     /**
      * Update the navigation property items in drives
+     * @param DriveItem $body The request body
      * @param DriveItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

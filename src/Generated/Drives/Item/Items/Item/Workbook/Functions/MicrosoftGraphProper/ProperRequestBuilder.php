@@ -47,6 +47,7 @@ class ProperRequestBuilder
 
     /**
      * Invoke action proper
+     * @param ProperPostRequestBody $body The request body
      * @param ProperRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ProperRequestBuilder
 
     /**
      * Invoke action proper
+     * @param ProperPostRequestBody $body The request body
      * @param ProperRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

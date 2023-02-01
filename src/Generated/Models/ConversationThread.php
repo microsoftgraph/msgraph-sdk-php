@@ -77,7 +77,7 @@ class ConversationThread extends Entity implements Parsable
     }
 
     /**
-     * Gets the posts property value. 
+     * Gets the posts property value. The posts property
      * @return array<Post>|null
     */
     public function getPosts(): ?array {
@@ -166,7 +166,7 @@ class ConversationThread extends Entity implements Parsable
     }
 
     /**
-     * Sets the posts property value. 
+     * Sets the posts property value. The posts property
      * @param array<Post>|null $value Value to set for the posts property.
     */
     public function setPosts(?array $value): void {

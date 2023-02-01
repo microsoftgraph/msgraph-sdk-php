@@ -92,6 +92,7 @@ class PointsRequestBuilder
 
     /**
      * Use this API to create a new ChartPoints.
+     * @param WorkbookChartPoint $body The request body
      * @param PointsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/chartseries-post-points?view=graph-rest-1.0 Find more info here
@@ -136,6 +137,7 @@ class PointsRequestBuilder
 
     /**
      * Use this API to create a new ChartPoints.
+     * @param WorkbookChartPoint $body The request body
      * @param PointsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

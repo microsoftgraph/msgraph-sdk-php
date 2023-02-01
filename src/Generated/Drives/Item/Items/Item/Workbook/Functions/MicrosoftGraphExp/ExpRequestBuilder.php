@@ -47,6 +47,7 @@ class ExpRequestBuilder
 
     /**
      * Invoke action exp
+     * @param ExpPostRequestBody $body The request body
      * @param ExpRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ExpRequestBuilder
 
     /**
      * Invoke action exp
+     * @param ExpPostRequestBody $body The request body
      * @param ExpRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

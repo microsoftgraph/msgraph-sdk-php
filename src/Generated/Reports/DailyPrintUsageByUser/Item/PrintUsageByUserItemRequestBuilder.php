@@ -87,6 +87,7 @@ class PrintUsageByUserItemRequestBuilder
 
     /**
      * Update the navigation property dailyPrintUsageByUser in reports
+     * @param PrintUsageByUser $body The request body
      * @param PrintUsageByUserItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class PrintUsageByUserItemRequestBuilder
 
     /**
      * Update the navigation property dailyPrintUsageByUser in reports
+     * @param PrintUsageByUser $body The request body
      * @param PrintUsageByUserItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

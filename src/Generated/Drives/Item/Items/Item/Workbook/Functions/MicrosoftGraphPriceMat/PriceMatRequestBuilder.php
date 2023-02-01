@@ -47,6 +47,7 @@ class PriceMatRequestBuilder
 
     /**
      * Invoke action priceMat
+     * @param PriceMatPostRequestBody $body The request body
      * @param PriceMatRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class PriceMatRequestBuilder
 
     /**
      * Invoke action priceMat
+     * @param PriceMatPostRequestBody $body The request body
      * @param PriceMatRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

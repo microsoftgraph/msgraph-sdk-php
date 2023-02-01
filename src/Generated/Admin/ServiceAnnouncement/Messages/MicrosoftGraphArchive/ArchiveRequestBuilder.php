@@ -46,6 +46,7 @@ class ArchiveRequestBuilder
 
     /**
      * Archive a list of serviceUpdateMessages for the signed in user.
+     * @param ArchivePostRequestBody $body The request body
      * @param ArchiveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/serviceupdatemessage-archive?view=graph-rest-1.0 Find more info here
@@ -65,6 +66,7 @@ class ArchiveRequestBuilder
 
     /**
      * Archive a list of serviceUpdateMessages for the signed in user.
+     * @param ArchivePostRequestBody $body The request body
      * @param ArchiveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

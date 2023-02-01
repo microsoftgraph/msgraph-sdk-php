@@ -109,7 +109,7 @@ class DeviceConfigurationSettingState implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -141,7 +141,7 @@ class DeviceConfigurationSettingState implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the state property value. 
+     * Gets the state property value. The state property
      * @return ComplianceStatus|null
     */
     public function getState(): ?ComplianceStatus {
@@ -250,7 +250,7 @@ class DeviceConfigurationSettingState implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -282,7 +282,7 @@ class DeviceConfigurationSettingState implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the state property value. 
+     * Sets the state property value. The state property
      * @param ComplianceStatus|null $value Value to set for the state property.
     */
     public function setState(?ComplianceStatus $value): void {

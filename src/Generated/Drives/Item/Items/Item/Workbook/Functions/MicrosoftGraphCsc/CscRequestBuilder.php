@@ -47,6 +47,7 @@ class CscRequestBuilder
 
     /**
      * Invoke action csc
+     * @param CscPostRequestBody $body The request body
      * @param CscRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class CscRequestBuilder
 
     /**
      * Invoke action csc
+     * @param CscPostRequestBody $body The request body
      * @param CscRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

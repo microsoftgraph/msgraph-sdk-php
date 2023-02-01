@@ -75,6 +75,7 @@ class OperationsRequestBuilder
 
     /**
      * Create new navigation property to operations for sites
+     * @param RichLongRunningOperation $body The request body
      * @param OperationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,6 +119,7 @@ class OperationsRequestBuilder
 
     /**
      * Create new navigation property to operations for sites
+     * @param RichLongRunningOperation $body The request body
      * @param OperationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

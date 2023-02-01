@@ -44,7 +44,7 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the availabilityViewInterval property value. 
+     * Gets the availabilityViewInterval property value. The AvailabilityViewInterval property
      * @return int|null
     */
     public function getAvailabilityViewInterval(): ?int {
@@ -60,7 +60,7 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the endTime property value. 
+     * Gets the endTime property value. The EndTime property
      * @return DateTimeTimeZone|null
     */
     public function getEndTime(): ?DateTimeTimeZone {
@@ -82,7 +82,7 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the schedules property value. 
+     * Gets the schedules property value. The Schedules property
      * @return array<string>|null
     */
     public function getSchedules(): ?array {
@@ -90,7 +90,7 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the startTime property value. 
+     * Gets the startTime property value. The StartTime property
      * @return DateTimeTimeZone|null
     */
     public function getStartTime(): ?DateTimeTimeZone {
@@ -118,7 +118,7 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the availabilityViewInterval property value. 
+     * Sets the availabilityViewInterval property value. The AvailabilityViewInterval property
      * @param int|null $value Value to set for the AvailabilityViewInterval property.
     */
     public function setAvailabilityViewInterval(?int $value): void {
@@ -134,7 +134,7 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the endTime property value. 
+     * Sets the endTime property value. The EndTime property
      * @param DateTimeTimeZone|null $value Value to set for the EndTime property.
     */
     public function setEndTime(?DateTimeTimeZone $value): void {
@@ -142,7 +142,7 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the schedules property value. 
+     * Sets the schedules property value. The Schedules property
      * @param array<string>|null $value Value to set for the Schedules property.
     */
     public function setSchedules(?array $value): void {
@@ -150,7 +150,7 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the startTime property value. 
+     * Sets the startTime property value. The StartTime property
      * @param DateTimeTimeZone|null $value Value to set for the StartTime property.
     */
     public function setStartTime(?DateTimeTimeZone $value): void {

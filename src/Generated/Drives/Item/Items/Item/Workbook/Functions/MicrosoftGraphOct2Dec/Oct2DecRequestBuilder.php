@@ -47,6 +47,7 @@ class Oct2DecRequestBuilder
 
     /**
      * Invoke action oct2Dec
+     * @param Oct2DecPostRequestBody $body The request body
      * @param Oct2DecRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Oct2DecRequestBuilder
 
     /**
      * Invoke action oct2Dec
+     * @param Oct2DecPostRequestBody $body The request body
      * @param Oct2DecRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

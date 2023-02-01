@@ -26,7 +26,7 @@ class TodoTask extends Entity implements Parsable
     }
 
     /**
-     * Gets the attachments property value. 
+     * Gets the attachments property value. A collection of file attachments for the task.
      * @return array<AttachmentBase>|null
     */
     public function getAttachments(): ?array {
@@ -34,7 +34,7 @@ class TodoTask extends Entity implements Parsable
     }
 
     /**
-     * Gets the attachmentSessions property value. 
+     * Gets the attachmentSessions property value. The attachmentSessions property
      * @return array<AttachmentSession>|null
     */
     public function getAttachmentSessions(): ?array {
@@ -136,7 +136,7 @@ class TodoTask extends Entity implements Parsable
     }
 
     /**
-     * Gets the hasAttachments property value. 
+     * Gets the hasAttachments property value. Indicates whether the task has attachments.
      * @return bool|null
     */
     public function getHasAttachments(): ?bool {
@@ -144,7 +144,7 @@ class TodoTask extends Entity implements Parsable
     }
 
     /**
-     * Gets the importance property value. 
+     * Gets the importance property value. The importance property
      * @return Importance|null
     */
     public function getImportance(): ?Importance {
@@ -192,7 +192,7 @@ class TodoTask extends Entity implements Parsable
     }
 
     /**
-     * Gets the startDateTime property value. 
+     * Gets the startDateTime property value. The date and time in the specified time zone at which the task is scheduled to start.
      * @return DateTimeTimeZone|null
     */
     public function getStartDateTime(): ?DateTimeTimeZone {
@@ -200,7 +200,7 @@ class TodoTask extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. 
+     * Gets the status property value. The status property
      * @return TaskStatus|null
     */
     public function getStatus(): ?TaskStatus {
@@ -244,7 +244,7 @@ class TodoTask extends Entity implements Parsable
     }
 
     /**
-     * Sets the attachments property value. 
+     * Sets the attachments property value. A collection of file attachments for the task.
      * @param array<AttachmentBase>|null $value Value to set for the attachments property.
     */
     public function setAttachments(?array $value): void {
@@ -252,7 +252,7 @@ class TodoTask extends Entity implements Parsable
     }
 
     /**
-     * Sets the attachmentSessions property value. 
+     * Sets the attachmentSessions property value. The attachmentSessions property
      * @param array<AttachmentSession>|null $value Value to set for the attachmentSessions property.
     */
     public function setAttachmentSessions(?array $value): void {
@@ -324,7 +324,7 @@ class TodoTask extends Entity implements Parsable
     }
 
     /**
-     * Sets the hasAttachments property value. 
+     * Sets the hasAttachments property value. Indicates whether the task has attachments.
      * @param bool|null $value Value to set for the hasAttachments property.
     */
     public function setHasAttachments(?bool $value): void {
@@ -332,7 +332,7 @@ class TodoTask extends Entity implements Parsable
     }
 
     /**
-     * Sets the importance property value. 
+     * Sets the importance property value. The importance property
      * @param Importance|null $value Value to set for the importance property.
     */
     public function setImportance(?Importance $value): void {
@@ -380,7 +380,7 @@ class TodoTask extends Entity implements Parsable
     }
 
     /**
-     * Sets the startDateTime property value. 
+     * Sets the startDateTime property value. The date and time in the specified time zone at which the task is scheduled to start.
      * @param DateTimeTimeZone|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTimeTimeZone $value): void {
@@ -388,7 +388,7 @@ class TodoTask extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. 
+     * Sets the status property value. The status property
      * @param TaskStatus|null $value Value to set for the status property.
     */
     public function setStatus(?TaskStatus $value): void {

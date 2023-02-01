@@ -36,7 +36,7 @@ class EducationUserCollectionResponse extends BaseCollectionPaginationCountRespo
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<EducationUser>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class EducationUserCollectionResponse extends BaseCollectionPaginationCountRespo
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param array<EducationUser>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

@@ -47,6 +47,7 @@ class OddLYieldRequestBuilder
 
     /**
      * Invoke action oddLYield
+     * @param OddLYieldPostRequestBody $body The request body
      * @param OddLYieldRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class OddLYieldRequestBuilder
 
     /**
      * Invoke action oddLYield
+     * @param OddLYieldPostRequestBody $body The request body
      * @param OddLYieldRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

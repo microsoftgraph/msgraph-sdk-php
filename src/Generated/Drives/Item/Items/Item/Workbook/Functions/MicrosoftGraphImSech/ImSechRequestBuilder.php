@@ -47,6 +47,7 @@ class ImSechRequestBuilder
 
     /**
      * Invoke action imSech
+     * @param ImSechPostRequestBody $body The request body
      * @param ImSechRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ImSechRequestBuilder
 
     /**
      * Invoke action imSech
+     * @param ImSechPostRequestBody $body The request body
      * @param ImSechRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

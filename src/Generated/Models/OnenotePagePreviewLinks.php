@@ -63,7 +63,7 @@ class OnenotePagePreviewLinks implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -71,7 +71,7 @@ class OnenotePagePreviewLinks implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the previewImageUrl property value. 
+     * Gets the previewImageUrl property value. The previewImageUrl property
      * @return ExternalLink|null
     */
     public function getPreviewImageUrl(): ?ExternalLink {
@@ -105,7 +105,7 @@ class OnenotePagePreviewLinks implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -113,7 +113,7 @@ class OnenotePagePreviewLinks implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the previewImageUrl property value. 
+     * Sets the previewImageUrl property value. The previewImageUrl property
      * @param ExternalLink|null $value Value to set for the previewImageUrl property.
     */
     public function setPreviewImageUrl(?ExternalLink $value): void {

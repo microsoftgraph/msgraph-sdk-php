@@ -47,6 +47,7 @@ class DvarPRequestBuilder
 
     /**
      * Invoke action dvarP
+     * @param DvarPPostRequestBody $body The request body
      * @param DvarPRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class DvarPRequestBuilder
 
     /**
      * Invoke action dvarP
+     * @param DvarPPostRequestBody $body The request body
      * @param DvarPRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

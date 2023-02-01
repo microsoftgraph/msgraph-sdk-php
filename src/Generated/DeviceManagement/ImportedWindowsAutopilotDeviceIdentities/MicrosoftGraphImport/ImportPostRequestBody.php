@@ -63,7 +63,7 @@ class ImportPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the importedWindowsAutopilotDeviceIdentities property value. 
+     * Gets the importedWindowsAutopilotDeviceIdentities property value. The importedWindowsAutopilotDeviceIdentities property
      * @return array<ImportedWindowsAutopilotDeviceIdentity>|null
     */
     public function getImportedWindowsAutopilotDeviceIdentities(): ?array {
@@ -96,7 +96,7 @@ class ImportPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the importedWindowsAutopilotDeviceIdentities property value. 
+     * Sets the importedWindowsAutopilotDeviceIdentities property value. The importedWindowsAutopilotDeviceIdentities property
      * @param array<ImportedWindowsAutopilotDeviceIdentity>|null $value Value to set for the importedWindowsAutopilotDeviceIdentities property.
     */
     public function setImportedWindowsAutopilotDeviceIdentities(?array $value): void {

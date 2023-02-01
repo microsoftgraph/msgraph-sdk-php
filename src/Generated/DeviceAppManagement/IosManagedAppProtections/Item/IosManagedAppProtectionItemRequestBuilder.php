@@ -115,6 +115,7 @@ class IosManagedAppProtectionItemRequestBuilder
 
     /**
      * Update the navigation property iosManagedAppProtections in deviceAppManagement
+     * @param IosManagedAppProtection $body The request body
      * @param IosManagedAppProtectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -179,6 +180,7 @@ class IosManagedAppProtectionItemRequestBuilder
 
     /**
      * Update the navigation property iosManagedAppProtections in deviceAppManagement
+     * @param IosManagedAppProtection $body The request body
      * @param IosManagedAppProtectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

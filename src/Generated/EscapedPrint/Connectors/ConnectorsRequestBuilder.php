@@ -75,6 +75,7 @@ class ConnectorsRequestBuilder
 
     /**
      * Create new navigation property to connectors for print
+     * @param PrintConnector $body The request body
      * @param ConnectorsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,6 +119,7 @@ class ConnectorsRequestBuilder
 
     /**
      * Create new navigation property to connectors for print
+     * @param PrintConnector $body The request body
      * @param ConnectorsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

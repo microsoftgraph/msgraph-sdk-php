@@ -87,6 +87,7 @@ class RiskyUserHistoryItemItemRequestBuilder
 
     /**
      * Update the navigation property history in identityProtection
+     * @param RiskyUserHistoryItem $body The request body
      * @param RiskyUserHistoryItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class RiskyUserHistoryItemItemRequestBuilder
 
     /**
      * Update the navigation property history in identityProtection
+     * @param RiskyUserHistoryItem $body The request body
      * @param RiskyUserHistoryItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

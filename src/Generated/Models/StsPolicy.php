@@ -37,7 +37,7 @@ class StsPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Gets the appliesTo property value. 
+     * Gets the appliesTo property value. The appliesTo property
      * @return array<DirectoryObject>|null
     */
     public function getAppliesTo(): ?array {
@@ -85,7 +85,7 @@ class StsPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Sets the appliesTo property value. 
+     * Sets the appliesTo property value. The appliesTo property
      * @param array<DirectoryObject>|null $value Value to set for the appliesTo property.
     */
     public function setAppliesTo(?array $value): void {

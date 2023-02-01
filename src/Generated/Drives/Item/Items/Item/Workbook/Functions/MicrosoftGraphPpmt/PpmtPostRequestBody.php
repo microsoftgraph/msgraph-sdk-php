@@ -68,7 +68,7 @@ class PpmtPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the fv property value. 
+     * Gets the fv property value. The fv property
      * @return Json|null
     */
     public function getFv(): ?Json {
@@ -76,7 +76,7 @@ class PpmtPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the nper property value. 
+     * Gets the nper property value. The nper property
      * @return Json|null
     */
     public function getNper(): ?Json {
@@ -84,7 +84,7 @@ class PpmtPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the per property value. 
+     * Gets the per property value. The per property
      * @return Json|null
     */
     public function getPer(): ?Json {
@@ -92,7 +92,7 @@ class PpmtPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the pv property value. 
+     * Gets the pv property value. The pv property
      * @return Json|null
     */
     public function getPv(): ?Json {
@@ -100,7 +100,7 @@ class PpmtPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the rate property value. 
+     * Gets the rate property value. The rate property
      * @return Json|null
     */
     public function getRate(): ?Json {
@@ -108,7 +108,7 @@ class PpmtPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the type property value. 
+     * Gets the type property value. The type property
      * @return Json|null
     */
     public function getType(): ?Json {
@@ -146,7 +146,7 @@ class PpmtPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the fv property value. 
+     * Sets the fv property value. The fv property
      * @param Json|null $value Value to set for the fv property.
     */
     public function setFv(?Json $value): void {
@@ -154,7 +154,7 @@ class PpmtPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the nper property value. 
+     * Sets the nper property value. The nper property
      * @param Json|null $value Value to set for the nper property.
     */
     public function setNper(?Json $value): void {
@@ -162,7 +162,7 @@ class PpmtPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the per property value. 
+     * Sets the per property value. The per property
      * @param Json|null $value Value to set for the per property.
     */
     public function setPer(?Json $value): void {
@@ -170,7 +170,7 @@ class PpmtPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the pv property value. 
+     * Sets the pv property value. The pv property
      * @param Json|null $value Value to set for the pv property.
     */
     public function setPv(?Json $value): void {
@@ -178,7 +178,7 @@ class PpmtPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the rate property value. 
+     * Sets the rate property value. The rate property
      * @param Json|null $value Value to set for the rate property.
     */
     public function setRate(?Json $value): void {
@@ -186,7 +186,7 @@ class PpmtPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the type property value. 
+     * Sets the type property value. The type property
      * @param Json|null $value Value to set for the type property.
     */
     public function setType(?Json $value): void {

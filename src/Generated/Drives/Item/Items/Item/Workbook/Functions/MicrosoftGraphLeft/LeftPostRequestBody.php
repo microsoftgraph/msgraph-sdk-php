@@ -64,7 +64,7 @@ class LeftPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the numChars property value. 
+     * Gets the numChars property value. The numChars property
      * @return Json|null
     */
     public function getNumChars(): ?Json {
@@ -72,7 +72,7 @@ class LeftPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the text property value. 
+     * Gets the text property value. The text property
      * @return Json|null
     */
     public function getText(): ?Json {
@@ -106,7 +106,7 @@ class LeftPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the numChars property value. 
+     * Sets the numChars property value. The numChars property
      * @param Json|null $value Value to set for the numChars property.
     */
     public function setNumChars(?Json $value): void {
@@ -114,7 +114,7 @@ class LeftPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the text property value. 
+     * Sets the text property value. The text property
      * @param Json|null $value Value to set for the text property.
     */
     public function setText(?Json $value): void {

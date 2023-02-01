@@ -47,6 +47,7 @@ class TbillPriceRequestBuilder
 
     /**
      * Invoke action tbillPrice
+     * @param TbillPricePostRequestBody $body The request body
      * @param TbillPriceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class TbillPriceRequestBuilder
 
     /**
      * Invoke action tbillPrice
+     * @param TbillPricePostRequestBody $body The request body
      * @param TbillPriceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

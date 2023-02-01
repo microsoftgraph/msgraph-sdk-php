@@ -87,6 +87,7 @@ class NamedLocationItemRequestBuilder
 
     /**
      * Update the navigation property namedLocations in identity
+     * @param NamedLocation $body The request body
      * @param NamedLocationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class NamedLocationItemRequestBuilder
 
     /**
      * Update the navigation property namedLocations in identity
+     * @param NamedLocation $body The request body
      * @param NamedLocationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

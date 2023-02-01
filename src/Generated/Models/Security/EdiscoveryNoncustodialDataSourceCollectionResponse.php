@@ -37,7 +37,7 @@ class EdiscoveryNoncustodialDataSourceCollectionResponse extends BaseCollectionP
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<EdiscoveryNoncustodialDataSource>|null
     */
     public function getValue(): ?array {
@@ -54,7 +54,7 @@ class EdiscoveryNoncustodialDataSourceCollectionResponse extends BaseCollectionP
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param array<EdiscoveryNoncustodialDataSource>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

@@ -160,6 +160,7 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder
 
     /**
      * Update the navigation property mobileAppConfigurations in deviceAppManagement
+     * @param ManagedDeviceMobileAppConfiguration $body The request body
      * @param ManagedDeviceMobileAppConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -224,6 +225,7 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder
 
     /**
      * Update the navigation property mobileAppConfigurations in deviceAppManagement
+     * @param ManagedDeviceMobileAppConfiguration $body The request body
      * @param ManagedDeviceMobileAppConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

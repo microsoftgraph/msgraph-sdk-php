@@ -47,6 +47,7 @@ class YearRequestBuilder
 
     /**
      * Invoke action year
+     * @param YearPostRequestBody $body The request body
      * @param YearRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class YearRequestBuilder
 
     /**
      * Invoke action year
+     * @param YearPostRequestBody $body The request body
      * @param YearRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

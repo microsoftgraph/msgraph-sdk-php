@@ -135,6 +135,7 @@ class AgreementItemRequestBuilder
 
     /**
      * Update entity in agreements
+     * @param Agreement $body The request body
      * @param AgreementItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -199,6 +200,7 @@ class AgreementItemRequestBuilder
 
     /**
      * Update entity in agreements
+     * @param Agreement $body The request body
      * @param AgreementItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

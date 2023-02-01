@@ -87,6 +87,7 @@ class TokenLifetimePolicyItemRequestBuilder
 
     /**
      * Update the navigation property tokenLifetimePolicies in policies
+     * @param TokenLifetimePolicy $body The request body
      * @param TokenLifetimePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class TokenLifetimePolicyItemRequestBuilder
 
     /**
      * Update the navigation property tokenLifetimePolicies in policies
+     * @param TokenLifetimePolicy $body The request body
      * @param TokenLifetimePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

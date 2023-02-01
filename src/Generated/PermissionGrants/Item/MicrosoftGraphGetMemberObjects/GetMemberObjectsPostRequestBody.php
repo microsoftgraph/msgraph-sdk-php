@@ -62,7 +62,7 @@ class GetMemberObjectsPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the securityEnabledOnly property value. 
+     * Gets the securityEnabledOnly property value. The securityEnabledOnly property
      * @return bool|null
     */
     public function getSecurityEnabledOnly(): ?bool {
@@ -95,7 +95,7 @@ class GetMemberObjectsPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the securityEnabledOnly property value. 
+     * Sets the securityEnabledOnly property value. The securityEnabledOnly property
      * @param bool|null $value Value to set for the securityEnabledOnly property.
     */
     public function setSecurityEnabledOnly(?bool $value): void {

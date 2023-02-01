@@ -85,6 +85,7 @@ class StagesRequestBuilder
 
     /**
      * Create new navigation property to stages for identityGovernance
+     * @param AccessReviewStage $body The request body
      * @param StagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -128,6 +129,7 @@ class StagesRequestBuilder
 
     /**
      * Create new navigation property to stages for identityGovernance
+     * @param AccessReviewStage $body The request body
      * @param StagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

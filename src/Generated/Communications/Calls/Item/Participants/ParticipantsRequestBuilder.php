@@ -83,6 +83,7 @@ class ParticipantsRequestBuilder
 
     /**
      * Create new navigation property to participants for communications
+     * @param Participant $body The request body
      * @param ParticipantsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -126,6 +127,7 @@ class ParticipantsRequestBuilder
 
     /**
      * Create new navigation property to participants for communications
+     * @param Participant $body The request body
      * @param ParticipantsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

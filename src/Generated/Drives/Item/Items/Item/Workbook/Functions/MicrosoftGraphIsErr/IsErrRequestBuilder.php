@@ -47,6 +47,7 @@ class IsErrRequestBuilder
 
     /**
      * Invoke action isErr
+     * @param IsErrPostRequestBody $body The request body
      * @param IsErrRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class IsErrRequestBuilder
 
     /**
      * Invoke action isErr
+     * @param IsErrPostRequestBody $body The request body
      * @param IsErrRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -75,6 +75,7 @@ class SecureScoresRequestBuilder
 
     /**
      * Create new navigation property to secureScores for security
+     * @param SecureScore $body The request body
      * @param SecureScoresRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,6 +119,7 @@ class SecureScoresRequestBuilder
 
     /**
      * Create new navigation property to secureScores for security
+     * @param SecureScore $body The request body
      * @param SecureScoresRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

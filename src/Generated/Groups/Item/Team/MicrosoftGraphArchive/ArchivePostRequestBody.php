@@ -62,7 +62,7 @@ class ArchivePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the shouldSetSpoSiteReadOnlyForMembers property value. 
+     * Gets the shouldSetSpoSiteReadOnlyForMembers property value. The shouldSetSpoSiteReadOnlyForMembers property
      * @return bool|null
     */
     public function getShouldSetSpoSiteReadOnlyForMembers(): ?bool {
@@ -95,7 +95,7 @@ class ArchivePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the shouldSetSpoSiteReadOnlyForMembers property value. 
+     * Sets the shouldSetSpoSiteReadOnlyForMembers property value. The shouldSetSpoSiteReadOnlyForMembers property
      * @param bool|null $value Value to set for the shouldSetSpoSiteReadOnlyForMembers property.
     */
     public function setShouldSetSpoSiteReadOnlyForMembers(?bool $value): void {

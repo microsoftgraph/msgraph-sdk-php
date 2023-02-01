@@ -157,6 +157,7 @@ class DirectoryRoleItemRequestBuilder
 
     /**
      * Update entity in directoryRoles
+     * @param DirectoryRole $body The request body
      * @param DirectoryRoleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -232,6 +233,7 @@ class DirectoryRoleItemRequestBuilder
 
     /**
      * Update entity in directoryRoles
+     * @param DirectoryRole $body The request body
      * @param DirectoryRoleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

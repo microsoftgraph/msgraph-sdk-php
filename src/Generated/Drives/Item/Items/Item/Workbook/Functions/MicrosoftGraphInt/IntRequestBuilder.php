@@ -47,6 +47,7 @@ class IntRequestBuilder
 
     /**
      * Invoke action int
+     * @param IntPostRequestBody $body The request body
      * @param IntRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class IntRequestBuilder
 
     /**
      * Invoke action int
+     * @param IntPostRequestBody $body The request body
      * @param IntRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

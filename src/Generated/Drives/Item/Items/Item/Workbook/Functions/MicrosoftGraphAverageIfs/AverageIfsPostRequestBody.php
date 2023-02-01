@@ -44,7 +44,7 @@ class AverageIfsPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the averageRange property value. 
+     * Gets the averageRange property value. The averageRange property
      * @return Json|null
     */
     public function getAverageRange(): ?Json {
@@ -72,7 +72,7 @@ class AverageIfsPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the values property value. 
+     * Gets the values property value. The values property
      * @return Json|null
     */
     public function getValues(): ?Json {
@@ -98,7 +98,7 @@ class AverageIfsPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the averageRange property value. 
+     * Sets the averageRange property value. The averageRange property
      * @param Json|null $value Value to set for the averageRange property.
     */
     public function setAverageRange(?Json $value): void {
@@ -114,7 +114,7 @@ class AverageIfsPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the values property value. 
+     * Sets the values property value. The values property
      * @param Json|null $value Value to set for the values property.
     */
     public function setValues(?Json $value): void {

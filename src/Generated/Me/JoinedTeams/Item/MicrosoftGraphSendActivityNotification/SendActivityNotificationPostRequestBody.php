@@ -39,7 +39,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, B
     }
 
     /**
-     * Gets the activityType property value. 
+     * Gets the activityType property value. The activityType property
      * @return string|null
     */
     public function getActivityType(): ?string {
@@ -63,7 +63,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, B
     }
 
     /**
-     * Gets the chainId property value. 
+     * Gets the chainId property value. The chainId property
      * @return int|null
     */
     public function getChainId(): ?int {
@@ -87,7 +87,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, B
     }
 
     /**
-     * Gets the previewText property value. 
+     * Gets the previewText property value. The previewText property
      * @return ItemBody|null
     */
     public function getPreviewText(): ?ItemBody {
@@ -95,7 +95,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, B
     }
 
     /**
-     * Gets the recipient property value. 
+     * Gets the recipient property value. The recipient property
      * @return TeamworkNotificationRecipient|null
     */
     public function getRecipient(): ?TeamworkNotificationRecipient {
@@ -103,7 +103,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, B
     }
 
     /**
-     * Gets the templateParameters property value. 
+     * Gets the templateParameters property value. The templateParameters property
      * @return array<KeyValuePair>|null
     */
     public function getTemplateParameters(): ?array {
@@ -111,7 +111,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, B
     }
 
     /**
-     * Gets the topic property value. 
+     * Gets the topic property value. The topic property
      * @return TeamworkActivityTopic|null
     */
     public function getTopic(): ?TeamworkActivityTopic {
@@ -133,7 +133,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, B
     }
 
     /**
-     * Sets the activityType property value. 
+     * Sets the activityType property value. The activityType property
      * @param string|null $value Value to set for the activityType property.
     */
     public function setActivityType(?string $value): void {
@@ -157,7 +157,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, B
     }
 
     /**
-     * Sets the chainId property value. 
+     * Sets the chainId property value. The chainId property
      * @param int|null $value Value to set for the chainId property.
     */
     public function setChainId(?int $value): void {
@@ -165,7 +165,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, B
     }
 
     /**
-     * Sets the previewText property value. 
+     * Sets the previewText property value. The previewText property
      * @param ItemBody|null $value Value to set for the previewText property.
     */
     public function setPreviewText(?ItemBody $value): void {
@@ -173,7 +173,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, B
     }
 
     /**
-     * Sets the recipient property value. 
+     * Sets the recipient property value. The recipient property
      * @param TeamworkNotificationRecipient|null $value Value to set for the recipient property.
     */
     public function setRecipient(?TeamworkNotificationRecipient $value): void {
@@ -181,7 +181,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, B
     }
 
     /**
-     * Sets the templateParameters property value. 
+     * Sets the templateParameters property value. The templateParameters property
      * @param array<KeyValuePair>|null $value Value to set for the templateParameters property.
     */
     public function setTemplateParameters(?array $value): void {
@@ -189,7 +189,7 @@ class SendActivityNotificationPostRequestBody implements AdditionalDataHolder, B
     }
 
     /**
-     * Sets the topic property value. 
+     * Sets the topic property value. The topic property
      * @param TeamworkActivityTopic|null $value Value to set for the topic property.
     */
     public function setTopic(?TeamworkActivityTopic $value): void {

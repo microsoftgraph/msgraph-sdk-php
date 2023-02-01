@@ -46,6 +46,7 @@ class WipeManagedAppRegistrationsByDeviceTagRequestBuilder
 
     /**
      * Issues a wipe operation on an app registration with specified device tag.
+     * @param WipeManagedAppRegistrationsByDeviceTagPostRequestBody $body The request body
      * @param WipeManagedAppRegistrationsByDeviceTagRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -64,6 +65,7 @@ class WipeManagedAppRegistrationsByDeviceTagRequestBuilder
 
     /**
      * Issues a wipe operation on an app registration with specified device tag.
+     * @param WipeManagedAppRegistrationsByDeviceTagPostRequestBody $body The request body
      * @param WipeManagedAppRegistrationsByDeviceTagRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

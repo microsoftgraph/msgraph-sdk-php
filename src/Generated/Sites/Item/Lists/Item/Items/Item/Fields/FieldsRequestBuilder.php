@@ -83,6 +83,7 @@ class FieldsRequestBuilder
 
     /**
      * Update the properties on a **[listItem][]**.
+     * @param FieldValueSet $body The request body
      * @param FieldsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/listitem-update?view=graph-rest-1.0 Find more info here
@@ -148,6 +149,7 @@ class FieldsRequestBuilder
 
     /**
      * Update the properties on a **[listItem][]**.
+     * @param FieldValueSet $body The request body
      * @param FieldsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

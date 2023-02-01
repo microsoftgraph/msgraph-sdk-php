@@ -103,6 +103,7 @@ class WorkbookNamedItemItemRequestBuilder
 
     /**
      * Update the navigation property names in drives
+     * @param WorkbookNamedItem $body The request body
      * @param WorkbookNamedItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -167,6 +168,7 @@ class WorkbookNamedItemItemRequestBuilder
 
     /**
      * Update the navigation property names in drives
+     * @param WorkbookNamedItem $body The request body
      * @param WorkbookNamedItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

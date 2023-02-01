@@ -47,6 +47,7 @@ class Beta_DistRequestBuilder
 
     /**
      * Invoke action beta_Dist
+     * @param Beta_DistPostRequestBody $body The request body
      * @param Beta_DistRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Beta_DistRequestBuilder
 
     /**
      * Invoke action beta_Dist
+     * @param Beta_DistPostRequestBody $body The request body
      * @param Beta_DistRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

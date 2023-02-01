@@ -87,6 +87,7 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder
 
     /**
      * Update the navigation property activityBasedTimeoutPolicies in policies
+     * @param ActivityBasedTimeoutPolicy $body The request body
      * @param ActivityBasedTimeoutPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class ActivityBasedTimeoutPolicyItemRequestBuilder
 
     /**
      * Update the navigation property activityBasedTimeoutPolicies in policies
+     * @param ActivityBasedTimeoutPolicy $body The request body
      * @param ActivityBasedTimeoutPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

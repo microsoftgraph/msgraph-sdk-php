@@ -47,6 +47,7 @@ class Bin2HexRequestBuilder
 
     /**
      * Invoke action bin2Hex
+     * @param Bin2HexPostRequestBody $body The request body
      * @param Bin2HexRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Bin2HexRequestBuilder
 
     /**
      * Invoke action bin2Hex
+     * @param Bin2HexPostRequestBody $body The request body
      * @param Bin2HexRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

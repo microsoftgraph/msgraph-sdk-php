@@ -52,7 +52,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the expirationDateTime property value. 
+     * Gets the expirationDateTime property value. The expirationDateTime property
      * @return string|null
     */
     public function getExpirationDateTime(): ?string {
@@ -78,7 +78,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the message property value. 
+     * Gets the message property value. The message property
      * @return string|null
     */
     public function getMessage(): ?string {
@@ -86,7 +86,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the password property value. 
+     * Gets the password property value. The password property
      * @return string|null
     */
     public function getPassword(): ?string {
@@ -94,7 +94,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the recipients property value. 
+     * Gets the recipients property value. The recipients property
      * @return array<DriveRecipient>|null
     */
     public function getRecipients(): ?array {
@@ -102,7 +102,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the requireSignIn property value. 
+     * Gets the requireSignIn property value. The requireSignIn property
      * @return bool|null
     */
     public function getRequireSignIn(): ?bool {
@@ -110,7 +110,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the retainInheritedPermissions property value. 
+     * Gets the retainInheritedPermissions property value. The retainInheritedPermissions property
      * @return bool|null
     */
     public function getRetainInheritedPermissions(): ?bool {
@@ -118,7 +118,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the roles property value. 
+     * Gets the roles property value. The roles property
      * @return array<string>|null
     */
     public function getRoles(): ?array {
@@ -126,7 +126,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the sendInvitation property value. 
+     * Gets the sendInvitation property value. The sendInvitation property
      * @return bool|null
     */
     public function getSendInvitation(): ?bool {
@@ -166,7 +166,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the expirationDateTime property value. 
+     * Sets the expirationDateTime property value. The expirationDateTime property
      * @param string|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?string $value): void {
@@ -174,7 +174,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the message property value. 
+     * Sets the message property value. The message property
      * @param string|null $value Value to set for the message property.
     */
     public function setMessage(?string $value): void {
@@ -182,7 +182,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the password property value. 
+     * Sets the password property value. The password property
      * @param string|null $value Value to set for the password property.
     */
     public function setPassword(?string $value): void {
@@ -190,7 +190,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the recipients property value. 
+     * Sets the recipients property value. The recipients property
      * @param array<DriveRecipient>|null $value Value to set for the recipients property.
     */
     public function setRecipients(?array $value): void {
@@ -198,7 +198,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the requireSignIn property value. 
+     * Sets the requireSignIn property value. The requireSignIn property
      * @param bool|null $value Value to set for the requireSignIn property.
     */
     public function setRequireSignIn(?bool $value): void {
@@ -206,7 +206,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the retainInheritedPermissions property value. 
+     * Sets the retainInheritedPermissions property value. The retainInheritedPermissions property
      * @param bool|null $value Value to set for the retainInheritedPermissions property.
     */
     public function setRetainInheritedPermissions(?bool $value): void {
@@ -214,7 +214,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the roles property value. 
+     * Sets the roles property value. The roles property
      * @param array<string>|null $value Value to set for the roles property.
     */
     public function setRoles(?array $value): void {
@@ -222,7 +222,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the sendInvitation property value. 
+     * Sets the sendInvitation property value. The sendInvitation property
      * @param bool|null $value Value to set for the sendInvitation property.
     */
     public function setSendInvitation(?bool $value): void {

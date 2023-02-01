@@ -47,6 +47,7 @@ class MedianRequestBuilder
 
     /**
      * Invoke action median
+     * @param MedianPostRequestBody $body The request body
      * @param MedianRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class MedianRequestBuilder
 
     /**
      * Invoke action median
+     * @param MedianPostRequestBody $body The request body
      * @param MedianRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -64,7 +64,7 @@ class GeStepPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the number property value. 
+     * Gets the number property value. The number property
      * @return Json|null
     */
     public function getNumber(): ?Json {
@@ -72,7 +72,7 @@ class GeStepPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the step property value. 
+     * Gets the step property value. The step property
      * @return Json|null
     */
     public function getStep(): ?Json {
@@ -106,7 +106,7 @@ class GeStepPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the number property value. 
+     * Sets the number property value. The number property
      * @param Json|null $value Value to set for the number property.
     */
     public function setNumber(?Json $value): void {
@@ -114,7 +114,7 @@ class GeStepPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the step property value. 
+     * Sets the step property value. The step property
      * @param Json|null $value Value to set for the step property.
     */
     public function setStep(?Json $value): void {

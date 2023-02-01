@@ -65,7 +65,7 @@ class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the logicalTest property value. 
+     * Gets the logicalTest property value. The logicalTest property
      * @return Json|null
     */
     public function getLogicalTest(): ?Json {
@@ -73,7 +73,7 @@ class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the valueIfFalse property value. 
+     * Gets the valueIfFalse property value. The valueIfFalse property
      * @return Json|null
     */
     public function getValueIfFalse(): ?Json {
@@ -81,7 +81,7 @@ class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the valueIfTrue property value. 
+     * Gets the valueIfTrue property value. The valueIfTrue property
      * @return Json|null
     */
     public function getValueIfTrue(): ?Json {
@@ -116,7 +116,7 @@ class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the logicalTest property value. 
+     * Sets the logicalTest property value. The logicalTest property
      * @param Json|null $value Value to set for the logicalTest property.
     */
     public function setLogicalTest(?Json $value): void {
@@ -124,7 +124,7 @@ class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the valueIfFalse property value. 
+     * Sets the valueIfFalse property value. The valueIfFalse property
      * @param Json|null $value Value to set for the valueIfFalse property.
     */
     public function setValueIfFalse(?Json $value): void {
@@ -132,7 +132,7 @@ class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the valueIfTrue property value. 
+     * Sets the valueIfTrue property value. The valueIfTrue property
      * @param Json|null $value Value to set for the valueIfTrue property.
     */
     public function setValueIfTrue(?Json $value): void {

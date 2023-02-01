@@ -95,6 +95,7 @@ class TeamsTabItemRequestBuilder
 
     /**
      * Update the navigation property tabs in teams
+     * @param TeamsTab $body The request body
      * @param TeamsTabItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class TeamsTabItemRequestBuilder
 
     /**
      * Update the navigation property tabs in teams
+     * @param TeamsTab $body The request body
      * @param TeamsTabItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

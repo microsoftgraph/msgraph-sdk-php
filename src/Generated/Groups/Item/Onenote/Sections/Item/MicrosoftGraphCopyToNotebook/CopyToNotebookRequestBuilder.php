@@ -47,6 +47,7 @@ class CopyToNotebookRequestBuilder
 
     /**
      * For Copy operations, you follow an asynchronous calling pattern:  First call the Copy action, and then poll the operation endpoint for the result.
+     * @param CopyToNotebookPostRequestBody $body The request body
      * @param CopyToNotebookRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/section-copytonotebook?view=graph-rest-1.0 Find more info here
@@ -66,6 +67,7 @@ class CopyToNotebookRequestBuilder
 
     /**
      * For Copy operations, you follow an asynchronous calling pattern:  First call the Copy action, and then poll the operation endpoint for the result.
+     * @param CopyToNotebookPostRequestBody $body The request body
      * @param CopyToNotebookRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

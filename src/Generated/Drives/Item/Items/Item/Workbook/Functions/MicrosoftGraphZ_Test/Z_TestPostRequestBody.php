@@ -44,7 +44,7 @@ class Z_TestPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the array property value. 
+     * Gets the array property value. The array property
      * @return Json|null
     */
     public function getArray(): ?Json {
@@ -73,7 +73,7 @@ class Z_TestPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the sigma property value. 
+     * Gets the sigma property value. The sigma property
      * @return Json|null
     */
     public function getSigma(): ?Json {
@@ -81,7 +81,7 @@ class Z_TestPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the x property value. 
+     * Gets the x property value. The x property
      * @return Json|null
     */
     public function getX(): ?Json {
@@ -108,7 +108,7 @@ class Z_TestPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the array property value. 
+     * Sets the array property value. The array property
      * @param Json|null $value Value to set for the array property.
     */
     public function setArray(?Json $value): void {
@@ -124,7 +124,7 @@ class Z_TestPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the sigma property value. 
+     * Sets the sigma property value. The sigma property
      * @param Json|null $value Value to set for the sigma property.
     */
     public function setSigma(?Json $value): void {
@@ -132,7 +132,7 @@ class Z_TestPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the x property value. 
+     * Sets the x property value. The x property
      * @param Json|null $value Value to set for the x property.
     */
     public function setX(?Json $value): void {

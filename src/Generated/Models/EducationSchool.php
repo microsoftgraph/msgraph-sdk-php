@@ -74,7 +74,7 @@ class EducationSchool extends EducationOrganization implements Parsable
     }
 
     /**
-     * Gets the fax property value. 
+     * Gets the fax property value. The fax property
      * @return string|null
     */
     public function getFax(): ?string {
@@ -232,7 +232,7 @@ class EducationSchool extends EducationOrganization implements Parsable
     }
 
     /**
-     * Sets the fax property value. 
+     * Sets the fax property value. The fax property
      * @param string|null $value Value to set for the fax property.
     */
     public function setFax(?string $value): void {

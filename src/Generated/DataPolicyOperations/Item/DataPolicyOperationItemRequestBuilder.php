@@ -88,6 +88,7 @@ class DataPolicyOperationItemRequestBuilder
 
     /**
      * Update entity in dataPolicyOperations
+     * @param DataPolicyOperation $body The request body
      * @param DataPolicyOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -152,6 +153,7 @@ class DataPolicyOperationItemRequestBuilder
 
     /**
      * Update entity in dataPolicyOperations
+     * @param DataPolicyOperation $body The request body
      * @param DataPolicyOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -65,7 +65,7 @@ class PurgeDataPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the purgeAreas property value. 
+     * Gets the purgeAreas property value. The purgeAreas property
      * @return PurgeAreas|null
     */
     public function getPurgeAreas(): ?PurgeAreas {
@@ -73,7 +73,7 @@ class PurgeDataPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the purgeType property value. 
+     * Gets the purgeType property value. The purgeType property
      * @return PurgeType|null
     */
     public function getPurgeType(): ?PurgeType {
@@ -107,7 +107,7 @@ class PurgeDataPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the purgeAreas property value. 
+     * Sets the purgeAreas property value. The purgeAreas property
      * @param PurgeAreas|null $value Value to set for the purgeAreas property.
     */
     public function setPurgeAreas(?PurgeAreas $value): void {
@@ -115,7 +115,7 @@ class PurgeDataPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the purgeType property value. 
+     * Sets the purgeType property value. The purgeType property
      * @param PurgeType|null $value Value to set for the purgeType property.
     */
     public function setPurgeType(?PurgeType $value): void {

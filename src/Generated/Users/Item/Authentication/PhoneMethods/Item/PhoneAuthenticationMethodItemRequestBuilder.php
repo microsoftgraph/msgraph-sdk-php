@@ -103,6 +103,7 @@ class PhoneAuthenticationMethodItemRequestBuilder
 
     /**
      * Update the navigation property phoneMethods in users
+     * @param PhoneAuthenticationMethod $body The request body
      * @param PhoneAuthenticationMethodItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -167,6 +168,7 @@ class PhoneAuthenticationMethodItemRequestBuilder
 
     /**
      * Update the navigation property phoneMethods in users
+     * @param PhoneAuthenticationMethod $body The request body
      * @param PhoneAuthenticationMethodItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

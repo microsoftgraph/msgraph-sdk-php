@@ -52,7 +52,7 @@ class NumberValuePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the decimalSeparator property value. 
+     * Gets the decimalSeparator property value. The decimalSeparator property
      * @return Json|null
     */
     public function getDecimalSeparator(): ?Json {
@@ -73,7 +73,7 @@ class NumberValuePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the groupSeparator property value. 
+     * Gets the groupSeparator property value. The groupSeparator property
      * @return Json|null
     */
     public function getGroupSeparator(): ?Json {
@@ -81,7 +81,7 @@ class NumberValuePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the text property value. 
+     * Gets the text property value. The text property
      * @return Json|null
     */
     public function getText(): ?Json {
@@ -116,7 +116,7 @@ class NumberValuePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the decimalSeparator property value. 
+     * Sets the decimalSeparator property value. The decimalSeparator property
      * @param Json|null $value Value to set for the decimalSeparator property.
     */
     public function setDecimalSeparator(?Json $value): void {
@@ -124,7 +124,7 @@ class NumberValuePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the groupSeparator property value. 
+     * Sets the groupSeparator property value. The groupSeparator property
      * @param Json|null $value Value to set for the groupSeparator property.
     */
     public function setGroupSeparator(?Json $value): void {
@@ -132,7 +132,7 @@ class NumberValuePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the text property value. 
+     * Sets the text property value. The text property
      * @param Json|null $value Value to set for the text property.
     */
     public function setText(?Json $value): void {

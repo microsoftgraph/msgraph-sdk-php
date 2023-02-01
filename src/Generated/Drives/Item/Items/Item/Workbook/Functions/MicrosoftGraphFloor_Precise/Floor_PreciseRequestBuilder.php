@@ -47,6 +47,7 @@ class Floor_PreciseRequestBuilder
 
     /**
      * Invoke action floor_Precise
+     * @param Floor_PrecisePostRequestBody $body The request body
      * @param Floor_PreciseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Floor_PreciseRequestBuilder
 
     /**
      * Invoke action floor_Precise
+     * @param Floor_PrecisePostRequestBody $body The request body
      * @param Floor_PreciseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

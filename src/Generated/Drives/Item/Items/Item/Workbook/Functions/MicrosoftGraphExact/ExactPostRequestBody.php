@@ -64,7 +64,7 @@ class ExactPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the text1 property value. 
+     * Gets the text1 property value. The text1 property
      * @return Json|null
     */
     public function getText1(): ?Json {
@@ -72,7 +72,7 @@ class ExactPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the text2 property value. 
+     * Gets the text2 property value. The text2 property
      * @return Json|null
     */
     public function getText2(): ?Json {
@@ -106,7 +106,7 @@ class ExactPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the text1 property value. 
+     * Sets the text1 property value. The text1 property
      * @param Json|null $value Value to set for the text1 property.
     */
     public function setText1(?Json $value): void {
@@ -114,7 +114,7 @@ class ExactPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the text2 property value. 
+     * Sets the text2 property value. The text2 property
      * @param Json|null $value Value to set for the text2 property.
     */
     public function setText2(?Json $value): void {

@@ -85,6 +85,7 @@ class RoleAssignmentScheduleInstancesRequestBuilder
 
     /**
      * Create new navigation property to roleAssignmentScheduleInstances for roleManagement
+     * @param UnifiedRoleAssignmentScheduleInstance $body The request body
      * @param RoleAssignmentScheduleInstancesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -128,6 +129,7 @@ class RoleAssignmentScheduleInstancesRequestBuilder
 
     /**
      * Create new navigation property to roleAssignmentScheduleInstances for roleManagement
+     * @param UnifiedRoleAssignmentScheduleInstance $body The request body
      * @param RoleAssignmentScheduleInstancesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

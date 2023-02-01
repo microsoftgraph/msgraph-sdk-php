@@ -125,6 +125,7 @@ class UserFlowLanguageConfigurationItemRequestBuilder
 
     /**
      * Update the navigation property languages in identity
+     * @param UserFlowLanguageConfiguration $body The request body
      * @param UserFlowLanguageConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -189,6 +190,7 @@ class UserFlowLanguageConfigurationItemRequestBuilder
 
     /**
      * Update the navigation property languages in identity
+     * @param UserFlowLanguageConfiguration $body The request body
      * @param UserFlowLanguageConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

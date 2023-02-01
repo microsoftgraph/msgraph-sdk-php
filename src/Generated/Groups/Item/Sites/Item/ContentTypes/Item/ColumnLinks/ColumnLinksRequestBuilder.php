@@ -74,6 +74,7 @@ class ColumnLinksRequestBuilder
 
     /**
      * Create new navigation property to columnLinks for groups
+     * @param ColumnLink $body The request body
      * @param ColumnLinksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class ColumnLinksRequestBuilder
 
     /**
      * Create new navigation property to columnLinks for groups
+     * @param ColumnLink $body The request body
      * @param ColumnLinksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

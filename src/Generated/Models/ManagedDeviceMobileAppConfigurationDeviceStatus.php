@@ -78,7 +78,7 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity implements 
     }
 
     /**
-     * Gets the status property value. 
+     * Gets the status property value. The status property
      * @return ComplianceStatus|null
     */
     public function getStatus(): ?ComplianceStatus {
@@ -149,7 +149,7 @@ class ManagedDeviceMobileAppConfigurationDeviceStatus extends Entity implements 
     }
 
     /**
-     * Sets the status property value. 
+     * Sets the status property value. The status property
      * @param ComplianceStatus|null $value Value to set for the status property.
     */
     public function setStatus(?ComplianceStatus $value): void {

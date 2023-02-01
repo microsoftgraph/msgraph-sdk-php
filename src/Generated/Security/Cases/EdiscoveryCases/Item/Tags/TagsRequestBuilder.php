@@ -83,6 +83,7 @@ class TagsRequestBuilder
 
     /**
      * Create a new ediscoveryReviewTag object.
+     * @param EdiscoveryReviewTag $body The request body
      * @param TagsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/security-ediscoverycase-post-tags?view=graph-rest-1.0 Find more info here
@@ -127,6 +128,7 @@ class TagsRequestBuilder
 
     /**
      * Create a new ediscoveryReviewTag object.
+     * @param EdiscoveryReviewTag $body The request body
      * @param TagsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

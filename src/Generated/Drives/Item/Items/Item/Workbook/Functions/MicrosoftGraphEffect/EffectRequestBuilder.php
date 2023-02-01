@@ -47,6 +47,7 @@ class EffectRequestBuilder
 
     /**
      * Invoke action effect
+     * @param EffectPostRequestBody $body The request body
      * @param EffectRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class EffectRequestBuilder
 
     /**
      * Invoke action effect
+     * @param EffectPostRequestBody $body The request body
      * @param EffectRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

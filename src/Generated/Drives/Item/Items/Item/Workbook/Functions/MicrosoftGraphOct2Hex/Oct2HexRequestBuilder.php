@@ -47,6 +47,7 @@ class Oct2HexRequestBuilder
 
     /**
      * Invoke action oct2Hex
+     * @param Oct2HexPostRequestBody $body The request body
      * @param Oct2HexRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Oct2HexRequestBuilder
 
     /**
      * Invoke action oct2Hex
+     * @param Oct2HexPostRequestBody $body The request body
      * @param Oct2HexRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

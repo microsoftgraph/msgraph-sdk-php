@@ -25,7 +25,7 @@ class DelegatedAdminCustomer extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. 
+     * Gets the displayName property value. The displayName property
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -46,7 +46,7 @@ class DelegatedAdminCustomer extends Entity implements Parsable
     }
 
     /**
-     * Gets the serviceManagementDetails property value. 
+     * Gets the serviceManagementDetails property value. The serviceManagementDetails property
      * @return array<DelegatedAdminServiceManagementDetail>|null
     */
     public function getServiceManagementDetails(): ?array {
@@ -54,7 +54,7 @@ class DelegatedAdminCustomer extends Entity implements Parsable
     }
 
     /**
-     * Gets the tenantId property value. 
+     * Gets the tenantId property value. The tenantId property
      * @return string|null
     */
     public function getTenantId(): ?string {
@@ -73,7 +73,7 @@ class DelegatedAdminCustomer extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. 
+     * Sets the displayName property value. The displayName property
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -81,7 +81,7 @@ class DelegatedAdminCustomer extends Entity implements Parsable
     }
 
     /**
-     * Sets the serviceManagementDetails property value. 
+     * Sets the serviceManagementDetails property value. The serviceManagementDetails property
      * @param array<DelegatedAdminServiceManagementDetail>|null $value Value to set for the serviceManagementDetails property.
     */
     public function setServiceManagementDetails(?array $value): void {
@@ -89,7 +89,7 @@ class DelegatedAdminCustomer extends Entity implements Parsable
     }
 
     /**
-     * Sets the tenantId property value. 
+     * Sets the tenantId property value. The tenantId property
      * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {

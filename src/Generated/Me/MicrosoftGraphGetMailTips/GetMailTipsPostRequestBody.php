@@ -52,7 +52,7 @@ class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the emailAddresses property value. 
+     * Gets the emailAddresses property value. The EmailAddresses property
      * @return array<string>|null
     */
     public function getEmailAddresses(): ?array {
@@ -72,7 +72,7 @@ class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the mailTipsOptions property value. 
+     * Gets the mailTipsOptions property value. The MailTipsOptions property
      * @return MailTipsType|null
     */
     public function getMailTipsOptions(): ?MailTipsType {
@@ -106,7 +106,7 @@ class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the emailAddresses property value. 
+     * Sets the emailAddresses property value. The EmailAddresses property
      * @param array<string>|null $value Value to set for the EmailAddresses property.
     */
     public function setEmailAddresses(?array $value): void {
@@ -114,7 +114,7 @@ class GetMailTipsPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the mailTipsOptions property value. 
+     * Sets the mailTipsOptions property value. The MailTipsOptions property
      * @param MailTipsType|null $value Value to set for the MailTipsOptions property.
     */
     public function setMailTipsOptions(?MailTipsType $value): void {

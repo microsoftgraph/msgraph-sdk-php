@@ -44,7 +44,7 @@ class Binom_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the alpha property value. 
+     * Gets the alpha property value. The alpha property
      * @return Json|null
     */
     public function getAlpha(): ?Json {
@@ -73,7 +73,7 @@ class Binom_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the probabilityS property value. 
+     * Gets the probabilityS property value. The probabilityS property
      * @return Json|null
     */
     public function getProbabilityS(): ?Json {
@@ -81,7 +81,7 @@ class Binom_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the trials property value. 
+     * Gets the trials property value. The trials property
      * @return Json|null
     */
     public function getTrials(): ?Json {
@@ -108,7 +108,7 @@ class Binom_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the alpha property value. 
+     * Sets the alpha property value. The alpha property
      * @param Json|null $value Value to set for the alpha property.
     */
     public function setAlpha(?Json $value): void {
@@ -124,7 +124,7 @@ class Binom_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the probabilityS property value. 
+     * Sets the probabilityS property value. The probabilityS property
      * @param Json|null $value Value to set for the probabilityS property.
     */
     public function setProbabilityS(?Json $value): void {
@@ -132,7 +132,7 @@ class Binom_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the trials property value. 
+     * Sets the trials property value. The trials property
      * @param Json|null $value Value to set for the trials property.
     */
     public function setTrials(?Json $value): void {

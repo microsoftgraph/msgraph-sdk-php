@@ -44,7 +44,7 @@ class Confidence_NormPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the alpha property value. 
+     * Gets the alpha property value. The alpha property
      * @return Json|null
     */
     public function getAlpha(): ?Json {
@@ -73,7 +73,7 @@ class Confidence_NormPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the size property value. 
+     * Gets the size property value. The size property
      * @return Json|null
     */
     public function getSize(): ?Json {
@@ -81,7 +81,7 @@ class Confidence_NormPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the standardDev property value. 
+     * Gets the standardDev property value. The standardDev property
      * @return Json|null
     */
     public function getStandardDev(): ?Json {
@@ -108,7 +108,7 @@ class Confidence_NormPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the alpha property value. 
+     * Sets the alpha property value. The alpha property
      * @param Json|null $value Value to set for the alpha property.
     */
     public function setAlpha(?Json $value): void {
@@ -124,7 +124,7 @@ class Confidence_NormPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the size property value. 
+     * Sets the size property value. The size property
      * @param Json|null $value Value to set for the size property.
     */
     public function setSize(?Json $value): void {
@@ -132,7 +132,7 @@ class Confidence_NormPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the standardDev property value. 
+     * Sets the standardDev property value. The standardDev property
      * @param Json|null $value Value to set for the standardDev property.
     */
     public function setStandardDev(?Json $value): void {

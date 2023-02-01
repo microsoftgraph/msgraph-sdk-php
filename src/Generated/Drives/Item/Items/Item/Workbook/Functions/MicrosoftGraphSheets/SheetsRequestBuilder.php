@@ -47,6 +47,7 @@ class SheetsRequestBuilder
 
     /**
      * Invoke action sheets
+     * @param SheetsPostRequestBody $body The request body
      * @param SheetsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class SheetsRequestBuilder
 
     /**
      * Invoke action sheets
+     * @param SheetsPostRequestBody $body The request body
      * @param SheetsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

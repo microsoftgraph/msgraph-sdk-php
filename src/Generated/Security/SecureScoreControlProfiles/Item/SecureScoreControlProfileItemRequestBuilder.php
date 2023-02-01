@@ -87,6 +87,7 @@ class SecureScoreControlProfileItemRequestBuilder
 
     /**
      * Update the navigation property secureScoreControlProfiles in security
+     * @param SecureScoreControlProfile $body The request body
      * @param SecureScoreControlProfileItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class SecureScoreControlProfileItemRequestBuilder
 
     /**
      * Update the navigation property secureScoreControlProfiles in security
+     * @param SecureScoreControlProfile $body The request body
      * @param SecureScoreControlProfileItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

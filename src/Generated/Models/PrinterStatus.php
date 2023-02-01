@@ -81,7 +81,7 @@ class PrinterStatus implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -89,7 +89,7 @@ class PrinterStatus implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the state property value. 
+     * Gets the state property value. The state property
      * @return PrinterProcessingState|null
     */
     public function getState(): ?PrinterProcessingState {
@@ -141,7 +141,7 @@ class PrinterStatus implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -149,7 +149,7 @@ class PrinterStatus implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the state property value. 
+     * Sets the state property value. The state property
      * @param PrinterProcessingState|null $value Value to set for the state property.
     */
     public function setState(?PrinterProcessingState $value): void {

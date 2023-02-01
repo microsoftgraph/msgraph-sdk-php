@@ -125,6 +125,7 @@ class PermissionGrantPolicyItemRequestBuilder
 
     /**
      * Update the navigation property permissionGrantPolicies in policies
+     * @param PermissionGrantPolicy $body The request body
      * @param PermissionGrantPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -189,6 +190,7 @@ class PermissionGrantPolicyItemRequestBuilder
 
     /**
      * Update the navigation property permissionGrantPolicies in policies
+     * @param PermissionGrantPolicy $body The request body
      * @param PermissionGrantPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

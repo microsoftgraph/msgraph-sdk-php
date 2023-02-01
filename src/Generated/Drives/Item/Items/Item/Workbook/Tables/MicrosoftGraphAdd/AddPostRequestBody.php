@@ -43,7 +43,7 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the address property value. 
+     * Gets the address property value. The address property
      * @return string|null
     */
     public function getAddress(): ?string {
@@ -71,7 +71,7 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the hasHeaders property value. 
+     * Gets the hasHeaders property value. The hasHeaders property
      * @return bool|null
     */
     public function getHasHeaders(): ?bool {
@@ -97,7 +97,7 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the address property value. 
+     * Sets the address property value. The address property
      * @param string|null $value Value to set for the address property.
     */
     public function setAddress(?string $value): void {
@@ -113,7 +113,7 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the hasHeaders property value. 
+     * Sets the hasHeaders property value. The hasHeaders property
      * @param bool|null $value Value to set for the hasHeaders property.
     */
     public function setHasHeaders(?bool $value): void {

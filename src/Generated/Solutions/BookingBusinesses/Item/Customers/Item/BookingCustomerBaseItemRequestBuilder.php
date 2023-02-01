@@ -87,6 +87,7 @@ class BookingCustomerBaseItemRequestBuilder
 
     /**
      * Update the navigation property customers in solutions
+     * @param BookingCustomerBase $body The request body
      * @param BookingCustomerBaseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class BookingCustomerBaseItemRequestBuilder
 
     /**
      * Update the navigation property customers in solutions
+     * @param BookingCustomerBase $body The request body
      * @param BookingCustomerBaseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

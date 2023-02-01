@@ -63,7 +63,7 @@ class ReplyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the post property value. 
+     * Gets the post property value. The Post property
      * @return Post|null
     */
     public function getPost(): ?Post {
@@ -96,7 +96,7 @@ class ReplyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the post property value. 
+     * Sets the post property value. The Post property
      * @param Post|null $value Value to set for the Post property.
     */
     public function setPost(?Post $value): void {

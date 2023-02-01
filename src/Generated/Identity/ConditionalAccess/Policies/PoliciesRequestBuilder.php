@@ -75,6 +75,7 @@ class PoliciesRequestBuilder
 
     /**
      * Create a new conditionalAccessPolicy.
+     * @param ConditionalAccessPolicy $body The request body
      * @param PoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/conditionalaccessroot-post-policies?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class PoliciesRequestBuilder
 
     /**
      * Create a new conditionalAccessPolicy.
+     * @param ConditionalAccessPolicy $body The request body
      * @param PoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -85,6 +85,7 @@ class RoleEligibilityScheduleInstancesRequestBuilder
 
     /**
      * Create new navigation property to roleEligibilityScheduleInstances for roleManagement
+     * @param UnifiedRoleEligibilityScheduleInstance $body The request body
      * @param RoleEligibilityScheduleInstancesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -128,6 +129,7 @@ class RoleEligibilityScheduleInstancesRequestBuilder
 
     /**
      * Create new navigation property to roleEligibilityScheduleInstances for roleManagement
+     * @param UnifiedRoleEligibilityScheduleInstance $body The request body
      * @param RoleEligibilityScheduleInstancesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

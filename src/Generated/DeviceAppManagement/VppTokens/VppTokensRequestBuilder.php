@@ -74,6 +74,7 @@ class VppTokensRequestBuilder
 
     /**
      * Create new navigation property to vppTokens for deviceAppManagement
+     * @param VppToken $body The request body
      * @param VppTokensRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class VppTokensRequestBuilder
 
     /**
      * Create new navigation property to vppTokens for deviceAppManagement
+     * @param VppToken $body The request body
      * @param VppTokensRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

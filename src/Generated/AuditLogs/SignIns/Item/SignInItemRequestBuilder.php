@@ -87,6 +87,7 @@ class SignInItemRequestBuilder
 
     /**
      * Update the navigation property signIns in auditLogs
+     * @param SignIn $body The request body
      * @param SignInItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class SignInItemRequestBuilder
 
     /**
      * Update the navigation property signIns in auditLogs
+     * @param SignIn $body The request body
      * @param SignInItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -47,6 +47,7 @@ class DatevalueRequestBuilder
 
     /**
      * Invoke action datevalue
+     * @param DatevaluePostRequestBody $body The request body
      * @param DatevalueRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class DatevalueRequestBuilder
 
     /**
      * Invoke action datevalue
+     * @param DatevaluePostRequestBody $body The request body
      * @param DatevalueRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

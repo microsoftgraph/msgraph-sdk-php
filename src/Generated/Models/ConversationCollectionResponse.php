@@ -36,7 +36,7 @@ class ConversationCollectionResponse extends BaseCollectionPaginationCountRespon
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<Conversation>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class ConversationCollectionResponse extends BaseCollectionPaginationCountRespon
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param array<Conversation>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

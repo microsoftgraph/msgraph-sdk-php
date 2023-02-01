@@ -37,7 +37,7 @@ class OrganizerMeetingInfo extends MeetingInfo implements Parsable
     }
 
     /**
-     * Gets the organizer property value. 
+     * Gets the organizer property value. The organizer property
      * @return IdentitySet|null
     */
     public function getOrganizer(): ?IdentitySet {
@@ -54,7 +54,7 @@ class OrganizerMeetingInfo extends MeetingInfo implements Parsable
     }
 
     /**
-     * Sets the organizer property value. 
+     * Sets the organizer property value. The organizer property
      * @param IdentitySet|null $value Value to set for the organizer property.
     */
     public function setOrganizer(?IdentitySet $value): void {

@@ -36,7 +36,7 @@ class ContractCollectionResponse extends BaseCollectionPaginationCountResponse i
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<Contract>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class ContractCollectionResponse extends BaseCollectionPaginationCountResponse i
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param array<Contract>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

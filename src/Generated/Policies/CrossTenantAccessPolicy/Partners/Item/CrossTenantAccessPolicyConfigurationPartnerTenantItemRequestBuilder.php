@@ -87,6 +87,7 @@ class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
 
     /**
      * Update the navigation property partners in policies
+     * @param CrossTenantAccessPolicyConfigurationPartner $body The request body
      * @param CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
 
     /**
      * Update the navigation property partners in policies
+     * @param CrossTenantAccessPolicyConfigurationPartner $body The request body
      * @param CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

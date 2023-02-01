@@ -36,7 +36,7 @@ class Win32LobAppRuleCollectionResponse extends BaseCollectionPaginationCountRes
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<Win32LobAppRule>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class Win32LobAppRuleCollectionResponse extends BaseCollectionPaginationCountRes
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param array<Win32LobAppRule>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

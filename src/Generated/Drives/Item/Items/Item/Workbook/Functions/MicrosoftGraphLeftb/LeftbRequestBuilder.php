@@ -47,6 +47,7 @@ class LeftbRequestBuilder
 
     /**
      * Invoke action leftb
+     * @param LeftbPostRequestBody $body The request body
      * @param LeftbRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class LeftbRequestBuilder
 
     /**
      * Invoke action leftb
+     * @param LeftbPostRequestBody $body The request body
      * @param LeftbRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

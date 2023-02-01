@@ -51,7 +51,7 @@ class DelegatedAdminRelationshipCustomerParticipant implements AdditionalDataHol
     }
 
     /**
-     * Gets the displayName property value. 
+     * Gets the displayName property value. The displayName property
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -72,7 +72,7 @@ class DelegatedAdminRelationshipCustomerParticipant implements AdditionalDataHol
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -80,7 +80,7 @@ class DelegatedAdminRelationshipCustomerParticipant implements AdditionalDataHol
     }
 
     /**
-     * Gets the tenantId property value. 
+     * Gets the tenantId property value. The tenantId property
      * @return string|null
     */
     public function getTenantId(): ?string {
@@ -115,7 +115,7 @@ class DelegatedAdminRelationshipCustomerParticipant implements AdditionalDataHol
     }
 
     /**
-     * Sets the displayName property value. 
+     * Sets the displayName property value. The displayName property
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -123,7 +123,7 @@ class DelegatedAdminRelationshipCustomerParticipant implements AdditionalDataHol
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -131,7 +131,7 @@ class DelegatedAdminRelationshipCustomerParticipant implements AdditionalDataHol
     }
 
     /**
-     * Sets the tenantId property value. 
+     * Sets the tenantId property value. The tenantId property
      * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {

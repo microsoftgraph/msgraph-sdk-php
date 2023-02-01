@@ -64,7 +64,7 @@ class DollarDePostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the fraction property value. 
+     * Gets the fraction property value. The fraction property
      * @return Json|null
     */
     public function getFraction(): ?Json {
@@ -72,7 +72,7 @@ class DollarDePostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the fractionalDollar property value. 
+     * Gets the fractionalDollar property value. The fractionalDollar property
      * @return Json|null
     */
     public function getFractionalDollar(): ?Json {
@@ -106,7 +106,7 @@ class DollarDePostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the fraction property value. 
+     * Sets the fraction property value. The fraction property
      * @param Json|null $value Value to set for the fraction property.
     */
     public function setFraction(?Json $value): void {
@@ -114,7 +114,7 @@ class DollarDePostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the fractionalDollar property value. 
+     * Sets the fractionalDollar property value. The fractionalDollar property
      * @param Json|null $value Value to set for the fractionalDollar property.
     */
     public function setFractionalDollar(?Json $value): void {

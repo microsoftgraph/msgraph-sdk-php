@@ -36,7 +36,7 @@ class AssociatedTeamInfoCollectionResponse extends BaseCollectionPaginationCount
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<AssociatedTeamInfo>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class AssociatedTeamInfoCollectionResponse extends BaseCollectionPaginationCount
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param array<AssociatedTeamInfo>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

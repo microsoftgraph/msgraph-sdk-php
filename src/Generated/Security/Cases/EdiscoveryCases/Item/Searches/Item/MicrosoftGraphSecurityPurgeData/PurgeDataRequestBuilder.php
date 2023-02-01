@@ -46,6 +46,7 @@ class PurgeDataRequestBuilder
 
     /**
      * Invoke action purgeData
+     * @param PurgeDataPostRequestBody $body The request body
      * @param PurgeDataRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -64,6 +65,7 @@ class PurgeDataRequestBuilder
 
     /**
      * Invoke action purgeData
+     * @param PurgeDataPostRequestBody $body The request body
      * @param PurgeDataRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

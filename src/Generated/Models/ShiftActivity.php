@@ -101,7 +101,7 @@ class ShiftActivity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -117,7 +117,7 @@ class ShiftActivity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the theme property value. 
+     * Gets the theme property value. The theme property
      * @return ScheduleEntityTheme|null
     */
     public function getTheme(): ?ScheduleEntityTheme {
@@ -188,7 +188,7 @@ class ShiftActivity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -204,7 +204,7 @@ class ShiftActivity implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the theme property value. 
+     * Sets the theme property value. The theme property
      * @param ScheduleEntityTheme|null $value Value to set for the theme property.
     */
     public function setTheme(?ScheduleEntityTheme $value): void {

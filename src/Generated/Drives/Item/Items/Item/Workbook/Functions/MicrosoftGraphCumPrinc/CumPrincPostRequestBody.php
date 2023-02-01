@@ -52,7 +52,7 @@ class CumPrincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the endPeriod property value. 
+     * Gets the endPeriod property value. The endPeriod property
      * @return Json|null
     */
     public function getEndPeriod(): ?Json {
@@ -76,7 +76,7 @@ class CumPrincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the nper property value. 
+     * Gets the nper property value. The nper property
      * @return Json|null
     */
     public function getNper(): ?Json {
@@ -84,7 +84,7 @@ class CumPrincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the pv property value. 
+     * Gets the pv property value. The pv property
      * @return Json|null
     */
     public function getPv(): ?Json {
@@ -92,7 +92,7 @@ class CumPrincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the rate property value. 
+     * Gets the rate property value. The rate property
      * @return Json|null
     */
     public function getRate(): ?Json {
@@ -100,7 +100,7 @@ class CumPrincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the startPeriod property value. 
+     * Gets the startPeriod property value. The startPeriod property
      * @return Json|null
     */
     public function getStartPeriod(): ?Json {
@@ -108,7 +108,7 @@ class CumPrincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the type property value. 
+     * Gets the type property value. The type property
      * @return Json|null
     */
     public function getType(): ?Json {
@@ -146,7 +146,7 @@ class CumPrincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the endPeriod property value. 
+     * Sets the endPeriod property value. The endPeriod property
      * @param Json|null $value Value to set for the endPeriod property.
     */
     public function setEndPeriod(?Json $value): void {
@@ -154,7 +154,7 @@ class CumPrincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the nper property value. 
+     * Sets the nper property value. The nper property
      * @param Json|null $value Value to set for the nper property.
     */
     public function setNper(?Json $value): void {
@@ -162,7 +162,7 @@ class CumPrincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the pv property value. 
+     * Sets the pv property value. The pv property
      * @param Json|null $value Value to set for the pv property.
     */
     public function setPv(?Json $value): void {
@@ -170,7 +170,7 @@ class CumPrincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the rate property value. 
+     * Sets the rate property value. The rate property
      * @param Json|null $value Value to set for the rate property.
     */
     public function setRate(?Json $value): void {
@@ -178,7 +178,7 @@ class CumPrincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the startPeriod property value. 
+     * Sets the startPeriod property value. The startPeriod property
      * @param Json|null $value Value to set for the startPeriod property.
     */
     public function setStartPeriod(?Json $value): void {
@@ -186,7 +186,7 @@ class CumPrincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the type property value. 
+     * Sets the type property value. The type property
      * @param Json|null $value Value to set for the type property.
     */
     public function setType(?Json $value): void {

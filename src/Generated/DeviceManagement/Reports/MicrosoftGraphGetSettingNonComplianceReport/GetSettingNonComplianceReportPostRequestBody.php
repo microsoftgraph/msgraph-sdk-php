@@ -70,7 +70,7 @@ class GetSettingNonComplianceReportPostRequestBody implements AdditionalDataHold
     }
 
     /**
-     * Gets the filter property value. 
+     * Gets the filter property value. The filter property
      * @return string|null
     */
     public function getFilter(): ?string {
@@ -78,7 +78,7 @@ class GetSettingNonComplianceReportPostRequestBody implements AdditionalDataHold
     }
 
     /**
-     * Gets the groupBy property value. 
+     * Gets the groupBy property value. The groupBy property
      * @return array<string>|null
     */
     public function getGroupBy(): ?array {
@@ -86,7 +86,7 @@ class GetSettingNonComplianceReportPostRequestBody implements AdditionalDataHold
     }
 
     /**
-     * Gets the name property value. 
+     * Gets the name property value. The name property
      * @return string|null
     */
     public function getName(): ?string {
@@ -94,7 +94,7 @@ class GetSettingNonComplianceReportPostRequestBody implements AdditionalDataHold
     }
 
     /**
-     * Gets the orderBy property value. 
+     * Gets the orderBy property value. The orderBy property
      * @return array<string>|null
     */
     public function getOrderBy(): ?array {
@@ -102,7 +102,7 @@ class GetSettingNonComplianceReportPostRequestBody implements AdditionalDataHold
     }
 
     /**
-     * Gets the search property value. 
+     * Gets the search property value. The search property
      * @return string|null
     */
     public function getSearch(): ?string {
@@ -110,7 +110,7 @@ class GetSettingNonComplianceReportPostRequestBody implements AdditionalDataHold
     }
 
     /**
-     * Gets the select property value. 
+     * Gets the select property value. The select property
      * @return array<string>|null
     */
     public function getSelect(): ?array {
@@ -118,7 +118,7 @@ class GetSettingNonComplianceReportPostRequestBody implements AdditionalDataHold
     }
 
     /**
-     * Gets the sessionId property value. 
+     * Gets the sessionId property value. The sessionId property
      * @return string|null
     */
     public function getSessionId(): ?string {
@@ -126,7 +126,7 @@ class GetSettingNonComplianceReportPostRequestBody implements AdditionalDataHold
     }
 
     /**
-     * Gets the skip property value. 
+     * Gets the skip property value. The skip property
      * @return int|null
     */
     public function getSkip(): ?int {
@@ -134,7 +134,7 @@ class GetSettingNonComplianceReportPostRequestBody implements AdditionalDataHold
     }
 
     /**
-     * Gets the top property value. 
+     * Gets the top property value. The top property
      * @return int|null
     */
     public function getTop(): ?int {
@@ -175,7 +175,7 @@ class GetSettingNonComplianceReportPostRequestBody implements AdditionalDataHold
     }
 
     /**
-     * Sets the filter property value. 
+     * Sets the filter property value. The filter property
      * @param string|null $value Value to set for the filter property.
     */
     public function setFilter(?string $value): void {
@@ -183,7 +183,7 @@ class GetSettingNonComplianceReportPostRequestBody implements AdditionalDataHold
     }
 
     /**
-     * Sets the groupBy property value. 
+     * Sets the groupBy property value. The groupBy property
      * @param array<string>|null $value Value to set for the groupBy property.
     */
     public function setGroupBy(?array $value): void {
@@ -191,7 +191,7 @@ class GetSettingNonComplianceReportPostRequestBody implements AdditionalDataHold
     }
 
     /**
-     * Sets the name property value. 
+     * Sets the name property value. The name property
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -199,7 +199,7 @@ class GetSettingNonComplianceReportPostRequestBody implements AdditionalDataHold
     }
 
     /**
-     * Sets the orderBy property value. 
+     * Sets the orderBy property value. The orderBy property
      * @param array<string>|null $value Value to set for the orderBy property.
     */
     public function setOrderBy(?array $value): void {
@@ -207,7 +207,7 @@ class GetSettingNonComplianceReportPostRequestBody implements AdditionalDataHold
     }
 
     /**
-     * Sets the search property value. 
+     * Sets the search property value. The search property
      * @param string|null $value Value to set for the search property.
     */
     public function setSearch(?string $value): void {
@@ -215,7 +215,7 @@ class GetSettingNonComplianceReportPostRequestBody implements AdditionalDataHold
     }
 
     /**
-     * Sets the select property value. 
+     * Sets the select property value. The select property
      * @param array<string>|null $value Value to set for the select property.
     */
     public function setSelect(?array $value): void {
@@ -223,7 +223,7 @@ class GetSettingNonComplianceReportPostRequestBody implements AdditionalDataHold
     }
 
     /**
-     * Sets the sessionId property value. 
+     * Sets the sessionId property value. The sessionId property
      * @param string|null $value Value to set for the sessionId property.
     */
     public function setSessionId(?string $value): void {
@@ -231,7 +231,7 @@ class GetSettingNonComplianceReportPostRequestBody implements AdditionalDataHold
     }
 
     /**
-     * Sets the skip property value. 
+     * Sets the skip property value. The skip property
      * @param int|null $value Value to set for the skip property.
     */
     public function setSkip(?int $value): void {
@@ -239,7 +239,7 @@ class GetSettingNonComplianceReportPostRequestBody implements AdditionalDataHold
     }
 
     /**
-     * Sets the top property value. 
+     * Sets the top property value. The top property
      * @param int|null $value Value to set for the top property.
     */
     public function setTop(?int $value): void {

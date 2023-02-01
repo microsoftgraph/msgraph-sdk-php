@@ -47,6 +47,7 @@ class Rank_EqRequestBuilder
 
     /**
      * Invoke action rank_Eq
+     * @param Rank_EqPostRequestBody $body The request body
      * @param Rank_EqRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Rank_EqRequestBuilder
 
     /**
      * Invoke action rank_Eq
+     * @param Rank_EqPostRequestBody $body The request body
      * @param Rank_EqRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

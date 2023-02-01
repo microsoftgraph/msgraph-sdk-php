@@ -47,6 +47,7 @@ class TimeRequestBuilder
 
     /**
      * Invoke action time
+     * @param TimePostRequestBody $body The request body
      * @param TimeRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class TimeRequestBuilder
 
     /**
      * Invoke action time
+     * @param TimePostRequestBody $body The request body
      * @param TimeRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

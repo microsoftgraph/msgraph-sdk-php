@@ -62,7 +62,7 @@ class AddGroupPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the groupId property value. 
+     * Gets the groupId property value. The groupId property
      * @return string|null
     */
     public function getGroupId(): ?string {
@@ -95,7 +95,7 @@ class AddGroupPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the groupId property value. 
+     * Sets the groupId property value. The groupId property
      * @param string|null $value Value to set for the groupId property.
     */
     public function setGroupId(?string $value): void {

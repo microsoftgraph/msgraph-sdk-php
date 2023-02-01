@@ -74,6 +74,7 @@ class ItemsRequestBuilder
 
     /**
      * Create new navigation property to items for connections
+     * @param ExternalItem $body The request body
      * @param ItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class ItemsRequestBuilder
 
     /**
      * Create new navigation property to items for connections
+     * @param ExternalItem $body The request body
      * @param ItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

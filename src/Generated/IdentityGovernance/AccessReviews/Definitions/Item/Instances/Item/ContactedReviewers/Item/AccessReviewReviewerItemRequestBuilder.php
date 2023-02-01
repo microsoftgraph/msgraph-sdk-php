@@ -87,6 +87,7 @@ class AccessReviewReviewerItemRequestBuilder
 
     /**
      * Update the navigation property contactedReviewers in identityGovernance
+     * @param AccessReviewReviewer $body The request body
      * @param AccessReviewReviewerItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class AccessReviewReviewerItemRequestBuilder
 
     /**
      * Update the navigation property contactedReviewers in identityGovernance
+     * @param AccessReviewReviewer $body The request body
      * @param AccessReviewReviewerItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

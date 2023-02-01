@@ -75,6 +75,7 @@ class InstalledAppsRequestBuilder
 
     /**
      * Install a teamsApp to the specified chat.
+     * @param TeamsAppInstallation $body The request body
      * @param InstalledAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/chat-post-installedapps?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class InstalledAppsRequestBuilder
 
     /**
      * Install a teamsApp to the specified chat.
+     * @param TeamsAppInstallation $body The request body
      * @param InstalledAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

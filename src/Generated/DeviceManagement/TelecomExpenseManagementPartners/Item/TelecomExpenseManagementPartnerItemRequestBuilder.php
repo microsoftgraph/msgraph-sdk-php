@@ -87,6 +87,7 @@ class TelecomExpenseManagementPartnerItemRequestBuilder
 
     /**
      * Update the navigation property telecomExpenseManagementPartners in deviceManagement
+     * @param TelecomExpenseManagementPartner $body The request body
      * @param TelecomExpenseManagementPartnerItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class TelecomExpenseManagementPartnerItemRequestBuilder
 
     /**
      * Update the navigation property telecomExpenseManagementPartners in deviceManagement
+     * @param TelecomExpenseManagementPartner $body The request body
      * @param TelecomExpenseManagementPartnerItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -46,6 +46,7 @@ class TentativelyAcceptRequestBuilder
 
     /**
      * Tentatively accept the specified event in a user calendar. If the event allows proposals for new times, on responding tentative to the event, an invitee can choose to suggest an alternative time by including the **proposedNewTime** parameter. For more information on how to propose a time, and how to receive and accept a new time proposal, see Propose new meeting times.
+     * @param TentativelyAcceptPostRequestBody $body The request body
      * @param TentativelyAcceptRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/event-tentativelyaccept?view=graph-rest-1.0 Find more info here
@@ -65,6 +66,7 @@ class TentativelyAcceptRequestBuilder
 
     /**
      * Tentatively accept the specified event in a user calendar. If the event allows proposals for new times, on responding tentative to the event, an invitee can choose to suggest an alternative time by including the **proposedNewTime** parameter. For more information on how to propose a time, and how to receive and accept a new time proposal, see Propose new meeting times.
+     * @param TentativelyAcceptPostRequestBody $body The request body
      * @param TentativelyAcceptRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

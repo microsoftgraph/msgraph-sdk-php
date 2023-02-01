@@ -47,6 +47,7 @@ class BahtTextRequestBuilder
 
     /**
      * Invoke action bahtText
+     * @param BahtTextPostRequestBody $body The request body
      * @param BahtTextRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class BahtTextRequestBuilder
 
     /**
      * Invoke action bahtText
+     * @param BahtTextPostRequestBody $body The request body
      * @param BahtTextRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -87,6 +87,7 @@ class IosUpdateDeviceStatusItemRequestBuilder
 
     /**
      * Update the navigation property iosUpdateStatuses in deviceManagement
+     * @param IosUpdateDeviceStatus $body The request body
      * @param IosUpdateDeviceStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class IosUpdateDeviceStatusItemRequestBuilder
 
     /**
      * Update the navigation property iosUpdateStatuses in deviceManagement
+     * @param IosUpdateDeviceStatus $body The request body
      * @param IosUpdateDeviceStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

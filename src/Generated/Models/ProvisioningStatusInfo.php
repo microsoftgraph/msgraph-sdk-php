@@ -51,7 +51,7 @@ class ProvisioningStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the errorInformation property value. 
+     * Gets the errorInformation property value. The errorInformation property
      * @return ProvisioningErrorInfo|null
     */
     public function getErrorInformation(): ?ProvisioningErrorInfo {
@@ -72,7 +72,7 @@ class ProvisioningStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -115,7 +115,7 @@ class ProvisioningStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the errorInformation property value. 
+     * Sets the errorInformation property value. The errorInformation property
      * @param ProvisioningErrorInfo|null $value Value to set for the errorInformation property.
     */
     public function setErrorInformation(?ProvisioningErrorInfo $value): void {
@@ -123,7 +123,7 @@ class ProvisioningStatusInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

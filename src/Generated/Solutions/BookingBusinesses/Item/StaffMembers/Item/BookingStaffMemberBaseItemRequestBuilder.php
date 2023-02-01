@@ -87,6 +87,7 @@ class BookingStaffMemberBaseItemRequestBuilder
 
     /**
      * Update the navigation property staffMembers in solutions
+     * @param BookingStaffMemberBase $body The request body
      * @param BookingStaffMemberBaseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class BookingStaffMemberBaseItemRequestBuilder
 
     /**
      * Update the navigation property staffMembers in solutions
+     * @param BookingStaffMemberBase $body The request body
      * @param BookingStaffMemberBaseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

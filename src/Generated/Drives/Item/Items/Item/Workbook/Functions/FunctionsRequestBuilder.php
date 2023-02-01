@@ -3011,6 +3011,7 @@ class FunctionsRequestBuilder
 
     /**
      * Update the navigation property functions in drives
+     * @param WorkbookFunctions $body The request body
      * @param FunctionsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -3075,6 +3076,7 @@ class FunctionsRequestBuilder
 
     /**
      * Update the navigation property functions in drives
+     * @param WorkbookFunctions $body The request body
      * @param FunctionsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

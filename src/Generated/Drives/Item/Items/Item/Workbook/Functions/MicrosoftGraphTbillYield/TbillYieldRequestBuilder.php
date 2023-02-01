@@ -47,6 +47,7 @@ class TbillYieldRequestBuilder
 
     /**
      * Invoke action tbillYield
+     * @param TbillYieldPostRequestBody $body The request body
      * @param TbillYieldRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class TbillYieldRequestBuilder
 
     /**
      * Invoke action tbillYield
+     * @param TbillYieldPostRequestBody $body The request body
      * @param TbillYieldRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -87,6 +87,7 @@ class WorkbookOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in drives
+     * @param WorkbookOperation $body The request body
      * @param WorkbookOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class WorkbookOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in drives
+     * @param WorkbookOperation $body The request body
      * @param WorkbookOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

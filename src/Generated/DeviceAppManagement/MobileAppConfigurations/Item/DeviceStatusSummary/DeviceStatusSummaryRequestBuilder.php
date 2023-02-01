@@ -83,6 +83,7 @@ class DeviceStatusSummaryRequestBuilder
 
     /**
      * Update the navigation property deviceStatusSummary in deviceAppManagement
+     * @param ManagedDeviceMobileAppConfigurationDeviceSummary $body The request body
      * @param DeviceStatusSummaryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -147,6 +148,7 @@ class DeviceStatusSummaryRequestBuilder
 
     /**
      * Update the navigation property deviceStatusSummary in deviceAppManagement
+     * @param ManagedDeviceMobileAppConfigurationDeviceSummary $body The request body
      * @param DeviceStatusSummaryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

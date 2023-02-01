@@ -85,6 +85,7 @@ class AssignmentRequestsRequestBuilder
 
     /**
      * In Azure AD Entitlement Management, create a new accessPackageAssignmentRequest object.  This operation is used to assign a user to an access package, or to remove an access package assignment.
+     * @param AccessPackageAssignmentRequest $body The request body
      * @param AssignmentRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/entitlementmanagement-post-assignmentrequests?view=graph-rest-1.0 Find more info here
@@ -129,6 +130,7 @@ class AssignmentRequestsRequestBuilder
 
     /**
      * In Azure AD Entitlement Management, create a new accessPackageAssignmentRequest object.  This operation is used to assign a user to an access package, or to remove an access package assignment.
+     * @param AccessPackageAssignmentRequest $body The request body
      * @param AssignmentRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

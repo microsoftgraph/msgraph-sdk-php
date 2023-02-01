@@ -87,6 +87,7 @@ class AttendanceRecordItemRequestBuilder
 
     /**
      * Update the navigation property attendanceRecords in me
+     * @param AttendanceRecord $body The request body
      * @param AttendanceRecordItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class AttendanceRecordItemRequestBuilder
 
     /**
      * Update the navigation property attendanceRecords in me
+     * @param AttendanceRecord $body The request body
      * @param AttendanceRecordItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

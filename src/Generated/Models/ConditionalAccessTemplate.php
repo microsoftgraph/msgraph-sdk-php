@@ -33,7 +33,7 @@ class ConditionalAccessTemplate extends Entity implements Parsable
     }
 
     /**
-     * Gets the details property value. 
+     * Gets the details property value. The details property
      * @return ConditionalAccessPolicyDetail|null
     */
     public function getDetails(): ?ConditionalAccessPolicyDetail {
@@ -63,7 +63,7 @@ class ConditionalAccessTemplate extends Entity implements Parsable
     }
 
     /**
-     * Gets the scenarios property value. 
+     * Gets the scenarios property value. The scenarios property
      * @return TemplateScenarios|null
     */
     public function getScenarios(): ?TemplateScenarios {
@@ -91,7 +91,7 @@ class ConditionalAccessTemplate extends Entity implements Parsable
     }
 
     /**
-     * Sets the details property value. 
+     * Sets the details property value. The details property
      * @param ConditionalAccessPolicyDetail|null $value Value to set for the details property.
     */
     public function setDetails(?ConditionalAccessPolicyDetail $value): void {
@@ -107,7 +107,7 @@ class ConditionalAccessTemplate extends Entity implements Parsable
     }
 
     /**
-     * Sets the scenarios property value. 
+     * Sets the scenarios property value. The scenarios property
      * @param TemplateScenarios|null $value Value to set for the scenarios property.
     */
     public function setScenarios(?TemplateScenarios $value): void {

@@ -75,6 +75,7 @@ class UsedRequestBuilder
 
     /**
      * Create new navigation property to used for me
+     * @param UsedInsight $body The request body
      * @param UsedRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,6 +119,7 @@ class UsedRequestBuilder
 
     /**
      * Create new navigation property to used for me
+     * @param UsedInsight $body The request body
      * @param UsedRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

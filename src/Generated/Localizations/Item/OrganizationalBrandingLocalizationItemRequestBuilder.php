@@ -111,6 +111,7 @@ class OrganizationalBrandingLocalizationItemRequestBuilder
 
     /**
      * Update entity in localizations
+     * @param OrganizationalBrandingLocalization $body The request body
      * @param OrganizationalBrandingLocalizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -175,6 +176,7 @@ class OrganizationalBrandingLocalizationItemRequestBuilder
 
     /**
      * Update entity in localizations
+     * @param OrganizationalBrandingLocalization $body The request body
      * @param OrganizationalBrandingLocalizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

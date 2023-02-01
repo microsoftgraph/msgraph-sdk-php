@@ -26,7 +26,7 @@ class DelegatedAdminAccessAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the accessContainer property value. 
+     * Gets the accessContainer property value. The accessContainer property
      * @return DelegatedAdminAccessContainer|null
     */
     public function getAccessContainer(): ?DelegatedAdminAccessContainer {
@@ -34,7 +34,7 @@ class DelegatedAdminAccessAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the accessDetails property value. 
+     * Gets the accessDetails property value. The accessDetails property
      * @return DelegatedAdminAccessDetails|null
     */
     public function getAccessDetails(): ?DelegatedAdminAccessDetails {
@@ -42,7 +42,7 @@ class DelegatedAdminAccessAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. 
+     * Gets the createdDateTime property value. The createdDateTime property
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -65,7 +65,7 @@ class DelegatedAdminAccessAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. 
+     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -73,7 +73,7 @@ class DelegatedAdminAccessAssignment extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. 
+     * Gets the status property value. The status property
      * @return DelegatedAdminAccessAssignmentStatus|null
     */
     public function getStatus(): ?DelegatedAdminAccessAssignmentStatus {
@@ -94,7 +94,7 @@ class DelegatedAdminAccessAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the accessContainer property value. 
+     * Sets the accessContainer property value. The accessContainer property
      * @param DelegatedAdminAccessContainer|null $value Value to set for the accessContainer property.
     */
     public function setAccessContainer(?DelegatedAdminAccessContainer $value): void {
@@ -102,7 +102,7 @@ class DelegatedAdminAccessAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the accessDetails property value. 
+     * Sets the accessDetails property value. The accessDetails property
      * @param DelegatedAdminAccessDetails|null $value Value to set for the accessDetails property.
     */
     public function setAccessDetails(?DelegatedAdminAccessDetails $value): void {
@@ -110,7 +110,7 @@ class DelegatedAdminAccessAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. 
+     * Sets the createdDateTime property value. The createdDateTime property
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -118,7 +118,7 @@ class DelegatedAdminAccessAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. 
+     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
@@ -126,7 +126,7 @@ class DelegatedAdminAccessAssignment extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. 
+     * Sets the status property value. The status property
      * @param DelegatedAdminAccessAssignmentStatus|null $value Value to set for the status property.
     */
     public function setStatus(?DelegatedAdminAccessAssignmentStatus $value): void {

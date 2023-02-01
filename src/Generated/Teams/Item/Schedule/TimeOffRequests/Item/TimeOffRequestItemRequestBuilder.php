@@ -87,6 +87,7 @@ class TimeOffRequestItemRequestBuilder
 
     /**
      * Update the navigation property timeOffRequests in teams
+     * @param TimeOffRequest $body The request body
      * @param TimeOffRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class TimeOffRequestItemRequestBuilder
 
     /**
      * Update the navigation property timeOffRequests in teams
+     * @param TimeOffRequest $body The request body
      * @param TimeOffRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -47,6 +47,7 @@ class Iso_CeilingRequestBuilder
 
     /**
      * Invoke action iso_Ceiling
+     * @param Iso_CeilingPostRequestBody $body The request body
      * @param Iso_CeilingRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Iso_CeilingRequestBuilder
 
     /**
      * Invoke action iso_Ceiling
+     * @param Iso_CeilingPostRequestBody $body The request body
      * @param Iso_CeilingRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

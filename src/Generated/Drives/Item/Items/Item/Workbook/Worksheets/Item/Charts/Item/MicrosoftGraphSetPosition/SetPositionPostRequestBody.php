@@ -52,7 +52,7 @@ class SetPositionPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the endCell property value. 
+     * Gets the endCell property value. The endCell property
      * @return Json|null
     */
     public function getEndCell(): ?Json {
@@ -72,7 +72,7 @@ class SetPositionPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the startCell property value. 
+     * Gets the startCell property value. The startCell property
      * @return Json|null
     */
     public function getStartCell(): ?Json {
@@ -106,7 +106,7 @@ class SetPositionPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the endCell property value. 
+     * Sets the endCell property value. The endCell property
      * @param Json|null $value Value to set for the endCell property.
     */
     public function setEndCell(?Json $value): void {
@@ -114,7 +114,7 @@ class SetPositionPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the startCell property value. 
+     * Sets the startCell property value. The startCell property
      * @param Json|null $value Value to set for the startCell property.
     */
     public function setStartCell(?Json $value): void {

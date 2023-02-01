@@ -31,7 +31,7 @@ class CrossTenantAccessPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Gets the allowedCloudEndpoints property value. 
+     * Gets the allowedCloudEndpoints property value. The allowedCloudEndpoints property
      * @return array<string>|null
     */
     public function getAllowedCloudEndpoints(): ?array {
@@ -79,7 +79,7 @@ class CrossTenantAccessPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Sets the allowedCloudEndpoints property value. 
+     * Sets the allowedCloudEndpoints property value. The allowedCloudEndpoints property
      * @param array<string>|null $value Value to set for the allowedCloudEndpoints property.
     */
     public function setAllowedCloudEndpoints(?array $value): void {

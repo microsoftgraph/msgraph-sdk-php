@@ -90,6 +90,7 @@ class NoncustodialDataSourcesRequestBuilder
 
     /**
      * Create a new ediscoveryNoncustodialDataSource object.
+     * @param EdiscoveryNoncustodialDataSource $body The request body
      * @param NoncustodialDataSourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/security-ediscoverycase-post-noncustodialdatasources?view=graph-rest-1.0 Find more info here
@@ -134,6 +135,7 @@ class NoncustodialDataSourcesRequestBuilder
 
     /**
      * Create a new ediscoveryNoncustodialDataSource object.
+     * @param EdiscoveryNoncustodialDataSource $body The request body
      * @param NoncustodialDataSourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

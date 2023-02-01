@@ -52,7 +52,7 @@ class ReplyAllPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the comment property value. 
+     * Gets the comment property value. The Comment property
      * @return string|null
     */
     public function getComment(): ?string {
@@ -72,7 +72,7 @@ class ReplyAllPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the message property value. 
+     * Gets the message property value. The Message property
      * @return Message|null
     */
     public function getMessage(): ?Message {
@@ -106,7 +106,7 @@ class ReplyAllPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the comment property value. 
+     * Sets the comment property value. The Comment property
      * @param string|null $value Value to set for the Comment property.
     */
     public function setComment(?string $value): void {
@@ -114,7 +114,7 @@ class ReplyAllPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the message property value. 
+     * Sets the message property value. The Message property
      * @param Message|null $value Value to set for the Message property.
     */
     public function setMessage(?Message $value): void {

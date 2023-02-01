@@ -87,6 +87,7 @@ class ShiftItemRequestBuilder
 
     /**
      * Update the navigation property shifts in me
+     * @param Shift $body The request body
      * @param ShiftItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class ShiftItemRequestBuilder
 
     /**
      * Update the navigation property shifts in me
+     * @param Shift $body The request body
      * @param ShiftItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

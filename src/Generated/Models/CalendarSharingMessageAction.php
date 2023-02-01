@@ -35,7 +35,7 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the action property value. 
+     * Gets the action property value. The action property
      * @return CalendarSharingAction|null
     */
     public function getAction(): ?CalendarSharingAction {
@@ -43,7 +43,7 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the actionType property value. 
+     * Gets the actionType property value. The actionType property
      * @return CalendarSharingActionType|null
     */
     public function getActionType(): ?CalendarSharingActionType {
@@ -81,7 +81,7 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the importance property value. 
+     * Gets the importance property value. The importance property
      * @return CalendarSharingActionImportance|null
     */
     public function getImportance(): ?CalendarSharingActionImportance {
@@ -89,7 +89,7 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -109,7 +109,7 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the action property value. 
+     * Sets the action property value. The action property
      * @param CalendarSharingAction|null $value Value to set for the action property.
     */
     public function setAction(?CalendarSharingAction $value): void {
@@ -117,7 +117,7 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the actionType property value. 
+     * Sets the actionType property value. The actionType property
      * @param CalendarSharingActionType|null $value Value to set for the actionType property.
     */
     public function setActionType(?CalendarSharingActionType $value): void {
@@ -141,7 +141,7 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the importance property value. 
+     * Sets the importance property value. The importance property
      * @param CalendarSharingActionImportance|null $value Value to set for the importance property.
     */
     public function setImportance(?CalendarSharingActionImportance $value): void {
@@ -149,7 +149,7 @@ class CalendarSharingMessageAction implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

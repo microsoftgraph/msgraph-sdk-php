@@ -51,7 +51,7 @@ class AlertDetection implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the detectionType property value. 
+     * Gets the detectionType property value. The detectionType property
      * @return string|null
     */
     public function getDetectionType(): ?string {
@@ -73,7 +73,7 @@ class AlertDetection implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the method property value. 
+     * Gets the method property value. The method property
      * @return string|null
     */
     public function getMethod(): ?string {
@@ -81,7 +81,7 @@ class AlertDetection implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the name property value. 
+     * Gets the name property value. The name property
      * @return string|null
     */
     public function getName(): ?string {
@@ -89,7 +89,7 @@ class AlertDetection implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -125,7 +125,7 @@ class AlertDetection implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the detectionType property value. 
+     * Sets the detectionType property value. The detectionType property
      * @param string|null $value Value to set for the detectionType property.
     */
     public function setDetectionType(?string $value): void {
@@ -133,7 +133,7 @@ class AlertDetection implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the method property value. 
+     * Sets the method property value. The method property
      * @param string|null $value Value to set for the method property.
     */
     public function setMethod(?string $value): void {
@@ -141,7 +141,7 @@ class AlertDetection implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the name property value. 
+     * Sets the name property value. The name property
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -149,7 +149,7 @@ class AlertDetection implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

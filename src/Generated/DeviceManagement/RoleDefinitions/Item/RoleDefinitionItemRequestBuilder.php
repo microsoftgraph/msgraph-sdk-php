@@ -96,6 +96,7 @@ class RoleDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property roleDefinitions in deviceManagement
+     * @param RoleDefinition $body The request body
      * @param RoleDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -171,6 +172,7 @@ class RoleDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property roleDefinitions in deviceManagement
+     * @param RoleDefinition $body The request body
      * @param RoleDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -135,6 +135,7 @@ class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder
 
     /**
      * Update the navigation property roleEligibilityScheduleRequests in roleManagement
+     * @param UnifiedRoleEligibilityScheduleRequest $body The request body
      * @param UnifiedRoleEligibilityScheduleRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -199,6 +200,7 @@ class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder
 
     /**
      * Update the navigation property roleEligibilityScheduleRequests in roleManagement
+     * @param UnifiedRoleEligibilityScheduleRequest $body The request body
      * @param UnifiedRoleEligibilityScheduleRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

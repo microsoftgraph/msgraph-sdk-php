@@ -72,7 +72,7 @@ class ExcludeTarget implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -80,7 +80,7 @@ class ExcludeTarget implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the targetType property value. 
+     * Gets the targetType property value. The targetType property
      * @return AuthenticationMethodTargetType|null
     */
     public function getTargetType(): ?AuthenticationMethodTargetType {
@@ -123,7 +123,7 @@ class ExcludeTarget implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -131,7 +131,7 @@ class ExcludeTarget implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the targetType property value. 
+     * Sets the targetType property value. The targetType property
      * @param AuthenticationMethodTargetType|null $value Value to set for the targetType property.
     */
     public function setTargetType(?AuthenticationMethodTargetType $value): void {

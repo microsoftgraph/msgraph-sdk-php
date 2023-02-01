@@ -74,6 +74,7 @@ class AudioRoutingGroupsRequestBuilder
 
     /**
      * Create new navigation property to audioRoutingGroups for communications
+     * @param AudioRoutingGroup $body The request body
      * @param AudioRoutingGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class AudioRoutingGroupsRequestBuilder
 
     /**
      * Create new navigation property to audioRoutingGroups for communications
+     * @param AudioRoutingGroup $body The request body
      * @param AudioRoutingGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

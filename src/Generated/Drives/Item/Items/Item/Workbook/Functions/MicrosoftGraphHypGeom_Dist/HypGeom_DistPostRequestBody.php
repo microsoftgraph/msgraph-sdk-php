@@ -52,7 +52,7 @@ class HypGeom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the cumulative property value. 
+     * Gets the cumulative property value. The cumulative property
      * @return Json|null
     */
     public function getCumulative(): ?Json {
@@ -75,7 +75,7 @@ class HypGeom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the numberPop property value. 
+     * Gets the numberPop property value. The numberPop property
      * @return Json|null
     */
     public function getNumberPop(): ?Json {
@@ -83,7 +83,7 @@ class HypGeom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the numberSample property value. 
+     * Gets the numberSample property value. The numberSample property
      * @return Json|null
     */
     public function getNumberSample(): ?Json {
@@ -91,7 +91,7 @@ class HypGeom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the populationS property value. 
+     * Gets the populationS property value. The populationS property
      * @return Json|null
     */
     public function getPopulationS(): ?Json {
@@ -99,7 +99,7 @@ class HypGeom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the sampleS property value. 
+     * Gets the sampleS property value. The sampleS property
      * @return Json|null
     */
     public function getSampleS(): ?Json {
@@ -136,7 +136,7 @@ class HypGeom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the cumulative property value. 
+     * Sets the cumulative property value. The cumulative property
      * @param Json|null $value Value to set for the cumulative property.
     */
     public function setCumulative(?Json $value): void {
@@ -144,7 +144,7 @@ class HypGeom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the numberPop property value. 
+     * Sets the numberPop property value. The numberPop property
      * @param Json|null $value Value to set for the numberPop property.
     */
     public function setNumberPop(?Json $value): void {
@@ -152,7 +152,7 @@ class HypGeom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the numberSample property value. 
+     * Sets the numberSample property value. The numberSample property
      * @param Json|null $value Value to set for the numberSample property.
     */
     public function setNumberSample(?Json $value): void {
@@ -160,7 +160,7 @@ class HypGeom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the populationS property value. 
+     * Sets the populationS property value. The populationS property
      * @param Json|null $value Value to set for the populationS property.
     */
     public function setPopulationS(?Json $value): void {
@@ -168,7 +168,7 @@ class HypGeom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the sampleS property value. 
+     * Sets the sampleS property value. The sampleS property
      * @param Json|null $value Value to set for the sampleS property.
     */
     public function setSampleS(?Json $value): void {

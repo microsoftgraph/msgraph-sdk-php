@@ -87,6 +87,7 @@ class InternalDomainFederationItemRequestBuilder
 
     /**
      * Update the navigation property federationConfiguration in domains
+     * @param InternalDomainFederation $body The request body
      * @param InternalDomainFederationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class InternalDomainFederationItemRequestBuilder
 
     /**
      * Update the navigation property federationConfiguration in domains
+     * @param InternalDomainFederation $body The request body
      * @param InternalDomainFederationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

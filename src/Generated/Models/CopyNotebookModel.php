@@ -19,7 +19,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * @var string|null $escapedSelf 
+     * @var string|null $escapedSelf The self property
     */
     public ?string $escapedSelf = null;
     
@@ -57,7 +57,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the createdBy property value. 
+     * Gets the createdBy property value. The createdBy property
      * @return string|null
     */
     public function getCreatedBy(): ?string {
@@ -65,7 +65,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the createdByIdentity property value. 
+     * Gets the createdByIdentity property value. The createdByIdentity property
      * @return IdentitySet|null
     */
     public function getCreatedByIdentity(): ?IdentitySet {
@@ -73,7 +73,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the createdTime property value. 
+     * Gets the createdTime property value. The createdTime property
      * @return DateTime|null
     */
     public function getCreatedTime(): ?DateTime {
@@ -107,7 +107,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the id property value. 
+     * Gets the id property value. The id property
      * @return string|null
     */
     public function getId(): ?string {
@@ -115,7 +115,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the isDefault property value. 
+     * Gets the isDefault property value. The isDefault property
      * @return bool|null
     */
     public function getIsDefault(): ?bool {
@@ -123,7 +123,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the isShared property value. 
+     * Gets the isShared property value. The isShared property
      * @return bool|null
     */
     public function getIsShared(): ?bool {
@@ -131,7 +131,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the lastModifiedBy property value. 
+     * Gets the lastModifiedBy property value. The lastModifiedBy property
      * @return string|null
     */
     public function getLastModifiedBy(): ?string {
@@ -139,7 +139,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the lastModifiedByIdentity property value. 
+     * Gets the lastModifiedByIdentity property value. The lastModifiedByIdentity property
      * @return IdentitySet|null
     */
     public function getLastModifiedByIdentity(): ?IdentitySet {
@@ -147,7 +147,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the lastModifiedTime property value. 
+     * Gets the lastModifiedTime property value. The lastModifiedTime property
      * @return DateTime|null
     */
     public function getLastModifiedTime(): ?DateTime {
@@ -155,7 +155,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the links property value. 
+     * Gets the links property value. The links property
      * @return NotebookLinks|null
     */
     public function getLinks(): ?NotebookLinks {
@@ -163,7 +163,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the name property value. 
+     * Gets the name property value. The name property
      * @return string|null
     */
     public function getName(): ?string {
@@ -171,7 +171,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -179,7 +179,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the sectionGroupsUrl property value. 
+     * Gets the sectionGroupsUrl property value. The sectionGroupsUrl property
      * @return string|null
     */
     public function getSectionGroupsUrl(): ?string {
@@ -187,7 +187,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the sectionsUrl property value. 
+     * Gets the sectionsUrl property value. The sectionsUrl property
      * @return string|null
     */
     public function getSectionsUrl(): ?string {
@@ -195,7 +195,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the self property value. 
+     * Gets the self property value. The self property
      * @return string|null
     */
     public function getSelf(): ?string {
@@ -203,7 +203,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the userRole property value. 
+     * Gets the userRole property value. The userRole property
      * @return OnenoteUserRole|null
     */
     public function getUserRole(): ?OnenoteUserRole {
@@ -251,7 +251,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the createdBy property value. 
+     * Sets the createdBy property value. The createdBy property
      * @param string|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?string $value): void {
@@ -259,7 +259,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the createdByIdentity property value. 
+     * Sets the createdByIdentity property value. The createdByIdentity property
      * @param IdentitySet|null $value Value to set for the createdByIdentity property.
     */
     public function setCreatedByIdentity(?IdentitySet $value): void {
@@ -267,7 +267,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the createdTime property value. 
+     * Sets the createdTime property value. The createdTime property
      * @param DateTime|null $value Value to set for the createdTime property.
     */
     public function setCreatedTime(?DateTime $value): void {
@@ -275,7 +275,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the id property value. 
+     * Sets the id property value. The id property
      * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {
@@ -283,7 +283,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the isDefault property value. 
+     * Sets the isDefault property value. The isDefault property
      * @param bool|null $value Value to set for the isDefault property.
     */
     public function setIsDefault(?bool $value): void {
@@ -291,7 +291,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the isShared property value. 
+     * Sets the isShared property value. The isShared property
      * @param bool|null $value Value to set for the isShared property.
     */
     public function setIsShared(?bool $value): void {
@@ -299,7 +299,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the lastModifiedBy property value. 
+     * Sets the lastModifiedBy property value. The lastModifiedBy property
      * @param string|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?string $value): void {
@@ -307,7 +307,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the lastModifiedByIdentity property value. 
+     * Sets the lastModifiedByIdentity property value. The lastModifiedByIdentity property
      * @param IdentitySet|null $value Value to set for the lastModifiedByIdentity property.
     */
     public function setLastModifiedByIdentity(?IdentitySet $value): void {
@@ -315,7 +315,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the lastModifiedTime property value. 
+     * Sets the lastModifiedTime property value. The lastModifiedTime property
      * @param DateTime|null $value Value to set for the lastModifiedTime property.
     */
     public function setLastModifiedTime(?DateTime $value): void {
@@ -323,7 +323,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the links property value. 
+     * Sets the links property value. The links property
      * @param NotebookLinks|null $value Value to set for the links property.
     */
     public function setLinks(?NotebookLinks $value): void {
@@ -331,7 +331,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the name property value. 
+     * Sets the name property value. The name property
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -339,7 +339,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -347,7 +347,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the sectionGroupsUrl property value. 
+     * Sets the sectionGroupsUrl property value. The sectionGroupsUrl property
      * @param string|null $value Value to set for the sectionGroupsUrl property.
     */
     public function setSectionGroupsUrl(?string $value): void {
@@ -355,7 +355,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the sectionsUrl property value. 
+     * Sets the sectionsUrl property value. The sectionsUrl property
      * @param string|null $value Value to set for the sectionsUrl property.
     */
     public function setSectionsUrl(?string $value): void {
@@ -363,7 +363,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the self property value. 
+     * Sets the self property value. The self property
      * @param string|null $value Value to set for the EscapedSelf property.
     */
     public function setSelf(?string $value): void {
@@ -371,7 +371,7 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the userRole property value. 
+     * Sets the userRole property value. The userRole property
      * @param OnenoteUserRole|null $value Value to set for the userRole property.
     */
     public function setUserRole(?OnenoteUserRole $value): void {

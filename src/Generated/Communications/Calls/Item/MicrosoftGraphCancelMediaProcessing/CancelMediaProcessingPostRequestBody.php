@@ -51,7 +51,7 @@ class CancelMediaProcessingPostRequestBody implements AdditionalDataHolder, Back
     }
 
     /**
-     * Gets the clientContext property value. 
+     * Gets the clientContext property value. The clientContext property
      * @return string|null
     */
     public function getClientContext(): ?string {
@@ -95,7 +95,7 @@ class CancelMediaProcessingPostRequestBody implements AdditionalDataHolder, Back
     }
 
     /**
-     * Sets the clientContext property value. 
+     * Sets the clientContext property value. The clientContext property
      * @param string|null $value Value to set for the clientContext property.
     */
     public function setClientContext(?string $value): void {

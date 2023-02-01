@@ -44,7 +44,7 @@ class AssignLicensePostRequestBody implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the addLicenses property value. 
+     * Gets the addLicenses property value. The addLicenses property
      * @return array<AssignedLicense>|null
     */
     public function getAddLicenses(): ?array {
@@ -72,7 +72,7 @@ class AssignLicensePostRequestBody implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the removeLicenses property value. 
+     * Gets the removeLicenses property value. The removeLicenses property
      * @return array<string>|null
     */
     public function getRemoveLicenses(): ?array {
@@ -98,7 +98,7 @@ class AssignLicensePostRequestBody implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the addLicenses property value. 
+     * Sets the addLicenses property value. The addLicenses property
      * @param array<AssignedLicense>|null $value Value to set for the addLicenses property.
     */
     public function setAddLicenses(?array $value): void {
@@ -114,7 +114,7 @@ class AssignLicensePostRequestBody implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the removeLicenses property value. 
+     * Sets the removeLicenses property value. The removeLicenses property
      * @param array<string>|null $value Value to set for the removeLicenses property.
     */
     public function setRemoveLicenses(?array $value): void {

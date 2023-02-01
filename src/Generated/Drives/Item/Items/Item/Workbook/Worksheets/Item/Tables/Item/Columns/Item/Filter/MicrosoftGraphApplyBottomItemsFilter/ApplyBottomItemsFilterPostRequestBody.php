@@ -51,7 +51,7 @@ class ApplyBottomItemsFilterPostRequestBody implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Gets the count property value. 
+     * Gets the count property value. The count property
      * @return int|null
     */
     public function getCount(): ?int {
@@ -95,7 +95,7 @@ class ApplyBottomItemsFilterPostRequestBody implements AdditionalDataHolder, Bac
     }
 
     /**
-     * Sets the count property value. 
+     * Sets the count property value. The count property
      * @param int|null $value Value to set for the count property.
     */
     public function setCount(?int $value): void {

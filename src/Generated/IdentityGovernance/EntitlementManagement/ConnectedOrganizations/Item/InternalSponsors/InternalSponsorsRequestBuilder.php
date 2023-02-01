@@ -107,6 +107,7 @@ class InternalSponsorsRequestBuilder
 
     /**
      * Create new navigation property to internalSponsors for identityGovernance
+     * @param DirectoryObject $body The request body
      * @param InternalSponsorsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -150,6 +151,7 @@ class InternalSponsorsRequestBuilder
 
     /**
      * Create new navigation property to internalSponsors for identityGovernance
+     * @param DirectoryObject $body The request body
      * @param InternalSponsorsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -97,6 +97,7 @@ class IdentityGovernanceRequestBuilder
 
     /**
      * Update identityGovernance
+     * @param IdentityGovernance $body The request body
      * @param IdentityGovernanceRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -140,6 +141,7 @@ class IdentityGovernanceRequestBuilder
 
     /**
      * Update identityGovernance
+     * @param IdentityGovernance $body The request body
      * @param IdentityGovernanceRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

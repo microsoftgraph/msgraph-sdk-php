@@ -83,6 +83,7 @@ class ChatsRequestBuilder
 
     /**
      * Create new navigation property to chats for users
+     * @param Chat $body The request body
      * @param ChatsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -126,6 +127,7 @@ class ChatsRequestBuilder
 
     /**
      * Create new navigation property to chats for users
+     * @param Chat $body The request body
      * @param ChatsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

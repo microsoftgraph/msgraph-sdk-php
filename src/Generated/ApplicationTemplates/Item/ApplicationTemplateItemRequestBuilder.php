@@ -96,6 +96,7 @@ class ApplicationTemplateItemRequestBuilder
 
     /**
      * Update entity in applicationTemplates
+     * @param ApplicationTemplate $body The request body
      * @param ApplicationTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -160,6 +161,7 @@ class ApplicationTemplateItemRequestBuilder
 
     /**
      * Update entity in applicationTemplates
+     * @param ApplicationTemplate $body The request body
      * @param ApplicationTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

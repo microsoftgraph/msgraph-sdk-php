@@ -36,7 +36,7 @@ class AppCatalogs extends Entity implements Parsable
     }
 
     /**
-     * Gets the teamsApps property value. 
+     * Gets the teamsApps property value. The teamsApps property
      * @return array<TeamsApp>|null
     */
     public function getTeamsApps(): ?array {
@@ -53,7 +53,7 @@ class AppCatalogs extends Entity implements Parsable
     }
 
     /**
-     * Sets the teamsApps property value. 
+     * Sets the teamsApps property value. The teamsApps property
      * @param array<TeamsApp>|null $value Value to set for the teamsApps property.
     */
     public function setTeamsApps(?array $value): void {

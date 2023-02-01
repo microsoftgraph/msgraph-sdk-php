@@ -87,6 +87,7 @@ class SegmentItemRequestBuilder
 
     /**
      * Update the navigation property segments in communications
+     * @param Segment $body The request body
      * @param SegmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class SegmentItemRequestBuilder
 
     /**
      * Update the navigation property segments in communications
+     * @param Segment $body The request body
      * @param SegmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -47,6 +47,7 @@ class WeekNumRequestBuilder
 
     /**
      * Invoke action weekNum
+     * @param WeekNumPostRequestBody $body The request body
      * @param WeekNumRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class WeekNumRequestBuilder
 
     /**
      * Invoke action weekNum
+     * @param WeekNumPostRequestBody $body The request body
      * @param WeekNumRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

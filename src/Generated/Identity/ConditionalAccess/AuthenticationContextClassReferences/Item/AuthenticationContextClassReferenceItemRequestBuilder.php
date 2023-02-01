@@ -87,6 +87,7 @@ class AuthenticationContextClassReferenceItemRequestBuilder
 
     /**
      * Update the navigation property authenticationContextClassReferences in identity
+     * @param AuthenticationContextClassReference $body The request body
      * @param AuthenticationContextClassReferenceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class AuthenticationContextClassReferenceItemRequestBuilder
 
     /**
      * Update the navigation property authenticationContextClassReferences in identity
+     * @param AuthenticationContextClassReference $body The request body
      * @param AuthenticationContextClassReferenceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

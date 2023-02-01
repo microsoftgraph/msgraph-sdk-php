@@ -79,7 +79,7 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the isAzureAdJoined property value. 
+     * Gets the isAzureAdJoined property value. The isAzureAdJoined property
      * @return bool|null
     */
     public function getIsAzureAdJoined(): ?bool {
@@ -87,7 +87,7 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the isAzureAdRegistered property value. 
+     * Gets the isAzureAdRegistered property value. The isAzureAdRegistered property
      * @return bool|null
     */
     public function getIsAzureAdRegistered(): ?bool {
@@ -111,7 +111,7 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -193,7 +193,7 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the isAzureAdJoined property value. 
+     * Sets the isAzureAdJoined property value. The isAzureAdJoined property
      * @param bool|null $value Value to set for the isAzureAdJoined property.
     */
     public function setIsAzureAdJoined(?bool $value): void {
@@ -201,7 +201,7 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the isAzureAdRegistered property value. 
+     * Sets the isAzureAdRegistered property value. The isAzureAdRegistered property
      * @param bool|null $value Value to set for the isAzureAdRegistered property.
     */
     public function setIsAzureAdRegistered(?bool $value): void {
@@ -225,7 +225,7 @@ class HostSecurityState implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

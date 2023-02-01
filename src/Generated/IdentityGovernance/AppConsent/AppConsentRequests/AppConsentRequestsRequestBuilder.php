@@ -85,6 +85,7 @@ class AppConsentRequestsRequestBuilder
 
     /**
      * Create new navigation property to appConsentRequests for identityGovernance
+     * @param AppConsentRequest $body The request body
      * @param AppConsentRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -128,6 +129,7 @@ class AppConsentRequestsRequestBuilder
 
     /**
      * Create new navigation property to appConsentRequests for identityGovernance
+     * @param AppConsentRequest $body The request body
      * @param AppConsentRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

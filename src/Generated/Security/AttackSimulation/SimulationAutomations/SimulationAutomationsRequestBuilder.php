@@ -75,6 +75,7 @@ class SimulationAutomationsRequestBuilder
 
     /**
      * Create new navigation property to simulationAutomations for security
+     * @param SimulationAutomation $body The request body
      * @param SimulationAutomationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,6 +119,7 @@ class SimulationAutomationsRequestBuilder
 
     /**
      * Create new navigation property to simulationAutomations for security
+     * @param SimulationAutomation $body The request body
      * @param SimulationAutomationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

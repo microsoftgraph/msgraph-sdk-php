@@ -52,7 +52,7 @@ class NominalPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the effectRate property value. 
+     * Gets the effectRate property value. The effectRate property
      * @return Json|null
     */
     public function getEffectRate(): ?Json {
@@ -72,7 +72,7 @@ class NominalPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the npery property value. 
+     * Gets the npery property value. The npery property
      * @return Json|null
     */
     public function getNpery(): ?Json {
@@ -106,7 +106,7 @@ class NominalPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the effectRate property value. 
+     * Sets the effectRate property value. The effectRate property
      * @param Json|null $value Value to set for the effectRate property.
     */
     public function setEffectRate(?Json $value): void {
@@ -114,7 +114,7 @@ class NominalPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the npery property value. 
+     * Sets the npery property value. The npery property
      * @param Json|null $value Value to set for the npery property.
     */
     public function setNpery(?Json $value): void {

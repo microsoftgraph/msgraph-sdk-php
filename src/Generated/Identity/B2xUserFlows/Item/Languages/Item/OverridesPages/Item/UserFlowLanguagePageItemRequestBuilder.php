@@ -95,6 +95,7 @@ class UserFlowLanguagePageItemRequestBuilder
 
     /**
      * Update the navigation property overridesPages in identity
+     * @param UserFlowLanguagePage $body The request body
      * @param UserFlowLanguagePageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class UserFlowLanguagePageItemRequestBuilder
 
     /**
      * Update the navigation property overridesPages in identity
+     * @param UserFlowLanguagePage $body The request body
      * @param UserFlowLanguagePageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

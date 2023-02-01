@@ -96,6 +96,7 @@ class AppConsentRequestItemRequestBuilder
 
     /**
      * Update the navigation property appConsentRequests in identityGovernance
+     * @param AppConsentRequest $body The request body
      * @param AppConsentRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -160,6 +161,7 @@ class AppConsentRequestItemRequestBuilder
 
     /**
      * Update the navigation property appConsentRequests in identityGovernance
+     * @param AppConsentRequest $body The request body
      * @param AppConsentRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

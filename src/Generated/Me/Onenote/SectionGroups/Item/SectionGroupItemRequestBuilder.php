@@ -120,6 +120,7 @@ class SectionGroupItemRequestBuilder
 
     /**
      * Update the navigation property sectionGroups in me
+     * @param SectionGroup $body The request body
      * @param SectionGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -206,6 +207,7 @@ class SectionGroupItemRequestBuilder
 
     /**
      * Update the navigation property sectionGroups in me
+     * @param SectionGroup $body The request body
      * @param SectionGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

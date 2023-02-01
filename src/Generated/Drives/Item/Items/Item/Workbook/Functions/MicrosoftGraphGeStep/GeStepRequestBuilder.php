@@ -47,6 +47,7 @@ class GeStepRequestBuilder
 
     /**
      * Invoke action geStep
+     * @param GeStepPostRequestBody $body The request body
      * @param GeStepRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class GeStepRequestBuilder
 
     /**
      * Invoke action geStep
+     * @param GeStepPostRequestBody $body The request body
      * @param GeStepRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

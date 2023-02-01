@@ -47,6 +47,7 @@ class GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder
 
     /**
      * Invoke action getConfigurationPolicyNonComplianceSummaryReport
+     * @param GetConfigurationPolicyNonComplianceSummaryReportPostRequestBody $body The request body
      * @param GetConfigurationPolicyNonComplianceSummaryReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder
 
     /**
      * Invoke action getConfigurationPolicyNonComplianceSummaryReport
+     * @param GetConfigurationPolicyNonComplianceSummaryReportPostRequestBody $body The request body
      * @param GetConfigurationPolicyNonComplianceSummaryReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

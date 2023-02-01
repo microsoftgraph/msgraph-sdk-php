@@ -47,6 +47,7 @@ class ImLog10RequestBuilder
 
     /**
      * Invoke action imLog10
+     * @param ImLog10PostRequestBody $body The request body
      * @param ImLog10RequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ImLog10RequestBuilder
 
     /**
      * Invoke action imLog10
+     * @param ImLog10PostRequestBody $body The request body
      * @param ImLog10RequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -52,7 +52,7 @@ class AmorLincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the basis property value. 
+     * Gets the basis property value. The basis property
      * @return Json|null
     */
     public function getBasis(): ?Json {
@@ -60,7 +60,7 @@ class AmorLincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the cost property value. 
+     * Gets the cost property value. The cost property
      * @return Json|null
     */
     public function getCost(): ?Json {
@@ -68,7 +68,7 @@ class AmorLincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the datePurchased property value. 
+     * Gets the datePurchased property value. The datePurchased property
      * @return Json|null
     */
     public function getDatePurchased(): ?Json {
@@ -93,7 +93,7 @@ class AmorLincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the firstPeriod property value. 
+     * Gets the firstPeriod property value. The firstPeriod property
      * @return Json|null
     */
     public function getFirstPeriod(): ?Json {
@@ -101,7 +101,7 @@ class AmorLincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the period property value. 
+     * Gets the period property value. The period property
      * @return Json|null
     */
     public function getPeriod(): ?Json {
@@ -109,7 +109,7 @@ class AmorLincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the rate property value. 
+     * Gets the rate property value. The rate property
      * @return Json|null
     */
     public function getRate(): ?Json {
@@ -117,7 +117,7 @@ class AmorLincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the salvage property value. 
+     * Gets the salvage property value. The salvage property
      * @return Json|null
     */
     public function getSalvage(): ?Json {
@@ -156,7 +156,7 @@ class AmorLincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the basis property value. 
+     * Sets the basis property value. The basis property
      * @param Json|null $value Value to set for the basis property.
     */
     public function setBasis(?Json $value): void {
@@ -164,7 +164,7 @@ class AmorLincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the cost property value. 
+     * Sets the cost property value. The cost property
      * @param Json|null $value Value to set for the cost property.
     */
     public function setCost(?Json $value): void {
@@ -172,7 +172,7 @@ class AmorLincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the datePurchased property value. 
+     * Sets the datePurchased property value. The datePurchased property
      * @param Json|null $value Value to set for the datePurchased property.
     */
     public function setDatePurchased(?Json $value): void {
@@ -180,7 +180,7 @@ class AmorLincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the firstPeriod property value. 
+     * Sets the firstPeriod property value. The firstPeriod property
      * @param Json|null $value Value to set for the firstPeriod property.
     */
     public function setFirstPeriod(?Json $value): void {
@@ -188,7 +188,7 @@ class AmorLincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the period property value. 
+     * Sets the period property value. The period property
      * @param Json|null $value Value to set for the period property.
     */
     public function setPeriod(?Json $value): void {
@@ -196,7 +196,7 @@ class AmorLincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the rate property value. 
+     * Sets the rate property value. The rate property
      * @param Json|null $value Value to set for the rate property.
     */
     public function setRate(?Json $value): void {
@@ -204,7 +204,7 @@ class AmorLincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the salvage property value. 
+     * Sets the salvage property value. The salvage property
      * @param Json|null $value Value to set for the salvage property.
     */
     public function setSalvage(?Json $value): void {

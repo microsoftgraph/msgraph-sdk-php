@@ -54,7 +54,7 @@ class WorkbookComment extends Entity implements Parsable
     }
 
     /**
-     * Gets the replies property value. 
+     * Gets the replies property value. The replies property
      * @return array<WorkbookCommentReply>|null
     */
     public function getReplies(): ?array {
@@ -89,7 +89,7 @@ class WorkbookComment extends Entity implements Parsable
     }
 
     /**
-     * Sets the replies property value. 
+     * Sets the replies property value. The replies property
      * @param array<WorkbookCommentReply>|null $value Value to set for the replies property.
     */
     public function setReplies(?array $value): void {

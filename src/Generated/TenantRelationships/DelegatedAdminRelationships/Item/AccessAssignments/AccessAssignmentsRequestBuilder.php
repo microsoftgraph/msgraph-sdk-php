@@ -74,6 +74,7 @@ class AccessAssignmentsRequestBuilder
 
     /**
      * Create new navigation property to accessAssignments for tenantRelationships
+     * @param DelegatedAdminAccessAssignment $body The request body
      * @param AccessAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class AccessAssignmentsRequestBuilder
 
     /**
      * Create new navigation property to accessAssignments for tenantRelationships
+     * @param DelegatedAdminAccessAssignment $body The request body
      * @param AccessAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -87,6 +87,7 @@ class SimulationItemRequestBuilder
 
     /**
      * Update the navigation property simulations in security
+     * @param Simulation $body The request body
      * @param SimulationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class SimulationItemRequestBuilder
 
     /**
      * Update the navigation property simulations in security
+     * @param Simulation $body The request body
      * @param SimulationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

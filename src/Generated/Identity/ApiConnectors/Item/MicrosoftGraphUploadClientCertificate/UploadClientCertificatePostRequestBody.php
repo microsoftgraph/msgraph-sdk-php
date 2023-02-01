@@ -63,7 +63,7 @@ class UploadClientCertificatePostRequestBody implements AdditionalDataHolder, Ba
     }
 
     /**
-     * Gets the password property value. 
+     * Gets the password property value. The password property
      * @return string|null
     */
     public function getPassword(): ?string {
@@ -71,7 +71,7 @@ class UploadClientCertificatePostRequestBody implements AdditionalDataHolder, Ba
     }
 
     /**
-     * Gets the pkcs12Value property value. 
+     * Gets the pkcs12Value property value. The pkcs12Value property
      * @return string|null
     */
     public function getPkcs12Value(): ?string {
@@ -105,7 +105,7 @@ class UploadClientCertificatePostRequestBody implements AdditionalDataHolder, Ba
     }
 
     /**
-     * Sets the password property value. 
+     * Sets the password property value. The password property
      * @param string|null $value Value to set for the password property.
     */
     public function setPassword(?string $value): void {
@@ -113,7 +113,7 @@ class UploadClientCertificatePostRequestBody implements AdditionalDataHolder, Ba
     }
 
     /**
-     * Sets the pkcs12Value property value. 
+     * Sets the pkcs12Value property value. The pkcs12Value property
      * @param string|null $value Value to set for the pkcs12Value property.
     */
     public function setPkcs12Value(?string $value): void {

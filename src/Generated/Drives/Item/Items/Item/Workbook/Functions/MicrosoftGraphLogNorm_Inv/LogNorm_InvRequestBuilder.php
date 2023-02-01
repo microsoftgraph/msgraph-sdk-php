@@ -47,6 +47,7 @@ class LogNorm_InvRequestBuilder
 
     /**
      * Invoke action logNorm_Inv
+     * @param LogNorm_InvPostRequestBody $body The request body
      * @param LogNorm_InvRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class LogNorm_InvRequestBuilder
 
     /**
      * Invoke action logNorm_Inv
+     * @param LogNorm_InvPostRequestBody $body The request body
      * @param LogNorm_InvRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

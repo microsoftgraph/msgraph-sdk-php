@@ -74,6 +74,7 @@ class AuthenticationMethodConfigurationsRequestBuilder
 
     /**
      * Create new navigation property to authenticationMethodConfigurations for authenticationMethodsPolicy
+     * @param AuthenticationMethodConfiguration $body The request body
      * @param AuthenticationMethodConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class AuthenticationMethodConfigurationsRequestBuilder
 
     /**
      * Create new navigation property to authenticationMethodConfigurations for authenticationMethodsPolicy
+     * @param AuthenticationMethodConfiguration $body The request body
      * @param AuthenticationMethodConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

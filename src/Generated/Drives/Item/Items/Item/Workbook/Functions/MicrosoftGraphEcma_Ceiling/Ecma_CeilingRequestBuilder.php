@@ -47,6 +47,7 @@ class Ecma_CeilingRequestBuilder
 
     /**
      * Invoke action ecma_Ceiling
+     * @param Ecma_CeilingPostRequestBody $body The request body
      * @param Ecma_CeilingRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Ecma_CeilingRequestBuilder
 
     /**
      * Invoke action ecma_Ceiling
+     * @param Ecma_CeilingPostRequestBody $body The request body
      * @param Ecma_CeilingRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

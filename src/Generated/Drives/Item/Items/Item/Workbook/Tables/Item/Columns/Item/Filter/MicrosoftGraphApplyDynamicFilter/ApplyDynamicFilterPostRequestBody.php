@@ -51,7 +51,7 @@ class ApplyDynamicFilterPostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Gets the criteria property value. 
+     * Gets the criteria property value. The criteria property
      * @return string|null
     */
     public function getCriteria(): ?string {
@@ -95,7 +95,7 @@ class ApplyDynamicFilterPostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Sets the criteria property value. 
+     * Sets the criteria property value. The criteria property
      * @param string|null $value Value to set for the criteria property.
     */
     public function setCriteria(?string $value): void {

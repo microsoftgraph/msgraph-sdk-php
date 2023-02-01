@@ -62,7 +62,7 @@ class IsPublishedResponse implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return bool|null
     */
     public function getValue(): ?bool {
@@ -95,7 +95,7 @@ class IsPublishedResponse implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param bool|null $value Value to set for the value property.
     */
     public function setValue(?bool $value): void {

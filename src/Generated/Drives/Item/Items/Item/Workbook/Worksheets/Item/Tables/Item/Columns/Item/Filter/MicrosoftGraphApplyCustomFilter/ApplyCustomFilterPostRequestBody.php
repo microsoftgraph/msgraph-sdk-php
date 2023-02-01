@@ -51,7 +51,7 @@ class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, BackedMo
     }
 
     /**
-     * Gets the criteria1 property value. 
+     * Gets the criteria1 property value. The criteria1 property
      * @return string|null
     */
     public function getCriteria1(): ?string {
@@ -59,7 +59,7 @@ class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, BackedMo
     }
 
     /**
-     * Gets the criteria2 property value. 
+     * Gets the criteria2 property value. The criteria2 property
      * @return string|null
     */
     public function getCriteria2(): ?string {
@@ -80,7 +80,7 @@ class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, BackedMo
     }
 
     /**
-     * Gets the oper property value. 
+     * Gets the oper property value. The oper property
      * @return string|null
     */
     public function getOper(): ?string {
@@ -115,7 +115,7 @@ class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, BackedMo
     }
 
     /**
-     * Sets the criteria1 property value. 
+     * Sets the criteria1 property value. The criteria1 property
      * @param string|null $value Value to set for the criteria1 property.
     */
     public function setCriteria1(?string $value): void {
@@ -123,7 +123,7 @@ class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, BackedMo
     }
 
     /**
-     * Sets the criteria2 property value. 
+     * Sets the criteria2 property value. The criteria2 property
      * @param string|null $value Value to set for the criteria2 property.
     */
     public function setCriteria2(?string $value): void {
@@ -131,7 +131,7 @@ class ApplyCustomFilterPostRequestBody implements AdditionalDataHolder, BackedMo
     }
 
     /**
-     * Sets the oper property value. 
+     * Sets the oper property value. The oper property
      * @param string|null $value Value to set for the oper property.
     */
     public function setOper(?string $value): void {

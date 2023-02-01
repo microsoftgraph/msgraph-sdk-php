@@ -74,6 +74,7 @@ class TermsRequestBuilder
 
     /**
      * Create new navigation property to terms for sites
+     * @param Term $body The request body
      * @param TermsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class TermsRequestBuilder
 
     /**
      * Create new navigation property to terms for sites
+     * @param Term $body The request body
      * @param TermsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

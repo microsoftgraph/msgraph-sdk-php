@@ -66,7 +66,7 @@ class AddKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the keyCredential property value. 
+     * Gets the keyCredential property value. The keyCredential property
      * @return KeyCredential|null
     */
     public function getKeyCredential(): ?KeyCredential {
@@ -74,7 +74,7 @@ class AddKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the passwordCredential property value. 
+     * Gets the passwordCredential property value. The passwordCredential property
      * @return PasswordCredential|null
     */
     public function getPasswordCredential(): ?PasswordCredential {
@@ -82,7 +82,7 @@ class AddKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the proof property value. 
+     * Gets the proof property value. The proof property
      * @return string|null
     */
     public function getProof(): ?string {
@@ -117,7 +117,7 @@ class AddKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the keyCredential property value. 
+     * Sets the keyCredential property value. The keyCredential property
      * @param KeyCredential|null $value Value to set for the keyCredential property.
     */
     public function setKeyCredential(?KeyCredential $value): void {
@@ -125,7 +125,7 @@ class AddKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the passwordCredential property value. 
+     * Sets the passwordCredential property value. The passwordCredential property
      * @param PasswordCredential|null $value Value to set for the passwordCredential property.
     */
     public function setPasswordCredential(?PasswordCredential $value): void {
@@ -133,7 +133,7 @@ class AddKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the proof property value. 
+     * Sets the proof property value. The proof property
      * @param string|null $value Value to set for the proof property.
     */
     public function setProof(?string $value): void {

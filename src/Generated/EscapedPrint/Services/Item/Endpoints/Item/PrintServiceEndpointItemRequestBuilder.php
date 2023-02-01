@@ -87,6 +87,7 @@ class PrintServiceEndpointItemRequestBuilder
 
     /**
      * Update the navigation property endpoints in print
+     * @param PrintServiceEndpoint $body The request body
      * @param PrintServiceEndpointItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class PrintServiceEndpointItemRequestBuilder
 
     /**
      * Update the navigation property endpoints in print
+     * @param PrintServiceEndpoint $body The request body
      * @param PrintServiceEndpointItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

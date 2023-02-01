@@ -47,6 +47,7 @@ class UnicharRequestBuilder
 
     /**
      * Invoke action unichar
+     * @param UnicharPostRequestBody $body The request body
      * @param UnicharRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class UnicharRequestBuilder
 
     /**
      * Invoke action unichar
+     * @param UnicharPostRequestBody $body The request body
      * @param UnicharRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

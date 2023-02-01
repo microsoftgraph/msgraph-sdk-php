@@ -66,7 +66,7 @@ class SubstitutePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the instanceNum property value. 
+     * Gets the instanceNum property value. The instanceNum property
      * @return Json|null
     */
     public function getInstanceNum(): ?Json {
@@ -74,7 +74,7 @@ class SubstitutePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the newText property value. 
+     * Gets the newText property value. The newText property
      * @return Json|null
     */
     public function getNewText(): ?Json {
@@ -82,7 +82,7 @@ class SubstitutePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the oldText property value. 
+     * Gets the oldText property value. The oldText property
      * @return Json|null
     */
     public function getOldText(): ?Json {
@@ -90,7 +90,7 @@ class SubstitutePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the text property value. 
+     * Gets the text property value. The text property
      * @return Json|null
     */
     public function getText(): ?Json {
@@ -126,7 +126,7 @@ class SubstitutePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the instanceNum property value. 
+     * Sets the instanceNum property value. The instanceNum property
      * @param Json|null $value Value to set for the instanceNum property.
     */
     public function setInstanceNum(?Json $value): void {
@@ -134,7 +134,7 @@ class SubstitutePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the newText property value. 
+     * Sets the newText property value. The newText property
      * @param Json|null $value Value to set for the newText property.
     */
     public function setNewText(?Json $value): void {
@@ -142,7 +142,7 @@ class SubstitutePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the oldText property value. 
+     * Sets the oldText property value. The oldText property
      * @param Json|null $value Value to set for the oldText property.
     */
     public function setOldText(?Json $value): void {
@@ -150,7 +150,7 @@ class SubstitutePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the text property value. 
+     * Sets the text property value. The text property
      * @param Json|null $value Value to set for the text property.
     */
     public function setText(?Json $value): void {

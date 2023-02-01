@@ -74,6 +74,7 @@ class RoleDefinitionsRequestBuilder
 
     /**
      * Create new navigation property to roleDefinitions for deviceManagement
+     * @param RoleDefinition $body The request body
      * @param RoleDefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class RoleDefinitionsRequestBuilder
 
     /**
      * Create new navigation property to roleDefinitions for deviceManagement
+     * @param RoleDefinition $body The request body
      * @param RoleDefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

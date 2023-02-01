@@ -151,6 +151,7 @@ class TargetedManagedAppConfigurationItemRequestBuilder
 
     /**
      * Update the navigation property targetedManagedAppConfigurations in deviceAppManagement
+     * @param TargetedManagedAppConfiguration $body The request body
      * @param TargetedManagedAppConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -215,6 +216,7 @@ class TargetedManagedAppConfigurationItemRequestBuilder
 
     /**
      * Update the navigation property targetedManagedAppConfigurations in deviceAppManagement
+     * @param TargetedManagedAppConfiguration $body The request body
      * @param TargetedManagedAppConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

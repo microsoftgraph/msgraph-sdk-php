@@ -107,6 +107,7 @@ class MeetingAttendanceReportItemRequestBuilder
 
     /**
      * Update the navigation property attendanceReports in communications
+     * @param MeetingAttendanceReport $body The request body
      * @param MeetingAttendanceReportItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -171,6 +172,7 @@ class MeetingAttendanceReportItemRequestBuilder
 
     /**
      * Update the navigation property attendanceReports in communications
+     * @param MeetingAttendanceReport $body The request body
      * @param MeetingAttendanceReportItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -95,6 +95,7 @@ class UsedInsightItemRequestBuilder
 
     /**
      * Update the navigation property used in me
+     * @param UsedInsight $body The request body
      * @param UsedInsightItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class UsedInsightItemRequestBuilder
 
     /**
      * Update the navigation property used in me
+     * @param UsedInsight $body The request body
      * @param UsedInsightItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -87,6 +87,7 @@ class TeamsTemplateItemRequestBuilder
 
     /**
      * Update entity in teamsTemplates
+     * @param TeamsTemplate $body The request body
      * @param TeamsTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class TeamsTemplateItemRequestBuilder
 
     /**
      * Update entity in teamsTemplates
+     * @param TeamsTemplate $body The request body
      * @param TeamsTemplateItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -46,6 +46,7 @@ class UpdateWindowsDeviceAccountRequestBuilder
 
     /**
      * Invoke action updateWindowsDeviceAccount
+     * @param UpdateWindowsDeviceAccountPostRequestBody $body The request body
      * @param UpdateWindowsDeviceAccountRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -64,6 +65,7 @@ class UpdateWindowsDeviceAccountRequestBuilder
 
     /**
      * Invoke action updateWindowsDeviceAccount
+     * @param UpdateWindowsDeviceAccountPostRequestBody $body The request body
      * @param UpdateWindowsDeviceAccountRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

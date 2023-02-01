@@ -74,6 +74,7 @@ class ConditionalAccessPoliciesRequestBuilder
 
     /**
      * Create new navigation property to conditionalAccessPolicies for policies
+     * @param ConditionalAccessPolicy $body The request body
      * @param ConditionalAccessPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class ConditionalAccessPoliciesRequestBuilder
 
     /**
      * Create new navigation property to conditionalAccessPolicies for policies
+     * @param ConditionalAccessPolicy $body The request body
      * @param ConditionalAccessPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -96,6 +96,7 @@ class ApprovalItemRequestBuilder
 
     /**
      * Update the navigation property accessPackageAssignmentApprovals in identityGovernance
+     * @param Approval $body The request body
      * @param ApprovalItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -171,6 +172,7 @@ class ApprovalItemRequestBuilder
 
     /**
      * Update the navigation property accessPackageAssignmentApprovals in identityGovernance
+     * @param Approval $body The request body
      * @param ApprovalItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

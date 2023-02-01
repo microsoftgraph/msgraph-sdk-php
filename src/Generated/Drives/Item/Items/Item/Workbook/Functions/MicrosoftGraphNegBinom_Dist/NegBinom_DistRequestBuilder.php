@@ -47,6 +47,7 @@ class NegBinom_DistRequestBuilder
 
     /**
      * Invoke action negBinom_Dist
+     * @param NegBinom_DistPostRequestBody $body The request body
      * @param NegBinom_DistRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class NegBinom_DistRequestBuilder
 
     /**
      * Invoke action negBinom_Dist
+     * @param NegBinom_DistPostRequestBody $body The request body
      * @param NegBinom_DistRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

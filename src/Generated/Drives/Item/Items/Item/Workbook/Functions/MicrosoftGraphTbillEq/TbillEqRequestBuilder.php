@@ -47,6 +47,7 @@ class TbillEqRequestBuilder
 
     /**
      * Invoke action tbillEq
+     * @param TbillEqPostRequestBody $body The request body
      * @param TbillEqRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class TbillEqRequestBuilder
 
     /**
      * Invoke action tbillEq
+     * @param TbillEqPostRequestBody $body The request body
      * @param TbillEqRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

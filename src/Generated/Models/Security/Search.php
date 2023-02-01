@@ -36,7 +36,7 @@ class Search extends Entity implements Parsable
     }
 
     /**
-     * Gets the contentQuery property value. 
+     * Gets the contentQuery property value. The contentQuery property
      * @return string|null
     */
     public function getContentQuery(): ?string {
@@ -44,7 +44,7 @@ class Search extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdBy property value. 
+     * Gets the createdBy property value. The createdBy property
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
@@ -52,7 +52,7 @@ class Search extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. 
+     * Gets the createdDateTime property value. The createdDateTime property
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -60,7 +60,7 @@ class Search extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. 
+     * Gets the description property value. The description property
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -68,7 +68,7 @@ class Search extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. 
+     * Gets the displayName property value. The displayName property
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -93,7 +93,7 @@ class Search extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedBy property value. 
+     * Gets the lastModifiedBy property value. The lastModifiedBy property
      * @return IdentitySet|null
     */
     public function getLastModifiedBy(): ?IdentitySet {
@@ -101,7 +101,7 @@ class Search extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. 
+     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -124,7 +124,7 @@ class Search extends Entity implements Parsable
     }
 
     /**
-     * Sets the contentQuery property value. 
+     * Sets the contentQuery property value. The contentQuery property
      * @param string|null $value Value to set for the contentQuery property.
     */
     public function setContentQuery(?string $value): void {
@@ -132,7 +132,7 @@ class Search extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdBy property value. 
+     * Sets the createdBy property value. The createdBy property
      * @param IdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?IdentitySet $value): void {
@@ -140,7 +140,7 @@ class Search extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. 
+     * Sets the createdDateTime property value. The createdDateTime property
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -148,7 +148,7 @@ class Search extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. 
+     * Sets the description property value. The description property
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -156,7 +156,7 @@ class Search extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. 
+     * Sets the displayName property value. The displayName property
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -164,7 +164,7 @@ class Search extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedBy property value. 
+     * Sets the lastModifiedBy property value. The lastModifiedBy property
      * @param IdentitySet|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?IdentitySet $value): void {
@@ -172,7 +172,7 @@ class Search extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. 
+     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {

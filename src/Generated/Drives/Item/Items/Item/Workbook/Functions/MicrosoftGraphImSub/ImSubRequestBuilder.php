@@ -47,6 +47,7 @@ class ImSubRequestBuilder
 
     /**
      * Invoke action imSub
+     * @param ImSubPostRequestBody $body The request body
      * @param ImSubRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ImSubRequestBuilder
 
     /**
      * Invoke action imSub
+     * @param ImSubPostRequestBody $body The request body
      * @param ImSubRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

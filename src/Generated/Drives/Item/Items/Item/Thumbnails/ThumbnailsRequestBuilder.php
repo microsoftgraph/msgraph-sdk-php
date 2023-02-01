@@ -75,6 +75,7 @@ class ThumbnailsRequestBuilder
 
     /**
      * Create new navigation property to thumbnails for drives
+     * @param ThumbnailSet $body The request body
      * @param ThumbnailsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,6 +119,7 @@ class ThumbnailsRequestBuilder
 
     /**
      * Create new navigation property to thumbnails for drives
+     * @param ThumbnailSet $body The request body
      * @param ThumbnailsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

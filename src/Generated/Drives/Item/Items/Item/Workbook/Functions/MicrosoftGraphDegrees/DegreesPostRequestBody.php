@@ -44,7 +44,7 @@ class DegreesPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the angle property value. 
+     * Gets the angle property value. The angle property
      * @return Json|null
     */
     public function getAngle(): ?Json {
@@ -88,7 +88,7 @@ class DegreesPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the angle property value. 
+     * Sets the angle property value. The angle property
      * @param Json|null $value Value to set for the angle property.
     */
     public function setAngle(?Json $value): void {

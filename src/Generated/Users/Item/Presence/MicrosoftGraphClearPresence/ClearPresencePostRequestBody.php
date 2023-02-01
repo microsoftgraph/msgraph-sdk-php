@@ -62,7 +62,7 @@ class ClearPresencePostRequestBody implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the sessionId property value. 
+     * Gets the sessionId property value. The sessionId property
      * @return string|null
     */
     public function getSessionId(): ?string {
@@ -95,7 +95,7 @@ class ClearPresencePostRequestBody implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the sessionId property value. 
+     * Sets the sessionId property value. The sessionId property
      * @param string|null $value Value to set for the sessionId property.
     */
     public function setSessionId(?string $value): void {

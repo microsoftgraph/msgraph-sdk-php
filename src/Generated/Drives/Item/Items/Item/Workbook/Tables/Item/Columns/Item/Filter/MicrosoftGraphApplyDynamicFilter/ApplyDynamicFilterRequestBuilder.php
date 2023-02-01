@@ -46,6 +46,7 @@ class ApplyDynamicFilterRequestBuilder
 
     /**
      * Invoke action applyDynamicFilter
+     * @param ApplyDynamicFilterPostRequestBody $body The request body
      * @param ApplyDynamicFilterRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -64,6 +65,7 @@ class ApplyDynamicFilterRequestBuilder
 
     /**
      * Invoke action applyDynamicFilter
+     * @param ApplyDynamicFilterPostRequestBody $body The request body
      * @param ApplyDynamicFilterRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

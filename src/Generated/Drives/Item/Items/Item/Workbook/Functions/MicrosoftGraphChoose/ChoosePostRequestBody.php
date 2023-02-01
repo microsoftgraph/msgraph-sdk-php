@@ -64,7 +64,7 @@ class ChoosePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the indexNum property value. 
+     * Gets the indexNum property value. The indexNum property
      * @return Json|null
     */
     public function getIndexNum(): ?Json {
@@ -72,7 +72,7 @@ class ChoosePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the values property value. 
+     * Gets the values property value. The values property
      * @return Json|null
     */
     public function getValues(): ?Json {
@@ -106,7 +106,7 @@ class ChoosePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the indexNum property value. 
+     * Sets the indexNum property value. The indexNum property
      * @param Json|null $value Value to set for the indexNum property.
     */
     public function setIndexNum(?Json $value): void {
@@ -114,7 +114,7 @@ class ChoosePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the values property value. 
+     * Sets the values property value. The values property
      * @param Json|null $value Value to set for the values property.
     */
     public function setValues(?Json $value): void {

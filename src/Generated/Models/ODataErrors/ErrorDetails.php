@@ -51,7 +51,7 @@ class ErrorDetails implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the code property value. 
+     * Gets the code property value. The code property
      * @return string|null
     */
     public function getCode(): ?string {
@@ -72,7 +72,7 @@ class ErrorDetails implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the message property value. 
+     * Gets the message property value. The message property
      * @return string|null
     */
     public function getMessage(): ?string {
@@ -80,7 +80,7 @@ class ErrorDetails implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the target property value. 
+     * Gets the target property value. The target property
      * @return string|null
     */
     public function getTarget(): ?string {
@@ -115,7 +115,7 @@ class ErrorDetails implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the code property value. 
+     * Sets the code property value. The code property
      * @param string|null $value Value to set for the code property.
     */
     public function setCode(?string $value): void {
@@ -123,7 +123,7 @@ class ErrorDetails implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the message property value. 
+     * Sets the message property value. The message property
      * @param string|null $value Value to set for the message property.
     */
     public function setMessage(?string $value): void {
@@ -131,7 +131,7 @@ class ErrorDetails implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the target property value. 
+     * Sets the target property value. The target property
      * @param string|null $value Value to set for the target property.
     */
     public function setTarget(?string $value): void {

@@ -293,6 +293,7 @@ class TeamItemRequestBuilder
 
     /**
      * Update the navigation property joinedTeams in me
+     * @param Team $body The request body
      * @param TeamItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -368,6 +369,7 @@ class TeamItemRequestBuilder
 
     /**
      * Update the navigation property joinedTeams in me
+     * @param Team $body The request body
      * @param TeamItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

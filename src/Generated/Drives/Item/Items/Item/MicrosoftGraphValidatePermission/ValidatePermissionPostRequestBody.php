@@ -51,7 +51,7 @@ class ValidatePermissionPostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Gets the challengeToken property value. 
+     * Gets the challengeToken property value. The challengeToken property
      * @return string|null
     */
     public function getChallengeToken(): ?string {
@@ -71,7 +71,7 @@ class ValidatePermissionPostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Gets the password property value. 
+     * Gets the password property value. The password property
      * @return string|null
     */
     public function getPassword(): ?string {
@@ -105,7 +105,7 @@ class ValidatePermissionPostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Sets the challengeToken property value. 
+     * Sets the challengeToken property value. The challengeToken property
      * @param string|null $value Value to set for the challengeToken property.
     */
     public function setChallengeToken(?string $value): void {
@@ -113,7 +113,7 @@ class ValidatePermissionPostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Sets the password property value. 
+     * Sets the password property value. The password property
      * @param string|null $value Value to set for the password property.
     */
     public function setPassword(?string $value): void {

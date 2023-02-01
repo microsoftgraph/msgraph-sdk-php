@@ -47,6 +47,7 @@ class UnmuteRequestBuilder
 
     /**
      * Allow the application to unmute itself. This is a server unmute, meaning that the server will start sending audio packets for this participant to other participants again. For more information about how to handle unmute operations, see unmuteParticipantOperation.
+     * @param UnmutePostRequestBody $body The request body
      * @param UnmuteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/call-unmute?view=graph-rest-1.0 Find more info here
@@ -66,6 +67,7 @@ class UnmuteRequestBuilder
 
     /**
      * Allow the application to unmute itself. This is a server unmute, meaning that the server will start sending audio packets for this participant to other participants again. For more information about how to handle unmute operations, see unmuteParticipantOperation.
+     * @param UnmutePostRequestBody $body The request body
      * @param UnmuteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

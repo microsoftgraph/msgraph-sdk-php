@@ -87,6 +87,7 @@ class WindowsInformationProtectionPolicyItemRequestBuilder
 
     /**
      * Update the navigation property windowsInformationProtectionPolicies in deviceAppManagement
+     * @param WindowsInformationProtectionPolicy $body The request body
      * @param WindowsInformationProtectionPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class WindowsInformationProtectionPolicyItemRequestBuilder
 
     /**
      * Update the navigation property windowsInformationProtectionPolicies in deviceAppManagement
+     * @param WindowsInformationProtectionPolicy $body The request body
      * @param WindowsInformationProtectionPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

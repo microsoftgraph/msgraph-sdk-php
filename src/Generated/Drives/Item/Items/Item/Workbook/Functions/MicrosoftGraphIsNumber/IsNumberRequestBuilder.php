@@ -47,6 +47,7 @@ class IsNumberRequestBuilder
 
     /**
      * Invoke action isNumber
+     * @param IsNumberPostRequestBody $body The request body
      * @param IsNumberRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class IsNumberRequestBuilder
 
     /**
      * Invoke action isNumber
+     * @param IsNumberPostRequestBody $body The request body
      * @param IsNumberRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

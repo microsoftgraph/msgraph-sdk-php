@@ -74,6 +74,7 @@ class ResultsRequestBuilder
 
     /**
      * Create new navigation property to results for informationProtection
+     * @param ThreatAssessmentResult $body The request body
      * @param ResultsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class ResultsRequestBuilder
 
     /**
      * Create new navigation property to results for informationProtection
+     * @param ThreatAssessmentResult $body The request body
      * @param ResultsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

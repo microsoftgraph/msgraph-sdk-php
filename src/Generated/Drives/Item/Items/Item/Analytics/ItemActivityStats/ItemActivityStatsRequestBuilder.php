@@ -74,6 +74,7 @@ class ItemActivityStatsRequestBuilder
 
     /**
      * Create new navigation property to itemActivityStats for drives
+     * @param ItemActivityStat $body The request body
      * @param ItemActivityStatsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class ItemActivityStatsRequestBuilder
 
     /**
      * Create new navigation property to itemActivityStats for drives
+     * @param ItemActivityStat $body The request body
      * @param ItemActivityStatsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

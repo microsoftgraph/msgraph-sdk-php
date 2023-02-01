@@ -44,7 +44,7 @@ class AssignPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the assignments property value. 
+     * Gets the assignments property value. The assignments property
      * @return array<DeviceConfigurationAssignment>|null
     */
     public function getAssignments(): ?array {
@@ -88,7 +88,7 @@ class AssignPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the assignments property value. 
+     * Sets the assignments property value. The assignments property
      * @param array<DeviceConfigurationAssignment>|null $value Value to set for the assignments property.
     */
     public function setAssignments(?array $value): void {

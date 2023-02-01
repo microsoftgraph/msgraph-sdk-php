@@ -155,6 +155,7 @@ class ExternalConnectionItemRequestBuilder
 
     /**
      * Update entity in connections
+     * @param ExternalConnection $body The request body
      * @param ExternalConnectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -219,6 +220,7 @@ class ExternalConnectionItemRequestBuilder
 
     /**
      * Update entity in connections
+     * @param ExternalConnection $body The request body
      * @param ExternalConnectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

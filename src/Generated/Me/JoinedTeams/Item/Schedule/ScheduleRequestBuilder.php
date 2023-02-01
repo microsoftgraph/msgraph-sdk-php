@@ -206,6 +206,7 @@ class ScheduleRequestBuilder
 
     /**
      * Update the navigation property schedule in me
+     * @param Schedule $body The request body
      * @param ScheduleRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -336,6 +337,7 @@ class ScheduleRequestBuilder
 
     /**
      * Update the navigation property schedule in me
+     * @param Schedule $body The request body
      * @param ScheduleRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

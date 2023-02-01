@@ -83,7 +83,7 @@ class BucketAggregationDefinition implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -107,7 +107,7 @@ class BucketAggregationDefinition implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the sortBy property value. 
+     * Gets the sortBy property value. The sortBy property
      * @return BucketAggregationSortProperty|null
     */
     public function getSortBy(): ?BucketAggregationSortProperty {
@@ -161,7 +161,7 @@ class BucketAggregationDefinition implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -185,7 +185,7 @@ class BucketAggregationDefinition implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the sortBy property value. 
+     * Sets the sortBy property value. The sortBy property
      * @param BucketAggregationSortProperty|null $value Value to set for the sortBy property.
     */
     public function setSortBy(?BucketAggregationSortProperty $value): void {

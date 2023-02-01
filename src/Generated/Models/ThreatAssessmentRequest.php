@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ThreatAssessmentRequest extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new ThreatAssessmentRequest and sets the default values.
+     * Instantiates a new threatAssessmentRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -36,7 +36,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the category property value. 
+     * Gets the category property value. The category property
      * @return ThreatCategory|null
     */
     public function getCategory(): ?ThreatCategory {
@@ -68,7 +68,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the expectedAssessment property value. 
+     * Gets the expectedAssessment property value. The expectedAssessment property
      * @return ThreatExpectedAssessment|null
     */
     public function getExpectedAssessment(): ?ThreatExpectedAssessment {
@@ -134,7 +134,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the category property value. 
+     * Sets the category property value. The category property
      * @param ThreatCategory|null $value Value to set for the category property.
     */
     public function setCategory(?ThreatCategory $value): void {
@@ -166,7 +166,7 @@ class ThreatAssessmentRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the expectedAssessment property value. 
+     * Sets the expectedAssessment property value. The expectedAssessment property
      * @param ThreatExpectedAssessment|null $value Value to set for the expectedAssessment property.
     */
     public function setExpectedAssessment(?ThreatExpectedAssessment $value): void {

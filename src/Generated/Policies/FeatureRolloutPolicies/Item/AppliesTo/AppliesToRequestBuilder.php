@@ -106,6 +106,7 @@ class AppliesToRequestBuilder
 
     /**
      * Create new navigation property to appliesTo for policies
+     * @param DirectoryObject $body The request body
      * @param AppliesToRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -149,6 +150,7 @@ class AppliesToRequestBuilder
 
     /**
      * Create new navigation property to appliesTo for policies
+     * @param DirectoryObject $body The request body
      * @param AppliesToRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -87,6 +87,7 @@ class ServicePrincipalRiskDetectionItemRequestBuilder
 
     /**
      * Update the navigation property servicePrincipalRiskDetections in identityProtection
+     * @param ServicePrincipalRiskDetection $body The request body
      * @param ServicePrincipalRiskDetectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class ServicePrincipalRiskDetectionItemRequestBuilder
 
     /**
      * Update the navigation property servicePrincipalRiskDetections in identityProtection
+     * @param ServicePrincipalRiskDetection $body The request body
      * @param ServicePrincipalRiskDetectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

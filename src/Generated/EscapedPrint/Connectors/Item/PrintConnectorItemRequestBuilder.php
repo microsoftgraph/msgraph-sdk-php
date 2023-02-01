@@ -87,6 +87,7 @@ class PrintConnectorItemRequestBuilder
 
     /**
      * Update the navigation property connectors in print
+     * @param PrintConnector $body The request body
      * @param PrintConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class PrintConnectorItemRequestBuilder
 
     /**
      * Update the navigation property connectors in print
+     * @param PrintConnector $body The request body
      * @param PrintConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

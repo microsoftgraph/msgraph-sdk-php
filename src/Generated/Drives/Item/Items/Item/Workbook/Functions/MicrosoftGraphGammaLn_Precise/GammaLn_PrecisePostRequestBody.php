@@ -63,7 +63,7 @@ class GammaLn_PrecisePostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the x property value. 
+     * Gets the x property value. The x property
      * @return Json|null
     */
     public function getX(): ?Json {
@@ -96,7 +96,7 @@ class GammaLn_PrecisePostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the x property value. 
+     * Sets the x property value. The x property
      * @param Json|null $value Value to set for the x property.
     */
     public function setX(?Json $value): void {

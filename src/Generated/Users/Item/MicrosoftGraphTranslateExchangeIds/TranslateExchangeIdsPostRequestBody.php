@@ -65,7 +65,7 @@ class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Gets the inputIds property value. 
+     * Gets the inputIds property value. The InputIds property
      * @return array<string>|null
     */
     public function getInputIds(): ?array {
@@ -73,7 +73,7 @@ class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Gets the sourceIdType property value. 
+     * Gets the sourceIdType property value. The SourceIdType property
      * @return ExchangeIdFormat|null
     */
     public function getSourceIdType(): ?ExchangeIdFormat {
@@ -81,7 +81,7 @@ class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Gets the targetIdType property value. 
+     * Gets the targetIdType property value. The TargetIdType property
      * @return ExchangeIdFormat|null
     */
     public function getTargetIdType(): ?ExchangeIdFormat {
@@ -116,7 +116,7 @@ class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Sets the inputIds property value. 
+     * Sets the inputIds property value. The InputIds property
      * @param array<string>|null $value Value to set for the InputIds property.
     */
     public function setInputIds(?array $value): void {
@@ -124,7 +124,7 @@ class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Sets the sourceIdType property value. 
+     * Sets the sourceIdType property value. The SourceIdType property
      * @param ExchangeIdFormat|null $value Value to set for the SourceIdType property.
     */
     public function setSourceIdType(?ExchangeIdFormat $value): void {
@@ -132,7 +132,7 @@ class TranslateExchangeIdsPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Sets the targetIdType property value. 
+     * Sets the targetIdType property value. The TargetIdType property
      * @param ExchangeIdFormat|null $value Value to set for the TargetIdType property.
     */
     public function setTargetIdType(?ExchangeIdFormat $value): void {

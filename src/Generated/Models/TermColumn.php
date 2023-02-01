@@ -76,7 +76,7 @@ class TermColumn implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -84,7 +84,7 @@ class TermColumn implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the parentTerm property value. 
+     * Gets the parentTerm property value. The parentTerm property
      * @return Term|null
     */
     public function getParentTerm(): ?Term {
@@ -100,7 +100,7 @@ class TermColumn implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the termSet property value. 
+     * Gets the termSet property value. The termSet property
      * @return Set|null
     */
     public function getTermSet(): ?Set {
@@ -145,7 +145,7 @@ class TermColumn implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -153,7 +153,7 @@ class TermColumn implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the parentTerm property value. 
+     * Sets the parentTerm property value. The parentTerm property
      * @param Term|null $value Value to set for the parentTerm property.
     */
     public function setParentTerm(?Term $value): void {
@@ -169,7 +169,7 @@ class TermColumn implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the termSet property value. 
+     * Sets the termSet property value. The termSet property
      * @param Set|null $value Value to set for the termSet property.
     */
     public function setTermSet(?Set $value): void {

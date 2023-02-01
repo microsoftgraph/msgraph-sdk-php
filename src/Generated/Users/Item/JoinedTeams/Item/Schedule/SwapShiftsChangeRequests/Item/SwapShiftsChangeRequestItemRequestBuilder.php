@@ -87,6 +87,7 @@ class SwapShiftsChangeRequestItemRequestBuilder
 
     /**
      * Update the navigation property swapShiftsChangeRequests in users
+     * @param SwapShiftsChangeRequest $body The request body
      * @param SwapShiftsChangeRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class SwapShiftsChangeRequestItemRequestBuilder
 
     /**
      * Update the navigation property swapShiftsChangeRequests in users
+     * @param SwapShiftsChangeRequest $body The request body
      * @param SwapShiftsChangeRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

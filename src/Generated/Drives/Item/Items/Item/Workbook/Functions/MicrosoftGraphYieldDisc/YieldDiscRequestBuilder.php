@@ -47,6 +47,7 @@ class YieldDiscRequestBuilder
 
     /**
      * Invoke action yieldDisc
+     * @param YieldDiscPostRequestBody $body The request body
      * @param YieldDiscRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class YieldDiscRequestBuilder
 
     /**
      * Invoke action yieldDisc
+     * @param YieldDiscPostRequestBody $body The request body
      * @param YieldDiscRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

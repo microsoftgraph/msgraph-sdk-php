@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class BookingCurrency extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new BookingCurrency and sets the default values.
+     * Instantiates a new bookingCurrency and sets the default values.
     */
     public function __construct() {
         parent::__construct();

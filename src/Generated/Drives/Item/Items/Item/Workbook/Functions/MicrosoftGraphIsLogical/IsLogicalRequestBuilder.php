@@ -47,6 +47,7 @@ class IsLogicalRequestBuilder
 
     /**
      * Invoke action isLogical
+     * @param IsLogicalPostRequestBody $body The request body
      * @param IsLogicalRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class IsLogicalRequestBuilder
 
     /**
      * Invoke action isLogical
+     * @param IsLogicalPostRequestBody $body The request body
      * @param IsLogicalRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

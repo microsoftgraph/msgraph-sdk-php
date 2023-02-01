@@ -47,6 +47,7 @@ class Confidence_NormRequestBuilder
 
     /**
      * Invoke action confidence_Norm
+     * @param Confidence_NormPostRequestBody $body The request body
      * @param Confidence_NormRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Confidence_NormRequestBuilder
 
     /**
      * Invoke action confidence_Norm
+     * @param Confidence_NormPostRequestBody $body The request body
      * @param Confidence_NormRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

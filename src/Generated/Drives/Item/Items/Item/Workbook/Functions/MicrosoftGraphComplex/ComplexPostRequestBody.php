@@ -65,7 +65,7 @@ class ComplexPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the iNum property value. 
+     * Gets the iNum property value. The iNum property
      * @return Json|null
     */
     public function getINum(): ?Json {
@@ -73,7 +73,7 @@ class ComplexPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the realNum property value. 
+     * Gets the realNum property value. The realNum property
      * @return Json|null
     */
     public function getRealNum(): ?Json {
@@ -81,7 +81,7 @@ class ComplexPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the suffix property value. 
+     * Gets the suffix property value. The suffix property
      * @return Json|null
     */
     public function getSuffix(): ?Json {
@@ -116,7 +116,7 @@ class ComplexPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the iNum property value. 
+     * Sets the iNum property value. The iNum property
      * @param Json|null $value Value to set for the iNum property.
     */
     public function setINum(?Json $value): void {
@@ -124,7 +124,7 @@ class ComplexPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the realNum property value. 
+     * Sets the realNum property value. The realNum property
      * @param Json|null $value Value to set for the realNum property.
     */
     public function setRealNum(?Json $value): void {
@@ -132,7 +132,7 @@ class ComplexPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the suffix property value. 
+     * Sets the suffix property value. The suffix property
      * @param Json|null $value Value to set for the suffix property.
     */
     public function setSuffix(?Json $value): void {

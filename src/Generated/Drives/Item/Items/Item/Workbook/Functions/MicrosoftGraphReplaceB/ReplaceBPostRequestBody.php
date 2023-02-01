@@ -66,7 +66,7 @@ class ReplaceBPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the newText property value. 
+     * Gets the newText property value. The newText property
      * @return Json|null
     */
     public function getNewText(): ?Json {
@@ -74,7 +74,7 @@ class ReplaceBPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the numBytes property value. 
+     * Gets the numBytes property value. The numBytes property
      * @return Json|null
     */
     public function getNumBytes(): ?Json {
@@ -82,7 +82,7 @@ class ReplaceBPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the oldText property value. 
+     * Gets the oldText property value. The oldText property
      * @return Json|null
     */
     public function getOldText(): ?Json {
@@ -90,7 +90,7 @@ class ReplaceBPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the startNum property value. 
+     * Gets the startNum property value. The startNum property
      * @return Json|null
     */
     public function getStartNum(): ?Json {
@@ -126,7 +126,7 @@ class ReplaceBPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the newText property value. 
+     * Sets the newText property value. The newText property
      * @param Json|null $value Value to set for the newText property.
     */
     public function setNewText(?Json $value): void {
@@ -134,7 +134,7 @@ class ReplaceBPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the numBytes property value. 
+     * Sets the numBytes property value. The numBytes property
      * @param Json|null $value Value to set for the numBytes property.
     */
     public function setNumBytes(?Json $value): void {
@@ -142,7 +142,7 @@ class ReplaceBPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the oldText property value. 
+     * Sets the oldText property value. The oldText property
      * @param Json|null $value Value to set for the oldText property.
     */
     public function setOldText(?Json $value): void {
@@ -150,7 +150,7 @@ class ReplaceBPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the startNum property value. 
+     * Sets the startNum property value. The startNum property
      * @param Json|null $value Value to set for the startNum property.
     */
     public function setStartNum(?Json $value): void {

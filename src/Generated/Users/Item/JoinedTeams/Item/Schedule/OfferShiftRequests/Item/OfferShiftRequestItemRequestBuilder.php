@@ -87,6 +87,7 @@ class OfferShiftRequestItemRequestBuilder
 
     /**
      * Update the navigation property offerShiftRequests in users
+     * @param OfferShiftRequest $body The request body
      * @param OfferShiftRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class OfferShiftRequestItemRequestBuilder
 
     /**
      * Update the navigation property offerShiftRequests in users
+     * @param OfferShiftRequest $body The request body
      * @param OfferShiftRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -47,6 +47,7 @@ class Expon_DistRequestBuilder
 
     /**
      * Invoke action expon_Dist
+     * @param Expon_DistPostRequestBody $body The request body
      * @param Expon_DistRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Expon_DistRequestBuilder
 
     /**
      * Invoke action expon_Dist
+     * @param Expon_DistPostRequestBody $body The request body
      * @param Expon_DistRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -47,6 +47,7 @@ class ErfC_PreciseRequestBuilder
 
     /**
      * Invoke action erfC_Precise
+     * @param ErfC_PrecisePostRequestBody $body The request body
      * @param ErfC_PreciseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ErfC_PreciseRequestBuilder
 
     /**
      * Invoke action erfC_Precise
+     * @param ErfC_PrecisePostRequestBody $body The request body
      * @param ErfC_PreciseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

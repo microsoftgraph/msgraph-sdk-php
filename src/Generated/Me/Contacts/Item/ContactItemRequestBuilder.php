@@ -144,6 +144,7 @@ class ContactItemRequestBuilder
 
     /**
      * Update the navigation property contacts in me
+     * @param Contact $body The request body
      * @param ContactItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -219,6 +220,7 @@ class ContactItemRequestBuilder
 
     /**
      * Update the navigation property contacts in me
+     * @param Contact $body The request body
      * @param ContactItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

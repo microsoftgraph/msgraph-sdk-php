@@ -74,7 +74,7 @@ class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the itemId property value. 
+     * Gets the itemId property value. The itemId property
      * @return string|null
     */
     public function getItemId(): ?string {
@@ -82,7 +82,7 @@ class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -98,7 +98,7 @@ class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the selectionLikelihood property value. 
+     * Gets the selectionLikelihood property value. The selectionLikelihood property
      * @return SelectionLikelihoodInfo|null
     */
     public function getSelectionLikelihood(): ?SelectionLikelihoodInfo {
@@ -143,7 +143,7 @@ class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the itemId property value. 
+     * Sets the itemId property value. The itemId property
      * @param string|null $value Value to set for the itemId property.
     */
     public function setItemId(?string $value): void {
@@ -151,7 +151,7 @@ class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -167,7 +167,7 @@ class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the selectionLikelihood property value. 
+     * Sets the selectionLikelihood property value. The selectionLikelihood property
      * @param SelectionLikelihoodInfo|null $value Value to set for the selectionLikelihood property.
     */
     public function setSelectionLikelihood(?SelectionLikelihoodInfo $value): void {

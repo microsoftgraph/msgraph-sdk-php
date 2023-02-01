@@ -46,6 +46,7 @@ class ApplyIconFilterRequestBuilder
 
     /**
      * Invoke action applyIconFilter
+     * @param ApplyIconFilterPostRequestBody $body The request body
      * @param ApplyIconFilterRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -64,6 +65,7 @@ class ApplyIconFilterRequestBuilder
 
     /**
      * Invoke action applyIconFilter
+     * @param ApplyIconFilterPostRequestBody $body The request body
      * @param ApplyIconFilterRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

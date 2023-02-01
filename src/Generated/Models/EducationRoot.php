@@ -51,7 +51,7 @@ class EducationRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the classes property value. 
+     * Gets the classes property value. The classes property
      * @return array<EducationClass>|null
     */
     public function getClasses(): ?array {
@@ -74,7 +74,7 @@ class EducationRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the me property value. 
+     * Gets the me property value. The me property
      * @return EducationUser|null
     */
     public function getMe(): ?EducationUser {
@@ -82,7 +82,7 @@ class EducationRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -90,7 +90,7 @@ class EducationRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the schools property value. 
+     * Gets the schools property value. The schools property
      * @return array<EducationSchool>|null
     */
     public function getSchools(): ?array {
@@ -98,7 +98,7 @@ class EducationRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the users property value. 
+     * Gets the users property value. The users property
      * @return array<EducationUser>|null
     */
     public function getUsers(): ?array {
@@ -135,7 +135,7 @@ class EducationRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the classes property value. 
+     * Sets the classes property value. The classes property
      * @param array<EducationClass>|null $value Value to set for the classes property.
     */
     public function setClasses(?array $value): void {
@@ -143,7 +143,7 @@ class EducationRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the me property value. 
+     * Sets the me property value. The me property
      * @param EducationUser|null $value Value to set for the me property.
     */
     public function setMe(?EducationUser $value): void {
@@ -151,7 +151,7 @@ class EducationRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -159,7 +159,7 @@ class EducationRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the schools property value. 
+     * Sets the schools property value. The schools property
      * @param array<EducationSchool>|null $value Value to set for the schools property.
     */
     public function setSchools(?array $value): void {
@@ -167,7 +167,7 @@ class EducationRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the users property value. 
+     * Sets the users property value. The users property
      * @param array<EducationUser>|null $value Value to set for the users property.
     */
     public function setUsers(?array $value): void {

@@ -47,6 +47,7 @@ class IsEvenRequestBuilder
 
     /**
      * Invoke action isEven
+     * @param IsEvenPostRequestBody $body The request body
      * @param IsEvenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class IsEvenRequestBuilder
 
     /**
      * Invoke action isEven
+     * @param IsEvenPostRequestBody $body The request body
      * @param IsEvenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

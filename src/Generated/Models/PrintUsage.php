@@ -34,7 +34,7 @@ class PrintUsage extends Entity implements Parsable
     }
 
     /**
-     * Gets the completedBlackAndWhiteJobCount property value. 
+     * Gets the completedBlackAndWhiteJobCount property value. The completedBlackAndWhiteJobCount property
      * @return int|null
     */
     public function getCompletedBlackAndWhiteJobCount(): ?int {
@@ -42,7 +42,7 @@ class PrintUsage extends Entity implements Parsable
     }
 
     /**
-     * Gets the completedColorJobCount property value. 
+     * Gets the completedColorJobCount property value. The completedColorJobCount property
      * @return int|null
     */
     public function getCompletedColorJobCount(): ?int {
@@ -64,7 +64,7 @@ class PrintUsage extends Entity implements Parsable
     }
 
     /**
-     * Gets the incompleteJobCount property value. 
+     * Gets the incompleteJobCount property value. The incompleteJobCount property
      * @return int|null
     */
     public function getIncompleteJobCount(): ?int {
@@ -72,7 +72,7 @@ class PrintUsage extends Entity implements Parsable
     }
 
     /**
-     * Gets the usageDate property value. 
+     * Gets the usageDate property value. The usageDate property
      * @return Date|null
     */
     public function getUsageDate(): ?Date {
@@ -92,7 +92,7 @@ class PrintUsage extends Entity implements Parsable
     }
 
     /**
-     * Sets the completedBlackAndWhiteJobCount property value. 
+     * Sets the completedBlackAndWhiteJobCount property value. The completedBlackAndWhiteJobCount property
      * @param int|null $value Value to set for the completedBlackAndWhiteJobCount property.
     */
     public function setCompletedBlackAndWhiteJobCount(?int $value): void {
@@ -100,7 +100,7 @@ class PrintUsage extends Entity implements Parsable
     }
 
     /**
-     * Sets the completedColorJobCount property value. 
+     * Sets the completedColorJobCount property value. The completedColorJobCount property
      * @param int|null $value Value to set for the completedColorJobCount property.
     */
     public function setCompletedColorJobCount(?int $value): void {
@@ -108,7 +108,7 @@ class PrintUsage extends Entity implements Parsable
     }
 
     /**
-     * Sets the incompleteJobCount property value. 
+     * Sets the incompleteJobCount property value. The incompleteJobCount property
      * @param int|null $value Value to set for the incompleteJobCount property.
     */
     public function setIncompleteJobCount(?int $value): void {
@@ -116,7 +116,7 @@ class PrintUsage extends Entity implements Parsable
     }
 
     /**
-     * Sets the usageDate property value. 
+     * Sets the usageDate property value. The usageDate property
      * @param Date|null $value Value to set for the usageDate property.
     */
     public function setUsageDate(?Date $value): void {

@@ -96,6 +96,7 @@ class GroupItemRequestBuilder
 
     /**
      * Update the navigation property groups in sites
+     * @param Group $body The request body
      * @param GroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -171,6 +172,7 @@ class GroupItemRequestBuilder
 
     /**
      * Update the navigation property groups in sites
+     * @param Group $body The request body
      * @param GroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -65,7 +65,7 @@ class MatchPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the lookupArray property value. 
+     * Gets the lookupArray property value. The lookupArray property
      * @return Json|null
     */
     public function getLookupArray(): ?Json {
@@ -73,7 +73,7 @@ class MatchPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the lookupValue property value. 
+     * Gets the lookupValue property value. The lookupValue property
      * @return Json|null
     */
     public function getLookupValue(): ?Json {
@@ -81,7 +81,7 @@ class MatchPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the matchType property value. 
+     * Gets the matchType property value. The matchType property
      * @return Json|null
     */
     public function getMatchType(): ?Json {
@@ -116,7 +116,7 @@ class MatchPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the lookupArray property value. 
+     * Sets the lookupArray property value. The lookupArray property
      * @param Json|null $value Value to set for the lookupArray property.
     */
     public function setLookupArray(?Json $value): void {
@@ -124,7 +124,7 @@ class MatchPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the lookupValue property value. 
+     * Sets the lookupValue property value. The lookupValue property
      * @param Json|null $value Value to set for the lookupValue property.
     */
     public function setLookupValue(?Json $value): void {
@@ -132,7 +132,7 @@ class MatchPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the matchType property value. 
+     * Sets the matchType property value. The matchType property
      * @param Json|null $value Value to set for the matchType property.
     */
     public function setMatchType(?Json $value): void {

@@ -47,6 +47,7 @@ class CumPrincRequestBuilder
 
     /**
      * Invoke action cumPrinc
+     * @param CumPrincPostRequestBody $body The request body
      * @param CumPrincRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class CumPrincRequestBuilder
 
     /**
      * Invoke action cumPrinc
+     * @param CumPrincPostRequestBody $body The request body
      * @param CumPrincRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

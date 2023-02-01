@@ -52,7 +52,7 @@ class SumIfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the criteria property value. 
+     * Gets the criteria property value. The criteria property
      * @return Json|null
     */
     public function getCriteria(): ?Json {
@@ -73,7 +73,7 @@ class SumIfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the range property value. 
+     * Gets the range property value. The range property
      * @return Json|null
     */
     public function getRange(): ?Json {
@@ -81,7 +81,7 @@ class SumIfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the sumRange property value. 
+     * Gets the sumRange property value. The sumRange property
      * @return Json|null
     */
     public function getSumRange(): ?Json {
@@ -116,7 +116,7 @@ class SumIfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the criteria property value. 
+     * Sets the criteria property value. The criteria property
      * @param Json|null $value Value to set for the criteria property.
     */
     public function setCriteria(?Json $value): void {
@@ -124,7 +124,7 @@ class SumIfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the range property value. 
+     * Sets the range property value. The range property
      * @param Json|null $value Value to set for the range property.
     */
     public function setRange(?Json $value): void {
@@ -132,7 +132,7 @@ class SumIfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the sumRange property value. 
+     * Sets the sumRange property value. The sumRange property
      * @param Json|null $value Value to set for the sumRange property.
     */
     public function setSumRange(?Json $value): void {

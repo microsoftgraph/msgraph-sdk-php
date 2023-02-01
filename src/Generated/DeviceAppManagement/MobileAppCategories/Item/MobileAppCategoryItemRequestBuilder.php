@@ -87,6 +87,7 @@ class MobileAppCategoryItemRequestBuilder
 
     /**
      * Update the navigation property mobileAppCategories in deviceAppManagement
+     * @param MobileAppCategory $body The request body
      * @param MobileAppCategoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class MobileAppCategoryItemRequestBuilder
 
     /**
      * Update the navigation property mobileAppCategories in deviceAppManagement
+     * @param MobileAppCategory $body The request body
      * @param MobileAppCategoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

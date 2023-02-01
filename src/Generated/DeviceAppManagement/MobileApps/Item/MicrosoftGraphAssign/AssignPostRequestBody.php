@@ -63,7 +63,7 @@ class AssignPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the mobileAppAssignments property value. 
+     * Gets the mobileAppAssignments property value. The mobileAppAssignments property
      * @return array<MobileAppAssignment>|null
     */
     public function getMobileAppAssignments(): ?array {
@@ -96,7 +96,7 @@ class AssignPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the mobileAppAssignments property value. 
+     * Sets the mobileAppAssignments property value. The mobileAppAssignments property
      * @param array<MobileAppAssignment>|null $value Value to set for the mobileAppAssignments property.
     */
     public function setMobileAppAssignments(?array $value): void {

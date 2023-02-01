@@ -63,7 +63,7 @@ class NotPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the logical property value. 
+     * Gets the logical property value. The logical property
      * @return Json|null
     */
     public function getLogical(): ?Json {
@@ -96,7 +96,7 @@ class NotPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the logical property value. 
+     * Sets the logical property value. The logical property
      * @param Json|null $value Value to set for the logical property.
     */
     public function setLogical(?Json $value): void {

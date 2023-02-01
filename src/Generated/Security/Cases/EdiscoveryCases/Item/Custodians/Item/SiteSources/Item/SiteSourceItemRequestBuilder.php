@@ -95,6 +95,7 @@ class SiteSourceItemRequestBuilder
 
     /**
      * Update the navigation property siteSources in security
+     * @param SiteSource $body The request body
      * @param SiteSourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class SiteSourceItemRequestBuilder
 
     /**
      * Update the navigation property siteSources in security
+     * @param SiteSource $body The request body
      * @param SiteSourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

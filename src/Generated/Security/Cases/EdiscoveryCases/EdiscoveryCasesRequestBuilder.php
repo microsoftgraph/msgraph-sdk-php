@@ -75,6 +75,7 @@ class EdiscoveryCasesRequestBuilder
 
     /**
      * Create a new ediscoveryCase object.
+     * @param EdiscoveryCase $body The request body
      * @param EdiscoveryCasesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/security-casesroot-post-ediscoverycases?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class EdiscoveryCasesRequestBuilder
 
     /**
      * Create a new ediscoveryCase object.
+     * @param EdiscoveryCase $body The request body
      * @param EdiscoveryCasesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

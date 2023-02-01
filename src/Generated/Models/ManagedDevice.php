@@ -368,7 +368,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Gets the managementAgent property value. 
+     * Gets the managementAgent property value. The managementAgent property
      * @return ManagementAgentType|null
     */
     public function getManagementAgent(): ?ManagementAgentType {
@@ -846,7 +846,7 @@ class ManagedDevice extends Entity implements Parsable
     }
 
     /**
-     * Sets the managementAgent property value. 
+     * Sets the managementAgent property value. The managementAgent property
      * @param ManagementAgentType|null $value Value to set for the managementAgent property.
     */
     public function setManagementAgent(?ManagementAgentType $value): void {

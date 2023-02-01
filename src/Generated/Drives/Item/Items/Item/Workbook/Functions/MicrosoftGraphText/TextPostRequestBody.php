@@ -64,7 +64,7 @@ class TextPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the formatText property value. 
+     * Gets the formatText property value. The formatText property
      * @return Json|null
     */
     public function getFormatText(): ?Json {
@@ -72,7 +72,7 @@ class TextPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return Json|null
     */
     public function getValue(): ?Json {
@@ -106,7 +106,7 @@ class TextPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the formatText property value. 
+     * Sets the formatText property value. The formatText property
      * @param Json|null $value Value to set for the formatText property.
     */
     public function setFormatText(?Json $value): void {
@@ -114,7 +114,7 @@ class TextPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param Json|null $value Value to set for the value property.
     */
     public function setValue(?Json $value): void {

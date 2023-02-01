@@ -105,6 +105,7 @@ class GroupLifecyclePolicyItemRequestBuilder
 
     /**
      * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object.
+     * @param GroupLifecyclePolicy $body The request body
      * @param GroupLifecyclePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/grouplifecyclepolicy-update?view=graph-rest-1.0 Find more info here
@@ -170,6 +171,7 @@ class GroupLifecyclePolicyItemRequestBuilder
 
     /**
      * Update the properties of a groupLifecyclePolicygroupLifecyclePolicy resource type object.
+     * @param GroupLifecyclePolicy $body The request body
      * @param GroupLifecyclePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

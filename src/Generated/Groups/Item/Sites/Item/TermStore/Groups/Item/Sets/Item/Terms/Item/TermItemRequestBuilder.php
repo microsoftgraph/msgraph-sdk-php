@@ -123,6 +123,7 @@ class TermItemRequestBuilder
 
     /**
      * Update the navigation property terms in groups
+     * @param Term $body The request body
      * @param TermItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -198,6 +199,7 @@ class TermItemRequestBuilder
 
     /**
      * Update the navigation property terms in groups
+     * @param Term $body The request body
      * @param TermItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

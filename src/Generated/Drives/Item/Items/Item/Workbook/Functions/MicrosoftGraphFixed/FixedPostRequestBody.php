@@ -52,7 +52,7 @@ class FixedPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the decimals property value. 
+     * Gets the decimals property value. The decimals property
      * @return Json|null
     */
     public function getDecimals(): ?Json {
@@ -73,7 +73,7 @@ class FixedPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the noCommas property value. 
+     * Gets the noCommas property value. The noCommas property
      * @return Json|null
     */
     public function getNoCommas(): ?Json {
@@ -81,7 +81,7 @@ class FixedPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the number property value. 
+     * Gets the number property value. The number property
      * @return Json|null
     */
     public function getNumber(): ?Json {
@@ -116,7 +116,7 @@ class FixedPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the decimals property value. 
+     * Sets the decimals property value. The decimals property
      * @param Json|null $value Value to set for the decimals property.
     */
     public function setDecimals(?Json $value): void {
@@ -124,7 +124,7 @@ class FixedPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the noCommas property value. 
+     * Sets the noCommas property value. The noCommas property
      * @param Json|null $value Value to set for the noCommas property.
     */
     public function setNoCommas(?Json $value): void {
@@ -132,7 +132,7 @@ class FixedPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the number property value. 
+     * Sets the number property value. The number property
      * @param Json|null $value Value to set for the number property.
     */
     public function setNumber(?Json $value): void {

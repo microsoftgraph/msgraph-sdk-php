@@ -46,6 +46,7 @@ class RemoveKeyRequestBuilder
 
     /**
      * Remove a key credential from a servicePrincipal. This method along with addKey can be used by a servicePrincipal to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.
+     * @param RemoveKeyPostRequestBody $body The request body
      * @param RemoveKeyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/serviceprincipal-removekey?view=graph-rest-1.0 Find more info here
@@ -65,6 +66,7 @@ class RemoveKeyRequestBuilder
 
     /**
      * Remove a key credential from a servicePrincipal. This method along with addKey can be used by a servicePrincipal to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.
+     * @param RemoveKeyPostRequestBody $body The request body
      * @param RemoveKeyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

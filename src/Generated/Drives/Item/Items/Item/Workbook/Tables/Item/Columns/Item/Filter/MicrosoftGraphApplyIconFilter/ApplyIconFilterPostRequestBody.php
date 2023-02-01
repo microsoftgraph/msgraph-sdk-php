@@ -63,7 +63,7 @@ class ApplyIconFilterPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the icon property value. 
+     * Gets the icon property value. The icon property
      * @return WorkbookIcon|null
     */
     public function getIcon(): ?WorkbookIcon {
@@ -96,7 +96,7 @@ class ApplyIconFilterPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the icon property value. 
+     * Sets the icon property value. The icon property
      * @param WorkbookIcon|null $value Value to set for the icon property.
     */
     public function setIcon(?WorkbookIcon $value): void {

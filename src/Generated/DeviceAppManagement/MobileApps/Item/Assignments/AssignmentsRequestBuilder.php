@@ -74,6 +74,7 @@ class AssignmentsRequestBuilder
 
     /**
      * Create new navigation property to assignments for deviceAppManagement
+     * @param MobileAppAssignment $body The request body
      * @param AssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class AssignmentsRequestBuilder
 
     /**
      * Create new navigation property to assignments for deviceAppManagement
+     * @param MobileAppAssignment $body The request body
      * @param AssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

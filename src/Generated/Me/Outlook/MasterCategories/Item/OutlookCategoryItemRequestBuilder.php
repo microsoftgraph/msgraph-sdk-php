@@ -87,6 +87,7 @@ class OutlookCategoryItemRequestBuilder
 
     /**
      * Update the navigation property masterCategories in me
+     * @param OutlookCategory $body The request body
      * @param OutlookCategoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class OutlookCategoryItemRequestBuilder
 
     /**
      * Update the navigation property masterCategories in me
+     * @param OutlookCategory $body The request body
      * @param OutlookCategoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

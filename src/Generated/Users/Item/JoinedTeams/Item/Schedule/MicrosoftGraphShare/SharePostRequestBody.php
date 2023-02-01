@@ -52,7 +52,7 @@ class SharePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the endDateTime property value. 
+     * Gets the endDateTime property value. The endDateTime property
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
@@ -73,7 +73,7 @@ class SharePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the notifyTeam property value. 
+     * Gets the notifyTeam property value. The notifyTeam property
      * @return bool|null
     */
     public function getNotifyTeam(): ?bool {
@@ -81,7 +81,7 @@ class SharePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the startDateTime property value. 
+     * Gets the startDateTime property value. The startDateTime property
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
@@ -116,7 +116,7 @@ class SharePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the endDateTime property value. 
+     * Sets the endDateTime property value. The endDateTime property
      * @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value): void {
@@ -124,7 +124,7 @@ class SharePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the notifyTeam property value. 
+     * Sets the notifyTeam property value. The notifyTeam property
      * @param bool|null $value Value to set for the notifyTeam property.
     */
     public function setNotifyTeam(?bool $value): void {
@@ -132,7 +132,7 @@ class SharePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the startDateTime property value. 
+     * Sets the startDateTime property value. The startDateTime property
      * @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value): void {

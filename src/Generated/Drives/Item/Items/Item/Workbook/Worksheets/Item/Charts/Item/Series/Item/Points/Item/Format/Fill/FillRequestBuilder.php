@@ -99,6 +99,7 @@ class FillRequestBuilder
 
     /**
      * Update the navigation property fill in drives
+     * @param WorkbookChartFill $body The request body
      * @param FillRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -163,6 +164,7 @@ class FillRequestBuilder
 
     /**
      * Update the navigation property fill in drives
+     * @param WorkbookChartFill $body The request body
      * @param FillRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

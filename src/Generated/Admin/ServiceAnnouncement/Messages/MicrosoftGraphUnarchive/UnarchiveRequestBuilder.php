@@ -46,6 +46,7 @@ class UnarchiveRequestBuilder
 
     /**
      * Unarchive a list of serviceUpdateMessages for the signed in user.
+     * @param UnarchivePostRequestBody $body The request body
      * @param UnarchiveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/serviceupdatemessage-unarchive?view=graph-rest-1.0 Find more info here
@@ -65,6 +66,7 @@ class UnarchiveRequestBuilder
 
     /**
      * Unarchive a list of serviceUpdateMessages for the signed in user.
+     * @param UnarchivePostRequestBody $body The request body
      * @param UnarchiveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

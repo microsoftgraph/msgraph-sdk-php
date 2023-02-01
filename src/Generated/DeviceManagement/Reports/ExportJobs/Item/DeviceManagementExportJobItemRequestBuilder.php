@@ -87,6 +87,7 @@ class DeviceManagementExportJobItemRequestBuilder
 
     /**
      * Update the navigation property exportJobs in deviceManagement
+     * @param DeviceManagementExportJob $body The request body
      * @param DeviceManagementExportJobItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class DeviceManagementExportJobItemRequestBuilder
 
     /**
      * Update the navigation property exportJobs in deviceManagement
+     * @param DeviceManagementExportJob $body The request body
      * @param DeviceManagementExportJobItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

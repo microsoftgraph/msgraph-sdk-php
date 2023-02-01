@@ -85,6 +85,7 @@ class InferenceClassificationRequestBuilder
 
     /**
      * Update the navigation property inferenceClassification in me
+     * @param InferenceClassification $body The request body
      * @param InferenceClassificationRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -128,6 +129,7 @@ class InferenceClassificationRequestBuilder
 
     /**
      * Update the navigation property inferenceClassification in me
+     * @param InferenceClassification $body The request body
      * @param InferenceClassificationRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

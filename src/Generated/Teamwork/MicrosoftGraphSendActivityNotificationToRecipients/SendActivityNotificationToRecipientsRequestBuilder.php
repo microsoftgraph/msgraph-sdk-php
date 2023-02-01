@@ -46,6 +46,7 @@ class SendActivityNotificationToRecipientsRequestBuilder
 
     /**
      * Invoke action sendActivityNotificationToRecipients
+     * @param SendActivityNotificationToRecipientsPostRequestBody $body The request body
      * @param SendActivityNotificationToRecipientsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -64,6 +65,7 @@ class SendActivityNotificationToRecipientsRequestBuilder
 
     /**
      * Invoke action sendActivityNotificationToRecipients
+     * @param SendActivityNotificationToRecipientsPostRequestBody $body The request body
      * @param SendActivityNotificationToRecipientsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

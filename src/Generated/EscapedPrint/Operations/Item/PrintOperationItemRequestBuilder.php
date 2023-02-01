@@ -87,6 +87,7 @@ class PrintOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in print
+     * @param PrintOperation $body The request body
      * @param PrintOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class PrintOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in print
+     * @param PrintOperation $body The request body
      * @param PrintOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

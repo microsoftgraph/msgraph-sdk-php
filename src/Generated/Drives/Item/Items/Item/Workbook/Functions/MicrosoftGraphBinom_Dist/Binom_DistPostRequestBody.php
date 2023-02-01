@@ -52,7 +52,7 @@ class Binom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the cumulative property value. 
+     * Gets the cumulative property value. The cumulative property
      * @return Json|null
     */
     public function getCumulative(): ?Json {
@@ -74,7 +74,7 @@ class Binom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the numberS property value. 
+     * Gets the numberS property value. The numberS property
      * @return Json|null
     */
     public function getNumberS(): ?Json {
@@ -82,7 +82,7 @@ class Binom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the probabilityS property value. 
+     * Gets the probabilityS property value. The probabilityS property
      * @return Json|null
     */
     public function getProbabilityS(): ?Json {
@@ -90,7 +90,7 @@ class Binom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the trials property value. 
+     * Gets the trials property value. The trials property
      * @return Json|null
     */
     public function getTrials(): ?Json {
@@ -126,7 +126,7 @@ class Binom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the cumulative property value. 
+     * Sets the cumulative property value. The cumulative property
      * @param Json|null $value Value to set for the cumulative property.
     */
     public function setCumulative(?Json $value): void {
@@ -134,7 +134,7 @@ class Binom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the numberS property value. 
+     * Sets the numberS property value. The numberS property
      * @param Json|null $value Value to set for the numberS property.
     */
     public function setNumberS(?Json $value): void {
@@ -142,7 +142,7 @@ class Binom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the probabilityS property value. 
+     * Sets the probabilityS property value. The probabilityS property
      * @param Json|null $value Value to set for the probabilityS property.
     */
     public function setProbabilityS(?Json $value): void {
@@ -150,7 +150,7 @@ class Binom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the trials property value. 
+     * Sets the trials property value. The trials property
      * @param Json|null $value Value to set for the trials property.
     */
     public function setTrials(?Json $value): void {

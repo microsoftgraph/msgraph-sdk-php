@@ -87,6 +87,7 @@ class DeviceCompliancePolicyAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property assignments in deviceManagement
+     * @param DeviceCompliancePolicyAssignment $body The request body
      * @param DeviceCompliancePolicyAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class DeviceCompliancePolicyAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property assignments in deviceManagement
+     * @param DeviceCompliancePolicyAssignment $body The request body
      * @param DeviceCompliancePolicyAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

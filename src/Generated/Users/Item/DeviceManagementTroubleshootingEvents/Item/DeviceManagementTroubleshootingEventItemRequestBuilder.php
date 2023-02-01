@@ -87,6 +87,7 @@ class DeviceManagementTroubleshootingEventItemRequestBuilder
 
     /**
      * Update the navigation property deviceManagementTroubleshootingEvents in users
+     * @param DeviceManagementTroubleshootingEvent $body The request body
      * @param DeviceManagementTroubleshootingEventItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class DeviceManagementTroubleshootingEventItemRequestBuilder
 
     /**
      * Update the navigation property deviceManagementTroubleshootingEvents in users
+     * @param DeviceManagementTroubleshootingEvent $body The request body
      * @param DeviceManagementTroubleshootingEventItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -64,7 +64,7 @@ class RedirectUriSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the index property value. 
+     * Gets the index property value. The index property
      * @return int|null
     */
     public function getIndex(): ?int {
@@ -72,7 +72,7 @@ class RedirectUriSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -80,7 +80,7 @@ class RedirectUriSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the uri property value. 
+     * Gets the uri property value. The uri property
      * @return string|null
     */
     public function getUri(): ?string {
@@ -115,7 +115,7 @@ class RedirectUriSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the index property value. 
+     * Sets the index property value. The index property
      * @param int|null $value Value to set for the index property.
     */
     public function setIndex(?int $value): void {
@@ -123,7 +123,7 @@ class RedirectUriSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -131,7 +131,7 @@ class RedirectUriSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the uri property value. 
+     * Sets the uri property value. The uri property
      * @param string|null $value Value to set for the uri property.
     */
     public function setUri(?string $value): void {

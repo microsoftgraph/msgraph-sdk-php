@@ -87,6 +87,7 @@ class RiskDetectionItemRequestBuilder
 
     /**
      * Update the navigation property riskDetections in identityProtection
+     * @param RiskDetection $body The request body
      * @param RiskDetectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class RiskDetectionItemRequestBuilder
 
     /**
      * Update the navigation property riskDetections in identityProtection
+     * @param RiskDetection $body The request body
      * @param RiskDetectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

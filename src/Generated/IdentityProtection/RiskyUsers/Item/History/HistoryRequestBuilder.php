@@ -75,6 +75,7 @@ class HistoryRequestBuilder
 
     /**
      * Create new navigation property to history for identityProtection
+     * @param RiskyUserHistoryItem $body The request body
      * @param HistoryRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,6 +119,7 @@ class HistoryRequestBuilder
 
     /**
      * Create new navigation property to history for identityProtection
+     * @param RiskyUserHistoryItem $body The request body
      * @param HistoryRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

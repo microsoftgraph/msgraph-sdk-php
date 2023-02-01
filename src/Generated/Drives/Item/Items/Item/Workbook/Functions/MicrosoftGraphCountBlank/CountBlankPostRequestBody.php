@@ -63,7 +63,7 @@ class CountBlankPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the range property value. 
+     * Gets the range property value. The range property
      * @return Json|null
     */
     public function getRange(): ?Json {
@@ -96,7 +96,7 @@ class CountBlankPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the range property value. 
+     * Sets the range property value. The range property
      * @param Json|null $value Value to set for the range property.
     */
     public function setRange(?Json $value): void {

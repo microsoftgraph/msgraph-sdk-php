@@ -47,6 +47,7 @@ class GetDeviceManagementIntentSettingsReportRequestBuilder
 
     /**
      * Invoke action getDeviceManagementIntentSettingsReport
+     * @param GetDeviceManagementIntentSettingsReportPostRequestBody $body The request body
      * @param GetDeviceManagementIntentSettingsReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class GetDeviceManagementIntentSettingsReportRequestBuilder
 
     /**
      * Invoke action getDeviceManagementIntentSettingsReport
+     * @param GetDeviceManagementIntentSettingsReportPostRequestBody $body The request body
      * @param GetDeviceManagementIntentSettingsReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

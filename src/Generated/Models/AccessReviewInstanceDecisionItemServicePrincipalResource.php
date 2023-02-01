@@ -26,7 +26,7 @@ class AccessReviewInstanceDecisionItemServicePrincipalResource extends AccessRev
     }
 
     /**
-     * Gets the appId property value. 
+     * Gets the appId property value. The appId property
      * @return string|null
     */
     public function getAppId(): ?string {
@@ -54,7 +54,7 @@ class AccessReviewInstanceDecisionItemServicePrincipalResource extends AccessRev
     }
 
     /**
-     * Sets the appId property value. 
+     * Sets the appId property value. The appId property
      * @param string|null $value Value to set for the appId property.
     */
     public function setAppId(?string $value): void {

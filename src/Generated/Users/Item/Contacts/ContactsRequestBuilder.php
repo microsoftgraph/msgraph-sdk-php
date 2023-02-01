@@ -83,6 +83,7 @@ class ContactsRequestBuilder
 
     /**
      * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder.
+     * @param Contact $body The request body
      * @param ContactsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/user-post-contacts?view=graph-rest-1.0 Find more info here
@@ -127,6 +128,7 @@ class ContactsRequestBuilder
 
     /**
      * Add a contact to the root Contacts folder or to the contacts endpoint of another contact folder.
+     * @param Contact $body The request body
      * @param ContactsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

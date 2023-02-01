@@ -37,7 +37,7 @@ class ServiceUserAgent extends UserAgent implements Parsable
     }
 
     /**
-     * Gets the role property value. 
+     * Gets the role property value. The role property
      * @return ServiceRole|null
     */
     public function getRole(): ?ServiceRole {
@@ -54,7 +54,7 @@ class ServiceUserAgent extends UserAgent implements Parsable
     }
 
     /**
-     * Sets the role property value. 
+     * Sets the role property value. The role property
      * @param ServiceRole|null $value Value to set for the role property.
     */
     public function setRole(?ServiceRole $value): void {

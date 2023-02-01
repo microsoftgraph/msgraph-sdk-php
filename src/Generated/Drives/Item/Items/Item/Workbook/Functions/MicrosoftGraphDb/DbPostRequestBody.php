@@ -52,7 +52,7 @@ class DbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the cost property value. 
+     * Gets the cost property value. The cost property
      * @return Json|null
     */
     public function getCost(): ?Json {
@@ -75,7 +75,7 @@ class DbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the life property value. 
+     * Gets the life property value. The life property
      * @return Json|null
     */
     public function getLife(): ?Json {
@@ -83,7 +83,7 @@ class DbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the month property value. 
+     * Gets the month property value. The month property
      * @return Json|null
     */
     public function getMonth(): ?Json {
@@ -91,7 +91,7 @@ class DbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the period property value. 
+     * Gets the period property value. The period property
      * @return Json|null
     */
     public function getPeriod(): ?Json {
@@ -99,7 +99,7 @@ class DbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the salvage property value. 
+     * Gets the salvage property value. The salvage property
      * @return Json|null
     */
     public function getSalvage(): ?Json {
@@ -136,7 +136,7 @@ class DbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the cost property value. 
+     * Sets the cost property value. The cost property
      * @param Json|null $value Value to set for the cost property.
     */
     public function setCost(?Json $value): void {
@@ -144,7 +144,7 @@ class DbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the life property value. 
+     * Sets the life property value. The life property
      * @param Json|null $value Value to set for the life property.
     */
     public function setLife(?Json $value): void {
@@ -152,7 +152,7 @@ class DbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the month property value. 
+     * Sets the month property value. The month property
      * @param Json|null $value Value to set for the month property.
     */
     public function setMonth(?Json $value): void {
@@ -160,7 +160,7 @@ class DbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the period property value. 
+     * Sets the period property value. The period property
      * @param Json|null $value Value to set for the period property.
     */
     public function setPeriod(?Json $value): void {
@@ -168,7 +168,7 @@ class DbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the salvage property value. 
+     * Sets the salvage property value. The salvage property
      * @param Json|null $value Value to set for the salvage property.
     */
     public function setSalvage(?Json $value): void {

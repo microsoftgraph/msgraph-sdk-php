@@ -184,6 +184,7 @@ class AccessReviewInstanceItemRequestBuilder
 
     /**
      * Update the navigation property instances in identityGovernance
+     * @param AccessReviewInstance $body The request body
      * @param AccessReviewInstanceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -259,6 +260,7 @@ class AccessReviewInstanceItemRequestBuilder
 
     /**
      * Update the navigation property instances in identityGovernance
+     * @param AccessReviewInstance $body The request body
      * @param AccessReviewInstanceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

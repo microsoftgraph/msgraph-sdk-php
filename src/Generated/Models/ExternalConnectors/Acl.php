@@ -35,7 +35,7 @@ class Acl implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the accessType property value. 
+     * Gets the accessType property value. The accessType property
      * @return AccessType|null
     */
     public function getAccessType(): ?AccessType {
@@ -73,7 +73,7 @@ class Acl implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -81,7 +81,7 @@ class Acl implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the type property value. 
+     * Gets the type property value. The type property
      * @return AclType|null
     */
     public function getType(): ?AclType {
@@ -109,7 +109,7 @@ class Acl implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the accessType property value. 
+     * Sets the accessType property value. The accessType property
      * @param AccessType|null $value Value to set for the accessType property.
     */
     public function setAccessType(?AccessType $value): void {
@@ -133,7 +133,7 @@ class Acl implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -141,7 +141,7 @@ class Acl implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the type property value. 
+     * Sets the type property value. The type property
      * @param AclType|null $value Value to set for the type property.
     */
     public function setType(?AclType $value): void {

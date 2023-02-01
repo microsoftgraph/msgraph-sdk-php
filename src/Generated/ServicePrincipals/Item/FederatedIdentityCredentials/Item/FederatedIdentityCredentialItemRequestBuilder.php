@@ -87,6 +87,7 @@ class FederatedIdentityCredentialItemRequestBuilder
 
     /**
      * Update the navigation property federatedIdentityCredentials in servicePrincipals
+     * @param FederatedIdentityCredential $body The request body
      * @param FederatedIdentityCredentialItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class FederatedIdentityCredentialItemRequestBuilder
 
     /**
      * Update the navigation property federatedIdentityCredentials in servicePrincipals
+     * @param FederatedIdentityCredential $body The request body
      * @param FederatedIdentityCredentialItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

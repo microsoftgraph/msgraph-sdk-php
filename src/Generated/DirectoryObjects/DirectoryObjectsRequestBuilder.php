@@ -98,6 +98,7 @@ class DirectoryObjectsRequestBuilder
 
     /**
      * Add new entity to directoryObjects
+     * @param DirectoryObject $body The request body
      * @param DirectoryObjectsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -141,6 +142,7 @@ class DirectoryObjectsRequestBuilder
 
     /**
      * Add new entity to directoryObjects
+     * @param DirectoryObject $body The request body
      * @param DirectoryObjectsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -47,6 +47,7 @@ class SlnRequestBuilder
 
     /**
      * Invoke action sln
+     * @param SlnPostRequestBody $body The request body
      * @param SlnRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class SlnRequestBuilder
 
     /**
      * Invoke action sln
+     * @param SlnPostRequestBody $body The request body
      * @param SlnRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

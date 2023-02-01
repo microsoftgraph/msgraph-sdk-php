@@ -47,6 +47,7 @@ class DsumRequestBuilder
 
     /**
      * Invoke action dsum
+     * @param DsumPostRequestBody $body The request body
      * @param DsumRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class DsumRequestBuilder
 
     /**
      * Invoke action dsum
+     * @param DsumPostRequestBody $body The request body
      * @param DsumRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

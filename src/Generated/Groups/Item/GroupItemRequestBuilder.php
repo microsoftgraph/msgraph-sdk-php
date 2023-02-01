@@ -559,6 +559,7 @@ class GroupItemRequestBuilder
 
     /**
      * Update the properties of a group object.
+     * @param Group $body The request body
      * @param GroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/group-update?view=graph-rest-1.0 Find more info here
@@ -690,6 +691,7 @@ class GroupItemRequestBuilder
 
     /**
      * Update the properties of a group object.
+     * @param Group $body The request body
      * @param GroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

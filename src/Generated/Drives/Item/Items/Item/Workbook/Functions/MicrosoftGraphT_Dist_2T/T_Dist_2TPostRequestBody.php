@@ -52,7 +52,7 @@ class T_Dist_2TPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the degFreedom property value. 
+     * Gets the degFreedom property value. The degFreedom property
      * @return Json|null
     */
     public function getDegFreedom(): ?Json {
@@ -72,7 +72,7 @@ class T_Dist_2TPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the x property value. 
+     * Gets the x property value. The x property
      * @return Json|null
     */
     public function getX(): ?Json {
@@ -106,7 +106,7 @@ class T_Dist_2TPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the degFreedom property value. 
+     * Sets the degFreedom property value. The degFreedom property
      * @param Json|null $value Value to set for the degFreedom property.
     */
     public function setDegFreedom(?Json $value): void {
@@ -114,7 +114,7 @@ class T_Dist_2TPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the x property value. 
+     * Sets the x property value. The x property
      * @param Json|null $value Value to set for the x property.
     */
     public function setX(?Json $value): void {

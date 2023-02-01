@@ -83,6 +83,7 @@ class ConditionalAccessSettingsRequestBuilder
 
     /**
      * Update the navigation property conditionalAccessSettings in deviceManagement
+     * @param OnPremisesConditionalAccessSettings $body The request body
      * @param ConditionalAccessSettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -147,6 +148,7 @@ class ConditionalAccessSettingsRequestBuilder
 
     /**
      * Update the navigation property conditionalAccessSettings in deviceManagement
+     * @param OnPremisesConditionalAccessSettings $body The request body
      * @param ConditionalAccessSettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

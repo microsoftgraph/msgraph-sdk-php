@@ -47,6 +47,7 @@ class HlookupRequestBuilder
 
     /**
      * Invoke action hlookup
+     * @param HlookupPostRequestBody $body The request body
      * @param HlookupRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class HlookupRequestBuilder
 
     /**
      * Invoke action hlookup
+     * @param HlookupPostRequestBody $body The request body
      * @param HlookupRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

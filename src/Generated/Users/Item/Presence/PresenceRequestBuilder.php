@@ -116,6 +116,7 @@ class PresenceRequestBuilder
 
     /**
      * Update the navigation property presence in users
+     * @param Presence $body The request body
      * @param PresenceRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -180,6 +181,7 @@ class PresenceRequestBuilder
 
     /**
      * Update the navigation property presence in users
+     * @param Presence $body The request body
      * @param PresenceRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

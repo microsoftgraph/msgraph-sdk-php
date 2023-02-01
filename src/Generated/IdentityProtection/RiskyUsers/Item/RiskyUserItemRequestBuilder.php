@@ -107,6 +107,7 @@ class RiskyUserItemRequestBuilder
 
     /**
      * Update the navigation property riskyUsers in identityProtection
+     * @param RiskyUser $body The request body
      * @param RiskyUserItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -171,6 +172,7 @@ class RiskyUserItemRequestBuilder
 
     /**
      * Update the navigation property riskyUsers in identityProtection
+     * @param RiskyUser $body The request body
      * @param RiskyUserItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

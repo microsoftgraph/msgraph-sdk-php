@@ -83,6 +83,7 @@ class DeviceConfigurationDeviceStateSummariesRequestBuilder
 
     /**
      * Update the navigation property deviceConfigurationDeviceStateSummaries in deviceManagement
+     * @param DeviceConfigurationDeviceStateSummary $body The request body
      * @param DeviceConfigurationDeviceStateSummariesRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -147,6 +148,7 @@ class DeviceConfigurationDeviceStateSummariesRequestBuilder
 
     /**
      * Update the navigation property deviceConfigurationDeviceStateSummaries in deviceManagement
+     * @param DeviceConfigurationDeviceStateSummary $body The request body
      * @param DeviceConfigurationDeviceStateSummariesRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

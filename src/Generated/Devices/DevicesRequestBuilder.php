@@ -107,6 +107,7 @@ class DevicesRequestBuilder
 
     /**
      * Create and register a new device in the organization.
+     * @param Device $body The request body
      * @param DevicesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/device-post-devices?view=graph-rest-1.0 Find more info here
@@ -151,6 +152,7 @@ class DevicesRequestBuilder
 
     /**
      * Create and register a new device in the organization.
+     * @param Device $body The request body
      * @param DevicesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

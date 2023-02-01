@@ -36,7 +36,7 @@ class ComplianceManagementPartnerAssignmentCollectionResponse extends BaseCollec
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<ComplianceManagementPartnerAssignment>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class ComplianceManagementPartnerAssignmentCollectionResponse extends BaseCollec
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param array<ComplianceManagementPartnerAssignment>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

@@ -291,6 +291,7 @@ class ApplicationItemRequestBuilder
 
     /**
      * Update the properties of an application object.
+     * @param Application $body The request body
      * @param ApplicationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/application-update?view=graph-rest-1.0 Find more info here
@@ -378,6 +379,7 @@ class ApplicationItemRequestBuilder
 
     /**
      * Update the properties of an application object.
+     * @param Application $body The request body
      * @param ApplicationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

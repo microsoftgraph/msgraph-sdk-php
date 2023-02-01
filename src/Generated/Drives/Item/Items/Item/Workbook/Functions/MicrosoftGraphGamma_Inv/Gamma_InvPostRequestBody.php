@@ -44,7 +44,7 @@ class Gamma_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the alpha property value. 
+     * Gets the alpha property value. The alpha property
      * @return Json|null
     */
     public function getAlpha(): ?Json {
@@ -60,7 +60,7 @@ class Gamma_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the beta property value. 
+     * Gets the beta property value. The beta property
      * @return Json|null
     */
     public function getBeta(): ?Json {
@@ -81,7 +81,7 @@ class Gamma_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the probability property value. 
+     * Gets the probability property value. The probability property
      * @return Json|null
     */
     public function getProbability(): ?Json {
@@ -108,7 +108,7 @@ class Gamma_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the alpha property value. 
+     * Sets the alpha property value. The alpha property
      * @param Json|null $value Value to set for the alpha property.
     */
     public function setAlpha(?Json $value): void {
@@ -124,7 +124,7 @@ class Gamma_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the beta property value. 
+     * Sets the beta property value. The beta property
      * @param Json|null $value Value to set for the beta property.
     */
     public function setBeta(?Json $value): void {
@@ -132,7 +132,7 @@ class Gamma_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the probability property value. 
+     * Sets the probability property value. The probability property
      * @param Json|null $value Value to set for the probability property.
     */
     public function setProbability(?Json $value): void {

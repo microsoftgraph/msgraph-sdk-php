@@ -51,7 +51,7 @@ class ApplyFontColorFilterPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Gets the color property value. 
+     * Gets the color property value. The color property
      * @return string|null
     */
     public function getColor(): ?string {
@@ -95,7 +95,7 @@ class ApplyFontColorFilterPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Sets the color property value. 
+     * Sets the color property value. The color property
      * @param string|null $value Value to set for the color property.
     */
     public function setColor(?string $value): void {

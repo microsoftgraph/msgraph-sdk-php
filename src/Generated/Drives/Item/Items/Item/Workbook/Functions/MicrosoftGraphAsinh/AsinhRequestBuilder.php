@@ -47,6 +47,7 @@ class AsinhRequestBuilder
 
     /**
      * Invoke action asinh
+     * @param AsinhPostRequestBody $body The request body
      * @param AsinhRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class AsinhRequestBuilder
 
     /**
      * Invoke action asinh
+     * @param AsinhPostRequestBody $body The request body
      * @param AsinhRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

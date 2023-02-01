@@ -75,6 +75,7 @@ class SessionsRequestBuilder
 
     /**
      * Create new navigation property to sessions for communications
+     * @param Session $body The request body
      * @param SessionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,6 +119,7 @@ class SessionsRequestBuilder
 
     /**
      * Create new navigation property to sessions for communications
+     * @param Session $body The request body
      * @param SessionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

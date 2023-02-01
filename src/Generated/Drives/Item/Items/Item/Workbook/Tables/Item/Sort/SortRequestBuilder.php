@@ -108,6 +108,7 @@ class SortRequestBuilder
 
     /**
      * Update the navigation property sort in drives
+     * @param WorkbookTableSort $body The request body
      * @param SortRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -172,6 +173,7 @@ class SortRequestBuilder
 
     /**
      * Update the navigation property sort in drives
+     * @param WorkbookTableSort $body The request body
      * @param SortRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

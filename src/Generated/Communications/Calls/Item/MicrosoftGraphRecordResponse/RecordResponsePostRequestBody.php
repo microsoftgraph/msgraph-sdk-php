@@ -52,7 +52,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the bargeInAllowed property value. 
+     * Gets the bargeInAllowed property value. The bargeInAllowed property
      * @return bool|null
     */
     public function getBargeInAllowed(): ?bool {
@@ -60,7 +60,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the clientContext property value. 
+     * Gets the clientContext property value. The clientContext property
      * @return string|null
     */
     public function getClientContext(): ?string {
@@ -86,7 +86,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the initialSilenceTimeoutInSeconds property value. 
+     * Gets the initialSilenceTimeoutInSeconds property value. The initialSilenceTimeoutInSeconds property
      * @return int|null
     */
     public function getInitialSilenceTimeoutInSeconds(): ?int {
@@ -94,7 +94,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the maxRecordDurationInSeconds property value. 
+     * Gets the maxRecordDurationInSeconds property value. The maxRecordDurationInSeconds property
      * @return int|null
     */
     public function getMaxRecordDurationInSeconds(): ?int {
@@ -102,7 +102,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the maxSilenceTimeoutInSeconds property value. 
+     * Gets the maxSilenceTimeoutInSeconds property value. The maxSilenceTimeoutInSeconds property
      * @return int|null
     */
     public function getMaxSilenceTimeoutInSeconds(): ?int {
@@ -110,7 +110,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the playBeep property value. 
+     * Gets the playBeep property value. The playBeep property
      * @return bool|null
     */
     public function getPlayBeep(): ?bool {
@@ -118,7 +118,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the prompts property value. 
+     * Gets the prompts property value. The prompts property
      * @return array<Prompt>|null
     */
     public function getPrompts(): ?array {
@@ -126,7 +126,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the stopTones property value. 
+     * Gets the stopTones property value. The stopTones property
      * @return array<string>|null
     */
     public function getStopTones(): ?array {
@@ -166,7 +166,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the bargeInAllowed property value. 
+     * Sets the bargeInAllowed property value. The bargeInAllowed property
      * @param bool|null $value Value to set for the bargeInAllowed property.
     */
     public function setBargeInAllowed(?bool $value): void {
@@ -174,7 +174,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the clientContext property value. 
+     * Sets the clientContext property value. The clientContext property
      * @param string|null $value Value to set for the clientContext property.
     */
     public function setClientContext(?string $value): void {
@@ -182,7 +182,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the initialSilenceTimeoutInSeconds property value. 
+     * Sets the initialSilenceTimeoutInSeconds property value. The initialSilenceTimeoutInSeconds property
      * @param int|null $value Value to set for the initialSilenceTimeoutInSeconds property.
     */
     public function setInitialSilenceTimeoutInSeconds(?int $value): void {
@@ -190,7 +190,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the maxRecordDurationInSeconds property value. 
+     * Sets the maxRecordDurationInSeconds property value. The maxRecordDurationInSeconds property
      * @param int|null $value Value to set for the maxRecordDurationInSeconds property.
     */
     public function setMaxRecordDurationInSeconds(?int $value): void {
@@ -198,7 +198,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the maxSilenceTimeoutInSeconds property value. 
+     * Sets the maxSilenceTimeoutInSeconds property value. The maxSilenceTimeoutInSeconds property
      * @param int|null $value Value to set for the maxSilenceTimeoutInSeconds property.
     */
     public function setMaxSilenceTimeoutInSeconds(?int $value): void {
@@ -206,7 +206,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the playBeep property value. 
+     * Sets the playBeep property value. The playBeep property
      * @param bool|null $value Value to set for the playBeep property.
     */
     public function setPlayBeep(?bool $value): void {
@@ -214,7 +214,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the prompts property value. 
+     * Sets the prompts property value. The prompts property
      * @param array<Prompt>|null $value Value to set for the prompts property.
     */
     public function setPrompts(?array $value): void {
@@ -222,7 +222,7 @@ class RecordResponsePostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the stopTones property value. 
+     * Sets the stopTones property value. The stopTones property
      * @param array<string>|null $value Value to set for the stopTones property.
     */
     public function setStopTones(?array $value): void {

@@ -163,6 +163,7 @@ class EducationSubmissionItemRequestBuilder
 
     /**
      * Update the navigation property submissions in education
+     * @param EducationSubmission $body The request body
      * @param EducationSubmissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -249,6 +250,7 @@ class EducationSubmissionItemRequestBuilder
 
     /**
      * Update the navigation property submissions in education
+     * @param EducationSubmission $body The request body
      * @param EducationSubmissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

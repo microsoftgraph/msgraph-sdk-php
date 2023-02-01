@@ -47,6 +47,7 @@ class RriRequestBuilder
 
     /**
      * Invoke action rri
+     * @param RriPostRequestBody $body The request body
      * @param RriRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class RriRequestBuilder
 
     /**
      * Invoke action rri
+     * @param RriPostRequestBody $body The request body
      * @param RriRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -47,6 +47,7 @@ class MirrRequestBuilder
 
     /**
      * Invoke action mirr
+     * @param MirrPostRequestBody $body The request body
      * @param MirrRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class MirrRequestBuilder
 
     /**
      * Invoke action mirr
+     * @param MirrPostRequestBody $body The request body
      * @param MirrRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

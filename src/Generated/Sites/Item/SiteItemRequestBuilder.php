@@ -306,6 +306,7 @@ class SiteItemRequestBuilder
 
     /**
      * Update entity in sites
+     * @param Site $body The request body
      * @param SiteItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -382,6 +383,7 @@ class SiteItemRequestBuilder
 
     /**
      * Update entity in sites
+     * @param Site $body The request body
      * @param SiteItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -75,6 +75,7 @@ class AssociatedTeamsRequestBuilder
 
     /**
      * Create new navigation property to associatedTeams for me
+     * @param AssociatedTeamInfo $body The request body
      * @param AssociatedTeamsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,6 +119,7 @@ class AssociatedTeamsRequestBuilder
 
     /**
      * Create new navigation property to associatedTeams for me
+     * @param AssociatedTeamInfo $body The request body
      * @param AssociatedTeamsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

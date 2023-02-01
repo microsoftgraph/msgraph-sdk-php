@@ -64,7 +64,7 @@ class Iso_CeilingPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the number property value. 
+     * Gets the number property value. The number property
      * @return Json|null
     */
     public function getNumber(): ?Json {
@@ -72,7 +72,7 @@ class Iso_CeilingPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the significance property value. 
+     * Gets the significance property value. The significance property
      * @return Json|null
     */
     public function getSignificance(): ?Json {
@@ -106,7 +106,7 @@ class Iso_CeilingPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the number property value. 
+     * Sets the number property value. The number property
      * @param Json|null $value Value to set for the number property.
     */
     public function setNumber(?Json $value): void {
@@ -114,7 +114,7 @@ class Iso_CeilingPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the significance property value. 
+     * Sets the significance property value. The significance property
      * @param Json|null $value Value to set for the significance property.
     */
     public function setSignificance(?Json $value): void {

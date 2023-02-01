@@ -115,6 +115,7 @@ class ServiceUpdateMessageItemRequestBuilder
 
     /**
      * Update the navigation property messages in admin
+     * @param ServiceUpdateMessage $body The request body
      * @param ServiceUpdateMessageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -179,6 +180,7 @@ class ServiceUpdateMessageItemRequestBuilder
 
     /**
      * Update the navigation property messages in admin
+     * @param ServiceUpdateMessage $body The request body
      * @param ServiceUpdateMessageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

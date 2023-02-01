@@ -47,6 +47,7 @@ class EvenRequestBuilder
 
     /**
      * Invoke action even
+     * @param EvenPostRequestBody $body The request body
      * @param EvenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class EvenRequestBuilder
 
     /**
      * Invoke action even
+     * @param EvenPostRequestBody $body The request body
      * @param EvenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

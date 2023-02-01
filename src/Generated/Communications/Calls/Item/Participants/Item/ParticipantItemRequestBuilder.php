@@ -111,6 +111,7 @@ class ParticipantItemRequestBuilder
 
     /**
      * Update the navigation property participants in communications
+     * @param Participant $body The request body
      * @param ParticipantItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -175,6 +176,7 @@ class ParticipantItemRequestBuilder
 
     /**
      * Update the navigation property participants in communications
+     * @param Participant $body The request body
      * @param ParticipantItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

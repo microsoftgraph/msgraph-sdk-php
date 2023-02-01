@@ -64,7 +64,7 @@ class PermutPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the number property value. 
+     * Gets the number property value. The number property
      * @return Json|null
     */
     public function getNumber(): ?Json {
@@ -72,7 +72,7 @@ class PermutPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the numberChosen property value. 
+     * Gets the numberChosen property value. The numberChosen property
      * @return Json|null
     */
     public function getNumberChosen(): ?Json {
@@ -106,7 +106,7 @@ class PermutPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the number property value. 
+     * Sets the number property value. The number property
      * @param Json|null $value Value to set for the number property.
     */
     public function setNumber(?Json $value): void {
@@ -114,7 +114,7 @@ class PermutPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the numberChosen property value. 
+     * Sets the numberChosen property value. The numberChosen property
      * @param Json|null $value Value to set for the numberChosen property.
     */
     public function setNumberChosen(?Json $value): void {

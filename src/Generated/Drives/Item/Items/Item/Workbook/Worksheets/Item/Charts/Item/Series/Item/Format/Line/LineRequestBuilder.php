@@ -91,6 +91,7 @@ class LineRequestBuilder
 
     /**
      * Update the navigation property line in drives
+     * @param WorkbookChartLineFormat $body The request body
      * @param LineRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -155,6 +156,7 @@ class LineRequestBuilder
 
     /**
      * Update the navigation property line in drives
+     * @param WorkbookChartLineFormat $body The request body
      * @param LineRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -47,6 +47,7 @@ class AmorDegrcRequestBuilder
 
     /**
      * Invoke action amorDegrc
+     * @param AmorDegrcPostRequestBody $body The request body
      * @param AmorDegrcRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class AmorDegrcRequestBuilder
 
     /**
      * Invoke action amorDegrc
+     * @param AmorDegrcPostRequestBody $body The request body
      * @param AmorDegrcRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

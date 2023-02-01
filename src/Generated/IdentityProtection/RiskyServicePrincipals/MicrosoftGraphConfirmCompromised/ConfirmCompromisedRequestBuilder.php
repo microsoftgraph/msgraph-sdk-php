@@ -46,6 +46,7 @@ class ConfirmCompromisedRequestBuilder
 
     /**
      * Confirm one or more riskyServicePrincipal objects as compromised. This action sets the targeted service principal account's risk level to `high`.
+     * @param ConfirmCompromisedPostRequestBody $body The request body
      * @param ConfirmCompromisedRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/riskyserviceprincipal-confirmcompromised?view=graph-rest-1.0 Find more info here
@@ -65,6 +66,7 @@ class ConfirmCompromisedRequestBuilder
 
     /**
      * Confirm one or more riskyServicePrincipal objects as compromised. This action sets the targeted service principal account's risk level to `high`.
+     * @param ConfirmCompromisedPostRequestBody $body The request body
      * @param ConfirmCompromisedRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

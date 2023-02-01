@@ -87,6 +87,7 @@ class BookingCustomQuestionItemRequestBuilder
 
     /**
      * Update the navigation property customQuestions in solutions
+     * @param BookingCustomQuestion $body The request body
      * @param BookingCustomQuestionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class BookingCustomQuestionItemRequestBuilder
 
     /**
      * Update the navigation property customQuestions in solutions
+     * @param BookingCustomQuestion $body The request body
      * @param BookingCustomQuestionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

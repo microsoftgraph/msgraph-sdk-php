@@ -47,6 +47,7 @@ class TanRequestBuilder
 
     /**
      * Invoke action tan
+     * @param TanPostRequestBody $body The request body
      * @param TanRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class TanRequestBuilder
 
     /**
      * Invoke action tan
+     * @param TanPostRequestBody $body The request body
      * @param TanRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

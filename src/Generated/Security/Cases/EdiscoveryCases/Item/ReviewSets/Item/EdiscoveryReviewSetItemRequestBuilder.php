@@ -104,6 +104,7 @@ class EdiscoveryReviewSetItemRequestBuilder
 
     /**
      * Update the navigation property reviewSets in security
+     * @param EdiscoveryReviewSet $body The request body
      * @param EdiscoveryReviewSetItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -179,6 +180,7 @@ class EdiscoveryReviewSetItemRequestBuilder
 
     /**
      * Update the navigation property reviewSets in security
+     * @param EdiscoveryReviewSet $body The request body
      * @param EdiscoveryReviewSetItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -95,6 +95,7 @@ class DocumentSetVersionItemRequestBuilder
 
     /**
      * Update the navigation property documentSetVersions in sites
+     * @param DocumentSetVersion $body The request body
      * @param DocumentSetVersionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class DocumentSetVersionItemRequestBuilder
 
     /**
      * Update the navigation property documentSetVersions in sites
+     * @param DocumentSetVersion $body The request body
      * @param DocumentSetVersionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

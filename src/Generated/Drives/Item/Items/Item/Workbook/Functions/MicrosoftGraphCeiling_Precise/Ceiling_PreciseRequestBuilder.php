@@ -47,6 +47,7 @@ class Ceiling_PreciseRequestBuilder
 
     /**
      * Invoke action ceiling_Precise
+     * @param Ceiling_PrecisePostRequestBody $body The request body
      * @param Ceiling_PreciseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Ceiling_PreciseRequestBuilder
 
     /**
      * Invoke action ceiling_Precise
+     * @param Ceiling_PrecisePostRequestBody $body The request body
      * @param Ceiling_PreciseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -111,6 +111,7 @@ class TeamsAppInstallationItemRequestBuilder
 
     /**
      * Update the navigation property installedApps in users
+     * @param TeamsAppInstallation $body The request body
      * @param TeamsAppInstallationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -175,6 +176,7 @@ class TeamsAppInstallationItemRequestBuilder
 
     /**
      * Update the navigation property installedApps in users
+     * @param TeamsAppInstallation $body The request body
      * @param TeamsAppInstallationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

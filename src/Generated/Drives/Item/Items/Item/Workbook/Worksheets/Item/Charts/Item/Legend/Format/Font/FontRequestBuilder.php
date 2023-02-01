@@ -83,6 +83,7 @@ class FontRequestBuilder
 
     /**
      * Update the navigation property font in drives
+     * @param WorkbookChartFont $body The request body
      * @param FontRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -147,6 +148,7 @@ class FontRequestBuilder
 
     /**
      * Update the navigation property font in drives
+     * @param WorkbookChartFont $body The request body
      * @param FontRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

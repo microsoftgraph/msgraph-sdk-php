@@ -63,7 +63,7 @@ class GetByIdsPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the ids property value. 
+     * Gets the ids property value. The ids property
      * @return array<string>|null
     */
     public function getIds(): ?array {
@@ -71,7 +71,7 @@ class GetByIdsPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the types property value. 
+     * Gets the types property value. The types property
      * @return array<string>|null
     */
     public function getTypes(): ?array {
@@ -105,7 +105,7 @@ class GetByIdsPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the ids property value. 
+     * Sets the ids property value. The ids property
      * @param array<string>|null $value Value to set for the ids property.
     */
     public function setIds(?array $value): void {
@@ -113,7 +113,7 @@ class GetByIdsPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the types property value. 
+     * Sets the types property value. The types property
      * @param array<string>|null $value Value to set for the types property.
     */
     public function setTypes(?array $value): void {

@@ -107,6 +107,7 @@ class PrintServiceItemRequestBuilder
 
     /**
      * Update the navigation property services in print
+     * @param PrintService $body The request body
      * @param PrintServiceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -171,6 +172,7 @@ class PrintServiceItemRequestBuilder
 
     /**
      * Update the navigation property services in print
+     * @param PrintService $body The request body
      * @param PrintServiceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

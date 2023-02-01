@@ -52,7 +52,7 @@ class WorkDayPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the days property value. 
+     * Gets the days property value. The days property
      * @return Json|null
     */
     public function getDays(): ?Json {
@@ -73,7 +73,7 @@ class WorkDayPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the holidays property value. 
+     * Gets the holidays property value. The holidays property
      * @return Json|null
     */
     public function getHolidays(): ?Json {
@@ -81,7 +81,7 @@ class WorkDayPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the startDate property value. 
+     * Gets the startDate property value. The startDate property
      * @return Json|null
     */
     public function getStartDate(): ?Json {
@@ -116,7 +116,7 @@ class WorkDayPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the days property value. 
+     * Sets the days property value. The days property
      * @param Json|null $value Value to set for the days property.
     */
     public function setDays(?Json $value): void {
@@ -124,7 +124,7 @@ class WorkDayPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the holidays property value. 
+     * Sets the holidays property value. The holidays property
      * @param Json|null $value Value to set for the holidays property.
     */
     public function setHolidays(?Json $value): void {
@@ -132,7 +132,7 @@ class WorkDayPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the startDate property value. 
+     * Sets the startDate property value. The startDate property
      * @param Json|null $value Value to set for the startDate property.
     */
     public function setStartDate(?Json $value): void {

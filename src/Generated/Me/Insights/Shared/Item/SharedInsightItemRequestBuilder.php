@@ -103,6 +103,7 @@ class SharedInsightItemRequestBuilder
 
     /**
      * Update the navigation property shared in me
+     * @param SharedInsight $body The request body
      * @param SharedInsightItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -167,6 +168,7 @@ class SharedInsightItemRequestBuilder
 
     /**
      * Update the navigation property shared in me
+     * @param SharedInsight $body The request body
      * @param SharedInsightItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

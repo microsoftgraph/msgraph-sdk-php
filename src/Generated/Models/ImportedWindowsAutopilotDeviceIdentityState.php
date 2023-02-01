@@ -67,7 +67,7 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
     }
 
     /**
-     * Gets the deviceImportStatus property value. 
+     * Gets the deviceImportStatus property value. The deviceImportStatus property
      * @return ImportedWindowsAutopilotDeviceIdentityImportStatus|null
     */
     public function getDeviceImportStatus(): ?ImportedWindowsAutopilotDeviceIdentityImportStatus {
@@ -98,7 +98,7 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -151,7 +151,7 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
     }
 
     /**
-     * Sets the deviceImportStatus property value. 
+     * Sets the deviceImportStatus property value. The deviceImportStatus property
      * @param ImportedWindowsAutopilotDeviceIdentityImportStatus|null $value Value to set for the deviceImportStatus property.
     */
     public function setDeviceImportStatus(?ImportedWindowsAutopilotDeviceIdentityImportStatus $value): void {
@@ -167,7 +167,7 @@ class ImportedWindowsAutopilotDeviceIdentityState implements AdditionalDataHolde
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

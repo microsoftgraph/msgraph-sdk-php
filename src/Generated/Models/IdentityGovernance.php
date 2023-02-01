@@ -35,7 +35,7 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the accessReviews property value. 
+     * Gets the accessReviews property value. The accessReviews property
      * @return AccessReviewSet|null
     */
     public function getAccessReviews(): ?AccessReviewSet {
@@ -51,7 +51,7 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the appConsent property value. 
+     * Gets the appConsent property value. The appConsent property
      * @return AppConsentApprovalRoute|null
     */
     public function getAppConsent(): ?AppConsentApprovalRoute {
@@ -67,7 +67,7 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the entitlementManagement property value. 
+     * Gets the entitlementManagement property value. The entitlementManagement property
      * @return EntitlementManagement|null
     */
     public function getEntitlementManagement(): ?EntitlementManagement {
@@ -90,7 +90,7 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -98,7 +98,7 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the termsOfUse property value. 
+     * Gets the termsOfUse property value. The termsOfUse property
      * @return TermsOfUseContainer|null
     */
     public function getTermsOfUse(): ?TermsOfUseContainer {
@@ -119,7 +119,7 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the accessReviews property value. 
+     * Sets the accessReviews property value. The accessReviews property
      * @param AccessReviewSet|null $value Value to set for the accessReviews property.
     */
     public function setAccessReviews(?AccessReviewSet $value): void {
@@ -135,7 +135,7 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the appConsent property value. 
+     * Sets the appConsent property value. The appConsent property
      * @param AppConsentApprovalRoute|null $value Value to set for the appConsent property.
     */
     public function setAppConsent(?AppConsentApprovalRoute $value): void {
@@ -151,7 +151,7 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the entitlementManagement property value. 
+     * Sets the entitlementManagement property value. The entitlementManagement property
      * @param EntitlementManagement|null $value Value to set for the entitlementManagement property.
     */
     public function setEntitlementManagement(?EntitlementManagement $value): void {
@@ -159,7 +159,7 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -167,7 +167,7 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the termsOfUse property value. 
+     * Sets the termsOfUse property value. The termsOfUse property
      * @param TermsOfUseContainer|null $value Value to set for the termsOfUse property.
     */
     public function setTermsOfUse(?TermsOfUseContainer $value): void {

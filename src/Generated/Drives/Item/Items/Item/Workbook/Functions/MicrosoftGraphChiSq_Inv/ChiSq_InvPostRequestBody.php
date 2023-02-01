@@ -52,7 +52,7 @@ class ChiSq_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the degFreedom property value. 
+     * Gets the degFreedom property value. The degFreedom property
      * @return Json|null
     */
     public function getDegFreedom(): ?Json {
@@ -72,7 +72,7 @@ class ChiSq_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the probability property value. 
+     * Gets the probability property value. The probability property
      * @return Json|null
     */
     public function getProbability(): ?Json {
@@ -106,7 +106,7 @@ class ChiSq_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the degFreedom property value. 
+     * Sets the degFreedom property value. The degFreedom property
      * @param Json|null $value Value to set for the degFreedom property.
     */
     public function setDegFreedom(?Json $value): void {
@@ -114,7 +114,7 @@ class ChiSq_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the probability property value. 
+     * Sets the probability property value. The probability property
      * @param Json|null $value Value to set for the probability property.
     */
     public function setProbability(?Json $value): void {

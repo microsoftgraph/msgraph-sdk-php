@@ -87,6 +87,7 @@ class ComplianceManagementPartnerItemRequestBuilder
 
     /**
      * Update the navigation property complianceManagementPartners in deviceManagement
+     * @param ComplianceManagementPartner $body The request body
      * @param ComplianceManagementPartnerItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class ComplianceManagementPartnerItemRequestBuilder
 
     /**
      * Update the navigation property complianceManagementPartners in deviceManagement
+     * @param ComplianceManagementPartner $body The request body
      * @param ComplianceManagementPartnerItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -64,7 +64,7 @@ class ErfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the lowerLimit property value. 
+     * Gets the lowerLimit property value. The lowerLimit property
      * @return Json|null
     */
     public function getLowerLimit(): ?Json {
@@ -72,7 +72,7 @@ class ErfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the upperLimit property value. 
+     * Gets the upperLimit property value. The upperLimit property
      * @return Json|null
     */
     public function getUpperLimit(): ?Json {
@@ -106,7 +106,7 @@ class ErfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the lowerLimit property value. 
+     * Sets the lowerLimit property value. The lowerLimit property
      * @param Json|null $value Value to set for the lowerLimit property.
     */
     public function setLowerLimit(?Json $value): void {
@@ -114,7 +114,7 @@ class ErfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the upperLimit property value. 
+     * Sets the upperLimit property value. The upperLimit property
      * @param Json|null $value Value to set for the upperLimit property.
     */
     public function setUpperLimit(?Json $value): void {

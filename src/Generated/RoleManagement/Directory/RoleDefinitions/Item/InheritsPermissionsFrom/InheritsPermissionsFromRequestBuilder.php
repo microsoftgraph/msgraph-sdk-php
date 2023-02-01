@@ -74,6 +74,7 @@ class InheritsPermissionsFromRequestBuilder
 
     /**
      * Create new navigation property to inheritsPermissionsFrom for roleManagement
+     * @param UnifiedRoleDefinition $body The request body
      * @param InheritsPermissionsFromRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class InheritsPermissionsFromRequestBuilder
 
     /**
      * Create new navigation property to inheritsPermissionsFrom for roleManagement
+     * @param UnifiedRoleDefinition $body The request body
      * @param InheritsPermissionsFromRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

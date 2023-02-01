@@ -531,6 +531,7 @@ class DeviceManagementRequestBuilder
 
     /**
      * Update deviceManagement
+     * @param DeviceManagement $body The request body
      * @param DeviceManagementRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -640,6 +641,7 @@ class DeviceManagementRequestBuilder
 
     /**
      * Update deviceManagement
+     * @param DeviceManagement $body The request body
      * @param DeviceManagementRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

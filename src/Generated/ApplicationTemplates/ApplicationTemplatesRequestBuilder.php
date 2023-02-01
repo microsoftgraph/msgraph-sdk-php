@@ -75,6 +75,7 @@ class ApplicationTemplatesRequestBuilder
 
     /**
      * Add new entity to applicationTemplates
+     * @param ApplicationTemplate $body The request body
      * @param ApplicationTemplatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,6 +119,7 @@ class ApplicationTemplatesRequestBuilder
 
     /**
      * Add new entity to applicationTemplates
+     * @param ApplicationTemplate $body The request body
      * @param ApplicationTemplatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

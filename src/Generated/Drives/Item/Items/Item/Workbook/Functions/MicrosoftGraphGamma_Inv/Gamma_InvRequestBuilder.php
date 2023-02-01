@@ -47,6 +47,7 @@ class Gamma_InvRequestBuilder
 
     /**
      * Invoke action gamma_Inv
+     * @param Gamma_InvPostRequestBody $body The request body
      * @param Gamma_InvRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Gamma_InvRequestBuilder
 
     /**
      * Invoke action gamma_Inv
+     * @param Gamma_InvPostRequestBody $body The request body
      * @param Gamma_InvRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

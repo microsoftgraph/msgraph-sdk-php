@@ -74,6 +74,7 @@ class AssignmentPoliciesRequestBuilder
 
     /**
      * Create new navigation property to assignmentPolicies for identityGovernance
+     * @param AccessPackageAssignmentPolicy $body The request body
      * @param AssignmentPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class AssignmentPoliciesRequestBuilder
 
     /**
      * Create new navigation property to assignmentPolicies for identityGovernance
+     * @param AccessPackageAssignmentPolicy $body The request body
      * @param AssignmentPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

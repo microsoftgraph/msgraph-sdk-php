@@ -47,6 +47,7 @@ class Norm_InvRequestBuilder
 
     /**
      * Invoke action norm_Inv
+     * @param Norm_InvPostRequestBody $body The request body
      * @param Norm_InvRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Norm_InvRequestBuilder
 
     /**
      * Invoke action norm_Inv
+     * @param Norm_InvPostRequestBody $body The request body
      * @param Norm_InvRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

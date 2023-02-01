@@ -169,6 +169,7 @@ class DomainItemRequestBuilder
 
     /**
      * Update the properties of domain object.
+     * @param Domain $body The request body
      * @param DomainItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/domain-update?view=graph-rest-1.0 Find more info here
@@ -245,6 +246,7 @@ class DomainItemRequestBuilder
 
     /**
      * Update the properties of domain object.
+     * @param Domain $body The request body
      * @param DomainItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

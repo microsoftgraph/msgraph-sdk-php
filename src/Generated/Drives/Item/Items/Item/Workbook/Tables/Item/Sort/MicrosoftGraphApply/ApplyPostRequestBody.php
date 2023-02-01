@@ -65,7 +65,7 @@ class ApplyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the fields property value. 
+     * Gets the fields property value. The fields property
      * @return array<WorkbookSortField>|null
     */
     public function getFields(): ?array {
@@ -73,7 +73,7 @@ class ApplyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the matchCase property value. 
+     * Gets the matchCase property value. The matchCase property
      * @return bool|null
     */
     public function getMatchCase(): ?bool {
@@ -81,7 +81,7 @@ class ApplyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the method property value. 
+     * Gets the method property value. The method property
      * @return string|null
     */
     public function getMethod(): ?string {
@@ -116,7 +116,7 @@ class ApplyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the fields property value. 
+     * Sets the fields property value. The fields property
      * @param array<WorkbookSortField>|null $value Value to set for the fields property.
     */
     public function setFields(?array $value): void {
@@ -124,7 +124,7 @@ class ApplyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the matchCase property value. 
+     * Sets the matchCase property value. The matchCase property
      * @param bool|null $value Value to set for the matchCase property.
     */
     public function setMatchCase(?bool $value): void {
@@ -132,7 +132,7 @@ class ApplyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the method property value. 
+     * Sets the method property value. The method property
      * @param string|null $value Value to set for the method property.
     */
     public function setMethod(?string $value): void {

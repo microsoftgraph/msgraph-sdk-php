@@ -63,7 +63,7 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the values property value. 
+     * Gets the values property value. The values property
      * @return array<ConversationMember>|null
     */
     public function getValues(): ?array {
@@ -96,7 +96,7 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the values property value. 
+     * Sets the values property value. The values property
      * @param array<ConversationMember>|null $value Value to set for the values property.
     */
     public function setValues(?array $value): void {

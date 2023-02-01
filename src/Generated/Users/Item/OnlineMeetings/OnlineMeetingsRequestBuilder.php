@@ -83,6 +83,7 @@ class OnlineMeetingsRequestBuilder
 
     /**
      * Create an online meeting on behalf of a user.
+     * @param OnlineMeeting $body The request body
      * @param OnlineMeetingsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/application-post-onlinemeetings?view=graph-rest-1.0 Find more info here
@@ -127,6 +128,7 @@ class OnlineMeetingsRequestBuilder
 
     /**
      * Create an online meeting on behalf of a user.
+     * @param OnlineMeeting $body The request body
      * @param OnlineMeetingsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

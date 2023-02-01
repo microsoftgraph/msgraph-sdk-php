@@ -47,6 +47,7 @@ class PowerRequestBuilder
 
     /**
      * Invoke action power
+     * @param PowerPostRequestBody $body The request body
      * @param PowerRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class PowerRequestBuilder
 
     /**
      * Invoke action power
+     * @param PowerPostRequestBody $body The request body
      * @param PowerRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

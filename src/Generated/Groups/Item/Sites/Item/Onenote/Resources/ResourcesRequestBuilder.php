@@ -74,6 +74,7 @@ class ResourcesRequestBuilder
 
     /**
      * Create new navigation property to resources for groups
+     * @param OnenoteResource $body The request body
      * @param ResourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class ResourcesRequestBuilder
 
     /**
      * Create new navigation property to resources for groups
+     * @param OnenoteResource $body The request body
      * @param ResourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

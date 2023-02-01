@@ -75,7 +75,7 @@ class Site extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the error property value. 
+     * Gets the error property value. The error property
      * @return PublicError|null
     */
     public function getError(): ?PublicError {
@@ -83,7 +83,7 @@ class Site extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the externalColumns property value. 
+     * Gets the externalColumns property value. The externalColumns property
      * @return array<ColumnDefinition>|null
     */
     public function getExternalColumns(): ?array {
@@ -283,7 +283,7 @@ class Site extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the error property value. 
+     * Sets the error property value. The error property
      * @param PublicError|null $value Value to set for the error property.
     */
     public function setError(?PublicError $value): void {
@@ -291,7 +291,7 @@ class Site extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the externalColumns property value. 
+     * Sets the externalColumns property value. The externalColumns property
      * @param array<ColumnDefinition>|null $value Value to set for the externalColumns property.
     */
     public function setExternalColumns(?array $value): void {

@@ -43,7 +43,7 @@ class ApplicationServicePrincipal implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the application property value. 
+     * Gets the application property value. The application property
      * @return Application|null
     */
     public function getApplication(): ?Application {
@@ -72,7 +72,7 @@ class ApplicationServicePrincipal implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -80,7 +80,7 @@ class ApplicationServicePrincipal implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the servicePrincipal property value. 
+     * Gets the servicePrincipal property value. The servicePrincipal property
      * @return ServicePrincipal|null
     */
     public function getServicePrincipal(): ?ServicePrincipal {
@@ -107,7 +107,7 @@ class ApplicationServicePrincipal implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the application property value. 
+     * Sets the application property value. The application property
      * @param Application|null $value Value to set for the application property.
     */
     public function setApplication(?Application $value): void {
@@ -123,7 +123,7 @@ class ApplicationServicePrincipal implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -131,7 +131,7 @@ class ApplicationServicePrincipal implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the servicePrincipal property value. 
+     * Sets the servicePrincipal property value. The servicePrincipal property
      * @param ServicePrincipal|null $value Value to set for the servicePrincipal property.
     */
     public function setServicePrincipal(?ServicePrincipal $value): void {

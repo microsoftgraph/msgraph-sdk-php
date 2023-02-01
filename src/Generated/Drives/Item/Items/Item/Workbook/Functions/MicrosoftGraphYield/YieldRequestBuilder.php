@@ -47,6 +47,7 @@ class YieldRequestBuilder
 
     /**
      * Invoke action yield
+     * @param YieldPostRequestBody $body The request body
      * @param YieldRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class YieldRequestBuilder
 
     /**
      * Invoke action yield
+     * @param YieldPostRequestBody $body The request body
      * @param YieldRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

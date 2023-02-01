@@ -52,7 +52,7 @@ class Expon_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the cumulative property value. 
+     * Gets the cumulative property value. The cumulative property
      * @return Json|null
     */
     public function getCumulative(): ?Json {
@@ -73,7 +73,7 @@ class Expon_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the lambda property value. 
+     * Gets the lambda property value. The lambda property
      * @return Json|null
     */
     public function getLambda(): ?Json {
@@ -81,7 +81,7 @@ class Expon_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the x property value. 
+     * Gets the x property value. The x property
      * @return Json|null
     */
     public function getX(): ?Json {
@@ -116,7 +116,7 @@ class Expon_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the cumulative property value. 
+     * Sets the cumulative property value. The cumulative property
      * @param Json|null $value Value to set for the cumulative property.
     */
     public function setCumulative(?Json $value): void {
@@ -124,7 +124,7 @@ class Expon_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the lambda property value. 
+     * Sets the lambda property value. The lambda property
      * @param Json|null $value Value to set for the lambda property.
     */
     public function setLambda(?Json $value): void {
@@ -132,7 +132,7 @@ class Expon_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the x property value. 
+     * Sets the x property value. The x property
      * @param Json|null $value Value to set for the x property.
     */
     public function setX(?Json $value): void {

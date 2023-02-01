@@ -47,6 +47,7 @@ class MoveRequestBuilder
 
     /**
      * Move a mailfolder and its contents to another mailfolder.
+     * @param MovePostRequestBody $body The request body
      * @param MoveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/mailfolder-move?view=graph-rest-1.0 Find more info here
@@ -66,6 +67,7 @@ class MoveRequestBuilder
 
     /**
      * Move a mailfolder and its contents to another mailfolder.
+     * @param MovePostRequestBody $body The request body
      * @param MoveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

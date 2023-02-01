@@ -84,6 +84,7 @@ class SchemaRequestBuilder
 
     /**
      * Update the navigation property schema in connections
+     * @param Schema $body The request body
      * @param SchemaRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,6 +149,7 @@ class SchemaRequestBuilder
 
     /**
      * Update the navigation property schema in connections
+     * @param Schema $body The request body
      * @param SchemaRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -46,6 +46,7 @@ class ForwardRequestBuilder
 
     /**
      * Forward a post to a recipient. You can specify both the parent conversation and thread in the request, or, you can specify just the parent thread without the parent conversation. 
+     * @param ForwardPostRequestBody $body The request body
      * @param ForwardRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/post-forward?view=graph-rest-1.0 Find more info here
@@ -65,6 +66,7 @@ class ForwardRequestBuilder
 
     /**
      * Forward a post to a recipient. You can specify both the parent conversation and thread in the request, or, you can specify just the parent thread without the parent conversation. 
+     * @param ForwardPostRequestBody $body The request body
      * @param ForwardRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

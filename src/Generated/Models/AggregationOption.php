@@ -51,7 +51,7 @@ class AggregationOption implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the bucketDefinition property value. 
+     * Gets the bucketDefinition property value. The bucketDefinition property
      * @return BucketAggregationDefinition|null
     */
     public function getBucketDefinition(): ?BucketAggregationDefinition {
@@ -81,7 +81,7 @@ class AggregationOption implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -125,7 +125,7 @@ class AggregationOption implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the bucketDefinition property value. 
+     * Sets the bucketDefinition property value. The bucketDefinition property
      * @param BucketAggregationDefinition|null $value Value to set for the bucketDefinition property.
     */
     public function setBucketDefinition(?BucketAggregationDefinition $value): void {
@@ -141,7 +141,7 @@ class AggregationOption implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

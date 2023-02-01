@@ -46,6 +46,7 @@ class CleanWindowsDeviceRequestBuilder
 
     /**
      * Clean Windows device
+     * @param CleanWindowsDevicePostRequestBody $body The request body
      * @param CleanWindowsDeviceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -64,6 +65,7 @@ class CleanWindowsDeviceRequestBuilder
 
     /**
      * Clean Windows device
+     * @param CleanWindowsDevicePostRequestBody $body The request body
      * @param CleanWindowsDeviceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

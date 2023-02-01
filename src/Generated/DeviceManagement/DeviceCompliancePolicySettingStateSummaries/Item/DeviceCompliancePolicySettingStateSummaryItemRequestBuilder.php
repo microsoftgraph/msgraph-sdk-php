@@ -107,6 +107,7 @@ class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder
 
     /**
      * Update the navigation property deviceCompliancePolicySettingStateSummaries in deviceManagement
+     * @param DeviceCompliancePolicySettingStateSummary $body The request body
      * @param DeviceCompliancePolicySettingStateSummaryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -171,6 +172,7 @@ class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder
 
     /**
      * Update the navigation property deviceCompliancePolicySettingStateSummaries in deviceManagement
+     * @param DeviceCompliancePolicySettingStateSummary $body The request body
      * @param DeviceCompliancePolicySettingStateSummaryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

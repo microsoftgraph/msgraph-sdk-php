@@ -47,6 +47,7 @@ class StopHoldMusicRequestBuilder
 
     /**
      * Reincorporate a participant previously put on hold to the call.
+     * @param StopHoldMusicPostRequestBody $body The request body
      * @param StopHoldMusicRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/participant-stopholdmusic?view=graph-rest-1.0 Find more info here
@@ -66,6 +67,7 @@ class StopHoldMusicRequestBuilder
 
     /**
      * Reincorporate a participant previously put on hold to the call.
+     * @param StopHoldMusicPostRequestBody $body The request body
      * @param StopHoldMusicRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

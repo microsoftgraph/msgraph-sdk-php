@@ -87,6 +87,7 @@ class CalendarPermissionItemRequestBuilder
 
     /**
      * Update the navigation property calendarPermissions in me
+     * @param CalendarPermission $body The request body
      * @param CalendarPermissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class CalendarPermissionItemRequestBuilder
 
     /**
      * Update the navigation property calendarPermissions in me
+     * @param CalendarPermission $body The request body
      * @param CalendarPermissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

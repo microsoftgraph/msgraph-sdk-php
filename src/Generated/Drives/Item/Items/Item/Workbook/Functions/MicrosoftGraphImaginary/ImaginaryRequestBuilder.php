@@ -47,6 +47,7 @@ class ImaginaryRequestBuilder
 
     /**
      * Invoke action imaginary
+     * @param ImaginaryPostRequestBody $body The request body
      * @param ImaginaryRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ImaginaryRequestBuilder
 
     /**
      * Invoke action imaginary
+     * @param ImaginaryPostRequestBody $body The request body
      * @param ImaginaryRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

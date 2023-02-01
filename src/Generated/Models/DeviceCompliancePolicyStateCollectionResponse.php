@@ -36,7 +36,7 @@ class DeviceCompliancePolicyStateCollectionResponse extends BaseCollectionPagina
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<DeviceCompliancePolicyState>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class DeviceCompliancePolicyStateCollectionResponse extends BaseCollectionPagina
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param array<DeviceCompliancePolicyState>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

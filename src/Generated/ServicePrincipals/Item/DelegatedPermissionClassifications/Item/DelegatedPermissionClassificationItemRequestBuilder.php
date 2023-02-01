@@ -87,6 +87,7 @@ class DelegatedPermissionClassificationItemRequestBuilder
 
     /**
      * Update the navigation property delegatedPermissionClassifications in servicePrincipals
+     * @param DelegatedPermissionClassification $body The request body
      * @param DelegatedPermissionClassificationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class DelegatedPermissionClassificationItemRequestBuilder
 
     /**
      * Update the navigation property delegatedPermissionClassifications in servicePrincipals
+     * @param DelegatedPermissionClassification $body The request body
      * @param DelegatedPermissionClassificationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -47,6 +47,7 @@ class CoupDayBsRequestBuilder
 
     /**
      * Invoke action coupDayBs
+     * @param CoupDayBsPostRequestBody $body The request body
      * @param CoupDayBsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class CoupDayBsRequestBuilder
 
     /**
      * Invoke action coupDayBs
+     * @param CoupDayBsPostRequestBody $body The request body
      * @param CoupDayBsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

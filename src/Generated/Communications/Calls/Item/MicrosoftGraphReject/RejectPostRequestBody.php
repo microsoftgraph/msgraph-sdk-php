@@ -52,7 +52,7 @@ class RejectPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the callbackUri property value. 
+     * Gets the callbackUri property value. The callbackUri property
      * @return string|null
     */
     public function getCallbackUri(): ?string {
@@ -72,7 +72,7 @@ class RejectPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the reason property value. 
+     * Gets the reason property value. The reason property
      * @return RejectReason|null
     */
     public function getReason(): ?RejectReason {
@@ -106,7 +106,7 @@ class RejectPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the callbackUri property value. 
+     * Sets the callbackUri property value. The callbackUri property
      * @param string|null $value Value to set for the callbackUri property.
     */
     public function setCallbackUri(?string $value): void {
@@ -114,7 +114,7 @@ class RejectPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the reason property value. 
+     * Sets the reason property value. The reason property
      * @param RejectReason|null $value Value to set for the reason property.
     */
     public function setReason(?RejectReason $value): void {

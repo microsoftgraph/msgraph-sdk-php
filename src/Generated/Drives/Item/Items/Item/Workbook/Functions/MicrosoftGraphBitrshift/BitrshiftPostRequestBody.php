@@ -64,7 +64,7 @@ class BitrshiftPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the number property value. 
+     * Gets the number property value. The number property
      * @return Json|null
     */
     public function getNumber(): ?Json {
@@ -72,7 +72,7 @@ class BitrshiftPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the shiftAmount property value. 
+     * Gets the shiftAmount property value. The shiftAmount property
      * @return Json|null
     */
     public function getShiftAmount(): ?Json {
@@ -106,7 +106,7 @@ class BitrshiftPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the number property value. 
+     * Sets the number property value. The number property
      * @param Json|null $value Value to set for the number property.
     */
     public function setNumber(?Json $value): void {
@@ -114,7 +114,7 @@ class BitrshiftPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the shiftAmount property value. 
+     * Sets the shiftAmount property value. The shiftAmount property
      * @param Json|null $value Value to set for the shiftAmount property.
     */
     public function setShiftAmount(?Json $value): void {

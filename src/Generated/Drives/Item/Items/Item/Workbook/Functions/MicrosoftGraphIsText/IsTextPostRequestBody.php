@@ -63,7 +63,7 @@ class IsTextPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return Json|null
     */
     public function getValue(): ?Json {
@@ -96,7 +96,7 @@ class IsTextPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param Json|null $value Value to set for the value property.
     */
     public function setValue(?Json $value): void {

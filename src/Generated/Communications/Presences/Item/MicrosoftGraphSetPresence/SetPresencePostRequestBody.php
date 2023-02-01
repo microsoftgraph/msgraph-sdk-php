@@ -36,7 +36,7 @@ class SetPresencePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the activity property value. 
+     * Gets the activity property value. The activity property
      * @return string|null
     */
     public function getActivity(): ?string {
@@ -52,7 +52,7 @@ class SetPresencePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the availability property value. 
+     * Gets the availability property value. The availability property
      * @return string|null
     */
     public function getAvailability(): ?string {
@@ -68,7 +68,7 @@ class SetPresencePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the expirationDuration property value. 
+     * Gets the expirationDuration property value. The expirationDuration property
      * @return DateInterval|null
     */
     public function getExpirationDuration(): ?DateInterval {
@@ -90,7 +90,7 @@ class SetPresencePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the sessionId property value. 
+     * Gets the sessionId property value. The sessionId property
      * @return string|null
     */
     public function getSessionId(): ?string {
@@ -110,7 +110,7 @@ class SetPresencePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the activity property value. 
+     * Sets the activity property value. The activity property
      * @param string|null $value Value to set for the activity property.
     */
     public function setActivity(?string $value): void {
@@ -126,7 +126,7 @@ class SetPresencePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the availability property value. 
+     * Sets the availability property value. The availability property
      * @param string|null $value Value to set for the availability property.
     */
     public function setAvailability(?string $value): void {
@@ -142,7 +142,7 @@ class SetPresencePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the expirationDuration property value. 
+     * Sets the expirationDuration property value. The expirationDuration property
      * @param DateInterval|null $value Value to set for the expirationDuration property.
     */
     public function setExpirationDuration(?DateInterval $value): void {
@@ -150,7 +150,7 @@ class SetPresencePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the sessionId property value. 
+     * Sets the sessionId property value. The sessionId property
      * @param string|null $value Value to set for the sessionId property.
     */
     public function setSessionId(?string $value): void {

@@ -47,6 +47,7 @@ class TruncRequestBuilder
 
     /**
      * Invoke action trunc
+     * @param TruncPostRequestBody $body The request body
      * @param TruncRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class TruncRequestBuilder
 
     /**
      * Invoke action trunc
+     * @param TruncPostRequestBody $body The request body
      * @param TruncRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

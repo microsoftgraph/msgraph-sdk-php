@@ -43,7 +43,7 @@ class RequestSignatureVerification implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the allowedWeakAlgorithms property value. 
+     * Gets the allowedWeakAlgorithms property value. The allowedWeakAlgorithms property
      * @return WeakAlgorithms|null
     */
     public function getAllowedWeakAlgorithms(): ?WeakAlgorithms {
@@ -72,7 +72,7 @@ class RequestSignatureVerification implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the isSignedRequestRequired property value. 
+     * Gets the isSignedRequestRequired property value. The isSignedRequestRequired property
      * @return bool|null
     */
     public function getIsSignedRequestRequired(): ?bool {
@@ -80,7 +80,7 @@ class RequestSignatureVerification implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -107,7 +107,7 @@ class RequestSignatureVerification implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the allowedWeakAlgorithms property value. 
+     * Sets the allowedWeakAlgorithms property value. The allowedWeakAlgorithms property
      * @param WeakAlgorithms|null $value Value to set for the allowedWeakAlgorithms property.
     */
     public function setAllowedWeakAlgorithms(?WeakAlgorithms $value): void {
@@ -123,7 +123,7 @@ class RequestSignatureVerification implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the isSignedRequestRequired property value. 
+     * Sets the isSignedRequestRequired property value. The isSignedRequestRequired property
      * @param bool|null $value Value to set for the isSignedRequestRequired property.
     */
     public function setIsSignedRequestRequired(?bool $value): void {
@@ -131,7 +131,7 @@ class RequestSignatureVerification implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

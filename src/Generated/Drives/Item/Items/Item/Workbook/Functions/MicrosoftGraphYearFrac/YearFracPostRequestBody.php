@@ -52,7 +52,7 @@ class YearFracPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the basis property value. 
+     * Gets the basis property value. The basis property
      * @return Json|null
     */
     public function getBasis(): ?Json {
@@ -60,7 +60,7 @@ class YearFracPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the endDate property value. 
+     * Gets the endDate property value. The endDate property
      * @return Json|null
     */
     public function getEndDate(): ?Json {
@@ -81,7 +81,7 @@ class YearFracPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the startDate property value. 
+     * Gets the startDate property value. The startDate property
      * @return Json|null
     */
     public function getStartDate(): ?Json {
@@ -116,7 +116,7 @@ class YearFracPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the basis property value. 
+     * Sets the basis property value. The basis property
      * @param Json|null $value Value to set for the basis property.
     */
     public function setBasis(?Json $value): void {
@@ -124,7 +124,7 @@ class YearFracPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the endDate property value. 
+     * Sets the endDate property value. The endDate property
      * @param Json|null $value Value to set for the endDate property.
     */
     public function setEndDate(?Json $value): void {
@@ -132,7 +132,7 @@ class YearFracPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the startDate property value. 
+     * Sets the startDate property value. The startDate property
      * @param Json|null $value Value to set for the startDate property.
     */
     public function setStartDate(?Json $value): void {

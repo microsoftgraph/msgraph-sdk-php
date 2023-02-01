@@ -62,7 +62,7 @@ class RemovePasswordPostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the keyId property value. 
+     * Gets the keyId property value. The keyId property
      * @return string|null
     */
     public function getKeyId(): ?string {
@@ -95,7 +95,7 @@ class RemovePasswordPostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the keyId property value. 
+     * Sets the keyId property value. The keyId property
      * @param string|null $value Value to set for the keyId property.
     */
     public function setKeyId(?string $value): void {

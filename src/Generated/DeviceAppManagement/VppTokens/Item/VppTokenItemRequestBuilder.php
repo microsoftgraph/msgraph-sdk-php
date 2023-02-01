@@ -95,6 +95,7 @@ class VppTokenItemRequestBuilder
 
     /**
      * Update the navigation property vppTokens in deviceAppManagement
+     * @param VppToken $body The request body
      * @param VppTokenItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class VppTokenItemRequestBuilder
 
     /**
      * Update the navigation property vppTokens in deviceAppManagement
+     * @param VppToken $body The request body
      * @param VppTokenItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

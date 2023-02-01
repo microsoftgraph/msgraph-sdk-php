@@ -91,6 +91,7 @@ class NamesRequestBuilder
 
     /**
      * Create new navigation property to names for drives
+     * @param WorkbookNamedItem $body The request body
      * @param NamesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -134,6 +135,7 @@ class NamesRequestBuilder
 
     /**
      * Create new navigation property to names for drives
+     * @param WorkbookNamedItem $body The request body
      * @param NamesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

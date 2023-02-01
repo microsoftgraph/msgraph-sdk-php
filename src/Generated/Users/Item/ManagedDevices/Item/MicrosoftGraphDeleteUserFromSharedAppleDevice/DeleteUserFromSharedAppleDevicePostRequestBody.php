@@ -62,7 +62,7 @@ class DeleteUserFromSharedAppleDevicePostRequestBody implements AdditionalDataHo
     }
 
     /**
-     * Gets the userPrincipalName property value. 
+     * Gets the userPrincipalName property value. The userPrincipalName property
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
@@ -95,7 +95,7 @@ class DeleteUserFromSharedAppleDevicePostRequestBody implements AdditionalDataHo
     }
 
     /**
-     * Sets the userPrincipalName property value. 
+     * Sets the userPrincipalName property value. The userPrincipalName property
      * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {

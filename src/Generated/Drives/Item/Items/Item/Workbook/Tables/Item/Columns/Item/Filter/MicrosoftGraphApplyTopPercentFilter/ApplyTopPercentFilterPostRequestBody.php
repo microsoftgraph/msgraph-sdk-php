@@ -62,7 +62,7 @@ class ApplyTopPercentFilterPostRequestBody implements AdditionalDataHolder, Back
     }
 
     /**
-     * Gets the percent property value. 
+     * Gets the percent property value. The percent property
      * @return int|null
     */
     public function getPercent(): ?int {
@@ -95,7 +95,7 @@ class ApplyTopPercentFilterPostRequestBody implements AdditionalDataHolder, Back
     }
 
     /**
-     * Sets the percent property value. 
+     * Sets the percent property value. The percent property
      * @param int|null $value Value to set for the percent property.
     */
     public function setPercent(?int $value): void {

@@ -89,7 +89,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
     }
 
     /**
-     * Gets the diskType property value. 
+     * Gets the diskType property value. The diskType property
      * @return DiskType|null
     */
     public function getDiskType(): ?DiskType {
@@ -143,7 +143,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
     }
 
     /**
-     * Gets the healthStatus property value. 
+     * Gets the healthStatus property value. The healthStatus property
      * @return UserExperienceAnalyticsHealthState|null
     */
     public function getHealthStatus(): ?UserExperienceAnalyticsHealthState {
@@ -307,7 +307,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
     }
 
     /**
-     * Sets the diskType property value. 
+     * Sets the diskType property value. The diskType property
      * @param DiskType|null $value Value to set for the diskType property.
     */
     public function setDiskType(?DiskType $value): void {
@@ -331,7 +331,7 @@ class UserExperienceAnalyticsDevicePerformance extends Entity implements Parsabl
     }
 
     /**
-     * Sets the healthStatus property value. 
+     * Sets the healthStatus property value. The healthStatus property
      * @param UserExperienceAnalyticsHealthState|null $value Value to set for the healthStatus property.
     */
     public function setHealthStatus(?UserExperienceAnalyticsHealthState $value): void {

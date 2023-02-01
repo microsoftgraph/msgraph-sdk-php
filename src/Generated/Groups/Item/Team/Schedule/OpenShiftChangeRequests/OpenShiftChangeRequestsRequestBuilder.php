@@ -75,6 +75,7 @@ class OpenShiftChangeRequestsRequestBuilder
 
     /**
      * Create instance of an openShiftChangeRequest object.
+     * @param OpenShiftChangeRequest $body The request body
      * @param OpenShiftChangeRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/openshiftchangerequest-post?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class OpenShiftChangeRequestsRequestBuilder
 
     /**
      * Create instance of an openShiftChangeRequest object.
+     * @param OpenShiftChangeRequest $body The request body
      * @param OpenShiftChangeRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

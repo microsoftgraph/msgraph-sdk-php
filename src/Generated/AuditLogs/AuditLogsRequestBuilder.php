@@ -103,6 +103,7 @@ class AuditLogsRequestBuilder
 
     /**
      * Update auditLogs
+     * @param AuditLogRoot $body The request body
      * @param AuditLogsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -168,6 +169,7 @@ class AuditLogsRequestBuilder
 
     /**
      * Update auditLogs
+     * @param AuditLogRoot $body The request body
      * @param AuditLogsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

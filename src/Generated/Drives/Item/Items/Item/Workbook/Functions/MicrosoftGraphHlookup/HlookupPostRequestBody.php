@@ -66,7 +66,7 @@ class HlookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the lookupValue property value. 
+     * Gets the lookupValue property value. The lookupValue property
      * @return Json|null
     */
     public function getLookupValue(): ?Json {
@@ -74,7 +74,7 @@ class HlookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the rangeLookup property value. 
+     * Gets the rangeLookup property value. The rangeLookup property
      * @return Json|null
     */
     public function getRangeLookup(): ?Json {
@@ -82,7 +82,7 @@ class HlookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the rowIndexNum property value. 
+     * Gets the rowIndexNum property value. The rowIndexNum property
      * @return Json|null
     */
     public function getRowIndexNum(): ?Json {
@@ -90,7 +90,7 @@ class HlookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the tableArray property value. 
+     * Gets the tableArray property value. The tableArray property
      * @return Json|null
     */
     public function getTableArray(): ?Json {
@@ -126,7 +126,7 @@ class HlookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the lookupValue property value. 
+     * Sets the lookupValue property value. The lookupValue property
      * @param Json|null $value Value to set for the lookupValue property.
     */
     public function setLookupValue(?Json $value): void {
@@ -134,7 +134,7 @@ class HlookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the rangeLookup property value. 
+     * Sets the rangeLookup property value. The rangeLookup property
      * @param Json|null $value Value to set for the rangeLookup property.
     */
     public function setRangeLookup(?Json $value): void {
@@ -142,7 +142,7 @@ class HlookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the rowIndexNum property value. 
+     * Sets the rowIndexNum property value. The rowIndexNum property
      * @param Json|null $value Value to set for the rowIndexNum property.
     */
     public function setRowIndexNum(?Json $value): void {
@@ -150,7 +150,7 @@ class HlookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the tableArray property value. 
+     * Sets the tableArray property value. The tableArray property
      * @param Json|null $value Value to set for the tableArray property.
     */
     public function setTableArray(?Json $value): void {

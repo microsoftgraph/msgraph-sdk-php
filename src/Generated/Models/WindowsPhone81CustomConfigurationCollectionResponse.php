@@ -36,7 +36,7 @@ class WindowsPhone81CustomConfigurationCollectionResponse extends BaseCollection
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<WindowsPhone81CustomConfiguration>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class WindowsPhone81CustomConfigurationCollectionResponse extends BaseCollection
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param array<WindowsPhone81CustomConfiguration>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

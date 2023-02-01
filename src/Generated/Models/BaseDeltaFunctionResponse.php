@@ -63,7 +63,7 @@ class BaseDeltaFunctionResponse implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the @odata.deltaLink property value. 
+     * Gets the @odata.deltaLink property value. The OdataDeltaLink property
      * @return string|null
     */
     public function getOdataDeltaLink(): ?string {
@@ -71,7 +71,7 @@ class BaseDeltaFunctionResponse implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the @odata.nextLink property value. 
+     * Gets the @odata.nextLink property value. The OdataNextLink property
      * @return string|null
     */
     public function getOdataNextLink(): ?string {
@@ -105,7 +105,7 @@ class BaseDeltaFunctionResponse implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the @odata.deltaLink property value. 
+     * Sets the @odata.deltaLink property value. The OdataDeltaLink property
      * @param string|null $value Value to set for the OdataDeltaLink property.
     */
     public function setOdataDeltaLink(?string $value): void {
@@ -113,7 +113,7 @@ class BaseDeltaFunctionResponse implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the @odata.nextLink property value. 
+     * Sets the @odata.nextLink property value. The OdataNextLink property
      * @param string|null $value Value to set for the OdataNextLink property.
     */
     public function setOdataNextLink(?string $value): void {

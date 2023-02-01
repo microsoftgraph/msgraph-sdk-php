@@ -47,6 +47,7 @@ class Poisson_DistRequestBuilder
 
     /**
      * Invoke action poisson_Dist
+     * @param Poisson_DistPostRequestBody $body The request body
      * @param Poisson_DistRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Poisson_DistRequestBuilder
 
     /**
      * Invoke action poisson_Dist
+     * @param Poisson_DistPostRequestBody $body The request body
      * @param Poisson_DistRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

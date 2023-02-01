@@ -74,6 +74,7 @@ class InvitationsRequestBuilder
 
     /**
      * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation you have several options available:
+     * @param Invitation $body The request body
      * @param InvitationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/invitation-post?view=graph-rest-1.0 Find more info here
@@ -118,6 +119,7 @@ class InvitationsRequestBuilder
 
     /**
      * Use this API to create a new invitation. Invitation adds an external user to the organization. When creating a new invitation you have several options available:
+     * @param Invitation $body The request body
      * @param InvitationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

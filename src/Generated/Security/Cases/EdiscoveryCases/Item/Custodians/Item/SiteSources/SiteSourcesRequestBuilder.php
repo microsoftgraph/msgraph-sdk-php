@@ -75,6 +75,7 @@ class SiteSourcesRequestBuilder
 
     /**
      * Create a new siteSource object associated with an eDiscovery custodian.
+     * @param SiteSource $body The request body
      * @param SiteSourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/security-ediscoverycustodian-post-sitesources?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class SiteSourcesRequestBuilder
 
     /**
      * Create a new siteSource object associated with an eDiscovery custodian.
+     * @param SiteSource $body The request body
      * @param SiteSourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

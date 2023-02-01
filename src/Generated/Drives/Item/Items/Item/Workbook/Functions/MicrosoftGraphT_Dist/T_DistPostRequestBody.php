@@ -52,7 +52,7 @@ class T_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the cumulative property value. 
+     * Gets the cumulative property value. The cumulative property
      * @return Json|null
     */
     public function getCumulative(): ?Json {
@@ -60,7 +60,7 @@ class T_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the degFreedom property value. 
+     * Gets the degFreedom property value. The degFreedom property
      * @return Json|null
     */
     public function getDegFreedom(): ?Json {
@@ -81,7 +81,7 @@ class T_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the x property value. 
+     * Gets the x property value. The x property
      * @return Json|null
     */
     public function getX(): ?Json {
@@ -116,7 +116,7 @@ class T_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the cumulative property value. 
+     * Sets the cumulative property value. The cumulative property
      * @param Json|null $value Value to set for the cumulative property.
     */
     public function setCumulative(?Json $value): void {
@@ -124,7 +124,7 @@ class T_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the degFreedom property value. 
+     * Sets the degFreedom property value. The degFreedom property
      * @param Json|null $value Value to set for the degFreedom property.
     */
     public function setDegFreedom(?Json $value): void {
@@ -132,7 +132,7 @@ class T_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the x property value. 
+     * Sets the x property value. The x property
      * @param Json|null $value Value to set for the x property.
     */
     public function setX(?Json $value): void {

@@ -52,7 +52,7 @@ class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the cost property value. 
+     * Gets the cost property value. The cost property
      * @return Json|null
     */
     public function getCost(): ?Json {
@@ -74,7 +74,7 @@ class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the life property value. 
+     * Gets the life property value. The life property
      * @return Json|null
     */
     public function getLife(): ?Json {
@@ -82,7 +82,7 @@ class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the per property value. 
+     * Gets the per property value. The per property
      * @return Json|null
     */
     public function getPer(): ?Json {
@@ -90,7 +90,7 @@ class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the salvage property value. 
+     * Gets the salvage property value. The salvage property
      * @return Json|null
     */
     public function getSalvage(): ?Json {
@@ -126,7 +126,7 @@ class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the cost property value. 
+     * Sets the cost property value. The cost property
      * @param Json|null $value Value to set for the cost property.
     */
     public function setCost(?Json $value): void {
@@ -134,7 +134,7 @@ class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the life property value. 
+     * Sets the life property value. The life property
      * @param Json|null $value Value to set for the life property.
     */
     public function setLife(?Json $value): void {
@@ -142,7 +142,7 @@ class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the per property value. 
+     * Sets the per property value. The per property
      * @param Json|null $value Value to set for the per property.
     */
     public function setPer(?Json $value): void {
@@ -150,7 +150,7 @@ class SydPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the salvage property value. 
+     * Sets the salvage property value. The salvage property
      * @param Json|null $value Value to set for the salvage property.
     */
     public function setSalvage(?Json $value): void {

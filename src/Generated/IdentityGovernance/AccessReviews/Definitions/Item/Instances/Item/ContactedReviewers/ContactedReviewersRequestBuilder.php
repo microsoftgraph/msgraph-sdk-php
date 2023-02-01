@@ -75,6 +75,7 @@ class ContactedReviewersRequestBuilder
 
     /**
      * Create new navigation property to contactedReviewers for identityGovernance
+     * @param AccessReviewReviewer $body The request body
      * @param ContactedReviewersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,6 +119,7 @@ class ContactedReviewersRequestBuilder
 
     /**
      * Create new navigation property to contactedReviewers for identityGovernance
+     * @param AccessReviewReviewer $body The request body
      * @param ContactedReviewersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

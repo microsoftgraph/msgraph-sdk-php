@@ -62,7 +62,7 @@ class ExportPersonalDataPostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Gets the storageLocation property value. 
+     * Gets the storageLocation property value. The storageLocation property
      * @return string|null
     */
     public function getStorageLocation(): ?string {
@@ -95,7 +95,7 @@ class ExportPersonalDataPostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Sets the storageLocation property value. 
+     * Sets the storageLocation property value. The storageLocation property
      * @param string|null $value Value to set for the storageLocation property.
     */
     public function setStorageLocation(?string $value): void {

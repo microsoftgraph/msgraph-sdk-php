@@ -47,6 +47,7 @@ class Confidence_TRequestBuilder
 
     /**
      * Invoke action confidence_T
+     * @param Confidence_TPostRequestBody $body The request body
      * @param Confidence_TRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Confidence_TRequestBuilder
 
     /**
      * Invoke action confidence_T
+     * @param Confidence_TPostRequestBody $body The request body
      * @param Confidence_TRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

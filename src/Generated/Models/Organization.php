@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Organization extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new Organization and sets the default values.
+     * Instantiates a new organization and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -224,7 +224,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the securityComplianceNotificationMails property value. 
+     * Gets the securityComplianceNotificationMails property value. The securityComplianceNotificationMails property
      * @return array<string>|null
     */
     public function getSecurityComplianceNotificationMails(): ?array {
@@ -232,7 +232,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the securityComplianceNotificationPhones property value. 
+     * Gets the securityComplianceNotificationPhones property value. The securityComplianceNotificationPhones property
      * @return array<string>|null
     */
     public function getSecurityComplianceNotificationPhones(): ?array {
@@ -475,7 +475,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the securityComplianceNotificationMails property value. 
+     * Sets the securityComplianceNotificationMails property value. The securityComplianceNotificationMails property
      * @param array<string>|null $value Value to set for the securityComplianceNotificationMails property.
     */
     public function setSecurityComplianceNotificationMails(?array $value): void {
@@ -483,7 +483,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the securityComplianceNotificationPhones property value. 
+     * Sets the securityComplianceNotificationPhones property value. The securityComplianceNotificationPhones property
      * @param array<string>|null $value Value to set for the securityComplianceNotificationPhones property.
     */
     public function setSecurityComplianceNotificationPhones(?array $value): void {

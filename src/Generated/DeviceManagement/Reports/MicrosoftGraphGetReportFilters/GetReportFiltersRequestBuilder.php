@@ -47,6 +47,7 @@ class GetReportFiltersRequestBuilder
 
     /**
      * Invoke action getReportFilters
+     * @param GetReportFiltersPostRequestBody $body The request body
      * @param GetReportFiltersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class GetReportFiltersRequestBuilder
 
     /**
      * Invoke action getReportFilters
+     * @param GetReportFiltersPostRequestBody $body The request body
      * @param GetReportFiltersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

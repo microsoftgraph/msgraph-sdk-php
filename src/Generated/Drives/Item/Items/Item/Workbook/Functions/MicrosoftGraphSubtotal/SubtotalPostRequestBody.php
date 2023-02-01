@@ -64,7 +64,7 @@ class SubtotalPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the functionNum property value. 
+     * Gets the functionNum property value. The functionNum property
      * @return Json|null
     */
     public function getFunctionNum(): ?Json {
@@ -72,7 +72,7 @@ class SubtotalPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the values property value. 
+     * Gets the values property value. The values property
      * @return Json|null
     */
     public function getValues(): ?Json {
@@ -106,7 +106,7 @@ class SubtotalPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the functionNum property value. 
+     * Sets the functionNum property value. The functionNum property
      * @param Json|null $value Value to set for the functionNum property.
     */
     public function setFunctionNum(?Json $value): void {
@@ -114,7 +114,7 @@ class SubtotalPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the values property value. 
+     * Sets the values property value. The values property
      * @param Json|null $value Value to set for the values property.
     */
     public function setValues(?Json $value): void {

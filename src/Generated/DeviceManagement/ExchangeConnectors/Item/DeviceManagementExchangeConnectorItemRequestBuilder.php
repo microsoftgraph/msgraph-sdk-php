@@ -95,6 +95,7 @@ class DeviceManagementExchangeConnectorItemRequestBuilder
 
     /**
      * Update the navigation property exchangeConnectors in deviceManagement
+     * @param DeviceManagementExchangeConnector $body The request body
      * @param DeviceManagementExchangeConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class DeviceManagementExchangeConnectorItemRequestBuilder
 
     /**
      * Update the navigation property exchangeConnectors in deviceManagement
+     * @param DeviceManagementExchangeConnector $body The request body
      * @param DeviceManagementExchangeConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

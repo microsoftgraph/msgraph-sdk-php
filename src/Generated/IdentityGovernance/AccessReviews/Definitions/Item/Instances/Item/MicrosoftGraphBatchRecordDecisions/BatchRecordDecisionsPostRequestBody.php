@@ -51,7 +51,7 @@ class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Gets the decision property value. 
+     * Gets the decision property value. The decision property
      * @return string|null
     */
     public function getDecision(): ?string {
@@ -73,7 +73,7 @@ class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Gets the justification property value. 
+     * Gets the justification property value. The justification property
      * @return string|null
     */
     public function getJustification(): ?string {
@@ -81,7 +81,7 @@ class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Gets the principalId property value. 
+     * Gets the principalId property value. The principalId property
      * @return string|null
     */
     public function getPrincipalId(): ?string {
@@ -89,7 +89,7 @@ class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Gets the resourceId property value. 
+     * Gets the resourceId property value. The resourceId property
      * @return string|null
     */
     public function getResourceId(): ?string {
@@ -125,7 +125,7 @@ class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Sets the decision property value. 
+     * Sets the decision property value. The decision property
      * @param string|null $value Value to set for the decision property.
     */
     public function setDecision(?string $value): void {
@@ -133,7 +133,7 @@ class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Sets the justification property value. 
+     * Sets the justification property value. The justification property
      * @param string|null $value Value to set for the justification property.
     */
     public function setJustification(?string $value): void {
@@ -141,7 +141,7 @@ class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Sets the principalId property value. 
+     * Sets the principalId property value. The principalId property
      * @param string|null $value Value to set for the principalId property.
     */
     public function setPrincipalId(?string $value): void {
@@ -149,7 +149,7 @@ class BatchRecordDecisionsPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Sets the resourceId property value. 
+     * Sets the resourceId property value. The resourceId property
      * @param string|null $value Value to set for the resourceId property.
     */
     public function setResourceId(?string $value): void {

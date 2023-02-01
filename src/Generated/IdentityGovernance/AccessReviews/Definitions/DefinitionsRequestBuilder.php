@@ -85,6 +85,7 @@ class DefinitionsRequestBuilder
 
     /**
      * Create a new accessReviewScheduleDefinition object.
+     * @param AccessReviewScheduleDefinition $body The request body
      * @param DefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/accessreviewset-post-definitions?view=graph-rest-1.0 Find more info here
@@ -129,6 +130,7 @@ class DefinitionsRequestBuilder
 
     /**
      * Create a new accessReviewScheduleDefinition object.
+     * @param AccessReviewScheduleDefinition $body The request body
      * @param DefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

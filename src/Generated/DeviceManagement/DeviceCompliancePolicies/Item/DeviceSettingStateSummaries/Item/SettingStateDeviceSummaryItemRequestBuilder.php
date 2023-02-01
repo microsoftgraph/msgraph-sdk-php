@@ -87,6 +87,7 @@ class SettingStateDeviceSummaryItemRequestBuilder
 
     /**
      * Update the navigation property deviceSettingStateSummaries in deviceManagement
+     * @param SettingStateDeviceSummary $body The request body
      * @param SettingStateDeviceSummaryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class SettingStateDeviceSummaryItemRequestBuilder
 
     /**
      * Update the navigation property deviceSettingStateSummaries in deviceManagement
+     * @param SettingStateDeviceSummary $body The request body
      * @param SettingStateDeviceSummaryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

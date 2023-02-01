@@ -100,6 +100,7 @@ class TablesRequestBuilder
 
     /**
      * Create new navigation property to tables for drives
+     * @param WorkbookTable $body The request body
      * @param TablesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -143,6 +144,7 @@ class TablesRequestBuilder
 
     /**
      * Create new navigation property to tables for drives
+     * @param WorkbookTable $body The request body
      * @param TablesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

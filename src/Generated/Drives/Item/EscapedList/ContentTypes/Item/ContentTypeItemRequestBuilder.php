@@ -212,6 +212,7 @@ class ContentTypeItemRequestBuilder
 
     /**
      * Update the navigation property contentTypes in drives
+     * @param ContentType $body The request body
      * @param ContentTypeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -276,6 +277,7 @@ class ContentTypeItemRequestBuilder
 
     /**
      * Update the navigation property contentTypes in drives
+     * @param ContentType $body The request body
      * @param ContentTypeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

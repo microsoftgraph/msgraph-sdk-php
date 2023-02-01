@@ -52,7 +52,7 @@ class DatevaluePostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the dateText property value. 
+     * Gets the dateText property value. The dateText property
      * @return Json|null
     */
     public function getDateText(): ?Json {
@@ -96,7 +96,7 @@ class DatevaluePostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the dateText property value. 
+     * Sets the dateText property value. The dateText property
      * @param Json|null $value Value to set for the dateText property.
     */
     public function setDateText(?Json $value): void {

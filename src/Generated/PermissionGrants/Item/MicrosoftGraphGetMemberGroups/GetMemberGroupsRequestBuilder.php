@@ -46,6 +46,7 @@ class GetMemberGroupsRequestBuilder
 
     /**
      * Return all the group IDs for the groups that the specified user, group, service principal, organizational contact, device, or directory object is a member of. This function is transitive.
+     * @param GetMemberGroupsPostRequestBody $body The request body
      * @param GetMemberGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/directoryobject-getmembergroups?view=graph-rest-1.0 Find more info here
@@ -65,6 +66,7 @@ class GetMemberGroupsRequestBuilder
 
     /**
      * Return all the group IDs for the groups that the specified user, group, service principal, organizational contact, device, or directory object is a member of. This function is transitive.
+     * @param GetMemberGroupsPostRequestBody $body The request body
      * @param GetMemberGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -47,6 +47,7 @@ class Percentile_ExcRequestBuilder
 
     /**
      * Invoke action percentile_Exc
+     * @param Percentile_ExcPostRequestBody $body The request body
      * @param Percentile_ExcRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Percentile_ExcRequestBuilder
 
     /**
      * Invoke action percentile_Exc
+     * @param Percentile_ExcPostRequestBody $body The request body
      * @param Percentile_ExcRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

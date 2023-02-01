@@ -47,6 +47,7 @@ class RunHuntingQueryRequestBuilder
 
     /**
      * Invoke action runHuntingQuery
+     * @param RunHuntingQueryPostRequestBody $body The request body
      * @param RunHuntingQueryRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class RunHuntingQueryRequestBuilder
 
     /**
      * Invoke action runHuntingQuery
+     * @param RunHuntingQueryPostRequestBody $body The request body
      * @param RunHuntingQueryRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

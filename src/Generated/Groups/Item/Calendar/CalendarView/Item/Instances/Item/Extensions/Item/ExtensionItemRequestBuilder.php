@@ -87,6 +87,7 @@ class ExtensionItemRequestBuilder
 
     /**
      * Update the navigation property extensions in groups
+     * @param Extension $body The request body
      * @param ExtensionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class ExtensionItemRequestBuilder
 
     /**
      * Update the navigation property extensions in groups
+     * @param Extension $body The request body
      * @param ExtensionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

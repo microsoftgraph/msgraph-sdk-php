@@ -87,6 +87,7 @@ class TimeOffItemRequestBuilder
 
     /**
      * Update the navigation property timesOff in users
+     * @param TimeOff $body The request body
      * @param TimeOffItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class TimeOffItemRequestBuilder
 
     /**
      * Update the navigation property timesOff in users
+     * @param TimeOff $body The request body
      * @param TimeOffItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

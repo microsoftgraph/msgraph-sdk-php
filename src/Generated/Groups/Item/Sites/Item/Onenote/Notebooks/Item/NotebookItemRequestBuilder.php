@@ -113,6 +113,7 @@ class NotebookItemRequestBuilder
 
     /**
      * Update the navigation property notebooks in groups
+     * @param Notebook $body The request body
      * @param NotebookItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -199,6 +200,7 @@ class NotebookItemRequestBuilder
 
     /**
      * Update the navigation property notebooks in groups
+     * @param Notebook $body The request body
      * @param NotebookItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -47,6 +47,7 @@ class Bin2OctRequestBuilder
 
     /**
      * Invoke action bin2Oct
+     * @param Bin2OctPostRequestBody $body The request body
      * @param Bin2OctRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Bin2OctRequestBuilder
 
     /**
      * Invoke action bin2Oct
+     * @param Bin2OctPostRequestBody $body The request body
      * @param Bin2OctRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

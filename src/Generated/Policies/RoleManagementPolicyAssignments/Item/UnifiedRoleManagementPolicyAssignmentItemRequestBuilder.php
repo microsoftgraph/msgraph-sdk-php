@@ -95,6 +95,7 @@ class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property roleManagementPolicyAssignments in policies
+     * @param UnifiedRoleManagementPolicyAssignment $body The request body
      * @param UnifiedRoleManagementPolicyAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class UnifiedRoleManagementPolicyAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property roleManagementPolicyAssignments in policies
+     * @param UnifiedRoleManagementPolicyAssignment $body The request body
      * @param UnifiedRoleManagementPolicyAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

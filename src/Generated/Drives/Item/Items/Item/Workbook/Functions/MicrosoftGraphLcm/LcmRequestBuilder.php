@@ -47,6 +47,7 @@ class LcmRequestBuilder
 
     /**
      * Invoke action lcm
+     * @param LcmPostRequestBody $body The request body
      * @param LcmRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class LcmRequestBuilder
 
     /**
      * Invoke action lcm
+     * @param LcmPostRequestBody $body The request body
      * @param LcmRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

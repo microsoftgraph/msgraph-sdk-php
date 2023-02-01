@@ -192,6 +192,7 @@ class CalendarItemRequestBuilder
 
     /**
      * Update the navigation property calendars in me
+     * @param Calendar $body The request body
      * @param CalendarItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -267,6 +268,7 @@ class CalendarItemRequestBuilder
 
     /**
      * Update the navigation property calendars in me
+     * @param Calendar $body The request body
      * @param CalendarItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

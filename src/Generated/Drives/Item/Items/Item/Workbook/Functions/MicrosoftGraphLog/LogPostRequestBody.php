@@ -52,7 +52,7 @@ class LogPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the base property value. 
+     * Gets the base property value. The base property
      * @return Json|null
     */
     public function getBase(): ?Json {
@@ -72,7 +72,7 @@ class LogPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the number property value. 
+     * Gets the number property value. The number property
      * @return Json|null
     */
     public function getNumber(): ?Json {
@@ -106,7 +106,7 @@ class LogPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the base property value. 
+     * Sets the base property value. The base property
      * @param Json|null $value Value to set for the base property.
     */
     public function setBase(?Json $value): void {
@@ -114,7 +114,7 @@ class LogPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the number property value. 
+     * Sets the number property value. The number property
      * @param Json|null $value Value to set for the number property.
     */
     public function setNumber(?Json $value): void {

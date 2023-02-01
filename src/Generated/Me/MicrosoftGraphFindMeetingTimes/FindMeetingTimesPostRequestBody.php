@@ -47,7 +47,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the attendees property value. 
+     * Gets the attendees property value. The attendees property
      * @return array<AttendeeBase>|null
     */
     public function getAttendees(): ?array {
@@ -81,7 +81,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the isOrganizerOptional property value. 
+     * Gets the isOrganizerOptional property value. The isOrganizerOptional property
      * @return bool|null
     */
     public function getIsOrganizerOptional(): ?bool {
@@ -89,7 +89,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the locationConstraint property value. 
+     * Gets the locationConstraint property value. The locationConstraint property
      * @return LocationConstraint|null
     */
     public function getLocationConstraint(): ?LocationConstraint {
@@ -97,7 +97,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the maxCandidates property value. 
+     * Gets the maxCandidates property value. The maxCandidates property
      * @return int|null
     */
     public function getMaxCandidates(): ?int {
@@ -105,7 +105,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the meetingDuration property value. 
+     * Gets the meetingDuration property value. The meetingDuration property
      * @return DateInterval|null
     */
     public function getMeetingDuration(): ?DateInterval {
@@ -113,7 +113,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the minimumAttendeePercentage property value. 
+     * Gets the minimumAttendeePercentage property value. The minimumAttendeePercentage property
      * @return float|null
     */
     public function getMinimumAttendeePercentage(): ?float {
@@ -121,7 +121,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the returnSuggestionReasons property value. 
+     * Gets the returnSuggestionReasons property value. The returnSuggestionReasons property
      * @return bool|null
     */
     public function getReturnSuggestionReasons(): ?bool {
@@ -129,7 +129,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the timeConstraint property value. 
+     * Gets the timeConstraint property value. The timeConstraint property
      * @return TimeConstraint|null
     */
     public function getTimeConstraint(): ?TimeConstraint {
@@ -161,7 +161,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the attendees property value. 
+     * Sets the attendees property value. The attendees property
      * @param array<AttendeeBase>|null $value Value to set for the attendees property.
     */
     public function setAttendees(?array $value): void {
@@ -177,7 +177,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the isOrganizerOptional property value. 
+     * Sets the isOrganizerOptional property value. The isOrganizerOptional property
      * @param bool|null $value Value to set for the isOrganizerOptional property.
     */
     public function setIsOrganizerOptional(?bool $value): void {
@@ -185,7 +185,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the locationConstraint property value. 
+     * Sets the locationConstraint property value. The locationConstraint property
      * @param LocationConstraint|null $value Value to set for the locationConstraint property.
     */
     public function setLocationConstraint(?LocationConstraint $value): void {
@@ -193,7 +193,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the maxCandidates property value. 
+     * Sets the maxCandidates property value. The maxCandidates property
      * @param int|null $value Value to set for the maxCandidates property.
     */
     public function setMaxCandidates(?int $value): void {
@@ -201,7 +201,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the meetingDuration property value. 
+     * Sets the meetingDuration property value. The meetingDuration property
      * @param DateInterval|null $value Value to set for the meetingDuration property.
     */
     public function setMeetingDuration(?DateInterval $value): void {
@@ -209,7 +209,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the minimumAttendeePercentage property value. 
+     * Sets the minimumAttendeePercentage property value. The minimumAttendeePercentage property
      * @param float|null $value Value to set for the minimumAttendeePercentage property.
     */
     public function setMinimumAttendeePercentage(?float $value): void {
@@ -217,7 +217,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the returnSuggestionReasons property value. 
+     * Sets the returnSuggestionReasons property value. The returnSuggestionReasons property
      * @param bool|null $value Value to set for the returnSuggestionReasons property.
     */
     public function setReturnSuggestionReasons(?bool $value): void {
@@ -225,7 +225,7 @@ class FindMeetingTimesPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the timeConstraint property value. 
+     * Sets the timeConstraint property value. The timeConstraint property
      * @param TimeConstraint|null $value Value to set for the timeConstraint property.
     */
     public function setTimeConstraint(?TimeConstraint $value): void {

@@ -135,6 +135,7 @@ class OnenotePageItemRequestBuilder
 
     /**
      * Update the navigation property pages in me
+     * @param OnenotePage $body The request body
      * @param OnenotePageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -199,6 +200,7 @@ class OnenotePageItemRequestBuilder
 
     /**
      * Update the navigation property pages in me
+     * @param OnenotePage $body The request body
      * @param OnenotePageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

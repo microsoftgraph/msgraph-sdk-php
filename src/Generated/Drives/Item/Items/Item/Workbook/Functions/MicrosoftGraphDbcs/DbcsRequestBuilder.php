@@ -47,6 +47,7 @@ class DbcsRequestBuilder
 
     /**
      * Invoke action dbcs
+     * @param DbcsPostRequestBody $body The request body
      * @param DbcsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class DbcsRequestBuilder
 
     /**
      * Invoke action dbcs
+     * @param DbcsPostRequestBody $body The request body
      * @param DbcsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

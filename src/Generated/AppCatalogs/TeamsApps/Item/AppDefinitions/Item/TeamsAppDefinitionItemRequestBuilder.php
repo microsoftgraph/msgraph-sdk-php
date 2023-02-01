@@ -95,6 +95,7 @@ class TeamsAppDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property appDefinitions in appCatalogs
+     * @param TeamsAppDefinition $body The request body
      * @param TeamsAppDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class TeamsAppDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property appDefinitions in appCatalogs
+     * @param TeamsAppDefinition $body The request body
      * @param TeamsAppDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

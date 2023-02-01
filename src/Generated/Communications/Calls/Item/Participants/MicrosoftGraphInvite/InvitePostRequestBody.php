@@ -52,7 +52,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the clientContext property value. 
+     * Gets the clientContext property value. The clientContext property
      * @return string|null
     */
     public function getClientContext(): ?string {
@@ -72,7 +72,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the participants property value. 
+     * Gets the participants property value. The participants property
      * @return array<InvitationParticipantInfo>|null
     */
     public function getParticipants(): ?array {
@@ -106,7 +106,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the clientContext property value. 
+     * Sets the clientContext property value. The clientContext property
      * @param string|null $value Value to set for the clientContext property.
     */
     public function setClientContext(?string $value): void {
@@ -114,7 +114,7 @@ class InvitePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the participants property value. 
+     * Sets the participants property value. The participants property
      * @param array<InvitationParticipantInfo>|null $value Value to set for the participants property.
     */
     public function setParticipants(?array $value): void {

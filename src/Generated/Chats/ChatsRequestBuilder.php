@@ -83,6 +83,7 @@ class ChatsRequestBuilder
 
     /**
      * Create a new chat object.
+     * @param Chat $body The request body
      * @param ChatsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/chat-post?view=graph-rest-1.0 Find more info here
@@ -127,6 +128,7 @@ class ChatsRequestBuilder
 
     /**
      * Create a new chat object.
+     * @param Chat $body The request body
      * @param ChatsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

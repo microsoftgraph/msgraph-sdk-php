@@ -37,7 +37,7 @@ class MediaCollectionResponse extends BaseCollectionPaginationCountResponse impl
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<Media>|null
     */
     public function getValue(): ?array {
@@ -54,7 +54,7 @@ class MediaCollectionResponse extends BaseCollectionPaginationCountResponse impl
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param array<Media>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

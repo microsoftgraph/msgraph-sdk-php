@@ -47,6 +47,7 @@ class DcountARequestBuilder
 
     /**
      * Invoke action dcountA
+     * @param DcountAPostRequestBody $body The request body
      * @param DcountARequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class DcountARequestBuilder
 
     /**
      * Invoke action dcountA
+     * @param DcountAPostRequestBody $body The request body
      * @param DcountARequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

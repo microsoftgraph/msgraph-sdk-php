@@ -95,6 +95,7 @@ class UnifiedGroupSourceItemRequestBuilder
 
     /**
      * Update the navigation property unifiedGroupSources in security
+     * @param UnifiedGroupSource $body The request body
      * @param UnifiedGroupSourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class UnifiedGroupSourceItemRequestBuilder
 
     /**
      * Update the navigation property unifiedGroupSources in security
+     * @param UnifiedGroupSource $body The request body
      * @param UnifiedGroupSourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

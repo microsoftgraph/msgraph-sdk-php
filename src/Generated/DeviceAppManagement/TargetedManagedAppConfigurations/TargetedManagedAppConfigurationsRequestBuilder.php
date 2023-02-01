@@ -74,6 +74,7 @@ class TargetedManagedAppConfigurationsRequestBuilder
 
     /**
      * Create new navigation property to targetedManagedAppConfigurations for deviceAppManagement
+     * @param TargetedManagedAppConfiguration $body The request body
      * @param TargetedManagedAppConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class TargetedManagedAppConfigurationsRequestBuilder
 
     /**
      * Create new navigation property to targetedManagedAppConfigurations for deviceAppManagement
+     * @param TargetedManagedAppConfiguration $body The request body
      * @param TargetedManagedAppConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -75,6 +75,7 @@ class RulesRequestBuilder
 
     /**
      * Create new navigation property to rules for policies
+     * @param UnifiedRoleManagementPolicyRule $body The request body
      * @param RulesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,6 +119,7 @@ class RulesRequestBuilder
 
     /**
      * Create new navigation property to rules for policies
+     * @param UnifiedRoleManagementPolicyRule $body The request body
      * @param RulesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -65,7 +65,7 @@ class BasePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the minLength property value. 
+     * Gets the minLength property value. The minLength property
      * @return Json|null
     */
     public function getMinLength(): ?Json {
@@ -73,7 +73,7 @@ class BasePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the number property value. 
+     * Gets the number property value. The number property
      * @return Json|null
     */
     public function getNumber(): ?Json {
@@ -81,7 +81,7 @@ class BasePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the radix property value. 
+     * Gets the radix property value. The radix property
      * @return Json|null
     */
     public function getRadix(): ?Json {
@@ -116,7 +116,7 @@ class BasePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the minLength property value. 
+     * Sets the minLength property value. The minLength property
      * @param Json|null $value Value to set for the minLength property.
     */
     public function setMinLength(?Json $value): void {
@@ -124,7 +124,7 @@ class BasePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the number property value. 
+     * Sets the number property value. The number property
      * @param Json|null $value Value to set for the number property.
     */
     public function setNumber(?Json $value): void {
@@ -132,7 +132,7 @@ class BasePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the radix property value. 
+     * Sets the radix property value. The radix property
      * @param Json|null $value Value to set for the radix property.
     */
     public function setRadix(?Json $value): void {

@@ -36,7 +36,7 @@ class OutlookCategoryCollectionResponse extends BaseCollectionPaginationCountRes
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<OutlookCategory>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class OutlookCategoryCollectionResponse extends BaseCollectionPaginationCountRes
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param array<OutlookCategory>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

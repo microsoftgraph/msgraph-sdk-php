@@ -72,7 +72,7 @@ class TimeConstraint implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -80,7 +80,7 @@ class TimeConstraint implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the timeSlots property value. 
+     * Gets the timeSlots property value. The timeSlots property
      * @return array<TimeSlot>|null
     */
     public function getTimeSlots(): ?array {
@@ -123,7 +123,7 @@ class TimeConstraint implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -131,7 +131,7 @@ class TimeConstraint implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the timeSlots property value. 
+     * Sets the timeSlots property value. The timeSlots property
      * @param array<TimeSlot>|null $value Value to set for the timeSlots property.
     */
     public function setTimeSlots(?array $value): void {

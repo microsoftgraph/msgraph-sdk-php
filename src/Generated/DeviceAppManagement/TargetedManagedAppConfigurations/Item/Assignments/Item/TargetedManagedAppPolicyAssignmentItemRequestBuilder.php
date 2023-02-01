@@ -87,6 +87,7 @@ class TargetedManagedAppPolicyAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property assignments in deviceAppManagement
+     * @param TargetedManagedAppPolicyAssignment $body The request body
      * @param TargetedManagedAppPolicyAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class TargetedManagedAppPolicyAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property assignments in deviceAppManagement
+     * @param TargetedManagedAppPolicyAssignment $body The request body
      * @param TargetedManagedAppPolicyAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

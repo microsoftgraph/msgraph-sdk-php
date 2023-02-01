@@ -38,7 +38,7 @@ class GetEffectivePermissionsWithScopeResponse extends BaseCollectionPaginationC
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<RolePermission>|null
     */
     public function getValue(): ?array {
@@ -55,7 +55,7 @@ class GetEffectivePermissionsWithScopeResponse extends BaseCollectionPaginationC
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param array<RolePermission>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

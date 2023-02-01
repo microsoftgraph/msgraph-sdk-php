@@ -83,6 +83,7 @@ class TasksRequestBuilder
 
     /**
      * Create a new task object in a specified todoTaskList.
+     * @param TodoTask $body The request body
      * @param TasksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/todotasklist-post-tasks?view=graph-rest-1.0 Find more info here
@@ -127,6 +128,7 @@ class TasksRequestBuilder
 
     /**
      * Create a new task object in a specified todoTaskList.
+     * @param TodoTask $body The request body
      * @param TasksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

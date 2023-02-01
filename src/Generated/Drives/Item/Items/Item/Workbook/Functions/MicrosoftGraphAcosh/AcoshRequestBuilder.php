@@ -47,6 +47,7 @@ class AcoshRequestBuilder
 
     /**
      * Invoke action acosh
+     * @param AcoshPostRequestBody $body The request body
      * @param AcoshRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class AcoshRequestBuilder
 
     /**
      * Invoke action acosh
+     * @param AcoshPostRequestBody $body The request body
      * @param AcoshRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -46,6 +46,7 @@ class ChangeScreenSharingRoleRequestBuilder
 
     /**
      * Allow applications to share screen content with the participants of a group call.
+     * @param ChangeScreenSharingRolePostRequestBody $body The request body
      * @param ChangeScreenSharingRoleRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/call-changescreensharingrole?view=graph-rest-1.0 Find more info here
@@ -65,6 +66,7 @@ class ChangeScreenSharingRoleRequestBuilder
 
     /**
      * Allow applications to share screen content with the participants of a group call.
+     * @param ChangeScreenSharingRolePostRequestBody $body The request body
      * @param ChangeScreenSharingRoleRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

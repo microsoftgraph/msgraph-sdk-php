@@ -96,6 +96,7 @@ class PlaceItemRequestBuilder
 
     /**
      * Update the properties of place object, which can be a room or roomList. You can identify the **room** or **roomList** by specifying the **id** or **emailAddress** property.
+     * @param Place $body The request body
      * @param PlaceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/place-update?view=graph-rest-1.0 Find more info here
@@ -161,6 +162,7 @@ class PlaceItemRequestBuilder
 
     /**
      * Update the properties of place object, which can be a room or roomList. You can identify the **room** or **roomList** by specifying the **id** or **emailAddress** property.
+     * @param Place $body The request body
      * @param PlaceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

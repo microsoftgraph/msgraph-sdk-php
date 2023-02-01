@@ -66,6 +66,7 @@ class AgreementAcceptancesRequestBuilder
 
     /**
      * Add new entity to agreementAcceptances
+     * @param AgreementAcceptance $body The request body
      * @param AgreementAcceptancesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -109,6 +110,7 @@ class AgreementAcceptancesRequestBuilder
 
     /**
      * Add new entity to agreementAcceptances
+     * @param AgreementAcceptance $body The request body
      * @param AgreementAcceptancesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

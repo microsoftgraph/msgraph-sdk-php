@@ -51,7 +51,7 @@ class CancelPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the comment property value. 
+     * Gets the comment property value. The Comment property
      * @return string|null
     */
     public function getComment(): ?string {
@@ -95,7 +95,7 @@ class CancelPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the comment property value. 
+     * Sets the comment property value. The Comment property
      * @param string|null $value Value to set for the Comment property.
     */
     public function setComment(?string $value): void {

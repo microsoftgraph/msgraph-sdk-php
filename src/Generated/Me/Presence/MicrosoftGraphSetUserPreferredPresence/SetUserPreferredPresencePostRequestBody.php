@@ -36,7 +36,7 @@ class SetUserPreferredPresencePostRequestBody implements AdditionalDataHolder, B
     }
 
     /**
-     * Gets the activity property value. 
+     * Gets the activity property value. The activity property
      * @return string|null
     */
     public function getActivity(): ?string {
@@ -52,7 +52,7 @@ class SetUserPreferredPresencePostRequestBody implements AdditionalDataHolder, B
     }
 
     /**
-     * Gets the availability property value. 
+     * Gets the availability property value. The availability property
      * @return string|null
     */
     public function getAvailability(): ?string {
@@ -68,7 +68,7 @@ class SetUserPreferredPresencePostRequestBody implements AdditionalDataHolder, B
     }
 
     /**
-     * Gets the expirationDuration property value. 
+     * Gets the expirationDuration property value. The expirationDuration property
      * @return DateInterval|null
     */
     public function getExpirationDuration(): ?DateInterval {
@@ -100,7 +100,7 @@ class SetUserPreferredPresencePostRequestBody implements AdditionalDataHolder, B
     }
 
     /**
-     * Sets the activity property value. 
+     * Sets the activity property value. The activity property
      * @param string|null $value Value to set for the activity property.
     */
     public function setActivity(?string $value): void {
@@ -116,7 +116,7 @@ class SetUserPreferredPresencePostRequestBody implements AdditionalDataHolder, B
     }
 
     /**
-     * Sets the availability property value. 
+     * Sets the availability property value. The availability property
      * @param string|null $value Value to set for the availability property.
     */
     public function setAvailability(?string $value): void {
@@ -132,7 +132,7 @@ class SetUserPreferredPresencePostRequestBody implements AdditionalDataHolder, B
     }
 
     /**
-     * Sets the expirationDuration property value. 
+     * Sets the expirationDuration property value. The expirationDuration property
      * @param DateInterval|null $value Value to set for the expirationDuration property.
     */
     public function setExpirationDuration(?DateInterval $value): void {

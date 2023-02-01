@@ -62,7 +62,7 @@ class ConfirmCompromisedPostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Gets the userIds property value. 
+     * Gets the userIds property value. The userIds property
      * @return array<string>|null
     */
     public function getUserIds(): ?array {
@@ -95,7 +95,7 @@ class ConfirmCompromisedPostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Sets the userIds property value. 
+     * Sets the userIds property value. The userIds property
      * @param array<string>|null $value Value to set for the userIds property.
     */
     public function setUserIds(?array $value): void {

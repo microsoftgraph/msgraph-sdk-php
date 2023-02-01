@@ -123,6 +123,7 @@ class MessagesRequestBuilder
 
     /**
      * Create new navigation property to messages for admin
+     * @param ServiceUpdateMessage $body The request body
      * @param MessagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -166,6 +167,7 @@ class MessagesRequestBuilder
 
     /**
      * Create new navigation property to messages for admin
+     * @param ServiceUpdateMessage $body The request body
      * @param MessagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

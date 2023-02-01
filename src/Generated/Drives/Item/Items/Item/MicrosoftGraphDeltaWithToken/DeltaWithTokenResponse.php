@@ -38,7 +38,7 @@ class DeltaWithTokenResponse extends BaseDeltaFunctionResponse implements Parsab
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<DriveItem>|null
     */
     public function getValue(): ?array {
@@ -55,7 +55,7 @@ class DeltaWithTokenResponse extends BaseDeltaFunctionResponse implements Parsab
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param array<DriveItem>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

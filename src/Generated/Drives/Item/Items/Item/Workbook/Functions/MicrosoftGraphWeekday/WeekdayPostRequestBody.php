@@ -64,7 +64,7 @@ class WeekdayPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the returnType property value. 
+     * Gets the returnType property value. The returnType property
      * @return Json|null
     */
     public function getReturnType(): ?Json {
@@ -72,7 +72,7 @@ class WeekdayPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the serialNumber property value. 
+     * Gets the serialNumber property value. The serialNumber property
      * @return Json|null
     */
     public function getSerialNumber(): ?Json {
@@ -106,7 +106,7 @@ class WeekdayPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the returnType property value. 
+     * Sets the returnType property value. The returnType property
      * @param Json|null $value Value to set for the returnType property.
     */
     public function setReturnType(?Json $value): void {
@@ -114,7 +114,7 @@ class WeekdayPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the serialNumber property value. 
+     * Sets the serialNumber property value. The serialNumber property
      * @param Json|null $value Value to set for the serialNumber property.
     */
     public function setSerialNumber(?Json $value): void {

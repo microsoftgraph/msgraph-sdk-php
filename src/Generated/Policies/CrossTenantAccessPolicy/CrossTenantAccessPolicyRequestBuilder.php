@@ -112,6 +112,7 @@ class CrossTenantAccessPolicyRequestBuilder
 
     /**
      * Update the properties of a cross-tenant access policy.
+     * @param CrossTenantAccessPolicy $body The request body
      * @param CrossTenantAccessPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/crosstenantaccesspolicy-update?view=graph-rest-1.0 Find more info here
@@ -177,6 +178,7 @@ class CrossTenantAccessPolicyRequestBuilder
 
     /**
      * Update the properties of a cross-tenant access policy.
+     * @param CrossTenantAccessPolicy $body The request body
      * @param CrossTenantAccessPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

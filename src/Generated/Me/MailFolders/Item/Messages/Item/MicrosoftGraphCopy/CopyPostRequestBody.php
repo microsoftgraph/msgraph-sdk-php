@@ -51,7 +51,7 @@ class CopyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the destinationId property value. 
+     * Gets the destinationId property value. The DestinationId property
      * @return string|null
     */
     public function getDestinationId(): ?string {
@@ -95,7 +95,7 @@ class CopyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the destinationId property value. 
+     * Sets the destinationId property value. The DestinationId property
      * @param string|null $value Value to set for the DestinationId property.
     */
     public function setDestinationId(?string $value): void {

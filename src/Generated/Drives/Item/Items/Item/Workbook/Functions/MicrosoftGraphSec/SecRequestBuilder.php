@@ -47,6 +47,7 @@ class SecRequestBuilder
 
     /**
      * Invoke action sec
+     * @param SecPostRequestBody $body The request body
      * @param SecRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class SecRequestBuilder
 
     /**
      * Invoke action sec
+     * @param SecPostRequestBody $body The request body
      * @param SecRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

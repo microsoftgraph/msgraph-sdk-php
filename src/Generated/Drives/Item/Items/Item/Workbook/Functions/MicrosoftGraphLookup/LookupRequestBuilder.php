@@ -47,6 +47,7 @@ class LookupRequestBuilder
 
     /**
      * Invoke action lookup
+     * @param LookupPostRequestBody $body The request body
      * @param LookupRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class LookupRequestBuilder
 
     /**
      * Invoke action lookup
+     * @param LookupPostRequestBody $body The request body
      * @param LookupRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

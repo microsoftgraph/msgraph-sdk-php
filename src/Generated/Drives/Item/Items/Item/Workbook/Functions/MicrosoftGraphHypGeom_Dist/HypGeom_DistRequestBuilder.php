@@ -47,6 +47,7 @@ class HypGeom_DistRequestBuilder
 
     /**
      * Invoke action hypGeom_Dist
+     * @param HypGeom_DistPostRequestBody $body The request body
      * @param HypGeom_DistRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class HypGeom_DistRequestBuilder
 
     /**
      * Invoke action hypGeom_Dist
+     * @param HypGeom_DistPostRequestBody $body The request body
      * @param HypGeom_DistRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

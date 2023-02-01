@@ -51,7 +51,7 @@ class ForceDeletePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the disableUserAccounts property value. 
+     * Gets the disableUserAccounts property value. The disableUserAccounts property
      * @return bool|null
     */
     public function getDisableUserAccounts(): ?bool {
@@ -95,7 +95,7 @@ class ForceDeletePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the disableUserAccounts property value. 
+     * Sets the disableUserAccounts property value. The disableUserAccounts property
      * @param bool|null $value Value to set for the disableUserAccounts property.
     */
     public function setDisableUserAccounts(?bool $value): void {

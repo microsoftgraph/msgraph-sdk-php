@@ -63,7 +63,7 @@ class SetOrderPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the newAssignmentOrder property value. 
+     * Gets the newAssignmentOrder property value. The newAssignmentOrder property
      * @return AssignmentOrder|null
     */
     public function getNewAssignmentOrder(): ?AssignmentOrder {
@@ -96,7 +96,7 @@ class SetOrderPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the newAssignmentOrder property value. 
+     * Sets the newAssignmentOrder property value. The newAssignmentOrder property
      * @param AssignmentOrder|null $value Value to set for the newAssignmentOrder property.
     */
     public function setNewAssignmentOrder(?AssignmentOrder $value): void {

@@ -73,6 +73,7 @@ class PhotoRequestBuilder
 
     /**
      * Update the navigation property photo in groups
+     * @param ProfilePhoto $body The request body
      * @param PhotoRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -116,6 +117,7 @@ class PhotoRequestBuilder
 
     /**
      * Update the navigation property photo in groups
+     * @param ProfilePhoto $body The request body
      * @param PhotoRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

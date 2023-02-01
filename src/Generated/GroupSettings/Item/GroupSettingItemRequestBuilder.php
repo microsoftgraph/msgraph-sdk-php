@@ -89,6 +89,7 @@ class GroupSettingItemRequestBuilder
 
     /**
      * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting.
+     * @param GroupSetting $body The request body
      * @param GroupSettingItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/groupsetting-update?view=graph-rest-1.0 Find more info here
@@ -154,6 +155,7 @@ class GroupSettingItemRequestBuilder
 
     /**
      * Update the properties of a groupSetting object for tenant-wide group settings or a specific group setting.
+     * @param GroupSetting $body The request body
      * @param GroupSettingItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

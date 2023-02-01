@@ -47,6 +47,7 @@ class SmallRequestBuilder
 
     /**
      * Invoke action small
+     * @param SmallPostRequestBody $body The request body
      * @param SmallRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class SmallRequestBuilder
 
     /**
      * Invoke action small
+     * @param SmallPostRequestBody $body The request body
      * @param SmallRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

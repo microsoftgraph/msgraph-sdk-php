@@ -63,7 +63,7 @@ class ChangeScreenSharingRolePostRequestBody implements AdditionalDataHolder, Ba
     }
 
     /**
-     * Gets the role property value. 
+     * Gets the role property value. The role property
      * @return ScreenSharingRole|null
     */
     public function getRole(): ?ScreenSharingRole {
@@ -96,7 +96,7 @@ class ChangeScreenSharingRolePostRequestBody implements AdditionalDataHolder, Ba
     }
 
     /**
-     * Sets the role property value. 
+     * Sets the role property value. The role property
      * @param ScreenSharingRole|null $value Value to set for the role property.
     */
     public function setRole(?ScreenSharingRole $value): void {

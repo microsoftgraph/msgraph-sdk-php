@@ -51,7 +51,7 @@ class InstantiatePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the displayName property value. 
+     * Gets the displayName property value. The displayName property
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -95,7 +95,7 @@ class InstantiatePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the displayName property value. 
+     * Sets the displayName property value. The displayName property
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {

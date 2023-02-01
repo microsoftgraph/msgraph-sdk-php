@@ -125,6 +125,7 @@ class DirectoryRequestBuilder
 
     /**
      * Update directory
+     * @param Directory $body The request body
      * @param DirectoryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -168,6 +169,7 @@ class DirectoryRequestBuilder
 
     /**
      * Update directory
+     * @param Directory $body The request body
      * @param DirectoryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

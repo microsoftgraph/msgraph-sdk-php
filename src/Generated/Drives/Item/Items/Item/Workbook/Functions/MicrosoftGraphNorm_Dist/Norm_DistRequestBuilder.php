@@ -47,6 +47,7 @@ class Norm_DistRequestBuilder
 
     /**
      * Invoke action norm_Dist
+     * @param Norm_DistPostRequestBody $body The request body
      * @param Norm_DistRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Norm_DistRequestBuilder
 
     /**
      * Invoke action norm_Dist
+     * @param Norm_DistPostRequestBody $body The request body
      * @param Norm_DistRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -41,7 +41,7 @@ class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable
     }
 
     /**
-     * Gets the licenseType property value. 
+     * Gets the licenseType property value. The licenseType property
      * @return MicrosoftStoreForBusinessLicenseType|null
     */
     public function getLicenseType(): ?MicrosoftStoreForBusinessLicenseType {
@@ -94,7 +94,7 @@ class MicrosoftStoreForBusinessApp extends MobileApp implements Parsable
     }
 
     /**
-     * Sets the licenseType property value. 
+     * Sets the licenseType property value. The licenseType property
      * @param MicrosoftStoreForBusinessLicenseType|null $value Value to set for the licenseType property.
     */
     public function setLicenseType(?MicrosoftStoreForBusinessLicenseType $value): void {

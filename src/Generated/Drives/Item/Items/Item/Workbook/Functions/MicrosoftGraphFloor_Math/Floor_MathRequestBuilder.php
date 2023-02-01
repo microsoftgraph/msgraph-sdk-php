@@ -47,6 +47,7 @@ class Floor_MathRequestBuilder
 
     /**
      * Invoke action floor_Math
+     * @param Floor_MathPostRequestBody $body The request body
      * @param Floor_MathRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Floor_MathRequestBuilder
 
     /**
      * Invoke action floor_Math
+     * @param Floor_MathPostRequestBody $body The request body
      * @param Floor_MathRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

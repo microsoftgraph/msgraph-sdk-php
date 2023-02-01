@@ -95,6 +95,7 @@ class PermissionItemRequestBuilder
 
     /**
      * Update the navigation property permissions in drives
+     * @param Permission $body The request body
      * @param PermissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class PermissionItemRequestBuilder
 
     /**
      * Update the navigation property permissions in drives
+     * @param Permission $body The request body
      * @param PermissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

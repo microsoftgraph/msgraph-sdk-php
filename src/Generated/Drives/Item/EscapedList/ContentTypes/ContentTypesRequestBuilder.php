@@ -99,6 +99,7 @@ class ContentTypesRequestBuilder
 
     /**
      * Create new navigation property to contentTypes for drives
+     * @param ContentType $body The request body
      * @param ContentTypesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -142,6 +143,7 @@ class ContentTypesRequestBuilder
 
     /**
      * Create new navigation property to contentTypes for drives
+     * @param ContentType $body The request body
      * @param ContentTypesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -52,7 +52,7 @@ class NetworkDays_IntlPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the endDate property value. 
+     * Gets the endDate property value. The endDate property
      * @return Json|null
     */
     public function getEndDate(): ?Json {
@@ -74,7 +74,7 @@ class NetworkDays_IntlPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the holidays property value. 
+     * Gets the holidays property value. The holidays property
      * @return Json|null
     */
     public function getHolidays(): ?Json {
@@ -82,7 +82,7 @@ class NetworkDays_IntlPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the startDate property value. 
+     * Gets the startDate property value. The startDate property
      * @return Json|null
     */
     public function getStartDate(): ?Json {
@@ -90,7 +90,7 @@ class NetworkDays_IntlPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the weekend property value. 
+     * Gets the weekend property value. The weekend property
      * @return Json|null
     */
     public function getWeekend(): ?Json {
@@ -126,7 +126,7 @@ class NetworkDays_IntlPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the endDate property value. 
+     * Sets the endDate property value. The endDate property
      * @param Json|null $value Value to set for the endDate property.
     */
     public function setEndDate(?Json $value): void {
@@ -134,7 +134,7 @@ class NetworkDays_IntlPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the holidays property value. 
+     * Sets the holidays property value. The holidays property
      * @param Json|null $value Value to set for the holidays property.
     */
     public function setHolidays(?Json $value): void {
@@ -142,7 +142,7 @@ class NetworkDays_IntlPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the startDate property value. 
+     * Sets the startDate property value. The startDate property
      * @param Json|null $value Value to set for the startDate property.
     */
     public function setStartDate(?Json $value): void {
@@ -150,7 +150,7 @@ class NetworkDays_IntlPostRequestBody implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the weekend property value. 
+     * Sets the weekend property value. The weekend property
      * @param Json|null $value Value to set for the weekend property.
     */
     public function setWeekend(?Json $value): void {

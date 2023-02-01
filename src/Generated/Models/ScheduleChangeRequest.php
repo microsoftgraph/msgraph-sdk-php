@@ -37,7 +37,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Gets the assignedTo property value. 
+     * Gets the assignedTo property value. The assignedTo property
      * @return ScheduleChangeRequestActor|null
     */
     public function getAssignedTo(): ?ScheduleChangeRequestActor {
@@ -63,7 +63,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Gets the managerActionDateTime property value. 
+     * Gets the managerActionDateTime property value. The managerActionDateTime property
      * @return DateTime|null
     */
     public function getManagerActionDateTime(): ?DateTime {
@@ -71,7 +71,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Gets the managerActionMessage property value. 
+     * Gets the managerActionMessage property value. The managerActionMessage property
      * @return string|null
     */
     public function getManagerActionMessage(): ?string {
@@ -79,7 +79,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Gets the managerUserId property value. 
+     * Gets the managerUserId property value. The managerUserId property
      * @return string|null
     */
     public function getManagerUserId(): ?string {
@@ -87,7 +87,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Gets the senderDateTime property value. 
+     * Gets the senderDateTime property value. The senderDateTime property
      * @return DateTime|null
     */
     public function getSenderDateTime(): ?DateTime {
@@ -95,7 +95,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Gets the senderMessage property value. 
+     * Gets the senderMessage property value. The senderMessage property
      * @return string|null
     */
     public function getSenderMessage(): ?string {
@@ -103,7 +103,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Gets the senderUserId property value. 
+     * Gets the senderUserId property value. The senderUserId property
      * @return string|null
     */
     public function getSenderUserId(): ?string {
@@ -111,7 +111,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Gets the state property value. 
+     * Gets the state property value. The state property
      * @return ScheduleChangeState|null
     */
     public function getState(): ?ScheduleChangeState {
@@ -131,7 +131,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Sets the assignedTo property value. 
+     * Sets the assignedTo property value. The assignedTo property
      * @param ScheduleChangeRequestActor|null $value Value to set for the assignedTo property.
     */
     public function setAssignedTo(?ScheduleChangeRequestActor $value): void {
@@ -139,7 +139,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Sets the managerActionDateTime property value. 
+     * Sets the managerActionDateTime property value. The managerActionDateTime property
      * @param DateTime|null $value Value to set for the managerActionDateTime property.
     */
     public function setManagerActionDateTime(?DateTime $value): void {
@@ -147,7 +147,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Sets the managerActionMessage property value. 
+     * Sets the managerActionMessage property value. The managerActionMessage property
      * @param string|null $value Value to set for the managerActionMessage property.
     */
     public function setManagerActionMessage(?string $value): void {
@@ -155,7 +155,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Sets the managerUserId property value. 
+     * Sets the managerUserId property value. The managerUserId property
      * @param string|null $value Value to set for the managerUserId property.
     */
     public function setManagerUserId(?string $value): void {
@@ -163,7 +163,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Sets the senderDateTime property value. 
+     * Sets the senderDateTime property value. The senderDateTime property
      * @param DateTime|null $value Value to set for the senderDateTime property.
     */
     public function setSenderDateTime(?DateTime $value): void {
@@ -171,7 +171,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Sets the senderMessage property value. 
+     * Sets the senderMessage property value. The senderMessage property
      * @param string|null $value Value to set for the senderMessage property.
     */
     public function setSenderMessage(?string $value): void {
@@ -179,7 +179,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Sets the senderUserId property value. 
+     * Sets the senderUserId property value. The senderUserId property
      * @param string|null $value Value to set for the senderUserId property.
     */
     public function setSenderUserId(?string $value): void {
@@ -187,7 +187,7 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
     }
 
     /**
-     * Sets the state property value. 
+     * Sets the state property value. The state property
      * @param ScheduleChangeState|null $value Value to set for the state property.
     */
     public function setState(?ScheduleChangeState $value): void {

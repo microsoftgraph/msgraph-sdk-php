@@ -74,6 +74,7 @@ class ServiceManagementDetailsRequestBuilder
 
     /**
      * Create new navigation property to serviceManagementDetails for tenantRelationships
+     * @param DelegatedAdminServiceManagementDetail $body The request body
      * @param ServiceManagementDetailsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class ServiceManagementDetailsRequestBuilder
 
     /**
      * Create new navigation property to serviceManagementDetails for tenantRelationships
+     * @param DelegatedAdminServiceManagementDetail $body The request body
      * @param ServiceManagementDetailsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

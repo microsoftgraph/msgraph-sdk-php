@@ -47,6 +47,7 @@ class IsTextRequestBuilder
 
     /**
      * Invoke action isText
+     * @param IsTextPostRequestBody $body The request body
      * @param IsTextRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class IsTextRequestBuilder
 
     /**
      * Invoke action isText
+     * @param IsTextPostRequestBody $body The request body
      * @param IsTextRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

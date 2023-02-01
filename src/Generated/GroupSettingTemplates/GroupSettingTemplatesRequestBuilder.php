@@ -99,6 +99,7 @@ class GroupSettingTemplatesRequestBuilder
 
     /**
      * Add new entity to groupSettingTemplates
+     * @param GroupSettingTemplate $body The request body
      * @param GroupSettingTemplatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -142,6 +143,7 @@ class GroupSettingTemplatesRequestBuilder
 
     /**
      * Add new entity to groupSettingTemplates
+     * @param GroupSettingTemplate $body The request body
      * @param GroupSettingTemplatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

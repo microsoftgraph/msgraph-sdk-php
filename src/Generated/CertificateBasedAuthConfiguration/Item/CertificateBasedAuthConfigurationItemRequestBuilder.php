@@ -87,6 +87,7 @@ class CertificateBasedAuthConfigurationItemRequestBuilder
 
     /**
      * Update entity in certificateBasedAuthConfiguration
+     * @param CertificateBasedAuthConfiguration $body The request body
      * @param CertificateBasedAuthConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class CertificateBasedAuthConfigurationItemRequestBuilder
 
     /**
      * Update entity in certificateBasedAuthConfiguration
+     * @param CertificateBasedAuthConfiguration $body The request body
      * @param CertificateBasedAuthConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

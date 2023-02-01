@@ -75,6 +75,7 @@ class ConnectedOrganizationsRequestBuilder
 
     /**
      * Create new navigation property to connectedOrganizations for identityGovernance
+     * @param ConnectedOrganization $body The request body
      * @param ConnectedOrganizationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,6 +119,7 @@ class ConnectedOrganizationsRequestBuilder
 
     /**
      * Create new navigation property to connectedOrganizations for identityGovernance
+     * @param ConnectedOrganization $body The request body
      * @param ConnectedOrganizationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

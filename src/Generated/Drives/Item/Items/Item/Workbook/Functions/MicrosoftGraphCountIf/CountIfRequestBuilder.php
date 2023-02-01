@@ -47,6 +47,7 @@ class CountIfRequestBuilder
 
     /**
      * Invoke action countIf
+     * @param CountIfPostRequestBody $body The request body
      * @param CountIfRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class CountIfRequestBuilder
 
     /**
      * Invoke action countIf
+     * @param CountIfPostRequestBody $body The request body
      * @param CountIfRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
