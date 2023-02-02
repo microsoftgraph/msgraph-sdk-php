@@ -69,6 +69,7 @@ class AlertItemRequestBuilder
 
     /**
      * Update the navigation property alerts in security
+     * @param Alert $body The request body
      * @param AlertItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -112,6 +113,7 @@ class AlertItemRequestBuilder
 
     /**
      * Update the navigation property alerts in security
+     * @param Alert $body The request body
      * @param AlertItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

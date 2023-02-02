@@ -52,7 +52,7 @@ class ReceivedPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the basis property value. 
+     * Gets the basis property value. The basis property
      * @return Json|null
     */
     public function getBasis(): ?Json {
@@ -60,7 +60,7 @@ class ReceivedPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the discount property value. 
+     * Gets the discount property value. The discount property
      * @return Json|null
     */
     public function getDiscount(): ?Json {
@@ -83,7 +83,7 @@ class ReceivedPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the investment property value. 
+     * Gets the investment property value. The investment property
      * @return Json|null
     */
     public function getInvestment(): ?Json {
@@ -91,7 +91,7 @@ class ReceivedPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the maturity property value. 
+     * Gets the maturity property value. The maturity property
      * @return Json|null
     */
     public function getMaturity(): ?Json {
@@ -99,7 +99,7 @@ class ReceivedPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the settlement property value. 
+     * Gets the settlement property value. The settlement property
      * @return Json|null
     */
     public function getSettlement(): ?Json {
@@ -136,7 +136,7 @@ class ReceivedPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the basis property value. 
+     * Sets the basis property value. The basis property
      * @param Json|null $value Value to set for the basis property.
     */
     public function setBasis(?Json $value): void {
@@ -144,7 +144,7 @@ class ReceivedPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the discount property value. 
+     * Sets the discount property value. The discount property
      * @param Json|null $value Value to set for the discount property.
     */
     public function setDiscount(?Json $value): void {
@@ -152,7 +152,7 @@ class ReceivedPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the investment property value. 
+     * Sets the investment property value. The investment property
      * @param Json|null $value Value to set for the investment property.
     */
     public function setInvestment(?Json $value): void {
@@ -160,7 +160,7 @@ class ReceivedPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the maturity property value. 
+     * Sets the maturity property value. The maturity property
      * @param Json|null $value Value to set for the maturity property.
     */
     public function setMaturity(?Json $value): void {
@@ -168,7 +168,7 @@ class ReceivedPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the settlement property value. 
+     * Sets the settlement property value. The settlement property
      * @param Json|null $value Value to set for the settlement property.
     */
     public function setSettlement(?Json $value): void {

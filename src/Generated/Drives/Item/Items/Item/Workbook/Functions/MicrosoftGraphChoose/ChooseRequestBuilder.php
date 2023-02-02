@@ -47,6 +47,7 @@ class ChooseRequestBuilder
 
     /**
      * Invoke action choose
+     * @param ChoosePostRequestBody $body The request body
      * @param ChooseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ChooseRequestBuilder
 
     /**
      * Invoke action choose
+     * @param ChoosePostRequestBody $body The request body
      * @param ChooseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

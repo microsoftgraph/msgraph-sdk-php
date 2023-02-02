@@ -63,7 +63,7 @@ class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the item property value. 
+     * Gets the item property value. The item property
      * @return DriveItemUploadableProperties|null
     */
     public function getItem(): ?DriveItemUploadableProperties {
@@ -96,7 +96,7 @@ class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the item property value. 
+     * Sets the item property value. The item property
      * @param DriveItemUploadableProperties|null $value Value to set for the item property.
     */
     public function setItem(?DriveItemUploadableProperties $value): void {

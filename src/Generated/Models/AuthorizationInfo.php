@@ -51,7 +51,7 @@ class AuthorizationInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the certificateUserIds property value. 
+     * Gets the certificateUserIds property value. The certificateUserIds property
      * @return array<string>|null
     */
     public function getCertificateUserIds(): ?array {
@@ -71,7 +71,7 @@ class AuthorizationInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -105,7 +105,7 @@ class AuthorizationInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the certificateUserIds property value. 
+     * Sets the certificateUserIds property value. The certificateUserIds property
      * @param array<string>|null $value Value to set for the certificateUserIds property.
     */
     public function setCertificateUserIds(?array $value): void {
@@ -113,7 +113,7 @@ class AuthorizationInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

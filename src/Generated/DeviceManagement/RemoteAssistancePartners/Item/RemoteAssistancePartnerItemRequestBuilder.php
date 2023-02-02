@@ -103,6 +103,7 @@ class RemoteAssistancePartnerItemRequestBuilder
 
     /**
      * Update the navigation property remoteAssistancePartners in deviceManagement
+     * @param RemoteAssistancePartner $body The request body
      * @param RemoteAssistancePartnerItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -167,6 +168,7 @@ class RemoteAssistancePartnerItemRequestBuilder
 
     /**
      * Update the navigation property remoteAssistancePartners in deviceManagement
+     * @param RemoteAssistancePartner $body The request body
      * @param RemoteAssistancePartnerItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

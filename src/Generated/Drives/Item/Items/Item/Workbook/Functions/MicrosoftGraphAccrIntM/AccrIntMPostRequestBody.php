@@ -52,7 +52,7 @@ class AccrIntMPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the basis property value. 
+     * Gets the basis property value. The basis property
      * @return Json|null
     */
     public function getBasis(): ?Json {
@@ -75,7 +75,7 @@ class AccrIntMPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the issue property value. 
+     * Gets the issue property value. The issue property
      * @return Json|null
     */
     public function getIssue(): ?Json {
@@ -83,7 +83,7 @@ class AccrIntMPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the par property value. 
+     * Gets the par property value. The par property
      * @return Json|null
     */
     public function getPar(): ?Json {
@@ -91,7 +91,7 @@ class AccrIntMPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the rate property value. 
+     * Gets the rate property value. The rate property
      * @return Json|null
     */
     public function getRate(): ?Json {
@@ -99,7 +99,7 @@ class AccrIntMPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the settlement property value. 
+     * Gets the settlement property value. The settlement property
      * @return Json|null
     */
     public function getSettlement(): ?Json {
@@ -136,7 +136,7 @@ class AccrIntMPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the basis property value. 
+     * Sets the basis property value. The basis property
      * @param Json|null $value Value to set for the basis property.
     */
     public function setBasis(?Json $value): void {
@@ -144,7 +144,7 @@ class AccrIntMPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the issue property value. 
+     * Sets the issue property value. The issue property
      * @param Json|null $value Value to set for the issue property.
     */
     public function setIssue(?Json $value): void {
@@ -152,7 +152,7 @@ class AccrIntMPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the par property value. 
+     * Sets the par property value. The par property
      * @param Json|null $value Value to set for the par property.
     */
     public function setPar(?Json $value): void {
@@ -160,7 +160,7 @@ class AccrIntMPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the rate property value. 
+     * Sets the rate property value. The rate property
      * @param Json|null $value Value to set for the rate property.
     */
     public function setRate(?Json $value): void {
@@ -168,7 +168,7 @@ class AccrIntMPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the settlement property value. 
+     * Sets the settlement property value. The settlement property
      * @param Json|null $value Value to set for the settlement property.
     */
     public function setSettlement(?Json $value): void {

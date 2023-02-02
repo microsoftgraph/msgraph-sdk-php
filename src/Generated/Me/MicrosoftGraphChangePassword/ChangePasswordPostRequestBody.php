@@ -51,7 +51,7 @@ class ChangePasswordPostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the currentPassword property value. 
+     * Gets the currentPassword property value. The currentPassword property
      * @return string|null
     */
     public function getCurrentPassword(): ?string {
@@ -71,7 +71,7 @@ class ChangePasswordPostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the newPassword property value. 
+     * Gets the newPassword property value. The newPassword property
      * @return string|null
     */
     public function getNewPassword(): ?string {
@@ -105,7 +105,7 @@ class ChangePasswordPostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the currentPassword property value. 
+     * Sets the currentPassword property value. The currentPassword property
      * @param string|null $value Value to set for the currentPassword property.
     */
     public function setCurrentPassword(?string $value): void {
@@ -113,7 +113,7 @@ class ChangePasswordPostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the newPassword property value. 
+     * Sets the newPassword property value. The newPassword property
      * @param string|null $value Value to set for the newPassword property.
     */
     public function setNewPassword(?string $value): void {

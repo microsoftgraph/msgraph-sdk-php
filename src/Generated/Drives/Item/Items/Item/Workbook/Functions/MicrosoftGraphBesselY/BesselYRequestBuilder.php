@@ -47,6 +47,7 @@ class BesselYRequestBuilder
 
     /**
      * Invoke action besselY
+     * @param BesselYPostRequestBody $body The request body
      * @param BesselYRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class BesselYRequestBuilder
 
     /**
      * Invoke action besselY
+     * @param BesselYPostRequestBody $body The request body
      * @param BesselYRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -36,7 +36,7 @@ class RiskyServicePrincipalHistoryItemCollectionResponse extends BaseCollectionP
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<RiskyServicePrincipalHistoryItem>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class RiskyServicePrincipalHistoryItemCollectionResponse extends BaseCollectionP
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param array<RiskyServicePrincipalHistoryItem>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

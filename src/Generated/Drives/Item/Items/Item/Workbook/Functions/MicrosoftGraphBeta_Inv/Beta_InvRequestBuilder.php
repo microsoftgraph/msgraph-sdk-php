@@ -47,6 +47,7 @@ class Beta_InvRequestBuilder
 
     /**
      * Invoke action beta_Inv
+     * @param Beta_InvPostRequestBody $body The request body
      * @param Beta_InvRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Beta_InvRequestBuilder
 
     /**
      * Invoke action beta_Inv
+     * @param Beta_InvPostRequestBody $body The request body
      * @param Beta_InvRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

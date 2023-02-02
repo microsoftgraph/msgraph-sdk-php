@@ -47,6 +47,7 @@ class IrrRequestBuilder
 
     /**
      * Invoke action irr
+     * @param IrrPostRequestBody $body The request body
      * @param IrrRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class IrrRequestBuilder
 
     /**
      * Invoke action irr
+     * @param IrrPostRequestBody $body The request body
      * @param IrrRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

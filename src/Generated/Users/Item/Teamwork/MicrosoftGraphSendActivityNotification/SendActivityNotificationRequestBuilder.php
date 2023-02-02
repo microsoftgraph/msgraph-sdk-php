@@ -46,6 +46,7 @@ class SendActivityNotificationRequestBuilder
 
     /**
      * Send an activity feed notification to a user. For more details about sending notifications and the requirements for doing so, see sending Teams activity notifications.
+     * @param SendActivityNotificationPostRequestBody $body The request body
      * @param SendActivityNotificationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/userteamwork-sendactivitynotification?view=graph-rest-1.0 Find more info here
@@ -65,6 +66,7 @@ class SendActivityNotificationRequestBuilder
 
     /**
      * Send an activity feed notification to a user. For more details about sending notifications and the requirements for doing so, see sending Teams activity notifications.
+     * @param SendActivityNotificationPostRequestBody $body The request body
      * @param SendActivityNotificationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

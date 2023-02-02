@@ -65,7 +65,7 @@ class Floor_MathPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the mode property value. 
+     * Gets the mode property value. The mode property
      * @return Json|null
     */
     public function getMode(): ?Json {
@@ -73,7 +73,7 @@ class Floor_MathPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the number property value. 
+     * Gets the number property value. The number property
      * @return Json|null
     */
     public function getNumber(): ?Json {
@@ -81,7 +81,7 @@ class Floor_MathPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the significance property value. 
+     * Gets the significance property value. The significance property
      * @return Json|null
     */
     public function getSignificance(): ?Json {
@@ -116,7 +116,7 @@ class Floor_MathPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the mode property value. 
+     * Sets the mode property value. The mode property
      * @param Json|null $value Value to set for the mode property.
     */
     public function setMode(?Json $value): void {
@@ -124,7 +124,7 @@ class Floor_MathPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the number property value. 
+     * Sets the number property value. The number property
      * @param Json|null $value Value to set for the number property.
     */
     public function setNumber(?Json $value): void {
@@ -132,7 +132,7 @@ class Floor_MathPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the significance property value. 
+     * Sets the significance property value. The significance property
      * @param Json|null $value Value to set for the significance property.
     */
     public function setSignificance(?Json $value): void {

@@ -46,6 +46,7 @@ class TranslateExchangeIdsRequestBuilder
 
     /**
      * Translate identifiers of Outlook-related resources between formats.
+     * @param TranslateExchangeIdsPostRequestBody $body The request body
      * @param TranslateExchangeIdsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/user-translateexchangeids?view=graph-rest-1.0 Find more info here
@@ -65,6 +66,7 @@ class TranslateExchangeIdsRequestBuilder
 
     /**
      * Translate identifiers of Outlook-related resources between formats.
+     * @param TranslateExchangeIdsPostRequestBody $body The request body
      * @param TranslateExchangeIdsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

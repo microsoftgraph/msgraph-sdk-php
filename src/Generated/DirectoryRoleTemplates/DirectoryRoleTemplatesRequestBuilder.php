@@ -99,6 +99,7 @@ class DirectoryRoleTemplatesRequestBuilder
 
     /**
      * Add new entity to directoryRoleTemplates
+     * @param DirectoryRoleTemplate $body The request body
      * @param DirectoryRoleTemplatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -142,6 +143,7 @@ class DirectoryRoleTemplatesRequestBuilder
 
     /**
      * Add new entity to directoryRoleTemplates
+     * @param DirectoryRoleTemplate $body The request body
      * @param DirectoryRoleTemplatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

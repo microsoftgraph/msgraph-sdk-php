@@ -75,6 +75,7 @@ class AttendanceRecordsRequestBuilder
 
     /**
      * Create new navigation property to attendanceRecords for users
+     * @param AttendanceRecord $body The request body
      * @param AttendanceRecordsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,6 +119,7 @@ class AttendanceRecordsRequestBuilder
 
     /**
      * Create new navigation property to attendanceRecords for users
+     * @param AttendanceRecord $body The request body
      * @param AttendanceRecordsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

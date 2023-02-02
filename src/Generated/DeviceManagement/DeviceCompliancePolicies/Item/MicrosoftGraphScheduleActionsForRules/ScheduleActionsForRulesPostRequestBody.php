@@ -52,7 +52,7 @@ class ScheduleActionsForRulesPostRequestBody implements AdditionalDataHolder, Ba
     }
 
     /**
-     * Gets the deviceComplianceScheduledActionForRules property value. 
+     * Gets the deviceComplianceScheduledActionForRules property value. The deviceComplianceScheduledActionForRules property
      * @return array<DeviceComplianceScheduledActionForRule>|null
     */
     public function getDeviceComplianceScheduledActionForRules(): ?array {
@@ -96,7 +96,7 @@ class ScheduleActionsForRulesPostRequestBody implements AdditionalDataHolder, Ba
     }
 
     /**
-     * Sets the deviceComplianceScheduledActionForRules property value. 
+     * Sets the deviceComplianceScheduledActionForRules property value. The deviceComplianceScheduledActionForRules property
      * @param array<DeviceComplianceScheduledActionForRule>|null $value Value to set for the deviceComplianceScheduledActionForRules property.
     */
     public function setDeviceComplianceScheduledActionForRules(?array $value): void {

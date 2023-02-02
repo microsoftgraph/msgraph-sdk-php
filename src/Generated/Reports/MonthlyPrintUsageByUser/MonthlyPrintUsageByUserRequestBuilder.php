@@ -75,6 +75,7 @@ class MonthlyPrintUsageByUserRequestBuilder
 
     /**
      * Create new navigation property to monthlyPrintUsageByUser for reports
+     * @param PrintUsageByUser $body The request body
      * @param MonthlyPrintUsageByUserRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,6 +119,7 @@ class MonthlyPrintUsageByUserRequestBuilder
 
     /**
      * Create new navigation property to monthlyPrintUsageByUser for reports
+     * @param PrintUsageByUser $body The request body
      * @param MonthlyPrintUsageByUserRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

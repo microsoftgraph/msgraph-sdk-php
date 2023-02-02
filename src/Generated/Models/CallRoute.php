@@ -18,7 +18,7 @@ class CallRoute implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * @var IdentitySet|null $escapedFinal 
+     * @var IdentitySet|null $escapedFinal The final property
     */
     public ?IdentitySet $escapedFinal = null;
     
@@ -70,7 +70,7 @@ class CallRoute implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the final property value. 
+     * Gets the final property value. The final property
      * @return IdentitySet|null
     */
     public function getFinal(): ?IdentitySet {
@@ -78,7 +78,7 @@ class CallRoute implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -86,7 +86,7 @@ class CallRoute implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the original property value. 
+     * Gets the original property value. The original property
      * @return IdentitySet|null
     */
     public function getOriginal(): ?IdentitySet {
@@ -94,7 +94,7 @@ class CallRoute implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the routingType property value. 
+     * Gets the routingType property value. The routingType property
      * @return RoutingType|null
     */
     public function getRoutingType(): ?RoutingType {
@@ -130,7 +130,7 @@ class CallRoute implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the final property value. 
+     * Sets the final property value. The final property
      * @param IdentitySet|null $value Value to set for the EscapedFinal property.
     */
     public function setFinal(?IdentitySet $value): void {
@@ -138,7 +138,7 @@ class CallRoute implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -146,7 +146,7 @@ class CallRoute implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the original property value. 
+     * Sets the original property value. The original property
      * @param IdentitySet|null $value Value to set for the original property.
     */
     public function setOriginal(?IdentitySet $value): void {
@@ -154,7 +154,7 @@ class CallRoute implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the routingType property value. 
+     * Sets the routingType property value. The routingType property
      * @param RoutingType|null $value Value to set for the routingType property.
     */
     public function setRoutingType(?RoutingType $value): void {

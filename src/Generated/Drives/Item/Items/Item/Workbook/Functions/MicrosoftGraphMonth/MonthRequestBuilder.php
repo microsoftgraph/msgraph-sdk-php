@@ -47,6 +47,7 @@ class MonthRequestBuilder
 
     /**
      * Invoke action month
+     * @param MonthPostRequestBody $body The request body
      * @param MonthRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class MonthRequestBuilder
 
     /**
      * Invoke action month
+     * @param MonthPostRequestBody $body The request body
      * @param MonthRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -75,6 +75,7 @@ class SectionGroupsRequestBuilder
 
     /**
      * Create new navigation property to sectionGroups for me
+     * @param SectionGroup $body The request body
      * @param SectionGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,6 +119,7 @@ class SectionGroupsRequestBuilder
 
     /**
      * Create new navigation property to sectionGroups for me
+     * @param SectionGroup $body The request body
      * @param SectionGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

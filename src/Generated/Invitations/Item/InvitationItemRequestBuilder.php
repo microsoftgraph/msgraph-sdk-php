@@ -95,6 +95,7 @@ class InvitationItemRequestBuilder
 
     /**
      * Update entity in invitations
+     * @param Invitation $body The request body
      * @param InvitationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class InvitationItemRequestBuilder
 
     /**
      * Update entity in invitations
+     * @param Invitation $body The request body
      * @param InvitationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

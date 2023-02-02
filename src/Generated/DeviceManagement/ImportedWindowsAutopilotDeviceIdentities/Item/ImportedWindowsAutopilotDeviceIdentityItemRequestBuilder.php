@@ -87,6 +87,7 @@ class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder
 
     /**
      * Update the navigation property importedWindowsAutopilotDeviceIdentities in deviceManagement
+     * @param ImportedWindowsAutopilotDeviceIdentity $body The request body
      * @param ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder
 
     /**
      * Update the navigation property importedWindowsAutopilotDeviceIdentities in deviceManagement
+     * @param ImportedWindowsAutopilotDeviceIdentity $body The request body
      * @param ImportedWindowsAutopilotDeviceIdentityItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

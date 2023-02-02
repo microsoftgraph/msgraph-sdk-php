@@ -47,6 +47,7 @@ class GeoMeanRequestBuilder
 
     /**
      * Invoke action geoMean
+     * @param GeoMeanPostRequestBody $body The request body
      * @param GeoMeanRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class GeoMeanRequestBuilder
 
     /**
      * Invoke action geoMean
+     * @param GeoMeanPostRequestBody $body The request body
      * @param GeoMeanRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

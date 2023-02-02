@@ -75,6 +75,7 @@ class TabsRequestBuilder
 
     /**
      * Add (pin) a tab to the specified chat. The corresponding app must already be installed in the chat.
+     * @param TeamsTab $body The request body
      * @param TabsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/chat-post-tabs?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class TabsRequestBuilder
 
     /**
      * Add (pin) a tab to the specified chat. The corresponding app must already be installed in the chat.
+     * @param TeamsTab $body The request body
      * @param TabsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

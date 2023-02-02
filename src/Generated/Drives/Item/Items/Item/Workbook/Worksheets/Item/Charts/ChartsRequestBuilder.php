@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\MicrosoftGraphAdd\AddRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\MicrosoftGraphCount\CountRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\MicrosoftGraphItemAtWithIndex\ItemAtWithIndexRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\MicrosoftGraphItemWithName\ItemWithNameRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -110,6 +110,7 @@ class ChartsRequestBuilder
 
     /**
      * Use this API to create a new Chart.
+     * @param WorkbookChart $body The request body
      * @param ChartsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/worksheet-post-charts?view=graph-rest-1.0 Find more info here
@@ -154,6 +155,7 @@ class ChartsRequestBuilder
 
     /**
      * Use this API to create a new Chart.
+     * @param WorkbookChart $body The request body
      * @param ChartsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

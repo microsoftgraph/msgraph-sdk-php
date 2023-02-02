@@ -47,6 +47,7 @@ class AccrIntRequestBuilder
 
     /**
      * Invoke action accrInt
+     * @param AccrIntPostRequestBody $body The request body
      * @param AccrIntRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class AccrIntRequestBuilder
 
     /**
      * Invoke action accrInt
+     * @param AccrIntPostRequestBody $body The request body
      * @param AccrIntRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

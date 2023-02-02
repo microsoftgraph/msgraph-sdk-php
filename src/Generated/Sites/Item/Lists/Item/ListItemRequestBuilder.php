@@ -184,6 +184,7 @@ class ListItemRequestBuilder
 
     /**
      * Update the navigation property lists in sites
+     * @param EscapedList $body The request body
      * @param ListItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -259,6 +260,7 @@ class ListItemRequestBuilder
 
     /**
      * Update the navigation property lists in sites
+     * @param EscapedList $body The request body
      * @param ListItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

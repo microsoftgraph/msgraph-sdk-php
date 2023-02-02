@@ -34,7 +34,7 @@ class TeamsAppDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdBy property value. 
+     * Gets the createdBy property value. The createdBy property
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
@@ -77,7 +77,7 @@ class TeamsAppDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. 
+     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -142,7 +142,7 @@ class TeamsAppDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdBy property value. 
+     * Sets the createdBy property value. The createdBy property
      * @param IdentitySet|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?IdentitySet $value): void {
@@ -166,7 +166,7 @@ class TeamsAppDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. 
+     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {

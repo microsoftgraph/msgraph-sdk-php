@@ -101,6 +101,7 @@ class AttackSimulationRequestBuilder
 
     /**
      * Update the navigation property attackSimulation in security
+     * @param AttackSimulationRoot $body The request body
      * @param AttackSimulationRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -187,6 +188,7 @@ class AttackSimulationRequestBuilder
 
     /**
      * Update the navigation property attackSimulation in security
+     * @param AttackSimulationRoot $body The request body
      * @param AttackSimulationRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

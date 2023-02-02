@@ -182,6 +182,7 @@ class OrgContactItemRequestBuilder
 
     /**
      * Update entity in contacts
+     * @param OrgContact $body The request body
      * @param OrgContactItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -246,6 +247,7 @@ class OrgContactItemRequestBuilder
 
     /**
      * Update entity in contacts
+     * @param OrgContact $body The request body
      * @param OrgContactItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -47,6 +47,7 @@ class RightbRequestBuilder
 
     /**
      * Invoke action rightb
+     * @param RightbPostRequestBody $body The request body
      * @param RightbRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class RightbRequestBuilder
 
     /**
      * Invoke action rightb
+     * @param RightbPostRequestBody $body The request body
      * @param RightbRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

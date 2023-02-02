@@ -63,7 +63,7 @@ class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolder, Back
     }
 
     /**
-     * Gets the hubSiteUrls property value. 
+     * Gets the hubSiteUrls property value. The hubSiteUrls property
      * @return array<string>|null
     */
     public function getHubSiteUrls(): ?array {
@@ -71,7 +71,7 @@ class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolder, Back
     }
 
     /**
-     * Gets the propagateToExistingLists property value. 
+     * Gets the propagateToExistingLists property value. The propagateToExistingLists property
      * @return bool|null
     */
     public function getPropagateToExistingLists(): ?bool {
@@ -105,7 +105,7 @@ class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolder, Back
     }
 
     /**
-     * Sets the hubSiteUrls property value. 
+     * Sets the hubSiteUrls property value. The hubSiteUrls property
      * @param array<string>|null $value Value to set for the hubSiteUrls property.
     */
     public function setHubSiteUrls(?array $value): void {
@@ -113,7 +113,7 @@ class AssociateWithHubSitesPostRequestBody implements AdditionalDataHolder, Back
     }
 
     /**
-     * Sets the propagateToExistingLists property value. 
+     * Sets the propagateToExistingLists property value. The propagateToExistingLists property
      * @param bool|null $value Value to set for the propagateToExistingLists property.
     */
     public function setPropagateToExistingLists(?bool $value): void {

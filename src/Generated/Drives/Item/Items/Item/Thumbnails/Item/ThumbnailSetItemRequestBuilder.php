@@ -87,6 +87,7 @@ class ThumbnailSetItemRequestBuilder
 
     /**
      * Update the navigation property thumbnails in drives
+     * @param ThumbnailSet $body The request body
      * @param ThumbnailSetItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class ThumbnailSetItemRequestBuilder
 
     /**
      * Update the navigation property thumbnails in drives
+     * @param ThumbnailSet $body The request body
      * @param ThumbnailSetItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

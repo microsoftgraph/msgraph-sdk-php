@@ -95,6 +95,7 @@ class UserScopeTeamsAppInstallationItemRequestBuilder
 
     /**
      * Update the navigation property installedApps in users
+     * @param UserScopeTeamsAppInstallation $body The request body
      * @param UserScopeTeamsAppInstallationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class UserScopeTeamsAppInstallationItemRequestBuilder
 
     /**
      * Update the navigation property installedApps in users
+     * @param UserScopeTeamsAppInstallation $body The request body
      * @param UserScopeTeamsAppInstallationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

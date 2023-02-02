@@ -64,7 +64,7 @@ class EdatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the months property value. 
+     * Gets the months property value. The months property
      * @return Json|null
     */
     public function getMonths(): ?Json {
@@ -72,7 +72,7 @@ class EdatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the startDate property value. 
+     * Gets the startDate property value. The startDate property
      * @return Json|null
     */
     public function getStartDate(): ?Json {
@@ -106,7 +106,7 @@ class EdatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the months property value. 
+     * Sets the months property value. The months property
      * @param Json|null $value Value to set for the months property.
     */
     public function setMonths(?Json $value): void {
@@ -114,7 +114,7 @@ class EdatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the startDate property value. 
+     * Sets the startDate property value. The startDate property
      * @param Json|null $value Value to set for the startDate property.
     */
     public function setStartDate(?Json $value): void {

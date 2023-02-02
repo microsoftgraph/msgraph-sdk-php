@@ -44,7 +44,7 @@ class Weibull_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the alpha property value. 
+     * Gets the alpha property value. The alpha property
      * @return Json|null
     */
     public function getAlpha(): ?Json {
@@ -60,7 +60,7 @@ class Weibull_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the beta property value. 
+     * Gets the beta property value. The beta property
      * @return Json|null
     */
     public function getBeta(): ?Json {
@@ -68,7 +68,7 @@ class Weibull_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the cumulative property value. 
+     * Gets the cumulative property value. The cumulative property
      * @return Json|null
     */
     public function getCumulative(): ?Json {
@@ -90,7 +90,7 @@ class Weibull_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the x property value. 
+     * Gets the x property value. The x property
      * @return Json|null
     */
     public function getX(): ?Json {
@@ -118,7 +118,7 @@ class Weibull_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the alpha property value. 
+     * Sets the alpha property value. The alpha property
      * @param Json|null $value Value to set for the alpha property.
     */
     public function setAlpha(?Json $value): void {
@@ -134,7 +134,7 @@ class Weibull_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the beta property value. 
+     * Sets the beta property value. The beta property
      * @param Json|null $value Value to set for the beta property.
     */
     public function setBeta(?Json $value): void {
@@ -142,7 +142,7 @@ class Weibull_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the cumulative property value. 
+     * Sets the cumulative property value. The cumulative property
      * @param Json|null $value Value to set for the cumulative property.
     */
     public function setCumulative(?Json $value): void {
@@ -150,7 +150,7 @@ class Weibull_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the x property value. 
+     * Sets the x property value. The x property
      * @param Json|null $value Value to set for the x property.
     */
     public function setX(?Json $value): void {

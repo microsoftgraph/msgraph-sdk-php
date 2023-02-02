@@ -100,6 +100,7 @@ class ProtectionRequestBuilder
 
     /**
      * Update the navigation property protection in drives
+     * @param WorkbookWorksheetProtection $body The request body
      * @param ProtectionRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -164,6 +165,7 @@ class ProtectionRequestBuilder
 
     /**
      * Update the navigation property protection in drives
+     * @param WorkbookWorksheetProtection $body The request body
      * @param ProtectionRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

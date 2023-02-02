@@ -75,6 +75,7 @@ class ConnectionsRequestBuilder
 
     /**
      * Create a new externalConnection object.
+     * @param ExternalConnection $body The request body
      * @param ConnectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/externalconnectors-external-post-connections?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class ConnectionsRequestBuilder
 
     /**
      * Create a new externalConnection object.
+     * @param ExternalConnection $body The request body
      * @param ConnectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

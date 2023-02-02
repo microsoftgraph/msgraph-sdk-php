@@ -177,6 +177,7 @@ class EdiscoverySearchItemRequestBuilder
 
     /**
      * Update the navigation property searches in security
+     * @param EdiscoverySearch $body The request body
      * @param EdiscoverySearchItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -241,6 +242,7 @@ class EdiscoverySearchItemRequestBuilder
 
     /**
      * Update the navigation property searches in security
+     * @param EdiscoverySearch $body The request body
      * @param EdiscoverySearchItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

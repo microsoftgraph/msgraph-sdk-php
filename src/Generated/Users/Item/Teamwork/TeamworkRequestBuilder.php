@@ -131,6 +131,7 @@ class TeamworkRequestBuilder
 
     /**
      * Update the navigation property teamwork in users
+     * @param UserTeamwork $body The request body
      * @param TeamworkRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -195,6 +196,7 @@ class TeamworkRequestBuilder
 
     /**
      * Update the navigation property teamwork in users
+     * @param UserTeamwork $body The request body
      * @param TeamworkRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

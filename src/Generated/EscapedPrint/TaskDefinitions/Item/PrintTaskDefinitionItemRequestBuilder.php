@@ -96,6 +96,7 @@ class PrintTaskDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property taskDefinitions in print
+     * @param PrintTaskDefinition $body The request body
      * @param PrintTaskDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -171,6 +172,7 @@ class PrintTaskDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property taskDefinitions in print
+     * @param PrintTaskDefinition $body The request body
      * @param PrintTaskDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

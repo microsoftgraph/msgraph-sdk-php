@@ -87,6 +87,7 @@ class TimeOffReasonItemRequestBuilder
 
     /**
      * Update the navigation property timeOffReasons in me
+     * @param TimeOffReason $body The request body
      * @param TimeOffReasonItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class TimeOffReasonItemRequestBuilder
 
     /**
      * Update the navigation property timeOffReasons in me
+     * @param TimeOffReason $body The request body
      * @param TimeOffReasonItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

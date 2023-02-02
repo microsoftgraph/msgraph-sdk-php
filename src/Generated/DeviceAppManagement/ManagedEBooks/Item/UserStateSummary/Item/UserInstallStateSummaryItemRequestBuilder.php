@@ -107,6 +107,7 @@ class UserInstallStateSummaryItemRequestBuilder
 
     /**
      * Update the navigation property userStateSummary in deviceAppManagement
+     * @param UserInstallStateSummary $body The request body
      * @param UserInstallStateSummaryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -171,6 +172,7 @@ class UserInstallStateSummaryItemRequestBuilder
 
     /**
      * Update the navigation property userStateSummary in deviceAppManagement
+     * @param UserInstallStateSummary $body The request body
      * @param UserInstallStateSummaryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

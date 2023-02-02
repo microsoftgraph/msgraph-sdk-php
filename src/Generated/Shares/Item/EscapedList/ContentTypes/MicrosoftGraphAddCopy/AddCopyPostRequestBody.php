@@ -51,7 +51,7 @@ class AddCopyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the contentType property value. 
+     * Gets the contentType property value. The contentType property
      * @return string|null
     */
     public function getContentType(): ?string {
@@ -95,7 +95,7 @@ class AddCopyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the contentType property value. 
+     * Sets the contentType property value. The contentType property
      * @param string|null $value Value to set for the contentType property.
     */
     public function setContentType(?string $value): void {

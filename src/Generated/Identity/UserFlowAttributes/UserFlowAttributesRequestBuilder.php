@@ -75,6 +75,7 @@ class UserFlowAttributesRequestBuilder
 
     /**
      * Create a new identityUserFlowAttribute object.
+     * @param IdentityUserFlowAttribute $body The request body
      * @param UserFlowAttributesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/identityuserflowattribute-post?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class UserFlowAttributesRequestBuilder
 
     /**
      * Create a new identityUserFlowAttribute object.
+     * @param IdentityUserFlowAttribute $body The request body
      * @param UserFlowAttributesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

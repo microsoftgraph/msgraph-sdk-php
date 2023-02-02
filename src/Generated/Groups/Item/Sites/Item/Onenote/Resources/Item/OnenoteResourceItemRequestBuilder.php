@@ -95,6 +95,7 @@ class OnenoteResourceItemRequestBuilder
 
     /**
      * Update the navigation property resources in groups
+     * @param OnenoteResource $body The request body
      * @param OnenoteResourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class OnenoteResourceItemRequestBuilder
 
     /**
      * Update the navigation property resources in groups
+     * @param OnenoteResource $body The request body
      * @param OnenoteResourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

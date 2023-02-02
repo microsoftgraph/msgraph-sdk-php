@@ -64,7 +64,7 @@ class ImSubPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the inumber1 property value. 
+     * Gets the inumber1 property value. The inumber1 property
      * @return Json|null
     */
     public function getInumber1(): ?Json {
@@ -72,7 +72,7 @@ class ImSubPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the inumber2 property value. 
+     * Gets the inumber2 property value. The inumber2 property
      * @return Json|null
     */
     public function getInumber2(): ?Json {
@@ -106,7 +106,7 @@ class ImSubPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the inumber1 property value. 
+     * Sets the inumber1 property value. The inumber1 property
      * @param Json|null $value Value to set for the inumber1 property.
     */
     public function setInumber1(?Json $value): void {
@@ -114,7 +114,7 @@ class ImSubPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the inumber2 property value. 
+     * Sets the inumber2 property value. The inumber2 property
      * @param Json|null $value Value to set for the inumber2 property.
     */
     public function setInumber2(?Json $value): void {

@@ -39,7 +39,7 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
     }
 
     /**
-     * Gets the activityType property value. 
+     * Gets the activityType property value. The activityType property
      * @return string|null
     */
     public function getActivityType(): ?string {
@@ -63,7 +63,7 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
     }
 
     /**
-     * Gets the chainId property value. 
+     * Gets the chainId property value. The chainId property
      * @return int|null
     */
     public function getChainId(): ?int {
@@ -88,7 +88,7 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
     }
 
     /**
-     * Gets the previewText property value. 
+     * Gets the previewText property value. The previewText property
      * @return ItemBody|null
     */
     public function getPreviewText(): ?ItemBody {
@@ -96,7 +96,7 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
     }
 
     /**
-     * Gets the recipients property value. 
+     * Gets the recipients property value. The recipients property
      * @return array<TeamworkNotificationRecipient>|null
     */
     public function getRecipients(): ?array {
@@ -104,7 +104,7 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
     }
 
     /**
-     * Gets the teamsAppId property value. 
+     * Gets the teamsAppId property value. The teamsAppId property
      * @return string|null
     */
     public function getTeamsAppId(): ?string {
@@ -112,7 +112,7 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
     }
 
     /**
-     * Gets the templateParameters property value. 
+     * Gets the templateParameters property value. The templateParameters property
      * @return array<KeyValuePair>|null
     */
     public function getTemplateParameters(): ?array {
@@ -120,7 +120,7 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
     }
 
     /**
-     * Gets the topic property value. 
+     * Gets the topic property value. The topic property
      * @return TeamworkActivityTopic|null
     */
     public function getTopic(): ?TeamworkActivityTopic {
@@ -143,7 +143,7 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
     }
 
     /**
-     * Sets the activityType property value. 
+     * Sets the activityType property value. The activityType property
      * @param string|null $value Value to set for the activityType property.
     */
     public function setActivityType(?string $value): void {
@@ -167,7 +167,7 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
     }
 
     /**
-     * Sets the chainId property value. 
+     * Sets the chainId property value. The chainId property
      * @param int|null $value Value to set for the chainId property.
     */
     public function setChainId(?int $value): void {
@@ -175,7 +175,7 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
     }
 
     /**
-     * Sets the previewText property value. 
+     * Sets the previewText property value. The previewText property
      * @param ItemBody|null $value Value to set for the previewText property.
     */
     public function setPreviewText(?ItemBody $value): void {
@@ -183,7 +183,7 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
     }
 
     /**
-     * Sets the recipients property value. 
+     * Sets the recipients property value. The recipients property
      * @param array<TeamworkNotificationRecipient>|null $value Value to set for the recipients property.
     */
     public function setRecipients(?array $value): void {
@@ -191,7 +191,7 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
     }
 
     /**
-     * Sets the teamsAppId property value. 
+     * Sets the teamsAppId property value. The teamsAppId property
      * @param string|null $value Value to set for the teamsAppId property.
     */
     public function setTeamsAppId(?string $value): void {
@@ -199,7 +199,7 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
     }
 
     /**
-     * Sets the templateParameters property value. 
+     * Sets the templateParameters property value. The templateParameters property
      * @param array<KeyValuePair>|null $value Value to set for the templateParameters property.
     */
     public function setTemplateParameters(?array $value): void {
@@ -207,7 +207,7 @@ class SendActivityNotificationToRecipientsPostRequestBody implements AdditionalD
     }
 
     /**
-     * Sets the topic property value. 
+     * Sets the topic property value. The topic property
      * @param TeamworkActivityTopic|null $value Value to set for the topic property.
     */
     public function setTopic(?TeamworkActivityTopic $value): void {

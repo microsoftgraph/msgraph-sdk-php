@@ -65,6 +65,7 @@ class ComplianceRequestBuilder
 
     /**
      * Update compliance
+     * @param Compliance $body The request body
      * @param ComplianceRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -108,6 +109,7 @@ class ComplianceRequestBuilder
 
     /**
      * Update compliance
+     * @param Compliance $body The request body
      * @param ComplianceRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

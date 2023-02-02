@@ -52,7 +52,7 @@ class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the expirationDateTime property value. 
+     * Gets the expirationDateTime property value. The expirationDateTime property
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
@@ -76,7 +76,7 @@ class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the message property value. 
+     * Gets the message property value. The message property
      * @return string|null
     */
     public function getMessage(): ?string {
@@ -84,7 +84,7 @@ class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the password property value. 
+     * Gets the password property value. The password property
      * @return string|null
     */
     public function getPassword(): ?string {
@@ -92,7 +92,7 @@ class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the retainInheritedPermissions property value. 
+     * Gets the retainInheritedPermissions property value. The retainInheritedPermissions property
      * @return bool|null
     */
     public function getRetainInheritedPermissions(): ?bool {
@@ -100,7 +100,7 @@ class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the scope property value. 
+     * Gets the scope property value. The scope property
      * @return string|null
     */
     public function getScope(): ?string {
@@ -108,7 +108,7 @@ class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the type property value. 
+     * Gets the type property value. The type property
      * @return string|null
     */
     public function getType(): ?string {
@@ -146,7 +146,7 @@ class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the expirationDateTime property value. 
+     * Sets the expirationDateTime property value. The expirationDateTime property
      * @param DateTime|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?DateTime $value): void {
@@ -154,7 +154,7 @@ class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the message property value. 
+     * Sets the message property value. The message property
      * @param string|null $value Value to set for the message property.
     */
     public function setMessage(?string $value): void {
@@ -162,7 +162,7 @@ class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the password property value. 
+     * Sets the password property value. The password property
      * @param string|null $value Value to set for the password property.
     */
     public function setPassword(?string $value): void {
@@ -170,7 +170,7 @@ class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the retainInheritedPermissions property value. 
+     * Sets the retainInheritedPermissions property value. The retainInheritedPermissions property
      * @param bool|null $value Value to set for the retainInheritedPermissions property.
     */
     public function setRetainInheritedPermissions(?bool $value): void {
@@ -178,7 +178,7 @@ class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the scope property value. 
+     * Sets the scope property value. The scope property
      * @param string|null $value Value to set for the scope property.
     */
     public function setScope(?string $value): void {
@@ -186,7 +186,7 @@ class CreateLinkPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the type property value. 
+     * Sets the type property value. The type property
      * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {

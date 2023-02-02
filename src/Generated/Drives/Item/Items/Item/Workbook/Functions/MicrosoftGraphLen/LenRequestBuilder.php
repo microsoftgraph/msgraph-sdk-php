@@ -47,6 +47,7 @@ class LenRequestBuilder
 
     /**
      * Invoke action len
+     * @param LenPostRequestBody $body The request body
      * @param LenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class LenRequestBuilder
 
     /**
      * Invoke action len
+     * @param LenPostRequestBody $body The request body
      * @param LenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

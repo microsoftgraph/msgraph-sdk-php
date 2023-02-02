@@ -47,6 +47,7 @@ class RoundRequestBuilder
 
     /**
      * Invoke action round
+     * @param RoundPostRequestBody $body The request body
      * @param RoundRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class RoundRequestBuilder
 
     /**
      * Invoke action round
+     * @param RoundPostRequestBody $body The request body
      * @param RoundRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

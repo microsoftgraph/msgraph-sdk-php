@@ -82,6 +82,7 @@ class TeamworkRequestBuilder
 
     /**
      * Update teamwork
+     * @param Teamwork $body The request body
      * @param TeamworkRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -125,6 +126,7 @@ class TeamworkRequestBuilder
 
     /**
      * Update teamwork
+     * @param Teamwork $body The request body
      * @param TeamworkRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

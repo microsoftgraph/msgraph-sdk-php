@@ -52,7 +52,7 @@ class DatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the day property value. 
+     * Gets the day property value. The day property
      * @return Json|null
     */
     public function getDay(): ?Json {
@@ -73,7 +73,7 @@ class DatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the month property value. 
+     * Gets the month property value. The month property
      * @return Json|null
     */
     public function getMonth(): ?Json {
@@ -81,7 +81,7 @@ class DatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the year property value. 
+     * Gets the year property value. The year property
      * @return Json|null
     */
     public function getYear(): ?Json {
@@ -116,7 +116,7 @@ class DatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the day property value. 
+     * Sets the day property value. The day property
      * @param Json|null $value Value to set for the day property.
     */
     public function setDay(?Json $value): void {
@@ -124,7 +124,7 @@ class DatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the month property value. 
+     * Sets the month property value. The month property
      * @param Json|null $value Value to set for the month property.
     */
     public function setMonth(?Json $value): void {
@@ -132,7 +132,7 @@ class DatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the year property value. 
+     * Sets the year property value. The year property
      * @param Json|null $value Value to set for the year property.
     */
     public function setYear(?Json $value): void {

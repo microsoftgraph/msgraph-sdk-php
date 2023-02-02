@@ -64,7 +64,7 @@ class ReptPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the numberTimes property value. 
+     * Gets the numberTimes property value. The numberTimes property
      * @return Json|null
     */
     public function getNumberTimes(): ?Json {
@@ -72,7 +72,7 @@ class ReptPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the text property value. 
+     * Gets the text property value. The text property
      * @return Json|null
     */
     public function getText(): ?Json {
@@ -106,7 +106,7 @@ class ReptPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the numberTimes property value. 
+     * Sets the numberTimes property value. The numberTimes property
      * @param Json|null $value Value to set for the numberTimes property.
     */
     public function setNumberTimes(?Json $value): void {
@@ -114,7 +114,7 @@ class ReptPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the text property value. 
+     * Sets the text property value. The text property
      * @param Json|null $value Value to set for the text property.
     */
     public function setText(?Json $value): void {

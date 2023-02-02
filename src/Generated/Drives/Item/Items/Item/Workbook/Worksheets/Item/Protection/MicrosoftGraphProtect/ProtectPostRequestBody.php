@@ -63,7 +63,7 @@ class ProtectPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the options property value. 
+     * Gets the options property value. The options property
      * @return WorkbookWorksheetProtectionOptions|null
     */
     public function getOptions(): ?WorkbookWorksheetProtectionOptions {
@@ -96,7 +96,7 @@ class ProtectPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the options property value. 
+     * Sets the options property value. The options property
      * @param WorkbookWorksheetProtectionOptions|null $value Value to set for the options property.
     */
     public function setOptions(?WorkbookWorksheetProtectionOptions $value): void {

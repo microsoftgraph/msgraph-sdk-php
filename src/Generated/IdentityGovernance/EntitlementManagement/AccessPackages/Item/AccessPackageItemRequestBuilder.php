@@ -181,6 +181,7 @@ class AccessPackageItemRequestBuilder
 
     /**
      * Update the navigation property accessPackages in identityGovernance
+     * @param AccessPackage $body The request body
      * @param AccessPackageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -245,6 +246,7 @@ class AccessPackageItemRequestBuilder
 
     /**
      * Update the navigation property accessPackages in identityGovernance
+     * @param AccessPackage $body The request body
      * @param AccessPackageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

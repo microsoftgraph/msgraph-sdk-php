@@ -75,6 +75,7 @@ class AdditionalSourcesRequestBuilder
 
     /**
      * Create a new additional source associated with an eDiscovery search.
+     * @param DataSource $body The request body
      * @param AdditionalSourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/security-ediscoverysearch-post-additionalsources?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class AdditionalSourcesRequestBuilder
 
     /**
      * Create a new additional source associated with an eDiscovery search.
+     * @param DataSource $body The request body
      * @param AdditionalSourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

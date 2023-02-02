@@ -65,7 +65,7 @@ class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolder, Back
     }
 
     /**
-     * Gets the lastMessageReadDateTime property value. 
+     * Gets the lastMessageReadDateTime property value. The lastMessageReadDateTime property
      * @return DateTime|null
     */
     public function getLastMessageReadDateTime(): ?DateTime {
@@ -73,7 +73,7 @@ class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolder, Back
     }
 
     /**
-     * Gets the user property value. 
+     * Gets the user property value. The user property
      * @return TeamworkUserIdentity|null
     */
     public function getUser(): ?TeamworkUserIdentity {
@@ -107,7 +107,7 @@ class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolder, Back
     }
 
     /**
-     * Sets the lastMessageReadDateTime property value. 
+     * Sets the lastMessageReadDateTime property value. The lastMessageReadDateTime property
      * @param DateTime|null $value Value to set for the lastMessageReadDateTime property.
     */
     public function setLastMessageReadDateTime(?DateTime $value): void {
@@ -115,7 +115,7 @@ class MarkChatUnreadForUserPostRequestBody implements AdditionalDataHolder, Back
     }
 
     /**
-     * Sets the user property value. 
+     * Sets the user property value. The user property
      * @param TeamworkUserIdentity|null $value Value to set for the user property.
     */
     public function setUser(?TeamworkUserIdentity $value): void {

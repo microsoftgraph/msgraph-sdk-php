@@ -62,7 +62,7 @@ class RemoveHoldPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the ids property value. 
+     * Gets the ids property value. The ids property
      * @return array<string>|null
     */
     public function getIds(): ?array {
@@ -95,7 +95,7 @@ class RemoveHoldPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the ids property value. 
+     * Sets the ids property value. The ids property
      * @param array<string>|null $value Value to set for the ids property.
     */
     public function setIds(?array $value): void {

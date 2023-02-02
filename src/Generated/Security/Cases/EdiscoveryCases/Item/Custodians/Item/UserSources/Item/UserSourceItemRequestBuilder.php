@@ -87,6 +87,7 @@ class UserSourceItemRequestBuilder
 
     /**
      * Update the navigation property userSources in security
+     * @param UserSource $body The request body
      * @param UserSourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class UserSourceItemRequestBuilder
 
     /**
      * Update the navigation property userSources in security
+     * @param UserSource $body The request body
      * @param UserSourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -115,6 +115,7 @@ class SeriesAxisRequestBuilder
 
     /**
      * Update the navigation property seriesAxis in drives
+     * @param WorkbookChartAxis $body The request body
      * @param SeriesAxisRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -179,6 +180,7 @@ class SeriesAxisRequestBuilder
 
     /**
      * Update the navigation property seriesAxis in drives
+     * @param WorkbookChartAxis $body The request body
      * @param SeriesAxisRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

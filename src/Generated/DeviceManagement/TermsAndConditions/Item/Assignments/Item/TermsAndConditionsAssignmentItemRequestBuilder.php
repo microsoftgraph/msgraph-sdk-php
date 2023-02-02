@@ -87,6 +87,7 @@ class TermsAndConditionsAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property assignments in deviceManagement
+     * @param TermsAndConditionsAssignment $body The request body
      * @param TermsAndConditionsAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class TermsAndConditionsAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property assignments in deviceManagement
+     * @param TermsAndConditionsAssignment $body The request body
      * @param TermsAndConditionsAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -85,6 +85,7 @@ class AccessPackagesRequestBuilder
 
     /**
      * Create a new accessPackage object. The access package will be added to an existing accessPackageCatalog.
+     * @param AccessPackage $body The request body
      * @param AccessPackagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/entitlementmanagement-post-accesspackages?view=graph-rest-1.0 Find more info here
@@ -129,6 +130,7 @@ class AccessPackagesRequestBuilder
 
     /**
      * Create a new accessPackage object. The access package will be added to an existing accessPackageCatalog.
+     * @param AccessPackage $body The request body
      * @param AccessPackagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

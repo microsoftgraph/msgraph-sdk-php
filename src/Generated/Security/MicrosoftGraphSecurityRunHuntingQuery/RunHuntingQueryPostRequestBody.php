@@ -62,7 +62,7 @@ class RunHuntingQueryPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the query property value. 
+     * Gets the query property value. The query property
      * @return string|null
     */
     public function getQuery(): ?string {
@@ -95,7 +95,7 @@ class RunHuntingQueryPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the query property value. 
+     * Sets the query property value. The query property
      * @param string|null $value Value to set for the query property.
     */
     public function setQuery(?string $value): void {

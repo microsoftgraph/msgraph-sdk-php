@@ -63,7 +63,7 @@ class DelegatedAdminAccessDetails implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -71,7 +71,7 @@ class DelegatedAdminAccessDetails implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the unifiedRoles property value. 
+     * Gets the unifiedRoles property value. The unifiedRoles property
      * @return array<UnifiedRole>|null
     */
     public function getUnifiedRoles(): ?array {
@@ -105,7 +105,7 @@ class DelegatedAdminAccessDetails implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -113,7 +113,7 @@ class DelegatedAdminAccessDetails implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the unifiedRoles property value. 
+     * Sets the unifiedRoles property value. The unifiedRoles property
      * @param array<UnifiedRole>|null $value Value to set for the unifiedRoles property.
     */
     public function setUnifiedRoles(?array $value): void {

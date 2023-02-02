@@ -127,6 +127,7 @@ class ResourceSpecificPermissionGrantItemRequestBuilder
 
     /**
      * Update entity in permissionGrants
+     * @param ResourceSpecificPermissionGrant $body The request body
      * @param ResourceSpecificPermissionGrantItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -191,6 +192,7 @@ class ResourceSpecificPermissionGrantItemRequestBuilder
 
     /**
      * Update entity in permissionGrants
+     * @param ResourceSpecificPermissionGrant $body The request body
      * @param ResourceSpecificPermissionGrantItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

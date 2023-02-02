@@ -64,7 +64,7 @@ class SumIfsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the sumRange property value. 
+     * Gets the sumRange property value. The sumRange property
      * @return Json|null
     */
     public function getSumRange(): ?Json {
@@ -72,7 +72,7 @@ class SumIfsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the values property value. 
+     * Gets the values property value. The values property
      * @return Json|null
     */
     public function getValues(): ?Json {
@@ -106,7 +106,7 @@ class SumIfsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the sumRange property value. 
+     * Sets the sumRange property value. The sumRange property
      * @param Json|null $value Value to set for the sumRange property.
     */
     public function setSumRange(?Json $value): void {
@@ -114,7 +114,7 @@ class SumIfsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the values property value. 
+     * Sets the values property value. The values property
      * @param Json|null $value Value to set for the values property.
     */
     public function setValues(?Json $value): void {

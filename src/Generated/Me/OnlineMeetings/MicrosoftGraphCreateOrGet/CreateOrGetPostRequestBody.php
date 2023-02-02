@@ -54,7 +54,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the chatInfo property value. 
+     * Gets the chatInfo property value. The chatInfo property
      * @return ChatInfo|null
     */
     public function getChatInfo(): ?ChatInfo {
@@ -62,7 +62,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the endDateTime property value. 
+     * Gets the endDateTime property value. The endDateTime property
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
@@ -70,7 +70,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the externalId property value. 
+     * Gets the externalId property value. The externalId property
      * @return string|null
     */
     public function getExternalId(): ?string {
@@ -94,7 +94,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the participants property value. 
+     * Gets the participants property value. The participants property
      * @return MeetingParticipants|null
     */
     public function getParticipants(): ?MeetingParticipants {
@@ -102,7 +102,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the startDateTime property value. 
+     * Gets the startDateTime property value. The startDateTime property
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
@@ -110,7 +110,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the subject property value. 
+     * Gets the subject property value. The subject property
      * @return string|null
     */
     public function getSubject(): ?string {
@@ -148,7 +148,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the chatInfo property value. 
+     * Sets the chatInfo property value. The chatInfo property
      * @param ChatInfo|null $value Value to set for the chatInfo property.
     */
     public function setChatInfo(?ChatInfo $value): void {
@@ -156,7 +156,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the endDateTime property value. 
+     * Sets the endDateTime property value. The endDateTime property
      * @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value): void {
@@ -164,7 +164,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the externalId property value. 
+     * Sets the externalId property value. The externalId property
      * @param string|null $value Value to set for the externalId property.
     */
     public function setExternalId(?string $value): void {
@@ -172,7 +172,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the participants property value. 
+     * Sets the participants property value. The participants property
      * @param MeetingParticipants|null $value Value to set for the participants property.
     */
     public function setParticipants(?MeetingParticipants $value): void {
@@ -180,7 +180,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the startDateTime property value. 
+     * Sets the startDateTime property value. The startDateTime property
      * @param DateTime|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTime $value): void {
@@ -188,7 +188,7 @@ class CreateOrGetPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the subject property value. 
+     * Sets the subject property value. The subject property
      * @param string|null $value Value to set for the subject property.
     */
     public function setSubject(?string $value): void {

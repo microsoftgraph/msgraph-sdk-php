@@ -47,6 +47,7 @@ class ExactRequestBuilder
 
     /**
      * Invoke action exact
+     * @param ExactPostRequestBody $body The request body
      * @param ExactRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ExactRequestBuilder
 
     /**
      * Invoke action exact
+     * @param ExactPostRequestBody $body The request body
      * @param ExactRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

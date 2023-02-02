@@ -44,7 +44,7 @@ class AverageIfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the averageRange property value. 
+     * Gets the averageRange property value. The averageRange property
      * @return Json|null
     */
     public function getAverageRange(): ?Json {
@@ -60,7 +60,7 @@ class AverageIfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the criteria property value. 
+     * Gets the criteria property value. The criteria property
      * @return Json|null
     */
     public function getCriteria(): ?Json {
@@ -81,7 +81,7 @@ class AverageIfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the range property value. 
+     * Gets the range property value. The range property
      * @return Json|null
     */
     public function getRange(): ?Json {
@@ -108,7 +108,7 @@ class AverageIfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the averageRange property value. 
+     * Sets the averageRange property value. The averageRange property
      * @param Json|null $value Value to set for the averageRange property.
     */
     public function setAverageRange(?Json $value): void {
@@ -124,7 +124,7 @@ class AverageIfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the criteria property value. 
+     * Sets the criteria property value. The criteria property
      * @param Json|null $value Value to set for the criteria property.
     */
     public function setCriteria(?Json $value): void {
@@ -132,7 +132,7 @@ class AverageIfPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the range property value. 
+     * Sets the range property value. The range property
      * @param Json|null $value Value to set for the range property.
     */
     public function setRange(?Json $value): void {

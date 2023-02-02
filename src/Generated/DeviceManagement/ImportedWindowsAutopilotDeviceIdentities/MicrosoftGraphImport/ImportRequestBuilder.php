@@ -46,6 +46,7 @@ class ImportRequestBuilder
 
     /**
      * Invoke action import
+     * @param ImportPostRequestBody $body The request body
      * @param ImportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -64,6 +65,7 @@ class ImportRequestBuilder
 
     /**
      * Invoke action import
+     * @param ImportPostRequestBody $body The request body
      * @param ImportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

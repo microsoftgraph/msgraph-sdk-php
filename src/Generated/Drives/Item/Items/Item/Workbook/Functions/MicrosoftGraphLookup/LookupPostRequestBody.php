@@ -65,7 +65,7 @@ class LookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the lookupValue property value. 
+     * Gets the lookupValue property value. The lookupValue property
      * @return Json|null
     */
     public function getLookupValue(): ?Json {
@@ -73,7 +73,7 @@ class LookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the lookupVector property value. 
+     * Gets the lookupVector property value. The lookupVector property
      * @return Json|null
     */
     public function getLookupVector(): ?Json {
@@ -81,7 +81,7 @@ class LookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the resultVector property value. 
+     * Gets the resultVector property value. The resultVector property
      * @return Json|null
     */
     public function getResultVector(): ?Json {
@@ -116,7 +116,7 @@ class LookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the lookupValue property value. 
+     * Sets the lookupValue property value. The lookupValue property
      * @param Json|null $value Value to set for the lookupValue property.
     */
     public function setLookupValue(?Json $value): void {
@@ -124,7 +124,7 @@ class LookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the lookupVector property value. 
+     * Sets the lookupVector property value. The lookupVector property
      * @param Json|null $value Value to set for the lookupVector property.
     */
     public function setLookupVector(?Json $value): void {
@@ -132,7 +132,7 @@ class LookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the resultVector property value. 
+     * Sets the resultVector property value. The resultVector property
      * @param Json|null $value Value to set for the resultVector property.
     */
     public function setResultVector(?Json $value): void {

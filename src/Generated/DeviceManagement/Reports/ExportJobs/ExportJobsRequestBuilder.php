@@ -74,6 +74,7 @@ class ExportJobsRequestBuilder
 
     /**
      * Create new navigation property to exportJobs for deviceManagement
+     * @param DeviceManagementExportJob $body The request body
      * @param ExportJobsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class ExportJobsRequestBuilder
 
     /**
      * Create new navigation property to exportJobs for deviceManagement
+     * @param DeviceManagementExportJob $body The request body
      * @param ExportJobsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

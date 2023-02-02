@@ -74,6 +74,7 @@ class WindowsAutopilotDeviceIdentitiesRequestBuilder
 
     /**
      * Create new navigation property to windowsAutopilotDeviceIdentities for deviceManagement
+     * @param WindowsAutopilotDeviceIdentity $body The request body
      * @param WindowsAutopilotDeviceIdentitiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class WindowsAutopilotDeviceIdentitiesRequestBuilder
 
     /**
      * Create new navigation property to windowsAutopilotDeviceIdentities for deviceManagement
+     * @param WindowsAutopilotDeviceIdentity $body The request body
      * @param WindowsAutopilotDeviceIdentitiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -51,7 +51,7 @@ class CheckinPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the checkInAs property value. 
+     * Gets the checkInAs property value. The checkInAs property
      * @return string|null
     */
     public function getCheckInAs(): ?string {
@@ -59,7 +59,7 @@ class CheckinPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the comment property value. 
+     * Gets the comment property value. The comment property
      * @return string|null
     */
     public function getComment(): ?string {
@@ -105,7 +105,7 @@ class CheckinPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the checkInAs property value. 
+     * Sets the checkInAs property value. The checkInAs property
      * @param string|null $value Value to set for the checkInAs property.
     */
     public function setCheckInAs(?string $value): void {
@@ -113,7 +113,7 @@ class CheckinPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the comment property value. 
+     * Sets the comment property value. The comment property
      * @param string|null $value Value to set for the comment property.
     */
     public function setComment(?string $value): void {

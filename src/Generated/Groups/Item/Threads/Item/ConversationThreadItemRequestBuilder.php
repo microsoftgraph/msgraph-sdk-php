@@ -104,6 +104,7 @@ class ConversationThreadItemRequestBuilder
 
     /**
      * Update the navigation property threads in groups
+     * @param ConversationThread $body The request body
      * @param ConversationThreadItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -179,6 +180,7 @@ class ConversationThreadItemRequestBuilder
 
     /**
      * Update the navigation property threads in groups
+     * @param ConversationThread $body The request body
      * @param ConversationThreadItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -83,6 +83,7 @@ class SchoolsRequestBuilder
 
     /**
      * Create a new educationSchool object.
+     * @param EducationSchool $body The request body
      * @param SchoolsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/educationschool-post?view=graph-rest-1.0 Find more info here
@@ -127,6 +128,7 @@ class SchoolsRequestBuilder
 
     /**
      * Create a new educationSchool object.
+     * @param EducationSchool $body The request body
      * @param SchoolsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

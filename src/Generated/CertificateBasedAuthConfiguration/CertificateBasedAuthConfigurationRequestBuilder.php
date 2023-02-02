@@ -74,6 +74,7 @@ class CertificateBasedAuthConfigurationRequestBuilder
 
     /**
      * Add new entity to certificateBasedAuthConfiguration
+     * @param CertificateBasedAuthConfiguration $body The request body
      * @param CertificateBasedAuthConfigurationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class CertificateBasedAuthConfigurationRequestBuilder
 
     /**
      * Add new entity to certificateBasedAuthConfiguration
+     * @param CertificateBasedAuthConfiguration $body The request body
      * @param CertificateBasedAuthConfigurationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

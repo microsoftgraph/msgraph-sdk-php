@@ -52,7 +52,7 @@ class AuthenticationMethodTarget extends Entity implements Parsable
     }
 
     /**
-     * Gets the targetType property value. 
+     * Gets the targetType property value. The targetType property
      * @return AuthenticationMethodTargetType|null
     */
     public function getTargetType(): ?AuthenticationMethodTargetType {
@@ -78,7 +78,7 @@ class AuthenticationMethodTarget extends Entity implements Parsable
     }
 
     /**
-     * Sets the targetType property value. 
+     * Sets the targetType property value. The targetType property
      * @param AuthenticationMethodTargetType|null $value Value to set for the targetType property.
     */
     public function setTargetType(?AuthenticationMethodTargetType $value): void {

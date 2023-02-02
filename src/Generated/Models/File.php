@@ -81,7 +81,7 @@ class File implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -89,7 +89,7 @@ class File implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the processingMetadata property value. 
+     * Gets the processingMetadata property value. The processingMetadata property
      * @return bool|null
     */
     public function getProcessingMetadata(): ?bool {
@@ -141,7 +141,7 @@ class File implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -149,7 +149,7 @@ class File implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the processingMetadata property value. 
+     * Sets the processingMetadata property value. The processingMetadata property
      * @param bool|null $value Value to set for the processingMetadata property.
     */
     public function setProcessingMetadata(?bool $value): void {

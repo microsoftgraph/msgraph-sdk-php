@@ -36,7 +36,7 @@ class RichLongRunningOperationCollectionResponse extends BaseCollectionPaginatio
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<RichLongRunningOperation>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class RichLongRunningOperationCollectionResponse extends BaseCollectionPaginatio
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param array<RichLongRunningOperation>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

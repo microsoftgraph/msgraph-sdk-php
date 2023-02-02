@@ -91,6 +91,7 @@ class MajorGridlinesRequestBuilder
 
     /**
      * Update the navigation property majorGridlines in drives
+     * @param WorkbookChartGridlines $body The request body
      * @param MajorGridlinesRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -155,6 +156,7 @@ class MajorGridlinesRequestBuilder
 
     /**
      * Update the navigation property majorGridlines in drives
+     * @param WorkbookChartGridlines $body The request body
      * @param MajorGridlinesRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -87,6 +87,7 @@ class RiskyServicePrincipalHistoryItemItemRequestBuilder
 
     /**
      * Update the navigation property history in identityProtection
+     * @param RiskyServicePrincipalHistoryItem $body The request body
      * @param RiskyServicePrincipalHistoryItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class RiskyServicePrincipalHistoryItemItemRequestBuilder
 
     /**
      * Update the navigation property history in identityProtection
+     * @param RiskyServicePrincipalHistoryItem $body The request body
      * @param RiskyServicePrincipalHistoryItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

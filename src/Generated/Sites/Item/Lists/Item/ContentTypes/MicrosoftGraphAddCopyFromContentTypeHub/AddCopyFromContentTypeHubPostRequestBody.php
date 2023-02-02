@@ -51,7 +51,7 @@ class AddCopyFromContentTypeHubPostRequestBody implements AdditionalDataHolder, 
     }
 
     /**
-     * Gets the contentTypeId property value. 
+     * Gets the contentTypeId property value. The contentTypeId property
      * @return string|null
     */
     public function getContentTypeId(): ?string {
@@ -95,7 +95,7 @@ class AddCopyFromContentTypeHubPostRequestBody implements AdditionalDataHolder, 
     }
 
     /**
-     * Sets the contentTypeId property value. 
+     * Sets the contentTypeId property value. The contentTypeId property
      * @param string|null $value Value to set for the contentTypeId property.
     */
     public function setContentTypeId(?string $value): void {

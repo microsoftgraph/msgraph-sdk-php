@@ -25,7 +25,7 @@ class PrintTaskDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdBy property value. 
+     * Gets the createdBy property value. The createdBy property
      * @return AppIdentity|null
     */
     public function getCreatedBy(): ?AppIdentity {
@@ -73,7 +73,7 @@ class PrintTaskDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdBy property value. 
+     * Sets the createdBy property value. The createdBy property
      * @param AppIdentity|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?AppIdentity $value): void {

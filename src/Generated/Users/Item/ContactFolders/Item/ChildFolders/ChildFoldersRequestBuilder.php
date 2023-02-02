@@ -83,6 +83,7 @@ class ChildFoldersRequestBuilder
 
     /**
      * Create a new contactFolder as a child of a specified folder.  You can also create a new contactFolder under the user's default contact folder.
+     * @param ContactFolder $body The request body
      * @param ChildFoldersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/contactfolder-post-childfolders?view=graph-rest-1.0 Find more info here
@@ -127,6 +128,7 @@ class ChildFoldersRequestBuilder
 
     /**
      * Create a new contactFolder as a child of a specified folder.  You can also create a new contactFolder under the user's default contact folder.
+     * @param ContactFolder $body The request body
      * @param ChildFoldersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -46,6 +46,7 @@ class AddRequestBuilder
 
     /**
      * Follow a user's site or multiple sites.
+     * @param AddPostRequestBody $body The request body
      * @param AddRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/site-follow?view=graph-rest-1.0 Find more info here
@@ -65,6 +66,7 @@ class AddRequestBuilder
 
     /**
      * Follow a user's site or multiple sites.
+     * @param AddPostRequestBody $body The request body
      * @param AddRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

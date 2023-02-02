@@ -258,6 +258,7 @@ class PoliciesRequestBuilder
 
     /**
      * Update policies
+     * @param PolicyRoot $body The request body
      * @param PoliciesRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -356,6 +357,7 @@ class PoliciesRequestBuilder
 
     /**
      * Update policies
+     * @param PolicyRoot $body The request body
      * @param PoliciesRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

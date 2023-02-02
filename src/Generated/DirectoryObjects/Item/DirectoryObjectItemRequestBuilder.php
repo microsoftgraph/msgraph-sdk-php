@@ -129,6 +129,7 @@ class DirectoryObjectItemRequestBuilder
 
     /**
      * Update entity in directoryObjects
+     * @param DirectoryObject $body The request body
      * @param DirectoryObjectItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -193,6 +194,7 @@ class DirectoryObjectItemRequestBuilder
 
     /**
      * Update entity in directoryObjects
+     * @param DirectoryObject $body The request body
      * @param DirectoryObjectItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

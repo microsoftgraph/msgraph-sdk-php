@@ -119,6 +119,7 @@ class PlannerTaskItemRequestBuilder
 
     /**
      * Update the navigation property tasks in users
+     * @param PlannerTask $body The request body
      * @param PlannerTaskItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -183,6 +184,7 @@ class PlannerTaskItemRequestBuilder
 
     /**
      * Update the navigation property tasks in users
+     * @param PlannerTask $body The request body
      * @param PlannerTaskItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

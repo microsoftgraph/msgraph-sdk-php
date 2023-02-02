@@ -37,7 +37,7 @@ class AadUserConversationMemberResult extends ActionResultPart implements Parsab
     }
 
     /**
-     * Gets the userId property value. 
+     * Gets the userId property value. The userId property
      * @return string|null
     */
     public function getUserId(): ?string {
@@ -54,7 +54,7 @@ class AadUserConversationMemberResult extends ActionResultPart implements Parsab
     }
 
     /**
-     * Sets the userId property value. 
+     * Sets the userId property value. The userId property
      * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {

@@ -52,7 +52,7 @@ class AssignPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the enrollmentConfigurationAssignments property value. 
+     * Gets the enrollmentConfigurationAssignments property value. The enrollmentConfigurationAssignments property
      * @return array<EnrollmentConfigurationAssignment>|null
     */
     public function getEnrollmentConfigurationAssignments(): ?array {
@@ -96,7 +96,7 @@ class AssignPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the enrollmentConfigurationAssignments property value. 
+     * Sets the enrollmentConfigurationAssignments property value. The enrollmentConfigurationAssignments property
      * @param array<EnrollmentConfigurationAssignment>|null $value Value to set for the enrollmentConfigurationAssignments property.
     */
     public function setEnrollmentConfigurationAssignments(?array $value): void {

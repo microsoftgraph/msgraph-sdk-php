@@ -47,6 +47,7 @@ class Hex2BinRequestBuilder
 
     /**
      * Invoke action hex2Bin
+     * @param Hex2BinPostRequestBody $body The request body
      * @param Hex2BinRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Hex2BinRequestBuilder
 
     /**
      * Invoke action hex2Bin
+     * @param Hex2BinPostRequestBody $body The request body
      * @param Hex2BinRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

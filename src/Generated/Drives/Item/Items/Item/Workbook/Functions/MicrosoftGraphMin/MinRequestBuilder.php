@@ -47,6 +47,7 @@ class MinRequestBuilder
 
     /**
      * Invoke action min
+     * @param MinPostRequestBody $body The request body
      * @param MinRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class MinRequestBuilder
 
     /**
      * Invoke action min
+     * @param MinPostRequestBody $body The request body
      * @param MinRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

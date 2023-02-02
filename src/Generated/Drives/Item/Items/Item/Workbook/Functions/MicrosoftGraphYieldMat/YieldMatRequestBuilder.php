@@ -47,6 +47,7 @@ class YieldMatRequestBuilder
 
     /**
      * Invoke action yieldMat
+     * @param YieldMatPostRequestBody $body The request body
      * @param YieldMatRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class YieldMatRequestBuilder
 
     /**
      * Invoke action yieldMat
+     * @param YieldMatPostRequestBody $body The request body
      * @param YieldMatRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

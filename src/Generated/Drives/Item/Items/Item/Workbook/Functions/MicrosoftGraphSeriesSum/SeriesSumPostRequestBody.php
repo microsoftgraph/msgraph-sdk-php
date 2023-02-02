@@ -52,7 +52,7 @@ class SeriesSumPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the coefficients property value. 
+     * Gets the coefficients property value. The coefficients property
      * @return Json|null
     */
     public function getCoefficients(): ?Json {
@@ -74,7 +74,7 @@ class SeriesSumPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the m property value. 
+     * Gets the m property value. The m property
      * @return Json|null
     */
     public function getM(): ?Json {
@@ -82,7 +82,7 @@ class SeriesSumPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the n property value. 
+     * Gets the n property value. The n property
      * @return Json|null
     */
     public function getN(): ?Json {
@@ -90,7 +90,7 @@ class SeriesSumPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the x property value. 
+     * Gets the x property value. The x property
      * @return Json|null
     */
     public function getX(): ?Json {
@@ -126,7 +126,7 @@ class SeriesSumPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the coefficients property value. 
+     * Sets the coefficients property value. The coefficients property
      * @param Json|null $value Value to set for the coefficients property.
     */
     public function setCoefficients(?Json $value): void {
@@ -134,7 +134,7 @@ class SeriesSumPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the m property value. 
+     * Sets the m property value. The m property
      * @param Json|null $value Value to set for the m property.
     */
     public function setM(?Json $value): void {
@@ -142,7 +142,7 @@ class SeriesSumPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the n property value. 
+     * Sets the n property value. The n property
      * @param Json|null $value Value to set for the n property.
     */
     public function setN(?Json $value): void {
@@ -150,7 +150,7 @@ class SeriesSumPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the x property value. 
+     * Sets the x property value. The x property
      * @param Json|null $value Value to set for the x property.
     */
     public function setX(?Json $value): void {

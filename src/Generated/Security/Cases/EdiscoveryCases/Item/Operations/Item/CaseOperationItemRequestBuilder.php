@@ -87,6 +87,7 @@ class CaseOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in security
+     * @param CaseOperation $body The request body
      * @param CaseOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class CaseOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in security
+     * @param CaseOperation $body The request body
      * @param CaseOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

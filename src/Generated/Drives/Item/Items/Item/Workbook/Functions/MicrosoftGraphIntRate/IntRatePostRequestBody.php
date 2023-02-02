@@ -52,7 +52,7 @@ class IntRatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the basis property value. 
+     * Gets the basis property value. The basis property
      * @return Json|null
     */
     public function getBasis(): ?Json {
@@ -75,7 +75,7 @@ class IntRatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the investment property value. 
+     * Gets the investment property value. The investment property
      * @return Json|null
     */
     public function getInvestment(): ?Json {
@@ -83,7 +83,7 @@ class IntRatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the maturity property value. 
+     * Gets the maturity property value. The maturity property
      * @return Json|null
     */
     public function getMaturity(): ?Json {
@@ -91,7 +91,7 @@ class IntRatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the redemption property value. 
+     * Gets the redemption property value. The redemption property
      * @return Json|null
     */
     public function getRedemption(): ?Json {
@@ -99,7 +99,7 @@ class IntRatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the settlement property value. 
+     * Gets the settlement property value. The settlement property
      * @return Json|null
     */
     public function getSettlement(): ?Json {
@@ -136,7 +136,7 @@ class IntRatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the basis property value. 
+     * Sets the basis property value. The basis property
      * @param Json|null $value Value to set for the basis property.
     */
     public function setBasis(?Json $value): void {
@@ -144,7 +144,7 @@ class IntRatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the investment property value. 
+     * Sets the investment property value. The investment property
      * @param Json|null $value Value to set for the investment property.
     */
     public function setInvestment(?Json $value): void {
@@ -152,7 +152,7 @@ class IntRatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the maturity property value. 
+     * Sets the maturity property value. The maturity property
      * @param Json|null $value Value to set for the maturity property.
     */
     public function setMaturity(?Json $value): void {
@@ -160,7 +160,7 @@ class IntRatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the redemption property value. 
+     * Sets the redemption property value. The redemption property
      * @param Json|null $value Value to set for the redemption property.
     */
     public function setRedemption(?Json $value): void {
@@ -168,7 +168,7 @@ class IntRatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the settlement property value. 
+     * Sets the settlement property value. The settlement property
      * @param Json|null $value Value to set for the settlement property.
     */
     public function setSettlement(?Json $value): void {

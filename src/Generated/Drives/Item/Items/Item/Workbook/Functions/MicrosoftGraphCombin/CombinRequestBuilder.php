@@ -47,6 +47,7 @@ class CombinRequestBuilder
 
     /**
      * Invoke action combin
+     * @param CombinPostRequestBody $body The request body
      * @param CombinRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class CombinRequestBuilder
 
     /**
      * Invoke action combin
+     * @param CombinPostRequestBody $body The request body
      * @param CombinRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

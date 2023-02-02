@@ -72,7 +72,7 @@ class RiskServicePrincipalActivity implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -80,7 +80,7 @@ class RiskServicePrincipalActivity implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the riskEventTypes property value. 
+     * Gets the riskEventTypes property value. The riskEventTypes property
      * @return array<string>|null
     */
     public function getRiskEventTypes(): ?array {
@@ -123,7 +123,7 @@ class RiskServicePrincipalActivity implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -131,7 +131,7 @@ class RiskServicePrincipalActivity implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the riskEventTypes property value. 
+     * Sets the riskEventTypes property value. The riskEventTypes property
      * @param array<string>|null $value Value to set for the riskEventTypes property.
     */
     public function setRiskEventTypes(?array $value): void {

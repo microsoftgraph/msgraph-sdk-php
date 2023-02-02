@@ -75,6 +75,7 @@ class ContentSharingSessionsRequestBuilder
 
     /**
      * Create new navigation property to contentSharingSessions for communications
+     * @param ContentSharingSession $body The request body
      * @param ContentSharingSessionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,6 +119,7 @@ class ContentSharingSessionsRequestBuilder
 
     /**
      * Create new navigation property to contentSharingSessions for communications
+     * @param ContentSharingSession $body The request body
      * @param ContentSharingSessionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

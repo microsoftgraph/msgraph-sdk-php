@@ -52,7 +52,7 @@ class XirrPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the dates property value. 
+     * Gets the dates property value. The dates property
      * @return Json|null
     */
     public function getDates(): ?Json {
@@ -73,7 +73,7 @@ class XirrPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the guess property value. 
+     * Gets the guess property value. The guess property
      * @return Json|null
     */
     public function getGuess(): ?Json {
@@ -81,7 +81,7 @@ class XirrPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the values property value. 
+     * Gets the values property value. The values property
      * @return Json|null
     */
     public function getValues(): ?Json {
@@ -116,7 +116,7 @@ class XirrPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the dates property value. 
+     * Sets the dates property value. The dates property
      * @param Json|null $value Value to set for the dates property.
     */
     public function setDates(?Json $value): void {
@@ -124,7 +124,7 @@ class XirrPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the guess property value. 
+     * Sets the guess property value. The guess property
      * @param Json|null $value Value to set for the guess property.
     */
     public function setGuess(?Json $value): void {
@@ -132,7 +132,7 @@ class XirrPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the values property value. 
+     * Sets the values property value. The values property
      * @param Json|null $value Value to set for the values property.
     */
     public function setValues(?Json $value): void {

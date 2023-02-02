@@ -47,6 +47,7 @@ class TrimRequestBuilder
 
     /**
      * Invoke action trim
+     * @param TrimPostRequestBody $body The request body
      * @param TrimRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class TrimRequestBuilder
 
     /**
      * Invoke action trim
+     * @param TrimPostRequestBody $body The request body
      * @param TrimRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

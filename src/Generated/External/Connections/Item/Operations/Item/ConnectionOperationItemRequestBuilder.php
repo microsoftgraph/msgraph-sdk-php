@@ -87,6 +87,7 @@ class ConnectionOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in external
+     * @param ConnectionOperation $body The request body
      * @param ConnectionOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class ConnectionOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in external
+     * @param ConnectionOperation $body The request body
      * @param ConnectionOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

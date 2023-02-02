@@ -26,7 +26,7 @@ class CalendarSharingMessage extends Message implements Parsable
     }
 
     /**
-     * Gets the canAccept property value. 
+     * Gets the canAccept property value. The canAccept property
      * @return bool|null
     */
     public function getCanAccept(): ?bool {
@@ -48,7 +48,7 @@ class CalendarSharingMessage extends Message implements Parsable
     }
 
     /**
-     * Gets the sharingMessageAction property value. 
+     * Gets the sharingMessageAction property value. The sharingMessageAction property
      * @return CalendarSharingMessageAction|null
     */
     public function getSharingMessageAction(): ?CalendarSharingMessageAction {
@@ -56,7 +56,7 @@ class CalendarSharingMessage extends Message implements Parsable
     }
 
     /**
-     * Gets the sharingMessageActions property value. 
+     * Gets the sharingMessageActions property value. The sharingMessageActions property
      * @return array<CalendarSharingMessageAction>|null
     */
     public function getSharingMessageActions(): ?array {
@@ -64,7 +64,7 @@ class CalendarSharingMessage extends Message implements Parsable
     }
 
     /**
-     * Gets the suggestedCalendarName property value. 
+     * Gets the suggestedCalendarName property value. The suggestedCalendarName property
      * @return string|null
     */
     public function getSuggestedCalendarName(): ?string {
@@ -84,7 +84,7 @@ class CalendarSharingMessage extends Message implements Parsable
     }
 
     /**
-     * Sets the canAccept property value. 
+     * Sets the canAccept property value. The canAccept property
      * @param bool|null $value Value to set for the canAccept property.
     */
     public function setCanAccept(?bool $value): void {
@@ -92,7 +92,7 @@ class CalendarSharingMessage extends Message implements Parsable
     }
 
     /**
-     * Sets the sharingMessageAction property value. 
+     * Sets the sharingMessageAction property value. The sharingMessageAction property
      * @param CalendarSharingMessageAction|null $value Value to set for the sharingMessageAction property.
     */
     public function setSharingMessageAction(?CalendarSharingMessageAction $value): void {
@@ -100,7 +100,7 @@ class CalendarSharingMessage extends Message implements Parsable
     }
 
     /**
-     * Sets the sharingMessageActions property value. 
+     * Sets the sharingMessageActions property value. The sharingMessageActions property
      * @param array<CalendarSharingMessageAction>|null $value Value to set for the sharingMessageActions property.
     */
     public function setSharingMessageActions(?array $value): void {
@@ -108,7 +108,7 @@ class CalendarSharingMessage extends Message implements Parsable
     }
 
     /**
-     * Sets the suggestedCalendarName property value. 
+     * Sets the suggestedCalendarName property value. The suggestedCalendarName property
      * @param string|null $value Value to set for the suggestedCalendarName property.
     */
     public function setSuggestedCalendarName(?string $value): void {

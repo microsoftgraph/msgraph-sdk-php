@@ -44,7 +44,7 @@ class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the attachmentInfo property value. 
+     * Gets the attachmentInfo property value. The attachmentInfo property
      * @return AttachmentInfo|null
     */
     public function getAttachmentInfo(): ?AttachmentInfo {
@@ -88,7 +88,7 @@ class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the attachmentInfo property value. 
+     * Sets the attachmentInfo property value. The attachmentInfo property
      * @param AttachmentInfo|null $value Value to set for the attachmentInfo property.
     */
     public function setAttachmentInfo(?AttachmentInfo $value): void {

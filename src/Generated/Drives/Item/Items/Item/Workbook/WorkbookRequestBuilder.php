@@ -221,6 +221,7 @@ class WorkbookRequestBuilder
 
     /**
      * Update the navigation property workbook in drives
+     * @param Workbook $body The request body
      * @param WorkbookRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -296,6 +297,7 @@ class WorkbookRequestBuilder
 
     /**
      * Update the navigation property workbook in drives
+     * @param Workbook $body The request body
      * @param WorkbookRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

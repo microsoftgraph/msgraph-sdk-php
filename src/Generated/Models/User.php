@@ -99,7 +99,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the authorizationInfo property value. 
+     * Gets the authorizationInfo property value. The authorizationInfo property
      * @return AuthorizationInfo|null
     */
     public function getAuthorizationInfo(): ?AuthorizationInfo {
@@ -155,7 +155,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the chats property value. 
+     * Gets the chats property value. The chats property
      * @return array<Chat>|null
     */
     public function getChats(): ?array {
@@ -491,7 +491,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the followedSites property value. 
+     * Gets the followedSites property value. The followedSites property
      * @return array<Site>|null
     */
     public function getFollowedSites(): ?array {
@@ -539,7 +539,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the insights property value. 
+     * Gets the insights property value. The insights property
      * @return OfficeGraphInsights|null
     */
     public function getInsights(): ?OfficeGraphInsights {
@@ -571,7 +571,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the joinedTeams property value. 
+     * Gets the joinedTeams property value. The joinedTeams property
      * @return array<Team>|null
     */
     public function getJoinedTeams(): ?array {
@@ -699,7 +699,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the oauth2PermissionGrants property value. 
+     * Gets the oauth2PermissionGrants property value. The oauth2PermissionGrants property
      * @return array<OAuth2PermissionGrant>|null
     */
     public function getOauth2PermissionGrants(): ?array {
@@ -715,7 +715,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the onenote property value. 
+     * Gets the onenote property value. The onenote property
      * @return Onenote|null
     */
     public function getOnenote(): ?Onenote {
@@ -723,7 +723,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the onlineMeetings property value. 
+     * Gets the onlineMeetings property value. The onlineMeetings property
      * @return array<OnlineMeeting>|null
     */
     public function getOnlineMeetings(): ?array {
@@ -819,7 +819,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the outlook property value. 
+     * Gets the outlook property value. The outlook property
      * @return OutlookUser|null
     */
     public function getOutlook(): ?OutlookUser {
@@ -883,7 +883,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the photos property value. 
+     * Gets the photos property value. The photos property
      * @return array<ProfilePhoto>|null
     */
     public function getPhotos(): ?array {
@@ -931,7 +931,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the presence property value. 
+     * Gets the presence property value. The presence property
      * @return Presence|null
     */
     public function getPresence(): ?Presence {
@@ -979,7 +979,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the scopedRoleMemberOf property value. 
+     * Gets the scopedRoleMemberOf property value. The scopedRoleMemberOf property
      * @return array<ScopedRoleMembership>|null
     */
     public function getScopedRoleMemberOf(): ?array {
@@ -995,7 +995,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the settings property value. 
+     * Gets the settings property value. The settings property
      * @return UserSettings|null
     */
     public function getSettings(): ?UserSettings {
@@ -1051,7 +1051,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the teamwork property value. 
+     * Gets the teamwork property value. The teamwork property
      * @return UserTeamwork|null
     */
     public function getTeamwork(): ?UserTeamwork {
@@ -1297,7 +1297,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the authorizationInfo property value. 
+     * Sets the authorizationInfo property value. The authorizationInfo property
      * @param AuthorizationInfo|null $value Value to set for the authorizationInfo property.
     */
     public function setAuthorizationInfo(?AuthorizationInfo $value): void {
@@ -1353,7 +1353,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the chats property value. 
+     * Sets the chats property value. The chats property
      * @param array<Chat>|null $value Value to set for the chats property.
     */
     public function setChats(?array $value): void {
@@ -1561,7 +1561,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the followedSites property value. 
+     * Sets the followedSites property value. The followedSites property
      * @param array<Site>|null $value Value to set for the followedSites property.
     */
     public function setFollowedSites(?array $value): void {
@@ -1609,7 +1609,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the insights property value. 
+     * Sets the insights property value. The insights property
      * @param OfficeGraphInsights|null $value Value to set for the insights property.
     */
     public function setInsights(?OfficeGraphInsights $value): void {
@@ -1641,7 +1641,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the joinedTeams property value. 
+     * Sets the joinedTeams property value. The joinedTeams property
      * @param array<Team>|null $value Value to set for the joinedTeams property.
     */
     public function setJoinedTeams(?array $value): void {
@@ -1769,7 +1769,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the oauth2PermissionGrants property value. 
+     * Sets the oauth2PermissionGrants property value. The oauth2PermissionGrants property
      * @param array<OAuth2PermissionGrant>|null $value Value to set for the oauth2PermissionGrants property.
     */
     public function setOauth2PermissionGrants(?array $value): void {
@@ -1785,7 +1785,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the onenote property value. 
+     * Sets the onenote property value. The onenote property
      * @param Onenote|null $value Value to set for the onenote property.
     */
     public function setOnenote(?Onenote $value): void {
@@ -1793,7 +1793,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the onlineMeetings property value. 
+     * Sets the onlineMeetings property value. The onlineMeetings property
      * @param array<OnlineMeeting>|null $value Value to set for the onlineMeetings property.
     */
     public function setOnlineMeetings(?array $value): void {
@@ -1889,7 +1889,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the outlook property value. 
+     * Sets the outlook property value. The outlook property
      * @param OutlookUser|null $value Value to set for the outlook property.
     */
     public function setOutlook(?OutlookUser $value): void {
@@ -1953,7 +1953,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the photos property value. 
+     * Sets the photos property value. The photos property
      * @param array<ProfilePhoto>|null $value Value to set for the photos property.
     */
     public function setPhotos(?array $value): void {
@@ -2001,7 +2001,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the presence property value. 
+     * Sets the presence property value. The presence property
      * @param Presence|null $value Value to set for the presence property.
     */
     public function setPresence(?Presence $value): void {
@@ -2049,7 +2049,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the scopedRoleMemberOf property value. 
+     * Sets the scopedRoleMemberOf property value. The scopedRoleMemberOf property
      * @param array<ScopedRoleMembership>|null $value Value to set for the scopedRoleMemberOf property.
     */
     public function setScopedRoleMemberOf(?array $value): void {
@@ -2065,7 +2065,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the settings property value. 
+     * Sets the settings property value. The settings property
      * @param UserSettings|null $value Value to set for the settings property.
     */
     public function setSettings(?UserSettings $value): void {
@@ -2121,7 +2121,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the teamwork property value. 
+     * Sets the teamwork property value. The teamwork property
      * @param UserTeamwork|null $value Value to set for the teamwork property.
     */
     public function setTeamwork(?UserTeamwork $value): void {

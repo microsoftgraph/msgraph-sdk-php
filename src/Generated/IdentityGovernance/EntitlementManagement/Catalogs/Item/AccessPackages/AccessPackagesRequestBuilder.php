@@ -84,6 +84,7 @@ class AccessPackagesRequestBuilder
 
     /**
      * Create new navigation property to accessPackages for identityGovernance
+     * @param AccessPackage $body The request body
      * @param AccessPackagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -127,6 +128,7 @@ class AccessPackagesRequestBuilder
 
     /**
      * Create new navigation property to accessPackages for identityGovernance
+     * @param AccessPackage $body The request body
      * @param AccessPackagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

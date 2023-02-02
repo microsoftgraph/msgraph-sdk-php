@@ -74,6 +74,7 @@ class FederationConfigurationRequestBuilder
 
     /**
      * Create a new internalDomainFederation object.
+     * @param InternalDomainFederation $body The request body
      * @param FederationConfigurationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/domain-post-federationconfiguration?view=graph-rest-1.0 Find more info here
@@ -118,6 +119,7 @@ class FederationConfigurationRequestBuilder
 
     /**
      * Create a new internalDomainFederation object.
+     * @param InternalDomainFederation $body The request body
      * @param FederationConfigurationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

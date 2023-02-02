@@ -47,6 +47,7 @@ class ImSumRequestBuilder
 
     /**
      * Invoke action imSum
+     * @param ImSumPostRequestBody $body The request body
      * @param ImSumRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ImSumRequestBuilder
 
     /**
      * Invoke action imSum
+     * @param ImSumPostRequestBody $body The request body
      * @param ImSumRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -63,7 +63,7 @@ class AssignPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the managedEBookAssignments property value. 
+     * Gets the managedEBookAssignments property value. The managedEBookAssignments property
      * @return array<ManagedEBookAssignment>|null
     */
     public function getManagedEBookAssignments(): ?array {
@@ -96,7 +96,7 @@ class AssignPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the managedEBookAssignments property value. 
+     * Sets the managedEBookAssignments property value. The managedEBookAssignments property
      * @param array<ManagedEBookAssignment>|null $value Value to set for the managedEBookAssignments property.
     */
     public function setManagedEBookAssignments(?array $value): void {

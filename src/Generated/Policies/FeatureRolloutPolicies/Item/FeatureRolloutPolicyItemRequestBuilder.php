@@ -107,6 +107,7 @@ class FeatureRolloutPolicyItemRequestBuilder
 
     /**
      * Update the navigation property featureRolloutPolicies in policies
+     * @param FeatureRolloutPolicy $body The request body
      * @param FeatureRolloutPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -171,6 +172,7 @@ class FeatureRolloutPolicyItemRequestBuilder
 
     /**
      * Update the navigation property featureRolloutPolicies in policies
+     * @param FeatureRolloutPolicy $body The request body
      * @param FeatureRolloutPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -46,6 +46,7 @@ class ApplyTagsRequestBuilder
 
     /**
      * Apply tags to files in an eDiscovery review set. For details, see Tag documents in a review set in eDiscovery.
+     * @param ApplyTagsPostRequestBody $body The request body
      * @param ApplyTagsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/security-ediscoveryreviewsetquery-applytags?view=graph-rest-1.0 Find more info here
@@ -65,6 +66,7 @@ class ApplyTagsRequestBuilder
 
     /**
      * Apply tags to files in an eDiscovery review set. For details, see Tag documents in a review set in eDiscovery.
+     * @param ApplyTagsPostRequestBody $body The request body
      * @param ApplyTagsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

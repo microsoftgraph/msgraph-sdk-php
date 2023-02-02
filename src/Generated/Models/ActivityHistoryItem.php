@@ -34,7 +34,7 @@ class ActivityHistoryItem extends Entity implements Parsable
     }
 
     /**
-     * Gets the activity property value. 
+     * Gets the activity property value. The activity property
      * @return UserActivity|null
     */
     public function getActivity(): ?UserActivity {
@@ -142,7 +142,7 @@ class ActivityHistoryItem extends Entity implements Parsable
     }
 
     /**
-     * Sets the activity property value. 
+     * Sets the activity property value. The activity property
      * @param UserActivity|null $value Value to set for the activity property.
     */
     public function setActivity(?UserActivity $value): void {

@@ -51,7 +51,7 @@ class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the bookingBusinesses property value. 
+     * Gets the bookingBusinesses property value. The bookingBusinesses property
      * @return array<BookingBusiness>|null
     */
     public function getBookingBusinesses(): ?array {
@@ -59,7 +59,7 @@ class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the bookingCurrencies property value. 
+     * Gets the bookingCurrencies property value. The bookingCurrencies property
      * @return array<BookingCurrency>|null
     */
     public function getBookingCurrencies(): ?array {
@@ -80,7 +80,7 @@ class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -115,7 +115,7 @@ class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the bookingBusinesses property value. 
+     * Sets the bookingBusinesses property value. The bookingBusinesses property
      * @param array<BookingBusiness>|null $value Value to set for the bookingBusinesses property.
     */
     public function setBookingBusinesses(?array $value): void {
@@ -123,7 +123,7 @@ class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the bookingCurrencies property value. 
+     * Sets the bookingCurrencies property value. The bookingCurrencies property
      * @param array<BookingCurrency>|null $value Value to set for the bookingCurrencies property.
     */
     public function setBookingCurrencies(?array $value): void {
@@ -131,7 +131,7 @@ class SolutionsRoot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

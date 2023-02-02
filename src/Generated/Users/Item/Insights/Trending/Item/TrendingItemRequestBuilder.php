@@ -95,6 +95,7 @@ class TrendingItemRequestBuilder
 
     /**
      * Update the navigation property trending in users
+     * @param Trending $body The request body
      * @param TrendingItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class TrendingItemRequestBuilder
 
     /**
      * Update the navigation property trending in users
+     * @param Trending $body The request body
      * @param TrendingItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

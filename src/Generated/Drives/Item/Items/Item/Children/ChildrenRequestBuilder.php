@@ -75,6 +75,7 @@ class ChildrenRequestBuilder
 
     /**
      * Create new navigation property to children for drives
+     * @param DriveItem $body The request body
      * @param ChildrenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/driveitem-post-children?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class ChildrenRequestBuilder
 
     /**
      * Create new navigation property to children for drives
+     * @param DriveItem $body The request body
      * @param ChildrenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

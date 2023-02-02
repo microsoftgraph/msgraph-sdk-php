@@ -87,6 +87,7 @@ class DataSourceItemRequestBuilder
 
     /**
      * Update the navigation property additionalSources in security
+     * @param DataSource $body The request body
      * @param DataSourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class DataSourceItemRequestBuilder
 
     /**
      * Update the navigation property additionalSources in security
+     * @param DataSource $body The request body
      * @param DataSourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

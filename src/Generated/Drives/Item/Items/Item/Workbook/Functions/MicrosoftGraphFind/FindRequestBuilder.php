@@ -47,6 +47,7 @@ class FindRequestBuilder
 
     /**
      * Invoke action find
+     * @param FindPostRequestBody $body The request body
      * @param FindRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class FindRequestBuilder
 
     /**
      * Invoke action find
+     * @param FindPostRequestBody $body The request body
      * @param FindRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

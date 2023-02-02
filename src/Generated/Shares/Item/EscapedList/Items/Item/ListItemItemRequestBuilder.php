@@ -160,6 +160,7 @@ class ListItemItemRequestBuilder
 
     /**
      * Update the navigation property items in shares
+     * @param ListItem $body The request body
      * @param ListItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -224,6 +225,7 @@ class ListItemItemRequestBuilder
 
     /**
      * Update the navigation property items in shares
+     * @param ListItem $body The request body
      * @param ListItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

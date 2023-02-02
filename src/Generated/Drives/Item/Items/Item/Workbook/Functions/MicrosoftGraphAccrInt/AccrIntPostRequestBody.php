@@ -52,7 +52,7 @@ class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the basis property value. 
+     * Gets the basis property value. The basis property
      * @return Json|null
     */
     public function getBasis(): ?Json {
@@ -60,7 +60,7 @@ class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the calcMethod property value. 
+     * Gets the calcMethod property value. The calcMethod property
      * @return Json|null
     */
     public function getCalcMethod(): ?Json {
@@ -86,7 +86,7 @@ class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the firstInterest property value. 
+     * Gets the firstInterest property value. The firstInterest property
      * @return Json|null
     */
     public function getFirstInterest(): ?Json {
@@ -94,7 +94,7 @@ class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the frequency property value. 
+     * Gets the frequency property value. The frequency property
      * @return Json|null
     */
     public function getFrequency(): ?Json {
@@ -102,7 +102,7 @@ class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the issue property value. 
+     * Gets the issue property value. The issue property
      * @return Json|null
     */
     public function getIssue(): ?Json {
@@ -110,7 +110,7 @@ class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the par property value. 
+     * Gets the par property value. The par property
      * @return Json|null
     */
     public function getPar(): ?Json {
@@ -118,7 +118,7 @@ class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the rate property value. 
+     * Gets the rate property value. The rate property
      * @return Json|null
     */
     public function getRate(): ?Json {
@@ -126,7 +126,7 @@ class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the settlement property value. 
+     * Gets the settlement property value. The settlement property
      * @return Json|null
     */
     public function getSettlement(): ?Json {
@@ -166,7 +166,7 @@ class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the basis property value. 
+     * Sets the basis property value. The basis property
      * @param Json|null $value Value to set for the basis property.
     */
     public function setBasis(?Json $value): void {
@@ -174,7 +174,7 @@ class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the calcMethod property value. 
+     * Sets the calcMethod property value. The calcMethod property
      * @param Json|null $value Value to set for the calcMethod property.
     */
     public function setCalcMethod(?Json $value): void {
@@ -182,7 +182,7 @@ class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the firstInterest property value. 
+     * Sets the firstInterest property value. The firstInterest property
      * @param Json|null $value Value to set for the firstInterest property.
     */
     public function setFirstInterest(?Json $value): void {
@@ -190,7 +190,7 @@ class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the frequency property value. 
+     * Sets the frequency property value. The frequency property
      * @param Json|null $value Value to set for the frequency property.
     */
     public function setFrequency(?Json $value): void {
@@ -198,7 +198,7 @@ class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the issue property value. 
+     * Sets the issue property value. The issue property
      * @param Json|null $value Value to set for the issue property.
     */
     public function setIssue(?Json $value): void {
@@ -206,7 +206,7 @@ class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the par property value. 
+     * Sets the par property value. The par property
      * @param Json|null $value Value to set for the par property.
     */
     public function setPar(?Json $value): void {
@@ -214,7 +214,7 @@ class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the rate property value. 
+     * Sets the rate property value. The rate property
      * @param Json|null $value Value to set for the rate property.
     */
     public function setRate(?Json $value): void {
@@ -222,7 +222,7 @@ class AccrIntPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the settlement property value. 
+     * Sets the settlement property value. The settlement property
      * @param Json|null $value Value to set for the settlement property.
     */
     public function setSettlement(?Json $value): void {

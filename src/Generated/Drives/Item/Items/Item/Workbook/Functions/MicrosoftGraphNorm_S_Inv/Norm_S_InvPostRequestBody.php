@@ -63,7 +63,7 @@ class Norm_S_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the probability property value. 
+     * Gets the probability property value. The probability property
      * @return Json|null
     */
     public function getProbability(): ?Json {
@@ -96,7 +96,7 @@ class Norm_S_InvPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the probability property value. 
+     * Sets the probability property value. The probability property
      * @param Json|null $value Value to set for the probability property.
     */
     public function setProbability(?Json $value): void {

@@ -99,6 +99,7 @@ class ContentTypesRequestBuilder
 
     /**
      * Create a new [contentType][] in a [site][].
+     * @param ContentType $body The request body
      * @param ContentTypesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/site-post-contenttypes?view=graph-rest-1.0 Find more info here
@@ -143,6 +144,7 @@ class ContentTypesRequestBuilder
 
     /**
      * Create a new [contentType][] in a [site][].
+     * @param ContentType $body The request body
      * @param ContentTypesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

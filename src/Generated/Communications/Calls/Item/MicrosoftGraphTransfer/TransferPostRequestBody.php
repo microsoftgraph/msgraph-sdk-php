@@ -65,7 +65,7 @@ class TransferPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the transferee property value. 
+     * Gets the transferee property value. The transferee property
      * @return ParticipantInfo|null
     */
     public function getTransferee(): ?ParticipantInfo {
@@ -73,7 +73,7 @@ class TransferPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the transferTarget property value. 
+     * Gets the transferTarget property value. The transferTarget property
      * @return InvitationParticipantInfo|null
     */
     public function getTransferTarget(): ?InvitationParticipantInfo {
@@ -107,7 +107,7 @@ class TransferPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the transferee property value. 
+     * Sets the transferee property value. The transferee property
      * @param ParticipantInfo|null $value Value to set for the transferee property.
     */
     public function setTransferee(?ParticipantInfo $value): void {
@@ -115,7 +115,7 @@ class TransferPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the transferTarget property value. 
+     * Sets the transferTarget property value. The transferTarget property
      * @param InvitationParticipantInfo|null $value Value to set for the transferTarget property.
     */
     public function setTransferTarget(?InvitationParticipantInfo $value): void {

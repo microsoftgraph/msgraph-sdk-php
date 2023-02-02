@@ -65,7 +65,7 @@ class ConvertPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the fromUnit property value. 
+     * Gets the fromUnit property value. The fromUnit property
      * @return Json|null
     */
     public function getFromUnit(): ?Json {
@@ -73,7 +73,7 @@ class ConvertPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the number property value. 
+     * Gets the number property value. The number property
      * @return Json|null
     */
     public function getNumber(): ?Json {
@@ -81,7 +81,7 @@ class ConvertPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the toUnit property value. 
+     * Gets the toUnit property value. The toUnit property
      * @return Json|null
     */
     public function getToUnit(): ?Json {
@@ -116,7 +116,7 @@ class ConvertPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the fromUnit property value. 
+     * Sets the fromUnit property value. The fromUnit property
      * @param Json|null $value Value to set for the fromUnit property.
     */
     public function setFromUnit(?Json $value): void {
@@ -124,7 +124,7 @@ class ConvertPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the number property value. 
+     * Sets the number property value. The number property
      * @param Json|null $value Value to set for the number property.
     */
     public function setNumber(?Json $value): void {
@@ -132,7 +132,7 @@ class ConvertPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the toUnit property value. 
+     * Sets the toUnit property value. The toUnit property
      * @param Json|null $value Value to set for the toUnit property.
     */
     public function setToUnit(?Json $value): void {

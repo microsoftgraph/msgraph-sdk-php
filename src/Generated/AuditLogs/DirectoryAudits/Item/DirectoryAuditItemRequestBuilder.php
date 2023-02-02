@@ -87,6 +87,7 @@ class DirectoryAuditItemRequestBuilder
 
     /**
      * Update the navigation property directoryAudits in auditLogs
+     * @param DirectoryAudit $body The request body
      * @param DirectoryAuditItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class DirectoryAuditItemRequestBuilder
 
     /**
      * Update the navigation property directoryAudits in auditLogs
+     * @param DirectoryAudit $body The request body
      * @param DirectoryAuditItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

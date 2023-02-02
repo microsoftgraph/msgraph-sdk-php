@@ -44,7 +44,7 @@ class IdentityUserFlow extends Entity implements Parsable
     }
 
     /**
-     * Gets the userFlowType property value. 
+     * Gets the userFlowType property value. The userFlowType property
      * @return UserFlowType|null
     */
     public function getUserFlowType(): ?UserFlowType {
@@ -52,7 +52,7 @@ class IdentityUserFlow extends Entity implements Parsable
     }
 
     /**
-     * Gets the userFlowTypeVersion property value. 
+     * Gets the userFlowTypeVersion property value. The userFlowTypeVersion property
      * @return float|null
     */
     public function getUserFlowTypeVersion(): ?float {
@@ -70,7 +70,7 @@ class IdentityUserFlow extends Entity implements Parsable
     }
 
     /**
-     * Sets the userFlowType property value. 
+     * Sets the userFlowType property value. The userFlowType property
      * @param UserFlowType|null $value Value to set for the userFlowType property.
     */
     public function setUserFlowType(?UserFlowType $value): void {
@@ -78,7 +78,7 @@ class IdentityUserFlow extends Entity implements Parsable
     }
 
     /**
-     * Sets the userFlowTypeVersion property value. 
+     * Sets the userFlowTypeVersion property value. The userFlowTypeVersion property
      * @param float|null $value Value to set for the userFlowTypeVersion property.
     */
     public function setUserFlowTypeVersion(?float $value): void {

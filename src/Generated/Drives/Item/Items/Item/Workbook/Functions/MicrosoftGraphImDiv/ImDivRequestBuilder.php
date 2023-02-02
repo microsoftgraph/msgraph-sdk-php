@@ -47,6 +47,7 @@ class ImDivRequestBuilder
 
     /**
      * Invoke action imDiv
+     * @param ImDivPostRequestBody $body The request body
      * @param ImDivRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ImDivRequestBuilder
 
     /**
      * Invoke action imDiv
+     * @param ImDivPostRequestBody $body The request body
      * @param ImDivRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

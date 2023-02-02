@@ -35,7 +35,7 @@ class DelegatedAdminAccessContainer implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the accessContainerId property value. 
+     * Gets the accessContainerId property value. The accessContainerId property
      * @return string|null
     */
     public function getAccessContainerId(): ?string {
@@ -43,7 +43,7 @@ class DelegatedAdminAccessContainer implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the accessContainerType property value. 
+     * Gets the accessContainerType property value. The accessContainerType property
      * @return DelegatedAdminAccessContainerType|null
     */
     public function getAccessContainerType(): ?DelegatedAdminAccessContainerType {
@@ -80,7 +80,7 @@ class DelegatedAdminAccessContainer implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -99,7 +99,7 @@ class DelegatedAdminAccessContainer implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the accessContainerId property value. 
+     * Sets the accessContainerId property value. The accessContainerId property
      * @param string|null $value Value to set for the accessContainerId property.
     */
     public function setAccessContainerId(?string $value): void {
@@ -107,7 +107,7 @@ class DelegatedAdminAccessContainer implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the accessContainerType property value. 
+     * Sets the accessContainerType property value. The accessContainerType property
      * @param DelegatedAdminAccessContainerType|null $value Value to set for the accessContainerType property.
     */
     public function setAccessContainerType(?DelegatedAdminAccessContainerType $value): void {
@@ -131,7 +131,7 @@ class DelegatedAdminAccessContainer implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

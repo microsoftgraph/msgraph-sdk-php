@@ -46,6 +46,7 @@ class ChangePasswordRequestBuilder
 
     /**
      * Enable the user to update their password. Any user can update their password without belonging to any administrator role.
+     * @param ChangePasswordPostRequestBody $body The request body
      * @param ChangePasswordRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/user-changepassword?view=graph-rest-1.0 Find more info here
@@ -65,6 +66,7 @@ class ChangePasswordRequestBuilder
 
     /**
      * Enable the user to update their password. Any user can update their password without belonging to any administrator role.
+     * @param ChangePasswordPostRequestBody $body The request body
      * @param ChangePasswordRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

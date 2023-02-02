@@ -87,6 +87,7 @@ class AssociatedTeamInfoItemRequestBuilder
 
     /**
      * Update the navigation property associatedTeams in users
+     * @param AssociatedTeamInfo $body The request body
      * @param AssociatedTeamInfoItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class AssociatedTeamInfoItemRequestBuilder
 
     /**
      * Update the navigation property associatedTeams in users
+     * @param AssociatedTeamInfo $body The request body
      * @param AssociatedTeamInfoItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

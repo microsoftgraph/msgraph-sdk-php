@@ -64,7 +64,7 @@ class GrantPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the recipients property value. 
+     * Gets the recipients property value. The recipients property
      * @return array<DriveRecipient>|null
     */
     public function getRecipients(): ?array {
@@ -72,7 +72,7 @@ class GrantPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the roles property value. 
+     * Gets the roles property value. The roles property
      * @return array<string>|null
     */
     public function getRoles(): ?array {
@@ -106,7 +106,7 @@ class GrantPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the recipients property value. 
+     * Sets the recipients property value. The recipients property
      * @param array<DriveRecipient>|null $value Value to set for the recipients property.
     */
     public function setRecipients(?array $value): void {
@@ -114,7 +114,7 @@ class GrantPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the roles property value. 
+     * Sets the roles property value. The roles property
      * @param array<string>|null $value Value to set for the roles property.
     */
     public function setRoles(?array $value): void {

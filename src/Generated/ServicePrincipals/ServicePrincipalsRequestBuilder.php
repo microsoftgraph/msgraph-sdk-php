@@ -107,6 +107,7 @@ class ServicePrincipalsRequestBuilder
 
     /**
      * Create a new servicePrincipal object.
+     * @param ServicePrincipal $body The request body
      * @param ServicePrincipalsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/serviceprincipal-post-serviceprincipals?view=graph-rest-1.0 Find more info here
@@ -151,6 +152,7 @@ class ServicePrincipalsRequestBuilder
 
     /**
      * Create a new servicePrincipal object.
+     * @param ServicePrincipal $body The request body
      * @param ServicePrincipalsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

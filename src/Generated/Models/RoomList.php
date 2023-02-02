@@ -46,7 +46,7 @@ class RoomList extends Place implements Parsable
     }
 
     /**
-     * Gets the rooms property value. 
+     * Gets the rooms property value. The rooms property
      * @return array<Room>|null
     */
     public function getRooms(): ?array {
@@ -72,7 +72,7 @@ class RoomList extends Place implements Parsable
     }
 
     /**
-     * Sets the rooms property value. 
+     * Sets the rooms property value. The rooms property
      * @param array<Room>|null $value Value to set for the rooms property.
     */
     public function setRooms(?array $value): void {

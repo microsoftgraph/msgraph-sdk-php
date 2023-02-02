@@ -84,6 +84,7 @@ class AccessPackageAssignmentApprovalsRequestBuilder
 
     /**
      * Create new navigation property to accessPackageAssignmentApprovals for identityGovernance
+     * @param Approval $body The request body
      * @param AccessPackageAssignmentApprovalsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -127,6 +128,7 @@ class AccessPackageAssignmentApprovalsRequestBuilder
 
     /**
      * Create new navigation property to accessPackageAssignmentApprovals for identityGovernance
+     * @param Approval $body The request body
      * @param AccessPackageAssignmentApprovalsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -46,6 +46,7 @@ class ApplyCellColorFilterRequestBuilder
 
     /**
      * Invoke action applyCellColorFilter
+     * @param ApplyCellColorFilterPostRequestBody $body The request body
      * @param ApplyCellColorFilterRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -64,6 +65,7 @@ class ApplyCellColorFilterRequestBuilder
 
     /**
      * Invoke action applyCellColorFilter
+     * @param ApplyCellColorFilterPostRequestBody $body The request body
      * @param ApplyCellColorFilterRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

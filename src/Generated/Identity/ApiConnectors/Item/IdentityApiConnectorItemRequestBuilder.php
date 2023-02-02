@@ -95,6 +95,7 @@ class IdentityApiConnectorItemRequestBuilder
 
     /**
      * Update the navigation property apiConnectors in identity
+     * @param IdentityApiConnector $body The request body
      * @param IdentityApiConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class IdentityApiConnectorItemRequestBuilder
 
     /**
      * Update the navigation property apiConnectors in identity
+     * @param IdentityApiConnector $body The request body
      * @param IdentityApiConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

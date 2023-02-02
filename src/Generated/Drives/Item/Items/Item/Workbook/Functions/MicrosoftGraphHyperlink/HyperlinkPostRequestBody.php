@@ -64,7 +64,7 @@ class HyperlinkPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the friendlyName property value. 
+     * Gets the friendlyName property value. The friendlyName property
      * @return Json|null
     */
     public function getFriendlyName(): ?Json {
@@ -72,7 +72,7 @@ class HyperlinkPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the linkLocation property value. 
+     * Gets the linkLocation property value. The linkLocation property
      * @return Json|null
     */
     public function getLinkLocation(): ?Json {
@@ -106,7 +106,7 @@ class HyperlinkPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the friendlyName property value. 
+     * Sets the friendlyName property value. The friendlyName property
      * @param Json|null $value Value to set for the friendlyName property.
     */
     public function setFriendlyName(?Json $value): void {
@@ -114,7 +114,7 @@ class HyperlinkPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the linkLocation property value. 
+     * Sets the linkLocation property value. The linkLocation property
      * @param Json|null $value Value to set for the linkLocation property.
     */
     public function setLinkLocation(?Json $value): void {

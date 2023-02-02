@@ -162,6 +162,7 @@ class EdiscoveryCustodianItemRequestBuilder
 
     /**
      * Update the navigation property custodians in security
+     * @param EdiscoveryCustodian $body The request body
      * @param EdiscoveryCustodianItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -237,6 +238,7 @@ class EdiscoveryCustodianItemRequestBuilder
 
     /**
      * Update the navigation property custodians in security
+     * @param EdiscoveryCustodian $body The request body
      * @param EdiscoveryCustodianItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

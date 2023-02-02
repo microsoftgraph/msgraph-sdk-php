@@ -47,6 +47,7 @@ class IsNARequestBuilder
 
     /**
      * Invoke action isNA
+     * @param IsNAPostRequestBody $body The request body
      * @param IsNARequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class IsNARequestBuilder
 
     /**
      * Invoke action isNA
+     * @param IsNAPostRequestBody $body The request body
      * @param IsNARequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

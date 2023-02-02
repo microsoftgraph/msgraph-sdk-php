@@ -122,6 +122,7 @@ class DeletedItemsRequestBuilder
 
     /**
      * Create new navigation property to deletedItems for directory
+     * @param DirectoryObject $body The request body
      * @param DeletedItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -165,6 +166,7 @@ class DeletedItemsRequestBuilder
 
     /**
      * Create new navigation property to deletedItems for directory
+     * @param DirectoryObject $body The request body
      * @param DeletedItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

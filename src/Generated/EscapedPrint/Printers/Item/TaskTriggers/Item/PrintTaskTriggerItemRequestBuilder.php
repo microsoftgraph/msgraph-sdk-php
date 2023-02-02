@@ -95,6 +95,7 @@ class PrintTaskTriggerItemRequestBuilder
 
     /**
      * Update the navigation property taskTriggers in print
+     * @param PrintTaskTrigger $body The request body
      * @param PrintTaskTriggerItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class PrintTaskTriggerItemRequestBuilder
 
     /**
      * Update the navigation property taskTriggers in print
+     * @param PrintTaskTrigger $body The request body
      * @param PrintTaskTriggerItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

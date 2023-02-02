@@ -55,7 +55,7 @@ class DeviceAndAppManagementData implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the content property value. 
+     * Gets the content property value. The content property
      * @return StreamInterface|null
     */
     public function getContent(): ?StreamInterface {
@@ -75,7 +75,7 @@ class DeviceAndAppManagementData implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -109,7 +109,7 @@ class DeviceAndAppManagementData implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the content property value. 
+     * Sets the content property value. The content property
      * @param StreamInterface|null $value Value to set for the content property.
     */
     public function setContent(?StreamInterface $value): void {
@@ -117,7 +117,7 @@ class DeviceAndAppManagementData implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

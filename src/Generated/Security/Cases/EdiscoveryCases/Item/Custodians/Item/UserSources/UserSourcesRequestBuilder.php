@@ -75,6 +75,7 @@ class UserSourcesRequestBuilder
 
     /**
      * Create a new userSource object associated with an eDiscovery custodian.
+     * @param UserSource $body The request body
      * @param UserSourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/security-ediscoverycustodian-post-usersources?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class UserSourcesRequestBuilder
 
     /**
      * Create a new userSource object associated with an eDiscovery custodian.
+     * @param UserSource $body The request body
      * @param UserSourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

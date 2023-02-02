@@ -107,6 +107,7 @@ class CalendarGroupItemRequestBuilder
 
     /**
      * Update the navigation property calendarGroups in users
+     * @param CalendarGroup $body The request body
      * @param CalendarGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -171,6 +172,7 @@ class CalendarGroupItemRequestBuilder
 
     /**
      * Update the navigation property calendarGroups in users
+     * @param CalendarGroup $body The request body
      * @param CalendarGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

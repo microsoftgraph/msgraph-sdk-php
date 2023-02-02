@@ -47,6 +47,7 @@ class Days360RequestBuilder
 
     /**
      * Invoke action days360
+     * @param Days360PostRequestBody $body The request body
      * @param Days360RequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Days360RequestBuilder
 
     /**
      * Invoke action days360
+     * @param Days360PostRequestBody $body The request body
      * @param Days360RequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

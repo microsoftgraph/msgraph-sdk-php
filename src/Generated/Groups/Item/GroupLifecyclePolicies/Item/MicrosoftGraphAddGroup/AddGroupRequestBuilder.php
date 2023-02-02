@@ -46,6 +46,7 @@ class AddGroupRequestBuilder
 
     /**
      * Invoke action addGroup
+     * @param AddGroupPostRequestBody $body The request body
      * @param AddGroupRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -64,6 +65,7 @@ class AddGroupRequestBuilder
 
     /**
      * Invoke action addGroup
+     * @param AddGroupPostRequestBody $body The request body
      * @param AddGroupRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

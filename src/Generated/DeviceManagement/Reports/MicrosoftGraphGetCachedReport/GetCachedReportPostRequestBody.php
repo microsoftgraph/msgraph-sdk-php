@@ -68,7 +68,7 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the groupBy property value. 
+     * Gets the groupBy property value. The groupBy property
      * @return array<string>|null
     */
     public function getGroupBy(): ?array {
@@ -76,7 +76,7 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the id property value. 
+     * Gets the id property value. The id property
      * @return string|null
     */
     public function getId(): ?string {
@@ -84,7 +84,7 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the orderBy property value. 
+     * Gets the orderBy property value. The orderBy property
      * @return array<string>|null
     */
     public function getOrderBy(): ?array {
@@ -92,7 +92,7 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the search property value. 
+     * Gets the search property value. The search property
      * @return string|null
     */
     public function getSearch(): ?string {
@@ -100,7 +100,7 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the select property value. 
+     * Gets the select property value. The select property
      * @return array<string>|null
     */
     public function getSelect(): ?array {
@@ -108,7 +108,7 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the skip property value. 
+     * Gets the skip property value. The skip property
      * @return int|null
     */
     public function getSkip(): ?int {
@@ -116,7 +116,7 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the top property value. 
+     * Gets the top property value. The top property
      * @return int|null
     */
     public function getTop(): ?int {
@@ -155,7 +155,7 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the groupBy property value. 
+     * Sets the groupBy property value. The groupBy property
      * @param array<string>|null $value Value to set for the groupBy property.
     */
     public function setGroupBy(?array $value): void {
@@ -163,7 +163,7 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the id property value. 
+     * Sets the id property value. The id property
      * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {
@@ -171,7 +171,7 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the orderBy property value. 
+     * Sets the orderBy property value. The orderBy property
      * @param array<string>|null $value Value to set for the orderBy property.
     */
     public function setOrderBy(?array $value): void {
@@ -179,7 +179,7 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the search property value. 
+     * Sets the search property value. The search property
      * @param string|null $value Value to set for the search property.
     */
     public function setSearch(?string $value): void {
@@ -187,7 +187,7 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the select property value. 
+     * Sets the select property value. The select property
      * @param array<string>|null $value Value to set for the select property.
     */
     public function setSelect(?array $value): void {
@@ -195,7 +195,7 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the skip property value. 
+     * Sets the skip property value. The skip property
      * @param int|null $value Value to set for the skip property.
     */
     public function setSkip(?int $value): void {
@@ -203,7 +203,7 @@ class GetCachedReportPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the top property value. 
+     * Sets the top property value. The top property
      * @param int|null $value Value to set for the top property.
     */
     public function setTop(?int $value): void {

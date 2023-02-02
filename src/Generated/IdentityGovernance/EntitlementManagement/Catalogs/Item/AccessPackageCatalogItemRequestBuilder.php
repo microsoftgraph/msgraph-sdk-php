@@ -107,6 +107,7 @@ class AccessPackageCatalogItemRequestBuilder
 
     /**
      * Update the navigation property catalogs in identityGovernance
+     * @param AccessPackageCatalog $body The request body
      * @param AccessPackageCatalogItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -171,6 +172,7 @@ class AccessPackageCatalogItemRequestBuilder
 
     /**
      * Update the navigation property catalogs in identityGovernance
+     * @param AccessPackageCatalog $body The request body
      * @param AccessPackageCatalogItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

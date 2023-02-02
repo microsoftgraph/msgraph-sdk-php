@@ -62,7 +62,7 @@ class CleanWindowsDevicePostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Gets the keepUserData property value. 
+     * Gets the keepUserData property value. The keepUserData property
      * @return bool|null
     */
     public function getKeepUserData(): ?bool {
@@ -95,7 +95,7 @@ class CleanWindowsDevicePostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Sets the keepUserData property value. 
+     * Sets the keepUserData property value. The keepUserData property
      * @param bool|null $value Value to set for the keepUserData property.
     */
     public function setKeepUserData(?bool $value): void {

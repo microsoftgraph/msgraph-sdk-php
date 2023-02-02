@@ -47,6 +47,7 @@ class StDevARequestBuilder
 
     /**
      * Invoke action stDevA
+     * @param StDevAPostRequestBody $body The request body
      * @param StDevARequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class StDevARequestBuilder
 
     /**
      * Invoke action stDevA
+     * @param StDevAPostRequestBody $body The request body
      * @param StDevARequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

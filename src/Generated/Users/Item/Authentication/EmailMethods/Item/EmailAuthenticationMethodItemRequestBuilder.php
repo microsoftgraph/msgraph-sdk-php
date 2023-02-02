@@ -87,6 +87,7 @@ class EmailAuthenticationMethodItemRequestBuilder
 
     /**
      * Update the navigation property emailMethods in users
+     * @param EmailAuthenticationMethod $body The request body
      * @param EmailAuthenticationMethodItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class EmailAuthenticationMethodItemRequestBuilder
 
     /**
      * Update the navigation property emailMethods in users
+     * @param EmailAuthenticationMethod $body The request body
      * @param EmailAuthenticationMethodItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

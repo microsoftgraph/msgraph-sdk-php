@@ -75,6 +75,7 @@ class ClaimsMappingPoliciesRequestBuilder
 
     /**
      * Create a new claimsMappingPolicy object.
+     * @param ClaimsMappingPolicy $body The request body
      * @param ClaimsMappingPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/claimsmappingpolicy-post-claimsmappingpolicies?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class ClaimsMappingPoliciesRequestBuilder
 
     /**
      * Create a new claimsMappingPolicy object.
+     * @param ClaimsMappingPolicy $body The request body
      * @param ClaimsMappingPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

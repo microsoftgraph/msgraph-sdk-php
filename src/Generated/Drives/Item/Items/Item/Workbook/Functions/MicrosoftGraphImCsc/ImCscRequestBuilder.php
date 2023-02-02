@@ -47,6 +47,7 @@ class ImCscRequestBuilder
 
     /**
      * Invoke action imCsc
+     * @param ImCscPostRequestBody $body The request body
      * @param ImCscRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ImCscRequestBuilder
 
     /**
      * Invoke action imCsc
+     * @param ImCscPostRequestBody $body The request body
      * @param ImCscRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

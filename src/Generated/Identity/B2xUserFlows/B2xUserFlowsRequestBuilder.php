@@ -75,6 +75,7 @@ class B2xUserFlowsRequestBuilder
 
     /**
      * Create a new b2xIdentityUserFlow object.
+     * @param B2xIdentityUserFlow $body The request body
      * @param B2xUserFlowsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/identitycontainer-post-b2xuserflows?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class B2xUserFlowsRequestBuilder
 
     /**
      * Create a new b2xIdentityUserFlow object.
+     * @param B2xIdentityUserFlow $body The request body
      * @param B2xUserFlowsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

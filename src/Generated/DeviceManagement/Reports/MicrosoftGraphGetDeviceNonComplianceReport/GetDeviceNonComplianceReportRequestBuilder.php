@@ -47,6 +47,7 @@ class GetDeviceNonComplianceReportRequestBuilder
 
     /**
      * Invoke action getDeviceNonComplianceReport
+     * @param GetDeviceNonComplianceReportPostRequestBody $body The request body
      * @param GetDeviceNonComplianceReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class GetDeviceNonComplianceReportRequestBuilder
 
     /**
      * Invoke action getDeviceNonComplianceReport
+     * @param GetDeviceNonComplianceReportPostRequestBody $body The request body
      * @param GetDeviceNonComplianceReportRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -47,6 +47,7 @@ class F_DistRequestBuilder
 
     /**
      * Invoke action f_Dist
+     * @param F_DistPostRequestBody $body The request body
      * @param F_DistRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class F_DistRequestBuilder
 
     /**
      * Invoke action f_Dist
+     * @param F_DistPostRequestBody $body The request body
      * @param F_DistRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -52,7 +52,7 @@ class ForwardPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the comment property value. 
+     * Gets the comment property value. The Comment property
      * @return string|null
     */
     public function getComment(): ?string {
@@ -72,7 +72,7 @@ class ForwardPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the toRecipients property value. 
+     * Gets the toRecipients property value. The ToRecipients property
      * @return array<Recipient>|null
     */
     public function getToRecipients(): ?array {
@@ -106,7 +106,7 @@ class ForwardPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the comment property value. 
+     * Sets the comment property value. The Comment property
      * @param string|null $value Value to set for the Comment property.
     */
     public function setComment(?string $value): void {
@@ -114,7 +114,7 @@ class ForwardPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the toRecipients property value. 
+     * Sets the toRecipients property value. The ToRecipients property
      * @param array<Recipient>|null $value Value to set for the ToRecipients property.
     */
     public function setToRecipients(?array $value): void {

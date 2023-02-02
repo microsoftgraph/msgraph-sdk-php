@@ -107,6 +107,7 @@ class SecurityRequestBuilder
 
     /**
      * Update the navigation property security in reports
+     * @param SecurityReportsRoot $body The request body
      * @param SecurityRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -171,6 +172,7 @@ class SecurityRequestBuilder
 
     /**
      * Update the navigation property security in reports
+     * @param SecurityReportsRoot $body The request body
      * @param SecurityRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

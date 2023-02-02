@@ -52,7 +52,7 @@ class ModPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the divisor property value. 
+     * Gets the divisor property value. The divisor property
      * @return Json|null
     */
     public function getDivisor(): ?Json {
@@ -72,7 +72,7 @@ class ModPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the number property value. 
+     * Gets the number property value. The number property
      * @return Json|null
     */
     public function getNumber(): ?Json {
@@ -106,7 +106,7 @@ class ModPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the divisor property value. 
+     * Sets the divisor property value. The divisor property
      * @param Json|null $value Value to set for the divisor property.
     */
     public function setDivisor(?Json $value): void {
@@ -114,7 +114,7 @@ class ModPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the number property value. 
+     * Sets the number property value. The number property
      * @param Json|null $value Value to set for the number property.
     */
     public function setNumber(?Json $value): void {

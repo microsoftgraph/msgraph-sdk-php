@@ -52,7 +52,7 @@ class DgetPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the criteria property value. 
+     * Gets the criteria property value. The criteria property
      * @return Json|null
     */
     public function getCriteria(): ?Json {
@@ -60,7 +60,7 @@ class DgetPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the database property value. 
+     * Gets the database property value. The database property
      * @return Json|null
     */
     public function getDatabase(): ?Json {
@@ -68,7 +68,7 @@ class DgetPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the field property value. 
+     * Gets the field property value. The field property
      * @return Json|null
     */
     public function getField(): ?Json {
@@ -116,7 +116,7 @@ class DgetPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the criteria property value. 
+     * Sets the criteria property value. The criteria property
      * @param Json|null $value Value to set for the criteria property.
     */
     public function setCriteria(?Json $value): void {
@@ -124,7 +124,7 @@ class DgetPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the database property value. 
+     * Sets the database property value. The database property
      * @param Json|null $value Value to set for the database property.
     */
     public function setDatabase(?Json $value): void {
@@ -132,7 +132,7 @@ class DgetPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the field property value. 
+     * Sets the field property value. The field property
      * @param Json|null $value Value to set for the field property.
     */
     public function setField(?Json $value): void {

@@ -27,7 +27,7 @@ class AttachmentSession extends Entity implements Parsable
     }
 
     /**
-     * Gets the content property value. 
+     * Gets the content property value. The content streams that are uploaded.
      * @return StreamInterface|null
     */
     public function getContent(): ?StreamInterface {
@@ -35,7 +35,7 @@ class AttachmentSession extends Entity implements Parsable
     }
 
     /**
-     * Gets the expirationDateTime property value. 
+     * Gets the expirationDateTime property value. The date and time in UTC when the upload session will expire. The complete file must be uploaded before this expiration time is reached.
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
@@ -56,7 +56,7 @@ class AttachmentSession extends Entity implements Parsable
     }
 
     /**
-     * Gets the nextExpectedRanges property value. 
+     * Gets the nextExpectedRanges property value. Indicates a single value {start} that represents the location in the file where the next upload should begin.
      * @return array<string>|null
     */
     public function getNextExpectedRanges(): ?array {
@@ -75,7 +75,7 @@ class AttachmentSession extends Entity implements Parsable
     }
 
     /**
-     * Sets the content property value. 
+     * Sets the content property value. The content streams that are uploaded.
      * @param StreamInterface|null $value Value to set for the content property.
     */
     public function setContent(?StreamInterface $value): void {
@@ -83,7 +83,7 @@ class AttachmentSession extends Entity implements Parsable
     }
 
     /**
-     * Sets the expirationDateTime property value. 
+     * Sets the expirationDateTime property value. The date and time in UTC when the upload session will expire. The complete file must be uploaded before this expiration time is reached.
      * @param DateTime|null $value Value to set for the expirationDateTime property.
     */
     public function setExpirationDateTime(?DateTime $value): void {
@@ -91,7 +91,7 @@ class AttachmentSession extends Entity implements Parsable
     }
 
     /**
-     * Sets the nextExpectedRanges property value. 
+     * Sets the nextExpectedRanges property value. Indicates a single value {start} that represents the location in the file where the next upload should begin.
      * @param array<string>|null $value Value to set for the nextExpectedRanges property.
     */
     public function setNextExpectedRanges(?array $value): void {

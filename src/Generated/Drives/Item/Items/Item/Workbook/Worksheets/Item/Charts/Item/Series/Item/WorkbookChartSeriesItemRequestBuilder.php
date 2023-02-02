@@ -104,6 +104,7 @@ class WorkbookChartSeriesItemRequestBuilder
 
     /**
      * Update the navigation property series in drives
+     * @param WorkbookChartSeries $body The request body
      * @param WorkbookChartSeriesItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -179,6 +180,7 @@ class WorkbookChartSeriesItemRequestBuilder
 
     /**
      * Update the navigation property series in drives
+     * @param WorkbookChartSeries $body The request body
      * @param WorkbookChartSeriesItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

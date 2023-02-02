@@ -47,6 +47,7 @@ class Ceiling_MathRequestBuilder
 
     /**
      * Invoke action ceiling_Math
+     * @param Ceiling_MathPostRequestBody $body The request body
      * @param Ceiling_MathRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Ceiling_MathRequestBuilder
 
     /**
      * Invoke action ceiling_Math
+     * @param Ceiling_MathPostRequestBody $body The request body
      * @param Ceiling_MathRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

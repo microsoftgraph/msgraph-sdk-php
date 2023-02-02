@@ -46,6 +46,7 @@ class FavoriteRequestBuilder
 
     /**
      * Change the status of a list of serviceUpdateMessages to favorite for the signed in user.
+     * @param FavoritePostRequestBody $body The request body
      * @param FavoriteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/serviceupdatemessage-favorite?view=graph-rest-1.0 Find more info here
@@ -65,6 +66,7 @@ class FavoriteRequestBuilder
 
     /**
      * Change the status of a list of serviceUpdateMessages to favorite for the signed in user.
+     * @param FavoritePostRequestBody $body The request body
      * @param FavoriteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

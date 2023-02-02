@@ -136,6 +136,7 @@ class AdministrativeUnitItemRequestBuilder
 
     /**
      * Update the navigation property administrativeUnits in directory
+     * @param AdministrativeUnit $body The request body
      * @param AdministrativeUnitItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -211,6 +212,7 @@ class AdministrativeUnitItemRequestBuilder
 
     /**
      * Update the navigation property administrativeUnits in directory
+     * @param AdministrativeUnit $body The request body
      * @param AdministrativeUnitItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

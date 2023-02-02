@@ -63,7 +63,7 @@ class SnoozeReminderPostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the newReminderTime property value. 
+     * Gets the newReminderTime property value. The NewReminderTime property
      * @return DateTimeTimeZone|null
     */
     public function getNewReminderTime(): ?DateTimeTimeZone {
@@ -96,7 +96,7 @@ class SnoozeReminderPostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the newReminderTime property value. 
+     * Sets the newReminderTime property value. The NewReminderTime property
      * @param DateTimeTimeZone|null $value Value to set for the NewReminderTime property.
     */
     public function setNewReminderTime(?DateTimeTimeZone $value): void {

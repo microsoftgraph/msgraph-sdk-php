@@ -47,6 +47,7 @@ class ColumnsRequestBuilder
 
     /**
      * Invoke action columns
+     * @param ColumnsPostRequestBody $body The request body
      * @param ColumnsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ColumnsRequestBuilder
 
     /**
      * Invoke action columns
+     * @param ColumnsPostRequestBody $body The request body
      * @param ColumnsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

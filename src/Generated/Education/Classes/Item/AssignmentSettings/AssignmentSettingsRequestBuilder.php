@@ -83,6 +83,7 @@ class AssignmentSettingsRequestBuilder
 
     /**
      * Update the properties of an educationAssignmentSettings object. Only Teachers can update these settings.
+     * @param EducationAssignmentSettings $body The request body
      * @param AssignmentSettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/educationassignmentsettings-update?view=graph-rest-1.0 Find more info here
@@ -148,6 +149,7 @@ class AssignmentSettingsRequestBuilder
 
     /**
      * Update the properties of an educationAssignmentSettings object. Only Teachers can update these settings.
+     * @param EducationAssignmentSettings $body The request body
      * @param AssignmentSettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -47,6 +47,7 @@ class PdurationRequestBuilder
 
     /**
      * Invoke action pduration
+     * @param PdurationPostRequestBody $body The request body
      * @param PdurationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class PdurationRequestBuilder
 
     /**
      * Invoke action pduration
+     * @param PdurationPostRequestBody $body The request body
      * @param PdurationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

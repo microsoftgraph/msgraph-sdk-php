@@ -87,6 +87,7 @@ class LongRunningOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in users
+     * @param LongRunningOperation $body The request body
      * @param LongRunningOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class LongRunningOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in users
+     * @param LongRunningOperation $body The request body
      * @param LongRunningOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

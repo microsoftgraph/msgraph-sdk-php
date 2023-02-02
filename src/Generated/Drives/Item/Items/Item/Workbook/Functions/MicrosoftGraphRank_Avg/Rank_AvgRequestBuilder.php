@@ -47,6 +47,7 @@ class Rank_AvgRequestBuilder
 
     /**
      * Invoke action rank_Avg
+     * @param Rank_AvgPostRequestBody $body The request body
      * @param Rank_AvgRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Rank_AvgRequestBuilder
 
     /**
      * Invoke action rank_Avg
+     * @param Rank_AvgPostRequestBody $body The request body
      * @param Rank_AvgRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

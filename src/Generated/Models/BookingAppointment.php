@@ -7,10 +7,13 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Represents a booked appointment of a service by a customer in a business.
+*/
 class BookingAppointment extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new BookingAppointment and sets the default values.
+     * Instantiates a new bookingAppointment and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -66,7 +69,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Gets the endDateTime property value. 
+     * Gets the endDateTime property value. The endDateTime property
      * @return DateTimeTimeZone|null
     */
     public function getEndDateTime(): ?DateTimeTimeZone {
@@ -244,7 +247,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Gets the startDateTime property value. 
+     * Gets the startDateTime property value. The startDateTime property
      * @return DateTimeTimeZone|null
     */
     public function getStartDateTime(): ?DateTimeTimeZone {
@@ -322,7 +325,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Sets the endDateTime property value. 
+     * Sets the endDateTime property value. The endDateTime property
      * @param DateTimeTimeZone|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTimeTimeZone $value): void {
@@ -466,7 +469,7 @@ class BookingAppointment extends Entity implements Parsable
     }
 
     /**
-     * Sets the startDateTime property value. 
+     * Sets the startDateTime property value. The startDateTime property
      * @param DateTimeTimeZone|null $value Value to set for the startDateTime property.
     */
     public function setStartDateTime(?DateTimeTimeZone $value): void {

@@ -47,6 +47,7 @@ class AtanhRequestBuilder
 
     /**
      * Invoke action atanh
+     * @param AtanhPostRequestBody $body The request body
      * @param AtanhRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class AtanhRequestBuilder
 
     /**
      * Invoke action atanh
+     * @param AtanhPostRequestBody $body The request body
      * @param AtanhRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -87,6 +87,7 @@ class IdentityUserFlowAttributeItemRequestBuilder
 
     /**
      * Update the navigation property userFlowAttributes in identity
+     * @param IdentityUserFlowAttribute $body The request body
      * @param IdentityUserFlowAttributeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class IdentityUserFlowAttributeItemRequestBuilder
 
     /**
      * Update the navigation property userFlowAttributes in identity
+     * @param IdentityUserFlowAttribute $body The request body
      * @param IdentityUserFlowAttributeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

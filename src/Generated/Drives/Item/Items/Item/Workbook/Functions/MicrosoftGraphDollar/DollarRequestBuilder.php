@@ -47,6 +47,7 @@ class DollarRequestBuilder
 
     /**
      * Invoke action dollar
+     * @param DollarPostRequestBody $body The request body
      * @param DollarRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class DollarRequestBuilder
 
     /**
      * Invoke action dollar
+     * @param DollarPostRequestBody $body The request body
      * @param DollarRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

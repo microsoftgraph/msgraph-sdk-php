@@ -287,6 +287,7 @@ class ManagedDeviceItemRequestBuilder
 
     /**
      * Update the navigation property managedDevices in deviceManagement
+     * @param ManagedDevice $body The request body
      * @param ManagedDeviceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -351,6 +352,7 @@ class ManagedDeviceItemRequestBuilder
 
     /**
      * Update the navigation property managedDevices in deviceManagement
+     * @param ManagedDevice $body The request body
      * @param ManagedDeviceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

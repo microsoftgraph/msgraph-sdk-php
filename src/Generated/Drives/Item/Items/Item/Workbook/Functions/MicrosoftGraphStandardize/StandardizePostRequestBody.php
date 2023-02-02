@@ -65,7 +65,7 @@ class StandardizePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the mean property value. 
+     * Gets the mean property value. The mean property
      * @return Json|null
     */
     public function getMean(): ?Json {
@@ -73,7 +73,7 @@ class StandardizePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the standardDev property value. 
+     * Gets the standardDev property value. The standardDev property
      * @return Json|null
     */
     public function getStandardDev(): ?Json {
@@ -81,7 +81,7 @@ class StandardizePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the x property value. 
+     * Gets the x property value. The x property
      * @return Json|null
     */
     public function getX(): ?Json {
@@ -116,7 +116,7 @@ class StandardizePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the mean property value. 
+     * Sets the mean property value. The mean property
      * @param Json|null $value Value to set for the mean property.
     */
     public function setMean(?Json $value): void {
@@ -124,7 +124,7 @@ class StandardizePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the standardDev property value. 
+     * Sets the standardDev property value. The standardDev property
      * @param Json|null $value Value to set for the standardDev property.
     */
     public function setStandardDev(?Json $value): void {
@@ -132,7 +132,7 @@ class StandardizePostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the x property value. 
+     * Sets the x property value. The x property
      * @param Json|null $value Value to set for the x property.
     */
     public function setX(?Json $value): void {

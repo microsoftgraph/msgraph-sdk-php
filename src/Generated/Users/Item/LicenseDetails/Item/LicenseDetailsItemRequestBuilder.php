@@ -87,6 +87,7 @@ class LicenseDetailsItemRequestBuilder
 
     /**
      * Update the navigation property licenseDetails in users
+     * @param LicenseDetails $body The request body
      * @param LicenseDetailsItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class LicenseDetailsItemRequestBuilder
 
     /**
      * Update the navigation property licenseDetails in users
+     * @param LicenseDetails $body The request body
      * @param LicenseDetailsItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

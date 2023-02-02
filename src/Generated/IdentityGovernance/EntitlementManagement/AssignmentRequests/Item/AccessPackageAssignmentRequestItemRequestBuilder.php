@@ -127,6 +127,7 @@ class AccessPackageAssignmentRequestItemRequestBuilder
 
     /**
      * Update the navigation property assignmentRequests in identityGovernance
+     * @param AccessPackageAssignmentRequest $body The request body
      * @param AccessPackageAssignmentRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -191,6 +192,7 @@ class AccessPackageAssignmentRequestItemRequestBuilder
 
     /**
      * Update the navigation property assignmentRequests in identityGovernance
+     * @param AccessPackageAssignmentRequest $body The request body
      * @param AccessPackageAssignmentRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

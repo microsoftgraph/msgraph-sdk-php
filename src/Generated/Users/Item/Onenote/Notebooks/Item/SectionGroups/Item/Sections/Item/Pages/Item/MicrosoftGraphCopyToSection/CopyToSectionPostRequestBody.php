@@ -65,7 +65,7 @@ class CopyToSectionPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the groupId property value. 
+     * Gets the groupId property value. The groupId property
      * @return string|null
     */
     public function getGroupId(): ?string {
@@ -73,7 +73,7 @@ class CopyToSectionPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the id property value. 
+     * Gets the id property value. The id property
      * @return string|null
     */
     public function getId(): ?string {
@@ -81,7 +81,7 @@ class CopyToSectionPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the siteCollectionId property value. 
+     * Gets the siteCollectionId property value. The siteCollectionId property
      * @return string|null
     */
     public function getSiteCollectionId(): ?string {
@@ -89,7 +89,7 @@ class CopyToSectionPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the siteId property value. 
+     * Gets the siteId property value. The siteId property
      * @return string|null
     */
     public function getSiteId(): ?string {
@@ -125,7 +125,7 @@ class CopyToSectionPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the groupId property value. 
+     * Sets the groupId property value. The groupId property
      * @param string|null $value Value to set for the groupId property.
     */
     public function setGroupId(?string $value): void {
@@ -133,7 +133,7 @@ class CopyToSectionPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the id property value. 
+     * Sets the id property value. The id property
      * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {
@@ -141,7 +141,7 @@ class CopyToSectionPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the siteCollectionId property value. 
+     * Sets the siteCollectionId property value. The siteCollectionId property
      * @param string|null $value Value to set for the siteCollectionId property.
     */
     public function setSiteCollectionId(?string $value): void {
@@ -149,7 +149,7 @@ class CopyToSectionPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the siteId property value. 
+     * Sets the siteId property value. The siteId property
      * @param string|null $value Value to set for the siteId property.
     */
     public function setSiteId(?string $value): void {

@@ -77,7 +77,7 @@ class BookingReminder implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -93,7 +93,7 @@ class BookingReminder implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the recipients property value. 
+     * Gets the recipients property value. The recipients property
      * @return BookingReminderRecipients|null
     */
     public function getRecipients(): ?BookingReminderRecipients {
@@ -137,7 +137,7 @@ class BookingReminder implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -153,7 +153,7 @@ class BookingReminder implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the recipients property value. 
+     * Sets the recipients property value. The recipients property
      * @param BookingReminderRecipients|null $value Value to set for the recipients property.
     */
     public function setRecipients(?BookingReminderRecipients $value): void {

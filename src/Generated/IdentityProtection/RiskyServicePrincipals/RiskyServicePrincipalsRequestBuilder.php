@@ -91,6 +91,7 @@ class RiskyServicePrincipalsRequestBuilder
 
     /**
      * Create new navigation property to riskyServicePrincipals for identityProtection
+     * @param RiskyServicePrincipal $body The request body
      * @param RiskyServicePrincipalsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -134,6 +135,7 @@ class RiskyServicePrincipalsRequestBuilder
 
     /**
      * Create new navigation property to riskyServicePrincipals for identityProtection
+     * @param RiskyServicePrincipal $body The request body
      * @param RiskyServicePrincipalsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

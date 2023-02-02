@@ -87,6 +87,7 @@ class DeviceComplianceActionItemItemRequestBuilder
 
     /**
      * Update the navigation property scheduledActionConfigurations in deviceManagement
+     * @param DeviceComplianceActionItem $body The request body
      * @param DeviceComplianceActionItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class DeviceComplianceActionItemItemRequestBuilder
 
     /**
      * Update the navigation property scheduledActionConfigurations in deviceManagement
+     * @param DeviceComplianceActionItem $body The request body
      * @param DeviceComplianceActionItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

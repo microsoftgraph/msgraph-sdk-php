@@ -52,7 +52,7 @@ class Error_TypePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the errorVal property value. 
+     * Gets the errorVal property value. The errorVal property
      * @return Json|null
     */
     public function getErrorVal(): ?Json {
@@ -96,7 +96,7 @@ class Error_TypePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the errorVal property value. 
+     * Sets the errorVal property value. The errorVal property
      * @param Json|null $value Value to set for the errorVal property.
     */
     public function setErrorVal(?Json $value): void {

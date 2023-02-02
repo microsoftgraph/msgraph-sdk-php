@@ -47,6 +47,7 @@ class NumberValueRequestBuilder
 
     /**
      * Invoke action numberValue
+     * @param NumberValuePostRequestBody $body The request body
      * @param NumberValueRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class NumberValueRequestBuilder
 
     /**
      * Invoke action numberValue
+     * @param NumberValuePostRequestBody $body The request body
      * @param NumberValueRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

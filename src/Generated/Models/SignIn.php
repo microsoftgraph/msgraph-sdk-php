@@ -111,7 +111,7 @@ class SignIn extends Entity implements Parsable
             'resourceId' => fn(ParseNode $n) => $o->setResourceId($n->getStringValue()),
             'riskDetail' => fn(ParseNode $n) => $o->setRiskDetail($n->getEnumValue(RiskDetail::class)),
             'riskEventTypes' => fn(ParseNode $n) => $o->setRiskEventTypes($n->getCollectionOfEnumValues(RiskEventType::class)),
-            'riskEventTypes_v2' => fn(ParseNode $n) => $o->setRiskEventTypes_v2($n->getCollectionOfPrimitiveValues()),
+            'riskEventTypes_v2' => fn(ParseNode $n) => $o->setRiskEventTypesV2($n->getCollectionOfPrimitiveValues()),
             'riskLevelAggregated' => fn(ParseNode $n) => $o->setRiskLevelAggregated($n->getEnumValue(RiskLevel::class)),
             'riskLevelDuringSignIn' => fn(ParseNode $n) => $o->setRiskLevelDuringSignIn($n->getEnumValue(RiskLevel::class)),
             'riskState' => fn(ParseNode $n) => $o->setRiskState($n->getEnumValue(RiskState::class)),
@@ -182,7 +182,7 @@ class SignIn extends Entity implements Parsable
      * Gets the riskEventTypes_v2 property value. The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue. Supports $filter (eq and startsWith operators only).
      * @return array<string>|null
     */
-    public function getRiskEventTypes_v2(): ?array {
+    public function getRiskEventTypesV2(): ?array {
         return $this->getBackingStore()->get('riskEventTypes_v2');
     }
 
@@ -263,7 +263,7 @@ class SignIn extends Entity implements Parsable
         $writer->writeStringValue('resourceId', $this->getResourceId());
         $writer->writeEnumValue('riskDetail', $this->getRiskDetail());
         $writer->writeCollectionOfEnumValues('riskEventTypes', $this->getRiskEventTypes());
-        $writer->writeCollectionOfPrimitiveValues('riskEventTypes_v2', $this->getRiskEventTypes_v2());
+        $writer->writeCollectionOfPrimitiveValues('riskEventTypes_v2', $this->getRiskEventTypesV2());
         $writer->writeEnumValue('riskLevelAggregated', $this->getRiskLevelAggregated());
         $writer->writeEnumValue('riskLevelDuringSignIn', $this->getRiskLevelDuringSignIn());
         $writer->writeEnumValue('riskState', $this->getRiskState());
@@ -397,7 +397,7 @@ class SignIn extends Entity implements Parsable
      * Sets the riskEventTypes_v2 property value. The list of risk event types associated with the sign-in. Possible values: unlikelyTravel, anonymizedIPAddress, maliciousIPAddress, unfamiliarFeatures, malwareInfectedIPAddress, suspiciousIPAddress, leakedCredentials, investigationsThreatIntelligence,  generic, or unknownFutureValue. Supports $filter (eq and startsWith operators only).
      * @param array<string>|null $value Value to set for the riskEventTypes_v2 property.
     */
-    public function setRiskEventTypes_v2(?array $value): void {
+    public function setRiskEventTypesV2(?array $value): void {
         $this->getBackingStore()->set('riskEventTypes_v2', $value);
     }
 

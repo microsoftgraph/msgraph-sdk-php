@@ -36,7 +36,7 @@ class X509CertificateRuleCollectionResponse extends BaseCollectionPaginationCoun
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<X509CertificateRule>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class X509CertificateRuleCollectionResponse extends BaseCollectionPaginationCoun
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param array<X509CertificateRule>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

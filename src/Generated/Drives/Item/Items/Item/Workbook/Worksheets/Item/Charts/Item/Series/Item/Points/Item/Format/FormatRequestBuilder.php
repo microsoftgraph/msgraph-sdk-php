@@ -91,6 +91,7 @@ class FormatRequestBuilder
 
     /**
      * Update the navigation property format in drives
+     * @param WorkbookChartPointFormat $body The request body
      * @param FormatRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -155,6 +156,7 @@ class FormatRequestBuilder
 
     /**
      * Update the navigation property format in drives
+     * @param WorkbookChartPointFormat $body The request body
      * @param FormatRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -47,6 +47,7 @@ class SubtotalRequestBuilder
 
     /**
      * Invoke action subtotal
+     * @param SubtotalPostRequestBody $body The request body
      * @param SubtotalRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class SubtotalRequestBuilder
 
     /**
      * Invoke action subtotal
+     * @param SubtotalPostRequestBody $body The request body
      * @param SubtotalRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -105,6 +105,7 @@ class SolutionsRequestBuilder
 
     /**
      * Update solutions
+     * @param SolutionsRoot $body The request body
      * @param SolutionsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -148,6 +149,7 @@ class SolutionsRequestBuilder
 
     /**
      * Update solutions
+     * @param SolutionsRoot $body The request body
      * @param SolutionsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

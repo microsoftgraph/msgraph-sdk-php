@@ -87,6 +87,7 @@ class ProvisioningObjectSummaryItemRequestBuilder
 
     /**
      * Update the navigation property provisioning in auditLogs
+     * @param ProvisioningObjectSummary $body The request body
      * @param ProvisioningObjectSummaryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class ProvisioningObjectSummaryItemRequestBuilder
 
     /**
      * Update the navigation property provisioning in auditLogs
+     * @param ProvisioningObjectSummary $body The request body
      * @param ProvisioningObjectSummaryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

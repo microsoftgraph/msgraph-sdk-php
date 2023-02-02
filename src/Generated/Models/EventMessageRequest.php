@@ -50,7 +50,7 @@ class EventMessageRequest extends EventMessage implements Parsable
     }
 
     /**
-     * Gets the meetingRequestType property value. 
+     * Gets the meetingRequestType property value. The meetingRequestType property
      * @return MeetingRequestType|null
     */
     public function getMeetingRequestType(): ?MeetingRequestType {
@@ -112,7 +112,7 @@ class EventMessageRequest extends EventMessage implements Parsable
     }
 
     /**
-     * Sets the meetingRequestType property value. 
+     * Sets the meetingRequestType property value. The meetingRequestType property
      * @param MeetingRequestType|null $value Value to set for the meetingRequestType property.
     */
     public function setMeetingRequestType(?MeetingRequestType $value): void {

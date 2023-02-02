@@ -63,7 +63,7 @@ class UpdateWindowsDeviceAccountPostRequestBody implements AdditionalDataHolder,
     }
 
     /**
-     * Gets the updateWindowsDeviceAccountActionParameter property value. 
+     * Gets the updateWindowsDeviceAccountActionParameter property value. The updateWindowsDeviceAccountActionParameter property
      * @return UpdateWindowsDeviceAccountActionParameter|null
     */
     public function getUpdateWindowsDeviceAccountActionParameter(): ?UpdateWindowsDeviceAccountActionParameter {
@@ -96,7 +96,7 @@ class UpdateWindowsDeviceAccountPostRequestBody implements AdditionalDataHolder,
     }
 
     /**
-     * Sets the updateWindowsDeviceAccountActionParameter property value. 
+     * Sets the updateWindowsDeviceAccountActionParameter property value. The updateWindowsDeviceAccountActionParameter property
      * @param UpdateWindowsDeviceAccountActionParameter|null $value Value to set for the updateWindowsDeviceAccountActionParameter property.
     */
     public function setUpdateWindowsDeviceAccountActionParameter(?UpdateWindowsDeviceAccountActionParameter $value): void {

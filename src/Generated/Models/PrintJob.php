@@ -26,7 +26,7 @@ class PrintJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the configuration property value. 
+     * Gets the configuration property value. The configuration property
      * @return PrintJobConfiguration|null
     */
     public function getConfiguration(): ?PrintJobConfiguration {
@@ -34,7 +34,7 @@ class PrintJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdBy property value. 
+     * Gets the createdBy property value. The createdBy property
      * @return UserIdentity|null
     */
     public function getCreatedBy(): ?UserIdentity {
@@ -50,7 +50,7 @@ class PrintJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the documents property value. 
+     * Gets the documents property value. The documents property
      * @return array<PrintDocument>|null
     */
     public function getDocuments(): ?array {
@@ -101,7 +101,7 @@ class PrintJob extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. 
+     * Gets the status property value. The status property
      * @return PrintJobStatus|null
     */
     public function getStatus(): ?PrintJobStatus {
@@ -134,7 +134,7 @@ class PrintJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the configuration property value. 
+     * Sets the configuration property value. The configuration property
      * @param PrintJobConfiguration|null $value Value to set for the configuration property.
     */
     public function setConfiguration(?PrintJobConfiguration $value): void {
@@ -142,7 +142,7 @@ class PrintJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdBy property value. 
+     * Sets the createdBy property value. The createdBy property
      * @param UserIdentity|null $value Value to set for the createdBy property.
     */
     public function setCreatedBy(?UserIdentity $value): void {
@@ -158,7 +158,7 @@ class PrintJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the documents property value. 
+     * Sets the documents property value. The documents property
      * @param array<PrintDocument>|null $value Value to set for the documents property.
     */
     public function setDocuments(?array $value): void {
@@ -190,7 +190,7 @@ class PrintJob extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. 
+     * Sets the status property value. The status property
      * @param PrintJobStatus|null $value Value to set for the status property.
     */
     public function setStatus(?PrintJobStatus $value): void {

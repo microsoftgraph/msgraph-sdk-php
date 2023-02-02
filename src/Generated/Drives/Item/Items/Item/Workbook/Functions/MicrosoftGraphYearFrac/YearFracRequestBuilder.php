@@ -47,6 +47,7 @@ class YearFracRequestBuilder
 
     /**
      * Invoke action yearFrac
+     * @param YearFracPostRequestBody $body The request body
      * @param YearFracRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class YearFracRequestBuilder
 
     /**
      * Invoke action yearFrac
+     * @param YearFracPostRequestBody $body The request body
      * @param YearFracRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -85,6 +85,7 @@ class ExternalRequestBuilder
 
     /**
      * Update external
+     * @param External $body The request body
      * @param ExternalRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -128,6 +129,7 @@ class ExternalRequestBuilder
 
     /**
      * Update external
+     * @param External $body The request body
      * @param ExternalRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

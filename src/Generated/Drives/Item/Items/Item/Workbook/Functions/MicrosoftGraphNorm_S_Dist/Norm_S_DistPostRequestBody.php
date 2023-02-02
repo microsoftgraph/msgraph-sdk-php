@@ -52,7 +52,7 @@ class Norm_S_DistPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the cumulative property value. 
+     * Gets the cumulative property value. The cumulative property
      * @return Json|null
     */
     public function getCumulative(): ?Json {
@@ -72,7 +72,7 @@ class Norm_S_DistPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the z property value. 
+     * Gets the z property value. The z property
      * @return Json|null
     */
     public function getZ(): ?Json {
@@ -106,7 +106,7 @@ class Norm_S_DistPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the cumulative property value. 
+     * Sets the cumulative property value. The cumulative property
      * @param Json|null $value Value to set for the cumulative property.
     */
     public function setCumulative(?Json $value): void {
@@ -114,7 +114,7 @@ class Norm_S_DistPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the z property value. 
+     * Sets the z property value. The z property
      * @param Json|null $value Value to set for the z property.
     */
     public function setZ(?Json $value): void {

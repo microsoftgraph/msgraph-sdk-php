@@ -64,7 +64,7 @@ class SetDataPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the seriesBy property value. 
+     * Gets the seriesBy property value. The seriesBy property
      * @return string|null
     */
     public function getSeriesBy(): ?string {
@@ -72,7 +72,7 @@ class SetDataPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the sourceData property value. 
+     * Gets the sourceData property value. The sourceData property
      * @return Json|null
     */
     public function getSourceData(): ?Json {
@@ -106,7 +106,7 @@ class SetDataPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the seriesBy property value. 
+     * Sets the seriesBy property value. The seriesBy property
      * @param string|null $value Value to set for the seriesBy property.
     */
     public function setSeriesBy(?string $value): void {
@@ -114,7 +114,7 @@ class SetDataPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the sourceData property value. 
+     * Sets the sourceData property value. The sourceData property
      * @param Json|null $value Value to set for the sourceData property.
     */
     public function setSourceData(?Json $value): void {

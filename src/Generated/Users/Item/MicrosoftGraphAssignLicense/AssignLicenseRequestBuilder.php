@@ -47,6 +47,7 @@ class AssignLicenseRequestBuilder
 
     /**
      * Invoke action assignLicense
+     * @param AssignLicensePostRequestBody $body The request body
      * @param AssignLicenseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/user-assignlicense?view=graph-rest-1.0 Find more info here
@@ -66,6 +67,7 @@ class AssignLicenseRequestBuilder
 
     /**
      * Invoke action assignLicense
+     * @param AssignLicensePostRequestBody $body The request body
      * @param AssignLicenseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

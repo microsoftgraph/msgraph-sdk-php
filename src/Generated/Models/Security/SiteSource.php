@@ -38,7 +38,7 @@ class SiteSource extends DataSource implements Parsable
     }
 
     /**
-     * Gets the site property value. 
+     * Gets the site property value. The site property
      * @return Site|null
     */
     public function getSite(): ?Site {
@@ -55,7 +55,7 @@ class SiteSource extends DataSource implements Parsable
     }
 
     /**
-     * Sets the site property value. 
+     * Sets the site property value. The site property
      * @param Site|null $value Value to set for the site property.
     */
     public function setSite(?Site $value): void {

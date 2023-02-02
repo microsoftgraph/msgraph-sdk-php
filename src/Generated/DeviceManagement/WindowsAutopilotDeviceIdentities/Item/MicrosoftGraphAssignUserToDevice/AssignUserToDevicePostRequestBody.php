@@ -43,7 +43,7 @@ class AssignUserToDevicePostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Gets the addressableUserName property value. 
+     * Gets the addressableUserName property value. The addressableUserName property
      * @return string|null
     */
     public function getAddressableUserName(): ?string {
@@ -71,7 +71,7 @@ class AssignUserToDevicePostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Gets the userPrincipalName property value. 
+     * Gets the userPrincipalName property value. The userPrincipalName property
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
@@ -97,7 +97,7 @@ class AssignUserToDevicePostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Sets the addressableUserName property value. 
+     * Sets the addressableUserName property value. The addressableUserName property
      * @param string|null $value Value to set for the addressableUserName property.
     */
     public function setAddressableUserName(?string $value): void {
@@ -113,7 +113,7 @@ class AssignUserToDevicePostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Sets the userPrincipalName property value. 
+     * Sets the userPrincipalName property value. The userPrincipalName property
      * @param string|null $value Value to set for the userPrincipalName property.
     */
     public function setUserPrincipalName(?string $value): void {

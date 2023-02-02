@@ -123,6 +123,7 @@ class AccessReviewsRequestBuilder
 
     /**
      * Update the navigation property accessReviews in identityGovernance
+     * @param AccessReviewSet $body The request body
      * @param AccessReviewsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -187,6 +188,7 @@ class AccessReviewsRequestBuilder
 
     /**
      * Update the navigation property accessReviews in identityGovernance
+     * @param AccessReviewSet $body The request body
      * @param AccessReviewsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

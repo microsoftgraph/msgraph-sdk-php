@@ -75,6 +75,7 @@ class AgreementsRequestBuilder
 
     /**
      * Create a new agreement object.
+     * @param Agreement $body The request body
      * @param AgreementsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/termsofusecontainer-post-agreements?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class AgreementsRequestBuilder
 
     /**
      * Create a new agreement object.
+     * @param Agreement $body The request body
      * @param AgreementsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

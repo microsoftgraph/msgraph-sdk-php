@@ -152,6 +152,7 @@ class ManagedEBookItemRequestBuilder
 
     /**
      * Update the navigation property managedEBooks in deviceAppManagement
+     * @param ManagedEBook $body The request body
      * @param ManagedEBookItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -216,6 +217,7 @@ class ManagedEBookItemRequestBuilder
 
     /**
      * Update the navigation property managedEBooks in deviceAppManagement
+     * @param ManagedEBook $body The request body
      * @param ManagedEBookItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

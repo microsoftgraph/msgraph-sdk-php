@@ -87,6 +87,7 @@ class EducationAssignmentResourceItemRequestBuilder
 
     /**
      * Update the navigation property resources in education
+     * @param EducationAssignmentResource $body The request body
      * @param EducationAssignmentResourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class EducationAssignmentResourceItemRequestBuilder
 
     /**
      * Update the navigation property resources in education
+     * @param EducationAssignmentResource $body The request body
      * @param EducationAssignmentResourceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

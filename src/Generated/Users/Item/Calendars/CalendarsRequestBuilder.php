@@ -75,6 +75,7 @@ class CalendarsRequestBuilder
 
     /**
      * Create a new calendar for a user.
+     * @param Calendar $body The request body
      * @param CalendarsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/user-post-calendars?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class CalendarsRequestBuilder
 
     /**
      * Create a new calendar for a user.
+     * @param Calendar $body The request body
      * @param CalendarsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

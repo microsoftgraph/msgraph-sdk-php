@@ -83,6 +83,7 @@ class ContactFoldersRequestBuilder
 
     /**
      * Create a new contactFolder under the user's default contacts folder. You can also create a new contactfolder as a child of any specified contact folder.
+     * @param ContactFolder $body The request body
      * @param ContactFoldersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/user-post-contactfolders?view=graph-rest-1.0 Find more info here
@@ -127,6 +128,7 @@ class ContactFoldersRequestBuilder
 
     /**
      * Create a new contactFolder under the user's default contacts folder. You can also create a new contactfolder as a child of any specified contact folder.
+     * @param ContactFolder $body The request body
      * @param ContactFoldersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

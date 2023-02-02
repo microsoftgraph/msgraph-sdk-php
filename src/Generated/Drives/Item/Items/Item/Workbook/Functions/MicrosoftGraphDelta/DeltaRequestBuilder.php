@@ -47,6 +47,7 @@ class DeltaRequestBuilder
 
     /**
      * Invoke action delta
+     * @param DeltaPostRequestBody $body The request body
      * @param DeltaRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class DeltaRequestBuilder
 
     /**
      * Invoke action delta
+     * @param DeltaPostRequestBody $body The request body
      * @param DeltaRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

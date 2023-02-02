@@ -87,7 +87,7 @@ class DirectoryAudit extends Entity implements Parsable
     }
 
     /**
-     * Gets the initiatedBy property value. 
+     * Gets the initiatedBy property value. The initiatedBy property
      * @return AuditActivityInitiator|null
     */
     public function getInitiatedBy(): ?AuditActivityInitiator {
@@ -194,7 +194,7 @@ class DirectoryAudit extends Entity implements Parsable
     }
 
     /**
-     * Sets the initiatedBy property value. 
+     * Sets the initiatedBy property value. The initiatedBy property
      * @param AuditActivityInitiator|null $value Value to set for the initiatedBy property.
     */
     public function setInitiatedBy(?AuditActivityInitiator $value): void {

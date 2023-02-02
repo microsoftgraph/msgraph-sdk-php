@@ -52,7 +52,7 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the comment property value. 
+     * Gets the comment property value. The comment property
      * @return string|null
     */
     public function getComment(): ?string {
@@ -73,7 +73,7 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the name property value. 
+     * Gets the name property value. The name property
      * @return string|null
     */
     public function getName(): ?string {
@@ -81,7 +81,7 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the reference property value. 
+     * Gets the reference property value. The reference property
      * @return Json|null
     */
     public function getReference(): ?Json {
@@ -116,7 +116,7 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the comment property value. 
+     * Sets the comment property value. The comment property
      * @param string|null $value Value to set for the comment property.
     */
     public function setComment(?string $value): void {
@@ -124,7 +124,7 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the name property value. 
+     * Sets the name property value. The name property
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -132,7 +132,7 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the reference property value. 
+     * Sets the reference property value. The reference property
      * @param Json|null $value Value to set for the reference property.
     */
     public function setReference(?Json $value): void {

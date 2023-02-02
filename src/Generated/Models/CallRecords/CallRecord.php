@@ -112,7 +112,7 @@ class CallRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the type property value. 
+     * Gets the type property value. The type property
      * @return CallType|null
     */
     public function getType(): ?CallType {
@@ -210,7 +210,7 @@ class CallRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the type property value. 
+     * Sets the type property value. The type property
      * @param CallType|null $value Value to set for the type property.
     */
     public function setType(?CallType $value): void {

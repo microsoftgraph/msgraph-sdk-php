@@ -47,6 +47,7 @@ class SinhRequestBuilder
 
     /**
      * Invoke action sinh
+     * @param SinhPostRequestBody $body The request body
      * @param SinhRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class SinhRequestBuilder
 
     /**
      * Invoke action sinh
+     * @param SinhPostRequestBody $body The request body
      * @param SinhRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -124,6 +124,7 @@ class EducationSchoolItemRequestBuilder
 
     /**
      * Update the navigation property schools in education
+     * @param EducationSchool $body The request body
      * @param EducationSchoolItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -188,6 +189,7 @@ class EducationSchoolItemRequestBuilder
 
     /**
      * Update the navigation property schools in education
+     * @param EducationSchool $body The request body
      * @param EducationSchoolItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

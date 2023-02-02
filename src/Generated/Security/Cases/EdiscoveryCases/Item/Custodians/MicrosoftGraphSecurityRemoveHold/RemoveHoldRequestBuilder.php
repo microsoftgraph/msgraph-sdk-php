@@ -46,6 +46,7 @@ class RemoveHoldRequestBuilder
 
     /**
      * Invoke action removeHold
+     * @param RemoveHoldPostRequestBody $body The request body
      * @param RemoveHoldRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -64,6 +65,7 @@ class RemoveHoldRequestBuilder
 
     /**
      * Invoke action removeHold
+     * @param RemoveHoldPostRequestBody $body The request body
      * @param RemoveHoldRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

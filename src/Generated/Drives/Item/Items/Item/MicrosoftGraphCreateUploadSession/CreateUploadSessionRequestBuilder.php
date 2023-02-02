@@ -47,6 +47,7 @@ class CreateUploadSessionRequestBuilder
 
     /**
      * Create an upload session to allow your app to upload files up to the maximum file size.An upload session allows your app to upload ranges of the file in sequential API requests, which allows the transfer to be resumed if a connection is dropped while the upload is in progress. To upload a file using an upload session, there are two steps:
+     * @param CreateUploadSessionPostRequestBody $body The request body
      * @param CreateUploadSessionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/driveitem-createuploadsession?view=graph-rest-1.0 Find more info here
@@ -66,6 +67,7 @@ class CreateUploadSessionRequestBuilder
 
     /**
      * Create an upload session to allow your app to upload files up to the maximum file size.An upload session allows your app to upload ranges of the file in sequential API requests, which allows the transfer to be resumed if a connection is dropped while the upload is in progress. To upload a file using an upload session, there are two steps:
+     * @param CreateUploadSessionPostRequestBody $body The request body
      * @param CreateUploadSessionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

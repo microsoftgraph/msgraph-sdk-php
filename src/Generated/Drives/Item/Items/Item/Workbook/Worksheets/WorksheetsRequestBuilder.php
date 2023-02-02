@@ -83,6 +83,7 @@ class WorksheetsRequestBuilder
 
     /**
      * Create new navigation property to worksheets for drives
+     * @param WorkbookWorksheet $body The request body
      * @param WorksheetsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -126,6 +127,7 @@ class WorksheetsRequestBuilder
 
     /**
      * Create new navigation property to worksheets for drives
+     * @param WorkbookWorksheet $body The request body
      * @param WorksheetsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

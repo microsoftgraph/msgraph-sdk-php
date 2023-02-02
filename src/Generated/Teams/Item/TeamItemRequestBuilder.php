@@ -294,6 +294,7 @@ class TeamItemRequestBuilder
 
     /**
      * Update the properties of the specified team.
+     * @param Team $body The request body
      * @param TeamItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/team-update?view=graph-rest-1.0 Find more info here
@@ -370,6 +371,7 @@ class TeamItemRequestBuilder
 
     /**
      * Update the properties of the specified team.
+     * @param Team $body The request body
      * @param TeamItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

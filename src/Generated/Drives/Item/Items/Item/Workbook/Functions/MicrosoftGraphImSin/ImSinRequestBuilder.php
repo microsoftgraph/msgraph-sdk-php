@@ -47,6 +47,7 @@ class ImSinRequestBuilder
 
     /**
      * Invoke action imSin
+     * @param ImSinPostRequestBody $body The request body
      * @param ImSinRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ImSinRequestBuilder
 
     /**
      * Invoke action imSin
+     * @param ImSinPostRequestBody $body The request body
      * @param ImSinRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

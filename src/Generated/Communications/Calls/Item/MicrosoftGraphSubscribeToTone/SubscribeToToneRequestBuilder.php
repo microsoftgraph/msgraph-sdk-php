@@ -47,6 +47,7 @@ class SubscribeToToneRequestBuilder
 
     /**
      * Subscribe to DTMF (dual-tone multi-frequency signaling). This allows you to be notified when the user presses keys on a 'dialpad'.
+     * @param SubscribeToTonePostRequestBody $body The request body
      * @param SubscribeToToneRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/call-subscribetotone?view=graph-rest-1.0 Find more info here
@@ -66,6 +67,7 @@ class SubscribeToToneRequestBuilder
 
     /**
      * Subscribe to DTMF (dual-tone multi-frequency signaling). This allows you to be notified when the user presses keys on a 'dialpad'.
+     * @param SubscribeToTonePostRequestBody $body The request body
      * @param SubscribeToToneRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

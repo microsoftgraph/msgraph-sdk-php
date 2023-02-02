@@ -78,7 +78,7 @@ class Set extends Entity implements Parsable
     }
 
     /**
-     * Gets the parentGroup property value. 
+     * Gets the parentGroup property value. The parentGroup property
      * @return Group|null
     */
     public function getParentGroup(): ?Group {
@@ -158,7 +158,7 @@ class Set extends Entity implements Parsable
     }
 
     /**
-     * Sets the parentGroup property value. 
+     * Sets the parentGroup property value. The parentGroup property
      * @param Group|null $value Value to set for the parentGroup property.
     */
     public function setParentGroup(?Group $value): void {

@@ -99,6 +99,7 @@ class ContractsRequestBuilder
 
     /**
      * Add new entity to contracts
+     * @param Contract $body The request body
      * @param ContractsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -142,6 +143,7 @@ class ContractsRequestBuilder
 
     /**
      * Add new entity to contracts
+     * @param Contract $body The request body
      * @param ContractsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

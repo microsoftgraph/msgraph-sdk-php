@@ -87,6 +87,7 @@ class OnenoteOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in me
+     * @param OnenoteOperation $body The request body
      * @param OnenoteOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class OnenoteOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in me
+     * @param OnenoteOperation $body The request body
      * @param OnenoteOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

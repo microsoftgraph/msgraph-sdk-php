@@ -52,7 +52,7 @@ class Poisson_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the cumulative property value. 
+     * Gets the cumulative property value. The cumulative property
      * @return Json|null
     */
     public function getCumulative(): ?Json {
@@ -73,7 +73,7 @@ class Poisson_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the mean property value. 
+     * Gets the mean property value. The mean property
      * @return Json|null
     */
     public function getMean(): ?Json {
@@ -81,7 +81,7 @@ class Poisson_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the x property value. 
+     * Gets the x property value. The x property
      * @return Json|null
     */
     public function getX(): ?Json {
@@ -116,7 +116,7 @@ class Poisson_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the cumulative property value. 
+     * Sets the cumulative property value. The cumulative property
      * @param Json|null $value Value to set for the cumulative property.
     */
     public function setCumulative(?Json $value): void {
@@ -124,7 +124,7 @@ class Poisson_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the mean property value. 
+     * Sets the mean property value. The mean property
      * @param Json|null $value Value to set for the mean property.
     */
     public function setMean(?Json $value): void {
@@ -132,7 +132,7 @@ class Poisson_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the x property value. 
+     * Sets the x property value. The x property
      * @param Json|null $value Value to set for the x property.
     */
     public function setX(?Json $value): void {

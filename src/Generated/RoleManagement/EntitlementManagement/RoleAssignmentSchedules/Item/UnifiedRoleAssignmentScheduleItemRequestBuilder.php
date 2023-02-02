@@ -95,6 +95,7 @@ class UnifiedRoleAssignmentScheduleItemRequestBuilder
 
     /**
      * Update the navigation property roleAssignmentSchedules in roleManagement
+     * @param UnifiedRoleAssignmentSchedule $body The request body
      * @param UnifiedRoleAssignmentScheduleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class UnifiedRoleAssignmentScheduleItemRequestBuilder
 
     /**
      * Update the navigation property roleAssignmentSchedules in roleManagement
+     * @param UnifiedRoleAssignmentSchedule $body The request body
      * @param UnifiedRoleAssignmentScheduleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

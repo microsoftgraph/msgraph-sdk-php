@@ -60,7 +60,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Gets the groups property value. 
+     * Gets the groups property value. The groups property
      * @return array<ExternalGroup>|null
     */
     public function getGroups(): ?array {
@@ -68,7 +68,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Gets the items property value. 
+     * Gets the items property value. The items property
      * @return array<ExternalItem>|null
     */
     public function getItems(): ?array {
@@ -84,7 +84,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Gets the operations property value. 
+     * Gets the operations property value. The operations property
      * @return array<ConnectionOperation>|null
     */
     public function getOperations(): ?array {
@@ -92,7 +92,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Gets the schema property value. 
+     * Gets the schema property value. The schema property
      * @return Schema|null
     */
     public function getSchema(): ?Schema {
@@ -139,7 +139,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Sets the groups property value. 
+     * Sets the groups property value. The groups property
      * @param array<ExternalGroup>|null $value Value to set for the groups property.
     */
     public function setGroups(?array $value): void {
@@ -147,7 +147,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Sets the items property value. 
+     * Sets the items property value. The items property
      * @param array<ExternalItem>|null $value Value to set for the items property.
     */
     public function setItems(?array $value): void {
@@ -163,7 +163,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Sets the operations property value. 
+     * Sets the operations property value. The operations property
      * @param array<ConnectionOperation>|null $value Value to set for the operations property.
     */
     public function setOperations(?array $value): void {
@@ -171,7 +171,7 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
-     * Sets the schema property value. 
+     * Sets the schema property value. The schema property
      * @param Schema|null $value Value to set for the schema property.
     */
     public function setSchema(?Schema $value): void {

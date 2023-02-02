@@ -95,6 +95,7 @@ class IdentityUserFlowAttributeAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property userAttributeAssignments in identity
+     * @param IdentityUserFlowAttributeAssignment $body The request body
      * @param IdentityUserFlowAttributeAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class IdentityUserFlowAttributeAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property userAttributeAssignments in identity
+     * @param IdentityUserFlowAttributeAssignment $body The request body
      * @param IdentityUserFlowAttributeAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

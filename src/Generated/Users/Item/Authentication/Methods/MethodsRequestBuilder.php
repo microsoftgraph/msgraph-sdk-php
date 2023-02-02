@@ -75,6 +75,7 @@ class MethodsRequestBuilder
 
     /**
      * Create new navigation property to methods for users
+     * @param AuthenticationMethod $body The request body
      * @param MethodsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,6 +119,7 @@ class MethodsRequestBuilder
 
     /**
      * Create new navigation property to methods for users
+     * @param AuthenticationMethod $body The request body
      * @param MethodsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

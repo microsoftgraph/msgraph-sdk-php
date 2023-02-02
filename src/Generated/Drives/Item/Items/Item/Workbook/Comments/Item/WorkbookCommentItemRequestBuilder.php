@@ -96,6 +96,7 @@ class WorkbookCommentItemRequestBuilder
 
     /**
      * Update the navigation property comments in drives
+     * @param WorkbookComment $body The request body
      * @param WorkbookCommentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -171,6 +172,7 @@ class WorkbookCommentItemRequestBuilder
 
     /**
      * Update the navigation property comments in drives
+     * @param WorkbookComment $body The request body
      * @param WorkbookCommentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

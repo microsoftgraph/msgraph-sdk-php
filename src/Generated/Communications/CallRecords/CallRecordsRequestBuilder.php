@@ -97,6 +97,7 @@ class CallRecordsRequestBuilder
 
     /**
      * Create new navigation property to callRecords for communications
+     * @param CallRecord $body The request body
      * @param CallRecordsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -140,6 +141,7 @@ class CallRecordsRequestBuilder
 
     /**
      * Create new navigation property to callRecords for communications
+     * @param CallRecord $body The request body
      * @param CallRecordsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

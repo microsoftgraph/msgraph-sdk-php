@@ -87,6 +87,7 @@ class AgreementFileVersionItemRequestBuilder
 
     /**
      * Update the navigation property versions in identityGovernance
+     * @param AgreementFileVersion $body The request body
      * @param AgreementFileVersionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class AgreementFileVersionItemRequestBuilder
 
     /**
      * Update the navigation property versions in identityGovernance
+     * @param AgreementFileVersion $body The request body
      * @param AgreementFileVersionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

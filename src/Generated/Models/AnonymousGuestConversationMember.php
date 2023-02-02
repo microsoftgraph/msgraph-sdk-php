@@ -26,7 +26,7 @@ class AnonymousGuestConversationMember extends ConversationMember implements Par
     }
 
     /**
-     * Gets the anonymousGuestId property value. 
+     * Gets the anonymousGuestId property value. The anonymousGuestId property
      * @return string|null
     */
     public function getAnonymousGuestId(): ?string {
@@ -54,7 +54,7 @@ class AnonymousGuestConversationMember extends ConversationMember implements Par
     }
 
     /**
-     * Sets the anonymousGuestId property value. 
+     * Sets the anonymousGuestId property value. The anonymousGuestId property
      * @param string|null $value Value to set for the anonymousGuestId property.
     */
     public function setAnonymousGuestId(?string $value): void {

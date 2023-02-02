@@ -47,6 +47,7 @@ class CoupNcdRequestBuilder
 
     /**
      * Invoke action coupNcd
+     * @param CoupNcdPostRequestBody $body The request body
      * @param CoupNcdRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class CoupNcdRequestBuilder
 
     /**
      * Invoke action coupNcd
+     * @param CoupNcdPostRequestBody $body The request body
      * @param CoupNcdRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

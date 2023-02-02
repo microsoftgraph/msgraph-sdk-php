@@ -74,6 +74,7 @@ class DeviceManagementPartnersRequestBuilder
 
     /**
      * Create new navigation property to deviceManagementPartners for deviceManagement
+     * @param DeviceManagementPartner $body The request body
      * @param DeviceManagementPartnersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class DeviceManagementPartnersRequestBuilder
 
     /**
      * Create new navigation property to deviceManagementPartners for deviceManagement
+     * @param DeviceManagementPartner $body The request body
      * @param DeviceManagementPartnersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

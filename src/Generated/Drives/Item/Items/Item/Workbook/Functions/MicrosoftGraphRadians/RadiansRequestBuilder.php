@@ -47,6 +47,7 @@ class RadiansRequestBuilder
 
     /**
      * Invoke action radians
+     * @param RadiansPostRequestBody $body The request body
      * @param RadiansRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class RadiansRequestBuilder
 
     /**
      * Invoke action radians
+     * @param RadiansPostRequestBody $body The request body
      * @param RadiansRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

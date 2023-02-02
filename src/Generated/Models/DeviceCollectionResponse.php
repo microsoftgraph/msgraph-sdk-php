@@ -36,7 +36,7 @@ class DeviceCollectionResponse extends BaseCollectionPaginationCountResponse imp
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<Device>|null
     */
     public function getValue(): ?array {
@@ -53,7 +53,7 @@ class DeviceCollectionResponse extends BaseCollectionPaginationCountResponse imp
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param array<Device>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

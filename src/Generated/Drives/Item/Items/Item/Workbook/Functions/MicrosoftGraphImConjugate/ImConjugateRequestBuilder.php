@@ -47,6 +47,7 @@ class ImConjugateRequestBuilder
 
     /**
      * Invoke action imConjugate
+     * @param ImConjugatePostRequestBody $body The request body
      * @param ImConjugateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ImConjugateRequestBuilder
 
     /**
      * Invoke action imConjugate
+     * @param ImConjugatePostRequestBody $body The request body
      * @param ImConjugateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

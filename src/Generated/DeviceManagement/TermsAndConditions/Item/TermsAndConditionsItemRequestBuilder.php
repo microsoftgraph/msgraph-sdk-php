@@ -127,6 +127,7 @@ class TermsAndConditionsItemRequestBuilder
 
     /**
      * Update the navigation property termsAndConditions in deviceManagement
+     * @param TermsAndConditions $body The request body
      * @param TermsAndConditionsItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -191,6 +192,7 @@ class TermsAndConditionsItemRequestBuilder
 
     /**
      * Update the navigation property termsAndConditions in deviceManagement
+     * @param TermsAndConditions $body The request body
      * @param TermsAndConditionsItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

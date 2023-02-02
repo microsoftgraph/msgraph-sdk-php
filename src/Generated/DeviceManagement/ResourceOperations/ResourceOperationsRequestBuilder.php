@@ -74,6 +74,7 @@ class ResourceOperationsRequestBuilder
 
     /**
      * Create new navigation property to resourceOperations for deviceManagement
+     * @param ResourceOperation $body The request body
      * @param ResourceOperationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class ResourceOperationsRequestBuilder
 
     /**
      * Create new navigation property to resourceOperations for deviceManagement
+     * @param ResourceOperation $body The request body
      * @param ResourceOperationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

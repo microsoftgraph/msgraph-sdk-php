@@ -160,6 +160,7 @@ class EducationUserItemRequestBuilder
 
     /**
      * Update the navigation property users in education
+     * @param EducationUser $body The request body
      * @param EducationUserItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -257,6 +258,7 @@ class EducationUserItemRequestBuilder
 
     /**
      * Update the navigation property users in education
+     * @param EducationUser $body The request body
      * @param EducationUserItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -74,6 +74,7 @@ class MembersRequestBuilder
 
     /**
      * Create an identity resource for a new member in an externalGroup.
+     * @param Identity $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/externalconnectors-externalgroup-post-members?view=graph-rest-1.0 Find more info here
@@ -118,6 +119,7 @@ class MembersRequestBuilder
 
     /**
      * Create an identity resource for a new member in an externalGroup.
+     * @param Identity $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

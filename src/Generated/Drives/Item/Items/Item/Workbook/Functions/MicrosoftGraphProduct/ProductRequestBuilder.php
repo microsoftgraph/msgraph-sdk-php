@@ -47,6 +47,7 @@ class ProductRequestBuilder
 
     /**
      * Invoke action product
+     * @param ProductPostRequestBody $body The request body
      * @param ProductRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ProductRequestBuilder
 
     /**
      * Invoke action product
+     * @param ProductPostRequestBody $body The request body
      * @param ProductRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

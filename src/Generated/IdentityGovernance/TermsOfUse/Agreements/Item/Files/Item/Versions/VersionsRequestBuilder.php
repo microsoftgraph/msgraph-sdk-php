@@ -74,6 +74,7 @@ class VersionsRequestBuilder
 
     /**
      * Create new navigation property to versions for identityGovernance
+     * @param AgreementFileVersion $body The request body
      * @param VersionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class VersionsRequestBuilder
 
     /**
      * Create new navigation property to versions for identityGovernance
+     * @param AgreementFileVersion $body The request body
      * @param VersionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

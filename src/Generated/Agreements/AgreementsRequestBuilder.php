@@ -66,6 +66,7 @@ class AgreementsRequestBuilder
 
     /**
      * Add new entity to agreements
+     * @param Agreement $body The request body
      * @param AgreementsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -109,6 +110,7 @@ class AgreementsRequestBuilder
 
     /**
      * Add new entity to agreements
+     * @param Agreement $body The request body
      * @param AgreementsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

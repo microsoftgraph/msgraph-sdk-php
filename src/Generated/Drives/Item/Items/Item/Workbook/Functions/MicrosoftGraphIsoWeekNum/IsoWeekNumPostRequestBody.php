@@ -52,7 +52,7 @@ class IsoWeekNumPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the date property value. 
+     * Gets the date property value. The date property
      * @return Json|null
     */
     public function getDate(): ?Json {
@@ -96,7 +96,7 @@ class IsoWeekNumPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the date property value. 
+     * Sets the date property value. The date property
      * @param Json|null $value Value to set for the date property.
     */
     public function setDate(?Json $value): void {

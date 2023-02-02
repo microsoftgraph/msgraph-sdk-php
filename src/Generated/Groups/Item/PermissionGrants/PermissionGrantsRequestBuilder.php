@@ -99,6 +99,7 @@ class PermissionGrantsRequestBuilder
 
     /**
      * Create new navigation property to permissionGrants for groups
+     * @param ResourceSpecificPermissionGrant $body The request body
      * @param PermissionGrantsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -142,6 +143,7 @@ class PermissionGrantsRequestBuilder
 
     /**
      * Create new navigation property to permissionGrants for groups
+     * @param ResourceSpecificPermissionGrant $body The request body
      * @param PermissionGrantsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

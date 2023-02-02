@@ -52,7 +52,7 @@ class NetworkDaysPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the endDate property value. 
+     * Gets the endDate property value. The endDate property
      * @return Json|null
     */
     public function getEndDate(): ?Json {
@@ -73,7 +73,7 @@ class NetworkDaysPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the holidays property value. 
+     * Gets the holidays property value. The holidays property
      * @return Json|null
     */
     public function getHolidays(): ?Json {
@@ -81,7 +81,7 @@ class NetworkDaysPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the startDate property value. 
+     * Gets the startDate property value. The startDate property
      * @return Json|null
     */
     public function getStartDate(): ?Json {
@@ -116,7 +116,7 @@ class NetworkDaysPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the endDate property value. 
+     * Sets the endDate property value. The endDate property
      * @param Json|null $value Value to set for the endDate property.
     */
     public function setEndDate(?Json $value): void {
@@ -124,7 +124,7 @@ class NetworkDaysPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the holidays property value. 
+     * Sets the holidays property value. The holidays property
      * @param Json|null $value Value to set for the holidays property.
     */
     public function setHolidays(?Json $value): void {
@@ -132,7 +132,7 @@ class NetworkDaysPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the startDate property value. 
+     * Sets the startDate property value. The startDate property
      * @param Json|null $value Value to set for the startDate property.
     */
     public function setStartDate(?Json $value): void {

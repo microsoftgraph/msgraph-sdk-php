@@ -30,7 +30,7 @@ class Security extends Entity implements Parsable
     }
 
     /**
-     * Gets the alerts property value. 
+     * Gets the alerts property value. The alerts property
      * @return array<Alert>|null
     */
     public function getAlerts(): ?array {
@@ -41,12 +41,12 @@ class Security extends Entity implements Parsable
      * Gets the alerts_v2 property value. A collection of alerts in Microsoft 365 Defender.
      * @return array<Alert>|null
     */
-    public function getAlerts_v2(): ?array {
+    public function getAlertsV2(): ?array {
         return $this->getBackingStore()->get('alerts_v2');
     }
 
     /**
-     * Gets the attackSimulation property value. 
+     * Gets the attackSimulation property value. The attackSimulation property
      * @return AttackSimulationRoot|null
     */
     public function getAttackSimulation(): ?AttackSimulationRoot {
@@ -54,7 +54,7 @@ class Security extends Entity implements Parsable
     }
 
     /**
-     * Gets the cases property value. 
+     * Gets the cases property value. The cases property
      * @return CasesRoot|null
     */
     public function getCases(): ?CasesRoot {
@@ -69,7 +69,7 @@ class Security extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'alerts' => fn(ParseNode $n) => $o->setAlerts($n->getCollectionOfObjectValues([Alert::class, 'createFromDiscriminatorValue'])),
-            'alerts_v2' => fn(ParseNode $n) => $o->setAlerts_v2($n->getCollectionOfObjectValues([Alert::class, 'createFromDiscriminatorValue'])),
+            'alerts_v2' => fn(ParseNode $n) => $o->setAlertsV2($n->getCollectionOfObjectValues([Alert::class, 'createFromDiscriminatorValue'])),
             'attackSimulation' => fn(ParseNode $n) => $o->setAttackSimulation($n->getObjectValue([AttackSimulationRoot::class, 'createFromDiscriminatorValue'])),
             'cases' => fn(ParseNode $n) => $o->setCases($n->getObjectValue([CasesRoot::class, 'createFromDiscriminatorValue'])),
             'incidents' => fn(ParseNode $n) => $o->setIncidents($n->getCollectionOfObjectValues([Incident::class, 'createFromDiscriminatorValue'])),
@@ -87,7 +87,7 @@ class Security extends Entity implements Parsable
     }
 
     /**
-     * Gets the secureScoreControlProfiles property value. 
+     * Gets the secureScoreControlProfiles property value. The secureScoreControlProfiles property
      * @return array<SecureScoreControlProfile>|null
     */
     public function getSecureScoreControlProfiles(): ?array {
@@ -95,7 +95,7 @@ class Security extends Entity implements Parsable
     }
 
     /**
-     * Gets the secureScores property value. 
+     * Gets the secureScores property value. The secureScores property
      * @return array<SecureScore>|null
     */
     public function getSecureScores(): ?array {
@@ -109,7 +109,7 @@ class Security extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('alerts', $this->getAlerts());
-        $writer->writeCollectionOfObjectValues('alerts_v2', $this->getAlerts_v2());
+        $writer->writeCollectionOfObjectValues('alerts_v2', $this->getAlertsV2());
         $writer->writeObjectValue('attackSimulation', $this->getAttackSimulation());
         $writer->writeObjectValue('cases', $this->getCases());
         $writer->writeCollectionOfObjectValues('incidents', $this->getIncidents());
@@ -118,7 +118,7 @@ class Security extends Entity implements Parsable
     }
 
     /**
-     * Sets the alerts property value. 
+     * Sets the alerts property value. The alerts property
      * @param array<Alert>|null $value Value to set for the alerts property.
     */
     public function setAlerts(?array $value): void {
@@ -129,12 +129,12 @@ class Security extends Entity implements Parsable
      * Sets the alerts_v2 property value. A collection of alerts in Microsoft 365 Defender.
      * @param array<Alert>|null $value Value to set for the alerts_v2 property.
     */
-    public function setAlerts_v2(?array $value): void {
+    public function setAlertsV2(?array $value): void {
         $this->getBackingStore()->set('alerts_v2', $value);
     }
 
     /**
-     * Sets the attackSimulation property value. 
+     * Sets the attackSimulation property value. The attackSimulation property
      * @param AttackSimulationRoot|null $value Value to set for the attackSimulation property.
     */
     public function setAttackSimulation(?AttackSimulationRoot $value): void {
@@ -142,7 +142,7 @@ class Security extends Entity implements Parsable
     }
 
     /**
-     * Sets the cases property value. 
+     * Sets the cases property value. The cases property
      * @param CasesRoot|null $value Value to set for the cases property.
     */
     public function setCases(?CasesRoot $value): void {
@@ -158,7 +158,7 @@ class Security extends Entity implements Parsable
     }
 
     /**
-     * Sets the secureScoreControlProfiles property value. 
+     * Sets the secureScoreControlProfiles property value. The secureScoreControlProfiles property
      * @param array<SecureScoreControlProfile>|null $value Value to set for the secureScoreControlProfiles property.
     */
     public function setSecureScoreControlProfiles(?array $value): void {
@@ -166,7 +166,7 @@ class Security extends Entity implements Parsable
     }
 
     /**
-     * Sets the secureScores property value. 
+     * Sets the secureScores property value. The secureScores property
      * @param array<SecureScore>|null $value Value to set for the secureScores property.
     */
     public function setSecureScores(?array $value): void {

@@ -47,6 +47,7 @@ class Bin2DecRequestBuilder
 
     /**
      * Invoke action bin2Dec
+     * @param Bin2DecPostRequestBody $body The request body
      * @param Bin2DecRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Bin2DecRequestBuilder
 
     /**
      * Invoke action bin2Dec
+     * @param Bin2DecPostRequestBody $body The request body
      * @param Bin2DecRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

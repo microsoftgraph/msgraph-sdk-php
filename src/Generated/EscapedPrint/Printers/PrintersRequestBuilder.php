@@ -83,6 +83,7 @@ class PrintersRequestBuilder
 
     /**
      * Create new navigation property to printers for print
+     * @param Printer $body The request body
      * @param PrintersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -126,6 +127,7 @@ class PrintersRequestBuilder
 
     /**
      * Create new navigation property to printers for print
+     * @param Printer $body The request body
      * @param PrintersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

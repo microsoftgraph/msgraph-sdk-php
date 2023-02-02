@@ -47,6 +47,7 @@ class AddCopyRequestBuilder
 
     /**
      * Add a copy of a [content type][contentType] from a [site][site] to a [list][list].
+     * @param AddCopyPostRequestBody $body The request body
      * @param AddCopyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/contenttype-addcopy?view=graph-rest-1.0 Find more info here
@@ -66,6 +67,7 @@ class AddCopyRequestBuilder
 
     /**
      * Add a copy of a [content type][contentType] from a [site][site] to a [list][list].
+     * @param AddCopyPostRequestBody $body The request body
      * @param AddCopyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

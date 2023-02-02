@@ -52,7 +52,7 @@ class RandBetweenPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the bottom property value. 
+     * Gets the bottom property value. The bottom property
      * @return Json|null
     */
     public function getBottom(): ?Json {
@@ -72,7 +72,7 @@ class RandBetweenPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the top property value. 
+     * Gets the top property value. The top property
      * @return Json|null
     */
     public function getTop(): ?Json {
@@ -106,7 +106,7 @@ class RandBetweenPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the bottom property value. 
+     * Sets the bottom property value. The bottom property
      * @param Json|null $value Value to set for the bottom property.
     */
     public function setBottom(?Json $value): void {
@@ -114,7 +114,7 @@ class RandBetweenPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the top property value. 
+     * Sets the top property value. The top property
      * @param Json|null $value Value to set for the top property.
     */
     public function setTop(?Json $value): void {

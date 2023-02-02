@@ -65,7 +65,7 @@ class LogNorm_InvPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the mean property value. 
+     * Gets the mean property value. The mean property
      * @return Json|null
     */
     public function getMean(): ?Json {
@@ -73,7 +73,7 @@ class LogNorm_InvPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the probability property value. 
+     * Gets the probability property value. The probability property
      * @return Json|null
     */
     public function getProbability(): ?Json {
@@ -81,7 +81,7 @@ class LogNorm_InvPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the standardDev property value. 
+     * Gets the standardDev property value. The standardDev property
      * @return Json|null
     */
     public function getStandardDev(): ?Json {
@@ -116,7 +116,7 @@ class LogNorm_InvPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the mean property value. 
+     * Sets the mean property value. The mean property
      * @param Json|null $value Value to set for the mean property.
     */
     public function setMean(?Json $value): void {
@@ -124,7 +124,7 @@ class LogNorm_InvPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the probability property value. 
+     * Sets the probability property value. The probability property
      * @param Json|null $value Value to set for the probability property.
     */
     public function setProbability(?Json $value): void {
@@ -132,7 +132,7 @@ class LogNorm_InvPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the standardDev property value. 
+     * Sets the standardDev property value. The standardDev property
      * @param Json|null $value Value to set for the standardDev property.
     */
     public function setStandardDev(?Json $value): void {

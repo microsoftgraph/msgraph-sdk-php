@@ -52,7 +52,7 @@ class ApplyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the criteria property value. 
+     * Gets the criteria property value. The criteria property
      * @return WorkbookFilterCriteria|null
     */
     public function getCriteria(): ?WorkbookFilterCriteria {
@@ -96,7 +96,7 @@ class ApplyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the criteria property value. 
+     * Sets the criteria property value. The criteria property
      * @param WorkbookFilterCriteria|null $value Value to set for the criteria property.
     */
     public function setCriteria(?WorkbookFilterCriteria $value): void {

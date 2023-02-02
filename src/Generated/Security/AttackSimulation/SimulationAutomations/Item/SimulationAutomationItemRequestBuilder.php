@@ -96,6 +96,7 @@ class SimulationAutomationItemRequestBuilder
 
     /**
      * Update the navigation property simulationAutomations in security
+     * @param SimulationAutomation $body The request body
      * @param SimulationAutomationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -171,6 +172,7 @@ class SimulationAutomationItemRequestBuilder
 
     /**
      * Update the navigation property simulationAutomations in security
+     * @param SimulationAutomation $body The request body
      * @param SimulationAutomationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

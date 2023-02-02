@@ -47,6 +47,7 @@ class KurtRequestBuilder
 
     /**
      * Invoke action kurt
+     * @param KurtPostRequestBody $body The request body
      * @param KurtRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class KurtRequestBuilder
 
     /**
      * Invoke action kurt
+     * @param KurtPostRequestBody $body The request body
      * @param KurtRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

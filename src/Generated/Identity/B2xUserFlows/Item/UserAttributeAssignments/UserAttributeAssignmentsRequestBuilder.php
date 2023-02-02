@@ -91,6 +91,7 @@ class UserAttributeAssignmentsRequestBuilder
 
     /**
      * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
+     * @param IdentityUserFlowAttributeAssignment $body The request body
      * @param UserAttributeAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/b2xidentityuserflow-post-userattributeassignments?view=graph-rest-1.0 Find more info here
@@ -135,6 +136,7 @@ class UserAttributeAssignmentsRequestBuilder
 
     /**
      * Create a new identityUserFlowAttributeAssignment object in a b2xIdentityUserFlow.
+     * @param IdentityUserFlowAttributeAssignment $body The request body
      * @param UserAttributeAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

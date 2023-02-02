@@ -119,6 +119,7 @@ class PresenceItemRequestBuilder
 
     /**
      * Update the navigation property presences in communications
+     * @param Presence $body The request body
      * @param PresenceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -183,6 +184,7 @@ class PresenceItemRequestBuilder
 
     /**
      * Update the navigation property presences in communications
+     * @param Presence $body The request body
      * @param PresenceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

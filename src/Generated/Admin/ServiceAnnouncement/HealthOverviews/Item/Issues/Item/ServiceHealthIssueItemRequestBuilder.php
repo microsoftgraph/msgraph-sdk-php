@@ -95,6 +95,7 @@ class ServiceHealthIssueItemRequestBuilder
 
     /**
      * Update the navigation property issues in admin
+     * @param ServiceHealthIssue $body The request body
      * @param ServiceHealthIssueItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class ServiceHealthIssueItemRequestBuilder
 
     /**
      * Update the navigation property issues in admin
+     * @param ServiceHealthIssue $body The request body
      * @param ServiceHealthIssueItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

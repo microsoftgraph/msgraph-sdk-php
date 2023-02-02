@@ -87,6 +87,7 @@ class ManagedAppOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in deviceAppManagement
+     * @param ManagedAppOperation $body The request body
      * @param ManagedAppOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class ManagedAppOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in deviceAppManagement
+     * @param ManagedAppOperation $body The request body
      * @param ManagedAppOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

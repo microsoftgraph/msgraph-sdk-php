@@ -115,6 +115,7 @@ class AccessReviewScheduleDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property definitions in identityGovernance
+     * @param AccessReviewScheduleDefinition $body The request body
      * @param AccessReviewScheduleDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -179,6 +180,7 @@ class AccessReviewScheduleDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property definitions in identityGovernance
+     * @param AccessReviewScheduleDefinition $body The request body
      * @param AccessReviewScheduleDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

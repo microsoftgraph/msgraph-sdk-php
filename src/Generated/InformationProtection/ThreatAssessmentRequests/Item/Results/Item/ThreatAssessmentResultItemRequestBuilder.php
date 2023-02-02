@@ -87,6 +87,7 @@ class ThreatAssessmentResultItemRequestBuilder
 
     /**
      * Update the navigation property results in informationProtection
+     * @param ThreatAssessmentResult $body The request body
      * @param ThreatAssessmentResultItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class ThreatAssessmentResultItemRequestBuilder
 
     /**
      * Update the navigation property results in informationProtection
+     * @param ThreatAssessmentResult $body The request body
      * @param ThreatAssessmentResultItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

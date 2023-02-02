@@ -52,7 +52,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the certificateSigningRequest property value. 
+     * Gets the certificateSigningRequest property value. The certificateSigningRequest property
      * @return PrintCertificateSigningRequest|null
     */
     public function getCertificateSigningRequest(): ?PrintCertificateSigningRequest {
@@ -60,7 +60,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the connectorId property value. 
+     * Gets the connectorId property value. The connectorId property
      * @return string|null
     */
     public function getConnectorId(): ?string {
@@ -68,7 +68,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the displayName property value. 
+     * Gets the displayName property value. The displayName property
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -93,7 +93,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the hasPhysicalDevice property value. 
+     * Gets the hasPhysicalDevice property value. The hasPhysicalDevice property
      * @return bool|null
     */
     public function getHasPhysicalDevice(): ?bool {
@@ -101,7 +101,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the manufacturer property value. 
+     * Gets the manufacturer property value. The manufacturer property
      * @return string|null
     */
     public function getManufacturer(): ?string {
@@ -109,7 +109,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the model property value. 
+     * Gets the model property value. The model property
      * @return string|null
     */
     public function getModel(): ?string {
@@ -117,7 +117,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the physicalDeviceId property value. 
+     * Gets the physicalDeviceId property value. The physicalDeviceId property
      * @return string|null
     */
     public function getPhysicalDeviceId(): ?string {
@@ -156,7 +156,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the certificateSigningRequest property value. 
+     * Sets the certificateSigningRequest property value. The certificateSigningRequest property
      * @param PrintCertificateSigningRequest|null $value Value to set for the certificateSigningRequest property.
     */
     public function setCertificateSigningRequest(?PrintCertificateSigningRequest $value): void {
@@ -164,7 +164,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the connectorId property value. 
+     * Sets the connectorId property value. The connectorId property
      * @param string|null $value Value to set for the connectorId property.
     */
     public function setConnectorId(?string $value): void {
@@ -172,7 +172,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the displayName property value. 
+     * Sets the displayName property value. The displayName property
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -180,7 +180,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the hasPhysicalDevice property value. 
+     * Sets the hasPhysicalDevice property value. The hasPhysicalDevice property
      * @param bool|null $value Value to set for the hasPhysicalDevice property.
     */
     public function setHasPhysicalDevice(?bool $value): void {
@@ -188,7 +188,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the manufacturer property value. 
+     * Sets the manufacturer property value. The manufacturer property
      * @param string|null $value Value to set for the manufacturer property.
     */
     public function setManufacturer(?string $value): void {
@@ -196,7 +196,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the model property value. 
+     * Sets the model property value. The model property
      * @param string|null $value Value to set for the model property.
     */
     public function setModel(?string $value): void {
@@ -204,7 +204,7 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the physicalDeviceId property value. 
+     * Sets the physicalDeviceId property value. The physicalDeviceId property
      * @param string|null $value Value to set for the physicalDeviceId property.
     */
     public function setPhysicalDeviceId(?string $value): void {

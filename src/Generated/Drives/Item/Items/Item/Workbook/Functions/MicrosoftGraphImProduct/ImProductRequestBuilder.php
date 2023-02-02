@@ -47,6 +47,7 @@ class ImProductRequestBuilder
 
     /**
      * Invoke action imProduct
+     * @param ImProductPostRequestBody $body The request body
      * @param ImProductRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ImProductRequestBuilder
 
     /**
      * Invoke action imProduct
+     * @param ImProductPostRequestBody $body The request body
      * @param ImProductRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

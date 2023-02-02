@@ -47,6 +47,7 @@ class MroundRequestBuilder
 
     /**
      * Invoke action mround
+     * @param MroundPostRequestBody $body The request body
      * @param MroundRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class MroundRequestBuilder
 
     /**
      * Invoke action mround
+     * @param MroundPostRequestBody $body The request body
      * @param MroundRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

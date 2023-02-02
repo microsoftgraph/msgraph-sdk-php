@@ -54,7 +54,7 @@ class ServiceHealth extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. 
+     * Gets the status property value. The status property
      * @return ServiceHealthStatus|null
     */
     public function getStatus(): ?ServiceHealthStatus {
@@ -89,7 +89,7 @@ class ServiceHealth extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. 
+     * Sets the status property value. The status property
      * @param ServiceHealthStatus|null $value Value to set for the status property.
     */
     public function setStatus(?ServiceHealthStatus $value): void {

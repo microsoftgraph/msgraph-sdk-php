@@ -63,7 +63,7 @@ class RemoveKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the keyId property value. 
+     * Gets the keyId property value. The keyId property
      * @return string|null
     */
     public function getKeyId(): ?string {
@@ -71,7 +71,7 @@ class RemoveKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the proof property value. 
+     * Gets the proof property value. The proof property
      * @return string|null
     */
     public function getProof(): ?string {
@@ -105,7 +105,7 @@ class RemoveKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the keyId property value. 
+     * Sets the keyId property value. The keyId property
      * @param string|null $value Value to set for the keyId property.
     */
     public function setKeyId(?string $value): void {
@@ -113,7 +113,7 @@ class RemoveKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the proof property value. 
+     * Sets the proof property value. The proof property
      * @param string|null $value Value to set for the proof property.
     */
     public function setProof(?string $value): void {

@@ -47,6 +47,7 @@ class VarPARequestBuilder
 
     /**
      * Invoke action varPA
+     * @param VarPAPostRequestBody $body The request body
      * @param VarPARequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class VarPARequestBuilder
 
     /**
      * Invoke action varPA
+     * @param VarPAPostRequestBody $body The request body
      * @param VarPARequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

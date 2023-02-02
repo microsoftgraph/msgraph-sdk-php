@@ -46,6 +46,7 @@ class ApplyFontColorFilterRequestBuilder
 
     /**
      * Invoke action applyFontColorFilter
+     * @param ApplyFontColorFilterPostRequestBody $body The request body
      * @param ApplyFontColorFilterRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -64,6 +65,7 @@ class ApplyFontColorFilterRequestBuilder
 
     /**
      * Invoke action applyFontColorFilter
+     * @param ApplyFontColorFilterPostRequestBody $body The request body
      * @param ApplyFontColorFilterRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

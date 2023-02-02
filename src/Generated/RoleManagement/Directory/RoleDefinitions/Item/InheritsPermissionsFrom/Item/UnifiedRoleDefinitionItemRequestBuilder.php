@@ -87,6 +87,7 @@ class UnifiedRoleDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property inheritsPermissionsFrom in roleManagement
+     * @param UnifiedRoleDefinition $body The request body
      * @param UnifiedRoleDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class UnifiedRoleDefinitionItemRequestBuilder
 
     /**
      * Update the navigation property inheritsPermissionsFrom in roleManagement
+     * @param UnifiedRoleDefinition $body The request body
      * @param UnifiedRoleDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

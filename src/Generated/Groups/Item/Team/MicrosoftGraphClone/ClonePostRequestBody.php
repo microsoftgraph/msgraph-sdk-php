@@ -53,7 +53,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the classification property value. 
+     * Gets the classification property value. The classification property
      * @return string|null
     */
     public function getClassification(): ?string {
@@ -61,7 +61,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the description property value. 
+     * Gets the description property value. The description property
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -69,7 +69,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the displayName property value. 
+     * Gets the displayName property value. The displayName property
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -93,7 +93,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the mailNickname property value. 
+     * Gets the mailNickname property value. The mailNickname property
      * @return string|null
     */
     public function getMailNickname(): ?string {
@@ -101,7 +101,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the partsToClone property value. 
+     * Gets the partsToClone property value. The partsToClone property
      * @return ClonableTeamParts|null
     */
     public function getPartsToClone(): ?ClonableTeamParts {
@@ -109,7 +109,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the visibility property value. 
+     * Gets the visibility property value. The visibility property
      * @return TeamVisibilityType|null
     */
     public function getVisibility(): ?TeamVisibilityType {
@@ -147,7 +147,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the classification property value. 
+     * Sets the classification property value. The classification property
      * @param string|null $value Value to set for the classification property.
     */
     public function setClassification(?string $value): void {
@@ -155,7 +155,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the description property value. 
+     * Sets the description property value. The description property
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -163,7 +163,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the displayName property value. 
+     * Sets the displayName property value. The displayName property
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -171,7 +171,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the mailNickname property value. 
+     * Sets the mailNickname property value. The mailNickname property
      * @param string|null $value Value to set for the mailNickname property.
     */
     public function setMailNickname(?string $value): void {
@@ -179,7 +179,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the partsToClone property value. 
+     * Sets the partsToClone property value. The partsToClone property
      * @param ClonableTeamParts|null $value Value to set for the partsToClone property.
     */
     public function setPartsToClone(?ClonableTeamParts $value): void {
@@ -187,7 +187,7 @@ class ClonePostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the visibility property value. 
+     * Sets the visibility property value. The visibility property
      * @param TeamVisibilityType|null $value Value to set for the visibility property.
     */
     public function setVisibility(?TeamVisibilityType $value): void {

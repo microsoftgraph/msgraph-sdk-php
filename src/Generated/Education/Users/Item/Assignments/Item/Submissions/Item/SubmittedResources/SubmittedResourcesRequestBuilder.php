@@ -75,6 +75,7 @@ class SubmittedResourcesRequestBuilder
 
     /**
      * Create new navigation property to submittedResources for education
+     * @param EducationSubmissionResource $body The request body
      * @param SubmittedResourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,6 +119,7 @@ class SubmittedResourcesRequestBuilder
 
     /**
      * Create new navigation property to submittedResources for education
+     * @param EducationSubmissionResource $body The request body
      * @param SubmittedResourcesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

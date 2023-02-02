@@ -47,6 +47,7 @@ class ReplaceBRequestBuilder
 
     /**
      * Invoke action replaceB
+     * @param ReplaceBPostRequestBody $body The request body
      * @param ReplaceBRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ReplaceBRequestBuilder
 
     /**
      * Invoke action replaceB
+     * @param ReplaceBPostRequestBody $body The request body
      * @param ReplaceBRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

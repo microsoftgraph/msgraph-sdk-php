@@ -47,6 +47,7 @@ class AddRequestBuilder
 
     /**
      * Adds a new name to the collection of the given scope using the user's locale for the formula.
+     * @param AddPostRequestBody $body The request body
      * @param AddRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/nameditem-add?view=graph-rest-1.0 Find more info here
@@ -66,6 +67,7 @@ class AddRequestBuilder
 
     /**
      * Adds a new name to the collection of the given scope using the user's locale for the formula.
+     * @param AddPostRequestBody $body The request body
      * @param AddRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

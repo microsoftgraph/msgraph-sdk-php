@@ -52,7 +52,7 @@ class StartHoldMusicPostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the clientContext property value. 
+     * Gets the clientContext property value. The clientContext property
      * @return string|null
     */
     public function getClientContext(): ?string {
@@ -60,7 +60,7 @@ class StartHoldMusicPostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the customPrompt property value. 
+     * Gets the customPrompt property value. The customPrompt property
      * @return Prompt|null
     */
     public function getCustomPrompt(): ?Prompt {
@@ -106,7 +106,7 @@ class StartHoldMusicPostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the clientContext property value. 
+     * Sets the clientContext property value. The clientContext property
      * @param string|null $value Value to set for the clientContext property.
     */
     public function setClientContext(?string $value): void {
@@ -114,7 +114,7 @@ class StartHoldMusicPostRequestBody implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the customPrompt property value. 
+     * Sets the customPrompt property value. The customPrompt property
      * @param Prompt|null $value Value to set for the customPrompt property.
     */
     public function setCustomPrompt(?Prompt $value): void {

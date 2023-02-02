@@ -188,6 +188,7 @@ class WorkbookTableItemRequestBuilder
 
     /**
      * Update the navigation property tables in drives
+     * @param WorkbookTable $body The request body
      * @param WorkbookTableItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -263,6 +264,7 @@ class WorkbookTableItemRequestBuilder
 
     /**
      * Update the navigation property tables in drives
+     * @param WorkbookTable $body The request body
      * @param WorkbookTableItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

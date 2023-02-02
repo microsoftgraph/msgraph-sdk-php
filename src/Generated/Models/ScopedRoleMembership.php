@@ -54,7 +54,7 @@ class ScopedRoleMembership extends Entity implements Parsable
     }
 
     /**
-     * Gets the roleMemberInfo property value. 
+     * Gets the roleMemberInfo property value. The roleMemberInfo property
      * @return Identity|null
     */
     public function getRoleMemberInfo(): ?Identity {
@@ -89,7 +89,7 @@ class ScopedRoleMembership extends Entity implements Parsable
     }
 
     /**
-     * Sets the roleMemberInfo property value. 
+     * Sets the roleMemberInfo property value. The roleMemberInfo property
      * @param Identity|null $value Value to set for the roleMemberInfo property.
     */
     public function setRoleMemberInfo(?Identity $value): void {

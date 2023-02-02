@@ -75,6 +75,7 @@ class FeatureRolloutPoliciesRequestBuilder
 
     /**
      * Create a new featureRolloutPolicy object.
+     * @param FeatureRolloutPolicy $body The request body
      * @param FeatureRolloutPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/featurerolloutpolicies-post?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class FeatureRolloutPoliciesRequestBuilder
 
     /**
      * Create a new featureRolloutPolicy object.
+     * @param FeatureRolloutPolicy $body The request body
      * @param FeatureRolloutPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

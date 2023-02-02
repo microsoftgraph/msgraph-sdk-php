@@ -100,6 +100,7 @@ class ColumnsRequestBuilder
 
     /**
      * Use this API to create a new TableColumn.
+     * @param WorkbookTableColumn $body The request body
      * @param ColumnsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/table-post-columns?view=graph-rest-1.0 Find more info here
@@ -144,6 +145,7 @@ class ColumnsRequestBuilder
 
     /**
      * Use this API to create a new TableColumn.
+     * @param WorkbookTableColumn $body The request body
      * @param ColumnsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

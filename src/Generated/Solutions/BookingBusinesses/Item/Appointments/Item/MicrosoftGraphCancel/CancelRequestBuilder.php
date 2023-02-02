@@ -46,6 +46,7 @@ class CancelRequestBuilder
 
     /**
      * Cancel the specified bookingAppointment in the specified bookingBusiness and send a message to the involved customer and staff members.
+     * @param CancelPostRequestBody $body The request body
      * @param CancelRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/bookingappointment-cancel?view=graph-rest-1.0 Find more info here
@@ -65,6 +66,7 @@ class CancelRequestBuilder
 
     /**
      * Cancel the specified bookingAppointment in the specified bookingBusiness and send a message to the involved customer and staff members.
+     * @param CancelPostRequestBody $body The request body
      * @param CancelRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

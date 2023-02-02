@@ -46,6 +46,7 @@ class GetPresencesByUserIdRequestBuilder
 
     /**
      * Get the presence information for multiple users.
+     * @param GetPresencesByUserIdPostRequestBody $body The request body
      * @param GetPresencesByUserIdRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/cloudcommunications-getpresencesbyuserid?view=graph-rest-1.0 Find more info here
@@ -65,6 +66,7 @@ class GetPresencesByUserIdRequestBuilder
 
     /**
      * Get the presence information for multiple users.
+     * @param GetPresencesByUserIdPostRequestBody $body The request body
      * @param GetPresencesByUserIdRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

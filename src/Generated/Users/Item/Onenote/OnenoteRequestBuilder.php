@@ -170,6 +170,7 @@ class OnenoteRequestBuilder
 
     /**
      * Update the navigation property onenote in users
+     * @param Onenote $body The request body
      * @param OnenoteRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -267,6 +268,7 @@ class OnenoteRequestBuilder
 
     /**
      * Update the navigation property onenote in users
+     * @param Onenote $body The request body
      * @param OnenoteRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -47,6 +47,7 @@ class CleanRequestBuilder
 
     /**
      * Invoke action clean
+     * @param CleanPostRequestBody $body The request body
      * @param CleanRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class CleanRequestBuilder
 
     /**
      * Invoke action clean
+     * @param CleanPostRequestBody $body The request body
      * @param CleanRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -119,6 +119,7 @@ class UnifiedRoleAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property roleAssignments in roleManagement
+     * @param UnifiedRoleAssignment $body The request body
      * @param UnifiedRoleAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -183,6 +184,7 @@ class UnifiedRoleAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property roleAssignments in roleManagement
+     * @param UnifiedRoleAssignment $body The request body
      * @param UnifiedRoleAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -96,6 +96,7 @@ class CallRecordItemRequestBuilder
 
     /**
      * Update the navigation property callRecords in communications
+     * @param CallRecord $body The request body
      * @param CallRecordItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -171,6 +172,7 @@ class CallRecordItemRequestBuilder
 
     /**
      * Update the navigation property callRecords in communications
+     * @param CallRecord $body The request body
      * @param CallRecordItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

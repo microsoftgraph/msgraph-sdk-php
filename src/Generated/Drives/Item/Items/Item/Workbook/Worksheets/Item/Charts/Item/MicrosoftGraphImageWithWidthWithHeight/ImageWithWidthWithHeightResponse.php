@@ -62,7 +62,7 @@ class ImageWithWidthWithHeightResponse implements AdditionalDataHolder, BackedMo
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return string|null
     */
     public function getValue(): ?string {
@@ -95,7 +95,7 @@ class ImageWithWidthWithHeightResponse implements AdditionalDataHolder, BackedMo
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param string|null $value Value to set for the value property.
     */
     public function setValue(?string $value): void {

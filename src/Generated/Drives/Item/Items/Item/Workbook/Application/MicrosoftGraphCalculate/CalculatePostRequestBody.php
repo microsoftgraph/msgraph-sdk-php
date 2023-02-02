@@ -51,7 +51,7 @@ class CalculatePostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the calculationType property value. 
+     * Gets the calculationType property value. The calculationType property
      * @return string|null
     */
     public function getCalculationType(): ?string {
@@ -95,7 +95,7 @@ class CalculatePostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the calculationType property value. 
+     * Sets the calculationType property value. The calculationType property
      * @param string|null $value Value to set for the calculationType property.
     */
     public function setCalculationType(?string $value): void {

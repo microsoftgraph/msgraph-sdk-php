@@ -179,6 +179,7 @@ class FilterRequestBuilder
 
     /**
      * Update the navigation property filter in drives
+     * @param WorkbookFilter $body The request body
      * @param FilterRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -243,6 +244,7 @@ class FilterRequestBuilder
 
     /**
      * Update the navigation property filter in drives
+     * @param WorkbookFilter $body The request body
      * @param FilterRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

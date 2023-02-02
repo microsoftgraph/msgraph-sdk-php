@@ -47,6 +47,7 @@ class EoMonthRequestBuilder
 
     /**
      * Invoke action eoMonth
+     * @param EoMonthPostRequestBody $body The request body
      * @param EoMonthRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class EoMonthRequestBuilder
 
     /**
      * Invoke action eoMonth
+     * @param EoMonthPostRequestBody $body The request body
      * @param EoMonthRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

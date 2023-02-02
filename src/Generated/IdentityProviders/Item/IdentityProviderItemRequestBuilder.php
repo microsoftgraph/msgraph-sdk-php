@@ -89,6 +89,7 @@ class IdentityProviderItemRequestBuilder
 
     /**
      * Update properties in an existing identityProvider.
+     * @param IdentityProvider $body The request body
      * @param IdentityProviderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/identityprovider-update?view=graph-rest-1.0 Find more info here
@@ -154,6 +155,7 @@ class IdentityProviderItemRequestBuilder
 
     /**
      * Update properties in an existing identityProvider.
+     * @param IdentityProvider $body The request body
      * @param IdentityProviderItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

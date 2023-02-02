@@ -75,6 +75,7 @@ class TasksRequestBuilder
 
     /**
      * Create new navigation property to tasks for users
+     * @param PlannerTask $body The request body
      * @param TasksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,6 +119,7 @@ class TasksRequestBuilder
 
     /**
      * Create new navigation property to tasks for users
+     * @param PlannerTask $body The request body
      * @param TasksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

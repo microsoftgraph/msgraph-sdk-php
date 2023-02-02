@@ -64,7 +64,7 @@ class MroundPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the multiple property value. 
+     * Gets the multiple property value. The multiple property
      * @return Json|null
     */
     public function getMultiple(): ?Json {
@@ -72,7 +72,7 @@ class MroundPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the number property value. 
+     * Gets the number property value. The number property
      * @return Json|null
     */
     public function getNumber(): ?Json {
@@ -106,7 +106,7 @@ class MroundPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the multiple property value. 
+     * Sets the multiple property value. The multiple property
      * @param Json|null $value Value to set for the multiple property.
     */
     public function setMultiple(?Json $value): void {
@@ -114,7 +114,7 @@ class MroundPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the number property value. 
+     * Sets the number property value. The number property
      * @param Json|null $value Value to set for the number property.
     */
     public function setNumber(?Json $value): void {

@@ -46,6 +46,7 @@ class RemoveGroupRequestBuilder
 
     /**
      * Invoke action removeGroup
+     * @param RemoveGroupPostRequestBody $body The request body
      * @param RemoveGroupRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -64,6 +65,7 @@ class RemoveGroupRequestBuilder
 
     /**
      * Invoke action removeGroup
+     * @param RemoveGroupPostRequestBody $body The request body
      * @param RemoveGroupRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -51,7 +51,7 @@ class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Gets the displayName property value. 
+     * Gets the displayName property value. The displayName property
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -59,7 +59,7 @@ class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Gets the entityType property value. 
+     * Gets the entityType property value. The entityType property
      * @return string|null
     */
     public function getEntityType(): ?string {
@@ -81,7 +81,7 @@ class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Gets the mailNickname property value. 
+     * Gets the mailNickname property value. The mailNickname property
      * @return string|null
     */
     public function getMailNickname(): ?string {
@@ -89,7 +89,7 @@ class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Gets the onBehalfOfUserId property value. 
+     * Gets the onBehalfOfUserId property value. The onBehalfOfUserId property
      * @return string|null
     */
     public function getOnBehalfOfUserId(): ?string {
@@ -125,7 +125,7 @@ class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Sets the displayName property value. 
+     * Sets the displayName property value. The displayName property
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -133,7 +133,7 @@ class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Sets the entityType property value. 
+     * Sets the entityType property value. The entityType property
      * @param string|null $value Value to set for the entityType property.
     */
     public function setEntityType(?string $value): void {
@@ -141,7 +141,7 @@ class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Sets the mailNickname property value. 
+     * Sets the mailNickname property value. The mailNickname property
      * @param string|null $value Value to set for the mailNickname property.
     */
     public function setMailNickname(?string $value): void {
@@ -149,7 +149,7 @@ class ValidatePropertiesPostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Sets the onBehalfOfUserId property value. 
+     * Sets the onBehalfOfUserId property value. The onBehalfOfUserId property
      * @param string|null $value Value to set for the onBehalfOfUserId property.
     */
     public function setOnBehalfOfUserId(?string $value): void {

@@ -87,6 +87,7 @@ class ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder
 
     /**
      * Update the navigation property userStatuses in deviceAppManagement
+     * @param ManagedDeviceMobileAppConfigurationUserStatus $body The request body
      * @param ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder
 
     /**
      * Update the navigation property userStatuses in deviceAppManagement
+     * @param ManagedDeviceMobileAppConfigurationUserStatus $body The request body
      * @param ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

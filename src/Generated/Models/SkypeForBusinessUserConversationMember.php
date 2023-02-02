@@ -38,7 +38,7 @@ class SkypeForBusinessUserConversationMember extends ConversationMember implemen
     }
 
     /**
-     * Gets the tenantId property value. 
+     * Gets the tenantId property value. The tenantId property
      * @return string|null
     */
     public function getTenantId(): ?string {
@@ -46,7 +46,7 @@ class SkypeForBusinessUserConversationMember extends ConversationMember implemen
     }
 
     /**
-     * Gets the userId property value. 
+     * Gets the userId property value. The userId property
      * @return string|null
     */
     public function getUserId(): ?string {
@@ -64,7 +64,7 @@ class SkypeForBusinessUserConversationMember extends ConversationMember implemen
     }
 
     /**
-     * Sets the tenantId property value. 
+     * Sets the tenantId property value. The tenantId property
      * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {
@@ -72,7 +72,7 @@ class SkypeForBusinessUserConversationMember extends ConversationMember implemen
     }
 
     /**
-     * Sets the userId property value. 
+     * Sets the userId property value. The userId property
      * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {

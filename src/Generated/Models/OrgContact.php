@@ -27,7 +27,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the addresses property value. 
+     * Gets the addresses property value. The addresses property
      * @return array<PhysicalOfficeAddress>|null
     */
     public function getAddresses(): ?array {
@@ -35,7 +35,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the companyName property value. 
+     * Gets the companyName property value. The companyName property
      * @return string|null
     */
     public function getCompanyName(): ?string {
@@ -43,7 +43,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the department property value. 
+     * Gets the department property value. The department property
      * @return string|null
     */
     public function getDepartment(): ?string {
@@ -51,7 +51,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the directReports property value. 
+     * Gets the directReports property value. The directReports property
      * @return array<DirectoryObject>|null
     */
     public function getDirectReports(): ?array {
@@ -59,7 +59,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the displayName property value. 
+     * Gets the displayName property value. The displayName property
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -95,7 +95,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the givenName property value. 
+     * Gets the givenName property value. The givenName property
      * @return string|null
     */
     public function getGivenName(): ?string {
@@ -103,7 +103,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the jobTitle property value. 
+     * Gets the jobTitle property value. The jobTitle property
      * @return string|null
     */
     public function getJobTitle(): ?string {
@@ -111,7 +111,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the mail property value. 
+     * Gets the mail property value. The mail property
      * @return string|null
     */
     public function getMail(): ?string {
@@ -119,7 +119,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the mailNickname property value. 
+     * Gets the mailNickname property value. The mailNickname property
      * @return string|null
     */
     public function getMailNickname(): ?string {
@@ -127,7 +127,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the manager property value. 
+     * Gets the manager property value. The manager property
      * @return DirectoryObject|null
     */
     public function getManager(): ?DirectoryObject {
@@ -135,7 +135,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the memberOf property value. 
+     * Gets the memberOf property value. The memberOf property
      * @return array<DirectoryObject>|null
     */
     public function getMemberOf(): ?array {
@@ -143,7 +143,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the onPremisesLastSyncDateTime property value. 
+     * Gets the onPremisesLastSyncDateTime property value. The onPremisesLastSyncDateTime property
      * @return DateTime|null
     */
     public function getOnPremisesLastSyncDateTime(): ?DateTime {
@@ -151,7 +151,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the onPremisesProvisioningErrors property value. 
+     * Gets the onPremisesProvisioningErrors property value. The onPremisesProvisioningErrors property
      * @return array<OnPremisesProvisioningError>|null
     */
     public function getOnPremisesProvisioningErrors(): ?array {
@@ -159,7 +159,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the onPremisesSyncEnabled property value. 
+     * Gets the onPremisesSyncEnabled property value. The onPremisesSyncEnabled property
      * @return bool|null
     */
     public function getOnPremisesSyncEnabled(): ?bool {
@@ -167,7 +167,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the phones property value. 
+     * Gets the phones property value. The phones property
      * @return array<Phone>|null
     */
     public function getPhones(): ?array {
@@ -175,7 +175,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the proxyAddresses property value. 
+     * Gets the proxyAddresses property value. The proxyAddresses property
      * @return array<string>|null
     */
     public function getProxyAddresses(): ?array {
@@ -183,7 +183,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the surname property value. 
+     * Gets the surname property value. The surname property
      * @return string|null
     */
     public function getSurname(): ?string {
@@ -191,7 +191,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the transitiveMemberOf property value. 
+     * Gets the transitiveMemberOf property value. The transitiveMemberOf property
      * @return array<DirectoryObject>|null
     */
     public function getTransitiveMemberOf(): ?array {
@@ -225,7 +225,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the addresses property value. 
+     * Sets the addresses property value. The addresses property
      * @param array<PhysicalOfficeAddress>|null $value Value to set for the addresses property.
     */
     public function setAddresses(?array $value): void {
@@ -233,7 +233,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the companyName property value. 
+     * Sets the companyName property value. The companyName property
      * @param string|null $value Value to set for the companyName property.
     */
     public function setCompanyName(?string $value): void {
@@ -241,7 +241,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the department property value. 
+     * Sets the department property value. The department property
      * @param string|null $value Value to set for the department property.
     */
     public function setDepartment(?string $value): void {
@@ -249,7 +249,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the directReports property value. 
+     * Sets the directReports property value. The directReports property
      * @param array<DirectoryObject>|null $value Value to set for the directReports property.
     */
     public function setDirectReports(?array $value): void {
@@ -257,7 +257,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the displayName property value. 
+     * Sets the displayName property value. The displayName property
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -265,7 +265,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the givenName property value. 
+     * Sets the givenName property value. The givenName property
      * @param string|null $value Value to set for the givenName property.
     */
     public function setGivenName(?string $value): void {
@@ -273,7 +273,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the jobTitle property value. 
+     * Sets the jobTitle property value. The jobTitle property
      * @param string|null $value Value to set for the jobTitle property.
     */
     public function setJobTitle(?string $value): void {
@@ -281,7 +281,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the mail property value. 
+     * Sets the mail property value. The mail property
      * @param string|null $value Value to set for the mail property.
     */
     public function setMail(?string $value): void {
@@ -289,7 +289,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the mailNickname property value. 
+     * Sets the mailNickname property value. The mailNickname property
      * @param string|null $value Value to set for the mailNickname property.
     */
     public function setMailNickname(?string $value): void {
@@ -297,7 +297,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the manager property value. 
+     * Sets the manager property value. The manager property
      * @param DirectoryObject|null $value Value to set for the manager property.
     */
     public function setManager(?DirectoryObject $value): void {
@@ -305,7 +305,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the memberOf property value. 
+     * Sets the memberOf property value. The memberOf property
      * @param array<DirectoryObject>|null $value Value to set for the memberOf property.
     */
     public function setMemberOf(?array $value): void {
@@ -313,7 +313,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the onPremisesLastSyncDateTime property value. 
+     * Sets the onPremisesLastSyncDateTime property value. The onPremisesLastSyncDateTime property
      * @param DateTime|null $value Value to set for the onPremisesLastSyncDateTime property.
     */
     public function setOnPremisesLastSyncDateTime(?DateTime $value): void {
@@ -321,7 +321,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the onPremisesProvisioningErrors property value. 
+     * Sets the onPremisesProvisioningErrors property value. The onPremisesProvisioningErrors property
      * @param array<OnPremisesProvisioningError>|null $value Value to set for the onPremisesProvisioningErrors property.
     */
     public function setOnPremisesProvisioningErrors(?array $value): void {
@@ -329,7 +329,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the onPremisesSyncEnabled property value. 
+     * Sets the onPremisesSyncEnabled property value. The onPremisesSyncEnabled property
      * @param bool|null $value Value to set for the onPremisesSyncEnabled property.
     */
     public function setOnPremisesSyncEnabled(?bool $value): void {
@@ -337,7 +337,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the phones property value. 
+     * Sets the phones property value. The phones property
      * @param array<Phone>|null $value Value to set for the phones property.
     */
     public function setPhones(?array $value): void {
@@ -345,7 +345,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the proxyAddresses property value. 
+     * Sets the proxyAddresses property value. The proxyAddresses property
      * @param array<string>|null $value Value to set for the proxyAddresses property.
     */
     public function setProxyAddresses(?array $value): void {
@@ -353,7 +353,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the surname property value. 
+     * Sets the surname property value. The surname property
      * @param string|null $value Value to set for the surname property.
     */
     public function setSurname(?string $value): void {
@@ -361,7 +361,7 @@ class OrgContact extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the transitiveMemberOf property value. 
+     * Sets the transitiveMemberOf property value. The transitiveMemberOf property
      * @param array<DirectoryObject>|null $value Value to set for the transitiveMemberOf property.
     */
     public function setTransitiveMemberOf(?array $value): void {

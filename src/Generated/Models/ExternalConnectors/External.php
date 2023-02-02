@@ -51,7 +51,7 @@ class External implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the connections property value. 
+     * Gets the connections property value. The connections property
      * @return array<ExternalConnection>|null
     */
     public function getConnections(): ?array {
@@ -71,7 +71,7 @@ class External implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -105,7 +105,7 @@ class External implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the connections property value. 
+     * Sets the connections property value. The connections property
      * @param array<ExternalConnection>|null $value Value to set for the connections property.
     */
     public function setConnections(?array $value): void {
@@ -113,7 +113,7 @@ class External implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

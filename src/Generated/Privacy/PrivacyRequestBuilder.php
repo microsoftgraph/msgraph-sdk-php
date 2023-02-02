@@ -74,6 +74,7 @@ class PrivacyRequestBuilder
 
     /**
      * Update privacy
+     * @param Privacy $body The request body
      * @param PrivacyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -128,6 +129,7 @@ class PrivacyRequestBuilder
 
     /**
      * Update privacy
+     * @param Privacy $body The request body
      * @param PrivacyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

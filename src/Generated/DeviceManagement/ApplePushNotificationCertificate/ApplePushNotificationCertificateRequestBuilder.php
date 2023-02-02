@@ -91,6 +91,7 @@ class ApplePushNotificationCertificateRequestBuilder
 
     /**
      * Update the navigation property applePushNotificationCertificate in deviceManagement
+     * @param ApplePushNotificationCertificate $body The request body
      * @param ApplePushNotificationCertificateRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -155,6 +156,7 @@ class ApplePushNotificationCertificateRequestBuilder
 
     /**
      * Update the navigation property applePushNotificationCertificate in deviceManagement
+     * @param ApplePushNotificationCertificate $body The request body
      * @param ApplePushNotificationCertificateRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

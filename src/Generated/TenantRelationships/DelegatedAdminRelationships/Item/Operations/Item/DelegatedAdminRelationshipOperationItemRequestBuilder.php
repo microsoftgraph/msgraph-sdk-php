@@ -87,6 +87,7 @@ class DelegatedAdminRelationshipOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in tenantRelationships
+     * @param DelegatedAdminRelationshipOperation $body The request body
      * @param DelegatedAdminRelationshipOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class DelegatedAdminRelationshipOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in tenantRelationships
+     * @param DelegatedAdminRelationshipOperation $body The request body
      * @param DelegatedAdminRelationshipOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

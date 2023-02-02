@@ -116,6 +116,7 @@ class TodoTaskListItemRequestBuilder
 
     /**
      * Update the navigation property lists in users
+     * @param TodoTaskList $body The request body
      * @param TodoTaskListItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -191,6 +192,7 @@ class TodoTaskListItemRequestBuilder
 
     /**
      * Update the navigation property lists in users
+     * @param TodoTaskList $body The request body
      * @param TodoTaskListItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

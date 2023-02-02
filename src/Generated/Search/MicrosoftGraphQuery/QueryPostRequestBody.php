@@ -63,7 +63,7 @@ class QueryPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the requests property value. 
+     * Gets the requests property value. The requests property
      * @return array<SearchRequest>|null
     */
     public function getRequests(): ?array {
@@ -96,7 +96,7 @@ class QueryPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the requests property value. 
+     * Sets the requests property value. The requests property
      * @param array<SearchRequest>|null $value Value to set for the requests property.
     */
     public function setRequests(?array $value): void {

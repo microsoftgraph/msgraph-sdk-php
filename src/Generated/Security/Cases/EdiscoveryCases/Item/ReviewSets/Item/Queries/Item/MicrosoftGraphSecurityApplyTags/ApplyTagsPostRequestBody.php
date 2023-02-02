@@ -64,7 +64,7 @@ class ApplyTagsPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the tagsToAdd property value. 
+     * Gets the tagsToAdd property value. The tagsToAdd property
      * @return array<EdiscoveryReviewTag>|null
     */
     public function getTagsToAdd(): ?array {
@@ -72,7 +72,7 @@ class ApplyTagsPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the tagsToRemove property value. 
+     * Gets the tagsToRemove property value. The tagsToRemove property
      * @return array<EdiscoveryReviewTag>|null
     */
     public function getTagsToRemove(): ?array {
@@ -106,7 +106,7 @@ class ApplyTagsPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the tagsToAdd property value. 
+     * Sets the tagsToAdd property value. The tagsToAdd property
      * @param array<EdiscoveryReviewTag>|null $value Value to set for the tagsToAdd property.
     */
     public function setTagsToAdd(?array $value): void {
@@ -114,7 +114,7 @@ class ApplyTagsPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the tagsToRemove property value. 
+     * Sets the tagsToRemove property value. The tagsToRemove property
      * @param array<EdiscoveryReviewTag>|null $value Value to set for the tagsToRemove property.
     */
     public function setTagsToRemove(?array $value): void {

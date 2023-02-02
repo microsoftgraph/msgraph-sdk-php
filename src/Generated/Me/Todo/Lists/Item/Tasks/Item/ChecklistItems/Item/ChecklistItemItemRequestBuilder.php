@@ -87,6 +87,7 @@ class ChecklistItemItemRequestBuilder
 
     /**
      * Update the navigation property checklistItems in me
+     * @param ChecklistItem $body The request body
      * @param ChecklistItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class ChecklistItemItemRequestBuilder
 
     /**
      * Update the navigation property checklistItems in me
+     * @param ChecklistItem $body The request body
      * @param ChecklistItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

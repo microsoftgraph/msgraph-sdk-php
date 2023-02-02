@@ -107,6 +107,7 @@ class SharedWithChannelTeamInfoItemRequestBuilder
 
     /**
      * Update the navigation property sharedWithTeams in groups
+     * @param SharedWithChannelTeamInfo $body The request body
      * @param SharedWithChannelTeamInfoItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -171,6 +172,7 @@ class SharedWithChannelTeamInfoItemRequestBuilder
 
     /**
      * Update the navigation property sharedWithTeams in groups
+     * @param SharedWithChannelTeamInfo $body The request body
      * @param SharedWithChannelTeamInfoItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

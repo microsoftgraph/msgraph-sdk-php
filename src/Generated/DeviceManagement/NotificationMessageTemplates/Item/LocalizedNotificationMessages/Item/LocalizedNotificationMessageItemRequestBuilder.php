@@ -87,6 +87,7 @@ class LocalizedNotificationMessageItemRequestBuilder
 
     /**
      * Update the navigation property localizedNotificationMessages in deviceManagement
+     * @param LocalizedNotificationMessage $body The request body
      * @param LocalizedNotificationMessageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class LocalizedNotificationMessageItemRequestBuilder
 
     /**
      * Update the navigation property localizedNotificationMessages in deviceManagement
+     * @param LocalizedNotificationMessage $body The request body
      * @param LocalizedNotificationMessageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -74,6 +74,7 @@ class WindowsInformationProtectionAppLearningSummariesRequestBuilder
 
     /**
      * Create new navigation property to windowsInformationProtectionAppLearningSummaries for deviceManagement
+     * @param WindowsInformationProtectionAppLearningSummary $body The request body
      * @param WindowsInformationProtectionAppLearningSummariesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class WindowsInformationProtectionAppLearningSummariesRequestBuilder
 
     /**
      * Create new navigation property to windowsInformationProtectionAppLearningSummaries for deviceManagement
+     * @param WindowsInformationProtectionAppLearningSummary $body The request body
      * @param WindowsInformationProtectionAppLearningSummariesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

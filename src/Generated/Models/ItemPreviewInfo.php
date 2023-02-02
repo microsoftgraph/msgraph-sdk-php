@@ -65,7 +65,7 @@ class ItemPreviewInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the getUrl property value. 
+     * Gets the getUrl property value. The getUrl property
      * @return string|null
     */
     public function getGetUrl(): ?string {
@@ -73,7 +73,7 @@ class ItemPreviewInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -81,7 +81,7 @@ class ItemPreviewInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the postParameters property value. 
+     * Gets the postParameters property value. The postParameters property
      * @return string|null
     */
     public function getPostParameters(): ?string {
@@ -89,7 +89,7 @@ class ItemPreviewInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the postUrl property value. 
+     * Gets the postUrl property value. The postUrl property
      * @return string|null
     */
     public function getPostUrl(): ?string {
@@ -125,7 +125,7 @@ class ItemPreviewInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the getUrl property value. 
+     * Sets the getUrl property value. The getUrl property
      * @param string|null $value Value to set for the getUrl property.
     */
     public function setGetUrl(?string $value): void {
@@ -133,7 +133,7 @@ class ItemPreviewInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -141,7 +141,7 @@ class ItemPreviewInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the postParameters property value. 
+     * Sets the postParameters property value. The postParameters property
      * @param string|null $value Value to set for the postParameters property.
     */
     public function setPostParameters(?string $value): void {
@@ -149,7 +149,7 @@ class ItemPreviewInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the postUrl property value. 
+     * Sets the postUrl property value. The postUrl property
      * @param string|null $value Value to set for the postUrl property.
     */
     public function setPostUrl(?string $value): void {

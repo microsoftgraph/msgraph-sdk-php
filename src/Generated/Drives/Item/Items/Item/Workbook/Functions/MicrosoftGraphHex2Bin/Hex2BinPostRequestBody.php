@@ -64,7 +64,7 @@ class Hex2BinPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the number property value. 
+     * Gets the number property value. The number property
      * @return Json|null
     */
     public function getNumber(): ?Json {
@@ -72,7 +72,7 @@ class Hex2BinPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the places property value. 
+     * Gets the places property value. The places property
      * @return Json|null
     */
     public function getPlaces(): ?Json {
@@ -106,7 +106,7 @@ class Hex2BinPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the number property value. 
+     * Sets the number property value. The number property
      * @param Json|null $value Value to set for the number property.
     */
     public function setNumber(?Json $value): void {
@@ -114,7 +114,7 @@ class Hex2BinPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the places property value. 
+     * Sets the places property value. The places property
      * @param Json|null $value Value to set for the places property.
     */
     public function setPlaces(?Json $value): void {

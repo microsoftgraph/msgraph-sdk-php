@@ -74,6 +74,7 @@ class CommentsRequestBuilder
 
     /**
      * Create new navigation property to comments for drives
+     * @param WorkbookComment $body The request body
      * @param CommentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class CommentsRequestBuilder
 
     /**
      * Create new navigation property to comments for drives
+     * @param WorkbookComment $body The request body
      * @param CommentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

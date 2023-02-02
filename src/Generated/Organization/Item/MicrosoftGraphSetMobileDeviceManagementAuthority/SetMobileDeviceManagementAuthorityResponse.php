@@ -62,7 +62,7 @@ class SetMobileDeviceManagementAuthorityResponse implements AdditionalDataHolder
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return int|null
     */
     public function getValue(): ?int {
@@ -95,7 +95,7 @@ class SetMobileDeviceManagementAuthorityResponse implements AdditionalDataHolder
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param int|null $value Value to set for the value property.
     */
     public function setValue(?int $value): void {

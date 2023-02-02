@@ -63,7 +63,7 @@ class Skew_pPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the values property value. 
+     * Gets the values property value. The values property
      * @return Json|null
     */
     public function getValues(): ?Json {
@@ -96,7 +96,7 @@ class Skew_pPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the values property value. 
+     * Sets the values property value. The values property
      * @param Json|null $value Value to set for the values property.
     */
     public function setValues(?Json $value): void {

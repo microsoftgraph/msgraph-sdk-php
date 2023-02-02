@@ -182,6 +182,7 @@ class PrimaryChannelRequestBuilder
 
     /**
      * Update the navigation property primaryChannel in groups
+     * @param Channel $body The request body
      * @param PrimaryChannelRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -268,6 +269,7 @@ class PrimaryChannelRequestBuilder
 
     /**
      * Update the navigation property primaryChannel in groups
+     * @param Channel $body The request body
      * @param PrimaryChannelRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -33,7 +33,7 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
     }
 
     /**
-     * Gets the dataType property value. 
+     * Gets the dataType property value. The dataType property
      * @return IdentityUserFlowAttributeDataType|null
     */
     public function getDataType(): ?IdentityUserFlowAttributeDataType {
@@ -71,7 +71,7 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
     }
 
     /**
-     * Gets the userFlowAttributeType property value. 
+     * Gets the userFlowAttributeType property value. The userFlowAttributeType property
      * @return IdentityUserFlowAttributeType|null
     */
     public function getUserFlowAttributeType(): ?IdentityUserFlowAttributeType {
@@ -91,7 +91,7 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
     }
 
     /**
-     * Sets the dataType property value. 
+     * Sets the dataType property value. The dataType property
      * @param IdentityUserFlowAttributeDataType|null $value Value to set for the dataType property.
     */
     public function setDataType(?IdentityUserFlowAttributeDataType $value): void {
@@ -115,7 +115,7 @@ class IdentityUserFlowAttribute extends Entity implements Parsable
     }
 
     /**
-     * Sets the userFlowAttributeType property value. 
+     * Sets the userFlowAttributeType property value. The userFlowAttributeType property
      * @param IdentityUserFlowAttributeType|null $value Value to set for the userFlowAttributeType property.
     */
     public function setUserFlowAttributeType(?IdentityUserFlowAttributeType $value): void {

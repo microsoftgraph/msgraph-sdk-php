@@ -47,6 +47,7 @@ class Weibull_DistRequestBuilder
 
     /**
      * Invoke action weibull_Dist
+     * @param Weibull_DistPostRequestBody $body The request body
      * @param Weibull_DistRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Weibull_DistRequestBuilder
 
     /**
      * Invoke action weibull_Dist
+     * @param Weibull_DistPostRequestBody $body The request body
      * @param Weibull_DistRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

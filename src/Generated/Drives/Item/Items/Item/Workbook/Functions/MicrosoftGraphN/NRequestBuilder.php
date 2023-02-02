@@ -47,6 +47,7 @@ class NRequestBuilder
 
     /**
      * Invoke action n
+     * @param NPostRequestBody $body The request body
      * @param NRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class NRequestBuilder
 
     /**
      * Invoke action n
+     * @param NPostRequestBody $body The request body
      * @param NRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

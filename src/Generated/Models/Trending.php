@@ -41,7 +41,7 @@ class Trending extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. 
+     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -92,7 +92,7 @@ class Trending extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. 
+     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {

@@ -75,6 +75,7 @@ class PartnersRequestBuilder
 
     /**
      * Create a new partner configuration in a cross-tenant access policy.
+     * @param CrossTenantAccessPolicyConfigurationPartner $body The request body
      * @param PartnersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/crosstenantaccesspolicy-post-partners?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class PartnersRequestBuilder
 
     /**
      * Create a new partner configuration in a cross-tenant access policy.
+     * @param CrossTenantAccessPolicyConfigurationPartner $body The request body
      * @param PartnersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

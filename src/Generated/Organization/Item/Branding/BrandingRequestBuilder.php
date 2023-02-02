@@ -129,6 +129,7 @@ class BrandingRequestBuilder
 
     /**
      * Update the properties of the default branding object specified by the organizationalBranding resource.
+     * @param OrganizationalBranding $body The request body
      * @param BrandingRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/organizationalbranding-update?view=graph-rest-1.0 Find more info here
@@ -194,6 +195,7 @@ class BrandingRequestBuilder
 
     /**
      * Update the properties of the default branding object specified by the organizationalBranding resource.
+     * @param OrganizationalBranding $body The request body
      * @param BrandingRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -145,6 +145,7 @@ class B2xIdentityUserFlowItemRequestBuilder
 
     /**
      * Update the navigation property b2xUserFlows in identity
+     * @param B2xIdentityUserFlow $body The request body
      * @param B2xIdentityUserFlowItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -209,6 +210,7 @@ class B2xIdentityUserFlowItemRequestBuilder
 
     /**
      * Update the navigation property b2xUserFlows in identity
+     * @param B2xIdentityUserFlow $body The request body
      * @param B2xIdentityUserFlowItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

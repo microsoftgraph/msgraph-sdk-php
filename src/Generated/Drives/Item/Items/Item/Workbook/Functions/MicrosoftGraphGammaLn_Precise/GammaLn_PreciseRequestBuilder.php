@@ -47,6 +47,7 @@ class GammaLn_PreciseRequestBuilder
 
     /**
      * Invoke action gammaLn_Precise
+     * @param GammaLn_PrecisePostRequestBody $body The request body
      * @param GammaLn_PreciseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class GammaLn_PreciseRequestBuilder
 
     /**
      * Invoke action gammaLn_Precise
+     * @param GammaLn_PrecisePostRequestBody $body The request body
      * @param GammaLn_PreciseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

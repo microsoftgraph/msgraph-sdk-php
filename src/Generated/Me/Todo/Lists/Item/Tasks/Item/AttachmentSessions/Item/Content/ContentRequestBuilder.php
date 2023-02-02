@@ -46,7 +46,7 @@ class ContentRequestBuilder
     }
 
     /**
-     * Get content for the navigation property attachmentSessions from me
+     * The content streams that are uploaded.
      * @param ContentRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -64,7 +64,7 @@ class ContentRequestBuilder
     }
 
     /**
-     * Update content for the navigation property attachmentSessions in me
+     * The content streams that are uploaded.
      * @param StreamInterface $body Binary request body
      * @param ContentRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -83,7 +83,7 @@ class ContentRequestBuilder
     }
 
     /**
-     * Get content for the navigation property attachmentSessions from me
+     * The content streams that are uploaded.
      * @param ContentRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +104,7 @@ class ContentRequestBuilder
     }
 
     /**
-     * Update content for the navigation property attachmentSessions in me
+     * The content streams that are uploaded.
      * @param StreamInterface $body Binary request body
      * @param ContentRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

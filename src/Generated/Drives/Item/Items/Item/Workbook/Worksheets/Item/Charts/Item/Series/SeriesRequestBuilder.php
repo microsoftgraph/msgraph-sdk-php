@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\MicrosoftGraphCount\CountRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\MicrosoftGraphItemAtWithIndex\ItemAtWithIndexRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookChartSeries;
@@ -92,6 +92,7 @@ class SeriesRequestBuilder
 
     /**
      * Use this API to create a new ChartSeries.
+     * @param WorkbookChartSeries $body The request body
      * @param SeriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/chart-post-series?view=graph-rest-1.0 Find more info here
@@ -136,6 +137,7 @@ class SeriesRequestBuilder
 
     /**
      * Use this API to create a new ChartSeries.
+     * @param WorkbookChartSeries $body The request body
      * @param SeriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -62,7 +62,7 @@ class GetAvailableExtensionPropertiesPostRequestBody implements AdditionalDataHo
     }
 
     /**
-     * Gets the isSyncedFromOnPremises property value. 
+     * Gets the isSyncedFromOnPremises property value. The isSyncedFromOnPremises property
      * @return bool|null
     */
     public function getIsSyncedFromOnPremises(): ?bool {
@@ -95,7 +95,7 @@ class GetAvailableExtensionPropertiesPostRequestBody implements AdditionalDataHo
     }
 
     /**
-     * Sets the isSyncedFromOnPremises property value. 
+     * Sets the isSyncedFromOnPremises property value. The isSyncedFromOnPremises property
      * @param bool|null $value Value to set for the isSyncedFromOnPremises property.
     */
     public function setIsSyncedFromOnPremises(?bool $value): void {

@@ -75,6 +75,7 @@ class MembersRequestBuilder
 
     /**
      * Create a new teamworkTagMember object in a team.
+     * @param TeamworkTagMember $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/teamworktagmember-post?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class MembersRequestBuilder
 
     /**
      * Create a new teamworkTagMember object in a team.
+     * @param TeamworkTagMember $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

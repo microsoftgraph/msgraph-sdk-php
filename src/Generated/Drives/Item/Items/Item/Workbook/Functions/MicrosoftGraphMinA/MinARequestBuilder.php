@@ -47,6 +47,7 @@ class MinARequestBuilder
 
     /**
      * Invoke action minA
+     * @param MinAPostRequestBody $body The request body
      * @param MinARequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class MinARequestBuilder
 
     /**
      * Invoke action minA
+     * @param MinAPostRequestBody $body The request body
      * @param MinARequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

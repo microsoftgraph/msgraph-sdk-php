@@ -47,6 +47,7 @@ class MatchRequestBuilder
 
     /**
      * Invoke action match
+     * @param MatchPostRequestBody $body The request body
      * @param MatchRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class MatchRequestBuilder
 
     /**
      * Invoke action match
+     * @param MatchPostRequestBody $body The request body
      * @param MatchRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

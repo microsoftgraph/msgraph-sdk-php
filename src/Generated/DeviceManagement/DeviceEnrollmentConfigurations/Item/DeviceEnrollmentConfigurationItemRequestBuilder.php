@@ -123,6 +123,7 @@ class DeviceEnrollmentConfigurationItemRequestBuilder
 
     /**
      * Update the navigation property deviceEnrollmentConfigurations in deviceManagement
+     * @param DeviceEnrollmentConfiguration $body The request body
      * @param DeviceEnrollmentConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -187,6 +188,7 @@ class DeviceEnrollmentConfigurationItemRequestBuilder
 
     /**
      * Update the navigation property deviceEnrollmentConfigurations in deviceManagement
+     * @param DeviceEnrollmentConfiguration $body The request body
      * @param DeviceEnrollmentConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

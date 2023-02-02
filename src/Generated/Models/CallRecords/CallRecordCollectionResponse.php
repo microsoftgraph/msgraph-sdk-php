@@ -37,7 +37,7 @@ class CallRecordCollectionResponse extends BaseCollectionPaginationCountResponse
     }
 
     /**
-     * Gets the value property value. 
+     * Gets the value property value. The value property
      * @return array<CallRecord>|null
     */
     public function getValue(): ?array {
@@ -54,7 +54,7 @@ class CallRecordCollectionResponse extends BaseCollectionPaginationCountResponse
     }
 
     /**
-     * Sets the value property value. 
+     * Sets the value property value. The value property
      * @param array<CallRecord>|null $value Value to set for the value property.
     */
     public function setValue(?array $value): void {

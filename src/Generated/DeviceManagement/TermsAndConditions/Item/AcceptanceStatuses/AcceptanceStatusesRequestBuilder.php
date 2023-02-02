@@ -74,6 +74,7 @@ class AcceptanceStatusesRequestBuilder
 
     /**
      * Create new navigation property to acceptanceStatuses for deviceManagement
+     * @param TermsAndConditionsAcceptanceStatus $body The request body
      * @param AcceptanceStatusesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class AcceptanceStatusesRequestBuilder
 
     /**
      * Create new navigation property to acceptanceStatuses for deviceManagement
+     * @param TermsAndConditionsAcceptanceStatus $body The request body
      * @param AcceptanceStatusesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

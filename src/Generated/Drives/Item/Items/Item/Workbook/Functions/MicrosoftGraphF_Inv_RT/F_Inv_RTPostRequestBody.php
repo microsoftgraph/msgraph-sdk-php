@@ -52,7 +52,7 @@ class F_Inv_RTPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the degFreedom1 property value. 
+     * Gets the degFreedom1 property value. The degFreedom1 property
      * @return Json|null
     */
     public function getDegFreedom1(): ?Json {
@@ -60,7 +60,7 @@ class F_Inv_RTPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the degFreedom2 property value. 
+     * Gets the degFreedom2 property value. The degFreedom2 property
      * @return Json|null
     */
     public function getDegFreedom2(): ?Json {
@@ -81,7 +81,7 @@ class F_Inv_RTPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the probability property value. 
+     * Gets the probability property value. The probability property
      * @return Json|null
     */
     public function getProbability(): ?Json {
@@ -116,7 +116,7 @@ class F_Inv_RTPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the degFreedom1 property value. 
+     * Sets the degFreedom1 property value. The degFreedom1 property
      * @param Json|null $value Value to set for the degFreedom1 property.
     */
     public function setDegFreedom1(?Json $value): void {
@@ -124,7 +124,7 @@ class F_Inv_RTPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the degFreedom2 property value. 
+     * Sets the degFreedom2 property value. The degFreedom2 property
      * @param Json|null $value Value to set for the degFreedom2 property.
     */
     public function setDegFreedom2(?Json $value): void {
@@ -132,7 +132,7 @@ class F_Inv_RTPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the probability property value. 
+     * Sets the probability property value. The probability property
      * @param Json|null $value Value to set for the probability property.
     */
     public function setProbability(?Json $value): void {

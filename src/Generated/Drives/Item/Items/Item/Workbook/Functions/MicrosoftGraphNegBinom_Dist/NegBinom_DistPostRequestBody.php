@@ -52,7 +52,7 @@ class NegBinom_DistPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the cumulative property value. 
+     * Gets the cumulative property value. The cumulative property
      * @return Json|null
     */
     public function getCumulative(): ?Json {
@@ -74,7 +74,7 @@ class NegBinom_DistPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the numberF property value. 
+     * Gets the numberF property value. The numberF property
      * @return Json|null
     */
     public function getNumberF(): ?Json {
@@ -82,7 +82,7 @@ class NegBinom_DistPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the numberS property value. 
+     * Gets the numberS property value. The numberS property
      * @return Json|null
     */
     public function getNumberS(): ?Json {
@@ -90,7 +90,7 @@ class NegBinom_DistPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the probabilityS property value. 
+     * Gets the probabilityS property value. The probabilityS property
      * @return Json|null
     */
     public function getProbabilityS(): ?Json {
@@ -126,7 +126,7 @@ class NegBinom_DistPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the cumulative property value. 
+     * Sets the cumulative property value. The cumulative property
      * @param Json|null $value Value to set for the cumulative property.
     */
     public function setCumulative(?Json $value): void {
@@ -134,7 +134,7 @@ class NegBinom_DistPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the numberF property value. 
+     * Sets the numberF property value. The numberF property
      * @param Json|null $value Value to set for the numberF property.
     */
     public function setNumberF(?Json $value): void {
@@ -142,7 +142,7 @@ class NegBinom_DistPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the numberS property value. 
+     * Sets the numberS property value. The numberS property
      * @param Json|null $value Value to set for the numberS property.
     */
     public function setNumberS(?Json $value): void {
@@ -150,7 +150,7 @@ class NegBinom_DistPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the probabilityS property value. 
+     * Sets the probabilityS property value. The probabilityS property
      * @param Json|null $value Value to set for the probabilityS property.
     */
     public function setProbabilityS(?Json $value): void {

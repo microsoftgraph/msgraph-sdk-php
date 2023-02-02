@@ -87,6 +87,7 @@ class EndpointItemRequestBuilder
 
     /**
      * Update the navigation property endpoints in servicePrincipals
+     * @param Endpoint $body The request body
      * @param EndpointItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class EndpointItemRequestBuilder
 
     /**
      * Update the navigation property endpoints in servicePrincipals
+     * @param Endpoint $body The request body
      * @param EndpointItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

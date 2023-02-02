@@ -44,7 +44,7 @@ class TrimMeanPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the array property value. 
+     * Gets the array property value. The array property
      * @return Json|null
     */
     public function getArray(): ?Json {
@@ -72,7 +72,7 @@ class TrimMeanPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the percent property value. 
+     * Gets the percent property value. The percent property
      * @return Json|null
     */
     public function getPercent(): ?Json {
@@ -98,7 +98,7 @@ class TrimMeanPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the array property value. 
+     * Sets the array property value. The array property
      * @param Json|null $value Value to set for the array property.
     */
     public function setArray(?Json $value): void {
@@ -114,7 +114,7 @@ class TrimMeanPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the percent property value. 
+     * Sets the percent property value. The percent property
      * @param Json|null $value Value to set for the percent property.
     */
     public function setPercent(?Json $value): void {

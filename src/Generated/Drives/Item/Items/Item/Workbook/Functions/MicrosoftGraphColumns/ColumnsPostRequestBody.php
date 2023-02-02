@@ -44,7 +44,7 @@ class ColumnsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the array property value. 
+     * Gets the array property value. The array property
      * @return Json|null
     */
     public function getArray(): ?Json {
@@ -88,7 +88,7 @@ class ColumnsPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the array property value. 
+     * Sets the array property value. The array property
      * @param Json|null $value Value to set for the array property.
     */
     public function setArray(?Json $value): void {

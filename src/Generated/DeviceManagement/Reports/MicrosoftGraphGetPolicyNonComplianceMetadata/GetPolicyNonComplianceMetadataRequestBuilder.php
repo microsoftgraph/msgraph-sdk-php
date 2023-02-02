@@ -47,6 +47,7 @@ class GetPolicyNonComplianceMetadataRequestBuilder
 
     /**
      * Invoke action getPolicyNonComplianceMetadata
+     * @param GetPolicyNonComplianceMetadataPostRequestBody $body The request body
      * @param GetPolicyNonComplianceMetadataRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class GetPolicyNonComplianceMetadataRequestBuilder
 
     /**
      * Invoke action getPolicyNonComplianceMetadata
+     * @param GetPolicyNonComplianceMetadataPostRequestBody $body The request body
      * @param GetPolicyNonComplianceMetadataRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

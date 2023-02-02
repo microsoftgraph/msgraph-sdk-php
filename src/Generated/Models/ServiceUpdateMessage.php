@@ -52,7 +52,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
     }
 
     /**
-     * Gets the body property value. 
+     * Gets the body property value. The body property
      * @return ItemBody|null
     */
     public function getBody(): ?ItemBody {
@@ -60,7 +60,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
     }
 
     /**
-     * Gets the category property value. 
+     * Gets the category property value. The category property
      * @return ServiceUpdateCategory|null
     */
     public function getCategory(): ?ServiceUpdateCategory {
@@ -113,7 +113,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
     }
 
     /**
-     * Gets the severity property value. 
+     * Gets the severity property value. The severity property
      * @return ServiceUpdateSeverity|null
     */
     public function getSeverity(): ?ServiceUpdateSeverity {
@@ -180,7 +180,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
     }
 
     /**
-     * Sets the body property value. 
+     * Sets the body property value. The body property
      * @param ItemBody|null $value Value to set for the body property.
     */
     public function setBody(?ItemBody $value): void {
@@ -188,7 +188,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
     }
 
     /**
-     * Sets the category property value. 
+     * Sets the category property value. The category property
      * @param ServiceUpdateCategory|null $value Value to set for the category property.
     */
     public function setCategory(?ServiceUpdateCategory $value): void {
@@ -220,7 +220,7 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
     }
 
     /**
-     * Sets the severity property value. 
+     * Sets the severity property value. The severity property
      * @param ServiceUpdateSeverity|null $value Value to set for the severity property.
     */
     public function setSeverity(?ServiceUpdateSeverity $value): void {

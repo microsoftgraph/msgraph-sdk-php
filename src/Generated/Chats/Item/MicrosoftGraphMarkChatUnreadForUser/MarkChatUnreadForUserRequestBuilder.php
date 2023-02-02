@@ -46,6 +46,7 @@ class MarkChatUnreadForUserRequestBuilder
 
     /**
      * Mark a chat as unread for a user.
+     * @param MarkChatUnreadForUserPostRequestBody $body The request body
      * @param MarkChatUnreadForUserRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/chat-markchatunreadforuser?view=graph-rest-1.0 Find more info here
@@ -65,6 +66,7 @@ class MarkChatUnreadForUserRequestBuilder
 
     /**
      * Mark a chat as unread for a user.
+     * @param MarkChatUnreadForUserPostRequestBody $body The request body
      * @param MarkChatUnreadForUserRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

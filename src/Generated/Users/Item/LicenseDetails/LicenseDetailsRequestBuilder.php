@@ -75,6 +75,7 @@ class LicenseDetailsRequestBuilder
 
     /**
      * Create new navigation property to licenseDetails for users
+     * @param LicenseDetails $body The request body
      * @param LicenseDetailsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,6 +119,7 @@ class LicenseDetailsRequestBuilder
 
     /**
      * Create new navigation property to licenseDetails for users
+     * @param LicenseDetails $body The request body
      * @param LicenseDetailsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

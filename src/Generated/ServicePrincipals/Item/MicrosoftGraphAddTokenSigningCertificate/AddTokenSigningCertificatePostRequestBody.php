@@ -52,7 +52,7 @@ class AddTokenSigningCertificatePostRequestBody implements AdditionalDataHolder,
     }
 
     /**
-     * Gets the displayName property value. 
+     * Gets the displayName property value. The displayName property
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -60,7 +60,7 @@ class AddTokenSigningCertificatePostRequestBody implements AdditionalDataHolder,
     }
 
     /**
-     * Gets the endDateTime property value. 
+     * Gets the endDateTime property value. The endDateTime property
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
@@ -106,7 +106,7 @@ class AddTokenSigningCertificatePostRequestBody implements AdditionalDataHolder,
     }
 
     /**
-     * Sets the displayName property value. 
+     * Sets the displayName property value. The displayName property
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -114,7 +114,7 @@ class AddTokenSigningCertificatePostRequestBody implements AdditionalDataHolder,
     }
 
     /**
-     * Sets the endDateTime property value. 
+     * Sets the endDateTime property value. The endDateTime property
      * @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value): void {

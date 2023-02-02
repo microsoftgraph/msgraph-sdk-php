@@ -51,7 +51,7 @@ class AddFormulaLocalPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the comment property value. 
+     * Gets the comment property value. The comment property
      * @return string|null
     */
     public function getComment(): ?string {
@@ -72,7 +72,7 @@ class AddFormulaLocalPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the formula property value. 
+     * Gets the formula property value. The formula property
      * @return string|null
     */
     public function getFormula(): ?string {
@@ -80,7 +80,7 @@ class AddFormulaLocalPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Gets the name property value. 
+     * Gets the name property value. The name property
      * @return string|null
     */
     public function getName(): ?string {
@@ -115,7 +115,7 @@ class AddFormulaLocalPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the comment property value. 
+     * Sets the comment property value. The comment property
      * @param string|null $value Value to set for the comment property.
     */
     public function setComment(?string $value): void {
@@ -123,7 +123,7 @@ class AddFormulaLocalPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the formula property value. 
+     * Sets the formula property value. The formula property
      * @param string|null $value Value to set for the formula property.
     */
     public function setFormula(?string $value): void {
@@ -131,7 +131,7 @@ class AddFormulaLocalPostRequestBody implements AdditionalDataHolder, BackedMode
     }
 
     /**
-     * Sets the name property value. 
+     * Sets the name property value. The name property
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {

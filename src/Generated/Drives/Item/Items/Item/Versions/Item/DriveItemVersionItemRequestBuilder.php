@@ -103,6 +103,7 @@ class DriveItemVersionItemRequestBuilder
 
     /**
      * Update the navigation property versions in drives
+     * @param DriveItemVersion $body The request body
      * @param DriveItemVersionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -167,6 +168,7 @@ class DriveItemVersionItemRequestBuilder
 
     /**
      * Update the navigation property versions in drives
+     * @param DriveItemVersion $body The request body
      * @param DriveItemVersionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

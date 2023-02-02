@@ -64,7 +64,7 @@ class BitorPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the number1 property value. 
+     * Gets the number1 property value. The number1 property
      * @return Json|null
     */
     public function getNumber1(): ?Json {
@@ -72,7 +72,7 @@ class BitorPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the number2 property value. 
+     * Gets the number2 property value. The number2 property
      * @return Json|null
     */
     public function getNumber2(): ?Json {
@@ -106,7 +106,7 @@ class BitorPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the number1 property value. 
+     * Sets the number1 property value. The number1 property
      * @param Json|null $value Value to set for the number1 property.
     */
     public function setNumber1(?Json $value): void {
@@ -114,7 +114,7 @@ class BitorPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the number2 property value. 
+     * Sets the number2 property value. The number2 property
      * @param Json|null $value Value to set for the number2 property.
     */
     public function setNumber2(?Json $value): void {

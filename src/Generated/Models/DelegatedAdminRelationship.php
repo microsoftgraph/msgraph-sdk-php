@@ -27,7 +27,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Gets the accessAssignments property value. 
+     * Gets the accessAssignments property value. The accessAssignments property
      * @return array<DelegatedAdminAccessAssignment>|null
     */
     public function getAccessAssignments(): ?array {
@@ -35,7 +35,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Gets the accessDetails property value. 
+     * Gets the accessDetails property value. The accessDetails property
      * @return DelegatedAdminAccessDetails|null
     */
     public function getAccessDetails(): ?DelegatedAdminAccessDetails {
@@ -43,7 +43,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Gets the activatedDateTime property value. 
+     * Gets the activatedDateTime property value. The activatedDateTime property
      * @return DateTime|null
     */
     public function getActivatedDateTime(): ?DateTime {
@@ -51,7 +51,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. 
+     * Gets the createdDateTime property value. The createdDateTime property
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -59,7 +59,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Gets the customer property value. 
+     * Gets the customer property value. The customer property
      * @return DelegatedAdminRelationshipCustomerParticipant|null
     */
     public function getCustomer(): ?DelegatedAdminRelationshipCustomerParticipant {
@@ -67,7 +67,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. 
+     * Gets the displayName property value. The displayName property
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -75,7 +75,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Gets the duration property value. 
+     * Gets the duration property value. The duration property
      * @return DateInterval|null
     */
     public function getDuration(): ?DateInterval {
@@ -83,7 +83,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Gets the endDateTime property value. 
+     * Gets the endDateTime property value. The endDateTime property
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
@@ -113,7 +113,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. 
+     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -121,7 +121,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Gets the operations property value. 
+     * Gets the operations property value. The operations property
      * @return array<DelegatedAdminRelationshipOperation>|null
     */
     public function getOperations(): ?array {
@@ -129,7 +129,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Gets the requests property value. 
+     * Gets the requests property value. The requests property
      * @return array<DelegatedAdminRelationshipRequest>|null
     */
     public function getRequests(): ?array {
@@ -137,7 +137,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. 
+     * Gets the status property value. The status property
      * @return DelegatedAdminRelationshipStatus|null
     */
     public function getStatus(): ?DelegatedAdminRelationshipStatus {
@@ -165,7 +165,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Sets the accessAssignments property value. 
+     * Sets the accessAssignments property value. The accessAssignments property
      * @param array<DelegatedAdminAccessAssignment>|null $value Value to set for the accessAssignments property.
     */
     public function setAccessAssignments(?array $value): void {
@@ -173,7 +173,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Sets the accessDetails property value. 
+     * Sets the accessDetails property value. The accessDetails property
      * @param DelegatedAdminAccessDetails|null $value Value to set for the accessDetails property.
     */
     public function setAccessDetails(?DelegatedAdminAccessDetails $value): void {
@@ -181,7 +181,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Sets the activatedDateTime property value. 
+     * Sets the activatedDateTime property value. The activatedDateTime property
      * @param DateTime|null $value Value to set for the activatedDateTime property.
     */
     public function setActivatedDateTime(?DateTime $value): void {
@@ -189,7 +189,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. 
+     * Sets the createdDateTime property value. The createdDateTime property
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -197,7 +197,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Sets the customer property value. 
+     * Sets the customer property value. The customer property
      * @param DelegatedAdminRelationshipCustomerParticipant|null $value Value to set for the customer property.
     */
     public function setCustomer(?DelegatedAdminRelationshipCustomerParticipant $value): void {
@@ -205,7 +205,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. 
+     * Sets the displayName property value. The displayName property
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -213,7 +213,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Sets the duration property value. 
+     * Sets the duration property value. The duration property
      * @param DateInterval|null $value Value to set for the duration property.
     */
     public function setDuration(?DateInterval $value): void {
@@ -221,7 +221,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Sets the endDateTime property value. 
+     * Sets the endDateTime property value. The endDateTime property
      * @param DateTime|null $value Value to set for the endDateTime property.
     */
     public function setEndDateTime(?DateTime $value): void {
@@ -229,7 +229,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. 
+     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
@@ -237,7 +237,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Sets the operations property value. 
+     * Sets the operations property value. The operations property
      * @param array<DelegatedAdminRelationshipOperation>|null $value Value to set for the operations property.
     */
     public function setOperations(?array $value): void {
@@ -245,7 +245,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Sets the requests property value. 
+     * Sets the requests property value. The requests property
      * @param array<DelegatedAdminRelationshipRequest>|null $value Value to set for the requests property.
     */
     public function setRequests(?array $value): void {
@@ -253,7 +253,7 @@ class DelegatedAdminRelationship extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. 
+     * Sets the status property value. The status property
      * @param DelegatedAdminRelationshipStatus|null $value Value to set for the status property.
     */
     public function setStatus(?DelegatedAdminRelationshipStatus $value): void {

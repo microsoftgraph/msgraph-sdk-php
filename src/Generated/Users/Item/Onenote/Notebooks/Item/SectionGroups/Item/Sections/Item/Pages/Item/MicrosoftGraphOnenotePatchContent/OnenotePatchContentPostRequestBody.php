@@ -52,7 +52,7 @@ class OnenotePatchContentPostRequestBody implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the commands property value. 
+     * Gets the commands property value. The commands property
      * @return array<OnenotePatchContentCommand>|null
     */
     public function getCommands(): ?array {
@@ -96,7 +96,7 @@ class OnenotePatchContentPostRequestBody implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the commands property value. 
+     * Sets the commands property value. The commands property
      * @param array<OnenotePatchContentCommand>|null $value Value to set for the commands property.
     */
     public function setCommands(?array $value): void {

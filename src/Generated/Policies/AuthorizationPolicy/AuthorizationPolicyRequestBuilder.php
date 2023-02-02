@@ -83,6 +83,7 @@ class AuthorizationPolicyRequestBuilder
 
     /**
      * Update the properties of an authorizationPolicy object.
+     * @param AuthorizationPolicy $body The request body
      * @param AuthorizationPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/authorizationpolicy-update?view=graph-rest-1.0 Find more info here
@@ -148,6 +149,7 @@ class AuthorizationPolicyRequestBuilder
 
     /**
      * Update the properties of an authorizationPolicy object.
+     * @param AuthorizationPolicy $body The request body
      * @param AuthorizationPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -87,6 +87,7 @@ class OpenShiftChangeRequestItemRequestBuilder
 
     /**
      * Update the navigation property openShiftChangeRequests in me
+     * @param OpenShiftChangeRequest $body The request body
      * @param OpenShiftChangeRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class OpenShiftChangeRequestItemRequestBuilder
 
     /**
      * Update the navigation property openShiftChangeRequests in me
+     * @param OpenShiftChangeRequest $body The request body
      * @param OpenShiftChangeRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

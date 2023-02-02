@@ -47,6 +47,7 @@ class IsrefRequestBuilder
 
     /**
      * Invoke action isref
+     * @param IsrefPostRequestBody $body The request body
      * @param IsrefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class IsrefRequestBuilder
 
     /**
      * Invoke action isref
+     * @param IsrefPostRequestBody $body The request body
      * @param IsrefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

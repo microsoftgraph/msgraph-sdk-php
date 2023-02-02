@@ -87,6 +87,7 @@ class TeamsAsyncOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in users
+     * @param TeamsAsyncOperation $body The request body
      * @param TeamsAsyncOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class TeamsAsyncOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in users
+     * @param TeamsAsyncOperation $body The request body
      * @param TeamsAsyncOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

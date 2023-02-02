@@ -75,6 +75,7 @@ class SignInsRequestBuilder
 
     /**
      * Create new navigation property to signIns for auditLogs
+     * @param SignIn $body The request body
      * @param SignInsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,6 +119,7 @@ class SignInsRequestBuilder
 
     /**
      * Create new navigation property to signIns for auditLogs
+     * @param SignIn $body The request body
      * @param SignInsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

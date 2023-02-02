@@ -52,7 +52,7 @@ class TentativelyAcceptPostRequestBody implements AdditionalDataHolder, BackedMo
     }
 
     /**
-     * Gets the comment property value. 
+     * Gets the comment property value. The Comment property
      * @return string|null
     */
     public function getComment(): ?string {
@@ -73,7 +73,7 @@ class TentativelyAcceptPostRequestBody implements AdditionalDataHolder, BackedMo
     }
 
     /**
-     * Gets the proposedNewTime property value. 
+     * Gets the proposedNewTime property value. The ProposedNewTime property
      * @return TimeSlot|null
     */
     public function getProposedNewTime(): ?TimeSlot {
@@ -81,7 +81,7 @@ class TentativelyAcceptPostRequestBody implements AdditionalDataHolder, BackedMo
     }
 
     /**
-     * Gets the sendResponse property value. 
+     * Gets the sendResponse property value. The SendResponse property
      * @return bool|null
     */
     public function getSendResponse(): ?bool {
@@ -116,7 +116,7 @@ class TentativelyAcceptPostRequestBody implements AdditionalDataHolder, BackedMo
     }
 
     /**
-     * Sets the comment property value. 
+     * Sets the comment property value. The Comment property
      * @param string|null $value Value to set for the Comment property.
     */
     public function setComment(?string $value): void {
@@ -124,7 +124,7 @@ class TentativelyAcceptPostRequestBody implements AdditionalDataHolder, BackedMo
     }
 
     /**
-     * Sets the proposedNewTime property value. 
+     * Sets the proposedNewTime property value. The ProposedNewTime property
      * @param TimeSlot|null $value Value to set for the ProposedNewTime property.
     */
     public function setProposedNewTime(?TimeSlot $value): void {
@@ -132,7 +132,7 @@ class TentativelyAcceptPostRequestBody implements AdditionalDataHolder, BackedMo
     }
 
     /**
-     * Sets the sendResponse property value. 
+     * Sets the sendResponse property value. The SendResponse property
      * @param bool|null $value Value to set for the SendResponse property.
     */
     public function setSendResponse(?bool $value): void {

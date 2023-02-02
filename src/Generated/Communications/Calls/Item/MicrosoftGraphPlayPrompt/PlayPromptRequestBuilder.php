@@ -47,6 +47,7 @@ class PlayPromptRequestBuilder
 
     /**
      * Play a prompt in the call. For more information about how to handle operations, see commsOperation
+     * @param PlayPromptPostRequestBody $body The request body
      * @param PlayPromptRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/call-playprompt?view=graph-rest-1.0 Find more info here
@@ -66,6 +67,7 @@ class PlayPromptRequestBuilder
 
     /**
      * Play a prompt in the call. For more information about how to handle operations, see commsOperation
+     * @param PlayPromptPostRequestBody $body The request body
      * @param PlayPromptRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

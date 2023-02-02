@@ -82,7 +82,7 @@ class ConditionalAccessApplications implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the includeAuthenticationContextClassReferences property value. 
+     * Gets the includeAuthenticationContextClassReferences property value. The includeAuthenticationContextClassReferences property
      * @return array<string>|null
     */
     public function getIncludeAuthenticationContextClassReferences(): ?array {
@@ -98,7 +98,7 @@ class ConditionalAccessApplications implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -151,7 +151,7 @@ class ConditionalAccessApplications implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the includeAuthenticationContextClassReferences property value. 
+     * Sets the includeAuthenticationContextClassReferences property value. The includeAuthenticationContextClassReferences property
      * @param array<string>|null $value Value to set for the includeAuthenticationContextClassReferences property.
     */
     public function setIncludeAuthenticationContextClassReferences(?array $value): void {
@@ -167,7 +167,7 @@ class ConditionalAccessApplications implements AdditionalDataHolder, BackedModel
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

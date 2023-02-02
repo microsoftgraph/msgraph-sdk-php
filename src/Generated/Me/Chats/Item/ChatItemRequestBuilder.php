@@ -213,6 +213,7 @@ class ChatItemRequestBuilder
 
     /**
      * Update the navigation property chats in me
+     * @param Chat $body The request body
      * @param ChatItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -299,6 +300,7 @@ class ChatItemRequestBuilder
 
     /**
      * Update the navigation property chats in me
+     * @param Chat $body The request body
      * @param ChatItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

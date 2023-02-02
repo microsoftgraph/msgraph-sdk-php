@@ -62,7 +62,7 @@ class CheckMemberGroupsPostRequestBody implements AdditionalDataHolder, BackedMo
     }
 
     /**
-     * Gets the groupIds property value. 
+     * Gets the groupIds property value. The groupIds property
      * @return array<string>|null
     */
     public function getGroupIds(): ?array {
@@ -95,7 +95,7 @@ class CheckMemberGroupsPostRequestBody implements AdditionalDataHolder, BackedMo
     }
 
     /**
-     * Sets the groupIds property value. 
+     * Sets the groupIds property value. The groupIds property
      * @param array<string>|null $value Value to set for the groupIds property.
     */
     public function setGroupIds(?array $value): void {

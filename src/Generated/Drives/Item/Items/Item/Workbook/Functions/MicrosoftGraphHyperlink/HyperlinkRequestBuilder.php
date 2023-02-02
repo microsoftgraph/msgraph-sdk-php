@@ -47,6 +47,7 @@ class HyperlinkRequestBuilder
 
     /**
      * Invoke action hyperlink
+     * @param HyperlinkPostRequestBody $body The request body
      * @param HyperlinkRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class HyperlinkRequestBuilder
 
     /**
      * Invoke action hyperlink
+     * @param HyperlinkPostRequestBody $body The request body
      * @param HyperlinkRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

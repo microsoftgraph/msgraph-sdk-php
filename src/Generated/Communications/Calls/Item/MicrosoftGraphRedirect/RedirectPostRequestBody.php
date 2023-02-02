@@ -52,7 +52,7 @@ class RedirectPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the callbackUri property value. 
+     * Gets the callbackUri property value. The callbackUri property
      * @return string|null
     */
     public function getCallbackUri(): ?string {
@@ -73,7 +73,7 @@ class RedirectPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the targets property value. 
+     * Gets the targets property value. The targets property
      * @return array<InvitationParticipantInfo>|null
     */
     public function getTargets(): ?array {
@@ -81,7 +81,7 @@ class RedirectPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the timeout property value. 
+     * Gets the timeout property value. The timeout property
      * @return int|null
     */
     public function getTimeout(): ?int {
@@ -116,7 +116,7 @@ class RedirectPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the callbackUri property value. 
+     * Sets the callbackUri property value. The callbackUri property
      * @param string|null $value Value to set for the callbackUri property.
     */
     public function setCallbackUri(?string $value): void {
@@ -124,7 +124,7 @@ class RedirectPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the targets property value. 
+     * Sets the targets property value. The targets property
      * @param array<InvitationParticipantInfo>|null $value Value to set for the targets property.
     */
     public function setTargets(?array $value): void {
@@ -132,7 +132,7 @@ class RedirectPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the timeout property value. 
+     * Sets the timeout property value. The timeout property
      * @param int|null $value Value to set for the timeout property.
     */
     public function setTimeout(?int $value): void {

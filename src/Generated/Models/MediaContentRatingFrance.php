@@ -72,7 +72,7 @@ class MediaContentRatingFrance implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -123,7 +123,7 @@ class MediaContentRatingFrance implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

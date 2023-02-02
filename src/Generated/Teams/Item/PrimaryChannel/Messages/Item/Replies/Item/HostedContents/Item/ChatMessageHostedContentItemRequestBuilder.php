@@ -87,6 +87,7 @@ class ChatMessageHostedContentItemRequestBuilder
 
     /**
      * Update the navigation property hostedContents in teams
+     * @param ChatMessageHostedContent $body The request body
      * @param ChatMessageHostedContentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class ChatMessageHostedContentItemRequestBuilder
 
     /**
      * Update the navigation property hostedContents in teams
+     * @param ChatMessageHostedContent $body The request body
      * @param ChatMessageHostedContentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

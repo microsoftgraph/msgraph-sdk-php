@@ -96,6 +96,7 @@ class AgreementFileLocalizationItemRequestBuilder
 
     /**
      * Update the navigation property files in agreements
+     * @param AgreementFileLocalization $body The request body
      * @param AgreementFileLocalizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -160,6 +161,7 @@ class AgreementFileLocalizationItemRequestBuilder
 
     /**
      * Update the navigation property files in agreements
+     * @param AgreementFileLocalization $body The request body
      * @param AgreementFileLocalizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

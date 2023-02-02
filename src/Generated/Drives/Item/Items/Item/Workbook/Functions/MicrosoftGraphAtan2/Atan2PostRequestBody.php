@@ -64,7 +64,7 @@ class Atan2PostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the xNum property value. 
+     * Gets the xNum property value. The xNum property
      * @return Json|null
     */
     public function getXNum(): ?Json {
@@ -72,7 +72,7 @@ class Atan2PostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the yNum property value. 
+     * Gets the yNum property value. The yNum property
      * @return Json|null
     */
     public function getYNum(): ?Json {
@@ -106,7 +106,7 @@ class Atan2PostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the xNum property value. 
+     * Sets the xNum property value. The xNum property
      * @param Json|null $value Value to set for the xNum property.
     */
     public function setXNum(?Json $value): void {
@@ -114,7 +114,7 @@ class Atan2PostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the yNum property value. 
+     * Sets the yNum property value. The yNum property
      * @param Json|null $value Value to set for the yNum property.
     */
     public function setYNum(?Json $value): void {

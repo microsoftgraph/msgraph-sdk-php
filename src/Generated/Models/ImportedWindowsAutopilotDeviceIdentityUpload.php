@@ -55,7 +55,7 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity implements Par
     }
 
     /**
-     * Gets the status property value. 
+     * Gets the status property value. The status property
      * @return ImportedWindowsAutopilotDeviceIdentityUploadStatus|null
     */
     public function getStatus(): ?ImportedWindowsAutopilotDeviceIdentityUploadStatus {
@@ -90,7 +90,7 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity implements Par
     }
 
     /**
-     * Sets the status property value. 
+     * Sets the status property value. The status property
      * @param ImportedWindowsAutopilotDeviceIdentityUploadStatus|null $value Value to set for the status property.
     */
     public function setStatus(?ImportedWindowsAutopilotDeviceIdentityUploadStatus $value): void {

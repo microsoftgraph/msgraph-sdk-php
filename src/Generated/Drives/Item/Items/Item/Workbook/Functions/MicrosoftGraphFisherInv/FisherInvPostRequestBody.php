@@ -63,7 +63,7 @@ class FisherInvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the y property value. 
+     * Gets the y property value. The y property
      * @return Json|null
     */
     public function getY(): ?Json {
@@ -96,7 +96,7 @@ class FisherInvPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the y property value. 
+     * Sets the y property value. The y property
      * @param Json|null $value Value to set for the y property.
     */
     public function setY(?Json $value): void {

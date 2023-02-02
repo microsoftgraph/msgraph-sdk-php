@@ -47,6 +47,7 @@ class ConcatenateRequestBuilder
 
     /**
      * Invoke action concatenate
+     * @param ConcatenatePostRequestBody $body The request body
      * @param ConcatenateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ConcatenateRequestBuilder
 
     /**
      * Invoke action concatenate
+     * @param ConcatenatePostRequestBody $body The request body
      * @param ConcatenateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

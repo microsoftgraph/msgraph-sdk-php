@@ -27,7 +27,7 @@ class TaskFileAttachment extends AttachmentBase implements Parsable
     }
 
     /**
-     * Gets the contentBytes property value. 
+     * Gets the contentBytes property value. The base64-encoded contents of the file.
      * @return StreamInterface|null
     */
     public function getContentBytes(): ?StreamInterface {
@@ -55,7 +55,7 @@ class TaskFileAttachment extends AttachmentBase implements Parsable
     }
 
     /**
-     * Sets the contentBytes property value. 
+     * Sets the contentBytes property value. The base64-encoded contents of the file.
      * @param StreamInterface|null $value Value to set for the contentBytes property.
     */
     public function setContentBytes(?StreamInterface $value): void {

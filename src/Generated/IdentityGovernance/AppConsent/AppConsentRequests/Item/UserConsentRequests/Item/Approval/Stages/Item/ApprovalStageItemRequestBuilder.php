@@ -87,6 +87,7 @@ class ApprovalStageItemRequestBuilder
 
     /**
      * Update the navigation property stages in identityGovernance
+     * @param ApprovalStage $body The request body
      * @param ApprovalStageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class ApprovalStageItemRequestBuilder
 
     /**
      * Update the navigation property stages in identityGovernance
+     * @param ApprovalStage $body The request body
      * @param ApprovalStageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -64,7 +64,7 @@ class IdentityContainer extends Entity implements Parsable
     }
 
     /**
-     * Gets the identityProviders property value. 
+     * Gets the identityProviders property value. The identityProviders property
      * @return array<IdentityProviderBase>|null
     */
     public function getIdentityProviders(): ?array {
@@ -117,7 +117,7 @@ class IdentityContainer extends Entity implements Parsable
     }
 
     /**
-     * Sets the identityProviders property value. 
+     * Sets the identityProviders property value. The identityProviders property
      * @param array<IdentityProviderBase>|null $value Value to set for the identityProviders property.
     */
     public function setIdentityProviders(?array $value): void {

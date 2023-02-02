@@ -92,7 +92,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the defaultRedirectUri property value. 
+     * Gets the defaultRedirectUri property value. The defaultRedirectUri property
      * @return string|null
     */
     public function getDefaultRedirectUri(): ?string {
@@ -200,7 +200,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the homeRealmDiscoveryPolicies property value. 
+     * Gets the homeRealmDiscoveryPolicies property value. The homeRealmDiscoveryPolicies property
      * @return array<HomeRealmDiscoveryPolicy>|null
     */
     public function getHomeRealmDiscoveryPolicies(): ?array {
@@ -264,7 +264,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the oauth2RequirePostResponse property value. 
+     * Gets the oauth2RequirePostResponse property value. The oauth2RequirePostResponse property
      * @return bool|null
     */
     public function getOauth2RequirePostResponse(): ?bool {
@@ -320,7 +320,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the requestSignatureVerification property value. 
+     * Gets the requestSignatureVerification property value. The requestSignatureVerification property
      * @return RequestSignatureVerification|null
     */
     public function getRequestSignatureVerification(): ?RequestSignatureVerification {
@@ -384,7 +384,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the tokenIssuancePolicies property value. 
+     * Gets the tokenIssuancePolicies property value. The tokenIssuancePolicies property
      * @return array<TokenIssuancePolicy>|null
     */
     public function getTokenIssuancePolicies(): ?array {
@@ -392,7 +392,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the tokenLifetimePolicies property value. 
+     * Gets the tokenLifetimePolicies property value. The tokenLifetimePolicies property
      * @return array<TokenLifetimePolicy>|null
     */
     public function getTokenLifetimePolicies(): ?array {
@@ -530,7 +530,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the defaultRedirectUri property value. 
+     * Sets the defaultRedirectUri property value. The defaultRedirectUri property
      * @param string|null $value Value to set for the defaultRedirectUri property.
     */
     public function setDefaultRedirectUri(?string $value): void {
@@ -586,7 +586,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the homeRealmDiscoveryPolicies property value. 
+     * Sets the homeRealmDiscoveryPolicies property value. The homeRealmDiscoveryPolicies property
      * @param array<HomeRealmDiscoveryPolicy>|null $value Value to set for the homeRealmDiscoveryPolicies property.
     */
     public function setHomeRealmDiscoveryPolicies(?array $value): void {
@@ -650,7 +650,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the oauth2RequirePostResponse property value. 
+     * Sets the oauth2RequirePostResponse property value. The oauth2RequirePostResponse property
      * @param bool|null $value Value to set for the oauth2RequirePostResponse property.
     */
     public function setOauth2RequirePostResponse(?bool $value): void {
@@ -706,7 +706,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the requestSignatureVerification property value. 
+     * Sets the requestSignatureVerification property value. The requestSignatureVerification property
      * @param RequestSignatureVerification|null $value Value to set for the requestSignatureVerification property.
     */
     public function setRequestSignatureVerification(?RequestSignatureVerification $value): void {
@@ -770,7 +770,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the tokenIssuancePolicies property value. 
+     * Sets the tokenIssuancePolicies property value. The tokenIssuancePolicies property
      * @param array<TokenIssuancePolicy>|null $value Value to set for the tokenIssuancePolicies property.
     */
     public function setTokenIssuancePolicies(?array $value): void {
@@ -778,7 +778,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the tokenLifetimePolicies property value. 
+     * Sets the tokenLifetimePolicies property value. The tokenLifetimePolicies property
      * @param array<TokenLifetimePolicy>|null $value Value to set for the tokenLifetimePolicies property.
     */
     public function setTokenLifetimePolicies(?array $value): void {

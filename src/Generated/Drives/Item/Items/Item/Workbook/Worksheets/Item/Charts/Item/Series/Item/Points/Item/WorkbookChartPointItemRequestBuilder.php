@@ -95,6 +95,7 @@ class WorkbookChartPointItemRequestBuilder
 
     /**
      * Update the navigation property points in drives
+     * @param WorkbookChartPoint $body The request body
      * @param WorkbookChartPointItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class WorkbookChartPointItemRequestBuilder
 
     /**
      * Update the navigation property points in drives
+     * @param WorkbookChartPoint $body The request body
      * @param WorkbookChartPointItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

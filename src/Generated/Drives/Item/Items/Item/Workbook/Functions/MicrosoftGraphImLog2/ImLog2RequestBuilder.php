@@ -47,6 +47,7 @@ class ImLog2RequestBuilder
 
     /**
      * Invoke action imLog2
+     * @param ImLog2PostRequestBody $body The request body
      * @param ImLog2RequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ImLog2RequestBuilder
 
     /**
      * Invoke action imLog2
+     * @param ImLog2PostRequestBody $body The request body
      * @param ImLog2RequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

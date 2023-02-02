@@ -107,6 +107,7 @@ class AxesRequestBuilder
 
     /**
      * Update the navigation property axes in drives
+     * @param WorkbookChartAxes $body The request body
      * @param AxesRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -171,6 +172,7 @@ class AxesRequestBuilder
 
     /**
      * Update the navigation property axes in drives
+     * @param WorkbookChartAxes $body The request body
      * @param AxesRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -198,6 +198,7 @@ class EdiscoveryCaseItemRequestBuilder
 
     /**
      * Update the navigation property ediscoveryCases in security
+     * @param EdiscoveryCase $body The request body
      * @param EdiscoveryCaseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -295,6 +296,7 @@ class EdiscoveryCaseItemRequestBuilder
 
     /**
      * Update the navigation property ediscoveryCases in security
+     * @param EdiscoveryCase $body The request body
      * @param EdiscoveryCaseItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

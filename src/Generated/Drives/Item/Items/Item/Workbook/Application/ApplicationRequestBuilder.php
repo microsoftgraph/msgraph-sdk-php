@@ -92,6 +92,7 @@ class ApplicationRequestBuilder
 
     /**
      * Update the navigation property application in drives
+     * @param WorkbookApplication $body The request body
      * @param ApplicationRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -156,6 +157,7 @@ class ApplicationRequestBuilder
 
     /**
      * Update the navigation property application in drives
+     * @param WorkbookApplication $body The request body
      * @param ApplicationRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

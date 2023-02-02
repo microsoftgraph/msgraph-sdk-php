@@ -75,6 +75,7 @@ class ServicesRequestBuilder
 
     /**
      * Create a new bookingService for the specified bookingBusiness.
+     * @param BookingService $body The request body
      * @param ServicesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/bookingbusiness-post-services?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class ServicesRequestBuilder
 
     /**
      * Create a new bookingService for the specified bookingBusiness.
+     * @param BookingService $body The request body
      * @param ServicesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

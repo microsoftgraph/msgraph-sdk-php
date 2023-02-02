@@ -51,7 +51,7 @@ class WipeManagedAppRegistrationsByDeviceTagPostRequestBody implements Additiona
     }
 
     /**
-     * Gets the deviceTag property value. 
+     * Gets the deviceTag property value. The deviceTag property
      * @return string|null
     */
     public function getDeviceTag(): ?string {
@@ -95,7 +95,7 @@ class WipeManagedAppRegistrationsByDeviceTagPostRequestBody implements Additiona
     }
 
     /**
-     * Sets the deviceTag property value. 
+     * Sets the deviceTag property value. The deviceTag property
      * @param string|null $value Value to set for the deviceTag property.
     */
     public function setDeviceTag(?string $value): void {

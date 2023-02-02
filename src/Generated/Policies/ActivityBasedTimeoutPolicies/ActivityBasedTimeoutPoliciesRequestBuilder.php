@@ -75,6 +75,7 @@ class ActivityBasedTimeoutPoliciesRequestBuilder
 
     /**
      * Create a new activityBasedTimeoutPolicy object.
+     * @param ActivityBasedTimeoutPolicy $body The request body
      * @param ActivityBasedTimeoutPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/activitybasedtimeoutpolicy-post-activitybasedtimeoutpolicies?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class ActivityBasedTimeoutPoliciesRequestBuilder
 
     /**
      * Create a new activityBasedTimeoutPolicy object.
+     * @param ActivityBasedTimeoutPolicy $body The request body
      * @param ActivityBasedTimeoutPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

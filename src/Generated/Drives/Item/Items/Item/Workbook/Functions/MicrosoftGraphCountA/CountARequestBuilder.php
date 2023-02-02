@@ -47,6 +47,7 @@ class CountARequestBuilder
 
     /**
      * Invoke action countA
+     * @param CountAPostRequestBody $body The request body
      * @param CountARequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class CountARequestBuilder
 
     /**
      * Invoke action countA
+     * @param CountAPostRequestBody $body The request body
      * @param CountARequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

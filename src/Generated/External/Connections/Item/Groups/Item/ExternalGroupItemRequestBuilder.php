@@ -107,6 +107,7 @@ class ExternalGroupItemRequestBuilder
 
     /**
      * Update the navigation property groups in external
+     * @param ExternalGroup $body The request body
      * @param ExternalGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -171,6 +172,7 @@ class ExternalGroupItemRequestBuilder
 
     /**
      * Update the navigation property groups in external
+     * @param ExternalGroup $body The request body
      * @param ExternalGroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

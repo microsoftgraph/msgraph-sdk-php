@@ -87,6 +87,7 @@ class ScopedRoleMembershipItemRequestBuilder
 
     /**
      * Update the navigation property scopedRoleMemberOf in me
+     * @param ScopedRoleMembership $body The request body
      * @param ScopedRoleMembershipItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class ScopedRoleMembershipItemRequestBuilder
 
     /**
      * Update the navigation property scopedRoleMemberOf in me
+     * @param ScopedRoleMembership $body The request body
      * @param ScopedRoleMembershipItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

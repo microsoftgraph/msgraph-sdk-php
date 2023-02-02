@@ -47,6 +47,7 @@ class T_Inv_2TRequestBuilder
 
     /**
      * Invoke action t_Inv_2T
+     * @param T_Inv_2TPostRequestBody $body The request body
      * @param T_Inv_2TRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class T_Inv_2TRequestBuilder
 
     /**
      * Invoke action t_Inv_2T
+     * @param T_Inv_2TPostRequestBody $body The request body
      * @param T_Inv_2TRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

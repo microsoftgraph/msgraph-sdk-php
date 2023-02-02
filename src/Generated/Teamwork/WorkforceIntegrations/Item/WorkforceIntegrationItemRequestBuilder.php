@@ -87,6 +87,7 @@ class WorkforceIntegrationItemRequestBuilder
 
     /**
      * Update the navigation property workforceIntegrations in teamwork
+     * @param WorkforceIntegration $body The request body
      * @param WorkforceIntegrationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class WorkforceIntegrationItemRequestBuilder
 
     /**
      * Update the navigation property workforceIntegrations in teamwork
+     * @param WorkforceIntegration $body The request body
      * @param WorkforceIntegrationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

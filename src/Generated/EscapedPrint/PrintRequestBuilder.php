@@ -141,6 +141,7 @@ class PrintRequestBuilder
 
     /**
      * Update print
+     * @param EscapedPrint $body The request body
      * @param PrintRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -228,6 +229,7 @@ class PrintRequestBuilder
 
     /**
      * Update print
+     * @param EscapedPrint $body The request body
      * @param PrintRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -87,6 +87,7 @@ class ColumnLinkItemRequestBuilder
 
     /**
      * Update the navigation property columnLinks in sites
+     * @param ColumnLink $body The request body
      * @param ColumnLinkItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class ColumnLinkItemRequestBuilder
 
     /**
      * Update the navigation property columnLinks in sites
+     * @param ColumnLink $body The request body
      * @param ColumnLinkItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

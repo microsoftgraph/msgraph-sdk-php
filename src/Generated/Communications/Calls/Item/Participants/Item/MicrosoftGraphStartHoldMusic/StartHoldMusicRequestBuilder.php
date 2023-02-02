@@ -47,6 +47,7 @@ class StartHoldMusicRequestBuilder
 
     /**
      * Put a participant on hold and play music in the background.
+     * @param StartHoldMusicPostRequestBody $body The request body
      * @param StartHoldMusicRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/participant-startholdmusic?view=graph-rest-1.0 Find more info here
@@ -66,6 +67,7 @@ class StartHoldMusicRequestBuilder
 
     /**
      * Put a participant on hold and play music in the background.
+     * @param StartHoldMusicPostRequestBody $body The request body
      * @param StartHoldMusicRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

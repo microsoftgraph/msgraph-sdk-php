@@ -74,6 +74,7 @@ class DeviceEnrollmentConfigurationsRequestBuilder
 
     /**
      * Create new navigation property to deviceEnrollmentConfigurations for deviceManagement
+     * @param DeviceEnrollmentConfiguration $body The request body
      * @param DeviceEnrollmentConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class DeviceEnrollmentConfigurationsRequestBuilder
 
     /**
      * Create new navigation property to deviceEnrollmentConfigurations for deviceManagement
+     * @param DeviceEnrollmentConfiguration $body The request body
      * @param DeviceEnrollmentConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

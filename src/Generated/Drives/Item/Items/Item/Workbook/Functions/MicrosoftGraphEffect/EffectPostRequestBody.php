@@ -64,7 +64,7 @@ class EffectPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the nominalRate property value. 
+     * Gets the nominalRate property value. The nominalRate property
      * @return Json|null
     */
     public function getNominalRate(): ?Json {
@@ -72,7 +72,7 @@ class EffectPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the npery property value. 
+     * Gets the npery property value. The npery property
      * @return Json|null
     */
     public function getNpery(): ?Json {
@@ -106,7 +106,7 @@ class EffectPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the nominalRate property value. 
+     * Sets the nominalRate property value. The nominalRate property
      * @param Json|null $value Value to set for the nominalRate property.
     */
     public function setNominalRate(?Json $value): void {
@@ -114,7 +114,7 @@ class EffectPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the npery property value. 
+     * Sets the npery property value. The npery property
      * @param Json|null $value Value to set for the npery property.
     */
     public function setNpery(?Json $value): void {

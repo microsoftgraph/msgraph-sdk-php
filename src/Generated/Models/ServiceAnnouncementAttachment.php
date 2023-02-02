@@ -35,7 +35,7 @@ class ServiceAnnouncementAttachment extends Entity implements Parsable
     }
 
     /**
-     * Gets the contentType property value. 
+     * Gets the contentType property value. The contentType property
      * @return string|null
     */
     public function getContentType(): ?string {
@@ -58,7 +58,7 @@ class ServiceAnnouncementAttachment extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. 
+     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -66,7 +66,7 @@ class ServiceAnnouncementAttachment extends Entity implements Parsable
     }
 
     /**
-     * Gets the name property value. 
+     * Gets the name property value. The name property
      * @return string|null
     */
     public function getName(): ?string {
@@ -74,7 +74,7 @@ class ServiceAnnouncementAttachment extends Entity implements Parsable
     }
 
     /**
-     * Gets the size property value. 
+     * Gets the size property value. The size property
      * @return int|null
     */
     public function getSize(): ?int {
@@ -103,7 +103,7 @@ class ServiceAnnouncementAttachment extends Entity implements Parsable
     }
 
     /**
-     * Sets the contentType property value. 
+     * Sets the contentType property value. The contentType property
      * @param string|null $value Value to set for the contentType property.
     */
     public function setContentType(?string $value): void {
@@ -111,7 +111,7 @@ class ServiceAnnouncementAttachment extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. 
+     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
@@ -119,7 +119,7 @@ class ServiceAnnouncementAttachment extends Entity implements Parsable
     }
 
     /**
-     * Sets the name property value. 
+     * Sets the name property value. The name property
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -127,7 +127,7 @@ class ServiceAnnouncementAttachment extends Entity implements Parsable
     }
 
     /**
-     * Sets the size property value. 
+     * Sets the size property value. The size property
      * @param int|null $value Value to set for the size property.
     */
     public function setSize(?int $value): void {

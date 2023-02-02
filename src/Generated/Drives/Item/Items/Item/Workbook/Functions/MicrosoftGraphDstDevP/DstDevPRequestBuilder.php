@@ -47,6 +47,7 @@ class DstDevPRequestBuilder
 
     /**
      * Invoke action dstDevP
+     * @param DstDevPPostRequestBody $body The request body
      * @param DstDevPRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class DstDevPRequestBuilder
 
     /**
      * Invoke action dstDevP
+     * @param DstDevPPostRequestBody $body The request body
      * @param DstDevPRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

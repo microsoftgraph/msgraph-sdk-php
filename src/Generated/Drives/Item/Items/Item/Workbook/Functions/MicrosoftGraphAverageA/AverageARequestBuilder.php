@@ -47,6 +47,7 @@ class AverageARequestBuilder
 
     /**
      * Invoke action averageA
+     * @param AverageAPostRequestBody $body The request body
      * @param AverageARequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class AverageARequestBuilder
 
     /**
      * Invoke action averageA
+     * @param AverageAPostRequestBody $body The request body
      * @param AverageARequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

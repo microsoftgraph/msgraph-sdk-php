@@ -36,7 +36,7 @@ class Beta_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the a property value. 
+     * Gets the a property value. The A property
      * @return Json|null
     */
     public function getA(): ?Json {
@@ -52,7 +52,7 @@ class Beta_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the alpha property value. 
+     * Gets the alpha property value. The alpha property
      * @return Json|null
     */
     public function getAlpha(): ?Json {
@@ -60,7 +60,7 @@ class Beta_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the b property value. 
+     * Gets the b property value. The B property
      * @return Json|null
     */
     public function getB(): ?Json {
@@ -76,7 +76,7 @@ class Beta_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the beta property value. 
+     * Gets the beta property value. The beta property
      * @return Json|null
     */
     public function getBeta(): ?Json {
@@ -84,7 +84,7 @@ class Beta_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the cumulative property value. 
+     * Gets the cumulative property value. The cumulative property
      * @return Json|null
     */
     public function getCumulative(): ?Json {
@@ -108,7 +108,7 @@ class Beta_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the x property value. 
+     * Gets the x property value. The x property
      * @return Json|null
     */
     public function getX(): ?Json {
@@ -130,7 +130,7 @@ class Beta_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the a property value. 
+     * Sets the a property value. The A property
      * @param Json|null $value Value to set for the A property.
     */
     public function setA(?Json $value): void {
@@ -146,7 +146,7 @@ class Beta_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the alpha property value. 
+     * Sets the alpha property value. The alpha property
      * @param Json|null $value Value to set for the alpha property.
     */
     public function setAlpha(?Json $value): void {
@@ -154,7 +154,7 @@ class Beta_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the b property value. 
+     * Sets the b property value. The B property
      * @param Json|null $value Value to set for the B property.
     */
     public function setB(?Json $value): void {
@@ -170,7 +170,7 @@ class Beta_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the beta property value. 
+     * Sets the beta property value. The beta property
      * @param Json|null $value Value to set for the beta property.
     */
     public function setBeta(?Json $value): void {
@@ -178,7 +178,7 @@ class Beta_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the cumulative property value. 
+     * Sets the cumulative property value. The cumulative property
      * @param Json|null $value Value to set for the cumulative property.
     */
     public function setCumulative(?Json $value): void {
@@ -186,7 +186,7 @@ class Beta_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the x property value. 
+     * Sets the x property value. The x property
      * @param Json|null $value Value to set for the x property.
     */
     public function setX(?Json $value): void {

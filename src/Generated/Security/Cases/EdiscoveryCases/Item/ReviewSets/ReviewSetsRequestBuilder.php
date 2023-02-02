@@ -75,6 +75,7 @@ class ReviewSetsRequestBuilder
 
     /**
      * Create a new ediscoveryReviewSet object.
+     * @param EdiscoveryReviewSet $body The request body
      * @param ReviewSetsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/security-ediscoverycase-post-reviewsets?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class ReviewSetsRequestBuilder
 
     /**
      * Create a new ediscoveryReviewSet object.
+     * @param EdiscoveryReviewSet $body The request body
      * @param ReviewSetsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

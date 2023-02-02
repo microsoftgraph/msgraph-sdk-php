@@ -90,7 +90,7 @@ class Post extends OutlookItem implements Parsable
     }
 
     /**
-     * Gets the from property value. 
+     * Gets the from property value. The from property
      * @return Recipient|null
     */
     public function getFrom(): ?Recipient {
@@ -215,7 +215,7 @@ class Post extends OutlookItem implements Parsable
     }
 
     /**
-     * Sets the from property value. 
+     * Sets the from property value. The from property
      * @param Recipient|null $value Value to set for the from property.
     */
     public function setFrom(?Recipient $value): void {

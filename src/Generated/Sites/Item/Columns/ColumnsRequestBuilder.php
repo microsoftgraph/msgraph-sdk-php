@@ -75,6 +75,7 @@ class ColumnsRequestBuilder
 
     /**
      * Create a column for a [site][site] with a request that specifies a [columnDefinition][columnDefinition].
+     * @param ColumnDefinition $body The request body
      * @param ColumnsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/site-post-columns?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class ColumnsRequestBuilder
 
     /**
      * Create a column for a [site][site] with a request that specifies a [columnDefinition][columnDefinition].
+     * @param ColumnDefinition $body The request body
      * @param ColumnsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

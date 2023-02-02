@@ -64,7 +64,7 @@ class NpvPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the rate property value. 
+     * Gets the rate property value. The rate property
      * @return Json|null
     */
     public function getRate(): ?Json {
@@ -72,7 +72,7 @@ class NpvPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the values property value. 
+     * Gets the values property value. The values property
      * @return Json|null
     */
     public function getValues(): ?Json {
@@ -106,7 +106,7 @@ class NpvPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the rate property value. 
+     * Sets the rate property value. The rate property
      * @param Json|null $value Value to set for the rate property.
     */
     public function setRate(?Json $value): void {
@@ -114,7 +114,7 @@ class NpvPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the values property value. 
+     * Sets the values property value. The values property
      * @param Json|null $value Value to set for the values property.
     */
     public function setValues(?Json $value): void {

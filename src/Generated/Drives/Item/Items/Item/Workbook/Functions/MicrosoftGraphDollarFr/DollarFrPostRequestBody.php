@@ -52,7 +52,7 @@ class DollarFrPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the decimalDollar property value. 
+     * Gets the decimalDollar property value. The decimalDollar property
      * @return Json|null
     */
     public function getDecimalDollar(): ?Json {
@@ -72,7 +72,7 @@ class DollarFrPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the fraction property value. 
+     * Gets the fraction property value. The fraction property
      * @return Json|null
     */
     public function getFraction(): ?Json {
@@ -106,7 +106,7 @@ class DollarFrPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the decimalDollar property value. 
+     * Sets the decimalDollar property value. The decimalDollar property
      * @param Json|null $value Value to set for the decimalDollar property.
     */
     public function setDecimalDollar(?Json $value): void {
@@ -114,7 +114,7 @@ class DollarFrPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the fraction property value. 
+     * Sets the fraction property value. The fraction property
      * @param Json|null $value Value to set for the fraction property.
     */
     public function setFraction(?Json $value): void {

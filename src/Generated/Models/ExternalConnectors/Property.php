@@ -126,7 +126,7 @@ class Property implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -134,7 +134,7 @@ class Property implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the type property value. 
+     * Gets the type property value. The type property
      * @return PropertyType|null
     */
     public function getType(): ?PropertyType {
@@ -231,7 +231,7 @@ class Property implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -239,7 +239,7 @@ class Property implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the type property value. 
+     * Sets the type property value. The type property
      * @param PropertyType|null $value Value to set for the type property.
     */
     public function setType(?PropertyType $value): void {

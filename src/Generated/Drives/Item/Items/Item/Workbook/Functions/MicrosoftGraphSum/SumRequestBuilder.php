@@ -47,6 +47,7 @@ class SumRequestBuilder
 
     /**
      * Invoke action sum
+     * @param SumPostRequestBody $body The request body
      * @param SumRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class SumRequestBuilder
 
     /**
      * Invoke action sum
+     * @param SumPostRequestBody $body The request body
      * @param SumRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

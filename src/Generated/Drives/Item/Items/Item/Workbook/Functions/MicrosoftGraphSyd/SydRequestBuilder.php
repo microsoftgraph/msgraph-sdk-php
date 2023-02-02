@@ -47,6 +47,7 @@ class SydRequestBuilder
 
     /**
      * Invoke action syd
+     * @param SydPostRequestBody $body The request body
      * @param SydRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class SydRequestBuilder
 
     /**
      * Invoke action syd
+     * @param SydPostRequestBody $body The request body
      * @param SydRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

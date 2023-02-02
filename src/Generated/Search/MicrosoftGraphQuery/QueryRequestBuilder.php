@@ -46,6 +46,7 @@ class QueryRequestBuilder
 
     /**
      * Invoke action query
+     * @param QueryPostRequestBody $body The request body
      * @param QueryRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -64,6 +65,7 @@ class QueryRequestBuilder
 
     /**
      * Invoke action query
+     * @param QueryPostRequestBody $body The request body
      * @param QueryRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

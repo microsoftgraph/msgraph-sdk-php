@@ -47,6 +47,7 @@ class HarMeanRequestBuilder
 
     /**
      * Invoke action harMean
+     * @param HarMeanPostRequestBody $body The request body
      * @param HarMeanRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class HarMeanRequestBuilder
 
     /**
      * Invoke action harMean
+     * @param HarMeanPostRequestBody $body The request body
      * @param HarMeanRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

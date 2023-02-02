@@ -429,6 +429,7 @@ class ServicePrincipalItemRequestBuilder
 
     /**
      * Update entity in servicePrincipals
+     * @param ServicePrincipal $body The request body
      * @param ServicePrincipalItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -515,6 +516,7 @@ class ServicePrincipalItemRequestBuilder
 
     /**
      * Update entity in servicePrincipals
+     * @param ServicePrincipal $body The request body
      * @param ServicePrincipalItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

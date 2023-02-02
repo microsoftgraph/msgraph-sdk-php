@@ -87,6 +87,7 @@ class MobileThreatDefenseConnectorItemRequestBuilder
 
     /**
      * Update the navigation property mobileThreatDefenseConnectors in deviceManagement
+     * @param MobileThreatDefenseConnector $body The request body
      * @param MobileThreatDefenseConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class MobileThreatDefenseConnectorItemRequestBuilder
 
     /**
      * Update the navigation property mobileThreatDefenseConnectors in deviceManagement
+     * @param MobileThreatDefenseConnector $body The request body
      * @param MobileThreatDefenseConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

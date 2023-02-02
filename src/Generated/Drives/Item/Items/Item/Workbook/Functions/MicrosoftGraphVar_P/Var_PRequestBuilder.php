@@ -47,6 +47,7 @@ class Var_PRequestBuilder
 
     /**
      * Invoke action var_P
+     * @param Var_PPostRequestBody $body The request body
      * @param Var_PRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Var_PRequestBuilder
 
     /**
      * Invoke action var_P
+     * @param Var_PPostRequestBody $body The request body
      * @param Var_PRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

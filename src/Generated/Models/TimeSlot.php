@@ -51,7 +51,7 @@ class TimeSlot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the end property value. 
+     * Gets the end property value. The end property
      * @return DateTimeTimeZone|null
     */
     public function getEnd(): ?DateTimeTimeZone {
@@ -72,7 +72,7 @@ class TimeSlot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -80,7 +80,7 @@ class TimeSlot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the start property value. 
+     * Gets the start property value. The start property
      * @return DateTimeTimeZone|null
     */
     public function getStart(): ?DateTimeTimeZone {
@@ -115,7 +115,7 @@ class TimeSlot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the end property value. 
+     * Sets the end property value. The end property
      * @param DateTimeTimeZone|null $value Value to set for the end property.
     */
     public function setEnd(?DateTimeTimeZone $value): void {
@@ -123,7 +123,7 @@ class TimeSlot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -131,7 +131,7 @@ class TimeSlot implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the start property value. 
+     * Sets the start property value. The start property
      * @param DateTimeTimeZone|null $value Value to set for the start property.
     */
     public function setStart(?DateTimeTimeZone $value): void {

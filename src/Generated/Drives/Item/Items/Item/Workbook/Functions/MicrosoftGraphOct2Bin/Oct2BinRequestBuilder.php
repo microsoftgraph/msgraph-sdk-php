@@ -47,6 +47,7 @@ class Oct2BinRequestBuilder
 
     /**
      * Invoke action oct2Bin
+     * @param Oct2BinPostRequestBody $body The request body
      * @param Oct2BinRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Oct2BinRequestBuilder
 
     /**
      * Invoke action oct2Bin
+     * @param Oct2BinPostRequestBody $body The request body
      * @param Oct2BinRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

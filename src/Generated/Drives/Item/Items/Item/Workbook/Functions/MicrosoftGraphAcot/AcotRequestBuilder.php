@@ -47,6 +47,7 @@ class AcotRequestBuilder
 
     /**
      * Invoke action acot
+     * @param AcotPostRequestBody $body The request body
      * @param AcotRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class AcotRequestBuilder
 
     /**
      * Invoke action acot
+     * @param AcotPostRequestBody $body The request body
      * @param AcotRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -87,6 +87,7 @@ class TeamworkTagMemberItemRequestBuilder
 
     /**
      * Update the navigation property members in users
+     * @param TeamworkTagMember $body The request body
      * @param TeamworkTagMemberItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class TeamworkTagMemberItemRequestBuilder
 
     /**
      * Update the navigation property members in users
+     * @param TeamworkTagMember $body The request body
      * @param TeamworkTagMemberItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

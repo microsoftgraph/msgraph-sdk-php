@@ -65,7 +65,7 @@ class RriPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the fv property value. 
+     * Gets the fv property value. The fv property
      * @return Json|null
     */
     public function getFv(): ?Json {
@@ -73,7 +73,7 @@ class RriPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the nper property value. 
+     * Gets the nper property value. The nper property
      * @return Json|null
     */
     public function getNper(): ?Json {
@@ -81,7 +81,7 @@ class RriPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the pv property value. 
+     * Gets the pv property value. The pv property
      * @return Json|null
     */
     public function getPv(): ?Json {
@@ -116,7 +116,7 @@ class RriPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the fv property value. 
+     * Sets the fv property value. The fv property
      * @param Json|null $value Value to set for the fv property.
     */
     public function setFv(?Json $value): void {
@@ -124,7 +124,7 @@ class RriPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the nper property value. 
+     * Sets the nper property value. The nper property
      * @param Json|null $value Value to set for the nper property.
     */
     public function setNper(?Json $value): void {
@@ -132,7 +132,7 @@ class RriPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the pv property value. 
+     * Sets the pv property value. The pv property
      * @param Json|null $value Value to set for the pv property.
     */
     public function setPv(?Json $value): void {

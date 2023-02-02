@@ -95,6 +95,7 @@ class ServiceAnnouncementAttachmentItemRequestBuilder
 
     /**
      * Update the navigation property attachments in admin
+     * @param ServiceAnnouncementAttachment $body The request body
      * @param ServiceAnnouncementAttachmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class ServiceAnnouncementAttachmentItemRequestBuilder
 
     /**
      * Update the navigation property attachments in admin
+     * @param ServiceAnnouncementAttachment $body The request body
      * @param ServiceAnnouncementAttachmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

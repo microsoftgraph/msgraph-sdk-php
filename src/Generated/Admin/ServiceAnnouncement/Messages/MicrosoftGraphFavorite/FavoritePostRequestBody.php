@@ -62,7 +62,7 @@ class FavoritePostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Gets the messageIds property value. 
+     * Gets the messageIds property value. The messageIds property
      * @return array<string>|null
     */
     public function getMessageIds(): ?array {
@@ -95,7 +95,7 @@ class FavoritePostRequestBody implements AdditionalDataHolder, BackedModel, Pars
     }
 
     /**
-     * Sets the messageIds property value. 
+     * Sets the messageIds property value. The messageIds property
      * @param array<string>|null $value Value to set for the messageIds property.
     */
     public function setMessageIds(?array $value): void {

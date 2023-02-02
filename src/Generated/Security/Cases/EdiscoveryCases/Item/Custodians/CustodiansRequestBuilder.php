@@ -91,6 +91,7 @@ class CustodiansRequestBuilder
 
     /**
      * Create a new ediscoveryCustodian object.After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site.
+     * @param EdiscoveryCustodian $body The request body
      * @param CustodiansRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/security-ediscoverycase-post-custodians?view=graph-rest-1.0 Find more info here
@@ -135,6 +136,7 @@ class CustodiansRequestBuilder
 
     /**
      * Create a new ediscoveryCustodian object.After the custodian object is created, you will need to create the custodian's userSource to reference their mailbox and OneDrive for Business site.
+     * @param EdiscoveryCustodian $body The request body
      * @param CustodiansRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

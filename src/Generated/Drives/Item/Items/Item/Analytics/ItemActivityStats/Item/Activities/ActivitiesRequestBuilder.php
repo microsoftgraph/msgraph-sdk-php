@@ -74,6 +74,7 @@ class ActivitiesRequestBuilder
 
     /**
      * Create new navigation property to activities for drives
+     * @param ItemActivity $body The request body
      * @param ActivitiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class ActivitiesRequestBuilder
 
     /**
      * Create new navigation property to activities for drives
+     * @param ItemActivity $body The request body
      * @param ActivitiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

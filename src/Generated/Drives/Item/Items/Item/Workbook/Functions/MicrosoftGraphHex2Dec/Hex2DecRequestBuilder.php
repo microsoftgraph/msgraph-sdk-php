@@ -47,6 +47,7 @@ class Hex2DecRequestBuilder
 
     /**
      * Invoke action hex2Dec
+     * @param Hex2DecPostRequestBody $body The request body
      * @param Hex2DecRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Hex2DecRequestBuilder
 
     /**
      * Invoke action hex2Dec
+     * @param Hex2DecPostRequestBody $body The request body
      * @param Hex2DecRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

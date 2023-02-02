@@ -62,7 +62,7 @@ class WindowsDefenderScanPostRequestBody implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the quickScan property value. 
+     * Gets the quickScan property value. The quickScan property
      * @return bool|null
     */
     public function getQuickScan(): ?bool {
@@ -95,7 +95,7 @@ class WindowsDefenderScanPostRequestBody implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the quickScan property value. 
+     * Sets the quickScan property value. The quickScan property
      * @param bool|null $value Value to set for the quickScan property.
     */
     public function setQuickScan(?bool $value): void {

@@ -38,7 +38,7 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the acceptedModalities property value. 
+     * Gets the acceptedModalities property value. The acceptedModalities property
      * @return array<Modality>|null
     */
     public function getAcceptedModalities(): ?array {
@@ -62,7 +62,7 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the callbackUri property value. 
+     * Gets the callbackUri property value. The callbackUri property
      * @return string|null
     */
     public function getCallbackUri(): ?string {
@@ -70,7 +70,7 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the callOptions property value. 
+     * Gets the callOptions property value. The callOptions property
      * @return IncomingCallOptions|null
     */
     public function getCallOptions(): ?IncomingCallOptions {
@@ -93,7 +93,7 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the mediaConfig property value. 
+     * Gets the mediaConfig property value. The mediaConfig property
      * @return MediaConfig|null
     */
     public function getMediaConfig(): ?MediaConfig {
@@ -101,7 +101,7 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the participantCapacity property value. 
+     * Gets the participantCapacity property value. The participantCapacity property
      * @return int|null
     */
     public function getParticipantCapacity(): ?int {
@@ -122,7 +122,7 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the acceptedModalities property value. 
+     * Sets the acceptedModalities property value. The acceptedModalities property
      * @param array<Modality>|null $value Value to set for the acceptedModalities property.
     */
     public function setAcceptedModalities(?array $value): void {
@@ -146,7 +146,7 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the callbackUri property value. 
+     * Sets the callbackUri property value. The callbackUri property
      * @param string|null $value Value to set for the callbackUri property.
     */
     public function setCallbackUri(?string $value): void {
@@ -154,7 +154,7 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the callOptions property value. 
+     * Sets the callOptions property value. The callOptions property
      * @param IncomingCallOptions|null $value Value to set for the callOptions property.
     */
     public function setCallOptions(?IncomingCallOptions $value): void {
@@ -162,7 +162,7 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the mediaConfig property value. 
+     * Sets the mediaConfig property value. The mediaConfig property
      * @param MediaConfig|null $value Value to set for the mediaConfig property.
     */
     public function setMediaConfig(?MediaConfig $value): void {
@@ -170,7 +170,7 @@ class AnswerPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the participantCapacity property value. 
+     * Sets the participantCapacity property value. The participantCapacity property
      * @param int|null $value Value to set for the participantCapacity property.
     */
     public function setParticipantCapacity(?int $value): void {

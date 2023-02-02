@@ -25,7 +25,7 @@ class Workbook extends Entity implements Parsable
     }
 
     /**
-     * Gets the application property value. 
+     * Gets the application property value. The application property
      * @return WorkbookApplication|null
     */
     public function getApplication(): ?WorkbookApplication {
@@ -33,7 +33,7 @@ class Workbook extends Entity implements Parsable
     }
 
     /**
-     * Gets the comments property value. 
+     * Gets the comments property value. The comments property
      * @return array<WorkbookComment>|null
     */
     public function getComments(): ?array {
@@ -58,7 +58,7 @@ class Workbook extends Entity implements Parsable
     }
 
     /**
-     * Gets the functions property value. 
+     * Gets the functions property value. The functions property
      * @return WorkbookFunctions|null
     */
     public function getFunctions(): ?WorkbookFunctions {
@@ -113,7 +113,7 @@ class Workbook extends Entity implements Parsable
     }
 
     /**
-     * Sets the application property value. 
+     * Sets the application property value. The application property
      * @param WorkbookApplication|null $value Value to set for the application property.
     */
     public function setApplication(?WorkbookApplication $value): void {
@@ -121,7 +121,7 @@ class Workbook extends Entity implements Parsable
     }
 
     /**
-     * Sets the comments property value. 
+     * Sets the comments property value. The comments property
      * @param array<WorkbookComment>|null $value Value to set for the comments property.
     */
     public function setComments(?array $value): void {
@@ -129,7 +129,7 @@ class Workbook extends Entity implements Parsable
     }
 
     /**
-     * Sets the functions property value. 
+     * Sets the functions property value. The functions property
      * @param WorkbookFunctions|null $value Value to set for the functions property.
     */
     public function setFunctions(?WorkbookFunctions $value): void {

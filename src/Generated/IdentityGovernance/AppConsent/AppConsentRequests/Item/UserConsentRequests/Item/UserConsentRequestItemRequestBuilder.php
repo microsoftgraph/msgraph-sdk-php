@@ -95,6 +95,7 @@ class UserConsentRequestItemRequestBuilder
 
     /**
      * Update the navigation property userConsentRequests in identityGovernance
+     * @param UserConsentRequest $body The request body
      * @param UserConsentRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class UserConsentRequestItemRequestBuilder
 
     /**
      * Update the navigation property userConsentRequests in identityGovernance
+     * @param UserConsentRequest $body The request body
      * @param UserConsentRequestItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -87,6 +87,7 @@ class AuthenticationMethodConfigurationItemRequestBuilder
 
     /**
      * Update entity in authenticationMethodConfigurations
+     * @param AuthenticationMethodConfiguration $body The request body
      * @param AuthenticationMethodConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class AuthenticationMethodConfigurationItemRequestBuilder
 
     /**
      * Update entity in authenticationMethodConfigurations
+     * @param AuthenticationMethodConfiguration $body The request body
      * @param AuthenticationMethodConfigurationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

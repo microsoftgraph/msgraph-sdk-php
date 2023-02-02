@@ -81,7 +81,7 @@ class TodoTaskList extends Entity implements Parsable
     }
 
     /**
-     * Gets the wellknownListName property value. 
+     * Gets the wellknownListName property value. The wellknownListName property
      * @return WellknownListName|null
     */
     public function getWellknownListName(): ?WellknownListName {
@@ -143,7 +143,7 @@ class TodoTaskList extends Entity implements Parsable
     }
 
     /**
-     * Sets the wellknownListName property value. 
+     * Sets the wellknownListName property value. The wellknownListName property
      * @param WellknownListName|null $value Value to set for the wellknownListName property.
     */
     public function setWellknownListName(?WellknownListName $value): void {

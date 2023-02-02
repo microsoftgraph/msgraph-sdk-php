@@ -65,7 +65,7 @@ class FindBPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the findText property value. 
+     * Gets the findText property value. The findText property
      * @return Json|null
     */
     public function getFindText(): ?Json {
@@ -73,7 +73,7 @@ class FindBPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the startNum property value. 
+     * Gets the startNum property value. The startNum property
      * @return Json|null
     */
     public function getStartNum(): ?Json {
@@ -81,7 +81,7 @@ class FindBPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the withinText property value. 
+     * Gets the withinText property value. The withinText property
      * @return Json|null
     */
     public function getWithinText(): ?Json {
@@ -116,7 +116,7 @@ class FindBPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the findText property value. 
+     * Sets the findText property value. The findText property
      * @param Json|null $value Value to set for the findText property.
     */
     public function setFindText(?Json $value): void {
@@ -124,7 +124,7 @@ class FindBPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the startNum property value. 
+     * Sets the startNum property value. The startNum property
      * @param Json|null $value Value to set for the startNum property.
     */
     public function setStartNum(?Json $value): void {
@@ -132,7 +132,7 @@ class FindBPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the withinText property value. 
+     * Sets the withinText property value. The withinText property
      * @param Json|null $value Value to set for the withinText property.
     */
     public function setWithinText(?Json $value): void {

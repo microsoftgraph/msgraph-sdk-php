@@ -26,7 +26,7 @@ class DelegatedAdminRelationshipRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the action property value. 
+     * Gets the action property value. The action property
      * @return DelegatedAdminRelationshipRequestAction|null
     */
     public function getAction(): ?DelegatedAdminRelationshipRequestAction {
@@ -34,7 +34,7 @@ class DelegatedAdminRelationshipRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. 
+     * Gets the createdDateTime property value. The createdDateTime property
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -56,7 +56,7 @@ class DelegatedAdminRelationshipRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. 
+     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -64,7 +64,7 @@ class DelegatedAdminRelationshipRequest extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. 
+     * Gets the status property value. The status property
      * @return DelegatedAdminRelationshipRequestStatus|null
     */
     public function getStatus(): ?DelegatedAdminRelationshipRequestStatus {
@@ -84,7 +84,7 @@ class DelegatedAdminRelationshipRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the action property value. 
+     * Sets the action property value. The action property
      * @param DelegatedAdminRelationshipRequestAction|null $value Value to set for the action property.
     */
     public function setAction(?DelegatedAdminRelationshipRequestAction $value): void {
@@ -92,7 +92,7 @@ class DelegatedAdminRelationshipRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. 
+     * Sets the createdDateTime property value. The createdDateTime property
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -100,7 +100,7 @@ class DelegatedAdminRelationshipRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. 
+     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
@@ -108,7 +108,7 @@ class DelegatedAdminRelationshipRequest extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. 
+     * Sets the status property value. The status property
      * @param DelegatedAdminRelationshipRequestStatus|null $value Value to set for the status property.
     */
     public function setStatus(?DelegatedAdminRelationshipRequestStatus $value): void {

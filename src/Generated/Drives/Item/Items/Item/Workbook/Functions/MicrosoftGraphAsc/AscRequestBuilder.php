@@ -47,6 +47,7 @@ class AscRequestBuilder
 
     /**
      * Invoke action asc
+     * @param AscPostRequestBody $body The request body
      * @param AscRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class AscRequestBuilder
 
     /**
      * Invoke action asc
+     * @param AscPostRequestBody $body The request body
      * @param AscRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -46,6 +46,7 @@ class DeleteUserFromSharedAppleDeviceRequestBuilder
 
     /**
      * Delete user from shared Apple device
+     * @param DeleteUserFromSharedAppleDevicePostRequestBody $body The request body
      * @param DeleteUserFromSharedAppleDeviceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -64,6 +65,7 @@ class DeleteUserFromSharedAppleDeviceRequestBuilder
 
     /**
      * Delete user from shared Apple device
+     * @param DeleteUserFromSharedAppleDevicePostRequestBody $body The request body
      * @param DeleteUserFromSharedAppleDeviceRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

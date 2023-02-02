@@ -76,7 +76,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
     }
 
     /**
-     * Gets the operationType property value. 
+     * Gets the operationType property value. The operationType property
      * @return TeamsAsyncOperationType|null
     */
     public function getOperationType(): ?TeamsAsyncOperationType {
@@ -84,7 +84,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. 
+     * Gets the status property value. The status property
      * @return TeamsAsyncOperationStatus|null
     */
     public function getStatus(): ?TeamsAsyncOperationStatus {
@@ -156,7 +156,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
     }
 
     /**
-     * Sets the operationType property value. 
+     * Sets the operationType property value. The operationType property
      * @param TeamsAsyncOperationType|null $value Value to set for the operationType property.
     */
     public function setOperationType(?TeamsAsyncOperationType $value): void {
@@ -164,7 +164,7 @@ class TeamsAsyncOperation extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. 
+     * Sets the status property value. The status property
      * @param TeamsAsyncOperationStatus|null $value Value to set for the status property.
     */
     public function setStatus(?TeamsAsyncOperationStatus $value): void {

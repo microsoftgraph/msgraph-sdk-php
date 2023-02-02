@@ -47,6 +47,7 @@ class ErfCRequestBuilder
 
     /**
      * Invoke action erfC
+     * @param ErfCPostRequestBody $body The request body
      * @param ErfCRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ErfCRequestBuilder
 
     /**
      * Invoke action erfC
+     * @param ErfCPostRequestBody $body The request body
      * @param ErfCRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

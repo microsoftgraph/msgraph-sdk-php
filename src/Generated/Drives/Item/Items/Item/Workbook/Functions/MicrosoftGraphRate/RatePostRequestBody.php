@@ -68,7 +68,7 @@ class RatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the fv property value. 
+     * Gets the fv property value. The fv property
      * @return Json|null
     */
     public function getFv(): ?Json {
@@ -76,7 +76,7 @@ class RatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the guess property value. 
+     * Gets the guess property value. The guess property
      * @return Json|null
     */
     public function getGuess(): ?Json {
@@ -84,7 +84,7 @@ class RatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the nper property value. 
+     * Gets the nper property value. The nper property
      * @return Json|null
     */
     public function getNper(): ?Json {
@@ -92,7 +92,7 @@ class RatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the pmt property value. 
+     * Gets the pmt property value. The pmt property
      * @return Json|null
     */
     public function getPmt(): ?Json {
@@ -100,7 +100,7 @@ class RatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the pv property value. 
+     * Gets the pv property value. The pv property
      * @return Json|null
     */
     public function getPv(): ?Json {
@@ -108,7 +108,7 @@ class RatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the type property value. 
+     * Gets the type property value. The type property
      * @return Json|null
     */
     public function getType(): ?Json {
@@ -146,7 +146,7 @@ class RatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the fv property value. 
+     * Sets the fv property value. The fv property
      * @param Json|null $value Value to set for the fv property.
     */
     public function setFv(?Json $value): void {
@@ -154,7 +154,7 @@ class RatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the guess property value. 
+     * Sets the guess property value. The guess property
      * @param Json|null $value Value to set for the guess property.
     */
     public function setGuess(?Json $value): void {
@@ -162,7 +162,7 @@ class RatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the nper property value. 
+     * Sets the nper property value. The nper property
      * @param Json|null $value Value to set for the nper property.
     */
     public function setNper(?Json $value): void {
@@ -170,7 +170,7 @@ class RatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the pmt property value. 
+     * Sets the pmt property value. The pmt property
      * @param Json|null $value Value to set for the pmt property.
     */
     public function setPmt(?Json $value): void {
@@ -178,7 +178,7 @@ class RatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the pv property value. 
+     * Sets the pv property value. The pv property
      * @param Json|null $value Value to set for the pv property.
     */
     public function setPv(?Json $value): void {
@@ -186,7 +186,7 @@ class RatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the type property value. 
+     * Sets the type property value. The type property
      * @param Json|null $value Value to set for the type property.
     */
     public function setType(?Json $value): void {

@@ -47,6 +47,7 @@ class FixedRequestBuilder
 
     /**
      * Invoke action fixed
+     * @param FixedPostRequestBody $body The request body
      * @param FixedRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class FixedRequestBuilder
 
     /**
      * Invoke action fixed
+     * @param FixedPostRequestBody $body The request body
      * @param FixedRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

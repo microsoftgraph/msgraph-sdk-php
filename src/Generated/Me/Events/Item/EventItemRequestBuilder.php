@@ -239,6 +239,7 @@ class EventItemRequestBuilder
 
     /**
      * Update the navigation property events in me
+     * @param Event $body The request body
      * @param EventItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -314,6 +315,7 @@ class EventItemRequestBuilder
 
     /**
      * Update the navigation property events in me
+     * @param Event $body The request body
      * @param EventItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

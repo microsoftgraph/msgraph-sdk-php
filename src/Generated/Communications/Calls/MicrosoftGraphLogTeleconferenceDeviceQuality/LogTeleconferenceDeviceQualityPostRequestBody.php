@@ -63,7 +63,7 @@ class LogTeleconferenceDeviceQualityPostRequestBody implements AdditionalDataHol
     }
 
     /**
-     * Gets the quality property value. 
+     * Gets the quality property value. The quality property
      * @return TeleconferenceDeviceQuality|null
     */
     public function getQuality(): ?TeleconferenceDeviceQuality {
@@ -96,7 +96,7 @@ class LogTeleconferenceDeviceQualityPostRequestBody implements AdditionalDataHol
     }
 
     /**
-     * Sets the quality property value. 
+     * Sets the quality property value. The quality property
      * @param TeleconferenceDeviceQuality|null $value Value to set for the quality property.
     */
     public function setQuality(?TeleconferenceDeviceQuality $value): void {

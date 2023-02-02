@@ -46,6 +46,7 @@ class ApplyRequestBuilder
 
     /**
      * Apply the given filter criteria on the given column.
+     * @param ApplyPostRequestBody $body The request body
      * @param ApplyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/filter-apply?view=graph-rest-1.0 Find more info here
@@ -65,6 +66,7 @@ class ApplyRequestBuilder
 
     /**
      * Apply the given filter criteria on the given column.
+     * @param ApplyPostRequestBody $body The request body
      * @param ApplyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

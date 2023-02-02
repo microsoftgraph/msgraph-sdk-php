@@ -67,7 +67,7 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the connectionType property value. 
+     * Gets the connectionType property value. The connectionType property
      * @return NetworkConnectionType|null
     */
     public function getConnectionType(): ?NetworkConnectionType {
@@ -152,7 +152,7 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the networkTransportProtocol property value. 
+     * Gets the networkTransportProtocol property value. The networkTransportProtocol property
      * @return NetworkTransportProtocol|null
     */
     public function getNetworkTransportProtocol(): ?NetworkTransportProtocol {
@@ -160,7 +160,7 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -232,7 +232,7 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the wifiBand property value. 
+     * Gets the wifiBand property value. The wifiBand property
      * @return WifiBand|null
     */
     public function getWifiBand(): ?WifiBand {
@@ -272,7 +272,7 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the wifiRadioType property value. 
+     * Gets the wifiRadioType property value. The wifiRadioType property
      * @return WifiRadioType|null
     */
     public function getWifiRadioType(): ?WifiRadioType {
@@ -371,7 +371,7 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the connectionType property value. 
+     * Sets the connectionType property value. The connectionType property
      * @param NetworkConnectionType|null $value Value to set for the connectionType property.
     */
     public function setConnectionType(?NetworkConnectionType $value): void {
@@ -419,7 +419,7 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the networkTransportProtocol property value. 
+     * Sets the networkTransportProtocol property value. The networkTransportProtocol property
      * @param NetworkTransportProtocol|null $value Value to set for the networkTransportProtocol property.
     */
     public function setNetworkTransportProtocol(?NetworkTransportProtocol $value): void {
@@ -427,7 +427,7 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -499,7 +499,7 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the wifiBand property value. 
+     * Sets the wifiBand property value. The wifiBand property
      * @param WifiBand|null $value Value to set for the wifiBand property.
     */
     public function setWifiBand(?WifiBand $value): void {
@@ -539,7 +539,7 @@ class NetworkInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the wifiRadioType property value. 
+     * Sets the wifiRadioType property value. The wifiRadioType property
      * @param WifiRadioType|null $value Value to set for the wifiRadioType property.
     */
     public function setWifiRadioType(?WifiRadioType $value): void {

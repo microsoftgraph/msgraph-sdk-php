@@ -87,6 +87,7 @@ class RichLongRunningOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in groups
+     * @param RichLongRunningOperation $body The request body
      * @param RichLongRunningOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class RichLongRunningOperationItemRequestBuilder
 
     /**
      * Update the navigation property operations in groups
+     * @param RichLongRunningOperation $body The request body
      * @param RichLongRunningOperationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

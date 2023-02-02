@@ -92,6 +92,7 @@ class AuditEventsRequestBuilder
 
     /**
      * Create new navigation property to auditEvents for deviceManagement
+     * @param AuditEvent $body The request body
      * @param AuditEventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -135,6 +136,7 @@ class AuditEventsRequestBuilder
 
     /**
      * Create new navigation property to auditEvents for deviceManagement
+     * @param AuditEvent $body The request body
      * @param AuditEventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

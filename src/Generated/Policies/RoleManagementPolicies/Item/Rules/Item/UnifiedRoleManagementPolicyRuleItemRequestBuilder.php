@@ -87,6 +87,7 @@ class UnifiedRoleManagementPolicyRuleItemRequestBuilder
 
     /**
      * Update the navigation property rules in policies
+     * @param UnifiedRoleManagementPolicyRule $body The request body
      * @param UnifiedRoleManagementPolicyRuleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class UnifiedRoleManagementPolicyRuleItemRequestBuilder
 
     /**
      * Update the navigation property rules in policies
+     * @param UnifiedRoleManagementPolicyRule $body The request body
      * @param UnifiedRoleManagementPolicyRuleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

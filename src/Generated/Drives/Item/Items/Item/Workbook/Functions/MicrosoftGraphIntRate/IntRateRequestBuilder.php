@@ -47,6 +47,7 @@ class IntRateRequestBuilder
 
     /**
      * Invoke action intRate
+     * @param IntRatePostRequestBody $body The request body
      * @param IntRateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class IntRateRequestBuilder
 
     /**
      * Invoke action intRate
+     * @param IntRatePostRequestBody $body The request body
      * @param IntRateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -47,6 +47,7 @@ class DiscRequestBuilder
 
     /**
      * Invoke action disc
+     * @param DiscPostRequestBody $body The request body
      * @param DiscRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class DiscRequestBuilder
 
     /**
      * Invoke action disc
+     * @param DiscPostRequestBody $body The request body
      * @param DiscRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

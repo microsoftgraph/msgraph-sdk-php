@@ -47,6 +47,7 @@ class Z_TestRequestBuilder
 
     /**
      * Invoke action z_Test
+     * @param Z_TestPostRequestBody $body The request body
      * @param Z_TestRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Z_TestRequestBuilder
 
     /**
      * Invoke action z_Test
+     * @param Z_TestPostRequestBody $body The request body
      * @param Z_TestRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

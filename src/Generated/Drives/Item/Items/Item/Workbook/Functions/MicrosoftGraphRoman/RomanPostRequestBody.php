@@ -64,7 +64,7 @@ class RomanPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the form property value. 
+     * Gets the form property value. The form property
      * @return Json|null
     */
     public function getForm(): ?Json {
@@ -72,7 +72,7 @@ class RomanPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the number property value. 
+     * Gets the number property value. The number property
      * @return Json|null
     */
     public function getNumber(): ?Json {
@@ -106,7 +106,7 @@ class RomanPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the form property value. 
+     * Sets the form property value. The form property
      * @param Json|null $value Value to set for the form property.
     */
     public function setForm(?Json $value): void {
@@ -114,7 +114,7 @@ class RomanPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the number property value. 
+     * Sets the number property value. The number property
      * @param Json|null $value Value to set for the number property.
     */
     public function setNumber(?Json $value): void {

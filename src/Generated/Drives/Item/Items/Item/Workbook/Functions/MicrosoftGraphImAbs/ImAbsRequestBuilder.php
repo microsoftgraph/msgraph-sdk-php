@@ -47,6 +47,7 @@ class ImAbsRequestBuilder
 
     /**
      * Invoke action imAbs
+     * @param ImAbsPostRequestBody $body The request body
      * @param ImAbsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ImAbsRequestBuilder
 
     /**
      * Invoke action imAbs
+     * @param ImAbsPostRequestBody $body The request body
      * @param ImAbsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

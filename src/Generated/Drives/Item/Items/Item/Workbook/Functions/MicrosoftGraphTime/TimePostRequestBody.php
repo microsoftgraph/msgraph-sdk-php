@@ -65,7 +65,7 @@ class TimePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the hour property value. 
+     * Gets the hour property value. The hour property
      * @return Json|null
     */
     public function getHour(): ?Json {
@@ -73,7 +73,7 @@ class TimePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the minute property value. 
+     * Gets the minute property value. The minute property
      * @return Json|null
     */
     public function getMinute(): ?Json {
@@ -81,7 +81,7 @@ class TimePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the second property value. 
+     * Gets the second property value. The second property
      * @return Json|null
     */
     public function getSecond(): ?Json {
@@ -116,7 +116,7 @@ class TimePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the hour property value. 
+     * Sets the hour property value. The hour property
      * @param Json|null $value Value to set for the hour property.
     */
     public function setHour(?Json $value): void {
@@ -124,7 +124,7 @@ class TimePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the minute property value. 
+     * Sets the minute property value. The minute property
      * @param Json|null $value Value to set for the minute property.
     */
     public function setMinute(?Json $value): void {
@@ -132,7 +132,7 @@ class TimePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the second property value. 
+     * Sets the second property value. The second property
      * @param Json|null $value Value to set for the second property.
     */
     public function setSecond(?Json $value): void {

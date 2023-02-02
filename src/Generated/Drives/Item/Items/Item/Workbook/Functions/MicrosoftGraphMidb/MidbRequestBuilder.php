@@ -47,6 +47,7 @@ class MidbRequestBuilder
 
     /**
      * Invoke action midb
+     * @param MidbPostRequestBody $body The request body
      * @param MidbRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class MidbRequestBuilder
 
     /**
      * Invoke action midb
+     * @param MidbPostRequestBody $body The request body
      * @param MidbRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

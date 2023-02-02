@@ -87,6 +87,7 @@ class AppRoleAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property appRoleAssignments in servicePrincipals
+     * @param AppRoleAssignment $body The request body
      * @param AppRoleAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class AppRoleAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property appRoleAssignments in servicePrincipals
+     * @param AppRoleAssignment $body The request body
      * @param AppRoleAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

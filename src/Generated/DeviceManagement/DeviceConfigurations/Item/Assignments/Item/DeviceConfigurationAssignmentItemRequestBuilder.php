@@ -87,6 +87,7 @@ class DeviceConfigurationAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property assignments in deviceManagement
+     * @param DeviceConfigurationAssignment $body The request body
      * @param DeviceConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class DeviceConfigurationAssignmentItemRequestBuilder
 
     /**
      * Update the navigation property assignments in deviceManagement
+     * @param DeviceConfigurationAssignment $body The request body
      * @param DeviceConfigurationAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

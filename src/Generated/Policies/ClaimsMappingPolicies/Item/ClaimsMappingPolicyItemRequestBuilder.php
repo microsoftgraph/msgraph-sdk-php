@@ -87,6 +87,7 @@ class ClaimsMappingPolicyItemRequestBuilder
 
     /**
      * Update the navigation property claimsMappingPolicies in policies
+     * @param ClaimsMappingPolicy $body The request body
      * @param ClaimsMappingPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class ClaimsMappingPolicyItemRequestBuilder
 
     /**
      * Update the navigation property claimsMappingPolicies in policies
+     * @param ClaimsMappingPolicy $body The request body
      * @param ClaimsMappingPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

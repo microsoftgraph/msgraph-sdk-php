@@ -75,6 +75,7 @@ class CustomQuestionsRequestBuilder
 
     /**
      * Create a new bookingCustomQuestion object.
+     * @param BookingCustomQuestion $body The request body
      * @param CustomQuestionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/bookingbusiness-post-customquestions?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class CustomQuestionsRequestBuilder
 
     /**
      * Create a new bookingCustomQuestion object.
+     * @param BookingCustomQuestion $body The request body
      * @param CustomQuestionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

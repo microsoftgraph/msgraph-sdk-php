@@ -63,7 +63,7 @@ class YearPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the serialNumber property value. 
+     * Gets the serialNumber property value. The serialNumber property
      * @return Json|null
     */
     public function getSerialNumber(): ?Json {
@@ -96,7 +96,7 @@ class YearPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the serialNumber property value. 
+     * Sets the serialNumber property value. The serialNumber property
      * @param Json|null $value Value to set for the serialNumber property.
     */
     public function setSerialNumber(?Json $value): void {

@@ -87,6 +87,7 @@ class TokenIssuancePolicyItemRequestBuilder
 
     /**
      * Update the navigation property tokenIssuancePolicies in policies
+     * @param TokenIssuancePolicy $body The request body
      * @param TokenIssuancePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class TokenIssuancePolicyItemRequestBuilder
 
     /**
      * Update the navigation property tokenIssuancePolicies in policies
+     * @param TokenIssuancePolicy $body The request body
      * @param TokenIssuancePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

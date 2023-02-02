@@ -95,6 +95,7 @@ class WorkbookTableRowItemRequestBuilder
 
     /**
      * Update the navigation property rows in drives
+     * @param WorkbookTableRow $body The request body
      * @param WorkbookTableRowItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class WorkbookTableRowItemRequestBuilder
 
     /**
      * Update the navigation property rows in drives
+     * @param WorkbookTableRow $body The request body
      * @param WorkbookTableRowItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

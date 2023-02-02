@@ -47,6 +47,7 @@ class ValueRequestBuilder
 
     /**
      * Invoke action value
+     * @param ValuePostRequestBody $body The request body
      * @param ValueRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ValueRequestBuilder
 
     /**
      * Invoke action value
+     * @param ValuePostRequestBody $body The request body
      * @param ValueRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

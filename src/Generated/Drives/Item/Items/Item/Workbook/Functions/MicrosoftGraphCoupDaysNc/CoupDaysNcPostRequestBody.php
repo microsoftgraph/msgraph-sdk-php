@@ -52,7 +52,7 @@ class CoupDaysNcPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the basis property value. 
+     * Gets the basis property value. The basis property
      * @return Json|null
     */
     public function getBasis(): ?Json {
@@ -74,7 +74,7 @@ class CoupDaysNcPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the frequency property value. 
+     * Gets the frequency property value. The frequency property
      * @return Json|null
     */
     public function getFrequency(): ?Json {
@@ -82,7 +82,7 @@ class CoupDaysNcPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the maturity property value. 
+     * Gets the maturity property value. The maturity property
      * @return Json|null
     */
     public function getMaturity(): ?Json {
@@ -90,7 +90,7 @@ class CoupDaysNcPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the settlement property value. 
+     * Gets the settlement property value. The settlement property
      * @return Json|null
     */
     public function getSettlement(): ?Json {
@@ -126,7 +126,7 @@ class CoupDaysNcPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the basis property value. 
+     * Sets the basis property value. The basis property
      * @param Json|null $value Value to set for the basis property.
     */
     public function setBasis(?Json $value): void {
@@ -134,7 +134,7 @@ class CoupDaysNcPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the frequency property value. 
+     * Sets the frequency property value. The frequency property
      * @param Json|null $value Value to set for the frequency property.
     */
     public function setFrequency(?Json $value): void {
@@ -142,7 +142,7 @@ class CoupDaysNcPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the maturity property value. 
+     * Sets the maturity property value. The maturity property
      * @param Json|null $value Value to set for the maturity property.
     */
     public function setMaturity(?Json $value): void {
@@ -150,7 +150,7 @@ class CoupDaysNcPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the settlement property value. 
+     * Sets the settlement property value. The settlement property
      * @param Json|null $value Value to set for the settlement property.
     */
     public function setSettlement(?Json $value): void {

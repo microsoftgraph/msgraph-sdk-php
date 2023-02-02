@@ -44,7 +44,7 @@ class Quartile_ExcPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the array property value. 
+     * Gets the array property value. The array property
      * @return Json|null
     */
     public function getArray(): ?Json {
@@ -72,7 +72,7 @@ class Quartile_ExcPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the quart property value. 
+     * Gets the quart property value. The quart property
      * @return Json|null
     */
     public function getQuart(): ?Json {
@@ -98,7 +98,7 @@ class Quartile_ExcPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the array property value. 
+     * Sets the array property value. The array property
      * @param Json|null $value Value to set for the array property.
     */
     public function setArray(?Json $value): void {
@@ -114,7 +114,7 @@ class Quartile_ExcPostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the quart property value. 
+     * Sets the quart property value. The quart property
      * @param Json|null $value Value to set for the quart property.
     */
     public function setQuart(?Json $value): void {

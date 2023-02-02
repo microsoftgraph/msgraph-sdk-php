@@ -75,6 +75,7 @@ class AttachmentsRequestBuilder
 
     /**
      * Create new navigation property to attachments for admin
+     * @param ServiceAnnouncementAttachment $body The request body
      * @param AttachmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,6 +119,7 @@ class AttachmentsRequestBuilder
 
     /**
      * Create new navigation property to attachments for admin
+     * @param ServiceAnnouncementAttachment $body The request body
      * @param AttachmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

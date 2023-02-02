@@ -47,6 +47,7 @@ class AreasRequestBuilder
 
     /**
      * Invoke action areas
+     * @param AreasPostRequestBody $body The request body
      * @param AreasRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class AreasRequestBuilder
 
     /**
      * Invoke action areas
+     * @param AreasPostRequestBody $body The request body
      * @param AreasRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

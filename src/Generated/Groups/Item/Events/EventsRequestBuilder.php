@@ -83,6 +83,7 @@ class EventsRequestBuilder
 
     /**
      * Use this API to create a new event.
+     * @param Event $body The request body
      * @param EventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/group-post-events?view=graph-rest-1.0 Find more info here
@@ -127,6 +128,7 @@ class EventsRequestBuilder
 
     /**
      * Use this API to create a new event.
+     * @param Event $body The request body
      * @param EventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

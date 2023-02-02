@@ -47,6 +47,7 @@ class ChiSq_DistRequestBuilder
 
     /**
      * Invoke action chiSq_Dist
+     * @param ChiSq_DistPostRequestBody $body The request body
      * @param ChiSq_DistRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ChiSq_DistRequestBuilder
 
     /**
      * Invoke action chiSq_Dist
+     * @param ChiSq_DistPostRequestBody $body The request body
      * @param ChiSq_DistRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

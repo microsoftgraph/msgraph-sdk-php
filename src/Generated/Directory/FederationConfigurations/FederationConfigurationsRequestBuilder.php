@@ -82,6 +82,7 @@ class FederationConfigurationsRequestBuilder
 
     /**
      * Create new navigation property to federationConfigurations for directory
+     * @param IdentityProviderBase $body The request body
      * @param FederationConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -125,6 +126,7 @@ class FederationConfigurationsRequestBuilder
 
     /**
      * Create new navigation property to federationConfigurations for directory
+     * @param IdentityProviderBase $body The request body
      * @param FederationConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

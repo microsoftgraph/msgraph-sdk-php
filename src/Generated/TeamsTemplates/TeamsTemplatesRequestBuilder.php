@@ -74,6 +74,7 @@ class TeamsTemplatesRequestBuilder
 
     /**
      * Add new entity to teamsTemplates
+     * @param TeamsTemplate $body The request body
      * @param TeamsTemplatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class TeamsTemplatesRequestBuilder
 
     /**
      * Add new entity to teamsTemplates
+     * @param TeamsTemplate $body The request body
      * @param TeamsTemplatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

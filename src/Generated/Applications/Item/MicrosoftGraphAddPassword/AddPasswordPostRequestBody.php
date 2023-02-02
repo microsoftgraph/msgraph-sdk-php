@@ -63,7 +63,7 @@ class AddPasswordPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the passwordCredential property value. 
+     * Gets the passwordCredential property value. The passwordCredential property
      * @return PasswordCredential|null
     */
     public function getPasswordCredential(): ?PasswordCredential {
@@ -96,7 +96,7 @@ class AddPasswordPostRequestBody implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the passwordCredential property value. 
+     * Sets the passwordCredential property value. The passwordCredential property
      * @param PasswordCredential|null $value Value to set for the passwordCredential property.
     */
     public function setPasswordCredential(?PasswordCredential $value): void {

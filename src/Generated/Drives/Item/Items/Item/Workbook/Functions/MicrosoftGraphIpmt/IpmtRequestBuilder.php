@@ -47,6 +47,7 @@ class IpmtRequestBuilder
 
     /**
      * Invoke action ipmt
+     * @param IpmtPostRequestBody $body The request body
      * @param IpmtRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class IpmtRequestBuilder
 
     /**
      * Invoke action ipmt
+     * @param IpmtPostRequestBody $body The request body
      * @param IpmtRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

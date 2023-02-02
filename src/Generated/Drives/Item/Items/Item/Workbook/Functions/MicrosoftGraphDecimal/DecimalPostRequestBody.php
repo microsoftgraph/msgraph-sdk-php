@@ -64,7 +64,7 @@ class DecimalPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the number property value. 
+     * Gets the number property value. The number property
      * @return Json|null
     */
     public function getNumber(): ?Json {
@@ -72,7 +72,7 @@ class DecimalPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the radix property value. 
+     * Gets the radix property value. The radix property
      * @return Json|null
     */
     public function getRadix(): ?Json {
@@ -106,7 +106,7 @@ class DecimalPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the number property value. 
+     * Sets the number property value. The number property
      * @param Json|null $value Value to set for the number property.
     */
     public function setNumber(?Json $value): void {
@@ -114,7 +114,7 @@ class DecimalPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the radix property value. 
+     * Sets the radix property value. The radix property
      * @param Json|null $value Value to set for the radix property.
     */
     public function setRadix(?Json $value): void {

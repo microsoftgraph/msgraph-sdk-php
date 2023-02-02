@@ -128,7 +128,7 @@ class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -144,7 +144,7 @@ class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the processingState property value. 
+     * Gets the processingState property value. The processingState property
      * @return PrintJobProcessingState|null
     */
     public function getProcessingState(): ?PrintJobProcessingState {
@@ -242,7 +242,7 @@ class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -258,7 +258,7 @@ class ArchivedPrintJob implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the processingState property value. 
+     * Sets the processingState property value. The processingState property
      * @param PrintJobProcessingState|null $value Value to set for the processingState property.
     */
     public function setProcessingState(?PrintJobProcessingState $value): void {

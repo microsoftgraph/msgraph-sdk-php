@@ -46,6 +46,7 @@ class DismissRequestBuilder
 
     /**
      * Dismiss the risk of one or more riskyUser objects. This action sets the targeted user's risk level to none.
+     * @param DismissPostRequestBody $body The request body
      * @param DismissRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/riskyuser-dismiss?view=graph-rest-1.0 Find more info here
@@ -65,6 +66,7 @@ class DismissRequestBuilder
 
     /**
      * Dismiss the risk of one or more riskyUser objects. This action sets the targeted user's risk level to none.
+     * @param DismissPostRequestBody $body The request body
      * @param DismissRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

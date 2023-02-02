@@ -47,6 +47,7 @@ class MoveRequestBuilder
 
     /**
      * Move a message to another folder within the specified user's mailbox. This creates a new copy of the message in the destination folder and removes the original message.
+     * @param MovePostRequestBody $body The request body
      * @param MoveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/message-move?view=graph-rest-1.0 Find more info here
@@ -66,6 +67,7 @@ class MoveRequestBuilder
 
     /**
      * Move a message to another folder within the specified user's mailbox. This creates a new copy of the message in the destination folder and removes the original message.
+     * @param MovePostRequestBody $body The request body
      * @param MoveRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

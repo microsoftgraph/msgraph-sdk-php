@@ -52,7 +52,7 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the clickAction property value. 
+     * Gets the clickAction property value. The clickAction property
      * @return string|null
     */
     public function getClickAction(): ?string {
@@ -60,7 +60,7 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the clickDateTime property value. 
+     * Gets the clickDateTime property value. The clickDateTime property
      * @return DateTime|null
     */
     public function getClickDateTime(): ?DateTime {
@@ -85,7 +85,7 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the id property value. 
+     * Gets the id property value. The id property
      * @return string|null
     */
     public function getId(): ?string {
@@ -93,7 +93,7 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -101,7 +101,7 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the sourceId property value. 
+     * Gets the sourceId property value. The sourceId property
      * @return string|null
     */
     public function getSourceId(): ?string {
@@ -109,7 +109,7 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the uriDomain property value. 
+     * Gets the uriDomain property value. The uriDomain property
      * @return string|null
     */
     public function getUriDomain(): ?string {
@@ -117,7 +117,7 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the verdict property value. 
+     * Gets the verdict property value. The verdict property
      * @return string|null
     */
     public function getVerdict(): ?string {
@@ -156,7 +156,7 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the clickAction property value. 
+     * Sets the clickAction property value. The clickAction property
      * @param string|null $value Value to set for the clickAction property.
     */
     public function setClickAction(?string $value): void {
@@ -164,7 +164,7 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the clickDateTime property value. 
+     * Sets the clickDateTime property value. The clickDateTime property
      * @param DateTime|null $value Value to set for the clickDateTime property.
     */
     public function setClickDateTime(?DateTime $value): void {
@@ -172,7 +172,7 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the id property value. 
+     * Sets the id property value. The id property
      * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {
@@ -180,7 +180,7 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -188,7 +188,7 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the sourceId property value. 
+     * Sets the sourceId property value. The sourceId property
      * @param string|null $value Value to set for the sourceId property.
     */
     public function setSourceId(?string $value): void {
@@ -196,7 +196,7 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the uriDomain property value. 
+     * Sets the uriDomain property value. The uriDomain property
      * @param string|null $value Value to set for the uriDomain property.
     */
     public function setUriDomain(?string $value): void {
@@ -204,7 +204,7 @@ class UriClickSecurityState implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the verdict property value. 
+     * Sets the verdict property value. The verdict property
      * @param string|null $value Value to set for the verdict property.
     */
     public function setVerdict(?string $value): void {

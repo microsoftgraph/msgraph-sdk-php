@@ -83,6 +83,7 @@ class RepliesRequestBuilder
 
     /**
      * Create a new reply to a chatMessage in a specified channel.
+     * @param ChatMessage $body The request body
      * @param RepliesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0 Find more info here
@@ -127,6 +128,7 @@ class RepliesRequestBuilder
 
     /**
      * Create a new reply to a chatMessage in a specified channel.
+     * @param ChatMessage $body The request body
      * @param RepliesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

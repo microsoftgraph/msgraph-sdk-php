@@ -47,6 +47,7 @@ class WorkDayRequestBuilder
 
     /**
      * Invoke action workDay
+     * @param WorkDayPostRequestBody $body The request body
      * @param WorkDayRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class WorkDayRequestBuilder
 
     /**
      * Invoke action workDay
+     * @param WorkDayPostRequestBody $body The request body
      * @param WorkDayRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

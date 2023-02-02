@@ -156,6 +156,7 @@ class SharedDriveItemItemRequestBuilder
 
     /**
      * Update entity in shares
+     * @param SharedDriveItem $body The request body
      * @param SharedDriveItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -220,6 +221,7 @@ class SharedDriveItemItemRequestBuilder
 
     /**
      * Update entity in shares
+     * @param SharedDriveItem $body The request body
      * @param SharedDriveItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

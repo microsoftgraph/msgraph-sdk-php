@@ -128,6 +128,7 @@ class ContractItemRequestBuilder
 
     /**
      * Update entity in contracts
+     * @param Contract $body The request body
      * @param ContractItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -192,6 +193,7 @@ class ContractItemRequestBuilder
 
     /**
      * Update entity in contracts
+     * @param Contract $body The request body
      * @param ContractItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

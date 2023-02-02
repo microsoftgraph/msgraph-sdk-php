@@ -63,7 +63,7 @@ class PreviewPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the page property value. 
+     * Gets the page property value. The page property
      * @return string|null
     */
     public function getPage(): ?string {
@@ -71,7 +71,7 @@ class PreviewPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the zoom property value. 
+     * Gets the zoom property value. The zoom property
      * @return float|null
     */
     public function getZoom(): ?float {
@@ -105,7 +105,7 @@ class PreviewPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the page property value. 
+     * Sets the page property value. The page property
      * @param string|null $value Value to set for the page property.
     */
     public function setPage(?string $value): void {
@@ -113,7 +113,7 @@ class PreviewPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the zoom property value. 
+     * Sets the zoom property value. The zoom property
      * @param float|null $value Value to set for the zoom property.
     */
     public function setZoom(?float $value): void {

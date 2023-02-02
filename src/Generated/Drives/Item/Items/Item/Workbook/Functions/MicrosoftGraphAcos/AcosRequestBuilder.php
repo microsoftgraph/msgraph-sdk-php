@@ -47,6 +47,7 @@ class AcosRequestBuilder
 
     /**
      * Invoke action acos
+     * @param AcosPostRequestBody $body The request body
      * @param AcosRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class AcosRequestBuilder
 
     /**
      * Invoke action acos
+     * @param AcosPostRequestBody $body The request body
      * @param AcosRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

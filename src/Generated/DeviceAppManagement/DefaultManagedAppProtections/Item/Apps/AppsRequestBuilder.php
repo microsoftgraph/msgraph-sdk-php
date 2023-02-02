@@ -74,6 +74,7 @@ class AppsRequestBuilder
 
     /**
      * Create new navigation property to apps for deviceAppManagement
+     * @param ManagedMobileApp $body The request body
      * @param AppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class AppsRequestBuilder
 
     /**
      * Create new navigation property to apps for deviceAppManagement
+     * @param ManagedMobileApp $body The request body
      * @param AppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

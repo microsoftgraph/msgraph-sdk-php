@@ -65,7 +65,7 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the seriesBy property value. 
+     * Gets the seriesBy property value. The seriesBy property
      * @return string|null
     */
     public function getSeriesBy(): ?string {
@@ -73,7 +73,7 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the sourceData property value. 
+     * Gets the sourceData property value. The sourceData property
      * @return Json|null
     */
     public function getSourceData(): ?Json {
@@ -81,7 +81,7 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the type property value. 
+     * Gets the type property value. The type property
      * @return string|null
     */
     public function getType(): ?string {
@@ -116,7 +116,7 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the seriesBy property value. 
+     * Sets the seriesBy property value. The seriesBy property
      * @param string|null $value Value to set for the seriesBy property.
     */
     public function setSeriesBy(?string $value): void {
@@ -124,7 +124,7 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the sourceData property value. 
+     * Sets the sourceData property value. The sourceData property
      * @param Json|null $value Value to set for the sourceData property.
     */
     public function setSourceData(?Json $value): void {
@@ -132,7 +132,7 @@ class AddPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the type property value. 
+     * Sets the type property value. The type property
      * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {

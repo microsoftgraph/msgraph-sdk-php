@@ -103,7 +103,7 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -111,7 +111,7 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the origin property value. 
+     * Gets the origin property value. The origin property
      * @return string|null
     */
     public function getOrigin(): ?string {
@@ -217,7 +217,7 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {
@@ -225,7 +225,7 @@ class PermissionScope implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the origin property value. 
+     * Sets the origin property value. The origin property
      * @param string|null $value Value to set for the origin property.
     */
     public function setOrigin(?string $value): void {

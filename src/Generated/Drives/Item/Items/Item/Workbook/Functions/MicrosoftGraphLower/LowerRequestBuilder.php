@@ -47,6 +47,7 @@ class LowerRequestBuilder
 
     /**
      * Invoke action lower
+     * @param LowerPostRequestBody $body The request body
      * @param LowerRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class LowerRequestBuilder
 
     /**
      * Invoke action lower
+     * @param LowerPostRequestBody $body The request body
      * @param LowerRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

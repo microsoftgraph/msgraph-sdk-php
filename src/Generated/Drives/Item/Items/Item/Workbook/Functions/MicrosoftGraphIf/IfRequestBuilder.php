@@ -47,6 +47,7 @@ class IfRequestBuilder
 
     /**
      * Invoke action if
+     * @param IfPostRequestBody $body The request body
      * @param IfRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class IfRequestBuilder
 
     /**
      * Invoke action if
+     * @param IfPostRequestBody $body The request body
      * @param IfRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

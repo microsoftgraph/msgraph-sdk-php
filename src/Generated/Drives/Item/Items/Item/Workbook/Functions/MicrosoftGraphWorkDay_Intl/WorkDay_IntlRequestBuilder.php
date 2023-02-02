@@ -47,6 +47,7 @@ class WorkDay_IntlRequestBuilder
 
     /**
      * Invoke action workDay_Intl
+     * @param WorkDay_IntlPostRequestBody $body The request body
      * @param WorkDay_IntlRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class WorkDay_IntlRequestBuilder
 
     /**
      * Invoke action workDay_Intl
+     * @param WorkDay_IntlPostRequestBody $body The request body
      * @param WorkDay_IntlRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

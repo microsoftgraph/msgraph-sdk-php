@@ -46,6 +46,7 @@ class GetAvailableExtensionPropertiesRequestBuilder
 
     /**
      * Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties:+ user+ group+ administrativeUnit+ application+ device+ organization
+     * @param GetAvailableExtensionPropertiesPostRequestBody $body The request body
      * @param GetAvailableExtensionPropertiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/directoryobject-getavailableextensionproperties?view=graph-rest-1.0 Find more info here
@@ -65,6 +66,7 @@ class GetAvailableExtensionPropertiesRequestBuilder
 
     /**
      * Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties:+ user+ group+ administrativeUnit+ application+ device+ organization
+     * @param GetAvailableExtensionPropertiesPostRequestBody $body The request body
      * @param GetAvailableExtensionPropertiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

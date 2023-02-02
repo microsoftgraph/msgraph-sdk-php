@@ -87,6 +87,7 @@ class OpenShiftItemRequestBuilder
 
     /**
      * Update the navigation property openShifts in teams
+     * @param OpenShift $body The request body
      * @param OpenShiftItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class OpenShiftItemRequestBuilder
 
     /**
      * Update the navigation property openShifts in teams
+     * @param OpenShift $body The request body
      * @param OpenShiftItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -47,6 +47,7 @@ class F_Inv_RTRequestBuilder
 
     /**
      * Invoke action f_Inv_RT
+     * @param F_Inv_RTPostRequestBody $body The request body
      * @param F_Inv_RTRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class F_Inv_RTRequestBuilder
 
     /**
      * Invoke action f_Inv_RT
+     * @param F_Inv_RTPostRequestBody $body The request body
      * @param F_Inv_RTRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -65,7 +65,7 @@ class PdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the fv property value. 
+     * Gets the fv property value. The fv property
      * @return Json|null
     */
     public function getFv(): ?Json {
@@ -73,7 +73,7 @@ class PdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the pv property value. 
+     * Gets the pv property value. The pv property
      * @return Json|null
     */
     public function getPv(): ?Json {
@@ -81,7 +81,7 @@ class PdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the rate property value. 
+     * Gets the rate property value. The rate property
      * @return Json|null
     */
     public function getRate(): ?Json {
@@ -116,7 +116,7 @@ class PdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the fv property value. 
+     * Sets the fv property value. The fv property
      * @param Json|null $value Value to set for the fv property.
     */
     public function setFv(?Json $value): void {
@@ -124,7 +124,7 @@ class PdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the pv property value. 
+     * Sets the pv property value. The pv property
      * @param Json|null $value Value to set for the pv property.
     */
     public function setPv(?Json $value): void {
@@ -132,7 +132,7 @@ class PdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the rate property value. 
+     * Sets the rate property value. The rate property
      * @param Json|null $value Value to set for the rate property.
     */
     public function setRate(?Json $value): void {

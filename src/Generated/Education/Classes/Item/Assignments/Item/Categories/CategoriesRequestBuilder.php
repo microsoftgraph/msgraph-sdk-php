@@ -91,6 +91,7 @@ class CategoriesRequestBuilder
 
     /**
      * Create new navigation property to categories for education
+     * @param EducationCategory $body The request body
      * @param CategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -134,6 +135,7 @@ class CategoriesRequestBuilder
 
     /**
      * Create new navigation property to categories for education
+     * @param EducationCategory $body The request body
      * @param CategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

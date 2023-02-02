@@ -47,6 +47,7 @@ class LogNorm_DistRequestBuilder
 
     /**
      * Invoke action logNorm_Dist
+     * @param LogNorm_DistPostRequestBody $body The request body
      * @param LogNorm_DistRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class LogNorm_DistRequestBuilder
 
     /**
      * Invoke action logNorm_Dist
+     * @param LogNorm_DistPostRequestBody $body The request body
      * @param LogNorm_DistRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

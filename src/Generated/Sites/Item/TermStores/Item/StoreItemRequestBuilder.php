@@ -116,6 +116,7 @@ class StoreItemRequestBuilder
 
     /**
      * Update the navigation property termStores in sites
+     * @param Store $body The request body
      * @param StoreItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -191,6 +192,7 @@ class StoreItemRequestBuilder
 
     /**
      * Update the navigation property termStores in sites
+     * @param Store $body The request body
      * @param StoreItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

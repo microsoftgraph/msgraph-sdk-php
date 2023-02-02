@@ -47,6 +47,7 @@ class RoundUpRequestBuilder
 
     /**
      * Invoke action roundUp
+     * @param RoundUpPostRequestBody $body The request body
      * @param RoundUpRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class RoundUpRequestBuilder
 
     /**
      * Invoke action roundUp
+     * @param RoundUpPostRequestBody $body The request body
      * @param RoundUpRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

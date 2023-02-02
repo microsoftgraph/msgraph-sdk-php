@@ -75,6 +75,7 @@ class MasterCategoriesRequestBuilder
 
     /**
      * Create an outlookCategory object in the user's master list of categories.
+     * @param OutlookCategory $body The request body
      * @param MasterCategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/outlookuser-post-mastercategories?view=graph-rest-1.0 Find more info here
@@ -119,6 +120,7 @@ class MasterCategoriesRequestBuilder
 
     /**
      * Create an outlookCategory object in the user's master list of categories.
+     * @param OutlookCategory $body The request body
      * @param MasterCategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

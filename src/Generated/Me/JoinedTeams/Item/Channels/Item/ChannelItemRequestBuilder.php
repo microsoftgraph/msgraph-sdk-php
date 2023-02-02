@@ -185,6 +185,7 @@ class ChannelItemRequestBuilder
 
     /**
      * Update the navigation property channels in me
+     * @param Channel $body The request body
      * @param ChannelItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -271,6 +272,7 @@ class ChannelItemRequestBuilder
 
     /**
      * Update the navigation property channels in me
+     * @param Channel $body The request body
      * @param ChannelItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

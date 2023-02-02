@@ -63,7 +63,7 @@ class ErfC_PrecisePostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the x property value. 
+     * Gets the x property value. The X property
      * @return Json|null
     */
     public function getX(): ?Json {
@@ -96,7 +96,7 @@ class ErfC_PrecisePostRequestBody implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the x property value. 
+     * Sets the x property value. The X property
      * @param Json|null $value Value to set for the X property.
     */
     public function setX(?Json $value): void {

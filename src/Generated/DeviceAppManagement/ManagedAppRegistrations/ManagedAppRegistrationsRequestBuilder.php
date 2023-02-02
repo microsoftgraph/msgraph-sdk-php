@@ -82,6 +82,7 @@ class ManagedAppRegistrationsRequestBuilder
 
     /**
      * Create new navigation property to managedAppRegistrations for deviceAppManagement
+     * @param ManagedAppRegistration $body The request body
      * @param ManagedAppRegistrationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -125,6 +126,7 @@ class ManagedAppRegistrationsRequestBuilder
 
     /**
      * Create new navigation property to managedAppRegistrations for deviceAppManagement
+     * @param ManagedAppRegistration $body The request body
      * @param ManagedAppRegistrationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

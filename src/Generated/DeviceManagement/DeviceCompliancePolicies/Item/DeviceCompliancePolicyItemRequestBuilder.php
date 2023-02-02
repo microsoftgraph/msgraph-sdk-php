@@ -197,6 +197,7 @@ class DeviceCompliancePolicyItemRequestBuilder
 
     /**
      * Update the navigation property deviceCompliancePolicies in deviceManagement
+     * @param DeviceCompliancePolicy $body The request body
      * @param DeviceCompliancePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -272,6 +273,7 @@ class DeviceCompliancePolicyItemRequestBuilder
 
     /**
      * Update the navigation property deviceCompliancePolicies in deviceManagement
+     * @param DeviceCompliancePolicy $body The request body
      * @param DeviceCompliancePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

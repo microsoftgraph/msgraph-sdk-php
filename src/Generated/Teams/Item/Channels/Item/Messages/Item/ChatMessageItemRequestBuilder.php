@@ -131,6 +131,7 @@ class ChatMessageItemRequestBuilder
 
     /**
      * Update the navigation property messages in teams
+     * @param ChatMessage $body The request body
      * @param ChatMessageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -206,6 +207,7 @@ class ChatMessageItemRequestBuilder
 
     /**
      * Update the navigation property messages in teams
+     * @param ChatMessage $body The request body
      * @param ChatMessageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

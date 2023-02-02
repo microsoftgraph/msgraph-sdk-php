@@ -51,7 +51,7 @@ class RoleManagement implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the directory property value. 
+     * Gets the directory property value. The directory property
      * @return RbacApplication|null
     */
     public function getDirectory(): ?RbacApplication {
@@ -80,7 +80,7 @@ class RoleManagement implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.type property value. 
+     * Gets the @odata.type property value. The OdataType property
      * @return string|null
     */
     public function getOdataType(): ?string {
@@ -115,7 +115,7 @@ class RoleManagement implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the directory property value. 
+     * Sets the directory property value. The directory property
      * @param RbacApplication|null $value Value to set for the directory property.
     */
     public function setDirectory(?RbacApplication $value): void {
@@ -131,7 +131,7 @@ class RoleManagement implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.type property value. 
+     * Sets the @odata.type property value. The OdataType property
      * @param string|null $value Value to set for the OdataType property.
     */
     public function setOdataType(?string $value): void {

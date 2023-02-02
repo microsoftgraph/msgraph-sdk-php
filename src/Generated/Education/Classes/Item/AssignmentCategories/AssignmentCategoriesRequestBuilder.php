@@ -83,6 +83,7 @@ class AssignmentCategoriesRequestBuilder
 
     /**
      * Creates a new educationCategory on an educationClass. Only teachers can perform this operation.
+     * @param EducationCategory $body The request body
      * @param AssignmentCategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/educationclass-post-category?view=graph-rest-1.0 Find more info here
@@ -127,6 +128,7 @@ class AssignmentCategoriesRequestBuilder
 
     /**
      * Creates a new educationCategory on an educationClass. Only teachers can perform this operation.
+     * @param EducationCategory $body The request body
      * @param AssignmentCategoriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

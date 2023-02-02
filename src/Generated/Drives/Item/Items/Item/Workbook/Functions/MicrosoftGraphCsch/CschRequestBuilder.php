@@ -47,6 +47,7 @@ class CschRequestBuilder
 
     /**
      * Invoke action csch
+     * @param CschPostRequestBody $body The request body
      * @param CschRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class CschRequestBuilder
 
     /**
      * Invoke action csch
+     * @param CschPostRequestBody $body The request body
      * @param CschRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -116,7 +116,7 @@ class Drive extends BaseItem implements Parsable
     }
 
     /**
-     * Gets the sharePointIds property value. 
+     * Gets the sharePointIds property value. The sharePointIds property
      * @return SharepointIds|null
     */
     public function getSharePointIds(): ?SharepointIds {
@@ -223,7 +223,7 @@ class Drive extends BaseItem implements Parsable
     }
 
     /**
-     * Sets the sharePointIds property value. 
+     * Sets the sharePointIds property value. The sharePointIds property
      * @param SharepointIds|null $value Value to set for the sharePointIds property.
     */
     public function setSharePointIds(?SharepointIds $value): void {

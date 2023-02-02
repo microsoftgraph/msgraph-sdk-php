@@ -62,7 +62,7 @@ class ConfirmCompromisedPostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Gets the servicePrincipalIds property value. 
+     * Gets the servicePrincipalIds property value. The servicePrincipalIds property
      * @return array<string>|null
     */
     public function getServicePrincipalIds(): ?array {
@@ -95,7 +95,7 @@ class ConfirmCompromisedPostRequestBody implements AdditionalDataHolder, BackedM
     }
 
     /**
-     * Sets the servicePrincipalIds property value. 
+     * Sets the servicePrincipalIds property value. The servicePrincipalIds property
      * @param array<string>|null $value Value to set for the servicePrincipalIds property.
     */
     public function setServicePrincipalIds(?array $value): void {

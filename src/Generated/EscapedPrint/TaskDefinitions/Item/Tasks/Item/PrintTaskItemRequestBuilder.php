@@ -103,6 +103,7 @@ class PrintTaskItemRequestBuilder
 
     /**
      * Update the navigation property tasks in print
+     * @param PrintTask $body The request body
      * @param PrintTaskItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -167,6 +168,7 @@ class PrintTaskItemRequestBuilder
 
     /**
      * Update the navigation property tasks in print
+     * @param PrintTask $body The request body
      * @param PrintTaskItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

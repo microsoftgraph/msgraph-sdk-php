@@ -52,7 +52,7 @@ class PlayPromptPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the clientContext property value. 
+     * Gets the clientContext property value. The clientContext property
      * @return string|null
     */
     public function getClientContext(): ?string {
@@ -72,7 +72,7 @@ class PlayPromptPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the prompts property value. 
+     * Gets the prompts property value. The prompts property
      * @return array<Prompt>|null
     */
     public function getPrompts(): ?array {
@@ -106,7 +106,7 @@ class PlayPromptPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the clientContext property value. 
+     * Sets the clientContext property value. The clientContext property
      * @param string|null $value Value to set for the clientContext property.
     */
     public function setClientContext(?string $value): void {
@@ -114,7 +114,7 @@ class PlayPromptPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the prompts property value. 
+     * Sets the prompts property value. The prompts property
      * @param array<Prompt>|null $value Value to set for the prompts property.
     */
     public function setPrompts(?array $value): void {

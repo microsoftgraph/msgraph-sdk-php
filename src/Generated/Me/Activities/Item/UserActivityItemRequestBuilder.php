@@ -107,6 +107,7 @@ class UserActivityItemRequestBuilder
 
     /**
      * Update the navigation property activities in me
+     * @param UserActivity $body The request body
      * @param UserActivityItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -171,6 +172,7 @@ class UserActivityItemRequestBuilder
 
     /**
      * Update the navigation property activities in me
+     * @param UserActivity $body The request body
      * @param UserActivityItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

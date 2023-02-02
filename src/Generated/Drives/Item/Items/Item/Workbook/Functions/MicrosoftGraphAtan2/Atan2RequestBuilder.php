@@ -47,6 +47,7 @@ class Atan2RequestBuilder
 
     /**
      * Invoke action atan2
+     * @param Atan2PostRequestBody $body The request body
      * @param Atan2RequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class Atan2RequestBuilder
 
     /**
      * Invoke action atan2
+     * @param Atan2PostRequestBody $body The request body
      * @param Atan2RequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -45,7 +45,7 @@ class TargetAppsPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the appGroupType property value. 
+     * Gets the appGroupType property value. The appGroupType property
      * @return TargetedManagedAppGroupType|null
     */
     public function getAppGroupType(): ?TargetedManagedAppGroupType {
@@ -53,7 +53,7 @@ class TargetAppsPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the apps property value. 
+     * Gets the apps property value. The apps property
      * @return array<ManagedMobileApp>|null
     */
     public function getApps(): ?array {
@@ -99,7 +99,7 @@ class TargetAppsPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the appGroupType property value. 
+     * Sets the appGroupType property value. The appGroupType property
      * @param TargetedManagedAppGroupType|null $value Value to set for the appGroupType property.
     */
     public function setAppGroupType(?TargetedManagedAppGroupType $value): void {
@@ -107,7 +107,7 @@ class TargetAppsPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the apps property value. 
+     * Sets the apps property value. The apps property
      * @param array<ManagedMobileApp>|null $value Value to set for the apps property.
     */
     public function setApps(?array $value): void {

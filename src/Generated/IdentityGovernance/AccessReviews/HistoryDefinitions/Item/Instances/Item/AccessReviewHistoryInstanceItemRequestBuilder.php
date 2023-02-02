@@ -95,6 +95,7 @@ class AccessReviewHistoryInstanceItemRequestBuilder
 
     /**
      * Update the navigation property instances in identityGovernance
+     * @param AccessReviewHistoryInstance $body The request body
      * @param AccessReviewHistoryInstanceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class AccessReviewHistoryInstanceItemRequestBuilder
 
     /**
      * Update the navigation property instances in identityGovernance
+     * @param AccessReviewHistoryInstance $body The request body
      * @param AccessReviewHistoryInstanceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

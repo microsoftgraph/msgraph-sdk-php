@@ -46,6 +46,7 @@ class ApplyBottomItemsFilterRequestBuilder
 
     /**
      * Invoke action applyBottomItemsFilter
+     * @param ApplyBottomItemsFilterPostRequestBody $body The request body
      * @param ApplyBottomItemsFilterRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -64,6 +65,7 @@ class ApplyBottomItemsFilterRequestBuilder
 
     /**
      * Invoke action applyBottomItemsFilter
+     * @param ApplyBottomItemsFilterPostRequestBody $body The request body
      * @param ApplyBottomItemsFilterRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

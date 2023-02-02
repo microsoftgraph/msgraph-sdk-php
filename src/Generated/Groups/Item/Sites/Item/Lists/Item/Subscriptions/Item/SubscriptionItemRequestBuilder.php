@@ -95,6 +95,7 @@ class SubscriptionItemRequestBuilder
 
     /**
      * Update the navigation property subscriptions in groups
+     * @param Subscription $body The request body
      * @param SubscriptionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -159,6 +160,7 @@ class SubscriptionItemRequestBuilder
 
     /**
      * Update the navigation property subscriptions in groups
+     * @param Subscription $body The request body
      * @param SubscriptionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

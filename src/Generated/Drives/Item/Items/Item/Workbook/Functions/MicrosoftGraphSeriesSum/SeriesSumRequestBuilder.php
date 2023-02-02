@@ -47,6 +47,7 @@ class SeriesSumRequestBuilder
 
     /**
      * Invoke action seriesSum
+     * @param SeriesSumPostRequestBody $body The request body
      * @param SeriesSumRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class SeriesSumRequestBuilder
 
     /**
      * Invoke action seriesSum
+     * @param SeriesSumPostRequestBody $body The request body
      * @param SeriesSumRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

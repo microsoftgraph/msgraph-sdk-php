@@ -83,7 +83,7 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the reconfirmationInDays property value. 
+     * Gets the reconfirmationInDays property value. The reconfirmationInDays property
      * @return int|null
     */
     public function getReconfirmationInDays(): ?int {
@@ -154,7 +154,7 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the reconfirmationInDays property value. 
+     * Sets the reconfirmationInDays property value. The reconfirmationInDays property
      * @param int|null $value Value to set for the reconfirmationInDays property.
     */
     public function setReconfirmationInDays(?int $value): void {

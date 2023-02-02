@@ -1106,6 +1106,7 @@ class ReportsRequestBuilder
 
     /**
      * Update reports
+     * @param ReportRoot $body The request body
      * @param ReportsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -1149,6 +1150,7 @@ class ReportsRequestBuilder
 
     /**
      * Update reports
+     * @param ReportRoot $body The request body
      * @param ReportsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

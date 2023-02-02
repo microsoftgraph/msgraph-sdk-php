@@ -46,6 +46,7 @@ class OnenotePatchContentRequestBuilder
 
     /**
      * Invoke action onenotePatchContent
+     * @param OnenotePatchContentPostRequestBody $body The request body
      * @param OnenotePatchContentRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -64,6 +65,7 @@ class OnenotePatchContentRequestBuilder
 
     /**
      * Invoke action onenotePatchContent
+     * @param OnenotePatchContentPostRequestBody $body The request body
      * @param OnenotePatchContentRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -201,6 +201,7 @@ class WorkbookChartItemRequestBuilder
 
     /**
      * Update the navigation property charts in drives
+     * @param WorkbookChart $body The request body
      * @param WorkbookChartItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -276,6 +277,7 @@ class WorkbookChartItemRequestBuilder
 
     /**
      * Update the navigation property charts in drives
+     * @param WorkbookChart $body The request body
      * @param WorkbookChartItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

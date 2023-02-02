@@ -87,6 +87,7 @@ class IdentityItemRequestBuilder
 
     /**
      * Update the navigation property members in external
+     * @param Identity $body The request body
      * @param IdentityItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -151,6 +152,7 @@ class IdentityItemRequestBuilder
 
     /**
      * Update the navigation property members in external
+     * @param Identity $body The request body
      * @param IdentityItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

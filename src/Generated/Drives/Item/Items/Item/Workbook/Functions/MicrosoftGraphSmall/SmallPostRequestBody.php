@@ -44,7 +44,7 @@ class SmallPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the array property value. 
+     * Gets the array property value. The array property
      * @return Json|null
     */
     public function getArray(): ?Json {
@@ -72,7 +72,7 @@ class SmallPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Gets the k property value. 
+     * Gets the k property value. The k property
      * @return Json|null
     */
     public function getK(): ?Json {
@@ -98,7 +98,7 @@ class SmallPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the array property value. 
+     * Sets the array property value. The array property
      * @param Json|null $value Value to set for the array property.
     */
     public function setArray(?Json $value): void {
@@ -114,7 +114,7 @@ class SmallPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
     }
 
     /**
-     * Sets the k property value. 
+     * Sets the k property value. The k property
      * @param Json|null $value Value to set for the k property.
     */
     public function setK(?Json $value): void {

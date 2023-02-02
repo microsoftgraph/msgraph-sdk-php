@@ -74,6 +74,7 @@ class ExchangeConnectorsRequestBuilder
 
     /**
      * Create new navigation property to exchangeConnectors for deviceManagement
+     * @param DeviceManagementExchangeConnector $body The request body
      * @param ExchangeConnectorsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -117,6 +118,7 @@ class ExchangeConnectorsRequestBuilder
 
     /**
      * Create new navigation property to exchangeConnectors for deviceManagement
+     * @param DeviceManagementExchangeConnector $body The request body
      * @param ExchangeConnectorsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

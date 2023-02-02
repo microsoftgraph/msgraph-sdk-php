@@ -47,6 +47,7 @@ class ResetPasswordRequestBuilder
 
     /**
      * Invoke action resetPassword
+     * @param ResetPasswordPostRequestBody $body The request body
      * @param ResetPasswordRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class ResetPasswordRequestBuilder
 
     /**
      * Invoke action resetPassword
+     * @param ResetPasswordPostRequestBody $body The request body
      * @param ResetPasswordRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

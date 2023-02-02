@@ -64,7 +64,7 @@ class RightbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the numBytes property value. 
+     * Gets the numBytes property value. The numBytes property
      * @return Json|null
     */
     public function getNumBytes(): ?Json {
@@ -72,7 +72,7 @@ class RightbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the text property value. 
+     * Gets the text property value. The text property
      * @return Json|null
     */
     public function getText(): ?Json {
@@ -106,7 +106,7 @@ class RightbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the numBytes property value. 
+     * Sets the numBytes property value. The numBytes property
      * @param Json|null $value Value to set for the numBytes property.
     */
     public function setNumBytes(?Json $value): void {
@@ -114,7 +114,7 @@ class RightbPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the text property value. 
+     * Sets the text property value. The text property
      * @param Json|null $value Value to set for the text property.
     */
     public function setText(?Json $value): void {

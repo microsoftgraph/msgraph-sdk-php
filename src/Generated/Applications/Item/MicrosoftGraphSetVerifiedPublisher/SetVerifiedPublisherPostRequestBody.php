@@ -62,7 +62,7 @@ class SetVerifiedPublisherPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Gets the verifiedPublisherId property value. 
+     * Gets the verifiedPublisherId property value. The verifiedPublisherId property
      * @return string|null
     */
     public function getVerifiedPublisherId(): ?string {
@@ -95,7 +95,7 @@ class SetVerifiedPublisherPostRequestBody implements AdditionalDataHolder, Backe
     }
 
     /**
-     * Sets the verifiedPublisherId property value. 
+     * Sets the verifiedPublisherId property value. The verifiedPublisherId property
      * @param string|null $value Value to set for the verifiedPublisherId property.
     */
     public function setVerifiedPublisherId(?string $value): void {

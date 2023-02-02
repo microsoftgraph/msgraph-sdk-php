@@ -65,7 +65,7 @@ class TbillYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the maturity property value. 
+     * Gets the maturity property value. The maturity property
      * @return Json|null
     */
     public function getMaturity(): ?Json {
@@ -73,7 +73,7 @@ class TbillYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the pr property value. 
+     * Gets the pr property value. The pr property
      * @return Json|null
     */
     public function getPr(): ?Json {
@@ -81,7 +81,7 @@ class TbillYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the settlement property value. 
+     * Gets the settlement property value. The settlement property
      * @return Json|null
     */
     public function getSettlement(): ?Json {
@@ -116,7 +116,7 @@ class TbillYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the maturity property value. 
+     * Sets the maturity property value. The maturity property
      * @param Json|null $value Value to set for the maturity property.
     */
     public function setMaturity(?Json $value): void {
@@ -124,7 +124,7 @@ class TbillYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the pr property value. 
+     * Sets the pr property value. The pr property
      * @param Json|null $value Value to set for the pr property.
     */
     public function setPr(?Json $value): void {
@@ -132,7 +132,7 @@ class TbillYieldPostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the settlement property value. 
+     * Sets the settlement property value. The settlement property
      * @param Json|null $value Value to set for the settlement property.
     */
     public function setSettlement(?Json $value): void {

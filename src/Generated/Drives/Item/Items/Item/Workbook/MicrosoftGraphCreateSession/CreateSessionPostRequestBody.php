@@ -62,7 +62,7 @@ class CreateSessionPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the persistChanges property value. 
+     * Gets the persistChanges property value. The persistChanges property
      * @return bool|null
     */
     public function getPersistChanges(): ?bool {
@@ -95,7 +95,7 @@ class CreateSessionPostRequestBody implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the persistChanges property value. 
+     * Sets the persistChanges property value. The persistChanges property
      * @param bool|null $value Value to set for the persistChanges property.
     */
     public function setPersistChanges(?bool $value): void {

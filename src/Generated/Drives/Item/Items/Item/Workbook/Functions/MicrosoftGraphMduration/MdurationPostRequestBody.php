@@ -52,7 +52,7 @@ class MdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the basis property value. 
+     * Gets the basis property value. The basis property
      * @return Json|null
     */
     public function getBasis(): ?Json {
@@ -60,7 +60,7 @@ class MdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the coupon property value. 
+     * Gets the coupon property value. The coupon property
      * @return Json|null
     */
     public function getCoupon(): ?Json {
@@ -84,7 +84,7 @@ class MdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the frequency property value. 
+     * Gets the frequency property value. The frequency property
      * @return Json|null
     */
     public function getFrequency(): ?Json {
@@ -92,7 +92,7 @@ class MdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the maturity property value. 
+     * Gets the maturity property value. The maturity property
      * @return Json|null
     */
     public function getMaturity(): ?Json {
@@ -100,7 +100,7 @@ class MdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the settlement property value. 
+     * Gets the settlement property value. The settlement property
      * @return Json|null
     */
     public function getSettlement(): ?Json {
@@ -108,7 +108,7 @@ class MdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Gets the yld property value. 
+     * Gets the yld property value. The yld property
      * @return Json|null
     */
     public function getYld(): ?Json {
@@ -146,7 +146,7 @@ class MdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the basis property value. 
+     * Sets the basis property value. The basis property
      * @param Json|null $value Value to set for the basis property.
     */
     public function setBasis(?Json $value): void {
@@ -154,7 +154,7 @@ class MdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the coupon property value. 
+     * Sets the coupon property value. The coupon property
      * @param Json|null $value Value to set for the coupon property.
     */
     public function setCoupon(?Json $value): void {
@@ -162,7 +162,7 @@ class MdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the frequency property value. 
+     * Sets the frequency property value. The frequency property
      * @param Json|null $value Value to set for the frequency property.
     */
     public function setFrequency(?Json $value): void {
@@ -170,7 +170,7 @@ class MdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the maturity property value. 
+     * Sets the maturity property value. The maturity property
      * @param Json|null $value Value to set for the maturity property.
     */
     public function setMaturity(?Json $value): void {
@@ -178,7 +178,7 @@ class MdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the settlement property value. 
+     * Sets the settlement property value. The settlement property
      * @param Json|null $value Value to set for the settlement property.
     */
     public function setSettlement(?Json $value): void {
@@ -186,7 +186,7 @@ class MdurationPostRequestBody implements AdditionalDataHolder, BackedModel, Par
     }
 
     /**
-     * Sets the yld property value. 
+     * Sets the yld property value. The yld property
      * @param Json|null $value Value to set for the yld property.
     */
     public function setYld(?Json $value): void {

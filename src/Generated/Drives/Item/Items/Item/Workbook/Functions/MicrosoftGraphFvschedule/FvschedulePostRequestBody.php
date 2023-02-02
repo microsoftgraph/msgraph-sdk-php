@@ -64,7 +64,7 @@ class FvschedulePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the principal property value. 
+     * Gets the principal property value. The principal property
      * @return Json|null
     */
     public function getPrincipal(): ?Json {
@@ -72,7 +72,7 @@ class FvschedulePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the schedule property value. 
+     * Gets the schedule property value. The schedule property
      * @return Json|null
     */
     public function getSchedule(): ?Json {
@@ -106,7 +106,7 @@ class FvschedulePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the principal property value. 
+     * Sets the principal property value. The principal property
      * @param Json|null $value Value to set for the principal property.
     */
     public function setPrincipal(?Json $value): void {
@@ -114,7 +114,7 @@ class FvschedulePostRequestBody implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the schedule property value. 
+     * Sets the schedule property value. The schedule property
      * @param Json|null $value Value to set for the schedule property.
     */
     public function setSchedule(?Json $value): void {

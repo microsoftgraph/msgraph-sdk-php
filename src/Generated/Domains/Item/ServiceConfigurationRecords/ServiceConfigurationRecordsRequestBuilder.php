@@ -75,6 +75,7 @@ class ServiceConfigurationRecordsRequestBuilder
 
     /**
      * Create new navigation property to serviceConfigurationRecords for domains
+     * @param DomainDnsRecord $body The request body
      * @param ServiceConfigurationRecordsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -118,6 +119,7 @@ class ServiceConfigurationRecordsRequestBuilder
 
     /**
      * Create new navigation property to serviceConfigurationRecords for domains
+     * @param DomainDnsRecord $body The request body
      * @param ServiceConfigurationRecordsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

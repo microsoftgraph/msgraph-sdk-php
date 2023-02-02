@@ -83,6 +83,7 @@ class DeviceCategoryRequestBuilder
 
     /**
      * Update the navigation property deviceCategory in users
+     * @param DeviceCategory $body The request body
      * @param DeviceCategoryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -147,6 +148,7 @@ class DeviceCategoryRequestBuilder
 
     /**
      * Update the navigation property deviceCategory in users
+     * @param DeviceCategory $body The request body
      * @param DeviceCategoryRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

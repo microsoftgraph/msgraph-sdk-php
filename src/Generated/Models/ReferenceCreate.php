@@ -62,7 +62,7 @@ class ReferenceCreate implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the @odata.id property value. 
+     * Gets the @odata.id property value. The OdataId property
      * @return string|null
     */
     public function getOdataId(): ?string {
@@ -95,7 +95,7 @@ class ReferenceCreate implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the @odata.id property value. 
+     * Sets the @odata.id property value. The OdataId property
      * @param string|null $value Value to set for the OdataId property.
     */
     public function setOdataId(?string $value): void {

@@ -47,6 +47,7 @@ class PercentRank_IncRequestBuilder
 
     /**
      * Invoke action percentRank_Inc
+     * @param PercentRank_IncPostRequestBody $body The request body
      * @param PercentRank_IncRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -65,6 +66,7 @@ class PercentRank_IncRequestBuilder
 
     /**
      * Invoke action percentRank_Inc
+     * @param PercentRank_IncPostRequestBody $body The request body
      * @param PercentRank_IncRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

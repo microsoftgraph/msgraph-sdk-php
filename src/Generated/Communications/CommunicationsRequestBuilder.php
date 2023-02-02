@@ -142,6 +142,7 @@ class CommunicationsRequestBuilder
 
     /**
      * Update communications
+     * @param CloudCommunications $body The request body
      * @param CommunicationsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -196,6 +197,7 @@ class CommunicationsRequestBuilder
 
     /**
      * Update communications
+     * @param CloudCommunications $body The request body
      * @param CommunicationsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
