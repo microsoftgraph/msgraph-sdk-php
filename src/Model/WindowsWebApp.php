@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* UnifiedRole File
+* WindowsWebApp File
 * PHP version 7
 *
 * @category  Library
@@ -12,8 +12,9 @@
 * @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
+
 /**
-* UnifiedRole class
+* WindowsWebApp class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,34 +22,35 @@ namespace Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class UnifiedRole extends Entity
+class WindowsWebApp extends MobileApp
 {
     /**
-    * Gets the roleDefinitionId
-    * The unified role definition ID of the directory role. Refer to unifiedRoleDefinition resource.
+    * Gets the appUrl
+    * Indicates the Windows web app URL. Example: 'https://www.contoso.com'
     *
-    * @return string|null The roleDefinitionId
+    * @return string|null The appUrl
     */
-    public function getRoleDefinitionId()
+    public function getAppUrl()
     {
-        if (array_key_exists("roleDefinitionId", $this->_propDict)) {
-            return $this->_propDict["roleDefinitionId"];
+        if (array_key_exists("appUrl", $this->_propDict)) {
+            return $this->_propDict["appUrl"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the roleDefinitionId
-    * The unified role definition ID of the directory role. Refer to unifiedRoleDefinition resource.
+    * Sets the appUrl
+    * Indicates the Windows web app URL. Example: 'https://www.contoso.com'
     *
-    * @param string $val The value of the roleDefinitionId
+    * @param string $val The appUrl
     *
-    * @return UnifiedRole
+    * @return WindowsWebApp
     */
-    public function setRoleDefinitionId($val)
+    public function setAppUrl($val)
     {
-        $this->_propDict["roleDefinitionId"] = $val;
+        $this->_propDict["appUrl"] = $val;
         return $this;
     }
+
 }

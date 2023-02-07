@@ -26,6 +26,7 @@ class DelegatedAdminRelationship extends Entity
 {
     /**
     * Gets the accessDetails
+    * The access details containing the identifiers of the administrative roles that the partner admin is requesting in the customer tenant.
     *
     * @return DelegatedAdminAccessDetails|null The accessDetails
     */
@@ -44,6 +45,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Sets the accessDetails
+    * The access details containing the identifiers of the administrative roles that the partner admin is requesting in the customer tenant.
     *
     * @param DelegatedAdminAccessDetails $val The accessDetails
     *
@@ -57,6 +59,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Gets the activatedDateTime
+    * The date and time in ISO 8601 format and in UTC time when the relationship became active. Read-only.
     *
     * @return \DateTime|null The activatedDateTime
     */
@@ -75,6 +78,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Sets the activatedDateTime
+    * The date and time in ISO 8601 format and in UTC time when the relationship became active. Read-only.
     *
     * @param \DateTime $val The activatedDateTime
     *
@@ -88,6 +92,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Gets the createdDateTime
+    * The date and time in ISO 8601 format and in UTC time when the relationship was created. Read-only.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -106,6 +111,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Sets the createdDateTime
+    * The date and time in ISO 8601 format and in UTC time when the relationship was created. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -119,6 +125,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Gets the customer
+    * The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Cannot be changed by the customer.
     *
     * @return DelegatedAdminRelationshipCustomerParticipant|null The customer
     */
@@ -137,6 +144,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Sets the customer
+    * The display name and unique identifier of the customer of the relationship. This is configured either by the partner at the time the relationship is created or by the system after the customer approves the relationship. Cannot be changed by the customer.
     *
     * @param DelegatedAdminRelationshipCustomerParticipant $val The customer
     *
@@ -150,6 +158,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Gets the displayName
+    * The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
     *
     * @return string|null The displayName
     */
@@ -164,6 +173,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Sets the displayName
+    * The display name of the relationship used for ease of identification. Must be unique across all delegated admin relationships of the partner. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
     *
     * @param string $val The displayName
     *
@@ -177,6 +187,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Gets the duration
+    * The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
     *
     * @return \DateInterval|null The duration
     */
@@ -195,6 +206,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Sets the duration
+    * The duration of the relationship in ISO 8601 format. Must be a value between P1D and P2Y inclusive. This is set by the partner only when the relationship is in the created status and cannot be changed by the customer.
     *
     * @param \DateInterval $val The duration
     *
@@ -208,6 +220,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Gets the endDateTime
+    * The date and time in ISO 8601 format and in UTC time when the status of relationship changes to either terminated or expired. Calculated as endDateTime = activatedDateTime + duration. Read-only.
     *
     * @return \DateTime|null The endDateTime
     */
@@ -226,6 +239,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Sets the endDateTime
+    * The date and time in ISO 8601 format and in UTC time when the status of relationship changes to either terminated or expired. Calculated as endDateTime = activatedDateTime + duration. Read-only.
     *
     * @param \DateTime $val The endDateTime
     *
@@ -239,6 +253,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * The date and time in ISO 8601 format and in UTC time when the relationship was last modified. Read-only.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -257,6 +272,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * The date and time in ISO 8601 format and in UTC time when the relationship was last modified. Read-only.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -270,6 +286,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Gets the status
+    * The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderBy.
     *
     * @return DelegatedAdminRelationshipStatus|null The status
     */
@@ -288,6 +305,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Sets the status
+    * The status of the relationship. Read Only. The possible values are: activating, active, approvalPending, approved, created, expired, expiring, terminated, terminating, terminationRequested, unknownFutureValue. Supports $orderBy.
     *
     * @param DelegatedAdminRelationshipStatus $val The status
     *
@@ -302,6 +320,7 @@ class DelegatedAdminRelationship extends Entity
 
      /**
      * Gets the accessAssignments
+    * The access assignments associated with the delegated admin relationship.
      *
      * @return array|null The accessAssignments
      */
@@ -316,6 +335,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Sets the accessAssignments
+    * The access assignments associated with the delegated admin relationship.
     *
     * @param DelegatedAdminAccessAssignment[] $val The accessAssignments
     *
@@ -330,6 +350,7 @@ class DelegatedAdminRelationship extends Entity
 
      /**
      * Gets the operations
+    * The long running operations associated with the delegated admin relationship.
      *
      * @return array|null The operations
      */
@@ -344,6 +365,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Sets the operations
+    * The long running operations associated with the delegated admin relationship.
     *
     * @param DelegatedAdminRelationshipOperation[] $val The operations
     *
@@ -358,6 +380,7 @@ class DelegatedAdminRelationship extends Entity
 
      /**
      * Gets the requests
+    * The requests associated with the delegated admin relationship.
      *
      * @return array|null The requests
      */
@@ -372,6 +395,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Sets the requests
+    * The requests associated with the delegated admin relationship.
     *
     * @param DelegatedAdminRelationshipRequest[] $val The requests
     *

@@ -58,6 +58,7 @@ class TenantRelationship implements \JsonSerializable
 
      /**
      * Gets the delegatedAdminCustomers
+    * The customer who has a delegated admin relationship with a Microsoft partner.
      *
      * @return array|null The delegatedAdminCustomers
      */
@@ -72,6 +73,7 @@ class TenantRelationship implements \JsonSerializable
 
     /**
     * Sets the delegatedAdminCustomers
+    * The customer who has a delegated admin relationship with a Microsoft partner.
     *
     * @param DelegatedAdminCustomer[] $val The delegatedAdminCustomers
     *
@@ -86,6 +88,7 @@ class TenantRelationship implements \JsonSerializable
 
      /**
      * Gets the delegatedAdminRelationships
+    * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
      *
      * @return array|null The delegatedAdminRelationships
      */
@@ -100,6 +103,7 @@ class TenantRelationship implements \JsonSerializable
 
     /**
     * Sets the delegatedAdminRelationships
+    * The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
     *
     * @param DelegatedAdminRelationship[] $val The delegatedAdminRelationships
     *

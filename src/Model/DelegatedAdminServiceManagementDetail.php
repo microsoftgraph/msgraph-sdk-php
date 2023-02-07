@@ -26,6 +26,7 @@ class DelegatedAdminServiceManagementDetail extends Entity
 {
     /**
     * Gets the serviceManagementUrl
+    * The URL of the management portal for the managed service. Read-only.
     *
     * @return string|null The serviceManagementUrl
     */
@@ -40,6 +41,7 @@ class DelegatedAdminServiceManagementDetail extends Entity
 
     /**
     * Sets the serviceManagementUrl
+    * The URL of the management portal for the managed service. Read-only.
     *
     * @param string $val The serviceManagementUrl
     *
@@ -53,6 +55,7 @@ class DelegatedAdminServiceManagementDetail extends Entity
 
     /**
     * Gets the serviceName
+    * The name of a managed service. Read-only.
     *
     * @return string|null The serviceName
     */
@@ -67,6 +70,7 @@ class DelegatedAdminServiceManagementDetail extends Entity
 
     /**
     * Sets the serviceName
+    * The name of a managed service. Read-only.
     *
     * @param string $val The serviceName
     *

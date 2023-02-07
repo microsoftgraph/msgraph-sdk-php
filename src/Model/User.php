@@ -501,6 +501,37 @@ class User extends DirectoryObject
     }
 
     /**
+    * Gets the employeeLeaveDateTime
+    *
+    * @return \DateTime|null The employeeLeaveDateTime
+    */
+    public function getEmployeeLeaveDateTime()
+    {
+        if (array_key_exists("employeeLeaveDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["employeeLeaveDateTime"], "\DateTime") || is_null($this->_propDict["employeeLeaveDateTime"])) {
+                return $this->_propDict["employeeLeaveDateTime"];
+            } else {
+                $this->_propDict["employeeLeaveDateTime"] = new \DateTime($this->_propDict["employeeLeaveDateTime"]);
+                return $this->_propDict["employeeLeaveDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the employeeLeaveDateTime
+    *
+    * @param \DateTime $val The employeeLeaveDateTime
+    *
+    * @return User
+    */
+    public function setEmployeeLeaveDateTime($val)
+    {
+        $this->_propDict["employeeLeaveDateTime"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the employeeOrgData
     * Represents organization data (e.g. division and costCenter) associated with a user. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in).
     *
