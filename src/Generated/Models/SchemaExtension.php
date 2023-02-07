@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SchemaExtension extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new schemaExtension and sets the default values.
+     * Instantiates a new SchemaExtension and sets the default values.
     */
     public function __construct() {
         parent::__construct();
