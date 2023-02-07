@@ -173,6 +173,34 @@ class CloudPcProvisioningPolicy extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the domainJoinConfigurations
+     *
+     * @return array|null The domainJoinConfigurations
+     */
+    public function getDomainJoinConfigurations()
+    {
+        if (array_key_exists("domainJoinConfigurations", $this->_propDict)) {
+           return $this->_propDict["domainJoinConfigurations"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the domainJoinConfigurations
+    *
+    * @param CloudPcDomainJoinConfiguration[] $val The domainJoinConfigurations
+    *
+    * @return CloudPcProvisioningPolicy
+    */
+    public function setDomainJoinConfigurations($val)
+    {
+        $this->_propDict["domainJoinConfigurations"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the enableSingleSignOn
     *

@@ -88,6 +88,7 @@ class CloudPC extends Entity
 
     /**
     * Gets the diskEncryptionState
+    * The disk encryption applied to the Cloud PC. Possible values: notAvailable, notEncrypted, encryptedUsingPlatformManagedKey, encryptedUsingCustomerManagedKey, and unknownFutureValue.
     *
     * @return CloudPcDiskEncryptionState|null The diskEncryptionState
     */
@@ -106,6 +107,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the diskEncryptionState
+    * The disk encryption applied to the Cloud PC. Possible values: notAvailable, notEncrypted, encryptedUsingPlatformManagedKey, encryptedUsingCustomerManagedKey, and unknownFutureValue.
     *
     * @param CloudPcDiskEncryptionState $val The diskEncryptionState
     *

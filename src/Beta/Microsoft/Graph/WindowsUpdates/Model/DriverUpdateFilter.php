@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* EquivalentContentOption File
+* DriverUpdateFilter File
 * PHP version 7
 *
 * @category  Library
@@ -12,11 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\WindowsUpdates\Model;
-
-use Microsoft\Graph\Core\Enum;
-
 /**
-* EquivalentContentOption class
+* DriverUpdateFilter class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,12 +21,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class EquivalentContentOption extends Enum
+class DriverUpdateFilter extends WindowsUpdateFilter
 {
-    /**
-    * The Enum EquivalentContentOption
-    */
-    const NONE = "none";
-    const LATEST_SECURITY = "latestSecurity";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

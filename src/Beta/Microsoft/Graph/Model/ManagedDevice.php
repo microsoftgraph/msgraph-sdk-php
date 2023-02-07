@@ -945,7 +945,7 @@ class ManagedDevice extends Entity
 
     /**
     * Gets the ethernetMacAddress
-    * Ethernet MAC. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity. Individual get call with select query options is needed to retrieve actual values. Example: deviceManagement/managedDevices({managedDeviceId})?$select=ethernetMacAddress Supports: $select. $Search is not supported. Read-only. This property is read-only.
+    * Indicates Ethernet MAC Address of the device. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity. Individual get call with select query options is needed to retrieve actual values. Example: deviceManagement/managedDevices({managedDeviceId})?$select=ethernetMacAddress Supports: $select. $Search is not supported. Read-only. This property is read-only.
     *
     * @return string|null The ethernetMacAddress
     */
@@ -960,7 +960,7 @@ class ManagedDevice extends Entity
 
     /**
     * Sets the ethernetMacAddress
-    * Ethernet MAC. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity. Individual get call with select query options is needed to retrieve actual values. Example: deviceManagement/managedDevices({managedDeviceId})?$select=ethernetMacAddress Supports: $select. $Search is not supported. Read-only. This property is read-only.
+    * Indicates Ethernet MAC Address of the device. Default, is Null (Non-Default property) for this property when returned as part of managedDevice entity. Individual get call with select query options is needed to retrieve actual values. Example: deviceManagement/managedDevices({managedDeviceId})?$select=ethernetMacAddress Supports: $select. $Search is not supported. Read-only. This property is read-only.
     *
     * @param string $val The ethernetMacAddress
     *
@@ -2144,7 +2144,7 @@ class ManagedDevice extends Entity
 
     /**
     * Gets the skuNumber
-    * Device sku number, see also: https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo. Valid values 0 to 2147483647. This property is read-only.
+    * Device sku number, see also: https://learn.microsoft.com/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo. Valid values 0 to 2147483647. This property is read-only.
     *
     * @return int|null The skuNumber
     */
@@ -2159,7 +2159,7 @@ class ManagedDevice extends Entity
 
     /**
     * Sets the skuNumber
-    * Device sku number, see also: https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo. Valid values 0 to 2147483647. This property is read-only.
+    * Device sku number, see also: https://learn.microsoft.com/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo. Valid values 0 to 2147483647. This property is read-only.
     *
     * @param int $val The skuNumber
     *
@@ -2701,6 +2701,36 @@ class ManagedDevice extends Entity
     public function setDeviceCategory($val)
     {
         $this->_propDict["deviceCategory"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the deviceHealthScriptStates
+    * Results of device health scripts that ran for this device. Default is empty list. This property is read-only.
+     *
+     * @return array|null The deviceHealthScriptStates
+     */
+    public function getDeviceHealthScriptStates()
+    {
+        if (array_key_exists("deviceHealthScriptStates", $this->_propDict)) {
+           return $this->_propDict["deviceHealthScriptStates"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the deviceHealthScriptStates
+    * Results of device health scripts that ran for this device. Default is empty list. This property is read-only.
+    *
+    * @param DeviceHealthScriptPolicyState[] $val The deviceHealthScriptStates
+    *
+    * @return ManagedDevice
+    */
+    public function setDeviceHealthScriptStates($val)
+    {
+        $this->_propDict["deviceHealthScriptStates"] = $val;
         return $this;
     }
 

@@ -33,4 +33,5 @@ class PlannerContainerType extends Enum
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
     const ROSTER = "roster";
     const PROJECT = "project";
+    const DRIVE_ITEM = "driveItem";
 }

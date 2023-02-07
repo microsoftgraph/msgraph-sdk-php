@@ -26,6 +26,7 @@ class AzureCommunicationServicesUserConversationMember extends ConversationMembe
 {
     /**
     * Gets the azureCommunicationServicesId
+    * Azure Communication Services ID of the user.
     *
     * @return string|null The azureCommunicationServicesId
     */
@@ -40,6 +41,7 @@ class AzureCommunicationServicesUserConversationMember extends ConversationMembe
 
     /**
     * Sets the azureCommunicationServicesId
+    * Azure Communication Services ID of the user.
     *
     * @param string $val The azureCommunicationServicesId
     *

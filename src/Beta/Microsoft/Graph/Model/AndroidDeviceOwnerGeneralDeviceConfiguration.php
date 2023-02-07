@@ -2032,6 +2032,64 @@ class AndroidDeviceOwnerGeneralDeviceConfiguration extends DeviceConfiguration
     }
 
     /**
+    * Gets the locateDeviceLostModeEnabled
+    * Indicates whether or not LocateDevice for devices with lost mode (COBO, COPE) is enabled.
+    *
+    * @return bool|null The locateDeviceLostModeEnabled
+    */
+    public function getLocateDeviceLostModeEnabled()
+    {
+        if (array_key_exists("locateDeviceLostModeEnabled", $this->_propDict)) {
+            return $this->_propDict["locateDeviceLostModeEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the locateDeviceLostModeEnabled
+    * Indicates whether or not LocateDevice for devices with lost mode (COBO, COPE) is enabled.
+    *
+    * @param bool $val The locateDeviceLostModeEnabled
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setLocateDeviceLostModeEnabled($val)
+    {
+        $this->_propDict["locateDeviceLostModeEnabled"] = boolval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the locateDeviceUserlessDisabled
+    * Indicates whether or not LocateDevice for userless (COSU) devices is disabled.
+    *
+    * @return bool|null The locateDeviceUserlessDisabled
+    */
+    public function getLocateDeviceUserlessDisabled()
+    {
+        if (array_key_exists("locateDeviceUserlessDisabled", $this->_propDict)) {
+            return $this->_propDict["locateDeviceUserlessDisabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the locateDeviceUserlessDisabled
+    * Indicates whether or not LocateDevice for userless (COSU) devices is disabled.
+    *
+    * @param bool $val The locateDeviceUserlessDisabled
+    *
+    * @return AndroidDeviceOwnerGeneralDeviceConfiguration
+    */
+    public function setLocateDeviceUserlessDisabled($val)
+    {
+        $this->_propDict["locateDeviceUserlessDisabled"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the microphoneForceMute
     * Indicates whether or not to block unmuting the microphone on the device.
     *

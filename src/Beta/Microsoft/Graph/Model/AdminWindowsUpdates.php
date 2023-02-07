@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Updates File
+* AdminWindowsUpdates File
 * PHP version 7
 *
 * @category  Library
@@ -11,10 +11,10 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\WindowsUpdates\Model;
+namespace Beta\Microsoft\Graph\Model;
 
 /**
-* Updates class
+* AdminWindowsUpdates class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,13 +22,13 @@ namespace Beta\Microsoft\Graph\WindowsUpdates\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Updates extends \Beta\Microsoft\Graph\Model\Entity
+class AdminWindowsUpdates extends Entity
 {
     /**
     * Gets the catalog
     * Catalog of content that can be approved for deployment by the deployment service. Read-only.
     *
-    * @return Catalog|null The catalog
+    * @return \Beta\Microsoft\Graph\WindowsUpdates\Model\Catalog|null The catalog
     */
     public function getCatalog()
     {
@@ -36,7 +36,7 @@ class Updates extends \Beta\Microsoft\Graph\Model\Entity
             if (is_a($this->_propDict["catalog"], "\Beta\Microsoft\Graph\WindowsUpdates\Model\Catalog") || is_null($this->_propDict["catalog"])) {
                 return $this->_propDict["catalog"];
             } else {
-                $this->_propDict["catalog"] = new Catalog($this->_propDict["catalog"]);
+                $this->_propDict["catalog"] = new \Beta\Microsoft\Graph\WindowsUpdates\Model\Catalog($this->_propDict["catalog"]);
                 return $this->_propDict["catalog"];
             }
         }
@@ -47,9 +47,9 @@ class Updates extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the catalog
     * Catalog of content that can be approved for deployment by the deployment service. Read-only.
     *
-    * @param Catalog $val The catalog
+    * @param \Beta\Microsoft\Graph\WindowsUpdates\Model\Catalog $val The catalog
     *
-    * @return Updates
+    * @return AdminWindowsUpdates
     */
     public function setCatalog($val)
     {
@@ -59,8 +59,38 @@ class Updates extends \Beta\Microsoft\Graph\Model\Entity
 
 
      /**
+     * Gets the deploymentAudiences
+    * The set of updatableAsset resources to which a deployment can apply.
+     *
+     * @return array|null The deploymentAudiences
+     */
+    public function getDeploymentAudiences()
+    {
+        if (array_key_exists("deploymentAudiences", $this->_propDict)) {
+           return $this->_propDict["deploymentAudiences"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the deploymentAudiences
+    * The set of updatableAsset resources to which a deployment can apply.
+    *
+    * @param \Beta\Microsoft\Graph\WindowsUpdates\Model\DeploymentAudience[] $val The deploymentAudiences
+    *
+    * @return AdminWindowsUpdates
+    */
+    public function setDeploymentAudiences($val)
+    {
+        $this->_propDict["deploymentAudiences"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the deployments
-    * Deployments created using the deployment service. Read-only.
+    * Deployments created using the deployment service.
      *
      * @return array|null The deployments
      */
@@ -75,11 +105,11 @@ class Updates extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the deployments
-    * Deployments created using the deployment service. Read-only.
+    * Deployments created using the deployment service.
     *
-    * @param Deployment[] $val The deployments
+    * @param \Beta\Microsoft\Graph\WindowsUpdates\Model\Deployment[] $val The deployments
     *
-    * @return Updates
+    * @return AdminWindowsUpdates
     */
     public function setDeployments($val)
     {
@@ -107,9 +137,9 @@ class Updates extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the resourceConnections
     * Service connections to external resources such as analytics workspaces.
     *
-    * @param ResourceConnection[] $val The resourceConnections
+    * @param \Beta\Microsoft\Graph\WindowsUpdates\Model\ResourceConnection[] $val The resourceConnections
     *
-    * @return Updates
+    * @return AdminWindowsUpdates
     */
     public function setResourceConnections($val)
     {
@@ -120,7 +150,7 @@ class Updates extends \Beta\Microsoft\Graph\Model\Entity
 
      /**
      * Gets the updatableAssets
-    * Assets registered with the deployment service that can receive updates. Read-only.
+    * Assets registered with the deployment service that can receive updates.
      *
      * @return array|null The updatableAssets
      */
@@ -135,15 +165,45 @@ class Updates extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the updatableAssets
-    * Assets registered with the deployment service that can receive updates. Read-only.
+    * Assets registered with the deployment service that can receive updates.
     *
-    * @param UpdatableAsset[] $val The updatableAssets
+    * @param \Beta\Microsoft\Graph\WindowsUpdates\Model\UpdatableAsset[] $val The updatableAssets
     *
-    * @return Updates
+    * @return AdminWindowsUpdates
     */
     public function setUpdatableAssets($val)
     {
         $this->_propDict["updatableAssets"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the updatePolicies
+    * A collection of policies for approving the deployment of different content to an audience over time.
+     *
+     * @return array|null The updatePolicies
+     */
+    public function getUpdatePolicies()
+    {
+        if (array_key_exists("updatePolicies", $this->_propDict)) {
+           return $this->_propDict["updatePolicies"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the updatePolicies
+    * A collection of policies for approving the deployment of different content to an audience over time.
+    *
+    * @param \Beta\Microsoft\Graph\WindowsUpdates\Model\UpdatePolicy[] $val The updatePolicies
+    *
+    * @return AdminWindowsUpdates
+    */
+    public function setUpdatePolicies($val)
+    {
+        $this->_propDict["updatePolicies"] = $val;
         return $this;
     }
 

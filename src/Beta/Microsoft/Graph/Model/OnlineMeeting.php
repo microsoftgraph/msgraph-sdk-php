@@ -116,6 +116,33 @@ class OnlineMeeting extends Entity
     }
 
     /**
+    * Gets the allowParticipantsToChangeName
+    *
+    * @return bool|null The allowParticipantsToChangeName
+    */
+    public function getAllowParticipantsToChangeName()
+    {
+        if (array_key_exists("allowParticipantsToChangeName", $this->_propDict)) {
+            return $this->_propDict["allowParticipantsToChangeName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the allowParticipantsToChangeName
+    *
+    * @param bool $val The allowParticipantsToChangeName
+    *
+    * @return OnlineMeeting
+    */
+    public function setAllowParticipantsToChangeName($val)
+    {
+        $this->_propDict["allowParticipantsToChangeName"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the allowTeamworkReactions
     * Indicates if Teams reactions are enabled for the meeting.
     *
@@ -765,6 +792,37 @@ class OnlineMeeting extends Entity
     public function setRecording($val)
     {
         $this->_propDict["recording"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the shareMeetingChatHistoryDefault
+    *
+    * @return MeetingChatHistoryDefaultMode|null The shareMeetingChatHistoryDefault
+    */
+    public function getShareMeetingChatHistoryDefault()
+    {
+        if (array_key_exists("shareMeetingChatHistoryDefault", $this->_propDict)) {
+            if (is_a($this->_propDict["shareMeetingChatHistoryDefault"], "\Beta\Microsoft\Graph\Model\MeetingChatHistoryDefaultMode") || is_null($this->_propDict["shareMeetingChatHistoryDefault"])) {
+                return $this->_propDict["shareMeetingChatHistoryDefault"];
+            } else {
+                $this->_propDict["shareMeetingChatHistoryDefault"] = new MeetingChatHistoryDefaultMode($this->_propDict["shareMeetingChatHistoryDefault"]);
+                return $this->_propDict["shareMeetingChatHistoryDefault"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the shareMeetingChatHistoryDefault
+    *
+    * @param MeetingChatHistoryDefaultMode $val The shareMeetingChatHistoryDefault
+    *
+    * @return OnlineMeeting
+    */
+    public function setShareMeetingChatHistoryDefault($val)
+    {
+        $this->_propDict["shareMeetingChatHistoryDefault"] = $val;
         return $this;
     }
 

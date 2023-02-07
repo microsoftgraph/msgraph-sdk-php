@@ -26,6 +26,7 @@ class ImpactedResource extends Entity
 {
     /**
     * Gets the addedDateTime
+    * The date and time when the impactedResource object was initially associated with the recommendation.
     *
     * @return \DateTime|null The addedDateTime
     */
@@ -44,6 +45,7 @@ class ImpactedResource extends Entity
 
     /**
     * Sets the addedDateTime
+    * The date and time when the impactedResource object was initially associated with the recommendation.
     *
     * @param \DateTime $val The addedDateTime
     *
@@ -58,6 +60,7 @@ class ImpactedResource extends Entity
 
      /**
      * Gets the additionalDetails
+    * Additional information unique to the impactedResource to help contextualize the recommendation.
      *
      * @return array|null The additionalDetails
      */
@@ -72,6 +75,7 @@ class ImpactedResource extends Entity
 
     /**
     * Sets the additionalDetails
+    * Additional information unique to the impactedResource to help contextualize the recommendation.
     *
     * @param KeyValue[] $val The additionalDetails
     *
@@ -85,6 +89,7 @@ class ImpactedResource extends Entity
 
     /**
     * Gets the apiUrl
+    * The URL link to the corresponding Azure AD resource.
     *
     * @return string|null The apiUrl
     */
@@ -99,6 +104,7 @@ class ImpactedResource extends Entity
 
     /**
     * Sets the apiUrl
+    * The URL link to the corresponding Azure AD resource.
     *
     * @param string $val The apiUrl
     *
@@ -112,6 +118,7 @@ class ImpactedResource extends Entity
 
     /**
     * Gets the displayName
+    * Friendly name of the Azure AD resource.
     *
     * @return string|null The displayName
     */
@@ -126,6 +133,7 @@ class ImpactedResource extends Entity
 
     /**
     * Sets the displayName
+    * Friendly name of the Azure AD resource.
     *
     * @param string $val The displayName
     *
@@ -139,6 +147,7 @@ class ImpactedResource extends Entity
 
     /**
     * Gets the lastModifiedBy
+    * Name of the user or service that last updated the status.
     *
     * @return string|null The lastModifiedBy
     */
@@ -153,6 +162,7 @@ class ImpactedResource extends Entity
 
     /**
     * Sets the lastModifiedBy
+    * Name of the user or service that last updated the status.
     *
     * @param string $val The lastModifiedBy
     *
@@ -166,6 +176,7 @@ class ImpactedResource extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * The date and time when the status was last updated.
     *
     * @return string|null The lastModifiedDateTime
     */
@@ -180,6 +191,7 @@ class ImpactedResource extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * The date and time when the status was last updated.
     *
     * @param string $val The lastModifiedDateTime
     *
@@ -193,6 +205,7 @@ class ImpactedResource extends Entity
 
     /**
     * Gets the owner
+    * The user responsible for maintaining the resource.
     *
     * @return string|null The owner
     */
@@ -207,6 +220,7 @@ class ImpactedResource extends Entity
 
     /**
     * Sets the owner
+    * The user responsible for maintaining the resource.
     *
     * @param string $val The owner
     *
@@ -220,6 +234,7 @@ class ImpactedResource extends Entity
 
     /**
     * Gets the portalUrl
+    * The URL link to the corresponding Azure AD portal page of the resource.
     *
     * @return string|null The portalUrl
     */
@@ -234,6 +249,7 @@ class ImpactedResource extends Entity
 
     /**
     * Sets the portalUrl
+    * The URL link to the corresponding Azure AD portal page of the resource.
     *
     * @param string $val The portalUrl
     *
@@ -247,6 +263,7 @@ class ImpactedResource extends Entity
 
     /**
     * Gets the postponeUntilDateTime
+    * The future date and time when the status of a postponed impactedResource will be active again.
     *
     * @return \DateTime|null The postponeUntilDateTime
     */
@@ -265,6 +282,7 @@ class ImpactedResource extends Entity
 
     /**
     * Sets the postponeUntilDateTime
+    * The future date and time when the status of a postponed impactedResource will be active again.
     *
     * @param \DateTime $val The postponeUntilDateTime
     *
@@ -278,6 +296,7 @@ class ImpactedResource extends Entity
 
     /**
     * Gets the rank
+    * Indicates the importance of the resource. A resource with a rank equal to 1 is of the highest importance.
     *
     * @return int|null The rank
     */
@@ -292,6 +311,7 @@ class ImpactedResource extends Entity
 
     /**
     * Sets the rank
+    * Indicates the importance of the resource. A resource with a rank equal to 1 is of the highest importance.
     *
     * @param int $val The rank
     *
@@ -305,6 +325,7 @@ class ImpactedResource extends Entity
 
     /**
     * Gets the recommendationId
+    * The unique identifier of the recommendation that the resource is associated with.
     *
     * @return string|null The recommendationId
     */
@@ -319,6 +340,7 @@ class ImpactedResource extends Entity
 
     /**
     * Sets the recommendationId
+    * The unique identifier of the recommendation that the resource is associated with.
     *
     * @param string $val The recommendationId
     *
@@ -332,6 +354,7 @@ class ImpactedResource extends Entity
 
     /**
     * Gets the resourceType
+    * Indicates the type of Azure AD resource. Examples include user, application.
     *
     * @return string|null The resourceType
     */
@@ -346,6 +369,7 @@ class ImpactedResource extends Entity
 
     /**
     * Sets the resourceType
+    * Indicates the type of Azure AD resource. Examples include user, application.
     *
     * @param string $val The resourceType
     *
@@ -359,6 +383,7 @@ class ImpactedResource extends Entity
 
     /**
     * Gets the status
+    * Indicates whether a resource needs to be addressed. The possible values are: active, completedBySystem, completedByUser, dismissed, postponed, unknownFutureValue. By default, a recommendation's status is set to active when the recommendation is first generated. Status is set to completedBySystem when our service detects that a resource which was once active no longer applies.
     *
     * @return RecommendationStatus|null The status
     */
@@ -377,6 +402,7 @@ class ImpactedResource extends Entity
 
     /**
     * Sets the status
+    * Indicates whether a resource needs to be addressed. The possible values are: active, completedBySystem, completedByUser, dismissed, postponed, unknownFutureValue. By default, a recommendation's status is set to active when the recommendation is first generated. Status is set to completedBySystem when our service detects that a resource which was once active no longer applies.
     *
     * @param RecommendationStatus $val The status
     *
@@ -390,6 +416,7 @@ class ImpactedResource extends Entity
 
     /**
     * Gets the subjectId
+    * The related unique identifier, depending on the resourceType. For example, this property is set to the applicationId if the resourceType is an application.
     *
     * @return string|null The subjectId
     */
@@ -404,6 +431,7 @@ class ImpactedResource extends Entity
 
     /**
     * Sets the subjectId
+    * The related unique identifier, depending on the resourceType. For example, this property is set to the applicationId if the resourceType is an application.
     *
     * @param string $val The subjectId
     *
