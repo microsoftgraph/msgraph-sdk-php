@@ -228,7 +228,7 @@ class ReportsRequestBuilder
     public function exportJobsById(string $id): DeviceManagementExportJobItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceManagementExportJob%2Did'] = $id;
-        return new DeviceManagementExportJobItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DeviceManagementExportJobItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

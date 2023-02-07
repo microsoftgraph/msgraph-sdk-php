@@ -138,7 +138,7 @@ class NotebookItemRequestBuilder
     public function sectionGroupsById(string $id): SectionGroupItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['sectionGroup%2Did'] = $id;
-        return new SectionGroupItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new SectionGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -149,7 +149,7 @@ class NotebookItemRequestBuilder
     public function sectionsById(string $id): OnenoteSectionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['onenoteSection%2Did'] = $id;
-        return new OnenoteSectionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new OnenoteSectionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

@@ -60,7 +60,7 @@ class TermsAndConditionsItemRequestBuilder
     public function acceptanceStatusesById(string $id): TermsAndConditionsAcceptanceStatusItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['termsAndConditionsAcceptanceStatus%2Did'] = $id;
-        return new TermsAndConditionsAcceptanceStatusItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new TermsAndConditionsAcceptanceStatusItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -71,7 +71,7 @@ class TermsAndConditionsItemRequestBuilder
     public function assignmentsById(string $id): TermsAndConditionsAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['termsAndConditionsAssignment%2Did'] = $id;
-        return new TermsAndConditionsAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new TermsAndConditionsAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

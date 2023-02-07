@@ -128,7 +128,7 @@ class ExternalConnectionItemRequestBuilder
     public function groupsById(string $id): ExternalGroupItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['externalGroup%2Did'] = $id;
-        return new ExternalGroupItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ExternalGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -139,7 +139,7 @@ class ExternalConnectionItemRequestBuilder
     public function itemsById(string $id): ExternalItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['externalItem%2Did'] = $id;
-        return new ExternalItemItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ExternalItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -150,7 +150,7 @@ class ExternalConnectionItemRequestBuilder
     public function operationsById(string $id): ConnectionOperationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['connectionOperation%2Did'] = $id;
-        return new ConnectionOperationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ConnectionOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

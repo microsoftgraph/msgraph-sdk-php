@@ -134,7 +134,7 @@ class DomainItemRequestBuilder
     public function domainNameReferencesById(string $id): DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -145,7 +145,7 @@ class DomainItemRequestBuilder
     public function federationConfigurationById(string $id): InternalDomainFederationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['internalDomainFederation%2Did'] = $id;
-        return new InternalDomainFederationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new InternalDomainFederationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -195,7 +195,7 @@ class DomainItemRequestBuilder
     public function serviceConfigurationRecordsById(string $id): \Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\Item\DomainDnsRecordItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['domainDnsRecord%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\Item\DomainDnsRecordItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\Item\DomainDnsRecordItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -276,7 +276,7 @@ class DomainItemRequestBuilder
     public function verificationDnsRecordsById(string $id): \Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\Item\DomainDnsRecordItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['domainDnsRecord%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\Item\DomainDnsRecordItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\Item\DomainDnsRecordItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

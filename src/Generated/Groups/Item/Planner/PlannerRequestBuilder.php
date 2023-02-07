@@ -121,7 +121,7 @@ class PlannerRequestBuilder
     public function plansById(string $id): PlannerPlanItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['plannerPlan%2Did'] = $id;
-        return new PlannerPlanItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new PlannerPlanItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

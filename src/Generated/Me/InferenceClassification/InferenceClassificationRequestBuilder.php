@@ -84,7 +84,7 @@ class InferenceClassificationRequestBuilder
     public function overridesById(string $id): InferenceClassificationOverrideItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['inferenceClassificationOverride%2Did'] = $id;
-        return new InferenceClassificationOverrideItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new InferenceClassificationOverrideItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

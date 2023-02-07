@@ -68,7 +68,7 @@ class TeamworkRequestBuilder
     public function associatedTeamsById(string $id): AssociatedTeamInfoItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['associatedTeamInfo%2Did'] = $id;
-        return new AssociatedTeamInfoItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AssociatedTeamInfoItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -130,7 +130,7 @@ class TeamworkRequestBuilder
     public function installedAppsById(string $id): UserScopeTeamsAppInstallationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['userScopeTeamsAppInstallation%2Did'] = $id;
-        return new UserScopeTeamsAppInstallationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new UserScopeTeamsAppInstallationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

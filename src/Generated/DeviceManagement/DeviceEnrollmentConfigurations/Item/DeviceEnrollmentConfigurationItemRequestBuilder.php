@@ -67,7 +67,7 @@ class DeviceEnrollmentConfigurationItemRequestBuilder
     public function assignmentsById(string $id): EnrollmentConfigurationAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['enrollmentConfigurationAssignment%2Did'] = $id;
-        return new EnrollmentConfigurationAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new EnrollmentConfigurationAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

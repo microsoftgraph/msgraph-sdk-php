@@ -68,7 +68,7 @@ class PrinterShareItemRequestBuilder
     public function allowedGroupsById(string $id): GroupItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['group%2Did'] = $id;
-        return new GroupItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new GroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -79,7 +79,7 @@ class PrinterShareItemRequestBuilder
     public function allowedUsersById(string $id): UserItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['user%2Did'] = $id;
-        return new UserItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new UserItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

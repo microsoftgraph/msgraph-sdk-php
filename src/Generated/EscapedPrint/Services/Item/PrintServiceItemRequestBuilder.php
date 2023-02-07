@@ -84,7 +84,7 @@ class PrintServiceItemRequestBuilder
     public function endpointsById(string $id): PrintServiceEndpointItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['printServiceEndpoint%2Did'] = $id;
-        return new PrintServiceEndpointItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new PrintServiceEndpointItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

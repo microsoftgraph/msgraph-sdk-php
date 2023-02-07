@@ -51,7 +51,7 @@ class ItemActivityStatItemRequestBuilder
     public function activitiesById(string $id): ItemActivityItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['itemActivity%2Did'] = $id;
-        return new ItemActivityItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ItemActivityItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

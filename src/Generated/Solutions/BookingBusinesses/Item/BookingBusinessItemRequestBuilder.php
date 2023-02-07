@@ -118,7 +118,7 @@ class BookingBusinessItemRequestBuilder
     public function appointmentsById(string $id): \Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Appointments\Item\BookingAppointmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['bookingAppointment%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Appointments\Item\BookingAppointmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Appointments\Item\BookingAppointmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -129,7 +129,7 @@ class BookingBusinessItemRequestBuilder
     public function calendarViewById(string $id): \Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CalendarView\Item\BookingAppointmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['bookingAppointment%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CalendarView\Item\BookingAppointmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CalendarView\Item\BookingAppointmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -155,7 +155,7 @@ class BookingBusinessItemRequestBuilder
     public function customersById(string $id): BookingCustomerBaseItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['bookingCustomerBase%2Did'] = $id;
-        return new BookingCustomerBaseItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new BookingCustomerBaseItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -166,7 +166,7 @@ class BookingBusinessItemRequestBuilder
     public function customQuestionsById(string $id): BookingCustomQuestionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['bookingCustomQuestion%2Did'] = $id;
-        return new BookingCustomQuestionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new BookingCustomQuestionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -232,7 +232,7 @@ class BookingBusinessItemRequestBuilder
     public function servicesById(string $id): BookingServiceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['bookingService%2Did'] = $id;
-        return new BookingServiceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new BookingServiceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -243,7 +243,7 @@ class BookingBusinessItemRequestBuilder
     public function staffMembersById(string $id): BookingStaffMemberBaseItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['bookingStaffMemberBase%2Did'] = $id;
-        return new BookingStaffMemberBaseItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new BookingStaffMemberBaseItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

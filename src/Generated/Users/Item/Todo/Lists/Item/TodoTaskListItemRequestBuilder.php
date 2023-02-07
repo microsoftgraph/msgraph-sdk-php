@@ -93,7 +93,7 @@ class TodoTaskListItemRequestBuilder
     public function extensionsById(string $id): ExtensionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['extension%2Did'] = $id;
-        return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -141,7 +141,7 @@ class TodoTaskListItemRequestBuilder
     public function tasksById(string $id): TodoTaskItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['todoTask%2Did'] = $id;
-        return new TodoTaskItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new TodoTaskItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

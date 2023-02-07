@@ -126,7 +126,7 @@ class ChatMessageItemRequestBuilder
     public function hostedContentsById(string $id): ChatMessageHostedContentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['chatMessageHostedContent%2Did'] = $id;
-        return new ChatMessageHostedContentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ChatMessageHostedContentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -156,7 +156,7 @@ class ChatMessageItemRequestBuilder
     public function repliesById(string $id): \Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\Messages\Item\Replies\Item\ChatMessageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['chatMessage%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\Messages\Item\Replies\Item\ChatMessageItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Groups\Item\Team\Channels\Item\Messages\Item\Replies\Item\ChatMessageItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

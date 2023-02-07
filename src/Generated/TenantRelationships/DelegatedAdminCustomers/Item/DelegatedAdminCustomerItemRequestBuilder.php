@@ -121,7 +121,7 @@ class DelegatedAdminCustomerItemRequestBuilder
     public function serviceManagementDetailsById(string $id): DelegatedAdminServiceManagementDetailItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['delegatedAdminServiceManagementDetail%2Did'] = $id;
-        return new DelegatedAdminServiceManagementDetailItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DelegatedAdminServiceManagementDetailItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

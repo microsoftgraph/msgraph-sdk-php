@@ -129,7 +129,7 @@ class WorkbookChartSeriesItemRequestBuilder
     public function pointsById(string $id): WorkbookChartPointItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['workbookChartPoint%2Did'] = $id;
-        return new WorkbookChartPointItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new WorkbookChartPointItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

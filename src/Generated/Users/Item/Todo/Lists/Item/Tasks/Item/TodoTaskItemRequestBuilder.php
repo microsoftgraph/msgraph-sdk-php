@@ -87,7 +87,7 @@ class TodoTaskItemRequestBuilder
     public function attachmentsById(string $id): AttachmentBaseItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['attachmentBase%2Did'] = $id;
-        return new AttachmentBaseItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AttachmentBaseItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -98,7 +98,7 @@ class TodoTaskItemRequestBuilder
     public function attachmentSessionsById(string $id): AttachmentSessionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['attachmentSession%2Did'] = $id;
-        return new AttachmentSessionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AttachmentSessionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -109,7 +109,7 @@ class TodoTaskItemRequestBuilder
     public function checklistItemsById(string $id): ChecklistItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['checklistItem%2Did'] = $id;
-        return new ChecklistItemItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ChecklistItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -153,7 +153,7 @@ class TodoTaskItemRequestBuilder
     public function extensionsById(string $id): ExtensionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['extension%2Did'] = $id;
-        return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -182,7 +182,7 @@ class TodoTaskItemRequestBuilder
     public function linkedResourcesById(string $id): LinkedResourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['linkedResource%2Did'] = $id;
-        return new LinkedResourceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new LinkedResourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

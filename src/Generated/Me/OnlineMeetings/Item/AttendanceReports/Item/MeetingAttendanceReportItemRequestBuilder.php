@@ -51,7 +51,7 @@ class MeetingAttendanceReportItemRequestBuilder
     public function attendanceRecordsById(string $id): AttendanceRecordItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['attendanceRecord%2Did'] = $id;
-        return new AttendanceRecordItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AttendanceRecordItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

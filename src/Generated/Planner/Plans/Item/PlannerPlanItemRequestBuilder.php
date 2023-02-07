@@ -68,7 +68,7 @@ class PlannerPlanItemRequestBuilder
     public function bucketsById(string $id): PlannerBucketItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['plannerBucket%2Did'] = $id;
-        return new PlannerBucketItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new PlannerBucketItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -149,7 +149,7 @@ class PlannerPlanItemRequestBuilder
     public function tasksById(string $id): PlannerTaskItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['plannerTask%2Did'] = $id;
-        return new PlannerTaskItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new PlannerTaskItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

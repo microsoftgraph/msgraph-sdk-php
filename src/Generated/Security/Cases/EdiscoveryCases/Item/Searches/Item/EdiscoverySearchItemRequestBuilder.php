@@ -99,7 +99,7 @@ class EdiscoverySearchItemRequestBuilder
     public function additionalSourcesById(string $id): \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\AdditionalSources\Item\DataSourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['dataSource%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\AdditionalSources\Item\DataSourceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\AdditionalSources\Item\DataSourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -125,7 +125,7 @@ class EdiscoverySearchItemRequestBuilder
     public function custodianSourcesById(string $id): \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\CustodianSources\Item\DataSourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['dataSource%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\CustodianSources\Item\DataSourceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\CustodianSources\Item\DataSourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -172,7 +172,7 @@ class EdiscoverySearchItemRequestBuilder
     public function noncustodialSourcesById(string $id): EdiscoveryNoncustodialDataSourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['ediscoveryNoncustodialDataSource%2Did'] = $id;
-        return new EdiscoveryNoncustodialDataSourceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new EdiscoveryNoncustodialDataSourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

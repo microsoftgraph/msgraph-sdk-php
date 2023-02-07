@@ -182,7 +182,7 @@ class TeamItemRequestBuilder
     public function allChannelsById(string $id): \Microsoft\Graph\Generated\Teams\Item\AllChannels\Item\ChannelItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['channel%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Teams\Item\AllChannels\Item\ChannelItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Teams\Item\AllChannels\Item\ChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -193,7 +193,7 @@ class TeamItemRequestBuilder
     public function channelsById(string $id): \Microsoft\Graph\Generated\Teams\Item\Channels\Item\ChannelItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['channel%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Teams\Item\Channels\Item\ChannelItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Teams\Item\Channels\Item\ChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -256,7 +256,7 @@ class TeamItemRequestBuilder
     public function incomingChannelsById(string $id): \Microsoft\Graph\Generated\Teams\Item\IncomingChannels\Item\ChannelItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['channel%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Teams\Item\IncomingChannels\Item\ChannelItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Teams\Item\IncomingChannels\Item\ChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -267,7 +267,7 @@ class TeamItemRequestBuilder
     public function installedAppsById(string $id): TeamsAppInstallationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['teamsAppInstallation%2Did'] = $id;
-        return new TeamsAppInstallationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new TeamsAppInstallationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -278,7 +278,7 @@ class TeamItemRequestBuilder
     public function membersById(string $id): ConversationMemberItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['conversationMember%2Did'] = $id;
-        return new ConversationMemberItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ConversationMemberItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -289,7 +289,7 @@ class TeamItemRequestBuilder
     public function operationsById(string $id): TeamsAsyncOperationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['teamsAsyncOperation%2Did'] = $id;
-        return new TeamsAsyncOperationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new TeamsAsyncOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -320,7 +320,7 @@ class TeamItemRequestBuilder
     public function tagsById(string $id): TeamworkTagItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['teamworkTag%2Did'] = $id;
-        return new TeamworkTagItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new TeamworkTagItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

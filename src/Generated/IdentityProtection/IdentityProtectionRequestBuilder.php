@@ -130,7 +130,7 @@ class IdentityProtectionRequestBuilder
     public function riskDetectionsById(string $id): RiskDetectionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['riskDetection%2Did'] = $id;
-        return new RiskDetectionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new RiskDetectionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -141,7 +141,7 @@ class IdentityProtectionRequestBuilder
     public function riskyServicePrincipalsById(string $id): RiskyServicePrincipalItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['riskyServicePrincipal%2Did'] = $id;
-        return new RiskyServicePrincipalItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new RiskyServicePrincipalItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -152,7 +152,7 @@ class IdentityProtectionRequestBuilder
     public function riskyUsersById(string $id): RiskyUserItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['riskyUser%2Did'] = $id;
-        return new RiskyUserItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new RiskyUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -163,7 +163,7 @@ class IdentityProtectionRequestBuilder
     public function servicePrincipalRiskDetectionsById(string $id): ServicePrincipalRiskDetectionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['servicePrincipalRiskDetection%2Did'] = $id;
-        return new ServicePrincipalRiskDetectionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ServicePrincipalRiskDetectionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

@@ -244,7 +244,7 @@ class ReportsRequestBuilder
     public function dailyPrintUsageByPrinterById(string $id): \Microsoft\Graph\Generated\Reports\DailyPrintUsageByPrinter\Item\PrintUsageByPrinterItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['printUsageByPrinter%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Reports\DailyPrintUsageByPrinter\Item\PrintUsageByPrinterItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Reports\DailyPrintUsageByPrinter\Item\PrintUsageByPrinterItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -255,7 +255,7 @@ class ReportsRequestBuilder
     public function dailyPrintUsageByUserById(string $id): \Microsoft\Graph\Generated\Reports\DailyPrintUsageByUser\Item\PrintUsageByUserItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['printUsageByUser%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Reports\DailyPrintUsageByUser\Item\PrintUsageByUserItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Reports\DailyPrintUsageByUser\Item\PrintUsageByUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -1094,7 +1094,7 @@ class ReportsRequestBuilder
     public function monthlyPrintUsageByPrinterById(string $id): \Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByPrinter\Item\PrintUsageByPrinterItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['printUsageByPrinter%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByPrinter\Item\PrintUsageByPrinterItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByPrinter\Item\PrintUsageByPrinterItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -1105,7 +1105,7 @@ class ReportsRequestBuilder
     public function monthlyPrintUsageByUserById(string $id): \Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByUser\Item\PrintUsageByUserItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['printUsageByUser%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByUser\Item\PrintUsageByUserItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByUser\Item\PrintUsageByUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

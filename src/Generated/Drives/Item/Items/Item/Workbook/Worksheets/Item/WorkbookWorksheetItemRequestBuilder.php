@@ -105,7 +105,7 @@ class WorkbookWorksheetItemRequestBuilder
     public function chartsById(string $id): WorkbookChartItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['workbookChart%2Did'] = $id;
-        return new WorkbookChartItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new WorkbookChartItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -195,7 +195,7 @@ class WorkbookWorksheetItemRequestBuilder
     public function namesById(string $id): WorkbookNamedItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['workbookNamedItem%2Did'] = $id;
-        return new WorkbookNamedItemItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new WorkbookNamedItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -225,7 +225,7 @@ class WorkbookWorksheetItemRequestBuilder
     public function pivotTablesById(string $id): WorkbookPivotTableItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['workbookPivotTable%2Did'] = $id;
-        return new WorkbookPivotTableItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new WorkbookPivotTableItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -236,7 +236,7 @@ class WorkbookWorksheetItemRequestBuilder
     public function tablesById(string $id): WorkbookTableItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['workbookTable%2Did'] = $id;
-        return new WorkbookTableItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new WorkbookTableItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

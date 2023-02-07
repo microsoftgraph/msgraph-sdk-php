@@ -111,7 +111,7 @@ class CrossTenantAccessPolicyRequestBuilder
     public function partnersById(string $id): CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['crossTenantAccessPolicyConfigurationPartner%2DtenantId'] = $id;
-        return new CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

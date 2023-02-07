@@ -121,7 +121,7 @@ class DeviceComplianceScheduledActionForRuleItemRequestBuilder
     public function scheduledActionConfigurationsById(string $id): DeviceComplianceActionItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceComplianceActionItem%2Did'] = $id;
-        return new DeviceComplianceActionItemItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DeviceComplianceActionItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

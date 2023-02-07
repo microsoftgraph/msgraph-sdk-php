@@ -121,7 +121,7 @@ class CallRecordItemRequestBuilder
     public function sessionsById(string $id): SessionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['session%2Did'] = $id;
-        return new SessionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new SessionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

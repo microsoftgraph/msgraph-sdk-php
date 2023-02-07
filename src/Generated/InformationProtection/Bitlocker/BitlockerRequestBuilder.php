@@ -84,7 +84,7 @@ class BitlockerRequestBuilder
     public function recoveryKeysById(string $id): BitlockerRecoveryKeyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['bitlockerRecoveryKey%2Did'] = $id;
-        return new BitlockerRecoveryKeyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new BitlockerRecoveryKeyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

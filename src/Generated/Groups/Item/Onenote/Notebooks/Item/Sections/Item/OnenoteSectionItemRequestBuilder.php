@@ -134,7 +134,7 @@ class OnenoteSectionItemRequestBuilder
     public function pagesById(string $id): OnenotePageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['onenotePage%2Did'] = $id;
-        return new OnenotePageItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new OnenotePageItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

@@ -51,7 +51,7 @@ class SharedWithChannelTeamInfoItemRequestBuilder
     public function allowedMembersById(string $id): ConversationMemberItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['conversationMember%2Did'] = $id;
-        return new ConversationMemberItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ConversationMemberItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

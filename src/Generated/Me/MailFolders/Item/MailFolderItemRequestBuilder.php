@@ -102,7 +102,7 @@ class MailFolderItemRequestBuilder
     public function childFoldersById(string $id): \Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\MailFolderItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['mailFolder%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\MailFolderItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\MailFolderItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -164,7 +164,7 @@ class MailFolderItemRequestBuilder
     public function messageRulesById(string $id): MessageRuleItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['messageRule%2Did'] = $id;
-        return new MessageRuleItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new MessageRuleItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -175,7 +175,7 @@ class MailFolderItemRequestBuilder
     public function messagesById(string $id): MessageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['message%2Did'] = $id;
-        return new MessageItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new MessageItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -186,7 +186,7 @@ class MailFolderItemRequestBuilder
     public function multiValueExtendedPropertiesById(string $id): MultiValueLegacyExtendedPropertyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['multiValueLegacyExtendedProperty%2Did'] = $id;
-        return new MultiValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new MultiValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -216,7 +216,7 @@ class MailFolderItemRequestBuilder
     public function singleValueExtendedPropertiesById(string $id): SingleValueLegacyExtendedPropertyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['singleValueLegacyExtendedProperty%2Did'] = $id;
-        return new SingleValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new SingleValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

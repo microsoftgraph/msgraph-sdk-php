@@ -102,7 +102,7 @@ class AccessReviewHistoryDefinitionItemRequestBuilder
     public function instancesById(string $id): AccessReviewHistoryInstanceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['accessReviewHistoryInstance%2Did'] = $id;
-        return new AccessReviewHistoryInstanceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AccessReviewHistoryInstanceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

@@ -112,7 +112,7 @@ class TermStoreRequestBuilder
     public function groupsById(string $id): GroupItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['group%2Did1'] = $id;
-        return new GroupItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new GroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -143,7 +143,7 @@ class TermStoreRequestBuilder
     public function setsById(string $id): SetItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['set%2Did'] = $id;
-        return new SetItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new SetItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

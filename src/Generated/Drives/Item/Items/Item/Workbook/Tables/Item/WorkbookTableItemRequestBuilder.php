@@ -132,7 +132,7 @@ class WorkbookTableItemRequestBuilder
     public function columnsById(string $id): WorkbookTableColumnItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['workbookTableColumn%2Did'] = $id;
-        return new WorkbookTableColumnItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new WorkbookTableColumnItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -213,7 +213,7 @@ class WorkbookTableItemRequestBuilder
     public function rowsById(string $id): WorkbookTableRowItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['workbookTableRow%2Did'] = $id;
-        return new WorkbookTableRowItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new WorkbookTableRowItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

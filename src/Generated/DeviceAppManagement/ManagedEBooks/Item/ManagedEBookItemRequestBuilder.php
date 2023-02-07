@@ -85,7 +85,7 @@ class ManagedEBookItemRequestBuilder
     public function assignmentsById(string $id): ManagedEBookAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedEBookAssignment%2Did'] = $id;
-        return new ManagedEBookAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ManagedEBookAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -129,7 +129,7 @@ class ManagedEBookItemRequestBuilder
     public function deviceStatesById(string $id): DeviceInstallStateItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceInstallState%2Did'] = $id;
-        return new DeviceInstallStateItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DeviceInstallStateItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -247,7 +247,7 @@ class ManagedEBookItemRequestBuilder
     public function userStateSummaryById(string $id): UserInstallStateSummaryItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['userInstallStateSummary%2Did'] = $id;
-        return new UserInstallStateSummaryItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new UserInstallStateSummaryItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

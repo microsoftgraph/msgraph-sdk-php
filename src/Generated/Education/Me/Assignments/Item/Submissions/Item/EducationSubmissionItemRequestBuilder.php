@@ -158,7 +158,7 @@ class EducationSubmissionItemRequestBuilder
     public function outcomesById(string $id): EducationOutcomeItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationOutcome%2Did'] = $id;
-        return new EducationOutcomeItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new EducationOutcomeItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -188,7 +188,7 @@ class EducationSubmissionItemRequestBuilder
     public function resourcesById(string $id): \Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Resources\Item\EducationSubmissionResourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationSubmissionResource%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Resources\Item\EducationSubmissionResourceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Resources\Item\EducationSubmissionResourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -199,7 +199,7 @@ class EducationSubmissionItemRequestBuilder
     public function submittedResourcesById(string $id): \Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\SubmittedResources\Item\EducationSubmissionResourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationSubmissionResource%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\SubmittedResources\Item\EducationSubmissionResourceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\SubmittedResources\Item\EducationSubmissionResourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

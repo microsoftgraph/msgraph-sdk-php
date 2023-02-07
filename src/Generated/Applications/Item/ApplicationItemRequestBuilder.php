@@ -234,7 +234,7 @@ class ApplicationItemRequestBuilder
     public function extensionPropertiesById(string $id): ExtensionPropertyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['extensionProperty%2Did'] = $id;
-        return new ExtensionPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ExtensionPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -245,7 +245,7 @@ class ApplicationItemRequestBuilder
     public function federatedIdentityCredentialsById(string $id): FederatedIdentityCredentialItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['federatedIdentityCredential%2Did'] = $id;
-        return new FederatedIdentityCredentialItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new FederatedIdentityCredentialItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -275,7 +275,7 @@ class ApplicationItemRequestBuilder
     public function homeRealmDiscoveryPoliciesById(string $id): HomeRealmDiscoveryPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['homeRealmDiscoveryPolicy%2Did'] = $id;
-        return new HomeRealmDiscoveryPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new HomeRealmDiscoveryPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -286,7 +286,7 @@ class ApplicationItemRequestBuilder
     public function ownersById(string $id): DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -363,7 +363,7 @@ class ApplicationItemRequestBuilder
     public function tokenIssuancePoliciesById(string $id): TokenIssuancePolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['tokenIssuancePolicy%2Did'] = $id;
-        return new TokenIssuancePolicyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new TokenIssuancePolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -374,7 +374,7 @@ class ApplicationItemRequestBuilder
     public function tokenLifetimePoliciesById(string $id): TokenLifetimePolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['tokenLifetimePolicy%2Did'] = $id;
-        return new TokenLifetimePolicyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new TokenLifetimePolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

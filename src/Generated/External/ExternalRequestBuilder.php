@@ -51,7 +51,7 @@ class ExternalRequestBuilder
     public function connectionsById(string $id): ExternalConnectionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['externalConnection%2Did'] = $id;
-        return new ExternalConnectionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ExternalConnectionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

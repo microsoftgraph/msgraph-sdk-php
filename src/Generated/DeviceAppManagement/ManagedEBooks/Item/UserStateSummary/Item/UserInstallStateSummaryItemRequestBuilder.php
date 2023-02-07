@@ -84,7 +84,7 @@ class UserInstallStateSummaryItemRequestBuilder
     public function deviceStatesById(string $id): DeviceInstallStateItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceInstallState%2Did'] = $id;
-        return new DeviceInstallStateItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DeviceInstallStateItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

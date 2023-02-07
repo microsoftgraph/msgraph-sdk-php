@@ -74,7 +74,7 @@ class AccessReviewStageItemRequestBuilder
     public function decisionsById(string $id): AccessReviewInstanceDecisionItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['accessReviewInstanceDecisionItem%2Did'] = $id;
-        return new AccessReviewInstanceDecisionItemItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AccessReviewInstanceDecisionItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

@@ -121,7 +121,7 @@ class ApprovalRequestBuilder
     public function stagesById(string $id): ApprovalStageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['approvalStage%2Did'] = $id;
-        return new ApprovalStageItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ApprovalStageItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

@@ -123,7 +123,7 @@ class ContentTypeItemRequestBuilder
     public function baseTypesById(string $id): \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\BaseTypes\Item\ContentTypeItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['contentType%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\BaseTypes\Item\ContentTypeItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\BaseTypes\Item\ContentTypeItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -134,7 +134,7 @@ class ContentTypeItemRequestBuilder
     public function columnLinksById(string $id): ColumnLinkItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnLink%2Did'] = $id;
-        return new ColumnLinkItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ColumnLinkItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -145,7 +145,7 @@ class ContentTypeItemRequestBuilder
     public function columnPositionsById(string $id): \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\ColumnPositions\Item\ColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnDefinition%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\ColumnPositions\Item\ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\ColumnPositions\Item\ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -156,7 +156,7 @@ class ContentTypeItemRequestBuilder
     public function columnsById(string $id): \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\Columns\Item\ColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnDefinition%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\Columns\Item\ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\Columns\Item\ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

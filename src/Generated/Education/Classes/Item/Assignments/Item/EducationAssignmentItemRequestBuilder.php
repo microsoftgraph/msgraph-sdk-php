@@ -101,7 +101,7 @@ class EducationAssignmentItemRequestBuilder
     public function categoriesById(string $id): EducationCategoryItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationCategory%2Did'] = $id;
-        return new EducationCategoryItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new EducationCategoryItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -182,7 +182,7 @@ class EducationAssignmentItemRequestBuilder
     public function resourcesById(string $id): EducationAssignmentResourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationAssignmentResource%2Did'] = $id;
-        return new EducationAssignmentResourceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new EducationAssignmentResourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -193,7 +193,7 @@ class EducationAssignmentItemRequestBuilder
     public function submissionsById(string $id): EducationSubmissionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationSubmission%2Did'] = $id;
-        return new EducationSubmissionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new EducationSubmissionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

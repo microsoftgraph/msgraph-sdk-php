@@ -84,7 +84,7 @@ class TargetedManagedAppConfigurationItemRequestBuilder
     public function appsById(string $id): ManagedMobileAppItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedMobileApp%2Did'] = $id;
-        return new ManagedMobileAppItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ManagedMobileAppItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -95,7 +95,7 @@ class TargetedManagedAppConfigurationItemRequestBuilder
     public function assignmentsById(string $id): TargetedManagedAppPolicyAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['targetedManagedAppPolicyAssignment%2Did'] = $id;
-        return new TargetedManagedAppPolicyAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new TargetedManagedAppPolicyAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

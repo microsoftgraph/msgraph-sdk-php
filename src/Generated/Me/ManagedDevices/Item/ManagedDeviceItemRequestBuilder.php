@@ -253,7 +253,7 @@ class ManagedDeviceItemRequestBuilder
     public function deviceCompliancePolicyStatesById(string $id): DeviceCompliancePolicyStateItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceCompliancePolicyState%2Did'] = $id;
-        return new DeviceCompliancePolicyStateItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DeviceCompliancePolicyStateItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -264,7 +264,7 @@ class ManagedDeviceItemRequestBuilder
     public function deviceConfigurationStatesById(string $id): DeviceConfigurationStateItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceConfigurationState%2Did'] = $id;
-        return new DeviceConfigurationStateItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DeviceConfigurationStateItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

@@ -58,7 +58,7 @@ class EdiscoveryReviewTagItemRequestBuilder
     public function childTagsById(string $id): \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\Item\ChildTags\Item\EdiscoveryReviewTagItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['ediscoveryReviewTag%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\Item\ChildTags\Item\EdiscoveryReviewTagItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\Item\ChildTags\Item\EdiscoveryReviewTagItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

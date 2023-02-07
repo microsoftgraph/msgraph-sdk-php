@@ -120,7 +120,7 @@ class ServiceAnnouncementRequestBuilder
     public function healthOverviewsById(string $id): ServiceHealthItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['serviceHealth%2Did'] = $id;
-        return new ServiceHealthItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ServiceHealthItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -131,7 +131,7 @@ class ServiceAnnouncementRequestBuilder
     public function issuesById(string $id): ServiceHealthIssueItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['serviceHealthIssue%2Did'] = $id;
-        return new ServiceHealthIssueItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ServiceHealthIssueItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -142,7 +142,7 @@ class ServiceAnnouncementRequestBuilder
     public function messagesById(string $id): ServiceUpdateMessageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['serviceUpdateMessage%2Did'] = $id;
-        return new ServiceUpdateMessageItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ServiceUpdateMessageItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

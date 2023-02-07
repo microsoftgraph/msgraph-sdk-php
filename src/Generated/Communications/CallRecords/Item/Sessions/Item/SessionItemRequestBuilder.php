@@ -121,7 +121,7 @@ class SessionItemRequestBuilder
     public function segmentsById(string $id): SegmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['segment%2Did'] = $id;
-        return new SegmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new SegmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

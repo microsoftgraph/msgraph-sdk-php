@@ -118,7 +118,7 @@ class AnalyticsRequestBuilder
     public function itemActivityStatsById(string $id): ItemActivityStatItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['itemActivityStat%2Did'] = $id;
-        return new ItemActivityStatItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ItemActivityStatItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

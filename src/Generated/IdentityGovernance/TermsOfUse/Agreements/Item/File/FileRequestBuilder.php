@@ -103,7 +103,7 @@ class FileRequestBuilder
     public function localizationsById(string $id): AgreementFileLocalizationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['agreementFileLocalization%2Did'] = $id;
-        return new AgreementFileLocalizationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AgreementFileLocalizationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

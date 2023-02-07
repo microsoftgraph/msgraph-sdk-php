@@ -102,7 +102,7 @@ class ExternalGroupItemRequestBuilder
     public function membersById(string $id): IdentityItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['identity%2Did'] = $id;
-        return new IdentityItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new IdentityItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

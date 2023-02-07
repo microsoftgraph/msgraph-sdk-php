@@ -132,7 +132,7 @@ class AccessReviewInstanceItemRequestBuilder
     public function contactedReviewersById(string $id): AccessReviewReviewerItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['accessReviewReviewer%2Did'] = $id;
-        return new AccessReviewReviewerItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AccessReviewReviewerItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -143,7 +143,7 @@ class AccessReviewInstanceItemRequestBuilder
     public function decisionsById(string $id): AccessReviewInstanceDecisionItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['accessReviewInstanceDecisionItem%2Did'] = $id;
-        return new AccessReviewInstanceDecisionItemItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AccessReviewInstanceDecisionItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -209,7 +209,7 @@ class AccessReviewInstanceItemRequestBuilder
     public function stagesById(string $id): AccessReviewStageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['accessReviewStage%2Did'] = $id;
-        return new AccessReviewStageItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AccessReviewStageItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

@@ -121,7 +121,7 @@ class WorkbookCommentItemRequestBuilder
     public function repliesById(string $id): WorkbookCommentReplyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['workbookCommentReply%2Did'] = $id;
-        return new WorkbookCommentReplyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new WorkbookCommentReplyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

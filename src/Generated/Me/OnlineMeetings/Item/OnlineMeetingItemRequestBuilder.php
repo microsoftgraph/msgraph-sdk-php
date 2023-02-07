@@ -59,7 +59,7 @@ class OnlineMeetingItemRequestBuilder
     public function attendanceReportsById(string $id): MeetingAttendanceReportItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['meetingAttendanceReport%2Did'] = $id;
-        return new MeetingAttendanceReportItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new MeetingAttendanceReportItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

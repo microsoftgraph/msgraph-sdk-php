@@ -84,7 +84,7 @@ class CasesRequestBuilder
     public function ediscoveryCasesById(string $id): EdiscoveryCaseItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['ediscoveryCase%2Did'] = $id;
-        return new EdiscoveryCaseItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new EdiscoveryCaseItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

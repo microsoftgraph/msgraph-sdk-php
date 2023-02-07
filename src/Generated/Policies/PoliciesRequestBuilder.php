@@ -180,7 +180,7 @@ class PoliciesRequestBuilder
     public function activityBasedTimeoutPoliciesById(string $id): ActivityBasedTimeoutPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['activityBasedTimeoutPolicy%2Did'] = $id;
-        return new ActivityBasedTimeoutPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ActivityBasedTimeoutPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -191,7 +191,7 @@ class PoliciesRequestBuilder
     public function claimsMappingPoliciesById(string $id): ClaimsMappingPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['claimsMappingPolicy%2Did'] = $id;
-        return new ClaimsMappingPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ClaimsMappingPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -202,7 +202,7 @@ class PoliciesRequestBuilder
     public function conditionalAccessPoliciesById(string $id): ConditionalAccessPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['conditionalAccessPolicy%2Did'] = $id;
-        return new ConditionalAccessPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ConditionalAccessPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -228,7 +228,7 @@ class PoliciesRequestBuilder
     public function featureRolloutPoliciesById(string $id): FeatureRolloutPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['featureRolloutPolicy%2Did'] = $id;
-        return new FeatureRolloutPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new FeatureRolloutPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -257,7 +257,7 @@ class PoliciesRequestBuilder
     public function homeRealmDiscoveryPoliciesById(string $id): HomeRealmDiscoveryPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['homeRealmDiscoveryPolicy%2Did'] = $id;
-        return new HomeRealmDiscoveryPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new HomeRealmDiscoveryPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -287,7 +287,7 @@ class PoliciesRequestBuilder
     public function permissionGrantPoliciesById(string $id): PermissionGrantPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['permissionGrantPolicy%2Did'] = $id;
-        return new PermissionGrantPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new PermissionGrantPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -298,7 +298,7 @@ class PoliciesRequestBuilder
     public function roleManagementPoliciesById(string $id): UnifiedRoleManagementPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedRoleManagementPolicy%2Did'] = $id;
-        return new UnifiedRoleManagementPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new UnifiedRoleManagementPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -309,7 +309,7 @@ class PoliciesRequestBuilder
     public function roleManagementPolicyAssignmentsById(string $id): UnifiedRoleManagementPolicyAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedRoleManagementPolicyAssignment%2Did'] = $id;
-        return new UnifiedRoleManagementPolicyAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new UnifiedRoleManagementPolicyAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -345,7 +345,7 @@ class PoliciesRequestBuilder
     public function tokenIssuancePoliciesById(string $id): TokenIssuancePolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['tokenIssuancePolicy%2Did'] = $id;
-        return new TokenIssuancePolicyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new TokenIssuancePolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -356,7 +356,7 @@ class PoliciesRequestBuilder
     public function tokenLifetimePoliciesById(string $id): TokenLifetimePolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['tokenLifetimePolicy%2Did'] = $id;
-        return new TokenLifetimePolicyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new TokenLifetimePolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

@@ -116,7 +116,7 @@ class OrganizationItemRequestBuilder
     public function certificateBasedAuthConfigurationById(string $id): CertificateBasedAuthConfigurationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['certificateBasedAuthConfiguration%2Did'] = $id;
-        return new CertificateBasedAuthConfigurationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new CertificateBasedAuthConfigurationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -160,7 +160,7 @@ class OrganizationItemRequestBuilder
     public function extensionsById(string $id): ExtensionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['extension%2Did'] = $id;
-        return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

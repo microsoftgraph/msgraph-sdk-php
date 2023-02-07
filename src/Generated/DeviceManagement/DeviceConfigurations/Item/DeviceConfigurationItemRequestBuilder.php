@@ -103,7 +103,7 @@ class DeviceConfigurationItemRequestBuilder
     public function assignmentsById(string $id): DeviceConfigurationAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceConfigurationAssignment%2Did'] = $id;
-        return new DeviceConfigurationAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DeviceConfigurationAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -147,7 +147,7 @@ class DeviceConfigurationItemRequestBuilder
     public function deviceSettingStateSummariesById(string $id): SettingStateDeviceSummaryItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['settingStateDeviceSummary%2Did'] = $id;
-        return new SettingStateDeviceSummaryItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new SettingStateDeviceSummaryItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -158,7 +158,7 @@ class DeviceConfigurationItemRequestBuilder
     public function deviceStatusesById(string $id): DeviceConfigurationDeviceStatusItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceConfigurationDeviceStatus%2Did'] = $id;
-        return new DeviceConfigurationDeviceStatusItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DeviceConfigurationDeviceStatusItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -285,7 +285,7 @@ class DeviceConfigurationItemRequestBuilder
     public function userStatusesById(string $id): DeviceConfigurationUserStatusItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceConfigurationUserStatus%2Did'] = $id;
-        return new DeviceConfigurationUserStatusItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DeviceConfigurationUserStatusItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

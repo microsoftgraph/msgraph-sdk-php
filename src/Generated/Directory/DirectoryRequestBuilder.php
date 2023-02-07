@@ -69,7 +69,7 @@ class DirectoryRequestBuilder
     public function administrativeUnitsById(string $id): AdministrativeUnitItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['administrativeUnit%2Did'] = $id;
-        return new AdministrativeUnitItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AdministrativeUnitItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -95,7 +95,7 @@ class DirectoryRequestBuilder
     public function deletedItemsById(string $id): DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -106,7 +106,7 @@ class DirectoryRequestBuilder
     public function federationConfigurationsById(string $id): IdentityProviderBaseItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['identityProviderBase%2Did'] = $id;
-        return new IdentityProviderBaseItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new IdentityProviderBaseItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

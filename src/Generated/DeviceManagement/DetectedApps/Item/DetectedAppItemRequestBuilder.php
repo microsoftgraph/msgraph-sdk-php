@@ -102,7 +102,7 @@ class DetectedAppItemRequestBuilder
     public function managedDevicesById(string $id): ManagedDeviceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedDevice%2Did'] = $id;
-        return new ManagedDeviceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ManagedDeviceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

@@ -145,7 +145,7 @@ class SectionGroupItemRequestBuilder
     public function sectionGroupsById(string $id): \Microsoft\Graph\Generated\Users\Item\Onenote\SectionGroups\Item\SectionGroups\Item\SectionGroupItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['sectionGroup%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\Users\Item\Onenote\SectionGroups\Item\SectionGroups\Item\SectionGroupItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Users\Item\Onenote\SectionGroups\Item\SectionGroups\Item\SectionGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -156,7 +156,7 @@ class SectionGroupItemRequestBuilder
     public function sectionsById(string $id): OnenoteSectionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['onenoteSection%2Did'] = $id;
-        return new OnenoteSectionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new OnenoteSectionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

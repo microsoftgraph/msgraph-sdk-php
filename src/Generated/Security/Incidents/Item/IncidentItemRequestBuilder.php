@@ -51,7 +51,7 @@ class IncidentItemRequestBuilder
     public function alertsById(string $id): AlertItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['alert%2Did'] = $id;
-        return new AlertItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AlertItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

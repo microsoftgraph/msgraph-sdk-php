@@ -108,7 +108,7 @@ class BrandingRequestBuilder
     public function localizationsById(string $id): OrganizationalBrandingLocalizationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['organizationalBrandingLocalization%2Did'] = $id;
-        return new OrganizationalBrandingLocalizationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new OrganizationalBrandingLocalizationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

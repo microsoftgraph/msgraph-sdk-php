@@ -67,7 +67,7 @@ class ManagedAppRegistrationItemRequestBuilder
     public function appliedPoliciesById(string $id): \Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\AppliedPolicies\Item\ManagedAppPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedAppPolicy%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\AppliedPolicies\Item\ManagedAppPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\AppliedPolicies\Item\ManagedAppPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -129,7 +129,7 @@ class ManagedAppRegistrationItemRequestBuilder
     public function intendedPoliciesById(string $id): \Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\IntendedPolicies\Item\ManagedAppPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedAppPolicy%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\IntendedPolicies\Item\ManagedAppPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Item\IntendedPolicies\Item\ManagedAppPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -140,7 +140,7 @@ class ManagedAppRegistrationItemRequestBuilder
     public function operationsById(string $id): ManagedAppOperationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedAppOperation%2Did'] = $id;
-        return new ManagedAppOperationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ManagedAppOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

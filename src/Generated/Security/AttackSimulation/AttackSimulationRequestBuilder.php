@@ -130,7 +130,7 @@ class AttackSimulationRequestBuilder
     public function simulationAutomationsById(string $id): SimulationAutomationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['simulationAutomation%2Did'] = $id;
-        return new SimulationAutomationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new SimulationAutomationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -141,7 +141,7 @@ class AttackSimulationRequestBuilder
     public function simulationsById(string $id): SimulationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['simulation%2Did'] = $id;
-        return new SimulationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new SimulationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

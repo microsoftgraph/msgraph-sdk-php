@@ -226,7 +226,7 @@ class WorkbookChartItemRequestBuilder
     public function seriesById(string $id): WorkbookChartSeriesItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['workbookChartSeries%2Did'] = $id;
-        return new WorkbookChartSeriesItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new WorkbookChartSeriesItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

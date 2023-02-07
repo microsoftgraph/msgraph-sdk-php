@@ -190,7 +190,7 @@ class CallItemRequestBuilder
     public function audioRoutingGroupsById(string $id): AudioRoutingGroupItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['audioRoutingGroup%2Did'] = $id;
-        return new AudioRoutingGroupItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AudioRoutingGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -216,7 +216,7 @@ class CallItemRequestBuilder
     public function contentSharingSessionsById(string $id): ContentSharingSessionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['contentSharingSession%2Did'] = $id;
-        return new ContentSharingSessionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ContentSharingSessionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -263,7 +263,7 @@ class CallItemRequestBuilder
     public function operationsById(string $id): CommsOperationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['commsOperation%2Did'] = $id;
-        return new CommsOperationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new CommsOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -274,7 +274,7 @@ class CallItemRequestBuilder
     public function participantsById(string $id): ParticipantItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['participant%2Did'] = $id;
-        return new ParticipantItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ParticipantItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

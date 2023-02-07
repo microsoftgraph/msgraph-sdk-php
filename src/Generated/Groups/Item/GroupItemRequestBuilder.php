@@ -380,7 +380,7 @@ class GroupItemRequestBuilder
     public function acceptedSendersById(string $id): \Microsoft\Graph\Generated\Groups\Item\AcceptedSenders\Item\DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\AcceptedSenders\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Groups\Item\AcceptedSenders\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -391,7 +391,7 @@ class GroupItemRequestBuilder
     public function appRoleAssignmentsById(string $id): AppRoleAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['appRoleAssignment%2Did'] = $id;
-        return new AppRoleAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AppRoleAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -402,7 +402,7 @@ class GroupItemRequestBuilder
     public function calendarViewById(string $id): \Microsoft\Graph\Generated\Groups\Item\CalendarView\Item\EventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['event%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\CalendarView\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Groups\Item\CalendarView\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -428,7 +428,7 @@ class GroupItemRequestBuilder
     public function conversationsById(string $id): ConversationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['conversation%2Did'] = $id;
-        return new ConversationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ConversationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -458,7 +458,7 @@ class GroupItemRequestBuilder
     public function drivesById(string $id): DriveItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['drive%2Did'] = $id;
-        return new DriveItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DriveItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -469,7 +469,7 @@ class GroupItemRequestBuilder
     public function eventsById(string $id): \Microsoft\Graph\Generated\Groups\Item\Events\Item\EventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['event%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\Events\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Groups\Item\Events\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -480,7 +480,7 @@ class GroupItemRequestBuilder
     public function extensionsById(string $id): ExtensionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['extension%2Did'] = $id;
-        return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -510,7 +510,7 @@ class GroupItemRequestBuilder
     public function groupLifecyclePoliciesById(string $id): GroupLifecyclePolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['groupLifecyclePolicy%2Did'] = $id;
-        return new GroupLifecyclePolicyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new GroupLifecyclePolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -521,7 +521,7 @@ class GroupItemRequestBuilder
     public function memberOfById(string $id): \Microsoft\Graph\Generated\Groups\Item\MemberOf\Item\DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\MemberOf\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Groups\Item\MemberOf\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -532,7 +532,7 @@ class GroupItemRequestBuilder
     public function membersById(string $id): \Microsoft\Graph\Generated\Groups\Item\Members\Item\DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\Members\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Groups\Item\Members\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -543,7 +543,7 @@ class GroupItemRequestBuilder
     public function membersWithLicenseErrorsById(string $id): \Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\Item\DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -554,7 +554,7 @@ class GroupItemRequestBuilder
     public function ownersById(string $id): \Microsoft\Graph\Generated\Groups\Item\Owners\Item\DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\Owners\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Groups\Item\Owners\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -585,7 +585,7 @@ class GroupItemRequestBuilder
     public function permissionGrantsById(string $id): ResourceSpecificPermissionGrantItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['resourceSpecificPermissionGrant%2Did'] = $id;
-        return new ResourceSpecificPermissionGrantItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ResourceSpecificPermissionGrantItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -596,7 +596,7 @@ class GroupItemRequestBuilder
     public function photosById(string $id): ProfilePhotoItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['profilePhoto%2Did'] = $id;
-        return new ProfilePhotoItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ProfilePhotoItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -607,7 +607,7 @@ class GroupItemRequestBuilder
     public function rejectedSendersById(string $id): \Microsoft\Graph\Generated\Groups\Item\RejectedSenders\Item\DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\RejectedSenders\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Groups\Item\RejectedSenders\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -618,7 +618,7 @@ class GroupItemRequestBuilder
     public function settingsById(string $id): GroupSettingItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['groupSetting%2Did'] = $id;
-        return new GroupSettingItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new GroupSettingItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -629,7 +629,7 @@ class GroupItemRequestBuilder
     public function sitesById(string $id): SiteItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['site%2Did'] = $id;
-        return new SiteItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new SiteItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -640,7 +640,7 @@ class GroupItemRequestBuilder
     public function threadsById(string $id): ConversationThreadItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['conversationThread%2Did'] = $id;
-        return new ConversationThreadItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ConversationThreadItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -721,7 +721,7 @@ class GroupItemRequestBuilder
     public function transitiveMemberOfById(string $id): \Microsoft\Graph\Generated\Groups\Item\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Groups\Item\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -732,7 +732,7 @@ class GroupItemRequestBuilder
     public function transitiveMembersById(string $id): \Microsoft\Graph\Generated\Groups\Item\TransitiveMembers\Item\DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\TransitiveMembers\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Groups\Item\TransitiveMembers\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

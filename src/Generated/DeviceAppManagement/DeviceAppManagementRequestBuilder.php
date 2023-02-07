@@ -176,7 +176,7 @@ class DeviceAppManagementRequestBuilder
     public function androidManagedAppProtectionsById(string $id): AndroidManagedAppProtectionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['androidManagedAppProtection%2Did'] = $id;
-        return new AndroidManagedAppProtectionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AndroidManagedAppProtectionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -202,7 +202,7 @@ class DeviceAppManagementRequestBuilder
     public function defaultManagedAppProtectionsById(string $id): DefaultManagedAppProtectionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['defaultManagedAppProtection%2Did'] = $id;
-        return new DefaultManagedAppProtectionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DefaultManagedAppProtectionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -231,7 +231,7 @@ class DeviceAppManagementRequestBuilder
     public function iosManagedAppProtectionsById(string $id): IosManagedAppProtectionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['iosManagedAppProtection%2Did'] = $id;
-        return new IosManagedAppProtectionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new IosManagedAppProtectionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -242,7 +242,7 @@ class DeviceAppManagementRequestBuilder
     public function managedAppPoliciesById(string $id): ManagedAppPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedAppPolicy%2Did'] = $id;
-        return new ManagedAppPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ManagedAppPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -253,7 +253,7 @@ class DeviceAppManagementRequestBuilder
     public function managedAppRegistrationsById(string $id): ManagedAppRegistrationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedAppRegistration%2Did'] = $id;
-        return new ManagedAppRegistrationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ManagedAppRegistrationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -264,7 +264,7 @@ class DeviceAppManagementRequestBuilder
     public function managedAppStatusesById(string $id): ManagedAppStatusItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedAppStatus%2Did'] = $id;
-        return new ManagedAppStatusItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ManagedAppStatusItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -275,7 +275,7 @@ class DeviceAppManagementRequestBuilder
     public function managedEBooksById(string $id): ManagedEBookItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedEBook%2Did'] = $id;
-        return new ManagedEBookItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ManagedEBookItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -286,7 +286,7 @@ class DeviceAppManagementRequestBuilder
     public function mdmWindowsInformationProtectionPoliciesById(string $id): MdmWindowsInformationProtectionPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['mdmWindowsInformationProtectionPolicy%2Did'] = $id;
-        return new MdmWindowsInformationProtectionPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new MdmWindowsInformationProtectionPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -297,7 +297,7 @@ class DeviceAppManagementRequestBuilder
     public function mobileAppCategoriesById(string $id): MobileAppCategoryItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['mobileAppCategory%2Did'] = $id;
-        return new MobileAppCategoryItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new MobileAppCategoryItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -308,7 +308,7 @@ class DeviceAppManagementRequestBuilder
     public function mobileAppConfigurationsById(string $id): ManagedDeviceMobileAppConfigurationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedDeviceMobileAppConfiguration%2Did'] = $id;
-        return new ManagedDeviceMobileAppConfigurationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ManagedDeviceMobileAppConfigurationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -319,7 +319,7 @@ class DeviceAppManagementRequestBuilder
     public function mobileAppsById(string $id): MobileAppItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['mobileApp%2Did'] = $id;
-        return new MobileAppItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new MobileAppItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -349,7 +349,7 @@ class DeviceAppManagementRequestBuilder
     public function targetedManagedAppConfigurationsById(string $id): TargetedManagedAppConfigurationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['targetedManagedAppConfiguration%2Did'] = $id;
-        return new TargetedManagedAppConfigurationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new TargetedManagedAppConfigurationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -409,7 +409,7 @@ class DeviceAppManagementRequestBuilder
     public function vppTokensById(string $id): VppTokenItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['vppToken%2Did'] = $id;
-        return new VppTokenItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new VppTokenItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -420,7 +420,7 @@ class DeviceAppManagementRequestBuilder
     public function windowsInformationProtectionPoliciesById(string $id): WindowsInformationProtectionPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['windowsInformationProtectionPolicy%2Did'] = $id;
-        return new WindowsInformationProtectionPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new WindowsInformationProtectionPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

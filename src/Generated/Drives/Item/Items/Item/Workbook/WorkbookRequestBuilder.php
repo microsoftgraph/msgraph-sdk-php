@@ -129,7 +129,7 @@ class WorkbookRequestBuilder
     public function commentsById(string $id): WorkbookCommentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['workbookComment%2Did'] = $id;
-        return new WorkbookCommentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new WorkbookCommentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -209,7 +209,7 @@ class WorkbookRequestBuilder
     public function namesById(string $id): WorkbookNamedItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['workbookNamedItem%2Did'] = $id;
-        return new WorkbookNamedItemItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new WorkbookNamedItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -220,7 +220,7 @@ class WorkbookRequestBuilder
     public function operationsById(string $id): WorkbookOperationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['workbookOperation%2Did'] = $id;
-        return new WorkbookOperationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new WorkbookOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -250,7 +250,7 @@ class WorkbookRequestBuilder
     public function tablesById(string $id): WorkbookTableItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['workbookTable%2Did'] = $id;
-        return new WorkbookTableItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new WorkbookTableItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -331,7 +331,7 @@ class WorkbookRequestBuilder
     public function worksheetsById(string $id): WorkbookWorksheetItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['workbookWorksheet%2Did'] = $id;
-        return new WorkbookWorksheetItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new WorkbookWorksheetItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

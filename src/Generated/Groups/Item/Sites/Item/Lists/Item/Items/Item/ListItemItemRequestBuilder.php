@@ -126,7 +126,7 @@ class ListItemItemRequestBuilder
     public function documentSetVersionsById(string $id): DocumentSetVersionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['documentSetVersion%2Did'] = $id;
-        return new DocumentSetVersionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DocumentSetVersionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -255,7 +255,7 @@ class ListItemItemRequestBuilder
     public function versionsById(string $id): ListItemVersionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['listItemVersion%2Did'] = $id;
-        return new ListItemVersionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ListItemVersionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

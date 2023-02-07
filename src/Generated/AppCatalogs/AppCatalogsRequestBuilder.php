@@ -103,7 +103,7 @@ class AppCatalogsRequestBuilder
     public function teamsAppsById(string $id): TeamsAppItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['teamsApp%2Did'] = $id;
-        return new TeamsAppItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new TeamsAppItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

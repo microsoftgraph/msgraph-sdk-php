@@ -102,7 +102,7 @@ class RiskyUserItemRequestBuilder
     public function historyById(string $id): RiskyUserHistoryItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['riskyUserHistoryItem%2Did'] = $id;
-        return new RiskyUserHistoryItemItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new RiskyUserHistoryItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

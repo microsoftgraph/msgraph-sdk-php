@@ -170,7 +170,7 @@ class PrimaryChannelRequestBuilder
     public function membersById(string $id): ConversationMemberItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['conversationMember%2Did'] = $id;
-        return new ConversationMemberItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ConversationMemberItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -181,7 +181,7 @@ class PrimaryChannelRequestBuilder
     public function messagesById(string $id): ChatMessageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['chatMessage%2Did'] = $id;
-        return new ChatMessageItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ChatMessageItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -211,7 +211,7 @@ class PrimaryChannelRequestBuilder
     public function sharedWithTeamsById(string $id): SharedWithChannelTeamInfoItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['sharedWithChannelTeamInfo%2Did'] = $id;
-        return new SharedWithChannelTeamInfoItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new SharedWithChannelTeamInfoItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -222,7 +222,7 @@ class PrimaryChannelRequestBuilder
     public function tabsById(string $id): TeamsTabItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['teamsTab%2Did'] = $id;
-        return new TeamsTabItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new TeamsTabItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

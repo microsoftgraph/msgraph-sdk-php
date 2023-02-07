@@ -103,7 +103,7 @@ class PrivacyRequestBuilder
     public function subjectRightsRequestsById(string $id): SubjectRightsRequestItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['subjectRightsRequest%2Did'] = $id;
-        return new SubjectRightsRequestItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new SubjectRightsRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

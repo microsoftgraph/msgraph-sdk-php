@@ -111,7 +111,7 @@ class InformationProtectionRequestBuilder
     public function threatAssessmentRequestsById(string $id): ThreatAssessmentRequestItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['threatAssessmentRequest%2Did'] = $id;
-        return new ThreatAssessmentRequestItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ThreatAssessmentRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

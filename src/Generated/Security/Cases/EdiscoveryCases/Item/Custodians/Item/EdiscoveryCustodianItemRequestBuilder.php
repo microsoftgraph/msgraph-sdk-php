@@ -187,7 +187,7 @@ class EdiscoveryCustodianItemRequestBuilder
     public function siteSourcesById(string $id): SiteSourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['siteSource%2Did'] = $id;
-        return new SiteSourceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new SiteSourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -268,7 +268,7 @@ class EdiscoveryCustodianItemRequestBuilder
     public function unifiedGroupSourcesById(string $id): UnifiedGroupSourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedGroupSource%2Did'] = $id;
-        return new UnifiedGroupSourceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new UnifiedGroupSourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -279,7 +279,7 @@ class EdiscoveryCustodianItemRequestBuilder
     public function userSourcesById(string $id): UserSourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['userSource%2Did'] = $id;
-        return new UserSourceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new UserSourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

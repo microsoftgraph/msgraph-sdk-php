@@ -172,7 +172,7 @@ class SiteItemRequestBuilder
     public function columnsById(string $id): \Microsoft\Graph\Generated\Sites\Item\Columns\Item\ColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnDefinition%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Sites\Item\Columns\Item\ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Sites\Item\Columns\Item\ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -198,7 +198,7 @@ class SiteItemRequestBuilder
     public function contentTypesById(string $id): ContentTypeItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['contentType%2Did'] = $id;
-        return new ContentTypeItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ContentTypeItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -209,7 +209,7 @@ class SiteItemRequestBuilder
     public function drivesById(string $id): DriveItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['drive%2Did'] = $id;
-        return new DriveItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DriveItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -220,7 +220,7 @@ class SiteItemRequestBuilder
     public function externalColumnsById(string $id): \Microsoft\Graph\Generated\Sites\Item\ExternalColumns\Item\ColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnDefinition%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Sites\Item\ExternalColumns\Item\ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Sites\Item\ExternalColumns\Item\ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -250,7 +250,7 @@ class SiteItemRequestBuilder
     public function itemsById(string $id): BaseItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['baseItem%2Did'] = $id;
-        return new BaseItemItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new BaseItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -261,7 +261,7 @@ class SiteItemRequestBuilder
     public function listsById(string $id): ListItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['list%2Did'] = $id;
-        return new ListItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ListItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -301,7 +301,7 @@ class SiteItemRequestBuilder
     public function operationsById(string $id): RichLongRunningOperationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['richLongRunningOperation%2Did'] = $id;
-        return new RichLongRunningOperationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new RichLongRunningOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -331,7 +331,7 @@ class SiteItemRequestBuilder
     public function permissionsById(string $id): PermissionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['permission%2Did'] = $id;
-        return new PermissionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new PermissionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -342,7 +342,7 @@ class SiteItemRequestBuilder
     public function sitesById(string $id): \Microsoft\Graph\Generated\Sites\Item\Sites\Item\SiteItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['site%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\Sites\Item\Sites\Item\SiteItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Sites\Item\Sites\Item\SiteItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -353,7 +353,7 @@ class SiteItemRequestBuilder
     public function termStoresById(string $id): StoreItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['store%2Did'] = $id;
-        return new StoreItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new StoreItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

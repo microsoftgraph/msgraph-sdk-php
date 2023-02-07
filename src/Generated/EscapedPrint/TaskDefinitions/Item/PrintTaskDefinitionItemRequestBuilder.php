@@ -121,7 +121,7 @@ class PrintTaskDefinitionItemRequestBuilder
     public function tasksById(string $id): PrintTaskItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['printTask%2Did'] = $id;
-        return new PrintTaskItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new PrintTaskItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

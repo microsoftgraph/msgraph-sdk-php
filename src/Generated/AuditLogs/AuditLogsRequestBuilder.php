@@ -84,7 +84,7 @@ class AuditLogsRequestBuilder
     public function directoryAuditsById(string $id): DirectoryAuditItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryAudit%2Did'] = $id;
-        return new DirectoryAuditItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DirectoryAuditItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -132,7 +132,7 @@ class AuditLogsRequestBuilder
     public function provisioningById(string $id): ProvisioningObjectSummaryItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['provisioningObjectSummary%2Did'] = $id;
-        return new ProvisioningObjectSummaryItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ProvisioningObjectSummaryItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -143,7 +143,7 @@ class AuditLogsRequestBuilder
     public function signInsById(string $id): SignInItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['signIn%2Did'] = $id;
-        return new SignInItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new SignInItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

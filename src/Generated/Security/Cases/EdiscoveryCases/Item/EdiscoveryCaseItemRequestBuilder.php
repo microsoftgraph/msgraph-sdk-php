@@ -135,7 +135,7 @@ class EdiscoveryCaseItemRequestBuilder
     public function custodiansById(string $id): EdiscoveryCustodianItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['ediscoveryCustodian%2Did'] = $id;
-        return new EdiscoveryCustodianItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new EdiscoveryCustodianItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -182,7 +182,7 @@ class EdiscoveryCaseItemRequestBuilder
     public function noncustodialDataSourcesById(string $id): EdiscoveryNoncustodialDataSourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['ediscoveryNoncustodialDataSource%2Did'] = $id;
-        return new EdiscoveryNoncustodialDataSourceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new EdiscoveryNoncustodialDataSourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -193,7 +193,7 @@ class EdiscoveryCaseItemRequestBuilder
     public function operationsById(string $id): CaseOperationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['caseOperation%2Did'] = $id;
-        return new CaseOperationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new CaseOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -223,7 +223,7 @@ class EdiscoveryCaseItemRequestBuilder
     public function reviewSetsById(string $id): EdiscoveryReviewSetItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['ediscoveryReviewSet%2Did'] = $id;
-        return new EdiscoveryReviewSetItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new EdiscoveryReviewSetItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -234,7 +234,7 @@ class EdiscoveryCaseItemRequestBuilder
     public function searchesById(string $id): EdiscoverySearchItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['ediscoverySearch%2Did'] = $id;
-        return new EdiscoverySearchItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new EdiscoverySearchItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -245,7 +245,7 @@ class EdiscoveryCaseItemRequestBuilder
     public function tagsById(string $id): EdiscoveryReviewTagItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['ediscoveryReviewTag%2Did'] = $id;
-        return new EdiscoveryReviewTagItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new EdiscoveryReviewTagItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

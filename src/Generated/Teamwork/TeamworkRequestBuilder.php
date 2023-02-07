@@ -160,7 +160,7 @@ class TeamworkRequestBuilder
     public function workforceIntegrationsById(string $id): WorkforceIntegrationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['workforceIntegration%2Did'] = $id;
-        return new WorkforceIntegrationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new WorkforceIntegrationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

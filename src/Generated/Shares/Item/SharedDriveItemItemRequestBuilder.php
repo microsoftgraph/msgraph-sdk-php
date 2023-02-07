@@ -151,7 +151,7 @@ class SharedDriveItemItemRequestBuilder
     public function itemsById(string $id): DriveItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['driveItem%2Did'] = $id;
-        return new DriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

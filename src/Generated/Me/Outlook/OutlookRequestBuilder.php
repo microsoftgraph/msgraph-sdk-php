@@ -101,7 +101,7 @@ class OutlookRequestBuilder
     public function masterCategoriesById(string $id): OutlookCategoryItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['outlookCategory%2Did'] = $id;
-        return new OutlookCategoryItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new OutlookCategoryItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

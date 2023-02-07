@@ -86,7 +86,7 @@ class IdentityRequestBuilder
     public function apiConnectorsById(string $id): IdentityApiConnectorItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['identityApiConnector%2Did'] = $id;
-        return new IdentityApiConnectorItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new IdentityApiConnectorItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -97,7 +97,7 @@ class IdentityRequestBuilder
     public function b2xUserFlowsById(string $id): B2xIdentityUserFlowItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['b2xIdentityUserFlow%2Did'] = $id;
-        return new B2xIdentityUserFlowItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new B2xIdentityUserFlowItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -141,7 +141,7 @@ class IdentityRequestBuilder
     public function identityProvidersById(string $id): IdentityProviderBaseItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['identityProviderBase%2Did'] = $id;
-        return new IdentityProviderBaseItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new IdentityProviderBaseItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -220,7 +220,7 @@ class IdentityRequestBuilder
     public function userFlowAttributesById(string $id): IdentityUserFlowAttributeItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['identityUserFlowAttribute%2Did'] = $id;
-        return new IdentityUserFlowAttributeItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new IdentityUserFlowAttributeItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

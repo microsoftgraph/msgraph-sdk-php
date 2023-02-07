@@ -77,7 +77,7 @@ class ContactFolderItemRequestBuilder
     public function childFoldersById(string $id): \Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\ChildFolders\Item\ContactFolderItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['contactFolder%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\ChildFolders\Item\ContactFolderItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\ChildFolders\Item\ContactFolderItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -103,7 +103,7 @@ class ContactFolderItemRequestBuilder
     public function contactsById(string $id): ContactItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['contact%2Did'] = $id;
-        return new ContactItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ContactItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -150,7 +150,7 @@ class ContactFolderItemRequestBuilder
     public function multiValueExtendedPropertiesById(string $id): MultiValueLegacyExtendedPropertyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['multiValueLegacyExtendedProperty%2Did'] = $id;
-        return new MultiValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new MultiValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -180,7 +180,7 @@ class ContactFolderItemRequestBuilder
     public function singleValueExtendedPropertiesById(string $id): SingleValueLegacyExtendedPropertyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['singleValueLegacyExtendedProperty%2Did'] = $id;
-        return new SingleValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new SingleValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

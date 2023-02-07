@@ -121,7 +121,7 @@ class ParentGroupRequestBuilder
     public function setsById(string $id): SetItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['set%2Did1'] = $id;
-        return new SetItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new SetItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

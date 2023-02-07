@@ -121,7 +121,7 @@ class RoleDefinitionItemRequestBuilder
     public function roleAssignmentsById(string $id): RoleAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['roleAssignment%2Did'] = $id;
-        return new RoleAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new RoleAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

@@ -184,7 +184,7 @@ class EntitlementManagementRequestBuilder
     public function roleAssignmentsById(string $id): UnifiedRoleAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedRoleAssignment%2Did'] = $id;
-        return new UnifiedRoleAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new UnifiedRoleAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -195,7 +195,7 @@ class EntitlementManagementRequestBuilder
     public function roleAssignmentScheduleInstancesById(string $id): UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedRoleAssignmentScheduleInstance%2Did'] = $id;
-        return new UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -206,7 +206,7 @@ class EntitlementManagementRequestBuilder
     public function roleAssignmentScheduleRequestsById(string $id): UnifiedRoleAssignmentScheduleRequestItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedRoleAssignmentScheduleRequest%2Did'] = $id;
-        return new UnifiedRoleAssignmentScheduleRequestItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new UnifiedRoleAssignmentScheduleRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -217,7 +217,7 @@ class EntitlementManagementRequestBuilder
     public function roleAssignmentSchedulesById(string $id): UnifiedRoleAssignmentScheduleItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedRoleAssignmentSchedule%2Did'] = $id;
-        return new UnifiedRoleAssignmentScheduleItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new UnifiedRoleAssignmentScheduleItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -228,7 +228,7 @@ class EntitlementManagementRequestBuilder
     public function roleDefinitionsById(string $id): UnifiedRoleDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedRoleDefinition%2Did'] = $id;
-        return new UnifiedRoleDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new UnifiedRoleDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -239,7 +239,7 @@ class EntitlementManagementRequestBuilder
     public function roleEligibilityScheduleInstancesById(string $id): UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedRoleEligibilityScheduleInstance%2Did'] = $id;
-        return new UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new UnifiedRoleEligibilityScheduleInstanceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -250,7 +250,7 @@ class EntitlementManagementRequestBuilder
     public function roleEligibilityScheduleRequestsById(string $id): UnifiedRoleEligibilityScheduleRequestItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedRoleEligibilityScheduleRequest%2Did'] = $id;
-        return new UnifiedRoleEligibilityScheduleRequestItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new UnifiedRoleEligibilityScheduleRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -261,7 +261,7 @@ class EntitlementManagementRequestBuilder
     public function roleEligibilitySchedulesById(string $id): UnifiedRoleEligibilityScheduleItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedRoleEligibilitySchedule%2Did'] = $id;
-        return new UnifiedRoleEligibilityScheduleItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new UnifiedRoleEligibilityScheduleItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

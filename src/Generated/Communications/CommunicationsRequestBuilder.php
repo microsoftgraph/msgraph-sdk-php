@@ -86,7 +86,7 @@ class CommunicationsRequestBuilder
     public function callRecordsById(string $id): CallRecordItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['callRecord%2Did'] = $id;
-        return new CallRecordItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new CallRecordItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -97,7 +97,7 @@ class CommunicationsRequestBuilder
     public function callsById(string $id): CallItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['call%2Did'] = $id;
-        return new CallItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new CallItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -141,7 +141,7 @@ class CommunicationsRequestBuilder
     public function onlineMeetingsById(string $id): OnlineMeetingItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['onlineMeeting%2Did'] = $id;
-        return new OnlineMeetingItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new OnlineMeetingItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -171,7 +171,7 @@ class CommunicationsRequestBuilder
     public function presencesById(string $id): PresenceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['presence%2Did'] = $id;
-        return new PresenceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new PresenceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

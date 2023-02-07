@@ -102,7 +102,7 @@ class TeamworkTagItemRequestBuilder
     public function membersById(string $id): TeamworkTagMemberItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['teamworkTagMember%2Did'] = $id;
-        return new TeamworkTagMemberItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new TeamworkTagMemberItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

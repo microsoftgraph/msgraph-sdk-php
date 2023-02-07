@@ -109,7 +109,7 @@ class SecurityRequestBuilder
     public function alerts_v2ById(string $id): \Microsoft\Graph\Generated\Security\Alerts_v2\Item\AlertItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['alert%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Security\Alerts_v2\Item\AlertItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Security\Alerts_v2\Item\AlertItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -120,7 +120,7 @@ class SecurityRequestBuilder
     public function alertsById(string $id): \Microsoft\Graph\Generated\Security\Alerts\Item\AlertItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['alert%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Security\Alerts\Item\AlertItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Security\Alerts\Item\AlertItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -164,7 +164,7 @@ class SecurityRequestBuilder
     public function incidentsById(string $id): IncidentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['incident%2Did'] = $id;
-        return new IncidentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new IncidentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -194,7 +194,7 @@ class SecurityRequestBuilder
     public function secureScoreControlProfilesById(string $id): SecureScoreControlProfileItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['secureScoreControlProfile%2Did'] = $id;
-        return new SecureScoreControlProfileItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new SecureScoreControlProfileItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -205,7 +205,7 @@ class SecurityRequestBuilder
     public function secureScoresById(string $id): SecureScoreItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['secureScore%2Did'] = $id;
-        return new SecureScoreItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new SecureScoreItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

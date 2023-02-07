@@ -129,7 +129,7 @@ class EdiscoveryReviewSetItemRequestBuilder
     public function queriesById(string $id): EdiscoveryReviewSetQueryItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['ediscoveryReviewSetQuery%2Did'] = $id;
-        return new EdiscoveryReviewSetQueryItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new EdiscoveryReviewSetQueryItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

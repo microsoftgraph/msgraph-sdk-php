@@ -75,7 +75,7 @@ class AccessReviewsRequestBuilder
     public function definitionsById(string $id): AccessReviewScheduleDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['accessReviewScheduleDefinition%2Did'] = $id;
-        return new AccessReviewScheduleDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AccessReviewScheduleDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -122,7 +122,7 @@ class AccessReviewsRequestBuilder
     public function historyDefinitionsById(string $id): AccessReviewHistoryDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['accessReviewHistoryDefinition%2Did'] = $id;
-        return new AccessReviewHistoryDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AccessReviewHistoryDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

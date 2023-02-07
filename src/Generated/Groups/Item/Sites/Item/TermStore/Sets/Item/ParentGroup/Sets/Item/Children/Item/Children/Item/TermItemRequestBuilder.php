@@ -129,7 +129,7 @@ class TermItemRequestBuilder
     public function relationsById(string $id): RelationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['relation%2Did'] = $id;
-        return new RelationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new RelationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

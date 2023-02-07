@@ -2,19 +2,17 @@
 
 namespace Microsoft\Graph\Generated\Models;
 
-use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-class ServiceAnnouncement extends Entity implements AdditionalDataHolder, Parsable 
+class ServiceAnnouncement extends Entity implements Parsable 
 {
     /**
      * Instantiates a new serviceAnnouncement and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->setAdditionalData([]);
     }
 
     /**
@@ -24,14 +22,6 @@ class ServiceAnnouncement extends Entity implements AdditionalDataHolder, Parsab
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): ServiceAnnouncement {
         return new ServiceAnnouncement();
-    }
-
-    /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return array<string, mixed>
-    */
-    public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -80,15 +70,6 @@ class ServiceAnnouncement extends Entity implements AdditionalDataHolder, Parsab
         $writer->writeCollectionOfObjectValues('healthOverviews', $this->getHealthOverviews());
         $writer->writeCollectionOfObjectValues('issues', $this->getIssues());
         $writer->writeCollectionOfObjectValues('messages', $this->getMessages());
-        $writer->writeAdditionalData($this->getAdditionalData());
-    }
-
-    /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param array<string,mixed> $value Value to set for the AdditionalData property.
-    */
-    public function setAdditionalData(?array $value): void {
-        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**

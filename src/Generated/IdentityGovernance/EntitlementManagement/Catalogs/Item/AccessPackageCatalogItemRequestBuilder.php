@@ -51,7 +51,7 @@ class AccessPackageCatalogItemRequestBuilder
     public function accessPackagesById(string $id): AccessPackageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['accessPackage%2Did'] = $id;
-        return new AccessPackageItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AccessPackageItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

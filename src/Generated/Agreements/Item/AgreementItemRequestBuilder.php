@@ -68,7 +68,7 @@ class AgreementItemRequestBuilder
     public function acceptancesById(string $id): AgreementAcceptanceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['agreementAcceptance%2Did'] = $id;
-        return new AgreementAcceptanceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AgreementAcceptanceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -112,7 +112,7 @@ class AgreementItemRequestBuilder
     public function filesById(string $id): AgreementFileLocalizationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['agreementFileLocalization%2Did'] = $id;
-        return new AgreementFileLocalizationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AgreementFileLocalizationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

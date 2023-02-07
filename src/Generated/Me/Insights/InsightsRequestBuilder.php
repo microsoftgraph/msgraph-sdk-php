@@ -139,7 +139,7 @@ class InsightsRequestBuilder
     public function sharedById(string $id): SharedInsightItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['sharedInsight%2Did'] = $id;
-        return new SharedInsightItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new SharedInsightItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -220,7 +220,7 @@ class InsightsRequestBuilder
     public function trendingById(string $id): TrendingItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['trending%2Did'] = $id;
-        return new TrendingItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new TrendingItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -231,7 +231,7 @@ class InsightsRequestBuilder
     public function usedById(string $id): UsedInsightItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['usedInsight%2Did'] = $id;
-        return new UsedInsightItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new UsedInsightItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

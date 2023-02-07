@@ -102,7 +102,7 @@ class ConversationItemRequestBuilder
     public function threadsById(string $id): ConversationThreadItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['conversationThread%2Did'] = $id;
-        return new ConversationThreadItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ConversationThreadItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

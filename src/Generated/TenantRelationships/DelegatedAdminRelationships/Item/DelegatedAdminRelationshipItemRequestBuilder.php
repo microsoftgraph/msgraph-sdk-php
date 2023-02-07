@@ -69,7 +69,7 @@ class DelegatedAdminRelationshipItemRequestBuilder
     public function accessAssignmentsById(string $id): DelegatedAdminAccessAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['delegatedAdminAccessAssignment%2Did'] = $id;
-        return new DelegatedAdminAccessAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DelegatedAdminAccessAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -131,7 +131,7 @@ class DelegatedAdminRelationshipItemRequestBuilder
     public function operationsById(string $id): DelegatedAdminRelationshipOperationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['delegatedAdminRelationshipOperation%2Did'] = $id;
-        return new DelegatedAdminRelationshipOperationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DelegatedAdminRelationshipOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -161,7 +161,7 @@ class DelegatedAdminRelationshipItemRequestBuilder
     public function requestsById(string $id): DelegatedAdminRelationshipRequestItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['delegatedAdminRelationshipRequest%2Did'] = $id;
-        return new DelegatedAdminRelationshipRequestItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DelegatedAdminRelationshipRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

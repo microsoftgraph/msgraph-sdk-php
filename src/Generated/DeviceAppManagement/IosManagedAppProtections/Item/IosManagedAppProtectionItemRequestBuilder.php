@@ -59,7 +59,7 @@ class IosManagedAppProtectionItemRequestBuilder
     public function appsById(string $id): ManagedMobileAppItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedMobileApp%2Did'] = $id;
-        return new ManagedMobileAppItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ManagedMobileAppItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

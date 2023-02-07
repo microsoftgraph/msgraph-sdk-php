@@ -118,7 +118,7 @@ class ChatMessageItemRequestBuilder
     public function hostedContentsById(string $id): ChatMessageHostedContentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['chatMessageHostedContent%2Did'] = $id;
-        return new ChatMessageHostedContentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ChatMessageHostedContentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

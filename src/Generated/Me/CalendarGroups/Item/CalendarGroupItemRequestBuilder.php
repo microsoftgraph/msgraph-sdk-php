@@ -51,7 +51,7 @@ class CalendarGroupItemRequestBuilder
     public function calendarsById(string $id): CalendarItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['calendar%2Did'] = $id;
-        return new CalendarItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new CalendarItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

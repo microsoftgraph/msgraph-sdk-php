@@ -102,7 +102,7 @@ class TodoRequestBuilder
     public function listsById(string $id): TodoTaskListItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['todoTaskList%2Did'] = $id;
-        return new TodoTaskListItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new TodoTaskListItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

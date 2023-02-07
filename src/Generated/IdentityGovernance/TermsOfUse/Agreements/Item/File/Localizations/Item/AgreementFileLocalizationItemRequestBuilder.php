@@ -191,7 +191,7 @@ class AgreementFileLocalizationItemRequestBuilder
     public function versionsById(string $id): AgreementFileVersionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['agreementFileVersion%2Did'] = $id;
-        return new AgreementFileVersionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AgreementFileVersionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

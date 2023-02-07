@@ -102,7 +102,7 @@ class UserActivityItemRequestBuilder
     public function historyItemsById(string $id): ActivityHistoryItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['activityHistoryItem%2Did'] = $id;
-        return new ActivityHistoryItemItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ActivityHistoryItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

@@ -75,7 +75,7 @@ class SetItemRequestBuilder
     public function childrenById(string $id): \Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\Sets\Item\Children\Item\TermItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['term%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\Sets\Item\Children\Item\TermItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\Sets\Item\Children\Item\TermItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -156,7 +156,7 @@ class SetItemRequestBuilder
     public function relationsById(string $id): RelationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['relation%2Did'] = $id;
-        return new RelationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new RelationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -167,7 +167,7 @@ class SetItemRequestBuilder
     public function termsById(string $id): \Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\Sets\Item\Terms\Item\TermItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['term%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\Sets\Item\Terms\Item\TermItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new \Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\Sets\Item\Terms\Item\TermItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

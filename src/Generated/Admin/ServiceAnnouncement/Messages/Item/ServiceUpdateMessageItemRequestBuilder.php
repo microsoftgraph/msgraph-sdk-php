@@ -59,7 +59,7 @@ class ServiceUpdateMessageItemRequestBuilder
     public function attachmentsById(string $id): ServiceAnnouncementAttachmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['serviceAnnouncementAttachment%2Did'] = $id;
-        return new ServiceAnnouncementAttachmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ServiceAnnouncementAttachmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

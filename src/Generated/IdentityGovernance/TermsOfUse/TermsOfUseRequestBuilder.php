@@ -60,7 +60,7 @@ class TermsOfUseRequestBuilder
     public function agreementAcceptancesById(string $id): AgreementAcceptanceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['agreementAcceptance%2Did'] = $id;
-        return new AgreementAcceptanceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AgreementAcceptanceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -71,7 +71,7 @@ class TermsOfUseRequestBuilder
     public function agreementsById(string $id): AgreementItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['agreement%2Did'] = $id;
-        return new AgreementItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AgreementItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

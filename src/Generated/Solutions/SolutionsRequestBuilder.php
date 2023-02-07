@@ -60,7 +60,7 @@ class SolutionsRequestBuilder
     public function bookingBusinessesById(string $id): BookingBusinessItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['bookingBusiness%2Did'] = $id;
-        return new BookingBusinessItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new BookingBusinessItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -71,7 +71,7 @@ class SolutionsRequestBuilder
     public function bookingCurrenciesById(string $id): BookingCurrencyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['bookingCurrency%2Did'] = $id;
-        return new BookingCurrencyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new BookingCurrencyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

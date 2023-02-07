@@ -84,7 +84,7 @@ class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder
     public function deviceComplianceSettingStatesById(string $id): DeviceComplianceSettingStateItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceComplianceSettingState%2Did'] = $id;
-        return new DeviceComplianceSettingStateItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DeviceComplianceSettingStateItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

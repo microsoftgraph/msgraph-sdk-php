@@ -75,7 +75,7 @@ class TenantRelationshipsRequestBuilder
     public function delegatedAdminCustomersById(string $id): DelegatedAdminCustomerItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['delegatedAdminCustomer%2Did'] = $id;
-        return new DelegatedAdminCustomerItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DelegatedAdminCustomerItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -86,7 +86,7 @@ class TenantRelationshipsRequestBuilder
     public function delegatedAdminRelationshipsById(string $id): DelegatedAdminRelationshipItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['delegatedAdminRelationship%2Did'] = $id;
-        return new DelegatedAdminRelationshipItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new DelegatedAdminRelationshipItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

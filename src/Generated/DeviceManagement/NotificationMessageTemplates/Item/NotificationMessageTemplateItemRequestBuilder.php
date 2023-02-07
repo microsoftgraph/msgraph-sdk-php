@@ -110,7 +110,7 @@ class NotificationMessageTemplateItemRequestBuilder
     public function localizedNotificationMessagesById(string $id): LocalizedNotificationMessageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['localizedNotificationMessage%2Did'] = $id;
-        return new LocalizedNotificationMessageItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new LocalizedNotificationMessageItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

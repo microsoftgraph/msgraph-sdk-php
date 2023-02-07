@@ -84,7 +84,7 @@ class MobileAppItemRequestBuilder
     public function assignmentsById(string $id): MobileAppAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['mobileAppAssignment%2Did'] = $id;
-        return new MobileAppAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new MobileAppAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -95,7 +95,7 @@ class MobileAppItemRequestBuilder
     public function categoriesById(string $id): MobileAppCategoryItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['mobileAppCategory%2Did'] = $id;
-        return new MobileAppCategoryItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new MobileAppCategoryItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

@@ -126,7 +126,7 @@ class SubjectRightsRequestItemRequestBuilder
     public function notesById(string $id): AuthoredNoteItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['authoredNote%2Did'] = $id;
-        return new AuthoredNoteItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AuthoredNoteItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

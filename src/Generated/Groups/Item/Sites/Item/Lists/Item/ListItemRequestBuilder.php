@@ -95,7 +95,7 @@ class ListItemRequestBuilder
     public function columnsById(string $id): ColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnDefinition%2Did'] = $id;
-        return new ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -121,7 +121,7 @@ class ListItemRequestBuilder
     public function contentTypesById(string $id): ContentTypeItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['contentType%2Did'] = $id;
-        return new ContentTypeItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ContentTypeItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -168,7 +168,7 @@ class ListItemRequestBuilder
     public function itemsById(string $id): ListItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['listItem%2Did'] = $id;
-        return new ListItemItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ListItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -179,7 +179,7 @@ class ListItemRequestBuilder
     public function operationsById(string $id): RichLongRunningOperationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['richLongRunningOperation%2Did'] = $id;
-        return new RichLongRunningOperationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new RichLongRunningOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -209,7 +209,7 @@ class ListItemRequestBuilder
     public function subscriptionsById(string $id): SubscriptionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['subscription%2Did'] = $id;
-        return new SubscriptionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new SubscriptionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

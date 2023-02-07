@@ -110,7 +110,7 @@ class AccessReviewScheduleDefinitionItemRequestBuilder
     public function instancesById(string $id): AccessReviewInstanceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['accessReviewInstance%2Did'] = $id;
-        return new AccessReviewInstanceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AccessReviewInstanceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

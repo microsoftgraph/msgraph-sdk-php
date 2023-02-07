@@ -121,7 +121,7 @@ class SimulationAutomationItemRequestBuilder
     public function runsById(string $id): SimulationAutomationRunItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['simulationAutomationRun%2Did'] = $id;
-        return new SimulationAutomationRunItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new SimulationAutomationRunItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

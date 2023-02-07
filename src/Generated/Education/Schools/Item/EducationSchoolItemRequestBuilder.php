@@ -68,7 +68,7 @@ class EducationSchoolItemRequestBuilder
     public function classesById(string $id): EducationClassItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationClass%2Did'] = $id;
-        return new EducationClassItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new EducationClassItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -219,7 +219,7 @@ class EducationSchoolItemRequestBuilder
     public function usersById(string $id): EducationUserItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationUser%2Did'] = $id;
-        return new EducationUserItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new EducationUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

@@ -51,7 +51,7 @@ class AuthenticationMethodsPolicyRequestBuilder
     public function authenticationMethodConfigurationsById(string $id): AuthenticationMethodConfigurationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['authenticationMethodConfiguration%2Did'] = $id;
-        return new AuthenticationMethodConfigurationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AuthenticationMethodConfigurationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

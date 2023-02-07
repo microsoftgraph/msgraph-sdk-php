@@ -51,7 +51,7 @@ class AppConsentRequestBuilder
     public function appConsentRequestsById(string $id): AppConsentRequestItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['appConsentRequest%2Did'] = $id;
-        return new AppConsentRequestItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new AppConsentRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

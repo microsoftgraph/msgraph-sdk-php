@@ -93,7 +93,7 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder
     public function assignmentsById(string $id): ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedDeviceMobileAppConfigurationAssignment%2Did'] = $id;
-        return new ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -137,7 +137,7 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder
     public function deviceStatusesById(string $id): ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedDeviceMobileAppConfigurationDeviceStatus%2Did'] = $id;
-        return new ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -255,7 +255,7 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder
     public function userStatusesById(string $id): ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedDeviceMobileAppConfigurationUserStatus%2Did'] = $id;
-        return new ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

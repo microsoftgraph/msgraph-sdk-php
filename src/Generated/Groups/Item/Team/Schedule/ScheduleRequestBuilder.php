@@ -183,7 +183,7 @@ class ScheduleRequestBuilder
     public function offerShiftRequestsById(string $id): OfferShiftRequestItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['offerShiftRequest%2Did'] = $id;
-        return new OfferShiftRequestItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new OfferShiftRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -194,7 +194,7 @@ class ScheduleRequestBuilder
     public function openShiftChangeRequestsById(string $id): OpenShiftChangeRequestItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['openShiftChangeRequest%2Did'] = $id;
-        return new OpenShiftChangeRequestItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new OpenShiftChangeRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -205,7 +205,7 @@ class ScheduleRequestBuilder
     public function openShiftsById(string $id): OpenShiftItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['openShift%2Did'] = $id;
-        return new OpenShiftItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new OpenShiftItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -235,7 +235,7 @@ class ScheduleRequestBuilder
     public function schedulingGroupsById(string $id): SchedulingGroupItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['schedulingGroup%2Did'] = $id;
-        return new SchedulingGroupItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new SchedulingGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -246,7 +246,7 @@ class ScheduleRequestBuilder
     public function shiftsById(string $id): ShiftItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['shift%2Did'] = $id;
-        return new ShiftItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ShiftItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -257,7 +257,7 @@ class ScheduleRequestBuilder
     public function swapShiftsChangeRequestsById(string $id): SwapShiftsChangeRequestItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['swapShiftsChangeRequest%2Did'] = $id;
-        return new SwapShiftsChangeRequestItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new SwapShiftsChangeRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -268,7 +268,7 @@ class ScheduleRequestBuilder
     public function timeOffReasonsById(string $id): TimeOffReasonItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['timeOffReason%2Did'] = $id;
-        return new TimeOffReasonItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new TimeOffReasonItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -279,7 +279,7 @@ class ScheduleRequestBuilder
     public function timeOffRequestsById(string $id): TimeOffRequestItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['timeOffRequest%2Did'] = $id;
-        return new TimeOffRequestItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new TimeOffRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -290,7 +290,7 @@ class ScheduleRequestBuilder
     public function timesOffById(string $id): TimeOffItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['timeOff%2Did'] = $id;
-        return new TimeOffItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new TimeOffItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

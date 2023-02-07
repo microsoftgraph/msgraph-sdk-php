@@ -102,7 +102,7 @@ class ServiceHealthItemRequestBuilder
     public function issuesById(string $id): ServiceHealthIssueItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['serviceHealthIssue%2Did'] = $id;
-        return new ServiceHealthIssueItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
+        return new ServiceHealthIssueItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
