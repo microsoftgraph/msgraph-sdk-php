@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* OverrideOption File
+* DelegatedAdminRelationshipRequestAction File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* OverrideOption class
+* DelegatedAdminRelationshipRequestAction class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,13 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class OverrideOption extends Enum
+class DelegatedAdminRelationshipRequestAction extends Enum
 {
     /**
-    * The Enum OverrideOption
+    * The Enum DelegatedAdminRelationshipRequestAction
     */
-    const NOT_ALLOWED = "notAllowed";
-    const ALLOW_FALSE_POSITIVE_OVERRIDE = "allowFalsePositiveOverride";
-    const ALLOW_WITH_JUSTIFICATION = "allowWithJustification";
-    const ALLOW_WITHOUT_JUSTIFICATION = "allowWithoutJustification";
+    const LOCK_FOR_APPROVAL = "lockForApproval";
+    const APPROVE = "approve";
+    const TERMINATE = "terminate";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

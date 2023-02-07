@@ -320,6 +320,35 @@ class IntuneBrandingProfile extends Entity
     }
 
     /**
+    * Gets the disableDeviceCategorySelection
+    * Boolean that indicates if Device Category Selection will be shown in Company Portal
+    *
+    * @return bool|null The disableDeviceCategorySelection
+    */
+    public function getDisableDeviceCategorySelection()
+    {
+        if (array_key_exists("disableDeviceCategorySelection", $this->_propDict)) {
+            return $this->_propDict["disableDeviceCategorySelection"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the disableDeviceCategorySelection
+    * Boolean that indicates if Device Category Selection will be shown in Company Portal
+    *
+    * @param bool $val The disableDeviceCategorySelection
+    *
+    * @return IntuneBrandingProfile
+    */
+    public function setDisableDeviceCategorySelection($val)
+    {
+        $this->_propDict["disableDeviceCategorySelection"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the displayName
     * Company/organization name that is displayed to end users
     *

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* SoftwareUpdateReference File
+* DelegatedAdminRelationshipOperationType File
 * PHP version 7
 *
 * @category  Library
@@ -11,9 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\WindowsUpdates\Model;
+namespace Microsoft\Graph\Model;
+
+use Microsoft\Graph\Core\Enum;
+
 /**
-* SoftwareUpdateReference class
+* DelegatedAdminRelationshipOperationType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,6 +24,11 @@ namespace Beta\Microsoft\Graph\WindowsUpdates\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class SoftwareUpdateReference extends DeployableContent
+class DelegatedAdminRelationshipOperationType extends Enum
 {
+    /**
+    * The Enum DelegatedAdminRelationshipOperationType
+    */
+    const DELEGATED_ADMIN_ACCESS_ASSIGNMENT_UPDATE = "delegatedAdminAccessAssignmentUpdate";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

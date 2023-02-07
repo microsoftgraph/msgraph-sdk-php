@@ -114,6 +114,39 @@ class CrossTenantIdentitySyncPolicyPartner implements \JsonSerializable
     }
 
     /**
+    * Gets the userSyncInbound
+    * Defines whether users can be synchronized from the partner tenant. Key.
+    *
+    * @return CrossTenantUserSyncInbound|null The userSyncInbound
+    */
+    public function getUserSyncInbound()
+    {
+        if (array_key_exists("userSyncInbound", $this->_propDict)) {
+            if (is_a($this->_propDict["userSyncInbound"], "\Beta\Microsoft\Graph\Model\CrossTenantUserSyncInbound") || is_null($this->_propDict["userSyncInbound"])) {
+                return $this->_propDict["userSyncInbound"];
+            } else {
+                $this->_propDict["userSyncInbound"] = new CrossTenantUserSyncInbound($this->_propDict["userSyncInbound"]);
+                return $this->_propDict["userSyncInbound"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the userSyncInbound
+    * Defines whether users can be synchronized from the partner tenant. Key.
+    *
+    * @param CrossTenantUserSyncInbound $val The userSyncInbound
+    *
+    * @return CrossTenantIdentitySyncPolicyPartner
+    */
+    public function setUserSyncInbound($val)
+    {
+        $this->_propDict["userSyncInbound"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the ODataType
     *
     * @return string|null The ODataType

@@ -25,7 +25,7 @@ class SearchHit extends Entity
 {
     /**
     * Gets the contentSource
-    * The name of the content source which the externalItem is part of .
+    * The name of the content source that the externalItem is part of.
     *
     * @return string|null The contentSource
     */
@@ -40,7 +40,7 @@ class SearchHit extends Entity
 
     /**
     * Sets the contentSource
-    * The name of the content source which the externalItem is part of .
+    * The name of the content source that the externalItem is part of.
     *
     * @param string $val The value of the contentSource
     *
@@ -81,6 +81,7 @@ class SearchHit extends Entity
     }
     /**
     * Gets the isCollapsed
+    * Indicates whether the current result is collapses when the collapseProperties property is used.
     *
     * @return bool|null The isCollapsed
     */
@@ -95,6 +96,7 @@ class SearchHit extends Entity
 
     /**
     * Sets the isCollapsed
+    * Indicates whether the current result is collapses when the collapseProperties property is used.
     *
     * @param bool $val The value of the isCollapsed
     *

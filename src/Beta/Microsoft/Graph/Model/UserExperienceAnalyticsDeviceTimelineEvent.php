@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* UserExperienceAnalyticsDeviceTimelineEvents File
+* UserExperienceAnalyticsDeviceTimelineEvent File
 * PHP version 7
 *
 * @category  Library
@@ -14,7 +14,7 @@
 namespace Beta\Microsoft\Graph\Model;
 
 /**
-* UserExperienceAnalyticsDeviceTimelineEvents class
+* UserExperienceAnalyticsDeviceTimelineEvent class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,7 +22,7 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class UserExperienceAnalyticsDeviceTimelineEvents extends Entity
+class UserExperienceAnalyticsDeviceTimelineEvent extends Entity
 {
     /**
     * Gets the deviceId
@@ -45,40 +45,11 @@ class UserExperienceAnalyticsDeviceTimelineEvents extends Entity
     *
     * @param string $val The deviceId
     *
-    * @return UserExperienceAnalyticsDeviceTimelineEvents
+    * @return UserExperienceAnalyticsDeviceTimelineEvent
     */
     public function setDeviceId($val)
     {
         $this->_propDict["deviceId"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the eventAdditionalInformation
-    * Placeholder value for future expansion.
-    *
-    * @return string|null The eventAdditionalInformation
-    */
-    public function getEventAdditionalInformation()
-    {
-        if (array_key_exists("eventAdditionalInformation", $this->_propDict)) {
-            return $this->_propDict["eventAdditionalInformation"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the eventAdditionalInformation
-    * Placeholder value for future expansion.
-    *
-    * @param string $val The eventAdditionalInformation
-    *
-    * @return UserExperienceAnalyticsDeviceTimelineEvents
-    */
-    public function setEventAdditionalInformation($val)
-    {
-        $this->_propDict["eventAdditionalInformation"] = $val;
         return $this;
     }
 
@@ -107,7 +78,7 @@ class UserExperienceAnalyticsDeviceTimelineEvents extends Entity
     *
     * @param \DateTime $val The eventDateTime
     *
-    * @return UserExperienceAnalyticsDeviceTimelineEvents
+    * @return UserExperienceAnalyticsDeviceTimelineEvent
     */
     public function setEventDateTime($val)
     {
@@ -136,7 +107,7 @@ class UserExperienceAnalyticsDeviceTimelineEvents extends Entity
     *
     * @param string $val The eventDetails
     *
-    * @return UserExperienceAnalyticsDeviceTimelineEvents
+    * @return UserExperienceAnalyticsDeviceTimelineEvent
     */
     public function setEventDetails($val)
     {
@@ -169,7 +140,7 @@ class UserExperienceAnalyticsDeviceTimelineEvents extends Entity
     *
     * @param DeviceEventLevel $val The eventLevel
     *
-    * @return UserExperienceAnalyticsDeviceTimelineEvents
+    * @return UserExperienceAnalyticsDeviceTimelineEvent
     */
     public function setEventLevel($val)
     {
@@ -198,7 +169,7 @@ class UserExperienceAnalyticsDeviceTimelineEvents extends Entity
     *
     * @param string $val The eventName
     *
-    * @return UserExperienceAnalyticsDeviceTimelineEvents
+    * @return UserExperienceAnalyticsDeviceTimelineEvent
     */
     public function setEventName($val)
     {
@@ -227,7 +198,7 @@ class UserExperienceAnalyticsDeviceTimelineEvents extends Entity
     *
     * @param string $val The eventSource
     *
-    * @return UserExperienceAnalyticsDeviceTimelineEvents
+    * @return UserExperienceAnalyticsDeviceTimelineEvent
     */
     public function setEventSource($val)
     {

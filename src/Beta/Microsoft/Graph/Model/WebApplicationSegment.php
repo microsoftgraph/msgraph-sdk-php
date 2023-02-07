@@ -26,6 +26,7 @@ class WebApplicationSegment extends ApplicationSegment
 {
     /**
     * Gets the alternateUrl
+    * If you're configuring a traffic manager in front of multiple App Proxy application segments, this property contains the user-friendly URL that will point to the traffic manager.
     *
     * @return string|null The alternateUrl
     */
@@ -40,6 +41,7 @@ class WebApplicationSegment extends ApplicationSegment
 
     /**
     * Sets the alternateUrl
+    * If you're configuring a traffic manager in front of multiple App Proxy application segments, this property contains the user-friendly URL that will point to the traffic manager.
     *
     * @param string $val The alternateUrl
     *
@@ -53,6 +55,7 @@ class WebApplicationSegment extends ApplicationSegment
 
     /**
     * Gets the externalUrl
+    * The published external URL for the application segment; for example, https://intranet.contoso.com/.
     *
     * @return string|null The externalUrl
     */
@@ -67,6 +70,7 @@ class WebApplicationSegment extends ApplicationSegment
 
     /**
     * Sets the externalUrl
+    * The published external URL for the application segment; for example, https://intranet.contoso.com/.
     *
     * @param string $val The externalUrl
     *
@@ -80,6 +84,7 @@ class WebApplicationSegment extends ApplicationSegment
 
     /**
     * Gets the internalUrl
+    * The internal URL of the application segment; for example, https://intranet/.
     *
     * @return string|null The internalUrl
     */
@@ -94,6 +99,7 @@ class WebApplicationSegment extends ApplicationSegment
 
     /**
     * Sets the internalUrl
+    * The internal URL of the application segment; for example, https://intranet/.
     *
     * @param string $val The internalUrl
     *
@@ -108,6 +114,7 @@ class WebApplicationSegment extends ApplicationSegment
 
      /**
      * Gets the corsConfigurations
+    * A collection of CORS Rule definitions for a particular application segment.
      *
      * @return array|null The corsConfigurations
      */
@@ -122,6 +129,7 @@ class WebApplicationSegment extends ApplicationSegment
 
     /**
     * Sets the corsConfigurations
+    * A collection of CORS Rule definitions for a particular application segment.
     *
     * @param CorsConfiguration_v2[] $val The corsConfigurations
     *

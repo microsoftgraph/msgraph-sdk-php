@@ -88,7 +88,7 @@ class PlannerBucket extends PlannerDelta
 
     /**
     * Gets the orderHint
-    * Hint used to order items of this type in a list view. The format is defined as outlined here.
+    * Hint used to order items of this type in a list view. For details about the supported format, see Using order hints in Planner.
     *
     * @return string|null The orderHint
     */
@@ -103,7 +103,7 @@ class PlannerBucket extends PlannerDelta
 
     /**
     * Sets the orderHint
-    * Hint used to order items of this type in a list view. The format is defined as outlined here.
+    * Hint used to order items of this type in a list view. For details about the supported format, see Using order hints in Planner.
     *
     * @param string $val The orderHint
     *

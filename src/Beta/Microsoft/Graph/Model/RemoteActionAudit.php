@@ -26,7 +26,7 @@ class RemoteActionAudit extends Entity
 {
     /**
     * Gets the action
-    * The action name. Possible values are: unknown, factoryReset, removeCompanyData, resetPasscode, remoteLock, enableLostMode, disableLostMode, locateDevice, rebootNow, recoverPasscode, cleanWindowsDevice, logoutSharedAppleDeviceActiveUser, quickScan, fullScan, windowsDefenderUpdateSignatures, factoryResetKeepEnrollmentData, updateDeviceAccount, automaticRedeployment, shutDown, rotateBitLockerKeys, rotateFileVaultKey, getFileVaultKey, setDeviceName, activateDeviceEsim, deprovision, disable, reenable, moveDeviceToOrganizationalUnit, initiateMobileDeviceManagementKeyRecovery.
+    * The action name. Possible values are: unknown, factoryReset, removeCompanyData, resetPasscode, remoteLock, enableLostMode, disableLostMode, locateDevice, rebootNow, recoverPasscode, cleanWindowsDevice, logoutSharedAppleDeviceActiveUser, quickScan, fullScan, windowsDefenderUpdateSignatures, factoryResetKeepEnrollmentData, updateDeviceAccount, automaticRedeployment, shutDown, rotateBitLockerKeys, rotateFileVaultKey, getFileVaultKey, setDeviceName, activateDeviceEsim, deprovision, disable, reenable, moveDeviceToOrganizationalUnit, initiateMobileDeviceManagementKeyRecovery, initiateOnDemandProactiveRemediation.
     *
     * @return RemoteAction|null The action
     */
@@ -45,7 +45,7 @@ class RemoteActionAudit extends Entity
 
     /**
     * Sets the action
-    * The action name. Possible values are: unknown, factoryReset, removeCompanyData, resetPasscode, remoteLock, enableLostMode, disableLostMode, locateDevice, rebootNow, recoverPasscode, cleanWindowsDevice, logoutSharedAppleDeviceActiveUser, quickScan, fullScan, windowsDefenderUpdateSignatures, factoryResetKeepEnrollmentData, updateDeviceAccount, automaticRedeployment, shutDown, rotateBitLockerKeys, rotateFileVaultKey, getFileVaultKey, setDeviceName, activateDeviceEsim, deprovision, disable, reenable, moveDeviceToOrganizationalUnit, initiateMobileDeviceManagementKeyRecovery.
+    * The action name. Possible values are: unknown, factoryReset, removeCompanyData, resetPasscode, remoteLock, enableLostMode, disableLostMode, locateDevice, rebootNow, recoverPasscode, cleanWindowsDevice, logoutSharedAppleDeviceActiveUser, quickScan, fullScan, windowsDefenderUpdateSignatures, factoryResetKeepEnrollmentData, updateDeviceAccount, automaticRedeployment, shutDown, rotateBitLockerKeys, rotateFileVaultKey, getFileVaultKey, setDeviceName, activateDeviceEsim, deprovision, disable, reenable, moveDeviceToOrganizationalUnit, initiateMobileDeviceManagementKeyRecovery, initiateOnDemandProactiveRemediation.
     *
     * @param RemoteAction $val The action
     *

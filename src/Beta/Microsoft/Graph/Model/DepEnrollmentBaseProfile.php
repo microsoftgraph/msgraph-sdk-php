@@ -461,7 +461,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
 
     /**
     * Gets the supervisedModeEnabled
-    * Supervised mode, True to enable, false otherwise. See https://learn.microsoft.com/en-us/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
+    * Supervised mode, True to enable, false otherwise. See https://learn.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
     *
     * @return bool|null The supervisedModeEnabled
     */
@@ -476,7 +476,7 @@ class DepEnrollmentBaseProfile extends EnrollmentProfile
 
     /**
     * Sets the supervisedModeEnabled
-    * Supervised mode, True to enable, false otherwise. See https://learn.microsoft.com/en-us/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
+    * Supervised mode, True to enable, false otherwise. See https://learn.microsoft.com/intune/deploy-use/enroll-devices-in-microsoft-intune for additional information.
     *
     * @param bool $val The supervisedModeEnabled
     *

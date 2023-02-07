@@ -332,7 +332,7 @@ class DeviceHealthScriptDeviceState extends Entity
 
     /**
     * Gets the remediationState
-    * Remediation state from the lastest device health script execution. Possible values are: unknown, skipped, success, remediationFailed, scriptError.
+    * Remediation state from the lastest device health script execution. Possible values are: unknown, skipped, success, remediationFailed, scriptError, unknownFutureValue.
     *
     * @return RemediationState|null The remediationState
     */
@@ -351,7 +351,7 @@ class DeviceHealthScriptDeviceState extends Entity
 
     /**
     * Sets the remediationState
-    * Remediation state from the lastest device health script execution. Possible values are: unknown, skipped, success, remediationFailed, scriptError.
+    * Remediation state from the lastest device health script execution. Possible values are: unknown, skipped, success, remediationFailed, scriptError, unknownFutureValue.
     *
     * @param RemediationState $val The remediationState
     *

@@ -423,7 +423,6 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Gets the onPremisesApplicationSegments
-    * Represents the application segment collection for an on-premises wildcard application.
     *
     * @return OnPremisesApplicationSegment|null The onPremisesApplicationSegments
     */
@@ -442,7 +441,6 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the onPremisesApplicationSegments
-    * Represents the application segment collection for an on-premises wildcard application.
     *
     * @param OnPremisesApplicationSegment $val The value to assign to the onPremisesApplicationSegments
     *
@@ -456,6 +454,7 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Gets the segmentsConfiguration
+    * Represents the collection of application segments for an on-premises wildcard application that's published through Azure AD Application Proxy.
     *
     * @return SegmentConfiguration|null The segmentsConfiguration
     */
@@ -474,6 +473,7 @@ class OnPremisesPublishing extends Entity
 
     /**
     * Sets the segmentsConfiguration
+    * Represents the collection of application segments for an on-premises wildcard application that's published through Azure AD Application Proxy.
     *
     * @param SegmentConfiguration $val The value to assign to the segmentsConfiguration
     *
