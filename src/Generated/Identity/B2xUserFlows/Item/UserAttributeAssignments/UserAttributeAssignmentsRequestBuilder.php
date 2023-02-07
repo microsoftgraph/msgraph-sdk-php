@@ -6,8 +6,8 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments\MicrosoftGraphGetOrder\GetOrderRequestBuilder;
-use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments\MicrosoftGraphSetOrder\SetOrderRequestBuilder;
+use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments\MicrosoftGraphGetOrder\MicrosoftGraphGetOrderRequestBuilder;
+use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments\MicrosoftGraphSetOrder\MicrosoftGraphSetOrderRequestBuilder;
 use Microsoft\Graph\Generated\Models\IdentityUserFlowAttributeAssignment;
 use Microsoft\Graph\Generated\Models\IdentityUserFlowAttributeAssignmentCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -33,15 +33,15 @@ class UserAttributeAssignmentsRequestBuilder
     /**
      * Provides operations to call the getOrder method.
     */
-    public function microsoftGraphGetOrder(): GetOrderRequestBuilder {
-        return new GetOrderRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetOrder(): MicrosoftGraphGetOrderRequestBuilder {
+        return new MicrosoftGraphGetOrderRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the setOrder method.
     */
-    public function microsoftGraphSetOrder(): SetOrderRequestBuilder {
-        return new SetOrderRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSetOrder(): MicrosoftGraphSetOrderRequestBuilder {
+        return new MicrosoftGraphSetOrderRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -61,13 +61,17 @@ class UserAttributeAssignmentsRequestBuilder
     
     /**
      * Instantiates a new UserAttributeAssignmentsRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}/userAttributeAssignments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

@@ -7,10 +7,13 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Singleton entity that acts as a container for all device app management functionality.
+*/
 class DeviceAppManagement extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new DeviceAppManagement and sets the default values.
+     * Instantiates a new deviceAppManagement and sets the default values.
     */
     public function __construct() {
         parent::__construct();

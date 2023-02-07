@@ -7,9 +7,9 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Outlook\MasterCategories\Item\OutlookCategoryItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Outlook\MasterCategories\MasterCategoriesRequestBuilder;
-use Microsoft\Graph\Generated\Me\Outlook\MicrosoftGraphSupportedLanguages\SupportedLanguagesRequestBuilder;
-use Microsoft\Graph\Generated\Me\Outlook\MicrosoftGraphSupportedTimeZones\SupportedTimeZonesRequestBuilder;
-use Microsoft\Graph\Generated\Me\Outlook\MicrosoftGraphSupportedTimeZonesWithTimeZoneStandard\SupportedTimeZonesWithTimeZoneStandardRequestBuilder;
+use Microsoft\Graph\Generated\Me\Outlook\MicrosoftGraphSupportedLanguages\MicrosoftGraphSupportedLanguagesRequestBuilder;
+use Microsoft\Graph\Generated\Me\Outlook\MicrosoftGraphSupportedTimeZones\MicrosoftGraphSupportedTimeZonesRequestBuilder;
+use Microsoft\Graph\Generated\Me\Outlook\MicrosoftGraphSupportedTimeZonesWithTimeZoneStandard\MicrosoftGraphSupportedTimeZonesWithTimeZoneStandardRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OutlookUser;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -34,15 +34,15 @@ class OutlookRequestBuilder
     /**
      * Provides operations to call the supportedLanguages method.
     */
-    public function microsoftGraphSupportedLanguages(): SupportedLanguagesRequestBuilder {
-        return new SupportedLanguagesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSupportedLanguages(): MicrosoftGraphSupportedLanguagesRequestBuilder {
+        return new MicrosoftGraphSupportedLanguagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the supportedTimeZones method.
     */
-    public function microsoftGraphSupportedTimeZones(): SupportedTimeZonesRequestBuilder {
-        return new SupportedTimeZonesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSupportedTimeZones(): MicrosoftGraphSupportedTimeZonesRequestBuilder {
+        return new MicrosoftGraphSupportedTimeZonesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -62,13 +62,17 @@ class OutlookRequestBuilder
     
     /**
      * Instantiates a new OutlookRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/me/outlook{?%24select}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -103,10 +107,10 @@ class OutlookRequestBuilder
     /**
      * Provides operations to call the supportedTimeZones method.
      * @param string $timeZoneStandard Usage: TimeZoneStandard='{TimeZoneStandard}'
-     * @return SupportedTimeZonesWithTimeZoneStandardRequestBuilder
+     * @return MicrosoftGraphSupportedTimeZonesWithTimeZoneStandardRequestBuilder
     */
-    public function microsoftGraphSupportedTimeZonesWithTimeZoneStandard(string $timeZoneStandard): SupportedTimeZonesWithTimeZoneStandardRequestBuilder {
-        return new SupportedTimeZonesWithTimeZoneStandardRequestBuilder($this->pathParameters, $this->requestAdapter, $timeZoneStandard);
+    public function microsoftGraphSupportedTimeZonesWithTimeZoneStandard(string $timeZoneStandard): MicrosoftGraphSupportedTimeZonesWithTimeZoneStandardRequestBuilder {
+        return new MicrosoftGraphSupportedTimeZonesWithTimeZoneStandardRequestBuilder($this->pathParameters, $this->requestAdapter, $timeZoneStandard);
     }
 
     /**

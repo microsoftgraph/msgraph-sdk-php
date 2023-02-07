@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminCustomers\
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get serviceManagementDetails from tenantRelationships
+ * Get a list of the delegatedAdminServiceManagementDetail objects and their properties.
 */
 class ServiceManagementDetailsRequestBuilderGetQueryParameters 
 {

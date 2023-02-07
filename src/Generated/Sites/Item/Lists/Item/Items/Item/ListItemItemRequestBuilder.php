@@ -12,8 +12,8 @@ use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\DocumentSetVersio
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\DocumentSetVersions\Item\DocumentSetVersionItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\DriveItem\DriveItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\Fields\FieldsRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\MicrosoftGraphGetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\MicrosoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\MicrosoftGraphGetActivitiesByInterval\MicrosoftGraphGetActivitiesByIntervalRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\MicrosoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\MicrosoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\Versions\Item\ListItemVersionItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\Versions\VersionsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -59,8 +59,8 @@ class ListItemItemRequestBuilder
     /**
      * Provides operations to call the getActivitiesByInterval method.
     */
-    public function microsoftGraphGetActivitiesByInterval(): GetActivitiesByIntervalRequestBuilder {
-        return new GetActivitiesByIntervalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetActivitiesByInterval(): MicrosoftGraphGetActivitiesByIntervalRequestBuilder {
+        return new MicrosoftGraphGetActivitiesByIntervalRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -87,17 +87,17 @@ class ListItemItemRequestBuilder
     
     /**
      * Instantiates a new ListItemItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $listItemId key: id of listItem
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $listItemId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/sites/{site%2Did}/lists/{list%2Did}/items/{listItem%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['listItemId'] = $listItemId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -152,10 +152,10 @@ class ListItemItemRequestBuilder
      * @param string $endDateTime Usage: endDateTime='{endDateTime}'
      * @param string $interval Usage: interval='{interval}'
      * @param string $startDateTime Usage: startDateTime='{startDateTime}'
-     * @return GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
+     * @return MicrosoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
     */
-    public function microsoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(string $endDateTime, string $interval, string $startDateTime): GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder {
-        return new GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder($this->pathParameters, $this->requestAdapter, $endDateTime, $interval, $startDateTime);
+    public function microsoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(string $endDateTime, string $interval, string $startDateTime): MicrosoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder {
+        return new MicrosoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder($this->pathParameters, $this->requestAdapter, $endDateTime, $interval, $startDateTime);
     }
 
     /**

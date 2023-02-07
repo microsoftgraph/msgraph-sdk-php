@@ -10,7 +10,7 @@ use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\Assignments
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\DeviceStates\DeviceStatesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\DeviceStates\Item\DeviceInstallStateItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\InstallSummary\InstallSummaryRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\MicrosoftGraphAssign\AssignRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\MicrosoftGraphAssign\MicrosoftGraphAssignRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\UserStateSummary\Item\UserInstallStateSummaryItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\UserStateSummary\UserStateSummaryRequestBuilder;
 use Microsoft\Graph\Generated\Models\ManagedEBook;
@@ -51,8 +51,8 @@ class ManagedEBookItemRequestBuilder
     /**
      * Provides operations to call the assign method.
     */
-    public function microsoftGraphAssign(): AssignRequestBuilder {
-        return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAssign(): MicrosoftGraphAssignRequestBuilder {
+        return new MicrosoftGraphAssignRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -90,17 +90,17 @@ class ManagedEBookItemRequestBuilder
 
     /**
      * Instantiates a new ManagedEBookItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $managedEBookId key: id of managedEBook
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $managedEBookId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/deviceAppManagement/managedEBooks/{managedEBook%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['managedEBookId'] = $managedEBookId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

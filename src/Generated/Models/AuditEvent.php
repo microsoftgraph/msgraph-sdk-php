@@ -7,10 +7,13 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * A class containing the properties for Audit Event.
+*/
 class AuditEvent extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new AuditEvent and sets the default values.
+     * Instantiates a new auditEvent and sets the default values.
     */
     public function __construct() {
         parent::__construct();

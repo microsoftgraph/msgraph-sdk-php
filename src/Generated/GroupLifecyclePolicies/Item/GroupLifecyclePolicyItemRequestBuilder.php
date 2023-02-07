@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\GroupLifecyclePolicies\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\GroupLifecyclePolicies\Item\MicrosoftGraphAddGroup\AddGroupRequestBuilder;
-use Microsoft\Graph\Generated\GroupLifecyclePolicies\Item\MicrosoftGraphRemoveGroup\RemoveGroupRequestBuilder;
+use Microsoft\Graph\Generated\GroupLifecyclePolicies\Item\MicrosoftGraphAddGroup\MicrosoftGraphAddGroupRequestBuilder;
+use Microsoft\Graph\Generated\GroupLifecyclePolicies\Item\MicrosoftGraphRemoveGroup\MicrosoftGraphRemoveGroupRequestBuilder;
 use Microsoft\Graph\Generated\Models\GroupLifecyclePolicy;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -24,15 +24,15 @@ class GroupLifecyclePolicyItemRequestBuilder
     /**
      * Provides operations to call the addGroup method.
     */
-    public function microsoftGraphAddGroup(): AddGroupRequestBuilder {
-        return new AddGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAddGroup(): MicrosoftGraphAddGroupRequestBuilder {
+        return new MicrosoftGraphAddGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the removeGroup method.
     */
-    public function microsoftGraphRemoveGroup(): RemoveGroupRequestBuilder {
-        return new RemoveGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRemoveGroup(): MicrosoftGraphRemoveGroupRequestBuilder {
+        return new MicrosoftGraphRemoveGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -52,17 +52,17 @@ class GroupLifecyclePolicyItemRequestBuilder
     
     /**
      * Instantiates a new GroupLifecyclePolicyItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $groupLifecyclePolicyId key: id of groupLifecyclePolicy
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $groupLifecyclePolicyId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/groupLifecyclePolicies/{groupLifecyclePolicy%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['groupLifecyclePolicyId'] = $groupLifecyclePolicyId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

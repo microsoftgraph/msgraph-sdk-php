@@ -36,17 +36,17 @@ class DelegatedAdminRelationshipRequestItemRequestBuilder
     
     /**
      * Instantiates a new DelegatedAdminRelationshipRequestItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $delegatedAdminRelationshipRequestId key: id of delegatedAdminRelationshipRequest
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $delegatedAdminRelationshipRequestId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/tenantRelationships/delegatedAdminRelationships/{delegatedAdminRelationship%2Did}/requests/{delegatedAdminRelationshipRequest%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['delegatedAdminRelationshipRequestId'] = $delegatedAdminRelationshipRequestId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -68,7 +68,7 @@ class DelegatedAdminRelationshipRequestItemRequestBuilder
     }
 
     /**
-     * Get requests from tenantRelationships
+     * The requests associated with the delegated admin relationship.
      * @param DelegatedAdminRelationshipRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -126,7 +126,7 @@ class DelegatedAdminRelationshipRequestItemRequestBuilder
     }
 
     /**
-     * Get requests from tenantRelationships
+     * The requests associated with the delegated admin relationship.
      * @param DelegatedAdminRelationshipRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

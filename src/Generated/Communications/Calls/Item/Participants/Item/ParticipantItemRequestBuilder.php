@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\MicrosoftGraphMute\MuteRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\MicrosoftGraphStartHoldMusic\StartHoldMusicRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\MicrosoftGraphStopHoldMusic\StopHoldMusicRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\MicrosoftGraphMute\MicrosoftGraphMuteRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\MicrosoftGraphStartHoldMusic\MicrosoftGraphStartHoldMusicRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\MicrosoftGraphStopHoldMusic\MicrosoftGraphStopHoldMusicRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Participant;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -25,22 +25,22 @@ class ParticipantItemRequestBuilder
     /**
      * Provides operations to call the mute method.
     */
-    public function microsoftGraphMute(): MuteRequestBuilder {
-        return new MuteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphMute(): MicrosoftGraphMuteRequestBuilder {
+        return new MicrosoftGraphMuteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the startHoldMusic method.
     */
-    public function microsoftGraphStartHoldMusic(): StartHoldMusicRequestBuilder {
-        return new StartHoldMusicRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphStartHoldMusic(): MicrosoftGraphStartHoldMusicRequestBuilder {
+        return new MicrosoftGraphStartHoldMusicRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the stopHoldMusic method.
     */
-    public function microsoftGraphStopHoldMusic(): StopHoldMusicRequestBuilder {
-        return new StopHoldMusicRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphStopHoldMusic(): MicrosoftGraphStopHoldMusicRequestBuilder {
+        return new MicrosoftGraphStopHoldMusicRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -60,17 +60,17 @@ class ParticipantItemRequestBuilder
     
     /**
      * Instantiates a new ParticipantItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $participantId key: id of participant
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $participantId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/communications/calls/{call%2Did}/participants/{participant%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['participantId'] = $participantId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

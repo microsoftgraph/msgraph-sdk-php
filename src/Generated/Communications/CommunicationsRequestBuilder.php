@@ -9,7 +9,7 @@ use Microsoft\Graph\Generated\Communications\CallRecords\CallRecordsRequestBuild
 use Microsoft\Graph\Generated\Communications\CallRecords\Item\CallRecordItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\CallsRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\CallItemRequestBuilder;
-use Microsoft\Graph\Generated\Communications\MicrosoftGraphGetPresencesByUserId\GetPresencesByUserIdRequestBuilder;
+use Microsoft\Graph\Generated\Communications\MicrosoftGraphGetPresencesByUserId\MicrosoftGraphGetPresencesByUserIdRequestBuilder;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\OnlineMeetingItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\OnlineMeetingsRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Presences\Item\PresenceItemRequestBuilder;
@@ -45,8 +45,8 @@ class CommunicationsRequestBuilder
     /**
      * Provides operations to call the getPresencesByUserId method.
     */
-    public function microsoftGraphGetPresencesByUserId(): GetPresencesByUserIdRequestBuilder {
-        return new GetPresencesByUserIdRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetPresencesByUserId(): MicrosoftGraphGetPresencesByUserIdRequestBuilder {
+        return new MicrosoftGraphGetPresencesByUserIdRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -102,13 +102,17 @@ class CommunicationsRequestBuilder
 
     /**
      * Instantiates a new CommunicationsRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/communications{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

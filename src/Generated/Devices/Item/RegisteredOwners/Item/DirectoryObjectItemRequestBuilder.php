@@ -2,10 +2,10 @@
 
 namespace Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Item;
 
-use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Item\MicrosoftGraphAppRoleAssignment\AppRoleAssignmentRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Item\MicrosoftGraphEndpoint\EndpointRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Item\MicrosoftGraphServicePrincipal\ServicePrincipalRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Item\MicrosoftGraphUser\UserRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Item\MicrosoftGraphAppRoleAssignment\MicrosoftGraphAppRoleAssignmentRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Item\MicrosoftGraphEndpoint\MicrosoftGraphEndpointRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Item\MicrosoftGraphServicePrincipal\MicrosoftGraphServicePrincipalRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Item\MicrosoftGraphUser\MicrosoftGraphUserRequestBuilder;
 use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Item\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 
@@ -17,29 +17,29 @@ class DirectoryObjectItemRequestBuilder
     /**
      * Casts the previous resource to appRoleAssignment.
     */
-    public function microsoftGraphAppRoleAssignment(): AppRoleAssignmentRequestBuilder {
-        return new AppRoleAssignmentRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAppRoleAssignment(): MicrosoftGraphAppRoleAssignmentRequestBuilder {
+        return new MicrosoftGraphAppRoleAssignmentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to endpoint.
     */
-    public function microsoftGraphEndpoint(): EndpointRequestBuilder {
-        return new EndpointRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphEndpoint(): MicrosoftGraphEndpointRequestBuilder {
+        return new MicrosoftGraphEndpointRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to servicePrincipal.
     */
-    public function microsoftGraphServicePrincipal(): ServicePrincipalRequestBuilder {
-        return new ServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphServicePrincipal(): MicrosoftGraphServicePrincipalRequestBuilder {
+        return new MicrosoftGraphServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to user.
     */
-    public function microsoftGraphUser(): UserRequestBuilder {
-        return new UserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphUser(): MicrosoftGraphUserRequestBuilder {
+        return new MicrosoftGraphUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -66,17 +66,17 @@ class DirectoryObjectItemRequestBuilder
     
     /**
      * Instantiates a new DirectoryObjectItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $directoryObjectId key: id of directoryObject
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $directoryObjectId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/devices/{device%2Did}/registeredOwners/{directoryObject%2Did}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['directoryObjectId'] = $directoryObjectId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
 }

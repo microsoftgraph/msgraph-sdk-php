@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SearchEntity;
-use Microsoft\Graph\Generated\Search\MicrosoftGraphQuery\QueryRequestBuilder;
+use Microsoft\Graph\Generated\Search\MicrosoftGraphQuery\MicrosoftGraphQueryRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -23,8 +23,8 @@ class SearchRequestBuilder
     /**
      * Provides operations to call the query method.
     */
-    public function microsoftGraphQuery(): QueryRequestBuilder {
-        return new QueryRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphQuery(): MicrosoftGraphQueryRequestBuilder {
+        return new MicrosoftGraphQueryRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -44,13 +44,17 @@ class SearchRequestBuilder
     
     /**
      * Instantiates a new SearchRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/search{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

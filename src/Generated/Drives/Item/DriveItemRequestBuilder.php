@@ -9,9 +9,9 @@ use Microsoft\Graph\Generated\Drives\Item\Bundles\BundlesRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\ListRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Following\FollowingRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\ItemsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\MicrosoftGraphRecent\RecentRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\MicrosoftGraphSearchWithQ\SearchWithQRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\MicrosoftGraphSharedWithMe\SharedWithMeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\MicrosoftGraphRecent\MicrosoftGraphRecentRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\MicrosoftGraphSearchWithQ\MicrosoftGraphSearchWithQRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\MicrosoftGraphSharedWithMe\MicrosoftGraphSharedWithMeRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Root\RootRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Special\SpecialRequestBuilder;
 use Microsoft\Graph\Generated\Models\Drive;
@@ -59,15 +59,15 @@ class DriveItemRequestBuilder
     /**
      * Provides operations to call the recent method.
     */
-    public function microsoftGraphRecent(): RecentRequestBuilder {
-        return new RecentRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRecent(): MicrosoftGraphRecentRequestBuilder {
+        return new MicrosoftGraphRecentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the sharedWithMe method.
     */
-    public function microsoftGraphSharedWithMe(): SharedWithMeRequestBuilder {
-        return new SharedWithMeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSharedWithMe(): MicrosoftGraphSharedWithMeRequestBuilder {
+        return new MicrosoftGraphSharedWithMeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -112,17 +112,17 @@ class DriveItemRequestBuilder
 
     /**
      * Instantiates a new DriveItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $driveId key: id of drive
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $driveId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/drives/{drive%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['driveId'] = $driveId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -187,10 +187,10 @@ class DriveItemRequestBuilder
     /**
      * Provides operations to call the search method.
      * @param string $q Usage: q='{q}'
-     * @return SearchWithQRequestBuilder
+     * @return MicrosoftGraphSearchWithQRequestBuilder
     */
-    public function microsoftGraphSearchWithQ(string $q): SearchWithQRequestBuilder {
-        return new SearchWithQRequestBuilder($this->pathParameters, $this->requestAdapter, $q);
+    public function microsoftGraphSearchWithQ(string $q): MicrosoftGraphSearchWithQRequestBuilder {
+        return new MicrosoftGraphSearchWithQRequestBuilder($this->pathParameters, $this->requestAdapter, $q);
     }
 
     /**

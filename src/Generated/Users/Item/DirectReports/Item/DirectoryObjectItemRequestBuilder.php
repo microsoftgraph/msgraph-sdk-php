@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\DirectoryObject;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\DirectReports\Item\MicrosoftGraphOrgContact\OrgContactRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\DirectReports\Item\MicrosoftGraphUser\UserRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\DirectReports\Item\MicrosoftGraphOrgContact\MicrosoftGraphOrgContactRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\DirectReports\Item\MicrosoftGraphUser\MicrosoftGraphUserRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -24,15 +24,15 @@ class DirectoryObjectItemRequestBuilder
     /**
      * Casts the previous resource to orgContact.
     */
-    public function microsoftGraphOrgContact(): OrgContactRequestBuilder {
-        return new OrgContactRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphOrgContact(): MicrosoftGraphOrgContactRequestBuilder {
+        return new MicrosoftGraphOrgContactRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to user.
     */
-    public function microsoftGraphUser(): UserRequestBuilder {
-        return new UserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphUser(): MicrosoftGraphUserRequestBuilder {
+        return new MicrosoftGraphUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -52,17 +52,17 @@ class DirectoryObjectItemRequestBuilder
     
     /**
      * Instantiates a new DirectoryObjectItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $directoryObjectId key: id of directoryObject
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $directoryObjectId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/users/{user%2Did}/directReports/{directoryObject%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['directoryObjectId'] = $directoryObjectId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

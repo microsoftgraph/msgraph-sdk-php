@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DelegatedAdminCustomer extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new delegatedAdminCustomer and sets the default values.
+     * Instantiates a new DelegatedAdminCustomer and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -25,7 +25,7 @@ class DelegatedAdminCustomer extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The Azure AD display name of the customer tenant. Read-only. Supports $orderBy.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -46,7 +46,7 @@ class DelegatedAdminCustomer extends Entity implements Parsable
     }
 
     /**
-     * Gets the serviceManagementDetails property value. The serviceManagementDetails property
+     * Gets the serviceManagementDetails property value. Contains the management details of a service in the customer tenant that's managed by delegated administration.
      * @return array<DelegatedAdminServiceManagementDetail>|null
     */
     public function getServiceManagementDetails(): ?array {
@@ -54,7 +54,7 @@ class DelegatedAdminCustomer extends Entity implements Parsable
     }
 
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. The Azure AD-assigned tenant ID of the customer. Read-only.
      * @return string|null
     */
     public function getTenantId(): ?string {
@@ -73,7 +73,7 @@ class DelegatedAdminCustomer extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The Azure AD display name of the customer tenant. Read-only. Supports $orderBy.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -81,7 +81,7 @@ class DelegatedAdminCustomer extends Entity implements Parsable
     }
 
     /**
-     * Sets the serviceManagementDetails property value. The serviceManagementDetails property
+     * Sets the serviceManagementDetails property value. Contains the management details of a service in the customer tenant that's managed by delegated administration.
      * @param array<DelegatedAdminServiceManagementDetail>|null $value Value to set for the serviceManagementDetails property.
     */
     public function setServiceManagementDetails(?array $value): void {
@@ -89,7 +89,7 @@ class DelegatedAdminCustomer extends Entity implements Parsable
     }
 
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. The Azure AD-assigned tenant ID of the customer. Read-only.
      * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {

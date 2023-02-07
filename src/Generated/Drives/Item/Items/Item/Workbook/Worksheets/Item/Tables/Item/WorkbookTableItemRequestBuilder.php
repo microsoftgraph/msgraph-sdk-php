@@ -7,13 +7,13 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\ColumnsRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\WorkbookTableColumnItemRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\MicrosoftGraphClearFilters\ClearFiltersRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\MicrosoftGraphConvertToRange\ConvertToRangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\MicrosoftGraphDataBodyRange\DataBodyRangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\MicrosoftGraphHeaderRowRange\HeaderRowRangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\MicrosoftGraphRange\RangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\MicrosoftGraphReapplyFilters\ReapplyFiltersRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\MicrosoftGraphTotalRowRange\TotalRowRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\MicrosoftGraphClearFilters\MicrosoftGraphClearFiltersRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\MicrosoftGraphConvertToRange\MicrosoftGraphConvertToRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\MicrosoftGraphDataBodyRange\MicrosoftGraphDataBodyRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\MicrosoftGraphHeaderRowRange\MicrosoftGraphHeaderRowRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\MicrosoftGraphRange\MicrosoftGraphRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\MicrosoftGraphReapplyFilters\MicrosoftGraphReapplyFiltersRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\MicrosoftGraphTotalRowRange\MicrosoftGraphTotalRowRangeRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Rows\Item\WorkbookTableRowItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Rows\RowsRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Sort\SortRequestBuilder;
@@ -42,50 +42,50 @@ class WorkbookTableItemRequestBuilder
     /**
      * Provides operations to call the clearFilters method.
     */
-    public function microsoftGraphClearFilters(): ClearFiltersRequestBuilder {
-        return new ClearFiltersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphClearFilters(): MicrosoftGraphClearFiltersRequestBuilder {
+        return new MicrosoftGraphClearFiltersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the convertToRange method.
     */
-    public function microsoftGraphConvertToRange(): ConvertToRangeRequestBuilder {
-        return new ConvertToRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphConvertToRange(): MicrosoftGraphConvertToRangeRequestBuilder {
+        return new MicrosoftGraphConvertToRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the dataBodyRange method.
     */
-    public function microsoftGraphDataBodyRange(): DataBodyRangeRequestBuilder {
-        return new DataBodyRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDataBodyRange(): MicrosoftGraphDataBodyRangeRequestBuilder {
+        return new MicrosoftGraphDataBodyRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the headerRowRange method.
     */
-    public function microsoftGraphHeaderRowRange(): HeaderRowRangeRequestBuilder {
-        return new HeaderRowRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphHeaderRowRange(): MicrosoftGraphHeaderRowRangeRequestBuilder {
+        return new MicrosoftGraphHeaderRowRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the range method.
     */
-    public function microsoftGraphRange(): RangeRequestBuilder {
-        return new RangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRange(): MicrosoftGraphRangeRequestBuilder {
+        return new MicrosoftGraphRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the reapplyFilters method.
     */
-    public function microsoftGraphReapplyFilters(): ReapplyFiltersRequestBuilder {
-        return new ReapplyFiltersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphReapplyFilters(): MicrosoftGraphReapplyFiltersRequestBuilder {
+        return new MicrosoftGraphReapplyFiltersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the totalRowRange method.
     */
-    public function microsoftGraphTotalRowRange(): TotalRowRangeRequestBuilder {
-        return new TotalRowRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphTotalRowRange(): MicrosoftGraphTotalRowRangeRequestBuilder {
+        return new MicrosoftGraphTotalRowRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -137,17 +137,17 @@ class WorkbookTableItemRequestBuilder
 
     /**
      * Instantiates a new WorkbookTableItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $workbookTableId key: id of workbookTable
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $workbookTableId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/tables/{workbookTable%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['workbookTableId'] = $workbookTableId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

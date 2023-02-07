@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Identity\IdentityProviders\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Identity\IdentityProviders\MicrosoftGraphAvailableProviderTypes\AvailableProviderTypesRequestBuilder;
+use Microsoft\Graph\Generated\Identity\IdentityProviders\MicrosoftGraphAvailableProviderTypes\MicrosoftGraphAvailableProviderTypesRequestBuilder;
 use Microsoft\Graph\Generated\Models\IdentityProviderBase;
 use Microsoft\Graph\Generated\Models\IdentityProviderBaseCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -32,8 +32,8 @@ class IdentityProvidersRequestBuilder
     /**
      * Provides operations to call the availableProviderTypes method.
     */
-    public function microsoftGraphAvailableProviderTypes(): AvailableProviderTypesRequestBuilder {
-        return new AvailableProviderTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAvailableProviderTypes(): MicrosoftGraphAvailableProviderTypesRequestBuilder {
+        return new MicrosoftGraphAvailableProviderTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -53,13 +53,17 @@ class IdentityProvidersRequestBuilder
     
     /**
      * Instantiates a new IdentityProvidersRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/identity/identityProviders{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -82,7 +86,7 @@ class IdentityProvidersRequestBuilder
     }
 
     /**
-     * Create an identity provider resource that is of the type specified in the request body. Among the types of providers derived from identityProviderBase, you can currently create a socialIdentityProvider resource in Azure AD. In Azure AD B2C, this operation can currently create a socialIdentityProvider, or an appleManagedIdentityProvider resource.
+     * Create an identity provider object that is of the type specified in the request body. Among the types of providers derived from identityProviderBase, you can currently create a socialIdentityProvider resource in Azure AD. In Azure AD B2C, this operation can currently create a socialIdentityProvider, or an appleManagedIdentityProvider resource.
      * @param IdentityProviderBase $body The request body
      * @param IdentityProvidersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -127,7 +131,7 @@ class IdentityProvidersRequestBuilder
     }
 
     /**
-     * Create an identity provider resource that is of the type specified in the request body. Among the types of providers derived from identityProviderBase, you can currently create a socialIdentityProvider resource in Azure AD. In Azure AD B2C, this operation can currently create a socialIdentityProvider, or an appleManagedIdentityProvider resource.
+     * Create an identity provider object that is of the type specified in the request body. Among the types of providers derived from identityProviderBase, you can currently create a socialIdentityProvider resource in Azure AD. In Azure AD B2C, this operation can currently create a socialIdentityProvider, or an appleManagedIdentityProvider resource.
      * @param IdentityProviderBase $body The request body
      * @param IdentityProvidersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

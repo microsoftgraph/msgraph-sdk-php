@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Organization extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new organization and sets the default values.
+     * Instantiates a new Organization and sets the default values.
     */
     public function __construct() {
         parent::__construct();

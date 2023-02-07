@@ -8,11 +8,11 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Devices\Item\Extensions\ExtensionsRequestBuilder;
 use Microsoft\Graph\Generated\Devices\Item\Extensions\Item\ExtensionItemRequestBuilder;
 use Microsoft\Graph\Generated\Devices\Item\MemberOf\MemberOfRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\MicrosoftGraphCheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\MicrosoftGraphCheckMemberObjects\CheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\MicrosoftGraphGetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\MicrosoftGraphGetMemberObjects\GetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\MicrosoftGraphRestore\RestoreRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\MicrosoftGraphCheckMemberGroups\MicrosoftGraphCheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\MicrosoftGraphCheckMemberObjects\MicrosoftGraphCheckMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\MicrosoftGraphGetMemberGroups\MicrosoftGraphGetMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\MicrosoftGraphGetMemberObjects\MicrosoftGraphGetMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\MicrosoftGraphRestore\MicrosoftGraphRestoreRequestBuilder;
 use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\RegisteredOwnersRequestBuilder;
 use Microsoft\Graph\Generated\Devices\Item\RegisteredUsers\RegisteredUsersRequestBuilder;
 use Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\TransitiveMemberOfRequestBuilder;
@@ -47,36 +47,36 @@ class DeviceItemRequestBuilder
     /**
      * Provides operations to call the checkMemberGroups method.
     */
-    public function microsoftGraphCheckMemberGroups(): CheckMemberGroupsRequestBuilder {
-        return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCheckMemberGroups(): MicrosoftGraphCheckMemberGroupsRequestBuilder {
+        return new MicrosoftGraphCheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the checkMemberObjects method.
     */
-    public function microsoftGraphCheckMemberObjects(): CheckMemberObjectsRequestBuilder {
-        return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCheckMemberObjects(): MicrosoftGraphCheckMemberObjectsRequestBuilder {
+        return new MicrosoftGraphCheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getMemberGroups method.
     */
-    public function microsoftGraphGetMemberGroups(): GetMemberGroupsRequestBuilder {
-        return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetMemberGroups(): MicrosoftGraphGetMemberGroupsRequestBuilder {
+        return new MicrosoftGraphGetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getMemberObjects method.
     */
-    public function microsoftGraphGetMemberObjects(): GetMemberObjectsRequestBuilder {
-        return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetMemberObjects(): MicrosoftGraphGetMemberObjectsRequestBuilder {
+        return new MicrosoftGraphGetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the restore method.
     */
-    public function microsoftGraphRestore(): RestoreRequestBuilder {
-        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRestore(): MicrosoftGraphRestoreRequestBuilder {
+        return new MicrosoftGraphRestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -117,17 +117,17 @@ class DeviceItemRequestBuilder
     
     /**
      * Instantiates a new DeviceItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $deviceId key: id of device
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $deviceId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/devices/{device%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['deviceId'] = $deviceId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

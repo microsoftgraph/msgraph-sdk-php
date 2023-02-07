@@ -12,7 +12,7 @@ use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPac
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\IncompatibleAccessPackages\IncompatibleAccessPackagesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\IncompatibleGroups\IncompatibleGroupsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\IncompatibleGroups\Item\GroupItemRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\MicrosoftGraphGetApplicablePolicyRequirements\GetApplicablePolicyRequirementsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\MicrosoftGraphGetApplicablePolicyRequirements\MicrosoftGraphGetApplicablePolicyRequirementsRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessPackage;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -65,8 +65,8 @@ class AccessPackageItemRequestBuilder
     /**
      * Provides operations to call the getApplicablePolicyRequirements method.
     */
-    public function microsoftGraphGetApplicablePolicyRequirements(): GetApplicablePolicyRequirementsRequestBuilder {
-        return new GetApplicablePolicyRequirementsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetApplicablePolicyRequirements(): MicrosoftGraphGetApplicablePolicyRequirementsRequestBuilder {
+        return new MicrosoftGraphGetApplicablePolicyRequirementsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -108,17 +108,17 @@ class AccessPackageItemRequestBuilder
 
     /**
      * Instantiates a new AccessPackageItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $accessPackageId key: id of accessPackage
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $accessPackageId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/identityGovernance/entitlementManagement/accessPackages/{accessPackage%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['accessPackageId'] = $accessPackageId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

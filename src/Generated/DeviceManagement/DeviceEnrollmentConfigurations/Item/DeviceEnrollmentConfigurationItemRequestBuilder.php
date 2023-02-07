@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assignments\AssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assignments\Item\EnrollmentConfigurationAssignmentItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\MicrosoftGraphAssign\AssignRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\MicrosoftGraphSetPriority\SetPriorityRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\MicrosoftGraphAssign\MicrosoftGraphAssignRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\MicrosoftGraphSetPriority\MicrosoftGraphSetPriorityRequestBuilder;
 use Microsoft\Graph\Generated\Models\DeviceEnrollmentConfiguration;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -33,15 +33,15 @@ class DeviceEnrollmentConfigurationItemRequestBuilder
     /**
      * Provides operations to call the assign method.
     */
-    public function microsoftGraphAssign(): AssignRequestBuilder {
-        return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAssign(): MicrosoftGraphAssignRequestBuilder {
+        return new MicrosoftGraphAssignRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the setPriority method.
     */
-    public function microsoftGraphSetPriority(): SetPriorityRequestBuilder {
-        return new SetPriorityRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSetPriority(): MicrosoftGraphSetPriorityRequestBuilder {
+        return new MicrosoftGraphSetPriorityRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -72,17 +72,17 @@ class DeviceEnrollmentConfigurationItemRequestBuilder
 
     /**
      * Instantiates a new DeviceEnrollmentConfigurationItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $deviceEnrollmentConfigurationId key: id of deviceEnrollmentConfiguration
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $deviceEnrollmentConfigurationId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/deviceEnrollmentConfigurations/{deviceEnrollmentConfiguration%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['deviceEnrollmentConfigurationId'] = $deviceEnrollmentConfigurationId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

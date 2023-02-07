@@ -13,11 +13,11 @@ use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\ColumnLink
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\ColumnLinks\Item\ColumnLinkItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\ColumnPositions\ColumnPositionsRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\Columns\ColumnsRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\MicrosoftGraphAssociateWithHubSites\AssociateWithHubSitesRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\MicrosoftGraphCopyToDefaultContentLocation\CopyToDefaultContentLocationRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\MicrosoftGraphIsPublished\IsPublishedRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\MicrosoftGraphPublish\PublishRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\MicrosoftGraphUnpublish\UnpublishRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\MicrosoftGraphAssociateWithHubSites\MicrosoftGraphAssociateWithHubSitesRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\MicrosoftGraphCopyToDefaultContentLocation\MicrosoftGraphCopyToDefaultContentLocationRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\MicrosoftGraphIsPublished\MicrosoftGraphIsPublishedRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\MicrosoftGraphPublish\MicrosoftGraphPublishRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\MicrosoftGraphUnpublish\MicrosoftGraphUnpublishRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -68,36 +68,36 @@ class ContentTypeItemRequestBuilder
     /**
      * Provides operations to call the associateWithHubSites method.
     */
-    public function microsoftGraphAssociateWithHubSites(): AssociateWithHubSitesRequestBuilder {
-        return new AssociateWithHubSitesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAssociateWithHubSites(): MicrosoftGraphAssociateWithHubSitesRequestBuilder {
+        return new MicrosoftGraphAssociateWithHubSitesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the copyToDefaultContentLocation method.
     */
-    public function microsoftGraphCopyToDefaultContentLocation(): CopyToDefaultContentLocationRequestBuilder {
-        return new CopyToDefaultContentLocationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCopyToDefaultContentLocation(): MicrosoftGraphCopyToDefaultContentLocationRequestBuilder {
+        return new MicrosoftGraphCopyToDefaultContentLocationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the isPublished method.
     */
-    public function microsoftGraphIsPublished(): IsPublishedRequestBuilder {
-        return new IsPublishedRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphIsPublished(): MicrosoftGraphIsPublishedRequestBuilder {
+        return new MicrosoftGraphIsPublishedRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the publish method.
     */
-    public function microsoftGraphPublish(): PublishRequestBuilder {
-        return new PublishRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphPublish(): MicrosoftGraphPublishRequestBuilder {
+        return new MicrosoftGraphPublishRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the unpublish method.
     */
-    public function microsoftGraphUnpublish(): UnpublishRequestBuilder {
-        return new UnpublishRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphUnpublish(): MicrosoftGraphUnpublishRequestBuilder {
+        return new MicrosoftGraphUnpublishRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -161,17 +161,17 @@ class ContentTypeItemRequestBuilder
 
     /**
      * Instantiates a new ContentTypeItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $contentTypeId key: id of contentType
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $contentTypeId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/sites/{site%2Did}/lists/{list%2Did}/contentTypes/{contentType%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['contentTypeId'] = $contentTypeId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

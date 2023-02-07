@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Rows\Item\MicrosoftGraphRange\RangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Rows\Item\MicrosoftGraphRange\MicrosoftGraphRangeRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookTableRow;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,8 +23,8 @@ class WorkbookTableRowItemRequestBuilder
     /**
      * Provides operations to call the range method.
     */
-    public function microsoftGraphRange(): RangeRequestBuilder {
-        return new RangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRange(): MicrosoftGraphRangeRequestBuilder {
+        return new MicrosoftGraphRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -44,17 +44,17 @@ class WorkbookTableRowItemRequestBuilder
     
     /**
      * Instantiates a new WorkbookTableRowItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $workbookTableRowId key: id of workbookTableRow
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $workbookTableRowId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}/rows/{workbookTableRow%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['workbookTableRowId'] = $workbookTableRowId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews\It
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews\Item\Issues\Item\MicrosoftGraphIncidentReport\IncidentReportRequestBuilder;
+use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews\Item\Issues\Item\MicrosoftGraphIncidentReport\MicrosoftGraphIncidentReportRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ServiceHealthIssue;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,8 +23,8 @@ class ServiceHealthIssueItemRequestBuilder
     /**
      * Provides operations to call the incidentReport method.
     */
-    public function microsoftGraphIncidentReport(): IncidentReportRequestBuilder {
-        return new IncidentReportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphIncidentReport(): MicrosoftGraphIncidentReportRequestBuilder {
+        return new MicrosoftGraphIncidentReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -44,17 +44,17 @@ class ServiceHealthIssueItemRequestBuilder
     
     /**
      * Instantiates a new ServiceHealthIssueItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $serviceHealthIssueId key: id of serviceHealthIssue
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $serviceHealthIssueId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/admin/serviceAnnouncement/healthOverviews/{serviceHealth%2Did}/issues/{serviceHealthIssue%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['serviceHealthIssueId'] = $serviceHealthIssueId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

@@ -9,7 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Place;
 use Microsoft\Graph\Generated\Models\PlaceCollectionResponse;
 use Microsoft\Graph\Generated\Places\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Places\MicrosoftGraphRoom\RoomRequestBuilder;
+use Microsoft\Graph\Generated\Places\MicrosoftGraphRoom\MicrosoftGraphRoomRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -32,8 +32,8 @@ class PlacesRequestBuilder
     /**
      * Casts the previous resource to room.
     */
-    public function microsoftGraphRoom(): RoomRequestBuilder {
-        return new RoomRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRoom(): MicrosoftGraphRoomRequestBuilder {
+        return new MicrosoftGraphRoomRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -53,13 +53,17 @@ class PlacesRequestBuilder
     
     /**
      * Instantiates a new PlacesRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/places{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

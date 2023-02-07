@@ -55,7 +55,7 @@ class DeviceAndAppManagementData implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the content property value. The content property
+     * Gets the content property value. Not yet documented
      * @return StreamInterface|null
     */
     public function getContent(): ?StreamInterface {
@@ -109,7 +109,7 @@ class DeviceAndAppManagementData implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the content property value. The content property
+     * Sets the content property value. Not yet documented
      * @param StreamInterface|null $value Value to set for the content property.
     */
     public function setContent(?StreamInterface $value): void {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\ExchangeConnectors\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\ExchangeConnectors\Item\MicrosoftGraphSync\SyncRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ExchangeConnectors\Item\MicrosoftGraphSync\MicrosoftGraphSyncRequestBuilder;
 use Microsoft\Graph\Generated\Models\DeviceManagementExchangeConnector;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,8 +23,8 @@ class DeviceManagementExchangeConnectorItemRequestBuilder
     /**
      * Provides operations to call the sync method.
     */
-    public function microsoftGraphSync(): SyncRequestBuilder {
-        return new SyncRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSync(): MicrosoftGraphSyncRequestBuilder {
+        return new MicrosoftGraphSyncRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -44,17 +44,17 @@ class DeviceManagementExchangeConnectorItemRequestBuilder
     
     /**
      * Instantiates a new DeviceManagementExchangeConnectorItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $deviceManagementExchangeConnectorId key: id of deviceManagementExchangeConnector
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $deviceManagementExchangeConnectorId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/exchangeConnectors/{deviceManagementExchangeConnector%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['deviceManagementExchangeConnectorId'] = $deviceManagementExchangeConnectorId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

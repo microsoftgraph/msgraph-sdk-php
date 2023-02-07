@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdent
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\MicrosoftGraphAssignUserToDevice\AssignUserToDeviceRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\MicrosoftGraphUnassignUserFromDevice\UnassignUserFromDeviceRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\MicrosoftGraphUpdateDeviceProperties\UpdateDevicePropertiesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\MicrosoftGraphAssignUserToDevice\MicrosoftGraphAssignUserToDeviceRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\MicrosoftGraphUnassignUserFromDevice\MicrosoftGraphUnassignUserFromDeviceRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\MicrosoftGraphUpdateDeviceProperties\MicrosoftGraphUpdateDevicePropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WindowsAutopilotDeviceIdentity;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -25,22 +25,22 @@ class WindowsAutopilotDeviceIdentityItemRequestBuilder
     /**
      * Provides operations to call the assignUserToDevice method.
     */
-    public function microsoftGraphAssignUserToDevice(): AssignUserToDeviceRequestBuilder {
-        return new AssignUserToDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAssignUserToDevice(): MicrosoftGraphAssignUserToDeviceRequestBuilder {
+        return new MicrosoftGraphAssignUserToDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the unassignUserFromDevice method.
     */
-    public function microsoftGraphUnassignUserFromDevice(): UnassignUserFromDeviceRequestBuilder {
-        return new UnassignUserFromDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphUnassignUserFromDevice(): MicrosoftGraphUnassignUserFromDeviceRequestBuilder {
+        return new MicrosoftGraphUnassignUserFromDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the updateDeviceProperties method.
     */
-    public function microsoftGraphUpdateDeviceProperties(): UpdateDevicePropertiesRequestBuilder {
-        return new UpdateDevicePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphUpdateDeviceProperties(): MicrosoftGraphUpdateDevicePropertiesRequestBuilder {
+        return new MicrosoftGraphUpdateDevicePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -60,17 +60,17 @@ class WindowsAutopilotDeviceIdentityItemRequestBuilder
     
     /**
      * Instantiates a new WindowsAutopilotDeviceIdentityItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $windowsAutopilotDeviceIdentityId key: id of windowsAutopilotDeviceIdentity
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $windowsAutopilotDeviceIdentityId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/windowsAutopilotDeviceIdentities/{windowsAutopilotDeviceIdentity%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['windowsAutopilotDeviceIdentityId'] = $windowsAutopilotDeviceIdentityId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

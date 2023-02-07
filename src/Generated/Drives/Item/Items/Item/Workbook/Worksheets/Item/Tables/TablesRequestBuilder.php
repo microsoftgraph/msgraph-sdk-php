@@ -6,8 +6,9 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\MicrosoftGraphAdd\AddRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\MicrosoftGraphItemAtWithIndex\ItemAtWithIndexRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\MicrosoftGraphAdd\MicrosoftGraphAddRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\MicrosoftGraphCount\MicrosoftGraphCountRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\MicrosoftGraphItemAtWithIndex\MicrosoftGraphItemAtWithIndexRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookTable;
 use Microsoft\Graph\Generated\Models\WorkbookTableCollectionResponse;
@@ -33,15 +34,15 @@ class TablesRequestBuilder
     /**
      * Provides operations to call the add method.
     */
-    public function microsoftGraphAdd(): AddRequestBuilder {
-        return new AddRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAdd(): MicrosoftGraphAddRequestBuilder {
+        return new MicrosoftGraphAddRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the count method.
     */
-    public function microsoftGraphCount(): CountRequestBuilder {
-        return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCount(): MicrosoftGraphCountRequestBuilder {
+        return new MicrosoftGraphCountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -61,13 +62,17 @@ class TablesRequestBuilder
     
     /**
      * Instantiates a new TablesRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/tables{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -92,10 +97,10 @@ class TablesRequestBuilder
     /**
      * Provides operations to call the itemAt method.
      * @param int $index Usage: index={index}
-     * @return ItemAtWithIndexRequestBuilder
+     * @return MicrosoftGraphItemAtWithIndexRequestBuilder
     */
-    public function microsoftGraphItemAtWithIndex(int $index): ItemAtWithIndexRequestBuilder {
-        return new ItemAtWithIndexRequestBuilder($this->pathParameters, $this->requestAdapter, $index);
+    public function microsoftGraphItemAtWithIndex(int $index): MicrosoftGraphItemAtWithIndexRequestBuilder {
+        return new MicrosoftGraphItemAtWithIndexRequestBuilder($this->pathParameters, $this->requestAdapter, $index);
     }
 
     /**

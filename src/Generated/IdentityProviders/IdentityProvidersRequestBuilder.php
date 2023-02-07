@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityProviders\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\IdentityProviders\MicrosoftGraphAvailableProviderTypes\AvailableProviderTypesRequestBuilder;
+use Microsoft\Graph\Generated\IdentityProviders\MicrosoftGraphAvailableProviderTypes\MicrosoftGraphAvailableProviderTypesRequestBuilder;
 use Microsoft\Graph\Generated\Models\IdentityProvider;
 use Microsoft\Graph\Generated\Models\IdentityProviderCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -32,8 +32,8 @@ class IdentityProvidersRequestBuilder
     /**
      * Provides operations to call the availableProviderTypes method.
     */
-    public function microsoftGraphAvailableProviderTypes(): AvailableProviderTypesRequestBuilder {
-        return new AvailableProviderTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAvailableProviderTypes(): MicrosoftGraphAvailableProviderTypesRequestBuilder {
+        return new MicrosoftGraphAvailableProviderTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -53,13 +53,17 @@ class IdentityProvidersRequestBuilder
     
     /**
      * Instantiates a new IdentityProvidersRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/identityProviders{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

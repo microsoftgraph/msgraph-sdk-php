@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Versions\Item\Content\ContentRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Versions\Item\MicrosoftGraphRestoreVersion\RestoreVersionRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Versions\Item\MicrosoftGraphRestoreVersion\MicrosoftGraphRestoreVersionRequestBuilder;
 use Microsoft\Graph\Generated\Models\DriveItemVersion;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -31,8 +31,8 @@ class DriveItemVersionItemRequestBuilder
     /**
      * Provides operations to call the restoreVersion method.
     */
-    public function microsoftGraphRestoreVersion(): RestoreVersionRequestBuilder {
-        return new RestoreVersionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRestoreVersion(): MicrosoftGraphRestoreVersionRequestBuilder {
+        return new MicrosoftGraphRestoreVersionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -52,17 +52,17 @@ class DriveItemVersionItemRequestBuilder
     
     /**
      * Instantiates a new DriveItemVersionItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $driveItemVersionId key: id of driveItemVersion
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $driveItemVersionId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/versions/{driveItemVersion%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['driveItemVersionId'] = $driveItemVersionId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

@@ -6,8 +6,8 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\MicrosoftGraphGetNotebookFromWebUrl\GetNotebookFromWebUrlRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\MicrosoftGraphGetRecentNotebooksWithIncludePersonalNotebooks\GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\MicrosoftGraphGetNotebookFromWebUrl\MicrosoftGraphGetNotebookFromWebUrlRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\MicrosoftGraphGetRecentNotebooksWithIncludePersonalNotebooks\MicrosoftGraphGetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder;
 use Microsoft\Graph\Generated\Models\Notebook;
 use Microsoft\Graph\Generated\Models\NotebookCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -33,8 +33,8 @@ class NotebooksRequestBuilder
     /**
      * Provides operations to call the getNotebookFromWebUrl method.
     */
-    public function microsoftGraphGetNotebookFromWebUrl(): GetNotebookFromWebUrlRequestBuilder {
-        return new GetNotebookFromWebUrlRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetNotebookFromWebUrl(): MicrosoftGraphGetNotebookFromWebUrlRequestBuilder {
+        return new MicrosoftGraphGetNotebookFromWebUrlRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -54,13 +54,17 @@ class NotebooksRequestBuilder
     
     /**
      * Instantiates a new NotebooksRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/onenote/notebooks{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -85,10 +89,10 @@ class NotebooksRequestBuilder
     /**
      * Provides operations to call the getRecentNotebooks method.
      * @param bool $includePersonalNotebooks Usage: includePersonalNotebooks={includePersonalNotebooks}
-     * @return GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder
+     * @return MicrosoftGraphGetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder
     */
-    public function microsoftGraphGetRecentNotebooksWithIncludePersonalNotebooks(bool $includePersonalNotebooks): GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder {
-        return new GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder($this->pathParameters, $this->requestAdapter, $includePersonalNotebooks);
+    public function microsoftGraphGetRecentNotebooksWithIncludePersonalNotebooks(bool $includePersonalNotebooks): MicrosoftGraphGetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder {
+        return new MicrosoftGraphGetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder($this->pathParameters, $this->requestAdapter, $includePersonalNotebooks);
     }
 
     /**

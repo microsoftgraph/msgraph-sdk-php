@@ -6,8 +6,8 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\MicrosoftGraphManagedMobileLobApp\ManagedMobileLobAppRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\MicrosoftGraphMobileLobApp\MobileLobAppRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\MicrosoftGraphManagedMobileLobApp\MicrosoftGraphManagedMobileLobAppRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\MicrosoftGraphMobileLobApp\MicrosoftGraphMobileLobAppRequestBuilder;
 use Microsoft\Graph\Generated\Models\MobileApp;
 use Microsoft\Graph\Generated\Models\MobileAppCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -33,15 +33,15 @@ class MobileAppsRequestBuilder
     /**
      * Casts the previous resource to managedMobileLobApp.
     */
-    public function microsoftGraphManagedMobileLobApp(): ManagedMobileLobAppRequestBuilder {
-        return new ManagedMobileLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphManagedMobileLobApp(): MicrosoftGraphManagedMobileLobAppRequestBuilder {
+        return new MicrosoftGraphManagedMobileLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to mobileLobApp.
     */
-    public function microsoftGraphMobileLobApp(): MobileLobAppRequestBuilder {
-        return new MobileLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphMobileLobApp(): MicrosoftGraphMobileLobAppRequestBuilder {
+        return new MicrosoftGraphMobileLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -61,13 +61,17 @@ class MobileAppsRequestBuilder
     
     /**
      * Instantiates a new MobileAppsRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/deviceAppManagement/mobileApps{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

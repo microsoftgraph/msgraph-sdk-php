@@ -9,11 +9,11 @@ use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Application\Applic
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Comments\CommentsRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Comments\Item\WorkbookCommentItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\FunctionsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\MicrosoftGraphCloseSession\CloseSessionRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\MicrosoftGraphCreateSession\CreateSessionRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\MicrosoftGraphRefreshSession\RefreshSessionRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\MicrosoftGraphSessionInfoResourceWithKey\SessionInfoResourceWithKeyRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\MicrosoftGraphTableRowOperationResultWithKey\TableRowOperationResultWithKeyRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\MicrosoftGraphCloseSession\MicrosoftGraphCloseSessionRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\MicrosoftGraphCreateSession\MicrosoftGraphCreateSessionRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\MicrosoftGraphRefreshSession\MicrosoftGraphRefreshSessionRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\MicrosoftGraphSessionInfoResourceWithKey\MicrosoftGraphSessionInfoResourceWithKeyRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\MicrosoftGraphTableRowOperationResultWithKey\MicrosoftGraphTableRowOperationResultWithKeyRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Names\Item\WorkbookNamedItemItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Names\NamesRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Operations\Item\WorkbookOperationItemRequestBuilder;
@@ -60,22 +60,22 @@ class WorkbookRequestBuilder
     /**
      * Provides operations to call the closeSession method.
     */
-    public function microsoftGraphCloseSession(): CloseSessionRequestBuilder {
-        return new CloseSessionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCloseSession(): MicrosoftGraphCloseSessionRequestBuilder {
+        return new MicrosoftGraphCloseSessionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the createSession method.
     */
-    public function microsoftGraphCreateSession(): CreateSessionRequestBuilder {
-        return new CreateSessionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCreateSession(): MicrosoftGraphCreateSessionRequestBuilder {
+        return new MicrosoftGraphCreateSessionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the refreshSession method.
     */
-    public function microsoftGraphRefreshSession(): RefreshSessionRequestBuilder {
-        return new RefreshSessionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRefreshSession(): MicrosoftGraphRefreshSessionRequestBuilder {
+        return new MicrosoftGraphRefreshSessionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -134,13 +134,17 @@ class WorkbookRequestBuilder
 
     /**
      * Instantiates a new WorkbookRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -182,19 +186,19 @@ class WorkbookRequestBuilder
     /**
      * Provides operations to call the sessionInfoResource method.
      * @param string $key Usage: key='{key}'
-     * @return SessionInfoResourceWithKeyRequestBuilder
+     * @return MicrosoftGraphSessionInfoResourceWithKeyRequestBuilder
     */
-    public function microsoftGraphSessionInfoResourceWithKey(string $key): SessionInfoResourceWithKeyRequestBuilder {
-        return new SessionInfoResourceWithKeyRequestBuilder($this->pathParameters, $this->requestAdapter, $key);
+    public function microsoftGraphSessionInfoResourceWithKey(string $key): MicrosoftGraphSessionInfoResourceWithKeyRequestBuilder {
+        return new MicrosoftGraphSessionInfoResourceWithKeyRequestBuilder($this->pathParameters, $this->requestAdapter, $key);
     }
 
     /**
      * Provides operations to call the tableRowOperationResult method.
      * @param string $key Usage: key='{key}'
-     * @return TableRowOperationResultWithKeyRequestBuilder
+     * @return MicrosoftGraphTableRowOperationResultWithKeyRequestBuilder
     */
-    public function microsoftGraphTableRowOperationResultWithKey(string $key): TableRowOperationResultWithKeyRequestBuilder {
-        return new TableRowOperationResultWithKeyRequestBuilder($this->pathParameters, $this->requestAdapter, $key);
+    public function microsoftGraphTableRowOperationResultWithKey(string $key): MicrosoftGraphTableRowOperationResultWithKeyRequestBuilder {
+        return new MicrosoftGraphTableRowOperationResultWithKeyRequestBuilder($this->pathParameters, $this->requestAdapter, $key);
     }
 
     /**

@@ -6,12 +6,12 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\MicrosoftGraphApplication\ApplicationRequestBuilder;
-use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\MicrosoftGraphDevice\DeviceRequestBuilder;
-use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\MicrosoftGraphGroup\GroupRequestBuilder;
-use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\MicrosoftGraphOrgContact\OrgContactRequestBuilder;
-use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\MicrosoftGraphServicePrincipal\ServicePrincipalRequestBuilder;
-use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\MicrosoftGraphUser\UserRequestBuilder;
+use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\MicrosoftGraphApplication\MicrosoftGraphApplicationRequestBuilder;
+use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\MicrosoftGraphDevice\MicrosoftGraphDeviceRequestBuilder;
+use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\MicrosoftGraphGroup\MicrosoftGraphGroupRequestBuilder;
+use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\MicrosoftGraphOrgContact\MicrosoftGraphOrgContactRequestBuilder;
+use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\MicrosoftGraphServicePrincipal\MicrosoftGraphServicePrincipalRequestBuilder;
+use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\MicrosoftGraphUser\MicrosoftGraphUserRequestBuilder;
 use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\Ref\RefRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -37,43 +37,43 @@ class MembersRequestBuilder
     /**
      * Casts the previous resource to application.
     */
-    public function microsoftGraphApplication(): ApplicationRequestBuilder {
-        return new ApplicationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphApplication(): MicrosoftGraphApplicationRequestBuilder {
+        return new MicrosoftGraphApplicationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to device.
     */
-    public function microsoftGraphDevice(): DeviceRequestBuilder {
-        return new DeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDevice(): MicrosoftGraphDeviceRequestBuilder {
+        return new MicrosoftGraphDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to group.
     */
-    public function microsoftGraphGroup(): GroupRequestBuilder {
-        return new GroupRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGroup(): MicrosoftGraphGroupRequestBuilder {
+        return new MicrosoftGraphGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to orgContact.
     */
-    public function microsoftGraphOrgContact(): OrgContactRequestBuilder {
-        return new OrgContactRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphOrgContact(): MicrosoftGraphOrgContactRequestBuilder {
+        return new MicrosoftGraphOrgContactRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to servicePrincipal.
     */
-    public function microsoftGraphServicePrincipal(): ServicePrincipalRequestBuilder {
-        return new ServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphServicePrincipal(): MicrosoftGraphServicePrincipalRequestBuilder {
+        return new MicrosoftGraphServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to user.
     */
-    public function microsoftGraphUser(): UserRequestBuilder {
-        return new UserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphUser(): MicrosoftGraphUserRequestBuilder {
+        return new MicrosoftGraphUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -100,13 +100,17 @@ class MembersRequestBuilder
     
     /**
      * Instantiates a new MembersRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/directory/administrativeUnits/{administrativeUnit%2Did}/members{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

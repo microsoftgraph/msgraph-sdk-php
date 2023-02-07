@@ -12,8 +12,8 @@ use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\Dev
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\DeviceStatuses\DeviceStatusesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\DeviceStatuses\Item\DeviceComplianceDeviceStatusItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\DeviceStatusOverview\DeviceStatusOverviewRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\MicrosoftGraphAssign\AssignRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\MicrosoftGraphScheduleActionsForRules\ScheduleActionsForRulesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\MicrosoftGraphAssign\MicrosoftGraphAssignRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\MicrosoftGraphScheduleActionsForRules\MicrosoftGraphScheduleActionsForRulesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\ScheduledActionsForRule\Item\DeviceComplianceScheduledActionForRuleItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\ScheduledActionsForRule\ScheduledActionsForRuleRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\UserStatuses\Item\DeviceComplianceUserStatusItemRequestBuilder;
@@ -64,15 +64,15 @@ class DeviceCompliancePolicyItemRequestBuilder
     /**
      * Provides operations to call the assign method.
     */
-    public function microsoftGraphAssign(): AssignRequestBuilder {
-        return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAssign(): MicrosoftGraphAssignRequestBuilder {
+        return new MicrosoftGraphAssignRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the scheduleActionsForRules method.
     */
-    public function microsoftGraphScheduleActionsForRules(): ScheduleActionsForRulesRequestBuilder {
-        return new ScheduleActionsForRulesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphScheduleActionsForRules(): MicrosoftGraphScheduleActionsForRulesRequestBuilder {
+        return new MicrosoftGraphScheduleActionsForRulesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -124,17 +124,17 @@ class DeviceCompliancePolicyItemRequestBuilder
 
     /**
      * Instantiates a new DeviceCompliancePolicyItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $deviceCompliancePolicyId key: id of deviceCompliancePolicy
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $deviceCompliancePolicyId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/deviceCompliancePolicies/{deviceCompliancePolicy%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['deviceCompliancePolicyId'] = $deviceCompliancePolicyId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

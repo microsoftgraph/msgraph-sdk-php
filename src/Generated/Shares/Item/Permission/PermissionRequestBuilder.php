@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Permission;
-use Microsoft\Graph\Generated\Shares\Item\Permission\MicrosoftGraphGrant\GrantRequestBuilder;
+use Microsoft\Graph\Generated\Shares\Item\Permission\MicrosoftGraphGrant\MicrosoftGraphGrantRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -23,8 +23,8 @@ class PermissionRequestBuilder
     /**
      * Provides operations to call the grant method.
     */
-    public function microsoftGraphGrant(): GrantRequestBuilder {
-        return new GrantRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGrant(): MicrosoftGraphGrantRequestBuilder {
+        return new MicrosoftGraphGrantRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -44,13 +44,17 @@ class PermissionRequestBuilder
     
     /**
      * Instantiates a new PermissionRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/shares/{sharedDriveItem%2Did}/permission{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

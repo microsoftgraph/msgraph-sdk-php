@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Identity\ApiConnectors\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Identity\ApiConnectors\Item\MicrosoftGraphUploadClientCertificate\UploadClientCertificateRequestBuilder;
+use Microsoft\Graph\Generated\Identity\ApiConnectors\Item\MicrosoftGraphUploadClientCertificate\MicrosoftGraphUploadClientCertificateRequestBuilder;
 use Microsoft\Graph\Generated\Models\IdentityApiConnector;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,8 +23,8 @@ class IdentityApiConnectorItemRequestBuilder
     /**
      * Provides operations to call the uploadClientCertificate method.
     */
-    public function microsoftGraphUploadClientCertificate(): UploadClientCertificateRequestBuilder {
-        return new UploadClientCertificateRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphUploadClientCertificate(): MicrosoftGraphUploadClientCertificateRequestBuilder {
+        return new MicrosoftGraphUploadClientCertificateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -44,17 +44,17 @@ class IdentityApiConnectorItemRequestBuilder
     
     /**
      * Instantiates a new IdentityApiConnectorItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $identityApiConnectorId key: id of identityApiConnector
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $identityApiConnectorId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/identity/apiConnectors/{identityApiConnector%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['identityApiConnectorId'] = $identityApiConnectorId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

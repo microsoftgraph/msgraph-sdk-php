@@ -9,8 +9,8 @@ use Microsoft\Graph\Generated\Me\Calendars\Item\CalendarPermissions\CalendarPerm
 use Microsoft\Graph\Generated\Me\Calendars\Item\CalendarPermissions\Item\CalendarPermissionItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendars\Item\CalendarView\CalendarViewRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendars\Item\Events\EventsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Calendars\Item\MicrosoftGraphAllowedCalendarSharingRolesWithUser\AllowedCalendarSharingRolesWithUserRequestBuilder;
-use Microsoft\Graph\Generated\Me\Calendars\Item\MicrosoftGraphGetSchedule\GetScheduleRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendars\Item\MicrosoftGraphAllowedCalendarSharingRolesWithUser\MicrosoftGraphAllowedCalendarSharingRolesWithUserRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendars\Item\MicrosoftGraphGetSchedule\MicrosoftGraphGetScheduleRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendars\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendars\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendars\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
@@ -53,8 +53,8 @@ class CalendarItemRequestBuilder
     /**
      * Provides operations to call the getSchedule method.
     */
-    public function microsoftGraphGetSchedule(): GetScheduleRequestBuilder {
-        return new GetScheduleRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetSchedule(): MicrosoftGraphGetScheduleRequestBuilder {
+        return new MicrosoftGraphGetScheduleRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -110,17 +110,17 @@ class CalendarItemRequestBuilder
 
     /**
      * Instantiates a new CalendarItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $calendarId key: id of calendar
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $calendarId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/me/calendars/{calendar%2Did}{?%24select}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['calendarId'] = $calendarId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -173,10 +173,10 @@ class CalendarItemRequestBuilder
     /**
      * Provides operations to call the allowedCalendarSharingRoles method.
      * @param string $user Usage: User='{User}'
-     * @return AllowedCalendarSharingRolesWithUserRequestBuilder
+     * @return MicrosoftGraphAllowedCalendarSharingRolesWithUserRequestBuilder
     */
-    public function microsoftGraphAllowedCalendarSharingRolesWithUser(string $user): AllowedCalendarSharingRolesWithUserRequestBuilder {
-        return new AllowedCalendarSharingRolesWithUserRequestBuilder($this->pathParameters, $this->requestAdapter, $user);
+    public function microsoftGraphAllowedCalendarSharingRolesWithUser(string $user): MicrosoftGraphAllowedCalendarSharingRolesWithUserRequestBuilder {
+        return new MicrosoftGraphAllowedCalendarSharingRolesWithUserRequestBuilder($this->pathParameters, $this->requestAdapter, $user);
     }
 
     /**
