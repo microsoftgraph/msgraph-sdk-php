@@ -192,6 +192,34 @@ class IosMinimumOperatingSystem extends Entity
         return $this;
     }
     /**
+    * Gets the v16_0
+    * When TRUE, only Version 16.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+    *
+    * @return bool|null The v16_0
+    */
+    public function getV16_0()
+    {
+        if (array_key_exists("v160", $this->_propDict)) {
+            return $this->_propDict["v160"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the v16_0
+    * When TRUE, only Version 16.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
+    *
+    * @param bool $val The value of the v16_0
+    *
+    * @return IosMinimumOperatingSystem
+    */
+    public function setV16_0($val)
+    {
+        $this->_propDict["v160"] = $val;
+        return $this;
+    }
+    /**
     * Gets the v8_0
     * When TRUE, only Version 8.0 or later is supported. Default value is FALSE. Exactly one of the minimum operating system boolean values will be TRUE.
     *

@@ -216,6 +216,34 @@ class PlannerPlan extends PlannerDelta
         return $this;
     }
 
+
+     /**
+     * Gets the sharedWithContainers
+     *
+     * @return array|null The sharedWithContainers
+     */
+    public function getSharedWithContainers()
+    {
+        if (array_key_exists("sharedWithContainers", $this->_propDict)) {
+           return $this->_propDict["sharedWithContainers"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the sharedWithContainers
+    *
+    * @param PlannerSharedWithContainer[] $val The sharedWithContainers
+    *
+    * @return PlannerPlan
+    */
+    public function setSharedWithContainers($val)
+    {
+        $this->_propDict["sharedWithContainers"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the title
     * Required. Title of the plan.

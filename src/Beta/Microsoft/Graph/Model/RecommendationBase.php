@@ -27,6 +27,7 @@ class RecommendationBase extends Entity
 
      /**
      * Gets the actionSteps
+    * List of actions to take to complete a recommendation.
      *
      * @return array|null The actionSteps
      */
@@ -41,6 +42,7 @@ class RecommendationBase extends Entity
 
     /**
     * Sets the actionSteps
+    * List of actions to take to complete a recommendation.
     *
     * @param ActionStep[] $val The actionSteps
     *
@@ -54,6 +56,7 @@ class RecommendationBase extends Entity
 
     /**
     * Gets the benefits
+    * An explanation of why completing the recommendation will benefit you. Corresponds to the Value section of a recommendation shown in the Azure AD portal.
     *
     * @return string|null The benefits
     */
@@ -68,6 +71,7 @@ class RecommendationBase extends Entity
 
     /**
     * Sets the benefits
+    * An explanation of why completing the recommendation will benefit you. Corresponds to the Value section of a recommendation shown in the Azure AD portal.
     *
     * @param string $val The benefits
     *
@@ -81,6 +85,7 @@ class RecommendationBase extends Entity
 
     /**
     * Gets the category
+    * Indicates the category of intelligent guidance that the recommendation falls under. The possible values are: identityBestPractice, identitySecureScore, unknownFutureValue.
     *
     * @return RecommendationCategory|null The category
     */
@@ -99,6 +104,7 @@ class RecommendationBase extends Entity
 
     /**
     * Sets the category
+    * Indicates the category of intelligent guidance that the recommendation falls under. The possible values are: identityBestPractice, identitySecureScore, unknownFutureValue.
     *
     * @param RecommendationCategory $val The category
     *
@@ -112,6 +118,7 @@ class RecommendationBase extends Entity
 
     /**
     * Gets the createdDateTime
+    * The date and time when the recommendation was detected as applicable to your directory.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -130,6 +137,7 @@ class RecommendationBase extends Entity
 
     /**
     * Sets the createdDateTime
+    * The date and time when the recommendation was detected as applicable to your directory.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -143,6 +151,7 @@ class RecommendationBase extends Entity
 
     /**
     * Gets the currentScore
+    * The number of points the tenant has attained. Only applies to recommendations with category set to identitySecureScore.
     *
     * @return float|null The currentScore
     */
@@ -157,6 +166,7 @@ class RecommendationBase extends Entity
 
     /**
     * Sets the currentScore
+    * The number of points the tenant has attained. Only applies to recommendations with category set to identitySecureScore.
     *
     * @param float $val The currentScore
     *
@@ -170,6 +180,7 @@ class RecommendationBase extends Entity
 
     /**
     * Gets the displayName
+    * The title of the recommendation.
     *
     * @return string|null The displayName
     */
@@ -184,6 +195,7 @@ class RecommendationBase extends Entity
 
     /**
     * Sets the displayName
+    * The title of the recommendation.
     *
     * @param string $val The displayName
     *
@@ -198,6 +210,7 @@ class RecommendationBase extends Entity
 
      /**
      * Gets the featureAreas
+    * The directory feature that the recommendation is related to.
      *
      * @return array|null The featureAreas
      */
@@ -212,6 +225,7 @@ class RecommendationBase extends Entity
 
     /**
     * Sets the featureAreas
+    * The directory feature that the recommendation is related to.
     *
     * @param RecommendationFeatureAreas[] $val The featureAreas
     *
@@ -225,6 +239,7 @@ class RecommendationBase extends Entity
 
     /**
     * Gets the impactStartDateTime
+    * The future date and time when a recommendation should be completed.
     *
     * @return \DateTime|null The impactStartDateTime
     */
@@ -243,6 +258,7 @@ class RecommendationBase extends Entity
 
     /**
     * Sets the impactStartDateTime
+    * The future date and time when a recommendation should be completed.
     *
     * @param \DateTime $val The impactStartDateTime
     *
@@ -256,6 +272,7 @@ class RecommendationBase extends Entity
 
     /**
     * Gets the impactType
+    * Indicates the scope of impact of a recommendation. Tenant level indicates that the recommendation impacts the whole tenant. Other possible values include users, applications.
     *
     * @return string|null The impactType
     */
@@ -270,6 +287,7 @@ class RecommendationBase extends Entity
 
     /**
     * Sets the impactType
+    * Indicates the scope of impact of a recommendation. Tenant level indicates that the recommendation impacts the whole tenant. Other possible values include users, applications.
     *
     * @param string $val The impactType
     *
@@ -283,6 +301,7 @@ class RecommendationBase extends Entity
 
     /**
     * Gets the insights
+    * Describes why a recommendation uniquely applies to your directory. Corresponds to the Description section of a recommendation shown in the Azure AD portal.
     *
     * @return string|null The insights
     */
@@ -297,6 +316,7 @@ class RecommendationBase extends Entity
 
     /**
     * Sets the insights
+    * Describes why a recommendation uniquely applies to your directory. Corresponds to the Description section of a recommendation shown in the Azure AD portal.
     *
     * @param string $val The insights
     *
@@ -310,6 +330,7 @@ class RecommendationBase extends Entity
 
     /**
     * Gets the lastCheckedDateTime
+    * The most recent date and time a recommendation was deemed applicable to your directory.
     *
     * @return \DateTime|null The lastCheckedDateTime
     */
@@ -328,6 +349,7 @@ class RecommendationBase extends Entity
 
     /**
     * Sets the lastCheckedDateTime
+    * The most recent date and time a recommendation was deemed applicable to your directory.
     *
     * @param \DateTime $val The lastCheckedDateTime
     *
@@ -341,6 +363,7 @@ class RecommendationBase extends Entity
 
     /**
     * Gets the lastModifiedBy
+    * Name of the user who last updated the status of the recommendation.
     *
     * @return string|null The lastModifiedBy
     */
@@ -355,6 +378,7 @@ class RecommendationBase extends Entity
 
     /**
     * Sets the lastModifiedBy
+    * Name of the user who last updated the status of the recommendation.
     *
     * @param string $val The lastModifiedBy
     *
@@ -368,6 +392,7 @@ class RecommendationBase extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * The date and time the status of a recommendation was last updated.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -386,6 +411,7 @@ class RecommendationBase extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * The date and time the status of a recommendation was last updated.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -399,6 +425,7 @@ class RecommendationBase extends Entity
 
     /**
     * Gets the maxScore
+    * The maximum number of points attainable. Only applies to recommendations with category set to identitySecureScore.
     *
     * @return float|null The maxScore
     */
@@ -413,6 +440,7 @@ class RecommendationBase extends Entity
 
     /**
     * Sets the maxScore
+    * The maximum number of points attainable. Only applies to recommendations with category set to identitySecureScore.
     *
     * @param float $val The maxScore
     *
@@ -426,6 +454,7 @@ class RecommendationBase extends Entity
 
     /**
     * Gets the postponeUntilDateTime
+    * The future date and time when the status of a postponed recommendation will be active again.
     *
     * @return \DateTime|null The postponeUntilDateTime
     */
@@ -444,6 +473,7 @@ class RecommendationBase extends Entity
 
     /**
     * Sets the postponeUntilDateTime
+    * The future date and time when the status of a postponed recommendation will be active again.
     *
     * @param \DateTime $val The postponeUntilDateTime
     *
@@ -457,6 +487,7 @@ class RecommendationBase extends Entity
 
     /**
     * Gets the priority
+    * Indicates the time sensitivity for a recommendation to be completed. Microsoft auto assigns this value. The possible values are: low, medium, high.
     *
     * @return RecommendationPriority|null The priority
     */
@@ -475,6 +506,7 @@ class RecommendationBase extends Entity
 
     /**
     * Sets the priority
+    * Indicates the time sensitivity for a recommendation to be completed. Microsoft auto assigns this value. The possible values are: low, medium, high.
     *
     * @param RecommendationPriority $val The priority
     *
@@ -488,6 +520,7 @@ class RecommendationBase extends Entity
 
     /**
     * Gets the recommendationType
+    * Friendly shortname to identify the recommendation. The possible values are: adfsAppsMigration, enableDesktopSSO, enablePHS, enableProvisioning, switchFromPerUserMFA, tenantMFA, thirdPartyApps, turnOffPerUserMFA, useAuthenticatorApp, useMyApps, staleApps, staleAppCreds, applicationCredentialExpiry, servicePrincipalKeyExpiry, adminMFAV2, blockLegacyAuthentication, integratedApps, mfaRegistrationV2, pwagePolicyNew, passwordHashSync, oneAdmin, roleOverlap, selfServicePasswordReset, signinRiskPolicy, userRiskPolicy, verifyAppPublisher, privateLinkForAAD, appRoleAssignmentsGroups, appRoleAssignmentsUsers, managedIdentity, overprivilegedApps, unknownFutureValue.
     *
     * @return RecommendationType|null The recommendationType
     */
@@ -506,6 +539,7 @@ class RecommendationBase extends Entity
 
     /**
     * Sets the recommendationType
+    * Friendly shortname to identify the recommendation. The possible values are: adfsAppsMigration, enableDesktopSSO, enablePHS, enableProvisioning, switchFromPerUserMFA, tenantMFA, thirdPartyApps, turnOffPerUserMFA, useAuthenticatorApp, useMyApps, staleApps, staleAppCreds, applicationCredentialExpiry, servicePrincipalKeyExpiry, adminMFAV2, blockLegacyAuthentication, integratedApps, mfaRegistrationV2, pwagePolicyNew, passwordHashSync, oneAdmin, roleOverlap, selfServicePasswordReset, signinRiskPolicy, userRiskPolicy, verifyAppPublisher, privateLinkForAAD, appRoleAssignmentsGroups, appRoleAssignmentsUsers, managedIdentity, overprivilegedApps, unknownFutureValue.
     *
     * @param RecommendationType $val The recommendationType
     *
@@ -519,6 +553,7 @@ class RecommendationBase extends Entity
 
     /**
     * Gets the remediationImpact
+    * Description of the impact on users of the remediation. Only applies to recommendations with category set to identitySecureScore.
     *
     * @return string|null The remediationImpact
     */
@@ -533,6 +568,7 @@ class RecommendationBase extends Entity
 
     /**
     * Sets the remediationImpact
+    * Description of the impact on users of the remediation. Only applies to recommendations with category set to identitySecureScore.
     *
     * @param string $val The remediationImpact
     *
@@ -546,6 +582,7 @@ class RecommendationBase extends Entity
 
     /**
     * Gets the status
+    * Indicates the status of the recommendation based on user or system action. The possible values are: active, completedBySystem, completedByUser, dismissed, postponed, unknownFutureValue. By default, a recommendation's status is set to active when the recommendation is first generated. Status is set to completedBySystem when our service detects that a recommendation which was previously active no longer applies.
     *
     * @return RecommendationStatus|null The status
     */
@@ -564,6 +601,7 @@ class RecommendationBase extends Entity
 
     /**
     * Sets the status
+    * Indicates the status of the recommendation based on user or system action. The possible values are: active, completedBySystem, completedByUser, dismissed, postponed, unknownFutureValue. By default, a recommendation's status is set to active when the recommendation is first generated. Status is set to completedBySystem when our service detects that a recommendation which was previously active no longer applies.
     *
     * @param RecommendationStatus $val The status
     *
@@ -578,6 +616,7 @@ class RecommendationBase extends Entity
 
      /**
      * Gets the impactedResources
+    * The list of directory objects associated with the recommendation.
      *
      * @return array|null The impactedResources
      */
@@ -592,6 +631,7 @@ class RecommendationBase extends Entity
 
     /**
     * Sets the impactedResources
+    * The list of directory objects associated with the recommendation.
     *
     * @param ImpactedResource[] $val The impactedResources
     *

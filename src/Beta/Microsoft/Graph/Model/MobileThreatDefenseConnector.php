@@ -26,7 +26,7 @@ class MobileThreatDefenseConnector extends Entity
 {
     /**
     * Gets the allowPartnerToCollectIOSApplicationMetadata
-    * For IOS devices, allows the admin to configure whether the data sync partner may also collect metadata about installed applications from Intune
+    * When TRUE, indicates the data sync partner may collect metadata about installed applications from Intune for IOS devices. When FALSE, indicates the data sync partner may not collect metadata about installed applications from Intune for IOS devices. Default value is FALSE.
     *
     * @return bool|null The allowPartnerToCollectIOSApplicationMetadata
     */
@@ -41,7 +41,7 @@ class MobileThreatDefenseConnector extends Entity
 
     /**
     * Sets the allowPartnerToCollectIOSApplicationMetadata
-    * For IOS devices, allows the admin to configure whether the data sync partner may also collect metadata about installed applications from Intune
+    * When TRUE, indicates the data sync partner may collect metadata about installed applications from Intune for IOS devices. When FALSE, indicates the data sync partner may not collect metadata about installed applications from Intune for IOS devices. Default value is FALSE.
     *
     * @param bool $val The allowPartnerToCollectIOSApplicationMetadata
     *
@@ -55,7 +55,7 @@ class MobileThreatDefenseConnector extends Entity
 
     /**
     * Gets the allowPartnerToCollectIOSPersonalApplicationMetadata
-    * For IOS devices, allows the admin to configure whether the data sync partner may also collect metadata about personally installed applications from Intune
+    * When TRUE, indicates the data sync partner may collect metadata about personally installed applications from Intune for IOS devices. When FALSE, indicates the data sync partner may not collect metadata about personally installed applications from Intune for IOS devices. Default value is FALSE.
     *
     * @return bool|null The allowPartnerToCollectIOSPersonalApplicationMetadata
     */
@@ -70,7 +70,7 @@ class MobileThreatDefenseConnector extends Entity
 
     /**
     * Sets the allowPartnerToCollectIOSPersonalApplicationMetadata
-    * For IOS devices, allows the admin to configure whether the data sync partner may also collect metadata about personally installed applications from Intune
+    * When TRUE, indicates the data sync partner may collect metadata about personally installed applications from Intune for IOS devices. When FALSE, indicates the data sync partner may not collect metadata about personally installed applications from Intune for IOS devices. Default value is FALSE.
     *
     * @param bool $val The allowPartnerToCollectIOSPersonalApplicationMetadata
     *
@@ -142,7 +142,7 @@ class MobileThreatDefenseConnector extends Entity
 
     /**
     * Gets the androidMobileApplicationManagementEnabled
-    * For Android, set whether data from the data sync partner should be used during Mobile Application Management (MAM) evaluations. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation.
+    * When TRUE, inidicates that data from the data sync partner can be used during Mobile Application Management (MAM) evaluations for Android devices. When FALSE, inidicates that data from the data sync partner should not be used during Mobile Application Management (MAM) evaluations for Android devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE.
     *
     * @return bool|null The androidMobileApplicationManagementEnabled
     */
@@ -157,7 +157,7 @@ class MobileThreatDefenseConnector extends Entity
 
     /**
     * Sets the androidMobileApplicationManagementEnabled
-    * For Android, set whether data from the data sync partner should be used during Mobile Application Management (MAM) evaluations. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation.
+    * When TRUE, inidicates that data from the data sync partner can be used during Mobile Application Management (MAM) evaluations for Android devices. When FALSE, inidicates that data from the data sync partner should not be used during Mobile Application Management (MAM) evaluations for Android devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE.
     *
     * @param bool $val The androidMobileApplicationManagementEnabled
     *
@@ -229,7 +229,7 @@ class MobileThreatDefenseConnector extends Entity
 
     /**
     * Gets the iosMobileApplicationManagementEnabled
-    * For IOS, get or set whether data from the data sync partner should be used during Mobile Application Management (MAM) evaluations. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation.
+    * When TRUE, inidicates that data from the data sync partner can be used during Mobile Application Management (MAM) evaluations for IOS devices. When FALSE, inidicates that data from the data sync partner should not be used during Mobile Application Management (MAM) evaluations for IOS devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE.
     *
     * @return bool|null The iosMobileApplicationManagementEnabled
     */
@@ -244,7 +244,7 @@ class MobileThreatDefenseConnector extends Entity
 
     /**
     * Sets the iosMobileApplicationManagementEnabled
-    * For IOS, get or set whether data from the data sync partner should be used during Mobile Application Management (MAM) evaluations. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation.
+    * When TRUE, inidicates that data from the data sync partner can be used during Mobile Application Management (MAM) evaluations for IOS devices. When FALSE, inidicates that data from the data sync partner should not be used during Mobile Application Management (MAM) evaluations for IOS devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE.
     *
     * @param bool $val The iosMobileApplicationManagementEnabled
     *
@@ -349,7 +349,7 @@ class MobileThreatDefenseConnector extends Entity
 
     /**
     * Gets the microsoftDefenderForEndpointAttachEnabled
-    * When TRUE, configuration profile management via Microsoft Defender for Endpoint is enabled. When FALSE, configuration profile management via Microsoft Defender for Endpoint is disabled.
+    * When TRUE, inidicates that configuration profile management via Microsoft Defender for Endpoint is enabled. When FALSE, inidicates that configuration profile management via Microsoft Defender for Endpoint is disabled. Default value is FALSE.
     *
     * @return bool|null The microsoftDefenderForEndpointAttachEnabled
     */
@@ -364,7 +364,7 @@ class MobileThreatDefenseConnector extends Entity
 
     /**
     * Sets the microsoftDefenderForEndpointAttachEnabled
-    * When TRUE, configuration profile management via Microsoft Defender for Endpoint is enabled. When FALSE, configuration profile management via Microsoft Defender for Endpoint is disabled.
+    * When TRUE, inidicates that configuration profile management via Microsoft Defender for Endpoint is enabled. When FALSE, inidicates that configuration profile management via Microsoft Defender for Endpoint is disabled. Default value is FALSE.
     *
     * @param bool $val The microsoftDefenderForEndpointAttachEnabled
     *
@@ -469,7 +469,7 @@ class MobileThreatDefenseConnector extends Entity
 
     /**
     * Gets the windowsDeviceBlockedOnMissingPartnerData
-    * For Windows, set whether Intune must receive data from the data sync partner prior to marking a device compliant
+    * When TRUE, inidicates that Intune must receive data from the data sync partner prior to marking a device compliant for Windows. When FALSE, inidicates that Intune may make a device compliant without receiving data from the data sync partner for Windows. Default value is FALSE.
     *
     * @return bool|null The windowsDeviceBlockedOnMissingPartnerData
     */
@@ -484,7 +484,7 @@ class MobileThreatDefenseConnector extends Entity
 
     /**
     * Sets the windowsDeviceBlockedOnMissingPartnerData
-    * For Windows, set whether Intune must receive data from the data sync partner prior to marking a device compliant
+    * When TRUE, inidicates that Intune must receive data from the data sync partner prior to marking a device compliant for Windows. When FALSE, inidicates that Intune may make a device compliant without receiving data from the data sync partner for Windows. Default value is FALSE.
     *
     * @param bool $val The windowsDeviceBlockedOnMissingPartnerData
     *
@@ -498,7 +498,7 @@ class MobileThreatDefenseConnector extends Entity
 
     /**
     * Gets the windowsEnabled
-    * For Windows, get or set whether data from the data sync partner should be used during compliance evaluations
+    * When TRUE, inidicates that data from the data sync partner can be used during compliance evaluations for Windows. When FALSE, inidicates that data from the data sync partner should not be used during compliance evaluations for Windows. Default value is FALSE.
     *
     * @return bool|null The windowsEnabled
     */
@@ -513,7 +513,7 @@ class MobileThreatDefenseConnector extends Entity
 
     /**
     * Sets the windowsEnabled
-    * For Windows, get or set whether data from the data sync partner should be used during compliance evaluations
+    * When TRUE, inidicates that data from the data sync partner can be used during compliance evaluations for Windows. When FALSE, inidicates that data from the data sync partner should not be used during compliance evaluations for Windows. Default value is FALSE.
     *
     * @param bool $val The windowsEnabled
     *

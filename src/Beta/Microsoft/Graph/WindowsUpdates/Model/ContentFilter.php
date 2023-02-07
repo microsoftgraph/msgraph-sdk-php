@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* WindowsUpdateReference File
+* ContentFilter File
 * PHP version 7
 *
 * @category  Library
@@ -13,7 +13,7 @@
 */
 namespace Beta\Microsoft\Graph\WindowsUpdates\Model;
 /**
-* WindowsUpdateReference class
+* ContentFilter class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,6 +21,6 @@ namespace Beta\Microsoft\Graph\WindowsUpdates\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class WindowsUpdateReference extends SoftwareUpdateReference
+class ContentFilter extends \Beta\Microsoft\Graph\Model\Entity
 {
 }

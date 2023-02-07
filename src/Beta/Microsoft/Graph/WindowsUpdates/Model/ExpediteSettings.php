@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* FeatureUpdateReference File
+* ExpediteSettings File
 * PHP version 7
 *
 * @category  Library
@@ -13,7 +13,7 @@
 */
 namespace Beta\Microsoft\Graph\WindowsUpdates\Model;
 /**
-* FeatureUpdateReference class
+* ExpediteSettings class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,34 +21,34 @@ namespace Beta\Microsoft\Graph\WindowsUpdates\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class FeatureUpdateReference extends WindowsUpdateReference
+class ExpediteSettings extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
-    * Gets the version
-    * Specifies a feature update by version.
+    * Gets the isExpedited
+    * True indicates that the deployment of the content is expedited.
     *
-    * @return string|null The version
+    * @return bool|null The isExpedited
     */
-    public function getVersion()
+    public function getIsExpedited()
     {
-        if (array_key_exists("version", $this->_propDict)) {
-            return $this->_propDict["version"];
+        if (array_key_exists("isExpedited", $this->_propDict)) {
+            return $this->_propDict["isExpedited"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the version
-    * Specifies a feature update by version.
+    * Sets the isExpedited
+    * True indicates that the deployment of the content is expedited.
     *
-    * @param string $val The value of the version
+    * @param bool $val The value of the isExpedited
     *
-    * @return FeatureUpdateReference
+    * @return ExpediteSettings
     */
-    public function setVersion($val)
+    public function setIsExpedited($val)
     {
-        $this->_propDict["version"] = $val;
+        $this->_propDict["isExpedited"] = $val;
         return $this;
     }
 }

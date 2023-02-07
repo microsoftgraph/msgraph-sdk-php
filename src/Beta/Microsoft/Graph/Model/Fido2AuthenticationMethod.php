@@ -149,37 +149,6 @@ class Fido2AuthenticationMethod extends AuthenticationMethod
     }
 
     /**
-    * Gets the creationDateTime
-    *
-    * @return \DateTime|null The creationDateTime
-    */
-    public function getCreationDateTime()
-    {
-        if (array_key_exists("creationDateTime", $this->_propDict)) {
-            if (is_a($this->_propDict["creationDateTime"], "\DateTime") || is_null($this->_propDict["creationDateTime"])) {
-                return $this->_propDict["creationDateTime"];
-            } else {
-                $this->_propDict["creationDateTime"] = new \DateTime($this->_propDict["creationDateTime"]);
-                return $this->_propDict["creationDateTime"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the creationDateTime
-    *
-    * @param \DateTime $val The creationDateTime
-    *
-    * @return Fido2AuthenticationMethod
-    */
-    public function setCreationDateTime($val)
-    {
-        $this->_propDict["creationDateTime"] = $val;
-        return $this;
-    }
-
-    /**
     * Gets the displayName
     * The display name of the key as given by the user.
     *

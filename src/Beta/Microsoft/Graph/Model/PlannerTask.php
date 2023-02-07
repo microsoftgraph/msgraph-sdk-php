@@ -612,6 +612,37 @@ class PlannerTask extends PlannerDelta
     }
 
     /**
+    * Gets the recurrence
+    *
+    * @return PlannerTaskRecurrence|null The recurrence
+    */
+    public function getRecurrence()
+    {
+        if (array_key_exists("recurrence", $this->_propDict)) {
+            if (is_a($this->_propDict["recurrence"], "\Beta\Microsoft\Graph\Model\PlannerTaskRecurrence") || is_null($this->_propDict["recurrence"])) {
+                return $this->_propDict["recurrence"];
+            } else {
+                $this->_propDict["recurrence"] = new PlannerTaskRecurrence($this->_propDict["recurrence"]);
+                return $this->_propDict["recurrence"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the recurrence
+    *
+    * @param PlannerTaskRecurrence $val The recurrence
+    *
+    * @return PlannerTask
+    */
+    public function setRecurrence($val)
+    {
+        $this->_propDict["recurrence"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the referenceCount
     * Number of external references that exist on the task.
     *

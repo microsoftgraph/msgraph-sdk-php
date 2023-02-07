@@ -56,6 +56,34 @@ class AuthenticationStrengthRoot extends Entity
 
 
      /**
+     * Gets the combinations
+     *
+     * @return array|null The combinations
+     */
+    public function getCombinations()
+    {
+        if (array_key_exists("combinations", $this->_propDict)) {
+           return $this->_propDict["combinations"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the combinations
+    *
+    * @param AuthenticationMethodModes[] $val The combinations
+    *
+    * @return AuthenticationStrengthRoot
+    */
+    public function setCombinations($val)
+    {
+        $this->_propDict["combinations"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the authenticationMethodModes
     * Names and descriptions of all valid authentication method modes in the system.
      *

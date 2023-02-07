@@ -602,6 +602,36 @@ class DeviceManagement extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the connectorStatus
+    * The list of connector status for the tenant.
+     *
+     * @return array|null The connectorStatus
+     */
+    public function getConnectorStatus()
+    {
+        if (array_key_exists("connectorStatus", $this->_propDict)) {
+           return $this->_propDict["connectorStatus"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the connectorStatus
+    * The list of connector status for the tenant.
+    *
+    * @param ConnectorStatusDetails[] $val The connectorStatus
+    *
+    * @return DeviceManagement
+    */
+    public function setConnectorStatus($val)
+    {
+        $this->_propDict["connectorStatus"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the monitoring
     *
@@ -967,6 +997,36 @@ class DeviceManagement extends Entity
     public function setTermsAndConditions($val)
     {
         $this->_propDict["termsAndConditions"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the serviceNowConnections
+    * A list of ServiceNowConnections
+     *
+     * @return array|null The serviceNowConnections
+     */
+    public function getServiceNowConnections()
+    {
+        if (array_key_exists("serviceNowConnections", $this->_propDict)) {
+           return $this->_propDict["serviceNowConnections"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the serviceNowConnections
+    * A list of ServiceNowConnections
+    *
+    * @param ServiceNowConnection[] $val The serviceNowConnections
+    *
+    * @return DeviceManagement
+    */
+    public function setServiceNowConnections($val)
+    {
+        $this->_propDict["serviceNowConnections"] = $val;
         return $this;
     }
 
@@ -3624,31 +3684,31 @@ class DeviceManagement extends Entity
 
 
      /**
-     * Gets the userExperienceAnalyticsDeviceTimelineEvents
-    * The user experience analytics device events entity contains NRT device timeline events details.
+     * Gets the userExperienceAnalyticsDeviceTimelineEvent
+    * The user experience analytics device events entity contains NRT device timeline event details.
      *
-     * @return array|null The userExperienceAnalyticsDeviceTimelineEvents
+     * @return array|null The userExperienceAnalyticsDeviceTimelineEvent
      */
-    public function getUserExperienceAnalyticsDeviceTimelineEvents()
+    public function getUserExperienceAnalyticsDeviceTimelineEvent()
     {
-        if (array_key_exists("userExperienceAnalyticsDeviceTimelineEvents", $this->_propDict)) {
-           return $this->_propDict["userExperienceAnalyticsDeviceTimelineEvents"];
+        if (array_key_exists("userExperienceAnalyticsDeviceTimelineEvent", $this->_propDict)) {
+           return $this->_propDict["userExperienceAnalyticsDeviceTimelineEvent"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the userExperienceAnalyticsDeviceTimelineEvents
-    * The user experience analytics device events entity contains NRT device timeline events details.
+    * Sets the userExperienceAnalyticsDeviceTimelineEvent
+    * The user experience analytics device events entity contains NRT device timeline event details.
     *
-    * @param UserExperienceAnalyticsDeviceTimelineEvents[] $val The userExperienceAnalyticsDeviceTimelineEvents
+    * @param UserExperienceAnalyticsDeviceTimelineEvent[] $val The userExperienceAnalyticsDeviceTimelineEvent
     *
     * @return DeviceManagement
     */
-    public function setUserExperienceAnalyticsDeviceTimelineEvents($val)
+    public function setUserExperienceAnalyticsDeviceTimelineEvent($val)
     {
-        $this->_propDict["userExperienceAnalyticsDeviceTimelineEvents"] = $val;
+        $this->_propDict["userExperienceAnalyticsDeviceTimelineEvent"] = $val;
         return $this;
     }
 

@@ -55,6 +55,7 @@ class Directory extends Entity
 
      /**
      * Gets the recommendations
+    * List of recommended improvements to improve tenant posture.
      *
      * @return array|null The recommendations
      */
@@ -69,6 +70,7 @@ class Directory extends Entity
 
     /**
     * Sets the recommendations
+    * List of recommended improvements to improve tenant posture.
     *
     * @param Recommendation[] $val The recommendations
     *
