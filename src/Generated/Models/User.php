@@ -307,6 +307,14 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the employeeLeaveDateTime property value. The employeeLeaveDateTime property
+     * @return DateTime|null
+    */
+    public function getEmployeeLeaveDateTime(): ?DateTime {
+        return $this->getBackingStore()->get('employeeLeaveDateTime');
+    }
+
+    /**
      * Gets the employeeOrgData property value. Represents organization data (e.g. division and costCenter) associated with a user. Returned only on $select. Supports $filter (eq, ne, not , ge, le, in).
      * @return EmployeeOrgData|null
     */
@@ -404,6 +412,7 @@ class User extends DirectoryObject implements Parsable
             'drives' => fn(ParseNode $n) => $o->setDrives($n->getCollectionOfObjectValues([Drive::class, 'createFromDiscriminatorValue'])),
             'employeeHireDate' => fn(ParseNode $n) => $o->setEmployeeHireDate($n->getDateTimeValue()),
             'employeeId' => fn(ParseNode $n) => $o->setEmployeeId($n->getStringValue()),
+            'employeeLeaveDateTime' => fn(ParseNode $n) => $o->setEmployeeLeaveDateTime($n->getDateTimeValue()),
             'employeeOrgData' => fn(ParseNode $n) => $o->setEmployeeOrgData($n->getObjectValue([EmployeeOrgData::class, 'createFromDiscriminatorValue'])),
             'employeeType' => fn(ParseNode $n) => $o->setEmployeeType($n->getStringValue()),
             'events' => fn(ParseNode $n) => $o->setEvents($n->getCollectionOfObjectValues([Event::class, 'createFromDiscriminatorValue'])),
@@ -1139,6 +1148,7 @@ class User extends DirectoryObject implements Parsable
         $writer->writeCollectionOfObjectValues('drives', $this->getDrives());
         $writer->writeDateTimeValue('employeeHireDate', $this->getEmployeeHireDate());
         $writer->writeStringValue('employeeId', $this->getEmployeeId());
+        $writer->writeDateTimeValue('employeeLeaveDateTime', $this->getEmployeeLeaveDateTime());
         $writer->writeObjectValue('employeeOrgData', $this->getEmployeeOrgData());
         $writer->writeStringValue('employeeType', $this->getEmployeeType());
         $writer->writeCollectionOfObjectValues('events', $this->getEvents());
@@ -1502,6 +1512,14 @@ class User extends DirectoryObject implements Parsable
     */
     public function setEmployeeId(?string $value): void {
         $this->getBackingStore()->set('employeeId', $value);
+    }
+
+    /**
+     * Sets the employeeLeaveDateTime property value. The employeeLeaveDateTime property
+     * @param DateTime|null $value Value to set for the employeeLeaveDateTime property.
+    */
+    public function setEmployeeLeaveDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('employeeLeaveDateTime', $value);
     }
 
     /**

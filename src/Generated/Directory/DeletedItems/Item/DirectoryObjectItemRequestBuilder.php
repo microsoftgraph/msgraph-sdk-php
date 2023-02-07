@@ -5,14 +5,14 @@ namespace Microsoft\Graph\Generated\Directory\DeletedItems\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Item\MicrosoftGraphApplication\ApplicationRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Item\MicrosoftGraphCheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Item\MicrosoftGraphCheckMemberObjects\CheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Item\MicrosoftGraphGetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Item\MicrosoftGraphGetMemberObjects\GetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Item\MicrosoftGraphGroup\GroupRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Item\MicrosoftGraphRestore\RestoreRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Item\MicrosoftGraphUser\UserRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\Item\MicrosoftGraphApplication\MicrosoftGraphApplicationRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\Item\MicrosoftGraphCheckMemberGroups\MicrosoftGraphCheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\Item\MicrosoftGraphCheckMemberObjects\MicrosoftGraphCheckMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\Item\MicrosoftGraphGetMemberGroups\MicrosoftGraphGetMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\Item\MicrosoftGraphGetMemberObjects\MicrosoftGraphGetMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\Item\MicrosoftGraphGroup\MicrosoftGraphGroupRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\Item\MicrosoftGraphRestore\MicrosoftGraphRestoreRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\Item\MicrosoftGraphUser\MicrosoftGraphUserRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryObject;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -30,57 +30,57 @@ class DirectoryObjectItemRequestBuilder
     /**
      * Casts the previous resource to application.
     */
-    public function microsoftGraphApplication(): ApplicationRequestBuilder {
-        return new ApplicationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphApplication(): MicrosoftGraphApplicationRequestBuilder {
+        return new MicrosoftGraphApplicationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the checkMemberGroups method.
     */
-    public function microsoftGraphCheckMemberGroups(): CheckMemberGroupsRequestBuilder {
-        return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCheckMemberGroups(): MicrosoftGraphCheckMemberGroupsRequestBuilder {
+        return new MicrosoftGraphCheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the checkMemberObjects method.
     */
-    public function microsoftGraphCheckMemberObjects(): CheckMemberObjectsRequestBuilder {
-        return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCheckMemberObjects(): MicrosoftGraphCheckMemberObjectsRequestBuilder {
+        return new MicrosoftGraphCheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getMemberGroups method.
     */
-    public function microsoftGraphGetMemberGroups(): GetMemberGroupsRequestBuilder {
-        return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetMemberGroups(): MicrosoftGraphGetMemberGroupsRequestBuilder {
+        return new MicrosoftGraphGetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getMemberObjects method.
     */
-    public function microsoftGraphGetMemberObjects(): GetMemberObjectsRequestBuilder {
-        return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetMemberObjects(): MicrosoftGraphGetMemberObjectsRequestBuilder {
+        return new MicrosoftGraphGetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to group.
     */
-    public function microsoftGraphGroup(): GroupRequestBuilder {
-        return new GroupRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGroup(): MicrosoftGraphGroupRequestBuilder {
+        return new MicrosoftGraphGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the restore method.
     */
-    public function microsoftGraphRestore(): RestoreRequestBuilder {
-        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRestore(): MicrosoftGraphRestoreRequestBuilder {
+        return new MicrosoftGraphRestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to user.
     */
-    public function microsoftGraphUser(): UserRequestBuilder {
-        return new UserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphUser(): MicrosoftGraphUserRequestBuilder {
+        return new MicrosoftGraphUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -100,17 +100,17 @@ class DirectoryObjectItemRequestBuilder
     
     /**
      * Instantiates a new DirectoryObjectItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $directoryObjectId key: id of directoryObject
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $directoryObjectId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/directory/deletedItems/{directoryObject%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['directoryObjectId'] = $directoryObjectId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

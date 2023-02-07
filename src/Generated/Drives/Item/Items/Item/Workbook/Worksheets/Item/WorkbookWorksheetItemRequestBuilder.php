@@ -7,11 +7,11 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\ChartsRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\WorkbookChartItemRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\MicrosoftGraphCellWithRowWithColumn\CellWithRowWithColumnRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\MicrosoftGraphRange\RangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\MicrosoftGraphRangeWithAddress\RangeWithAddressRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\MicrosoftGraphUsedRange\UsedRangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\MicrosoftGraphUsedRangeWithValuesOnly\UsedRangeWithValuesOnlyRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\MicrosoftGraphCellWithRowWithColumn\MicrosoftGraphCellWithRowWithColumnRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\MicrosoftGraphRange\MicrosoftGraphRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\MicrosoftGraphRangeWithAddress\MicrosoftGraphRangeWithAddressRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\MicrosoftGraphUsedRange\MicrosoftGraphUsedRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\MicrosoftGraphUsedRangeWithValuesOnly\MicrosoftGraphUsedRangeWithValuesOnlyRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Names\Item\WorkbookNamedItemItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Names\NamesRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\PivotTables\Item\WorkbookPivotTableItemRequestBuilder;
@@ -43,15 +43,15 @@ class WorkbookWorksheetItemRequestBuilder
     /**
      * Provides operations to call the range method.
     */
-    public function microsoftGraphRange(): RangeRequestBuilder {
-        return new RangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRange(): MicrosoftGraphRangeRequestBuilder {
+        return new MicrosoftGraphRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the usedRange method.
     */
-    public function microsoftGraphUsedRange(): UsedRangeRequestBuilder {
-        return new UsedRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphUsedRange(): MicrosoftGraphUsedRangeRequestBuilder {
+        return new MicrosoftGraphUsedRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -110,17 +110,17 @@ class WorkbookWorksheetItemRequestBuilder
 
     /**
      * Instantiates a new WorkbookWorksheetItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $workbookWorksheetId key: id of workbookWorksheet
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $workbookWorksheetId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['workbookWorksheetId'] = $workbookWorksheetId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -163,28 +163,28 @@ class WorkbookWorksheetItemRequestBuilder
      * Provides operations to call the cell method.
      * @param int $column Usage: column={column}
      * @param int $row Usage: row={row}
-     * @return CellWithRowWithColumnRequestBuilder
+     * @return MicrosoftGraphCellWithRowWithColumnRequestBuilder
     */
-    public function microsoftGraphCellWithRowWithColumn(int $column, int $row): CellWithRowWithColumnRequestBuilder {
-        return new CellWithRowWithColumnRequestBuilder($this->pathParameters, $this->requestAdapter, $column, $row);
+    public function microsoftGraphCellWithRowWithColumn(int $column, int $row): MicrosoftGraphCellWithRowWithColumnRequestBuilder {
+        return new MicrosoftGraphCellWithRowWithColumnRequestBuilder($this->pathParameters, $this->requestAdapter, $column, $row);
     }
 
     /**
      * Provides operations to call the range method.
      * @param string $address Usage: address='{address}'
-     * @return RangeWithAddressRequestBuilder
+     * @return MicrosoftGraphRangeWithAddressRequestBuilder
     */
-    public function microsoftGraphRangeWithAddress(string $address): RangeWithAddressRequestBuilder {
-        return new RangeWithAddressRequestBuilder($this->pathParameters, $this->requestAdapter, $address);
+    public function microsoftGraphRangeWithAddress(string $address): MicrosoftGraphRangeWithAddressRequestBuilder {
+        return new MicrosoftGraphRangeWithAddressRequestBuilder($this->pathParameters, $this->requestAdapter, $address);
     }
 
     /**
      * Provides operations to call the usedRange method.
      * @param bool $valuesOnly Usage: valuesOnly={valuesOnly}
-     * @return UsedRangeWithValuesOnlyRequestBuilder
+     * @return MicrosoftGraphUsedRangeWithValuesOnlyRequestBuilder
     */
-    public function microsoftGraphUsedRangeWithValuesOnly(bool $valuesOnly): UsedRangeWithValuesOnlyRequestBuilder {
-        return new UsedRangeWithValuesOnlyRequestBuilder($this->pathParameters, $this->requestAdapter, $valuesOnly);
+    public function microsoftGraphUsedRangeWithValuesOnly(bool $valuesOnly): MicrosoftGraphUsedRangeWithValuesOnlyRequestBuilder {
+        return new MicrosoftGraphUsedRangeWithValuesOnlyRequestBuilder($this->pathParameters, $this->requestAdapter, $valuesOnly);
     }
 
     /**

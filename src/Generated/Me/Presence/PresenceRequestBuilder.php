@@ -5,10 +5,10 @@ namespace Microsoft\Graph\Generated\Me\Presence;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\Presence\MicrosoftGraphClearPresence\ClearPresenceRequestBuilder;
-use Microsoft\Graph\Generated\Me\Presence\MicrosoftGraphClearUserPreferredPresence\ClearUserPreferredPresenceRequestBuilder;
-use Microsoft\Graph\Generated\Me\Presence\MicrosoftGraphSetPresence\SetPresenceRequestBuilder;
-use Microsoft\Graph\Generated\Me\Presence\MicrosoftGraphSetUserPreferredPresence\SetUserPreferredPresenceRequestBuilder;
+use Microsoft\Graph\Generated\Me\Presence\MicrosoftGraphClearPresence\MicrosoftGraphClearPresenceRequestBuilder;
+use Microsoft\Graph\Generated\Me\Presence\MicrosoftGraphClearUserPreferredPresence\MicrosoftGraphClearUserPreferredPresenceRequestBuilder;
+use Microsoft\Graph\Generated\Me\Presence\MicrosoftGraphSetPresence\MicrosoftGraphSetPresenceRequestBuilder;
+use Microsoft\Graph\Generated\Me\Presence\MicrosoftGraphSetUserPreferredPresence\MicrosoftGraphSetUserPreferredPresenceRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Presence;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -26,29 +26,29 @@ class PresenceRequestBuilder
     /**
      * Provides operations to call the clearPresence method.
     */
-    public function microsoftGraphClearPresence(): ClearPresenceRequestBuilder {
-        return new ClearPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphClearPresence(): MicrosoftGraphClearPresenceRequestBuilder {
+        return new MicrosoftGraphClearPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the clearUserPreferredPresence method.
     */
-    public function microsoftGraphClearUserPreferredPresence(): ClearUserPreferredPresenceRequestBuilder {
-        return new ClearUserPreferredPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphClearUserPreferredPresence(): MicrosoftGraphClearUserPreferredPresenceRequestBuilder {
+        return new MicrosoftGraphClearUserPreferredPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the setPresence method.
     */
-    public function microsoftGraphSetPresence(): SetPresenceRequestBuilder {
-        return new SetPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSetPresence(): MicrosoftGraphSetPresenceRequestBuilder {
+        return new MicrosoftGraphSetPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the setUserPreferredPresence method.
     */
-    public function microsoftGraphSetUserPreferredPresence(): SetUserPreferredPresenceRequestBuilder {
-        return new SetUserPreferredPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSetUserPreferredPresence(): MicrosoftGraphSetUserPreferredPresenceRequestBuilder {
+        return new MicrosoftGraphSetUserPreferredPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -68,13 +68,17 @@ class PresenceRequestBuilder
     
     /**
      * Instantiates a new PresenceRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/me/presence{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

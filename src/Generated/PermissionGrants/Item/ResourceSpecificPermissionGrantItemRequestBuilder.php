@@ -7,11 +7,11 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ResourceSpecificPermissionGrant;
-use Microsoft\Graph\Generated\PermissionGrants\Item\MicrosoftGraphCheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\PermissionGrants\Item\MicrosoftGraphCheckMemberObjects\CheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\PermissionGrants\Item\MicrosoftGraphGetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\PermissionGrants\Item\MicrosoftGraphGetMemberObjects\GetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\PermissionGrants\Item\MicrosoftGraphRestore\RestoreRequestBuilder;
+use Microsoft\Graph\Generated\PermissionGrants\Item\MicrosoftGraphCheckMemberGroups\MicrosoftGraphCheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\PermissionGrants\Item\MicrosoftGraphCheckMemberObjects\MicrosoftGraphCheckMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\PermissionGrants\Item\MicrosoftGraphGetMemberGroups\MicrosoftGraphGetMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\PermissionGrants\Item\MicrosoftGraphGetMemberObjects\MicrosoftGraphGetMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\PermissionGrants\Item\MicrosoftGraphRestore\MicrosoftGraphRestoreRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -27,36 +27,36 @@ class ResourceSpecificPermissionGrantItemRequestBuilder
     /**
      * Provides operations to call the checkMemberGroups method.
     */
-    public function microsoftGraphCheckMemberGroups(): CheckMemberGroupsRequestBuilder {
-        return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCheckMemberGroups(): MicrosoftGraphCheckMemberGroupsRequestBuilder {
+        return new MicrosoftGraphCheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the checkMemberObjects method.
     */
-    public function microsoftGraphCheckMemberObjects(): CheckMemberObjectsRequestBuilder {
-        return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCheckMemberObjects(): MicrosoftGraphCheckMemberObjectsRequestBuilder {
+        return new MicrosoftGraphCheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getMemberGroups method.
     */
-    public function microsoftGraphGetMemberGroups(): GetMemberGroupsRequestBuilder {
-        return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetMemberGroups(): MicrosoftGraphGetMemberGroupsRequestBuilder {
+        return new MicrosoftGraphGetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getMemberObjects method.
     */
-    public function microsoftGraphGetMemberObjects(): GetMemberObjectsRequestBuilder {
-        return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetMemberObjects(): MicrosoftGraphGetMemberObjectsRequestBuilder {
+        return new MicrosoftGraphGetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the restore method.
     */
-    public function microsoftGraphRestore(): RestoreRequestBuilder {
-        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRestore(): MicrosoftGraphRestoreRequestBuilder {
+        return new MicrosoftGraphRestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -76,17 +76,17 @@ class ResourceSpecificPermissionGrantItemRequestBuilder
     
     /**
      * Instantiates a new ResourceSpecificPermissionGrantItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $resourceSpecificPermissionGrantId key: id of resourceSpecificPermissionGrant
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $resourceSpecificPermissionGrantId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/permissionGrants/{resourceSpecificPermissionGrant%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['resourceSpecificPermissionGrantId'] = $resourceSpecificPermissionGrantId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

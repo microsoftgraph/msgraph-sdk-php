@@ -45,17 +45,17 @@ class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder
     
     /**
      * Instantiates a new DeviceCompliancePolicySettingStateSummaryItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $deviceCompliancePolicySettingStateSummaryId key: id of deviceCompliancePolicySettingStateSummary
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $deviceCompliancePolicySettingStateSummaryId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/deviceCompliancePolicySettingStateSummaries/{deviceCompliancePolicySettingStateSummary%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['deviceCompliancePolicySettingStateSummaryId'] = $deviceCompliancePolicySettingStateSummaryId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

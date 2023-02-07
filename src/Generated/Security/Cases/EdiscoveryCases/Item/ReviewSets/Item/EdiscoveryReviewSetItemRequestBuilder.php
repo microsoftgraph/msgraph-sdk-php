@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryReviewSet;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSets\Item\MicrosoftGraphSecurityAddToReviewSet\AddToReviewSetRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSets\Item\MicrosoftGraphSecurityAddToReviewSet\MicrosoftGraphSecurityAddToReviewSetRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSets\Item\Queries\Item\EdiscoveryReviewSetQueryItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSets\Item\Queries\QueriesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -25,8 +25,8 @@ class EdiscoveryReviewSetItemRequestBuilder
     /**
      * Provides operations to call the addToReviewSet method.
     */
-    public function microsoftGraphSecurityAddToReviewSet(): AddToReviewSetRequestBuilder {
-        return new AddToReviewSetRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityAddToReviewSet(): MicrosoftGraphSecurityAddToReviewSetRequestBuilder {
+        return new MicrosoftGraphSecurityAddToReviewSetRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -53,17 +53,17 @@ class EdiscoveryReviewSetItemRequestBuilder
     
     /**
      * Instantiates a new EdiscoveryReviewSetItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $ediscoveryReviewSetId key: id of ediscoveryReviewSet
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $ediscoveryReviewSetId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/reviewSets/{ediscoveryReviewSet%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['ediscoveryReviewSetId'] = $ediscoveryReviewSetId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

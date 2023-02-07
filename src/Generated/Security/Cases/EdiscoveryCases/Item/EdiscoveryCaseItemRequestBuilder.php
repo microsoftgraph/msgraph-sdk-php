@@ -9,8 +9,8 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryCase;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\CustodiansRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\EdiscoveryCustodianItemRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\MicrosoftGraphSecurityClose\CloseRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\MicrosoftGraphSecurityReopen\ReopenRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\MicrosoftGraphSecurityClose\MicrosoftGraphSecurityCloseRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\MicrosoftGraphSecurityReopen\MicrosoftGraphSecurityReopenRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\NoncustodialDataSources\Item\EdiscoveryNoncustodialDataSourceItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\NoncustodialDataSources\NoncustodialDataSourcesRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Operations\Item\CaseOperationItemRequestBuilder;
@@ -44,15 +44,15 @@ class EdiscoveryCaseItemRequestBuilder
     /**
      * Provides operations to call the close method.
     */
-    public function microsoftGraphSecurityClose(): CloseRequestBuilder {
-        return new CloseRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityClose(): MicrosoftGraphSecurityCloseRequestBuilder {
+        return new MicrosoftGraphSecurityCloseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the reopen method.
     */
-    public function microsoftGraphSecurityReopen(): ReopenRequestBuilder {
-        return new ReopenRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityReopen(): MicrosoftGraphSecurityReopenRequestBuilder {
+        return new MicrosoftGraphSecurityReopenRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -114,17 +114,17 @@ class EdiscoveryCaseItemRequestBuilder
     
     /**
      * Instantiates a new EdiscoveryCaseItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $ediscoveryCaseId key: id of ediscoveryCase
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $ediscoveryCaseId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['ediscoveryCaseId'] = $ediscoveryCaseId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

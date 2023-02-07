@@ -6,7 +6,6 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\ApplicationTemplates\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Models\ApplicationTemplate;
 use Microsoft\Graph\Generated\Models\ApplicationTemplateCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -45,13 +44,17 @@ class ApplicationTemplatesRequestBuilder
     
     /**
      * Instantiates a new ApplicationTemplatesRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/applicationTemplates{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -68,25 +71,6 @@ class ApplicationTemplatesRequestBuilder
                     '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
             ];
             return $this->requestAdapter->sendAsync($requestInfo, [ApplicationTemplateCollectionResponse::class, 'createFromDiscriminatorValue'], $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
-    }
-
-    /**
-     * Add new entity to applicationTemplates
-     * @param ApplicationTemplate $body The request body
-     * @param ApplicationTemplatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
-    */
-    public function post(ApplicationTemplate $body, ?ApplicationTemplatesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
-        $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendAsync($requestInfo, [ApplicationTemplate::class, 'createFromDiscriminatorValue'], $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
@@ -114,30 +98,6 @@ class ApplicationTemplatesRequestBuilder
                 $requestInfo->addRequestOptions(...$requestConfiguration->options);
             }
         }
-        return $requestInfo;
-    }
-
-    /**
-     * Add new entity to applicationTemplates
-     * @param ApplicationTemplate $body The request body
-     * @param ApplicationTemplatesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return RequestInformation
-    */
-    public function toPostRequestInformation(ApplicationTemplate $body, ?ApplicationTemplatesRequestBuilderPostRequestConfiguration $requestConfiguration = null): RequestInformation {
-        $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
-        $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::POST;
-        $requestInfo->addHeader('Accept', "application/json");
-        if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
-        }
-        $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

@@ -13,11 +13,11 @@ use Microsoft\Graph\Generated\Groups\Item\Team\InstalledApps\InstalledAppsReques
 use Microsoft\Graph\Generated\Groups\Item\Team\InstalledApps\Item\TeamsAppInstallationItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Members\Item\ConversationMemberItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Members\MembersRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\MicrosoftGraphArchive\ArchiveRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\MicrosoftGraphClone\CloneRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\MicrosoftGraphCompleteMigration\CompleteMigrationRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\MicrosoftGraphSendActivityNotification\SendActivityNotificationRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\MicrosoftGraphUnarchive\UnarchiveRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\MicrosoftGraphArchive\MicrosoftGraphArchiveRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\MicrosoftGraphClone\MicrosoftGraphCloneRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\MicrosoftGraphCompleteMigration\MicrosoftGraphCompleteMigrationRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\MicrosoftGraphSendActivityNotification\MicrosoftGraphSendActivityNotificationRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\MicrosoftGraphUnarchive\MicrosoftGraphUnarchiveRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Operations\Item\TeamsAsyncOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Operations\OperationsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Photo\PhotoRequestBuilder;
@@ -85,36 +85,36 @@ class TeamRequestBuilder
     /**
      * Provides operations to call the archive method.
     */
-    public function microsoftGraphArchive(): ArchiveRequestBuilder {
-        return new ArchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphArchive(): MicrosoftGraphArchiveRequestBuilder {
+        return new MicrosoftGraphArchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the clone method.
     */
-    public function microsoftGraphClone(): CloneRequestBuilder {
-        return new CloneRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphClone(): MicrosoftGraphCloneRequestBuilder {
+        return new MicrosoftGraphCloneRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the completeMigration method.
     */
-    public function microsoftGraphCompleteMigration(): CompleteMigrationRequestBuilder {
-        return new CompleteMigrationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCompleteMigration(): MicrosoftGraphCompleteMigrationRequestBuilder {
+        return new MicrosoftGraphCompleteMigrationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the sendActivityNotification method.
     */
-    public function microsoftGraphSendActivityNotification(): SendActivityNotificationRequestBuilder {
-        return new SendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSendActivityNotification(): MicrosoftGraphSendActivityNotificationRequestBuilder {
+        return new MicrosoftGraphSendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the unarchive method.
     */
-    public function microsoftGraphUnarchive(): UnarchiveRequestBuilder {
-        return new UnarchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphUnarchive(): MicrosoftGraphUnarchiveRequestBuilder {
+        return new MicrosoftGraphUnarchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -198,13 +198,17 @@ class TeamRequestBuilder
 
     /**
      * Instantiates a new TeamRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/team{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

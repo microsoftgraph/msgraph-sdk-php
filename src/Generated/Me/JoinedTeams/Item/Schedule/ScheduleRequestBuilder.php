@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\MicrosoftGraphShare\ShareRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\MicrosoftGraphShare\MicrosoftGraphShareRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\OfferShiftRequests\Item\OfferShiftRequestItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\OfferShiftRequests\OfferShiftRequestsRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\OpenShiftChangeRequests\Item\OpenShiftChangeRequestItemRequestBuilder;
@@ -41,8 +41,8 @@ class ScheduleRequestBuilder
     /**
      * Provides operations to call the share method.
     */
-    public function microsoftGraphShare(): ShareRequestBuilder {
-        return new ShareRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphShare(): MicrosoftGraphShareRequestBuilder {
+        return new MicrosoftGraphShareRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -125,13 +125,17 @@ class ScheduleRequestBuilder
     
     /**
      * Instantiates a new ScheduleRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/me/joinedTeams/{team%2Did}/schedule{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

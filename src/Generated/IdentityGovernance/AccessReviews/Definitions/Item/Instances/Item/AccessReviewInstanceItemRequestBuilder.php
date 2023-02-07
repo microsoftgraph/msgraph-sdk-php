@@ -9,12 +9,12 @@ use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\ContactedReviewers\Item\AccessReviewReviewerItemRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\Decisions\DecisionsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\Decisions\Item\AccessReviewInstanceDecisionItemItemRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\MicrosoftGraphAcceptRecommendations\AcceptRecommendationsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\MicrosoftGraphApplyDecisions\ApplyDecisionsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\MicrosoftGraphBatchRecordDecisions\BatchRecordDecisionsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\MicrosoftGraphResetDecisions\ResetDecisionsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\MicrosoftGraphSendReminder\SendReminderRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\MicrosoftGraphStop\StopRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\MicrosoftGraphAcceptRecommendations\MicrosoftGraphAcceptRecommendationsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\MicrosoftGraphApplyDecisions\MicrosoftGraphApplyDecisionsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\MicrosoftGraphBatchRecordDecisions\MicrosoftGraphBatchRecordDecisionsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\MicrosoftGraphResetDecisions\MicrosoftGraphResetDecisionsRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\MicrosoftGraphSendReminder\MicrosoftGraphSendReminderRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\MicrosoftGraphStop\MicrosoftGraphStopRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\Stages\Item\AccessReviewStageItemRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\Stages\StagesRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessReviewInstance;
@@ -48,43 +48,43 @@ class AccessReviewInstanceItemRequestBuilder
     /**
      * Provides operations to call the acceptRecommendations method.
     */
-    public function microsoftGraphAcceptRecommendations(): AcceptRecommendationsRequestBuilder {
-        return new AcceptRecommendationsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAcceptRecommendations(): MicrosoftGraphAcceptRecommendationsRequestBuilder {
+        return new MicrosoftGraphAcceptRecommendationsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the applyDecisions method.
     */
-    public function microsoftGraphApplyDecisions(): ApplyDecisionsRequestBuilder {
-        return new ApplyDecisionsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphApplyDecisions(): MicrosoftGraphApplyDecisionsRequestBuilder {
+        return new MicrosoftGraphApplyDecisionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the batchRecordDecisions method.
     */
-    public function microsoftGraphBatchRecordDecisions(): BatchRecordDecisionsRequestBuilder {
-        return new BatchRecordDecisionsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphBatchRecordDecisions(): MicrosoftGraphBatchRecordDecisionsRequestBuilder {
+        return new MicrosoftGraphBatchRecordDecisionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the resetDecisions method.
     */
-    public function microsoftGraphResetDecisions(): ResetDecisionsRequestBuilder {
-        return new ResetDecisionsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphResetDecisions(): MicrosoftGraphResetDecisionsRequestBuilder {
+        return new MicrosoftGraphResetDecisionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the sendReminder method.
     */
-    public function microsoftGraphSendReminder(): SendReminderRequestBuilder {
-        return new SendReminderRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSendReminder(): MicrosoftGraphSendReminderRequestBuilder {
+        return new MicrosoftGraphSendReminderRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the stop method.
     */
-    public function microsoftGraphStop(): StopRequestBuilder {
-        return new StopRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphStop(): MicrosoftGraphStopRequestBuilder {
+        return new MicrosoftGraphStopRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -111,17 +111,17 @@ class AccessReviewInstanceItemRequestBuilder
     
     /**
      * Instantiates a new AccessReviewInstanceItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $accessReviewInstanceId key: id of accessReviewInstance
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $accessReviewInstanceId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/identityGovernance/accessReviews/definitions/{accessReviewScheduleDefinition%2Did}/instances/{accessReviewInstance%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['accessReviewInstanceId'] = $accessReviewInstanceId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

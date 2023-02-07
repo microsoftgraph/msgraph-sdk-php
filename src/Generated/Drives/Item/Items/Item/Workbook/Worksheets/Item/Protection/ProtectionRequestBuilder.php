@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Protection\MicrosoftGraphProtect\ProtectRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Protection\MicrosoftGraphUnprotect\UnprotectRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Protection\MicrosoftGraphProtect\MicrosoftGraphProtectRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Protection\MicrosoftGraphUnprotect\MicrosoftGraphUnprotectRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookWorksheetProtection;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -24,15 +24,15 @@ class ProtectionRequestBuilder
     /**
      * Provides operations to call the protect method.
     */
-    public function microsoftGraphProtect(): ProtectRequestBuilder {
-        return new ProtectRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphProtect(): MicrosoftGraphProtectRequestBuilder {
+        return new MicrosoftGraphProtectRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the unprotect method.
     */
-    public function microsoftGraphUnprotect(): UnprotectRequestBuilder {
-        return new UnprotectRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphUnprotect(): MicrosoftGraphUnprotectRequestBuilder {
+        return new MicrosoftGraphUnprotectRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -52,13 +52,17 @@ class ProtectionRequestBuilder
     
     /**
      * Instantiates a new ProtectionRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/protection{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

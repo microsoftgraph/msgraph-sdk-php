@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Calendar\Events\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Calendar\Events\MicrosoftGraphDelta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Calendar\Events\MicrosoftGraphDelta\MicrosoftGraphDeltaRequestBuilder;
 use Microsoft\Graph\Generated\Models\Event;
 use Microsoft\Graph\Generated\Models\EventCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -32,8 +32,8 @@ class EventsRequestBuilder
     /**
      * Provides operations to call the delta method.
     */
-    public function microsoftGraphDelta(): DeltaRequestBuilder {
-        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDelta(): MicrosoftGraphDeltaRequestBuilder {
+        return new MicrosoftGraphDeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -53,13 +53,17 @@ class EventsRequestBuilder
     
     /**
      * Instantiates a new EventsRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/calendar/events{?%24top,%24skip,%24filter,%24count,%24orderby,%24select}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

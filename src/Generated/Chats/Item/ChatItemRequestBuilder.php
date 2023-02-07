@@ -12,11 +12,11 @@ use Microsoft\Graph\Generated\Chats\Item\Members\Item\ConversationMemberItemRequ
 use Microsoft\Graph\Generated\Chats\Item\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\Messages\Item\ChatMessageItemRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\Messages\MessagesRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\MicrosoftGraphHideForUser\HideForUserRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\MicrosoftGraphMarkChatReadForUser\MarkChatReadForUserRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\MicrosoftGraphMarkChatUnreadForUser\MarkChatUnreadForUserRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\MicrosoftGraphSendActivityNotification\SendActivityNotificationRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\MicrosoftGraphUnhideForUser\UnhideForUserRequestBuilder;
+use Microsoft\Graph\Generated\Chats\Item\MicrosoftGraphHideForUser\MicrosoftGraphHideForUserRequestBuilder;
+use Microsoft\Graph\Generated\Chats\Item\MicrosoftGraphMarkChatReadForUser\MicrosoftGraphMarkChatReadForUserRequestBuilder;
+use Microsoft\Graph\Generated\Chats\Item\MicrosoftGraphMarkChatUnreadForUser\MicrosoftGraphMarkChatUnreadForUserRequestBuilder;
+use Microsoft\Graph\Generated\Chats\Item\MicrosoftGraphSendActivityNotification\MicrosoftGraphSendActivityNotificationRequestBuilder;
+use Microsoft\Graph\Generated\Chats\Item\MicrosoftGraphUnhideForUser\MicrosoftGraphUnhideForUserRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\PinnedMessages\Item\PinnedChatMessageInfoItemRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\PinnedMessages\PinnedMessagesRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\Tabs\Item\TeamsTabItemRequestBuilder;
@@ -66,36 +66,36 @@ class ChatItemRequestBuilder
     /**
      * Provides operations to call the hideForUser method.
     */
-    public function microsoftGraphHideForUser(): HideForUserRequestBuilder {
-        return new HideForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphHideForUser(): MicrosoftGraphHideForUserRequestBuilder {
+        return new MicrosoftGraphHideForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the markChatReadForUser method.
     */
-    public function microsoftGraphMarkChatReadForUser(): MarkChatReadForUserRequestBuilder {
-        return new MarkChatReadForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphMarkChatReadForUser(): MicrosoftGraphMarkChatReadForUserRequestBuilder {
+        return new MicrosoftGraphMarkChatReadForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the markChatUnreadForUser method.
     */
-    public function microsoftGraphMarkChatUnreadForUser(): MarkChatUnreadForUserRequestBuilder {
-        return new MarkChatUnreadForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphMarkChatUnreadForUser(): MicrosoftGraphMarkChatUnreadForUserRequestBuilder {
+        return new MicrosoftGraphMarkChatUnreadForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the sendActivityNotification method.
     */
-    public function microsoftGraphSendActivityNotification(): SendActivityNotificationRequestBuilder {
-        return new SendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSendActivityNotification(): MicrosoftGraphSendActivityNotificationRequestBuilder {
+        return new MicrosoftGraphSendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the unhideForUser method.
     */
-    public function microsoftGraphUnhideForUser(): UnhideForUserRequestBuilder {
-        return new UnhideForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphUnhideForUser(): MicrosoftGraphUnhideForUserRequestBuilder {
+        return new MicrosoftGraphUnhideForUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -129,17 +129,17 @@ class ChatItemRequestBuilder
     
     /**
      * Instantiates a new ChatItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $chatId key: id of chat
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $chatId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/chats/{chat%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['chatId'] = $chatId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

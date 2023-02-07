@@ -9,7 +9,7 @@ use Microsoft\Graph\Generated\Me\Teamwork\AssociatedTeams\AssociatedTeamsRequest
 use Microsoft\Graph\Generated\Me\Teamwork\AssociatedTeams\Item\AssociatedTeamInfoItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Teamwork\InstalledApps\InstalledAppsRequestBuilder;
 use Microsoft\Graph\Generated\Me\Teamwork\InstalledApps\Item\UserScopeTeamsAppInstallationItemRequestBuilder;
-use Microsoft\Graph\Generated\Me\Teamwork\MicrosoftGraphSendActivityNotification\SendActivityNotificationRequestBuilder;
+use Microsoft\Graph\Generated\Me\Teamwork\MicrosoftGraphSendActivityNotification\MicrosoftGraphSendActivityNotificationRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UserTeamwork;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -41,8 +41,8 @@ class TeamworkRequestBuilder
     /**
      * Provides operations to call the sendActivityNotification method.
     */
-    public function microsoftGraphSendActivityNotification(): SendActivityNotificationRequestBuilder {
-        return new SendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSendActivityNotification(): MicrosoftGraphSendActivityNotificationRequestBuilder {
+        return new MicrosoftGraphSendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -73,13 +73,17 @@ class TeamworkRequestBuilder
 
     /**
      * Instantiates a new TeamworkRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/me/teamwork{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

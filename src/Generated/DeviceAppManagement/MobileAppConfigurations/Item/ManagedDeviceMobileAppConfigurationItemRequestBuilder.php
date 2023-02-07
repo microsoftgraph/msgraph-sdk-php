@@ -10,7 +10,7 @@ use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\A
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\DeviceStatuses\DeviceStatusesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\DeviceStatuses\Item\ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\DeviceStatusSummary\DeviceStatusSummaryRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\MicrosoftGraphAssign\AssignRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\MicrosoftGraphAssign\MicrosoftGraphAssignRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\UserStatuses\Item\ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\UserStatuses\UserStatusesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\UserStatusSummary\UserStatusSummaryRequestBuilder;
@@ -52,8 +52,8 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder
     /**
      * Provides operations to call the assign method.
     */
-    public function microsoftGraphAssign(): AssignRequestBuilder {
-        return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAssign(): MicrosoftGraphAssignRequestBuilder {
+        return new MicrosoftGraphAssignRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -98,17 +98,17 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder
 
     /**
      * Instantiates a new ManagedDeviceMobileAppConfigurationItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $managedDeviceMobileAppConfigurationId key: id of managedDeviceMobileAppConfiguration
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $managedDeviceMobileAppConfigurationId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/deviceAppManagement/mobileAppConfigurations/{managedDeviceMobileAppConfiguration%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['managedDeviceMobileAppConfigurationId'] = $managedDeviceMobileAppConfigurationId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

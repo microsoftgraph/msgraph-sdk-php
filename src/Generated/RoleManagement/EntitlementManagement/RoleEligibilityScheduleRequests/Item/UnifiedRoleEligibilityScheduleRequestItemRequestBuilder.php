@@ -9,7 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UnifiedRoleEligibilityScheduleRequest;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEligibilityScheduleRequests\Item\AppScope\AppScopeRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEligibilityScheduleRequests\Item\DirectoryScope\DirectoryScopeRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEligibilityScheduleRequests\Item\MicrosoftGraphCancel\CancelRequestBuilder;
+use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEligibilityScheduleRequests\Item\MicrosoftGraphCancel\MicrosoftGraphCancelRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEligibilityScheduleRequests\Item\Principal\PrincipalRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEligibilityScheduleRequests\Item\RoleDefinition\RoleDefinitionRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleEligibilityScheduleRequests\Item\TargetSchedule\TargetScheduleRequestBuilder;
@@ -42,8 +42,8 @@ class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder
     /**
      * Provides operations to call the cancel method.
     */
-    public function microsoftGraphCancel(): CancelRequestBuilder {
-        return new CancelRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCancel(): MicrosoftGraphCancelRequestBuilder {
+        return new MicrosoftGraphCancelRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -84,17 +84,17 @@ class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder
     
     /**
      * Instantiates a new UnifiedRoleEligibilityScheduleRequestItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $unifiedRoleEligibilityScheduleRequestId key: id of unifiedRoleEligibilityScheduleRequest
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $unifiedRoleEligibilityScheduleRequestId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/roleManagement/entitlementManagement/roleEligibilityScheduleRequests/{unifiedRoleEligibilityScheduleRequest%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['unifiedRoleEligibilityScheduleRequestId'] = $unifiedRoleEligibilityScheduleRequestId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

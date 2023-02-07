@@ -11,8 +11,8 @@ use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\AddToReviewSetOperation\AddToReviewSetOperationRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\CustodianSources\CustodianSourcesRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\LastEstimateStatisticsOperation\LastEstimateStatisticsOperationRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\MicrosoftGraphSecurityEstimateStatistics\EstimateStatisticsRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\MicrosoftGraphSecurityPurgeData\PurgeDataRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\MicrosoftGraphSecurityEstimateStatistics\MicrosoftGraphSecurityEstimateStatisticsRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\MicrosoftGraphSecurityPurgeData\MicrosoftGraphSecurityPurgeDataRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\NoncustodialSources\Item\EdiscoveryNoncustodialDataSourceItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\NoncustodialSources\NoncustodialSourcesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -58,15 +58,15 @@ class EdiscoverySearchItemRequestBuilder
     /**
      * Provides operations to call the estimateStatistics method.
     */
-    public function microsoftGraphSecurityEstimateStatistics(): EstimateStatisticsRequestBuilder {
-        return new EstimateStatisticsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityEstimateStatistics(): MicrosoftGraphSecurityEstimateStatisticsRequestBuilder {
+        return new MicrosoftGraphSecurityEstimateStatisticsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the purgeData method.
     */
-    public function microsoftGraphSecurityPurgeData(): PurgeDataRequestBuilder {
-        return new PurgeDataRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityPurgeData(): MicrosoftGraphSecurityPurgeDataRequestBuilder {
+        return new MicrosoftGraphSecurityPurgeDataRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -104,17 +104,17 @@ class EdiscoverySearchItemRequestBuilder
 
     /**
      * Instantiates a new EdiscoverySearchItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $ediscoverySearchId key: id of ediscoverySearch
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $ediscoverySearchId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/searches/{ediscoverySearch%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['ediscoverySearchId'] = $ediscoverySearchId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

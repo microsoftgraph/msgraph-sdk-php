@@ -6,9 +6,9 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\MicrosoftGraphAdditionalAccess\AdditionalAccessRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\MicrosoftGraphAdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageId\AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\MicrosoftGraphFilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\MicrosoftGraphAdditionalAccess\MicrosoftGraphAdditionalAccessRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\MicrosoftGraphAdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageId\MicrosoftGraphAdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\MicrosoftGraphFilterByCurrentUserWithOn\MicrosoftGraphFilterByCurrentUserWithOnRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessPackageAssignment;
 use Microsoft\Graph\Generated\Models\AccessPackageAssignmentCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -34,8 +34,8 @@ class AssignmentsRequestBuilder
     /**
      * Provides operations to call the additionalAccess method.
     */
-    public function microsoftGraphAdditionalAccess(): AdditionalAccessRequestBuilder {
-        return new AdditionalAccessRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAdditionalAccess(): MicrosoftGraphAdditionalAccessRequestBuilder {
+        return new MicrosoftGraphAdditionalAccessRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -55,13 +55,17 @@ class AssignmentsRequestBuilder
     
     /**
      * Instantiates a new AssignmentsRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/identityGovernance/entitlementManagement/assignments{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -87,19 +91,19 @@ class AssignmentsRequestBuilder
      * Provides operations to call the additionalAccess method.
      * @param string $accessPackageId Usage: accessPackageId='{accessPackageId}'
      * @param string $incompatibleAccessPackageId Usage: incompatibleAccessPackageId='{incompatibleAccessPackageId}'
-     * @return AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder
+     * @return MicrosoftGraphAdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder
     */
-    public function microsoftGraphAdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageId(string $accessPackageId, string $incompatibleAccessPackageId): AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder {
-        return new AdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder($this->pathParameters, $this->requestAdapter, $accessPackageId, $incompatibleAccessPackageId);
+    public function microsoftGraphAdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageId(string $accessPackageId, string $incompatibleAccessPackageId): MicrosoftGraphAdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder {
+        return new MicrosoftGraphAdditionalAccessWithAccessPackageIdWithIncompatibleAccessPackageIdRequestBuilder($this->pathParameters, $this->requestAdapter, $accessPackageId, $incompatibleAccessPackageId);
     }
 
     /**
      * Provides operations to call the filterByCurrentUser method.
      * @param string $on Usage: on='{on}'
-     * @return FilterByCurrentUserWithOnRequestBuilder
+     * @return MicrosoftGraphFilterByCurrentUserWithOnRequestBuilder
     */
-    public function microsoftGraphFilterByCurrentUserWithOn(string $on): FilterByCurrentUserWithOnRequestBuilder {
-        return new FilterByCurrentUserWithOnRequestBuilder($this->pathParameters, $this->requestAdapter, $on);
+    public function microsoftGraphFilterByCurrentUserWithOn(string $on): MicrosoftGraphFilterByCurrentUserWithOnRequestBuilder {
+        return new MicrosoftGraphFilterByCurrentUserWithOnRequestBuilder($this->pathParameters, $this->requestAdapter, $on);
     }
 
     /**

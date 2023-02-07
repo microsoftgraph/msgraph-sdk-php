@@ -8,7 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ListItemVersion;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\Versions\Item\Fields\FieldsRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\Versions\Item\MicrosoftGraphRestoreVersion\RestoreVersionRequestBuilder;
+use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\Versions\Item\MicrosoftGraphRestoreVersion\MicrosoftGraphRestoreVersionRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -31,8 +31,8 @@ class ListItemVersionItemRequestBuilder
     /**
      * Provides operations to call the restoreVersion method.
     */
-    public function microsoftGraphRestoreVersion(): RestoreVersionRequestBuilder {
-        return new RestoreVersionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRestoreVersion(): MicrosoftGraphRestoreVersionRequestBuilder {
+        return new MicrosoftGraphRestoreVersionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -52,17 +52,17 @@ class ListItemVersionItemRequestBuilder
     
     /**
      * Instantiates a new ListItemVersionItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $listItemVersionId key: id of listItemVersion
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $listItemVersionId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/shares/{sharedDriveItem%2Did}/list/items/{listItem%2Did}/versions/{listItemVersion%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['listItemVersionId'] = $listItemVersionId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

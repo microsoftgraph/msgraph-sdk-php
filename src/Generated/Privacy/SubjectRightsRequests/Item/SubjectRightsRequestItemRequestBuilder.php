@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SubjectRightsRequest;
-use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\MicrosoftGraphGetFinalAttachment\GetFinalAttachmentRequestBuilder;
-use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\MicrosoftGraphGetFinalReport\GetFinalReportRequestBuilder;
+use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\MicrosoftGraphGetFinalAttachment\MicrosoftGraphGetFinalAttachmentRequestBuilder;
+use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\MicrosoftGraphGetFinalReport\MicrosoftGraphGetFinalReportRequestBuilder;
 use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Notes\Item\AuthoredNoteItemRequestBuilder;
 use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Notes\NotesRequestBuilder;
 use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Team\TeamRequestBuilder;
@@ -27,15 +27,15 @@ class SubjectRightsRequestItemRequestBuilder
     /**
      * Provides operations to call the getFinalAttachment method.
     */
-    public function microsoftGraphGetFinalAttachment(): GetFinalAttachmentRequestBuilder {
-        return new GetFinalAttachmentRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetFinalAttachment(): MicrosoftGraphGetFinalAttachmentRequestBuilder {
+        return new MicrosoftGraphGetFinalAttachmentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getFinalReport method.
     */
-    public function microsoftGraphGetFinalReport(): GetFinalReportRequestBuilder {
-        return new GetFinalReportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetFinalReport(): MicrosoftGraphGetFinalReportRequestBuilder {
+        return new MicrosoftGraphGetFinalReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -69,17 +69,17 @@ class SubjectRightsRequestItemRequestBuilder
     
     /**
      * Instantiates a new SubjectRightsRequestItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $subjectRightsRequestId key: id of subjectRightsRequest
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $subjectRightsRequestId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/privacy/subjectRightsRequests/{subjectRightsRequest%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['subjectRightsRequestId'] = $subjectRightsRequestId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

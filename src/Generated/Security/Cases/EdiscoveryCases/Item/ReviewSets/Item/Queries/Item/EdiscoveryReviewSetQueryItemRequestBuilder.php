@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryReviewSetQuery;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSets\Item\Queries\Item\MicrosoftGraphSecurityApplyTags\ApplyTagsRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSets\Item\Queries\Item\MicrosoftGraphSecurityApplyTags\MicrosoftGraphSecurityApplyTagsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -23,8 +23,8 @@ class EdiscoveryReviewSetQueryItemRequestBuilder
     /**
      * Provides operations to call the applyTags method.
     */
-    public function microsoftGraphSecurityApplyTags(): ApplyTagsRequestBuilder {
-        return new ApplyTagsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityApplyTags(): MicrosoftGraphSecurityApplyTagsRequestBuilder {
+        return new MicrosoftGraphSecurityApplyTagsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -44,17 +44,17 @@ class EdiscoveryReviewSetQueryItemRequestBuilder
     
     /**
      * Instantiates a new EdiscoveryReviewSetQueryItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $ediscoveryReviewSetQueryId key: id of ediscoveryReviewSetQuery
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $ediscoveryReviewSetQueryId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/reviewSets/{ediscoveryReviewSet%2Did}/queries/{ediscoveryReviewSetQuery%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['ediscoveryReviewSetQueryId'] = $ediscoveryReviewSetQueryId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

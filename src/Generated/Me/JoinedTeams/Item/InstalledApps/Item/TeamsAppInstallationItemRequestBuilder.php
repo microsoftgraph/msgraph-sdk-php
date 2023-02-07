@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\InstalledApps\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\JoinedTeams\Item\InstalledApps\Item\MicrosoftGraphUpgrade\UpgradeRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\InstalledApps\Item\MicrosoftGraphUpgrade\MicrosoftGraphUpgradeRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\InstalledApps\Item\TeamsApp\TeamsAppRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\InstalledApps\Item\TeamsAppDefinition\TeamsAppDefinitionRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -25,8 +25,8 @@ class TeamsAppInstallationItemRequestBuilder
     /**
      * Provides operations to call the upgrade method.
     */
-    public function microsoftGraphUpgrade(): UpgradeRequestBuilder {
-        return new UpgradeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphUpgrade(): MicrosoftGraphUpgradeRequestBuilder {
+        return new MicrosoftGraphUpgradeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -60,17 +60,17 @@ class TeamsAppInstallationItemRequestBuilder
     
     /**
      * Instantiates a new TeamsAppInstallationItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $teamsAppInstallationId key: id of teamsAppInstallation
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $teamsAppInstallationId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/me/joinedTeams/{team%2Did}/installedApps/{teamsAppInstallation%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['teamsAppInstallationId'] = $teamsAppInstallationId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

@@ -5,11 +5,11 @@ namespace Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\It
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\MicrosoftGraphReassign\ReassignRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\MicrosoftGraphReturn\ReturnRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\MicrosoftGraphSetUpResourcesFolder\SetUpResourcesFolderRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\MicrosoftGraphSubmit\SubmitRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\MicrosoftGraphUnsubmit\UnsubmitRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\MicrosoftGraphReassign\MicrosoftGraphReassignRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\MicrosoftGraphReturn\MicrosoftGraphReturnRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\MicrosoftGraphSetUpResourcesFolder\MicrosoftGraphSetUpResourcesFolderRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\MicrosoftGraphSubmit\MicrosoftGraphSubmitRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\MicrosoftGraphUnsubmit\MicrosoftGraphUnsubmitRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Outcomes\Item\EducationOutcomeItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Outcomes\OutcomesRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Resources\ResourcesRequestBuilder;
@@ -31,36 +31,36 @@ class EducationSubmissionItemRequestBuilder
     /**
      * Provides operations to call the reassign method.
     */
-    public function microsoftGraphReassign(): ReassignRequestBuilder {
-        return new ReassignRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphReassign(): MicrosoftGraphReassignRequestBuilder {
+        return new MicrosoftGraphReassignRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the return method.
     */
-    public function microsoftGraphReturn(): ReturnRequestBuilder {
-        return new ReturnRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphReturn(): MicrosoftGraphReturnRequestBuilder {
+        return new MicrosoftGraphReturnRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the setUpResourcesFolder method.
     */
-    public function microsoftGraphSetUpResourcesFolder(): SetUpResourcesFolderRequestBuilder {
-        return new SetUpResourcesFolderRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSetUpResourcesFolder(): MicrosoftGraphSetUpResourcesFolderRequestBuilder {
+        return new MicrosoftGraphSetUpResourcesFolderRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the submit method.
     */
-    public function microsoftGraphSubmit(): SubmitRequestBuilder {
-        return new SubmitRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSubmit(): MicrosoftGraphSubmitRequestBuilder {
+        return new MicrosoftGraphSubmitRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the unsubmit method.
     */
-    public function microsoftGraphUnsubmit(): UnsubmitRequestBuilder {
-        return new UnsubmitRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphUnsubmit(): MicrosoftGraphUnsubmitRequestBuilder {
+        return new MicrosoftGraphUnsubmitRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -101,17 +101,17 @@ class EducationSubmissionItemRequestBuilder
     
     /**
      * Instantiates a new EducationSubmissionItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $educationSubmissionId key: id of educationSubmission
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $educationSubmissionId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/education/me/assignments/{educationAssignment%2Did}/submissions/{educationSubmission%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['educationSubmissionId'] = $educationSubmissionId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

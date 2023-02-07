@@ -45,19 +45,24 @@ class RequestsRequestBuilder
     
     /**
      * Instantiates a new RequestsRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/tenantRelationships/delegatedAdminRelationships/{delegatedAdminRelationship%2Did}/requests{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
-     * Get requests from tenantRelationships
+     * Get a list of the delegatedAdminRelationshipRequest objects and their properties.
      * @param RequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/delegatedadminrelationship-list-requests?view=graph-rest-1.0 Find more info here
     */
     public function get(?RequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -73,10 +78,11 @@ class RequestsRequestBuilder
     }
 
     /**
-     * Create new navigation property to requests for tenantRelationships
+     * Create a new delegatedAdminRelationshipRequest object.
      * @param DelegatedAdminRelationshipRequest $body The request body
      * @param RequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/delegatedadminrelationship-post-requests?view=graph-rest-1.0 Find more info here
     */
     public function post(DelegatedAdminRelationshipRequest $body, ?RequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -92,7 +98,7 @@ class RequestsRequestBuilder
     }
 
     /**
-     * Get requests from tenantRelationships
+     * Get a list of the delegatedAdminRelationshipRequest objects and their properties.
      * @param RequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -117,7 +123,7 @@ class RequestsRequestBuilder
     }
 
     /**
-     * Create new navigation property to requests for tenantRelationships
+     * Create a new delegatedAdminRelationshipRequest object.
      * @param DelegatedAdminRelationshipRequest $body The request body
      * @param RequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

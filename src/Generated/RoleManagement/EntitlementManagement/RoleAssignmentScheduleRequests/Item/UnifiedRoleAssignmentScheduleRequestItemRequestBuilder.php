@@ -10,7 +10,7 @@ use Microsoft\Graph\Generated\Models\UnifiedRoleAssignmentScheduleRequest;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentScheduleRequests\Item\ActivatedUsing\ActivatedUsingRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentScheduleRequests\Item\AppScope\AppScopeRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentScheduleRequests\Item\DirectoryScope\DirectoryScopeRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentScheduleRequests\Item\MicrosoftGraphCancel\CancelRequestBuilder;
+use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentScheduleRequests\Item\MicrosoftGraphCancel\MicrosoftGraphCancelRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentScheduleRequests\Item\Principal\PrincipalRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentScheduleRequests\Item\RoleDefinition\RoleDefinitionRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentScheduleRequests\Item\TargetSchedule\TargetScheduleRequestBuilder;
@@ -50,8 +50,8 @@ class UnifiedRoleAssignmentScheduleRequestItemRequestBuilder
     /**
      * Provides operations to call the cancel method.
     */
-    public function microsoftGraphCancel(): CancelRequestBuilder {
-        return new CancelRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCancel(): MicrosoftGraphCancelRequestBuilder {
+        return new MicrosoftGraphCancelRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -92,17 +92,17 @@ class UnifiedRoleAssignmentScheduleRequestItemRequestBuilder
     
     /**
      * Instantiates a new UnifiedRoleAssignmentScheduleRequestItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $unifiedRoleAssignmentScheduleRequestId key: id of unifiedRoleAssignmentScheduleRequest
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $unifiedRoleAssignmentScheduleRequestId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/roleManagement/entitlementManagement/roleAssignmentScheduleRequests/{unifiedRoleAssignmentScheduleRequest%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['unifiedRoleAssignmentScheduleRequestId'] = $unifiedRoleAssignmentScheduleRequestId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

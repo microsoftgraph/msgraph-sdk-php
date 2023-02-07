@@ -51,7 +51,7 @@ class TenantRelationship implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the delegatedAdminCustomers property value. The delegatedAdminCustomers property
+     * Gets the delegatedAdminCustomers property value. The customer who has a delegated admin relationship with a Microsoft partner.
      * @return array<DelegatedAdminCustomer>|null
     */
     public function getDelegatedAdminCustomers(): ?array {
@@ -59,7 +59,7 @@ class TenantRelationship implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the delegatedAdminRelationships property value. The delegatedAdminRelationships property
+     * Gets the delegatedAdminRelationships property value. The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
      * @return array<DelegatedAdminRelationship>|null
     */
     public function getDelegatedAdminRelationships(): ?array {
@@ -115,7 +115,7 @@ class TenantRelationship implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the delegatedAdminCustomers property value. The delegatedAdminCustomers property
+     * Sets the delegatedAdminCustomers property value. The customer who has a delegated admin relationship with a Microsoft partner.
      * @param array<DelegatedAdminCustomer>|null $value Value to set for the delegatedAdminCustomers property.
     */
     public function setDelegatedAdminCustomers(?array $value): void {
@@ -123,7 +123,7 @@ class TenantRelationship implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the delegatedAdminRelationships property value. The delegatedAdminRelationships property
+     * Sets the delegatedAdminRelationships property value. The details of the delegated administrative privileges that a Microsoft partner has in a customer tenant.
      * @param array<DelegatedAdminRelationship>|null $value Value to set for the delegatedAdminRelationships property.
     */
     public function setDelegatedAdminRelationships(?array $value): void {

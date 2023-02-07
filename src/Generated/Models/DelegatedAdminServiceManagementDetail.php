@@ -37,7 +37,7 @@ class DelegatedAdminServiceManagementDetail extends Entity implements Parsable
     }
 
     /**
-     * Gets the serviceManagementUrl property value. The serviceManagementUrl property
+     * Gets the serviceManagementUrl property value. The URL of the management portal for the managed service. Read-only.
      * @return string|null
     */
     public function getServiceManagementUrl(): ?string {
@@ -45,7 +45,7 @@ class DelegatedAdminServiceManagementDetail extends Entity implements Parsable
     }
 
     /**
-     * Gets the serviceName property value. The serviceName property
+     * Gets the serviceName property value. The name of a managed service. Read-only.
      * @return string|null
     */
     public function getServiceName(): ?string {
@@ -63,7 +63,7 @@ class DelegatedAdminServiceManagementDetail extends Entity implements Parsable
     }
 
     /**
-     * Sets the serviceManagementUrl property value. The serviceManagementUrl property
+     * Sets the serviceManagementUrl property value. The URL of the management portal for the managed service. Read-only.
      * @param string|null $value Value to set for the serviceManagementUrl property.
     */
     public function setServiceManagementUrl(?string $value): void {
@@ -71,7 +71,7 @@ class DelegatedAdminServiceManagementDetail extends Entity implements Parsable
     }
 
     /**
-     * Sets the serviceName property value. The serviceName property
+     * Sets the serviceName property value. The name of a managed service. Read-only.
      * @param string|null $value Value to set for the serviceName property.
     */
     public function setServiceName(?string $value): void {

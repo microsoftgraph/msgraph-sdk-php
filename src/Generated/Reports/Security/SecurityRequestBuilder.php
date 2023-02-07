@@ -7,9 +7,9 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SecurityReportsRoot;
-use Microsoft\Graph\Generated\Reports\Security\MicrosoftGraphGetAttackSimulationRepeatOffenders\GetAttackSimulationRepeatOffendersRequestBuilder;
-use Microsoft\Graph\Generated\Reports\Security\MicrosoftGraphGetAttackSimulationSimulationUserCoverage\GetAttackSimulationSimulationUserCoverageRequestBuilder;
-use Microsoft\Graph\Generated\Reports\Security\MicrosoftGraphGetAttackSimulationTrainingUserCoverage\GetAttackSimulationTrainingUserCoverageRequestBuilder;
+use Microsoft\Graph\Generated\Reports\Security\MicrosoftGraphGetAttackSimulationRepeatOffenders\MicrosoftGraphGetAttackSimulationRepeatOffendersRequestBuilder;
+use Microsoft\Graph\Generated\Reports\Security\MicrosoftGraphGetAttackSimulationSimulationUserCoverage\MicrosoftGraphGetAttackSimulationSimulationUserCoverageRequestBuilder;
+use Microsoft\Graph\Generated\Reports\Security\MicrosoftGraphGetAttackSimulationTrainingUserCoverage\MicrosoftGraphGetAttackSimulationTrainingUserCoverageRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -25,22 +25,22 @@ class SecurityRequestBuilder
     /**
      * Provides operations to call the getAttackSimulationRepeatOffenders method.
     */
-    public function microsoftGraphGetAttackSimulationRepeatOffenders(): GetAttackSimulationRepeatOffendersRequestBuilder {
-        return new GetAttackSimulationRepeatOffendersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetAttackSimulationRepeatOffenders(): MicrosoftGraphGetAttackSimulationRepeatOffendersRequestBuilder {
+        return new MicrosoftGraphGetAttackSimulationRepeatOffendersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getAttackSimulationSimulationUserCoverage method.
     */
-    public function microsoftGraphGetAttackSimulationSimulationUserCoverage(): GetAttackSimulationSimulationUserCoverageRequestBuilder {
-        return new GetAttackSimulationSimulationUserCoverageRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetAttackSimulationSimulationUserCoverage(): MicrosoftGraphGetAttackSimulationSimulationUserCoverageRequestBuilder {
+        return new MicrosoftGraphGetAttackSimulationSimulationUserCoverageRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getAttackSimulationTrainingUserCoverage method.
     */
-    public function microsoftGraphGetAttackSimulationTrainingUserCoverage(): GetAttackSimulationTrainingUserCoverageRequestBuilder {
-        return new GetAttackSimulationTrainingUserCoverageRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetAttackSimulationTrainingUserCoverage(): MicrosoftGraphGetAttackSimulationTrainingUserCoverageRequestBuilder {
+        return new MicrosoftGraphGetAttackSimulationTrainingUserCoverageRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -60,13 +60,17 @@ class SecurityRequestBuilder
     
     /**
      * Instantiates a new SecurityRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/reports/security{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

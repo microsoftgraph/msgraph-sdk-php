@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Ite
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Item\MicrosoftGraphCopyNotebook\CopyNotebookRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Item\MicrosoftGraphCopyNotebook\MicrosoftGraphCopyNotebookRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Item\SectionGroups\Item\SectionGroupItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Item\SectionGroups\SectionGroupsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Item\Sections\Item\OnenoteSectionItemRequestBuilder;
@@ -27,8 +27,8 @@ class NotebookItemRequestBuilder
     /**
      * Provides operations to call the copyNotebook method.
     */
-    public function microsoftGraphCopyNotebook(): CopyNotebookRequestBuilder {
-        return new CopyNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCopyNotebook(): MicrosoftGraphCopyNotebookRequestBuilder {
+        return new MicrosoftGraphCopyNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -62,17 +62,17 @@ class NotebookItemRequestBuilder
     
     /**
      * Instantiates a new NotebookItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $notebookId key: id of notebook
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $notebookId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/onenote/notebooks/{notebook%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['notebookId'] = $notebookId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

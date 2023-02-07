@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Me\Authentication\Methods\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\Authentication\Methods\Item\MicrosoftGraphResetPassword\ResetPasswordRequestBuilder;
+use Microsoft\Graph\Generated\Me\Authentication\Methods\Item\MicrosoftGraphResetPassword\MicrosoftGraphResetPasswordRequestBuilder;
 use Microsoft\Graph\Generated\Models\AuthenticationMethod;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,8 +23,8 @@ class AuthenticationMethodItemRequestBuilder
     /**
      * Provides operations to call the resetPassword method.
     */
-    public function microsoftGraphResetPassword(): ResetPasswordRequestBuilder {
-        return new ResetPasswordRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphResetPassword(): MicrosoftGraphResetPasswordRequestBuilder {
+        return new MicrosoftGraphResetPasswordRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -44,17 +44,17 @@ class AuthenticationMethodItemRequestBuilder
     
     /**
      * Instantiates a new AuthenticationMethodItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $authenticationMethodId key: id of authenticationMethod
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $authenticationMethodId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/me/authentication/methods/{authenticationMethod%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['authenticationMethodId'] = $authenticationMethodId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

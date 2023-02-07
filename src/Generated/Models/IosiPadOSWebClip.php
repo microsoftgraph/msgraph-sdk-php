@@ -26,7 +26,7 @@ class IosiPadOSWebClip extends MobileApp implements Parsable
     }
 
     /**
-     * Gets the appUrl property value. Indicates iOS/iPadOS web clip app URL. Example: "https://www.contoso.com"
+     * Gets the appUrl property value. Indicates iOS/iPadOS web clip app URL. Example: 'https://www.contoso.com'
      * @return string|null
     */
     public function getAppUrl(): ?string {
@@ -64,7 +64,7 @@ class IosiPadOSWebClip extends MobileApp implements Parsable
     }
 
     /**
-     * Sets the appUrl property value. Indicates iOS/iPadOS web clip app URL. Example: "https://www.contoso.com"
+     * Sets the appUrl property value. Indicates iOS/iPadOS web clip app URL. Example: 'https://www.contoso.com'
      * @param string|null $value Value to set for the appUrl property.
     */
     public function setAppUrl(?string $value): void {

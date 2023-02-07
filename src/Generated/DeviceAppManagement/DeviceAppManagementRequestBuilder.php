@@ -21,7 +21,7 @@ use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\ManagedEBoo
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\ManagedEBooksRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MdmWindowsInformationProtectionPolicies\Item\MdmWindowsInformationProtectionPolicyItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MdmWindowsInformationProtectionPolicies\MdmWindowsInformationProtectionPoliciesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MicrosoftGraphSyncMicrosoftStoreForBusinessApps\SyncMicrosoftStoreForBusinessAppsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MicrosoftGraphSyncMicrosoftStoreForBusinessApps\MicrosoftGraphSyncMicrosoftStoreForBusinessAppsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppCategories\Item\MobileAppCategoryItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppCategories\MobileAppCategoriesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\ManagedDeviceMobileAppConfigurationItemRequestBuilder;
@@ -107,8 +107,8 @@ class DeviceAppManagementRequestBuilder
     /**
      * Provides operations to call the syncMicrosoftStoreForBusinessApps method.
     */
-    public function microsoftGraphSyncMicrosoftStoreForBusinessApps(): SyncMicrosoftStoreForBusinessAppsRequestBuilder {
-        return new SyncMicrosoftStoreForBusinessAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSyncMicrosoftStoreForBusinessApps(): MicrosoftGraphSyncMicrosoftStoreForBusinessAppsRequestBuilder {
+        return new MicrosoftGraphSyncMicrosoftStoreForBusinessAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -181,13 +181,17 @@ class DeviceAppManagementRequestBuilder
 
     /**
      * Instantiates a new DeviceAppManagementRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/deviceAppManagement{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

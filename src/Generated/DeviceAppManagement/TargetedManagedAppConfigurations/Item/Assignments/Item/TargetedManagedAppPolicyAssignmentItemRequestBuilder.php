@@ -36,17 +36,17 @@ class TargetedManagedAppPolicyAssignmentItemRequestBuilder
     
     /**
      * Instantiates a new TargetedManagedAppPolicyAssignmentItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $targetedManagedAppPolicyAssignmentId key: id of targetedManagedAppPolicyAssignment
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $targetedManagedAppPolicyAssignmentId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/deviceAppManagement/targetedManagedAppConfigurations/{targetedManagedAppConfiguration%2Did}/assignments/{targetedManagedAppPolicyAssignment%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['targetedManagedAppPolicyAssignmentId'] = $targetedManagedAppPolicyAssignmentId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

@@ -7,13 +7,10 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-/**
- * Represents a booked appointment of a service by a customer in a business.
-*/
 class BookingAppointment extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new bookingAppointment and sets the default values.
+     * Instantiates a new BookingAppointment and sets the default values.
     */
     public function __construct() {
         parent::__construct();

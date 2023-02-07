@@ -8,9 +8,9 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OnenotePage;
 use Microsoft\Graph\Generated\Users\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\Content\ContentRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\MicrosoftGraphCopyToSection\CopyToSectionRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\MicrosoftGraphOnenotePatchContent\OnenotePatchContentRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\MicrosoftGraphPreview\PreviewRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\MicrosoftGraphCopyToSection\MicrosoftGraphCopyToSectionRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\MicrosoftGraphOnenotePatchContent\MicrosoftGraphOnenotePatchContentRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\MicrosoftGraphPreview\MicrosoftGraphPreviewRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\ParentNotebook\ParentNotebookRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Onenote\SectionGroups\Item\Sections\Item\Pages\Item\ParentSection\ParentSectionRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -35,22 +35,22 @@ class OnenotePageItemRequestBuilder
     /**
      * Provides operations to call the copyToSection method.
     */
-    public function microsoftGraphCopyToSection(): CopyToSectionRequestBuilder {
-        return new CopyToSectionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCopyToSection(): MicrosoftGraphCopyToSectionRequestBuilder {
+        return new MicrosoftGraphCopyToSectionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the onenotePatchContent method.
     */
-    public function microsoftGraphOnenotePatchContent(): OnenotePatchContentRequestBuilder {
-        return new OnenotePatchContentRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphOnenotePatchContent(): MicrosoftGraphOnenotePatchContentRequestBuilder {
+        return new MicrosoftGraphOnenotePatchContentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the preview method.
     */
-    public function microsoftGraphPreview(): PreviewRequestBuilder {
-        return new PreviewRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphPreview(): MicrosoftGraphPreviewRequestBuilder {
+        return new MicrosoftGraphPreviewRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -84,17 +84,17 @@ class OnenotePageItemRequestBuilder
     
     /**
      * Instantiates a new OnenotePageItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $onenotePageId key: id of onenotePage
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $onenotePageId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/users/{user%2Did}/onenote/sectionGroups/{sectionGroup%2Did}/sections/{onenoteSection%2Did}/pages/{onenotePage%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['onenotePageId'] = $onenotePageId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

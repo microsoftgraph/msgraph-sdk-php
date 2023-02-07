@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\It
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Item\MicrosoftGraphBeginOnboarding\BeginOnboardingRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Item\MicrosoftGraphDisconnect\DisconnectRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Item\MicrosoftGraphBeginOnboarding\MicrosoftGraphBeginOnboardingRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Item\MicrosoftGraphDisconnect\MicrosoftGraphDisconnectRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\RemoteAssistancePartner;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -24,15 +24,15 @@ class RemoteAssistancePartnerItemRequestBuilder
     /**
      * Provides operations to call the beginOnboarding method.
     */
-    public function microsoftGraphBeginOnboarding(): BeginOnboardingRequestBuilder {
-        return new BeginOnboardingRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphBeginOnboarding(): MicrosoftGraphBeginOnboardingRequestBuilder {
+        return new MicrosoftGraphBeginOnboardingRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the disconnect method.
     */
-    public function microsoftGraphDisconnect(): DisconnectRequestBuilder {
-        return new DisconnectRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDisconnect(): MicrosoftGraphDisconnectRequestBuilder {
+        return new MicrosoftGraphDisconnectRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -52,17 +52,17 @@ class RemoteAssistancePartnerItemRequestBuilder
     
     /**
      * Instantiates a new RemoteAssistancePartnerItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $remoteAssistancePartnerId key: id of remoteAssistancePartner
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $remoteAssistancePartnerId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/remoteAssistancePartners/{remoteAssistancePartner%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['remoteAssistancePartnerId'] = $remoteAssistancePartnerId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

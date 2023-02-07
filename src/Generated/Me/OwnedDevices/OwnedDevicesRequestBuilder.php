@@ -6,9 +6,9 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\OwnedDevices\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Me\OwnedDevices\MicrosoftGraphAppRoleAssignment\AppRoleAssignmentRequestBuilder;
-use Microsoft\Graph\Generated\Me\OwnedDevices\MicrosoftGraphDevice\DeviceRequestBuilder;
-use Microsoft\Graph\Generated\Me\OwnedDevices\MicrosoftGraphEndpoint\EndpointRequestBuilder;
+use Microsoft\Graph\Generated\Me\OwnedDevices\MicrosoftGraphAppRoleAssignment\MicrosoftGraphAppRoleAssignmentRequestBuilder;
+use Microsoft\Graph\Generated\Me\OwnedDevices\MicrosoftGraphDevice\MicrosoftGraphDeviceRequestBuilder;
+use Microsoft\Graph\Generated\Me\OwnedDevices\MicrosoftGraphEndpoint\MicrosoftGraphEndpointRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -33,22 +33,22 @@ class OwnedDevicesRequestBuilder
     /**
      * Casts the previous resource to appRoleAssignment.
     */
-    public function microsoftGraphAppRoleAssignment(): AppRoleAssignmentRequestBuilder {
-        return new AppRoleAssignmentRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAppRoleAssignment(): MicrosoftGraphAppRoleAssignmentRequestBuilder {
+        return new MicrosoftGraphAppRoleAssignmentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to device.
     */
-    public function microsoftGraphDevice(): DeviceRequestBuilder {
-        return new DeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDevice(): MicrosoftGraphDeviceRequestBuilder {
+        return new MicrosoftGraphDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to endpoint.
     */
-    public function microsoftGraphEndpoint(): EndpointRequestBuilder {
-        return new EndpointRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphEndpoint(): MicrosoftGraphEndpointRequestBuilder {
+        return new MicrosoftGraphEndpointRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -68,13 +68,17 @@ class OwnedDevicesRequestBuilder
     
     /**
      * Instantiates a new OwnedDevicesRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/me/ownedDevices{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

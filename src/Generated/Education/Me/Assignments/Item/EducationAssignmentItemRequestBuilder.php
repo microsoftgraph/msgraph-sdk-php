@@ -7,9 +7,9 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Categories\CategoriesRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Categories\Item\EducationCategoryItemRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\MicrosoftGraphPublish\PublishRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\MicrosoftGraphSetUpFeedbackResourcesFolder\SetUpFeedbackResourcesFolderRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\MicrosoftGraphSetUpResourcesFolder\SetUpResourcesFolderRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\MicrosoftGraphPublish\MicrosoftGraphPublishRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\MicrosoftGraphSetUpFeedbackResourcesFolder\MicrosoftGraphSetUpFeedbackResourcesFolderRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\MicrosoftGraphSetUpResourcesFolder\MicrosoftGraphSetUpResourcesFolderRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Resources\Item\EducationAssignmentResourceItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Resources\ResourcesRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Rubric\RubricRequestBuilder;
@@ -39,22 +39,22 @@ class EducationAssignmentItemRequestBuilder
     /**
      * Provides operations to call the publish method.
     */
-    public function microsoftGraphPublish(): PublishRequestBuilder {
-        return new PublishRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphPublish(): MicrosoftGraphPublishRequestBuilder {
+        return new MicrosoftGraphPublishRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the setUpFeedbackResourcesFolder method.
     */
-    public function microsoftGraphSetUpFeedbackResourcesFolder(): SetUpFeedbackResourcesFolderRequestBuilder {
-        return new SetUpFeedbackResourcesFolderRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSetUpFeedbackResourcesFolder(): MicrosoftGraphSetUpFeedbackResourcesFolderRequestBuilder {
+        return new MicrosoftGraphSetUpFeedbackResourcesFolderRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the setUpResourcesFolder method.
     */
-    public function microsoftGraphSetUpResourcesFolder(): SetUpResourcesFolderRequestBuilder {
-        return new SetUpResourcesFolderRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSetUpResourcesFolder(): MicrosoftGraphSetUpResourcesFolderRequestBuilder {
+        return new MicrosoftGraphSetUpResourcesFolderRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -106,17 +106,17 @@ class EducationAssignmentItemRequestBuilder
 
     /**
      * Instantiates a new EducationAssignmentItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $educationAssignmentId key: id of educationAssignment
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $educationAssignmentId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/education/me/assignments/{educationAssignment%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['educationAssignmentId'] = $educationAssignmentId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

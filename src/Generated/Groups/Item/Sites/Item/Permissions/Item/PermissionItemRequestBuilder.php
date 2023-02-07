@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Permissions\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Permissions\Item\MicrosoftGraphGrant\GrantRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Permissions\Item\MicrosoftGraphGrant\MicrosoftGraphGrantRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Permission;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,8 +23,8 @@ class PermissionItemRequestBuilder
     /**
      * Provides operations to call the grant method.
     */
-    public function microsoftGraphGrant(): GrantRequestBuilder {
-        return new GrantRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGrant(): MicrosoftGraphGrantRequestBuilder {
+        return new MicrosoftGraphGrantRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -44,17 +44,17 @@ class PermissionItemRequestBuilder
     
     /**
      * Instantiates a new PermissionItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $permissionId key: id of permission
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $permissionId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/permissions/{permission%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['permissionId'] = $permissionId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

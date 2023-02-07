@@ -13,17 +13,17 @@ use Microsoft\Graph\Generated\Applications\Item\FederatedIdentityCredentials\Ite
 use Microsoft\Graph\Generated\Applications\Item\HomeRealmDiscoveryPolicies\HomeRealmDiscoveryPoliciesRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\HomeRealmDiscoveryPolicies\Item\HomeRealmDiscoveryPolicyItemRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\Logo\LogoRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\MicrosoftGraphAddKey\AddKeyRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\MicrosoftGraphAddPassword\AddPasswordRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\MicrosoftGraphCheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\MicrosoftGraphCheckMemberObjects\CheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\MicrosoftGraphGetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\MicrosoftGraphGetMemberObjects\GetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\MicrosoftGraphRemoveKey\RemoveKeyRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\MicrosoftGraphRemovePassword\RemovePasswordRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\MicrosoftGraphRestore\RestoreRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\MicrosoftGraphSetVerifiedPublisher\SetVerifiedPublisherRequestBuilder;
-use Microsoft\Graph\Generated\Applications\Item\MicrosoftGraphUnsetVerifiedPublisher\UnsetVerifiedPublisherRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\MicrosoftGraphAddKey\MicrosoftGraphAddKeyRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\MicrosoftGraphAddPassword\MicrosoftGraphAddPasswordRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\MicrosoftGraphCheckMemberGroups\MicrosoftGraphCheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\MicrosoftGraphCheckMemberObjects\MicrosoftGraphCheckMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\MicrosoftGraphGetMemberGroups\MicrosoftGraphGetMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\MicrosoftGraphGetMemberObjects\MicrosoftGraphGetMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\MicrosoftGraphRemoveKey\MicrosoftGraphRemoveKeyRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\MicrosoftGraphRemovePassword\MicrosoftGraphRemovePasswordRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\MicrosoftGraphRestore\MicrosoftGraphRestoreRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\MicrosoftGraphSetVerifiedPublisher\MicrosoftGraphSetVerifiedPublisherRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\MicrosoftGraphUnsetVerifiedPublisher\MicrosoftGraphUnsetVerifiedPublisherRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\Owners\Item\DirectoryObjectItemRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\Owners\OwnersRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\TokenIssuancePolicies\Item\TokenIssuancePolicyItemRequestBuilder;
@@ -82,78 +82,78 @@ class ApplicationItemRequestBuilder
     /**
      * Provides operations to call the addKey method.
     */
-    public function microsoftGraphAddKey(): AddKeyRequestBuilder {
-        return new AddKeyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAddKey(): MicrosoftGraphAddKeyRequestBuilder {
+        return new MicrosoftGraphAddKeyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the addPassword method.
     */
-    public function microsoftGraphAddPassword(): AddPasswordRequestBuilder {
-        return new AddPasswordRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAddPassword(): MicrosoftGraphAddPasswordRequestBuilder {
+        return new MicrosoftGraphAddPasswordRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the checkMemberGroups method.
     */
-    public function microsoftGraphCheckMemberGroups(): CheckMemberGroupsRequestBuilder {
-        return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCheckMemberGroups(): MicrosoftGraphCheckMemberGroupsRequestBuilder {
+        return new MicrosoftGraphCheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the checkMemberObjects method.
     */
-    public function microsoftGraphCheckMemberObjects(): CheckMemberObjectsRequestBuilder {
-        return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCheckMemberObjects(): MicrosoftGraphCheckMemberObjectsRequestBuilder {
+        return new MicrosoftGraphCheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getMemberGroups method.
     */
-    public function microsoftGraphGetMemberGroups(): GetMemberGroupsRequestBuilder {
-        return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetMemberGroups(): MicrosoftGraphGetMemberGroupsRequestBuilder {
+        return new MicrosoftGraphGetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getMemberObjects method.
     */
-    public function microsoftGraphGetMemberObjects(): GetMemberObjectsRequestBuilder {
-        return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetMemberObjects(): MicrosoftGraphGetMemberObjectsRequestBuilder {
+        return new MicrosoftGraphGetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the removeKey method.
     */
-    public function microsoftGraphRemoveKey(): RemoveKeyRequestBuilder {
-        return new RemoveKeyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRemoveKey(): MicrosoftGraphRemoveKeyRequestBuilder {
+        return new MicrosoftGraphRemoveKeyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the removePassword method.
     */
-    public function microsoftGraphRemovePassword(): RemovePasswordRequestBuilder {
-        return new RemovePasswordRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRemovePassword(): MicrosoftGraphRemovePasswordRequestBuilder {
+        return new MicrosoftGraphRemovePasswordRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the restore method.
     */
-    public function microsoftGraphRestore(): RestoreRequestBuilder {
-        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRestore(): MicrosoftGraphRestoreRequestBuilder {
+        return new MicrosoftGraphRestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the setVerifiedPublisher method.
     */
-    public function microsoftGraphSetVerifiedPublisher(): SetVerifiedPublisherRequestBuilder {
-        return new SetVerifiedPublisherRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSetVerifiedPublisher(): MicrosoftGraphSetVerifiedPublisherRequestBuilder {
+        return new MicrosoftGraphSetVerifiedPublisherRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the unsetVerifiedPublisher method.
     */
-    public function microsoftGraphUnsetVerifiedPublisher(): UnsetVerifiedPublisherRequestBuilder {
-        return new UnsetVerifiedPublisherRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphUnsetVerifiedPublisher(): MicrosoftGraphUnsetVerifiedPublisherRequestBuilder {
+        return new MicrosoftGraphUnsetVerifiedPublisherRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -194,17 +194,17 @@ class ApplicationItemRequestBuilder
     
     /**
      * Instantiates a new ApplicationItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $applicationId key: id of application
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $applicationId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/applications/{application%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['applicationId'] = $applicationId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

@@ -36,8 +36,8 @@ use Microsoft\Graph\Generated\DeviceManagement\IosUpdateStatuses\Item\IosUpdateD
 use Microsoft\Graph\Generated\DeviceManagement\ManagedDeviceOverview\ManagedDeviceOverviewRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\ManagedDeviceItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\ManagedDevicesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\MicrosoftGraphGetEffectivePermissionsWithScope\GetEffectivePermissionsWithScopeRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\MicrosoftGraphVerifyWindowsEnrollmentAutoDiscoveryWithDomainName\VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\MicrosoftGraphGetEffectivePermissionsWithScope\MicrosoftGraphGetEffectivePermissionsWithScopeRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\MicrosoftGraphVerifyWindowsEnrollmentAutoDiscoveryWithDomainName\MicrosoftGraphVerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\MobileThreatDefenseConnectors\Item\MobileThreatDefenseConnectorItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\MobileThreatDefenseConnectors\MobileThreatDefenseConnectorsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item\NotificationMessageTemplateItemRequestBuilder;
@@ -341,13 +341,17 @@ class DeviceManagementRequestBuilder
 
     /**
      * Instantiates a new DeviceManagementRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/deviceManagement{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -492,19 +496,19 @@ class DeviceManagementRequestBuilder
     /**
      * Provides operations to call the getEffectivePermissions method.
      * @param string $scope Usage: scope='{scope}'
-     * @return GetEffectivePermissionsWithScopeRequestBuilder
+     * @return MicrosoftGraphGetEffectivePermissionsWithScopeRequestBuilder
     */
-    public function microsoftGraphGetEffectivePermissionsWithScope(string $scope): GetEffectivePermissionsWithScopeRequestBuilder {
-        return new GetEffectivePermissionsWithScopeRequestBuilder($this->pathParameters, $this->requestAdapter, $scope);
+    public function microsoftGraphGetEffectivePermissionsWithScope(string $scope): MicrosoftGraphGetEffectivePermissionsWithScopeRequestBuilder {
+        return new MicrosoftGraphGetEffectivePermissionsWithScopeRequestBuilder($this->pathParameters, $this->requestAdapter, $scope);
     }
 
     /**
      * Provides operations to call the verifyWindowsEnrollmentAutoDiscovery method.
      * @param string $domainName Usage: domainName='{domainName}'
-     * @return VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder
+     * @return MicrosoftGraphVerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder
     */
-    public function microsoftGraphVerifyWindowsEnrollmentAutoDiscoveryWithDomainName(string $domainName): VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder {
-        return new VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder($this->pathParameters, $this->requestAdapter, $domainName);
+    public function microsoftGraphVerifyWindowsEnrollmentAutoDiscoveryWithDomainName(string $domainName): MicrosoftGraphVerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder {
+        return new MicrosoftGraphVerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder($this->pathParameters, $this->requestAdapter, $domainName);
     }
 
     /**
