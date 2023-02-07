@@ -26,6 +26,7 @@ class DelegatedAdminCustomer extends Entity
 {
     /**
     * Gets the displayName
+    * The Azure AD display name of the customer tenant. Read-only. Supports $orderBy.
     *
     * @return string|null The displayName
     */
@@ -40,6 +41,7 @@ class DelegatedAdminCustomer extends Entity
 
     /**
     * Sets the displayName
+    * The Azure AD display name of the customer tenant. Read-only. Supports $orderBy.
     *
     * @param string $val The displayName
     *
@@ -53,6 +55,7 @@ class DelegatedAdminCustomer extends Entity
 
     /**
     * Gets the tenantId
+    * The Azure AD-assigned tenant ID of the customer. Read-only.
     *
     * @return string|null The tenantId
     */
@@ -67,6 +70,7 @@ class DelegatedAdminCustomer extends Entity
 
     /**
     * Sets the tenantId
+    * The Azure AD-assigned tenant ID of the customer. Read-only.
     *
     * @param string $val The tenantId
     *
@@ -81,6 +85,7 @@ class DelegatedAdminCustomer extends Entity
 
      /**
      * Gets the serviceManagementDetails
+    * Contains the management details of a service in the customer tenant that's managed by delegated administration.
      *
      * @return array|null The serviceManagementDetails
      */
@@ -95,6 +100,7 @@ class DelegatedAdminCustomer extends Entity
 
     /**
     * Sets the serviceManagementDetails
+    * Contains the management details of a service in the customer tenant that's managed by delegated administration.
     *
     * @param DelegatedAdminServiceManagementDetail[] $val The serviceManagementDetails
     *

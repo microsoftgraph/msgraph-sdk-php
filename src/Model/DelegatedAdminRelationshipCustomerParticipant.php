@@ -25,6 +25,7 @@ class DelegatedAdminRelationshipCustomerParticipant extends Entity
 {
     /**
     * Gets the displayName
+    * The display name of the customer tenant as set by Azure AD. Read-only
     *
     * @return string|null The displayName
     */
@@ -39,6 +40,7 @@ class DelegatedAdminRelationshipCustomerParticipant extends Entity
 
     /**
     * Sets the displayName
+    * The display name of the customer tenant as set by Azure AD. Read-only
     *
     * @param string $val The value of the displayName
     *
@@ -51,6 +53,7 @@ class DelegatedAdminRelationshipCustomerParticipant extends Entity
     }
     /**
     * Gets the tenantId
+    * The Azure AD-assigned tenant ID of the customer tenant.
     *
     * @return string|null The tenantId
     */
@@ -65,6 +68,7 @@ class DelegatedAdminRelationshipCustomerParticipant extends Entity
 
     /**
     * Sets the tenantId
+    * The Azure AD-assigned tenant ID of the customer tenant.
     *
     * @param string $val The value of the tenantId
     *
