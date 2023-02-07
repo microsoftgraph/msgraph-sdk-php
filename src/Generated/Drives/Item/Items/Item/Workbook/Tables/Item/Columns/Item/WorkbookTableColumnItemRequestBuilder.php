@@ -6,10 +6,10 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Columns\Item\Filter\FilterRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Columns\Item\MicrosoftGraphDataBodyRange\DataBodyRangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Columns\Item\MicrosoftGraphHeaderRowRange\HeaderRowRangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Columns\Item\MicrosoftGraphRange\RangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Columns\Item\MicrosoftGraphTotalRowRange\TotalRowRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Columns\Item\MicrosoftGraphDataBodyRange\MicrosoftGraphDataBodyRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Columns\Item\MicrosoftGraphHeaderRowRange\MicrosoftGraphHeaderRowRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Columns\Item\MicrosoftGraphRange\MicrosoftGraphRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Columns\Item\MicrosoftGraphTotalRowRange\MicrosoftGraphTotalRowRangeRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookTableColumn;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -34,29 +34,29 @@ class WorkbookTableColumnItemRequestBuilder
     /**
      * Provides operations to call the dataBodyRange method.
     */
-    public function microsoftGraphDataBodyRange(): DataBodyRangeRequestBuilder {
-        return new DataBodyRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDataBodyRange(): MicrosoftGraphDataBodyRangeRequestBuilder {
+        return new MicrosoftGraphDataBodyRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the headerRowRange method.
     */
-    public function microsoftGraphHeaderRowRange(): HeaderRowRangeRequestBuilder {
-        return new HeaderRowRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphHeaderRowRange(): MicrosoftGraphHeaderRowRangeRequestBuilder {
+        return new MicrosoftGraphHeaderRowRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the range method.
     */
-    public function microsoftGraphRange(): RangeRequestBuilder {
-        return new RangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRange(): MicrosoftGraphRangeRequestBuilder {
+        return new MicrosoftGraphRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the totalRowRange method.
     */
-    public function microsoftGraphTotalRowRange(): TotalRowRangeRequestBuilder {
-        return new TotalRowRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphTotalRowRange(): MicrosoftGraphTotalRowRangeRequestBuilder {
+        return new MicrosoftGraphTotalRowRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -76,17 +76,17 @@ class WorkbookTableColumnItemRequestBuilder
     
     /**
      * Instantiates a new WorkbookTableColumnItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $workbookTableColumnId key: id of workbookTableColumn
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $workbookTableColumnId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/tables/{workbookTable%2Did}/columns/{workbookTableColumn%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['workbookTableColumnId'] = $workbookTableColumnId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

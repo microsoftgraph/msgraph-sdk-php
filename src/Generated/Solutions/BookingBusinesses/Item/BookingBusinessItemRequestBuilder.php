@@ -13,9 +13,9 @@ use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Customers\Custome
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Customers\Item\BookingCustomerBaseItemRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CustomQuestions\CustomQuestionsRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CustomQuestions\Item\BookingCustomQuestionItemRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\MicrosoftGraphGetStaffAvailability\GetStaffAvailabilityRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\MicrosoftGraphPublish\PublishRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\MicrosoftGraphUnpublish\UnpublishRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\MicrosoftGraphGetStaffAvailability\MicrosoftGraphGetStaffAvailabilityRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\MicrosoftGraphPublish\MicrosoftGraphPublishRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\MicrosoftGraphUnpublish\MicrosoftGraphUnpublishRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Services\Item\BookingServiceItemRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Services\ServicesRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\StaffMembers\Item\BookingStaffMemberBaseItemRequestBuilder;
@@ -63,22 +63,22 @@ class BookingBusinessItemRequestBuilder
     /**
      * Provides operations to call the getStaffAvailability method.
     */
-    public function microsoftGraphGetStaffAvailability(): GetStaffAvailabilityRequestBuilder {
-        return new GetStaffAvailabilityRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetStaffAvailability(): MicrosoftGraphGetStaffAvailabilityRequestBuilder {
+        return new MicrosoftGraphGetStaffAvailabilityRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the publish method.
     */
-    public function microsoftGraphPublish(): PublishRequestBuilder {
-        return new PublishRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphPublish(): MicrosoftGraphPublishRequestBuilder {
+        return new MicrosoftGraphPublishRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the unpublish method.
     */
-    public function microsoftGraphUnpublish(): UnpublishRequestBuilder {
-        return new UnpublishRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphUnpublish(): MicrosoftGraphUnpublishRequestBuilder {
+        return new MicrosoftGraphUnpublishRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -118,7 +118,7 @@ class BookingBusinessItemRequestBuilder
     public function appointmentsById(string $id): \Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Appointments\Item\BookingAppointmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['bookingAppointment%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Appointments\Item\BookingAppointmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Appointments\Item\BookingAppointmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -129,22 +129,22 @@ class BookingBusinessItemRequestBuilder
     public function calendarViewById(string $id): \Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CalendarView\Item\BookingAppointmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['bookingAppointment%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CalendarView\Item\BookingAppointmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CalendarView\Item\BookingAppointmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
      * Instantiates a new BookingBusinessItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $bookingBusinessId key: id of bookingBusiness
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $bookingBusinessId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['bookingBusinessId'] = $bookingBusinessId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -155,7 +155,7 @@ class BookingBusinessItemRequestBuilder
     public function customersById(string $id): BookingCustomerBaseItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['bookingCustomerBase%2Did'] = $id;
-        return new BookingCustomerBaseItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new BookingCustomerBaseItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -166,7 +166,7 @@ class BookingBusinessItemRequestBuilder
     public function customQuestionsById(string $id): BookingCustomQuestionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['bookingCustomQuestion%2Did'] = $id;
-        return new BookingCustomQuestionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new BookingCustomQuestionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -232,7 +232,7 @@ class BookingBusinessItemRequestBuilder
     public function servicesById(string $id): BookingServiceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['bookingService%2Did'] = $id;
-        return new BookingServiceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new BookingServiceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -243,7 +243,7 @@ class BookingBusinessItemRequestBuilder
     public function staffMembersById(string $id): BookingStaffMemberBaseItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['bookingStaffMemberBase%2Did'] = $id;
-        return new BookingStaffMemberBaseItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new BookingStaffMemberBaseItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

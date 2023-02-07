@@ -6,9 +6,9 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\MicrosoftGraphAddCopy\AddCopyRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\MicrosoftGraphAddCopyFromContentTypeHub\AddCopyFromContentTypeHubRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\MicrosoftGraphGetCompatibleHubContentTypes\GetCompatibleHubContentTypesRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\MicrosoftGraphAddCopy\MicrosoftGraphAddCopyRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\MicrosoftGraphAddCopyFromContentTypeHub\MicrosoftGraphAddCopyFromContentTypeHubRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\ContentTypes\MicrosoftGraphGetCompatibleHubContentTypes\MicrosoftGraphGetCompatibleHubContentTypesRequestBuilder;
 use Microsoft\Graph\Generated\Models\ContentType;
 use Microsoft\Graph\Generated\Models\ContentTypeCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -34,22 +34,22 @@ class ContentTypesRequestBuilder
     /**
      * Provides operations to call the addCopy method.
     */
-    public function microsoftGraphAddCopy(): AddCopyRequestBuilder {
-        return new AddCopyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAddCopy(): MicrosoftGraphAddCopyRequestBuilder {
+        return new MicrosoftGraphAddCopyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the addCopyFromContentTypeHub method.
     */
-    public function microsoftGraphAddCopyFromContentTypeHub(): AddCopyFromContentTypeHubRequestBuilder {
-        return new AddCopyFromContentTypeHubRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAddCopyFromContentTypeHub(): MicrosoftGraphAddCopyFromContentTypeHubRequestBuilder {
+        return new MicrosoftGraphAddCopyFromContentTypeHubRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getCompatibleHubContentTypes method.
     */
-    public function microsoftGraphGetCompatibleHubContentTypes(): GetCompatibleHubContentTypesRequestBuilder {
-        return new GetCompatibleHubContentTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetCompatibleHubContentTypes(): MicrosoftGraphGetCompatibleHubContentTypesRequestBuilder {
+        return new MicrosoftGraphGetCompatibleHubContentTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -69,13 +69,17 @@ class ContentTypesRequestBuilder
     
     /**
      * Instantiates a new ContentTypesRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/contentTypes{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

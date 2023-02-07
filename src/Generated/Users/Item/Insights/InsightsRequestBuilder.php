@@ -63,13 +63,17 @@ class InsightsRequestBuilder
     
     /**
      * Instantiates a new InsightsRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/users/{user%2Did}/insights{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -135,7 +139,7 @@ class InsightsRequestBuilder
     public function sharedById(string $id): SharedInsightItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['sharedInsight%2Did'] = $id;
-        return new SharedInsightItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new SharedInsightItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -216,7 +220,7 @@ class InsightsRequestBuilder
     public function trendingById(string $id): TrendingItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['trending%2Did'] = $id;
-        return new TrendingItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new TrendingItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -227,7 +231,7 @@ class InsightsRequestBuilder
     public function usedById(string $id): UsedInsightItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['usedInsight%2Did'] = $id;
-        return new UsedInsightItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new UsedInsightItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
 }

@@ -53,17 +53,17 @@ class TermItemRequestBuilder
     
     /**
      * Instantiates a new TermItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $termId1 key: id of term
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $termId1 = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/termStore/sets/{set%2Did}/children/{term%2Did}/children/{term%2Did1}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['termId1'] = $termId1;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -129,7 +129,7 @@ class TermItemRequestBuilder
     public function relationsById(string $id): RelationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['relation%2Did'] = $id;
-        return new RelationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new RelationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

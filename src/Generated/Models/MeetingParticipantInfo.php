@@ -81,7 +81,7 @@ class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the role property value. Specifies the participant's role in the meeting.  Possible values are attendee, presenter, producer, and unknownFutureValue.
+     * Gets the role property value. Specifies the participant's role in the meeting.
      * @return OnlineMeetingRole|null
     */
     public function getRole(): ?OnlineMeetingRole {
@@ -141,7 +141,7 @@ class MeetingParticipantInfo implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the role property value. Specifies the participant's role in the meeting.  Possible values are attendee, presenter, producer, and unknownFutureValue.
+     * Sets the role property value. Specifies the participant's role in the meeting.
      * @param OnlineMeetingRole|null $value Value to set for the role property.
     */
     public function setRole(?OnlineMeetingRole $value): void {

@@ -90,13 +90,17 @@ class OnenoteRequestBuilder
     
     /**
      * Instantiates a new OnenoteRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/onenote{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -143,7 +147,7 @@ class OnenoteRequestBuilder
     public function notebooksById(string $id): NotebookItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['notebook%2Did'] = $id;
-        return new NotebookItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new NotebookItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -154,7 +158,7 @@ class OnenoteRequestBuilder
     public function operationsById(string $id): OnenoteOperationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['onenoteOperation%2Did'] = $id;
-        return new OnenoteOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new OnenoteOperationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -165,7 +169,7 @@ class OnenoteRequestBuilder
     public function pagesById(string $id): OnenotePageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['onenotePage%2Did'] = $id;
-        return new OnenotePageItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new OnenotePageItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -195,7 +199,7 @@ class OnenoteRequestBuilder
     public function resourcesById(string $id): OnenoteResourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['onenoteResource%2Did'] = $id;
-        return new OnenoteResourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new OnenoteResourceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -206,7 +210,7 @@ class OnenoteRequestBuilder
     public function sectionGroupsById(string $id): SectionGroupItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['sectionGroup%2Did'] = $id;
-        return new SectionGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new SectionGroupItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -217,7 +221,7 @@ class OnenoteRequestBuilder
     public function sectionsById(string $id): OnenoteSectionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['onenoteSection%2Did'] = $id;
-        return new OnenoteSectionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new OnenoteSectionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

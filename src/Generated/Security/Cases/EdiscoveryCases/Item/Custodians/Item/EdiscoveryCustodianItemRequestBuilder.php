@@ -8,11 +8,11 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryCustodian;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\LastIndexOperation\LastIndexOperationRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\MicrosoftGraphSecurityActivate\ActivateRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\MicrosoftGraphSecurityApplyHold\ApplyHoldRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\MicrosoftGraphSecurityRelease\ReleaseRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\MicrosoftGraphSecurityRemoveHold\RemoveHoldRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\MicrosoftGraphSecurityUpdateIndex\UpdateIndexRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\MicrosoftGraphSecurityActivate\MicrosoftGraphSecurityActivateRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\MicrosoftGraphSecurityApplyHold\MicrosoftGraphSecurityApplyHoldRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\MicrosoftGraphSecurityRelease\MicrosoftGraphSecurityReleaseRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\MicrosoftGraphSecurityRemoveHold\MicrosoftGraphSecurityRemoveHoldRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\MicrosoftGraphSecurityUpdateIndex\MicrosoftGraphSecurityUpdateIndexRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\SiteSources\Item\SiteSourceItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\SiteSources\SiteSourcesRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\UnifiedGroupSources\Item\UnifiedGroupSourceItemRequestBuilder;
@@ -41,36 +41,36 @@ class EdiscoveryCustodianItemRequestBuilder
     /**
      * Provides operations to call the activate method.
     */
-    public function microsoftGraphSecurityActivate(): ActivateRequestBuilder {
-        return new ActivateRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityActivate(): MicrosoftGraphSecurityActivateRequestBuilder {
+        return new MicrosoftGraphSecurityActivateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the applyHold method.
     */
-    public function microsoftGraphSecurityApplyHold(): ApplyHoldRequestBuilder {
-        return new ApplyHoldRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityApplyHold(): MicrosoftGraphSecurityApplyHoldRequestBuilder {
+        return new MicrosoftGraphSecurityApplyHoldRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the release method.
     */
-    public function microsoftGraphSecurityRelease(): ReleaseRequestBuilder {
-        return new ReleaseRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityRelease(): MicrosoftGraphSecurityReleaseRequestBuilder {
+        return new MicrosoftGraphSecurityReleaseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the removeHold method.
     */
-    public function microsoftGraphSecurityRemoveHold(): RemoveHoldRequestBuilder {
-        return new RemoveHoldRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityRemoveHold(): MicrosoftGraphSecurityRemoveHoldRequestBuilder {
+        return new MicrosoftGraphSecurityRemoveHoldRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the updateIndex method.
     */
-    public function microsoftGraphSecurityUpdateIndex(): UpdateIndexRequestBuilder {
-        return new UpdateIndexRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityUpdateIndex(): MicrosoftGraphSecurityUpdateIndexRequestBuilder {
+        return new MicrosoftGraphSecurityUpdateIndexRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -111,17 +111,17 @@ class EdiscoveryCustodianItemRequestBuilder
     
     /**
      * Instantiates a new EdiscoveryCustodianItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $ediscoveryCustodianId key: id of ediscoveryCustodian
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $ediscoveryCustodianId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}/custodians/{ediscoveryCustodian%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['ediscoveryCustodianId'] = $ediscoveryCustodianId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -187,7 +187,7 @@ class EdiscoveryCustodianItemRequestBuilder
     public function siteSourcesById(string $id): SiteSourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['siteSource%2Did'] = $id;
-        return new SiteSourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new SiteSourceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -268,7 +268,7 @@ class EdiscoveryCustodianItemRequestBuilder
     public function unifiedGroupSourcesById(string $id): UnifiedGroupSourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['unifiedGroupSource%2Did'] = $id;
-        return new UnifiedGroupSourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new UnifiedGroupSourceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -279,7 +279,7 @@ class EdiscoveryCustodianItemRequestBuilder
     public function userSourcesById(string $id): UserSourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['userSource%2Did'] = $id;
-        return new UserSourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new UserSourceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
 }

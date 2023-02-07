@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\MicrosoftGraphInvite\InviteRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\MicrosoftGraphInvite\MicrosoftGraphInviteRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Participant;
 use Microsoft\Graph\Generated\Models\ParticipantCollectionResponse;
@@ -32,8 +32,8 @@ class ParticipantsRequestBuilder
     /**
      * Provides operations to call the invite method.
     */
-    public function microsoftGraphInvite(): InviteRequestBuilder {
-        return new InviteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphInvite(): MicrosoftGraphInviteRequestBuilder {
+        return new MicrosoftGraphInviteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -53,13 +53,17 @@ class ParticipantsRequestBuilder
     
     /**
      * Instantiates a new ParticipantsRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/communications/calls/{call%2Did}/participants{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

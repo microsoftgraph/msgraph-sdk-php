@@ -45,17 +45,17 @@ class DelegatedAdminCustomerItemRequestBuilder
     
     /**
      * Instantiates a new DelegatedAdminCustomerItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $delegatedAdminCustomerId key: id of delegatedAdminCustomer
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $delegatedAdminCustomerId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/tenantRelationships/delegatedAdminCustomers/{delegatedAdminCustomer%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['delegatedAdminCustomerId'] = $delegatedAdminCustomerId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -77,7 +77,7 @@ class DelegatedAdminCustomerItemRequestBuilder
     }
 
     /**
-     * Get delegatedAdminCustomers from tenantRelationships
+     * The customer who has a delegated admin relationship with a Microsoft partner.
      * @param DelegatedAdminCustomerItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -121,7 +121,7 @@ class DelegatedAdminCustomerItemRequestBuilder
     public function serviceManagementDetailsById(string $id): DelegatedAdminServiceManagementDetailItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['delegatedAdminServiceManagementDetail%2Did'] = $id;
-        return new DelegatedAdminServiceManagementDetailItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new DelegatedAdminServiceManagementDetailItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -146,7 +146,7 @@ class DelegatedAdminCustomerItemRequestBuilder
     }
 
     /**
-     * Get delegatedAdminCustomers from tenantRelationships
+     * The customer who has a delegated admin relationship with a Microsoft partner.
      * @param DelegatedAdminCustomerItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

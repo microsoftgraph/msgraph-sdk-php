@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\Notebook;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\Item\MicrosoftGraphCopyNotebook\CopyNotebookRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\Item\MicrosoftGraphCopyNotebook\MicrosoftGraphCopyNotebookRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\Item\SectionGroups\Item\SectionGroupItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\Item\SectionGroups\SectionGroupsRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\Item\Sections\Item\OnenoteSectionItemRequestBuilder;
@@ -27,8 +27,8 @@ class NotebookItemRequestBuilder
     /**
      * Provides operations to call the copyNotebook method.
     */
-    public function microsoftGraphCopyNotebook(): CopyNotebookRequestBuilder {
-        return new CopyNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCopyNotebook(): MicrosoftGraphCopyNotebookRequestBuilder {
+        return new MicrosoftGraphCopyNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -62,17 +62,17 @@ class NotebookItemRequestBuilder
     
     /**
      * Instantiates a new NotebookItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $notebookId key: id of notebook
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $notebookId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/sites/{site%2Did}/onenote/notebooks/{notebook%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['notebookId'] = $notebookId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -138,7 +138,7 @@ class NotebookItemRequestBuilder
     public function sectionGroupsById(string $id): SectionGroupItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['sectionGroup%2Did'] = $id;
-        return new SectionGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new SectionGroupItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -149,7 +149,7 @@ class NotebookItemRequestBuilder
     public function sectionsById(string $id): OnenoteSectionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['onenoteSection%2Did'] = $id;
-        return new OnenoteSectionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new OnenoteSectionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Chats\Item\Messages\Item\HostedContents\HostedContentsRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\Messages\Item\HostedContents\Item\ChatMessageHostedContentItemRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\Messages\Item\MicrosoftGraphSoftDelete\SoftDeleteRequestBuilder;
-use Microsoft\Graph\Generated\Chats\Item\Messages\Item\MicrosoftGraphUndoSoftDelete\UndoSoftDeleteRequestBuilder;
+use Microsoft\Graph\Generated\Chats\Item\Messages\Item\MicrosoftGraphSoftDelete\MicrosoftGraphSoftDeleteRequestBuilder;
+use Microsoft\Graph\Generated\Chats\Item\Messages\Item\MicrosoftGraphUndoSoftDelete\MicrosoftGraphUndoSoftDeleteRequestBuilder;
 use Microsoft\Graph\Generated\Chats\Item\Messages\Item\Replies\RepliesRequestBuilder;
 use Microsoft\Graph\Generated\Models\ChatMessage;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -34,15 +34,15 @@ class ChatMessageItemRequestBuilder
     /**
      * Provides operations to call the softDelete method.
     */
-    public function microsoftGraphSoftDelete(): SoftDeleteRequestBuilder {
-        return new SoftDeleteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSoftDelete(): MicrosoftGraphSoftDeleteRequestBuilder {
+        return new MicrosoftGraphSoftDeleteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the undoSoftDelete method.
     */
-    public function microsoftGraphUndoSoftDelete(): UndoSoftDeleteRequestBuilder {
-        return new UndoSoftDeleteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphUndoSoftDelete(): MicrosoftGraphUndoSoftDeleteRequestBuilder {
+        return new MicrosoftGraphUndoSoftDeleteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -69,17 +69,17 @@ class ChatMessageItemRequestBuilder
     
     /**
      * Instantiates a new ChatMessageItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $chatMessageId key: id of chatMessage
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $chatMessageId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/chats/{chat%2Did}/messages/{chatMessage%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['chatMessageId'] = $chatMessageId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -126,7 +126,7 @@ class ChatMessageItemRequestBuilder
     public function hostedContentsById(string $id): ChatMessageHostedContentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['chatMessageHostedContent%2Did'] = $id;
-        return new ChatMessageHostedContentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ChatMessageHostedContentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -156,7 +156,7 @@ class ChatMessageItemRequestBuilder
     public function repliesById(string $id): \Microsoft\Graph\Generated\Chats\Item\Messages\Item\Replies\Item\ChatMessageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['chatMessage%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\Chats\Item\Messages\Item\Replies\Item\ChatMessageItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Chats\Item\Messages\Item\Replies\Item\ChatMessageItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

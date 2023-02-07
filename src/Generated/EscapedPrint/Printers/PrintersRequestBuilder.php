@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\MicrosoftGraphCreate\CreateRequestBuilder;
+use Microsoft\Graph\Generated\EscapedPrint\Printers\MicrosoftGraphCreate\MicrosoftGraphCreateRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Printer;
 use Microsoft\Graph\Generated\Models\PrinterCollectionResponse;
@@ -32,8 +32,8 @@ class PrintersRequestBuilder
     /**
      * Provides operations to call the create method.
     */
-    public function microsoftGraphCreate(): CreateRequestBuilder {
-        return new CreateRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCreate(): MicrosoftGraphCreateRequestBuilder {
+        return new MicrosoftGraphCreateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -53,13 +53,17 @@ class PrintersRequestBuilder
     
     /**
      * Instantiates a new PrintersRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/print/printers{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

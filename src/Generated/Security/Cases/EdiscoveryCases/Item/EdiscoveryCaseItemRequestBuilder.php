@@ -9,8 +9,8 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryCase;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\CustodiansRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\EdiscoveryCustodianItemRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\MicrosoftGraphSecurityClose\CloseRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\MicrosoftGraphSecurityReopen\ReopenRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\MicrosoftGraphSecurityClose\MicrosoftGraphSecurityCloseRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\MicrosoftGraphSecurityReopen\MicrosoftGraphSecurityReopenRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\NoncustodialDataSources\Item\EdiscoveryNoncustodialDataSourceItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\NoncustodialDataSources\NoncustodialDataSourcesRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Operations\Item\CaseOperationItemRequestBuilder;
@@ -44,15 +44,15 @@ class EdiscoveryCaseItemRequestBuilder
     /**
      * Provides operations to call the close method.
     */
-    public function microsoftGraphSecurityClose(): CloseRequestBuilder {
-        return new CloseRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityClose(): MicrosoftGraphSecurityCloseRequestBuilder {
+        return new MicrosoftGraphSecurityCloseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the reopen method.
     */
-    public function microsoftGraphSecurityReopen(): ReopenRequestBuilder {
-        return new ReopenRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityReopen(): MicrosoftGraphSecurityReopenRequestBuilder {
+        return new MicrosoftGraphSecurityReopenRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -114,17 +114,17 @@ class EdiscoveryCaseItemRequestBuilder
     
     /**
      * Instantiates a new EdiscoveryCaseItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $ediscoveryCaseId key: id of ediscoveryCase
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $ediscoveryCaseId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/security/cases/ediscoveryCases/{ediscoveryCase%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['ediscoveryCaseId'] = $ediscoveryCaseId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -135,7 +135,7 @@ class EdiscoveryCaseItemRequestBuilder
     public function custodiansById(string $id): EdiscoveryCustodianItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['ediscoveryCustodian%2Did'] = $id;
-        return new EdiscoveryCustodianItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new EdiscoveryCustodianItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -182,7 +182,7 @@ class EdiscoveryCaseItemRequestBuilder
     public function noncustodialDataSourcesById(string $id): EdiscoveryNoncustodialDataSourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['ediscoveryNoncustodialDataSource%2Did'] = $id;
-        return new EdiscoveryNoncustodialDataSourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new EdiscoveryNoncustodialDataSourceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -193,7 +193,7 @@ class EdiscoveryCaseItemRequestBuilder
     public function operationsById(string $id): CaseOperationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['caseOperation%2Did'] = $id;
-        return new CaseOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new CaseOperationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -223,7 +223,7 @@ class EdiscoveryCaseItemRequestBuilder
     public function reviewSetsById(string $id): EdiscoveryReviewSetItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['ediscoveryReviewSet%2Did'] = $id;
-        return new EdiscoveryReviewSetItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new EdiscoveryReviewSetItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -234,7 +234,7 @@ class EdiscoveryCaseItemRequestBuilder
     public function searchesById(string $id): EdiscoverySearchItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['ediscoverySearch%2Did'] = $id;
-        return new EdiscoverySearchItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new EdiscoverySearchItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -245,7 +245,7 @@ class EdiscoveryCaseItemRequestBuilder
     public function tagsById(string $id): EdiscoveryReviewTagItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['ediscoveryReviewTag%2Did'] = $id;
-        return new EdiscoveryReviewTagItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new EdiscoveryReviewTagItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

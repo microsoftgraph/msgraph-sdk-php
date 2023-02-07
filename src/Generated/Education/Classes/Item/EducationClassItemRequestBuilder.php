@@ -109,7 +109,7 @@ class EducationClassItemRequestBuilder
     public function assignmentCategoriesById(string $id): EducationCategoryItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationCategory%2Did'] = $id;
-        return new EducationCategoryItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new EducationCategoryItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -120,22 +120,22 @@ class EducationClassItemRequestBuilder
     public function assignmentsById(string $id): EducationAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationAssignment%2Did'] = $id;
-        return new EducationAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new EducationAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
      * Instantiates a new EducationClassItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $educationClassId key: id of educationClass
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $educationClassId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/education/classes/{educationClass%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['educationClassId'] = $educationClassId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -182,7 +182,7 @@ class EducationClassItemRequestBuilder
     public function membersById(string $id): \Microsoft\Graph\Generated\Education\Classes\Item\Members\Item\EducationUserItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationUser%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Education\Classes\Item\Members\Item\EducationUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Education\Classes\Item\Members\Item\EducationUserItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -212,7 +212,7 @@ class EducationClassItemRequestBuilder
     public function schoolsById(string $id): EducationSchoolItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationSchool%2Did'] = $id;
-        return new EducationSchoolItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new EducationSchoolItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -223,7 +223,7 @@ class EducationClassItemRequestBuilder
     public function teachersById(string $id): \Microsoft\Graph\Generated\Education\Classes\Item\Teachers\Item\EducationUserItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['educationUser%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Education\Classes\Item\Teachers\Item\EducationUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Education\Classes\Item\Teachers\Item\EducationUserItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

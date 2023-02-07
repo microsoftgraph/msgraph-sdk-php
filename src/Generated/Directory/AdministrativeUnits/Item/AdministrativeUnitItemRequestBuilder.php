@@ -63,17 +63,17 @@ class AdministrativeUnitItemRequestBuilder
     
     /**
      * Instantiates a new AdministrativeUnitItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $administrativeUnitId key: id of administrativeUnit
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $administrativeUnitId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/directory/administrativeUnits/{administrativeUnit%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['administrativeUnitId'] = $administrativeUnitId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -102,7 +102,7 @@ class AdministrativeUnitItemRequestBuilder
     public function extensionsById(string $id): ExtensionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['extension%2Did'] = $id;
-        return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -131,7 +131,7 @@ class AdministrativeUnitItemRequestBuilder
     public function membersById(string $id): DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -161,7 +161,7 @@ class AdministrativeUnitItemRequestBuilder
     public function scopedRoleMembersById(string $id): ScopedRoleMembershipItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['scopedRoleMembership%2Did'] = $id;
-        return new ScopedRoleMembershipItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ScopedRoleMembershipItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

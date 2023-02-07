@@ -26,7 +26,7 @@ class DelegatedAdminRelationshipOperation extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The createdDateTime property
+     * Gets the createdDateTime property value. The time in ISO 8601 format and in UTC time when the long-running operation was created. Read-only.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -34,7 +34,7 @@ class DelegatedAdminRelationshipOperation extends Entity implements Parsable
     }
 
     /**
-     * Gets the data property value. The data property
+     * Gets the data property value. The data (payload) for the operation. Read-only.
      * @return string|null
     */
     public function getData(): ?string {
@@ -57,7 +57,7 @@ class DelegatedAdminRelationshipOperation extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Gets the lastModifiedDateTime property value. The time in ISO 8601 format and in UTC time when the long-running operation was last modified. Read-only.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -94,7 +94,7 @@ class DelegatedAdminRelationshipOperation extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The createdDateTime property
+     * Sets the createdDateTime property value. The time in ISO 8601 format and in UTC time when the long-running operation was created. Read-only.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -102,7 +102,7 @@ class DelegatedAdminRelationshipOperation extends Entity implements Parsable
     }
 
     /**
-     * Sets the data property value. The data property
+     * Sets the data property value. The data (payload) for the operation. Read-only.
      * @param string|null $value Value to set for the data property.
     */
     public function setData(?string $value): void {
@@ -110,7 +110,7 @@ class DelegatedAdminRelationshipOperation extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. The lastModifiedDateTime property
+     * Sets the lastModifiedDateTime property value. The time in ISO 8601 format and in UTC time when the long-running operation was last modified. Read-only.
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {

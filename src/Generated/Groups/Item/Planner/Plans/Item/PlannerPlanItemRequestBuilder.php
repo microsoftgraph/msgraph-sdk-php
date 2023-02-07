@@ -68,22 +68,22 @@ class PlannerPlanItemRequestBuilder
     public function bucketsById(string $id): PlannerBucketItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['plannerBucket%2Did'] = $id;
-        return new PlannerBucketItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new PlannerBucketItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
      * Instantiates a new PlannerPlanItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $plannerPlanId key: id of plannerPlan
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $plannerPlanId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/planner/plans/{plannerPlan%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['plannerPlanId'] = $plannerPlanId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -149,7 +149,7 @@ class PlannerPlanItemRequestBuilder
     public function tasksById(string $id): PlannerTaskItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['plannerTask%2Did'] = $id;
-        return new PlannerTaskItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new PlannerTaskItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

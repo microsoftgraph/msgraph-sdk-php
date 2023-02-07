@@ -95,18 +95,22 @@ class ListRequestBuilder
     public function columnsById(string $id): ColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnDefinition%2Did'] = $id;
-        return new ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
      * Instantiates a new ListRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/shares/{sharedDriveItem%2Did}/list{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -117,7 +121,7 @@ class ListRequestBuilder
     public function contentTypesById(string $id): ContentTypeItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['contentType%2Did'] = $id;
-        return new ContentTypeItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ContentTypeItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -164,7 +168,7 @@ class ListRequestBuilder
     public function itemsById(string $id): ListItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['listItem%2Did'] = $id;
-        return new ListItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ListItemItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -175,7 +179,7 @@ class ListRequestBuilder
     public function operationsById(string $id): RichLongRunningOperationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['richLongRunningOperation%2Did'] = $id;
-        return new RichLongRunningOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new RichLongRunningOperationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -205,7 +209,7 @@ class ListRequestBuilder
     public function subscriptionsById(string $id): SubscriptionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['subscription%2Did'] = $id;
-        return new SubscriptionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new SubscriptionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\MicrosoftGraphShare\ShareRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\MicrosoftGraphShare\MicrosoftGraphShareRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\OfferShiftRequests\Item\OfferShiftRequestItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\OfferShiftRequests\OfferShiftRequestsRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\OpenShiftChangeRequests\Item\OpenShiftChangeRequestItemRequestBuilder;
@@ -41,8 +41,8 @@ class ScheduleRequestBuilder
     /**
      * Provides operations to call the share method.
     */
-    public function microsoftGraphShare(): ShareRequestBuilder {
-        return new ShareRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphShare(): MicrosoftGraphShareRequestBuilder {
+        return new MicrosoftGraphShareRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -125,13 +125,17 @@ class ScheduleRequestBuilder
     
     /**
      * Instantiates a new ScheduleRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/me/joinedTeams/{team%2Did}/schedule{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -179,7 +183,7 @@ class ScheduleRequestBuilder
     public function offerShiftRequestsById(string $id): OfferShiftRequestItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['offerShiftRequest%2Did'] = $id;
-        return new OfferShiftRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new OfferShiftRequestItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -190,7 +194,7 @@ class ScheduleRequestBuilder
     public function openShiftChangeRequestsById(string $id): OpenShiftChangeRequestItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['openShiftChangeRequest%2Did'] = $id;
-        return new OpenShiftChangeRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new OpenShiftChangeRequestItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -201,7 +205,7 @@ class ScheduleRequestBuilder
     public function openShiftsById(string $id): OpenShiftItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['openShift%2Did'] = $id;
-        return new OpenShiftItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new OpenShiftItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -231,7 +235,7 @@ class ScheduleRequestBuilder
     public function schedulingGroupsById(string $id): SchedulingGroupItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['schedulingGroup%2Did'] = $id;
-        return new SchedulingGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new SchedulingGroupItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -242,7 +246,7 @@ class ScheduleRequestBuilder
     public function shiftsById(string $id): ShiftItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['shift%2Did'] = $id;
-        return new ShiftItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ShiftItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -253,7 +257,7 @@ class ScheduleRequestBuilder
     public function swapShiftsChangeRequestsById(string $id): SwapShiftsChangeRequestItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['swapShiftsChangeRequest%2Did'] = $id;
-        return new SwapShiftsChangeRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new SwapShiftsChangeRequestItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -264,7 +268,7 @@ class ScheduleRequestBuilder
     public function timeOffReasonsById(string $id): TimeOffReasonItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['timeOffReason%2Did'] = $id;
-        return new TimeOffReasonItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new TimeOffReasonItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -275,7 +279,7 @@ class ScheduleRequestBuilder
     public function timeOffRequestsById(string $id): TimeOffRequestItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['timeOffRequest%2Did'] = $id;
-        return new TimeOffRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new TimeOffRequestItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -286,7 +290,7 @@ class ScheduleRequestBuilder
     public function timesOffById(string $id): TimeOffItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['timeOff%2Did'] = $id;
-        return new TimeOffItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new TimeOffItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

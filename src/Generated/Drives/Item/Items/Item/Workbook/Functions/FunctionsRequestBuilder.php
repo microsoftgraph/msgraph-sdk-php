@@ -5,372 +5,372 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAbs\AbsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAccrInt\AccrIntRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAccrIntM\AccrIntMRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAcos\AcosRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAcosh\AcoshRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAcot\AcotRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAcoth\AcothRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAmorDegrc\AmorDegrcRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAmorLinc\AmorLincRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAnd\AndRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphArabic\ArabicRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAreas\AreasRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAsc\AscRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAsin\AsinRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAsinh\AsinhRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAtan\AtanRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAtan2\Atan2RequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAtanh\AtanhRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAveDev\AveDevRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAverage\AverageRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAverageA\AverageARequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAverageIf\AverageIfRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAverageIfs\AverageIfsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBahtText\BahtTextRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBase\BaseRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBesselI\BesselIRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBesselJ\BesselJRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBesselK\BesselKRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBesselY\BesselYRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBeta_Dist\Beta_DistRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBeta_Inv\Beta_InvRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBin2Dec\Bin2DecRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBin2Hex\Bin2HexRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBin2Oct\Bin2OctRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBinom_Dist_Range\Binom_Dist_RangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBinom_Dist\Binom_DistRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBinom_Inv\Binom_InvRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBitand\BitandRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBitlshift\BitlshiftRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBitor\BitorRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBitrshift\BitrshiftRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBitxor\BitxorRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCeiling_Math\Ceiling_MathRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCeiling_Precise\Ceiling_PreciseRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphChar\CharRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphChiSq_Dist_RT\ChiSq_Dist_RTRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphChiSq_Dist\ChiSq_DistRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphChiSq_Inv_RT\ChiSq_Inv_RTRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphChiSq_Inv\ChiSq_InvRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphChoose\ChooseRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphClean\CleanRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCode\CodeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphColumns\ColumnsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCombin\CombinRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCombina\CombinaRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphComplex\ComplexRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphConcatenate\ConcatenateRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphConfidence_Norm\Confidence_NormRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphConfidence_T\Confidence_TRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphConvert\ConvertRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCos\CosRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCosh\CoshRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCot\CotRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCoth\CothRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCount\CountRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCountA\CountARequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCountBlank\CountBlankRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCountIf\CountIfRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCountIfs\CountIfsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCoupDayBs\CoupDayBsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCoupDays\CoupDaysRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCoupDaysNc\CoupDaysNcRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCoupNcd\CoupNcdRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCoupNum\CoupNumRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCoupPcd\CoupPcdRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCsc\CscRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCsch\CschRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCumIPmt\CumIPmtRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCumPrinc\CumPrincRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDate\DateRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDatevalue\DatevalueRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDaverage\DaverageRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDay\DayRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDays\DaysRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDays360\Days360RequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDb\DbRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDbcs\DbcsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDcount\DcountRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDcountA\DcountARequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDdb\DdbRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDec2Bin\Dec2BinRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDec2Hex\Dec2HexRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDec2Oct\Dec2OctRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDecimal\DecimalRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDegrees\DegreesRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDelta\DeltaRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDevSq\DevSqRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDget\DgetRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDisc\DiscRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDmax\DmaxRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDmin\DminRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDollar\DollarRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDollarDe\DollarDeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDollarFr\DollarFrRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDproduct\DproductRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDstDev\DstDevRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDstDevP\DstDevPRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDsum\DsumRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDuration\DurationRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDvar\DvarRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDvarP\DvarPRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphEcma_Ceiling\Ecma_CeilingRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphEdate\EdateRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphEffect\EffectRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphEoMonth\EoMonthRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphErf_Precise\Erf_PreciseRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphErf\ErfRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphErfC_Precise\ErfC_PreciseRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphErfC\ErfCRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphError_Type\Error_TypeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphEven\EvenRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphExact\ExactRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphExp\ExpRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphExpon_Dist\Expon_DistRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphF_Dist_RT\F_Dist_RTRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphF_Dist\F_DistRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphF_Inv_RT\F_Inv_RTRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphF_Inv\F_InvRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphFact\FactRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphFactDouble\FactDoubleRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphFalse\FalseRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphFind\FindRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphFindB\FindBRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphFisher\FisherRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphFisherInv\FisherInvRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphFixed\FixedRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphFloor_Math\Floor_MathRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphFloor_Precise\Floor_PreciseRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphFv\FvRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphFvschedule\FvscheduleRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphGamma_Dist\Gamma_DistRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphGamma_Inv\Gamma_InvRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphGamma\GammaRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphGammaLn_Precise\GammaLn_PreciseRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphGammaLn\GammaLnRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphGauss\GaussRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphGcd\GcdRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphGeoMean\GeoMeanRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphGeStep\GeStepRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphHarMean\HarMeanRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphHex2Bin\Hex2BinRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphHex2Dec\Hex2DecRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphHex2Oct\Hex2OctRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphHlookup\HlookupRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphHour\HourRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphHyperlink\HyperlinkRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphHypGeom_Dist\HypGeom_DistRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIf\IfRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImAbs\ImAbsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImaginary\ImaginaryRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImArgument\ImArgumentRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImConjugate\ImConjugateRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImCos\ImCosRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImCosh\ImCoshRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImCot\ImCotRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImCsc\ImCscRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImCsch\ImCschRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImDiv\ImDivRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImExp\ImExpRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImLn\ImLnRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImLog10\ImLog10RequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImLog2\ImLog2RequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImPower\ImPowerRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImProduct\ImProductRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImReal\ImRealRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImSec\ImSecRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImSech\ImSechRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImSin\ImSinRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImSinh\ImSinhRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImSqrt\ImSqrtRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImSub\ImSubRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImSum\ImSumRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImTan\ImTanRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphInt\IntRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIntRate\IntRateRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIpmt\IpmtRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIrr\IrrRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIsErr\IsErrRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIsError\IsErrorRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIsEven\IsEvenRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIsFormula\IsFormulaRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIsLogical\IsLogicalRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIsNA\IsNARequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIsNonText\IsNonTextRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIsNumber\IsNumberRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIso_Ceiling\Iso_CeilingRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIsOdd\IsOddRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIsoWeekNum\IsoWeekNumRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIspmt\IspmtRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIsref\IsrefRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIsText\IsTextRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphKurt\KurtRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLarge\LargeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLcm\LcmRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLeft\LeftRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLeftb\LeftbRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLen\LenRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLenb\LenbRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLn\LnRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLog\LogRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLog10\Log10RequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLogNorm_Dist\LogNorm_DistRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLogNorm_Inv\LogNorm_InvRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLookup\LookupRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLower\LowerRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMatch\MatchRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMax\MaxRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMaxA\MaxARequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMduration\MdurationRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMedian\MedianRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMid\MidRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMidb\MidbRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMin\MinRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMinA\MinARequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMinute\MinuteRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMirr\MirrRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMod\ModRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMonth\MonthRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMround\MroundRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMultiNomial\MultiNomialRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphN\NRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNa\NaRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNegBinom_Dist\NegBinom_DistRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNetworkDays_Intl\NetworkDays_IntlRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNetworkDays\NetworkDaysRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNominal\NominalRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNorm_Dist\Norm_DistRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNorm_Inv\Norm_InvRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNorm_S_Dist\Norm_S_DistRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNorm_S_Inv\Norm_S_InvRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNot\NotRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNow\NowRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNper\NperRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNpv\NpvRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNumberValue\NumberValueRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphOct2Bin\Oct2BinRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphOct2Dec\Oct2DecRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphOct2Hex\Oct2HexRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphOdd\OddRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphOddFPrice\OddFPriceRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphOddFYield\OddFYieldRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphOddLPrice\OddLPriceRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphOddLYield\OddLYieldRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphOr\OrRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPduration\PdurationRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPercentile_Exc\Percentile_ExcRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPercentile_Inc\Percentile_IncRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPercentRank_Exc\PercentRank_ExcRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPercentRank_Inc\PercentRank_IncRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPermut\PermutRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPermutationa\PermutationaRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPhi\PhiRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPi\PiRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPmt\PmtRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPoisson_Dist\Poisson_DistRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPower\PowerRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPpmt\PpmtRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPrice\PriceRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPriceDisc\PriceDiscRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPriceMat\PriceMatRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphProduct\ProductRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphProper\ProperRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPv\PvRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphQuartile_Exc\Quartile_ExcRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphQuartile_Inc\Quartile_IncRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphQuotient\QuotientRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRadians\RadiansRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRand\RandRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRandBetween\RandBetweenRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRank_Avg\Rank_AvgRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRank_Eq\Rank_EqRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRate\RateRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphReceived\ReceivedRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphReplace\ReplaceRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphReplaceB\ReplaceBRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRept\ReptRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRight\RightRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRightb\RightbRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRoman\RomanRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRound\RoundRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRoundDown\RoundDownRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRoundUp\RoundUpRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRows\RowsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRri\RriRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSec\SecRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSech\SechRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSecond\SecondRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSeriesSum\SeriesSumRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSheet\SheetRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSheets\SheetsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSign\SignRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSin\SinRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSinh\SinhRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSkew_p\Skew_pRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSkew\SkewRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSln\SlnRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSmall\SmallRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSqrt\SqrtRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSqrtPi\SqrtPiRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphStandardize\StandardizeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphStDev_P\StDev_PRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphStDev_S\StDev_SRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphStDevA\StDevARequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphStDevPA\StDevPARequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSubstitute\SubstituteRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSubtotal\SubtotalRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSum\SumRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSumIf\SumIfRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSumIfs\SumIfsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSumSq\SumSqRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSyd\SydRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphT_Dist_2T\T_Dist_2TRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphT_Dist_RT\T_Dist_RTRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphT_Dist\T_DistRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphT_Inv_2T\T_Inv_2TRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphT_Inv\T_InvRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphT\TRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphTan\TanRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphTanh\TanhRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphTbillEq\TbillEqRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphTbillPrice\TbillPriceRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphTbillYield\TbillYieldRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphText\TextRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphTime\TimeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphTimevalue\TimevalueRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphToday\TodayRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphTrim\TrimRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphTrimMean\TrimMeanRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphTrue\TrueRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphTrunc\TruncRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphType\TypeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphUnichar\UnicharRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphUnicode\UnicodeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphUpper\UpperRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphUsdollar\UsdollarRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphValue\ValueRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphVar_P\Var_PRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphVar_S\Var_SRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphVarA\VarARequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphVarPA\VarPARequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphVdb\VdbRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphVlookup\VlookupRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphWeekday\WeekdayRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphWeekNum\WeekNumRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphWeibull_Dist\Weibull_DistRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphWorkDay_Intl\WorkDay_IntlRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphWorkDay\WorkDayRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphXirr\XirrRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphXnpv\XnpvRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphXor\XorRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphYear\YearRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphYearFrac\YearFracRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphYield\YieldRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphYieldDisc\YieldDiscRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphYieldMat\YieldMatRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphZ_Test\Z_TestRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAbs\MicrosoftGraphAbsRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAccrInt\MicrosoftGraphAccrIntRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAccrIntM\MicrosoftGraphAccrIntMRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAcos\MicrosoftGraphAcosRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAcosh\MicrosoftGraphAcoshRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAcot\MicrosoftGraphAcotRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAcoth\MicrosoftGraphAcothRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAmorDegrc\MicrosoftGraphAmorDegrcRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAmorLinc\MicrosoftGraphAmorLincRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAnd\MicrosoftGraphAndRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphArabic\MicrosoftGraphArabicRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAreas\MicrosoftGraphAreasRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAsc\MicrosoftGraphAscRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAsin\MicrosoftGraphAsinRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAsinh\MicrosoftGraphAsinhRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAtan\MicrosoftGraphAtanRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAtan2\MicrosoftGraphAtan2RequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAtanh\MicrosoftGraphAtanhRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAveDev\MicrosoftGraphAveDevRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAverage\MicrosoftGraphAverageRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAverageA\MicrosoftGraphAverageARequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAverageIf\MicrosoftGraphAverageIfRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphAverageIfs\MicrosoftGraphAverageIfsRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBahtText\MicrosoftGraphBahtTextRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBase\MicrosoftGraphBaseRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBesselI\MicrosoftGraphBesselIRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBesselJ\MicrosoftGraphBesselJRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBesselK\MicrosoftGraphBesselKRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBesselY\MicrosoftGraphBesselYRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBeta_Dist\MicrosoftGraphBeta_DistRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBeta_Inv\MicrosoftGraphBeta_InvRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBin2Dec\MicrosoftGraphBin2DecRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBin2Hex\MicrosoftGraphBin2HexRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBin2Oct\MicrosoftGraphBin2OctRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBinom_Dist_Range\MicrosoftGraphBinom_Dist_RangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBinom_Dist\MicrosoftGraphBinom_DistRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBinom_Inv\MicrosoftGraphBinom_InvRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBitand\MicrosoftGraphBitandRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBitlshift\MicrosoftGraphBitlshiftRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBitor\MicrosoftGraphBitorRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBitrshift\MicrosoftGraphBitrshiftRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphBitxor\MicrosoftGraphBitxorRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCeiling_Math\MicrosoftGraphCeiling_MathRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCeiling_Precise\MicrosoftGraphCeiling_PreciseRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphChar\MicrosoftGraphCharRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphChiSq_Dist_RT\MicrosoftGraphChiSq_Dist_RTRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphChiSq_Dist\MicrosoftGraphChiSq_DistRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphChiSq_Inv_RT\MicrosoftGraphChiSq_Inv_RTRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphChiSq_Inv\MicrosoftGraphChiSq_InvRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphChoose\MicrosoftGraphChooseRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphClean\MicrosoftGraphCleanRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCode\MicrosoftGraphCodeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphColumns\MicrosoftGraphColumnsRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCombin\MicrosoftGraphCombinRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCombina\MicrosoftGraphCombinaRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphComplex\MicrosoftGraphComplexRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphConcatenate\MicrosoftGraphConcatenateRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphConfidence_Norm\MicrosoftGraphConfidence_NormRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphConfidence_T\MicrosoftGraphConfidence_TRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphConvert\MicrosoftGraphConvertRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCos\MicrosoftGraphCosRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCosh\MicrosoftGraphCoshRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCot\MicrosoftGraphCotRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCoth\MicrosoftGraphCothRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCount\MicrosoftGraphCountRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCountA\MicrosoftGraphCountARequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCountBlank\MicrosoftGraphCountBlankRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCountIf\MicrosoftGraphCountIfRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCountIfs\MicrosoftGraphCountIfsRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCoupDayBs\MicrosoftGraphCoupDayBsRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCoupDays\MicrosoftGraphCoupDaysRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCoupDaysNc\MicrosoftGraphCoupDaysNcRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCoupNcd\MicrosoftGraphCoupNcdRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCoupNum\MicrosoftGraphCoupNumRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCoupPcd\MicrosoftGraphCoupPcdRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCsc\MicrosoftGraphCscRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCsch\MicrosoftGraphCschRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCumIPmt\MicrosoftGraphCumIPmtRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphCumPrinc\MicrosoftGraphCumPrincRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDate\MicrosoftGraphDateRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDatevalue\MicrosoftGraphDatevalueRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDaverage\MicrosoftGraphDaverageRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDay\MicrosoftGraphDayRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDays\MicrosoftGraphDaysRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDays360\MicrosoftGraphDays360RequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDb\MicrosoftGraphDbRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDbcs\MicrosoftGraphDbcsRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDcount\MicrosoftGraphDcountRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDcountA\MicrosoftGraphDcountARequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDdb\MicrosoftGraphDdbRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDec2Bin\MicrosoftGraphDec2BinRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDec2Hex\MicrosoftGraphDec2HexRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDec2Oct\MicrosoftGraphDec2OctRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDecimal\MicrosoftGraphDecimalRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDegrees\MicrosoftGraphDegreesRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDelta\MicrosoftGraphDeltaRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDevSq\MicrosoftGraphDevSqRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDget\MicrosoftGraphDgetRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDisc\MicrosoftGraphDiscRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDmax\MicrosoftGraphDmaxRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDmin\MicrosoftGraphDminRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDollar\MicrosoftGraphDollarRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDollarDe\MicrosoftGraphDollarDeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDollarFr\MicrosoftGraphDollarFrRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDproduct\MicrosoftGraphDproductRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDstDev\MicrosoftGraphDstDevRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDstDevP\MicrosoftGraphDstDevPRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDsum\MicrosoftGraphDsumRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDuration\MicrosoftGraphDurationRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDvar\MicrosoftGraphDvarRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphDvarP\MicrosoftGraphDvarPRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphEcma_Ceiling\MicrosoftGraphEcma_CeilingRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphEdate\MicrosoftGraphEdateRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphEffect\MicrosoftGraphEffectRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphEoMonth\MicrosoftGraphEoMonthRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphErf_Precise\MicrosoftGraphErf_PreciseRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphErf\MicrosoftGraphErfRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphErfC_Precise\MicrosoftGraphErfC_PreciseRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphErfC\MicrosoftGraphErfCRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphError_Type\MicrosoftGraphError_TypeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphEven\MicrosoftGraphEvenRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphExact\MicrosoftGraphExactRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphExp\MicrosoftGraphExpRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphExpon_Dist\MicrosoftGraphExpon_DistRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphF_Dist_RT\MicrosoftGraphF_Dist_RTRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphF_Dist\MicrosoftGraphF_DistRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphF_Inv_RT\MicrosoftGraphF_Inv_RTRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphF_Inv\MicrosoftGraphF_InvRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphFact\MicrosoftGraphFactRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphFactDouble\MicrosoftGraphFactDoubleRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphFalse\MicrosoftGraphFalseRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphFind\MicrosoftGraphFindRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphFindB\MicrosoftGraphFindBRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphFisher\MicrosoftGraphFisherRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphFisherInv\MicrosoftGraphFisherInvRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphFixed\MicrosoftGraphFixedRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphFloor_Math\MicrosoftGraphFloor_MathRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphFloor_Precise\MicrosoftGraphFloor_PreciseRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphFv\MicrosoftGraphFvRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphFvschedule\MicrosoftGraphFvscheduleRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphGamma_Dist\MicrosoftGraphGamma_DistRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphGamma_Inv\MicrosoftGraphGamma_InvRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphGamma\MicrosoftGraphGammaRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphGammaLn_Precise\MicrosoftGraphGammaLn_PreciseRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphGammaLn\MicrosoftGraphGammaLnRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphGauss\MicrosoftGraphGaussRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphGcd\MicrosoftGraphGcdRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphGeoMean\MicrosoftGraphGeoMeanRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphGeStep\MicrosoftGraphGeStepRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphHarMean\MicrosoftGraphHarMeanRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphHex2Bin\MicrosoftGraphHex2BinRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphHex2Dec\MicrosoftGraphHex2DecRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphHex2Oct\MicrosoftGraphHex2OctRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphHlookup\MicrosoftGraphHlookupRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphHour\MicrosoftGraphHourRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphHyperlink\MicrosoftGraphHyperlinkRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphHypGeom_Dist\MicrosoftGraphHypGeom_DistRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIf\MicrosoftGraphIfRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImAbs\MicrosoftGraphImAbsRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImaginary\MicrosoftGraphImaginaryRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImArgument\MicrosoftGraphImArgumentRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImConjugate\MicrosoftGraphImConjugateRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImCos\MicrosoftGraphImCosRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImCosh\MicrosoftGraphImCoshRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImCot\MicrosoftGraphImCotRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImCsc\MicrosoftGraphImCscRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImCsch\MicrosoftGraphImCschRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImDiv\MicrosoftGraphImDivRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImExp\MicrosoftGraphImExpRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImLn\MicrosoftGraphImLnRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImLog10\MicrosoftGraphImLog10RequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImLog2\MicrosoftGraphImLog2RequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImPower\MicrosoftGraphImPowerRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImProduct\MicrosoftGraphImProductRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImReal\MicrosoftGraphImRealRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImSec\MicrosoftGraphImSecRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImSech\MicrosoftGraphImSechRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImSin\MicrosoftGraphImSinRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImSinh\MicrosoftGraphImSinhRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImSqrt\MicrosoftGraphImSqrtRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImSub\MicrosoftGraphImSubRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImSum\MicrosoftGraphImSumRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphImTan\MicrosoftGraphImTanRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphInt\MicrosoftGraphIntRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIntRate\MicrosoftGraphIntRateRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIpmt\MicrosoftGraphIpmtRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIrr\MicrosoftGraphIrrRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIsErr\MicrosoftGraphIsErrRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIsError\MicrosoftGraphIsErrorRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIsEven\MicrosoftGraphIsEvenRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIsFormula\MicrosoftGraphIsFormulaRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIsLogical\MicrosoftGraphIsLogicalRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIsNA\MicrosoftGraphIsNARequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIsNonText\MicrosoftGraphIsNonTextRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIsNumber\MicrosoftGraphIsNumberRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIso_Ceiling\MicrosoftGraphIso_CeilingRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIsOdd\MicrosoftGraphIsOddRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIsoWeekNum\MicrosoftGraphIsoWeekNumRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIspmt\MicrosoftGraphIspmtRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIsref\MicrosoftGraphIsrefRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphIsText\MicrosoftGraphIsTextRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphKurt\MicrosoftGraphKurtRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLarge\MicrosoftGraphLargeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLcm\MicrosoftGraphLcmRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLeft\MicrosoftGraphLeftRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLeftb\MicrosoftGraphLeftbRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLen\MicrosoftGraphLenRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLenb\MicrosoftGraphLenbRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLn\MicrosoftGraphLnRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLog\MicrosoftGraphLogRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLog10\MicrosoftGraphLog10RequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLogNorm_Dist\MicrosoftGraphLogNorm_DistRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLogNorm_Inv\MicrosoftGraphLogNorm_InvRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLookup\MicrosoftGraphLookupRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphLower\MicrosoftGraphLowerRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMatch\MicrosoftGraphMatchRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMax\MicrosoftGraphMaxRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMaxA\MicrosoftGraphMaxARequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMduration\MicrosoftGraphMdurationRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMedian\MicrosoftGraphMedianRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMid\MicrosoftGraphMidRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMidb\MicrosoftGraphMidbRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMin\MicrosoftGraphMinRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMinA\MicrosoftGraphMinARequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMinute\MicrosoftGraphMinuteRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMirr\MicrosoftGraphMirrRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMod\MicrosoftGraphModRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMonth\MicrosoftGraphMonthRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMround\MicrosoftGraphMroundRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphMultiNomial\MicrosoftGraphMultiNomialRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphN\MicrosoftGraphNRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNa\MicrosoftGraphNaRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNegBinom_Dist\MicrosoftGraphNegBinom_DistRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNetworkDays_Intl\MicrosoftGraphNetworkDays_IntlRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNetworkDays\MicrosoftGraphNetworkDaysRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNominal\MicrosoftGraphNominalRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNorm_Dist\MicrosoftGraphNorm_DistRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNorm_Inv\MicrosoftGraphNorm_InvRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNorm_S_Dist\MicrosoftGraphNorm_S_DistRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNorm_S_Inv\MicrosoftGraphNorm_S_InvRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNot\MicrosoftGraphNotRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNow\MicrosoftGraphNowRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNper\MicrosoftGraphNperRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNpv\MicrosoftGraphNpvRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphNumberValue\MicrosoftGraphNumberValueRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphOct2Bin\MicrosoftGraphOct2BinRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphOct2Dec\MicrosoftGraphOct2DecRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphOct2Hex\MicrosoftGraphOct2HexRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphOdd\MicrosoftGraphOddRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphOddFPrice\MicrosoftGraphOddFPriceRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphOddFYield\MicrosoftGraphOddFYieldRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphOddLPrice\MicrosoftGraphOddLPriceRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphOddLYield\MicrosoftGraphOddLYieldRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphOr\MicrosoftGraphOrRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPduration\MicrosoftGraphPdurationRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPercentile_Exc\MicrosoftGraphPercentile_ExcRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPercentile_Inc\MicrosoftGraphPercentile_IncRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPercentRank_Exc\MicrosoftGraphPercentRank_ExcRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPercentRank_Inc\MicrosoftGraphPercentRank_IncRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPermut\MicrosoftGraphPermutRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPermutationa\MicrosoftGraphPermutationaRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPhi\MicrosoftGraphPhiRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPi\MicrosoftGraphPiRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPmt\MicrosoftGraphPmtRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPoisson_Dist\MicrosoftGraphPoisson_DistRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPower\MicrosoftGraphPowerRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPpmt\MicrosoftGraphPpmtRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPrice\MicrosoftGraphPriceRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPriceDisc\MicrosoftGraphPriceDiscRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPriceMat\MicrosoftGraphPriceMatRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphProduct\MicrosoftGraphProductRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphProper\MicrosoftGraphProperRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphPv\MicrosoftGraphPvRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphQuartile_Exc\MicrosoftGraphQuartile_ExcRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphQuartile_Inc\MicrosoftGraphQuartile_IncRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphQuotient\MicrosoftGraphQuotientRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRadians\MicrosoftGraphRadiansRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRand\MicrosoftGraphRandRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRandBetween\MicrosoftGraphRandBetweenRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRank_Avg\MicrosoftGraphRank_AvgRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRank_Eq\MicrosoftGraphRank_EqRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRate\MicrosoftGraphRateRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphReceived\MicrosoftGraphReceivedRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphReplace\MicrosoftGraphReplaceRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphReplaceB\MicrosoftGraphReplaceBRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRept\MicrosoftGraphReptRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRight\MicrosoftGraphRightRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRightb\MicrosoftGraphRightbRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRoman\MicrosoftGraphRomanRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRound\MicrosoftGraphRoundRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRoundDown\MicrosoftGraphRoundDownRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRoundUp\MicrosoftGraphRoundUpRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRows\MicrosoftGraphRowsRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphRri\MicrosoftGraphRriRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSec\MicrosoftGraphSecRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSech\MicrosoftGraphSechRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSecond\MicrosoftGraphSecondRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSeriesSum\MicrosoftGraphSeriesSumRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSheet\MicrosoftGraphSheetRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSheets\MicrosoftGraphSheetsRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSign\MicrosoftGraphSignRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSin\MicrosoftGraphSinRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSinh\MicrosoftGraphSinhRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSkew_p\MicrosoftGraphSkew_pRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSkew\MicrosoftGraphSkewRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSln\MicrosoftGraphSlnRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSmall\MicrosoftGraphSmallRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSqrt\MicrosoftGraphSqrtRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSqrtPi\MicrosoftGraphSqrtPiRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphStandardize\MicrosoftGraphStandardizeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphStDev_P\MicrosoftGraphStDev_PRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphStDev_S\MicrosoftGraphStDev_SRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphStDevA\MicrosoftGraphStDevARequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphStDevPA\MicrosoftGraphStDevPARequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSubstitute\MicrosoftGraphSubstituteRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSubtotal\MicrosoftGraphSubtotalRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSum\MicrosoftGraphSumRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSumIf\MicrosoftGraphSumIfRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSumIfs\MicrosoftGraphSumIfsRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSumSq\MicrosoftGraphSumSqRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphSyd\MicrosoftGraphSydRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphT_Dist_2T\MicrosoftGraphT_Dist_2TRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphT_Dist_RT\MicrosoftGraphT_Dist_RTRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphT_Dist\MicrosoftGraphT_DistRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphT_Inv_2T\MicrosoftGraphT_Inv_2TRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphT_Inv\MicrosoftGraphT_InvRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphT\MicrosoftGraphTRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphTan\MicrosoftGraphTanRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphTanh\MicrosoftGraphTanhRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphTbillEq\MicrosoftGraphTbillEqRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphTbillPrice\MicrosoftGraphTbillPriceRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphTbillYield\MicrosoftGraphTbillYieldRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphText\MicrosoftGraphTextRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphTime\MicrosoftGraphTimeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphTimevalue\MicrosoftGraphTimevalueRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphToday\MicrosoftGraphTodayRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphTrim\MicrosoftGraphTrimRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphTrimMean\MicrosoftGraphTrimMeanRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphTrue\MicrosoftGraphTrueRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphTrunc\MicrosoftGraphTruncRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphType\MicrosoftGraphTypeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphUnichar\MicrosoftGraphUnicharRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphUnicode\MicrosoftGraphUnicodeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphUpper\MicrosoftGraphUpperRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphUsdollar\MicrosoftGraphUsdollarRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphValue\MicrosoftGraphValueRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphVar_P\MicrosoftGraphVar_PRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphVar_S\MicrosoftGraphVar_SRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphVarA\MicrosoftGraphVarARequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphVarPA\MicrosoftGraphVarPARequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphVdb\MicrosoftGraphVdbRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphVlookup\MicrosoftGraphVlookupRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphWeekday\MicrosoftGraphWeekdayRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphWeekNum\MicrosoftGraphWeekNumRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphWeibull_Dist\MicrosoftGraphWeibull_DistRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphWorkDay_Intl\MicrosoftGraphWorkDay_IntlRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphWorkDay\MicrosoftGraphWorkDayRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphXirr\MicrosoftGraphXirrRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphXnpv\MicrosoftGraphXnpvRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphXor\MicrosoftGraphXorRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphYear\MicrosoftGraphYearRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphYearFrac\MicrosoftGraphYearFracRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphYield\MicrosoftGraphYieldRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphYieldDisc\MicrosoftGraphYieldDiscRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphYieldMat\MicrosoftGraphYieldMatRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\MicrosoftGraphZ_Test\MicrosoftGraphZ_TestRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookFunctions;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -388,2563 +388,2563 @@ class FunctionsRequestBuilder
     /**
      * Provides operations to call the abs method.
     */
-    public function microsoftGraphAbs(): AbsRequestBuilder {
-        return new AbsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAbs(): MicrosoftGraphAbsRequestBuilder {
+        return new MicrosoftGraphAbsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the accrInt method.
     */
-    public function microsoftGraphAccrInt(): AccrIntRequestBuilder {
-        return new AccrIntRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAccrInt(): MicrosoftGraphAccrIntRequestBuilder {
+        return new MicrosoftGraphAccrIntRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the accrIntM method.
     */
-    public function microsoftGraphAccrIntM(): AccrIntMRequestBuilder {
-        return new AccrIntMRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAccrIntM(): MicrosoftGraphAccrIntMRequestBuilder {
+        return new MicrosoftGraphAccrIntMRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the acos method.
     */
-    public function microsoftGraphAcos(): AcosRequestBuilder {
-        return new AcosRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAcos(): MicrosoftGraphAcosRequestBuilder {
+        return new MicrosoftGraphAcosRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the acosh method.
     */
-    public function microsoftGraphAcosh(): AcoshRequestBuilder {
-        return new AcoshRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAcosh(): MicrosoftGraphAcoshRequestBuilder {
+        return new MicrosoftGraphAcoshRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the acot method.
     */
-    public function microsoftGraphAcot(): AcotRequestBuilder {
-        return new AcotRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAcot(): MicrosoftGraphAcotRequestBuilder {
+        return new MicrosoftGraphAcotRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the acoth method.
     */
-    public function microsoftGraphAcoth(): AcothRequestBuilder {
-        return new AcothRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAcoth(): MicrosoftGraphAcothRequestBuilder {
+        return new MicrosoftGraphAcothRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the amorDegrc method.
     */
-    public function microsoftGraphAmorDegrc(): AmorDegrcRequestBuilder {
-        return new AmorDegrcRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAmorDegrc(): MicrosoftGraphAmorDegrcRequestBuilder {
+        return new MicrosoftGraphAmorDegrcRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the amorLinc method.
     */
-    public function microsoftGraphAmorLinc(): AmorLincRequestBuilder {
-        return new AmorLincRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAmorLinc(): MicrosoftGraphAmorLincRequestBuilder {
+        return new MicrosoftGraphAmorLincRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the and method.
     */
-    public function microsoftGraphAnd(): AndRequestBuilder {
-        return new AndRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAnd(): MicrosoftGraphAndRequestBuilder {
+        return new MicrosoftGraphAndRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the arabic method.
     */
-    public function microsoftGraphArabic(): ArabicRequestBuilder {
-        return new ArabicRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphArabic(): MicrosoftGraphArabicRequestBuilder {
+        return new MicrosoftGraphArabicRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the areas method.
     */
-    public function microsoftGraphAreas(): AreasRequestBuilder {
-        return new AreasRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAreas(): MicrosoftGraphAreasRequestBuilder {
+        return new MicrosoftGraphAreasRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the asc method.
     */
-    public function microsoftGraphAsc(): AscRequestBuilder {
-        return new AscRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAsc(): MicrosoftGraphAscRequestBuilder {
+        return new MicrosoftGraphAscRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the asin method.
     */
-    public function microsoftGraphAsin(): AsinRequestBuilder {
-        return new AsinRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAsin(): MicrosoftGraphAsinRequestBuilder {
+        return new MicrosoftGraphAsinRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the asinh method.
     */
-    public function microsoftGraphAsinh(): AsinhRequestBuilder {
-        return new AsinhRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAsinh(): MicrosoftGraphAsinhRequestBuilder {
+        return new MicrosoftGraphAsinhRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the atan method.
     */
-    public function microsoftGraphAtan(): AtanRequestBuilder {
-        return new AtanRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAtan(): MicrosoftGraphAtanRequestBuilder {
+        return new MicrosoftGraphAtanRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the atan2 method.
     */
-    public function microsoftGraphAtan2(): Atan2RequestBuilder {
-        return new Atan2RequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAtan2(): MicrosoftGraphAtan2RequestBuilder {
+        return new MicrosoftGraphAtan2RequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the atanh method.
     */
-    public function microsoftGraphAtanh(): AtanhRequestBuilder {
-        return new AtanhRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAtanh(): MicrosoftGraphAtanhRequestBuilder {
+        return new MicrosoftGraphAtanhRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the aveDev method.
     */
-    public function microsoftGraphAveDev(): AveDevRequestBuilder {
-        return new AveDevRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAveDev(): MicrosoftGraphAveDevRequestBuilder {
+        return new MicrosoftGraphAveDevRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the average method.
     */
-    public function microsoftGraphAverage(): AverageRequestBuilder {
-        return new AverageRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAverage(): MicrosoftGraphAverageRequestBuilder {
+        return new MicrosoftGraphAverageRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the averageA method.
     */
-    public function microsoftGraphAverageA(): AverageARequestBuilder {
-        return new AverageARequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAverageA(): MicrosoftGraphAverageARequestBuilder {
+        return new MicrosoftGraphAverageARequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the averageIf method.
     */
-    public function microsoftGraphAverageIf(): AverageIfRequestBuilder {
-        return new AverageIfRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAverageIf(): MicrosoftGraphAverageIfRequestBuilder {
+        return new MicrosoftGraphAverageIfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the averageIfs method.
     */
-    public function microsoftGraphAverageIfs(): AverageIfsRequestBuilder {
-        return new AverageIfsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAverageIfs(): MicrosoftGraphAverageIfsRequestBuilder {
+        return new MicrosoftGraphAverageIfsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the bahtText method.
     */
-    public function microsoftGraphBahtText(): BahtTextRequestBuilder {
-        return new BahtTextRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphBahtText(): MicrosoftGraphBahtTextRequestBuilder {
+        return new MicrosoftGraphBahtTextRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the base method.
     */
-    public function microsoftGraphBase(): BaseRequestBuilder {
-        return new BaseRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphBase(): MicrosoftGraphBaseRequestBuilder {
+        return new MicrosoftGraphBaseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the besselI method.
     */
-    public function microsoftGraphBesselI(): BesselIRequestBuilder {
-        return new BesselIRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphBesselI(): MicrosoftGraphBesselIRequestBuilder {
+        return new MicrosoftGraphBesselIRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the besselJ method.
     */
-    public function microsoftGraphBesselJ(): BesselJRequestBuilder {
-        return new BesselJRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphBesselJ(): MicrosoftGraphBesselJRequestBuilder {
+        return new MicrosoftGraphBesselJRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the besselK method.
     */
-    public function microsoftGraphBesselK(): BesselKRequestBuilder {
-        return new BesselKRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphBesselK(): MicrosoftGraphBesselKRequestBuilder {
+        return new MicrosoftGraphBesselKRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the besselY method.
     */
-    public function microsoftGraphBesselY(): BesselYRequestBuilder {
-        return new BesselYRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphBesselY(): MicrosoftGraphBesselYRequestBuilder {
+        return new MicrosoftGraphBesselYRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the beta_Dist method.
     */
-    public function microsoftGraphBeta_Dist(): Beta_DistRequestBuilder {
-        return new Beta_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphBeta_Dist(): MicrosoftGraphBeta_DistRequestBuilder {
+        return new MicrosoftGraphBeta_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the beta_Inv method.
     */
-    public function microsoftGraphBeta_Inv(): Beta_InvRequestBuilder {
-        return new Beta_InvRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphBeta_Inv(): MicrosoftGraphBeta_InvRequestBuilder {
+        return new MicrosoftGraphBeta_InvRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the bin2Dec method.
     */
-    public function microsoftGraphBin2Dec(): Bin2DecRequestBuilder {
-        return new Bin2DecRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphBin2Dec(): MicrosoftGraphBin2DecRequestBuilder {
+        return new MicrosoftGraphBin2DecRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the bin2Hex method.
     */
-    public function microsoftGraphBin2Hex(): Bin2HexRequestBuilder {
-        return new Bin2HexRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphBin2Hex(): MicrosoftGraphBin2HexRequestBuilder {
+        return new MicrosoftGraphBin2HexRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the bin2Oct method.
     */
-    public function microsoftGraphBin2Oct(): Bin2OctRequestBuilder {
-        return new Bin2OctRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphBin2Oct(): MicrosoftGraphBin2OctRequestBuilder {
+        return new MicrosoftGraphBin2OctRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the binom_Dist method.
     */
-    public function microsoftGraphBinom_Dist(): Binom_DistRequestBuilder {
-        return new Binom_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphBinom_Dist(): MicrosoftGraphBinom_DistRequestBuilder {
+        return new MicrosoftGraphBinom_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the binom_Dist_Range method.
     */
-    public function microsoftGraphBinom_Dist_Range(): Binom_Dist_RangeRequestBuilder {
-        return new Binom_Dist_RangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphBinom_Dist_Range(): MicrosoftGraphBinom_Dist_RangeRequestBuilder {
+        return new MicrosoftGraphBinom_Dist_RangeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the binom_Inv method.
     */
-    public function microsoftGraphBinom_Inv(): Binom_InvRequestBuilder {
-        return new Binom_InvRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphBinom_Inv(): MicrosoftGraphBinom_InvRequestBuilder {
+        return new MicrosoftGraphBinom_InvRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the bitand method.
     */
-    public function microsoftGraphBitand(): BitandRequestBuilder {
-        return new BitandRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphBitand(): MicrosoftGraphBitandRequestBuilder {
+        return new MicrosoftGraphBitandRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the bitlshift method.
     */
-    public function microsoftGraphBitlshift(): BitlshiftRequestBuilder {
-        return new BitlshiftRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphBitlshift(): MicrosoftGraphBitlshiftRequestBuilder {
+        return new MicrosoftGraphBitlshiftRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the bitor method.
     */
-    public function microsoftGraphBitor(): BitorRequestBuilder {
-        return new BitorRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphBitor(): MicrosoftGraphBitorRequestBuilder {
+        return new MicrosoftGraphBitorRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the bitrshift method.
     */
-    public function microsoftGraphBitrshift(): BitrshiftRequestBuilder {
-        return new BitrshiftRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphBitrshift(): MicrosoftGraphBitrshiftRequestBuilder {
+        return new MicrosoftGraphBitrshiftRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the bitxor method.
     */
-    public function microsoftGraphBitxor(): BitxorRequestBuilder {
-        return new BitxorRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphBitxor(): MicrosoftGraphBitxorRequestBuilder {
+        return new MicrosoftGraphBitxorRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the ceiling_Math method.
     */
-    public function microsoftGraphCeiling_Math(): Ceiling_MathRequestBuilder {
-        return new Ceiling_MathRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCeiling_Math(): MicrosoftGraphCeiling_MathRequestBuilder {
+        return new MicrosoftGraphCeiling_MathRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the ceiling_Precise method.
     */
-    public function microsoftGraphCeiling_Precise(): Ceiling_PreciseRequestBuilder {
-        return new Ceiling_PreciseRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCeiling_Precise(): MicrosoftGraphCeiling_PreciseRequestBuilder {
+        return new MicrosoftGraphCeiling_PreciseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the char method.
     */
-    public function microsoftGraphChar(): CharRequestBuilder {
-        return new CharRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphChar(): MicrosoftGraphCharRequestBuilder {
+        return new MicrosoftGraphCharRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the chiSq_Dist method.
     */
-    public function microsoftGraphChiSq_Dist(): ChiSq_DistRequestBuilder {
-        return new ChiSq_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphChiSq_Dist(): MicrosoftGraphChiSq_DistRequestBuilder {
+        return new MicrosoftGraphChiSq_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the chiSq_Dist_RT method.
     */
-    public function microsoftGraphChiSq_Dist_RT(): ChiSq_Dist_RTRequestBuilder {
-        return new ChiSq_Dist_RTRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphChiSq_Dist_RT(): MicrosoftGraphChiSq_Dist_RTRequestBuilder {
+        return new MicrosoftGraphChiSq_Dist_RTRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the chiSq_Inv method.
     */
-    public function microsoftGraphChiSq_Inv(): ChiSq_InvRequestBuilder {
-        return new ChiSq_InvRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphChiSq_Inv(): MicrosoftGraphChiSq_InvRequestBuilder {
+        return new MicrosoftGraphChiSq_InvRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the chiSq_Inv_RT method.
     */
-    public function microsoftGraphChiSq_Inv_RT(): ChiSq_Inv_RTRequestBuilder {
-        return new ChiSq_Inv_RTRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphChiSq_Inv_RT(): MicrosoftGraphChiSq_Inv_RTRequestBuilder {
+        return new MicrosoftGraphChiSq_Inv_RTRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the choose method.
     */
-    public function microsoftGraphChoose(): ChooseRequestBuilder {
-        return new ChooseRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphChoose(): MicrosoftGraphChooseRequestBuilder {
+        return new MicrosoftGraphChooseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the clean method.
     */
-    public function microsoftGraphClean(): CleanRequestBuilder {
-        return new CleanRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphClean(): MicrosoftGraphCleanRequestBuilder {
+        return new MicrosoftGraphCleanRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the code method.
     */
-    public function microsoftGraphCode(): CodeRequestBuilder {
-        return new CodeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCode(): MicrosoftGraphCodeRequestBuilder {
+        return new MicrosoftGraphCodeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the columns method.
     */
-    public function microsoftGraphColumns(): ColumnsRequestBuilder {
-        return new ColumnsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphColumns(): MicrosoftGraphColumnsRequestBuilder {
+        return new MicrosoftGraphColumnsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the combin method.
     */
-    public function microsoftGraphCombin(): CombinRequestBuilder {
-        return new CombinRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCombin(): MicrosoftGraphCombinRequestBuilder {
+        return new MicrosoftGraphCombinRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the combina method.
     */
-    public function microsoftGraphCombina(): CombinaRequestBuilder {
-        return new CombinaRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCombina(): MicrosoftGraphCombinaRequestBuilder {
+        return new MicrosoftGraphCombinaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the complex method.
     */
-    public function microsoftGraphComplex(): ComplexRequestBuilder {
-        return new ComplexRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphComplex(): MicrosoftGraphComplexRequestBuilder {
+        return new MicrosoftGraphComplexRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the concatenate method.
     */
-    public function microsoftGraphConcatenate(): ConcatenateRequestBuilder {
-        return new ConcatenateRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphConcatenate(): MicrosoftGraphConcatenateRequestBuilder {
+        return new MicrosoftGraphConcatenateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the confidence_Norm method.
     */
-    public function microsoftGraphConfidence_Norm(): Confidence_NormRequestBuilder {
-        return new Confidence_NormRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphConfidence_Norm(): MicrosoftGraphConfidence_NormRequestBuilder {
+        return new MicrosoftGraphConfidence_NormRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the confidence_T method.
     */
-    public function microsoftGraphConfidence_T(): Confidence_TRequestBuilder {
-        return new Confidence_TRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphConfidence_T(): MicrosoftGraphConfidence_TRequestBuilder {
+        return new MicrosoftGraphConfidence_TRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the convert method.
     */
-    public function microsoftGraphConvert(): ConvertRequestBuilder {
-        return new ConvertRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphConvert(): MicrosoftGraphConvertRequestBuilder {
+        return new MicrosoftGraphConvertRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the cos method.
     */
-    public function microsoftGraphCos(): CosRequestBuilder {
-        return new CosRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCos(): MicrosoftGraphCosRequestBuilder {
+        return new MicrosoftGraphCosRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the cosh method.
     */
-    public function microsoftGraphCosh(): CoshRequestBuilder {
-        return new CoshRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCosh(): MicrosoftGraphCoshRequestBuilder {
+        return new MicrosoftGraphCoshRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the cot method.
     */
-    public function microsoftGraphCot(): CotRequestBuilder {
-        return new CotRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCot(): MicrosoftGraphCotRequestBuilder {
+        return new MicrosoftGraphCotRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the coth method.
     */
-    public function microsoftGraphCoth(): CothRequestBuilder {
-        return new CothRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCoth(): MicrosoftGraphCothRequestBuilder {
+        return new MicrosoftGraphCothRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the count method.
     */
-    public function microsoftGraphCount(): CountRequestBuilder {
-        return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCount(): MicrosoftGraphCountRequestBuilder {
+        return new MicrosoftGraphCountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the countA method.
     */
-    public function microsoftGraphCountA(): CountARequestBuilder {
-        return new CountARequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCountA(): MicrosoftGraphCountARequestBuilder {
+        return new MicrosoftGraphCountARequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the countBlank method.
     */
-    public function microsoftGraphCountBlank(): CountBlankRequestBuilder {
-        return new CountBlankRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCountBlank(): MicrosoftGraphCountBlankRequestBuilder {
+        return new MicrosoftGraphCountBlankRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the countIf method.
     */
-    public function microsoftGraphCountIf(): CountIfRequestBuilder {
-        return new CountIfRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCountIf(): MicrosoftGraphCountIfRequestBuilder {
+        return new MicrosoftGraphCountIfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the countIfs method.
     */
-    public function microsoftGraphCountIfs(): CountIfsRequestBuilder {
-        return new CountIfsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCountIfs(): MicrosoftGraphCountIfsRequestBuilder {
+        return new MicrosoftGraphCountIfsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the coupDayBs method.
     */
-    public function microsoftGraphCoupDayBs(): CoupDayBsRequestBuilder {
-        return new CoupDayBsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCoupDayBs(): MicrosoftGraphCoupDayBsRequestBuilder {
+        return new MicrosoftGraphCoupDayBsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the coupDays method.
     */
-    public function microsoftGraphCoupDays(): CoupDaysRequestBuilder {
-        return new CoupDaysRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCoupDays(): MicrosoftGraphCoupDaysRequestBuilder {
+        return new MicrosoftGraphCoupDaysRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the coupDaysNc method.
     */
-    public function microsoftGraphCoupDaysNc(): CoupDaysNcRequestBuilder {
-        return new CoupDaysNcRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCoupDaysNc(): MicrosoftGraphCoupDaysNcRequestBuilder {
+        return new MicrosoftGraphCoupDaysNcRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the coupNcd method.
     */
-    public function microsoftGraphCoupNcd(): CoupNcdRequestBuilder {
-        return new CoupNcdRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCoupNcd(): MicrosoftGraphCoupNcdRequestBuilder {
+        return new MicrosoftGraphCoupNcdRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the coupNum method.
     */
-    public function microsoftGraphCoupNum(): CoupNumRequestBuilder {
-        return new CoupNumRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCoupNum(): MicrosoftGraphCoupNumRequestBuilder {
+        return new MicrosoftGraphCoupNumRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the coupPcd method.
     */
-    public function microsoftGraphCoupPcd(): CoupPcdRequestBuilder {
-        return new CoupPcdRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCoupPcd(): MicrosoftGraphCoupPcdRequestBuilder {
+        return new MicrosoftGraphCoupPcdRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the csc method.
     */
-    public function microsoftGraphCsc(): CscRequestBuilder {
-        return new CscRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCsc(): MicrosoftGraphCscRequestBuilder {
+        return new MicrosoftGraphCscRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the csch method.
     */
-    public function microsoftGraphCsch(): CschRequestBuilder {
-        return new CschRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCsch(): MicrosoftGraphCschRequestBuilder {
+        return new MicrosoftGraphCschRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the cumIPmt method.
     */
-    public function microsoftGraphCumIPmt(): CumIPmtRequestBuilder {
-        return new CumIPmtRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCumIPmt(): MicrosoftGraphCumIPmtRequestBuilder {
+        return new MicrosoftGraphCumIPmtRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the cumPrinc method.
     */
-    public function microsoftGraphCumPrinc(): CumPrincRequestBuilder {
-        return new CumPrincRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCumPrinc(): MicrosoftGraphCumPrincRequestBuilder {
+        return new MicrosoftGraphCumPrincRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the date method.
     */
-    public function microsoftGraphDate(): DateRequestBuilder {
-        return new DateRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDate(): MicrosoftGraphDateRequestBuilder {
+        return new MicrosoftGraphDateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the datevalue method.
     */
-    public function microsoftGraphDatevalue(): DatevalueRequestBuilder {
-        return new DatevalueRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDatevalue(): MicrosoftGraphDatevalueRequestBuilder {
+        return new MicrosoftGraphDatevalueRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the daverage method.
     */
-    public function microsoftGraphDaverage(): DaverageRequestBuilder {
-        return new DaverageRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDaverage(): MicrosoftGraphDaverageRequestBuilder {
+        return new MicrosoftGraphDaverageRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the day method.
     */
-    public function microsoftGraphDay(): DayRequestBuilder {
-        return new DayRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDay(): MicrosoftGraphDayRequestBuilder {
+        return new MicrosoftGraphDayRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the days method.
     */
-    public function microsoftGraphDays(): DaysRequestBuilder {
-        return new DaysRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDays(): MicrosoftGraphDaysRequestBuilder {
+        return new MicrosoftGraphDaysRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the days360 method.
     */
-    public function microsoftGraphDays360(): Days360RequestBuilder {
-        return new Days360RequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDays360(): MicrosoftGraphDays360RequestBuilder {
+        return new MicrosoftGraphDays360RequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the db method.
     */
-    public function microsoftGraphDb(): DbRequestBuilder {
-        return new DbRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDb(): MicrosoftGraphDbRequestBuilder {
+        return new MicrosoftGraphDbRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the dbcs method.
     */
-    public function microsoftGraphDbcs(): DbcsRequestBuilder {
-        return new DbcsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDbcs(): MicrosoftGraphDbcsRequestBuilder {
+        return new MicrosoftGraphDbcsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the dcount method.
     */
-    public function microsoftGraphDcount(): DcountRequestBuilder {
-        return new DcountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDcount(): MicrosoftGraphDcountRequestBuilder {
+        return new MicrosoftGraphDcountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the dcountA method.
     */
-    public function microsoftGraphDcountA(): DcountARequestBuilder {
-        return new DcountARequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDcountA(): MicrosoftGraphDcountARequestBuilder {
+        return new MicrosoftGraphDcountARequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the ddb method.
     */
-    public function microsoftGraphDdb(): DdbRequestBuilder {
-        return new DdbRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDdb(): MicrosoftGraphDdbRequestBuilder {
+        return new MicrosoftGraphDdbRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the dec2Bin method.
     */
-    public function microsoftGraphDec2Bin(): Dec2BinRequestBuilder {
-        return new Dec2BinRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDec2Bin(): MicrosoftGraphDec2BinRequestBuilder {
+        return new MicrosoftGraphDec2BinRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the dec2Hex method.
     */
-    public function microsoftGraphDec2Hex(): Dec2HexRequestBuilder {
-        return new Dec2HexRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDec2Hex(): MicrosoftGraphDec2HexRequestBuilder {
+        return new MicrosoftGraphDec2HexRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the dec2Oct method.
     */
-    public function microsoftGraphDec2Oct(): Dec2OctRequestBuilder {
-        return new Dec2OctRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDec2Oct(): MicrosoftGraphDec2OctRequestBuilder {
+        return new MicrosoftGraphDec2OctRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the decimal method.
     */
-    public function microsoftGraphDecimal(): DecimalRequestBuilder {
-        return new DecimalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDecimal(): MicrosoftGraphDecimalRequestBuilder {
+        return new MicrosoftGraphDecimalRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the degrees method.
     */
-    public function microsoftGraphDegrees(): DegreesRequestBuilder {
-        return new DegreesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDegrees(): MicrosoftGraphDegreesRequestBuilder {
+        return new MicrosoftGraphDegreesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the delta method.
     */
-    public function microsoftGraphDelta(): DeltaRequestBuilder {
-        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDelta(): MicrosoftGraphDeltaRequestBuilder {
+        return new MicrosoftGraphDeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the devSq method.
     */
-    public function microsoftGraphDevSq(): DevSqRequestBuilder {
-        return new DevSqRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDevSq(): MicrosoftGraphDevSqRequestBuilder {
+        return new MicrosoftGraphDevSqRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the dget method.
     */
-    public function microsoftGraphDget(): DgetRequestBuilder {
-        return new DgetRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDget(): MicrosoftGraphDgetRequestBuilder {
+        return new MicrosoftGraphDgetRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the disc method.
     */
-    public function microsoftGraphDisc(): DiscRequestBuilder {
-        return new DiscRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDisc(): MicrosoftGraphDiscRequestBuilder {
+        return new MicrosoftGraphDiscRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the dmax method.
     */
-    public function microsoftGraphDmax(): DmaxRequestBuilder {
-        return new DmaxRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDmax(): MicrosoftGraphDmaxRequestBuilder {
+        return new MicrosoftGraphDmaxRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the dmin method.
     */
-    public function microsoftGraphDmin(): DminRequestBuilder {
-        return new DminRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDmin(): MicrosoftGraphDminRequestBuilder {
+        return new MicrosoftGraphDminRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the dollar method.
     */
-    public function microsoftGraphDollar(): DollarRequestBuilder {
-        return new DollarRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDollar(): MicrosoftGraphDollarRequestBuilder {
+        return new MicrosoftGraphDollarRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the dollarDe method.
     */
-    public function microsoftGraphDollarDe(): DollarDeRequestBuilder {
-        return new DollarDeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDollarDe(): MicrosoftGraphDollarDeRequestBuilder {
+        return new MicrosoftGraphDollarDeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the dollarFr method.
     */
-    public function microsoftGraphDollarFr(): DollarFrRequestBuilder {
-        return new DollarFrRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDollarFr(): MicrosoftGraphDollarFrRequestBuilder {
+        return new MicrosoftGraphDollarFrRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the dproduct method.
     */
-    public function microsoftGraphDproduct(): DproductRequestBuilder {
-        return new DproductRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDproduct(): MicrosoftGraphDproductRequestBuilder {
+        return new MicrosoftGraphDproductRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the dstDev method.
     */
-    public function microsoftGraphDstDev(): DstDevRequestBuilder {
-        return new DstDevRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDstDev(): MicrosoftGraphDstDevRequestBuilder {
+        return new MicrosoftGraphDstDevRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the dstDevP method.
     */
-    public function microsoftGraphDstDevP(): DstDevPRequestBuilder {
-        return new DstDevPRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDstDevP(): MicrosoftGraphDstDevPRequestBuilder {
+        return new MicrosoftGraphDstDevPRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the dsum method.
     */
-    public function microsoftGraphDsum(): DsumRequestBuilder {
-        return new DsumRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDsum(): MicrosoftGraphDsumRequestBuilder {
+        return new MicrosoftGraphDsumRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the duration method.
     */
-    public function microsoftGraphDuration(): DurationRequestBuilder {
-        return new DurationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDuration(): MicrosoftGraphDurationRequestBuilder {
+        return new MicrosoftGraphDurationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the dvar method.
     */
-    public function microsoftGraphDvar(): DvarRequestBuilder {
-        return new DvarRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDvar(): MicrosoftGraphDvarRequestBuilder {
+        return new MicrosoftGraphDvarRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the dvarP method.
     */
-    public function microsoftGraphDvarP(): DvarPRequestBuilder {
-        return new DvarPRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDvarP(): MicrosoftGraphDvarPRequestBuilder {
+        return new MicrosoftGraphDvarPRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the ecma_Ceiling method.
     */
-    public function microsoftGraphEcma_Ceiling(): Ecma_CeilingRequestBuilder {
-        return new Ecma_CeilingRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphEcma_Ceiling(): MicrosoftGraphEcma_CeilingRequestBuilder {
+        return new MicrosoftGraphEcma_CeilingRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the edate method.
     */
-    public function microsoftGraphEdate(): EdateRequestBuilder {
-        return new EdateRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphEdate(): MicrosoftGraphEdateRequestBuilder {
+        return new MicrosoftGraphEdateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the effect method.
     */
-    public function microsoftGraphEffect(): EffectRequestBuilder {
-        return new EffectRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphEffect(): MicrosoftGraphEffectRequestBuilder {
+        return new MicrosoftGraphEffectRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the eoMonth method.
     */
-    public function microsoftGraphEoMonth(): EoMonthRequestBuilder {
-        return new EoMonthRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphEoMonth(): MicrosoftGraphEoMonthRequestBuilder {
+        return new MicrosoftGraphEoMonthRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the erf method.
     */
-    public function microsoftGraphErf(): ErfRequestBuilder {
-        return new ErfRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphErf(): MicrosoftGraphErfRequestBuilder {
+        return new MicrosoftGraphErfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the erf_Precise method.
     */
-    public function microsoftGraphErf_Precise(): Erf_PreciseRequestBuilder {
-        return new Erf_PreciseRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphErf_Precise(): MicrosoftGraphErf_PreciseRequestBuilder {
+        return new MicrosoftGraphErf_PreciseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the erfC method.
     */
-    public function microsoftGraphErfC(): ErfCRequestBuilder {
-        return new ErfCRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphErfC(): MicrosoftGraphErfCRequestBuilder {
+        return new MicrosoftGraphErfCRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the erfC_Precise method.
     */
-    public function microsoftGraphErfC_Precise(): ErfC_PreciseRequestBuilder {
-        return new ErfC_PreciseRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphErfC_Precise(): MicrosoftGraphErfC_PreciseRequestBuilder {
+        return new MicrosoftGraphErfC_PreciseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the error_Type method.
     */
-    public function microsoftGraphError_Type(): Error_TypeRequestBuilder {
-        return new Error_TypeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphError_Type(): MicrosoftGraphError_TypeRequestBuilder {
+        return new MicrosoftGraphError_TypeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the even method.
     */
-    public function microsoftGraphEven(): EvenRequestBuilder {
-        return new EvenRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphEven(): MicrosoftGraphEvenRequestBuilder {
+        return new MicrosoftGraphEvenRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the exact method.
     */
-    public function microsoftGraphExact(): ExactRequestBuilder {
-        return new ExactRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphExact(): MicrosoftGraphExactRequestBuilder {
+        return new MicrosoftGraphExactRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the exp method.
     */
-    public function microsoftGraphExp(): ExpRequestBuilder {
-        return new ExpRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphExp(): MicrosoftGraphExpRequestBuilder {
+        return new MicrosoftGraphExpRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the expon_Dist method.
     */
-    public function microsoftGraphExpon_Dist(): Expon_DistRequestBuilder {
-        return new Expon_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphExpon_Dist(): MicrosoftGraphExpon_DistRequestBuilder {
+        return new MicrosoftGraphExpon_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the f_Dist method.
     */
-    public function microsoftGraphF_Dist(): F_DistRequestBuilder {
-        return new F_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphF_Dist(): MicrosoftGraphF_DistRequestBuilder {
+        return new MicrosoftGraphF_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the f_Dist_RT method.
     */
-    public function microsoftGraphF_Dist_RT(): F_Dist_RTRequestBuilder {
-        return new F_Dist_RTRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphF_Dist_RT(): MicrosoftGraphF_Dist_RTRequestBuilder {
+        return new MicrosoftGraphF_Dist_RTRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the f_Inv method.
     */
-    public function microsoftGraphF_Inv(): F_InvRequestBuilder {
-        return new F_InvRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphF_Inv(): MicrosoftGraphF_InvRequestBuilder {
+        return new MicrosoftGraphF_InvRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the f_Inv_RT method.
     */
-    public function microsoftGraphF_Inv_RT(): F_Inv_RTRequestBuilder {
-        return new F_Inv_RTRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphF_Inv_RT(): MicrosoftGraphF_Inv_RTRequestBuilder {
+        return new MicrosoftGraphF_Inv_RTRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the fact method.
     */
-    public function microsoftGraphFact(): FactRequestBuilder {
-        return new FactRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphFact(): MicrosoftGraphFactRequestBuilder {
+        return new MicrosoftGraphFactRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the factDouble method.
     */
-    public function microsoftGraphFactDouble(): FactDoubleRequestBuilder {
-        return new FactDoubleRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphFactDouble(): MicrosoftGraphFactDoubleRequestBuilder {
+        return new MicrosoftGraphFactDoubleRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the false method.
     */
-    public function microsoftGraphFalse(): FalseRequestBuilder {
-        return new FalseRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphFalse(): MicrosoftGraphFalseRequestBuilder {
+        return new MicrosoftGraphFalseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the find method.
     */
-    public function microsoftGraphFind(): FindRequestBuilder {
-        return new FindRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphFind(): MicrosoftGraphFindRequestBuilder {
+        return new MicrosoftGraphFindRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the findB method.
     */
-    public function microsoftGraphFindB(): FindBRequestBuilder {
-        return new FindBRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphFindB(): MicrosoftGraphFindBRequestBuilder {
+        return new MicrosoftGraphFindBRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the fisher method.
     */
-    public function microsoftGraphFisher(): FisherRequestBuilder {
-        return new FisherRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphFisher(): MicrosoftGraphFisherRequestBuilder {
+        return new MicrosoftGraphFisherRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the fisherInv method.
     */
-    public function microsoftGraphFisherInv(): FisherInvRequestBuilder {
-        return new FisherInvRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphFisherInv(): MicrosoftGraphFisherInvRequestBuilder {
+        return new MicrosoftGraphFisherInvRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the fixed method.
     */
-    public function microsoftGraphFixed(): FixedRequestBuilder {
-        return new FixedRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphFixed(): MicrosoftGraphFixedRequestBuilder {
+        return new MicrosoftGraphFixedRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the floor_Math method.
     */
-    public function microsoftGraphFloor_Math(): Floor_MathRequestBuilder {
-        return new Floor_MathRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphFloor_Math(): MicrosoftGraphFloor_MathRequestBuilder {
+        return new MicrosoftGraphFloor_MathRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the floor_Precise method.
     */
-    public function microsoftGraphFloor_Precise(): Floor_PreciseRequestBuilder {
-        return new Floor_PreciseRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphFloor_Precise(): MicrosoftGraphFloor_PreciseRequestBuilder {
+        return new MicrosoftGraphFloor_PreciseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the fv method.
     */
-    public function microsoftGraphFv(): FvRequestBuilder {
-        return new FvRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphFv(): MicrosoftGraphFvRequestBuilder {
+        return new MicrosoftGraphFvRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the fvschedule method.
     */
-    public function microsoftGraphFvschedule(): FvscheduleRequestBuilder {
-        return new FvscheduleRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphFvschedule(): MicrosoftGraphFvscheduleRequestBuilder {
+        return new MicrosoftGraphFvscheduleRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the gamma method.
     */
-    public function microsoftGraphGamma(): GammaRequestBuilder {
-        return new GammaRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGamma(): MicrosoftGraphGammaRequestBuilder {
+        return new MicrosoftGraphGammaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the gamma_Dist method.
     */
-    public function microsoftGraphGamma_Dist(): Gamma_DistRequestBuilder {
-        return new Gamma_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGamma_Dist(): MicrosoftGraphGamma_DistRequestBuilder {
+        return new MicrosoftGraphGamma_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the gamma_Inv method.
     */
-    public function microsoftGraphGamma_Inv(): Gamma_InvRequestBuilder {
-        return new Gamma_InvRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGamma_Inv(): MicrosoftGraphGamma_InvRequestBuilder {
+        return new MicrosoftGraphGamma_InvRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the gammaLn method.
     */
-    public function microsoftGraphGammaLn(): GammaLnRequestBuilder {
-        return new GammaLnRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGammaLn(): MicrosoftGraphGammaLnRequestBuilder {
+        return new MicrosoftGraphGammaLnRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the gammaLn_Precise method.
     */
-    public function microsoftGraphGammaLn_Precise(): GammaLn_PreciseRequestBuilder {
-        return new GammaLn_PreciseRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGammaLn_Precise(): MicrosoftGraphGammaLn_PreciseRequestBuilder {
+        return new MicrosoftGraphGammaLn_PreciseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the gauss method.
     */
-    public function microsoftGraphGauss(): GaussRequestBuilder {
-        return new GaussRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGauss(): MicrosoftGraphGaussRequestBuilder {
+        return new MicrosoftGraphGaussRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the gcd method.
     */
-    public function microsoftGraphGcd(): GcdRequestBuilder {
-        return new GcdRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGcd(): MicrosoftGraphGcdRequestBuilder {
+        return new MicrosoftGraphGcdRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the geoMean method.
     */
-    public function microsoftGraphGeoMean(): GeoMeanRequestBuilder {
-        return new GeoMeanRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGeoMean(): MicrosoftGraphGeoMeanRequestBuilder {
+        return new MicrosoftGraphGeoMeanRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the geStep method.
     */
-    public function microsoftGraphGeStep(): GeStepRequestBuilder {
-        return new GeStepRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGeStep(): MicrosoftGraphGeStepRequestBuilder {
+        return new MicrosoftGraphGeStepRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the harMean method.
     */
-    public function microsoftGraphHarMean(): HarMeanRequestBuilder {
-        return new HarMeanRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphHarMean(): MicrosoftGraphHarMeanRequestBuilder {
+        return new MicrosoftGraphHarMeanRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the hex2Bin method.
     */
-    public function microsoftGraphHex2Bin(): Hex2BinRequestBuilder {
-        return new Hex2BinRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphHex2Bin(): MicrosoftGraphHex2BinRequestBuilder {
+        return new MicrosoftGraphHex2BinRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the hex2Dec method.
     */
-    public function microsoftGraphHex2Dec(): Hex2DecRequestBuilder {
-        return new Hex2DecRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphHex2Dec(): MicrosoftGraphHex2DecRequestBuilder {
+        return new MicrosoftGraphHex2DecRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the hex2Oct method.
     */
-    public function microsoftGraphHex2Oct(): Hex2OctRequestBuilder {
-        return new Hex2OctRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphHex2Oct(): MicrosoftGraphHex2OctRequestBuilder {
+        return new MicrosoftGraphHex2OctRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the hlookup method.
     */
-    public function microsoftGraphHlookup(): HlookupRequestBuilder {
-        return new HlookupRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphHlookup(): MicrosoftGraphHlookupRequestBuilder {
+        return new MicrosoftGraphHlookupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the hour method.
     */
-    public function microsoftGraphHour(): HourRequestBuilder {
-        return new HourRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphHour(): MicrosoftGraphHourRequestBuilder {
+        return new MicrosoftGraphHourRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the hyperlink method.
     */
-    public function microsoftGraphHyperlink(): HyperlinkRequestBuilder {
-        return new HyperlinkRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphHyperlink(): MicrosoftGraphHyperlinkRequestBuilder {
+        return new MicrosoftGraphHyperlinkRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the hypGeom_Dist method.
     */
-    public function microsoftGraphHypGeom_Dist(): HypGeom_DistRequestBuilder {
-        return new HypGeom_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphHypGeom_Dist(): MicrosoftGraphHypGeom_DistRequestBuilder {
+        return new MicrosoftGraphHypGeom_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the if method.
     */
-    public function microsoftGraphIf(): IfRequestBuilder {
-        return new IfRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphIf(): MicrosoftGraphIfRequestBuilder {
+        return new MicrosoftGraphIfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imAbs method.
     */
-    public function microsoftGraphImAbs(): ImAbsRequestBuilder {
-        return new ImAbsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImAbs(): MicrosoftGraphImAbsRequestBuilder {
+        return new MicrosoftGraphImAbsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imaginary method.
     */
-    public function microsoftGraphImaginary(): ImaginaryRequestBuilder {
-        return new ImaginaryRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImaginary(): MicrosoftGraphImaginaryRequestBuilder {
+        return new MicrosoftGraphImaginaryRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imArgument method.
     */
-    public function microsoftGraphImArgument(): ImArgumentRequestBuilder {
-        return new ImArgumentRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImArgument(): MicrosoftGraphImArgumentRequestBuilder {
+        return new MicrosoftGraphImArgumentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imConjugate method.
     */
-    public function microsoftGraphImConjugate(): ImConjugateRequestBuilder {
-        return new ImConjugateRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImConjugate(): MicrosoftGraphImConjugateRequestBuilder {
+        return new MicrosoftGraphImConjugateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imCos method.
     */
-    public function microsoftGraphImCos(): ImCosRequestBuilder {
-        return new ImCosRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImCos(): MicrosoftGraphImCosRequestBuilder {
+        return new MicrosoftGraphImCosRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imCosh method.
     */
-    public function microsoftGraphImCosh(): ImCoshRequestBuilder {
-        return new ImCoshRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImCosh(): MicrosoftGraphImCoshRequestBuilder {
+        return new MicrosoftGraphImCoshRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imCot method.
     */
-    public function microsoftGraphImCot(): ImCotRequestBuilder {
-        return new ImCotRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImCot(): MicrosoftGraphImCotRequestBuilder {
+        return new MicrosoftGraphImCotRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imCsc method.
     */
-    public function microsoftGraphImCsc(): ImCscRequestBuilder {
-        return new ImCscRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImCsc(): MicrosoftGraphImCscRequestBuilder {
+        return new MicrosoftGraphImCscRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imCsch method.
     */
-    public function microsoftGraphImCsch(): ImCschRequestBuilder {
-        return new ImCschRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImCsch(): MicrosoftGraphImCschRequestBuilder {
+        return new MicrosoftGraphImCschRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imDiv method.
     */
-    public function microsoftGraphImDiv(): ImDivRequestBuilder {
-        return new ImDivRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImDiv(): MicrosoftGraphImDivRequestBuilder {
+        return new MicrosoftGraphImDivRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imExp method.
     */
-    public function microsoftGraphImExp(): ImExpRequestBuilder {
-        return new ImExpRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImExp(): MicrosoftGraphImExpRequestBuilder {
+        return new MicrosoftGraphImExpRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imLn method.
     */
-    public function microsoftGraphImLn(): ImLnRequestBuilder {
-        return new ImLnRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImLn(): MicrosoftGraphImLnRequestBuilder {
+        return new MicrosoftGraphImLnRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imLog10 method.
     */
-    public function microsoftGraphImLog10(): ImLog10RequestBuilder {
-        return new ImLog10RequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImLog10(): MicrosoftGraphImLog10RequestBuilder {
+        return new MicrosoftGraphImLog10RequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imLog2 method.
     */
-    public function microsoftGraphImLog2(): ImLog2RequestBuilder {
-        return new ImLog2RequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImLog2(): MicrosoftGraphImLog2RequestBuilder {
+        return new MicrosoftGraphImLog2RequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imPower method.
     */
-    public function microsoftGraphImPower(): ImPowerRequestBuilder {
-        return new ImPowerRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImPower(): MicrosoftGraphImPowerRequestBuilder {
+        return new MicrosoftGraphImPowerRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imProduct method.
     */
-    public function microsoftGraphImProduct(): ImProductRequestBuilder {
-        return new ImProductRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImProduct(): MicrosoftGraphImProductRequestBuilder {
+        return new MicrosoftGraphImProductRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imReal method.
     */
-    public function microsoftGraphImReal(): ImRealRequestBuilder {
-        return new ImRealRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImReal(): MicrosoftGraphImRealRequestBuilder {
+        return new MicrosoftGraphImRealRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imSec method.
     */
-    public function microsoftGraphImSec(): ImSecRequestBuilder {
-        return new ImSecRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImSec(): MicrosoftGraphImSecRequestBuilder {
+        return new MicrosoftGraphImSecRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imSech method.
     */
-    public function microsoftGraphImSech(): ImSechRequestBuilder {
-        return new ImSechRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImSech(): MicrosoftGraphImSechRequestBuilder {
+        return new MicrosoftGraphImSechRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imSin method.
     */
-    public function microsoftGraphImSin(): ImSinRequestBuilder {
-        return new ImSinRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImSin(): MicrosoftGraphImSinRequestBuilder {
+        return new MicrosoftGraphImSinRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imSinh method.
     */
-    public function microsoftGraphImSinh(): ImSinhRequestBuilder {
-        return new ImSinhRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImSinh(): MicrosoftGraphImSinhRequestBuilder {
+        return new MicrosoftGraphImSinhRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imSqrt method.
     */
-    public function microsoftGraphImSqrt(): ImSqrtRequestBuilder {
-        return new ImSqrtRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImSqrt(): MicrosoftGraphImSqrtRequestBuilder {
+        return new MicrosoftGraphImSqrtRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imSub method.
     */
-    public function microsoftGraphImSub(): ImSubRequestBuilder {
-        return new ImSubRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImSub(): MicrosoftGraphImSubRequestBuilder {
+        return new MicrosoftGraphImSubRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imSum method.
     */
-    public function microsoftGraphImSum(): ImSumRequestBuilder {
-        return new ImSumRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImSum(): MicrosoftGraphImSumRequestBuilder {
+        return new MicrosoftGraphImSumRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the imTan method.
     */
-    public function microsoftGraphImTan(): ImTanRequestBuilder {
-        return new ImTanRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImTan(): MicrosoftGraphImTanRequestBuilder {
+        return new MicrosoftGraphImTanRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the int method.
     */
-    public function microsoftGraphInt(): IntRequestBuilder {
-        return new IntRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphInt(): MicrosoftGraphIntRequestBuilder {
+        return new MicrosoftGraphIntRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the intRate method.
     */
-    public function microsoftGraphIntRate(): IntRateRequestBuilder {
-        return new IntRateRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphIntRate(): MicrosoftGraphIntRateRequestBuilder {
+        return new MicrosoftGraphIntRateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the ipmt method.
     */
-    public function microsoftGraphIpmt(): IpmtRequestBuilder {
-        return new IpmtRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphIpmt(): MicrosoftGraphIpmtRequestBuilder {
+        return new MicrosoftGraphIpmtRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the irr method.
     */
-    public function microsoftGraphIrr(): IrrRequestBuilder {
-        return new IrrRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphIrr(): MicrosoftGraphIrrRequestBuilder {
+        return new MicrosoftGraphIrrRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the isErr method.
     */
-    public function microsoftGraphIsErr(): IsErrRequestBuilder {
-        return new IsErrRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphIsErr(): MicrosoftGraphIsErrRequestBuilder {
+        return new MicrosoftGraphIsErrRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the isError method.
     */
-    public function microsoftGraphIsError(): IsErrorRequestBuilder {
-        return new IsErrorRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphIsError(): MicrosoftGraphIsErrorRequestBuilder {
+        return new MicrosoftGraphIsErrorRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the isEven method.
     */
-    public function microsoftGraphIsEven(): IsEvenRequestBuilder {
-        return new IsEvenRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphIsEven(): MicrosoftGraphIsEvenRequestBuilder {
+        return new MicrosoftGraphIsEvenRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the isFormula method.
     */
-    public function microsoftGraphIsFormula(): IsFormulaRequestBuilder {
-        return new IsFormulaRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphIsFormula(): MicrosoftGraphIsFormulaRequestBuilder {
+        return new MicrosoftGraphIsFormulaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the isLogical method.
     */
-    public function microsoftGraphIsLogical(): IsLogicalRequestBuilder {
-        return new IsLogicalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphIsLogical(): MicrosoftGraphIsLogicalRequestBuilder {
+        return new MicrosoftGraphIsLogicalRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the isNA method.
     */
-    public function microsoftGraphIsNA(): IsNARequestBuilder {
-        return new IsNARequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphIsNA(): MicrosoftGraphIsNARequestBuilder {
+        return new MicrosoftGraphIsNARequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the isNonText method.
     */
-    public function microsoftGraphIsNonText(): IsNonTextRequestBuilder {
-        return new IsNonTextRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphIsNonText(): MicrosoftGraphIsNonTextRequestBuilder {
+        return new MicrosoftGraphIsNonTextRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the isNumber method.
     */
-    public function microsoftGraphIsNumber(): IsNumberRequestBuilder {
-        return new IsNumberRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphIsNumber(): MicrosoftGraphIsNumberRequestBuilder {
+        return new MicrosoftGraphIsNumberRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the iso_Ceiling method.
     */
-    public function microsoftGraphIso_Ceiling(): Iso_CeilingRequestBuilder {
-        return new Iso_CeilingRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphIso_Ceiling(): MicrosoftGraphIso_CeilingRequestBuilder {
+        return new MicrosoftGraphIso_CeilingRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the isOdd method.
     */
-    public function microsoftGraphIsOdd(): IsOddRequestBuilder {
-        return new IsOddRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphIsOdd(): MicrosoftGraphIsOddRequestBuilder {
+        return new MicrosoftGraphIsOddRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the isoWeekNum method.
     */
-    public function microsoftGraphIsoWeekNum(): IsoWeekNumRequestBuilder {
-        return new IsoWeekNumRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphIsoWeekNum(): MicrosoftGraphIsoWeekNumRequestBuilder {
+        return new MicrosoftGraphIsoWeekNumRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the ispmt method.
     */
-    public function microsoftGraphIspmt(): IspmtRequestBuilder {
-        return new IspmtRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphIspmt(): MicrosoftGraphIspmtRequestBuilder {
+        return new MicrosoftGraphIspmtRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the isref method.
     */
-    public function microsoftGraphIsref(): IsrefRequestBuilder {
-        return new IsrefRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphIsref(): MicrosoftGraphIsrefRequestBuilder {
+        return new MicrosoftGraphIsrefRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the isText method.
     */
-    public function microsoftGraphIsText(): IsTextRequestBuilder {
-        return new IsTextRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphIsText(): MicrosoftGraphIsTextRequestBuilder {
+        return new MicrosoftGraphIsTextRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the kurt method.
     */
-    public function microsoftGraphKurt(): KurtRequestBuilder {
-        return new KurtRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphKurt(): MicrosoftGraphKurtRequestBuilder {
+        return new MicrosoftGraphKurtRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the large method.
     */
-    public function microsoftGraphLarge(): LargeRequestBuilder {
-        return new LargeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphLarge(): MicrosoftGraphLargeRequestBuilder {
+        return new MicrosoftGraphLargeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the lcm method.
     */
-    public function microsoftGraphLcm(): LcmRequestBuilder {
-        return new LcmRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphLcm(): MicrosoftGraphLcmRequestBuilder {
+        return new MicrosoftGraphLcmRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the left method.
     */
-    public function microsoftGraphLeft(): LeftRequestBuilder {
-        return new LeftRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphLeft(): MicrosoftGraphLeftRequestBuilder {
+        return new MicrosoftGraphLeftRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the leftb method.
     */
-    public function microsoftGraphLeftb(): LeftbRequestBuilder {
-        return new LeftbRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphLeftb(): MicrosoftGraphLeftbRequestBuilder {
+        return new MicrosoftGraphLeftbRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the len method.
     */
-    public function microsoftGraphLen(): LenRequestBuilder {
-        return new LenRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphLen(): MicrosoftGraphLenRequestBuilder {
+        return new MicrosoftGraphLenRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the lenb method.
     */
-    public function microsoftGraphLenb(): LenbRequestBuilder {
-        return new LenbRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphLenb(): MicrosoftGraphLenbRequestBuilder {
+        return new MicrosoftGraphLenbRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the ln method.
     */
-    public function microsoftGraphLn(): LnRequestBuilder {
-        return new LnRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphLn(): MicrosoftGraphLnRequestBuilder {
+        return new MicrosoftGraphLnRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the log method.
     */
-    public function microsoftGraphLog(): LogRequestBuilder {
-        return new LogRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphLog(): MicrosoftGraphLogRequestBuilder {
+        return new MicrosoftGraphLogRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the log10 method.
     */
-    public function microsoftGraphLog10(): Log10RequestBuilder {
-        return new Log10RequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphLog10(): MicrosoftGraphLog10RequestBuilder {
+        return new MicrosoftGraphLog10RequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the logNorm_Dist method.
     */
-    public function microsoftGraphLogNorm_Dist(): LogNorm_DistRequestBuilder {
-        return new LogNorm_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphLogNorm_Dist(): MicrosoftGraphLogNorm_DistRequestBuilder {
+        return new MicrosoftGraphLogNorm_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the logNorm_Inv method.
     */
-    public function microsoftGraphLogNorm_Inv(): LogNorm_InvRequestBuilder {
-        return new LogNorm_InvRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphLogNorm_Inv(): MicrosoftGraphLogNorm_InvRequestBuilder {
+        return new MicrosoftGraphLogNorm_InvRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the lookup method.
     */
-    public function microsoftGraphLookup(): LookupRequestBuilder {
-        return new LookupRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphLookup(): MicrosoftGraphLookupRequestBuilder {
+        return new MicrosoftGraphLookupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the lower method.
     */
-    public function microsoftGraphLower(): LowerRequestBuilder {
-        return new LowerRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphLower(): MicrosoftGraphLowerRequestBuilder {
+        return new MicrosoftGraphLowerRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the match method.
     */
-    public function microsoftGraphMatch(): MatchRequestBuilder {
-        return new MatchRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphMatch(): MicrosoftGraphMatchRequestBuilder {
+        return new MicrosoftGraphMatchRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the max method.
     */
-    public function microsoftGraphMax(): MaxRequestBuilder {
-        return new MaxRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphMax(): MicrosoftGraphMaxRequestBuilder {
+        return new MicrosoftGraphMaxRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the maxA method.
     */
-    public function microsoftGraphMaxA(): MaxARequestBuilder {
-        return new MaxARequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphMaxA(): MicrosoftGraphMaxARequestBuilder {
+        return new MicrosoftGraphMaxARequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the mduration method.
     */
-    public function microsoftGraphMduration(): MdurationRequestBuilder {
-        return new MdurationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphMduration(): MicrosoftGraphMdurationRequestBuilder {
+        return new MicrosoftGraphMdurationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the median method.
     */
-    public function microsoftGraphMedian(): MedianRequestBuilder {
-        return new MedianRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphMedian(): MicrosoftGraphMedianRequestBuilder {
+        return new MicrosoftGraphMedianRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the mid method.
     */
-    public function microsoftGraphMid(): MidRequestBuilder {
-        return new MidRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphMid(): MicrosoftGraphMidRequestBuilder {
+        return new MicrosoftGraphMidRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the midb method.
     */
-    public function microsoftGraphMidb(): MidbRequestBuilder {
-        return new MidbRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphMidb(): MicrosoftGraphMidbRequestBuilder {
+        return new MicrosoftGraphMidbRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the min method.
     */
-    public function microsoftGraphMin(): MinRequestBuilder {
-        return new MinRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphMin(): MicrosoftGraphMinRequestBuilder {
+        return new MicrosoftGraphMinRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the minA method.
     */
-    public function microsoftGraphMinA(): MinARequestBuilder {
-        return new MinARequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphMinA(): MicrosoftGraphMinARequestBuilder {
+        return new MicrosoftGraphMinARequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the minute method.
     */
-    public function microsoftGraphMinute(): MinuteRequestBuilder {
-        return new MinuteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphMinute(): MicrosoftGraphMinuteRequestBuilder {
+        return new MicrosoftGraphMinuteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the mirr method.
     */
-    public function microsoftGraphMirr(): MirrRequestBuilder {
-        return new MirrRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphMirr(): MicrosoftGraphMirrRequestBuilder {
+        return new MicrosoftGraphMirrRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the mod method.
     */
-    public function microsoftGraphMod(): ModRequestBuilder {
-        return new ModRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphMod(): MicrosoftGraphModRequestBuilder {
+        return new MicrosoftGraphModRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the month method.
     */
-    public function microsoftGraphMonth(): MonthRequestBuilder {
-        return new MonthRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphMonth(): MicrosoftGraphMonthRequestBuilder {
+        return new MicrosoftGraphMonthRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the mround method.
     */
-    public function microsoftGraphMround(): MroundRequestBuilder {
-        return new MroundRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphMround(): MicrosoftGraphMroundRequestBuilder {
+        return new MicrosoftGraphMroundRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the multiNomial method.
     */
-    public function microsoftGraphMultiNomial(): MultiNomialRequestBuilder {
-        return new MultiNomialRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphMultiNomial(): MicrosoftGraphMultiNomialRequestBuilder {
+        return new MicrosoftGraphMultiNomialRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the n method.
     */
-    public function microsoftGraphN(): NRequestBuilder {
-        return new NRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphN(): MicrosoftGraphNRequestBuilder {
+        return new MicrosoftGraphNRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the na method.
     */
-    public function microsoftGraphNa(): NaRequestBuilder {
-        return new NaRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphNa(): MicrosoftGraphNaRequestBuilder {
+        return new MicrosoftGraphNaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the negBinom_Dist method.
     */
-    public function microsoftGraphNegBinom_Dist(): NegBinom_DistRequestBuilder {
-        return new NegBinom_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphNegBinom_Dist(): MicrosoftGraphNegBinom_DistRequestBuilder {
+        return new MicrosoftGraphNegBinom_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the networkDays method.
     */
-    public function microsoftGraphNetworkDays(): NetworkDaysRequestBuilder {
-        return new NetworkDaysRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphNetworkDays(): MicrosoftGraphNetworkDaysRequestBuilder {
+        return new MicrosoftGraphNetworkDaysRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the networkDays_Intl method.
     */
-    public function microsoftGraphNetworkDays_Intl(): NetworkDays_IntlRequestBuilder {
-        return new NetworkDays_IntlRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphNetworkDays_Intl(): MicrosoftGraphNetworkDays_IntlRequestBuilder {
+        return new MicrosoftGraphNetworkDays_IntlRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the nominal method.
     */
-    public function microsoftGraphNominal(): NominalRequestBuilder {
-        return new NominalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphNominal(): MicrosoftGraphNominalRequestBuilder {
+        return new MicrosoftGraphNominalRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the norm_Dist method.
     */
-    public function microsoftGraphNorm_Dist(): Norm_DistRequestBuilder {
-        return new Norm_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphNorm_Dist(): MicrosoftGraphNorm_DistRequestBuilder {
+        return new MicrosoftGraphNorm_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the norm_Inv method.
     */
-    public function microsoftGraphNorm_Inv(): Norm_InvRequestBuilder {
-        return new Norm_InvRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphNorm_Inv(): MicrosoftGraphNorm_InvRequestBuilder {
+        return new MicrosoftGraphNorm_InvRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the norm_S_Dist method.
     */
-    public function microsoftGraphNorm_S_Dist(): Norm_S_DistRequestBuilder {
-        return new Norm_S_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphNorm_S_Dist(): MicrosoftGraphNorm_S_DistRequestBuilder {
+        return new MicrosoftGraphNorm_S_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the norm_S_Inv method.
     */
-    public function microsoftGraphNorm_S_Inv(): Norm_S_InvRequestBuilder {
-        return new Norm_S_InvRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphNorm_S_Inv(): MicrosoftGraphNorm_S_InvRequestBuilder {
+        return new MicrosoftGraphNorm_S_InvRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the not method.
     */
-    public function microsoftGraphNot(): NotRequestBuilder {
-        return new NotRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphNot(): MicrosoftGraphNotRequestBuilder {
+        return new MicrosoftGraphNotRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the now method.
     */
-    public function microsoftGraphNow(): NowRequestBuilder {
-        return new NowRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphNow(): MicrosoftGraphNowRequestBuilder {
+        return new MicrosoftGraphNowRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the nper method.
     */
-    public function microsoftGraphNper(): NperRequestBuilder {
-        return new NperRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphNper(): MicrosoftGraphNperRequestBuilder {
+        return new MicrosoftGraphNperRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the npv method.
     */
-    public function microsoftGraphNpv(): NpvRequestBuilder {
-        return new NpvRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphNpv(): MicrosoftGraphNpvRequestBuilder {
+        return new MicrosoftGraphNpvRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the numberValue method.
     */
-    public function microsoftGraphNumberValue(): NumberValueRequestBuilder {
-        return new NumberValueRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphNumberValue(): MicrosoftGraphNumberValueRequestBuilder {
+        return new MicrosoftGraphNumberValueRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the oct2Bin method.
     */
-    public function microsoftGraphOct2Bin(): Oct2BinRequestBuilder {
-        return new Oct2BinRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphOct2Bin(): MicrosoftGraphOct2BinRequestBuilder {
+        return new MicrosoftGraphOct2BinRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the oct2Dec method.
     */
-    public function microsoftGraphOct2Dec(): Oct2DecRequestBuilder {
-        return new Oct2DecRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphOct2Dec(): MicrosoftGraphOct2DecRequestBuilder {
+        return new MicrosoftGraphOct2DecRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the oct2Hex method.
     */
-    public function microsoftGraphOct2Hex(): Oct2HexRequestBuilder {
-        return new Oct2HexRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphOct2Hex(): MicrosoftGraphOct2HexRequestBuilder {
+        return new MicrosoftGraphOct2HexRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the odd method.
     */
-    public function microsoftGraphOdd(): OddRequestBuilder {
-        return new OddRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphOdd(): MicrosoftGraphOddRequestBuilder {
+        return new MicrosoftGraphOddRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the oddFPrice method.
     */
-    public function microsoftGraphOddFPrice(): OddFPriceRequestBuilder {
-        return new OddFPriceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphOddFPrice(): MicrosoftGraphOddFPriceRequestBuilder {
+        return new MicrosoftGraphOddFPriceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the oddFYield method.
     */
-    public function microsoftGraphOddFYield(): OddFYieldRequestBuilder {
-        return new OddFYieldRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphOddFYield(): MicrosoftGraphOddFYieldRequestBuilder {
+        return new MicrosoftGraphOddFYieldRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the oddLPrice method.
     */
-    public function microsoftGraphOddLPrice(): OddLPriceRequestBuilder {
-        return new OddLPriceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphOddLPrice(): MicrosoftGraphOddLPriceRequestBuilder {
+        return new MicrosoftGraphOddLPriceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the oddLYield method.
     */
-    public function microsoftGraphOddLYield(): OddLYieldRequestBuilder {
-        return new OddLYieldRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphOddLYield(): MicrosoftGraphOddLYieldRequestBuilder {
+        return new MicrosoftGraphOddLYieldRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the or method.
     */
-    public function microsoftGraphOr(): OrRequestBuilder {
-        return new OrRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphOr(): MicrosoftGraphOrRequestBuilder {
+        return new MicrosoftGraphOrRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the pduration method.
     */
-    public function microsoftGraphPduration(): PdurationRequestBuilder {
-        return new PdurationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphPduration(): MicrosoftGraphPdurationRequestBuilder {
+        return new MicrosoftGraphPdurationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the percentile_Exc method.
     */
-    public function microsoftGraphPercentile_Exc(): Percentile_ExcRequestBuilder {
-        return new Percentile_ExcRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphPercentile_Exc(): MicrosoftGraphPercentile_ExcRequestBuilder {
+        return new MicrosoftGraphPercentile_ExcRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the percentile_Inc method.
     */
-    public function microsoftGraphPercentile_Inc(): Percentile_IncRequestBuilder {
-        return new Percentile_IncRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphPercentile_Inc(): MicrosoftGraphPercentile_IncRequestBuilder {
+        return new MicrosoftGraphPercentile_IncRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the percentRank_Exc method.
     */
-    public function microsoftGraphPercentRank_Exc(): PercentRank_ExcRequestBuilder {
-        return new PercentRank_ExcRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphPercentRank_Exc(): MicrosoftGraphPercentRank_ExcRequestBuilder {
+        return new MicrosoftGraphPercentRank_ExcRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the percentRank_Inc method.
     */
-    public function microsoftGraphPercentRank_Inc(): PercentRank_IncRequestBuilder {
-        return new PercentRank_IncRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphPercentRank_Inc(): MicrosoftGraphPercentRank_IncRequestBuilder {
+        return new MicrosoftGraphPercentRank_IncRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the permut method.
     */
-    public function microsoftGraphPermut(): PermutRequestBuilder {
-        return new PermutRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphPermut(): MicrosoftGraphPermutRequestBuilder {
+        return new MicrosoftGraphPermutRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the permutationa method.
     */
-    public function microsoftGraphPermutationa(): PermutationaRequestBuilder {
-        return new PermutationaRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphPermutationa(): MicrosoftGraphPermutationaRequestBuilder {
+        return new MicrosoftGraphPermutationaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the phi method.
     */
-    public function microsoftGraphPhi(): PhiRequestBuilder {
-        return new PhiRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphPhi(): MicrosoftGraphPhiRequestBuilder {
+        return new MicrosoftGraphPhiRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the pi method.
     */
-    public function microsoftGraphPi(): PiRequestBuilder {
-        return new PiRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphPi(): MicrosoftGraphPiRequestBuilder {
+        return new MicrosoftGraphPiRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the pmt method.
     */
-    public function microsoftGraphPmt(): PmtRequestBuilder {
-        return new PmtRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphPmt(): MicrosoftGraphPmtRequestBuilder {
+        return new MicrosoftGraphPmtRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the poisson_Dist method.
     */
-    public function microsoftGraphPoisson_Dist(): Poisson_DistRequestBuilder {
-        return new Poisson_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphPoisson_Dist(): MicrosoftGraphPoisson_DistRequestBuilder {
+        return new MicrosoftGraphPoisson_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the power method.
     */
-    public function microsoftGraphPower(): PowerRequestBuilder {
-        return new PowerRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphPower(): MicrosoftGraphPowerRequestBuilder {
+        return new MicrosoftGraphPowerRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the ppmt method.
     */
-    public function microsoftGraphPpmt(): PpmtRequestBuilder {
-        return new PpmtRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphPpmt(): MicrosoftGraphPpmtRequestBuilder {
+        return new MicrosoftGraphPpmtRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the price method.
     */
-    public function microsoftGraphPrice(): PriceRequestBuilder {
-        return new PriceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphPrice(): MicrosoftGraphPriceRequestBuilder {
+        return new MicrosoftGraphPriceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the priceDisc method.
     */
-    public function microsoftGraphPriceDisc(): PriceDiscRequestBuilder {
-        return new PriceDiscRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphPriceDisc(): MicrosoftGraphPriceDiscRequestBuilder {
+        return new MicrosoftGraphPriceDiscRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the priceMat method.
     */
-    public function microsoftGraphPriceMat(): PriceMatRequestBuilder {
-        return new PriceMatRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphPriceMat(): MicrosoftGraphPriceMatRequestBuilder {
+        return new MicrosoftGraphPriceMatRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the product method.
     */
-    public function microsoftGraphProduct(): ProductRequestBuilder {
-        return new ProductRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphProduct(): MicrosoftGraphProductRequestBuilder {
+        return new MicrosoftGraphProductRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the proper method.
     */
-    public function microsoftGraphProper(): ProperRequestBuilder {
-        return new ProperRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphProper(): MicrosoftGraphProperRequestBuilder {
+        return new MicrosoftGraphProperRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the pv method.
     */
-    public function microsoftGraphPv(): PvRequestBuilder {
-        return new PvRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphPv(): MicrosoftGraphPvRequestBuilder {
+        return new MicrosoftGraphPvRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the quartile_Exc method.
     */
-    public function microsoftGraphQuartile_Exc(): Quartile_ExcRequestBuilder {
-        return new Quartile_ExcRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphQuartile_Exc(): MicrosoftGraphQuartile_ExcRequestBuilder {
+        return new MicrosoftGraphQuartile_ExcRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the quartile_Inc method.
     */
-    public function microsoftGraphQuartile_Inc(): Quartile_IncRequestBuilder {
-        return new Quartile_IncRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphQuartile_Inc(): MicrosoftGraphQuartile_IncRequestBuilder {
+        return new MicrosoftGraphQuartile_IncRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the quotient method.
     */
-    public function microsoftGraphQuotient(): QuotientRequestBuilder {
-        return new QuotientRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphQuotient(): MicrosoftGraphQuotientRequestBuilder {
+        return new MicrosoftGraphQuotientRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the radians method.
     */
-    public function microsoftGraphRadians(): RadiansRequestBuilder {
-        return new RadiansRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRadians(): MicrosoftGraphRadiansRequestBuilder {
+        return new MicrosoftGraphRadiansRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the rand method.
     */
-    public function microsoftGraphRand(): RandRequestBuilder {
-        return new RandRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRand(): MicrosoftGraphRandRequestBuilder {
+        return new MicrosoftGraphRandRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the randBetween method.
     */
-    public function microsoftGraphRandBetween(): RandBetweenRequestBuilder {
-        return new RandBetweenRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRandBetween(): MicrosoftGraphRandBetweenRequestBuilder {
+        return new MicrosoftGraphRandBetweenRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the rank_Avg method.
     */
-    public function microsoftGraphRank_Avg(): Rank_AvgRequestBuilder {
-        return new Rank_AvgRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRank_Avg(): MicrosoftGraphRank_AvgRequestBuilder {
+        return new MicrosoftGraphRank_AvgRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the rank_Eq method.
     */
-    public function microsoftGraphRank_Eq(): Rank_EqRequestBuilder {
-        return new Rank_EqRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRank_Eq(): MicrosoftGraphRank_EqRequestBuilder {
+        return new MicrosoftGraphRank_EqRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the rate method.
     */
-    public function microsoftGraphRate(): RateRequestBuilder {
-        return new RateRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRate(): MicrosoftGraphRateRequestBuilder {
+        return new MicrosoftGraphRateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the received method.
     */
-    public function microsoftGraphReceived(): ReceivedRequestBuilder {
-        return new ReceivedRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphReceived(): MicrosoftGraphReceivedRequestBuilder {
+        return new MicrosoftGraphReceivedRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the replace method.
     */
-    public function microsoftGraphReplace(): ReplaceRequestBuilder {
-        return new ReplaceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphReplace(): MicrosoftGraphReplaceRequestBuilder {
+        return new MicrosoftGraphReplaceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the replaceB method.
     */
-    public function microsoftGraphReplaceB(): ReplaceBRequestBuilder {
-        return new ReplaceBRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphReplaceB(): MicrosoftGraphReplaceBRequestBuilder {
+        return new MicrosoftGraphReplaceBRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the rept method.
     */
-    public function microsoftGraphRept(): ReptRequestBuilder {
-        return new ReptRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRept(): MicrosoftGraphReptRequestBuilder {
+        return new MicrosoftGraphReptRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the right method.
     */
-    public function microsoftGraphRight(): RightRequestBuilder {
-        return new RightRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRight(): MicrosoftGraphRightRequestBuilder {
+        return new MicrosoftGraphRightRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the rightb method.
     */
-    public function microsoftGraphRightb(): RightbRequestBuilder {
-        return new RightbRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRightb(): MicrosoftGraphRightbRequestBuilder {
+        return new MicrosoftGraphRightbRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the roman method.
     */
-    public function microsoftGraphRoman(): RomanRequestBuilder {
-        return new RomanRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRoman(): MicrosoftGraphRomanRequestBuilder {
+        return new MicrosoftGraphRomanRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the round method.
     */
-    public function microsoftGraphRound(): RoundRequestBuilder {
-        return new RoundRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRound(): MicrosoftGraphRoundRequestBuilder {
+        return new MicrosoftGraphRoundRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the roundDown method.
     */
-    public function microsoftGraphRoundDown(): RoundDownRequestBuilder {
-        return new RoundDownRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRoundDown(): MicrosoftGraphRoundDownRequestBuilder {
+        return new MicrosoftGraphRoundDownRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the roundUp method.
     */
-    public function microsoftGraphRoundUp(): RoundUpRequestBuilder {
-        return new RoundUpRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRoundUp(): MicrosoftGraphRoundUpRequestBuilder {
+        return new MicrosoftGraphRoundUpRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the rows method.
     */
-    public function microsoftGraphRows(): RowsRequestBuilder {
-        return new RowsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRows(): MicrosoftGraphRowsRequestBuilder {
+        return new MicrosoftGraphRowsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the rri method.
     */
-    public function microsoftGraphRri(): RriRequestBuilder {
-        return new RriRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRri(): MicrosoftGraphRriRequestBuilder {
+        return new MicrosoftGraphRriRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the sec method.
     */
-    public function microsoftGraphSec(): SecRequestBuilder {
-        return new SecRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSec(): MicrosoftGraphSecRequestBuilder {
+        return new MicrosoftGraphSecRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the sech method.
     */
-    public function microsoftGraphSech(): SechRequestBuilder {
-        return new SechRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSech(): MicrosoftGraphSechRequestBuilder {
+        return new MicrosoftGraphSechRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the second method.
     */
-    public function microsoftGraphSecond(): SecondRequestBuilder {
-        return new SecondRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecond(): MicrosoftGraphSecondRequestBuilder {
+        return new MicrosoftGraphSecondRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the seriesSum method.
     */
-    public function microsoftGraphSeriesSum(): SeriesSumRequestBuilder {
-        return new SeriesSumRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSeriesSum(): MicrosoftGraphSeriesSumRequestBuilder {
+        return new MicrosoftGraphSeriesSumRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the sheet method.
     */
-    public function microsoftGraphSheet(): SheetRequestBuilder {
-        return new SheetRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSheet(): MicrosoftGraphSheetRequestBuilder {
+        return new MicrosoftGraphSheetRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the sheets method.
     */
-    public function microsoftGraphSheets(): SheetsRequestBuilder {
-        return new SheetsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSheets(): MicrosoftGraphSheetsRequestBuilder {
+        return new MicrosoftGraphSheetsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the sign method.
     */
-    public function microsoftGraphSign(): SignRequestBuilder {
-        return new SignRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSign(): MicrosoftGraphSignRequestBuilder {
+        return new MicrosoftGraphSignRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the sin method.
     */
-    public function microsoftGraphSin(): SinRequestBuilder {
-        return new SinRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSin(): MicrosoftGraphSinRequestBuilder {
+        return new MicrosoftGraphSinRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the sinh method.
     */
-    public function microsoftGraphSinh(): SinhRequestBuilder {
-        return new SinhRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSinh(): MicrosoftGraphSinhRequestBuilder {
+        return new MicrosoftGraphSinhRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the skew method.
     */
-    public function microsoftGraphSkew(): SkewRequestBuilder {
-        return new SkewRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSkew(): MicrosoftGraphSkewRequestBuilder {
+        return new MicrosoftGraphSkewRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the skew_p method.
     */
-    public function microsoftGraphSkew_p(): Skew_pRequestBuilder {
-        return new Skew_pRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSkew_p(): MicrosoftGraphSkew_pRequestBuilder {
+        return new MicrosoftGraphSkew_pRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the sln method.
     */
-    public function microsoftGraphSln(): SlnRequestBuilder {
-        return new SlnRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSln(): MicrosoftGraphSlnRequestBuilder {
+        return new MicrosoftGraphSlnRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the small method.
     */
-    public function microsoftGraphSmall(): SmallRequestBuilder {
-        return new SmallRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSmall(): MicrosoftGraphSmallRequestBuilder {
+        return new MicrosoftGraphSmallRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the sqrt method.
     */
-    public function microsoftGraphSqrt(): SqrtRequestBuilder {
-        return new SqrtRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSqrt(): MicrosoftGraphSqrtRequestBuilder {
+        return new MicrosoftGraphSqrtRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the sqrtPi method.
     */
-    public function microsoftGraphSqrtPi(): SqrtPiRequestBuilder {
-        return new SqrtPiRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSqrtPi(): MicrosoftGraphSqrtPiRequestBuilder {
+        return new MicrosoftGraphSqrtPiRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the standardize method.
     */
-    public function microsoftGraphStandardize(): StandardizeRequestBuilder {
-        return new StandardizeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphStandardize(): MicrosoftGraphStandardizeRequestBuilder {
+        return new MicrosoftGraphStandardizeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the stDev_P method.
     */
-    public function microsoftGraphStDev_P(): StDev_PRequestBuilder {
-        return new StDev_PRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphStDev_P(): MicrosoftGraphStDev_PRequestBuilder {
+        return new MicrosoftGraphStDev_PRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the stDev_S method.
     */
-    public function microsoftGraphStDev_S(): StDev_SRequestBuilder {
-        return new StDev_SRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphStDev_S(): MicrosoftGraphStDev_SRequestBuilder {
+        return new MicrosoftGraphStDev_SRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the stDevA method.
     */
-    public function microsoftGraphStDevA(): StDevARequestBuilder {
-        return new StDevARequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphStDevA(): MicrosoftGraphStDevARequestBuilder {
+        return new MicrosoftGraphStDevARequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the stDevPA method.
     */
-    public function microsoftGraphStDevPA(): StDevPARequestBuilder {
-        return new StDevPARequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphStDevPA(): MicrosoftGraphStDevPARequestBuilder {
+        return new MicrosoftGraphStDevPARequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the substitute method.
     */
-    public function microsoftGraphSubstitute(): SubstituteRequestBuilder {
-        return new SubstituteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSubstitute(): MicrosoftGraphSubstituteRequestBuilder {
+        return new MicrosoftGraphSubstituteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the subtotal method.
     */
-    public function microsoftGraphSubtotal(): SubtotalRequestBuilder {
-        return new SubtotalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSubtotal(): MicrosoftGraphSubtotalRequestBuilder {
+        return new MicrosoftGraphSubtotalRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the sum method.
     */
-    public function microsoftGraphSum(): SumRequestBuilder {
-        return new SumRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSum(): MicrosoftGraphSumRequestBuilder {
+        return new MicrosoftGraphSumRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the sumIf method.
     */
-    public function microsoftGraphSumIf(): SumIfRequestBuilder {
-        return new SumIfRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSumIf(): MicrosoftGraphSumIfRequestBuilder {
+        return new MicrosoftGraphSumIfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the sumIfs method.
     */
-    public function microsoftGraphSumIfs(): SumIfsRequestBuilder {
-        return new SumIfsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSumIfs(): MicrosoftGraphSumIfsRequestBuilder {
+        return new MicrosoftGraphSumIfsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the sumSq method.
     */
-    public function microsoftGraphSumSq(): SumSqRequestBuilder {
-        return new SumSqRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSumSq(): MicrosoftGraphSumSqRequestBuilder {
+        return new MicrosoftGraphSumSqRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the syd method.
     */
-    public function microsoftGraphSyd(): SydRequestBuilder {
-        return new SydRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSyd(): MicrosoftGraphSydRequestBuilder {
+        return new MicrosoftGraphSydRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the t method.
     */
-    public function microsoftGraphT(): TRequestBuilder {
-        return new TRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphT(): MicrosoftGraphTRequestBuilder {
+        return new MicrosoftGraphTRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the t_Dist method.
     */
-    public function microsoftGraphT_Dist(): T_DistRequestBuilder {
-        return new T_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphT_Dist(): MicrosoftGraphT_DistRequestBuilder {
+        return new MicrosoftGraphT_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the t_Dist_2T method.
     */
-    public function microsoftGraphT_Dist_2T(): T_Dist_2TRequestBuilder {
-        return new T_Dist_2TRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphT_Dist_2T(): MicrosoftGraphT_Dist_2TRequestBuilder {
+        return new MicrosoftGraphT_Dist_2TRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the t_Dist_RT method.
     */
-    public function microsoftGraphT_Dist_RT(): T_Dist_RTRequestBuilder {
-        return new T_Dist_RTRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphT_Dist_RT(): MicrosoftGraphT_Dist_RTRequestBuilder {
+        return new MicrosoftGraphT_Dist_RTRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the t_Inv method.
     */
-    public function microsoftGraphT_Inv(): T_InvRequestBuilder {
-        return new T_InvRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphT_Inv(): MicrosoftGraphT_InvRequestBuilder {
+        return new MicrosoftGraphT_InvRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the t_Inv_2T method.
     */
-    public function microsoftGraphT_Inv_2T(): T_Inv_2TRequestBuilder {
-        return new T_Inv_2TRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphT_Inv_2T(): MicrosoftGraphT_Inv_2TRequestBuilder {
+        return new MicrosoftGraphT_Inv_2TRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the tan method.
     */
-    public function microsoftGraphTan(): TanRequestBuilder {
-        return new TanRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphTan(): MicrosoftGraphTanRequestBuilder {
+        return new MicrosoftGraphTanRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the tanh method.
     */
-    public function microsoftGraphTanh(): TanhRequestBuilder {
-        return new TanhRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphTanh(): MicrosoftGraphTanhRequestBuilder {
+        return new MicrosoftGraphTanhRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the tbillEq method.
     */
-    public function microsoftGraphTbillEq(): TbillEqRequestBuilder {
-        return new TbillEqRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphTbillEq(): MicrosoftGraphTbillEqRequestBuilder {
+        return new MicrosoftGraphTbillEqRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the tbillPrice method.
     */
-    public function microsoftGraphTbillPrice(): TbillPriceRequestBuilder {
-        return new TbillPriceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphTbillPrice(): MicrosoftGraphTbillPriceRequestBuilder {
+        return new MicrosoftGraphTbillPriceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the tbillYield method.
     */
-    public function microsoftGraphTbillYield(): TbillYieldRequestBuilder {
-        return new TbillYieldRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphTbillYield(): MicrosoftGraphTbillYieldRequestBuilder {
+        return new MicrosoftGraphTbillYieldRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the text method.
     */
-    public function microsoftGraphText(): TextRequestBuilder {
-        return new TextRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphText(): MicrosoftGraphTextRequestBuilder {
+        return new MicrosoftGraphTextRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the time method.
     */
-    public function microsoftGraphTime(): TimeRequestBuilder {
-        return new TimeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphTime(): MicrosoftGraphTimeRequestBuilder {
+        return new MicrosoftGraphTimeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the timevalue method.
     */
-    public function microsoftGraphTimevalue(): TimevalueRequestBuilder {
-        return new TimevalueRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphTimevalue(): MicrosoftGraphTimevalueRequestBuilder {
+        return new MicrosoftGraphTimevalueRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the today method.
     */
-    public function microsoftGraphToday(): TodayRequestBuilder {
-        return new TodayRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphToday(): MicrosoftGraphTodayRequestBuilder {
+        return new MicrosoftGraphTodayRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the trim method.
     */
-    public function microsoftGraphTrim(): TrimRequestBuilder {
-        return new TrimRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphTrim(): MicrosoftGraphTrimRequestBuilder {
+        return new MicrosoftGraphTrimRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the trimMean method.
     */
-    public function microsoftGraphTrimMean(): TrimMeanRequestBuilder {
-        return new TrimMeanRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphTrimMean(): MicrosoftGraphTrimMeanRequestBuilder {
+        return new MicrosoftGraphTrimMeanRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the true method.
     */
-    public function microsoftGraphTrue(): TrueRequestBuilder {
-        return new TrueRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphTrue(): MicrosoftGraphTrueRequestBuilder {
+        return new MicrosoftGraphTrueRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the trunc method.
     */
-    public function microsoftGraphTrunc(): TruncRequestBuilder {
-        return new TruncRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphTrunc(): MicrosoftGraphTruncRequestBuilder {
+        return new MicrosoftGraphTruncRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the type method.
     */
-    public function microsoftGraphType(): TypeRequestBuilder {
-        return new TypeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphType(): MicrosoftGraphTypeRequestBuilder {
+        return new MicrosoftGraphTypeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the unichar method.
     */
-    public function microsoftGraphUnichar(): UnicharRequestBuilder {
-        return new UnicharRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphUnichar(): MicrosoftGraphUnicharRequestBuilder {
+        return new MicrosoftGraphUnicharRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the unicode method.
     */
-    public function microsoftGraphUnicode(): UnicodeRequestBuilder {
-        return new UnicodeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphUnicode(): MicrosoftGraphUnicodeRequestBuilder {
+        return new MicrosoftGraphUnicodeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the upper method.
     */
-    public function microsoftGraphUpper(): UpperRequestBuilder {
-        return new UpperRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphUpper(): MicrosoftGraphUpperRequestBuilder {
+        return new MicrosoftGraphUpperRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the usdollar method.
     */
-    public function microsoftGraphUsdollar(): UsdollarRequestBuilder {
-        return new UsdollarRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphUsdollar(): MicrosoftGraphUsdollarRequestBuilder {
+        return new MicrosoftGraphUsdollarRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the value method.
     */
-    public function microsoftGraphValue(): ValueRequestBuilder {
-        return new ValueRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphValue(): MicrosoftGraphValueRequestBuilder {
+        return new MicrosoftGraphValueRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the var_P method.
     */
-    public function microsoftGraphVar_P(): Var_PRequestBuilder {
-        return new Var_PRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphVar_P(): MicrosoftGraphVar_PRequestBuilder {
+        return new MicrosoftGraphVar_PRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the var_S method.
     */
-    public function microsoftGraphVar_S(): Var_SRequestBuilder {
-        return new Var_SRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphVar_S(): MicrosoftGraphVar_SRequestBuilder {
+        return new MicrosoftGraphVar_SRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the varA method.
     */
-    public function microsoftGraphVarA(): VarARequestBuilder {
-        return new VarARequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphVarA(): MicrosoftGraphVarARequestBuilder {
+        return new MicrosoftGraphVarARequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the varPA method.
     */
-    public function microsoftGraphVarPA(): VarPARequestBuilder {
-        return new VarPARequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphVarPA(): MicrosoftGraphVarPARequestBuilder {
+        return new MicrosoftGraphVarPARequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the vdb method.
     */
-    public function microsoftGraphVdb(): VdbRequestBuilder {
-        return new VdbRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphVdb(): MicrosoftGraphVdbRequestBuilder {
+        return new MicrosoftGraphVdbRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the vlookup method.
     */
-    public function microsoftGraphVlookup(): VlookupRequestBuilder {
-        return new VlookupRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphVlookup(): MicrosoftGraphVlookupRequestBuilder {
+        return new MicrosoftGraphVlookupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the weekday method.
     */
-    public function microsoftGraphWeekday(): WeekdayRequestBuilder {
-        return new WeekdayRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphWeekday(): MicrosoftGraphWeekdayRequestBuilder {
+        return new MicrosoftGraphWeekdayRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the weekNum method.
     */
-    public function microsoftGraphWeekNum(): WeekNumRequestBuilder {
-        return new WeekNumRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphWeekNum(): MicrosoftGraphWeekNumRequestBuilder {
+        return new MicrosoftGraphWeekNumRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the weibull_Dist method.
     */
-    public function microsoftGraphWeibull_Dist(): Weibull_DistRequestBuilder {
-        return new Weibull_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphWeibull_Dist(): MicrosoftGraphWeibull_DistRequestBuilder {
+        return new MicrosoftGraphWeibull_DistRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the workDay method.
     */
-    public function microsoftGraphWorkDay(): WorkDayRequestBuilder {
-        return new WorkDayRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphWorkDay(): MicrosoftGraphWorkDayRequestBuilder {
+        return new MicrosoftGraphWorkDayRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the workDay_Intl method.
     */
-    public function microsoftGraphWorkDay_Intl(): WorkDay_IntlRequestBuilder {
-        return new WorkDay_IntlRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphWorkDay_Intl(): MicrosoftGraphWorkDay_IntlRequestBuilder {
+        return new MicrosoftGraphWorkDay_IntlRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the xirr method.
     */
-    public function microsoftGraphXirr(): XirrRequestBuilder {
-        return new XirrRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphXirr(): MicrosoftGraphXirrRequestBuilder {
+        return new MicrosoftGraphXirrRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the xnpv method.
     */
-    public function microsoftGraphXnpv(): XnpvRequestBuilder {
-        return new XnpvRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphXnpv(): MicrosoftGraphXnpvRequestBuilder {
+        return new MicrosoftGraphXnpvRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the xor method.
     */
-    public function microsoftGraphXor(): XorRequestBuilder {
-        return new XorRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphXor(): MicrosoftGraphXorRequestBuilder {
+        return new MicrosoftGraphXorRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the year method.
     */
-    public function microsoftGraphYear(): YearRequestBuilder {
-        return new YearRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphYear(): MicrosoftGraphYearRequestBuilder {
+        return new MicrosoftGraphYearRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the yearFrac method.
     */
-    public function microsoftGraphYearFrac(): YearFracRequestBuilder {
-        return new YearFracRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphYearFrac(): MicrosoftGraphYearFracRequestBuilder {
+        return new MicrosoftGraphYearFracRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the yield method.
     */
-    public function microsoftGraphYield(): YieldRequestBuilder {
-        return new YieldRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphYield(): MicrosoftGraphYieldRequestBuilder {
+        return new MicrosoftGraphYieldRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the yieldDisc method.
     */
-    public function microsoftGraphYieldDisc(): YieldDiscRequestBuilder {
-        return new YieldDiscRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphYieldDisc(): MicrosoftGraphYieldDiscRequestBuilder {
+        return new MicrosoftGraphYieldDiscRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the yieldMat method.
     */
-    public function microsoftGraphYieldMat(): YieldMatRequestBuilder {
-        return new YieldMatRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphYieldMat(): MicrosoftGraphYieldMatRequestBuilder {
+        return new MicrosoftGraphYieldMatRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the z_Test method.
     */
-    public function microsoftGraphZ_Test(): Z_TestRequestBuilder {
-        return new Z_TestRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphZ_Test(): MicrosoftGraphZ_TestRequestBuilder {
+        return new MicrosoftGraphZ_TestRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -2964,13 +2964,17 @@ class FunctionsRequestBuilder
     
     /**
      * Instantiates a new FunctionsRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/functions{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

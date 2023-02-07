@@ -45,17 +45,17 @@ class UserActivityItemRequestBuilder
     
     /**
      * Instantiates a new UserActivityItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $userActivityId key: id of userActivity
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $userActivityId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/me/activities/{userActivity%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['userActivityId'] = $userActivityId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -102,7 +102,7 @@ class UserActivityItemRequestBuilder
     public function historyItemsById(string $id): ActivityHistoryItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['activityHistoryItem%2Did'] = $id;
-        return new ActivityHistoryItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ActivityHistoryItemItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

@@ -126,13 +126,17 @@ class AuthenticationRequestBuilder
     
     /**
      * Instantiates a new AuthenticationRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/users/{user%2Did}/authentication{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -161,7 +165,7 @@ class AuthenticationRequestBuilder
     public function emailMethodsById(string $id): EmailAuthenticationMethodItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['emailAuthenticationMethod%2Did'] = $id;
-        return new EmailAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new EmailAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -172,7 +176,7 @@ class AuthenticationRequestBuilder
     public function fido2MethodsById(string $id): Fido2AuthenticationMethodItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['fido2AuthenticationMethod%2Did'] = $id;
-        return new Fido2AuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new Fido2AuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -201,7 +205,7 @@ class AuthenticationRequestBuilder
     public function methodsById(string $id): AuthenticationMethodItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['authenticationMethod%2Did'] = $id;
-        return new AuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new AuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -212,7 +216,7 @@ class AuthenticationRequestBuilder
     public function microsoftAuthenticatorMethodsById(string $id): MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['microsoftAuthenticatorAuthenticationMethod%2Did'] = $id;
-        return new MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MicrosoftAuthenticatorAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -223,7 +227,7 @@ class AuthenticationRequestBuilder
     public function operationsById(string $id): LongRunningOperationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['longRunningOperation%2Did'] = $id;
-        return new LongRunningOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new LongRunningOperationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -234,7 +238,7 @@ class AuthenticationRequestBuilder
     public function passwordMethodsById(string $id): PasswordAuthenticationMethodItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['passwordAuthenticationMethod%2Did'] = $id;
-        return new PasswordAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new PasswordAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -264,7 +268,7 @@ class AuthenticationRequestBuilder
     public function phoneMethodsById(string $id): PhoneAuthenticationMethodItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['phoneAuthenticationMethod%2Did'] = $id;
-        return new PhoneAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new PhoneAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -275,7 +279,7 @@ class AuthenticationRequestBuilder
     public function softwareOathMethodsById(string $id): SoftwareOathAuthenticationMethodItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['softwareOathAuthenticationMethod%2Did'] = $id;
-        return new SoftwareOathAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new SoftwareOathAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -286,7 +290,7 @@ class AuthenticationRequestBuilder
     public function temporaryAccessPassMethodsById(string $id): TemporaryAccessPassAuthenticationMethodItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['temporaryAccessPassAuthenticationMethod%2Did'] = $id;
-        return new TemporaryAccessPassAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new TemporaryAccessPassAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -367,7 +371,7 @@ class AuthenticationRequestBuilder
     public function windowsHelloForBusinessMethodsById(string $id): WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['windowsHelloForBusinessAuthenticationMethod%2Did'] = $id;
-        return new WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
 }

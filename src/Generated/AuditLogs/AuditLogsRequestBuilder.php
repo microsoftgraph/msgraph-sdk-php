@@ -63,13 +63,17 @@ class AuditLogsRequestBuilder
     
     /**
      * Instantiates a new AuditLogsRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/auditLogs{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -80,7 +84,7 @@ class AuditLogsRequestBuilder
     public function directoryAuditsById(string $id): DirectoryAuditItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryAudit%2Did'] = $id;
-        return new DirectoryAuditItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new DirectoryAuditItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -128,7 +132,7 @@ class AuditLogsRequestBuilder
     public function provisioningById(string $id): ProvisioningObjectSummaryItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['provisioningObjectSummary%2Did'] = $id;
-        return new ProvisioningObjectSummaryItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ProvisioningObjectSummaryItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -139,7 +143,7 @@ class AuditLogsRequestBuilder
     public function signInsById(string $id): SignInItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['signIn%2Did'] = $id;
-        return new SignInItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new SignInItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

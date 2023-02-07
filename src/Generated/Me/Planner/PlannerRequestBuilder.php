@@ -54,13 +54,17 @@ class PlannerRequestBuilder
     
     /**
      * Instantiates a new PlannerRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/me/planner{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -126,7 +130,7 @@ class PlannerRequestBuilder
     public function plansById(string $id): PlannerPlanItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['plannerPlan%2Did'] = $id;
-        return new PlannerPlanItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new PlannerPlanItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -137,7 +141,7 @@ class PlannerRequestBuilder
     public function tasksById(string $id): PlannerTaskItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['plannerTask%2Did'] = $id;
-        return new PlannerTaskItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new PlannerTaskItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

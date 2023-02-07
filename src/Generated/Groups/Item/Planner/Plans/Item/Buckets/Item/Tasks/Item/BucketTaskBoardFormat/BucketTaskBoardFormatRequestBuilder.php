@@ -36,13 +36,17 @@ class BucketTaskBoardFormatRequestBuilder
     
     /**
      * Instantiates a new BucketTaskBoardFormatRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/planner/plans/{plannerPlan%2Did}/buckets/{plannerBucket%2Did}/tasks/{plannerTask%2Did}/bucketTaskBoardFormat{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -83,7 +87,7 @@ class BucketTaskBoardFormatRequestBuilder
     }
 
     /**
-     * Update the properties of **plannerBucketTaskBoardTaskFormat** object.
+     * Update the navigation property bucketTaskBoardFormat in groups
      * @param PlannerBucketTaskBoardTaskFormat $body The request body
      * @param BucketTaskBoardFormatRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -149,7 +153,7 @@ class BucketTaskBoardFormatRequestBuilder
     }
 
     /**
-     * Update the properties of **plannerBucketTaskBoardTaskFormat** object.
+     * Update the navigation property bucketTaskBoardFormat in groups
      * @param PlannerBucketTaskBoardTaskFormat $body The request body
      * @param BucketTaskBoardFormatRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

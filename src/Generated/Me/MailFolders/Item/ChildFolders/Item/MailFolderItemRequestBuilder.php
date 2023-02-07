@@ -9,8 +9,8 @@ use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\MessageRules
 use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\MessageRules\MessageRulesRequestBuilder;
 use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\Messages\Item\MessageItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\Messages\MessagesRequestBuilder;
-use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\MicrosoftGraphCopy\CopyRequestBuilder;
-use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\MicrosoftGraphMove\MoveRequestBuilder;
+use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\MicrosoftGraphCopy\MicrosoftGraphCopyRequestBuilder;
+use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\MicrosoftGraphMove\MicrosoftGraphMoveRequestBuilder;
 use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
@@ -46,15 +46,15 @@ class MailFolderItemRequestBuilder
     /**
      * Provides operations to call the copy method.
     */
-    public function microsoftGraphCopy(): CopyRequestBuilder {
-        return new CopyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCopy(): MicrosoftGraphCopyRequestBuilder {
+        return new MicrosoftGraphCopyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the move method.
     */
-    public function microsoftGraphMove(): MoveRequestBuilder {
-        return new MoveRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphMove(): MicrosoftGraphMoveRequestBuilder {
+        return new MicrosoftGraphMoveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -88,17 +88,17 @@ class MailFolderItemRequestBuilder
     
     /**
      * Instantiates a new MailFolderItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $mailFolderId1 key: id of mailFolder
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $mailFolderId1 = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/me/mailFolders/{mailFolder%2Did}/childFolders/{mailFolder%2Did1}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['mailFolderId1'] = $mailFolderId1;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -145,7 +145,7 @@ class MailFolderItemRequestBuilder
     public function messageRulesById(string $id): MessageRuleItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['messageRule%2Did'] = $id;
-        return new MessageRuleItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MessageRuleItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -156,7 +156,7 @@ class MailFolderItemRequestBuilder
     public function messagesById(string $id): MessageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['message%2Did'] = $id;
-        return new MessageItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MessageItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -167,7 +167,7 @@ class MailFolderItemRequestBuilder
     public function multiValueExtendedPropertiesById(string $id): MultiValueLegacyExtendedPropertyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['multiValueLegacyExtendedProperty%2Did'] = $id;
-        return new MultiValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MultiValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -197,7 +197,7 @@ class MailFolderItemRequestBuilder
     public function singleValueExtendedPropertiesById(string $id): SingleValueLegacyExtendedPropertyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['singleValueLegacyExtendedProperty%2Did'] = $id;
-        return new SingleValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new SingleValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

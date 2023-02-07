@@ -11,11 +11,11 @@ use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\ColumnLi
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\ColumnLinks\Item\ColumnLinkItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\ColumnPositions\ColumnPositionsRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\Columns\ColumnsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\MicrosoftGraphAssociateWithHubSites\AssociateWithHubSitesRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\MicrosoftGraphCopyToDefaultContentLocation\CopyToDefaultContentLocationRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\MicrosoftGraphIsPublished\IsPublishedRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\MicrosoftGraphPublish\PublishRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\MicrosoftGraphUnpublish\UnpublishRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\MicrosoftGraphAssociateWithHubSites\MicrosoftGraphAssociateWithHubSitesRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\MicrosoftGraphCopyToDefaultContentLocation\MicrosoftGraphCopyToDefaultContentLocationRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\MicrosoftGraphIsPublished\MicrosoftGraphIsPublishedRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\MicrosoftGraphPublish\MicrosoftGraphPublishRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\MicrosoftGraphUnpublish\MicrosoftGraphUnpublishRequestBuilder;
 use Microsoft\Graph\Generated\Models\ContentType;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -68,36 +68,36 @@ class ContentTypeItemRequestBuilder
     /**
      * Provides operations to call the associateWithHubSites method.
     */
-    public function microsoftGraphAssociateWithHubSites(): AssociateWithHubSitesRequestBuilder {
-        return new AssociateWithHubSitesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAssociateWithHubSites(): MicrosoftGraphAssociateWithHubSitesRequestBuilder {
+        return new MicrosoftGraphAssociateWithHubSitesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the copyToDefaultContentLocation method.
     */
-    public function microsoftGraphCopyToDefaultContentLocation(): CopyToDefaultContentLocationRequestBuilder {
-        return new CopyToDefaultContentLocationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCopyToDefaultContentLocation(): MicrosoftGraphCopyToDefaultContentLocationRequestBuilder {
+        return new MicrosoftGraphCopyToDefaultContentLocationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the isPublished method.
     */
-    public function microsoftGraphIsPublished(): IsPublishedRequestBuilder {
-        return new IsPublishedRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphIsPublished(): MicrosoftGraphIsPublishedRequestBuilder {
+        return new MicrosoftGraphIsPublishedRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the publish method.
     */
-    public function microsoftGraphPublish(): PublishRequestBuilder {
-        return new PublishRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphPublish(): MicrosoftGraphPublishRequestBuilder {
+        return new MicrosoftGraphPublishRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the unpublish method.
     */
-    public function microsoftGraphUnpublish(): UnpublishRequestBuilder {
-        return new UnpublishRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphUnpublish(): MicrosoftGraphUnpublishRequestBuilder {
+        return new MicrosoftGraphUnpublishRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -123,7 +123,7 @@ class ContentTypeItemRequestBuilder
     public function baseTypesById(string $id): \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\BaseTypes\Item\ContentTypeItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['contentType%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\BaseTypes\Item\ContentTypeItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\BaseTypes\Item\ContentTypeItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -134,7 +134,7 @@ class ContentTypeItemRequestBuilder
     public function columnLinksById(string $id): ColumnLinkItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnLink%2Did'] = $id;
-        return new ColumnLinkItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ColumnLinkItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -145,7 +145,7 @@ class ContentTypeItemRequestBuilder
     public function columnPositionsById(string $id): \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\ColumnPositions\Item\ColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnDefinition%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\ColumnPositions\Item\ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\ColumnPositions\Item\ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -156,22 +156,22 @@ class ContentTypeItemRequestBuilder
     public function columnsById(string $id): \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\Columns\Item\ColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnDefinition%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\Columns\Item\ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Drives\Item\EscapedList\ContentTypes\Item\Columns\Item\ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
      * Instantiates a new ContentTypeItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $contentTypeId key: id of contentType
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $contentTypeId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/drives/{drive%2Did}/list/contentTypes/{contentType%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['contentTypeId'] = $contentTypeId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

@@ -71,7 +71,7 @@ class UnifiedRole implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the roleDefinitionId property value. The roleDefinitionId property
+     * Gets the roleDefinitionId property value. The unified role definition ID of the directory role. Refer to unifiedRoleDefinition resource.
      * @return string|null
     */
     public function getRoleDefinitionId(): ?string {
@@ -113,7 +113,7 @@ class UnifiedRole implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the roleDefinitionId property value. The roleDefinitionId property
+     * Sets the roleDefinitionId property value. The unified role definition ID of the directory role. Refer to unifiedRoleDefinition resource.
      * @param string|null $value Value to set for the roleDefinitionId property.
     */
     public function setRoleDefinitionId(?string $value): void {

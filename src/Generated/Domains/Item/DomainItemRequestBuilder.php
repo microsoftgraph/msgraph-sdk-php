@@ -9,9 +9,9 @@ use Microsoft\Graph\Generated\Domains\Item\DomainNameReferences\DomainNameRefere
 use Microsoft\Graph\Generated\Domains\Item\DomainNameReferences\Item\DirectoryObjectItemRequestBuilder;
 use Microsoft\Graph\Generated\Domains\Item\FederationConfiguration\FederationConfigurationRequestBuilder;
 use Microsoft\Graph\Generated\Domains\Item\FederationConfiguration\Item\InternalDomainFederationItemRequestBuilder;
-use Microsoft\Graph\Generated\Domains\Item\MicrosoftGraphForceDelete\ForceDeleteRequestBuilder;
-use Microsoft\Graph\Generated\Domains\Item\MicrosoftGraphPromote\PromoteRequestBuilder;
-use Microsoft\Graph\Generated\Domains\Item\MicrosoftGraphVerify\VerifyRequestBuilder;
+use Microsoft\Graph\Generated\Domains\Item\MicrosoftGraphForceDelete\MicrosoftGraphForceDeleteRequestBuilder;
+use Microsoft\Graph\Generated\Domains\Item\MicrosoftGraphPromote\MicrosoftGraphPromoteRequestBuilder;
+use Microsoft\Graph\Generated\Domains\Item\MicrosoftGraphVerify\MicrosoftGraphVerifyRequestBuilder;
 use Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\ServiceConfigurationRecordsRequestBuilder;
 use Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\VerificationDnsRecordsRequestBuilder;
 use Microsoft\Graph\Generated\Models\Domain;
@@ -45,22 +45,22 @@ class DomainItemRequestBuilder
     /**
      * Provides operations to call the forceDelete method.
     */
-    public function microsoftGraphForceDelete(): ForceDeleteRequestBuilder {
-        return new ForceDeleteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphForceDelete(): MicrosoftGraphForceDeleteRequestBuilder {
+        return new MicrosoftGraphForceDeleteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the promote method.
     */
-    public function microsoftGraphPromote(): PromoteRequestBuilder {
-        return new PromoteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphPromote(): MicrosoftGraphPromoteRequestBuilder {
+        return new MicrosoftGraphPromoteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the verify method.
     */
-    public function microsoftGraphVerify(): VerifyRequestBuilder {
-        return new VerifyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphVerify(): MicrosoftGraphVerifyRequestBuilder {
+        return new MicrosoftGraphVerifyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -94,17 +94,17 @@ class DomainItemRequestBuilder
     
     /**
      * Instantiates a new DomainItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $domainId key: id of domain
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $domainId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/domains/{domain%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['domainId'] = $domainId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -134,7 +134,7 @@ class DomainItemRequestBuilder
     public function domainNameReferencesById(string $id): DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -145,7 +145,7 @@ class DomainItemRequestBuilder
     public function federationConfigurationById(string $id): InternalDomainFederationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['internalDomainFederation%2Did'] = $id;
-        return new InternalDomainFederationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new InternalDomainFederationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -195,7 +195,7 @@ class DomainItemRequestBuilder
     public function serviceConfigurationRecordsById(string $id): \Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\Item\DomainDnsRecordItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['domainDnsRecord%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\Item\DomainDnsRecordItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\Item\DomainDnsRecordItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -276,7 +276,7 @@ class DomainItemRequestBuilder
     public function verificationDnsRecordsById(string $id): \Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\Item\DomainDnsRecordItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['domainDnsRecord%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\Item\DomainDnsRecordItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\Item\DomainDnsRecordItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
 }

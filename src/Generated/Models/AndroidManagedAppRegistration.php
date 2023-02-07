@@ -6,13 +6,10 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-/**
- * Represents the synchronization details of an android app, with management capabilities, for a specific user.
-*/
 class AndroidManagedAppRegistration extends ManagedAppRegistration implements Parsable 
 {
     /**
-     * Instantiates a new androidManagedAppRegistration and sets the default values.
+     * Instantiates a new AndroidManagedAppRegistration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

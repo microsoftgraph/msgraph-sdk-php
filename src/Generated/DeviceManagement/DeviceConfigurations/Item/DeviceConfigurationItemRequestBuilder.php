@@ -12,8 +12,8 @@ use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceS
 use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceStatuses\DeviceStatusesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceStatuses\Item\DeviceConfigurationDeviceStatusItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceStatusOverview\DeviceStatusOverviewRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\MicrosoftGraphAssign\AssignRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\MicrosoftGraphGetOmaSettingPlainTextValueWithSecretReferenceValueId\GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\MicrosoftGraphAssign\MicrosoftGraphAssignRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\MicrosoftGraphGetOmaSettingPlainTextValueWithSecretReferenceValueId\MicrosoftGraphGetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\UserStatuses\Item\DeviceConfigurationUserStatusItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\UserStatuses\UserStatusesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\UserStatusOverview\UserStatusOverviewRequestBuilder;
@@ -62,8 +62,8 @@ class DeviceConfigurationItemRequestBuilder
     /**
      * Provides operations to call the assign method.
     */
-    public function microsoftGraphAssign(): AssignRequestBuilder {
-        return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAssign(): MicrosoftGraphAssignRequestBuilder {
+        return new MicrosoftGraphAssignRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -103,22 +103,22 @@ class DeviceConfigurationItemRequestBuilder
     public function assignmentsById(string $id): DeviceConfigurationAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceConfigurationAssignment%2Did'] = $id;
-        return new DeviceConfigurationAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new DeviceConfigurationAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
      * Instantiates a new DeviceConfigurationItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $deviceConfigurationId key: id of deviceConfiguration
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $deviceConfigurationId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/deviceConfigurations/{deviceConfiguration%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['deviceConfigurationId'] = $deviceConfigurationId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -147,7 +147,7 @@ class DeviceConfigurationItemRequestBuilder
     public function deviceSettingStateSummariesById(string $id): SettingStateDeviceSummaryItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['settingStateDeviceSummary%2Did'] = $id;
-        return new SettingStateDeviceSummaryItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new SettingStateDeviceSummaryItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -158,7 +158,7 @@ class DeviceConfigurationItemRequestBuilder
     public function deviceStatusesById(string $id): DeviceConfigurationDeviceStatusItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceConfigurationDeviceStatus%2Did'] = $id;
-        return new DeviceConfigurationDeviceStatusItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new DeviceConfigurationDeviceStatusItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -182,10 +182,10 @@ class DeviceConfigurationItemRequestBuilder
     /**
      * Provides operations to call the getOmaSettingPlainTextValue method.
      * @param string $secretReferenceValueId Usage: secretReferenceValueId='{secretReferenceValueId}'
-     * @return GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder
+     * @return MicrosoftGraphGetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder
     */
-    public function microsoftGraphGetOmaSettingPlainTextValueWithSecretReferenceValueId(string $secretReferenceValueId): GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder {
-        return new GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder($this->pathParameters, $this->requestAdapter, $secretReferenceValueId);
+    public function microsoftGraphGetOmaSettingPlainTextValueWithSecretReferenceValueId(string $secretReferenceValueId): MicrosoftGraphGetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder {
+        return new MicrosoftGraphGetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder($this->pathParameters, $this->requestAdapter, $secretReferenceValueId);
     }
 
     /**
@@ -285,7 +285,7 @@ class DeviceConfigurationItemRequestBuilder
     public function userStatusesById(string $id): DeviceConfigurationUserStatusItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceConfigurationUserStatus%2Did'] = $id;
-        return new DeviceConfigurationUserStatusItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new DeviceConfigurationUserStatusItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
 }

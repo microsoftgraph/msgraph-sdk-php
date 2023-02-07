@@ -10,8 +10,8 @@ use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfiguratio
 use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\Assignments\AssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\Assignments\Item\TargetedManagedAppPolicyAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\DeploymentSummary\DeploymentSummaryRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\MicrosoftGraphAssign\AssignRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\MicrosoftGraphTargetApps\TargetAppsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\MicrosoftGraphAssign\MicrosoftGraphAssignRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\MicrosoftGraphTargetApps\MicrosoftGraphTargetAppsRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TargetedManagedAppConfiguration;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -50,15 +50,15 @@ class TargetedManagedAppConfigurationItemRequestBuilder
     /**
      * Provides operations to call the assign method.
     */
-    public function microsoftGraphAssign(): AssignRequestBuilder {
-        return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAssign(): MicrosoftGraphAssignRequestBuilder {
+        return new MicrosoftGraphAssignRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the targetApps method.
     */
-    public function microsoftGraphTargetApps(): TargetAppsRequestBuilder {
-        return new TargetAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphTargetApps(): MicrosoftGraphTargetAppsRequestBuilder {
+        return new MicrosoftGraphTargetAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -84,7 +84,7 @@ class TargetedManagedAppConfigurationItemRequestBuilder
     public function appsById(string $id): ManagedMobileAppItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['managedMobileApp%2Did'] = $id;
-        return new ManagedMobileAppItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ManagedMobileAppItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -95,22 +95,22 @@ class TargetedManagedAppConfigurationItemRequestBuilder
     public function assignmentsById(string $id): TargetedManagedAppPolicyAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['targetedManagedAppPolicyAssignment%2Did'] = $id;
-        return new TargetedManagedAppPolicyAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new TargetedManagedAppPolicyAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
      * Instantiates a new TargetedManagedAppConfigurationItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $targetedManagedAppConfigurationId key: id of targetedManagedAppConfiguration
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $targetedManagedAppConfigurationId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/deviceAppManagement/targetedManagedAppConfigurations/{targetedManagedAppConfiguration%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['targetedManagedAppConfigurationId'] = $targetedManagedAppConfigurationId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

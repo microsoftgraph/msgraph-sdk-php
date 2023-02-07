@@ -9,9 +9,9 @@ use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Assignments\As
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Assignments\Item\MobileAppAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Categories\CategoriesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Categories\Item\MobileAppCategoryItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\MicrosoftGraphAssign\AssignRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\MicrosoftGraphManagedMobileLobApp\ManagedMobileLobAppRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\MicrosoftGraphMobileLobApp\MobileLobAppRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\MicrosoftGraphAssign\MicrosoftGraphAssignRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\MicrosoftGraphManagedMobileLobApp\MicrosoftGraphManagedMobileLobAppRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\MicrosoftGraphMobileLobApp\MicrosoftGraphMobileLobAppRequestBuilder;
 use Microsoft\Graph\Generated\Models\MobileApp;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -43,22 +43,22 @@ class MobileAppItemRequestBuilder
     /**
      * Provides operations to call the assign method.
     */
-    public function microsoftGraphAssign(): AssignRequestBuilder {
-        return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAssign(): MicrosoftGraphAssignRequestBuilder {
+        return new MicrosoftGraphAssignRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to managedMobileLobApp.
     */
-    public function microsoftGraphManagedMobileLobApp(): ManagedMobileLobAppRequestBuilder {
-        return new ManagedMobileLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphManagedMobileLobApp(): MicrosoftGraphManagedMobileLobAppRequestBuilder {
+        return new MicrosoftGraphManagedMobileLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to mobileLobApp.
     */
-    public function microsoftGraphMobileLobApp(): MobileLobAppRequestBuilder {
-        return new MobileLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphMobileLobApp(): MicrosoftGraphMobileLobAppRequestBuilder {
+        return new MicrosoftGraphMobileLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -84,7 +84,7 @@ class MobileAppItemRequestBuilder
     public function assignmentsById(string $id): MobileAppAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['mobileAppAssignment%2Did'] = $id;
-        return new MobileAppAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MobileAppAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -95,22 +95,22 @@ class MobileAppItemRequestBuilder
     public function categoriesById(string $id): MobileAppCategoryItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['mobileAppCategory%2Did'] = $id;
-        return new MobileAppCategoryItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MobileAppCategoryItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
      * Instantiates a new MobileAppItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $mobileAppId key: id of mobileApp
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $mobileAppId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/deviceAppManagement/mobileApps/{mobileApp%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['mobileAppId'] = $mobileAppId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

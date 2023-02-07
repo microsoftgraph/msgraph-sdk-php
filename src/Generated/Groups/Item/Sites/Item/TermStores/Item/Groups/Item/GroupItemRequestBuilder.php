@@ -45,17 +45,17 @@ class GroupItemRequestBuilder
     
     /**
      * Instantiates a new GroupItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $groupId1 key: id of group
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $groupId1 = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/termStores/{store%2Did}/groups/{group%2Did1}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['groupId1'] = $groupId1;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -121,7 +121,7 @@ class GroupItemRequestBuilder
     public function setsById(string $id): SetItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['set%2Did'] = $id;
-        return new SetItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new SetItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

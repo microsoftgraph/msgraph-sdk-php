@@ -86,7 +86,7 @@ class IdentityRequestBuilder
     public function apiConnectorsById(string $id): IdentityApiConnectorItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['identityApiConnector%2Did'] = $id;
-        return new IdentityApiConnectorItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new IdentityApiConnectorItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -97,18 +97,22 @@ class IdentityRequestBuilder
     public function b2xUserFlowsById(string $id): B2xIdentityUserFlowItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['b2xIdentityUserFlow%2Did'] = $id;
-        return new B2xIdentityUserFlowItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new B2xIdentityUserFlowItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
      * Instantiates a new IdentityRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/identity{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -137,7 +141,7 @@ class IdentityRequestBuilder
     public function identityProvidersById(string $id): IdentityProviderBaseItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['identityProviderBase%2Did'] = $id;
-        return new IdentityProviderBaseItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new IdentityProviderBaseItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -216,7 +220,7 @@ class IdentityRequestBuilder
     public function userFlowAttributesById(string $id): IdentityUserFlowAttributeItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['identityUserFlowAttribute%2Did'] = $id;
-        return new IdentityUserFlowAttributeItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new IdentityUserFlowAttributeItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
 }

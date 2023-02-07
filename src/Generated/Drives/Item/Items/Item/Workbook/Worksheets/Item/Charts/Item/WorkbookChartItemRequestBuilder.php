@@ -9,12 +9,12 @@ use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Ch
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\DataLabels\DataLabelsRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Format\FormatRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Legend\LegendRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\MicrosoftGraphImage\ImageRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\MicrosoftGraphImageWithWidth\ImageWithWidthRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\MicrosoftGraphImageWithWidthWithHeight\ImageWithWidthWithHeightRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\MicrosoftGraphImageWithWidthWithHeightWithFittingMode\ImageWithWidthWithHeightWithFittingModeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\MicrosoftGraphSetData\SetDataRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\MicrosoftGraphSetPosition\SetPositionRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\MicrosoftGraphImage\MicrosoftGraphImageRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\MicrosoftGraphImageWithWidth\MicrosoftGraphImageWithWidthRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\MicrosoftGraphImageWithWidthWithHeight\MicrosoftGraphImageWithWidthWithHeightRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\MicrosoftGraphImageWithWidthWithHeightWithFittingMode\MicrosoftGraphImageWithWidthWithHeightWithFittingModeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\MicrosoftGraphSetData\MicrosoftGraphSetDataRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\MicrosoftGraphSetPosition\MicrosoftGraphSetPositionRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\Item\WorkbookChartSeriesItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\SeriesRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Title\TitleRequestBuilder;
@@ -64,22 +64,22 @@ class WorkbookChartItemRequestBuilder
     /**
      * Provides operations to call the image method.
     */
-    public function microsoftGraphImage(): ImageRequestBuilder {
-        return new ImageRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphImage(): MicrosoftGraphImageRequestBuilder {
+        return new MicrosoftGraphImageRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the setData method.
     */
-    public function microsoftGraphSetData(): SetDataRequestBuilder {
-        return new SetDataRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSetData(): MicrosoftGraphSetDataRequestBuilder {
+        return new MicrosoftGraphSetDataRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the setPosition method.
     */
-    public function microsoftGraphSetPosition(): SetPositionRequestBuilder {
-        return new SetPositionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSetPosition(): MicrosoftGraphSetPositionRequestBuilder {
+        return new MicrosoftGraphSetPositionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -120,17 +120,17 @@ class WorkbookChartItemRequestBuilder
     
     /**
      * Instantiates a new WorkbookChartItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $workbookChartId key: id of workbookChart
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $workbookChartId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['workbookChartId'] = $workbookChartId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -172,20 +172,20 @@ class WorkbookChartItemRequestBuilder
     /**
      * Provides operations to call the image method.
      * @param int $width Usage: width={width}
-     * @return ImageWithWidthRequestBuilder
+     * @return MicrosoftGraphImageWithWidthRequestBuilder
     */
-    public function microsoftGraphImageWithWidth(int $width): ImageWithWidthRequestBuilder {
-        return new ImageWithWidthRequestBuilder($this->pathParameters, $this->requestAdapter, $width);
+    public function microsoftGraphImageWithWidth(int $width): MicrosoftGraphImageWithWidthRequestBuilder {
+        return new MicrosoftGraphImageWithWidthRequestBuilder($this->pathParameters, $this->requestAdapter, $width);
     }
 
     /**
      * Provides operations to call the image method.
      * @param int $height Usage: height={height}
      * @param int $width Usage: width={width}
-     * @return ImageWithWidthWithHeightRequestBuilder
+     * @return MicrosoftGraphImageWithWidthWithHeightRequestBuilder
     */
-    public function microsoftGraphImageWithWidthWithHeight(int $height, int $width): ImageWithWidthWithHeightRequestBuilder {
-        return new ImageWithWidthWithHeightRequestBuilder($this->pathParameters, $this->requestAdapter, $height, $width);
+    public function microsoftGraphImageWithWidthWithHeight(int $height, int $width): MicrosoftGraphImageWithWidthWithHeightRequestBuilder {
+        return new MicrosoftGraphImageWithWidthWithHeightRequestBuilder($this->pathParameters, $this->requestAdapter, $height, $width);
     }
 
     /**
@@ -193,10 +193,10 @@ class WorkbookChartItemRequestBuilder
      * @param string $fittingMode Usage: fittingMode='{fittingMode}'
      * @param int $height Usage: height={height}
      * @param int $width Usage: width={width}
-     * @return ImageWithWidthWithHeightWithFittingModeRequestBuilder
+     * @return MicrosoftGraphImageWithWidthWithHeightWithFittingModeRequestBuilder
     */
-    public function microsoftGraphImageWithWidthWithHeightWithFittingMode(string $fittingMode, int $height, int $width): ImageWithWidthWithHeightWithFittingModeRequestBuilder {
-        return new ImageWithWidthWithHeightWithFittingModeRequestBuilder($this->pathParameters, $this->requestAdapter, $fittingMode, $height, $width);
+    public function microsoftGraphImageWithWidthWithHeightWithFittingMode(string $fittingMode, int $height, int $width): MicrosoftGraphImageWithWidthWithHeightWithFittingModeRequestBuilder {
+        return new MicrosoftGraphImageWithWidthWithHeightWithFittingModeRequestBuilder($this->pathParameters, $this->requestAdapter, $fittingMode, $height, $width);
     }
 
     /**
@@ -226,7 +226,7 @@ class WorkbookChartItemRequestBuilder
     public function seriesById(string $id): WorkbookChartSeriesItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['workbookChartSeries%2Did'] = $id;
-        return new WorkbookChartSeriesItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new WorkbookChartSeriesItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

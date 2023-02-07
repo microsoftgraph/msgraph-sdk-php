@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Subscripti
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Subscriptions\Item\MicrosoftGraphReauthorize\ReauthorizeRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Subscriptions\Item\MicrosoftGraphReauthorize\MicrosoftGraphReauthorizeRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Subscription;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,8 +23,8 @@ class SubscriptionItemRequestBuilder
     /**
      * Provides operations to call the reauthorize method.
     */
-    public function microsoftGraphReauthorize(): ReauthorizeRequestBuilder {
-        return new ReauthorizeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphReauthorize(): MicrosoftGraphReauthorizeRequestBuilder {
+        return new MicrosoftGraphReauthorizeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -44,17 +44,17 @@ class SubscriptionItemRequestBuilder
     
     /**
      * Instantiates a new SubscriptionItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $subscriptionId key: id of subscription
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $subscriptionId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/lists/{list%2Did}/subscriptions/{subscription%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['subscriptionId'] = $subscriptionId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

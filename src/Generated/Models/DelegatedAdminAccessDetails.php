@@ -71,7 +71,7 @@ class DelegatedAdminAccessDetails implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Gets the unifiedRoles property value. The unifiedRoles property
+     * Gets the unifiedRoles property value. The directory roles that the Microsoft partner is assigned in the customer tenant.
      * @return array<UnifiedRole>|null
     */
     public function getUnifiedRoles(): ?array {
@@ -113,7 +113,7 @@ class DelegatedAdminAccessDetails implements AdditionalDataHolder, BackedModel, 
     }
 
     /**
-     * Sets the unifiedRoles property value. The unifiedRoles property
+     * Sets the unifiedRoles property value. The directory roles that the Microsoft partner is assigned in the customer tenant.
      * @param array<UnifiedRole>|null $value Value to set for the unifiedRoles property.
     */
     public function setUnifiedRoles(?array $value): void {

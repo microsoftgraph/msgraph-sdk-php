@@ -78,18 +78,22 @@ class ConditionalAccessRequestBuilder
     public function authenticationContextClassReferencesById(string $id): AuthenticationContextClassReferenceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['authenticationContextClassReference%2Did'] = $id;
-        return new AuthenticationContextClassReferenceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new AuthenticationContextClassReferenceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
      * Instantiates a new ConditionalAccessRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/identity/conditionalAccess{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -136,7 +140,7 @@ class ConditionalAccessRequestBuilder
     public function namedLocationsById(string $id): NamedLocationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['namedLocation%2Did'] = $id;
-        return new NamedLocationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new NamedLocationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -166,7 +170,7 @@ class ConditionalAccessRequestBuilder
     public function policiesById(string $id): ConditionalAccessPolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['conditionalAccessPolicy%2Did'] = $id;
-        return new ConditionalAccessPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ConditionalAccessPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -177,7 +181,7 @@ class ConditionalAccessRequestBuilder
     public function templatesById(string $id): ConditionalAccessTemplateItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['conditionalAccessTemplate%2Did'] = $id;
-        return new ConditionalAccessTemplateItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ConditionalAccessTemplateItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

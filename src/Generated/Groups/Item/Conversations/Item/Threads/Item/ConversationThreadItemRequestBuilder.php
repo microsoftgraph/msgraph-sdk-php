@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\MicrosoftGraphReply\ReplyRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\MicrosoftGraphReply\MicrosoftGraphReplyRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\PostItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\PostsRequestBuilder;
 use Microsoft\Graph\Generated\Models\ConversationThread;
@@ -25,8 +25,8 @@ class ConversationThreadItemRequestBuilder
     /**
      * Provides operations to call the reply method.
     */
-    public function microsoftGraphReply(): ReplyRequestBuilder {
-        return new ReplyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphReply(): MicrosoftGraphReplyRequestBuilder {
+        return new MicrosoftGraphReplyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -53,17 +53,17 @@ class ConversationThreadItemRequestBuilder
     
     /**
      * Instantiates a new ConversationThreadItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $conversationThreadId key: id of conversationThread
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $conversationThreadId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/conversations/{conversation%2Did}/threads/{conversationThread%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['conversationThreadId'] = $conversationThreadId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -129,7 +129,7 @@ class ConversationThreadItemRequestBuilder
     public function postsById(string $id): PostItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['post%2Did'] = $id;
-        return new PostItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new PostItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

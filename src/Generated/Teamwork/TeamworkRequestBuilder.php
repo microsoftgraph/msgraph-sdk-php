@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Teamwork;
-use Microsoft\Graph\Generated\Teamwork\MicrosoftGraphSendActivityNotificationToRecipients\SendActivityNotificationToRecipientsRequestBuilder;
+use Microsoft\Graph\Generated\Teamwork\MicrosoftGraphSendActivityNotificationToRecipients\MicrosoftGraphSendActivityNotificationToRecipientsRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\WorkforceIntegrations\Item\WorkforceIntegrationItemRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\WorkforceIntegrations\WorkforceIntegrationsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -25,8 +25,8 @@ class TeamworkRequestBuilder
     /**
      * Provides operations to call the sendActivityNotificationToRecipients method.
     */
-    public function microsoftGraphSendActivityNotificationToRecipients(): SendActivityNotificationToRecipientsRequestBuilder {
-        return new SendActivityNotificationToRecipientsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSendActivityNotificationToRecipients(): MicrosoftGraphSendActivityNotificationToRecipientsRequestBuilder {
+        return new MicrosoftGraphSendActivityNotificationToRecipientsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -53,13 +53,17 @@ class TeamworkRequestBuilder
     
     /**
      * Instantiates a new TeamworkRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/teamwork{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -156,7 +160,7 @@ class TeamworkRequestBuilder
     public function workforceIntegrationsById(string $id): WorkforceIntegrationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['workforceIntegration%2Did'] = $id;
-        return new WorkforceIntegrationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new WorkforceIntegrationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
 }

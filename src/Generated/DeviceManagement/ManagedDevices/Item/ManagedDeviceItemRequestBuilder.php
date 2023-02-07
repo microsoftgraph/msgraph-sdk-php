@@ -10,24 +10,24 @@ use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\DeviceComplia
 use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\DeviceCompliancePolicyStates\Item\DeviceCompliancePolicyStateItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\DeviceConfigurationStates\DeviceConfigurationStatesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\DeviceConfigurationStates\Item\DeviceConfigurationStateItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphBypassActivationLock\BypassActivationLockRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphCleanWindowsDevice\CleanWindowsDeviceRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphDeleteUserFromSharedAppleDevice\DeleteUserFromSharedAppleDeviceRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphDisableLostMode\DisableLostModeRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphLocateDevice\LocateDeviceRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphLogoutSharedAppleDeviceActiveUser\LogoutSharedAppleDeviceActiveUserRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphRebootNow\RebootNowRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphRecoverPasscode\RecoverPasscodeRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphRemoteLock\RemoteLockRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphRequestRemoteAssistance\RequestRemoteAssistanceRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphResetPasscode\ResetPasscodeRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphRetire\RetireRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphShutDown\ShutDownRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphSyncDevice\SyncDeviceRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphUpdateWindowsDeviceAccount\UpdateWindowsDeviceAccountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphWindowsDefenderScan\WindowsDefenderScanRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphWindowsDefenderUpdateSignatures\WindowsDefenderUpdateSignaturesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphWipe\WipeRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphBypassActivationLock\MicrosoftGraphBypassActivationLockRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphCleanWindowsDevice\MicrosoftGraphCleanWindowsDeviceRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphDeleteUserFromSharedAppleDevice\MicrosoftGraphDeleteUserFromSharedAppleDeviceRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphDisableLostMode\MicrosoftGraphDisableLostModeRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphLocateDevice\MicrosoftGraphLocateDeviceRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphLogoutSharedAppleDeviceActiveUser\MicrosoftGraphLogoutSharedAppleDeviceActiveUserRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphRebootNow\MicrosoftGraphRebootNowRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphRecoverPasscode\MicrosoftGraphRecoverPasscodeRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphRemoteLock\MicrosoftGraphRemoteLockRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphRequestRemoteAssistance\MicrosoftGraphRequestRemoteAssistanceRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphResetPasscode\MicrosoftGraphResetPasscodeRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphRetire\MicrosoftGraphRetireRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphShutDown\MicrosoftGraphShutDownRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphSyncDevice\MicrosoftGraphSyncDeviceRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphUpdateWindowsDeviceAccount\MicrosoftGraphUpdateWindowsDeviceAccountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphWindowsDefenderScan\MicrosoftGraphWindowsDefenderScanRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphWindowsDefenderUpdateSignatures\MicrosoftGraphWindowsDefenderUpdateSignaturesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\MicrosoftGraphWipe\MicrosoftGraphWipeRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\Users\UsersRequestBuilder;
 use Microsoft\Graph\Generated\Models\ManagedDevice;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -67,127 +67,127 @@ class ManagedDeviceItemRequestBuilder
     /**
      * Provides operations to call the bypassActivationLock method.
     */
-    public function microsoftGraphBypassActivationLock(): BypassActivationLockRequestBuilder {
-        return new BypassActivationLockRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphBypassActivationLock(): MicrosoftGraphBypassActivationLockRequestBuilder {
+        return new MicrosoftGraphBypassActivationLockRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the cleanWindowsDevice method.
     */
-    public function microsoftGraphCleanWindowsDevice(): CleanWindowsDeviceRequestBuilder {
-        return new CleanWindowsDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCleanWindowsDevice(): MicrosoftGraphCleanWindowsDeviceRequestBuilder {
+        return new MicrosoftGraphCleanWindowsDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the deleteUserFromSharedAppleDevice method.
     */
-    public function microsoftGraphDeleteUserFromSharedAppleDevice(): DeleteUserFromSharedAppleDeviceRequestBuilder {
-        return new DeleteUserFromSharedAppleDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDeleteUserFromSharedAppleDevice(): MicrosoftGraphDeleteUserFromSharedAppleDeviceRequestBuilder {
+        return new MicrosoftGraphDeleteUserFromSharedAppleDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the disableLostMode method.
     */
-    public function microsoftGraphDisableLostMode(): DisableLostModeRequestBuilder {
-        return new DisableLostModeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDisableLostMode(): MicrosoftGraphDisableLostModeRequestBuilder {
+        return new MicrosoftGraphDisableLostModeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the locateDevice method.
     */
-    public function microsoftGraphLocateDevice(): LocateDeviceRequestBuilder {
-        return new LocateDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphLocateDevice(): MicrosoftGraphLocateDeviceRequestBuilder {
+        return new MicrosoftGraphLocateDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the logoutSharedAppleDeviceActiveUser method.
     */
-    public function microsoftGraphLogoutSharedAppleDeviceActiveUser(): LogoutSharedAppleDeviceActiveUserRequestBuilder {
-        return new LogoutSharedAppleDeviceActiveUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphLogoutSharedAppleDeviceActiveUser(): MicrosoftGraphLogoutSharedAppleDeviceActiveUserRequestBuilder {
+        return new MicrosoftGraphLogoutSharedAppleDeviceActiveUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the rebootNow method.
     */
-    public function microsoftGraphRebootNow(): RebootNowRequestBuilder {
-        return new RebootNowRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRebootNow(): MicrosoftGraphRebootNowRequestBuilder {
+        return new MicrosoftGraphRebootNowRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the recoverPasscode method.
     */
-    public function microsoftGraphRecoverPasscode(): RecoverPasscodeRequestBuilder {
-        return new RecoverPasscodeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRecoverPasscode(): MicrosoftGraphRecoverPasscodeRequestBuilder {
+        return new MicrosoftGraphRecoverPasscodeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the remoteLock method.
     */
-    public function microsoftGraphRemoteLock(): RemoteLockRequestBuilder {
-        return new RemoteLockRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRemoteLock(): MicrosoftGraphRemoteLockRequestBuilder {
+        return new MicrosoftGraphRemoteLockRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the requestRemoteAssistance method.
     */
-    public function microsoftGraphRequestRemoteAssistance(): RequestRemoteAssistanceRequestBuilder {
-        return new RequestRemoteAssistanceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRequestRemoteAssistance(): MicrosoftGraphRequestRemoteAssistanceRequestBuilder {
+        return new MicrosoftGraphRequestRemoteAssistanceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the resetPasscode method.
     */
-    public function microsoftGraphResetPasscode(): ResetPasscodeRequestBuilder {
-        return new ResetPasscodeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphResetPasscode(): MicrosoftGraphResetPasscodeRequestBuilder {
+        return new MicrosoftGraphResetPasscodeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the retire method.
     */
-    public function microsoftGraphRetire(): RetireRequestBuilder {
-        return new RetireRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRetire(): MicrosoftGraphRetireRequestBuilder {
+        return new MicrosoftGraphRetireRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the shutDown method.
     */
-    public function microsoftGraphShutDown(): ShutDownRequestBuilder {
-        return new ShutDownRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphShutDown(): MicrosoftGraphShutDownRequestBuilder {
+        return new MicrosoftGraphShutDownRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the syncDevice method.
     */
-    public function microsoftGraphSyncDevice(): SyncDeviceRequestBuilder {
-        return new SyncDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSyncDevice(): MicrosoftGraphSyncDeviceRequestBuilder {
+        return new MicrosoftGraphSyncDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the updateWindowsDeviceAccount method.
     */
-    public function microsoftGraphUpdateWindowsDeviceAccount(): UpdateWindowsDeviceAccountRequestBuilder {
-        return new UpdateWindowsDeviceAccountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphUpdateWindowsDeviceAccount(): MicrosoftGraphUpdateWindowsDeviceAccountRequestBuilder {
+        return new MicrosoftGraphUpdateWindowsDeviceAccountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the windowsDefenderScan method.
     */
-    public function microsoftGraphWindowsDefenderScan(): WindowsDefenderScanRequestBuilder {
-        return new WindowsDefenderScanRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphWindowsDefenderScan(): MicrosoftGraphWindowsDefenderScanRequestBuilder {
+        return new MicrosoftGraphWindowsDefenderScanRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the windowsDefenderUpdateSignatures method.
     */
-    public function microsoftGraphWindowsDefenderUpdateSignatures(): WindowsDefenderUpdateSignaturesRequestBuilder {
-        return new WindowsDefenderUpdateSignaturesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphWindowsDefenderUpdateSignatures(): MicrosoftGraphWindowsDefenderUpdateSignaturesRequestBuilder {
+        return new MicrosoftGraphWindowsDefenderUpdateSignaturesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the wipe method.
     */
-    public function microsoftGraphWipe(): WipeRequestBuilder {
-        return new WipeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphWipe(): MicrosoftGraphWipeRequestBuilder {
+        return new MicrosoftGraphWipeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -214,17 +214,17 @@ class ManagedDeviceItemRequestBuilder
     
     /**
      * Instantiates a new ManagedDeviceItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $managedDeviceId key: id of managedDevice
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $managedDeviceId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/managedDevices/{managedDevice%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['managedDeviceId'] = $managedDeviceId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -253,7 +253,7 @@ class ManagedDeviceItemRequestBuilder
     public function deviceCompliancePolicyStatesById(string $id): DeviceCompliancePolicyStateItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceCompliancePolicyState%2Did'] = $id;
-        return new DeviceCompliancePolicyStateItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new DeviceCompliancePolicyStateItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -264,7 +264,7 @@ class ManagedDeviceItemRequestBuilder
     public function deviceConfigurationStatesById(string $id): DeviceConfigurationStateItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['deviceConfigurationState%2Did'] = $id;
-        return new DeviceConfigurationStateItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new DeviceConfigurationStateItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

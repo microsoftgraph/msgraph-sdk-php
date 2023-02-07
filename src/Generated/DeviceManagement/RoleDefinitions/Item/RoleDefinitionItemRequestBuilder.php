@@ -45,17 +45,17 @@ class RoleDefinitionItemRequestBuilder
     
     /**
      * Instantiates a new RoleDefinitionItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $roleDefinitionId key: id of roleDefinition
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $roleDefinitionId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/roleDefinitions/{roleDefinition%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['roleDefinitionId'] = $roleDefinitionId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -121,7 +121,7 @@ class RoleDefinitionItemRequestBuilder
     public function roleAssignmentsById(string $id): RoleAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['roleAssignment%2Did'] = $id;
-        return new RoleAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new RoleAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

@@ -87,7 +87,7 @@ class TodoTaskItemRequestBuilder
     public function attachmentsById(string $id): AttachmentBaseItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['attachmentBase%2Did'] = $id;
-        return new AttachmentBaseItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new AttachmentBaseItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -98,7 +98,7 @@ class TodoTaskItemRequestBuilder
     public function attachmentSessionsById(string $id): AttachmentSessionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['attachmentSession%2Did'] = $id;
-        return new AttachmentSessionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new AttachmentSessionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -109,22 +109,22 @@ class TodoTaskItemRequestBuilder
     public function checklistItemsById(string $id): ChecklistItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['checklistItem%2Did'] = $id;
-        return new ChecklistItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ChecklistItemItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
      * Instantiates a new TodoTaskItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $todoTaskId key: id of todoTask
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $todoTaskId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/users/{user%2Did}/todo/lists/{todoTaskList%2Did}/tasks/{todoTask%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['todoTaskId'] = $todoTaskId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -153,7 +153,7 @@ class TodoTaskItemRequestBuilder
     public function extensionsById(string $id): ExtensionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['extension%2Did'] = $id;
-        return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -182,7 +182,7 @@ class TodoTaskItemRequestBuilder
     public function linkedResourcesById(string $id): LinkedResourceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['linkedResource%2Did'] = $id;
-        return new LinkedResourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new LinkedResourceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

@@ -53,17 +53,17 @@ class WorkbookChartSeriesItemRequestBuilder
     
     /**
      * Instantiates a new WorkbookChartSeriesItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $workbookChartSeriesId key: id of workbookChartSeries
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $workbookChartSeriesId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/series/{workbookChartSeries%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['workbookChartSeriesId'] = $workbookChartSeriesId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -129,7 +129,7 @@ class WorkbookChartSeriesItemRequestBuilder
     public function pointsById(string $id): WorkbookChartPointItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['workbookChartPoint%2Did'] = $id;
-        return new WorkbookChartPointItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new WorkbookChartPointItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

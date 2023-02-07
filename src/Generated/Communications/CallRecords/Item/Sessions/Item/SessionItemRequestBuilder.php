@@ -45,17 +45,17 @@ class SessionItemRequestBuilder
     
     /**
      * Instantiates a new SessionItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $sessionId key: id of session
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $sessionId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/communications/callRecords/{callRecord%2Did}/sessions/{session%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['sessionId'] = $sessionId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -121,7 +121,7 @@ class SessionItemRequestBuilder
     public function segmentsById(string $id): SegmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['segment%2Did'] = $id;
-        return new SegmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new SegmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

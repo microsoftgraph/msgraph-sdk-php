@@ -45,13 +45,17 @@ class CasesRequestBuilder
     
     /**
      * Instantiates a new CasesRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/security/cases{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -80,7 +84,7 @@ class CasesRequestBuilder
     public function ediscoveryCasesById(string $id): EdiscoveryCaseItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['ediscoveryCase%2Did'] = $id;
-        return new EdiscoveryCaseItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new EdiscoveryCaseItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

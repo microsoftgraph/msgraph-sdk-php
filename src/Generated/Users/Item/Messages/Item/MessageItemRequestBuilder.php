@@ -11,15 +11,15 @@ use Microsoft\Graph\Generated\Users\Item\Messages\Item\Attachments\AttachmentsRe
 use Microsoft\Graph\Generated\Users\Item\Messages\Item\Attachments\Item\AttachmentItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Messages\Item\Extensions\ExtensionsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Messages\Item\Extensions\Item\ExtensionItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Messages\Item\MicrosoftGraphCopy\CopyRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Messages\Item\MicrosoftGraphCreateForward\CreateForwardRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Messages\Item\MicrosoftGraphCreateReply\CreateReplyRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Messages\Item\MicrosoftGraphCreateReplyAll\CreateReplyAllRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Messages\Item\MicrosoftGraphForward\ForwardRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Messages\Item\MicrosoftGraphMove\MoveRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Messages\Item\MicrosoftGraphReply\ReplyRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Messages\Item\MicrosoftGraphReplyAll\ReplyAllRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Messages\Item\MicrosoftGraphSend\SendRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Messages\Item\MicrosoftGraphCopy\MicrosoftGraphCopyRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Messages\Item\MicrosoftGraphCreateForward\MicrosoftGraphCreateForwardRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Messages\Item\MicrosoftGraphCreateReply\MicrosoftGraphCreateReplyRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Messages\Item\MicrosoftGraphCreateReplyAll\MicrosoftGraphCreateReplyAllRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Messages\Item\MicrosoftGraphForward\MicrosoftGraphForwardRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Messages\Item\MicrosoftGraphMove\MicrosoftGraphMoveRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Messages\Item\MicrosoftGraphReply\MicrosoftGraphReplyRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Messages\Item\MicrosoftGraphReplyAll\MicrosoftGraphReplyAllRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Messages\Item\MicrosoftGraphSend\MicrosoftGraphSendRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Messages\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Messages\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Messages\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
@@ -61,64 +61,64 @@ class MessageItemRequestBuilder
     /**
      * Provides operations to call the copy method.
     */
-    public function microsoftGraphCopy(): CopyRequestBuilder {
-        return new CopyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCopy(): MicrosoftGraphCopyRequestBuilder {
+        return new MicrosoftGraphCopyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the createForward method.
     */
-    public function microsoftGraphCreateForward(): CreateForwardRequestBuilder {
-        return new CreateForwardRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCreateForward(): MicrosoftGraphCreateForwardRequestBuilder {
+        return new MicrosoftGraphCreateForwardRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the createReply method.
     */
-    public function microsoftGraphCreateReply(): CreateReplyRequestBuilder {
-        return new CreateReplyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCreateReply(): MicrosoftGraphCreateReplyRequestBuilder {
+        return new MicrosoftGraphCreateReplyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the createReplyAll method.
     */
-    public function microsoftGraphCreateReplyAll(): CreateReplyAllRequestBuilder {
-        return new CreateReplyAllRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCreateReplyAll(): MicrosoftGraphCreateReplyAllRequestBuilder {
+        return new MicrosoftGraphCreateReplyAllRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the forward method.
     */
-    public function microsoftGraphForward(): ForwardRequestBuilder {
-        return new ForwardRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphForward(): MicrosoftGraphForwardRequestBuilder {
+        return new MicrosoftGraphForwardRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the move method.
     */
-    public function microsoftGraphMove(): MoveRequestBuilder {
-        return new MoveRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphMove(): MicrosoftGraphMoveRequestBuilder {
+        return new MicrosoftGraphMoveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the reply method.
     */
-    public function microsoftGraphReply(): ReplyRequestBuilder {
-        return new ReplyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphReply(): MicrosoftGraphReplyRequestBuilder {
+        return new MicrosoftGraphReplyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the replyAll method.
     */
-    public function microsoftGraphReplyAll(): ReplyAllRequestBuilder {
-        return new ReplyAllRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphReplyAll(): MicrosoftGraphReplyAllRequestBuilder {
+        return new MicrosoftGraphReplyAllRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the send method.
     */
-    public function microsoftGraphSend(): SendRequestBuilder {
-        return new SendRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSend(): MicrosoftGraphSendRequestBuilder {
+        return new MicrosoftGraphSendRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -158,22 +158,22 @@ class MessageItemRequestBuilder
     public function attachmentsById(string $id): AttachmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['attachment%2Did'] = $id;
-        return new AttachmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new AttachmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
      * Instantiates a new MessageItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $messageId key: id of message
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $messageId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/users/{user%2Did}/messages/{message%2Did}{?%24select}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['messageId'] = $messageId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -202,7 +202,7 @@ class MessageItemRequestBuilder
     public function extensionsById(string $id): ExtensionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['extension%2Did'] = $id;
-        return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -231,7 +231,7 @@ class MessageItemRequestBuilder
     public function multiValueExtendedPropertiesById(string $id): MultiValueLegacyExtendedPropertyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['multiValueLegacyExtendedProperty%2Did'] = $id;
-        return new MultiValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MultiValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -261,7 +261,7 @@ class MessageItemRequestBuilder
     public function singleValueExtendedPropertiesById(string $id): SingleValueLegacyExtendedPropertyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['singleValueLegacyExtendedProperty%2Did'] = $id;
-        return new SingleValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new SingleValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

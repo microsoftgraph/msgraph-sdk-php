@@ -93,17 +93,17 @@ class SharedDriveItemItemRequestBuilder
     
     /**
      * Instantiates a new SharedDriveItemItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $sharedDriveItemId key: id of sharedDriveItem
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $sharedDriveItemId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/shares/{sharedDriveItem%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['sharedDriveItemId'] = $sharedDriveItemId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -151,7 +151,7 @@ class SharedDriveItemItemRequestBuilder
     public function itemsById(string $id): DriveItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['driveItem%2Did'] = $id;
-        return new DriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new DriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

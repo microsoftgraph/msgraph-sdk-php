@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\InstancesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\AccessReviewInstanceItemRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\MicrosoftGraphStop\StopRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\MicrosoftGraphStop\MicrosoftGraphStopRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessReviewScheduleDefinition;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -32,8 +32,8 @@ class AccessReviewScheduleDefinitionItemRequestBuilder
     /**
      * Provides operations to call the stop method.
     */
-    public function microsoftGraphStop(): StopRequestBuilder {
-        return new StopRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphStop(): MicrosoftGraphStopRequestBuilder {
+        return new MicrosoftGraphStopRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -53,17 +53,17 @@ class AccessReviewScheduleDefinitionItemRequestBuilder
     
     /**
      * Instantiates a new AccessReviewScheduleDefinitionItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $accessReviewScheduleDefinitionId key: id of accessReviewScheduleDefinition
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $accessReviewScheduleDefinitionId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/identityGovernance/accessReviews/definitions/{accessReviewScheduleDefinition%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['accessReviewScheduleDefinitionId'] = $accessReviewScheduleDefinitionId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -110,7 +110,7 @@ class AccessReviewScheduleDefinitionItemRequestBuilder
     public function instancesById(string $id): AccessReviewInstanceItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['accessReviewInstance%2Did'] = $id;
-        return new AccessReviewInstanceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new AccessReviewInstanceItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

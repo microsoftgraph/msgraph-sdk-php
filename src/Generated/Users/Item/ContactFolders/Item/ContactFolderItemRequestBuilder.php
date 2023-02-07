@@ -77,22 +77,22 @@ class ContactFolderItemRequestBuilder
     public function childFoldersById(string $id): \Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\ChildFolders\Item\ContactFolderItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['contactFolder%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\ChildFolders\Item\ContactFolderItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\ChildFolders\Item\ContactFolderItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
      * Instantiates a new ContactFolderItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $contactFolderId key: id of contactFolder
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $contactFolderId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/users/{user%2Did}/contactFolders/{contactFolder%2Did}{?%24select}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['contactFolderId'] = $contactFolderId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -103,7 +103,7 @@ class ContactFolderItemRequestBuilder
     public function contactsById(string $id): ContactItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['contact%2Did'] = $id;
-        return new ContactItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ContactItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -150,7 +150,7 @@ class ContactFolderItemRequestBuilder
     public function multiValueExtendedPropertiesById(string $id): MultiValueLegacyExtendedPropertyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['multiValueLegacyExtendedProperty%2Did'] = $id;
-        return new MultiValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MultiValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -180,7 +180,7 @@ class ContactFolderItemRequestBuilder
     public function singleValueExtendedPropertiesById(string $id): SingleValueLegacyExtendedPropertyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['singleValueLegacyExtendedProperty%2Did'] = $id;
-        return new SingleValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new SingleValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Application;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Application\MicrosoftGraphCalculate\CalculateRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Application\MicrosoftGraphCalculate\MicrosoftGraphCalculateRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookApplication;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,8 +23,8 @@ class ApplicationRequestBuilder
     /**
      * Provides operations to call the calculate method.
     */
-    public function microsoftGraphCalculate(): CalculateRequestBuilder {
-        return new CalculateRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCalculate(): MicrosoftGraphCalculateRequestBuilder {
+        return new MicrosoftGraphCalculateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -44,13 +44,17 @@ class ApplicationRequestBuilder
     
     /**
      * Instantiates a new ApplicationRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/application{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

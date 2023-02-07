@@ -19,10 +19,10 @@ use Microsoft\Graph\Generated\Sites\Item\Items\Item\BaseItemItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Items\ItemsRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ListItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\ListsRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\MicrosoftGraphGetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\MicrosoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\MicrosoftGraphGetApplicableContentTypesForListWithListId\GetApplicableContentTypesForListWithListIdRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\MicrosoftGraphGetByPathWithPath\GetByPathWithPathRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\MicrosoftGraphGetActivitiesByInterval\MicrosoftGraphGetActivitiesByIntervalRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\MicrosoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\MicrosoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\MicrosoftGraphGetApplicableContentTypesForListWithListId\MicrosoftGraphGetApplicableContentTypesForListWithListIdRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\MicrosoftGraphGetByPathWithPath\MicrosoftGraphGetByPathWithPathRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\OnenoteRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Operations\Item\RichLongRunningOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Operations\OperationsRequestBuilder;
@@ -103,8 +103,8 @@ class SiteItemRequestBuilder
     /**
      * Provides operations to call the getActivitiesByInterval method.
     */
-    public function microsoftGraphGetActivitiesByInterval(): GetActivitiesByIntervalRequestBuilder {
-        return new GetActivitiesByIntervalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetActivitiesByInterval(): MicrosoftGraphGetActivitiesByIntervalRequestBuilder {
+        return new MicrosoftGraphGetActivitiesByIntervalRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -172,22 +172,22 @@ class SiteItemRequestBuilder
     public function columnsById(string $id): \Microsoft\Graph\Generated\Sites\Item\Columns\Item\ColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnDefinition%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Sites\Item\Columns\Item\ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Sites\Item\Columns\Item\ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
      * Instantiates a new SiteItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $siteId key: id of site
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $siteId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/sites/{site%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['siteId'] = $siteId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -198,7 +198,7 @@ class SiteItemRequestBuilder
     public function contentTypesById(string $id): ContentTypeItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['contentType%2Did'] = $id;
-        return new ContentTypeItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ContentTypeItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -209,7 +209,7 @@ class SiteItemRequestBuilder
     public function drivesById(string $id): DriveItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['drive%2Did'] = $id;
-        return new DriveItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new DriveItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -220,7 +220,7 @@ class SiteItemRequestBuilder
     public function externalColumnsById(string $id): \Microsoft\Graph\Generated\Sites\Item\ExternalColumns\Item\ColumnDefinitionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['columnDefinition%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Sites\Item\ExternalColumns\Item\ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Sites\Item\ExternalColumns\Item\ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -250,7 +250,7 @@ class SiteItemRequestBuilder
     public function itemsById(string $id): BaseItemItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['baseItem%2Did'] = $id;
-        return new BaseItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new BaseItemItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -261,7 +261,7 @@ class SiteItemRequestBuilder
     public function listsById(string $id): ListItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['list%2Did'] = $id;
-        return new ListItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ListItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -269,28 +269,28 @@ class SiteItemRequestBuilder
      * @param string $endDateTime Usage: endDateTime='{endDateTime}'
      * @param string $interval Usage: interval='{interval}'
      * @param string $startDateTime Usage: startDateTime='{startDateTime}'
-     * @return GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
+     * @return MicrosoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
     */
-    public function microsoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(string $endDateTime, string $interval, string $startDateTime): GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder {
-        return new GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder($this->pathParameters, $this->requestAdapter, $endDateTime, $interval, $startDateTime);
+    public function microsoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(string $endDateTime, string $interval, string $startDateTime): MicrosoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder {
+        return new MicrosoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder($this->pathParameters, $this->requestAdapter, $endDateTime, $interval, $startDateTime);
     }
 
     /**
      * Provides operations to call the getApplicableContentTypesForList method.
      * @param string $listId Usage: listId='{listId}'
-     * @return GetApplicableContentTypesForListWithListIdRequestBuilder
+     * @return MicrosoftGraphGetApplicableContentTypesForListWithListIdRequestBuilder
     */
-    public function microsoftGraphGetApplicableContentTypesForListWithListId(string $listId): GetApplicableContentTypesForListWithListIdRequestBuilder {
-        return new GetApplicableContentTypesForListWithListIdRequestBuilder($this->pathParameters, $this->requestAdapter, $listId);
+    public function microsoftGraphGetApplicableContentTypesForListWithListId(string $listId): MicrosoftGraphGetApplicableContentTypesForListWithListIdRequestBuilder {
+        return new MicrosoftGraphGetApplicableContentTypesForListWithListIdRequestBuilder($this->pathParameters, $this->requestAdapter, $listId);
     }
 
     /**
      * Provides operations to call the getByPath method.
      * @param string $path Usage: path='{path}'
-     * @return GetByPathWithPathRequestBuilder
+     * @return MicrosoftGraphGetByPathWithPathRequestBuilder
     */
-    public function microsoftGraphGetByPathWithPath(string $path): GetByPathWithPathRequestBuilder {
-        return new GetByPathWithPathRequestBuilder($this->pathParameters, $this->requestAdapter, $path);
+    public function microsoftGraphGetByPathWithPath(string $path): MicrosoftGraphGetByPathWithPathRequestBuilder {
+        return new MicrosoftGraphGetByPathWithPathRequestBuilder($this->pathParameters, $this->requestAdapter, $path);
     }
 
     /**
@@ -301,7 +301,7 @@ class SiteItemRequestBuilder
     public function operationsById(string $id): RichLongRunningOperationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['richLongRunningOperation%2Did'] = $id;
-        return new RichLongRunningOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new RichLongRunningOperationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -331,7 +331,7 @@ class SiteItemRequestBuilder
     public function permissionsById(string $id): PermissionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['permission%2Did'] = $id;
-        return new PermissionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new PermissionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -342,7 +342,7 @@ class SiteItemRequestBuilder
     public function sitesById(string $id): \Microsoft\Graph\Generated\Sites\Item\Sites\Item\SiteItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['site%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\Sites\Item\Sites\Item\SiteItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Sites\Item\Sites\Item\SiteItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -353,7 +353,7 @@ class SiteItemRequestBuilder
     public function termStoresById(string $id): StoreItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['store%2Did'] = $id;
-        return new StoreItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new StoreItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

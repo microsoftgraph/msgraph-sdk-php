@@ -60,7 +60,7 @@ class TermsAndConditionsItemRequestBuilder
     public function acceptanceStatusesById(string $id): TermsAndConditionsAcceptanceStatusItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['termsAndConditionsAcceptanceStatus%2Did'] = $id;
-        return new TermsAndConditionsAcceptanceStatusItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new TermsAndConditionsAcceptanceStatusItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -71,22 +71,22 @@ class TermsAndConditionsItemRequestBuilder
     public function assignmentsById(string $id): TermsAndConditionsAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['termsAndConditionsAssignment%2Did'] = $id;
-        return new TermsAndConditionsAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new TermsAndConditionsAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
      * Instantiates a new TermsAndConditionsItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $termsAndConditionsId key: id of termsAndConditions
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $termsAndConditionsId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/termsAndConditions/{termsAndConditions%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['termsAndConditionsId'] = $termsAndConditionsId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

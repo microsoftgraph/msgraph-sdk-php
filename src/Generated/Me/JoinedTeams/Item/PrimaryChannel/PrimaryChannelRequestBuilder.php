@@ -10,10 +10,10 @@ use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Members\Item\Co
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Messages\Item\ChatMessageItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Messages\MessagesRequestBuilder;
-use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\MicrosoftGraphCompleteMigration\CompleteMigrationRequestBuilder;
-use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\MicrosoftGraphDoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
-use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\MicrosoftGraphProvisionEmail\ProvisionEmailRequestBuilder;
-use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\MicrosoftGraphRemoveEmail\RemoveEmailRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\MicrosoftGraphCompleteMigration\MicrosoftGraphCompleteMigrationRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\MicrosoftGraphDoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName\MicrosoftGraphDoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\MicrosoftGraphProvisionEmail\MicrosoftGraphProvisionEmailRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\MicrosoftGraphRemoveEmail\MicrosoftGraphRemoveEmailRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\SharedWithTeams\Item\SharedWithChannelTeamInfoItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\SharedWithTeams\SharedWithTeamsRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Tabs\Item\TeamsTabItemRequestBuilder;
@@ -56,29 +56,29 @@ class PrimaryChannelRequestBuilder
     /**
      * Provides operations to call the completeMigration method.
     */
-    public function microsoftGraphCompleteMigration(): CompleteMigrationRequestBuilder {
-        return new CompleteMigrationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCompleteMigration(): MicrosoftGraphCompleteMigrationRequestBuilder {
+        return new MicrosoftGraphCompleteMigrationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the doesUserHaveAccess method.
     */
-    public function microsoftGraphDoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName(): DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder {
-        return new DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName(): MicrosoftGraphDoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder {
+        return new MicrosoftGraphDoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the provisionEmail method.
     */
-    public function microsoftGraphProvisionEmail(): ProvisionEmailRequestBuilder {
-        return new ProvisionEmailRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphProvisionEmail(): MicrosoftGraphProvisionEmailRequestBuilder {
+        return new MicrosoftGraphProvisionEmailRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the removeEmail method.
     */
-    public function microsoftGraphRemoveEmail(): RemoveEmailRequestBuilder {
-        return new RemoveEmailRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRemoveEmail(): MicrosoftGraphRemoveEmailRequestBuilder {
+        return new MicrosoftGraphRemoveEmailRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -112,13 +112,17 @@ class PrimaryChannelRequestBuilder
     
     /**
      * Instantiates a new PrimaryChannelRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/me/joinedTeams/{team%2Did}/primaryChannel{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -166,7 +170,7 @@ class PrimaryChannelRequestBuilder
     public function membersById(string $id): ConversationMemberItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['conversationMember%2Did'] = $id;
-        return new ConversationMemberItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ConversationMemberItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -177,7 +181,7 @@ class PrimaryChannelRequestBuilder
     public function messagesById(string $id): ChatMessageItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['chatMessage%2Did'] = $id;
-        return new ChatMessageItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ChatMessageItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -207,7 +211,7 @@ class PrimaryChannelRequestBuilder
     public function sharedWithTeamsById(string $id): SharedWithChannelTeamInfoItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['sharedWithChannelTeamInfo%2Did'] = $id;
-        return new SharedWithChannelTeamInfoItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new SharedWithChannelTeamInfoItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -218,7 +222,7 @@ class PrimaryChannelRequestBuilder
     public function tabsById(string $id): TeamsTabItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['teamsTab%2Did'] = $id;
-        return new TeamsTabItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new TeamsTabItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

@@ -45,17 +45,17 @@ class WorkbookCommentItemRequestBuilder
     
     /**
      * Instantiates a new WorkbookCommentItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $workbookCommentId key: id of workbookComment
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $workbookCommentId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/comments/{workbookComment%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['workbookCommentId'] = $workbookCommentId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -121,7 +121,7 @@ class WorkbookCommentItemRequestBuilder
     public function repliesById(string $id): WorkbookCommentReplyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['workbookCommentReply%2Did'] = $id;
-        return new WorkbookCommentReplyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new WorkbookCommentReplyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

@@ -9,8 +9,8 @@ use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarPerm
 use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarPermissions\Item\CalendarPermissionItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\CalendarViewRequestBuilder;
 use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\Events\EventsRequestBuilder;
-use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\MicrosoftGraphAllowedCalendarSharingRolesWithUser\AllowedCalendarSharingRolesWithUserRequestBuilder;
-use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\MicrosoftGraphGetSchedule\GetScheduleRequestBuilder;
+use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\MicrosoftGraphAllowedCalendarSharingRolesWithUser\MicrosoftGraphAllowedCalendarSharingRolesWithUserRequestBuilder;
+use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\MicrosoftGraphGetSchedule\MicrosoftGraphGetScheduleRequestBuilder;
 use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
@@ -53,8 +53,8 @@ class CalendarItemRequestBuilder
     /**
      * Provides operations to call the getSchedule method.
     */
-    public function microsoftGraphGetSchedule(): GetScheduleRequestBuilder {
-        return new GetScheduleRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetSchedule(): MicrosoftGraphGetScheduleRequestBuilder {
+        return new MicrosoftGraphGetScheduleRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -94,7 +94,7 @@ class CalendarItemRequestBuilder
     public function calendarPermissionsById(string $id): CalendarPermissionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['calendarPermission%2Did'] = $id;
-        return new CalendarPermissionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new CalendarPermissionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -105,22 +105,22 @@ class CalendarItemRequestBuilder
     public function calendarViewById(string $id): \Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\EventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['event%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarView\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
      * Instantiates a new CalendarItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $calendarId key: id of calendar
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $calendarId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/me/calendarGroups/{calendarGroup%2Did}/calendars/{calendar%2Did}{?%24select}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['calendarId'] = $calendarId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -149,7 +149,7 @@ class CalendarItemRequestBuilder
     public function eventsById(string $id): \Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\Events\Item\EventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['event%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\Events\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\Events\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -173,10 +173,10 @@ class CalendarItemRequestBuilder
     /**
      * Provides operations to call the allowedCalendarSharingRoles method.
      * @param string $user Usage: User='{User}'
-     * @return AllowedCalendarSharingRolesWithUserRequestBuilder
+     * @return MicrosoftGraphAllowedCalendarSharingRolesWithUserRequestBuilder
     */
-    public function microsoftGraphAllowedCalendarSharingRolesWithUser(string $user): AllowedCalendarSharingRolesWithUserRequestBuilder {
-        return new AllowedCalendarSharingRolesWithUserRequestBuilder($this->pathParameters, $this->requestAdapter, $user);
+    public function microsoftGraphAllowedCalendarSharingRolesWithUser(string $user): MicrosoftGraphAllowedCalendarSharingRolesWithUserRequestBuilder {
+        return new MicrosoftGraphAllowedCalendarSharingRolesWithUserRequestBuilder($this->pathParameters, $this->requestAdapter, $user);
     }
 
     /**
@@ -187,7 +187,7 @@ class CalendarItemRequestBuilder
     public function multiValueExtendedPropertiesById(string $id): MultiValueLegacyExtendedPropertyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['multiValueLegacyExtendedProperty%2Did'] = $id;
-        return new MultiValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new MultiValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -217,7 +217,7 @@ class CalendarItemRequestBuilder
     public function singleValueExtendedPropertiesById(string $id): SingleValueLegacyExtendedPropertyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['singleValueLegacyExtendedProperty%2Did'] = $id;
-        return new SingleValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new SingleValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

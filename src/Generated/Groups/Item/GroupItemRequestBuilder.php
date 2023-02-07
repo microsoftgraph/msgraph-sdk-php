@@ -24,20 +24,20 @@ use Microsoft\Graph\Generated\Groups\Item\GroupLifecyclePolicies\Item\GroupLifec
 use Microsoft\Graph\Generated\Groups\Item\MemberOf\MemberOfRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\MembersWithLicenseErrorsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphAddFavorite\AddFavoriteRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphAssignLicense\AssignLicenseRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphCheckGrantedPermissionsForApp\CheckGrantedPermissionsForAppRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphCheckMemberGroups\CheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphCheckMemberObjects\CheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphGetMemberGroups\GetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphGetMemberObjects\GetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphRemoveFavorite\RemoveFavoriteRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphRenew\RenewRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphResetUnseenCount\ResetUnseenCountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphRestore\RestoreRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphSubscribeByMail\SubscribeByMailRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphUnsubscribeByMail\UnsubscribeByMailRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphValidateProperties\ValidatePropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphAddFavorite\MicrosoftGraphAddFavoriteRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphAssignLicense\MicrosoftGraphAssignLicenseRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphCheckGrantedPermissionsForApp\MicrosoftGraphCheckGrantedPermissionsForAppRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphCheckMemberGroups\MicrosoftGraphCheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphCheckMemberObjects\MicrosoftGraphCheckMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphGetMemberGroups\MicrosoftGraphGetMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphGetMemberObjects\MicrosoftGraphGetMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphRemoveFavorite\MicrosoftGraphRemoveFavoriteRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphRenew\MicrosoftGraphRenewRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphResetUnseenCount\MicrosoftGraphResetUnseenCountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphRestore\MicrosoftGraphRestoreRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphSubscribeByMail\MicrosoftGraphSubscribeByMailRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphUnsubscribeByMail\MicrosoftGraphUnsubscribeByMailRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphValidateProperties\MicrosoftGraphValidatePropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Onenote\OnenoteRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Owners\OwnersRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\Item\ResourceSpecificPermissionGrantItemRequestBuilder;
@@ -171,99 +171,99 @@ class GroupItemRequestBuilder
     /**
      * Provides operations to call the addFavorite method.
     */
-    public function microsoftGraphAddFavorite(): AddFavoriteRequestBuilder {
-        return new AddFavoriteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAddFavorite(): MicrosoftGraphAddFavoriteRequestBuilder {
+        return new MicrosoftGraphAddFavoriteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the assignLicense method.
     */
-    public function microsoftGraphAssignLicense(): AssignLicenseRequestBuilder {
-        return new AssignLicenseRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphAssignLicense(): MicrosoftGraphAssignLicenseRequestBuilder {
+        return new MicrosoftGraphAssignLicenseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the checkGrantedPermissionsForApp method.
     */
-    public function microsoftGraphCheckGrantedPermissionsForApp(): CheckGrantedPermissionsForAppRequestBuilder {
-        return new CheckGrantedPermissionsForAppRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCheckGrantedPermissionsForApp(): MicrosoftGraphCheckGrantedPermissionsForAppRequestBuilder {
+        return new MicrosoftGraphCheckGrantedPermissionsForAppRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the checkMemberGroups method.
     */
-    public function microsoftGraphCheckMemberGroups(): CheckMemberGroupsRequestBuilder {
-        return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCheckMemberGroups(): MicrosoftGraphCheckMemberGroupsRequestBuilder {
+        return new MicrosoftGraphCheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the checkMemberObjects method.
     */
-    public function microsoftGraphCheckMemberObjects(): CheckMemberObjectsRequestBuilder {
-        return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCheckMemberObjects(): MicrosoftGraphCheckMemberObjectsRequestBuilder {
+        return new MicrosoftGraphCheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getMemberGroups method.
     */
-    public function microsoftGraphGetMemberGroups(): GetMemberGroupsRequestBuilder {
-        return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetMemberGroups(): MicrosoftGraphGetMemberGroupsRequestBuilder {
+        return new MicrosoftGraphGetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getMemberObjects method.
     */
-    public function microsoftGraphGetMemberObjects(): GetMemberObjectsRequestBuilder {
-        return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphGetMemberObjects(): MicrosoftGraphGetMemberObjectsRequestBuilder {
+        return new MicrosoftGraphGetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the removeFavorite method.
     */
-    public function microsoftGraphRemoveFavorite(): RemoveFavoriteRequestBuilder {
-        return new RemoveFavoriteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRemoveFavorite(): MicrosoftGraphRemoveFavoriteRequestBuilder {
+        return new MicrosoftGraphRemoveFavoriteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the renew method.
     */
-    public function microsoftGraphRenew(): RenewRequestBuilder {
-        return new RenewRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRenew(): MicrosoftGraphRenewRequestBuilder {
+        return new MicrosoftGraphRenewRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the resetUnseenCount method.
     */
-    public function microsoftGraphResetUnseenCount(): ResetUnseenCountRequestBuilder {
-        return new ResetUnseenCountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphResetUnseenCount(): MicrosoftGraphResetUnseenCountRequestBuilder {
+        return new MicrosoftGraphResetUnseenCountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the restore method.
     */
-    public function microsoftGraphRestore(): RestoreRequestBuilder {
-        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRestore(): MicrosoftGraphRestoreRequestBuilder {
+        return new MicrosoftGraphRestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the subscribeByMail method.
     */
-    public function microsoftGraphSubscribeByMail(): SubscribeByMailRequestBuilder {
-        return new SubscribeByMailRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSubscribeByMail(): MicrosoftGraphSubscribeByMailRequestBuilder {
+        return new MicrosoftGraphSubscribeByMailRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the unsubscribeByMail method.
     */
-    public function microsoftGraphUnsubscribeByMail(): UnsubscribeByMailRequestBuilder {
-        return new UnsubscribeByMailRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphUnsubscribeByMail(): MicrosoftGraphUnsubscribeByMailRequestBuilder {
+        return new MicrosoftGraphUnsubscribeByMailRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the validateProperties method.
     */
-    public function microsoftGraphValidateProperties(): ValidatePropertiesRequestBuilder {
-        return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphValidateProperties(): MicrosoftGraphValidatePropertiesRequestBuilder {
+        return new MicrosoftGraphValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -380,7 +380,7 @@ class GroupItemRequestBuilder
     public function acceptedSendersById(string $id): \Microsoft\Graph\Generated\Groups\Item\AcceptedSenders\Item\DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\AcceptedSenders\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Groups\Item\AcceptedSenders\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -391,7 +391,7 @@ class GroupItemRequestBuilder
     public function appRoleAssignmentsById(string $id): AppRoleAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['appRoleAssignment%2Did'] = $id;
-        return new AppRoleAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new AppRoleAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -402,22 +402,22 @@ class GroupItemRequestBuilder
     public function calendarViewById(string $id): \Microsoft\Graph\Generated\Groups\Item\CalendarView\Item\EventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['event%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\CalendarView\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Groups\Item\CalendarView\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
      * Instantiates a new GroupItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $groupId key: id of group
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $groupId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/groups/{group%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['groupId'] = $groupId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -428,7 +428,7 @@ class GroupItemRequestBuilder
     public function conversationsById(string $id): ConversationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['conversation%2Did'] = $id;
-        return new ConversationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ConversationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -458,7 +458,7 @@ class GroupItemRequestBuilder
     public function drivesById(string $id): DriveItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['drive%2Did'] = $id;
-        return new DriveItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new DriveItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -469,7 +469,7 @@ class GroupItemRequestBuilder
     public function eventsById(string $id): \Microsoft\Graph\Generated\Groups\Item\Events\Item\EventItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['event%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\Events\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Groups\Item\Events\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -480,7 +480,7 @@ class GroupItemRequestBuilder
     public function extensionsById(string $id): ExtensionItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['extension%2Did'] = $id;
-        return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -510,7 +510,7 @@ class GroupItemRequestBuilder
     public function groupLifecyclePoliciesById(string $id): GroupLifecyclePolicyItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['groupLifecyclePolicy%2Did'] = $id;
-        return new GroupLifecyclePolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new GroupLifecyclePolicyItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -521,7 +521,7 @@ class GroupItemRequestBuilder
     public function memberOfById(string $id): \Microsoft\Graph\Generated\Groups\Item\MemberOf\Item\DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\MemberOf\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Groups\Item\MemberOf\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -532,7 +532,7 @@ class GroupItemRequestBuilder
     public function membersById(string $id): \Microsoft\Graph\Generated\Groups\Item\Members\Item\DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\Members\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Groups\Item\Members\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -543,7 +543,7 @@ class GroupItemRequestBuilder
     public function membersWithLicenseErrorsById(string $id): \Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\Item\DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -554,7 +554,7 @@ class GroupItemRequestBuilder
     public function ownersById(string $id): \Microsoft\Graph\Generated\Groups\Item\Owners\Item\DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\Owners\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Groups\Item\Owners\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -585,7 +585,7 @@ class GroupItemRequestBuilder
     public function permissionGrantsById(string $id): ResourceSpecificPermissionGrantItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['resourceSpecificPermissionGrant%2Did'] = $id;
-        return new ResourceSpecificPermissionGrantItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ResourceSpecificPermissionGrantItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -596,7 +596,7 @@ class GroupItemRequestBuilder
     public function photosById(string $id): ProfilePhotoItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['profilePhoto%2Did'] = $id;
-        return new ProfilePhotoItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ProfilePhotoItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -607,7 +607,7 @@ class GroupItemRequestBuilder
     public function rejectedSendersById(string $id): \Microsoft\Graph\Generated\Groups\Item\RejectedSenders\Item\DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\RejectedSenders\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Groups\Item\RejectedSenders\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -618,7 +618,7 @@ class GroupItemRequestBuilder
     public function settingsById(string $id): GroupSettingItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['groupSetting%2Did'] = $id;
-        return new GroupSettingItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new GroupSettingItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -629,7 +629,7 @@ class GroupItemRequestBuilder
     public function sitesById(string $id): SiteItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['site%2Did'] = $id;
-        return new SiteItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new SiteItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -640,7 +640,7 @@ class GroupItemRequestBuilder
     public function threadsById(string $id): ConversationThreadItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['conversationThread%2Did'] = $id;
-        return new ConversationThreadItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new ConversationThreadItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -721,7 +721,7 @@ class GroupItemRequestBuilder
     public function transitiveMemberOfById(string $id): \Microsoft\Graph\Generated\Groups\Item\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Groups\Item\TransitiveMemberOf\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -732,7 +732,7 @@ class GroupItemRequestBuilder
     public function transitiveMembersById(string $id): \Microsoft\Graph\Generated\Groups\Item\TransitiveMembers\Item\DirectoryObjectItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['directoryObject%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Groups\Item\TransitiveMembers\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new \Microsoft\Graph\Generated\Groups\Item\TransitiveMembers\Item\DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
 }

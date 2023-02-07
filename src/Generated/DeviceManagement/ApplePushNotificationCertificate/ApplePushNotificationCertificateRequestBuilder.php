@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\ApplePushNotificationCertif
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\ApplePushNotificationCertificate\MicrosoftGraphDownloadApplePushNotificationCertificateSigningRequest\DownloadApplePushNotificationCertificateSigningRequestRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ApplePushNotificationCertificate\MicrosoftGraphDownloadApplePushNotificationCertificateSigningRequest\MicrosoftGraphDownloadApplePushNotificationCertificateSigningRequestRequestBuilder;
 use Microsoft\Graph\Generated\Models\ApplePushNotificationCertificate;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,8 +23,8 @@ class ApplePushNotificationCertificateRequestBuilder
     /**
      * Provides operations to call the downloadApplePushNotificationCertificateSigningRequest method.
     */
-    public function microsoftGraphDownloadApplePushNotificationCertificateSigningRequest(): DownloadApplePushNotificationCertificateSigningRequestRequestBuilder {
-        return new DownloadApplePushNotificationCertificateSigningRequestRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDownloadApplePushNotificationCertificateSigningRequest(): MicrosoftGraphDownloadApplePushNotificationCertificateSigningRequestRequestBuilder {
+        return new MicrosoftGraphDownloadApplePushNotificationCertificateSigningRequestRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -44,13 +44,17 @@ class ApplePushNotificationCertificateRequestBuilder
     
     /**
      * Instantiates a new ApplePushNotificationCertificateRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/deviceManagement/applePushNotificationCertificate{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

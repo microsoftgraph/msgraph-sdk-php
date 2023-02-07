@@ -72,17 +72,17 @@ class B2xIdentityUserFlowItemRequestBuilder
     
     /**
      * Instantiates a new B2xIdentityUserFlowItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $b2xIdentityUserFlowId key: id of b2xIdentityUserFlow
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $b2xIdentityUserFlowId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/identity/b2xUserFlows/{b2xIdentityUserFlow%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['b2xIdentityUserFlowId'] = $b2xIdentityUserFlowId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -129,7 +129,7 @@ class B2xIdentityUserFlowItemRequestBuilder
     public function identityProvidersById(string $id): IdentityProviderItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['identityProvider%2Did'] = $id;
-        return new IdentityProviderItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new IdentityProviderItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -140,7 +140,7 @@ class B2xIdentityUserFlowItemRequestBuilder
     public function languagesById(string $id): UserFlowLanguageConfigurationItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['userFlowLanguageConfiguration%2Did'] = $id;
-        return new UserFlowLanguageConfigurationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new UserFlowLanguageConfigurationItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -240,7 +240,7 @@ class B2xIdentityUserFlowItemRequestBuilder
     public function userAttributeAssignmentsById(string $id): IdentityUserFlowAttributeAssignmentItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['identityUserFlowAttributeAssignment%2Did'] = $id;
-        return new IdentityUserFlowAttributeAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new IdentityUserFlowAttributeAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -251,7 +251,7 @@ class B2xIdentityUserFlowItemRequestBuilder
     public function userFlowIdentityProvidersById(string $id): IdentityProviderBaseItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['identityProviderBase%2Did'] = $id;
-        return new IdentityProviderBaseItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new IdentityProviderBaseItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
 }

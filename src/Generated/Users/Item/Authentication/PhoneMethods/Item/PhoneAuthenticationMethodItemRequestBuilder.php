@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PhoneAuthenticationMethod;
-use Microsoft\Graph\Generated\Users\Item\Authentication\PhoneMethods\Item\MicrosoftGraphDisableSmsSignIn\DisableSmsSignInRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\PhoneMethods\Item\MicrosoftGraphEnableSmsSignIn\EnableSmsSignInRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Authentication\PhoneMethods\Item\MicrosoftGraphDisableSmsSignIn\MicrosoftGraphDisableSmsSignInRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Authentication\PhoneMethods\Item\MicrosoftGraphEnableSmsSignIn\MicrosoftGraphEnableSmsSignInRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -24,15 +24,15 @@ class PhoneAuthenticationMethodItemRequestBuilder
     /**
      * Provides operations to call the disableSmsSignIn method.
     */
-    public function microsoftGraphDisableSmsSignIn(): DisableSmsSignInRequestBuilder {
-        return new DisableSmsSignInRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphDisableSmsSignIn(): MicrosoftGraphDisableSmsSignInRequestBuilder {
+        return new MicrosoftGraphDisableSmsSignInRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the enableSmsSignIn method.
     */
-    public function microsoftGraphEnableSmsSignIn(): EnableSmsSignInRequestBuilder {
-        return new EnableSmsSignInRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphEnableSmsSignIn(): MicrosoftGraphEnableSmsSignInRequestBuilder {
+        return new MicrosoftGraphEnableSmsSignInRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -52,17 +52,17 @@ class PhoneAuthenticationMethodItemRequestBuilder
     
     /**
      * Instantiates a new PhoneAuthenticationMethodItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $phoneAuthenticationMethodId key: id of phoneAuthenticationMethod
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $phoneAuthenticationMethodId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/users/{user%2Did}/authentication/phoneMethods/{phoneAuthenticationMethod%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['phoneAuthenticationMethodId'] = $phoneAuthenticationMethodId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

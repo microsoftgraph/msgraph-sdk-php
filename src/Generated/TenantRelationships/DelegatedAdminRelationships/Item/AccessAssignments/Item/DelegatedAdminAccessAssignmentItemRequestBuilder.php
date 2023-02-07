@@ -36,17 +36,17 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder
     
     /**
      * Instantiates a new DelegatedAdminAccessAssignmentItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $delegatedAdminAccessAssignmentId key: id of delegatedAdminAccessAssignment
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $delegatedAdminAccessAssignmentId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/tenantRelationships/delegatedAdminRelationships/{delegatedAdminRelationship%2Did}/accessAssignments/{delegatedAdminAccessAssignment%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['delegatedAdminAccessAssignmentId'] = $delegatedAdminAccessAssignmentId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -68,7 +68,7 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder
     }
 
     /**
-     * Get accessAssignments from tenantRelationships
+     * The access assignments associated with the delegated admin relationship.
      * @param DelegatedAdminAccessAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -126,7 +126,7 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder
     }
 
     /**
-     * Get accessAssignments from tenantRelationships
+     * The access assignments associated with the delegated admin relationship.
      * @param DelegatedAdminAccessAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

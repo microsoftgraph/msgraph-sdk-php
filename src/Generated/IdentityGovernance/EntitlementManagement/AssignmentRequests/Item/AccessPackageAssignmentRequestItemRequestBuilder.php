@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\AccessPackage\AccessPackageRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\Assignment\AssignmentRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\MicrosoftGraphCancel\CancelRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\MicrosoftGraphReprocess\ReprocessRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\MicrosoftGraphCancel\MicrosoftGraphCancelRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\MicrosoftGraphReprocess\MicrosoftGraphReprocessRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\Requestor\RequestorRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessPackageAssignmentRequest;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -41,15 +41,15 @@ class AccessPackageAssignmentRequestItemRequestBuilder
     /**
      * Provides operations to call the cancel method.
     */
-    public function microsoftGraphCancel(): CancelRequestBuilder {
-        return new CancelRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphCancel(): MicrosoftGraphCancelRequestBuilder {
+        return new MicrosoftGraphCancelRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the reprocess method.
     */
-    public function microsoftGraphReprocess(): ReprocessRequestBuilder {
-        return new ReprocessRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphReprocess(): MicrosoftGraphReprocessRequestBuilder {
+        return new MicrosoftGraphReprocessRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -76,17 +76,17 @@ class AccessPackageAssignmentRequestItemRequestBuilder
     
     /**
      * Instantiates a new AccessPackageAssignmentRequestItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $accessPackageAssignmentRequestId key: id of accessPackageAssignmentRequest
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $accessPackageAssignmentRequestId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/identityGovernance/entitlementManagement/assignmentRequests/{accessPackageAssignmentRequest%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['accessPackageAssignmentRequestId'] = $accessPackageAssignmentRequestId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**

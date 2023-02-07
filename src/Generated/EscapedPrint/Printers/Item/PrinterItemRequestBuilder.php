@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Connectors\ConnectorsRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Connectors\Item\PrintConnectorItemRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\MicrosoftGraphRestoreFactoryDefaults\RestoreFactoryDefaultsRequestBuilder;
+use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\MicrosoftGraphRestoreFactoryDefaults\MicrosoftGraphRestoreFactoryDefaultsRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Shares\Item\PrinterShareItemRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Shares\SharesRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\TaskTriggers\Item\PrintTaskTriggerItemRequestBuilder;
@@ -36,8 +36,8 @@ class PrinterItemRequestBuilder
     /**
      * Provides operations to call the restoreFactoryDefaults method.
     */
-    public function microsoftGraphRestoreFactoryDefaults(): RestoreFactoryDefaultsRequestBuilder {
-        return new RestoreFactoryDefaultsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphRestoreFactoryDefaults(): MicrosoftGraphRestoreFactoryDefaultsRequestBuilder {
+        return new MicrosoftGraphRestoreFactoryDefaultsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -77,22 +77,22 @@ class PrinterItemRequestBuilder
     public function connectorsById(string $id): PrintConnectorItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['printConnector%2Did'] = $id;
-        return new PrintConnectorItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new PrintConnectorItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
      * Instantiates a new PrinterItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $printerId key: id of printer
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $printerId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/print/printers/{printer%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['printerId'] = $printerId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
@@ -158,7 +158,7 @@ class PrinterItemRequestBuilder
     public function sharesById(string $id): PrinterShareItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['printerShare%2Did'] = $id;
-        return new PrinterShareItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new PrinterShareItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**
@@ -169,7 +169,7 @@ class PrinterItemRequestBuilder
     public function taskTriggersById(string $id): PrintTaskTriggerItemRequestBuilder {
         $urlTplParams = $this->pathParameters;
         $urlTplParams['printTaskTrigger%2Did'] = $id;
-        return new PrintTaskTriggerItemRequestBuilder($urlTplParams, $this->requestAdapter);
+        return new PrintTaskTriggerItemRequestBuilder($urlTplParams, $this->requestAdapter, $id);
     }
 
     /**

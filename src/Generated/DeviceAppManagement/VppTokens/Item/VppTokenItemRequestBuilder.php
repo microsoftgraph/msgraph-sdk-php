@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\VppTokens\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceAppManagement\VppTokens\Item\MicrosoftGraphSyncLicenses\SyncLicensesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\VppTokens\Item\MicrosoftGraphSyncLicenses\MicrosoftGraphSyncLicensesRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\VppToken;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,8 +23,8 @@ class VppTokenItemRequestBuilder
     /**
      * Provides operations to call the syncLicenses method.
     */
-    public function microsoftGraphSyncLicenses(): SyncLicensesRequestBuilder {
-        return new SyncLicensesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSyncLicenses(): MicrosoftGraphSyncLicensesRequestBuilder {
+        return new MicrosoftGraphSyncLicensesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -44,17 +44,17 @@ class VppTokenItemRequestBuilder
     
     /**
      * Instantiates a new VppTokenItemRequestBuilder and sets the default values.
-     * @param array<string, mixed> $pathParameters Path parameters for the request
+     * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-     * @param string|null $vppTokenId key: id of vppToken
     */
-    public function __construct(array $pathParameters, RequestAdapter $requestAdapter, ?string $vppTokenId = null) {
+    public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
         $this->urlTemplate = '{+baseurl}/deviceAppManagement/vppTokens/{vppToken%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
-        $this->pathParameters = $pathParameters;
-        $urlTplParams = $pathParameters;
-        $urlTplParams['vppTokenId'] = $vppTokenId;
-        $this->pathParameters = array_merge($this->pathParameters, $urlTplParams);
+        if (is_array($pathParametersOrRawUrl)) {
+            $this->pathParameters = $pathParametersOrRawUrl;
+        } else {
+            $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
     }
 
     /**
