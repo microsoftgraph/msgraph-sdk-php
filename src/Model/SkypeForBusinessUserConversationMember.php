@@ -26,6 +26,7 @@ class SkypeForBusinessUserConversationMember extends ConversationMember
 {
     /**
     * Gets the tenantId
+    * ID of the tenant that the user belongs to.
     *
     * @return string|null The tenantId
     */
@@ -40,6 +41,7 @@ class SkypeForBusinessUserConversationMember extends ConversationMember
 
     /**
     * Sets the tenantId
+    * ID of the tenant that the user belongs to.
     *
     * @param string $val The tenantId
     *
@@ -53,6 +55,7 @@ class SkypeForBusinessUserConversationMember extends ConversationMember
 
     /**
     * Gets the userId
+    * Azure Active Directory ID of the user.
     *
     * @return string|null The userId
     */
@@ -67,6 +70,7 @@ class SkypeForBusinessUserConversationMember extends ConversationMember
 
     /**
     * Sets the userId
+    * Azure Active Directory ID of the user.
     *
     * @param string $val The userId
     *

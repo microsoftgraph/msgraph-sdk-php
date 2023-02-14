@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* EntityType File
+* SearchContent File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* EntityType class
+* SearchContent class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,19 +24,12 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class EntityType extends Enum
+class SearchContent extends Enum
 {
     /**
-    * The Enum EntityType
+    * The Enum SearchContent
     */
-    const EVENT = "event";
-    const MESSAGE = "message";
-    const DRIVE_ITEM = "driveItem";
-    const EXTERNAL_ITEM = "externalItem";
-    const SITE = "site";
-    const GRAPHLIST = "list";
-    const LIST_ITEM = "listItem";
-    const DRIVE = "drive";
+    const SHARED_CONTENT = "sharedContent";
+    const PRIVATE_CONTENT = "privateContent";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const CHAT_MESSAGE = "chatMessage";
 }
