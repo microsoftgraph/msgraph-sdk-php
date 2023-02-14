@@ -26,6 +26,7 @@ class AnonymousGuestConversationMember extends ConversationMember
 {
     /**
     * Gets the anonymousGuestId
+    * Unique ID that represents the user. Note: This ID can change if the user leaves and rejoins the meeting, or joins from a different device.
     *
     * @return string|null The anonymousGuestId
     */
@@ -40,6 +41,7 @@ class AnonymousGuestConversationMember extends ConversationMember
 
     /**
     * Sets the anonymousGuestId
+    * Unique ID that represents the user. Note: This ID can change if the user leaves and rejoins the meeting, or joins from a different device.
     *
     * @param string $val The anonymousGuestId
     *
