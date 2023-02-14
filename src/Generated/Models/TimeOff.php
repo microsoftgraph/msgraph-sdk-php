@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class TimeOff extends ChangeTrackedEntity implements Parsable 
 {
     /**
-     * Instantiates a new timeOff and sets the default values.
+     * Instantiates a new TimeOff and sets the default values.
     */
     public function __construct() {
         parent::__construct();

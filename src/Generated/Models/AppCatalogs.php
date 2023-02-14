@@ -5,23 +5,14 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
-use Microsoft\Kiota\Abstractions\Store\BackedModel;
-use Microsoft\Kiota\Abstractions\Store\BackingStore;
-use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class AppCatalogs extends Entity implements BackedModel, Parsable 
+class AppCatalogs extends Entity implements Parsable 
 {
     /**
-     * @var BackingStore $backingStore Stores model information.
-    */
-    private BackingStore $backingStore;
-    
-    /**
-     * Instantiates a new appCatalogs and sets the default values.
+     * Instantiates a new AppCatalogs and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
     }
 
     /**
@@ -31,14 +22,6 @@ class AppCatalogs extends Entity implements BackedModel, Parsable
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): AppCatalogs {
         return new AppCatalogs();
-    }
-
-    /**
-     * Gets the backingStore property value. Stores model information.
-     * @return BackingStore
-    */
-    public function getBackingStore(): BackingStore {
-        return $this->backingStore;
     }
 
     /**
@@ -67,14 +50,6 @@ class AppCatalogs extends Entity implements BackedModel, Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('teamsApps', $this->getTeamsApps());
-    }
-
-    /**
-     * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the BackingStore property.
-    */
-    public function setBackingStore(BackingStore $value): void {
-        $this->backingStore = $value;
     }
 
     /**

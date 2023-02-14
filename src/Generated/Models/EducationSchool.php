@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EducationSchool extends EducationOrganization implements Parsable 
 {
     /**
-     * Instantiates a new educationSchool and sets the default values.
+     * Instantiates a new EducationSchool and sets the default values.
     */
     public function __construct() {
         parent::__construct();

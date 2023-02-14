@@ -37,7 +37,7 @@ class SkypeUserConversationMember extends ConversationMember implements Parsable
     }
 
     /**
-     * Gets the skypeId property value. The skypeId property
+     * Gets the skypeId property value. Skype ID of the user.
      * @return string|null
     */
     public function getSkypeId(): ?string {
@@ -54,7 +54,7 @@ class SkypeUserConversationMember extends ConversationMember implements Parsable
     }
 
     /**
-     * Sets the skypeId property value. The skypeId property
+     * Sets the skypeId property value. Skype ID of the user.
      * @param string|null $value Value to set for the skypeId property.
     */
     public function setSkypeId(?string $value): void {

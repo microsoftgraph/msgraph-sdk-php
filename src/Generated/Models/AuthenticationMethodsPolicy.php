@@ -3,28 +3,17 @@
 namespace Microsoft\Graph\Generated\Models;
 
 use DateTime;
-use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
-use Microsoft\Kiota\Abstractions\Store\BackedModel;
-use Microsoft\Kiota\Abstractions\Store\BackingStore;
-use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class AuthenticationMethodsPolicy extends Entity implements AdditionalDataHolder, BackedModel, Parsable 
+class AuthenticationMethodsPolicy extends Entity implements Parsable 
 {
-    /**
-     * @var BackingStore $backingStore Stores model information.
-    */
-    private BackingStore $backingStore;
-    
     /**
      * Instantiates a new authenticationMethodsPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
-        $this->setAdditionalData([]);
     }
 
     /**
@@ -37,27 +26,11 @@ class AuthenticationMethodsPolicy extends Entity implements AdditionalDataHolder
     }
 
     /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return array<string, mixed>
-    */
-    public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
-    }
-
-    /**
      * Gets the authenticationMethodConfigurations property value. Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
      * @return array<AuthenticationMethodConfiguration>|null
     */
     public function getAuthenticationMethodConfigurations(): ?array {
         return $this->getBackingStore()->get('authenticationMethodConfigurations');
-    }
-
-    /**
-     * Gets the backingStore property value. Stores model information.
-     * @return BackingStore
-    */
-    public function getBackingStore(): BackingStore {
-        return $this->backingStore;
     }
 
     /**
@@ -138,15 +111,6 @@ class AuthenticationMethodsPolicy extends Entity implements AdditionalDataHolder
         $writer->writeStringValue('policyVersion', $this->getPolicyVersion());
         $writer->writeIntegerValue('reconfirmationInDays', $this->getReconfirmationInDays());
         $writer->writeObjectValue('registrationEnforcement', $this->getRegistrationEnforcement());
-        $writer->writeAdditionalData($this->getAdditionalData());
-    }
-
-    /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param array<string,mixed> $value Value to set for the AdditionalData property.
-    */
-    public function setAdditionalData(?array $value): void {
-        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
@@ -155,14 +119,6 @@ class AuthenticationMethodsPolicy extends Entity implements AdditionalDataHolder
     */
     public function setAuthenticationMethodConfigurations(?array $value): void {
         $this->getBackingStore()->set('authenticationMethodConfigurations', $value);
-    }
-
-    /**
-     * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the BackingStore property.
-    */
-    public function setBackingStore(BackingStore $value): void {
-        $this->backingStore = $value;
     }
 
     /**
