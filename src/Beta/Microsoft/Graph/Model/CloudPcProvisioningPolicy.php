@@ -203,6 +203,7 @@ class CloudPcProvisioningPolicy extends Entity
 
     /**
     * Gets the enableSingleSignOn
+    * True if the provisioned Cloud PC can be accessed by single sign-on. False indicates that the provisioned Cloud PC doesn't support this feature. Default value is false. Windows 365 users can use single sign-on to authenticate to Azure Active Directory (Azure AD) with passwordless options (for example, FIDO keys) to access their Cloud PC. Optional.
     *
     * @return bool|null The enableSingleSignOn
     */
@@ -217,6 +218,7 @@ class CloudPcProvisioningPolicy extends Entity
 
     /**
     * Sets the enableSingleSignOn
+    * True if the provisioned Cloud PC can be accessed by single sign-on. False indicates that the provisioned Cloud PC doesn't support this feature. Default value is false. Windows 365 users can use single sign-on to authenticate to Azure Active Directory (Azure AD) with passwordless options (for example, FIDO keys) to access their Cloud PC. Optional.
     *
     * @param bool $val The enableSingleSignOn
     *
@@ -474,6 +476,7 @@ class CloudPcProvisioningPolicy extends Entity
 
     /**
     * Gets the provisioningType
+    * Specifies the type of license used when provisioning Cloud PCs using this policy. By default, the license type is dedicated if the provisioningType isn't specified when you create the cloudPcProvisioningPolicy. You can't change this property after the cloudPcProvisioningPolicy was created. Possible values are: dedicated, shared, unknownFutureValue.
     *
     * @return CloudPcProvisioningType|null The provisioningType
     */
@@ -492,6 +495,7 @@ class CloudPcProvisioningPolicy extends Entity
 
     /**
     * Sets the provisioningType
+    * Specifies the type of license used when provisioning Cloud PCs using this policy. By default, the license type is dedicated if the provisioningType isn't specified when you create the cloudPcProvisioningPolicy. You can't change this property after the cloudPcProvisioningPolicy was created. Possible values are: dedicated, shared, unknownFutureValue.
     *
     * @param CloudPcProvisioningType $val The provisioningType
     *
@@ -539,7 +543,7 @@ class CloudPcProvisioningPolicy extends Entity
 
      /**
      * Gets the assignments
-    * A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. See an example of getting the assignments relationship.
+    * A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. For an example about how to get the assignments relationship, see Get cloudPcProvisioningPolicy.
      *
      * @return array|null The assignments
      */
@@ -554,7 +558,7 @@ class CloudPcProvisioningPolicy extends Entity
 
     /**
     * Sets the assignments
-    * A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. See an example of getting the assignments relationship.
+    * A defined collection of provisioning policy assignments. Represents the set of Microsoft 365 groups and security groups in Azure AD that have provisioning policy assigned. Returned only on $expand. For an example about how to get the assignments relationship, see Get cloudPcProvisioningPolicy.
     *
     * @param CloudPcProvisioningPolicyAssignment[] $val The assignments
     *

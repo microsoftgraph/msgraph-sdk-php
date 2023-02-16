@@ -26,7 +26,7 @@ class CallTranscript extends Entity
 {
     /**
     * Gets the content
-    * A field representing the content of the transcript. Read-only.
+    * A field that represents the content of the transcript. Read-only.
     *
     * @return \GuzzleHttp\Psr7\Stream|null The content
     */
@@ -45,7 +45,7 @@ class CallTranscript extends Entity
 
     /**
     * Sets the content
-    * A field representing the content of the transcript. Read-only.
+    * A field that represents the content of the transcript. Read-only.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The content
     *
@@ -59,7 +59,7 @@ class CallTranscript extends Entity
 
     /**
     * Gets the createdDateTime
-    * Date and time at which the transcript was created. Read-only.
+    * Date and time at which the transcript was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -78,7 +78,7 @@ class CallTranscript extends Entity
 
     /**
     * Sets the createdDateTime
-    * Date and time at which the transcript was created. Read-only.
+    * Date and time at which the transcript was created. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
     *
     * @param \DateTime $val The createdDateTime
     *
