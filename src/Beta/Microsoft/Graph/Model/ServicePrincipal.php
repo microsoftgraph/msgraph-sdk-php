@@ -351,7 +351,7 @@ class ServicePrincipal extends DirectoryObject
 
     /**
     * Gets the customSecurityAttributes
-    * An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith).
+    * An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith). Filter value is case sensitive.
     *
     * @return CustomSecurityAttributeValue|null The customSecurityAttributes
     */
@@ -370,7 +370,7 @@ class ServicePrincipal extends DirectoryObject
 
     /**
     * Sets the customSecurityAttributes
-    * An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith).
+    * An open complex type that holds the value of a custom security attribute that is assigned to a directory object. Nullable. Returned only on $select. Supports $filter (eq, ne, not, startsWith). Filter value is case sensitive.
     *
     * @param CustomSecurityAttributeValue $val The customSecurityAttributes
     *

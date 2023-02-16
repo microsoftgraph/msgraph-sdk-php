@@ -26,6 +26,7 @@ class CloudPcSharedUseServicePlan extends Entity
 {
     /**
     * Gets the displayName
+    * The display name of the shared-use service plan.
     *
     * @return string|null The displayName
     */
@@ -40,6 +41,7 @@ class CloudPcSharedUseServicePlan extends Entity
 
     /**
     * Sets the displayName
+    * The display name of the shared-use service plan.
     *
     * @param string $val The displayName
     *
@@ -53,6 +55,7 @@ class CloudPcSharedUseServicePlan extends Entity
 
     /**
     * Gets the totalCount
+    * Total number of shared-use service plans purchased by the customer.
     *
     * @return int|null The totalCount
     */
@@ -67,6 +70,7 @@ class CloudPcSharedUseServicePlan extends Entity
 
     /**
     * Sets the totalCount
+    * Total number of shared-use service plans purchased by the customer.
     *
     * @param int $val The totalCount
     *
@@ -80,6 +84,7 @@ class CloudPcSharedUseServicePlan extends Entity
 
     /**
     * Gets the usedCount
+    * The number of service plans that the account uses.
     *
     * @return int|null The usedCount
     */
@@ -94,6 +99,7 @@ class CloudPcSharedUseServicePlan extends Entity
 
     /**
     * Sets the usedCount
+    * The number of service plans that the account uses.
     *
     * @param int $val The usedCount
     *

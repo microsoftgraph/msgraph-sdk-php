@@ -236,6 +236,7 @@ class Participant extends Entity
 
     /**
     * Gets the restrictedExperience
+    * Indicates the reason or reasons why media content from this participant is restricted.
     *
     * @return OnlineMeetingRestricted|null The restrictedExperience
     */
@@ -254,6 +255,7 @@ class Participant extends Entity
 
     /**
     * Sets the restrictedExperience
+    * Indicates the reason or reasons why media content from this participant is restricted.
     *
     * @param OnlineMeetingRestricted $val The restrictedExperience
     *
