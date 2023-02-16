@@ -24,4 +24,26 @@ class NotebookItemRequestBuilderGetRequestConfiguration
     */
     public ?NotebookItemRequestBuilderGetQueryParameters $queryParameters = null;
     
+    /**
+     * Instantiates a new NotebookItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return NotebookItemRequestBuilderGetQueryParameters
+    */
+    public static function addQueryParameters(?array $expand = null, ?array $select = null): NotebookItemRequestBuilderGetQueryParameters {
+        return new NotebookItemRequestBuilderGetQueryParameters($expand, $select);
+    }
+
+    /**
+     * Instantiates a new NotebookItemRequestBuilderGetRequestConfiguration and sets the default values.
+     * @param array<array>|null $headers Request headers
+     * @param array<array>|null $options Request options
+     * @param NotebookItemRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public function __construct(?array $headers = null, ?array $options = null, ?NotebookItemRequestBuilderGetQueryParameters $queryParameters = null) {
+        $this->headers = $headers;
+        $this->options = $options;
+        $this->queryParameters = $queryParameters;
+    }
+
 }

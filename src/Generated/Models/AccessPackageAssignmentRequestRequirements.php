@@ -36,7 +36,7 @@ class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder
 
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return array<string, mixed>
+     * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
         return $this->getBackingStore()->get('additionalData');
@@ -72,6 +72,7 @@ class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder
             'policyDescription' => fn(ParseNode $n) => $o->setPolicyDescription($n->getStringValue()),
             'policyDisplayName' => fn(ParseNode $n) => $o->setPolicyDisplayName($n->getStringValue()),
             'policyId' => fn(ParseNode $n) => $o->setPolicyId($n->getStringValue()),
+            'questions' => fn(ParseNode $n) => $o->setQuestions($n->getCollectionOfObjectValues([AccessPackageQuestion::class, 'createFromDiscriminatorValue'])),
             'schedule' => fn(ParseNode $n) => $o->setSchedule($n->getObjectValue([EntitlementManagementSchedule::class, 'createFromDiscriminatorValue'])),
         ];
     }
@@ -125,6 +126,14 @@ class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder
     }
 
     /**
+     * Gets the questions property value. The questions property
+     * @return array<AccessPackageQuestion>|null
+    */
+    public function getQuestions(): ?array {
+        return $this->getBackingStore()->get('questions');
+    }
+
+    /**
      * Gets the schedule property value. Schedule restrictions enforced, if any.
      * @return EntitlementManagementSchedule|null
     */
@@ -144,6 +153,7 @@ class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder
         $writer->writeStringValue('policyDescription', $this->getPolicyDescription());
         $writer->writeStringValue('policyDisplayName', $this->getPolicyDisplayName());
         $writer->writeStringValue('policyId', $this->getPolicyId());
+        $writer->writeCollectionOfObjectValues('questions', $this->getQuestions());
         $writer->writeObjectValue('schedule', $this->getSchedule());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
@@ -218,6 +228,14 @@ class AccessPackageAssignmentRequestRequirements implements AdditionalDataHolder
     */
     public function setPolicyId(?string $value): void {
         $this->getBackingStore()->set('policyId', $value);
+    }
+
+    /**
+     * Sets the questions property value. The questions property
+     * @param array<AccessPackageQuestion>|null $value Value to set for the questions property.
+    */
+    public function setQuestions(?array $value): void {
+        $this->getBackingStore()->set('questions', $value);
     }
 
     /**

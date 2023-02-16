@@ -24,4 +24,26 @@ class FilterRequestBuilderGetRequestConfiguration
     */
     public ?FilterRequestBuilderGetQueryParameters $queryParameters = null;
     
+    /**
+     * Instantiates a new filterRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return FilterRequestBuilderGetQueryParameters
+    */
+    public static function addQueryParameters(?array $expand = null, ?array $select = null): FilterRequestBuilderGetQueryParameters {
+        return new FilterRequestBuilderGetQueryParameters($expand, $select);
+    }
+
+    /**
+     * Instantiates a new filterRequestBuilderGetRequestConfiguration and sets the default values.
+     * @param array<array>|null $headers Request headers
+     * @param array<array>|null $options Request options
+     * @param FilterRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public function __construct(?array $headers = null, ?array $options = null, ?FilterRequestBuilderGetQueryParameters $queryParameters = null) {
+        $this->headers = $headers;
+        $this->options = $options;
+        $this->queryParameters = $queryParameters;
+    }
+
 }

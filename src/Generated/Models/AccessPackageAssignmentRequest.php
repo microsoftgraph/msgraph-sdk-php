@@ -34,6 +34,14 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     }
 
     /**
+     * Gets the answers property value. Answers provided by the requestor to accessPackageQuestions asked of them at the time of request.
+     * @return array<AccessPackageAnswer>|null
+    */
+    public function getAnswers(): ?array {
+        return $this->getBackingStore()->get('answers');
+    }
+
+    /**
      * Gets the assignment property value. For a requestType of userAdd or adminAdd, this is an access package assignment requested to be created.  For a requestType of userRemove, adminRemove or systemRemove, this has the id property of an existing assignment to be removed.   Supports $expand.
      * @return AccessPackageAssignment|null
     */
@@ -65,6 +73,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'accessPackage' => fn(ParseNode $n) => $o->setAccessPackage($n->getObjectValue([AccessPackage::class, 'createFromDiscriminatorValue'])),
+            'answers' => fn(ParseNode $n) => $o->setAnswers($n->getCollectionOfObjectValues([AccessPackageAnswer::class, 'createFromDiscriminatorValue'])),
             'assignment' => fn(ParseNode $n) => $o->setAssignment($n->getObjectValue([AccessPackageAssignment::class, 'createFromDiscriminatorValue'])),
             'completedDateTime' => fn(ParseNode $n) => $o->setCompletedDateTime($n->getDateTimeValue()),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
@@ -123,6 +132,7 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeObjectValue('accessPackage', $this->getAccessPackage());
+        $writer->writeCollectionOfObjectValues('answers', $this->getAnswers());
         $writer->writeObjectValue('assignment', $this->getAssignment());
         $writer->writeDateTimeValue('completedDateTime', $this->getCompletedDateTime());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
@@ -139,6 +149,14 @@ class AccessPackageAssignmentRequest extends Entity implements Parsable
     */
     public function setAccessPackage(?AccessPackage $value): void {
         $this->getBackingStore()->set('accessPackage', $value);
+    }
+
+    /**
+     * Sets the answers property value. Answers provided by the requestor to accessPackageQuestions asked of them at the time of request.
+     * @param array<AccessPackageAnswer>|null $value Value to set for the answers property.
+    */
+    public function setAnswers(?array $value): void {
+        $this->getBackingStore()->set('answers', $value);
     }
 
     /**

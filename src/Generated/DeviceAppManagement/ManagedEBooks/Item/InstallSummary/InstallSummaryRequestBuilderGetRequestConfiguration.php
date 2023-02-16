@@ -24,4 +24,26 @@ class InstallSummaryRequestBuilderGetRequestConfiguration
     */
     public ?InstallSummaryRequestBuilderGetQueryParameters $queryParameters = null;
     
+    /**
+     * Instantiates a new installSummaryRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return InstallSummaryRequestBuilderGetQueryParameters
+    */
+    public static function addQueryParameters(?array $expand = null, ?array $select = null): InstallSummaryRequestBuilderGetQueryParameters {
+        return new InstallSummaryRequestBuilderGetQueryParameters($expand, $select);
+    }
+
+    /**
+     * Instantiates a new installSummaryRequestBuilderGetRequestConfiguration and sets the default values.
+     * @param array<array>|null $headers Request headers
+     * @param array<array>|null $options Request options
+     * @param InstallSummaryRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public function __construct(?array $headers = null, ?array $options = null, ?InstallSummaryRequestBuilderGetQueryParameters $queryParameters = null) {
+        $this->headers = $headers;
+        $this->options = $options;
+        $this->queryParameters = $queryParameters;
+    }
+
 }

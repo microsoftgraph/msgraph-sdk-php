@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CloudCommunications extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new cloudCommunications and sets the default values.
+     * Instantiates a new CloudCommunications and sets the default values.
     */
     public function __construct() {
         parent::__construct();

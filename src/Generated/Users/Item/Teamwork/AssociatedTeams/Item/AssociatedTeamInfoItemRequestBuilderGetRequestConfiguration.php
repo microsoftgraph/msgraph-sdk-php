@@ -24,4 +24,26 @@ class AssociatedTeamInfoItemRequestBuilderGetRequestConfiguration
     */
     public ?AssociatedTeamInfoItemRequestBuilderGetQueryParameters $queryParameters = null;
     
+    /**
+     * Instantiates a new AssociatedTeamInfoItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return AssociatedTeamInfoItemRequestBuilderGetQueryParameters
+    */
+    public static function addQueryParameters(?array $expand = null, ?array $select = null): AssociatedTeamInfoItemRequestBuilderGetQueryParameters {
+        return new AssociatedTeamInfoItemRequestBuilderGetQueryParameters($expand, $select);
+    }
+
+    /**
+     * Instantiates a new AssociatedTeamInfoItemRequestBuilderGetRequestConfiguration and sets the default values.
+     * @param array<array>|null $headers Request headers
+     * @param array<array>|null $options Request options
+     * @param AssociatedTeamInfoItemRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public function __construct(?array $headers = null, ?array $options = null, ?AssociatedTeamInfoItemRequestBuilderGetQueryParameters $queryParameters = null) {
+        $this->headers = $headers;
+        $this->options = $options;
+        $this->queryParameters = $queryParameters;
+    }
+
 }

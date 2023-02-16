@@ -105,6 +105,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'expiration' => fn(ParseNode $n) => $o->setExpiration($n->getObjectValue([ExpirationPattern::class, 'createFromDiscriminatorValue'])),
             'modifiedDateTime' => fn(ParseNode $n) => $o->setModifiedDateTime($n->getDateTimeValue()),
+            'questions' => fn(ParseNode $n) => $o->setQuestions($n->getCollectionOfObjectValues([AccessPackageQuestion::class, 'createFromDiscriminatorValue'])),
             'requestApprovalSettings' => fn(ParseNode $n) => $o->setRequestApprovalSettings($n->getObjectValue([AccessPackageAssignmentApprovalSettings::class, 'createFromDiscriminatorValue'])),
             'requestorSettings' => fn(ParseNode $n) => $o->setRequestorSettings($n->getObjectValue([AccessPackageAssignmentRequestorSettings::class, 'createFromDiscriminatorValue'])),
             'reviewSettings' => fn(ParseNode $n) => $o->setReviewSettings($n->getObjectValue([AccessPackageAssignmentReviewSettings::class, 'createFromDiscriminatorValue'])),
@@ -118,6 +119,14 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     */
     public function getModifiedDateTime(): ?DateTime {
         return $this->getBackingStore()->get('modifiedDateTime');
+    }
+
+    /**
+     * Gets the questions property value. The questions property
+     * @return array<AccessPackageQuestion>|null
+    */
+    public function getQuestions(): ?array {
+        return $this->getBackingStore()->get('questions');
     }
 
     /**
@@ -167,6 +176,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeObjectValue('expiration', $this->getExpiration());
         $writer->writeDateTimeValue('modifiedDateTime', $this->getModifiedDateTime());
+        $writer->writeCollectionOfObjectValues('questions', $this->getQuestions());
         $writer->writeObjectValue('requestApprovalSettings', $this->getRequestApprovalSettings());
         $writer->writeObjectValue('requestorSettings', $this->getRequestorSettings());
         $writer->writeObjectValue('reviewSettings', $this->getReviewSettings());
@@ -243,6 +253,14 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     */
     public function setModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('modifiedDateTime', $value);
+    }
+
+    /**
+     * Sets the questions property value. The questions property
+     * @param array<AccessPackageQuestion>|null $value Value to set for the questions property.
+    */
+    public function setQuestions(?array $value): void {
+        $this->getBackingStore()->set('questions', $value);
     }
 
     /**

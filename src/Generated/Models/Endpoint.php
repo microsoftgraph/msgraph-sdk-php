@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Endpoint extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new Endpoint and sets the default values.
+     * Instantiates a new endpoint and sets the default values.
     */
     public function __construct() {
         parent::__construct();

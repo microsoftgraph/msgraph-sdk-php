@@ -7,6 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\Item\AssignmentPolicies\Item\AccessPackage\AccessPackageRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\Item\AssignmentPolicies\Item\Catalog\CatalogRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\Item\AssignmentPolicies\Item\Questions\Item\AccessPackageQuestionItemRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\Item\AssignmentPolicies\Item\Questions\QuestionsRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessPackageAssignmentPolicy;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -39,6 +41,13 @@ class AccessPackageAssignmentPolicyItemRequestBuilder
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * Provides operations to manage the questions property of the microsoft.graph.accessPackageAssignmentPolicy entity.
+    */
+    public function questions(): QuestionsRequestBuilder {
+        return new QuestionsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -118,6 +127,17 @@ class AccessPackageAssignmentPolicyItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
+    }
+
+    /**
+     * Provides operations to manage the questions property of the microsoft.graph.accessPackageAssignmentPolicy entity.
+     * @param string $id Unique identifier of the item
+     * @return AccessPackageQuestionItemRequestBuilder
+    */
+    public function questionsById(string $id): AccessPackageQuestionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['accessPackageQuestion%2Did'] = $id;
+        return new AccessPackageQuestionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

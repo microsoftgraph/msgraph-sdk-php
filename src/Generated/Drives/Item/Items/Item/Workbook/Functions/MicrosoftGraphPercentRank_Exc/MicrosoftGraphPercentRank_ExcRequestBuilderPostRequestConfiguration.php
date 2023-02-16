@@ -19,4 +19,14 @@ class MicrosoftGraphPercentRank_ExcRequestBuilderPostRequestConfiguration
     */
     public ?array $options = null;
     
+    /**
+     * Instantiates a new microsoftGraphPercentRank_ExcRequestBuilderPostRequestConfiguration and sets the default values.
+     * @param array<array>|null $headers Request headers
+     * @param array<array>|null $options Request options
+    */
+    public function __construct(?array $headers = null, ?array $options = null) {
+        $this->headers = $headers;
+        $this->options = $options;
+    }
+
 }

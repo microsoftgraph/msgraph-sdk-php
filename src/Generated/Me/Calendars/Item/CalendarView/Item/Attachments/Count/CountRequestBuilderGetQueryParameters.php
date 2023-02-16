@@ -15,4 +15,12 @@ class CountRequestBuilderGetQueryParameters
     */
     public ?string $filter = null;
     
+    /**
+     * Instantiates a new CountRequestBuilderGetQueryParameters and sets the default values.
+     * @param string|null $filter Filter items by property values
+    */
+    public function __construct(?string $filter = null) {
+        $this->filter = $filter;
+    }
+
 }

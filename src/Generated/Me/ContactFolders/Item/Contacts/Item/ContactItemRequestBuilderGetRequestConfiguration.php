@@ -24,4 +24,26 @@ class ContactItemRequestBuilderGetRequestConfiguration
     */
     public ?ContactItemRequestBuilderGetQueryParameters $queryParameters = null;
     
+    /**
+     * Instantiates a new ContactItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return ContactItemRequestBuilderGetQueryParameters
+    */
+    public static function addQueryParameters(?array $expand = null, ?array $select = null): ContactItemRequestBuilderGetQueryParameters {
+        return new ContactItemRequestBuilderGetQueryParameters($expand, $select);
+    }
+
+    /**
+     * Instantiates a new ContactItemRequestBuilderGetRequestConfiguration and sets the default values.
+     * @param array<array>|null $headers Request headers
+     * @param array<array>|null $options Request options
+     * @param ContactItemRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public function __construct(?array $headers = null, ?array $options = null, ?ContactItemRequestBuilderGetQueryParameters $queryParameters = null) {
+        $this->headers = $headers;
+        $this->options = $options;
+        $this->queryParameters = $queryParameters;
+    }
+
 }

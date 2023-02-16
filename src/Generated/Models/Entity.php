@@ -83,7 +83,10 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.accessPackageAssignmentPolicy': return new AccessPackageAssignmentPolicy();
                 case '#microsoft.graph.accessPackageAssignmentRequest': return new AccessPackageAssignmentRequest();
                 case '#microsoft.graph.accessPackageCatalog': return new AccessPackageCatalog();
+                case '#microsoft.graph.accessPackageMultipleChoiceQuestion': return new AccessPackageMultipleChoiceQuestion();
+                case '#microsoft.graph.accessPackageQuestion': return new AccessPackageQuestion();
                 case '#microsoft.graph.accessPackageSubject': return new AccessPackageSubject();
+                case '#microsoft.graph.accessPackageTextInputQuestion': return new AccessPackageTextInputQuestion();
                 case '#microsoft.graph.accessReviewHistoryDefinition': return new AccessReviewHistoryDefinition();
                 case '#microsoft.graph.accessReviewHistoryInstance': return new AccessReviewHistoryInstance();
                 case '#microsoft.graph.accessReviewInstance': return new AccessReviewInstance();
@@ -734,7 +737,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return array<string, mixed>
+     * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
         return $this->getBackingStore()->get('additionalData');

@@ -2,29 +2,18 @@
 
 namespace Microsoft\Graph\Generated\Models;
 
-use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
-use Microsoft\Kiota\Abstractions\Store\BackedModel;
-use Microsoft\Kiota\Abstractions\Store\BackingStore;
-use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 use Psr\Http\Message\StreamInterface;
 
-class OrganizationalBrandingProperties extends Entity implements AdditionalDataHolder, BackedModel, Parsable 
+class OrganizationalBrandingProperties extends Entity implements Parsable 
 {
-    /**
-     * @var BackingStore $backingStore Stores model information.
-    */
-    private BackingStore $backingStore;
-    
     /**
      * Instantiates a new organizationalBrandingProperties and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
-        $this->setAdditionalData([]);
     }
 
     /**
@@ -42,14 +31,6 @@ class OrganizationalBrandingProperties extends Entity implements AdditionalDataH
             }
         }
         return new OrganizationalBrandingProperties();
-    }
-
-    /**
-     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return array<string, mixed>
-    */
-    public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -74,14 +55,6 @@ class OrganizationalBrandingProperties extends Entity implements AdditionalDataH
     */
     public function getBackgroundImageRelativeUrl(): ?string {
         return $this->getBackingStore()->get('backgroundImageRelativeUrl');
-    }
-
-    /**
-     * Gets the backingStore property value. Stores model information.
-     * @return BackingStore
-    */
-    public function getBackingStore(): BackingStore {
-        return $this->backingStore;
     }
 
     /**
@@ -176,15 +149,6 @@ class OrganizationalBrandingProperties extends Entity implements AdditionalDataH
         $writer->writeBinaryContent('squareLogo', $this->getSquareLogo());
         $writer->writeStringValue('squareLogoRelativeUrl', $this->getSquareLogoRelativeUrl());
         $writer->writeStringValue('usernameHintText', $this->getUsernameHintText());
-        $writer->writeAdditionalData($this->getAdditionalData());
-    }
-
-    /**
-     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @param array<string,mixed> $value Value to set for the AdditionalData property.
-    */
-    public function setAdditionalData(?array $value): void {
-        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
@@ -209,14 +173,6 @@ class OrganizationalBrandingProperties extends Entity implements AdditionalDataH
     */
     public function setBackgroundImageRelativeUrl(?string $value): void {
         $this->getBackingStore()->set('backgroundImageRelativeUrl', $value);
-    }
-
-    /**
-     * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the BackingStore property.
-    */
-    public function setBackingStore(BackingStore $value): void {
-        $this->backingStore = $value;
     }
 
     /**

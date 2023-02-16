@@ -24,4 +24,26 @@ class CreatedOnBehalfOfRequestBuilderGetRequestConfiguration
     */
     public ?CreatedOnBehalfOfRequestBuilderGetQueryParameters $queryParameters = null;
     
+    /**
+     * Instantiates a new createdOnBehalfOfRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return CreatedOnBehalfOfRequestBuilderGetQueryParameters
+    */
+    public static function addQueryParameters(?array $expand = null, ?array $select = null): CreatedOnBehalfOfRequestBuilderGetQueryParameters {
+        return new CreatedOnBehalfOfRequestBuilderGetQueryParameters($expand, $select);
+    }
+
+    /**
+     * Instantiates a new createdOnBehalfOfRequestBuilderGetRequestConfiguration and sets the default values.
+     * @param array<array>|null $headers Request headers
+     * @param array<array>|null $options Request options
+     * @param CreatedOnBehalfOfRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public function __construct(?array $headers = null, ?array $options = null, ?CreatedOnBehalfOfRequestBuilderGetQueryParameters $queryParameters = null) {
+        $this->headers = $headers;
+        $this->options = $options;
+        $this->queryParameters = $queryParameters;
+    }
+
 }

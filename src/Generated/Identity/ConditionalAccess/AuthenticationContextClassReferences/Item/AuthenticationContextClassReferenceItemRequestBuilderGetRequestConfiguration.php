@@ -24,4 +24,26 @@ class AuthenticationContextClassReferenceItemRequestBuilderGetRequestConfigurati
     */
     public ?AuthenticationContextClassReferenceItemRequestBuilderGetQueryParameters $queryParameters = null;
     
+    /**
+     * Instantiates a new AuthenticationContextClassReferenceItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return AuthenticationContextClassReferenceItemRequestBuilderGetQueryParameters
+    */
+    public static function addQueryParameters(?array $expand = null, ?array $select = null): AuthenticationContextClassReferenceItemRequestBuilderGetQueryParameters {
+        return new AuthenticationContextClassReferenceItemRequestBuilderGetQueryParameters($expand, $select);
+    }
+
+    /**
+     * Instantiates a new AuthenticationContextClassReferenceItemRequestBuilderGetRequestConfiguration and sets the default values.
+     * @param array<array>|null $headers Request headers
+     * @param array<array>|null $options Request options
+     * @param AuthenticationContextClassReferenceItemRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public function __construct(?array $headers = null, ?array $options = null, ?AuthenticationContextClassReferenceItemRequestBuilderGetQueryParameters $queryParameters = null) {
+        $this->headers = $headers;
+        $this->options = $options;
+        $this->queryParameters = $queryParameters;
+    }
+
 }

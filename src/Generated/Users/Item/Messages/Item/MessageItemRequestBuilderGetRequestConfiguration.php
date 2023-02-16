@@ -24,4 +24,25 @@ class MessageItemRequestBuilderGetRequestConfiguration
     */
     public ?MessageItemRequestBuilderGetQueryParameters $queryParameters = null;
     
+    /**
+     * Instantiates a new MessageItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $select Select properties to be returned
+     * @return MessageItemRequestBuilderGetQueryParameters
+    */
+    public static function addQueryParameters(?array $select = null): MessageItemRequestBuilderGetQueryParameters {
+        return new MessageItemRequestBuilderGetQueryParameters($select);
+    }
+
+    /**
+     * Instantiates a new MessageItemRequestBuilderGetRequestConfiguration and sets the default values.
+     * @param array<array>|null $headers Request headers
+     * @param array<array>|null $options Request options
+     * @param MessageItemRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public function __construct(?array $headers = null, ?array $options = null, ?MessageItemRequestBuilderGetQueryParameters $queryParameters = null) {
+        $this->headers = $headers;
+        $this->options = $options;
+        $this->queryParameters = $queryParameters;
+    }
+
 }
