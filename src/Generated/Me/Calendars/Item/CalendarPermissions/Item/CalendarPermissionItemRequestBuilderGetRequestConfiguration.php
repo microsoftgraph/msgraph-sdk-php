@@ -24,4 +24,25 @@ class CalendarPermissionItemRequestBuilderGetRequestConfiguration
     */
     public ?CalendarPermissionItemRequestBuilderGetQueryParameters $queryParameters = null;
     
+    /**
+     * Instantiates a new CalendarPermissionItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $select Select properties to be returned
+     * @return CalendarPermissionItemRequestBuilderGetQueryParameters
+    */
+    public static function addQueryParameters(?array $select = null): CalendarPermissionItemRequestBuilderGetQueryParameters {
+        return new CalendarPermissionItemRequestBuilderGetQueryParameters($select);
+    }
+
+    /**
+     * Instantiates a new CalendarPermissionItemRequestBuilderGetRequestConfiguration and sets the default values.
+     * @param array<array>|null $headers Request headers
+     * @param array<array>|null $options Request options
+     * @param CalendarPermissionItemRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public function __construct(?array $headers = null, ?array $options = null, ?CalendarPermissionItemRequestBuilderGetQueryParameters $queryParameters = null) {
+        $this->headers = $headers;
+        $this->options = $options;
+        $this->queryParameters = $queryParameters;
+    }
+
 }

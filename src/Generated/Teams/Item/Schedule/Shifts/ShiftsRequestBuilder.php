@@ -78,7 +78,7 @@ class ShiftsRequestBuilder
     }
 
     /**
-     * Create a new shift instance in a schedule.
+     * Create a new shift instance in a schedule. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
      * @param Shift $body The request body
      * @param ShiftsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -123,7 +123,7 @@ class ShiftsRequestBuilder
     }
 
     /**
-     * Create a new shift instance in a schedule.
+     * Create a new shift instance in a schedule. The duration of a shift cannot be less than 1 minute or longer than 24 hours.
      * @param Shift $body The request body
      * @param ShiftsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

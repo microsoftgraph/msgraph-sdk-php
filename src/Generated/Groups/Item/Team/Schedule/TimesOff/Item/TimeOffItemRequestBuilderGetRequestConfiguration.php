@@ -24,4 +24,25 @@ class TimeOffItemRequestBuilderGetRequestConfiguration
     */
     public ?TimeOffItemRequestBuilderGetQueryParameters $queryParameters = null;
     
+    /**
+     * Instantiates a new TimeOffItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $select Select properties to be returned
+     * @return TimeOffItemRequestBuilderGetQueryParameters
+    */
+    public static function addQueryParameters(?array $select = null): TimeOffItemRequestBuilderGetQueryParameters {
+        return new TimeOffItemRequestBuilderGetQueryParameters($select);
+    }
+
+    /**
+     * Instantiates a new TimeOffItemRequestBuilderGetRequestConfiguration and sets the default values.
+     * @param array<array>|null $headers Request headers
+     * @param array<array>|null $options Request options
+     * @param TimeOffItemRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public function __construct(?array $headers = null, ?array $options = null, ?TimeOffItemRequestBuilderGetQueryParameters $queryParameters = null) {
+        $this->headers = $headers;
+        $this->options = $options;
+        $this->queryParameters = $queryParameters;
+    }
+
 }

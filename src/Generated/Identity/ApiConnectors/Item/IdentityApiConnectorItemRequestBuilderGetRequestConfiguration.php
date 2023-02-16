@@ -24,4 +24,26 @@ class IdentityApiConnectorItemRequestBuilderGetRequestConfiguration
     */
     public ?IdentityApiConnectorItemRequestBuilderGetQueryParameters $queryParameters = null;
     
+    /**
+     * Instantiates a new IdentityApiConnectorItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return IdentityApiConnectorItemRequestBuilderGetQueryParameters
+    */
+    public static function addQueryParameters(?array $expand = null, ?array $select = null): IdentityApiConnectorItemRequestBuilderGetQueryParameters {
+        return new IdentityApiConnectorItemRequestBuilderGetQueryParameters($expand, $select);
+    }
+
+    /**
+     * Instantiates a new IdentityApiConnectorItemRequestBuilderGetRequestConfiguration and sets the default values.
+     * @param array<array>|null $headers Request headers
+     * @param array<array>|null $options Request options
+     * @param IdentityApiConnectorItemRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public function __construct(?array $headers = null, ?array $options = null, ?IdentityApiConnectorItemRequestBuilderGetQueryParameters $queryParameters = null) {
+        $this->headers = $headers;
+        $this->options = $options;
+        $this->queryParameters = $queryParameters;
+    }
+
 }

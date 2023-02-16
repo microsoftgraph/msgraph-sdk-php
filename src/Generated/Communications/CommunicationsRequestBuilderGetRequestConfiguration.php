@@ -24,4 +24,26 @@ class CommunicationsRequestBuilderGetRequestConfiguration
     */
     public ?CommunicationsRequestBuilderGetQueryParameters $queryParameters = null;
     
+    /**
+     * Instantiates a new communicationsRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return CommunicationsRequestBuilderGetQueryParameters
+    */
+    public static function addQueryParameters(?array $expand = null, ?array $select = null): CommunicationsRequestBuilderGetQueryParameters {
+        return new CommunicationsRequestBuilderGetQueryParameters($expand, $select);
+    }
+
+    /**
+     * Instantiates a new communicationsRequestBuilderGetRequestConfiguration and sets the default values.
+     * @param array<array>|null $headers Request headers
+     * @param array<array>|null $options Request options
+     * @param CommunicationsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public function __construct(?array $headers = null, ?array $options = null, ?CommunicationsRequestBuilderGetQueryParameters $queryParameters = null) {
+        $this->headers = $headers;
+        $this->options = $options;
+        $this->queryParameters = $queryParameters;
+    }
+
 }

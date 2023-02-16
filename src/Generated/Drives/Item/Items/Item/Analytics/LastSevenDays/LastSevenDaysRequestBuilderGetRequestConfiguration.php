@@ -24,4 +24,26 @@ class LastSevenDaysRequestBuilderGetRequestConfiguration
     */
     public ?LastSevenDaysRequestBuilderGetQueryParameters $queryParameters = null;
     
+    /**
+     * Instantiates a new lastSevenDaysRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return LastSevenDaysRequestBuilderGetQueryParameters
+    */
+    public static function addQueryParameters(?array $expand = null, ?array $select = null): LastSevenDaysRequestBuilderGetQueryParameters {
+        return new LastSevenDaysRequestBuilderGetQueryParameters($expand, $select);
+    }
+
+    /**
+     * Instantiates a new lastSevenDaysRequestBuilderGetRequestConfiguration and sets the default values.
+     * @param array<array>|null $headers Request headers
+     * @param array<array>|null $options Request options
+     * @param LastSevenDaysRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public function __construct(?array $headers = null, ?array $options = null, ?LastSevenDaysRequestBuilderGetQueryParameters $queryParameters = null) {
+        $this->headers = $headers;
+        $this->options = $options;
+        $this->queryParameters = $queryParameters;
+    }
+
 }

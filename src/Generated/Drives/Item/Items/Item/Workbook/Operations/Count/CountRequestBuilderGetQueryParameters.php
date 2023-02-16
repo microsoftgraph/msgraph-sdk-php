@@ -15,4 +15,12 @@ class CountRequestBuilderGetQueryParameters
     */
     public ?string $search = null;
     
+    /**
+     * Instantiates a new CountRequestBuilderGetQueryParameters and sets the default values.
+     * @param string|null $search Search items by search phrases
+    */
+    public function __construct(?string $search = null) {
+        $this->search = $search;
+    }
+
 }

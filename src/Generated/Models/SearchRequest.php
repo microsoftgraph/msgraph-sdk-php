@@ -36,7 +36,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
-     * @return array<string, mixed>
+     * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
         return $this->getBackingStore()->get('additionalData');
@@ -107,7 +107,9 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'query' => fn(ParseNode $n) => $o->setQuery($n->getObjectValue([SearchQuery::class, 'createFromDiscriminatorValue'])),
             'queryAlterationOptions' => fn(ParseNode $n) => $o->setQueryAlterationOptions($n->getObjectValue([SearchAlterationOptions::class, 'createFromDiscriminatorValue'])),
+            'region' => fn(ParseNode $n) => $o->setRegion($n->getStringValue()),
             'resultTemplateOptions' => fn(ParseNode $n) => $o->setResultTemplateOptions($n->getObjectValue([ResultTemplateOption::class, 'createFromDiscriminatorValue'])),
+            'sharePointOneDriveOptions' => fn(ParseNode $n) => $o->setSharePointOneDriveOptions($n->getObjectValue([SharePointOneDriveOptions::class, 'createFromDiscriminatorValue'])),
             'size' => fn(ParseNode $n) => $o->setSize($n->getIntegerValue()),
             'sortProperties' => fn(ParseNode $n) => $o->setSortProperties($n->getCollectionOfObjectValues([SortProperty::class, 'createFromDiscriminatorValue'])),
         ];
@@ -154,11 +156,27 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the region property value. The region property
+     * @return string|null
+    */
+    public function getRegion(): ?string {
+        return $this->getBackingStore()->get('region');
+    }
+
+    /**
      * Gets the resultTemplateOptions property value. The resultTemplateOptions property
      * @return ResultTemplateOption|null
     */
     public function getResultTemplateOptions(): ?ResultTemplateOption {
         return $this->getBackingStore()->get('resultTemplateOptions');
+    }
+
+    /**
+     * Gets the sharePointOneDriveOptions property value. The sharePointOneDriveOptions property
+     * @return SharePointOneDriveOptions|null
+    */
+    public function getSharePointOneDriveOptions(): ?SharePointOneDriveOptions {
+        return $this->getBackingStore()->get('sharePointOneDriveOptions');
     }
 
     /**
@@ -192,7 +210,9 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('query', $this->getQuery());
         $writer->writeObjectValue('queryAlterationOptions', $this->getQueryAlterationOptions());
+        $writer->writeStringValue('region', $this->getRegion());
         $writer->writeObjectValue('resultTemplateOptions', $this->getResultTemplateOptions());
+        $writer->writeObjectValue('sharePointOneDriveOptions', $this->getSharePointOneDriveOptions());
         $writer->writeIntegerValue('size', $this->getSize());
         $writer->writeCollectionOfObjectValues('sortProperties', $this->getSortProperties());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -295,11 +315,27 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Sets the region property value. The region property
+     * @param string|null $value Value to set for the region property.
+    */
+    public function setRegion(?string $value): void {
+        $this->getBackingStore()->set('region', $value);
+    }
+
+    /**
      * Sets the resultTemplateOptions property value. The resultTemplateOptions property
      * @param ResultTemplateOption|null $value Value to set for the resultTemplateOptions property.
     */
     public function setResultTemplateOptions(?ResultTemplateOption $value): void {
         $this->getBackingStore()->set('resultTemplateOptions', $value);
+    }
+
+    /**
+     * Sets the sharePointOneDriveOptions property value. The sharePointOneDriveOptions property
+     * @param SharePointOneDriveOptions|null $value Value to set for the sharePointOneDriveOptions property.
+    */
+    public function setSharePointOneDriveOptions(?SharePointOneDriveOptions $value): void {
+        $this->getBackingStore()->set('sharePointOneDriveOptions', $value);
     }
 
     /**

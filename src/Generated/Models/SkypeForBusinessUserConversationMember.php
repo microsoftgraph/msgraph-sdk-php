@@ -38,7 +38,7 @@ class SkypeForBusinessUserConversationMember extends ConversationMember implemen
     }
 
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. ID of the tenant that the user belongs to.
      * @return string|null
     */
     public function getTenantId(): ?string {
@@ -46,7 +46,7 @@ class SkypeForBusinessUserConversationMember extends ConversationMember implemen
     }
 
     /**
-     * Gets the userId property value. The userId property
+     * Gets the userId property value. Azure Active Directory ID of the user.
      * @return string|null
     */
     public function getUserId(): ?string {
@@ -64,7 +64,7 @@ class SkypeForBusinessUserConversationMember extends ConversationMember implemen
     }
 
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. ID of the tenant that the user belongs to.
      * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {
@@ -72,7 +72,7 @@ class SkypeForBusinessUserConversationMember extends ConversationMember implemen
     }
 
     /**
-     * Sets the userId property value. The userId property
+     * Sets the userId property value. Azure Active Directory ID of the user.
      * @param string|null $value Value to set for the userId property.
     */
     public function setUserId(?string $value): void {

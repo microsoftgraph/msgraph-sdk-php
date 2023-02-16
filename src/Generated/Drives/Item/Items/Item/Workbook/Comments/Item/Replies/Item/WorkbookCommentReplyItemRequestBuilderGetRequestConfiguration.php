@@ -24,4 +24,26 @@ class WorkbookCommentReplyItemRequestBuilderGetRequestConfiguration
     */
     public ?WorkbookCommentReplyItemRequestBuilderGetQueryParameters $queryParameters = null;
     
+    /**
+     * Instantiates a new WorkbookCommentReplyItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return WorkbookCommentReplyItemRequestBuilderGetQueryParameters
+    */
+    public static function addQueryParameters(?array $expand = null, ?array $select = null): WorkbookCommentReplyItemRequestBuilderGetQueryParameters {
+        return new WorkbookCommentReplyItemRequestBuilderGetQueryParameters($expand, $select);
+    }
+
+    /**
+     * Instantiates a new WorkbookCommentReplyItemRequestBuilderGetRequestConfiguration and sets the default values.
+     * @param array<array>|null $headers Request headers
+     * @param array<array>|null $options Request options
+     * @param WorkbookCommentReplyItemRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public function __construct(?array $headers = null, ?array $options = null, ?WorkbookCommentReplyItemRequestBuilderGetQueryParameters $queryParameters = null) {
+        $this->headers = $headers;
+        $this->options = $options;
+        $this->queryParameters = $queryParameters;
+    }
+
 }

@@ -24,4 +24,26 @@ class DataSourceRequestBuilderGetRequestConfiguration
     */
     public ?DataSourceRequestBuilderGetQueryParameters $queryParameters = null;
     
+    /**
+     * Instantiates a new dataSourceRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return DataSourceRequestBuilderGetQueryParameters
+    */
+    public static function addQueryParameters(?array $expand = null, ?array $select = null): DataSourceRequestBuilderGetQueryParameters {
+        return new DataSourceRequestBuilderGetQueryParameters($expand, $select);
+    }
+
+    /**
+     * Instantiates a new dataSourceRequestBuilderGetRequestConfiguration and sets the default values.
+     * @param array<array>|null $headers Request headers
+     * @param array<array>|null $options Request options
+     * @param DataSourceRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public function __construct(?array $headers = null, ?array $options = null, ?DataSourceRequestBuilderGetQueryParameters $queryParameters = null) {
+        $this->headers = $headers;
+        $this->options = $options;
+        $this->queryParameters = $queryParameters;
+    }
+
 }

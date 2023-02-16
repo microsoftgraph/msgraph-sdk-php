@@ -24,4 +24,26 @@ class ServiceAnnouncementRequestBuilderGetRequestConfiguration
     */
     public ?ServiceAnnouncementRequestBuilderGetQueryParameters $queryParameters = null;
     
+    /**
+     * Instantiates a new serviceAnnouncementRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return ServiceAnnouncementRequestBuilderGetQueryParameters
+    */
+    public static function addQueryParameters(?array $expand = null, ?array $select = null): ServiceAnnouncementRequestBuilderGetQueryParameters {
+        return new ServiceAnnouncementRequestBuilderGetQueryParameters($expand, $select);
+    }
+
+    /**
+     * Instantiates a new serviceAnnouncementRequestBuilderGetRequestConfiguration and sets the default values.
+     * @param array<array>|null $headers Request headers
+     * @param array<array>|null $options Request options
+     * @param ServiceAnnouncementRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public function __construct(?array $headers = null, ?array $options = null, ?ServiceAnnouncementRequestBuilderGetQueryParameters $queryParameters = null) {
+        $this->headers = $headers;
+        $this->options = $options;
+        $this->queryParameters = $queryParameters;
+    }
+
 }

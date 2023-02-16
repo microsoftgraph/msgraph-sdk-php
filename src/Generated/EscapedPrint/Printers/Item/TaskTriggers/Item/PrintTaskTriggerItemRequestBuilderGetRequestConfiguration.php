@@ -24,4 +24,26 @@ class PrintTaskTriggerItemRequestBuilderGetRequestConfiguration
     */
     public ?PrintTaskTriggerItemRequestBuilderGetQueryParameters $queryParameters = null;
     
+    /**
+     * Instantiates a new PrintTaskTriggerItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return PrintTaskTriggerItemRequestBuilderGetQueryParameters
+    */
+    public static function addQueryParameters(?array $expand = null, ?array $select = null): PrintTaskTriggerItemRequestBuilderGetQueryParameters {
+        return new PrintTaskTriggerItemRequestBuilderGetQueryParameters($expand, $select);
+    }
+
+    /**
+     * Instantiates a new PrintTaskTriggerItemRequestBuilderGetRequestConfiguration and sets the default values.
+     * @param array<array>|null $headers Request headers
+     * @param array<array>|null $options Request options
+     * @param PrintTaskTriggerItemRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public function __construct(?array $headers = null, ?array $options = null, ?PrintTaskTriggerItemRequestBuilderGetQueryParameters $queryParameters = null) {
+        $this->headers = $headers;
+        $this->options = $options;
+        $this->queryParameters = $queryParameters;
+    }
+
 }

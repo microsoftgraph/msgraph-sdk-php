@@ -19,4 +19,14 @@ class LegendRequestBuilderDeleteRequestConfiguration
     */
     public ?array $options = null;
     
+    /**
+     * Instantiates a new legendRequestBuilderDeleteRequestConfiguration and sets the default values.
+     * @param array<array>|null $headers Request headers
+     * @param array<array>|null $options Request options
+    */
+    public function __construct(?array $headers = null, ?array $options = null) {
+        $this->headers = $headers;
+        $this->options = $options;
+    }
+
 }

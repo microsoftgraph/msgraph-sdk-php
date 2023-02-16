@@ -24,4 +24,26 @@ class DelegatedAdminServiceManagementDetailItemRequestBuilderGetRequestConfigura
     */
     public ?DelegatedAdminServiceManagementDetailItemRequestBuilderGetQueryParameters $queryParameters = null;
     
+    /**
+     * Instantiates a new DelegatedAdminServiceManagementDetailItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return DelegatedAdminServiceManagementDetailItemRequestBuilderGetQueryParameters
+    */
+    public static function addQueryParameters(?array $expand = null, ?array $select = null): DelegatedAdminServiceManagementDetailItemRequestBuilderGetQueryParameters {
+        return new DelegatedAdminServiceManagementDetailItemRequestBuilderGetQueryParameters($expand, $select);
+    }
+
+    /**
+     * Instantiates a new DelegatedAdminServiceManagementDetailItemRequestBuilderGetRequestConfiguration and sets the default values.
+     * @param array<array>|null $headers Request headers
+     * @param array<array>|null $options Request options
+     * @param DelegatedAdminServiceManagementDetailItemRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public function __construct(?array $headers = null, ?array $options = null, ?DelegatedAdminServiceManagementDetailItemRequestBuilderGetQueryParameters $queryParameters = null) {
+        $this->headers = $headers;
+        $this->options = $options;
+        $this->queryParameters = $queryParameters;
+    }
+
 }

@@ -24,4 +24,26 @@ class WorkbookChartSeriesItemRequestBuilderGetRequestConfiguration
     */
     public ?WorkbookChartSeriesItemRequestBuilderGetQueryParameters $queryParameters = null;
     
+    /**
+     * Instantiates a new WorkbookChartSeriesItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return WorkbookChartSeriesItemRequestBuilderGetQueryParameters
+    */
+    public static function addQueryParameters(?array $expand = null, ?array $select = null): WorkbookChartSeriesItemRequestBuilderGetQueryParameters {
+        return new WorkbookChartSeriesItemRequestBuilderGetQueryParameters($expand, $select);
+    }
+
+    /**
+     * Instantiates a new WorkbookChartSeriesItemRequestBuilderGetRequestConfiguration and sets the default values.
+     * @param array<array>|null $headers Request headers
+     * @param array<array>|null $options Request options
+     * @param WorkbookChartSeriesItemRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public function __construct(?array $headers = null, ?array $options = null, ?WorkbookChartSeriesItemRequestBuilderGetQueryParameters $queryParameters = null) {
+        $this->headers = $headers;
+        $this->options = $options;
+        $this->queryParameters = $queryParameters;
+    }
+
 }

@@ -24,4 +24,26 @@ class EdiscoveryCaseItemRequestBuilderGetRequestConfiguration
     */
     public ?EdiscoveryCaseItemRequestBuilderGetQueryParameters $queryParameters = null;
     
+    /**
+     * Instantiates a new EdiscoveryCaseItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return EdiscoveryCaseItemRequestBuilderGetQueryParameters
+    */
+    public static function addQueryParameters(?array $expand = null, ?array $select = null): EdiscoveryCaseItemRequestBuilderGetQueryParameters {
+        return new EdiscoveryCaseItemRequestBuilderGetQueryParameters($expand, $select);
+    }
+
+    /**
+     * Instantiates a new EdiscoveryCaseItemRequestBuilderGetRequestConfiguration and sets the default values.
+     * @param array<array>|null $headers Request headers
+     * @param array<array>|null $options Request options
+     * @param EdiscoveryCaseItemRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public function __construct(?array $headers = null, ?array $options = null, ?EdiscoveryCaseItemRequestBuilderGetQueryParameters $queryParameters = null) {
+        $this->headers = $headers;
+        $this->options = $options;
+        $this->queryParameters = $queryParameters;
+    }
+
 }
