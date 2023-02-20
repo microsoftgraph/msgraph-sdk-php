@@ -31,7 +31,7 @@ class GraphRequestAdapter extends BaseGraphRequestAdapter
      */
     public function __construct(AuthenticationProvider $authenticationProvider, Client $httpClient = null)
     {
-        parent::__construct($authenticationProvider, $this->getTelemetryConfig(), null, null, $httpClient);
+        parent::__construct($this->getTelemetryConfig(), $authenticationProvider, null, null, $httpClient);
     }
 
     /**
