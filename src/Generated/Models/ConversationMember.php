@@ -28,6 +28,7 @@ class ConversationMember extends Entity implements Parsable
             switch ($mappingValue) {
                 case '#microsoft.graph.aadUserConversationMember': return new AadUserConversationMember();
                 case '#microsoft.graph.anonymousGuestConversationMember': return new AnonymousGuestConversationMember();
+                case '#microsoft.graph.azureCommunicationServicesUserConversationMember': return new AzureCommunicationServicesUserConversationMember();
                 case '#microsoft.graph.microsoftAccountUserConversationMember': return new MicrosoftAccountUserConversationMember();
                 case '#microsoft.graph.skypeForBusinessUserConversationMember': return new SkypeForBusinessUserConversationMember();
                 case '#microsoft.graph.skypeUserConversationMember': return new SkypeUserConversationMember();

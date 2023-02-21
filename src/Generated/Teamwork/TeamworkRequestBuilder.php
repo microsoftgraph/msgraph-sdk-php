@@ -7,6 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Teamwork;
+use Microsoft\Graph\Generated\Teamwork\DeletedTeams\DeletedTeamsRequestBuilder;
+use Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\DeletedTeamItemRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\MicrosoftGraphSendActivityNotificationToRecipients\MicrosoftGraphSendActivityNotificationToRecipientsRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\WorkforceIntegrations\Item\WorkforceIntegrationItemRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\WorkforceIntegrations\WorkforceIntegrationsRequestBuilder;
@@ -22,6 +24,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 */
 class TeamworkRequestBuilder 
 {
+    /**
+     * Provides operations to manage the deletedTeams property of the microsoft.graph.teamwork entity.
+    */
+    public function deletedTeams(): DeletedTeamsRequestBuilder {
+        return new DeletedTeamsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to call the sendActivityNotificationToRecipients method.
     */
@@ -64,6 +73,17 @@ class TeamworkRequestBuilder
         } else {
             $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
         }
+    }
+
+    /**
+     * Provides operations to manage the deletedTeams property of the microsoft.graph.teamwork entity.
+     * @param string $id Unique identifier of the item
+     * @return DeletedTeamItemRequestBuilder
+    */
+    public function deletedTeamsById(string $id): DeletedTeamItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['deletedTeam%2Did'] = $id;
+        return new DeletedTeamItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

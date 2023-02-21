@@ -148,6 +148,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.authenticationMethodTarget': return new AuthenticationMethodTarget();
                 case '#microsoft.graph.authoredNote': return new AuthoredNote();
                 case '#microsoft.graph.authorizationPolicy': return new AuthorizationPolicy();
+                case '#microsoft.graph.azureCommunicationServicesUserConversationMember': return new AzureCommunicationServicesUserConversationMember();
                 case '#microsoft.graph.b2xIdentityUserFlow': return new B2xIdentityUserFlow();
                 case '#microsoft.graph.baseItem': return new BaseItem();
                 case '#microsoft.graph.baseItemVersion': return new BaseItemVersion();
@@ -210,6 +211,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.delegatedAdminRelationshipRequest': return new DelegatedAdminRelationshipRequest();
                 case '#microsoft.graph.delegatedAdminServiceManagementDetail': return new DelegatedAdminServiceManagementDetail();
                 case '#microsoft.graph.delegatedPermissionClassification': return new DelegatedPermissionClassification();
+                case '#microsoft.graph.deletedTeam': return new DeletedTeam();
                 case '#microsoft.graph.detectedApp': return new DetectedApp();
                 case '#microsoft.graph.device': return new Device();
                 case '#microsoft.graph.deviceAndAppManagementRoleAssignment': return new DeviceAndAppManagementRoleAssignment();

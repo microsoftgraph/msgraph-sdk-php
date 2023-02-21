@@ -68,10 +68,10 @@ class PointsRequestBuilder
     }
 
     /**
-     * Retrieve a list of chartpoint objects.
+     * Retrieve a list of chartpoints objects.
      * @param PointsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chartpoint-list?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/chartseries-list-points?view=graph-rest-1.0 Find more info here
     */
     public function get(?PointsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -116,7 +116,7 @@ class PointsRequestBuilder
     }
 
     /**
-     * Retrieve a list of chartpoint objects.
+     * Retrieve a list of chartpoints objects.
      * @param PointsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
