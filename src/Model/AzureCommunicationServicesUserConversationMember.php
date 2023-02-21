@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* LobbyBypassSettings File
+* AzureCommunicationServicesUserConversationMember File
 * PHP version 7
 *
 * @category  Library
@@ -12,8 +12,9 @@
 * @link      https://graph.microsoft.com
 */
 namespace Microsoft\Graph\Model;
+
 /**
-* LobbyBypassSettings class
+* AzureCommunicationServicesUserConversationMember class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,34 +22,33 @@ namespace Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class LobbyBypassSettings extends Entity
+class AzureCommunicationServicesUserConversationMember extends ConversationMember
 {
     /**
-    * Gets the isDialInBypassEnabled
-    * Specifies whether or not to always let dial-in callers bypass the lobby. Optional.
+    * Gets the azureCommunicationServicesId
     *
-    * @return bool|null The isDialInBypassEnabled
+    * @return string|null The azureCommunicationServicesId
     */
-    public function getIsDialInBypassEnabled()
+    public function getAzureCommunicationServicesId()
     {
-        if (array_key_exists("isDialInBypassEnabled", $this->_propDict)) {
-            return $this->_propDict["isDialInBypassEnabled"];
+        if (array_key_exists("azureCommunicationServicesId", $this->_propDict)) {
+            return $this->_propDict["azureCommunicationServicesId"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the isDialInBypassEnabled
-    * Specifies whether or not to always let dial-in callers bypass the lobby. Optional.
+    * Sets the azureCommunicationServicesId
     *
-    * @param bool $val The value of the isDialInBypassEnabled
+    * @param string $val The azureCommunicationServicesId
     *
-    * @return LobbyBypassSettings
+    * @return AzureCommunicationServicesUserConversationMember
     */
-    public function setIsDialInBypassEnabled($val)
+    public function setAzureCommunicationServicesId($val)
     {
-        $this->_propDict["isDialInBypassEnabled"] = $val;
+        $this->_propDict["azureCommunicationServicesId"] = $val;
         return $this;
     }
+
 }
