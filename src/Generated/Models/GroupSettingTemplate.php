@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class GroupSettingTemplate extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new groupSettingTemplate and sets the default values.
+     * Instantiates a new GroupSettingTemplate and sets the default values.
     */
     public function __construct() {
         parent::__construct();

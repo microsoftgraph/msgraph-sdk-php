@@ -43,22 +43,6 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
-     * Gets the allowedPresenters property value. Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
-     * @return OnlineMeetingPresenters|null
-    */
-    public function getAllowedPresenters(): ?OnlineMeetingPresenters {
-        return $this->getBackingStore()->get('allowedPresenters');
-    }
-
-    /**
-     * Gets the allowMeetingChat property value. Specifies the mode of meeting chat.
-     * @return MeetingChatMode|null
-    */
-    public function getAllowMeetingChat(): ?MeetingChatMode {
-        return $this->getBackingStore()->get('allowMeetingChat');
-    }
-
-    /**
      * Gets the allowTeamworkReactions property value. Indicates whether Teams reactions are enabled for the meeting.
      * @return bool|null
     */
@@ -139,8 +123,6 @@ class OnlineMeeting extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'allowAttendeeToEnableCamera' => fn(ParseNode $n) => $o->setAllowAttendeeToEnableCamera($n->getBooleanValue()),
             'allowAttendeeToEnableMic' => fn(ParseNode $n) => $o->setAllowAttendeeToEnableMic($n->getBooleanValue()),
-            'allowedPresenters' => fn(ParseNode $n) => $o->setAllowedPresenters($n->getEnumValue(OnlineMeetingPresenters::class)),
-            'allowMeetingChat' => fn(ParseNode $n) => $o->setAllowMeetingChat($n->getEnumValue(MeetingChatMode::class)),
             'allowTeamworkReactions' => fn(ParseNode $n) => $o->setAllowTeamworkReactions($n->getBooleanValue()),
             'attendanceReports' => fn(ParseNode $n) => $o->setAttendanceReports($n->getCollectionOfObjectValues([MeetingAttendanceReport::class, 'createFromDiscriminatorValue'])),
             'attendeeReport' => fn(ParseNode $n) => $o->setAttendeeReport($n->getBinaryContent()),
@@ -260,8 +242,6 @@ class OnlineMeeting extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeBooleanValue('allowAttendeeToEnableCamera', $this->getAllowAttendeeToEnableCamera());
         $writer->writeBooleanValue('allowAttendeeToEnableMic', $this->getAllowAttendeeToEnableMic());
-        $writer->writeEnumValue('allowedPresenters', $this->getAllowedPresenters());
-        $writer->writeEnumValue('allowMeetingChat', $this->getAllowMeetingChat());
         $writer->writeBooleanValue('allowTeamworkReactions', $this->getAllowTeamworkReactions());
         $writer->writeCollectionOfObjectValues('attendanceReports', $this->getAttendanceReports());
         $writer->writeBinaryContent('attendeeReport', $this->getAttendeeReport());
@@ -298,22 +278,6 @@ class OnlineMeeting extends Entity implements Parsable
     */
     public function setAllowAttendeeToEnableMic(?bool $value): void {
         $this->getBackingStore()->set('allowAttendeeToEnableMic', $value);
-    }
-
-    /**
-     * Sets the allowedPresenters property value. Specifies who can be a presenter in a meeting. Possible values are listed in the following table.
-     * @param OnlineMeetingPresenters|null $value Value to set for the allowedPresenters property.
-    */
-    public function setAllowedPresenters(?OnlineMeetingPresenters $value): void {
-        $this->getBackingStore()->set('allowedPresenters', $value);
-    }
-
-    /**
-     * Sets the allowMeetingChat property value. Specifies the mode of meeting chat.
-     * @param MeetingChatMode|null $value Value to set for the allowMeetingChat property.
-    */
-    public function setAllowMeetingChat(?MeetingChatMode $value): void {
-        $this->getBackingStore()->set('allowMeetingChat', $value);
     }
 
     /**

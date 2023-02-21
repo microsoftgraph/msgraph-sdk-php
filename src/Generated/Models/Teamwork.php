@@ -25,12 +25,21 @@ class Teamwork extends Entity implements Parsable
     }
 
     /**
+     * Gets the deletedTeams property value. The deletedTeams property
+     * @return array<DeletedTeam>|null
+    */
+    public function getDeletedTeams(): ?array {
+        return $this->getBackingStore()->get('deletedTeams');
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'deletedTeams' => fn(ParseNode $n) => $o->setDeletedTeams($n->getCollectionOfObjectValues([DeletedTeam::class, 'createFromDiscriminatorValue'])),
             'workforceIntegrations' => fn(ParseNode $n) => $o->setWorkforceIntegrations($n->getCollectionOfObjectValues([WorkforceIntegration::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -49,7 +58,16 @@ class Teamwork extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('deletedTeams', $this->getDeletedTeams());
         $writer->writeCollectionOfObjectValues('workforceIntegrations', $this->getWorkforceIntegrations());
+    }
+
+    /**
+     * Sets the deletedTeams property value. The deletedTeams property
+     * @param array<DeletedTeam>|null $value Value to set for the deletedTeams property.
+    */
+    public function setDeletedTeams(?array $value): void {
+        $this->getBackingStore()->set('deletedTeams', $value);
     }
 
     /**

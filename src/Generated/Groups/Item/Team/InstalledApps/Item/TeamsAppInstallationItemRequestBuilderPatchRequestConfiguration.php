@@ -15,7 +15,7 @@ class TeamsAppInstallationItemRequestBuilderPatchRequestConfiguration
     public ?array $headers = null;
     
     /**
-     * @var array<string, RequestOption>|null $options Request options
+     * @var array<RequestOption>|null $options Request options
     */
     public ?array $options = null;
     
