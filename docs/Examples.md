@@ -7,6 +7,7 @@ This creates a default Graph client that uses `https://graph.microsoft.com` as t
 
 use Microsoft\Graph\GraphRequestAdapter;
 use Microsoft\Graph\GraphServiceClient;
+use Microsoft\Kiota\Authentication\Oauth\AuthorizationCodeContext;
 use Microsoft\Kiota\Authentication\Oauth\ClientCredentialContext;
 use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAuthenticationProvider;
 
@@ -19,6 +20,16 @@ $tokenRequestContext = new AuthorizationCodeContext(
 );
 $scopes = ['User.Read', 'Mail.ReadWrite'];
 $authProvider = new GraphPhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
+$requestAdapter = new GraphRequestAdapter($authProvider);
+$graphServiceClient = new GraphServiceClient($requestAdapter);
+
+// Uses https://graph.microsoft.com/.default scopes if none are specified
+$tokenRequestContext = new ClientCredentialContext(
+    'tenantId',
+    'clientId',
+    'clientSecret'
+);
+$authProvider = new GraphPhpLeagueAuthenticationProvider($tokenRequestContext);
 $requestAdapter = new GraphRequestAdapter($authProvider);
 $graphServiceClient = new GraphServiceClient($requestAdapter);
 
@@ -48,6 +59,10 @@ See [Microsoft Graph Permissions](https://docs.microsoft.com/en-us/graph/auth/au
 
 ```php
 $user = $graphServiceClient->me()->get()->wait();
+
+// Or
+
+$user = $graphServiceClient->usersById('userPrincipalName')->get()->wait();
 ```
 
 ## Get a collection of items
@@ -65,6 +80,15 @@ $requestConfig->queryParameters = new MessagesRequestBuilderGetQueryParameters()
 $requestConfig->queryParameters->select = ['subject'];
 $requestConfig->queryParameters->top = 2;
 $requestConfig->headers = ['Prefer' => 'outlook.body-content-type=text'];
+
+// or with PHP 8
+$requestConfig = new MessagesRequestBuilderGetRequestConfiguration(
+    queryParameters: MessagesRequestBuilderGetRequestConfiguration::addQueryParameters(
+        select: ['subject'],
+        top: 2
+    ),
+    headers: ['Prefer' => 'outlook.body-content-type=text']
+);
 
 $messages = $graphServiceClient->usersById(USER_ID)->messages()->get($requestConfig)->wait();
 
@@ -89,14 +113,24 @@ while ($messages->getOdatanextLink()) {
 
 ```
 
-## Get the raw response
-The SDK provides a default response handler which returns the raw PSR-7 response.
+## Use a Custom Response Handler / Get the raw PSR response
+Define a response handler that implements the [Response Handler interface](https://github.com/microsoft/kiota-abstractions-php/blob/dev/src/ResponseHandler.php) and pass it into the request using the request options.
+
+The SDK provides a default asynchronous response handler which returns a promise that resolves to a  raw PSR-7 response.
 
 To get the raw response:
 ```php
 
-$user = $graphServiceClient->me()->get(null, new NativeResponseHandler())->wait();
+// PHP 7
+$config = new MeRequestBuilderGetRequestConfiguration();
+$config->options = [new ResponsehandlerOption(new NativeResponseHandler())];
+$user = $graphServiceClient->me()->get($config)->wait()->wait();
 
+
+// PHP 8
+$user = $graphServiceClient->me()->get(new MeRequestBuilderGetRequestConfiguration(
+    options: [new ResponseHandlerOption(new NativeResponseHandler())]
+))->wait()->wait();
 ```
 
 ## Send an email
@@ -162,7 +196,7 @@ try {
     $response = $graphServiceClient->me()->sendMail()->post($requestBody)->wait();
 
 } catch (ApiException $ex) {
-    echo $ex->getMessage();
+    echo $ex->getError()->getMessage();
 }
 
 ```
@@ -193,7 +227,7 @@ try {
     $fileContents = $graphServiceclient->drivesById('driveId')->itemsById('itemId')->content()->get()->wait();
 
 } catch (ApiException $ex) {
-    echo $ex->getMessage();
+    echo $ex->getError()->getMessage();
 }
 
 ```
@@ -215,12 +249,17 @@ Each execution method i.e. get(), post(), put(), patch(), delete() accepts a Req
 
 ```php
 
-use Microsoft\Graph\Generated\Users\Item\Messages\MessagesRequestBuilderGetRequestConfiguration;
+use Microsoft\Graph\Generated\Me\Messages\MessagesRequestBuilderGetRequestConfiguration;
 
 $requestConfig = new MessagesRequestBuilderGetRequestConfiguration();
 $requestConfig->headers = ['Prefer' => 'outlook.body-content-type=text'];
 
 $messages = $graphServiceclient->me()->messages()->get($requestConfig)->wait();
+
+// PHP 8
+$messages = $graphServiceClient->me()->messages()->get(new MessagesRequestBuilderGetRequestConfiguration(
+    headers: ['Prefer' => 'outlook.body-content-type=text']
+))->wait();
 
 ```
 
@@ -228,16 +267,26 @@ $messages = $graphServiceclient->me()->messages()->get($requestConfig)->wait();
 
 ```php
 
-use Microsoft\Graph\Generated\Users\Item\Messages\MessagesRequestBuilderGetQueryParameters;
-use Microsoft\Graph\Generated\Users\Item\Messages\MessagesRequestBuilderGetRequestConfiguration;
+use Microsoft\Graph\Generated\Me\Messages\MessagesRequestBuilderGetRequestConfiguration;
 
 $requestConfig = new MessagesRequestBuilderGetRequestConfiguration();
-$requestConfig->queryParameters = new MessagesRequestBuilderGetQueryParameters();
+$requestConfig->queryParameters = MessagesRequestBuilderGetRequestConfiguration::addQueryParameters();
 $requestConfig->queryParameters->select = ['subject', 'from'];
 $requestConfig->queryParameters->skip = 2;
 $requestConfig->queryParameters->top = 3;
 
 $messages = $graphServiceClient->me()->messages()->get($requestConfig)->wait();
+
+// PHP 8
+$messages = $graphServiceClient->me()->messages()->get(new MessagesRequestBuilderGetRequestConfiguration(
+    queryParameters: MessagesRequestBuilderGetRequestConfiguration::addQueryParameters(
+        select: ['subject', 'from'],
+        skip: 2,
+        top: 3
+    )
+))->wait();
+
+
 ```
 
 ## Customizing middleware configuration
@@ -247,12 +296,8 @@ $messages = $graphServiceClient->me()->messages()->get($requestConfig)->wait();
 use Microsoft\Graph\Generated\Users\Item\Messages\MessagesRequestBuilderGetRequestConfiguration;
 use Microsoft\Kiota\Http\Middleware\Options\RetryOption;
 
-$retryOption = new RetryOption();
-$retryOption->setMaxRetries(2);
-$retryOption->setDelay(5);
-
 $requestConfig = new MessagesRequestBuilderGetRequestConfiguration();
-$requestConfig->options = [RetryOption::class => $retryOption];
+$requestConfig->options = [new RetryOption(2, 5)];
 
 $messages = $graphServiceClient->me()->messages()->get($requestConfig)->wait();
 
