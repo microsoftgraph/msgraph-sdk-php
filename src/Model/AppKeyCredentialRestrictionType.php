@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* LobbyBypassScope File
+* AppKeyCredentialRestrictionType File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* LobbyBypassScope class
+* AppKeyCredentialRestrictionType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,16 +24,11 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class LobbyBypassScope extends Enum
+class AppKeyCredentialRestrictionType extends Enum
 {
     /**
-    * The Enum LobbyBypassScope
+    * The Enum AppKeyCredentialRestrictionType
     */
-    const ORGANIZER = "organizer";
-    const ORGANIZATION = "organization";
-    const ORGANIZATION_AND_FEDERATED = "organizationAndFederated";
-    const EVERYONE = "everyone";
+    const ASYMMETRIC_KEY_LIFETIME = "asymmetricKeyLifetime";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const INVITED = "invited";
-    const ORGANIZATION_EXCLUDING_GUESTS = "organizationExcludingGuests";
 }

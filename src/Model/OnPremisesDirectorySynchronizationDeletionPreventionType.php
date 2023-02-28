@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* MeetingChatMode File
+* OnPremisesDirectorySynchronizationDeletionPreventionType File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* MeetingChatMode class
+* OnPremisesDirectorySynchronizationDeletionPreventionType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,13 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class MeetingChatMode extends Enum
+class OnPremisesDirectorySynchronizationDeletionPreventionType extends Enum
 {
     /**
-    * The Enum MeetingChatMode
+    * The Enum OnPremisesDirectorySynchronizationDeletionPreventionType
     */
-    const ENABLED = "enabled";
     const DISABLED = "disabled";
-    const LIMITED = "limited";
+    const ENABLED_FOR_COUNT = "enabledForCount";
+    const ENABLED_FOR_PERCENTAGE = "enabledForPercentage";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
