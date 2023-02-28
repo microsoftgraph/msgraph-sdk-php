@@ -54,7 +54,7 @@ class OnPremisesAccidentalDeletionPrevention extends Entity
 
     /**
     * Gets the synchronizationPreventionType
-    * The status of the accidental deletion prevention feature. The possible values are: disabled, enabledForCount, enabledForPercentage.
+    * The status of the accidental deletion prevention feature. The possible values are: disabled, enabledForCount, enabledForPercentage, unknownFutureValue.
     *
     * @return OnPremisesDirectorySynchronizationDeletionPreventionType|null The synchronizationPreventionType
     */
@@ -73,7 +73,7 @@ class OnPremisesAccidentalDeletionPrevention extends Entity
 
     /**
     * Sets the synchronizationPreventionType
-    * The status of the accidental deletion prevention feature. The possible values are: disabled, enabledForCount, enabledForPercentage.
+    * The status of the accidental deletion prevention feature. The possible values are: disabled, enabledForCount, enabledForPercentage, unknownFutureValue.
     *
     * @param OnPremisesDirectorySynchronizationDeletionPreventionType $val The value to assign to the synchronizationPreventionType
     *
