@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceManagementPartners\It
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceManagementPartners\Item\MicrosoftGraphTerminate\MicrosoftGraphTerminateRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceManagementPartners\Item\Terminate\TerminateRequestBuilder;
 use Microsoft\Graph\Generated\Models\DeviceManagementPartner;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -21,13 +21,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class DeviceManagementPartnerItemRequestBuilder 
 {
     /**
-     * Provides operations to call the terminate method.
-    */
-    public function microsoftGraphTerminate(): MicrosoftGraphTerminateRequestBuilder {
-        return new MicrosoftGraphTerminateRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -36,6 +29,13 @@ class DeviceManagementPartnerItemRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the terminate method.
+    */
+    public function terminate(): TerminateRequestBuilder {
+        return new TerminateRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder

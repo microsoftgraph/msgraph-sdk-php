@@ -9,10 +9,10 @@ use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPac
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\AssignmentPolicies\AssignmentPoliciesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\AssignmentPolicies\Item\AccessPackageAssignmentPolicyItemRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\Catalog\CatalogRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\GetApplicablePolicyRequirements\GetApplicablePolicyRequirementsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\IncompatibleAccessPackages\IncompatibleAccessPackagesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\IncompatibleGroups\IncompatibleGroupsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\IncompatibleGroups\Item\GroupItemRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackages\Item\MicrosoftGraphGetApplicablePolicyRequirements\MicrosoftGraphGetApplicablePolicyRequirementsRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessPackage;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -49,6 +49,13 @@ class AccessPackageItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the getApplicablePolicyRequirements method.
+    */
+    public function getApplicablePolicyRequirements(): GetApplicablePolicyRequirementsRequestBuilder {
+        return new GetApplicablePolicyRequirementsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the incompatibleAccessPackages property of the microsoft.graph.accessPackage entity.
     */
     public function incompatibleAccessPackages(): IncompatibleAccessPackagesRequestBuilder {
@@ -60,13 +67,6 @@ class AccessPackageItemRequestBuilder
     */
     public function incompatibleGroups(): IncompatibleGroupsRequestBuilder {
         return new IncompatibleGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the getApplicablePolicyRequirements method.
-    */
-    public function microsoftGraphGetApplicablePolicyRequirements(): MicrosoftGraphGetApplicablePolicyRequirementsRequestBuilder {
-        return new MicrosoftGraphGetApplicablePolicyRequirementsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

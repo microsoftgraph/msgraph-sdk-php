@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SearchEntity;
-use Microsoft\Graph\Generated\Search\MicrosoftGraphQuery\MicrosoftGraphQueryRequestBuilder;
+use Microsoft\Graph\Generated\Search\Query\QueryRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -21,16 +21,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class SearchRequestBuilder 
 {
     /**
-     * Provides operations to call the query method.
-    */
-    public function microsoftGraphQuery(): MicrosoftGraphQueryRequestBuilder {
-        return new MicrosoftGraphQueryRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * Provides operations to call the query method.
+    */
+    public function query(): QueryRequestBuilder {
+        return new QueryRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.

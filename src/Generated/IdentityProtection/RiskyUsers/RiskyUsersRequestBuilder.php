@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\IdentityProtection\RiskyUsers;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\ConfirmCompromised\ConfirmCompromisedRequestBuilder;
 use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\MicrosoftGraphConfirmCompromised\MicrosoftGraphConfirmCompromisedRequestBuilder;
-use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\MicrosoftGraphDismiss\MicrosoftGraphDismissRequestBuilder;
+use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Dismiss\DismissRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\RiskyUser;
 use Microsoft\Graph\Generated\Models\RiskyUserCollectionResponse;
@@ -24,6 +24,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class RiskyUsersRequestBuilder 
 {
     /**
+     * Provides operations to call the confirmCompromised method.
+    */
+    public function confirmCompromised(): ConfirmCompromisedRequestBuilder {
+        return new ConfirmCompromisedRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
@@ -31,17 +38,10 @@ class RiskyUsersRequestBuilder
     }
     
     /**
-     * Provides operations to call the confirmCompromised method.
-    */
-    public function microsoftGraphConfirmCompromised(): MicrosoftGraphConfirmCompromisedRequestBuilder {
-        return new MicrosoftGraphConfirmCompromisedRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the dismiss method.
     */
-    public function microsoftGraphDismiss(): MicrosoftGraphDismissRequestBuilder {
-        return new MicrosoftGraphDismissRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function dismiss(): DismissRequestBuilder {
+        return new DismissRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

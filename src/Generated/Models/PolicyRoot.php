@@ -41,6 +41,14 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
+     * Gets the appManagementPolicies property value. The appManagementPolicies property
+     * @return array<AppManagementPolicy>|null
+    */
+    public function getAppManagementPolicies(): ?array {
+        return $this->getBackingStore()->get('appManagementPolicies');
+    }
+
+    /**
      * Gets the authenticationFlowsPolicy property value. The policy configuration of the self-service sign-up experience of external users.
      * @return AuthenticationFlowsPolicy|null
     */
@@ -89,6 +97,14 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
+     * Gets the defaultAppManagementPolicy property value. The defaultAppManagementPolicy property
+     * @return TenantAppManagementPolicy|null
+    */
+    public function getDefaultAppManagementPolicy(): ?TenantAppManagementPolicy {
+        return $this->getBackingStore()->get('defaultAppManagementPolicy');
+    }
+
+    /**
      * Gets the featureRolloutPolicies property value. The feature rollout policy associated with a directory object.
      * @return array<FeatureRolloutPolicy>|null
     */
@@ -105,12 +121,14 @@ class PolicyRoot extends Entity implements Parsable
         return array_merge(parent::getFieldDeserializers(), [
             'activityBasedTimeoutPolicies' => fn(ParseNode $n) => $o->setActivityBasedTimeoutPolicies($n->getCollectionOfObjectValues([ActivityBasedTimeoutPolicy::class, 'createFromDiscriminatorValue'])),
             'adminConsentRequestPolicy' => fn(ParseNode $n) => $o->setAdminConsentRequestPolicy($n->getObjectValue([AdminConsentRequestPolicy::class, 'createFromDiscriminatorValue'])),
+            'appManagementPolicies' => fn(ParseNode $n) => $o->setAppManagementPolicies($n->getCollectionOfObjectValues([AppManagementPolicy::class, 'createFromDiscriminatorValue'])),
             'authenticationFlowsPolicy' => fn(ParseNode $n) => $o->setAuthenticationFlowsPolicy($n->getObjectValue([AuthenticationFlowsPolicy::class, 'createFromDiscriminatorValue'])),
             'authenticationMethodsPolicy' => fn(ParseNode $n) => $o->setAuthenticationMethodsPolicy($n->getObjectValue([AuthenticationMethodsPolicy::class, 'createFromDiscriminatorValue'])),
             'authorizationPolicy' => fn(ParseNode $n) => $o->setAuthorizationPolicy($n->getObjectValue([AuthorizationPolicy::class, 'createFromDiscriminatorValue'])),
             'claimsMappingPolicies' => fn(ParseNode $n) => $o->setClaimsMappingPolicies($n->getCollectionOfObjectValues([ClaimsMappingPolicy::class, 'createFromDiscriminatorValue'])),
             'conditionalAccessPolicies' => fn(ParseNode $n) => $o->setConditionalAccessPolicies($n->getCollectionOfObjectValues([ConditionalAccessPolicy::class, 'createFromDiscriminatorValue'])),
             'crossTenantAccessPolicy' => fn(ParseNode $n) => $o->setCrossTenantAccessPolicy($n->getObjectValue([CrossTenantAccessPolicy::class, 'createFromDiscriminatorValue'])),
+            'defaultAppManagementPolicy' => fn(ParseNode $n) => $o->setDefaultAppManagementPolicy($n->getObjectValue([TenantAppManagementPolicy::class, 'createFromDiscriminatorValue'])),
             'featureRolloutPolicies' => fn(ParseNode $n) => $o->setFeatureRolloutPolicies($n->getCollectionOfObjectValues([FeatureRolloutPolicy::class, 'createFromDiscriminatorValue'])),
             'homeRealmDiscoveryPolicies' => fn(ParseNode $n) => $o->setHomeRealmDiscoveryPolicies($n->getCollectionOfObjectValues([HomeRealmDiscoveryPolicy::class, 'createFromDiscriminatorValue'])),
             'identitySecurityDefaultsEnforcementPolicy' => fn(ParseNode $n) => $o->setIdentitySecurityDefaultsEnforcementPolicy($n->getObjectValue([IdentitySecurityDefaultsEnforcementPolicy::class, 'createFromDiscriminatorValue'])),
@@ -186,12 +204,14 @@ class PolicyRoot extends Entity implements Parsable
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('activityBasedTimeoutPolicies', $this->getActivityBasedTimeoutPolicies());
         $writer->writeObjectValue('adminConsentRequestPolicy', $this->getAdminConsentRequestPolicy());
+        $writer->writeCollectionOfObjectValues('appManagementPolicies', $this->getAppManagementPolicies());
         $writer->writeObjectValue('authenticationFlowsPolicy', $this->getAuthenticationFlowsPolicy());
         $writer->writeObjectValue('authenticationMethodsPolicy', $this->getAuthenticationMethodsPolicy());
         $writer->writeObjectValue('authorizationPolicy', $this->getAuthorizationPolicy());
         $writer->writeCollectionOfObjectValues('claimsMappingPolicies', $this->getClaimsMappingPolicies());
         $writer->writeCollectionOfObjectValues('conditionalAccessPolicies', $this->getConditionalAccessPolicies());
         $writer->writeObjectValue('crossTenantAccessPolicy', $this->getCrossTenantAccessPolicy());
+        $writer->writeObjectValue('defaultAppManagementPolicy', $this->getDefaultAppManagementPolicy());
         $writer->writeCollectionOfObjectValues('featureRolloutPolicies', $this->getFeatureRolloutPolicies());
         $writer->writeCollectionOfObjectValues('homeRealmDiscoveryPolicies', $this->getHomeRealmDiscoveryPolicies());
         $writer->writeObjectValue('identitySecurityDefaultsEnforcementPolicy', $this->getIdentitySecurityDefaultsEnforcementPolicy());
@@ -216,6 +236,14 @@ class PolicyRoot extends Entity implements Parsable
     */
     public function setAdminConsentRequestPolicy(?AdminConsentRequestPolicy $value): void {
         $this->getBackingStore()->set('adminConsentRequestPolicy', $value);
+    }
+
+    /**
+     * Sets the appManagementPolicies property value. The appManagementPolicies property
+     * @param array<AppManagementPolicy>|null $value Value to set for the appManagementPolicies property.
+    */
+    public function setAppManagementPolicies(?array $value): void {
+        $this->getBackingStore()->set('appManagementPolicies', $value);
     }
 
     /**
@@ -264,6 +292,14 @@ class PolicyRoot extends Entity implements Parsable
     */
     public function setCrossTenantAccessPolicy(?CrossTenantAccessPolicy $value): void {
         $this->getBackingStore()->set('crossTenantAccessPolicy', $value);
+    }
+
+    /**
+     * Sets the defaultAppManagementPolicy property value. The defaultAppManagementPolicy property
+     * @param TenantAppManagementPolicy|null $value Value to set for the defaultAppManagementPolicy property.
+    */
+    public function setDefaultAppManagementPolicy(?TenantAppManagementPolicy $value): void {
+        $this->getBackingStore()->set('defaultAppManagementPolicy', $value);
     }
 
     /**

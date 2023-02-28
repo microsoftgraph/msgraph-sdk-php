@@ -63,7 +63,7 @@ class SharePointOneDriveOptions implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Gets the includeContent property value. The includeContent property
+     * Gets the includeContent property value. The type of search content. The possible values are: sharedContent, privateContent, unknownFutureValue. Read-only.
      * @return SearchContent|null
     */
     public function getIncludeContent(): ?SearchContent {
@@ -105,7 +105,7 @@ class SharePointOneDriveOptions implements AdditionalDataHolder, BackedModel, Pa
     }
 
     /**
-     * Sets the includeContent property value. The includeContent property
+     * Sets the includeContent property value. The type of search content. The possible values are: sharedContent, privateContent, unknownFutureValue. Read-only.
      * @param SearchContent|null $value Value to set for the includeContent property.
     */
     public function setIncludeContent(?SearchContent $value): void {

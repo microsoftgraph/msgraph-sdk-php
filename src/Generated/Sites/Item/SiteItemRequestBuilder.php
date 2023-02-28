@@ -15,14 +15,14 @@ use Microsoft\Graph\Generated\Sites\Item\Drive\DriveRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Drives\DrivesRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Drives\Item\DriveItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\ExternalColumns\ExternalColumnsRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\GetApplicableContentTypesForListWithListId\GetApplicableContentTypesForListWithListIdRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\GetByPathWithPath\GetByPathWithPathRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Items\Item\BaseItemItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Items\ItemsRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ListItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\ListsRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\MicrosoftGraphGetActivitiesByInterval\MicrosoftGraphGetActivitiesByIntervalRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\MicrosoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\MicrosoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\MicrosoftGraphGetApplicableContentTypesForListWithListId\MicrosoftGraphGetApplicableContentTypesForListWithListIdRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\MicrosoftGraphGetByPathWithPath\MicrosoftGraphGetByPathWithPathRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\OnenoteRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Operations\Item\RichLongRunningOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Operations\OperationsRequestBuilder;
@@ -87,6 +87,13 @@ class SiteItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the getActivitiesByInterval method.
+    */
+    public function getActivitiesByInterval(): GetActivitiesByIntervalRequestBuilder {
+        return new GetActivitiesByIntervalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the items property of the microsoft.graph.site entity.
     */
     public function items(): ItemsRequestBuilder {
@@ -98,13 +105,6 @@ class SiteItemRequestBuilder
     */
     public function lists(): ListsRequestBuilder {
         return new ListsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the getActivitiesByInterval method.
-    */
-    public function microsoftGraphGetActivitiesByInterval(): MicrosoftGraphGetActivitiesByIntervalRequestBuilder {
-        return new MicrosoftGraphGetActivitiesByIntervalRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -243,6 +243,35 @@ class SiteItemRequestBuilder
     }
 
     /**
+     * Provides operations to call the getActivitiesByInterval method.
+     * @param string $endDateTime Usage: endDateTime='{endDateTime}'
+     * @param string $interval Usage: interval='{interval}'
+     * @param string $startDateTime Usage: startDateTime='{startDateTime}'
+     * @return GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
+    */
+    public function getActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(string $endDateTime, string $interval, string $startDateTime): GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder {
+        return new GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder($this->pathParameters, $this->requestAdapter, $endDateTime, $interval, $startDateTime);
+    }
+
+    /**
+     * Provides operations to call the getApplicableContentTypesForList method.
+     * @param string $listId Usage: listId='{listId}'
+     * @return GetApplicableContentTypesForListWithListIdRequestBuilder
+    */
+    public function getApplicableContentTypesForListWithListId(string $listId): GetApplicableContentTypesForListWithListIdRequestBuilder {
+        return new GetApplicableContentTypesForListWithListIdRequestBuilder($this->pathParameters, $this->requestAdapter, $listId);
+    }
+
+    /**
+     * Provides operations to call the getByPath method.
+     * @param string $path Usage: path='{path}'
+     * @return GetByPathWithPathRequestBuilder
+    */
+    public function getByPathWithPath(string $path): GetByPathWithPathRequestBuilder {
+        return new GetByPathWithPathRequestBuilder($this->pathParameters, $this->requestAdapter, $path);
+    }
+
+    /**
      * Provides operations to manage the items property of the microsoft.graph.site entity.
      * @param string $id Unique identifier of the item
      * @return BaseItemItemRequestBuilder
@@ -262,35 +291,6 @@ class SiteItemRequestBuilder
         $urlTplParams = $this->pathParameters;
         $urlTplParams['list%2Did'] = $id;
         return new ListItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to call the getActivitiesByInterval method.
-     * @param string $endDateTime Usage: endDateTime='{endDateTime}'
-     * @param string $interval Usage: interval='{interval}'
-     * @param string $startDateTime Usage: startDateTime='{startDateTime}'
-     * @return MicrosoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder
-    */
-    public function microsoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval(string $endDateTime, string $interval, string $startDateTime): MicrosoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder {
-        return new MicrosoftGraphGetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder($this->pathParameters, $this->requestAdapter, $endDateTime, $interval, $startDateTime);
-    }
-
-    /**
-     * Provides operations to call the getApplicableContentTypesForList method.
-     * @param string $listId Usage: listId='{listId}'
-     * @return MicrosoftGraphGetApplicableContentTypesForListWithListIdRequestBuilder
-    */
-    public function microsoftGraphGetApplicableContentTypesForListWithListId(string $listId): MicrosoftGraphGetApplicableContentTypesForListWithListIdRequestBuilder {
-        return new MicrosoftGraphGetApplicableContentTypesForListWithListIdRequestBuilder($this->pathParameters, $this->requestAdapter, $listId);
-    }
-
-    /**
-     * Provides operations to call the getByPath method.
-     * @param string $path Usage: path='{path}'
-     * @return MicrosoftGraphGetByPathWithPathRequestBuilder
-    */
-    public function microsoftGraphGetByPathWithPath(string $path): MicrosoftGraphGetByPathWithPathRequestBuilder {
-        return new MicrosoftGraphGetByPathWithPathRequestBuilder($this->pathParameters, $this->requestAdapter, $path);
     }
 
     /**

@@ -8,11 +8,11 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OnenotePage;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\Item\Sections\Item\Pages\Item\Content\ContentRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\Item\Sections\Item\Pages\Item\MicrosoftGraphCopyToSection\MicrosoftGraphCopyToSectionRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\Item\Sections\Item\Pages\Item\MicrosoftGraphOnenotePatchContent\MicrosoftGraphOnenotePatchContentRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\Item\Sections\Item\Pages\Item\MicrosoftGraphPreview\MicrosoftGraphPreviewRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\Item\Sections\Item\Pages\Item\CopyToSection\CopyToSectionRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\Item\Sections\Item\Pages\Item\OnenotePatchContent\OnenotePatchContentRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\Item\Sections\Item\Pages\Item\ParentNotebook\ParentNotebookRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\Item\Sections\Item\Pages\Item\ParentSection\ParentSectionRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\Item\Sections\Item\Pages\Item\Preview\PreviewRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -35,22 +35,15 @@ class OnenotePageItemRequestBuilder
     /**
      * Provides operations to call the copyToSection method.
     */
-    public function microsoftGraphCopyToSection(): MicrosoftGraphCopyToSectionRequestBuilder {
-        return new MicrosoftGraphCopyToSectionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function copyToSection(): CopyToSectionRequestBuilder {
+        return new CopyToSectionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the onenotePatchContent method.
     */
-    public function microsoftGraphOnenotePatchContent(): MicrosoftGraphOnenotePatchContentRequestBuilder {
-        return new MicrosoftGraphOnenotePatchContentRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the preview method.
-    */
-    public function microsoftGraphPreview(): MicrosoftGraphPreviewRequestBuilder {
-        return new MicrosoftGraphPreviewRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function onenotePatchContent(): OnenotePatchContentRequestBuilder {
+        return new OnenotePatchContentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -71,6 +64,13 @@ class OnenotePageItemRequestBuilder
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * Provides operations to call the preview method.
+    */
+    public function preview(): PreviewRequestBuilder {
+        return new PreviewRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.

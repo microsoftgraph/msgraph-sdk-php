@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\MicrosoftGraphImport\MicrosoftGraphImportRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\Import\ImportRequestBuilder;
 use Microsoft\Graph\Generated\Models\ImportedWindowsAutopilotDeviceIdentity;
 use Microsoft\Graph\Generated\Models\ImportedWindowsAutopilotDeviceIdentityCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -32,8 +32,8 @@ class ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder
     /**
      * Provides operations to call the import method.
     */
-    public function microsoftGraphImport(): MicrosoftGraphImportRequestBuilder {
-        return new MicrosoftGraphImportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function import(): ImportRequestBuilder {
+        return new ImportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

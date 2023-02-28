@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\ApplicationTemplates\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\ApplicationTemplates\Item\MicrosoftGraphInstantiate\MicrosoftGraphInstantiateRequestBuilder;
+use Microsoft\Graph\Generated\ApplicationTemplates\Item\Instantiate\InstantiateRequestBuilder;
 use Microsoft\Graph\Generated\Models\ApplicationTemplate;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,8 +23,8 @@ class ApplicationTemplateItemRequestBuilder
     /**
      * Provides operations to call the instantiate method.
     */
-    public function microsoftGraphInstantiate(): MicrosoftGraphInstantiateRequestBuilder {
-        return new MicrosoftGraphInstantiateRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function instantiate(): InstantiateRequestBuilder {
+        return new InstantiateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

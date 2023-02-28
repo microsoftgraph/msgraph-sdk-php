@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\Attachments\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\Attachments\MicrosoftGraphCreateUploadSession\MicrosoftGraphCreateUploadSessionRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\Attachments\CreateUploadSession\CreateUploadSessionRequestBuilder;
 use Microsoft\Graph\Generated\Models\Attachment;
 use Microsoft\Graph\Generated\Models\AttachmentCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -32,8 +32,8 @@ class AttachmentsRequestBuilder
     /**
      * Provides operations to call the createUploadSession method.
     */
-    public function microsoftGraphCreateUploadSession(): MicrosoftGraphCreateUploadSessionRequestBuilder {
-        return new MicrosoftGraphCreateUploadSessionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function createUploadSession(): CreateUploadSessionRequestBuilder {
+        return new CreateUploadSessionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

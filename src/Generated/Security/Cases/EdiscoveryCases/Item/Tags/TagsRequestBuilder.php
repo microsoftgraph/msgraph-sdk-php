@@ -9,7 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryReviewTag;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryReviewTagCollectionResponse;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\MicrosoftGraphSecurityAsHierarchy\MicrosoftGraphSecurityAsHierarchyRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\SecurityAsHierarchy\SecurityAsHierarchyRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -30,13 +30,6 @@ class TagsRequestBuilder
     }
     
     /**
-     * Provides operations to call the asHierarchy method.
-    */
-    public function microsoftGraphSecurityAsHierarchy(): MicrosoftGraphSecurityAsHierarchyRequestBuilder {
-        return new MicrosoftGraphSecurityAsHierarchyRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -45,6 +38,13 @@ class TagsRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the asHierarchy method.
+    */
+    public function securityAsHierarchy(): SecurityAsHierarchyRequestBuilder {
+        return new SecurityAsHierarchyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder

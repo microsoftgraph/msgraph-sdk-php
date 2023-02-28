@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\Item\Points\Item\Format\Fill\MicrosoftGraphClear\MicrosoftGraphClearRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\Item\Points\Item\Format\Fill\MicrosoftGraphSetSolidColor\MicrosoftGraphSetSolidColorRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\Item\Points\Item\Format\Fill\Clear\ClearRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\Item\Points\Item\Format\Fill\SetSolidColor\SetSolidColorRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookChartFill;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -24,15 +24,8 @@ class FillRequestBuilder
     /**
      * Provides operations to call the clear method.
     */
-    public function microsoftGraphClear(): MicrosoftGraphClearRequestBuilder {
-        return new MicrosoftGraphClearRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the setSolidColor method.
-    */
-    public function microsoftGraphSetSolidColor(): MicrosoftGraphSetSolidColorRequestBuilder {
-        return new MicrosoftGraphSetSolidColorRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function clear(): ClearRequestBuilder {
+        return new ClearRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -44,6 +37,13 @@ class FillRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the setSolidColor method.
+    */
+    public function setSolidColor(): SetSolidColorRequestBuilder {
+        return new SetSolidColorRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder

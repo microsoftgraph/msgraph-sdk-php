@@ -9,10 +9,10 @@ use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\Atta
 use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\Attachments\Item\AttachmentItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\Extensions\ExtensionsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\Extensions\Item\ExtensionItemRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\MicrosoftGraphForward\MicrosoftGraphForwardRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\MicrosoftGraphReply\MicrosoftGraphReplyRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\Forward\ForwardRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\Reply\ReplyRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -46,15 +46,8 @@ class InReplyToRequestBuilder
     /**
      * Provides operations to call the forward method.
     */
-    public function microsoftGraphForward(): MicrosoftGraphForwardRequestBuilder {
-        return new MicrosoftGraphForwardRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the reply method.
-    */
-    public function microsoftGraphReply(): MicrosoftGraphReplyRequestBuilder {
-        return new MicrosoftGraphReplyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function forward(): ForwardRequestBuilder {
+        return new ForwardRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -68,6 +61,13 @@ class InReplyToRequestBuilder
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * Provides operations to call the reply method.
+    */
+    public function reply(): ReplyRequestBuilder {
+        return new ReplyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.

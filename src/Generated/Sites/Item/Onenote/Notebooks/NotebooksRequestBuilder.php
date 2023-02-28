@@ -9,8 +9,8 @@ use Microsoft\Graph\Generated\Models\Notebook;
 use Microsoft\Graph\Generated\Models\NotebookCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\MicrosoftGraphGetNotebookFromWebUrl\MicrosoftGraphGetNotebookFromWebUrlRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\MicrosoftGraphGetRecentNotebooksWithIncludePersonalNotebooks\MicrosoftGraphGetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\GetNotebookFromWebUrl\GetNotebookFromWebUrlRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\GetRecentNotebooksWithIncludePersonalNotebooks\GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -33,8 +33,8 @@ class NotebooksRequestBuilder
     /**
      * Provides operations to call the getNotebookFromWebUrl method.
     */
-    public function microsoftGraphGetNotebookFromWebUrl(): MicrosoftGraphGetNotebookFromWebUrlRequestBuilder {
-        return new MicrosoftGraphGetNotebookFromWebUrlRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getNotebookFromWebUrl(): GetNotebookFromWebUrlRequestBuilder {
+        return new GetNotebookFromWebUrlRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -89,10 +89,10 @@ class NotebooksRequestBuilder
     /**
      * Provides operations to call the getRecentNotebooks method.
      * @param bool $includePersonalNotebooks Usage: includePersonalNotebooks={includePersonalNotebooks}
-     * @return MicrosoftGraphGetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder
+     * @return GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder
     */
-    public function microsoftGraphGetRecentNotebooksWithIncludePersonalNotebooks(bool $includePersonalNotebooks): MicrosoftGraphGetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder {
-        return new MicrosoftGraphGetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder($this->pathParameters, $this->requestAdapter, $includePersonalNotebooks);
+    public function getRecentNotebooksWithIncludePersonalNotebooks(bool $includePersonalNotebooks): GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder {
+        return new GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder($this->pathParameters, $this->requestAdapter, $includePersonalNotebooks);
     }
 
     /**

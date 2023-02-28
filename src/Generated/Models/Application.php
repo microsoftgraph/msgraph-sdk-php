@@ -60,6 +60,14 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the appManagementPolicies property value. The appManagementPolicies property
+     * @return array<AppManagementPolicy>|null
+    */
+    public function getAppManagementPolicies(): ?array {
+        return $this->getBackingStore()->get('appManagementPolicies');
+    }
+
+    /**
      * Gets the appRoles property value. The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.
      * @return array<AppRole>|null
     */
@@ -150,6 +158,7 @@ class Application extends DirectoryObject implements Parsable
             'api' => fn(ParseNode $n) => $o->setApi($n->getObjectValue([ApiApplication::class, 'createFromDiscriminatorValue'])),
             'appId' => fn(ParseNode $n) => $o->setAppId($n->getStringValue()),
             'applicationTemplateId' => fn(ParseNode $n) => $o->setApplicationTemplateId($n->getStringValue()),
+            'appManagementPolicies' => fn(ParseNode $n) => $o->setAppManagementPolicies($n->getCollectionOfObjectValues([AppManagementPolicy::class, 'createFromDiscriminatorValue'])),
             'appRoles' => fn(ParseNode $n) => $o->setAppRoles($n->getCollectionOfObjectValues([AppRole::class, 'createFromDiscriminatorValue'])),
             'certification' => fn(ParseNode $n) => $o->setCertification($n->getObjectValue([Certification::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
@@ -425,6 +434,7 @@ class Application extends DirectoryObject implements Parsable
         $writer->writeObjectValue('api', $this->getApi());
         $writer->writeStringValue('appId', $this->getAppId());
         $writer->writeStringValue('applicationTemplateId', $this->getApplicationTemplateId());
+        $writer->writeCollectionOfObjectValues('appManagementPolicies', $this->getAppManagementPolicies());
         $writer->writeCollectionOfObjectValues('appRoles', $this->getAppRoles());
         $writer->writeObjectValue('certification', $this->getCertification());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
@@ -495,6 +505,14 @@ class Application extends DirectoryObject implements Parsable
     */
     public function setApplicationTemplateId(?string $value): void {
         $this->getBackingStore()->set('applicationTemplateId', $value);
+    }
+
+    /**
+     * Sets the appManagementPolicies property value. The appManagementPolicies property
+     * @param array<AppManagementPolicy>|null $value Value to set for the appManagementPolicies property.
+    */
+    public function setAppManagementPolicies(?array $value): void {
+        $this->getBackingStore()->set('appManagementPolicies', $value);
     }
 
     /**

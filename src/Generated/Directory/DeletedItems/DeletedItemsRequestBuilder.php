@@ -6,12 +6,12 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Directory\DeletedItems\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\MicrosoftGraphApplication\MicrosoftGraphApplicationRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\MicrosoftGraphGetAvailableExtensionProperties\MicrosoftGraphGetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\MicrosoftGraphGetByIds\MicrosoftGraphGetByIdsRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\MicrosoftGraphGroup\MicrosoftGraphGroupRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\MicrosoftGraphUser\MicrosoftGraphUserRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\MicrosoftGraphValidateProperties\MicrosoftGraphValidatePropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\GraphApplication\GraphApplicationRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\GraphGroup\GraphGroupRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\GraphUser\GraphUserRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryObject;
 use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -35,45 +35,38 @@ class DeletedItemsRequestBuilder
     }
     
     /**
-     * Casts the previous resource to application.
-    */
-    public function microsoftGraphApplication(): MicrosoftGraphApplicationRequestBuilder {
-        return new MicrosoftGraphApplicationRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the getAvailableExtensionProperties method.
     */
-    public function microsoftGraphGetAvailableExtensionProperties(): MicrosoftGraphGetAvailableExtensionPropertiesRequestBuilder {
-        return new MicrosoftGraphGetAvailableExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
+        return new GetAvailableExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getByIds method.
     */
-    public function microsoftGraphGetByIds(): MicrosoftGraphGetByIdsRequestBuilder {
-        return new MicrosoftGraphGetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getByIds(): GetByIdsRequestBuilder {
+        return new GetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to application.
+    */
+    public function graphApplication(): GraphApplicationRequestBuilder {
+        return new GraphApplicationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to group.
     */
-    public function microsoftGraphGroup(): MicrosoftGraphGroupRequestBuilder {
-        return new MicrosoftGraphGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphGroup(): GraphGroupRequestBuilder {
+        return new GraphGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to user.
     */
-    public function microsoftGraphUser(): MicrosoftGraphUserRequestBuilder {
-        return new MicrosoftGraphUserRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the validateProperties method.
-    */
-    public function microsoftGraphValidateProperties(): MicrosoftGraphValidatePropertiesRequestBuilder {
-        return new MicrosoftGraphValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphUser(): GraphUserRequestBuilder {
+        return new GraphUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -90,6 +83,13 @@ class DeletedItemsRequestBuilder
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
+    
+    /**
+     * Provides operations to call the validateProperties method.
+    */
+    public function validateProperties(): ValidatePropertiesRequestBuilder {
+        return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * Instantiates a new DeletedItemsRequestBuilder and sets the default values.

@@ -58,7 +58,16 @@ class Directory extends Entity implements Parsable
             'administrativeUnits' => fn(ParseNode $n) => $o->setAdministrativeUnits($n->getCollectionOfObjectValues([AdministrativeUnit::class, 'createFromDiscriminatorValue'])),
             'deletedItems' => fn(ParseNode $n) => $o->setDeletedItems($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'federationConfigurations' => fn(ParseNode $n) => $o->setFederationConfigurations($n->getCollectionOfObjectValues([IdentityProviderBase::class, 'createFromDiscriminatorValue'])),
+            'onPremisesSynchronization' => fn(ParseNode $n) => $o->setOnPremisesSynchronization($n->getCollectionOfObjectValues([OnPremisesDirectorySynchronization::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the onPremisesSynchronization property value. A container for on-premises directory synchronization functionalities that are available for the organization.
+     * @return array<OnPremisesDirectorySynchronization>|null
+    */
+    public function getOnPremisesSynchronization(): ?array {
+        return $this->getBackingStore()->get('onPremisesSynchronization');
     }
 
     /**
@@ -70,6 +79,7 @@ class Directory extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('administrativeUnits', $this->getAdministrativeUnits());
         $writer->writeCollectionOfObjectValues('deletedItems', $this->getDeletedItems());
         $writer->writeCollectionOfObjectValues('federationConfigurations', $this->getFederationConfigurations());
+        $writer->writeCollectionOfObjectValues('onPremisesSynchronization', $this->getOnPremisesSynchronization());
     }
 
     /**
@@ -94,6 +104,14 @@ class Directory extends Entity implements Parsable
     */
     public function setFederationConfigurations(?array $value): void {
         $this->getBackingStore()->set('federationConfigurations', $value);
+    }
+
+    /**
+     * Sets the onPremisesSynchronization property value. A container for on-premises directory synchronization functionalities that are available for the organization.
+     * @param array<OnPremisesDirectorySynchronization>|null $value Value to set for the onPremisesSynchronization property.
+    */
+    public function setOnPremisesSynchronization(?array $value): void {
+        $this->getBackingStore()->set('onPremisesSynchronization', $value);
     }
 
 }

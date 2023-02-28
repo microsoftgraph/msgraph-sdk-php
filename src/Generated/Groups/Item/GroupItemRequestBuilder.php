@@ -6,10 +6,15 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\AcceptedSenders\AcceptedSendersRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\AddFavorite\AddFavoriteRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\AppRoleAssignments\AppRoleAssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\AppRoleAssignments\Item\AppRoleAssignmentItemRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\AssignLicense\AssignLicenseRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Calendar\CalendarRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\CalendarView\CalendarViewRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\CheckGrantedPermissionsForApp\CheckGrantedPermissionsForAppRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Conversations\ConversationsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\ConversationItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\CreatedOnBehalfOf\CreatedOnBehalfOfRequestBuilder;
@@ -19,25 +24,13 @@ use Microsoft\Graph\Generated\Groups\Item\Drives\Item\DriveItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Events\EventsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Extensions\ExtensionsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Extensions\Item\ExtensionItemRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\GroupLifecyclePolicies\GroupLifecyclePoliciesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\GroupLifecyclePolicies\Item\GroupLifecyclePolicyItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\MemberOf\MemberOfRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\MembersWithLicenseErrors\MembersWithLicenseErrorsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphAddFavorite\MicrosoftGraphAddFavoriteRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphAssignLicense\MicrosoftGraphAssignLicenseRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphCheckGrantedPermissionsForApp\MicrosoftGraphCheckGrantedPermissionsForAppRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphCheckMemberGroups\MicrosoftGraphCheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphCheckMemberObjects\MicrosoftGraphCheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphGetMemberGroups\MicrosoftGraphGetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphGetMemberObjects\MicrosoftGraphGetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphRemoveFavorite\MicrosoftGraphRemoveFavoriteRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphRenew\MicrosoftGraphRenewRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphResetUnseenCount\MicrosoftGraphResetUnseenCountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphRestore\MicrosoftGraphRestoreRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphSubscribeByMail\MicrosoftGraphSubscribeByMailRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphUnsubscribeByMail\MicrosoftGraphUnsubscribeByMailRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\MicrosoftGraphValidateProperties\MicrosoftGraphValidatePropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Onenote\OnenoteRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Owners\OwnersRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\Item\ResourceSpecificPermissionGrantItemRequestBuilder;
@@ -47,15 +40,22 @@ use Microsoft\Graph\Generated\Groups\Item\Photos\Item\ProfilePhotoItemRequestBui
 use Microsoft\Graph\Generated\Groups\Item\Photos\PhotosRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Planner\PlannerRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\RejectedSenders\RejectedSendersRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\RemoveFavorite\RemoveFavoriteRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Renew\RenewRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\ResetUnseenCount\ResetUnseenCountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Restore\RestoreRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Settings\Item\GroupSettingItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Settings\SettingsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\SiteItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\SitesRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\SubscribeByMail\SubscribeByMailRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\TeamRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Threads\Item\ConversationThreadItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Threads\ThreadsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\TransitiveMemberOf\TransitiveMemberOfRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\TransitiveMembers\TransitiveMembersRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\UnsubscribeByMail\UnsubscribeByMailRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\Group;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -78,10 +78,24 @@ class GroupItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the addFavorite method.
+    */
+    public function addFavorite(): AddFavoriteRequestBuilder {
+        return new AddFavoriteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the appRoleAssignments property of the microsoft.graph.group entity.
     */
     public function appRoleAssignments(): AppRoleAssignmentsRequestBuilder {
         return new AppRoleAssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the assignLicense method.
+    */
+    public function assignLicense(): AssignLicenseRequestBuilder {
+        return new AssignLicenseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -96,6 +110,27 @@ class GroupItemRequestBuilder
     */
     public function calendarView(): CalendarViewRequestBuilder {
         return new CalendarViewRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the checkGrantedPermissionsForApp method.
+    */
+    public function checkGrantedPermissionsForApp(): CheckGrantedPermissionsForAppRequestBuilder {
+        return new CheckGrantedPermissionsForAppRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the checkMemberGroups method.
+    */
+    public function checkMemberGroups(): CheckMemberGroupsRequestBuilder {
+        return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the checkMemberObjects method.
+    */
+    public function checkMemberObjects(): CheckMemberObjectsRequestBuilder {
+        return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -141,6 +176,20 @@ class GroupItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the getMemberGroups method.
+    */
+    public function getMemberGroups(): GetMemberGroupsRequestBuilder {
+        return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getMemberObjects method.
+    */
+    public function getMemberObjects(): GetMemberObjectsRequestBuilder {
+        return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the groupLifecyclePolicies property of the microsoft.graph.group entity.
     */
     public function groupLifecyclePolicies(): GroupLifecyclePoliciesRequestBuilder {
@@ -166,104 +215,6 @@ class GroupItemRequestBuilder
     */
     public function membersWithLicenseErrors(): MembersWithLicenseErrorsRequestBuilder {
         return new MembersWithLicenseErrorsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the addFavorite method.
-    */
-    public function microsoftGraphAddFavorite(): MicrosoftGraphAddFavoriteRequestBuilder {
-        return new MicrosoftGraphAddFavoriteRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the assignLicense method.
-    */
-    public function microsoftGraphAssignLicense(): MicrosoftGraphAssignLicenseRequestBuilder {
-        return new MicrosoftGraphAssignLicenseRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the checkGrantedPermissionsForApp method.
-    */
-    public function microsoftGraphCheckGrantedPermissionsForApp(): MicrosoftGraphCheckGrantedPermissionsForAppRequestBuilder {
-        return new MicrosoftGraphCheckGrantedPermissionsForAppRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the checkMemberGroups method.
-    */
-    public function microsoftGraphCheckMemberGroups(): MicrosoftGraphCheckMemberGroupsRequestBuilder {
-        return new MicrosoftGraphCheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the checkMemberObjects method.
-    */
-    public function microsoftGraphCheckMemberObjects(): MicrosoftGraphCheckMemberObjectsRequestBuilder {
-        return new MicrosoftGraphCheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the getMemberGroups method.
-    */
-    public function microsoftGraphGetMemberGroups(): MicrosoftGraphGetMemberGroupsRequestBuilder {
-        return new MicrosoftGraphGetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the getMemberObjects method.
-    */
-    public function microsoftGraphGetMemberObjects(): MicrosoftGraphGetMemberObjectsRequestBuilder {
-        return new MicrosoftGraphGetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the removeFavorite method.
-    */
-    public function microsoftGraphRemoveFavorite(): MicrosoftGraphRemoveFavoriteRequestBuilder {
-        return new MicrosoftGraphRemoveFavoriteRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the renew method.
-    */
-    public function microsoftGraphRenew(): MicrosoftGraphRenewRequestBuilder {
-        return new MicrosoftGraphRenewRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the resetUnseenCount method.
-    */
-    public function microsoftGraphResetUnseenCount(): MicrosoftGraphResetUnseenCountRequestBuilder {
-        return new MicrosoftGraphResetUnseenCountRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the restore method.
-    */
-    public function microsoftGraphRestore(): MicrosoftGraphRestoreRequestBuilder {
-        return new MicrosoftGraphRestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the subscribeByMail method.
-    */
-    public function microsoftGraphSubscribeByMail(): MicrosoftGraphSubscribeByMailRequestBuilder {
-        return new MicrosoftGraphSubscribeByMailRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the unsubscribeByMail method.
-    */
-    public function microsoftGraphUnsubscribeByMail(): MicrosoftGraphUnsubscribeByMailRequestBuilder {
-        return new MicrosoftGraphUnsubscribeByMailRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the validateProperties method.
-    */
-    public function microsoftGraphValidateProperties(): MicrosoftGraphValidatePropertiesRequestBuilder {
-        return new MicrosoftGraphValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -321,9 +272,37 @@ class GroupItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the removeFavorite method.
+    */
+    public function removeFavorite(): RemoveFavoriteRequestBuilder {
+        return new RemoveFavoriteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the renew method.
+    */
+    public function renew(): RenewRequestBuilder {
+        return new RenewRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the resetUnseenCount method.
+    */
+    public function resetUnseenCount(): ResetUnseenCountRequestBuilder {
+        return new ResetUnseenCountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the restore method.
+    */
+    public function restore(): RestoreRequestBuilder {
+        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * Provides operations to manage the settings property of the microsoft.graph.group entity.
@@ -337,6 +316,13 @@ class GroupItemRequestBuilder
     */
     public function sites(): SitesRequestBuilder {
         return new SitesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the subscribeByMail method.
+    */
+    public function subscribeByMail(): SubscribeByMailRequestBuilder {
+        return new SubscribeByMailRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -368,9 +354,23 @@ class GroupItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the unsubscribeByMail method.
+    */
+    public function unsubscribeByMail(): UnsubscribeByMailRequestBuilder {
+        return new UnsubscribeByMailRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
+    
+    /**
+     * Provides operations to call the validateProperties method.
+    */
+    public function validateProperties(): ValidatePropertiesRequestBuilder {
+        return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * Gets an item from the Microsoft/Graph/Generated.groups.item.acceptedSenders.item collection
@@ -558,11 +558,11 @@ class GroupItemRequestBuilder
     }
 
     /**
-     * Add a member to a security or Microsoft 365 group through the **members** navigation property. The following table shows the types of members that can be added to either security groups or Microsoft 365 groups.
+     * Update the properties of a group object.
      * @param Group $body The request body
      * @param GroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/group-post-members?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/group-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(Group $body, ?GroupItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -690,7 +690,7 @@ class GroupItemRequestBuilder
     }
 
     /**
-     * Add a member to a security or Microsoft 365 group through the **members** navigation property. The following table shows the types of members that can be added to either security groups or Microsoft 365 groups.
+     * Update the properties of a group object.
      * @param Group $body The request body
      * @param GroupItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

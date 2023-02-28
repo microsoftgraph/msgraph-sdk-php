@@ -5,15 +5,15 @@ namespace Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\CompleteMigration\CompleteMigrationRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName\DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\FilesFolder\FilesFolderRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Members\Item\ConversationMemberItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Messages\Item\ChatMessageItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Messages\MessagesRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\MicrosoftGraphCompleteMigration\MicrosoftGraphCompleteMigrationRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\MicrosoftGraphDoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName\MicrosoftGraphDoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\MicrosoftGraphProvisionEmail\MicrosoftGraphProvisionEmailRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\MicrosoftGraphRemoveEmail\MicrosoftGraphRemoveEmailRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\ProvisionEmail\ProvisionEmailRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\RemoveEmail\RemoveEmailRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\SharedWithTeams\Item\SharedWithChannelTeamInfoItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\SharedWithTeams\SharedWithTeamsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Tabs\Item\TeamsTabItemRequestBuilder;
@@ -32,6 +32,20 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 */
 class PrimaryChannelRequestBuilder 
 {
+    /**
+     * Provides operations to call the completeMigration method.
+    */
+    public function completeMigration(): CompleteMigrationRequestBuilder {
+        return new CompleteMigrationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the doesUserHaveAccess method.
+    */
+    public function doesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName(): DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder {
+        return new DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the filesFolder property of the microsoft.graph.channel entity.
     */
@@ -54,37 +68,23 @@ class PrimaryChannelRequestBuilder
     }
     
     /**
-     * Provides operations to call the completeMigration method.
+     * @var array<string, mixed> $pathParameters Path parameters for the request
     */
-    public function microsoftGraphCompleteMigration(): MicrosoftGraphCompleteMigrationRequestBuilder {
-        return new MicrosoftGraphCompleteMigrationRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the doesUserHaveAccess method.
-    */
-    public function microsoftGraphDoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalName(): MicrosoftGraphDoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder {
-        return new MicrosoftGraphDoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
+    private array $pathParameters;
     
     /**
      * Provides operations to call the provisionEmail method.
     */
-    public function microsoftGraphProvisionEmail(): MicrosoftGraphProvisionEmailRequestBuilder {
-        return new MicrosoftGraphProvisionEmailRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function provisionEmail(): ProvisionEmailRequestBuilder {
+        return new ProvisionEmailRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the removeEmail method.
     */
-    public function microsoftGraphRemoveEmail(): MicrosoftGraphRemoveEmailRequestBuilder {
-        return new MicrosoftGraphRemoveEmailRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function removeEmail(): RemoveEmailRequestBuilder {
+        return new RemoveEmailRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
-    
-    /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
-    */
-    private array $pathParameters;
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.

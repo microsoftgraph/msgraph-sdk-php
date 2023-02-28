@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\It
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Item\MicrosoftGraphBeginOnboarding\MicrosoftGraphBeginOnboardingRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Item\MicrosoftGraphDisconnect\MicrosoftGraphDisconnectRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Item\BeginOnboarding\BeginOnboardingRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Item\Disconnect\DisconnectRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\RemoteAssistancePartner;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -24,15 +24,15 @@ class RemoteAssistancePartnerItemRequestBuilder
     /**
      * Provides operations to call the beginOnboarding method.
     */
-    public function microsoftGraphBeginOnboarding(): MicrosoftGraphBeginOnboardingRequestBuilder {
-        return new MicrosoftGraphBeginOnboardingRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function beginOnboarding(): BeginOnboardingRequestBuilder {
+        return new BeginOnboardingRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the disconnect method.
     */
-    public function microsoftGraphDisconnect(): MicrosoftGraphDisconnectRequestBuilder {
-        return new MicrosoftGraphDisconnectRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function disconnect(): DisconnectRequestBuilder {
+        return new DisconnectRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -5,10 +5,10 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurati
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assign\AssignRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assignments\AssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assignments\Item\EnrollmentConfigurationAssignmentItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\MicrosoftGraphAssign\MicrosoftGraphAssignRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\MicrosoftGraphSetPriority\MicrosoftGraphSetPriorityRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\SetPriority\SetPriorityRequestBuilder;
 use Microsoft\Graph\Generated\Models\DeviceEnrollmentConfiguration;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -24,24 +24,17 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class DeviceEnrollmentConfigurationItemRequestBuilder 
 {
     /**
+     * Provides operations to call the assign method.
+    */
+    public function assign(): AssignRequestBuilder {
+        return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the assignments property of the microsoft.graph.deviceEnrollmentConfiguration entity.
     */
     public function assignments(): AssignmentsRequestBuilder {
         return new AssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the assign method.
-    */
-    public function microsoftGraphAssign(): MicrosoftGraphAssignRequestBuilder {
-        return new MicrosoftGraphAssignRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the setPriority method.
-    */
-    public function microsoftGraphSetPriority(): MicrosoftGraphSetPriorityRequestBuilder {
-        return new MicrosoftGraphSetPriorityRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -53,6 +46,13 @@ class DeviceEnrollmentConfigurationItemRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the setPriority method.
+    */
+    public function setPriority(): SetPriorityRequestBuilder {
+        return new SetPriorityRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder

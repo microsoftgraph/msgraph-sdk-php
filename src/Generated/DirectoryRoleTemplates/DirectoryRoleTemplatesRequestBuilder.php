@@ -6,9 +6,9 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DirectoryRoleTemplates\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoleTemplates\MicrosoftGraphGetAvailableExtensionProperties\MicrosoftGraphGetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoleTemplates\MicrosoftGraphGetByIds\MicrosoftGraphGetByIdsRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoleTemplates\MicrosoftGraphValidateProperties\MicrosoftGraphValidatePropertiesRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoleTemplates\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoleTemplates\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoleTemplates\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryRoleTemplate;
 use Microsoft\Graph\Generated\Models\DirectoryRoleTemplateCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -34,22 +34,15 @@ class DirectoryRoleTemplatesRequestBuilder
     /**
      * Provides operations to call the getAvailableExtensionProperties method.
     */
-    public function microsoftGraphGetAvailableExtensionProperties(): MicrosoftGraphGetAvailableExtensionPropertiesRequestBuilder {
-        return new MicrosoftGraphGetAvailableExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
+        return new GetAvailableExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getByIds method.
     */
-    public function microsoftGraphGetByIds(): MicrosoftGraphGetByIdsRequestBuilder {
-        return new MicrosoftGraphGetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the validateProperties method.
-    */
-    public function microsoftGraphValidateProperties(): MicrosoftGraphValidatePropertiesRequestBuilder {
-        return new MicrosoftGraphValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getByIds(): GetByIdsRequestBuilder {
+        return new GetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -66,6 +59,13 @@ class DirectoryRoleTemplatesRequestBuilder
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
+    
+    /**
+     * Provides operations to call the validateProperties method.
+    */
+    public function validateProperties(): ValidatePropertiesRequestBuilder {
+        return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * Instantiates a new DirectoryRoleTemplatesRequestBuilder and sets the default values.

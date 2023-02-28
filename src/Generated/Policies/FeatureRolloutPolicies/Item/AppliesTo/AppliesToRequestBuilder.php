@@ -9,10 +9,10 @@ use Microsoft\Graph\Generated\Models\DirectoryObject;
 use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\MicrosoftGraphGetAvailableExtensionProperties\MicrosoftGraphGetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\MicrosoftGraphGetByIds\MicrosoftGraphGetByIdsRequestBuilder;
-use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\MicrosoftGraphValidateProperties\MicrosoftGraphValidatePropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\GetByIds\GetByIdsRequestBuilder;
 use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\Ref\RefRequestBuilder;
+use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -35,22 +35,15 @@ class AppliesToRequestBuilder
     /**
      * Provides operations to call the getAvailableExtensionProperties method.
     */
-    public function microsoftGraphGetAvailableExtensionProperties(): MicrosoftGraphGetAvailableExtensionPropertiesRequestBuilder {
-        return new MicrosoftGraphGetAvailableExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
+        return new GetAvailableExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getByIds method.
     */
-    public function microsoftGraphGetByIds(): MicrosoftGraphGetByIdsRequestBuilder {
-        return new MicrosoftGraphGetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the validateProperties method.
-    */
-    public function microsoftGraphValidateProperties(): MicrosoftGraphValidatePropertiesRequestBuilder {
-        return new MicrosoftGraphValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getByIds(): GetByIdsRequestBuilder {
+        return new GetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -74,6 +67,13 @@ class AppliesToRequestBuilder
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
+    
+    /**
+     * Provides operations to call the validateProperties method.
+    */
+    public function validateProperties(): ValidatePropertiesRequestBuilder {
+        return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * Instantiates a new AppliesToRequestBuilder and sets the default values.

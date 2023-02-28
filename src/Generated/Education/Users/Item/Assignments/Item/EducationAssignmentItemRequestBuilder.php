@@ -7,12 +7,12 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Categories\CategoriesRequestBuilder;
 use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Categories\Item\EducationCategoryItemRequestBuilder;
-use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\MicrosoftGraphPublish\MicrosoftGraphPublishRequestBuilder;
-use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\MicrosoftGraphSetUpFeedbackResourcesFolder\MicrosoftGraphSetUpFeedbackResourcesFolderRequestBuilder;
-use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\MicrosoftGraphSetUpResourcesFolder\MicrosoftGraphSetUpResourcesFolderRequestBuilder;
+use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Publish\PublishRequestBuilder;
 use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Resources\Item\EducationAssignmentResourceItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Resources\ResourcesRequestBuilder;
 use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Rubric\RubricRequestBuilder;
+use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\SetUpFeedbackResourcesFolder\SetUpFeedbackResourcesFolderRequestBuilder;
+use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\SetUpResourcesFolder\SetUpResourcesFolderRequestBuilder;
 use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Submissions\Item\EducationSubmissionItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Submissions\SubmissionsRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationAssignment;
@@ -37,30 +37,16 @@ class EducationAssignmentItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the publish method.
-    */
-    public function microsoftGraphPublish(): MicrosoftGraphPublishRequestBuilder {
-        return new MicrosoftGraphPublishRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the setUpFeedbackResourcesFolder method.
-    */
-    public function microsoftGraphSetUpFeedbackResourcesFolder(): MicrosoftGraphSetUpFeedbackResourcesFolderRequestBuilder {
-        return new MicrosoftGraphSetUpFeedbackResourcesFolderRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the setUpResourcesFolder method.
-    */
-    public function microsoftGraphSetUpResourcesFolder(): MicrosoftGraphSetUpResourcesFolderRequestBuilder {
-        return new MicrosoftGraphSetUpResourcesFolderRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * Provides operations to call the publish method.
+    */
+    public function publish(): PublishRequestBuilder {
+        return new PublishRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -79,6 +65,20 @@ class EducationAssignmentItemRequestBuilder
     */
     public function rubric(): RubricRequestBuilder {
         return new RubricRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the setUpFeedbackResourcesFolder method.
+    */
+    public function setUpFeedbackResourcesFolder(): SetUpFeedbackResourcesFolderRequestBuilder {
+        return new SetUpFeedbackResourcesFolderRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the setUpResourcesFolder method.
+    */
+    public function setUpResourcesFolder(): SetUpResourcesFolderRequestBuilder {
+        return new SetUpResourcesFolderRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

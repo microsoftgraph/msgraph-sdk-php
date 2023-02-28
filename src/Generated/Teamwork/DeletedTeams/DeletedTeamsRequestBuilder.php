@@ -9,7 +9,7 @@ use Microsoft\Graph\Generated\Models\DeletedTeam;
 use Microsoft\Graph\Generated\Models\DeletedTeamCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Teamwork\DeletedTeams\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Teamwork\DeletedTeams\MicrosoftGraphGetAllMessages\MicrosoftGraphGetAllMessagesRequestBuilder;
+use Microsoft\Graph\Generated\Teamwork\DeletedTeams\GetAllMessages\GetAllMessagesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -32,8 +32,8 @@ class DeletedTeamsRequestBuilder
     /**
      * Provides operations to call the getAllMessages method.
     */
-    public function microsoftGraphGetAllMessages(): MicrosoftGraphGetAllMessagesRequestBuilder {
-        return new MicrosoftGraphGetAllMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getAllMessages(): GetAllMessagesRequestBuilder {
+        return new GetAllMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

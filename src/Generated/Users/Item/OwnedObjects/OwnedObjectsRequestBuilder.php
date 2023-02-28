@@ -8,9 +8,9 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\OwnedObjects\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\OwnedObjects\MicrosoftGraphApplication\MicrosoftGraphApplicationRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\OwnedObjects\MicrosoftGraphGroup\MicrosoftGraphGroupRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\OwnedObjects\MicrosoftGraphServicePrincipal\MicrosoftGraphServicePrincipalRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\OwnedObjects\GraphApplication\GraphApplicationRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\OwnedObjects\GraphGroup\GraphGroupRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\OwnedObjects\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -33,22 +33,22 @@ class OwnedObjectsRequestBuilder
     /**
      * Casts the previous resource to application.
     */
-    public function microsoftGraphApplication(): MicrosoftGraphApplicationRequestBuilder {
-        return new MicrosoftGraphApplicationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphApplication(): GraphApplicationRequestBuilder {
+        return new GraphApplicationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to group.
     */
-    public function microsoftGraphGroup(): MicrosoftGraphGroupRequestBuilder {
-        return new MicrosoftGraphGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphGroup(): GraphGroupRequestBuilder {
+        return new GraphGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to servicePrincipal.
     */
-    public function microsoftGraphServicePrincipal(): MicrosoftGraphServicePrincipalRequestBuilder {
-        return new MicrosoftGraphServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphServicePrincipal(): GraphServicePrincipalRequestBuilder {
+        return new GraphServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

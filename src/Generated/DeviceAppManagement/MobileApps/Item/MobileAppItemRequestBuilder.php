@@ -5,13 +5,13 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Assign\AssignRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Assignments\AssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Assignments\Item\MobileAppAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Categories\CategoriesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\Categories\Item\MobileAppCategoryItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\MicrosoftGraphAssign\MicrosoftGraphAssignRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\MicrosoftGraphManagedMobileLobApp\MicrosoftGraphManagedMobileLobAppRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\MicrosoftGraphMobileLobApp\MicrosoftGraphMobileLobAppRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphManagedMobileLobApp\GraphManagedMobileLobAppRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Item\GraphMobileLobApp\GraphMobileLobAppRequestBuilder;
 use Microsoft\Graph\Generated\Models\MobileApp;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -27,6 +27,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class MobileAppItemRequestBuilder 
 {
     /**
+     * Provides operations to call the assign method.
+    */
+    public function assign(): AssignRequestBuilder {
+        return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the assignments property of the microsoft.graph.mobileApp entity.
     */
     public function assignments(): AssignmentsRequestBuilder {
@@ -41,24 +48,17 @@ class MobileAppItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the assign method.
-    */
-    public function microsoftGraphAssign(): MicrosoftGraphAssignRequestBuilder {
-        return new MicrosoftGraphAssignRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Casts the previous resource to managedMobileLobApp.
     */
-    public function microsoftGraphManagedMobileLobApp(): MicrosoftGraphManagedMobileLobAppRequestBuilder {
-        return new MicrosoftGraphManagedMobileLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphManagedMobileLobApp(): GraphManagedMobileLobAppRequestBuilder {
+        return new GraphManagedMobileLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to mobileLobApp.
     */
-    public function microsoftGraphMobileLobApp(): MicrosoftGraphMobileLobAppRequestBuilder {
-        return new MicrosoftGraphMobileLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphMobileLobApp(): GraphMobileLobAppRequestBuilder {
+        return new GraphMobileLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

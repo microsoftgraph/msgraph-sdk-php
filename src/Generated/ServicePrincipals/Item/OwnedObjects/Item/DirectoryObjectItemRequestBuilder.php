@@ -7,11 +7,11 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\DirectoryObject;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\OwnedObjects\Item\MicrosoftGraphApplication\MicrosoftGraphApplicationRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\OwnedObjects\Item\MicrosoftGraphAppRoleAssignment\MicrosoftGraphAppRoleAssignmentRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\OwnedObjects\Item\MicrosoftGraphEndpoint\MicrosoftGraphEndpointRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\OwnedObjects\Item\MicrosoftGraphGroup\MicrosoftGraphGroupRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\OwnedObjects\Item\MicrosoftGraphServicePrincipal\MicrosoftGraphServicePrincipalRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\OwnedObjects\Item\GraphApplication\GraphApplicationRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\OwnedObjects\Item\GraphAppRoleAssignment\GraphAppRoleAssignmentRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\OwnedObjects\Item\GraphEndpoint\GraphEndpointRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\OwnedObjects\Item\GraphGroup\GraphGroupRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\OwnedObjects\Item\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -27,36 +27,36 @@ class DirectoryObjectItemRequestBuilder
     /**
      * Casts the previous resource to application.
     */
-    public function microsoftGraphApplication(): MicrosoftGraphApplicationRequestBuilder {
-        return new MicrosoftGraphApplicationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphApplication(): GraphApplicationRequestBuilder {
+        return new GraphApplicationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to appRoleAssignment.
     */
-    public function microsoftGraphAppRoleAssignment(): MicrosoftGraphAppRoleAssignmentRequestBuilder {
-        return new MicrosoftGraphAppRoleAssignmentRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphAppRoleAssignment(): GraphAppRoleAssignmentRequestBuilder {
+        return new GraphAppRoleAssignmentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to endpoint.
     */
-    public function microsoftGraphEndpoint(): MicrosoftGraphEndpointRequestBuilder {
-        return new MicrosoftGraphEndpointRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphEndpoint(): GraphEndpointRequestBuilder {
+        return new GraphEndpointRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to group.
     */
-    public function microsoftGraphGroup(): MicrosoftGraphGroupRequestBuilder {
-        return new MicrosoftGraphGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphGroup(): GraphGroupRequestBuilder {
+        return new GraphGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to servicePrincipal.
     */
-    public function microsoftGraphServicePrincipal(): MicrosoftGraphServicePrincipalRequestBuilder {
-        return new MicrosoftGraphServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphServicePrincipal(): GraphServicePrincipalRequestBuilder {
+        return new GraphServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -5,13 +5,13 @@ namespace Microsoft\Graph\Generated\DirectoryRoles\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
 use Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Item\DirectoryObjectItemRequestBuilder;
 use Microsoft\Graph\Generated\DirectoryRoles\Item\Members\MembersRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoles\Item\MicrosoftGraphCheckMemberGroups\MicrosoftGraphCheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoles\Item\MicrosoftGraphCheckMemberObjects\MicrosoftGraphCheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoles\Item\MicrosoftGraphGetMemberGroups\MicrosoftGraphGetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoles\Item\MicrosoftGraphGetMemberObjects\MicrosoftGraphGetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoles\Item\MicrosoftGraphRestore\MicrosoftGraphRestoreRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoles\Item\Restore\RestoreRequestBuilder;
 use Microsoft\Graph\Generated\DirectoryRoles\Item\ScopedMembers\Item\ScopedRoleMembershipItemRequestBuilder;
 use Microsoft\Graph\Generated\DirectoryRoles\Item\ScopedMembers\ScopedMembersRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryRole;
@@ -29,45 +29,38 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class DirectoryRoleItemRequestBuilder 
 {
     /**
-     * Provides operations to manage the members property of the microsoft.graph.directoryRole entity.
-    */
-    public function members(): MembersRequestBuilder {
-        return new MembersRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the checkMemberGroups method.
     */
-    public function microsoftGraphCheckMemberGroups(): MicrosoftGraphCheckMemberGroupsRequestBuilder {
-        return new MicrosoftGraphCheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function checkMemberGroups(): CheckMemberGroupsRequestBuilder {
+        return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the checkMemberObjects method.
     */
-    public function microsoftGraphCheckMemberObjects(): MicrosoftGraphCheckMemberObjectsRequestBuilder {
-        return new MicrosoftGraphCheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function checkMemberObjects(): CheckMemberObjectsRequestBuilder {
+        return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getMemberGroups method.
     */
-    public function microsoftGraphGetMemberGroups(): MicrosoftGraphGetMemberGroupsRequestBuilder {
-        return new MicrosoftGraphGetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getMemberGroups(): GetMemberGroupsRequestBuilder {
+        return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getMemberObjects method.
     */
-    public function microsoftGraphGetMemberObjects(): MicrosoftGraphGetMemberObjectsRequestBuilder {
-        return new MicrosoftGraphGetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getMemberObjects(): GetMemberObjectsRequestBuilder {
+        return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * Provides operations to call the restore method.
+     * Provides operations to manage the members property of the microsoft.graph.directoryRole entity.
     */
-    public function microsoftGraphRestore(): MicrosoftGraphRestoreRequestBuilder {
-        return new MicrosoftGraphRestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function members(): MembersRequestBuilder {
+        return new MembersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -79,6 +72,13 @@ class DirectoryRoleItemRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the restore method.
+    */
+    public function restore(): RestoreRequestBuilder {
+        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * Provides operations to manage the scopedMembers property of the microsoft.graph.directoryRole entity.

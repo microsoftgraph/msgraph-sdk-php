@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Team\Channels\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Channels\MicrosoftGraphGetAllMessages\MicrosoftGraphGetAllMessagesRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\Channels\GetAllMessages\GetAllMessagesRequestBuilder;
 use Microsoft\Graph\Generated\Models\Channel;
 use Microsoft\Graph\Generated\Models\ChannelCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -32,8 +32,8 @@ class ChannelsRequestBuilder
     /**
      * Provides operations to call the getAllMessages method.
     */
-    public function microsoftGraphGetAllMessages(): MicrosoftGraphGetAllMessagesRequestBuilder {
-        return new MicrosoftGraphGetAllMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getAllMessages(): GetAllMessagesRequestBuilder {
+        return new GetAllMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

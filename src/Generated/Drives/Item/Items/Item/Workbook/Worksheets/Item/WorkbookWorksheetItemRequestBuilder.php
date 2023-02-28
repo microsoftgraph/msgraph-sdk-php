@@ -5,20 +5,20 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\CellWithRowWithColumn\CellWithRowWithColumnRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\ChartsRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\WorkbookChartItemRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\MicrosoftGraphCellWithRowWithColumn\MicrosoftGraphCellWithRowWithColumnRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\MicrosoftGraphRange\MicrosoftGraphRangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\MicrosoftGraphRangeWithAddress\MicrosoftGraphRangeWithAddressRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\MicrosoftGraphUsedRange\MicrosoftGraphUsedRangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\MicrosoftGraphUsedRangeWithValuesOnly\MicrosoftGraphUsedRangeWithValuesOnlyRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Names\Item\WorkbookNamedItemItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Names\NamesRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\PivotTables\Item\WorkbookPivotTableItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\PivotTables\PivotTablesRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Protection\ProtectionRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Range\RangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\RangeWithAddress\RangeWithAddressRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\WorkbookTableItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\TablesRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\UsedRange\UsedRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\UsedRangeWithValuesOnly\UsedRangeWithValuesOnlyRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookWorksheet;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -38,20 +38,6 @@ class WorkbookWorksheetItemRequestBuilder
     */
     public function charts(): ChartsRequestBuilder {
         return new ChartsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the range method.
-    */
-    public function microsoftGraphRange(): MicrosoftGraphRangeRequestBuilder {
-        return new MicrosoftGraphRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the usedRange method.
-    */
-    public function microsoftGraphUsedRange(): MicrosoftGraphUsedRangeRequestBuilder {
-        return new MicrosoftGraphUsedRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -81,6 +67,13 @@ class WorkbookWorksheetItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the range method.
+    */
+    public function range(): RangeRequestBuilder {
+        return new RangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
@@ -97,6 +90,23 @@ class WorkbookWorksheetItemRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to call the usedRange method.
+    */
+    public function usedRange(): UsedRangeRequestBuilder {
+        return new UsedRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the cell method.
+     * @param int $column Usage: column={column}
+     * @param int $row Usage: row={row}
+     * @return CellWithRowWithColumnRequestBuilder
+    */
+    public function cellWithRowWithColumn(int $column, int $row): CellWithRowWithColumnRequestBuilder {
+        return new CellWithRowWithColumnRequestBuilder($this->pathParameters, $this->requestAdapter, $column, $row);
+    }
+
     /**
      * Provides operations to manage the charts property of the microsoft.graph.workbookWorksheet entity.
      * @param string $id Unique identifier of the item
@@ -160,34 +170,6 @@ class WorkbookWorksheetItemRequestBuilder
     }
 
     /**
-     * Provides operations to call the cell method.
-     * @param int $column Usage: column={column}
-     * @param int $row Usage: row={row}
-     * @return MicrosoftGraphCellWithRowWithColumnRequestBuilder
-    */
-    public function microsoftGraphCellWithRowWithColumn(int $column, int $row): MicrosoftGraphCellWithRowWithColumnRequestBuilder {
-        return new MicrosoftGraphCellWithRowWithColumnRequestBuilder($this->pathParameters, $this->requestAdapter, $column, $row);
-    }
-
-    /**
-     * Provides operations to call the range method.
-     * @param string $address Usage: address='{address}'
-     * @return MicrosoftGraphRangeWithAddressRequestBuilder
-    */
-    public function microsoftGraphRangeWithAddress(string $address): MicrosoftGraphRangeWithAddressRequestBuilder {
-        return new MicrosoftGraphRangeWithAddressRequestBuilder($this->pathParameters, $this->requestAdapter, $address);
-    }
-
-    /**
-     * Provides operations to call the usedRange method.
-     * @param bool $valuesOnly Usage: valuesOnly={valuesOnly}
-     * @return MicrosoftGraphUsedRangeWithValuesOnlyRequestBuilder
-    */
-    public function microsoftGraphUsedRangeWithValuesOnly(bool $valuesOnly): MicrosoftGraphUsedRangeWithValuesOnlyRequestBuilder {
-        return new MicrosoftGraphUsedRangeWithValuesOnlyRequestBuilder($this->pathParameters, $this->requestAdapter, $valuesOnly);
-    }
-
-    /**
      * Provides operations to manage the names property of the microsoft.graph.workbookWorksheet entity.
      * @param string $id Unique identifier of the item
      * @return WorkbookNamedItemItemRequestBuilder
@@ -226,6 +208,15 @@ class WorkbookWorksheetItemRequestBuilder
         $urlTplParams = $this->pathParameters;
         $urlTplParams['workbookPivotTable%2Did'] = $id;
         return new WorkbookPivotTableItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
+    /**
+     * Provides operations to call the range method.
+     * @param string $address Usage: address='{address}'
+     * @return RangeWithAddressRequestBuilder
+    */
+    public function rangeWithAddress(string $address): RangeWithAddressRequestBuilder {
+        return new RangeWithAddressRequestBuilder($this->pathParameters, $this->requestAdapter, $address);
     }
 
     /**
@@ -307,6 +298,15 @@ class WorkbookWorksheetItemRequestBuilder
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
+    }
+
+    /**
+     * Provides operations to call the usedRange method.
+     * @param bool $valuesOnly Usage: valuesOnly={valuesOnly}
+     * @return UsedRangeWithValuesOnlyRequestBuilder
+    */
+    public function usedRangeWithValuesOnly(bool $valuesOnly): UsedRangeWithValuesOnlyRequestBuilder {
+        return new UsedRangeWithValuesOnlyRequestBuilder($this->pathParameters, $this->requestAdapter, $valuesOnly);
     }
 
 }

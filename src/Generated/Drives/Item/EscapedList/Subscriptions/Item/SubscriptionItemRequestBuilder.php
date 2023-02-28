@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\EscapedList\Subscriptions\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Drives\Item\EscapedList\Subscriptions\Item\MicrosoftGraphReauthorize\MicrosoftGraphReauthorizeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\EscapedList\Subscriptions\Item\Reauthorize\ReauthorizeRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Subscription;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -21,16 +21,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class SubscriptionItemRequestBuilder 
 {
     /**
-     * Provides operations to call the reauthorize method.
-    */
-    public function microsoftGraphReauthorize(): MicrosoftGraphReauthorizeRequestBuilder {
-        return new MicrosoftGraphReauthorizeRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * Provides operations to call the reauthorize method.
+    */
+    public function reauthorize(): ReauthorizeRequestBuilder {
+        return new ReauthorizeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.

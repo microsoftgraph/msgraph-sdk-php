@@ -9,19 +9,19 @@ use Microsoft\Graph\Generated\Models\Message;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\Attachments\AttachmentsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\Attachments\Item\AttachmentItemRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\Copy\CopyRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\CreateForward\CreateForwardRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\CreateReply\CreateReplyRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\CreateReplyAll\CreateReplyAllRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\Extensions\ExtensionsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\Extensions\Item\ExtensionItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\MicrosoftGraphCopy\MicrosoftGraphCopyRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\MicrosoftGraphCreateForward\MicrosoftGraphCreateForwardRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\MicrosoftGraphCreateReply\MicrosoftGraphCreateReplyRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\MicrosoftGraphCreateReplyAll\MicrosoftGraphCreateReplyAllRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\MicrosoftGraphForward\MicrosoftGraphForwardRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\MicrosoftGraphMove\MicrosoftGraphMoveRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\MicrosoftGraphReply\MicrosoftGraphReplyRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\MicrosoftGraphReplyAll\MicrosoftGraphReplyAllRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\MicrosoftGraphSend\MicrosoftGraphSendRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\Forward\ForwardRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\Move\MoveRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\Reply\ReplyRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\ReplyAll\ReplyAllRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\Send\SendRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\Value\ContentRequestBuilder;
@@ -52,6 +52,34 @@ class MessageItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the copy method.
+    */
+    public function copy(): CopyRequestBuilder {
+        return new CopyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the createForward method.
+    */
+    public function createForward(): CreateForwardRequestBuilder {
+        return new CreateForwardRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the createReply method.
+    */
+    public function createReply(): CreateReplyRequestBuilder {
+        return new CreateReplyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the createReplyAll method.
+    */
+    public function createReplyAll(): CreateReplyAllRequestBuilder {
+        return new CreateReplyAllRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the extensions property of the microsoft.graph.message entity.
     */
     public function extensions(): ExtensionsRequestBuilder {
@@ -59,66 +87,17 @@ class MessageItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the copy method.
-    */
-    public function microsoftGraphCopy(): MicrosoftGraphCopyRequestBuilder {
-        return new MicrosoftGraphCopyRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the createForward method.
-    */
-    public function microsoftGraphCreateForward(): MicrosoftGraphCreateForwardRequestBuilder {
-        return new MicrosoftGraphCreateForwardRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the createReply method.
-    */
-    public function microsoftGraphCreateReply(): MicrosoftGraphCreateReplyRequestBuilder {
-        return new MicrosoftGraphCreateReplyRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the createReplyAll method.
-    */
-    public function microsoftGraphCreateReplyAll(): MicrosoftGraphCreateReplyAllRequestBuilder {
-        return new MicrosoftGraphCreateReplyAllRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the forward method.
     */
-    public function microsoftGraphForward(): MicrosoftGraphForwardRequestBuilder {
-        return new MicrosoftGraphForwardRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function forward(): ForwardRequestBuilder {
+        return new ForwardRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the move method.
     */
-    public function microsoftGraphMove(): MicrosoftGraphMoveRequestBuilder {
-        return new MicrosoftGraphMoveRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the reply method.
-    */
-    public function microsoftGraphReply(): MicrosoftGraphReplyRequestBuilder {
-        return new MicrosoftGraphReplyRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the replyAll method.
-    */
-    public function microsoftGraphReplyAll(): MicrosoftGraphReplyAllRequestBuilder {
-        return new MicrosoftGraphReplyAllRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the send method.
-    */
-    public function microsoftGraphSend(): MicrosoftGraphSendRequestBuilder {
-        return new MicrosoftGraphSendRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function move(): MoveRequestBuilder {
+        return new MoveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -134,9 +113,30 @@ class MessageItemRequestBuilder
     private array $pathParameters;
     
     /**
+     * Provides operations to call the reply method.
+    */
+    public function reply(): ReplyRequestBuilder {
+        return new ReplyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the replyAll method.
+    */
+    public function replyAll(): ReplyAllRequestBuilder {
+        return new ReplyAllRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the send method.
+    */
+    public function send(): SendRequestBuilder {
+        return new SendRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.message entity.

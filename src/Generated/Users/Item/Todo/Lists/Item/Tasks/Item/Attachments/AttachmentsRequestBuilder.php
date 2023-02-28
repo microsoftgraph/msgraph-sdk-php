@@ -9,7 +9,7 @@ use Microsoft\Graph\Generated\Models\AttachmentBase;
 use Microsoft\Graph\Generated\Models\AttachmentBaseCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Attachments\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Attachments\MicrosoftGraphCreateUploadSession\MicrosoftGraphCreateUploadSessionRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Attachments\CreateUploadSession\CreateUploadSessionRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -32,8 +32,8 @@ class AttachmentsRequestBuilder
     /**
      * Provides operations to call the createUploadSession method.
     */
-    public function microsoftGraphCreateUploadSession(): MicrosoftGraphCreateUploadSessionRequestBuilder {
-        return new MicrosoftGraphCreateUploadSessionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function createUploadSession(): CreateUploadSessionRequestBuilder {
+        return new CreateUploadSessionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

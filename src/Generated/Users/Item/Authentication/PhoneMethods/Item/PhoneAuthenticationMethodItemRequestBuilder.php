@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PhoneAuthenticationMethod;
-use Microsoft\Graph\Generated\Users\Item\Authentication\PhoneMethods\Item\MicrosoftGraphDisableSmsSignIn\MicrosoftGraphDisableSmsSignInRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Authentication\PhoneMethods\Item\MicrosoftGraphEnableSmsSignIn\MicrosoftGraphEnableSmsSignInRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Authentication\PhoneMethods\Item\DisableSmsSignIn\DisableSmsSignInRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Authentication\PhoneMethods\Item\EnableSmsSignIn\EnableSmsSignInRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -24,15 +24,15 @@ class PhoneAuthenticationMethodItemRequestBuilder
     /**
      * Provides operations to call the disableSmsSignIn method.
     */
-    public function microsoftGraphDisableSmsSignIn(): MicrosoftGraphDisableSmsSignInRequestBuilder {
-        return new MicrosoftGraphDisableSmsSignInRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function disableSmsSignIn(): DisableSmsSignInRequestBuilder {
+        return new DisableSmsSignInRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the enableSmsSignIn method.
     */
-    public function microsoftGraphEnableSmsSignIn(): MicrosoftGraphEnableSmsSignInRequestBuilder {
-        return new MicrosoftGraphEnableSmsSignInRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function enableSmsSignIn(): EnableSmsSignInRequestBuilder {
+        return new EnableSmsSignInRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

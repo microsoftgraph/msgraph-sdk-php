@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item\LocalizedNotificationMessages\Item\LocalizedNotificationMessageItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item\LocalizedNotificationMessages\LocalizedNotificationMessagesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item\MicrosoftGraphSendTestMessage\MicrosoftGraphSendTestMessageRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item\SendTestMessage\SendTestMessageRequestBuilder;
 use Microsoft\Graph\Generated\Models\NotificationMessageTemplate;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -30,13 +30,6 @@ class NotificationMessageTemplateItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the sendTestMessage method.
-    */
-    public function microsoftGraphSendTestMessage(): MicrosoftGraphSendTestMessageRequestBuilder {
-        return new MicrosoftGraphSendTestMessageRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -45,6 +38,13 @@ class NotificationMessageTemplateItemRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the sendTestMessage method.
+    */
+    public function sendTestMessage(): SendTestMessageRequestBuilder {
+        return new SendTestMessageRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder

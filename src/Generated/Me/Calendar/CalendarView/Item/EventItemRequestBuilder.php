@@ -5,23 +5,23 @@ namespace Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\Accept\AcceptRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\Attachments\AttachmentsRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\Attachments\Item\AttachmentItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\Calendar\CalendarRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\Cancel\CancelRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\Decline\DeclineRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\DismissReminder\DismissReminderRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\Extensions\ExtensionsRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\Extensions\Item\ExtensionItemRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\Forward\ForwardRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\Instances\InstancesRequestBuilder;
-use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\MicrosoftGraphAccept\MicrosoftGraphAcceptRequestBuilder;
-use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\MicrosoftGraphCancel\MicrosoftGraphCancelRequestBuilder;
-use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\MicrosoftGraphDecline\MicrosoftGraphDeclineRequestBuilder;
-use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\MicrosoftGraphDismissReminder\MicrosoftGraphDismissReminderRequestBuilder;
-use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\MicrosoftGraphForward\MicrosoftGraphForwardRequestBuilder;
-use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\MicrosoftGraphSnoozeReminder\MicrosoftGraphSnoozeReminderRequestBuilder;
-use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\MicrosoftGraphTentativelyAccept\MicrosoftGraphTentativelyAcceptRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\SnoozeReminder\SnoozeReminderRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\TentativelyAccept\TentativelyAcceptRequestBuilder;
 use Microsoft\Graph\Generated\Models\Event;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -37,6 +37,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class EventItemRequestBuilder 
 {
     /**
+     * Provides operations to call the accept method.
+    */
+    public function accept(): AcceptRequestBuilder {
+        return new AcceptRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the attachments property of the microsoft.graph.event entity.
     */
     public function attachments(): AttachmentsRequestBuilder {
@@ -51,6 +58,27 @@ class EventItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the cancel method.
+    */
+    public function cancel(): CancelRequestBuilder {
+        return new CancelRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the decline method.
+    */
+    public function decline(): DeclineRequestBuilder {
+        return new DeclineRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the dismissReminder method.
+    */
+    public function dismissReminder(): DismissReminderRequestBuilder {
+        return new DismissReminderRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the extensions property of the microsoft.graph.event entity.
     */
     public function extensions(): ExtensionsRequestBuilder {
@@ -58,59 +86,17 @@ class EventItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the forward method.
+    */
+    public function forward(): ForwardRequestBuilder {
+        return new ForwardRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the instances property of the microsoft.graph.event entity.
     */
     public function instances(): InstancesRequestBuilder {
         return new InstancesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the accept method.
-    */
-    public function microsoftGraphAccept(): MicrosoftGraphAcceptRequestBuilder {
-        return new MicrosoftGraphAcceptRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the cancel method.
-    */
-    public function microsoftGraphCancel(): MicrosoftGraphCancelRequestBuilder {
-        return new MicrosoftGraphCancelRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the decline method.
-    */
-    public function microsoftGraphDecline(): MicrosoftGraphDeclineRequestBuilder {
-        return new MicrosoftGraphDeclineRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the dismissReminder method.
-    */
-    public function microsoftGraphDismissReminder(): MicrosoftGraphDismissReminderRequestBuilder {
-        return new MicrosoftGraphDismissReminderRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the forward method.
-    */
-    public function microsoftGraphForward(): MicrosoftGraphForwardRequestBuilder {
-        return new MicrosoftGraphForwardRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the snoozeReminder method.
-    */
-    public function microsoftGraphSnoozeReminder(): MicrosoftGraphSnoozeReminderRequestBuilder {
-        return new MicrosoftGraphSnoozeReminderRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the tentativelyAccept method.
-    */
-    public function microsoftGraphTentativelyAccept(): MicrosoftGraphTentativelyAcceptRequestBuilder {
-        return new MicrosoftGraphTentativelyAcceptRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -135,6 +121,20 @@ class EventItemRequestBuilder
     */
     public function singleValueExtendedProperties(): SingleValueExtendedPropertiesRequestBuilder {
         return new SingleValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the snoozeReminder method.
+    */
+    public function snoozeReminder(): SnoozeReminderRequestBuilder {
+        return new SnoozeReminderRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the tentativelyAccept method.
+    */
+    public function tentativelyAccept(): TentativelyAcceptRequestBuilder {
+        return new TentativelyAcceptRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

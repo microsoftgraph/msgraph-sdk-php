@@ -6,8 +6,8 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\AuditEvents\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\AuditEvents\MicrosoftGraphGetAuditActivityTypesWithCategory\MicrosoftGraphGetAuditActivityTypesWithCategoryRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\AuditEvents\MicrosoftGraphGetAuditCategories\MicrosoftGraphGetAuditCategoriesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\AuditEvents\GetAuditActivityTypesWithCategory\GetAuditActivityTypesWithCategoryRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\AuditEvents\GetAuditCategories\GetAuditCategoriesRequestBuilder;
 use Microsoft\Graph\Generated\Models\AuditEvent;
 use Microsoft\Graph\Generated\Models\AuditEventCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -33,8 +33,8 @@ class AuditEventsRequestBuilder
     /**
      * Provides operations to call the getAuditCategories method.
     */
-    public function microsoftGraphGetAuditCategories(): MicrosoftGraphGetAuditCategoriesRequestBuilder {
-        return new MicrosoftGraphGetAuditCategoriesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getAuditCategories(): GetAuditCategoriesRequestBuilder {
+        return new GetAuditCategoriesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -88,10 +88,10 @@ class AuditEventsRequestBuilder
     /**
      * Provides operations to call the getAuditActivityTypes method.
      * @param string $category Usage: category='{category}'
-     * @return MicrosoftGraphGetAuditActivityTypesWithCategoryRequestBuilder
+     * @return GetAuditActivityTypesWithCategoryRequestBuilder
     */
-    public function microsoftGraphGetAuditActivityTypesWithCategory(string $category): MicrosoftGraphGetAuditActivityTypesWithCategoryRequestBuilder {
-        return new MicrosoftGraphGetAuditActivityTypesWithCategoryRequestBuilder($this->pathParameters, $this->requestAdapter, $category);
+    public function getAuditActivityTypesWithCategory(string $category): GetAuditActivityTypesWithCategoryRequestBuilder {
+        return new GetAuditActivityTypesWithCategoryRequestBuilder($this->pathParameters, $this->requestAdapter, $category);
     }
 
     /**

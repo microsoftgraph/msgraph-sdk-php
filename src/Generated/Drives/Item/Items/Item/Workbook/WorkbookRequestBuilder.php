@@ -6,18 +6,18 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Application\ApplicationRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\CloseSession\CloseSessionRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Comments\CommentsRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Comments\Item\WorkbookCommentItemRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\CreateSession\CreateSessionRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\FunctionsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\MicrosoftGraphCloseSession\MicrosoftGraphCloseSessionRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\MicrosoftGraphCreateSession\MicrosoftGraphCreateSessionRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\MicrosoftGraphRefreshSession\MicrosoftGraphRefreshSessionRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\MicrosoftGraphSessionInfoResourceWithKey\MicrosoftGraphSessionInfoResourceWithKeyRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\MicrosoftGraphTableRowOperationResultWithKey\MicrosoftGraphTableRowOperationResultWithKeyRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Names\Item\WorkbookNamedItemItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Names\NamesRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Operations\Item\WorkbookOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Operations\OperationsRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\RefreshSession\RefreshSessionRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\SessionInfoResourceWithKey\SessionInfoResourceWithKeyRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\TableRowOperationResultWithKey\TableRowOperationResultWithKeyRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\WorkbookTableItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\TablesRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\WorkbookWorksheetItemRequestBuilder;
@@ -44,6 +44,13 @@ class WorkbookRequestBuilder
     }
     
     /**
+     * Provides operations to call the closeSession method.
+    */
+    public function closeSession(): CloseSessionRequestBuilder {
+        return new CloseSessionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the comments property of the microsoft.graph.workbook entity.
     */
     public function comments(): CommentsRequestBuilder {
@@ -51,31 +58,17 @@ class WorkbookRequestBuilder
     }
     
     /**
+     * Provides operations to call the createSession method.
+    */
+    public function createSession(): CreateSessionRequestBuilder {
+        return new CreateSessionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the functions property of the microsoft.graph.workbook entity.
     */
     public function functions(): FunctionsRequestBuilder {
         return new FunctionsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the closeSession method.
-    */
-    public function microsoftGraphCloseSession(): MicrosoftGraphCloseSessionRequestBuilder {
-        return new MicrosoftGraphCloseSessionRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the createSession method.
-    */
-    public function microsoftGraphCreateSession(): MicrosoftGraphCreateSessionRequestBuilder {
-        return new MicrosoftGraphCreateSessionRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the refreshSession method.
-    */
-    public function microsoftGraphRefreshSession(): MicrosoftGraphRefreshSessionRequestBuilder {
-        return new MicrosoftGraphRefreshSessionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -96,6 +89,13 @@ class WorkbookRequestBuilder
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * Provides operations to call the refreshSession method.
+    */
+    public function refreshSession(): RefreshSessionRequestBuilder {
+        return new RefreshSessionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -184,24 +184,6 @@ class WorkbookRequestBuilder
     }
 
     /**
-     * Provides operations to call the sessionInfoResource method.
-     * @param string $key Usage: key='{key}'
-     * @return MicrosoftGraphSessionInfoResourceWithKeyRequestBuilder
-    */
-    public function microsoftGraphSessionInfoResourceWithKey(string $key): MicrosoftGraphSessionInfoResourceWithKeyRequestBuilder {
-        return new MicrosoftGraphSessionInfoResourceWithKeyRequestBuilder($this->pathParameters, $this->requestAdapter, $key);
-    }
-
-    /**
-     * Provides operations to call the tableRowOperationResult method.
-     * @param string $key Usage: key='{key}'
-     * @return MicrosoftGraphTableRowOperationResultWithKeyRequestBuilder
-    */
-    public function microsoftGraphTableRowOperationResultWithKey(string $key): MicrosoftGraphTableRowOperationResultWithKeyRequestBuilder {
-        return new MicrosoftGraphTableRowOperationResultWithKeyRequestBuilder($this->pathParameters, $this->requestAdapter, $key);
-    }
-
-    /**
      * Provides operations to manage the names property of the microsoft.graph.workbook entity.
      * @param string $id Unique identifier of the item
      * @return WorkbookNamedItemItemRequestBuilder
@@ -240,6 +222,24 @@ class WorkbookRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
+    }
+
+    /**
+     * Provides operations to call the sessionInfoResource method.
+     * @param string $key Usage: key='{key}'
+     * @return SessionInfoResourceWithKeyRequestBuilder
+    */
+    public function sessionInfoResourceWithKey(string $key): SessionInfoResourceWithKeyRequestBuilder {
+        return new SessionInfoResourceWithKeyRequestBuilder($this->pathParameters, $this->requestAdapter, $key);
+    }
+
+    /**
+     * Provides operations to call the tableRowOperationResult method.
+     * @param string $key Usage: key='{key}'
+     * @return TableRowOperationResultWithKeyRequestBuilder
+    */
+    public function tableRowOperationResultWithKey(string $key): TableRowOperationResultWithKeyRequestBuilder {
+        return new TableRowOperationResultWithKeyRequestBuilder($this->pathParameters, $this->requestAdapter, $key);
     }
 
     /**

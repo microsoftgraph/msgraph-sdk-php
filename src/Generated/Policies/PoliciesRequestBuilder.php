@@ -10,6 +10,8 @@ use Microsoft\Graph\Generated\Models\PolicyRoot;
 use Microsoft\Graph\Generated\Policies\ActivityBasedTimeoutPolicies\ActivityBasedTimeoutPoliciesRequestBuilder;
 use Microsoft\Graph\Generated\Policies\ActivityBasedTimeoutPolicies\Item\ActivityBasedTimeoutPolicyItemRequestBuilder;
 use Microsoft\Graph\Generated\Policies\AdminConsentRequestPolicy\AdminConsentRequestPolicyRequestBuilder;
+use Microsoft\Graph\Generated\Policies\AppManagementPolicies\AppManagementPoliciesRequestBuilder;
+use Microsoft\Graph\Generated\Policies\AppManagementPolicies\Item\AppManagementPolicyItemRequestBuilder;
 use Microsoft\Graph\Generated\Policies\AuthenticationFlowsPolicy\AuthenticationFlowsPolicyRequestBuilder;
 use Microsoft\Graph\Generated\Policies\AuthenticationMethodsPolicy\AuthenticationMethodsPolicyRequestBuilder;
 use Microsoft\Graph\Generated\Policies\AuthorizationPolicy\AuthorizationPolicyRequestBuilder;
@@ -18,6 +20,7 @@ use Microsoft\Graph\Generated\Policies\ClaimsMappingPolicies\Item\ClaimsMappingP
 use Microsoft\Graph\Generated\Policies\ConditionalAccessPolicies\ConditionalAccessPoliciesRequestBuilder;
 use Microsoft\Graph\Generated\Policies\ConditionalAccessPolicies\Item\ConditionalAccessPolicyItemRequestBuilder;
 use Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\CrossTenantAccessPolicyRequestBuilder;
+use Microsoft\Graph\Generated\Policies\DefaultAppManagementPolicy\DefaultAppManagementPolicyRequestBuilder;
 use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\FeatureRolloutPoliciesRequestBuilder;
 use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\FeatureRolloutPolicyItemRequestBuilder;
 use Microsoft\Graph\Generated\Policies\HomeRealmDiscoveryPolicies\HomeRealmDiscoveryPoliciesRequestBuilder;
@@ -60,6 +63,13 @@ class PoliciesRequestBuilder
     }
     
     /**
+     * Provides operations to manage the appManagementPolicies property of the microsoft.graph.policyRoot entity.
+    */
+    public function appManagementPolicies(): AppManagementPoliciesRequestBuilder {
+        return new AppManagementPoliciesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the authenticationFlowsPolicy property of the microsoft.graph.policyRoot entity.
     */
     public function authenticationFlowsPolicy(): AuthenticationFlowsPolicyRequestBuilder {
@@ -99,6 +109,13 @@ class PoliciesRequestBuilder
     */
     public function crossTenantAccessPolicy(): CrossTenantAccessPolicyRequestBuilder {
         return new CrossTenantAccessPolicyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the defaultAppManagementPolicy property of the microsoft.graph.policyRoot entity.
+    */
+    public function defaultAppManagementPolicy(): DefaultAppManagementPolicyRequestBuilder {
+        return new DefaultAppManagementPolicyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -181,6 +198,17 @@ class PoliciesRequestBuilder
         $urlTplParams = $this->pathParameters;
         $urlTplParams['activityBasedTimeoutPolicy%2Did'] = $id;
         return new ActivityBasedTimeoutPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
+    /**
+     * Provides operations to manage the appManagementPolicies property of the microsoft.graph.policyRoot entity.
+     * @param string $id Unique identifier of the item
+     * @return AppManagementPolicyItemRequestBuilder
+    */
+    public function appManagementPoliciesById(string $id): AppManagementPolicyItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['appManagementPolicy%2Did'] = $id;
+        return new AppManagementPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

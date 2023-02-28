@@ -6,8 +6,8 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments\MicrosoftGraphGetOrder\MicrosoftGraphGetOrderRequestBuilder;
-use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments\MicrosoftGraphSetOrder\MicrosoftGraphSetOrderRequestBuilder;
+use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments\GetOrder\GetOrderRequestBuilder;
+use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\UserAttributeAssignments\SetOrder\SetOrderRequestBuilder;
 use Microsoft\Graph\Generated\Models\IdentityUserFlowAttributeAssignment;
 use Microsoft\Graph\Generated\Models\IdentityUserFlowAttributeAssignmentCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -33,15 +33,8 @@ class UserAttributeAssignmentsRequestBuilder
     /**
      * Provides operations to call the getOrder method.
     */
-    public function microsoftGraphGetOrder(): MicrosoftGraphGetOrderRequestBuilder {
-        return new MicrosoftGraphGetOrderRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the setOrder method.
-    */
-    public function microsoftGraphSetOrder(): MicrosoftGraphSetOrderRequestBuilder {
-        return new MicrosoftGraphSetOrderRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getOrder(): GetOrderRequestBuilder {
+        return new GetOrderRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -53,6 +46,13 @@ class UserAttributeAssignmentsRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the setOrder method.
+    */
+    public function setOrder(): SetOrderRequestBuilder {
+        return new SetOrderRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder

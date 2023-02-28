@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Directory\FederationConfigurations;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Directory\FederationConfigurations\AvailableProviderTypes\AvailableProviderTypesRequestBuilder;
 use Microsoft\Graph\Generated\Directory\FederationConfigurations\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Directory\FederationConfigurations\MicrosoftGraphAvailableProviderTypes\MicrosoftGraphAvailableProviderTypesRequestBuilder;
 use Microsoft\Graph\Generated\Models\IdentityProviderBase;
 use Microsoft\Graph\Generated\Models\IdentityProviderBaseCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -23,17 +23,17 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class FederationConfigurationsRequestBuilder 
 {
     /**
+     * Provides operations to call the availableProviderTypes method.
+    */
+    public function availableProviderTypes(): AvailableProviderTypesRequestBuilder {
+        return new AvailableProviderTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the availableProviderTypes method.
-    */
-    public function microsoftGraphAvailableProviderTypes(): MicrosoftGraphAvailableProviderTypesRequestBuilder {
-        return new MicrosoftGraphAvailableProviderTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

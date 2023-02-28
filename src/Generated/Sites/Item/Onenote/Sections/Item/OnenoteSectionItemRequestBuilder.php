@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OnenoteSection;
-use Microsoft\Graph\Generated\Sites\Item\Onenote\Sections\Item\MicrosoftGraphCopyToNotebook\MicrosoftGraphCopyToNotebookRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Onenote\Sections\Item\MicrosoftGraphCopyToSectionGroup\MicrosoftGraphCopyToSectionGroupRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Onenote\Sections\Item\CopyToNotebook\CopyToNotebookRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Onenote\Sections\Item\CopyToSectionGroup\CopyToSectionGroupRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\Sections\Item\Pages\Item\OnenotePageItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\Sections\Item\Pages\PagesRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\Sections\Item\ParentNotebook\ParentNotebookRequestBuilder;
@@ -28,15 +28,15 @@ class OnenoteSectionItemRequestBuilder
     /**
      * Provides operations to call the copyToNotebook method.
     */
-    public function microsoftGraphCopyToNotebook(): MicrosoftGraphCopyToNotebookRequestBuilder {
-        return new MicrosoftGraphCopyToNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function copyToNotebook(): CopyToNotebookRequestBuilder {
+        return new CopyToNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the copyToSectionGroup method.
     */
-    public function microsoftGraphCopyToSectionGroup(): MicrosoftGraphCopyToSectionGroupRequestBuilder {
-        return new MicrosoftGraphCopyToSectionGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function copyToSectionGroup(): CopyToSectionGroupRequestBuilder {
+        return new CopyToSectionGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

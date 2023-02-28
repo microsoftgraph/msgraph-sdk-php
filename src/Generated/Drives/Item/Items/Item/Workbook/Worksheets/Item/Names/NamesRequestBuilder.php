@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Names\Add\AddRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Names\AddFormulaLocal\AddFormulaLocalRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Names\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Names\MicrosoftGraphAdd\MicrosoftGraphAddRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Names\MicrosoftGraphAddFormulaLocal\MicrosoftGraphAddFormulaLocalRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookNamedItem;
 use Microsoft\Graph\Generated\Models\WorkbookNamedItemCollectionResponse;
@@ -24,24 +24,24 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class NamesRequestBuilder 
 {
     /**
-     * Provides operations to count the resources in the collection.
-    */
-    public function count(): CountRequestBuilder {
-        return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the add method.
     */
-    public function microsoftGraphAdd(): MicrosoftGraphAddRequestBuilder {
-        return new MicrosoftGraphAddRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function add(): AddRequestBuilder {
+        return new AddRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the addFormulaLocal method.
     */
-    public function microsoftGraphAddFormulaLocal(): MicrosoftGraphAddFormulaLocalRequestBuilder {
-        return new MicrosoftGraphAddFormulaLocalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function addFormulaLocal(): AddFormulaLocalRequestBuilder {
+        return new AddFormulaLocalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to count the resources in the collection.
+    */
+    public function count(): CountRequestBuilder {
+        return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -5,10 +5,9 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Add\AddRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\MicrosoftGraphAdd\MicrosoftGraphAddRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\MicrosoftGraphCount\MicrosoftGraphCountRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\MicrosoftGraphItemAtWithIndex\MicrosoftGraphItemAtWithIndexRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\ItemAtWithIndex\ItemAtWithIndexRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookTableColumn;
 use Microsoft\Graph\Generated\Models\WorkbookTableColumnCollectionResponse;
@@ -25,24 +24,17 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ColumnsRequestBuilder 
 {
     /**
-     * Provides operations to count the resources in the collection.
-    */
-    public function count(): CountRequestBuilder {
-        return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the add method.
     */
-    public function microsoftGraphAdd(): MicrosoftGraphAddRequestBuilder {
-        return new MicrosoftGraphAddRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function add(): AddRequestBuilder {
+        return new AddRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the count method.
     */
-    public function microsoftGraphCount(): MicrosoftGraphCountRequestBuilder {
-        return new MicrosoftGraphCountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function count(): CountRequestBuilder {
+        return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -79,7 +71,7 @@ class ColumnsRequestBuilder
      * Retrieve a list of tablecolumn objects.
      * @param ColumnsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/table-list-columns?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/tablecolumn-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ColumnsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -97,10 +89,10 @@ class ColumnsRequestBuilder
     /**
      * Provides operations to call the itemAt method.
      * @param int $index Usage: index={index}
-     * @return MicrosoftGraphItemAtWithIndexRequestBuilder
+     * @return ItemAtWithIndexRequestBuilder
     */
-    public function microsoftGraphItemAtWithIndex(int $index): MicrosoftGraphItemAtWithIndexRequestBuilder {
-        return new MicrosoftGraphItemAtWithIndexRequestBuilder($this->pathParameters, $this->requestAdapter, $index);
+    public function itemAtWithIndex(int $index): ItemAtWithIndexRequestBuilder {
+        return new ItemAtWithIndexRequestBuilder($this->pathParameters, $this->requestAdapter, $index);
     }
 
     /**

@@ -8,12 +8,12 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\MailFolder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\ChildFoldersRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Copy\CopyRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\MessageRules\Item\MessageRuleItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\MessageRules\MessageRulesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\MessageItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\MessagesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\MicrosoftGraphCopy\MicrosoftGraphCopyRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\MicrosoftGraphMove\MicrosoftGraphMoveRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Move\MoveRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
@@ -38,6 +38,13 @@ class MailFolderItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the copy method.
+    */
+    public function copy(): CopyRequestBuilder {
+        return new CopyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the messageRules property of the microsoft.graph.mailFolder entity.
     */
     public function messageRules(): MessageRulesRequestBuilder {
@@ -52,17 +59,10 @@ class MailFolderItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the copy method.
-    */
-    public function microsoftGraphCopy(): MicrosoftGraphCopyRequestBuilder {
-        return new MicrosoftGraphCopyRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the move method.
     */
-    public function microsoftGraphMove(): MicrosoftGraphMoveRequestBuilder {
-        return new MicrosoftGraphMoveRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function move(): MoveRequestBuilder {
+        return new MoveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

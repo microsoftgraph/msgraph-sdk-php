@@ -13,11 +13,11 @@ use Microsoft\Graph\Generated\Security\AttackSimulation\AttackSimulationRequestB
 use Microsoft\Graph\Generated\Security\Cases\CasesRequestBuilder;
 use Microsoft\Graph\Generated\Security\Incidents\IncidentsRequestBuilder;
 use Microsoft\Graph\Generated\Security\Incidents\Item\IncidentItemRequestBuilder;
-use Microsoft\Graph\Generated\Security\MicrosoftGraphSecurityRunHuntingQuery\MicrosoftGraphSecurityRunHuntingQueryRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecureScoreControlProfiles\Item\SecureScoreControlProfileItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecureScoreControlProfiles\SecureScoreControlProfilesRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecureScores\Item\SecureScoreItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecureScores\SecureScoresRequestBuilder;
+use Microsoft\Graph\Generated\Security\SecurityRunHuntingQuery\SecurityRunHuntingQueryRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -66,13 +66,6 @@ class SecurityRequestBuilder
     }
     
     /**
-     * Provides operations to call the runHuntingQuery method.
-    */
-    public function microsoftGraphSecurityRunHuntingQuery(): MicrosoftGraphSecurityRunHuntingQueryRequestBuilder {
-        return new MicrosoftGraphSecurityRunHuntingQueryRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -94,6 +87,13 @@ class SecurityRequestBuilder
     */
     public function secureScores(): SecureScoresRequestBuilder {
         return new SecureScoresRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the runHuntingQuery method.
+    */
+    public function securityRunHuntingQuery(): SecurityRunHuntingQueryRequestBuilder {
+        return new SecurityRunHuntingQueryRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

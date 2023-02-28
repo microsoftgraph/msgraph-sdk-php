@@ -9,7 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Teamwork;
 use Microsoft\Graph\Generated\Teamwork\DeletedTeams\DeletedTeamsRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\DeletedTeamItemRequestBuilder;
-use Microsoft\Graph\Generated\Teamwork\MicrosoftGraphSendActivityNotificationToRecipients\MicrosoftGraphSendActivityNotificationToRecipientsRequestBuilder;
+use Microsoft\Graph\Generated\Teamwork\SendActivityNotificationToRecipients\SendActivityNotificationToRecipientsRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\WorkforceIntegrations\Item\WorkforceIntegrationItemRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\WorkforceIntegrations\WorkforceIntegrationsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -32,13 +32,6 @@ class TeamworkRequestBuilder
     }
     
     /**
-     * Provides operations to call the sendActivityNotificationToRecipients method.
-    */
-    public function microsoftGraphSendActivityNotificationToRecipients(): MicrosoftGraphSendActivityNotificationToRecipientsRequestBuilder {
-        return new MicrosoftGraphSendActivityNotificationToRecipientsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -47,6 +40,13 @@ class TeamworkRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the sendActivityNotificationToRecipients method.
+    */
+    public function sendActivityNotificationToRecipients(): SendActivityNotificationToRecipientsRequestBuilder {
+        return new SendActivityNotificationToRecipientsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder

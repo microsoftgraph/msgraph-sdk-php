@@ -9,7 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UserActivity;
 use Microsoft\Graph\Generated\Models\UserActivityCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\Activities\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Activities\MicrosoftGraphRecent\MicrosoftGraphRecentRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Activities\Recent\RecentRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -30,16 +30,16 @@ class ActivitiesRequestBuilder
     }
     
     /**
-     * Provides operations to call the recent method.
-    */
-    public function microsoftGraphRecent(): MicrosoftGraphRecentRequestBuilder {
-        return new MicrosoftGraphRecentRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * Provides operations to call the recent method.
+    */
+    public function recent(): RecentRequestBuilder {
+        return new RecentRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.

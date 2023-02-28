@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Ite
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Item\MicrosoftGraphCopyNotebook\MicrosoftGraphCopyNotebookRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Item\CopyNotebook\CopyNotebookRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Item\SectionGroups\Item\SectionGroupItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Item\SectionGroups\SectionGroupsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Item\Sections\Item\OnenoteSectionItemRequestBuilder;
@@ -27,8 +27,8 @@ class NotebookItemRequestBuilder
     /**
      * Provides operations to call the copyNotebook method.
     */
-    public function microsoftGraphCopyNotebook(): MicrosoftGraphCopyNotebookRequestBuilder {
-        return new MicrosoftGraphCopyNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function copyNotebook(): CopyNotebookRequestBuilder {
+        return new CopyNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

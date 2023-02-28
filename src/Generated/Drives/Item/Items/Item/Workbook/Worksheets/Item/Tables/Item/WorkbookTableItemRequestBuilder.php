@@ -5,18 +5,18 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\ClearFilters\ClearFiltersRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\ColumnsRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\WorkbookTableColumnItemRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\MicrosoftGraphClearFilters\MicrosoftGraphClearFiltersRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\MicrosoftGraphConvertToRange\MicrosoftGraphConvertToRangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\MicrosoftGraphDataBodyRange\MicrosoftGraphDataBodyRangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\MicrosoftGraphHeaderRowRange\MicrosoftGraphHeaderRowRangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\MicrosoftGraphRange\MicrosoftGraphRangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\MicrosoftGraphReapplyFilters\MicrosoftGraphReapplyFiltersRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\MicrosoftGraphTotalRowRange\MicrosoftGraphTotalRowRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\ConvertToRange\ConvertToRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\DataBodyRange\DataBodyRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\HeaderRowRange\HeaderRowRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Range\RangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\ReapplyFilters\ReapplyFiltersRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Rows\Item\WorkbookTableRowItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Rows\RowsRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Sort\SortRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\TotalRowRange\TotalRowRangeRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Worksheet\WorksheetRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookTable;
@@ -33,6 +33,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class WorkbookTableItemRequestBuilder 
 {
     /**
+     * Provides operations to call the clearFilters method.
+    */
+    public function clearFilters(): ClearFiltersRequestBuilder {
+        return new ClearFiltersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the columns property of the microsoft.graph.workbookTable entity.
     */
     public function columns(): ColumnsRequestBuilder {
@@ -40,58 +47,44 @@ class WorkbookTableItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the clearFilters method.
-    */
-    public function microsoftGraphClearFilters(): MicrosoftGraphClearFiltersRequestBuilder {
-        return new MicrosoftGraphClearFiltersRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the convertToRange method.
     */
-    public function microsoftGraphConvertToRange(): MicrosoftGraphConvertToRangeRequestBuilder {
-        return new MicrosoftGraphConvertToRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function convertToRange(): ConvertToRangeRequestBuilder {
+        return new ConvertToRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the dataBodyRange method.
     */
-    public function microsoftGraphDataBodyRange(): MicrosoftGraphDataBodyRangeRequestBuilder {
-        return new MicrosoftGraphDataBodyRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function dataBodyRange(): DataBodyRangeRequestBuilder {
+        return new DataBodyRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the headerRowRange method.
     */
-    public function microsoftGraphHeaderRowRange(): MicrosoftGraphHeaderRowRangeRequestBuilder {
-        return new MicrosoftGraphHeaderRowRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the range method.
-    */
-    public function microsoftGraphRange(): MicrosoftGraphRangeRequestBuilder {
-        return new MicrosoftGraphRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the reapplyFilters method.
-    */
-    public function microsoftGraphReapplyFilters(): MicrosoftGraphReapplyFiltersRequestBuilder {
-        return new MicrosoftGraphReapplyFiltersRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the totalRowRange method.
-    */
-    public function microsoftGraphTotalRowRange(): MicrosoftGraphTotalRowRangeRequestBuilder {
-        return new MicrosoftGraphTotalRowRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function headerRowRange(): HeaderRowRangeRequestBuilder {
+        return new HeaderRowRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * Provides operations to call the range method.
+    */
+    public function range(): RangeRequestBuilder {
+        return new RangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the reapplyFilters method.
+    */
+    public function reapplyFilters(): ReapplyFiltersRequestBuilder {
+        return new ReapplyFiltersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -110,6 +103,13 @@ class WorkbookTableItemRequestBuilder
     */
     public function sort(): SortRequestBuilder {
         return new SortRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the totalRowRange method.
+    */
+    public function totalRowRange(): TotalRowRangeRequestBuilder {
+        return new TotalRowRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

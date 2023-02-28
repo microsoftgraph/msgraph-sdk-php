@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Add\AddRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\MicrosoftGraphAdd\MicrosoftGraphAddRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookWorksheet;
 use Microsoft\Graph\Generated\Models\WorkbookWorksheetCollectionResponse;
@@ -23,17 +23,17 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class WorksheetsRequestBuilder 
 {
     /**
+     * Provides operations to call the add method.
+    */
+    public function add(): AddRequestBuilder {
+        return new AddRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the add method.
-    */
-    public function microsoftGraphAdd(): MicrosoftGraphAddRequestBuilder {
-        return new MicrosoftGraphAddRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -70,7 +70,7 @@ class WorksheetsRequestBuilder
      * Retrieve a list of worksheet objects.
      * @param WorksheetsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/workbook-list-worksheets?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/worksheet-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?WorksheetsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

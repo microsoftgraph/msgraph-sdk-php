@@ -6,12 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\MicrosoftGraphApplication\MicrosoftGraphApplicationRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\MicrosoftGraphDevice\MicrosoftGraphDeviceRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\MicrosoftGraphGroup\MicrosoftGraphGroupRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\MicrosoftGraphOrgContact\MicrosoftGraphOrgContactRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\MicrosoftGraphServicePrincipal\MicrosoftGraphServicePrincipalRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\MicrosoftGraphUser\MicrosoftGraphUserRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\GraphGroup\GraphGroupRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -34,45 +29,10 @@ class TransitiveMemberOfRequestBuilder
     }
     
     /**
-     * Casts the previous resource to application.
-    */
-    public function microsoftGraphApplication(): MicrosoftGraphApplicationRequestBuilder {
-        return new MicrosoftGraphApplicationRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Casts the previous resource to device.
-    */
-    public function microsoftGraphDevice(): MicrosoftGraphDeviceRequestBuilder {
-        return new MicrosoftGraphDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Casts the previous resource to group.
     */
-    public function microsoftGraphGroup(): MicrosoftGraphGroupRequestBuilder {
-        return new MicrosoftGraphGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Casts the previous resource to orgContact.
-    */
-    public function microsoftGraphOrgContact(): MicrosoftGraphOrgContactRequestBuilder {
-        return new MicrosoftGraphOrgContactRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Casts the previous resource to servicePrincipal.
-    */
-    public function microsoftGraphServicePrincipal(): MicrosoftGraphServicePrincipalRequestBuilder {
-        return new MicrosoftGraphServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Casts the previous resource to user.
-    */
-    public function microsoftGraphUser(): MicrosoftGraphUserRequestBuilder {
-        return new MicrosoftGraphUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphGroup(): GraphGroupRequestBuilder {
+        return new GraphGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

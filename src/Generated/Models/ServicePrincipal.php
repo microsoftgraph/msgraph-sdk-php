@@ -82,6 +82,14 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the appManagementPolicies property value. The appManagementPolicies property
+     * @return array<AppManagementPolicy>|null
+    */
+    public function getAppManagementPolicies(): ?array {
+        return $this->getBackingStore()->get('appManagementPolicies');
+    }
+
+    /**
      * Gets the appOwnerOrganizationId property value. Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le).
      * @return string|null
     */
@@ -199,6 +207,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
             'appDisplayName' => fn(ParseNode $n) => $o->setAppDisplayName($n->getStringValue()),
             'appId' => fn(ParseNode $n) => $o->setAppId($n->getStringValue()),
             'applicationTemplateId' => fn(ParseNode $n) => $o->setApplicationTemplateId($n->getStringValue()),
+            'appManagementPolicies' => fn(ParseNode $n) => $o->setAppManagementPolicies($n->getCollectionOfObjectValues([AppManagementPolicy::class, 'createFromDiscriminatorValue'])),
             'appOwnerOrganizationId' => fn(ParseNode $n) => $o->setAppOwnerOrganizationId($n->getStringValue()),
             'appRoleAssignedTo' => fn(ParseNode $n) => $o->setAppRoleAssignedTo($n->getCollectionOfObjectValues([AppRoleAssignment::class, 'createFromDiscriminatorValue'])),
             'appRoleAssignmentRequired' => fn(ParseNode $n) => $o->setAppRoleAssignmentRequired($n->getBooleanValue()),
@@ -480,6 +489,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
         $writer->writeStringValue('appDisplayName', $this->getAppDisplayName());
         $writer->writeStringValue('appId', $this->getAppId());
         $writer->writeStringValue('applicationTemplateId', $this->getApplicationTemplateId());
+        $writer->writeCollectionOfObjectValues('appManagementPolicies', $this->getAppManagementPolicies());
         $writer->writeStringValue('appOwnerOrganizationId', $this->getAppOwnerOrganizationId());
         $writer->writeCollectionOfObjectValues('appRoleAssignedTo', $this->getAppRoleAssignedTo());
         $writer->writeBooleanValue('appRoleAssignmentRequired', $this->getAppRoleAssignmentRequired());
@@ -577,6 +587,14 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     */
     public function setApplicationTemplateId(?string $value): void {
         $this->getBackingStore()->set('applicationTemplateId', $value);
+    }
+
+    /**
+     * Sets the appManagementPolicies property value. The appManagementPolicies property
+     * @param array<AppManagementPolicy>|null $value Value to set for the appManagementPolicies property.
+    */
+    public function setAppManagementPolicies(?array $value): void {
+        $this->getBackingStore()->set('appManagementPolicies', $value);
     }
 
     /**

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\VppTokens\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceAppManagement\VppTokens\Item\MicrosoftGraphSyncLicenses\MicrosoftGraphSyncLicensesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\VppTokens\Item\SyncLicenses\SyncLicensesRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\VppToken;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -21,13 +21,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class VppTokenItemRequestBuilder 
 {
     /**
-     * Provides operations to call the syncLicenses method.
-    */
-    public function microsoftGraphSyncLicenses(): MicrosoftGraphSyncLicensesRequestBuilder {
-        return new MicrosoftGraphSyncLicensesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -36,6 +29,13 @@ class VppTokenItemRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the syncLicenses method.
+    */
+    public function syncLicenses(): SyncLicensesRequestBuilder {
+        return new SyncLicensesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder

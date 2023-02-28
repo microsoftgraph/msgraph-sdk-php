@@ -6,8 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\Item\Points\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\Item\Points\MicrosoftGraphCount\MicrosoftGraphCountRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\Item\Points\MicrosoftGraphItemAtWithIndex\MicrosoftGraphItemAtWithIndexRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\Item\Points\ItemAtWithIndex\ItemAtWithIndexRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookChartPoint;
 use Microsoft\Graph\Generated\Models\WorkbookChartPointCollectionResponse;
@@ -24,17 +23,10 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class PointsRequestBuilder 
 {
     /**
-     * Provides operations to count the resources in the collection.
+     * Provides operations to call the count method.
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the count method.
-    */
-    public function microsoftGraphCount(): MicrosoftGraphCountRequestBuilder {
-        return new MicrosoftGraphCountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -68,10 +60,10 @@ class PointsRequestBuilder
     }
 
     /**
-     * Retrieve a list of chartpoints objects.
+     * Retrieve a list of chartpoint objects.
      * @param PointsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chartseries-list-points?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/chartpoint-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?PointsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -89,10 +81,10 @@ class PointsRequestBuilder
     /**
      * Provides operations to call the itemAt method.
      * @param int $index Usage: index={index}
-     * @return MicrosoftGraphItemAtWithIndexRequestBuilder
+     * @return ItemAtWithIndexRequestBuilder
     */
-    public function microsoftGraphItemAtWithIndex(int $index): MicrosoftGraphItemAtWithIndexRequestBuilder {
-        return new MicrosoftGraphItemAtWithIndexRequestBuilder($this->pathParameters, $this->requestAdapter, $index);
+    public function itemAtWithIndex(int $index): ItemAtWithIndexRequestBuilder {
+        return new ItemAtWithIndexRequestBuilder($this->pathParameters, $this->requestAdapter, $index);
     }
 
     /**
@@ -116,7 +108,7 @@ class PointsRequestBuilder
     }
 
     /**
-     * Retrieve a list of chartpoints objects.
+     * Retrieve a list of chartpoint objects.
      * @param PointsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

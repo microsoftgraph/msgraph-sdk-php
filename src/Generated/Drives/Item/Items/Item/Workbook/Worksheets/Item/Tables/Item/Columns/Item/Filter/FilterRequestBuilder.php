@@ -5,18 +5,18 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\Filter\MicrosoftGraphApply\MicrosoftGraphApplyRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\Filter\MicrosoftGraphApplyBottomItemsFilter\MicrosoftGraphApplyBottomItemsFilterRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\Filter\MicrosoftGraphApplyBottomPercentFilter\MicrosoftGraphApplyBottomPercentFilterRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\Filter\MicrosoftGraphApplyCellColorFilter\MicrosoftGraphApplyCellColorFilterRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\Filter\MicrosoftGraphApplyCustomFilter\MicrosoftGraphApplyCustomFilterRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\Filter\MicrosoftGraphApplyDynamicFilter\MicrosoftGraphApplyDynamicFilterRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\Filter\MicrosoftGraphApplyFontColorFilter\MicrosoftGraphApplyFontColorFilterRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\Filter\MicrosoftGraphApplyIconFilter\MicrosoftGraphApplyIconFilterRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\Filter\MicrosoftGraphApplyTopItemsFilter\MicrosoftGraphApplyTopItemsFilterRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\Filter\MicrosoftGraphApplyTopPercentFilter\MicrosoftGraphApplyTopPercentFilterRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\Filter\MicrosoftGraphApplyValuesFilter\MicrosoftGraphApplyValuesFilterRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\Filter\MicrosoftGraphClear\MicrosoftGraphClearRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\Filter\Apply\ApplyRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\Filter\ApplyBottomItemsFilter\ApplyBottomItemsFilterRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\Filter\ApplyBottomPercentFilter\ApplyBottomPercentFilterRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\Filter\ApplyCellColorFilter\ApplyCellColorFilterRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\Filter\ApplyCustomFilter\ApplyCustomFilterRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\Filter\ApplyDynamicFilter\ApplyDynamicFilterRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\Filter\ApplyFontColorFilter\ApplyFontColorFilterRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\Filter\ApplyIconFilter\ApplyIconFilterRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\Filter\ApplyTopItemsFilter\ApplyTopItemsFilterRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\Filter\ApplyTopPercentFilter\ApplyTopPercentFilterRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\Filter\ApplyValuesFilter\ApplyValuesFilterRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\Filter\Clear\ClearRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookFilter;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -34,85 +34,85 @@ class FilterRequestBuilder
     /**
      * Provides operations to call the apply method.
     */
-    public function microsoftGraphApply(): MicrosoftGraphApplyRequestBuilder {
-        return new MicrosoftGraphApplyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function apply(): ApplyRequestBuilder {
+        return new ApplyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the applyBottomItemsFilter method.
     */
-    public function microsoftGraphApplyBottomItemsFilter(): MicrosoftGraphApplyBottomItemsFilterRequestBuilder {
-        return new MicrosoftGraphApplyBottomItemsFilterRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function applyBottomItemsFilter(): ApplyBottomItemsFilterRequestBuilder {
+        return new ApplyBottomItemsFilterRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the applyBottomPercentFilter method.
     */
-    public function microsoftGraphApplyBottomPercentFilter(): MicrosoftGraphApplyBottomPercentFilterRequestBuilder {
-        return new MicrosoftGraphApplyBottomPercentFilterRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function applyBottomPercentFilter(): ApplyBottomPercentFilterRequestBuilder {
+        return new ApplyBottomPercentFilterRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the applyCellColorFilter method.
     */
-    public function microsoftGraphApplyCellColorFilter(): MicrosoftGraphApplyCellColorFilterRequestBuilder {
-        return new MicrosoftGraphApplyCellColorFilterRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function applyCellColorFilter(): ApplyCellColorFilterRequestBuilder {
+        return new ApplyCellColorFilterRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the applyCustomFilter method.
     */
-    public function microsoftGraphApplyCustomFilter(): MicrosoftGraphApplyCustomFilterRequestBuilder {
-        return new MicrosoftGraphApplyCustomFilterRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function applyCustomFilter(): ApplyCustomFilterRequestBuilder {
+        return new ApplyCustomFilterRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the applyDynamicFilter method.
     */
-    public function microsoftGraphApplyDynamicFilter(): MicrosoftGraphApplyDynamicFilterRequestBuilder {
-        return new MicrosoftGraphApplyDynamicFilterRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function applyDynamicFilter(): ApplyDynamicFilterRequestBuilder {
+        return new ApplyDynamicFilterRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the applyFontColorFilter method.
     */
-    public function microsoftGraphApplyFontColorFilter(): MicrosoftGraphApplyFontColorFilterRequestBuilder {
-        return new MicrosoftGraphApplyFontColorFilterRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function applyFontColorFilter(): ApplyFontColorFilterRequestBuilder {
+        return new ApplyFontColorFilterRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the applyIconFilter method.
     */
-    public function microsoftGraphApplyIconFilter(): MicrosoftGraphApplyIconFilterRequestBuilder {
-        return new MicrosoftGraphApplyIconFilterRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function applyIconFilter(): ApplyIconFilterRequestBuilder {
+        return new ApplyIconFilterRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the applyTopItemsFilter method.
     */
-    public function microsoftGraphApplyTopItemsFilter(): MicrosoftGraphApplyTopItemsFilterRequestBuilder {
-        return new MicrosoftGraphApplyTopItemsFilterRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function applyTopItemsFilter(): ApplyTopItemsFilterRequestBuilder {
+        return new ApplyTopItemsFilterRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the applyTopPercentFilter method.
     */
-    public function microsoftGraphApplyTopPercentFilter(): MicrosoftGraphApplyTopPercentFilterRequestBuilder {
-        return new MicrosoftGraphApplyTopPercentFilterRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function applyTopPercentFilter(): ApplyTopPercentFilterRequestBuilder {
+        return new ApplyTopPercentFilterRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the applyValuesFilter method.
     */
-    public function microsoftGraphApplyValuesFilter(): MicrosoftGraphApplyValuesFilterRequestBuilder {
-        return new MicrosoftGraphApplyValuesFilterRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function applyValuesFilter(): ApplyValuesFilterRequestBuilder {
+        return new ApplyValuesFilterRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the clear method.
     */
-    public function microsoftGraphClear(): MicrosoftGraphClearRequestBuilder {
-        return new MicrosoftGraphClearRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function clear(): ClearRequestBuilder {
+        return new ClearRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

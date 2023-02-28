@@ -9,10 +9,10 @@ use Microsoft\Graph\Generated\Drives\Item\Bundles\BundlesRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\EscapedList\ListRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Following\FollowingRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\ItemsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\MicrosoftGraphRecent\MicrosoftGraphRecentRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\MicrosoftGraphSearchWithQ\MicrosoftGraphSearchWithQRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\MicrosoftGraphSharedWithMe\MicrosoftGraphSharedWithMeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Recent\RecentRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Root\RootRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\SearchWithQ\SearchWithQRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\SharedWithMe\SharedWithMeRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Special\SpecialRequestBuilder;
 use Microsoft\Graph\Generated\Models\Drive;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -57,23 +57,16 @@ class DriveItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the recent method.
-    */
-    public function microsoftGraphRecent(): MicrosoftGraphRecentRequestBuilder {
-        return new MicrosoftGraphRecentRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the sharedWithMe method.
-    */
-    public function microsoftGraphSharedWithMe(): MicrosoftGraphSharedWithMeRequestBuilder {
-        return new MicrosoftGraphSharedWithMeRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * Provides operations to call the recent method.
+    */
+    public function recent(): RecentRequestBuilder {
+        return new RecentRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -85,6 +78,13 @@ class DriveItemRequestBuilder
     */
     public function root(): RootRequestBuilder {
         return new RootRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the sharedWithMe method.
+    */
+    public function sharedWithMe(): SharedWithMeRequestBuilder {
+        return new SharedWithMeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -185,15 +185,6 @@ class DriveItemRequestBuilder
     }
 
     /**
-     * Provides operations to call the search method.
-     * @param string $q Usage: q='{q}'
-     * @return MicrosoftGraphSearchWithQRequestBuilder
-    */
-    public function microsoftGraphSearchWithQ(string $q): MicrosoftGraphSearchWithQRequestBuilder {
-        return new MicrosoftGraphSearchWithQRequestBuilder($this->pathParameters, $this->requestAdapter, $q);
-    }
-
-    /**
      * Update entity in drives
      * @param Drive $body The request body
      * @param DriveItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
@@ -210,6 +201,15 @@ class DriveItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
+    }
+
+    /**
+     * Provides operations to call the search method.
+     * @param string $q Usage: q='{q}'
+     * @return SearchWithQRequestBuilder
+    */
+    public function searchWithQ(string $q): SearchWithQRequestBuilder {
+        return new SearchWithQRequestBuilder($this->pathParameters, $this->requestAdapter, $q);
     }
 
     /**

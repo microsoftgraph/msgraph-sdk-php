@@ -8,26 +8,26 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Team;
 use Microsoft\Graph\Generated\Teams\Item\AllChannels\AllChannelsRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\Archive\ArchiveRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Channels\ChannelsRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\CompleteMigration\CompleteMigrationRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\EscapedClone\CloneRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Group\GroupRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\IncomingChannels\IncomingChannelsRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\InstalledApps\InstalledAppsRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\InstalledApps\Item\TeamsAppInstallationItemRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Members\Item\ConversationMemberItemRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Members\MembersRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\MicrosoftGraphArchive\MicrosoftGraphArchiveRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\MicrosoftGraphClone\MicrosoftGraphCloneRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\MicrosoftGraphCompleteMigration\MicrosoftGraphCompleteMigrationRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\MicrosoftGraphSendActivityNotification\MicrosoftGraphSendActivityNotificationRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\MicrosoftGraphUnarchive\MicrosoftGraphUnarchiveRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Operations\Item\TeamsAsyncOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Operations\OperationsRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Photo\PhotoRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\PrimaryChannelRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Schedule\ScheduleRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\SendActivityNotification\SendActivityNotificationRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Tags\Item\TeamworkTagItemRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Tags\TagsRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Template\TemplateRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\Unarchive\UnarchiveRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -48,10 +48,31 @@ class TeamItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the archive method.
+    */
+    public function archive(): ArchiveRequestBuilder {
+        return new ArchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the channels property of the microsoft.graph.team entity.
     */
     public function channels(): ChannelsRequestBuilder {
         return new ChannelsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the completeMigration method.
+    */
+    public function completeMigration(): CompleteMigrationRequestBuilder {
+        return new CompleteMigrationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the clone method.
+    */
+    public function escapedClone(): CloneRequestBuilder {
+        return new CloneRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -80,41 +101,6 @@ class TeamItemRequestBuilder
     */
     public function members(): MembersRequestBuilder {
         return new MembersRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the archive method.
-    */
-    public function microsoftGraphArchive(): MicrosoftGraphArchiveRequestBuilder {
-        return new MicrosoftGraphArchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the clone method.
-    */
-    public function microsoftGraphClone(): MicrosoftGraphCloneRequestBuilder {
-        return new MicrosoftGraphCloneRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the completeMigration method.
-    */
-    public function microsoftGraphCompleteMigration(): MicrosoftGraphCompleteMigrationRequestBuilder {
-        return new MicrosoftGraphCompleteMigrationRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the sendActivityNotification method.
-    */
-    public function microsoftGraphSendActivityNotification(): MicrosoftGraphSendActivityNotificationRequestBuilder {
-        return new MicrosoftGraphSendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the unarchive method.
-    */
-    public function microsoftGraphUnarchive(): MicrosoftGraphUnarchiveRequestBuilder {
-        return new MicrosoftGraphUnarchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -156,6 +142,13 @@ class TeamItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the sendActivityNotification method.
+    */
+    public function sendActivityNotification(): SendActivityNotificationRequestBuilder {
+        return new SendActivityNotificationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the tags property of the microsoft.graph.team entity.
     */
     public function tags(): TagsRequestBuilder {
@@ -167,6 +160,13 @@ class TeamItemRequestBuilder
     */
     public function template(): TemplateRequestBuilder {
         return new TemplateRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the unarchive method.
+    */
+    public function unarchive(): UnarchiveRequestBuilder {
+        return new UnarchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -7,9 +7,9 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SecurityReportsRoot;
-use Microsoft\Graph\Generated\Reports\Security\MicrosoftGraphGetAttackSimulationRepeatOffenders\MicrosoftGraphGetAttackSimulationRepeatOffendersRequestBuilder;
-use Microsoft\Graph\Generated\Reports\Security\MicrosoftGraphGetAttackSimulationSimulationUserCoverage\MicrosoftGraphGetAttackSimulationSimulationUserCoverageRequestBuilder;
-use Microsoft\Graph\Generated\Reports\Security\MicrosoftGraphGetAttackSimulationTrainingUserCoverage\MicrosoftGraphGetAttackSimulationTrainingUserCoverageRequestBuilder;
+use Microsoft\Graph\Generated\Reports\Security\GetAttackSimulationRepeatOffenders\GetAttackSimulationRepeatOffendersRequestBuilder;
+use Microsoft\Graph\Generated\Reports\Security\GetAttackSimulationSimulationUserCoverage\GetAttackSimulationSimulationUserCoverageRequestBuilder;
+use Microsoft\Graph\Generated\Reports\Security\GetAttackSimulationTrainingUserCoverage\GetAttackSimulationTrainingUserCoverageRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -25,22 +25,22 @@ class SecurityRequestBuilder
     /**
      * Provides operations to call the getAttackSimulationRepeatOffenders method.
     */
-    public function microsoftGraphGetAttackSimulationRepeatOffenders(): MicrosoftGraphGetAttackSimulationRepeatOffendersRequestBuilder {
-        return new MicrosoftGraphGetAttackSimulationRepeatOffendersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getAttackSimulationRepeatOffenders(): GetAttackSimulationRepeatOffendersRequestBuilder {
+        return new GetAttackSimulationRepeatOffendersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getAttackSimulationSimulationUserCoverage method.
     */
-    public function microsoftGraphGetAttackSimulationSimulationUserCoverage(): MicrosoftGraphGetAttackSimulationSimulationUserCoverageRequestBuilder {
-        return new MicrosoftGraphGetAttackSimulationSimulationUserCoverageRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getAttackSimulationSimulationUserCoverage(): GetAttackSimulationSimulationUserCoverageRequestBuilder {
+        return new GetAttackSimulationSimulationUserCoverageRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getAttackSimulationTrainingUserCoverage method.
     */
-    public function microsoftGraphGetAttackSimulationTrainingUserCoverage(): MicrosoftGraphGetAttackSimulationTrainingUserCoverageRequestBuilder {
-        return new MicrosoftGraphGetAttackSimulationTrainingUserCoverageRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getAttackSimulationTrainingUserCoverage(): GetAttackSimulationTrainingUserCoverageRequestBuilder {
+        return new GetAttackSimulationTrainingUserCoverageRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

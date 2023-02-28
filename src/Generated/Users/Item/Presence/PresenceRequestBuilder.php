@@ -7,10 +7,10 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Presence;
-use Microsoft\Graph\Generated\Users\Item\Presence\MicrosoftGraphClearPresence\MicrosoftGraphClearPresenceRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Presence\MicrosoftGraphClearUserPreferredPresence\MicrosoftGraphClearUserPreferredPresenceRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Presence\MicrosoftGraphSetPresence\MicrosoftGraphSetPresenceRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Presence\MicrosoftGraphSetUserPreferredPresence\MicrosoftGraphSetUserPreferredPresenceRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Presence\ClearPresence\ClearPresenceRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Presence\ClearUserPreferredPresence\ClearUserPreferredPresenceRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Presence\SetPresence\SetPresenceRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Presence\SetUserPreferredPresence\SetUserPreferredPresenceRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -26,29 +26,15 @@ class PresenceRequestBuilder
     /**
      * Provides operations to call the clearPresence method.
     */
-    public function microsoftGraphClearPresence(): MicrosoftGraphClearPresenceRequestBuilder {
-        return new MicrosoftGraphClearPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function clearPresence(): ClearPresenceRequestBuilder {
+        return new ClearPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the clearUserPreferredPresence method.
     */
-    public function microsoftGraphClearUserPreferredPresence(): MicrosoftGraphClearUserPreferredPresenceRequestBuilder {
-        return new MicrosoftGraphClearUserPreferredPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the setPresence method.
-    */
-    public function microsoftGraphSetPresence(): MicrosoftGraphSetPresenceRequestBuilder {
-        return new MicrosoftGraphSetPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the setUserPreferredPresence method.
-    */
-    public function microsoftGraphSetUserPreferredPresence(): MicrosoftGraphSetUserPreferredPresenceRequestBuilder {
-        return new MicrosoftGraphSetUserPreferredPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function clearUserPreferredPresence(): ClearUserPreferredPresenceRequestBuilder {
+        return new ClearUserPreferredPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -60,6 +46,20 @@ class PresenceRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the setPresence method.
+    */
+    public function setPresence(): SetPresenceRequestBuilder {
+        return new SetPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the setUserPreferredPresence method.
+    */
+    public function setUserPreferredPresence(): SetUserPreferredPresenceRequestBuilder {
+        return new SetUserPreferredPresenceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
