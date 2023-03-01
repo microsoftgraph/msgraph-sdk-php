@@ -9,7 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OnlineMeeting;
 use Microsoft\Graph\Generated\Models\OnlineMeetingCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\MicrosoftGraphCreateOrGet\MicrosoftGraphCreateOrGetRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\CreateOrGet\CreateOrGetRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -32,8 +32,8 @@ class OnlineMeetingsRequestBuilder
     /**
      * Provides operations to call the createOrGet method.
     */
-    public function microsoftGraphCreateOrGet(): MicrosoftGraphCreateOrGetRequestBuilder {
-        return new MicrosoftGraphCreateOrGetRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function createOrGet(): CreateOrGetRequestBuilder {
+        return new CreateOrGetRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

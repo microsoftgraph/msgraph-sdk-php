@@ -5,10 +5,10 @@ namespace Microsoft\Graph\Generated\Devices\Item\RegisteredUsers\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Devices\Item\RegisteredUsers\Item\MicrosoftGraphAppRoleAssignment\MicrosoftGraphAppRoleAssignmentRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\RegisteredUsers\Item\MicrosoftGraphEndpoint\MicrosoftGraphEndpointRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\RegisteredUsers\Item\MicrosoftGraphServicePrincipal\MicrosoftGraphServicePrincipalRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\RegisteredUsers\Item\MicrosoftGraphUser\MicrosoftGraphUserRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\RegisteredUsers\Item\GraphAppRoleAssignment\GraphAppRoleAssignmentRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\RegisteredUsers\Item\GraphEndpoint\GraphEndpointRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\RegisteredUsers\Item\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\RegisteredUsers\Item\GraphUser\GraphUserRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryObject;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -26,29 +26,29 @@ class DirectoryObjectItemRequestBuilder
     /**
      * Casts the previous resource to appRoleAssignment.
     */
-    public function microsoftGraphAppRoleAssignment(): MicrosoftGraphAppRoleAssignmentRequestBuilder {
-        return new MicrosoftGraphAppRoleAssignmentRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphAppRoleAssignment(): GraphAppRoleAssignmentRequestBuilder {
+        return new GraphAppRoleAssignmentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to endpoint.
     */
-    public function microsoftGraphEndpoint(): MicrosoftGraphEndpointRequestBuilder {
-        return new MicrosoftGraphEndpointRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphEndpoint(): GraphEndpointRequestBuilder {
+        return new GraphEndpointRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to servicePrincipal.
     */
-    public function microsoftGraphServicePrincipal(): MicrosoftGraphServicePrincipalRequestBuilder {
-        return new MicrosoftGraphServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphServicePrincipal(): GraphServicePrincipalRequestBuilder {
+        return new GraphServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to user.
     */
-    public function microsoftGraphUser(): MicrosoftGraphUserRequestBuilder {
-        return new MicrosoftGraphUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphUser(): GraphUserRequestBuilder {
+        return new GraphUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

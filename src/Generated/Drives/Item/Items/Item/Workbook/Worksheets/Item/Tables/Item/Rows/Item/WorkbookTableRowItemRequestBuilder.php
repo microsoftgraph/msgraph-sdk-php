@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Rows\Item\MicrosoftGraphRange\MicrosoftGraphRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Rows\Item\Range\RangeRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookTableRow;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -21,16 +21,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class WorkbookTableRowItemRequestBuilder 
 {
     /**
-     * Provides operations to call the range method.
-    */
-    public function microsoftGraphRange(): MicrosoftGraphRangeRequestBuilder {
-        return new MicrosoftGraphRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * Provides operations to call the range method.
+    */
+    public function range(): RangeRequestBuilder {
+        return new RangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.

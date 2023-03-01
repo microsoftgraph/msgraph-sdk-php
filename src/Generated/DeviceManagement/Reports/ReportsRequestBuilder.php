@@ -7,24 +7,24 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\Reports\ExportJobs\ExportJobsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\Reports\ExportJobs\Item\DeviceManagementExportJobItemRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\MicrosoftGraphGetCachedReport\MicrosoftGraphGetCachedReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\MicrosoftGraphGetCompliancePolicyNonComplianceReport\MicrosoftGraphGetCompliancePolicyNonComplianceReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\MicrosoftGraphGetCompliancePolicyNonComplianceSummaryReport\MicrosoftGraphGetCompliancePolicyNonComplianceSummaryReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\MicrosoftGraphGetComplianceSettingNonComplianceReport\MicrosoftGraphGetComplianceSettingNonComplianceReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\MicrosoftGraphGetConfigurationPolicyNonComplianceReport\MicrosoftGraphGetConfigurationPolicyNonComplianceReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\MicrosoftGraphGetConfigurationPolicyNonComplianceSummaryReport\MicrosoftGraphGetConfigurationPolicyNonComplianceSummaryReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\MicrosoftGraphGetConfigurationSettingNonComplianceReport\MicrosoftGraphGetConfigurationSettingNonComplianceReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\MicrosoftGraphGetDeviceManagementIntentPerSettingContributingProfiles\MicrosoftGraphGetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\MicrosoftGraphGetDeviceManagementIntentSettingsReport\MicrosoftGraphGetDeviceManagementIntentSettingsReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\MicrosoftGraphGetDeviceNonComplianceReport\MicrosoftGraphGetDeviceNonComplianceReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\MicrosoftGraphGetDevicesWithoutCompliancePolicyReport\MicrosoftGraphGetDevicesWithoutCompliancePolicyReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\MicrosoftGraphGetHistoricalReport\MicrosoftGraphGetHistoricalReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\MicrosoftGraphGetNoncompliantDevicesAndSettingsReport\MicrosoftGraphGetNoncompliantDevicesAndSettingsReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\MicrosoftGraphGetPolicyNonComplianceMetadata\MicrosoftGraphGetPolicyNonComplianceMetadataRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\MicrosoftGraphGetPolicyNonComplianceReport\MicrosoftGraphGetPolicyNonComplianceReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\MicrosoftGraphGetPolicyNonComplianceSummaryReport\MicrosoftGraphGetPolicyNonComplianceSummaryReportRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\MicrosoftGraphGetReportFilters\MicrosoftGraphGetReportFiltersRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\Reports\MicrosoftGraphGetSettingNonComplianceReport\MicrosoftGraphGetSettingNonComplianceReportRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\Reports\GetCachedReport\GetCachedReportRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\Reports\GetCompliancePolicyNonComplianceReport\GetCompliancePolicyNonComplianceReportRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\Reports\GetCompliancePolicyNonComplianceSummaryReport\GetCompliancePolicyNonComplianceSummaryReportRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\Reports\GetComplianceSettingNonComplianceReport\GetComplianceSettingNonComplianceReportRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\Reports\GetConfigurationPolicyNonComplianceReport\GetConfigurationPolicyNonComplianceReportRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\Reports\GetConfigurationPolicyNonComplianceSummaryReport\GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\Reports\GetConfigurationSettingNonComplianceReport\GetConfigurationSettingNonComplianceReportRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\Reports\GetDeviceManagementIntentPerSettingContributingProfiles\GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\Reports\GetDeviceManagementIntentSettingsReport\GetDeviceManagementIntentSettingsReportRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\Reports\GetDeviceNonComplianceReport\GetDeviceNonComplianceReportRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\Reports\GetDevicesWithoutCompliancePolicyReport\GetDevicesWithoutCompliancePolicyReportRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\Reports\GetHistoricalReport\GetHistoricalReportRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\Reports\GetNoncompliantDevicesAndSettingsReport\GetNoncompliantDevicesAndSettingsReportRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\Reports\GetPolicyNonComplianceMetadata\GetPolicyNonComplianceMetadataRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\Reports\GetPolicyNonComplianceReport\GetPolicyNonComplianceReportRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\Reports\GetPolicyNonComplianceSummaryReport\GetPolicyNonComplianceSummaryReportRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\Reports\GetReportFilters\GetReportFiltersRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\Reports\GetSettingNonComplianceReport\GetSettingNonComplianceReportRequestBuilder;
 use Microsoft\Graph\Generated\Models\DeviceManagementReports;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -49,127 +49,127 @@ class ReportsRequestBuilder
     /**
      * Provides operations to call the getCachedReport method.
     */
-    public function microsoftGraphGetCachedReport(): MicrosoftGraphGetCachedReportRequestBuilder {
-        return new MicrosoftGraphGetCachedReportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getCachedReport(): GetCachedReportRequestBuilder {
+        return new GetCachedReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getCompliancePolicyNonComplianceReport method.
     */
-    public function microsoftGraphGetCompliancePolicyNonComplianceReport(): MicrosoftGraphGetCompliancePolicyNonComplianceReportRequestBuilder {
-        return new MicrosoftGraphGetCompliancePolicyNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getCompliancePolicyNonComplianceReport(): GetCompliancePolicyNonComplianceReportRequestBuilder {
+        return new GetCompliancePolicyNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getCompliancePolicyNonComplianceSummaryReport method.
     */
-    public function microsoftGraphGetCompliancePolicyNonComplianceSummaryReport(): MicrosoftGraphGetCompliancePolicyNonComplianceSummaryReportRequestBuilder {
-        return new MicrosoftGraphGetCompliancePolicyNonComplianceSummaryReportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getCompliancePolicyNonComplianceSummaryReport(): GetCompliancePolicyNonComplianceSummaryReportRequestBuilder {
+        return new GetCompliancePolicyNonComplianceSummaryReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getComplianceSettingNonComplianceReport method.
     */
-    public function microsoftGraphGetComplianceSettingNonComplianceReport(): MicrosoftGraphGetComplianceSettingNonComplianceReportRequestBuilder {
-        return new MicrosoftGraphGetComplianceSettingNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getComplianceSettingNonComplianceReport(): GetComplianceSettingNonComplianceReportRequestBuilder {
+        return new GetComplianceSettingNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getConfigurationPolicyNonComplianceReport method.
     */
-    public function microsoftGraphGetConfigurationPolicyNonComplianceReport(): MicrosoftGraphGetConfigurationPolicyNonComplianceReportRequestBuilder {
-        return new MicrosoftGraphGetConfigurationPolicyNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getConfigurationPolicyNonComplianceReport(): GetConfigurationPolicyNonComplianceReportRequestBuilder {
+        return new GetConfigurationPolicyNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getConfigurationPolicyNonComplianceSummaryReport method.
     */
-    public function microsoftGraphGetConfigurationPolicyNonComplianceSummaryReport(): MicrosoftGraphGetConfigurationPolicyNonComplianceSummaryReportRequestBuilder {
-        return new MicrosoftGraphGetConfigurationPolicyNonComplianceSummaryReportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getConfigurationPolicyNonComplianceSummaryReport(): GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder {
+        return new GetConfigurationPolicyNonComplianceSummaryReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getConfigurationSettingNonComplianceReport method.
     */
-    public function microsoftGraphGetConfigurationSettingNonComplianceReport(): MicrosoftGraphGetConfigurationSettingNonComplianceReportRequestBuilder {
-        return new MicrosoftGraphGetConfigurationSettingNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getConfigurationSettingNonComplianceReport(): GetConfigurationSettingNonComplianceReportRequestBuilder {
+        return new GetConfigurationSettingNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getDeviceManagementIntentPerSettingContributingProfiles method.
     */
-    public function microsoftGraphGetDeviceManagementIntentPerSettingContributingProfiles(): MicrosoftGraphGetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder {
-        return new MicrosoftGraphGetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getDeviceManagementIntentPerSettingContributingProfiles(): GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder {
+        return new GetDeviceManagementIntentPerSettingContributingProfilesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getDeviceManagementIntentSettingsReport method.
     */
-    public function microsoftGraphGetDeviceManagementIntentSettingsReport(): MicrosoftGraphGetDeviceManagementIntentSettingsReportRequestBuilder {
-        return new MicrosoftGraphGetDeviceManagementIntentSettingsReportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getDeviceManagementIntentSettingsReport(): GetDeviceManagementIntentSettingsReportRequestBuilder {
+        return new GetDeviceManagementIntentSettingsReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getDeviceNonComplianceReport method.
     */
-    public function microsoftGraphGetDeviceNonComplianceReport(): MicrosoftGraphGetDeviceNonComplianceReportRequestBuilder {
-        return new MicrosoftGraphGetDeviceNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getDeviceNonComplianceReport(): GetDeviceNonComplianceReportRequestBuilder {
+        return new GetDeviceNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getDevicesWithoutCompliancePolicyReport method.
     */
-    public function microsoftGraphGetDevicesWithoutCompliancePolicyReport(): MicrosoftGraphGetDevicesWithoutCompliancePolicyReportRequestBuilder {
-        return new MicrosoftGraphGetDevicesWithoutCompliancePolicyReportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getDevicesWithoutCompliancePolicyReport(): GetDevicesWithoutCompliancePolicyReportRequestBuilder {
+        return new GetDevicesWithoutCompliancePolicyReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getHistoricalReport method.
     */
-    public function microsoftGraphGetHistoricalReport(): MicrosoftGraphGetHistoricalReportRequestBuilder {
-        return new MicrosoftGraphGetHistoricalReportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getHistoricalReport(): GetHistoricalReportRequestBuilder {
+        return new GetHistoricalReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getNoncompliantDevicesAndSettingsReport method.
     */
-    public function microsoftGraphGetNoncompliantDevicesAndSettingsReport(): MicrosoftGraphGetNoncompliantDevicesAndSettingsReportRequestBuilder {
-        return new MicrosoftGraphGetNoncompliantDevicesAndSettingsReportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getNoncompliantDevicesAndSettingsReport(): GetNoncompliantDevicesAndSettingsReportRequestBuilder {
+        return new GetNoncompliantDevicesAndSettingsReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getPolicyNonComplianceMetadata method.
     */
-    public function microsoftGraphGetPolicyNonComplianceMetadata(): MicrosoftGraphGetPolicyNonComplianceMetadataRequestBuilder {
-        return new MicrosoftGraphGetPolicyNonComplianceMetadataRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getPolicyNonComplianceMetadata(): GetPolicyNonComplianceMetadataRequestBuilder {
+        return new GetPolicyNonComplianceMetadataRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getPolicyNonComplianceReport method.
     */
-    public function microsoftGraphGetPolicyNonComplianceReport(): MicrosoftGraphGetPolicyNonComplianceReportRequestBuilder {
-        return new MicrosoftGraphGetPolicyNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getPolicyNonComplianceReport(): GetPolicyNonComplianceReportRequestBuilder {
+        return new GetPolicyNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getPolicyNonComplianceSummaryReport method.
     */
-    public function microsoftGraphGetPolicyNonComplianceSummaryReport(): MicrosoftGraphGetPolicyNonComplianceSummaryReportRequestBuilder {
-        return new MicrosoftGraphGetPolicyNonComplianceSummaryReportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getPolicyNonComplianceSummaryReport(): GetPolicyNonComplianceSummaryReportRequestBuilder {
+        return new GetPolicyNonComplianceSummaryReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getReportFilters method.
     */
-    public function microsoftGraphGetReportFilters(): MicrosoftGraphGetReportFiltersRequestBuilder {
-        return new MicrosoftGraphGetReportFiltersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getReportFilters(): GetReportFiltersRequestBuilder {
+        return new GetReportFiltersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getSettingNonComplianceReport method.
     */
-    public function microsoftGraphGetSettingNonComplianceReport(): MicrosoftGraphGetSettingNonComplianceReportRequestBuilder {
-        return new MicrosoftGraphGetSettingNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getSettingNonComplianceReport(): GetSettingNonComplianceReportRequestBuilder {
+        return new GetSettingNonComplianceReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

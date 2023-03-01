@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\ApplePushNotificationCertif
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\ApplePushNotificationCertificate\MicrosoftGraphDownloadApplePushNotificationCertificateSigningRequest\MicrosoftGraphDownloadApplePushNotificationCertificateSigningRequestRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ApplePushNotificationCertificate\DownloadApplePushNotificationCertificateSigningRequest\DownloadApplePushNotificationCertificateSigningRequestRequestBuilder;
 use Microsoft\Graph\Generated\Models\ApplePushNotificationCertificate;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,8 +23,8 @@ class ApplePushNotificationCertificateRequestBuilder
     /**
      * Provides operations to call the downloadApplePushNotificationCertificateSigningRequest method.
     */
-    public function microsoftGraphDownloadApplePushNotificationCertificateSigningRequest(): MicrosoftGraphDownloadApplePushNotificationCertificateSigningRequestRequestBuilder {
-        return new MicrosoftGraphDownloadApplePushNotificationCertificateSigningRequestRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function downloadApplePushNotificationCertificateSigningRequest(): DownloadApplePushNotificationCertificateSigningRequestRequestBuilder {
+        return new DownloadApplePushNotificationCertificateSigningRequestRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

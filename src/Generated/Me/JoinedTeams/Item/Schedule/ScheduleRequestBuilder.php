@@ -5,7 +5,6 @@ namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\MicrosoftGraphShare\MicrosoftGraphShareRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\OfferShiftRequests\Item\OfferShiftRequestItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\OfferShiftRequests\OfferShiftRequestsRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\OpenShiftChangeRequests\Item\OpenShiftChangeRequestItemRequestBuilder;
@@ -14,6 +13,7 @@ use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\OpenShifts\Item\OpenS
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\OpenShifts\OpenShiftsRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\SchedulingGroups\Item\SchedulingGroupItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\SchedulingGroups\SchedulingGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\Share\ShareRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\Shifts\Item\ShiftItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\Shifts\ShiftsRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\SwapShiftsChangeRequests\Item\SwapShiftsChangeRequestItemRequestBuilder;
@@ -38,13 +38,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 */
 class ScheduleRequestBuilder 
 {
-    /**
-     * Provides operations to call the share method.
-    */
-    public function microsoftGraphShare(): MicrosoftGraphShareRequestBuilder {
-        return new MicrosoftGraphShareRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
     /**
      * Provides operations to manage the offerShiftRequests property of the microsoft.graph.schedule entity.
     */
@@ -81,6 +74,13 @@ class ScheduleRequestBuilder
     */
     public function schedulingGroups(): SchedulingGroupsRequestBuilder {
         return new SchedulingGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the share method.
+    */
+    public function share(): ShareRequestBuilder {
+        return new ShareRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

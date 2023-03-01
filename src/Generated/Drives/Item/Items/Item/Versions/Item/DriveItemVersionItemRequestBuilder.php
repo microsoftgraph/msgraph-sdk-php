@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Versions\Item\Content\ContentRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Versions\Item\MicrosoftGraphRestoreVersion\MicrosoftGraphRestoreVersionRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Versions\Item\RestoreVersion\RestoreVersionRequestBuilder;
 use Microsoft\Graph\Generated\Models\DriveItemVersion;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -29,13 +29,6 @@ class DriveItemVersionItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the restoreVersion method.
-    */
-    public function microsoftGraphRestoreVersion(): MicrosoftGraphRestoreVersionRequestBuilder {
-        return new MicrosoftGraphRestoreVersionRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -44,6 +37,13 @@ class DriveItemVersionItemRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the restoreVersion method.
+    */
+    public function restoreVersion(): RestoreVersionRequestBuilder {
+        return new RestoreVersionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder

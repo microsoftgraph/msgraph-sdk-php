@@ -8,10 +8,10 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ContentType;
 use Microsoft\Graph\Generated\Models\ContentTypeCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\AddCopy\AddCopyRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\AddCopyFromContentTypeHub\AddCopyFromContentTypeHubRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\MicrosoftGraphAddCopy\MicrosoftGraphAddCopyRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\MicrosoftGraphAddCopyFromContentTypeHub\MicrosoftGraphAddCopyFromContentTypeHubRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\MicrosoftGraphGetCompatibleHubContentTypes\MicrosoftGraphGetCompatibleHubContentTypesRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\GetCompatibleHubContentTypes\GetCompatibleHubContentTypesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -25,6 +25,20 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ContentTypesRequestBuilder 
 {
     /**
+     * Provides operations to call the addCopy method.
+    */
+    public function addCopy(): AddCopyRequestBuilder {
+        return new AddCopyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the addCopyFromContentTypeHub method.
+    */
+    public function addCopyFromContentTypeHub(): AddCopyFromContentTypeHubRequestBuilder {
+        return new AddCopyFromContentTypeHubRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
@@ -32,24 +46,10 @@ class ContentTypesRequestBuilder
     }
     
     /**
-     * Provides operations to call the addCopy method.
-    */
-    public function microsoftGraphAddCopy(): MicrosoftGraphAddCopyRequestBuilder {
-        return new MicrosoftGraphAddCopyRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the addCopyFromContentTypeHub method.
-    */
-    public function microsoftGraphAddCopyFromContentTypeHub(): MicrosoftGraphAddCopyFromContentTypeHubRequestBuilder {
-        return new MicrosoftGraphAddCopyFromContentTypeHubRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the getCompatibleHubContentTypes method.
     */
-    public function microsoftGraphGetCompatibleHubContentTypes(): MicrosoftGraphGetCompatibleHubContentTypesRequestBuilder {
-        return new MicrosoftGraphGetCompatibleHubContentTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getCompatibleHubContentTypes(): GetCompatibleHubContentTypesRequestBuilder {
+        return new GetCompatibleHubContentTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

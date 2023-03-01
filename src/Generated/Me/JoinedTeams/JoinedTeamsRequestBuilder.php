@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Me\JoinedTeams\MicrosoftGraphGetAllMessages\MicrosoftGraphGetAllMessagesRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\GetAllMessages\GetAllMessagesRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Team;
 use Microsoft\Graph\Generated\Models\TeamCollectionResponse;
@@ -32,8 +32,8 @@ class JoinedTeamsRequestBuilder
     /**
      * Provides operations to call the getAllMessages method.
     */
-    public function microsoftGraphGetAllMessages(): MicrosoftGraphGetAllMessagesRequestBuilder {
-        return new MicrosoftGraphGetAllMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getAllMessages(): GetAllMessagesRequestBuilder {
+        return new GetAllMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

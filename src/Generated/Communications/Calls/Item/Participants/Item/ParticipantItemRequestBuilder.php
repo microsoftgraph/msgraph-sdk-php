@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\MicrosoftGraphMute\MicrosoftGraphMuteRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\MicrosoftGraphStartHoldMusic\MicrosoftGraphStartHoldMusicRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\MicrosoftGraphStopHoldMusic\MicrosoftGraphStopHoldMusicRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\Mute\MuteRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\StartHoldMusic\StartHoldMusicRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\StopHoldMusic\StopHoldMusicRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Participant;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -25,22 +25,8 @@ class ParticipantItemRequestBuilder
     /**
      * Provides operations to call the mute method.
     */
-    public function microsoftGraphMute(): MicrosoftGraphMuteRequestBuilder {
-        return new MicrosoftGraphMuteRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the startHoldMusic method.
-    */
-    public function microsoftGraphStartHoldMusic(): MicrosoftGraphStartHoldMusicRequestBuilder {
-        return new MicrosoftGraphStartHoldMusicRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the stopHoldMusic method.
-    */
-    public function microsoftGraphStopHoldMusic(): MicrosoftGraphStopHoldMusicRequestBuilder {
-        return new MicrosoftGraphStopHoldMusicRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function mute(): MuteRequestBuilder {
+        return new MuteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -52,6 +38,20 @@ class ParticipantItemRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the startHoldMusic method.
+    */
+    public function startHoldMusic(): StartHoldMusicRequestBuilder {
+        return new StartHoldMusicRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the stopHoldMusic method.
+    */
+    public function stopHoldMusic(): StopHoldMusicRequestBuilder {
+        return new StopHoldMusicRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder

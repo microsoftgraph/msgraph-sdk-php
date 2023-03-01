@@ -6,8 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\MicrosoftGraphCount\MicrosoftGraphCountRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\MicrosoftGraphItemAtWithIndex\MicrosoftGraphItemAtWithIndexRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\ItemAtWithIndex\ItemAtWithIndexRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookChartSeries;
 use Microsoft\Graph\Generated\Models\WorkbookChartSeriesCollectionResponse;
@@ -24,17 +23,10 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class SeriesRequestBuilder 
 {
     /**
-     * Provides operations to count the resources in the collection.
+     * Provides operations to call the count method.
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the count method.
-    */
-    public function microsoftGraphCount(): MicrosoftGraphCountRequestBuilder {
-        return new MicrosoftGraphCountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -89,10 +81,10 @@ class SeriesRequestBuilder
     /**
      * Provides operations to call the itemAt method.
      * @param int $index Usage: index={index}
-     * @return MicrosoftGraphItemAtWithIndexRequestBuilder
+     * @return ItemAtWithIndexRequestBuilder
     */
-    public function microsoftGraphItemAtWithIndex(int $index): MicrosoftGraphItemAtWithIndexRequestBuilder {
-        return new MicrosoftGraphItemAtWithIndexRequestBuilder($this->pathParameters, $this->requestAdapter, $index);
+    public function itemAtWithIndex(int $index): ItemAtWithIndexRequestBuilder {
+        return new ItemAtWithIndexRequestBuilder($this->pathParameters, $this->requestAdapter, $index);
     }
 
     /**

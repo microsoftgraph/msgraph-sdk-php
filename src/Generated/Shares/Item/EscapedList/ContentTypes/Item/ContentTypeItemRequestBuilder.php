@@ -7,17 +7,17 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ContentType;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\AssociateWithHubSites\AssociateWithHubSitesRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\Base\BaseRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\BaseTypes\BaseTypesRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\ColumnLinks\ColumnLinksRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\ColumnLinks\Item\ColumnLinkItemRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\ColumnPositions\ColumnPositionsRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\Columns\ColumnsRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\MicrosoftGraphAssociateWithHubSites\MicrosoftGraphAssociateWithHubSitesRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\MicrosoftGraphCopyToDefaultContentLocation\MicrosoftGraphCopyToDefaultContentLocationRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\MicrosoftGraphIsPublished\MicrosoftGraphIsPublishedRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\MicrosoftGraphPublish\MicrosoftGraphPublishRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\MicrosoftGraphUnpublish\MicrosoftGraphUnpublishRequestBuilder;
+use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\CopyToDefaultContentLocation\CopyToDefaultContentLocationRequestBuilder;
+use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\IsPublished\IsPublishedRequestBuilder;
+use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\Publish\PublishRequestBuilder;
+use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\Item\Unpublish\UnpublishRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -30,6 +30,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 */
 class ContentTypeItemRequestBuilder 
 {
+    /**
+     * Provides operations to call the associateWithHubSites method.
+    */
+    public function associateWithHubSites(): AssociateWithHubSitesRequestBuilder {
+        return new AssociateWithHubSitesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the base property of the microsoft.graph.contentType entity.
     */
@@ -66,38 +73,17 @@ class ContentTypeItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the associateWithHubSites method.
-    */
-    public function microsoftGraphAssociateWithHubSites(): MicrosoftGraphAssociateWithHubSitesRequestBuilder {
-        return new MicrosoftGraphAssociateWithHubSitesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the copyToDefaultContentLocation method.
     */
-    public function microsoftGraphCopyToDefaultContentLocation(): MicrosoftGraphCopyToDefaultContentLocationRequestBuilder {
-        return new MicrosoftGraphCopyToDefaultContentLocationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function copyToDefaultContentLocation(): CopyToDefaultContentLocationRequestBuilder {
+        return new CopyToDefaultContentLocationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the isPublished method.
     */
-    public function microsoftGraphIsPublished(): MicrosoftGraphIsPublishedRequestBuilder {
-        return new MicrosoftGraphIsPublishedRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the publish method.
-    */
-    public function microsoftGraphPublish(): MicrosoftGraphPublishRequestBuilder {
-        return new MicrosoftGraphPublishRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the unpublish method.
-    */
-    public function microsoftGraphUnpublish(): MicrosoftGraphUnpublishRequestBuilder {
-        return new MicrosoftGraphUnpublishRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function isPublished(): IsPublishedRequestBuilder {
+        return new IsPublishedRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -106,9 +92,23 @@ class ContentTypeItemRequestBuilder
     private array $pathParameters;
     
     /**
+     * Provides operations to call the publish method.
+    */
+    public function publish(): PublishRequestBuilder {
+        return new PublishRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the unpublish method.
+    */
+    public function unpublish(): UnpublishRequestBuilder {
+        return new UnpublishRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder

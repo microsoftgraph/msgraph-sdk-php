@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Groups\Item\Threads\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Item\MicrosoftGraphReply\MicrosoftGraphReplyRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\PostItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\PostsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Reply\ReplyRequestBuilder;
 use Microsoft\Graph\Generated\Models\ConversationThread;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,13 +23,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ConversationThreadItemRequestBuilder 
 {
     /**
-     * Provides operations to call the reply method.
-    */
-    public function microsoftGraphReply(): MicrosoftGraphReplyRequestBuilder {
-        return new MicrosoftGraphReplyRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -39,6 +32,13 @@ class ConversationThreadItemRequestBuilder
     */
     public function posts(): PostsRequestBuilder {
         return new PostsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the reply method.
+    */
+    public function reply(): ReplyRequestBuilder {
+        return new ReplyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

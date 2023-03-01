@@ -9,8 +9,6 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryCase;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\CustodiansRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\EdiscoveryCustodianItemRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\MicrosoftGraphSecurityClose\MicrosoftGraphSecurityCloseRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\MicrosoftGraphSecurityReopen\MicrosoftGraphSecurityReopenRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\NoncustodialDataSources\Item\EdiscoveryNoncustodialDataSourceItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\NoncustodialDataSources\NoncustodialDataSourcesRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Operations\Item\CaseOperationItemRequestBuilder;
@@ -19,6 +17,8 @@ use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSets\Ite
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSets\ReviewSetsRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\EdiscoverySearchItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\SearchesRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\SecurityClose\SecurityCloseRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\SecurityReopen\SecurityReopenRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Settings\SettingsRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\Item\EdiscoveryReviewTagItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\TagsRequestBuilder;
@@ -39,20 +39,6 @@ class EdiscoveryCaseItemRequestBuilder
     */
     public function custodians(): CustodiansRequestBuilder {
         return new CustodiansRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the close method.
-    */
-    public function microsoftGraphSecurityClose(): MicrosoftGraphSecurityCloseRequestBuilder {
-        return new MicrosoftGraphSecurityCloseRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the reopen method.
-    */
-    public function microsoftGraphSecurityReopen(): MicrosoftGraphSecurityReopenRequestBuilder {
-        return new MicrosoftGraphSecurityReopenRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -91,6 +77,20 @@ class EdiscoveryCaseItemRequestBuilder
     */
     public function searches(): SearchesRequestBuilder {
         return new SearchesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the close method.
+    */
+    public function securityClose(): SecurityCloseRequestBuilder {
+        return new SecurityCloseRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the reopen method.
+    */
+    public function securityReopen(): SecurityReopenRequestBuilder {
+        return new SecurityReopenRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

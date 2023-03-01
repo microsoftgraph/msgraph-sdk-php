@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\IdentityProviders;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\IdentityProviders\AvailableProviderTypes\AvailableProviderTypesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityProviders\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\IdentityProviders\MicrosoftGraphAvailableProviderTypes\MicrosoftGraphAvailableProviderTypesRequestBuilder;
 use Microsoft\Graph\Generated\Models\IdentityProvider;
 use Microsoft\Graph\Generated\Models\IdentityProviderCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -23,17 +23,17 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class IdentityProvidersRequestBuilder 
 {
     /**
+     * Provides operations to call the availableProviderTypes method.
+    */
+    public function availableProviderTypes(): AvailableProviderTypesRequestBuilder {
+        return new AvailableProviderTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the availableProviderTypes method.
-    */
-    public function microsoftGraphAvailableProviderTypes(): MicrosoftGraphAvailableProviderTypesRequestBuilder {
-        return new MicrosoftGraphAvailableProviderTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

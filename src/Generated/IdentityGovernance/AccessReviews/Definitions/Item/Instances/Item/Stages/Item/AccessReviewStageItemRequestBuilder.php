@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\Stages\Item\Decisions\DecisionsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\Stages\Item\Decisions\Item\AccessReviewInstanceDecisionItemItemRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\Stages\Item\MicrosoftGraphStop\MicrosoftGraphStopRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\Instances\Item\Stages\Item\Stop\StopRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessReviewStage;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -30,13 +30,6 @@ class AccessReviewStageItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the stop method.
-    */
-    public function microsoftGraphStop(): MicrosoftGraphStopRequestBuilder {
-        return new MicrosoftGraphStopRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -45,6 +38,13 @@ class AccessReviewStageItemRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the stop method.
+    */
+    public function stop(): StopRequestBuilder {
+        return new StopRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder

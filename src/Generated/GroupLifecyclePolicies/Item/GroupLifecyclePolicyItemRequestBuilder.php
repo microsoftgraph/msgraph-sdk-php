@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\GroupLifecyclePolicies\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\GroupLifecyclePolicies\Item\MicrosoftGraphAddGroup\MicrosoftGraphAddGroupRequestBuilder;
-use Microsoft\Graph\Generated\GroupLifecyclePolicies\Item\MicrosoftGraphRemoveGroup\MicrosoftGraphRemoveGroupRequestBuilder;
+use Microsoft\Graph\Generated\GroupLifecyclePolicies\Item\AddGroup\AddGroupRequestBuilder;
+use Microsoft\Graph\Generated\GroupLifecyclePolicies\Item\RemoveGroup\RemoveGroupRequestBuilder;
 use Microsoft\Graph\Generated\Models\GroupLifecyclePolicy;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -24,21 +24,21 @@ class GroupLifecyclePolicyItemRequestBuilder
     /**
      * Provides operations to call the addGroup method.
     */
-    public function microsoftGraphAddGroup(): MicrosoftGraphAddGroupRequestBuilder {
-        return new MicrosoftGraphAddGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the removeGroup method.
-    */
-    public function microsoftGraphRemoveGroup(): MicrosoftGraphRemoveGroupRequestBuilder {
-        return new MicrosoftGraphRemoveGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function addGroup(): AddGroupRequestBuilder {
+        return new AddGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * Provides operations to call the removeGroup method.
+    */
+    public function removeGroup(): RemoveGroupRequestBuilder {
+        return new RemoveGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.

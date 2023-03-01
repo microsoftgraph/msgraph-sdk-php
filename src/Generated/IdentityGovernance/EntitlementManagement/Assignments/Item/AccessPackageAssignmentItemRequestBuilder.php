@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\Item\AccessPackage\AccessPackageRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\Item\AssignmentPolicy\AssignmentPolicyRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\Item\MicrosoftGraphReprocess\MicrosoftGraphReprocessRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\Item\Reprocess\ReprocessRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Assignments\Item\Target\TargetRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessPackageAssignment;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -38,16 +38,16 @@ class AccessPackageAssignmentItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the reprocess method.
-    */
-    public function microsoftGraphReprocess(): MicrosoftGraphReprocessRequestBuilder {
-        return new MicrosoftGraphReprocessRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * Provides operations to call the reprocess method.
+    */
+    public function reprocess(): ReprocessRequestBuilder {
+        return new ReprocessRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.

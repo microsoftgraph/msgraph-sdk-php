@@ -9,8 +9,8 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UnifiedRoleAssignmentScheduleRequest;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentScheduleRequests\Item\ActivatedUsing\ActivatedUsingRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentScheduleRequests\Item\AppScope\AppScopeRequestBuilder;
+use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentScheduleRequests\Item\Cancel\CancelRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentScheduleRequests\Item\DirectoryScope\DirectoryScopeRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentScheduleRequests\Item\MicrosoftGraphCancel\MicrosoftGraphCancelRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentScheduleRequests\Item\Principal\PrincipalRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentScheduleRequests\Item\RoleDefinition\RoleDefinitionRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleAssignmentScheduleRequests\Item\TargetSchedule\TargetScheduleRequestBuilder;
@@ -41,17 +41,17 @@ class UnifiedRoleAssignmentScheduleRequestItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the cancel method.
+    */
+    public function cancel(): CancelRequestBuilder {
+        return new CancelRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the directoryScope property of the microsoft.graph.unifiedRoleAssignmentScheduleRequest entity.
     */
     public function directoryScope(): DirectoryScopeRequestBuilder {
         return new DirectoryScopeRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the cancel method.
-    */
-    public function microsoftGraphCancel(): MicrosoftGraphCancelRequestBuilder {
-        return new MicrosoftGraphCancelRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

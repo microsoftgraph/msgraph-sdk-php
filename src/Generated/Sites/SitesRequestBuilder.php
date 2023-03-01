@@ -7,9 +7,9 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SiteCollectionResponse;
+use Microsoft\Graph\Generated\Sites\Add\AddRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Sites\MicrosoftGraphAdd\MicrosoftGraphAddRequestBuilder;
-use Microsoft\Graph\Generated\Sites\MicrosoftGraphRemove\MicrosoftGraphRemoveRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Remove\RemoveRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -23,6 +23,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class SitesRequestBuilder 
 {
     /**
+     * Provides operations to call the add method.
+    */
+    public function add(): AddRequestBuilder {
+        return new AddRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
@@ -30,23 +37,16 @@ class SitesRequestBuilder
     }
     
     /**
-     * Provides operations to call the add method.
+     * @var array<string, mixed> $pathParameters Path parameters for the request
     */
-    public function microsoftGraphAdd(): MicrosoftGraphAddRequestBuilder {
-        return new MicrosoftGraphAddRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
+    private array $pathParameters;
     
     /**
      * Provides operations to call the remove method.
     */
-    public function microsoftGraphRemove(): MicrosoftGraphRemoveRequestBuilder {
-        return new MicrosoftGraphRemoveRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function remove(): RemoveRequestBuilder {
+        return new RemoveRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
-    
-    /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
-    */
-    private array $pathParameters;
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.

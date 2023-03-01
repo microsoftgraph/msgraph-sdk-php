@@ -9,7 +9,7 @@ use Microsoft\Graph\Generated\Models\ChatMessage;
 use Microsoft\Graph\Generated\Models\ChatMessageCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Messages\Item\Replies\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Messages\Item\Replies\MicrosoftGraphDelta\MicrosoftGraphDeltaRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Messages\Item\Replies\Delta\DeltaRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -32,8 +32,8 @@ class RepliesRequestBuilder
     /**
      * Provides operations to call the delta method.
     */
-    public function microsoftGraphDelta(): MicrosoftGraphDeltaRequestBuilder {
-        return new MicrosoftGraphDeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function delta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -86,11 +86,11 @@ class RepliesRequestBuilder
     }
 
     /**
-     * Create a new reply to a chatMessage in a specified channel.
+     * Send a new reply to a chatMessage in a specified channel.
      * @param ChatMessage $body The request body
      * @param RepliesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/chatmessage-post-replies?view=graph-rest-1.0 Find more info here
     */
     public function post(ChatMessage $body, ?RepliesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -131,7 +131,7 @@ class RepliesRequestBuilder
     }
 
     /**
-     * Create a new reply to a chatMessage in a specified channel.
+     * Send a new reply to a chatMessage in a specified channel.
      * @param ChatMessage $body The request body
      * @param RepliesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

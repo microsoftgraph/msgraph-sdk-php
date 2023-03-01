@@ -5,13 +5,13 @@ namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Archive\ArchiveRequestBuilder;
 use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\MicrosoftGraphArchive\MicrosoftGraphArchiveRequestBuilder;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\MicrosoftGraphFavorite\MicrosoftGraphFavoriteRequestBuilder;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\MicrosoftGraphMarkRead\MicrosoftGraphMarkReadRequestBuilder;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\MicrosoftGraphMarkUnread\MicrosoftGraphMarkUnreadRequestBuilder;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\MicrosoftGraphUnarchive\MicrosoftGraphUnarchiveRequestBuilder;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\MicrosoftGraphUnfavorite\MicrosoftGraphUnfavoriteRequestBuilder;
+use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Favorite\FavoriteRequestBuilder;
+use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\MarkRead\MarkReadRequestBuilder;
+use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\MarkUnread\MarkUnreadRequestBuilder;
+use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Unarchive\UnarchiveRequestBuilder;
+use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Unfavorite\UnfavoriteRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ServiceUpdateMessage;
 use Microsoft\Graph\Generated\Models\ServiceUpdateMessageCollectionResponse;
@@ -28,6 +28,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class MessagesRequestBuilder 
 {
     /**
+     * Provides operations to call the archive method.
+    */
+    public function archive(): ArchiveRequestBuilder {
+        return new ArchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to count the resources in the collection.
     */
     public function count(): CountRequestBuilder {
@@ -35,45 +42,24 @@ class MessagesRequestBuilder
     }
     
     /**
-     * Provides operations to call the archive method.
-    */
-    public function microsoftGraphArchive(): MicrosoftGraphArchiveRequestBuilder {
-        return new MicrosoftGraphArchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the favorite method.
     */
-    public function microsoftGraphFavorite(): MicrosoftGraphFavoriteRequestBuilder {
-        return new MicrosoftGraphFavoriteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function favorite(): FavoriteRequestBuilder {
+        return new FavoriteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the markRead method.
     */
-    public function microsoftGraphMarkRead(): MicrosoftGraphMarkReadRequestBuilder {
-        return new MicrosoftGraphMarkReadRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function markRead(): MarkReadRequestBuilder {
+        return new MarkReadRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the markUnread method.
     */
-    public function microsoftGraphMarkUnread(): MicrosoftGraphMarkUnreadRequestBuilder {
-        return new MicrosoftGraphMarkUnreadRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the unarchive method.
-    */
-    public function microsoftGraphUnarchive(): MicrosoftGraphUnarchiveRequestBuilder {
-        return new MicrosoftGraphUnarchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the unfavorite method.
-    */
-    public function microsoftGraphUnfavorite(): MicrosoftGraphUnfavoriteRequestBuilder {
-        return new MicrosoftGraphUnfavoriteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function markUnread(): MarkUnreadRequestBuilder {
+        return new MarkUnreadRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -85,6 +71,20 @@ class MessagesRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the unarchive method.
+    */
+    public function unarchive(): UnarchiveRequestBuilder {
+        return new UnarchiveRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the unfavorite method.
+    */
+    public function unfavorite(): UnfavoriteRequestBuilder {
+        return new UnfavoriteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder

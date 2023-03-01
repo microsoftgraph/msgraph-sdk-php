@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Me\RegisteredDevices\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\RegisteredDevices\Item\MicrosoftGraphAppRoleAssignment\MicrosoftGraphAppRoleAssignmentRequestBuilder;
-use Microsoft\Graph\Generated\Me\RegisteredDevices\Item\MicrosoftGraphDevice\MicrosoftGraphDeviceRequestBuilder;
-use Microsoft\Graph\Generated\Me\RegisteredDevices\Item\MicrosoftGraphEndpoint\MicrosoftGraphEndpointRequestBuilder;
+use Microsoft\Graph\Generated\Me\RegisteredDevices\Item\GraphAppRoleAssignment\GraphAppRoleAssignmentRequestBuilder;
+use Microsoft\Graph\Generated\Me\RegisteredDevices\Item\GraphDevice\GraphDeviceRequestBuilder;
+use Microsoft\Graph\Generated\Me\RegisteredDevices\Item\GraphEndpoint\GraphEndpointRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryObject;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -25,22 +25,22 @@ class DirectoryObjectItemRequestBuilder
     /**
      * Casts the previous resource to appRoleAssignment.
     */
-    public function microsoftGraphAppRoleAssignment(): MicrosoftGraphAppRoleAssignmentRequestBuilder {
-        return new MicrosoftGraphAppRoleAssignmentRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphAppRoleAssignment(): GraphAppRoleAssignmentRequestBuilder {
+        return new GraphAppRoleAssignmentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to device.
     */
-    public function microsoftGraphDevice(): MicrosoftGraphDeviceRequestBuilder {
-        return new MicrosoftGraphDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphDevice(): GraphDeviceRequestBuilder {
+        return new GraphDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to endpoint.
     */
-    public function microsoftGraphEndpoint(): MicrosoftGraphEndpointRequestBuilder {
-        return new MicrosoftGraphEndpointRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphEndpoint(): GraphEndpointRequestBuilder {
+        return new GraphEndpointRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -126,6 +126,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.applePushNotificationCertificate': return new ApplePushNotificationCertificate();
                 case '#microsoft.graph.application': return new Application();
                 case '#microsoft.graph.applicationTemplate': return new ApplicationTemplate();
+                case '#microsoft.graph.appManagementPolicy': return new AppManagementPolicy();
                 case '#microsoft.graph.appRoleAssignment': return new AppRoleAssignment();
                 case '#microsoft.graph.approval': return new Approval();
                 case '#microsoft.graph.approvalStage': return new ApprovalStage();
@@ -433,6 +434,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.onenoteSection': return new OnenoteSection();
                 case '#microsoft.graph.onlineMeeting': return new OnlineMeeting();
                 case '#microsoft.graph.onPremisesConditionalAccessSettings': return new OnPremisesConditionalAccessSettings();
+                case '#microsoft.graph.onPremisesDirectorySynchronization': return new OnPremisesDirectorySynchronization();
                 case '#microsoft.graph.openShift': return new OpenShift();
                 case '#microsoft.graph.openShiftChangeRequest': return new OpenShiftChangeRequest();
                 case '#microsoft.graph.openTypeExtension': return new OpenTypeExtension();
@@ -601,6 +603,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.telecomExpenseManagementPartner': return new TelecomExpenseManagementPartner();
                 case '#microsoft.graph.temporaryAccessPassAuthenticationMethod': return new TemporaryAccessPassAuthenticationMethod();
                 case '#microsoft.graph.temporaryAccessPassAuthenticationMethodConfiguration': return new TemporaryAccessPassAuthenticationMethodConfiguration();
+                case '#microsoft.graph.tenantAppManagementPolicy': return new TenantAppManagementPolicy();
                 case '#microsoft.graph.termsAndConditions': return new TermsAndConditions();
                 case '#microsoft.graph.termsAndConditionsAcceptanceStatus': return new TermsAndConditionsAcceptanceStatus();
                 case '#microsoft.graph.termsAndConditionsAssignment': return new TermsAndConditionsAssignment();

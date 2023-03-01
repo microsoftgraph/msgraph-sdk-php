@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\MicrosoftGraphInvite\MicrosoftGraphInviteRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Invite\InviteRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Participant;
 use Microsoft\Graph\Generated\Models\ParticipantCollectionResponse;
@@ -32,8 +32,8 @@ class ParticipantsRequestBuilder
     /**
      * Provides operations to call the invite method.
     */
-    public function microsoftGraphInvite(): MicrosoftGraphInviteRequestBuilder {
-        return new MicrosoftGraphInviteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function invite(): InviteRequestBuilder {
+        return new InviteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

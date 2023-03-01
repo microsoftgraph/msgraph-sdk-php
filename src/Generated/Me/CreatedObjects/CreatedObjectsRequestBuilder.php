@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\CreatedObjects\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Me\CreatedObjects\MicrosoftGraphServicePrincipal\MicrosoftGraphServicePrincipalRequestBuilder;
+use Microsoft\Graph\Generated\Me\CreatedObjects\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -31,8 +31,8 @@ class CreatedObjectsRequestBuilder
     /**
      * Casts the previous resource to servicePrincipal.
     */
-    public function microsoftGraphServicePrincipal(): MicrosoftGraphServicePrincipalRequestBuilder {
-        return new MicrosoftGraphServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphServicePrincipal(): GraphServicePrincipalRequestBuilder {
+        return new GraphServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

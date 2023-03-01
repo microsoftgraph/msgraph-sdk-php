@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\It
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\Assign\AssignRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\Assignments\AssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\Assignments\Item\DeviceCompliancePolicyAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\DeviceSettingStateSummaries\DeviceSettingStateSummariesRequestBuilder;
@@ -12,8 +13,7 @@ use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\Dev
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\DeviceStatuses\DeviceStatusesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\DeviceStatuses\Item\DeviceComplianceDeviceStatusItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\DeviceStatusOverview\DeviceStatusOverviewRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\MicrosoftGraphAssign\MicrosoftGraphAssignRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\MicrosoftGraphScheduleActionsForRules\MicrosoftGraphScheduleActionsForRulesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\ScheduleActionsForRules\ScheduleActionsForRulesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\ScheduledActionsForRule\Item\DeviceComplianceScheduledActionForRuleItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\ScheduledActionsForRule\ScheduledActionsForRuleRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\UserStatuses\Item\DeviceComplianceUserStatusItemRequestBuilder;
@@ -33,6 +33,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 */
 class DeviceCompliancePolicyItemRequestBuilder 
 {
+    /**
+     * Provides operations to call the assign method.
+    */
+    public function assign(): AssignRequestBuilder {
+        return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.deviceCompliancePolicy entity.
     */
@@ -62,20 +69,6 @@ class DeviceCompliancePolicyItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the assign method.
-    */
-    public function microsoftGraphAssign(): MicrosoftGraphAssignRequestBuilder {
-        return new MicrosoftGraphAssignRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the scheduleActionsForRules method.
-    */
-    public function microsoftGraphScheduleActionsForRules(): MicrosoftGraphScheduleActionsForRulesRequestBuilder {
-        return new MicrosoftGraphScheduleActionsForRulesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -84,6 +77,13 @@ class DeviceCompliancePolicyItemRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the scheduleActionsForRules method.
+    */
+    public function scheduleActionsForRules(): ScheduleActionsForRulesRequestBuilder {
+        return new ScheduleActionsForRulesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * Provides operations to manage the scheduledActionsForRule property of the microsoft.graph.deviceCompliancePolicy entity.

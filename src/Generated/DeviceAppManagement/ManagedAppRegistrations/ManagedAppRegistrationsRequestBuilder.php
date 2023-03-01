@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\MicrosoftGraphGetUserIdsWithFlaggedAppRegistration\MicrosoftGraphGetUserIdsWithFlaggedAppRegistrationRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppRegistrations\GetUserIdsWithFlaggedAppRegistration\GetUserIdsWithFlaggedAppRegistrationRequestBuilder;
 use Microsoft\Graph\Generated\Models\ManagedAppRegistration;
 use Microsoft\Graph\Generated\Models\ManagedAppRegistrationCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -32,8 +32,8 @@ class ManagedAppRegistrationsRequestBuilder
     /**
      * Provides operations to call the getUserIdsWithFlaggedAppRegistration method.
     */
-    public function microsoftGraphGetUserIdsWithFlaggedAppRegistration(): MicrosoftGraphGetUserIdsWithFlaggedAppRegistrationRequestBuilder {
-        return new MicrosoftGraphGetUserIdsWithFlaggedAppRegistrationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getUserIdsWithFlaggedAppRegistration(): GetUserIdsWithFlaggedAppRegistrationRequestBuilder {
+        return new GetUserIdsWithFlaggedAppRegistrationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

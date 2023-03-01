@@ -11,6 +11,8 @@ use Microsoft\Graph\Generated\Directory\DeletedItems\DeletedItemsRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\Item\DirectoryObjectItemRequestBuilder;
 use Microsoft\Graph\Generated\Directory\FederationConfigurations\FederationConfigurationsRequestBuilder;
 use Microsoft\Graph\Generated\Directory\FederationConfigurations\Item\IdentityProviderBaseItemRequestBuilder;
+use Microsoft\Graph\Generated\Directory\OnPremisesSynchronization\Item\OnPremisesDirectorySynchronizationItemRequestBuilder;
+use Microsoft\Graph\Generated\Directory\OnPremisesSynchronization\OnPremisesSynchronizationRequestBuilder;
 use Microsoft\Graph\Generated\Models\Directory;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -44,6 +46,13 @@ class DirectoryRequestBuilder
     */
     public function federationConfigurations(): FederationConfigurationsRequestBuilder {
         return new FederationConfigurationsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the onPremisesSynchronization property of the microsoft.graph.directory entity.
+    */
+    public function onPremisesSynchronization(): OnPremisesSynchronizationRequestBuilder {
+        return new OnPremisesSynchronizationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -125,6 +134,17 @@ class DirectoryRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
+    }
+
+    /**
+     * Provides operations to manage the onPremisesSynchronization property of the microsoft.graph.directory entity.
+     * @param string $id Unique identifier of the item
+     * @return OnPremisesDirectorySynchronizationItemRequestBuilder
+    */
+    public function onPremisesSynchronizationById(string $id): OnPremisesDirectorySynchronizationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['onPremisesDirectorySynchronization%2Did'] = $id;
+        return new OnPremisesDirectorySynchronizationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

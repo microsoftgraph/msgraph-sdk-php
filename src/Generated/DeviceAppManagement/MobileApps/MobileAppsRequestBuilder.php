@@ -6,8 +6,8 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\MicrosoftGraphManagedMobileLobApp\MicrosoftGraphManagedMobileLobAppRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\MicrosoftGraphMobileLobApp\MicrosoftGraphMobileLobAppRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphManagedMobileLobApp\GraphManagedMobileLobAppRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileApps\GraphMobileLobApp\GraphMobileLobAppRequestBuilder;
 use Microsoft\Graph\Generated\Models\MobileApp;
 use Microsoft\Graph\Generated\Models\MobileAppCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -33,15 +33,15 @@ class MobileAppsRequestBuilder
     /**
      * Casts the previous resource to managedMobileLobApp.
     */
-    public function microsoftGraphManagedMobileLobApp(): MicrosoftGraphManagedMobileLobAppRequestBuilder {
-        return new MicrosoftGraphManagedMobileLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphManagedMobileLobApp(): GraphManagedMobileLobAppRequestBuilder {
+        return new GraphManagedMobileLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to mobileLobApp.
     */
-    public function microsoftGraphMobileLobApp(): MicrosoftGraphMobileLobAppRequestBuilder {
-        return new MicrosoftGraphMobileLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphMobileLobApp(): GraphMobileLobAppRequestBuilder {
+        return new GraphMobileLobAppRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

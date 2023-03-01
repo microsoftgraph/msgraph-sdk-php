@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Todo\Lists\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Me\Todo\Lists\MicrosoftGraphDelta\MicrosoftGraphDeltaRequestBuilder;
+use Microsoft\Graph\Generated\Me\Todo\Lists\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TodoTaskList;
 use Microsoft\Graph\Generated\Models\TodoTaskListCollectionResponse;
@@ -32,8 +32,8 @@ class ListsRequestBuilder
     /**
      * Provides operations to call the delta method.
     */
-    public function microsoftGraphDelta(): MicrosoftGraphDeltaRequestBuilder {
-        return new MicrosoftGraphDeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function delta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

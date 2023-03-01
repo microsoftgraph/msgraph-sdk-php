@@ -9,7 +9,7 @@ use Microsoft\Graph\Generated\Models\MailFolder;
 use Microsoft\Graph\Generated\Models\MailFolderCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\MicrosoftGraphDelta\MicrosoftGraphDeltaRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Delta\DeltaRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -32,8 +32,8 @@ class ChildFoldersRequestBuilder
     /**
      * Provides operations to call the delta method.
     */
-    public function microsoftGraphDelta(): MicrosoftGraphDeltaRequestBuilder {
-        return new MicrosoftGraphDeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function delta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -9,11 +9,11 @@ use Microsoft\Graph\Generated\Domains\Item\DomainNameReferences\DomainNameRefere
 use Microsoft\Graph\Generated\Domains\Item\DomainNameReferences\Item\DirectoryObjectItemRequestBuilder;
 use Microsoft\Graph\Generated\Domains\Item\FederationConfiguration\FederationConfigurationRequestBuilder;
 use Microsoft\Graph\Generated\Domains\Item\FederationConfiguration\Item\InternalDomainFederationItemRequestBuilder;
-use Microsoft\Graph\Generated\Domains\Item\MicrosoftGraphForceDelete\MicrosoftGraphForceDeleteRequestBuilder;
-use Microsoft\Graph\Generated\Domains\Item\MicrosoftGraphPromote\MicrosoftGraphPromoteRequestBuilder;
-use Microsoft\Graph\Generated\Domains\Item\MicrosoftGraphVerify\MicrosoftGraphVerifyRequestBuilder;
+use Microsoft\Graph\Generated\Domains\Item\ForceDelete\ForceDeleteRequestBuilder;
+use Microsoft\Graph\Generated\Domains\Item\Promote\PromoteRequestBuilder;
 use Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\ServiceConfigurationRecordsRequestBuilder;
 use Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\VerificationDnsRecordsRequestBuilder;
+use Microsoft\Graph\Generated\Domains\Item\Verify\VerifyRequestBuilder;
 use Microsoft\Graph\Generated\Models\Domain;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -45,28 +45,21 @@ class DomainItemRequestBuilder
     /**
      * Provides operations to call the forceDelete method.
     */
-    public function microsoftGraphForceDelete(): MicrosoftGraphForceDeleteRequestBuilder {
-        return new MicrosoftGraphForceDeleteRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the promote method.
-    */
-    public function microsoftGraphPromote(): MicrosoftGraphPromoteRequestBuilder {
-        return new MicrosoftGraphPromoteRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the verify method.
-    */
-    public function microsoftGraphVerify(): MicrosoftGraphVerifyRequestBuilder {
-        return new MicrosoftGraphVerifyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function forceDelete(): ForceDeleteRequestBuilder {
+        return new ForceDeleteRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * Provides operations to call the promote method.
+    */
+    public function promote(): PromoteRequestBuilder {
+        return new PromoteRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -90,6 +83,13 @@ class DomainItemRequestBuilder
     */
     public function verificationDnsRecords(): VerificationDnsRecordsRequestBuilder {
         return new VerificationDnsRecordsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the verify method.
+    */
+    public function verify(): VerifyRequestBuilder {
+        return new VerifyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -9,11 +9,11 @@ use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\
 use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\Attachments\Item\AttachmentItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\Extensions\ExtensionsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\Extensions\Item\ExtensionItemRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\Forward\ForwardRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\InReplyTo\InReplyToRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\MicrosoftGraphForward\MicrosoftGraphForwardRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\MicrosoftGraphReply\MicrosoftGraphReplyRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\Reply\ReplyRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\Posts\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -45,24 +45,17 @@ class PostItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the forward method.
+    */
+    public function forward(): ForwardRequestBuilder {
+        return new ForwardRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the inReplyTo property of the microsoft.graph.post entity.
     */
     public function inReplyTo(): InReplyToRequestBuilder {
         return new InReplyToRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the forward method.
-    */
-    public function microsoftGraphForward(): MicrosoftGraphForwardRequestBuilder {
-        return new MicrosoftGraphForwardRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the reply method.
-    */
-    public function microsoftGraphReply(): MicrosoftGraphReplyRequestBuilder {
-        return new MicrosoftGraphReplyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -76,6 +69,13 @@ class PostItemRequestBuilder
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * Provides operations to call the reply method.
+    */
+    public function reply(): ReplyRequestBuilder {
+        return new ReplyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.

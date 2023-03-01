@@ -8,10 +8,10 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\MicrosoftGraphAppRoleAssignment\MicrosoftGraphAppRoleAssignmentRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\MicrosoftGraphEndpoint\MicrosoftGraphEndpointRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\MicrosoftGraphServicePrincipal\MicrosoftGraphServicePrincipalRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\MicrosoftGraphUser\MicrosoftGraphUserRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\GraphAppRoleAssignment\GraphAppRoleAssignmentRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\GraphEndpoint\GraphEndpointRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\GraphUser\GraphUserRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -35,29 +35,29 @@ class OwnersRequestBuilder
     /**
      * Casts the previous resource to appRoleAssignment.
     */
-    public function microsoftGraphAppRoleAssignment(): MicrosoftGraphAppRoleAssignmentRequestBuilder {
-        return new MicrosoftGraphAppRoleAssignmentRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphAppRoleAssignment(): GraphAppRoleAssignmentRequestBuilder {
+        return new GraphAppRoleAssignmentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to endpoint.
     */
-    public function microsoftGraphEndpoint(): MicrosoftGraphEndpointRequestBuilder {
-        return new MicrosoftGraphEndpointRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphEndpoint(): GraphEndpointRequestBuilder {
+        return new GraphEndpointRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to servicePrincipal.
     */
-    public function microsoftGraphServicePrincipal(): MicrosoftGraphServicePrincipalRequestBuilder {
-        return new MicrosoftGraphServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphServicePrincipal(): GraphServicePrincipalRequestBuilder {
+        return new GraphServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to user.
     */
-    public function microsoftGraphUser(): MicrosoftGraphUserRequestBuilder {
-        return new MicrosoftGraphUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphUser(): GraphUserRequestBuilder {
+        return new GraphUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

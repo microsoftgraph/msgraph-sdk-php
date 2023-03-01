@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Me\Chats\Item\InstalledApps\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\Chats\Item\InstalledApps\Item\MicrosoftGraphUpgrade\MicrosoftGraphUpgradeRequestBuilder;
 use Microsoft\Graph\Generated\Me\Chats\Item\InstalledApps\Item\TeamsApp\TeamsAppRequestBuilder;
 use Microsoft\Graph\Generated\Me\Chats\Item\InstalledApps\Item\TeamsAppDefinition\TeamsAppDefinitionRequestBuilder;
+use Microsoft\Graph\Generated\Me\Chats\Item\InstalledApps\Item\Upgrade\UpgradeRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TeamsAppInstallation;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -22,13 +22,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 */
 class TeamsAppInstallationItemRequestBuilder 
 {
-    /**
-     * Provides operations to call the upgrade method.
-    */
-    public function microsoftGraphUpgrade(): MicrosoftGraphUpgradeRequestBuilder {
-        return new MicrosoftGraphUpgradeRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
     /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
@@ -51,6 +44,13 @@ class TeamsAppInstallationItemRequestBuilder
     */
     public function teamsAppDefinition(): TeamsAppDefinitionRequestBuilder {
         return new TeamsAppDefinitionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the upgrade method.
+    */
+    public function upgrade(): UpgradeRequestBuilder {
+        return new UpgradeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

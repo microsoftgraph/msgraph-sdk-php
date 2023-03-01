@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\AccessPackage\AccessPackageRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\Assignment\AssignmentRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\MicrosoftGraphCancel\MicrosoftGraphCancelRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\MicrosoftGraphReprocess\MicrosoftGraphReprocessRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\Cancel\CancelRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\Reprocess\ReprocessRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AssignmentRequests\Item\Requestor\RequestorRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessPackageAssignmentRequest;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -41,21 +41,21 @@ class AccessPackageAssignmentRequestItemRequestBuilder
     /**
      * Provides operations to call the cancel method.
     */
-    public function microsoftGraphCancel(): MicrosoftGraphCancelRequestBuilder {
-        return new MicrosoftGraphCancelRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the reprocess method.
-    */
-    public function microsoftGraphReprocess(): MicrosoftGraphReprocessRequestBuilder {
-        return new MicrosoftGraphReprocessRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function cancel(): CancelRequestBuilder {
+        return new CancelRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * Provides operations to call the reprocess method.
+    */
+    public function reprocess(): ReprocessRequestBuilder {
+        return new ReprocessRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.

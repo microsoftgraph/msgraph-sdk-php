@@ -31,7 +31,7 @@ class CrossTenantAccessPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Gets the allowedCloudEndpoints property value. The allowedCloudEndpoints property
+     * Gets the allowedCloudEndpoints property value. Used to specify which Microsoft clouds an organization would like to collaborate with. By default, this value is empty. Supported values for this field are: microsoftonline.com, microsoftonline.us, and partner.microsoftonline.cn.
      * @return array<string>|null
     */
     public function getAllowedCloudEndpoints(): ?array {
@@ -79,7 +79,7 @@ class CrossTenantAccessPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Sets the allowedCloudEndpoints property value. The allowedCloudEndpoints property
+     * Sets the allowedCloudEndpoints property value. Used to specify which Microsoft clouds an organization would like to collaborate with. By default, this value is empty. Supported values for this field are: microsoftonline.com, microsoftonline.us, and partner.microsoftonline.cn.
      * @param array<string>|null $value Value to set for the allowedCloudEndpoints property.
     */
     public function setAllowedCloudEndpoints(?array $value): void {

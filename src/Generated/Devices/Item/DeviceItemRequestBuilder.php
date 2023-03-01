@@ -5,16 +5,16 @@ namespace Microsoft\Graph\Generated\Devices\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Devices\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
 use Microsoft\Graph\Generated\Devices\Item\Extensions\ExtensionsRequestBuilder;
 use Microsoft\Graph\Generated\Devices\Item\Extensions\Item\ExtensionItemRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
 use Microsoft\Graph\Generated\Devices\Item\MemberOf\MemberOfRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\MicrosoftGraphCheckMemberGroups\MicrosoftGraphCheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\MicrosoftGraphCheckMemberObjects\MicrosoftGraphCheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\MicrosoftGraphGetMemberGroups\MicrosoftGraphGetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\MicrosoftGraphGetMemberObjects\MicrosoftGraphGetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Devices\Item\MicrosoftGraphRestore\MicrosoftGraphRestoreRequestBuilder;
 use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\RegisteredOwnersRequestBuilder;
 use Microsoft\Graph\Generated\Devices\Item\RegisteredUsers\RegisteredUsersRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\Restore\RestoreRequestBuilder;
 use Microsoft\Graph\Generated\Devices\Item\TransitiveMemberOf\TransitiveMemberOfRequestBuilder;
 use Microsoft\Graph\Generated\Models\Device;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -31,6 +31,20 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class DeviceItemRequestBuilder 
 {
     /**
+     * Provides operations to call the checkMemberGroups method.
+    */
+    public function checkMemberGroups(): CheckMemberGroupsRequestBuilder {
+        return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the checkMemberObjects method.
+    */
+    public function checkMemberObjects(): CheckMemberObjectsRequestBuilder {
+        return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the extensions property of the microsoft.graph.device entity.
     */
     public function extensions(): ExtensionsRequestBuilder {
@@ -38,45 +52,24 @@ class DeviceItemRequestBuilder
     }
     
     /**
-     * Provides operations to manage the memberOf property of the microsoft.graph.device entity.
-    */
-    public function memberOf(): MemberOfRequestBuilder {
-        return new MemberOfRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the checkMemberGroups method.
-    */
-    public function microsoftGraphCheckMemberGroups(): MicrosoftGraphCheckMemberGroupsRequestBuilder {
-        return new MicrosoftGraphCheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the checkMemberObjects method.
-    */
-    public function microsoftGraphCheckMemberObjects(): MicrosoftGraphCheckMemberObjectsRequestBuilder {
-        return new MicrosoftGraphCheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the getMemberGroups method.
     */
-    public function microsoftGraphGetMemberGroups(): MicrosoftGraphGetMemberGroupsRequestBuilder {
-        return new MicrosoftGraphGetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getMemberGroups(): GetMemberGroupsRequestBuilder {
+        return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getMemberObjects method.
     */
-    public function microsoftGraphGetMemberObjects(): MicrosoftGraphGetMemberObjectsRequestBuilder {
-        return new MicrosoftGraphGetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getMemberObjects(): GetMemberObjectsRequestBuilder {
+        return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
-     * Provides operations to call the restore method.
+     * Provides operations to manage the memberOf property of the microsoft.graph.device entity.
     */
-    public function microsoftGraphRestore(): MicrosoftGraphRestoreRequestBuilder {
-        return new MicrosoftGraphRestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function memberOf(): MemberOfRequestBuilder {
+        return new MemberOfRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -102,6 +95,13 @@ class DeviceItemRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the restore method.
+    */
+    public function restore(): RestoreRequestBuilder {
+        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * Provides operations to manage the transitiveMemberOf property of the microsoft.graph.device entity.

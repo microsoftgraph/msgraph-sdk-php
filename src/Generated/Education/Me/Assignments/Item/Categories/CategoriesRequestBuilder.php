@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Categories\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Categories\MicrosoftGraphDelta\MicrosoftGraphDeltaRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Categories\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Categories\Ref\RefRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationCategory;
 use Microsoft\Graph\Generated\Models\EducationCategoryCollectionResponse;
@@ -33,8 +33,8 @@ class CategoriesRequestBuilder
     /**
      * Provides operations to call the delta method.
     */
-    public function microsoftGraphDelta(): MicrosoftGraphDeltaRequestBuilder {
-        return new MicrosoftGraphDeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function delta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

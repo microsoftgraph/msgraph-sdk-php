@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\PivotTables\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\PivotTables\MicrosoftGraphRefreshAll\MicrosoftGraphRefreshAllRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\PivotTables\RefreshAll\RefreshAllRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookPivotTable;
 use Microsoft\Graph\Generated\Models\WorkbookPivotTableCollectionResponse;
@@ -30,16 +30,16 @@ class PivotTablesRequestBuilder
     }
     
     /**
-     * Provides operations to call the refreshAll method.
-    */
-    public function microsoftGraphRefreshAll(): MicrosoftGraphRefreshAllRequestBuilder {
-        return new MicrosoftGraphRefreshAllRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * Provides operations to call the refreshAll method.
+    */
+    public function refreshAll(): RefreshAllRequestBuilder {
+        return new RefreshAllRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.

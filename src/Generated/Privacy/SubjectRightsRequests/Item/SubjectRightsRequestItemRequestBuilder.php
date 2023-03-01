@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SubjectRightsRequest;
-use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\MicrosoftGraphGetFinalAttachment\MicrosoftGraphGetFinalAttachmentRequestBuilder;
-use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\MicrosoftGraphGetFinalReport\MicrosoftGraphGetFinalReportRequestBuilder;
+use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\GetFinalAttachment\GetFinalAttachmentRequestBuilder;
+use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\GetFinalReport\GetFinalReportRequestBuilder;
 use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Notes\Item\AuthoredNoteItemRequestBuilder;
 use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Notes\NotesRequestBuilder;
 use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Team\TeamRequestBuilder;
@@ -27,15 +27,15 @@ class SubjectRightsRequestItemRequestBuilder
     /**
      * Provides operations to call the getFinalAttachment method.
     */
-    public function microsoftGraphGetFinalAttachment(): MicrosoftGraphGetFinalAttachmentRequestBuilder {
-        return new MicrosoftGraphGetFinalAttachmentRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getFinalAttachment(): GetFinalAttachmentRequestBuilder {
+        return new GetFinalAttachmentRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getFinalReport method.
     */
-    public function microsoftGraphGetFinalReport(): MicrosoftGraphGetFinalReportRequestBuilder {
-        return new MicrosoftGraphGetFinalReportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getFinalReport(): GetFinalReportRequestBuilder {
+        return new GetFinalReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -6,8 +6,8 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Contacts\Item\DirectReports\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Contacts\Item\DirectReports\MicrosoftGraphOrgContact\MicrosoftGraphOrgContactRequestBuilder;
-use Microsoft\Graph\Generated\Contacts\Item\DirectReports\MicrosoftGraphUser\MicrosoftGraphUserRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\DirectReports\GraphOrgContact\GraphOrgContactRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\DirectReports\GraphUser\GraphUserRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -32,15 +32,15 @@ class DirectReportsRequestBuilder
     /**
      * Casts the previous resource to orgContact.
     */
-    public function microsoftGraphOrgContact(): MicrosoftGraphOrgContactRequestBuilder {
-        return new MicrosoftGraphOrgContactRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphOrgContact(): GraphOrgContactRequestBuilder {
+        return new GraphOrgContactRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Casts the previous resource to user.
     */
-    public function microsoftGraphUser(): MicrosoftGraphUserRequestBuilder {
-        return new MicrosoftGraphUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphUser(): GraphUserRequestBuilder {
+        return new GraphUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

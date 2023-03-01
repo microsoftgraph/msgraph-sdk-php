@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\PivotTables\Item\MicrosoftGraphRefresh\MicrosoftGraphRefreshRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\PivotTables\Item\Refresh\RefreshRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\PivotTables\Item\Worksheet\WorksheetRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookPivotTable;
@@ -22,16 +22,16 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class WorkbookPivotTableItemRequestBuilder 
 {
     /**
-     * Provides operations to call the refresh method.
-    */
-    public function microsoftGraphRefresh(): MicrosoftGraphRefreshRequestBuilder {
-        return new MicrosoftGraphRefreshRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * Provides operations to call the refresh method.
+    */
+    public function refresh(): RefreshRequestBuilder {
+        return new RefreshRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.

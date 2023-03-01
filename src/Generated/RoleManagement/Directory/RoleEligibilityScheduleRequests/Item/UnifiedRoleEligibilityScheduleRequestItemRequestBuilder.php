@@ -8,8 +8,8 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UnifiedRoleEligibilityScheduleRequest;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilityScheduleRequests\Item\AppScope\AppScopeRequestBuilder;
+use Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilityScheduleRequests\Item\Cancel\CancelRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilityScheduleRequests\Item\DirectoryScope\DirectoryScopeRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilityScheduleRequests\Item\MicrosoftGraphCancel\MicrosoftGraphCancelRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilityScheduleRequests\Item\Principal\PrincipalRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilityScheduleRequests\Item\RoleDefinition\RoleDefinitionRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilityScheduleRequests\Item\TargetSchedule\TargetScheduleRequestBuilder;
@@ -33,17 +33,17 @@ class UnifiedRoleEligibilityScheduleRequestItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the cancel method.
+    */
+    public function cancel(): CancelRequestBuilder {
+        return new CancelRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the directoryScope property of the microsoft.graph.unifiedRoleEligibilityScheduleRequest entity.
     */
     public function directoryScope(): DirectoryScopeRequestBuilder {
         return new DirectoryScopeRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the cancel method.
-    */
-    public function microsoftGraphCancel(): MicrosoftGraphCancelRequestBuilder {
-        return new MicrosoftGraphCancelRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

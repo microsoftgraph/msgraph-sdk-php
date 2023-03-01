@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Protection\MicrosoftGraphProtect\MicrosoftGraphProtectRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Protection\MicrosoftGraphUnprotect\MicrosoftGraphUnprotectRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Protection\Protect\ProtectRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Protection\Unprotect\UnprotectRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookWorksheetProtection;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -22,28 +22,28 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ProtectionRequestBuilder 
 {
     /**
-     * Provides operations to call the protect method.
-    */
-    public function microsoftGraphProtect(): MicrosoftGraphProtectRequestBuilder {
-        return new MicrosoftGraphProtectRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the unprotect method.
-    */
-    public function microsoftGraphUnprotect(): MicrosoftGraphUnprotectRequestBuilder {
-        return new MicrosoftGraphUnprotectRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
     
     /**
+     * Provides operations to call the protect method.
+    */
+    public function protect(): ProtectRequestBuilder {
+        return new ProtectRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the unprotect method.
+    */
+    public function unprotect(): UnprotectRequestBuilder {
+        return new UnprotectRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder

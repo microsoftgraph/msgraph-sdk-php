@@ -9,7 +9,7 @@ use Microsoft\Graph\Generated\Communications\CallRecords\CallRecordsRequestBuild
 use Microsoft\Graph\Generated\Communications\CallRecords\Item\CallRecordItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\CallsRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\CallItemRequestBuilder;
-use Microsoft\Graph\Generated\Communications\MicrosoftGraphGetPresencesByUserId\MicrosoftGraphGetPresencesByUserIdRequestBuilder;
+use Microsoft\Graph\Generated\Communications\GetPresencesByUserId\GetPresencesByUserIdRequestBuilder;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\OnlineMeetingItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\OnlineMeetingsRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Presences\Item\PresenceItemRequestBuilder;
@@ -45,8 +45,8 @@ class CommunicationsRequestBuilder
     /**
      * Provides operations to call the getPresencesByUserId method.
     */
-    public function microsoftGraphGetPresencesByUserId(): MicrosoftGraphGetPresencesByUserIdRequestBuilder {
-        return new MicrosoftGraphGetPresencesByUserIdRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getPresencesByUserId(): GetPresencesByUserIdRequestBuilder {
+        return new GetPresencesByUserIdRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

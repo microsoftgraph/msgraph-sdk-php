@@ -5,11 +5,10 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Add\AddRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\MicrosoftGraphAdd\MicrosoftGraphAddRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\MicrosoftGraphCount\MicrosoftGraphCountRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\MicrosoftGraphItemAtWithIndex\MicrosoftGraphItemAtWithIndexRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\MicrosoftGraphItemWithName\MicrosoftGraphItemWithNameRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\ItemAtWithIndex\ItemAtWithIndexRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\ItemWithName\ItemWithNameRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookChart;
 use Microsoft\Graph\Generated\Models\WorkbookChartCollectionResponse;
@@ -26,24 +25,17 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class ChartsRequestBuilder 
 {
     /**
-     * Provides operations to count the resources in the collection.
-    */
-    public function count(): CountRequestBuilder {
-        return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the add method.
     */
-    public function microsoftGraphAdd(): MicrosoftGraphAddRequestBuilder {
-        return new MicrosoftGraphAddRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function add(): AddRequestBuilder {
+        return new AddRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the count method.
     */
-    public function microsoftGraphCount(): MicrosoftGraphCountRequestBuilder {
-        return new MicrosoftGraphCountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function count(): CountRequestBuilder {
+        return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -80,7 +72,7 @@ class ChartsRequestBuilder
      * Retrieve a list of chart objects.
      * @param ChartsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/worksheet-list-charts?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/chart-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ChartsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -98,19 +90,19 @@ class ChartsRequestBuilder
     /**
      * Provides operations to call the itemAt method.
      * @param int $index Usage: index={index}
-     * @return MicrosoftGraphItemAtWithIndexRequestBuilder
+     * @return ItemAtWithIndexRequestBuilder
     */
-    public function microsoftGraphItemAtWithIndex(int $index): MicrosoftGraphItemAtWithIndexRequestBuilder {
-        return new MicrosoftGraphItemAtWithIndexRequestBuilder($this->pathParameters, $this->requestAdapter, $index);
+    public function itemAtWithIndex(int $index): ItemAtWithIndexRequestBuilder {
+        return new ItemAtWithIndexRequestBuilder($this->pathParameters, $this->requestAdapter, $index);
     }
 
     /**
      * Provides operations to call the item method.
      * @param string $name Usage: name='{name}'
-     * @return MicrosoftGraphItemWithNameRequestBuilder
+     * @return ItemWithNameRequestBuilder
     */
-    public function microsoftGraphItemWithName(string $name): MicrosoftGraphItemWithNameRequestBuilder {
-        return new MicrosoftGraphItemWithNameRequestBuilder($this->pathParameters, $this->requestAdapter, $name);
+    public function itemWithName(string $name): ItemWithNameRequestBuilder {
+        return new ItemWithNameRequestBuilder($this->pathParameters, $this->requestAdapter, $name);
     }
 
     /**

@@ -5,12 +5,12 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\Assign\AssignRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\Assignments\AssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\Assignments\Item\ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\DeviceStatuses\DeviceStatusesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\DeviceStatuses\Item\ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\DeviceStatusSummary\DeviceStatusSummaryRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\MicrosoftGraphAssign\MicrosoftGraphAssignRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\UserStatuses\Item\ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\UserStatuses\UserStatusesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\UserStatusSummary\UserStatusSummaryRequestBuilder;
@@ -28,6 +28,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 */
 class ManagedDeviceMobileAppConfigurationItemRequestBuilder 
 {
+    /**
+     * Provides operations to call the assign method.
+    */
+    public function assign(): AssignRequestBuilder {
+        return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the assignments property of the microsoft.graph.managedDeviceMobileAppConfiguration entity.
     */
@@ -47,13 +54,6 @@ class ManagedDeviceMobileAppConfigurationItemRequestBuilder
     */
     public function deviceStatusSummary(): DeviceStatusSummaryRequestBuilder {
         return new DeviceStatusSummaryRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the assign method.
-    */
-    public function microsoftGraphAssign(): MicrosoftGraphAssignRequestBuilder {
-        return new MicrosoftGraphAssignRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

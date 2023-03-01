@@ -5,10 +5,9 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Add\AddRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\MicrosoftGraphAdd\MicrosoftGraphAddRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\MicrosoftGraphCount\MicrosoftGraphCountRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\MicrosoftGraphItemAtWithIndex\MicrosoftGraphItemAtWithIndexRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\ItemAtWithIndexRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookTable;
 use Microsoft\Graph\Generated\Models\WorkbookTableCollectionResponse;
@@ -25,24 +24,17 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class TablesRequestBuilder 
 {
     /**
-     * Provides operations to count the resources in the collection.
-    */
-    public function count(): CountRequestBuilder {
-        return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the add method.
     */
-    public function microsoftGraphAdd(): MicrosoftGraphAddRequestBuilder {
-        return new MicrosoftGraphAddRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function add(): AddRequestBuilder {
+        return new AddRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the count method.
     */
-    public function microsoftGraphCount(): MicrosoftGraphCountRequestBuilder {
-        return new MicrosoftGraphCountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function count(): CountRequestBuilder {
+        return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -97,10 +89,10 @@ class TablesRequestBuilder
     /**
      * Provides operations to call the itemAt method.
      * @param int $index Usage: index={index}
-     * @return MicrosoftGraphItemAtWithIndexRequestBuilder
+     * @return ItemAtWithIndexRequestBuilder
     */
-    public function microsoftGraphItemAtWithIndex(int $index): MicrosoftGraphItemAtWithIndexRequestBuilder {
-        return new MicrosoftGraphItemAtWithIndexRequestBuilder($this->pathParameters, $this->requestAdapter, $index);
+    public function itemAtWithIndex(int $index): ItemAtWithIndexRequestBuilder {
+        return new ItemAtWithIndexRequestBuilder($this->pathParameters, $this->requestAdapter, $index);
     }
 
     /**

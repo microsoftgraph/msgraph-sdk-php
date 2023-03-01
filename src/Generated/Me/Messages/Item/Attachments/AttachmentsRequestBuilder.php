@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Messages\Item\Attachments\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Me\Messages\Item\Attachments\MicrosoftGraphCreateUploadSession\MicrosoftGraphCreateUploadSessionRequestBuilder;
+use Microsoft\Graph\Generated\Me\Messages\Item\Attachments\CreateUploadSession\CreateUploadSessionRequestBuilder;
 use Microsoft\Graph\Generated\Models\Attachment;
 use Microsoft\Graph\Generated\Models\AttachmentCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -32,8 +32,8 @@ class AttachmentsRequestBuilder
     /**
      * Provides operations to call the createUploadSession method.
     */
-    public function microsoftGraphCreateUploadSession(): MicrosoftGraphCreateUploadSessionRequestBuilder {
-        return new MicrosoftGraphCreateUploadSessionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function createUploadSession(): CreateUploadSessionRequestBuilder {
+        return new CreateUploadSessionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -67,10 +67,10 @@ class AttachmentsRequestBuilder
     }
 
     /**
-     * Retrieve a list of attachment objects.
+     * Retrieve a list of attachment objects attached to a message.
      * @param AttachmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/eventmessage-list-attachments?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/message-list-attachments?view=graph-rest-1.0 Find more info here
     */
     public function get(?AttachmentsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -106,7 +106,7 @@ class AttachmentsRequestBuilder
     }
 
     /**
-     * Retrieve a list of attachment objects.
+     * Retrieve a list of attachment objects attached to a message.
      * @param AttachmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

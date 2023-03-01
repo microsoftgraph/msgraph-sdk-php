@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefi
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions\Item\Instances\Item\MicrosoftGraphGenerateDownloadUri\MicrosoftGraphGenerateDownloadUriRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions\Item\Instances\Item\GenerateDownloadUri\GenerateDownloadUriRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessReviewHistoryInstance;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,8 +23,8 @@ class AccessReviewHistoryInstanceItemRequestBuilder
     /**
      * Provides operations to call the generateDownloadUri method.
     */
-    public function microsoftGraphGenerateDownloadUri(): MicrosoftGraphGenerateDownloadUriRequestBuilder {
-        return new MicrosoftGraphGenerateDownloadUriRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function generateDownloadUri(): GenerateDownloadUriRequestBuilder {
+        return new GenerateDownloadUriRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

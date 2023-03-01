@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Axes\ValueAxis\MinorGridlines\Format\Line\MicrosoftGraphClear\MicrosoftGraphClearRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Axes\ValueAxis\MinorGridlines\Format\Line\Clear\ClearRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookChartLineFormat;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,8 +23,8 @@ class LineRequestBuilder
     /**
      * Provides operations to call the clear method.
     */
-    public function microsoftGraphClear(): MicrosoftGraphClearRequestBuilder {
-        return new MicrosoftGraphClearRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function clear(): ClearRequestBuilder {
+        return new ClearRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

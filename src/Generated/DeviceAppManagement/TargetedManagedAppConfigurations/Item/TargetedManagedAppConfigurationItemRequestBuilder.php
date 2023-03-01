@@ -7,11 +7,11 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\Apps\AppsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\Apps\Item\ManagedMobileAppItemRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\Assign\AssignRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\Assignments\AssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\Assignments\Item\TargetedManagedAppPolicyAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\DeploymentSummary\DeploymentSummaryRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\MicrosoftGraphAssign\MicrosoftGraphAssignRequestBuilder;
-use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\MicrosoftGraphTargetApps\MicrosoftGraphTargetAppsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\TargetApps\TargetAppsRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TargetedManagedAppConfiguration;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -34,6 +34,13 @@ class TargetedManagedAppConfigurationItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the assign method.
+    */
+    public function assign(): AssignRequestBuilder {
+        return new AssignRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the assignments property of the microsoft.graph.targetedManagedAppConfiguration entity.
     */
     public function assignments(): AssignmentsRequestBuilder {
@@ -48,20 +55,6 @@ class TargetedManagedAppConfigurationItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the assign method.
-    */
-    public function microsoftGraphAssign(): MicrosoftGraphAssignRequestBuilder {
-        return new MicrosoftGraphAssignRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the targetApps method.
-    */
-    public function microsoftGraphTargetApps(): MicrosoftGraphTargetAppsRequestBuilder {
-        return new MicrosoftGraphTargetAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -70,6 +63,13 @@ class TargetedManagedAppConfigurationItemRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the targetApps method.
+    */
+    public function targetApps(): TargetAppsRequestBuilder {
+        return new TargetAppsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder

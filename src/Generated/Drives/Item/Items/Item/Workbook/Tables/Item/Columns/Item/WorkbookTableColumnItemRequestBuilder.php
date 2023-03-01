@@ -5,11 +5,11 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Columns\Item\DataBodyRange\DataBodyRangeRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Columns\Item\Filter\FilterRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Columns\Item\MicrosoftGraphDataBodyRange\MicrosoftGraphDataBodyRangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Columns\Item\MicrosoftGraphHeaderRowRange\MicrosoftGraphHeaderRowRangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Columns\Item\MicrosoftGraphRange\MicrosoftGraphRangeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Columns\Item\MicrosoftGraphTotalRowRange\MicrosoftGraphTotalRowRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Columns\Item\HeaderRowRange\HeaderRowRangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Columns\Item\Range\RangeRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Columns\Item\TotalRowRange\TotalRowRangeRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookTableColumn;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -25,6 +25,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class WorkbookTableColumnItemRequestBuilder 
 {
     /**
+     * Provides operations to call the dataBodyRange method.
+    */
+    public function dataBodyRange(): DataBodyRangeRequestBuilder {
+        return new DataBodyRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the filter property of the microsoft.graph.workbookTableColumn entity.
     */
     public function filter(): FilterRequestBuilder {
@@ -32,31 +39,10 @@ class WorkbookTableColumnItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the dataBodyRange method.
-    */
-    public function microsoftGraphDataBodyRange(): MicrosoftGraphDataBodyRangeRequestBuilder {
-        return new MicrosoftGraphDataBodyRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the headerRowRange method.
     */
-    public function microsoftGraphHeaderRowRange(): MicrosoftGraphHeaderRowRangeRequestBuilder {
-        return new MicrosoftGraphHeaderRowRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the range method.
-    */
-    public function microsoftGraphRange(): MicrosoftGraphRangeRequestBuilder {
-        return new MicrosoftGraphRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the totalRowRange method.
-    */
-    public function microsoftGraphTotalRowRange(): MicrosoftGraphTotalRowRangeRequestBuilder {
-        return new MicrosoftGraphTotalRowRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function headerRowRange(): HeaderRowRangeRequestBuilder {
+        return new HeaderRowRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -65,9 +51,23 @@ class WorkbookTableColumnItemRequestBuilder
     private array $pathParameters;
     
     /**
+     * Provides operations to call the range method.
+    */
+    public function range(): RangeRequestBuilder {
+        return new RangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the totalRowRange method.
+    */
+    public function totalRowRange(): TotalRowRangeRequestBuilder {
+        return new TotalRowRangeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder

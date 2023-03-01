@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdent
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\MicrosoftGraphAssignUserToDevice\MicrosoftGraphAssignUserToDeviceRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\MicrosoftGraphUnassignUserFromDevice\MicrosoftGraphUnassignUserFromDeviceRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\MicrosoftGraphUpdateDeviceProperties\MicrosoftGraphUpdateDevicePropertiesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\AssignUserToDevice\AssignUserToDeviceRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\UnassignUserFromDevice\UnassignUserFromDeviceRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\UpdateDeviceProperties\UpdateDevicePropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WindowsAutopilotDeviceIdentity;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -25,22 +25,8 @@ class WindowsAutopilotDeviceIdentityItemRequestBuilder
     /**
      * Provides operations to call the assignUserToDevice method.
     */
-    public function microsoftGraphAssignUserToDevice(): MicrosoftGraphAssignUserToDeviceRequestBuilder {
-        return new MicrosoftGraphAssignUserToDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the unassignUserFromDevice method.
-    */
-    public function microsoftGraphUnassignUserFromDevice(): MicrosoftGraphUnassignUserFromDeviceRequestBuilder {
-        return new MicrosoftGraphUnassignUserFromDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the updateDeviceProperties method.
-    */
-    public function microsoftGraphUpdateDeviceProperties(): MicrosoftGraphUpdateDevicePropertiesRequestBuilder {
-        return new MicrosoftGraphUpdateDevicePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function assignUserToDevice(): AssignUserToDeviceRequestBuilder {
+        return new AssignUserToDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -52,6 +38,20 @@ class WindowsAutopilotDeviceIdentityItemRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the unassignUserFromDevice method.
+    */
+    public function unassignUserFromDevice(): UnassignUserFromDeviceRequestBuilder {
+        return new UnassignUserFromDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the updateDeviceProperties method.
+    */
+    public function updateDeviceProperties(): UpdateDevicePropertiesRequestBuilder {
+        return new UpdateDevicePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder

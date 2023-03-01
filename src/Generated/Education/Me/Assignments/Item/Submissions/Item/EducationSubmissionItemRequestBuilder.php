@@ -5,15 +5,15 @@ namespace Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\It
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\MicrosoftGraphReassign\MicrosoftGraphReassignRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\MicrosoftGraphReturn\MicrosoftGraphReturnRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\MicrosoftGraphSetUpResourcesFolder\MicrosoftGraphSetUpResourcesFolderRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\MicrosoftGraphSubmit\MicrosoftGraphSubmitRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\MicrosoftGraphUnsubmit\MicrosoftGraphUnsubmitRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\EscapedReturn\ReturnRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Outcomes\Item\EducationOutcomeItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Outcomes\OutcomesRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Reassign\ReassignRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Resources\ResourcesRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\SetUpResourcesFolder\SetUpResourcesFolderRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Submit\SubmitRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\SubmittedResources\SubmittedResourcesRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Unsubmit\UnsubmitRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationSubmission;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -29,38 +29,10 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class EducationSubmissionItemRequestBuilder 
 {
     /**
-     * Provides operations to call the reassign method.
-    */
-    public function microsoftGraphReassign(): MicrosoftGraphReassignRequestBuilder {
-        return new MicrosoftGraphReassignRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the return method.
     */
-    public function microsoftGraphReturn(): MicrosoftGraphReturnRequestBuilder {
-        return new MicrosoftGraphReturnRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the setUpResourcesFolder method.
-    */
-    public function microsoftGraphSetUpResourcesFolder(): MicrosoftGraphSetUpResourcesFolderRequestBuilder {
-        return new MicrosoftGraphSetUpResourcesFolderRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the submit method.
-    */
-    public function microsoftGraphSubmit(): MicrosoftGraphSubmitRequestBuilder {
-        return new MicrosoftGraphSubmitRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the unsubmit method.
-    */
-    public function microsoftGraphUnsubmit(): MicrosoftGraphUnsubmitRequestBuilder {
-        return new MicrosoftGraphUnsubmitRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function escapedReturn(): ReturnRequestBuilder {
+        return new ReturnRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -76,6 +48,13 @@ class EducationSubmissionItemRequestBuilder
     private array $pathParameters;
     
     /**
+     * Provides operations to call the reassign method.
+    */
+    public function reassign(): ReassignRequestBuilder {
+        return new ReassignRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
@@ -88,10 +67,31 @@ class EducationSubmissionItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the setUpResourcesFolder method.
+    */
+    public function setUpResourcesFolder(): SetUpResourcesFolderRequestBuilder {
+        return new SetUpResourcesFolderRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the submit method.
+    */
+    public function submit(): SubmitRequestBuilder {
+        return new SubmitRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the submittedResources property of the microsoft.graph.educationSubmission entity.
     */
     public function submittedResources(): SubmittedResourcesRequestBuilder {
         return new SubmittedResourcesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the unsubmit method.
+    */
+    public function unsubmit(): UnsubmitRequestBuilder {
+        return new UnsubmitRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

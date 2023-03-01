@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\MicrosoftGraphDelta\MicrosoftGraphDeltaRequestBuilder;
+use Microsoft\Graph\Generated\Me\MailFolders\Item\ChildFolders\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Models\MailFolder;
 use Microsoft\Graph\Generated\Models\MailFolderCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -32,8 +32,8 @@ class ChildFoldersRequestBuilder
     /**
      * Provides operations to call the delta method.
     */
-    public function microsoftGraphDelta(): MicrosoftGraphDeltaRequestBuilder {
-        return new MicrosoftGraphDeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function delta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

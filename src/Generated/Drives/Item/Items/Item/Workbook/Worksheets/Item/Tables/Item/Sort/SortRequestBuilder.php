@@ -5,9 +5,9 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Sort\MicrosoftGraphApply\MicrosoftGraphApplyRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Sort\MicrosoftGraphClear\MicrosoftGraphClearRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Sort\MicrosoftGraphReapply\MicrosoftGraphReapplyRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Sort\Apply\ApplyRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Sort\Clear\ClearRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Sort\Reapply\ReapplyRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookTableSort;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -25,28 +25,28 @@ class SortRequestBuilder
     /**
      * Provides operations to call the apply method.
     */
-    public function microsoftGraphApply(): MicrosoftGraphApplyRequestBuilder {
-        return new MicrosoftGraphApplyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function apply(): ApplyRequestBuilder {
+        return new ApplyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the clear method.
     */
-    public function microsoftGraphClear(): MicrosoftGraphClearRequestBuilder {
-        return new MicrosoftGraphClearRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the reapply method.
-    */
-    public function microsoftGraphReapply(): MicrosoftGraphReapplyRequestBuilder {
-        return new MicrosoftGraphReapplyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function clear(): ClearRequestBuilder {
+        return new ClearRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
+    
+    /**
+     * Provides operations to call the reapply method.
+    */
+    public function reapply(): ReapplyRequestBuilder {
+        return new ReapplyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.

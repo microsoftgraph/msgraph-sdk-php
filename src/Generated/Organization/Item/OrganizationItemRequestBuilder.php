@@ -10,14 +10,14 @@ use Microsoft\Graph\Generated\Models\Organization;
 use Microsoft\Graph\Generated\Organization\Item\Branding\BrandingRequestBuilder;
 use Microsoft\Graph\Generated\Organization\Item\CertificateBasedAuthConfiguration\CertificateBasedAuthConfigurationRequestBuilder;
 use Microsoft\Graph\Generated\Organization\Item\CertificateBasedAuthConfiguration\Item\CertificateBasedAuthConfigurationItemRequestBuilder;
+use Microsoft\Graph\Generated\Organization\Item\CheckMemberGroups\CheckMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Organization\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
 use Microsoft\Graph\Generated\Organization\Item\Extensions\ExtensionsRequestBuilder;
 use Microsoft\Graph\Generated\Organization\Item\Extensions\Item\ExtensionItemRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\MicrosoftGraphCheckMemberGroups\MicrosoftGraphCheckMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\MicrosoftGraphCheckMemberObjects\MicrosoftGraphCheckMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\MicrosoftGraphGetMemberGroups\MicrosoftGraphGetMemberGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\MicrosoftGraphGetMemberObjects\MicrosoftGraphGetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\MicrosoftGraphRestore\MicrosoftGraphRestoreRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\MicrosoftGraphSetMobileDeviceManagementAuthority\MicrosoftGraphSetMobileDeviceManagementAuthorityRequestBuilder;
+use Microsoft\Graph\Generated\Organization\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
+use Microsoft\Graph\Generated\Organization\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\Organization\Item\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Generated\Organization\Item\SetMobileDeviceManagementAuthority\SetMobileDeviceManagementAuthorityRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -45,6 +45,20 @@ class OrganizationItemRequestBuilder
     }
     
     /**
+     * Provides operations to call the checkMemberGroups method.
+    */
+    public function checkMemberGroups(): CheckMemberGroupsRequestBuilder {
+        return new CheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the checkMemberObjects method.
+    */
+    public function checkMemberObjects(): CheckMemberObjectsRequestBuilder {
+        return new CheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the extensions property of the microsoft.graph.organization entity.
     */
     public function extensions(): ExtensionsRequestBuilder {
@@ -52,45 +66,17 @@ class OrganizationItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the checkMemberGroups method.
-    */
-    public function microsoftGraphCheckMemberGroups(): MicrosoftGraphCheckMemberGroupsRequestBuilder {
-        return new MicrosoftGraphCheckMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the checkMemberObjects method.
-    */
-    public function microsoftGraphCheckMemberObjects(): MicrosoftGraphCheckMemberObjectsRequestBuilder {
-        return new MicrosoftGraphCheckMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the getMemberGroups method.
     */
-    public function microsoftGraphGetMemberGroups(): MicrosoftGraphGetMemberGroupsRequestBuilder {
-        return new MicrosoftGraphGetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getMemberGroups(): GetMemberGroupsRequestBuilder {
+        return new GetMemberGroupsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getMemberObjects method.
     */
-    public function microsoftGraphGetMemberObjects(): MicrosoftGraphGetMemberObjectsRequestBuilder {
-        return new MicrosoftGraphGetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the restore method.
-    */
-    public function microsoftGraphRestore(): MicrosoftGraphRestoreRequestBuilder {
-        return new MicrosoftGraphRestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the setMobileDeviceManagementAuthority method.
-    */
-    public function microsoftGraphSetMobileDeviceManagementAuthority(): MicrosoftGraphSetMobileDeviceManagementAuthorityRequestBuilder {
-        return new MicrosoftGraphSetMobileDeviceManagementAuthorityRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getMemberObjects(): GetMemberObjectsRequestBuilder {
+        return new GetMemberObjectsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -102,6 +88,20 @@ class OrganizationItemRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the restore method.
+    */
+    public function restore(): RestoreRequestBuilder {
+        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the setMobileDeviceManagementAuthority method.
+    */
+    public function setMobileDeviceManagementAuthority(): SetMobileDeviceManagementAuthorityRequestBuilder {
+        return new SetMobileDeviceManagementAuthorityRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder

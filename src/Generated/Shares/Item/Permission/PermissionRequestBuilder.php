@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Permission;
-use Microsoft\Graph\Generated\Shares\Item\Permission\MicrosoftGraphGrant\MicrosoftGraphGrantRequestBuilder;
+use Microsoft\Graph\Generated\Shares\Item\Permission\Grant\GrantRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -23,8 +23,8 @@ class PermissionRequestBuilder
     /**
      * Provides operations to call the grant method.
     */
-    public function microsoftGraphGrant(): MicrosoftGraphGrantRequestBuilder {
-        return new MicrosoftGraphGrantRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function grant(): GrantRequestBuilder {
+        return new GrantRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

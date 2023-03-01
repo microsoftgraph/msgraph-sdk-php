@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Communications\Calls\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\MicrosoftGraphLogTeleconferenceDeviceQuality\MicrosoftGraphLogTeleconferenceDeviceQualityRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\LogTeleconferenceDeviceQuality\LogTeleconferenceDeviceQualityRequestBuilder;
 use Microsoft\Graph\Generated\Models\Call;
 use Microsoft\Graph\Generated\Models\CallCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -32,8 +32,8 @@ class CallsRequestBuilder
     /**
      * Provides operations to call the logTeleconferenceDeviceQuality method.
     */
-    public function microsoftGraphLogTeleconferenceDeviceQuality(): MicrosoftGraphLogTeleconferenceDeviceQualityRequestBuilder {
-        return new MicrosoftGraphLogTeleconferenceDeviceQualityRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function logTeleconferenceDeviceQuality(): LogTeleconferenceDeviceQualityRequestBuilder {
+        return new LogTeleconferenceDeviceQualityRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

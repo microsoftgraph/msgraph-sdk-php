@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews\It
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews\Item\Issues\Item\MicrosoftGraphIncidentReport\MicrosoftGraphIncidentReportRequestBuilder;
+use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews\Item\Issues\Item\IncidentReport\IncidentReportRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ServiceHealthIssue;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,8 +23,8 @@ class ServiceHealthIssueItemRequestBuilder
     /**
      * Provides operations to call the incidentReport method.
     */
-    public function microsoftGraphIncidentReport(): MicrosoftGraphIncidentReportRequestBuilder {
-        return new MicrosoftGraphIncidentReportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function incidentReport(): IncidentReportRequestBuilder {
+        return new IncidentReportRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

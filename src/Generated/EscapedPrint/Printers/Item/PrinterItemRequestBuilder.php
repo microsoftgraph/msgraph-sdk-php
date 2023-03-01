@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Connectors\ConnectorsRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Connectors\Item\PrintConnectorItemRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\MicrosoftGraphRestoreFactoryDefaults\MicrosoftGraphRestoreFactoryDefaultsRequestBuilder;
+use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\RestoreFactoryDefaults\RestoreFactoryDefaultsRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Shares\Item\PrinterShareItemRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Shares\SharesRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\TaskTriggers\Item\PrintTaskTriggerItemRequestBuilder;
@@ -34,13 +34,6 @@ class PrinterItemRequestBuilder
     }
     
     /**
-     * Provides operations to call the restoreFactoryDefaults method.
-    */
-    public function microsoftGraphRestoreFactoryDefaults(): MicrosoftGraphRestoreFactoryDefaultsRequestBuilder {
-        return new MicrosoftGraphRestoreFactoryDefaultsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -49,6 +42,13 @@ class PrinterItemRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the restoreFactoryDefaults method.
+    */
+    public function restoreFactoryDefaults(): RestoreFactoryDefaultsRequestBuilder {
+        return new RestoreFactoryDefaultsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * Provides operations to manage the shares property of the microsoft.graph.printer entity.

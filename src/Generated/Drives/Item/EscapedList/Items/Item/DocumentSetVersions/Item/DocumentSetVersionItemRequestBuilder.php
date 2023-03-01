@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\EscapedList\Items\Item\DocumentS
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Drives\Item\EscapedList\Items\Item\DocumentSetVersions\Item\MicrosoftGraphRestore\MicrosoftGraphRestoreRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\EscapedList\Items\Item\DocumentSetVersions\Item\Restore\RestoreRequestBuilder;
 use Microsoft\Graph\Generated\Models\DocumentSetVersion;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -21,13 +21,6 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 class DocumentSetVersionItemRequestBuilder 
 {
     /**
-     * Provides operations to call the restore method.
-    */
-    public function microsoftGraphRestore(): MicrosoftGraphRestoreRequestBuilder {
-        return new MicrosoftGraphRestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
     private array $pathParameters;
@@ -36,6 +29,13 @@ class DocumentSetVersionItemRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to call the restore method.
+    */
+    public function restore(): RestoreRequestBuilder {
+        return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * @var string $urlTemplate Url template to use to build the URL for the current request builder

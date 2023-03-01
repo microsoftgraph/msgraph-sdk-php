@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Place;
-use Microsoft\Graph\Generated\Places\Item\MicrosoftGraphRoom\MicrosoftGraphRoomRequestBuilder;
+use Microsoft\Graph\Generated\Places\Item\GraphRoom\GraphRoomRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -23,8 +23,8 @@ class PlaceItemRequestBuilder
     /**
      * Casts the previous resource to room.
     */
-    public function microsoftGraphRoom(): MicrosoftGraphRoomRequestBuilder {
-        return new MicrosoftGraphRoomRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function graphRoom(): GraphRoomRequestBuilder {
+        return new GraphRoomRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -48,7 +48,7 @@ class PlaceItemRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/places/{place%2Did}{?%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/places/{place%2Did}';
         $this->requestAdapter = $requestAdapter;
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
@@ -70,25 +70,6 @@ class PlaceItemRequestBuilder
                     '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
             ];
             return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
-        } catch(Exception $ex) {
-            return new RejectedPromise($ex);
-        }
-    }
-
-    /**
-     * Get the properties and relationships of a place object specified by either its ID or email address. The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object.
-     * @param PlaceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return Promise
-     * @link https://docs.microsoft.com/graph/api/place-get?view=graph-rest-1.0 Find more info here
-    */
-    public function get(?PlaceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
-        $requestInfo = $this->toGetRequestInformation($requestConfiguration);
-        try {
-            $errorMappings = [
-                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
-            ];
-            return $this->requestAdapter->sendAsync($requestInfo, [Place::class, 'createFromDiscriminatorValue'], $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
@@ -127,31 +108,6 @@ class PlaceItemRequestBuilder
         if ($requestConfiguration !== null) {
             if ($requestConfiguration->headers !== null) {
                 $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
-        }
-        return $requestInfo;
-    }
-
-    /**
-     * Get the properties and relationships of a place object specified by either its ID or email address. The **place** object can be one of the following types: Both **room** and **roomList** are derived from the place object.
-     * @param PlaceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
-     * @return RequestInformation
-    */
-    public function toGetRequestInformation(?PlaceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): RequestInformation {
-        $requestInfo = new RequestInformation();
-        $requestInfo->urlTemplate = $this->urlTemplate;
-        $requestInfo->pathParameters = $this->pathParameters;
-        $requestInfo->httpMethod = HttpMethod::GET;
-        $requestInfo->addHeader('Accept', "application/json");
-        if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->queryParameters !== null) {
-                $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
             if ($requestConfiguration->options !== null) {
                 $requestInfo->addRequestOptions(...$requestConfiguration->options);

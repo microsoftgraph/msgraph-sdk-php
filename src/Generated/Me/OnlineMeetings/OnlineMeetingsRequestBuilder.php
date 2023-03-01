@@ -6,7 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\OnlineMeetings\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\Me\OnlineMeetings\MicrosoftGraphCreateOrGet\MicrosoftGraphCreateOrGetRequestBuilder;
+use Microsoft\Graph\Generated\Me\OnlineMeetings\CreateOrGet\CreateOrGetRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OnlineMeeting;
 use Microsoft\Graph\Generated\Models\OnlineMeetingCollectionResponse;
@@ -32,8 +32,8 @@ class OnlineMeetingsRequestBuilder
     /**
      * Provides operations to call the createOrGet method.
     */
-    public function microsoftGraphCreateOrGet(): MicrosoftGraphCreateOrGetRequestBuilder {
-        return new MicrosoftGraphCreateOrGetRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function createOrGet(): CreateOrGetRequestBuilder {
+        return new CreateOrGetRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

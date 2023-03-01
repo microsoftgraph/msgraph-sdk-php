@@ -9,10 +9,10 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ServicePrincipal;
 use Microsoft\Graph\Generated\Models\ServicePrincipalCollectionResponse;
 use Microsoft\Graph\Generated\ServicePrincipals\Count\CountRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\MicrosoftGraphDelta\MicrosoftGraphDeltaRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\MicrosoftGraphGetAvailableExtensionProperties\MicrosoftGraphGetAvailableExtensionPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\MicrosoftGraphGetByIds\MicrosoftGraphGetByIdsRequestBuilder;
-use Microsoft\Graph\Generated\ServicePrincipals\MicrosoftGraphValidateProperties\MicrosoftGraphValidatePropertiesRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -35,29 +35,22 @@ class ServicePrincipalsRequestBuilder
     /**
      * Provides operations to call the delta method.
     */
-    public function microsoftGraphDelta(): MicrosoftGraphDeltaRequestBuilder {
-        return new MicrosoftGraphDeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function delta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getAvailableExtensionProperties method.
     */
-    public function microsoftGraphGetAvailableExtensionProperties(): MicrosoftGraphGetAvailableExtensionPropertiesRequestBuilder {
-        return new MicrosoftGraphGetAvailableExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getAvailableExtensionProperties(): GetAvailableExtensionPropertiesRequestBuilder {
+        return new GetAvailableExtensionPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the getByIds method.
     */
-    public function microsoftGraphGetByIds(): MicrosoftGraphGetByIdsRequestBuilder {
-        return new MicrosoftGraphGetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the validateProperties method.
-    */
-    public function microsoftGraphValidateProperties(): MicrosoftGraphValidatePropertiesRequestBuilder {
-        return new MicrosoftGraphValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function getByIds(): GetByIdsRequestBuilder {
+        return new GetByIdsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -74,6 +67,13 @@ class ServicePrincipalsRequestBuilder
      * @var string $urlTemplate Url template to use to build the URL for the current request builder
     */
     private string $urlTemplate;
+    
+    /**
+     * Provides operations to call the validateProperties method.
+    */
+    public function validateProperties(): ValidatePropertiesRequestBuilder {
+        return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * Instantiates a new ServicePrincipalsRequestBuilder and sets the default values.

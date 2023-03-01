@@ -5,8 +5,8 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Ite
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item\MicrosoftGraphCopyToNotebook\MicrosoftGraphCopyToNotebookRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item\MicrosoftGraphCopyToSectionGroup\MicrosoftGraphCopyToSectionGroupRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item\CopyToNotebook\CopyToNotebookRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item\CopyToSectionGroup\CopyToSectionGroupRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item\Pages\Item\OnenotePageItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item\Pages\PagesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item\ParentNotebook\ParentNotebookRequestBuilder;
@@ -28,15 +28,15 @@ class OnenoteSectionItemRequestBuilder
     /**
      * Provides operations to call the copyToNotebook method.
     */
-    public function microsoftGraphCopyToNotebook(): MicrosoftGraphCopyToNotebookRequestBuilder {
-        return new MicrosoftGraphCopyToNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function copyToNotebook(): CopyToNotebookRequestBuilder {
+        return new CopyToNotebookRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the copyToSectionGroup method.
     */
-    public function microsoftGraphCopyToSectionGroup(): MicrosoftGraphCopyToSectionGroupRequestBuilder {
-        return new MicrosoftGraphCopyToSectionGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function copyToSectionGroup(): CopyToSectionGroupRequestBuilder {
+        return new CopyToSectionGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

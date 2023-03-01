@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Application;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Application\MicrosoftGraphCalculate\MicrosoftGraphCalculateRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Application\Calculate\CalculateRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookApplication;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -23,8 +23,8 @@ class ApplicationRequestBuilder
     /**
      * Provides operations to call the calculate method.
     */
-    public function microsoftGraphCalculate(): MicrosoftGraphCalculateRequestBuilder {
-        return new MicrosoftGraphCalculateRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function calculate(): CalculateRequestBuilder {
+        return new CalculateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
