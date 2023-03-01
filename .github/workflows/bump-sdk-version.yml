@@ -35,4 +35,4 @@ jobs:
       run: php scripts/BumpStableSdkVersion.php
 
     - name: Commit and push changes if any
-      run: if git commit -am "Bump SDK version"; then git push origin $GITHUB_REF; fi
+      run: if git commit -am "Bump SDK version"; then git push origin $GITHUB_HEAD_REF; fi
