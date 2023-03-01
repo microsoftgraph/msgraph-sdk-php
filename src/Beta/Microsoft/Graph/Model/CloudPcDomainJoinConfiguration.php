@@ -54,6 +54,7 @@ class CloudPcDomainJoinConfiguration extends Entity
 
     /**
     * Gets the regionGroup
+    * The logical geographic group this region belongs to. Multiple regions can belong to one region group. A customer can select a regionGroup when provisioning a Cloud PC, and the Cloud PC will be put in one of the regions in the group based on resource status. For example, the Europe region group contains the Northern Europe and Western Europe regions. Possible values are: default, australia, canada, usCentral, usEast, usWest, france, germany, europeUnion, unitedKingdom, japan, asia, india, southAmerica, euap, usGovernment, usGovernmentDOD, unknownFutureValue, norway, switzerland, and southKorea. Read-only.
     *
     * @return CloudPcRegionGroup|null The regionGroup
     */
@@ -72,6 +73,7 @@ class CloudPcDomainJoinConfiguration extends Entity
 
     /**
     * Sets the regionGroup
+    * The logical geographic group this region belongs to. Multiple regions can belong to one region group. A customer can select a regionGroup when provisioning a Cloud PC, and the Cloud PC will be put in one of the regions in the group based on resource status. For example, the Europe region group contains the Northern Europe and Western Europe regions. Possible values are: default, australia, canada, usCentral, usEast, usWest, france, germany, europeUnion, unitedKingdom, japan, asia, india, southAmerica, euap, usGovernment, usGovernmentDOD, unknownFutureValue, norway, switzerland, and southKorea. Read-only.
     *
     * @param CloudPcRegionGroup $val The value to assign to the regionGroup
     *

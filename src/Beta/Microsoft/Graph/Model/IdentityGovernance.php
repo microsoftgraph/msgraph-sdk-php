@@ -242,6 +242,37 @@ class IdentityGovernance implements \JsonSerializable
     }
 
     /**
+    * Gets the roleManagementAlerts
+    *
+    * @return RoleManagementAlert|null The roleManagementAlerts
+    */
+    public function getRoleManagementAlerts()
+    {
+        if (array_key_exists("roleManagementAlerts", $this->_propDict)) {
+            if (is_a($this->_propDict["roleManagementAlerts"], "\Beta\Microsoft\Graph\Model\RoleManagementAlert") || is_null($this->_propDict["roleManagementAlerts"])) {
+                return $this->_propDict["roleManagementAlerts"];
+            } else {
+                $this->_propDict["roleManagementAlerts"] = new RoleManagementAlert($this->_propDict["roleManagementAlerts"]);
+                return $this->_propDict["roleManagementAlerts"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the roleManagementAlerts
+    *
+    * @param RoleManagementAlert $val The roleManagementAlerts
+    *
+    * @return IdentityGovernance
+    */
+    public function setRoleManagementAlerts($val)
+    {
+        $this->_propDict["roleManagementAlerts"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the ODataType
     *
     * @return string|null The ODataType

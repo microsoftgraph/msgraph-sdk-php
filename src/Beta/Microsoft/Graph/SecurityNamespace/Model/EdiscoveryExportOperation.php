@@ -111,28 +111,25 @@ class EdiscoveryExportOperation extends CaseOperation
         return $this;
     }
 
-    /**
-    * Gets the exportFileMetadata
-    *
-    * @return ExportFileMetadata|null The exportFileMetadata
-    */
+
+     /**
+     * Gets the exportFileMetadata
+     *
+     * @return array|null The exportFileMetadata
+     */
     public function getExportFileMetadata()
     {
         if (array_key_exists("exportFileMetadata", $this->_propDict)) {
-            if (is_a($this->_propDict["exportFileMetadata"], "\Beta\Microsoft\Graph\SecurityNamespace\Model\ExportFileMetadata") || is_null($this->_propDict["exportFileMetadata"])) {
-                return $this->_propDict["exportFileMetadata"];
-            } else {
-                $this->_propDict["exportFileMetadata"] = new ExportFileMetadata($this->_propDict["exportFileMetadata"]);
-                return $this->_propDict["exportFileMetadata"];
-            }
+           return $this->_propDict["exportFileMetadata"];
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
     * Sets the exportFileMetadata
     *
-    * @param ExportFileMetadata $val The exportFileMetadata
+    * @param ExportFileMetadata[] $val The exportFileMetadata
     *
     * @return EdiscoveryExportOperation
     */
