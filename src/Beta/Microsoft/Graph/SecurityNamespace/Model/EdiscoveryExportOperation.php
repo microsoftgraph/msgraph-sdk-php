@@ -111,6 +111,34 @@ class EdiscoveryExportOperation extends CaseOperation
         return $this;
     }
 
+
+     /**
+     * Gets the exportFileMetadata
+     *
+     * @return array|null The exportFileMetadata
+     */
+    public function getExportFileMetadata()
+    {
+        if (array_key_exists("exportFileMetadata", $this->_propDict)) {
+           return $this->_propDict["exportFileMetadata"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the exportFileMetadata
+    *
+    * @param ExportFileMetadata[] $val The exportFileMetadata
+    *
+    * @return EdiscoveryExportOperation
+    */
+    public function setExportFileMetadata($val)
+    {
+        $this->_propDict["exportFileMetadata"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the exportOptions
     * The options provided for the export. For more details, see reviewSet: export. Possible values are: originalFiles, text, pdfReplacement, fileInfo, tags.

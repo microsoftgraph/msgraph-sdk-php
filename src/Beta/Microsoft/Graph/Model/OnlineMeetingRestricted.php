@@ -26,6 +26,7 @@ class OnlineMeetingRestricted extends Entity
 
     /**
     * Gets the contentSharingDisabled
+    * Specifies the reason why shared content from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
     *
     * @return OnlineMeetingContentSharingDisabledReason|null The contentSharingDisabled
     */
@@ -44,6 +45,7 @@ class OnlineMeetingRestricted extends Entity
 
     /**
     * Sets the contentSharingDisabled
+    * Specifies the reason why shared content from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
     *
     * @param OnlineMeetingContentSharingDisabledReason $val The value to assign to the contentSharingDisabled
     *
@@ -57,6 +59,7 @@ class OnlineMeetingRestricted extends Entity
 
     /**
     * Gets the videoDisabled
+    * Specifies the reason why video from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
     *
     * @return OnlineMeetingVideoDisabledReason|null The videoDisabled
     */
@@ -75,6 +78,7 @@ class OnlineMeetingRestricted extends Entity
 
     /**
     * Sets the videoDisabled
+    * Specifies the reason why video from this participant is disabled. Possible values are: watermarkProtection, unknownFutureValue.
     *
     * @param OnlineMeetingVideoDisabledReason $val The value to assign to the videoDisabled
     *

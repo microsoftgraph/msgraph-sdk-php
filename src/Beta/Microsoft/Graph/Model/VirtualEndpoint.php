@@ -366,6 +366,7 @@ class VirtualEndpoint extends Entity
 
      /**
      * Gets the sharedUseServicePlans
+    * Cloud PC shared-use service plans.
      *
      * @return array|null The sharedUseServicePlans
      */
@@ -380,6 +381,7 @@ class VirtualEndpoint extends Entity
 
     /**
     * Sets the sharedUseServicePlans
+    * Cloud PC shared-use service plans.
     *
     * @param CloudPcSharedUseServicePlan[] $val The sharedUseServicePlans
     *

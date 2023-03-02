@@ -26,6 +26,7 @@ class SkypeUserConversationMember extends ConversationMember
 {
     /**
     * Gets the skypeId
+    * Skype ID of the user.
     *
     * @return string|null The skypeId
     */
@@ -40,6 +41,7 @@ class SkypeUserConversationMember extends ConversationMember
 
     /**
     * Sets the skypeId
+    * Skype ID of the user.
     *
     * @param string $val The skypeId
     *

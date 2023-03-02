@@ -41,4 +41,5 @@ class EntityType extends Enum
     const ACRONYM = "acronym";
     const BOOKMARK = "bookmark";
     const CHAT_MESSAGE = "chatMessage";
+    const QNA = "qna";
 }
