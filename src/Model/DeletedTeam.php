@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* EntityType File
+* DeletedTeam File
 * PHP version 7
 *
 * @category  Library
@@ -13,10 +13,8 @@
 */
 namespace Microsoft\Graph\Model;
 
-use Microsoft\Graph\Core\Enum;
-
 /**
-* EntityType class
+* DeletedTeam class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,20 +22,34 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class EntityType extends Enum
+class DeletedTeam extends Entity
 {
+
+     /**
+     * Gets the channels
+     *
+     * @return array|null The channels
+     */
+    public function getChannels()
+    {
+        if (array_key_exists("channels", $this->_propDict)) {
+           return $this->_propDict["channels"];
+        } else {
+            return null;
+        }
+    }
+
     /**
-    * The Enum EntityType
+    * Sets the channels
+    *
+    * @param Channel[] $val The channels
+    *
+    * @return DeletedTeam
     */
-    const EVENT = "event";
-    const MESSAGE = "message";
-    const DRIVE_ITEM = "driveItem";
-    const EXTERNAL_ITEM = "externalItem";
-    const SITE = "site";
-    const GRAPHLIST = "list";
-    const LIST_ITEM = "listItem";
-    const DRIVE = "drive";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const CHAT_MESSAGE = "chatMessage";
-    const PERSON = "person";
+    public function setChannels($val)
+    {
+        $this->_propDict["channels"] = $val;
+        return $this;
+    }
+
 }
