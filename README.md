@@ -9,7 +9,7 @@ You can install the PHP SDK with Composer by editing your `composer.json` file:
 {
     "minimum-stability": "RC",
     "require": {
-        "microsoft/microsoft-graph": "^2.0.0-RC14",
+        "microsoft/microsoft-graph": "^2.0.0-RC13",
     }
 }
 ```
@@ -17,7 +17,7 @@ OR
 ```
 {
     "require": {
-        "microsoft/microsoft-graph": "^2.0.0-RC14",
+        "microsoft/microsoft-graph": "^2.0.0-RC13",
         "microsoft/microsoft-graph-core": "@RC"
     }
 }
@@ -49,6 +49,7 @@ $tokenRequestContext = new ClientCredentialContext(
 $authProvider = new GraphPhpLeagueAuthenticationProvider($tokenRequestContext);
 
 ```
+> **Note:** Don't forget to add the PHP opening tag (<?php) at the beginning of your file.
 
 To create an authentication provider that [gets access on behalf of a user](https://docs.microsoft.com/en-us/graph/auth-v2-user?context=graph%2Fapi%2F1.0&view=graph-rest-1.0):
 ```php
@@ -113,6 +114,9 @@ use Microsoft\Kiota\Abstractions\ApiException;
 use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAuthenticationProvider;
 use Microsoft\Kiota\Authentication\Oauth\ClientCredentialContext;
 
+set_include_path(DIR);
+require '../vendor/autoload.php';
+
 $tokenRequestContext = new ClientCredentialContext(
     'tenantId',
     'clientId',
@@ -142,6 +146,9 @@ use Microsoft\Graph\GraphServiceClient;
 use Microsoft\Kiota\Abstractions\ApiException;
 use Microsoft\Kiota\Authentication\Oauth\AuthorizationCodeContext;
 use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAuthenticationProvider;
+
+set_include_path(DIR);
+require '../vendor/autoload.php';
 
 $tokenRequestContext = new AuthorizationCodeContext(
     'tenantId',
