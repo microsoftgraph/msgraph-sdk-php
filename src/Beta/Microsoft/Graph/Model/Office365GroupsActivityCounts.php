@@ -150,6 +150,7 @@ class Office365GroupsActivityCounts extends Entity
 
     /**
     * Gets the teamsChannelMessages
+    * The number of channel messages in Teams team.
     *
     * @return int|null The teamsChannelMessages
     */
@@ -164,6 +165,7 @@ class Office365GroupsActivityCounts extends Entity
 
     /**
     * Sets the teamsChannelMessages
+    * The number of channel messages in Teams team.
     *
     * @param int $val The teamsChannelMessages
     *
@@ -177,6 +179,7 @@ class Office365GroupsActivityCounts extends Entity
 
     /**
     * Gets the teamsMeetingsOrganized
+    * The number of meetings organized in Teams team.
     *
     * @return int|null The teamsMeetingsOrganized
     */
@@ -191,6 +194,7 @@ class Office365GroupsActivityCounts extends Entity
 
     /**
     * Sets the teamsMeetingsOrganized
+    * The number of meetings organized in Teams team.
     *
     * @param int $val The teamsMeetingsOrganized
     *
