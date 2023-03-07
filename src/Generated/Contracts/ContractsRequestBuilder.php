@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Contracts\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Contracts\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Contracts\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Contracts\GetByIds\GetByIdsRequestBuilder;
 use Microsoft\Graph\Generated\Contracts\ValidateProperties\ValidatePropertiesRequestBuilder;
@@ -29,6 +30,13 @@ class ContractsRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the delta method.
+    */
+    public function delta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

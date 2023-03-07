@@ -59,6 +59,7 @@ class LobbyBypassSettings implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             'isDialInBypassEnabled' => fn(ParseNode $n) => $o->setIsDialInBypassEnabled($n->getBooleanValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'scope' => fn(ParseNode $n) => $o->setScope($n->getEnumValue(LobbyBypassScope::class)),
         ];
     }
 
@@ -79,12 +80,21 @@ class LobbyBypassSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the scope property value. Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Optional.
+     * @return LobbyBypassScope|null
+    */
+    public function getScope(): ?LobbyBypassScope {
+        return $this->getBackingStore()->get('scope');
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeBooleanValue('isDialInBypassEnabled', $this->getIsDialInBypassEnabled());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeEnumValue('scope', $this->getScope());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -118,6 +128,14 @@ class LobbyBypassSettings implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
+    }
+
+    /**
+     * Sets the scope property value. Specifies the type of participants that are automatically admitted into a meeting, bypassing the lobby. Optional.
+     * @param LobbyBypassScope|null $value Value to set for the scope property.
+    */
+    public function setScope(?LobbyBypassScope $value): void {
+        $this->getBackingStore()->set('scope', $value);
     }
 
 }

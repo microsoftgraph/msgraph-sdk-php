@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\GetByIds\GetByIdsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\ValidateProperties\ValidatePropertiesRequestBuilder;
@@ -29,6 +30,13 @@ class PermissionGrantsRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the delta method.
+    */
+    public function delta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

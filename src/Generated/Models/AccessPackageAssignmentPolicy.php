@@ -122,7 +122,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
-     * Gets the questions property value. The questions property
+     * Gets the questions property value. Questions that are posed to the  requestor.
      * @return array<AccessPackageQuestion>|null
     */
     public function getQuestions(): ?array {
@@ -256,7 +256,7 @@ class AccessPackageAssignmentPolicy extends Entity implements Parsable
     }
 
     /**
-     * Sets the questions property value. The questions property
+     * Sets the questions property value. Questions that are posed to the  requestor.
      * @param array<AccessPackageQuestion>|null $value Value to set for the questions property.
     */
     public function setQuestions(?array $value): void {

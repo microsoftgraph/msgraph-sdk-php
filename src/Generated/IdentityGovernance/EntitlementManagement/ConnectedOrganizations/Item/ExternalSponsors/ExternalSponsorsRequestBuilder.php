@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\ExternalSponsors\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\ExternalSponsors\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\ExternalSponsors\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\ExternalSponsors\GetByIds\GetByIdsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\ExternalSponsors\Ref\RefRequestBuilder;
@@ -30,6 +31,13 @@ class ExternalSponsorsRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the delta method.
+    */
+    public function delta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

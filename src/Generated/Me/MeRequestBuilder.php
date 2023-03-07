@@ -789,10 +789,10 @@ class MeRequestBuilder
     }
 
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
+     * Retrieve the properties and relationships of user object.
      * @param MeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/user-list-manager?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/user-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MeRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -1003,7 +1003,7 @@ class MeRequestBuilder
     }
 
     /**
-     * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
+     * Retrieve the properties and relationships of user object.
      * @param MeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -135,7 +135,7 @@ class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the userPurpose property value. The userPurpose property
+     * Gets the userPurpose property value. The purpose of the mailbox. Differentiates a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. Possible values are: user, linked, shared, room, equipment, others, unknownFutureValue. Read-only.
      * @return UserPurpose|null
     */
     public function getUserPurpose(): ?UserPurpose {
@@ -249,7 +249,7 @@ class MailboxSettings implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the userPurpose property value. The userPurpose property
+     * Sets the userPurpose property value. The purpose of the mailbox. Differentiates a mailbox for a single user from a shared mailbox and equipment mailbox in Exchange Online. Possible values are: user, linked, shared, room, equipment, others, unknownFutureValue. Read-only.
      * @param UserPurpose|null $value Value to set for the userPurpose property.
     */
     public function setUserPurpose(?UserPurpose $value): void {
