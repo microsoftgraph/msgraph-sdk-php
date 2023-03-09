@@ -26,6 +26,7 @@ class CrossTenantAccessPolicy extends PolicyBase
 {
     /**
     * Gets the allowedCloudEndpoints
+    * Used to specify which Microsoft clouds an organization would like to collaborate with. By default, this value is empty. Supported values for this field are: microsoftonline.com, microsoftonline.us, and partner.microsoftonline.cn.
     *
     * @return array|null The allowedCloudEndpoints
     */
@@ -40,6 +41,7 @@ class CrossTenantAccessPolicy extends PolicyBase
 
     /**
     * Sets the allowedCloudEndpoints
+    * Used to specify which Microsoft clouds an organization would like to collaborate with. By default, this value is empty. Supported values for this field are: microsoftonline.com, microsoftonline.us, and partner.microsoftonline.cn.
     *
     * @param string[] $val The allowedCloudEndpoints
     *

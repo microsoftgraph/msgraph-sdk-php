@@ -1086,6 +1086,34 @@ class Application extends DirectoryObject
         return $this;
     }
 
+
+     /**
+     * Gets the appManagementPolicies
+     *
+     * @return array|null The appManagementPolicies
+     */
+    public function getAppManagementPolicies()
+    {
+        if (array_key_exists("appManagementPolicies", $this->_propDict)) {
+           return $this->_propDict["appManagementPolicies"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the appManagementPolicies
+    *
+    * @param AppManagementPolicy[] $val The appManagementPolicies
+    *
+    * @return Application
+    */
+    public function setAppManagementPolicies($val)
+    {
+        $this->_propDict["appManagementPolicies"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the createdOnBehalfOf
     * Supports $filter (/$count eq 0, /$count ne 0). Read-only.
