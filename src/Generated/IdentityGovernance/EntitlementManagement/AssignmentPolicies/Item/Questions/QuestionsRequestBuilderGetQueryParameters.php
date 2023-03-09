@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Ass
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get questions from identityGovernance
+ * Questions that are posed to the  requestor.
 */
 class QuestionsRequestBuilderGetQueryParameters 
 {

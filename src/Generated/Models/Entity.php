@@ -292,6 +292,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.endpoint': return new Endpoint();
                 case '#microsoft.graph.enrollmentConfigurationAssignment': return new EnrollmentConfigurationAssignment();
                 case '#microsoft.graph.enrollmentTroubleshootingEvent': return new EnrollmentTroubleshootingEvent();
+                case '#microsoft.graph.enterpriseCodeSigningCertificate': return new EnterpriseCodeSigningCertificate();
                 case '#microsoft.graph.entitlementManagement': return new EntitlementManagement();
                 case '#microsoft.graph.entitlementManagementSettings': return new EntitlementManagementSettings();
                 case '#microsoft.graph.event': return new Event();
@@ -343,6 +344,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.iosGeneralDeviceConfiguration': return new IosGeneralDeviceConfiguration();
                 case '#microsoft.graph.iosiPadOSWebClip': return new IosiPadOSWebClip();
                 case '#microsoft.graph.iosLobApp': return new IosLobApp();
+                case '#microsoft.graph.iosLobAppProvisioningConfigurationAssignment': return new IosLobAppProvisioningConfigurationAssignment();
                 case '#microsoft.graph.iosManagedAppProtection': return new IosManagedAppProtection();
                 case '#microsoft.graph.iosManagedAppRegistration': return new IosManagedAppRegistration();
                 case '#microsoft.graph.iosMobileAppConfiguration': return new IosMobileAppConfiguration();

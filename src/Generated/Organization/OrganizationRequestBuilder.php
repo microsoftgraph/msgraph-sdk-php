@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Organization;
 use Microsoft\Graph\Generated\Models\OrganizationCollectionResponse;
 use Microsoft\Graph\Generated\Organization\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Organization\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Organization\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Organization\GetByIds\GetByIdsRequestBuilder;
 use Microsoft\Graph\Generated\Organization\ValidateProperties\ValidatePropertiesRequestBuilder;
@@ -29,6 +30,13 @@ class OrganizationRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the delta method.
+    */
+    public function delta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

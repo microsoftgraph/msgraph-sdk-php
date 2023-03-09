@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Post extends OutlookItem implements Parsable 
 {
     /**
-     * Instantiates a new Post and sets the default values.
+     * Instantiates a new post and sets the default values.
     */
     public function __construct() {
         parent::__construct();

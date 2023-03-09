@@ -68,7 +68,7 @@ class AccessPackageQuestionItemRequestBuilder
     }
 
     /**
-     * Get questions from identityGovernance
+     * Questions that are posed to the  requestor.
      * @param AccessPackageQuestionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -126,7 +126,7 @@ class AccessPackageQuestionItemRequestBuilder
     }
 
     /**
-     * Get questions from identityGovernance
+     * Questions that are posed to the  requestor.
      * @param AccessPackageQuestionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

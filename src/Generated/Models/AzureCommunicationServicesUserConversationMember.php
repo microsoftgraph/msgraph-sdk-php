@@ -26,7 +26,7 @@ class AzureCommunicationServicesUserConversationMember extends ConversationMembe
     }
 
     /**
-     * Gets the azureCommunicationServicesId property value. The azureCommunicationServicesId property
+     * Gets the azureCommunicationServicesId property value. Azure Communication Services ID of the user.
      * @return string|null
     */
     public function getAzureCommunicationServicesId(): ?string {
@@ -54,7 +54,7 @@ class AzureCommunicationServicesUserConversationMember extends ConversationMembe
     }
 
     /**
-     * Sets the azureCommunicationServicesId property value. The azureCommunicationServicesId property
+     * Sets the azureCommunicationServicesId property value. Azure Communication Services ID of the user.
      * @param string|null $value Value to set for the azureCommunicationServicesId property.
     */
     public function setAzureCommunicationServicesId(?string $value): void {

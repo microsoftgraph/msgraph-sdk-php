@@ -8,6 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ResourceSpecificPermissionGrant;
 use Microsoft\Graph\Generated\Models\ResourceSpecificPermissionGrantCollectionResponse;
+use Microsoft\Graph\Generated\PermissionGrants\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\PermissionGrants\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\PermissionGrants\GetByIds\GetByIdsRequestBuilder;
 use Microsoft\Graph\Generated\PermissionGrants\ValidateProperties\ValidatePropertiesRequestBuilder;
@@ -23,6 +24,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 */
 class PermissionGrantsRequestBuilder 
 {
+    /**
+     * Provides operations to call the delta method.
+    */
+    public function delta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to call the getAvailableExtensionProperties method.
     */

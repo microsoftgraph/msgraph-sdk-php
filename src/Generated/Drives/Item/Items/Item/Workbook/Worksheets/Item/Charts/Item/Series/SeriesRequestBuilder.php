@@ -63,7 +63,7 @@ class SeriesRequestBuilder
      * Retrieve a list of chartseries objects.
      * @param SeriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chart-list-series?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/chartseries-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?SeriesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

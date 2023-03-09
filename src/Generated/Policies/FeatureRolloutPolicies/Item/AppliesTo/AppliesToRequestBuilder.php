@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\DirectoryObject;
 use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\GetByIds\GetByIdsRequestBuilder;
 use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\AppliesTo\Ref\RefRequestBuilder;
@@ -30,6 +31,13 @@ class AppliesToRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the delta method.
+    */
+    public function delta(): DeltaRequestBuilder {
+        return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -8,7 +8,7 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
 /**
- * Entity which represents a connection to Mobile threat defense partner.
+ * Entity which represents a connection to Mobile Threat Defense partner.
 */
 class MobileThreatDefenseConnector extends Entity implements Parsable 
 {
