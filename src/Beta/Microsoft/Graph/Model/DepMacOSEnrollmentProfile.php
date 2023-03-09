@@ -54,6 +54,93 @@ class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
     }
 
     /**
+    * Gets the adminAccountFullName
+    * Indicates what the full name for the admin account is
+    *
+    * @return string|null The adminAccountFullName
+    */
+    public function getAdminAccountFullName()
+    {
+        if (array_key_exists("adminAccountFullName", $this->_propDict)) {
+            return $this->_propDict["adminAccountFullName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the adminAccountFullName
+    * Indicates what the full name for the admin account is
+    *
+    * @param string $val The adminAccountFullName
+    *
+    * @return DepMacOSEnrollmentProfile
+    */
+    public function setAdminAccountFullName($val)
+    {
+        $this->_propDict["adminAccountFullName"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the adminAccountPassword
+    * Indicates what the password for the admin account is
+    *
+    * @return string|null The adminAccountPassword
+    */
+    public function getAdminAccountPassword()
+    {
+        if (array_key_exists("adminAccountPassword", $this->_propDict)) {
+            return $this->_propDict["adminAccountPassword"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the adminAccountPassword
+    * Indicates what the password for the admin account is
+    *
+    * @param string $val The adminAccountPassword
+    *
+    * @return DepMacOSEnrollmentProfile
+    */
+    public function setAdminAccountPassword($val)
+    {
+        $this->_propDict["adminAccountPassword"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the adminAccountUserName
+    * Indicates what the user name for the admin account is
+    *
+    * @return string|null The adminAccountUserName
+    */
+    public function getAdminAccountUserName()
+    {
+        if (array_key_exists("adminAccountUserName", $this->_propDict)) {
+            return $this->_propDict["adminAccountUserName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the adminAccountUserName
+    * Indicates what the user name for the admin account is
+    *
+    * @param string $val The adminAccountUserName
+    *
+    * @return DepMacOSEnrollmentProfile
+    */
+    public function setAdminAccountUserName($val)
+    {
+        $this->_propDict["adminAccountUserName"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the autoUnlockWithWatchDisabled
     * Indicates if UnlockWithWatch screen is disabled
     *
@@ -195,6 +282,35 @@ class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
     public function setFileVaultDisabled($val)
     {
         $this->_propDict["fileVaultDisabled"] = boolval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the hideAdminAccount
+    * Indicates whether the admin account should be hidded or not
+    *
+    * @return bool|null The hideAdminAccount
+    */
+    public function getHideAdminAccount()
+    {
+        if (array_key_exists("hideAdminAccount", $this->_propDict)) {
+            return $this->_propDict["hideAdminAccount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the hideAdminAccount
+    * Indicates whether the admin account should be hidded or not
+    *
+    * @param bool $val The hideAdminAccount
+    *
+    * @return DepMacOSEnrollmentProfile
+    */
+    public function setHideAdminAccount($val)
+    {
+        $this->_propDict["hideAdminAccount"] = boolval($val);
         return $this;
     }
 
@@ -369,6 +485,35 @@ class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
     public function setRegistrationDisabled($val)
     {
         $this->_propDict["registrationDisabled"] = boolval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the requestRequiresNetworkTether
+    * Indicates if the device is network-tethered to run the command
+    *
+    * @return bool|null The requestRequiresNetworkTether
+    */
+    public function getRequestRequiresNetworkTether()
+    {
+        if (array_key_exists("requestRequiresNetworkTether", $this->_propDict)) {
+            return $this->_propDict["requestRequiresNetworkTether"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the requestRequiresNetworkTether
+    * Indicates if the device is network-tethered to run the command
+    *
+    * @param bool $val The requestRequiresNetworkTether
+    *
+    * @return DepMacOSEnrollmentProfile
+    */
+    public function setRequestRequiresNetworkTether($val)
+    {
+        $this->_propDict["requestRequiresNetworkTether"] = boolval($val);
         return $this;
     }
 

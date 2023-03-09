@@ -26,7 +26,7 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp
 {
     /**
     * Gets the identityName
-    * The Identity Name. This property is deprecated starting in February 2023 (Release 2302).
+    * The Identity Name. This property is deprecated starting  in February 2023 (Release 2302).
     *
     * @return string|null The identityName
     */
@@ -41,7 +41,7 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp
 
     /**
     * Sets the identityName
-    * The Identity Name. This property is deprecated starting in February 2023 (Release 2302).
+    * The Identity Name. This property is deprecated starting  in February 2023 (Release 2302).
     *
     * @param string $val The identityName
     *
@@ -55,7 +55,7 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp
 
     /**
     * Gets the identityVersion
-    * The identity version. This property is deprecated starting in February 2023 (Release 2302).
+    * The identity version. This property is deprecated starting  in February 2023 (Release 2302).
     *
     * @return string|null The identityVersion
     */
@@ -70,7 +70,7 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp
 
     /**
     * Sets the identityVersion
-    * The identity version. This property is deprecated starting in February 2023 (Release 2302).
+    * The identity version. This property is deprecated starting  in February 2023 (Release 2302).
     *
     * @param string $val The identityVersion
     *

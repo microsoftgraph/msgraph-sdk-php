@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* DeviceLogCollectionTemplateType File
+* AuthenticationStrengthResult File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* DeviceLogCollectionTemplateType class
+* AuthenticationStrengthResult class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,11 +24,19 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class DeviceLogCollectionTemplateType extends Enum
+class AuthenticationStrengthResult extends Enum
 {
     /**
-    * The Enum DeviceLogCollectionTemplateType
+    * The Enum AuthenticationStrengthResult
     */
-    const PREDEFINED = "predefined";
+    const NOT_SET = "notSet";
+    const SKIPPED_FOR_PROOF_UP = "skippedForProofUp";
+    const SATISFIED = "satisfied";
+    const SINGLE_CHALLENGE_REQUIRED = "singleChallengeRequired";
+    const MULTIPLE_CHALLENGES_REQUIRED = "multipleChallengesRequired";
+    const SINGLE_REGISTRATION_REQUIRED = "singleRegistrationRequired";
+    const MULTIPLE_REGISTRATIONS_REQUIRED = "multipleRegistrationsRequired";
+    const CANNOT_SATISFY_DUE_TO_COMBINATION_CONFIGURATION = "cannotSatisfyDueToCombinationConfiguration";
+    const CANNOT_SATISFY = "cannotSatisfy";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

@@ -184,4 +184,37 @@ class OrganizationSettings extends Entity
         return $this;
     }
 
+    /**
+    * Gets the pronouns
+    * Represents administrator settings that manage the support of pronouns in an organization.
+    *
+    * @return PronounsSettings|null The pronouns
+    */
+    public function getPronouns()
+    {
+        if (array_key_exists("pronouns", $this->_propDict)) {
+            if (is_a($this->_propDict["pronouns"], "\Beta\Microsoft\Graph\Model\PronounsSettings") || is_null($this->_propDict["pronouns"])) {
+                return $this->_propDict["pronouns"];
+            } else {
+                $this->_propDict["pronouns"] = new PronounsSettings($this->_propDict["pronouns"]);
+                return $this->_propDict["pronouns"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the pronouns
+    * Represents administrator settings that manage the support of pronouns in an organization.
+    *
+    * @param PronounsSettings $val The pronouns
+    *
+    * @return OrganizationSettings
+    */
+    public function setPronouns($val)
+    {
+        $this->_propDict["pronouns"] = $val;
+        return $this;
+    }
+
 }

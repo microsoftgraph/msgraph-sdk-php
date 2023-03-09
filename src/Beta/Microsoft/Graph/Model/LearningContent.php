@@ -113,7 +113,7 @@ class LearningContent extends Entity
 
     /**
     * Gets the createdDateTime
-    * The date when the learning content was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
+    * The date and time when the learning content was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -132,7 +132,7 @@ class LearningContent extends Entity
 
     /**
     * Sets the createdDateTime
-    * The date when the learning content was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
+    * The date and time when the learning content was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -266,7 +266,7 @@ class LearningContent extends Entity
 
     /**
     * Gets the isActive
-    * Indicates whether the content is active or not. Inactive content will not show up in the UI. The default value is true. Optional.
+    * Indicates whether the content is active or not. Inactive content doesn't show up in the UI. The default value is true. Optional.
     *
     * @return bool|null The isActive
     */
@@ -281,7 +281,7 @@ class LearningContent extends Entity
 
     /**
     * Sets the isActive
-    * Indicates whether the content is active or not. Inactive content will not show up in the UI. The default value is true. Optional.
+    * Indicates whether the content is active or not. Inactive content doesn't show up in the UI. The default value is true. Optional.
     *
     * @param bool $val The isActive
     *
@@ -382,7 +382,7 @@ class LearningContent extends Entity
 
     /**
     * Gets the lastModifiedDateTime
-    * The date when the learning content was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
+    * The date and time when the learning content was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -401,7 +401,7 @@ class LearningContent extends Entity
 
     /**
     * Sets the lastModifiedDateTime
-    * The date when the learning content was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
+    * The date and time when the learning content was last modified. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
