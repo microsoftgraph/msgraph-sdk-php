@@ -145,9 +145,6 @@ use Microsoft\Kiota\Abstractions\ApiException;
 use Microsoft\Kiota\Authentication\Oauth\AuthorizationCodeContext;
 use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAuthenticationProvider;
 
-set_include_path(DIR);
-require '../vendor/autoload.php';
-
 $tokenRequestContext = new AuthorizationCodeContext(
     'tenantId',
     'clientId',
