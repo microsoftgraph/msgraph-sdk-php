@@ -38,7 +38,7 @@ The following sample creates an authentication provider that [gets access withou
 ```php
 
 use Microsoft\Kiota\Authentication\Oauth\ClientCredentialContext;
-use Microsoft\Kiota\Authentication\PhpLeagueAuthenticationProvider;
+use Microsoft\Kiota\Authentication\GraphPhpLeagueAuthenticationProvider;
 
 $tokenRequestContext = new ClientCredentialContext(
     'tenantId',
@@ -46,7 +46,7 @@ $tokenRequestContext = new ClientCredentialContext(
     'clientSecret'
 );
 // uses https://graph.microsoft.com/.default scopes
-$authProvider = new PhpLeagueAuthenticationProvider($tokenRequestContext);
+$authProvider = new GraphPhpLeagueAuthenticationProvider($tokenRequestContext);
 
 ```
 > **Note:** Don't forget to add the PHP opening tag (<?php) at the beginning of your file.
