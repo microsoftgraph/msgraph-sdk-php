@@ -26,6 +26,7 @@ class MicrosoftAuthenticatorFeatureSettings extends Entity
 
     /**
     * Gets the companionAppAllowedState
+    * Determines whether users will be able to approve push notifications on other Microsoft applications such as Outlook Mobile.
     *
     * @return AuthenticationMethodFeatureConfiguration|null The companionAppAllowedState
     */
@@ -44,6 +45,7 @@ class MicrosoftAuthenticatorFeatureSettings extends Entity
 
     /**
     * Sets the companionAppAllowedState
+    * Determines whether users will be able to approve push notifications on other Microsoft applications such as Outlook Mobile.
     *
     * @param AuthenticationMethodFeatureConfiguration $val The value to assign to the companionAppAllowedState
     *

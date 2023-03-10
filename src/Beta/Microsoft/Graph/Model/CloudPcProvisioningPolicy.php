@@ -83,6 +83,33 @@ class CloudPcProvisioningPolicy extends Entity
     }
 
     /**
+    * Gets the cloudPcNamingTemplate
+    *
+    * @return string|null The cloudPcNamingTemplate
+    */
+    public function getCloudPcNamingTemplate()
+    {
+        if (array_key_exists("cloudPcNamingTemplate", $this->_propDict)) {
+            return $this->_propDict["cloudPcNamingTemplate"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the cloudPcNamingTemplate
+    *
+    * @param string $val The cloudPcNamingTemplate
+    *
+    * @return CloudPcProvisioningPolicy
+    */
+    public function setCloudPcNamingTemplate($val)
+    {
+        $this->_propDict["cloudPcNamingTemplate"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the description
     * The provisioning policy description.
     *

@@ -54,6 +54,7 @@ class AuthenticationStrength extends Entity
 
     /**
     * Gets the authenticationStrengthResult
+    * The result of the authentication strength. The possible values are: notSet, skippedForProofUp, satisfied, singleChallengeRequired, multipleChallengesRequired, singleRegistrationRequired, multipleRegistrationsRequired, cannotSatisfyDueToCombinationConfiguration, cannotSatisfy, unknownFutureValue.
     *
     * @return AuthenticationStrengthResult|null The authenticationStrengthResult
     */
@@ -72,6 +73,7 @@ class AuthenticationStrength extends Entity
 
     /**
     * Sets the authenticationStrengthResult
+    * The result of the authentication strength. The possible values are: notSet, skippedForProofUp, satisfied, singleChallengeRequired, multipleChallengesRequired, singleRegistrationRequired, multipleRegistrationsRequired, cannotSatisfyDueToCombinationConfiguration, cannotSatisfy, unknownFutureValue.
     *
     * @param AuthenticationStrengthResult $val The value to assign to the authenticationStrengthResult
     *

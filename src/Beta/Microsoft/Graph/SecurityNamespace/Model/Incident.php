@@ -179,6 +179,33 @@ class Incident extends \Beta\Microsoft\Graph\Model\Entity
     }
 
     /**
+    * Gets the description
+    *
+    * @return string|null The description
+    */
+    public function getDescription()
+    {
+        if (array_key_exists("description", $this->_propDict)) {
+            return $this->_propDict["description"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the description
+    *
+    * @param string $val The description
+    *
+    * @return Incident
+    */
+    public function setDescription($val)
+    {
+        $this->_propDict["description"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the determination
     * Specifies the determination of the incident. Possible values are: unknown, apt, malware, securityPersonnel, securityTesting, unwantedSoftware, other, multiStagedAttack, compromisedUser, phishing, maliciousUserActivity, clean, insufficientData, confirmedUserActivity, lineOfBusinessApplication, unknownFutureValue.
     *
@@ -303,6 +330,61 @@ class Incident extends \Beta\Microsoft\Graph\Model\Entity
     }
 
     /**
+    * Gets the recommendedActions
+    *
+    * @return string|null The recommendedActions
+    */
+    public function getRecommendedActions()
+    {
+        if (array_key_exists("recommendedActions", $this->_propDict)) {
+            return $this->_propDict["recommendedActions"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the recommendedActions
+    *
+    * @param string $val The recommendedActions
+    *
+    * @return Incident
+    */
+    public function setRecommendedActions($val)
+    {
+        $this->_propDict["recommendedActions"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the recommendedHuntingQueries
+     *
+     * @return array|null The recommendedHuntingQueries
+     */
+    public function getRecommendedHuntingQueries()
+    {
+        if (array_key_exists("recommendedHuntingQueries", $this->_propDict)) {
+           return $this->_propDict["recommendedHuntingQueries"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the recommendedHuntingQueries
+    *
+    * @param RecommendedHuntingQuery[] $val The recommendedHuntingQueries
+    *
+    * @return Incident
+    */
+    public function setRecommendedHuntingQueries($val)
+    {
+        $this->_propDict["recommendedHuntingQueries"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the redirectIncidentId
     * Only populated in case an incident is grouped together with another incident, as part of the logic that processes incidents. In such a case, the status property is redirected.
     *
@@ -394,6 +476,33 @@ class Incident extends \Beta\Microsoft\Graph\Model\Entity
     public function setStatus($val)
     {
         $this->_propDict["status"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the systemTags
+    *
+    * @return array|null The systemTags
+    */
+    public function getSystemTags()
+    {
+        if (array_key_exists("systemTags", $this->_propDict)) {
+            return $this->_propDict["systemTags"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the systemTags
+    *
+    * @param string[] $val The systemTags
+    *
+    * @return Incident
+    */
+    public function setSystemTags($val)
+    {
+        $this->_propDict["systemTags"] = $val;
         return $this;
     }
 
