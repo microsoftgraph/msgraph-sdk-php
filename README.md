@@ -38,7 +38,7 @@ The following sample creates an authentication provider that [gets access withou
 ```php
 
 use Microsoft\Kiota\Authentication\Oauth\ClientCredentialContext;
-use Microsoft\Kiota\Authentication\GraphPhpLeagueAuthenticationProvider;
+use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAuthenticationProvider;
 
 $tokenRequestContext = new ClientCredentialContext(
     'tenantId',
