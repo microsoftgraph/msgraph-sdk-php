@@ -35,8 +35,9 @@ An AuthenticationProvider handles authentication of requests made to the Graph. 
 The provided authentication provider wraps around the [The PHP League OAuth client](https://oauth2-client.thephpleague.com/).
 
 The following sample creates an authentication provider that [gets access without a user](https://docs.microsoft.com/en-us/graph/auth-v2-service?context=graph%2Fapi%2F1.0&view=graph-rest-1.0):
-```php
 
+```php
+<?php
 use Microsoft\Kiota\Authentication\Oauth\ClientCredentialContext;
 use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAuthenticationProvider;
 
@@ -49,11 +50,11 @@ $tokenRequestContext = new ClientCredentialContext(
 $authProvider = new GraphPhpLeagueAuthenticationProvider($tokenRequestContext);
 
 ```
-> **Note:** Don't forget to add the PHP opening tag (<?php) at the beginning of your file.
 
 To create an authentication provider that [gets access on behalf of a user](https://docs.microsoft.com/en-us/graph/auth-v2-user?context=graph%2Fapi%2F1.0&view=graph-rest-1.0):
-```php
 
+```php
+<?php
 use Microsoft\Kiota\Authentication\Oauth\AuthorizationCodeContext;
 use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAuthenticationProvider;
 
@@ -107,7 +108,7 @@ $requestAdapter = new GraphRequestAdapter($authProvider, $httpClient);
 The following is an example that shows how to fetch a user from Microsoft Graph
 
 ```php
-
+<?php
 use Microsoft\Graph\GraphRequestAdapter;
 use Microsoft\Graph\GraphServiceClient;
 use Microsoft\Kiota\Abstractions\ApiException;
@@ -140,7 +141,7 @@ try {
 
 Note that to calling `me()` requires a signed-in user and therefore delegated permissions (obtained using the `authorization_code` flow):
 ```php
-
+<?php
 use Microsoft\Graph\GraphRequestAdapter;
 use Microsoft\Graph\GraphServiceClient;
 use Microsoft\Kiota\Abstractions\ApiException;
