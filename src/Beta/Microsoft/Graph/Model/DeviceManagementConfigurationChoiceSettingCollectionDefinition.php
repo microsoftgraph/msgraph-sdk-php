@@ -26,7 +26,7 @@ class DeviceManagementConfigurationChoiceSettingCollectionDefinition extends Dev
 {
     /**
     * Gets the maximumCount
-    * Maximum number of choices in the collection. Valid values 1 to 100
+    * Maximum number of choices in the collection
     *
     * @return int|null The maximumCount
     */
@@ -41,7 +41,7 @@ class DeviceManagementConfigurationChoiceSettingCollectionDefinition extends Dev
 
     /**
     * Sets the maximumCount
-    * Maximum number of choices in the collection. Valid values 1 to 100
+    * Maximum number of choices in the collection
     *
     * @param int $val The maximumCount
     *
@@ -55,7 +55,7 @@ class DeviceManagementConfigurationChoiceSettingCollectionDefinition extends Dev
 
     /**
     * Gets the minimumCount
-    * Minimum number of choices in the collection. Valid values 1 to 100
+    * Minimum number of choices in the collection
     *
     * @return int|null The minimumCount
     */
@@ -70,7 +70,7 @@ class DeviceManagementConfigurationChoiceSettingCollectionDefinition extends Dev
 
     /**
     * Sets the minimumCount
-    * Minimum number of choices in the collection. Valid values 1 to 100
+    * Minimum number of choices in the collection
     *
     * @param int $val The minimumCount
     *

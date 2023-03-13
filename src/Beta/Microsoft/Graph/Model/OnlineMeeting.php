@@ -117,6 +117,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Gets the allowParticipantsToChangeName
+    * Specifies if participants are allowed to rename themselves in an instance of the meeting.
     *
     * @return bool|null The allowParticipantsToChangeName
     */
@@ -131,6 +132,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Sets the allowParticipantsToChangeName
+    * Specifies if participants are allowed to rename themselves in an instance of the meeting.
     *
     * @param bool $val The allowParticipantsToChangeName
     *

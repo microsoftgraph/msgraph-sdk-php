@@ -519,6 +519,7 @@ class CloudPC extends Entity
 
     /**
     * Gets the provisioningType
+    * The type of licenses to be used when provisioning Cloud PCs using this policy. Possible values are: dedicated, shared, unknownFutureValue. Default value is dedicated.
     *
     * @return CloudPcProvisioningType|null The provisioningType
     */
@@ -537,6 +538,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the provisioningType
+    * The type of licenses to be used when provisioning Cloud PCs using this policy. Possible values are: dedicated, shared, unknownFutureValue. Default value is dedicated.
     *
     * @param CloudPcProvisioningType $val The provisioningType
     *

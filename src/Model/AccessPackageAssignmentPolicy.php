@@ -445,6 +445,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
      /**
      * Gets the questions
+    * Questions that are posed to the  requestor.
      *
      * @return array|null The questions
      */
@@ -459,6 +460,7 @@ class AccessPackageAssignmentPolicy extends Entity
 
     /**
     * Sets the questions
+    * Questions that are posed to the  requestor.
     *
     * @param AccessPackageQuestion[] $val The questions
     *
