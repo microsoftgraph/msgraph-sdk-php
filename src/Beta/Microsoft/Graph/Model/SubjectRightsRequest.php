@@ -776,6 +776,62 @@ class SubjectRightsRequest extends Entity
 
 
      /**
+     * Gets the approvers
+     *
+     * @return array|null The approvers
+     */
+    public function getApprovers()
+    {
+        if (array_key_exists("approvers", $this->_propDict)) {
+           return $this->_propDict["approvers"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the approvers
+    *
+    * @param User[] $val The approvers
+    *
+    * @return SubjectRightsRequest
+    */
+    public function setApprovers($val)
+    {
+        $this->_propDict["approvers"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the collaborators
+     *
+     * @return array|null The collaborators
+     */
+    public function getCollaborators()
+    {
+        if (array_key_exists("collaborators", $this->_propDict)) {
+           return $this->_propDict["collaborators"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the collaborators
+    *
+    * @param User[] $val The collaborators
+    *
+    * @return SubjectRightsRequest
+    */
+    public function setCollaborators($val)
+    {
+        $this->_propDict["collaborators"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the notes
     * List of notes associated with the request.
      *
