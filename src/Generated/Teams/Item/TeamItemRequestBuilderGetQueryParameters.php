@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teams\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of the specified team.
+ * Get entity from teams by key
 */
 class TeamItemRequestBuilderGetQueryParameters 
 {

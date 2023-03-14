@@ -36,8 +36,8 @@ class AdminConsentRequestPolicyRequestBuilderGetRequestConfiguration
 
     /**
      * Instantiates a new adminConsentRequestPolicyRequestBuilderGetRequestConfiguration and sets the default values.
-     * @param array<array>|null $headers Request headers
-     * @param array<array>|null $options Request options
+     * @param array<string, array<string>|string>|null $headers Request headers
+     * @param array<RequestOption>|null $options Request options
      * @param AdminConsentRequestPolicyRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
     */
     public function __construct(?array $headers = null, ?array $options = null, ?AdminConsentRequestPolicyRequestBuilderGetQueryParameters $queryParameters = null) {

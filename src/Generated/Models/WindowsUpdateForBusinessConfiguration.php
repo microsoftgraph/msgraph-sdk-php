@@ -8,13 +8,10 @@ use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\Date;
 
-/**
- * Windows Update for business configuration, allows you to specify how and when Windows as a Service updates your Windows 10/11 devices with feature and quality updates. Supports ODATA clauses that DeviceConfiguration entity supports: $filter by types of DeviceConfiguration, $top, $select only DeviceConfiguration base properties, $orderby only DeviceConfiguration base properties, and $skip. The query parameter '$search' is not supported.
-*/
 class WindowsUpdateForBusinessConfiguration extends DeviceConfiguration implements Parsable 
 {
     /**
-     * Instantiates a new windowsUpdateForBusinessConfiguration and sets the default values.
+     * Instantiates a new WindowsUpdateForBusinessConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

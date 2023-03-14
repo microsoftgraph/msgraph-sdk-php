@@ -7,10 +7,13 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
+/**
+ * Event representing an general failure.
+*/
 class DeviceManagementTroubleshootingEvent extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new DeviceManagementTroubleshootingEvent and sets the default values.
+     * Instantiates a new deviceManagementTroubleshootingEvent and sets the default values.
     */
     public function __construct() {
         parent::__construct();
