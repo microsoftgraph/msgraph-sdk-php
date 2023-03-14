@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Teams;
+namespace Microsoft\Graph\Generated\EmployeeExperience\LearningProviders;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the properties and relationships of the specified team.
+ * Get a list of the learningProvider resources registered in Viva Learning for a tenant.
 */
-class TeamsRequestBuilderGetQueryParameters 
+class LearningProvidersRequestBuilderGetQueryParameters 
 {
     /**
      * @QueryParameter("%24count")
@@ -58,7 +58,7 @@ class TeamsRequestBuilderGetQueryParameters
     public ?int $top = null;
     
     /**
-     * Instantiates a new teamsRequestBuilderGetQueryParameters and sets the default values.
+     * Instantiates a new learningProvidersRequestBuilderGetQueryParameters and sets the default values.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values

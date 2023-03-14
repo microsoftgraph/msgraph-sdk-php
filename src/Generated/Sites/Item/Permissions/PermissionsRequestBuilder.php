@@ -78,7 +78,7 @@ class PermissionsRequestBuilder
     }
 
     /**
-     * Create a new permission object on a site.
+     * Create a new permission object on a site. 
      * @param Permission $body The request body
      * @param PermissionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -123,7 +123,7 @@ class PermissionsRequestBuilder
     }
 
     /**
-     * Create a new permission object on a site.
+     * Create a new permission object on a site. 
      * @param Permission $body The request body
      * @param PermissionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

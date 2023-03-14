@@ -359,6 +359,8 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.itemActivityStat': return new ItemActivityStat();
                 case '#microsoft.graph.itemAnalytics': return new ItemAnalytics();
                 case '#microsoft.graph.itemAttachment': return new ItemAttachment();
+                case '#microsoft.graph.learningContent': return new LearningContent();
+                case '#microsoft.graph.learningProvider': return new LearningProvider();
                 case '#microsoft.graph.licenseDetails': return new LicenseDetails();
                 case '#microsoft.graph.linkedResource': return new LinkedResource();
                 case '#microsoft.graph.list': return new EscapedList();

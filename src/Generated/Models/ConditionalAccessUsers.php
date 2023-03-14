@@ -59,6 +59,14 @@ class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
+     * Gets the excludeGuestsOrExternalUsers property value. The excludeGuestsOrExternalUsers property
+     * @return ConditionalAccessGuestsOrExternalUsers|null
+    */
+    public function getExcludeGuestsOrExternalUsers(): ?ConditionalAccessGuestsOrExternalUsers {
+        return $this->getBackingStore()->get('excludeGuestsOrExternalUsers');
+    }
+
+    /**
      * Gets the excludeRoles property value. Role IDs excluded from scope of policy.
      * @return array<string>|null
     */
@@ -82,9 +90,11 @@ class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsa
         $o = $this;
         return  [
             'excludeGroups' => fn(ParseNode $n) => $o->setExcludeGroups($n->getCollectionOfPrimitiveValues()),
+            'excludeGuestsOrExternalUsers' => fn(ParseNode $n) => $o->setExcludeGuestsOrExternalUsers($n->getObjectValue([ConditionalAccessGuestsOrExternalUsers::class, 'createFromDiscriminatorValue'])),
             'excludeRoles' => fn(ParseNode $n) => $o->setExcludeRoles($n->getCollectionOfPrimitiveValues()),
             'excludeUsers' => fn(ParseNode $n) => $o->setExcludeUsers($n->getCollectionOfPrimitiveValues()),
             'includeGroups' => fn(ParseNode $n) => $o->setIncludeGroups($n->getCollectionOfPrimitiveValues()),
+            'includeGuestsOrExternalUsers' => fn(ParseNode $n) => $o->setIncludeGuestsOrExternalUsers($n->getObjectValue([ConditionalAccessGuestsOrExternalUsers::class, 'createFromDiscriminatorValue'])),
             'includeRoles' => fn(ParseNode $n) => $o->setIncludeRoles($n->getCollectionOfPrimitiveValues()),
             'includeUsers' => fn(ParseNode $n) => $o->setIncludeUsers($n->getCollectionOfPrimitiveValues()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
@@ -97,6 +107,14 @@ class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsa
     */
     public function getIncludeGroups(): ?array {
         return $this->getBackingStore()->get('includeGroups');
+    }
+
+    /**
+     * Gets the includeGuestsOrExternalUsers property value. The includeGuestsOrExternalUsers property
+     * @return ConditionalAccessGuestsOrExternalUsers|null
+    */
+    public function getIncludeGuestsOrExternalUsers(): ?ConditionalAccessGuestsOrExternalUsers {
+        return $this->getBackingStore()->get('includeGuestsOrExternalUsers');
     }
 
     /**
@@ -129,9 +147,11 @@ class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsa
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeCollectionOfPrimitiveValues('excludeGroups', $this->getExcludeGroups());
+        $writer->writeObjectValue('excludeGuestsOrExternalUsers', $this->getExcludeGuestsOrExternalUsers());
         $writer->writeCollectionOfPrimitiveValues('excludeRoles', $this->getExcludeRoles());
         $writer->writeCollectionOfPrimitiveValues('excludeUsers', $this->getExcludeUsers());
         $writer->writeCollectionOfPrimitiveValues('includeGroups', $this->getIncludeGroups());
+        $writer->writeObjectValue('includeGuestsOrExternalUsers', $this->getIncludeGuestsOrExternalUsers());
         $writer->writeCollectionOfPrimitiveValues('includeRoles', $this->getIncludeRoles());
         $writer->writeCollectionOfPrimitiveValues('includeUsers', $this->getIncludeUsers());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
@@ -163,6 +183,14 @@ class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
+     * Sets the excludeGuestsOrExternalUsers property value. The excludeGuestsOrExternalUsers property
+     * @param ConditionalAccessGuestsOrExternalUsers|null $value Value to set for the excludeGuestsOrExternalUsers property.
+    */
+    public function setExcludeGuestsOrExternalUsers(?ConditionalAccessGuestsOrExternalUsers $value): void {
+        $this->getBackingStore()->set('excludeGuestsOrExternalUsers', $value);
+    }
+
+    /**
      * Sets the excludeRoles property value. Role IDs excluded from scope of policy.
      * @param array<string>|null $value Value to set for the excludeRoles property.
     */
@@ -184,6 +212,14 @@ class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsa
     */
     public function setIncludeGroups(?array $value): void {
         $this->getBackingStore()->set('includeGroups', $value);
+    }
+
+    /**
+     * Sets the includeGuestsOrExternalUsers property value. The includeGuestsOrExternalUsers property
+     * @param ConditionalAccessGuestsOrExternalUsers|null $value Value to set for the includeGuestsOrExternalUsers property.
+    */
+    public function setIncludeGuestsOrExternalUsers(?ConditionalAccessGuestsOrExternalUsers $value): void {
+        $this->getBackingStore()->set('includeGuestsOrExternalUsers', $value);
     }
 
     /**

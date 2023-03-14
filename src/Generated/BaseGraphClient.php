@@ -49,6 +49,7 @@ use Microsoft\Graph\Generated\Domains\Item\DomainItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\DrivesRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\DriveItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\EducationRequestBuilder;
+use Microsoft\Graph\Generated\EmployeeExperience\EmployeeExperienceRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\PrintRequestBuilder;
 use Microsoft\Graph\Generated\External\ExternalRequestBuilder;
 use Microsoft\Graph\Generated\GroupLifecyclePolicies\GroupLifecyclePoliciesRequestBuilder;
@@ -323,6 +324,13 @@ class BaseGraphClient
     */
     public function education(): EducationRequestBuilder {
         return new EducationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the employeeExperience singleton.
+    */
+    public function employeeExperience(): EmployeeExperienceRequestBuilder {
+        return new EmployeeExperienceRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
