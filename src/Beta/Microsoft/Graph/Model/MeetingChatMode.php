@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* SubjectRightsRequestStage File
+* MeetingChatMode File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* SubjectRightsRequestStage class
+* MeetingChatMode class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,17 +24,13 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class SubjectRightsRequestStage extends Enum
+class MeetingChatMode extends Enum
 {
     /**
-    * The Enum SubjectRightsRequestStage
+    * The Enum MeetingChatMode
     */
-    const CONTENT_RETRIEVAL = "contentRetrieval";
-    const CONTENT_REVIEW = "contentReview";
-    const GENERATE_REPORT = "generateReport";
-    const CONTENT_DELETION = "contentDeletion";
-    const CASE_RESOLVED = "caseResolved";
-    const CONTENT_ESTIMATE = "contentEstimate";
+    const ENABLED = "enabled";
+    const DISABLED = "disabled";
+    const LIMITED = "limited";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const APPROVAL = "approval";
 }

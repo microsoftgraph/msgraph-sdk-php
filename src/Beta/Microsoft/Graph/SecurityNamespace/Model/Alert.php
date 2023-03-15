@@ -767,6 +767,33 @@ class Alert extends \Beta\Microsoft\Graph\Model\Entity
     }
 
     /**
+    * Gets the systemTags
+    *
+    * @return array|null The systemTags
+    */
+    public function getSystemTags()
+    {
+        if (array_key_exists("systemTags", $this->_propDict)) {
+            return $this->_propDict["systemTags"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the systemTags
+    *
+    * @param string[] $val The systemTags
+    *
+    * @return Alert
+    */
+    public function setSystemTags($val)
+    {
+        $this->_propDict["systemTags"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the tenantId
     * The Azure Active Directory tenant the alert was created in.
     *

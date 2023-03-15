@@ -57,4 +57,32 @@ class CloudPcProvisioningPolicyAssignment extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the assignedUsers
+     *
+     * @return array|null The assignedUsers
+     */
+    public function getAssignedUsers()
+    {
+        if (array_key_exists("assignedUsers", $this->_propDict)) {
+           return $this->_propDict["assignedUsers"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the assignedUsers
+    *
+    * @param User[] $val The assignedUsers
+    *
+    * @return CloudPcProvisioningPolicyAssignment
+    */
+    public function setAssignedUsers($val)
+    {
+        $this->_propDict["assignedUsers"] = $val;
+        return $this;
+    }
+
 }
