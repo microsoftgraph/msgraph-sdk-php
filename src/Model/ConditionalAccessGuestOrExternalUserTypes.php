@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* SubjectRightsRequestStage File
+* ConditionalAccessGuestOrExternalUserTypes File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* SubjectRightsRequestStage class
+* ConditionalAccessGuestOrExternalUserTypes class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,17 +24,17 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class SubjectRightsRequestStage extends Enum
+class ConditionalAccessGuestOrExternalUserTypes extends Enum
 {
     /**
-    * The Enum SubjectRightsRequestStage
+    * The Enum ConditionalAccessGuestOrExternalUserTypes
     */
-    const CONTENT_RETRIEVAL = "contentRetrieval";
-    const CONTENT_REVIEW = "contentReview";
-    const GENERATE_REPORT = "generateReport";
-    const CONTENT_DELETION = "contentDeletion";
-    const CASE_RESOLVED = "caseResolved";
-    const CONTENT_ESTIMATE = "contentEstimate";
+    const NONE = "none";
+    const INTERNAL_GUEST = "internalGuest";
+    const B2B_COLLABORATION_GUEST = "b2bCollaborationGuest";
+    const B2B_COLLABORATION_MEMBER = "b2bCollaborationMember";
+    const B2B_DIRECT_CONNECT_USER = "b2bDirectConnectUser";
+    const OTHER_EXTERNAL_USER = "otherExternalUser";
+    const SERVICE_PROVIDER = "serviceProvider";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const APPROVAL = "approval";
 }

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* SubjectRightsRequestStage File
+* MicrosoftAuthenticatorAuthenticationMethodClientAppName File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* SubjectRightsRequestStage class
+* MicrosoftAuthenticatorAuthenticationMethodClientAppName class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,17 +24,12 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class SubjectRightsRequestStage extends Enum
+class MicrosoftAuthenticatorAuthenticationMethodClientAppName extends Enum
 {
     /**
-    * The Enum SubjectRightsRequestStage
+    * The Enum MicrosoftAuthenticatorAuthenticationMethodClientAppName
     */
-    const CONTENT_RETRIEVAL = "contentRetrieval";
-    const CONTENT_REVIEW = "contentReview";
-    const GENERATE_REPORT = "generateReport";
-    const CONTENT_DELETION = "contentDeletion";
-    const CASE_RESOLVED = "caseResolved";
-    const CONTENT_ESTIMATE = "contentEstimate";
+    const MICROSOFT_AUTHENTICATOR = "microsoftAuthenticator";
+    const OUTLOOK_MOBILE = "outlookMobile";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const APPROVAL = "approval";
 }
