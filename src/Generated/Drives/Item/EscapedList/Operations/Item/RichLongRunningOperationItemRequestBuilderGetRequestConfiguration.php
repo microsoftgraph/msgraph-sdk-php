@@ -25,16 +25,6 @@ class RichLongRunningOperationItemRequestBuilderGetRequestConfiguration
     public ?RichLongRunningOperationItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new RichLongRunningOperationItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return RichLongRunningOperationItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): RichLongRunningOperationItemRequestBuilderGetQueryParameters {
-        return new RichLongRunningOperationItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new RichLongRunningOperationItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class RichLongRunningOperationItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new RichLongRunningOperationItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return RichLongRunningOperationItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): RichLongRunningOperationItemRequestBuilderGetQueryParameters {
+        return new RichLongRunningOperationItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

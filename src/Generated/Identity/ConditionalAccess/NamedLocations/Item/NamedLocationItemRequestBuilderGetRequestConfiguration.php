@@ -25,16 +25,6 @@ class NamedLocationItemRequestBuilderGetRequestConfiguration
     public ?NamedLocationItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new NamedLocationItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return NamedLocationItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): NamedLocationItemRequestBuilderGetQueryParameters {
-        return new NamedLocationItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new NamedLocationItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class NamedLocationItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new NamedLocationItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return NamedLocationItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): NamedLocationItemRequestBuilderGetQueryParameters {
+        return new NamedLocationItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

@@ -25,16 +25,6 @@ class RootRequestBuilderGetRequestConfiguration
     public ?RootRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new rootRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return RootRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): RootRequestBuilderGetQueryParameters {
-        return new RootRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new rootRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class RootRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new rootRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return RootRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): RootRequestBuilderGetQueryParameters {
+        return new RootRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

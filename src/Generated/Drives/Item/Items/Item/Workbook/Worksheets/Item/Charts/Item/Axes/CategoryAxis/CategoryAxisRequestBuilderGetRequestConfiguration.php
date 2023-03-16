@@ -25,16 +25,6 @@ class CategoryAxisRequestBuilderGetRequestConfiguration
     public ?CategoryAxisRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new categoryAxisRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return CategoryAxisRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): CategoryAxisRequestBuilderGetQueryParameters {
-        return new CategoryAxisRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new categoryAxisRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class CategoryAxisRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new categoryAxisRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return CategoryAxisRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): CategoryAxisRequestBuilderGetQueryParameters {
+        return new CategoryAxisRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

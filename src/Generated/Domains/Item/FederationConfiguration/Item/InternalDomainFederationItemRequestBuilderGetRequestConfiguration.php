@@ -25,16 +25,6 @@ class InternalDomainFederationItemRequestBuilderGetRequestConfiguration
     public ?InternalDomainFederationItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new InternalDomainFederationItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return InternalDomainFederationItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): InternalDomainFederationItemRequestBuilderGetQueryParameters {
-        return new InternalDomainFederationItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new InternalDomainFederationItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class InternalDomainFederationItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new InternalDomainFederationItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return InternalDomainFederationItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): InternalDomainFederationItemRequestBuilderGetQueryParameters {
+        return new InternalDomainFederationItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

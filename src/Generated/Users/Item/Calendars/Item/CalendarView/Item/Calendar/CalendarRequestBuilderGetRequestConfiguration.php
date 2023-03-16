@@ -25,15 +25,6 @@ class CalendarRequestBuilderGetRequestConfiguration
     public ?CalendarRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new calendarRequestBuilderGetQueryParameters.
-     * @param array<string>|null $select Select properties to be returned
-     * @return CalendarRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $select = null): CalendarRequestBuilderGetQueryParameters {
-        return new CalendarRequestBuilderGetQueryParameters($select);
-    }
-
-    /**
      * Instantiates a new calendarRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -43,6 +34,15 @@ class CalendarRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new calendarRequestBuilderGetQueryParameters.
+     * @param array<string>|null $select Select properties to be returned
+     * @return CalendarRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $select = null): CalendarRequestBuilderGetQueryParameters {
+        return new CalendarRequestBuilderGetQueryParameters($select);
     }
 
 }

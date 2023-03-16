@@ -25,15 +25,6 @@ class OutlookCategoryItemRequestBuilderGetRequestConfiguration
     public ?OutlookCategoryItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new OutlookCategoryItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $select Select properties to be returned
-     * @return OutlookCategoryItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $select = null): OutlookCategoryItemRequestBuilderGetQueryParameters {
-        return new OutlookCategoryItemRequestBuilderGetQueryParameters($select);
-    }
-
-    /**
      * Instantiates a new OutlookCategoryItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -43,6 +34,15 @@ class OutlookCategoryItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new OutlookCategoryItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $select Select properties to be returned
+     * @return OutlookCategoryItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $select = null): OutlookCategoryItemRequestBuilderGetQueryParameters {
+        return new OutlookCategoryItemRequestBuilderGetQueryParameters($select);
     }
 
 }

@@ -25,16 +25,6 @@ class AssignmentDefaultsRequestBuilderGetRequestConfiguration
     public ?AssignmentDefaultsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new assignmentDefaultsRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return AssignmentDefaultsRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): AssignmentDefaultsRequestBuilderGetQueryParameters {
-        return new AssignmentDefaultsRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new assignmentDefaultsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class AssignmentDefaultsRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new assignmentDefaultsRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return AssignmentDefaultsRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): AssignmentDefaultsRequestBuilderGetQueryParameters {
+        return new AssignmentDefaultsRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

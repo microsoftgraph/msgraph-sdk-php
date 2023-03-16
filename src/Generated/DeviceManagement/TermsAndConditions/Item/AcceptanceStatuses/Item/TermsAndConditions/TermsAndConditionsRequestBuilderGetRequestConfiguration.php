@@ -25,16 +25,6 @@ class TermsAndConditionsRequestBuilderGetRequestConfiguration
     public ?TermsAndConditionsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new termsAndConditionsRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return TermsAndConditionsRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): TermsAndConditionsRequestBuilderGetQueryParameters {
-        return new TermsAndConditionsRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new termsAndConditionsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class TermsAndConditionsRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new termsAndConditionsRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return TermsAndConditionsRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): TermsAndConditionsRequestBuilderGetQueryParameters {
+        return new TermsAndConditionsRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

@@ -25,16 +25,6 @@ class WorkbookRequestBuilderGetRequestConfiguration
     public ?WorkbookRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new workbookRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return WorkbookRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): WorkbookRequestBuilderGetQueryParameters {
-        return new WorkbookRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new workbookRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class WorkbookRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new workbookRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return WorkbookRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): WorkbookRequestBuilderGetQueryParameters {
+        return new WorkbookRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

@@ -25,16 +25,6 @@ class OpenShiftChangeRequestItemRequestBuilderGetRequestConfiguration
     public ?OpenShiftChangeRequestItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new OpenShiftChangeRequestItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return OpenShiftChangeRequestItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): OpenShiftChangeRequestItemRequestBuilderGetQueryParameters {
-        return new OpenShiftChangeRequestItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new OpenShiftChangeRequestItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class OpenShiftChangeRequestItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new OpenShiftChangeRequestItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return OpenShiftChangeRequestItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): OpenShiftChangeRequestItemRequestBuilderGetQueryParameters {
+        return new OpenShiftChangeRequestItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

@@ -25,16 +25,6 @@ class BookingServiceItemRequestBuilderGetRequestConfiguration
     public ?BookingServiceItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new BookingServiceItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return BookingServiceItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): BookingServiceItemRequestBuilderGetQueryParameters {
-        return new BookingServiceItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new BookingServiceItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class BookingServiceItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new BookingServiceItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return BookingServiceItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): BookingServiceItemRequestBuilderGetQueryParameters {
+        return new BookingServiceItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

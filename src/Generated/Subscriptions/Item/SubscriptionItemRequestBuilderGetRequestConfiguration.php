@@ -25,15 +25,6 @@ class SubscriptionItemRequestBuilderGetRequestConfiguration
     public ?SubscriptionItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new SubscriptionItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $select Select properties to be returned
-     * @return SubscriptionItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $select = null): SubscriptionItemRequestBuilderGetQueryParameters {
-        return new SubscriptionItemRequestBuilderGetQueryParameters($select);
-    }
-
-    /**
      * Instantiates a new SubscriptionItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -43,6 +34,15 @@ class SubscriptionItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new SubscriptionItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $select Select properties to be returned
+     * @return SubscriptionItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $select = null): SubscriptionItemRequestBuilderGetQueryParameters {
+        return new SubscriptionItemRequestBuilderGetQueryParameters($select);
     }
 
 }

@@ -25,19 +25,6 @@ class GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetRequestConf
     public ?GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new getRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetQueryParameters.
-     * @param bool|null $count Include count of items
-     * @param string|null $filter Filter items by property values
-     * @param string|null $search Search items by search phrases
-     * @param int|null $skip Skip the first n items
-     * @param int|null $top Show only the first n items
-     * @return GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?bool $count = null, ?string $filter = null, ?string $search = null, ?int $skip = null, ?int $top = null): GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetQueryParameters {
-        return new GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetQueryParameters($count, $filter, $search, $skip, $top);
-    }
-
-    /**
      * Instantiates a new getRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -47,6 +34,19 @@ class GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetRequestConf
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new getRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetQueryParameters.
+     * @param bool|null $count Include count of items
+     * @param string|null $filter Filter items by property values
+     * @param string|null $search Search items by search phrases
+     * @param int|null $skip Skip the first n items
+     * @param int|null $top Show only the first n items
+     * @return GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?bool $count = null, ?string $filter = null, ?string $search = null, ?int $skip = null, ?int $top = null): GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetQueryParameters {
+        return new GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilderGetQueryParameters($count, $filter, $search, $skip, $top);
     }
 
 }

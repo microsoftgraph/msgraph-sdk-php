@@ -25,16 +25,6 @@ class SettingStateDeviceSummaryItemRequestBuilderGetRequestConfiguration
     public ?SettingStateDeviceSummaryItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new SettingStateDeviceSummaryItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return SettingStateDeviceSummaryItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): SettingStateDeviceSummaryItemRequestBuilderGetQueryParameters {
-        return new SettingStateDeviceSummaryItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new SettingStateDeviceSummaryItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class SettingStateDeviceSummaryItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new SettingStateDeviceSummaryItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return SettingStateDeviceSummaryItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): SettingStateDeviceSummaryItemRequestBuilderGetQueryParameters {
+        return new SettingStateDeviceSummaryItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

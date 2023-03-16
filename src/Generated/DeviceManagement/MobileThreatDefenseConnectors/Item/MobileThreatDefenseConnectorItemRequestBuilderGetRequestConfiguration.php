@@ -25,16 +25,6 @@ class MobileThreatDefenseConnectorItemRequestBuilderGetRequestConfiguration
     public ?MobileThreatDefenseConnectorItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new MobileThreatDefenseConnectorItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return MobileThreatDefenseConnectorItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): MobileThreatDefenseConnectorItemRequestBuilderGetQueryParameters {
-        return new MobileThreatDefenseConnectorItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new MobileThreatDefenseConnectorItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class MobileThreatDefenseConnectorItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new MobileThreatDefenseConnectorItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return MobileThreatDefenseConnectorItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): MobileThreatDefenseConnectorItemRequestBuilderGetQueryParameters {
+        return new MobileThreatDefenseConnectorItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

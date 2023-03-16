@@ -25,16 +25,6 @@ class ServicePrincipalItemRequestBuilderGetRequestConfiguration
     public ?ServicePrincipalItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new ServicePrincipalItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return ServicePrincipalItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): ServicePrincipalItemRequestBuilderGetQueryParameters {
-        return new ServicePrincipalItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new ServicePrincipalItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class ServicePrincipalItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new ServicePrincipalItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return ServicePrincipalItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): ServicePrincipalItemRequestBuilderGetQueryParameters {
+        return new ServicePrincipalItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

@@ -25,16 +25,6 @@ class VppTokenItemRequestBuilderGetRequestConfiguration
     public ?VppTokenItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new VppTokenItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return VppTokenItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): VppTokenItemRequestBuilderGetQueryParameters {
-        return new VppTokenItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new VppTokenItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class VppTokenItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new VppTokenItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return VppTokenItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): VppTokenItemRequestBuilderGetQueryParameters {
+        return new VppTokenItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

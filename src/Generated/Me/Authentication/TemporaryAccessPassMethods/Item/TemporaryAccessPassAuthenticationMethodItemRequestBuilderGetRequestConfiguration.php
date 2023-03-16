@@ -25,16 +25,6 @@ class TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetRequestConfigu
     public ?TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetQueryParameters {
-        return new TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetRequestConfigu
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetQueryParameters {
+        return new TemporaryAccessPassAuthenticationMethodItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

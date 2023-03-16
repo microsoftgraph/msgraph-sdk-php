@@ -5,14 +5,23 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class AgreementCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
+class AgreementCollectionResponse extends BaseCollectionPaginationCountResponse implements BackedModel, Parsable 
 {
+    /**
+     * @var BackingStore $backingStore Stores model information.
+    */
+    private BackingStore $backingStore;
+    
     /**
      * Instantiates a new AgreementCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
     }
 
     /**
@@ -22,6 +31,14 @@ class AgreementCollectionResponse extends BaseCollectionPaginationCountResponse 
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): AgreementCollectionResponse {
         return new AgreementCollectionResponse();
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -50,6 +67,14 @@ class AgreementCollectionResponse extends BaseCollectionPaginationCountResponse 
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('value', $this->getValue());
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**

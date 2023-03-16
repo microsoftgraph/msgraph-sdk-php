@@ -25,16 +25,6 @@ class ConnectionOperationItemRequestBuilderGetRequestConfiguration
     public ?ConnectionOperationItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new ConnectionOperationItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return ConnectionOperationItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): ConnectionOperationItemRequestBuilderGetQueryParameters {
-        return new ConnectionOperationItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new ConnectionOperationItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class ConnectionOperationItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new ConnectionOperationItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return ConnectionOperationItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): ConnectionOperationItemRequestBuilderGetQueryParameters {
+        return new ConnectionOperationItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

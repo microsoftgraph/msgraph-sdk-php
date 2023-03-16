@@ -25,16 +25,6 @@ class GraphRoomRequestBuilderGetRequestConfiguration
     public ?GraphRoomRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new graphRoomRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return GraphRoomRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): GraphRoomRequestBuilderGetQueryParameters {
-        return new GraphRoomRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new graphRoomRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class GraphRoomRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new graphRoomRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return GraphRoomRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): GraphRoomRequestBuilderGetQueryParameters {
+        return new GraphRoomRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

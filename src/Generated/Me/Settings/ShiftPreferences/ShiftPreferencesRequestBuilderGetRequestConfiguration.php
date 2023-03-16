@@ -25,16 +25,6 @@ class ShiftPreferencesRequestBuilderGetRequestConfiguration
     public ?ShiftPreferencesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new shiftPreferencesRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return ShiftPreferencesRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): ShiftPreferencesRequestBuilderGetQueryParameters {
-        return new ShiftPreferencesRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new shiftPreferencesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class ShiftPreferencesRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new shiftPreferencesRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return ShiftPreferencesRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): ShiftPreferencesRequestBuilderGetQueryParameters {
+        return new ShiftPreferencesRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

@@ -25,16 +25,6 @@ class DirectoryObjectItemRequestBuilderGetRequestConfiguration
     public ?DirectoryObjectItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new DirectoryObjectItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return DirectoryObjectItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): DirectoryObjectItemRequestBuilderGetQueryParameters {
-        return new DirectoryObjectItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new DirectoryObjectItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class DirectoryObjectItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new DirectoryObjectItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return DirectoryObjectItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): DirectoryObjectItemRequestBuilderGetQueryParameters {
+        return new DirectoryObjectItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

@@ -25,15 +25,6 @@ class ProfilePhotoItemRequestBuilderGetRequestConfiguration
     public ?ProfilePhotoItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new ProfilePhotoItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $select Select properties to be returned
-     * @return ProfilePhotoItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $select = null): ProfilePhotoItemRequestBuilderGetQueryParameters {
-        return new ProfilePhotoItemRequestBuilderGetQueryParameters($select);
-    }
-
-    /**
      * Instantiates a new ProfilePhotoItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -43,6 +34,15 @@ class ProfilePhotoItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new ProfilePhotoItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $select Select properties to be returned
+     * @return ProfilePhotoItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $select = null): ProfilePhotoItemRequestBuilderGetQueryParameters {
+        return new ProfilePhotoItemRequestBuilderGetQueryParameters($select);
     }
 
 }

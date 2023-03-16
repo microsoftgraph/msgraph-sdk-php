@@ -25,16 +25,6 @@ class IdentityItemRequestBuilderGetRequestConfiguration
     public ?IdentityItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new IdentityItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return IdentityItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): IdentityItemRequestBuilderGetQueryParameters {
-        return new IdentityItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new IdentityItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class IdentityItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new IdentityItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return IdentityItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): IdentityItemRequestBuilderGetQueryParameters {
+        return new IdentityItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teamwork\DeletedTeams;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get deletedTeams from teamwork
+ * Get a list of the deletedTeam objects and their properties.
 */
 class DeletedTeamsRequestBuilderGetQueryParameters 
 {

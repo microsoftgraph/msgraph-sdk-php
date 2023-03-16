@@ -25,16 +25,6 @@ class EmailAuthenticationMethodItemRequestBuilderGetRequestConfiguration
     public ?EmailAuthenticationMethodItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new EmailAuthenticationMethodItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return EmailAuthenticationMethodItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): EmailAuthenticationMethodItemRequestBuilderGetQueryParameters {
-        return new EmailAuthenticationMethodItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new EmailAuthenticationMethodItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class EmailAuthenticationMethodItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new EmailAuthenticationMethodItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return EmailAuthenticationMethodItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): EmailAuthenticationMethodItemRequestBuilderGetQueryParameters {
+        return new EmailAuthenticationMethodItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

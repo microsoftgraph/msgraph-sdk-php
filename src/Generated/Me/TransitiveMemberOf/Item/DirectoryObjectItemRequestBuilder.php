@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Me\TransitiveMemberOf\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Me\TransitiveMemberOf\Item\GraphAdministrativeUnit\GraphAdministrativeUnitRequestBuilder;
 use Microsoft\Graph\Generated\Me\TransitiveMemberOf\Item\GraphGroup\GraphGroupRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryObject;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -20,6 +21,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 */
 class DirectoryObjectItemRequestBuilder 
 {
+    /**
+     * Casts the previous resource to administrativeUnit.
+    */
+    public function graphAdministrativeUnit(): GraphAdministrativeUnitRequestBuilder {
+        return new GraphAdministrativeUnitRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Casts the previous resource to group.
     */

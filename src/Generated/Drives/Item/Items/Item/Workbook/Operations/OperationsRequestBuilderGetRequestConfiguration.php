@@ -25,18 +25,6 @@ class OperationsRequestBuilderGetRequestConfiguration
     public ?OperationsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new operationsRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $orderby Order items by property values
-     * @param string|null $search Search items by search phrases
-     * @param array<string>|null $select Select properties to be returned
-     * @return OperationsRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $orderby = null, ?string $search = null, ?array $select = null): OperationsRequestBuilderGetQueryParameters {
-        return new OperationsRequestBuilderGetQueryParameters($expand, $orderby, $search, $select);
-    }
-
-    /**
      * Instantiates a new operationsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -46,6 +34,18 @@ class OperationsRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new operationsRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $orderby Order items by property values
+     * @param string|null $search Search items by search phrases
+     * @param array<string>|null $select Select properties to be returned
+     * @return OperationsRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $orderby = null, ?string $search = null, ?array $select = null): OperationsRequestBuilderGetQueryParameters {
+        return new OperationsRequestBuilderGetQueryParameters($expand, $orderby, $search, $select);
     }
 
 }
