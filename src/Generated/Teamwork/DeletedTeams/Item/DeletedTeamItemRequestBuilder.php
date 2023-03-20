@@ -88,7 +88,7 @@ class DeletedTeamItemRequestBuilder
     }
 
     /**
-     * Get deletedTeams from teamwork
+     * The deleted team.
      * @param DeletedTeamItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -146,7 +146,7 @@ class DeletedTeamItemRequestBuilder
     }
 
     /**
-     * Get deletedTeams from teamwork
+     * The deleted team.
      * @param DeletedTeamItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

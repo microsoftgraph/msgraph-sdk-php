@@ -25,16 +25,6 @@ class GraphMobileLobAppRequestBuilderGetRequestConfiguration
     public ?GraphMobileLobAppRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new graphMobileLobAppRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return GraphMobileLobAppRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): GraphMobileLobAppRequestBuilderGetQueryParameters {
-        return new GraphMobileLobAppRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new graphMobileLobAppRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class GraphMobileLobAppRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new graphMobileLobAppRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return GraphMobileLobAppRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): GraphMobileLobAppRequestBuilderGetQueryParameters {
+        return new GraphMobileLobAppRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

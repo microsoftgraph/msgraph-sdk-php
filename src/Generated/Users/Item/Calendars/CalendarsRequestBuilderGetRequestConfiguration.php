@@ -25,20 +25,6 @@ class CalendarsRequestBuilderGetRequestConfiguration
     public ?CalendarsRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new calendarsRequestBuilderGetQueryParameters.
-     * @param bool|null $count Include count of items
-     * @param string|null $filter Filter items by property values
-     * @param array<string>|null $orderby Order items by property values
-     * @param array<string>|null $select Select properties to be returned
-     * @param int|null $skip Skip the first n items
-     * @param int|null $top Show only the first n items
-     * @return CalendarsRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?bool $count = null, ?string $filter = null, ?array $orderby = null, ?array $select = null, ?int $skip = null, ?int $top = null): CalendarsRequestBuilderGetQueryParameters {
-        return new CalendarsRequestBuilderGetQueryParameters($count, $filter, $orderby, $select, $skip, $top);
-    }
-
-    /**
      * Instantiates a new calendarsRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -48,6 +34,20 @@ class CalendarsRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new calendarsRequestBuilderGetQueryParameters.
+     * @param bool|null $count Include count of items
+     * @param string|null $filter Filter items by property values
+     * @param array<string>|null $orderby Order items by property values
+     * @param array<string>|null $select Select properties to be returned
+     * @param int|null $skip Skip the first n items
+     * @param int|null $top Show only the first n items
+     * @return CalendarsRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?bool $count = null, ?string $filter = null, ?array $orderby = null, ?array $select = null, ?int $skip = null, ?int $top = null): CalendarsRequestBuilderGetQueryParameters {
+        return new CalendarsRequestBuilderGetQueryParameters($count, $filter, $orderby, $select, $skip, $top);
     }
 
 }

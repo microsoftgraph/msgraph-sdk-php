@@ -25,15 +25,6 @@ class AttachmentBaseItemRequestBuilderGetRequestConfiguration
     public ?AttachmentBaseItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new AttachmentBaseItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $select Select properties to be returned
-     * @return AttachmentBaseItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $select = null): AttachmentBaseItemRequestBuilderGetQueryParameters {
-        return new AttachmentBaseItemRequestBuilderGetQueryParameters($select);
-    }
-
-    /**
      * Instantiates a new AttachmentBaseItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -43,6 +34,15 @@ class AttachmentBaseItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new AttachmentBaseItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $select Select properties to be returned
+     * @return AttachmentBaseItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $select = null): AttachmentBaseItemRequestBuilderGetQueryParameters {
+        return new AttachmentBaseItemRequestBuilderGetQueryParameters($select);
     }
 
 }

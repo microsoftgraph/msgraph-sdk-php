@@ -25,16 +25,6 @@ class TargetedManagedAppPolicyAssignmentItemRequestBuilderGetRequestConfiguratio
     public ?TargetedManagedAppPolicyAssignmentItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new TargetedManagedAppPolicyAssignmentItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return TargetedManagedAppPolicyAssignmentItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): TargetedManagedAppPolicyAssignmentItemRequestBuilderGetQueryParameters {
-        return new TargetedManagedAppPolicyAssignmentItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new TargetedManagedAppPolicyAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class TargetedManagedAppPolicyAssignmentItemRequestBuilderGetRequestConfiguratio
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new TargetedManagedAppPolicyAssignmentItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return TargetedManagedAppPolicyAssignmentItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): TargetedManagedAppPolicyAssignmentItemRequestBuilderGetQueryParameters {
+        return new TargetedManagedAppPolicyAssignmentItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

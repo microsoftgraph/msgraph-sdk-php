@@ -25,16 +25,6 @@ class OrganizationItemRequestBuilderGetRequestConfiguration
     public ?OrganizationItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new OrganizationItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return OrganizationItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): OrganizationItemRequestBuilderGetQueryParameters {
-        return new OrganizationItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new OrganizationItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class OrganizationItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new OrganizationItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return OrganizationItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): OrganizationItemRequestBuilderGetQueryParameters {
+        return new OrganizationItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

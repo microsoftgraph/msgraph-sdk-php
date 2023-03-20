@@ -25,16 +25,6 @@ class ExternalItemItemRequestBuilderGetRequestConfiguration
     public ?ExternalItemItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new ExternalItemItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return ExternalItemItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): ExternalItemItemRequestBuilderGetQueryParameters {
-        return new ExternalItemItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new ExternalItemItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class ExternalItemItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new ExternalItemItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return ExternalItemItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): ExternalItemItemRequestBuilderGetQueryParameters {
+        return new ExternalItemItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

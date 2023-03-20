@@ -25,15 +25,6 @@ class CountRequestBuilderGetRequestConfiguration
     public ?CountRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new CountRequestBuilderGetQueryParameters.
-     * @param string|null $filter Filter items by property values
-     * @return CountRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?string $filter = null): CountRequestBuilderGetQueryParameters {
-        return new CountRequestBuilderGetQueryParameters($filter);
-    }
-
-    /**
      * Instantiates a new CountRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -43,6 +34,15 @@ class CountRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new CountRequestBuilderGetQueryParameters.
+     * @param string|null $filter Filter items by property values
+     * @return CountRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?string $filter = null): CountRequestBuilderGetQueryParameters {
+        return new CountRequestBuilderGetQueryParameters($filter);
     }
 
 }

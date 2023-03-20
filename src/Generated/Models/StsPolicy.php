@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class StsPolicy extends PolicyBase implements Parsable 
 {
     /**
-     * Instantiates a new stsPolicy and sets the default values.
+     * Instantiates a new StsPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();

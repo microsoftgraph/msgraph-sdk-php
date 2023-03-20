@@ -67,7 +67,7 @@ class ChannelsRequestBuilder
     }
 
     /**
-     * Get channels from teamwork
+     * The channels that are either shared with this deleted team or created in this deleted team.
      * @param ChannelsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -104,7 +104,7 @@ class ChannelsRequestBuilder
     }
 
     /**
-     * Get channels from teamwork
+     * The channels that are either shared with this deleted team or created in this deleted team.
      * @param ChannelsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

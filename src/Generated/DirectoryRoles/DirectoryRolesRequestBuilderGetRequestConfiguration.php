@@ -25,6 +25,18 @@ class DirectoryRolesRequestBuilderGetRequestConfiguration
     public ?DirectoryRolesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
+     * Instantiates a new directoryRolesRequestBuilderGetRequestConfiguration and sets the default values.
+     * @param array<string, array<string>|string>|null $headers Request headers
+     * @param array<RequestOption>|null $options Request options
+     * @param DirectoryRolesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public function __construct(?array $headers = null, ?array $options = null, ?DirectoryRolesRequestBuilderGetQueryParameters $queryParameters = null) {
+        $this->headers = $headers;
+        $this->options = $options;
+        $this->queryParameters = $queryParameters;
+    }
+
+    /**
      * Instantiates a new directoryRolesRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
@@ -35,20 +47,8 @@ class DirectoryRolesRequestBuilderGetRequestConfiguration
      * @param int|null $skip Skip the first n items
      * @return DirectoryRolesRequestBuilderGetQueryParameters
     */
-    public static function addQueryParameters(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null): DirectoryRolesRequestBuilderGetQueryParameters {
+    public static function createQueryParameters(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null): DirectoryRolesRequestBuilderGetQueryParameters {
         return new DirectoryRolesRequestBuilderGetQueryParameters($count, $expand, $filter, $orderby, $search, $select, $skip);
-    }
-
-    /**
-     * Instantiates a new directoryRolesRequestBuilderGetRequestConfiguration and sets the default values.
-     * @param array<string, array<string>|string>|null $headers Request headers
-     * @param array<RequestOption>|null $options Request options
-     * @param DirectoryRolesRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
-    */
-    public function __construct(?array $headers = null, ?array $options = null, ?DirectoryRolesRequestBuilderGetQueryParameters $queryParameters = null) {
-        $this->headers = $headers;
-        $this->options = $options;
-        $this->queryParameters = $queryParameters;
     }
 
 }

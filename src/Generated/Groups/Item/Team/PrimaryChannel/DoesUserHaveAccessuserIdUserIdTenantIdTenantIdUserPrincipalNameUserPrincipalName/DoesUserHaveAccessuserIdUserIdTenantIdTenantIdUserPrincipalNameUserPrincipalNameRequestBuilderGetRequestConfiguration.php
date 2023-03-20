@@ -25,17 +25,6 @@ class DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincip
     public ?DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new doesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilderGetQueryParameters.
-     * @param string|null $tenantId Usage: tenantId='@tenantId'
-     * @param string|null $userId Usage: userId='@userId'
-     * @param string|null $userPrincipalName Usage: userPrincipalName='@userPrincipalName'
-     * @return DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?string $tenantId = null, ?string $userId = null, ?string $userPrincipalName = null): DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilderGetQueryParameters {
-        return new DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilderGetQueryParameters($tenantId, $userId, $userPrincipalName);
-    }
-
-    /**
      * Instantiates a new doesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -45,6 +34,17 @@ class DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincip
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new doesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilderGetQueryParameters.
+     * @param string|null $tenantId Usage: tenantId='@tenantId'
+     * @param string|null $userId Usage: userId='@userId'
+     * @param string|null $userPrincipalName Usage: userPrincipalName='@userPrincipalName'
+     * @return DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?string $tenantId = null, ?string $userId = null, ?string $userPrincipalName = null): DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilderGetQueryParameters {
+        return new DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincipalNameRequestBuilderGetQueryParameters($tenantId, $userId, $userPrincipalName);
     }
 
 }

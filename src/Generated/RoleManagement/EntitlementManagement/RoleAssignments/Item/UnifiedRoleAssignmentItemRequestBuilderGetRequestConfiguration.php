@@ -25,16 +25,6 @@ class UnifiedRoleAssignmentItemRequestBuilderGetRequestConfiguration
     public ?UnifiedRoleAssignmentItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new UnifiedRoleAssignmentItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return UnifiedRoleAssignmentItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): UnifiedRoleAssignmentItemRequestBuilderGetQueryParameters {
-        return new UnifiedRoleAssignmentItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new UnifiedRoleAssignmentItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class UnifiedRoleAssignmentItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new UnifiedRoleAssignmentItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return UnifiedRoleAssignmentItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): UnifiedRoleAssignmentItemRequestBuilderGetQueryParameters {
+        return new UnifiedRoleAssignmentItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

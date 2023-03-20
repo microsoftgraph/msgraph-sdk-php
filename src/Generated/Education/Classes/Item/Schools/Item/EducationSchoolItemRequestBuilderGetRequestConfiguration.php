@@ -25,16 +25,6 @@ class EducationSchoolItemRequestBuilderGetRequestConfiguration
     public ?EducationSchoolItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new EducationSchoolItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return EducationSchoolItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): EducationSchoolItemRequestBuilderGetQueryParameters {
-        return new EducationSchoolItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new EducationSchoolItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class EducationSchoolItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new EducationSchoolItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return EducationSchoolItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): EducationSchoolItemRequestBuilderGetQueryParameters {
+        return new EducationSchoolItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

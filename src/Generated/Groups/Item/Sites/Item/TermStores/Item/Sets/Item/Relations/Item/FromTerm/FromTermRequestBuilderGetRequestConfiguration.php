@@ -25,16 +25,6 @@ class FromTermRequestBuilderGetRequestConfiguration
     public ?FromTermRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new fromTermRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return FromTermRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): FromTermRequestBuilderGetQueryParameters {
-        return new FromTermRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new fromTermRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class FromTermRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new fromTermRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return FromTermRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): FromTermRequestBuilderGetQueryParameters {
+        return new FromTermRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

@@ -25,16 +25,6 @@ class ScheduleRequestBuilderGetRequestConfiguration
     public ?ScheduleRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new scheduleRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return ScheduleRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): ScheduleRequestBuilderGetQueryParameters {
-        return new ScheduleRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new scheduleRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class ScheduleRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new scheduleRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return ScheduleRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): ScheduleRequestBuilderGetQueryParameters {
+        return new ScheduleRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

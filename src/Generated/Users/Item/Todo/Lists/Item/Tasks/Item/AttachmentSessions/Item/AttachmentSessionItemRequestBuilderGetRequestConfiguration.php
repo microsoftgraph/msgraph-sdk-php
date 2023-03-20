@@ -25,15 +25,6 @@ class AttachmentSessionItemRequestBuilderGetRequestConfiguration
     public ?AttachmentSessionItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new AttachmentSessionItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $select Select properties to be returned
-     * @return AttachmentSessionItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $select = null): AttachmentSessionItemRequestBuilderGetQueryParameters {
-        return new AttachmentSessionItemRequestBuilderGetQueryParameters($select);
-    }
-
-    /**
      * Instantiates a new AttachmentSessionItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -43,6 +34,15 @@ class AttachmentSessionItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new AttachmentSessionItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $select Select properties to be returned
+     * @return AttachmentSessionItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $select = null): AttachmentSessionItemRequestBuilderGetQueryParameters {
+        return new AttachmentSessionItemRequestBuilderGetQueryParameters($select);
     }
 
 }

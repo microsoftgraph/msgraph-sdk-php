@@ -71,7 +71,7 @@ class RowsRequestBuilder
      * Retrieve a list of tablerow objects.
      * @param RowsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/tablerow-list?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/table-list-rows?view=graph-rest-1.0 Find more info here
     */
     public function get(?RowsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

@@ -25,16 +25,6 @@ class DomainDnsRecordItemRequestBuilderGetRequestConfiguration
     public ?DomainDnsRecordItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new DomainDnsRecordItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return DomainDnsRecordItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): DomainDnsRecordItemRequestBuilderGetQueryParameters {
-        return new DomainDnsRecordItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new DomainDnsRecordItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class DomainDnsRecordItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new DomainDnsRecordItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return DomainDnsRecordItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): DomainDnsRecordItemRequestBuilderGetQueryParameters {
+        return new DomainDnsRecordItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

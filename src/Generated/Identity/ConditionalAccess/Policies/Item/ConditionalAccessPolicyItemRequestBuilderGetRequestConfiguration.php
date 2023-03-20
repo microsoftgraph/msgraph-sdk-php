@@ -25,16 +25,6 @@ class ConditionalAccessPolicyItemRequestBuilderGetRequestConfiguration
     public ?ConditionalAccessPolicyItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new ConditionalAccessPolicyItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return ConditionalAccessPolicyItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): ConditionalAccessPolicyItemRequestBuilderGetQueryParameters {
-        return new ConditionalAccessPolicyItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new ConditionalAccessPolicyItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class ConditionalAccessPolicyItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new ConditionalAccessPolicyItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return ConditionalAccessPolicyItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): ConditionalAccessPolicyItemRequestBuilderGetQueryParameters {
+        return new ConditionalAccessPolicyItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

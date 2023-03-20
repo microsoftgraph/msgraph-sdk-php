@@ -25,16 +25,6 @@ class DeviceManagementTroubleshootingEventItemRequestBuilderGetRequestConfigurat
     public ?DeviceManagementTroubleshootingEventItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new DeviceManagementTroubleshootingEventItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return DeviceManagementTroubleshootingEventItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): DeviceManagementTroubleshootingEventItemRequestBuilderGetQueryParameters {
-        return new DeviceManagementTroubleshootingEventItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new DeviceManagementTroubleshootingEventItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class DeviceManagementTroubleshootingEventItemRequestBuilderGetRequestConfigurat
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new DeviceManagementTroubleshootingEventItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return DeviceManagementTroubleshootingEventItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): DeviceManagementTroubleshootingEventItemRequestBuilderGetQueryParameters {
+        return new DeviceManagementTroubleshootingEventItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

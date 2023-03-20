@@ -25,16 +25,6 @@ class OnenoteOperationItemRequestBuilderGetRequestConfiguration
     public ?OnenoteOperationItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new OnenoteOperationItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return OnenoteOperationItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): OnenoteOperationItemRequestBuilderGetQueryParameters {
-        return new OnenoteOperationItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new OnenoteOperationItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class OnenoteOperationItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new OnenoteOperationItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return OnenoteOperationItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): OnenoteOperationItemRequestBuilderGetQueryParameters {
+        return new OnenoteOperationItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

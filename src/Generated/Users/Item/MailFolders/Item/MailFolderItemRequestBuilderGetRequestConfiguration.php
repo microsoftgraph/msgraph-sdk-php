@@ -25,15 +25,6 @@ class MailFolderItemRequestBuilderGetRequestConfiguration
     public ?MailFolderItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new MailFolderItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $select Select properties to be returned
-     * @return MailFolderItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $select = null): MailFolderItemRequestBuilderGetQueryParameters {
-        return new MailFolderItemRequestBuilderGetQueryParameters($select);
-    }
-
-    /**
      * Instantiates a new MailFolderItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -43,6 +34,15 @@ class MailFolderItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new MailFolderItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $select Select properties to be returned
+     * @return MailFolderItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $select = null): MailFolderItemRequestBuilderGetQueryParameters {
+        return new MailFolderItemRequestBuilderGetQueryParameters($select);
     }
 
 }

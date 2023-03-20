@@ -25,16 +25,6 @@ class BitlockerRequestBuilderGetRequestConfiguration
     public ?BitlockerRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new bitlockerRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return BitlockerRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): BitlockerRequestBuilderGetQueryParameters {
-        return new BitlockerRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new bitlockerRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class BitlockerRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new bitlockerRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return BitlockerRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): BitlockerRequestBuilderGetQueryParameters {
+        return new BitlockerRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

@@ -25,15 +25,6 @@ class SubscribedSkuItemRequestBuilderGetRequestConfiguration
     public ?SubscribedSkuItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new SubscribedSkuItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $select Select properties to be returned
-     * @return SubscribedSkuItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $select = null): SubscribedSkuItemRequestBuilderGetQueryParameters {
-        return new SubscribedSkuItemRequestBuilderGetQueryParameters($select);
-    }
-
-    /**
      * Instantiates a new SubscribedSkuItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -43,6 +34,15 @@ class SubscribedSkuItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new SubscribedSkuItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $select Select properties to be returned
+     * @return SubscribedSkuItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $select = null): SubscribedSkuItemRequestBuilderGetQueryParameters {
+        return new SubscribedSkuItemRequestBuilderGetQueryParameters($select);
     }
 
 }

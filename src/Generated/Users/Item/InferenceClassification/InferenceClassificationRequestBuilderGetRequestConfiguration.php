@@ -25,15 +25,6 @@ class InferenceClassificationRequestBuilderGetRequestConfiguration
     public ?InferenceClassificationRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new inferenceClassificationRequestBuilderGetQueryParameters.
-     * @param array<string>|null $select Select properties to be returned
-     * @return InferenceClassificationRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $select = null): InferenceClassificationRequestBuilderGetQueryParameters {
-        return new InferenceClassificationRequestBuilderGetQueryParameters($select);
-    }
-
-    /**
      * Instantiates a new inferenceClassificationRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -43,6 +34,15 @@ class InferenceClassificationRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new inferenceClassificationRequestBuilderGetQueryParameters.
+     * @param array<string>|null $select Select properties to be returned
+     * @return InferenceClassificationRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $select = null): InferenceClassificationRequestBuilderGetQueryParameters {
+        return new InferenceClassificationRequestBuilderGetQueryParameters($select);
     }
 
 }

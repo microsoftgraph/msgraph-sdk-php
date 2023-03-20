@@ -25,16 +25,6 @@ class DirectoryRoleItemRequestBuilderGetRequestConfiguration
     public ?DirectoryRoleItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new DirectoryRoleItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return DirectoryRoleItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): DirectoryRoleItemRequestBuilderGetQueryParameters {
-        return new DirectoryRoleItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new DirectoryRoleItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class DirectoryRoleItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new DirectoryRoleItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return DirectoryRoleItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): DirectoryRoleItemRequestBuilderGetQueryParameters {
+        return new DirectoryRoleItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

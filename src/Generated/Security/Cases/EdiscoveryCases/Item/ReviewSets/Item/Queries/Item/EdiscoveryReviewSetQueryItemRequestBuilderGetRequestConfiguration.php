@@ -25,16 +25,6 @@ class EdiscoveryReviewSetQueryItemRequestBuilderGetRequestConfiguration
     public ?EdiscoveryReviewSetQueryItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new EdiscoveryReviewSetQueryItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return EdiscoveryReviewSetQueryItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): EdiscoveryReviewSetQueryItemRequestBuilderGetQueryParameters {
-        return new EdiscoveryReviewSetQueryItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new EdiscoveryReviewSetQueryItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class EdiscoveryReviewSetQueryItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new EdiscoveryReviewSetQueryItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return EdiscoveryReviewSetQueryItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): EdiscoveryReviewSetQueryItemRequestBuilderGetQueryParameters {
+        return new EdiscoveryReviewSetQueryItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

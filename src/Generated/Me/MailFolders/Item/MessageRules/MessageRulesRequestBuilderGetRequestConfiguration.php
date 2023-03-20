@@ -25,20 +25,6 @@ class MessageRulesRequestBuilderGetRequestConfiguration
     public ?MessageRulesRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new messageRulesRequestBuilderGetQueryParameters.
-     * @param bool|null $count Include count of items
-     * @param string|null $filter Filter items by property values
-     * @param array<string>|null $orderby Order items by property values
-     * @param array<string>|null $select Select properties to be returned
-     * @param int|null $skip Skip the first n items
-     * @param int|null $top Show only the first n items
-     * @return MessageRulesRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?bool $count = null, ?string $filter = null, ?array $orderby = null, ?array $select = null, ?int $skip = null, ?int $top = null): MessageRulesRequestBuilderGetQueryParameters {
-        return new MessageRulesRequestBuilderGetQueryParameters($count, $filter, $orderby, $select, $skip, $top);
-    }
-
-    /**
      * Instantiates a new messageRulesRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -48,6 +34,20 @@ class MessageRulesRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new messageRulesRequestBuilderGetQueryParameters.
+     * @param bool|null $count Include count of items
+     * @param string|null $filter Filter items by property values
+     * @param array<string>|null $orderby Order items by property values
+     * @param array<string>|null $select Select properties to be returned
+     * @param int|null $skip Skip the first n items
+     * @param int|null $top Show only the first n items
+     * @return MessageRulesRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?bool $count = null, ?string $filter = null, ?array $orderby = null, ?array $select = null, ?int $skip = null, ?int $top = null): MessageRulesRequestBuilderGetQueryParameters {
+        return new MessageRulesRequestBuilderGetQueryParameters($count, $filter, $orderby, $select, $skip, $top);
     }
 
 }

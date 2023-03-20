@@ -25,15 +25,6 @@ class ShiftItemRequestBuilderGetRequestConfiguration
     public ?ShiftItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new ShiftItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $select Select properties to be returned
-     * @return ShiftItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $select = null): ShiftItemRequestBuilderGetQueryParameters {
-        return new ShiftItemRequestBuilderGetQueryParameters($select);
-    }
-
-    /**
      * Instantiates a new ShiftItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -43,6 +34,15 @@ class ShiftItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new ShiftItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $select Select properties to be returned
+     * @return ShiftItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $select = null): ShiftItemRequestBuilderGetQueryParameters {
+        return new ShiftItemRequestBuilderGetQueryParameters($select);
     }
 
 }

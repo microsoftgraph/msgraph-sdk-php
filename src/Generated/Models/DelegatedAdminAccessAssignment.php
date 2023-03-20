@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DelegatedAdminAccessAssignment extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new DelegatedAdminAccessAssignment and sets the default values.
+     * Instantiates a new delegatedAdminAccessAssignment and sets the default values.
     */
     public function __construct() {
         parent::__construct();

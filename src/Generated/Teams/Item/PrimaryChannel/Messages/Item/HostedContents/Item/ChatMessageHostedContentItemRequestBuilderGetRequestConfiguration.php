@@ -25,16 +25,6 @@ class ChatMessageHostedContentItemRequestBuilderGetRequestConfiguration
     public ?ChatMessageHostedContentItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new ChatMessageHostedContentItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return ChatMessageHostedContentItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): ChatMessageHostedContentItemRequestBuilderGetQueryParameters {
-        return new ChatMessageHostedContentItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new ChatMessageHostedContentItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class ChatMessageHostedContentItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new ChatMessageHostedContentItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return ChatMessageHostedContentItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): ChatMessageHostedContentItemRequestBuilderGetQueryParameters {
+        return new ChatMessageHostedContentItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

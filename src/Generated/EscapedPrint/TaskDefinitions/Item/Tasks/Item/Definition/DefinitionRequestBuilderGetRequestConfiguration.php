@@ -25,16 +25,6 @@ class DefinitionRequestBuilderGetRequestConfiguration
     public ?DefinitionRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new definitionRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return DefinitionRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): DefinitionRequestBuilderGetQueryParameters {
-        return new DefinitionRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new definitionRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class DefinitionRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new definitionRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return DefinitionRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): DefinitionRequestBuilderGetQueryParameters {
+        return new DefinitionRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

@@ -25,16 +25,6 @@ class MobileAppItemRequestBuilderGetRequestConfiguration
     public ?MobileAppItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new MobileAppItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return MobileAppItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): MobileAppItemRequestBuilderGetQueryParameters {
-        return new MobileAppItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new MobileAppItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class MobileAppItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new MobileAppItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return MobileAppItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): MobileAppItemRequestBuilderGetQueryParameters {
+        return new MobileAppItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

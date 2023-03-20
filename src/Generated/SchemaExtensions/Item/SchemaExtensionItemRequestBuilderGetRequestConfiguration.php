@@ -25,16 +25,6 @@ class SchemaExtensionItemRequestBuilderGetRequestConfiguration
     public ?SchemaExtensionItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new SchemaExtensionItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return SchemaExtensionItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): SchemaExtensionItemRequestBuilderGetQueryParameters {
-        return new SchemaExtensionItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new SchemaExtensionItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class SchemaExtensionItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new SchemaExtensionItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return SchemaExtensionItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): SchemaExtensionItemRequestBuilderGetQueryParameters {
+        return new SchemaExtensionItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

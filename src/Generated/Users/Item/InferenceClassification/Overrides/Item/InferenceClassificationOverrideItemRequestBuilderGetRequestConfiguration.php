@@ -25,15 +25,6 @@ class InferenceClassificationOverrideItemRequestBuilderGetRequestConfiguration
     public ?InferenceClassificationOverrideItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new InferenceClassificationOverrideItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $select Select properties to be returned
-     * @return InferenceClassificationOverrideItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $select = null): InferenceClassificationOverrideItemRequestBuilderGetQueryParameters {
-        return new InferenceClassificationOverrideItemRequestBuilderGetQueryParameters($select);
-    }
-
-    /**
      * Instantiates a new InferenceClassificationOverrideItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -43,6 +34,15 @@ class InferenceClassificationOverrideItemRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new InferenceClassificationOverrideItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $select Select properties to be returned
+     * @return InferenceClassificationOverrideItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $select = null): InferenceClassificationOverrideItemRequestBuilderGetQueryParameters {
+        return new InferenceClassificationOverrideItemRequestBuilderGetQueryParameters($select);
     }
 
 }

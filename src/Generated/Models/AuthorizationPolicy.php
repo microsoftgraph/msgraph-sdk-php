@@ -58,6 +58,14 @@ class AuthorizationPolicy extends PolicyBase implements Parsable
     }
 
     /**
+     * Gets the allowUserConsentForRiskyApps property value. The allowUserConsentForRiskyApps property
+     * @return bool|null
+    */
+    public function getAllowUserConsentForRiskyApps(): ?bool {
+        return $this->getBackingStore()->get('allowUserConsentForRiskyApps');
+    }
+
+    /**
      * Gets the blockMsolPowerShell property value. To disable the use of MSOL PowerShell set this property to true. This will also disable user-based access to the legacy service endpoint used by MSOL PowerShell. This does not affect Azure AD Connect or Microsoft Graph.
      * @return bool|null
     */
@@ -84,6 +92,7 @@ class AuthorizationPolicy extends PolicyBase implements Parsable
             'allowedToUseSSPR' => fn(ParseNode $n) => $o->setAllowedToUseSSPR($n->getBooleanValue()),
             'allowEmailVerifiedUsersToJoinOrganization' => fn(ParseNode $n) => $o->setAllowEmailVerifiedUsersToJoinOrganization($n->getBooleanValue()),
             'allowInvitesFrom' => fn(ParseNode $n) => $o->setAllowInvitesFrom($n->getEnumValue(AllowInvitesFrom::class)),
+            'allowUserConsentForRiskyApps' => fn(ParseNode $n) => $o->setAllowUserConsentForRiskyApps($n->getBooleanValue()),
             'blockMsolPowerShell' => fn(ParseNode $n) => $o->setBlockMsolPowerShell($n->getBooleanValue()),
             'defaultUserRolePermissions' => fn(ParseNode $n) => $o->setDefaultUserRolePermissions($n->getObjectValue([DefaultUserRolePermissions::class, 'createFromDiscriminatorValue'])),
             'guestUserRoleId' => fn(ParseNode $n) => $o->setGuestUserRoleId($n->getStringValue()),
@@ -108,6 +117,7 @@ class AuthorizationPolicy extends PolicyBase implements Parsable
         $writer->writeBooleanValue('allowedToUseSSPR', $this->getAllowedToUseSSPR());
         $writer->writeBooleanValue('allowEmailVerifiedUsersToJoinOrganization', $this->getAllowEmailVerifiedUsersToJoinOrganization());
         $writer->writeEnumValue('allowInvitesFrom', $this->getAllowInvitesFrom());
+        $writer->writeBooleanValue('allowUserConsentForRiskyApps', $this->getAllowUserConsentForRiskyApps());
         $writer->writeBooleanValue('blockMsolPowerShell', $this->getBlockMsolPowerShell());
         $writer->writeObjectValue('defaultUserRolePermissions', $this->getDefaultUserRolePermissions());
         $writer->writeStringValue('guestUserRoleId', $this->getGuestUserRoleId());
@@ -143,6 +153,14 @@ class AuthorizationPolicy extends PolicyBase implements Parsable
     */
     public function setAllowInvitesFrom(?AllowInvitesFrom $value): void {
         $this->getBackingStore()->set('allowInvitesFrom', $value);
+    }
+
+    /**
+     * Sets the allowUserConsentForRiskyApps property value. The allowUserConsentForRiskyApps property
+     * @param bool|null $value Value to set for the allowUserConsentForRiskyApps property.
+    */
+    public function setAllowUserConsentForRiskyApps(?bool $value): void {
+        $this->getBackingStore()->set('allowUserConsentForRiskyApps', $value);
     }
 
     /**

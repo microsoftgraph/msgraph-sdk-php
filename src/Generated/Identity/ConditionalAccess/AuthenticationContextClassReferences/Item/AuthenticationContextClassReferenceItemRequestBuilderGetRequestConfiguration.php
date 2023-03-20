@@ -25,16 +25,6 @@ class AuthenticationContextClassReferenceItemRequestBuilderGetRequestConfigurati
     public ?AuthenticationContextClassReferenceItemRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new AuthenticationContextClassReferenceItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return AuthenticationContextClassReferenceItemRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): AuthenticationContextClassReferenceItemRequestBuilderGetQueryParameters {
-        return new AuthenticationContextClassReferenceItemRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new AuthenticationContextClassReferenceItemRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class AuthenticationContextClassReferenceItemRequestBuilderGetRequestConfigurati
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new AuthenticationContextClassReferenceItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return AuthenticationContextClassReferenceItemRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): AuthenticationContextClassReferenceItemRequestBuilderGetQueryParameters {
+        return new AuthenticationContextClassReferenceItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

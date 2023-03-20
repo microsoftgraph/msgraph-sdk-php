@@ -25,15 +25,6 @@ class RefRequestBuilderDeleteRequestConfiguration
     public ?RefRequestBuilderDeleteQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new RefRequestBuilderDeleteQueryParameters.
-     * @param string|null $id Delete Uri
-     * @return RefRequestBuilderDeleteQueryParameters
-    */
-    public static function addQueryParameters(?string $id = null): RefRequestBuilderDeleteQueryParameters {
-        return new RefRequestBuilderDeleteQueryParameters($id);
-    }
-
-    /**
      * Instantiates a new RefRequestBuilderDeleteRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -43,6 +34,15 @@ class RefRequestBuilderDeleteRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new RefRequestBuilderDeleteQueryParameters.
+     * @param string|null $id Delete Uri
+     * @return RefRequestBuilderDeleteQueryParameters
+    */
+    public static function createQueryParameters(?string $id = null): RefRequestBuilderDeleteQueryParameters {
+        return new RefRequestBuilderDeleteQueryParameters($id);
     }
 
 }

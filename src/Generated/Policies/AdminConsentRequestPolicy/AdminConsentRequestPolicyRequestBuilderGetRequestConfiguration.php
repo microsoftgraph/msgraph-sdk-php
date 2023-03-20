@@ -25,16 +25,6 @@ class AdminConsentRequestPolicyRequestBuilderGetRequestConfiguration
     public ?AdminConsentRequestPolicyRequestBuilderGetQueryParameters $queryParameters = null;
     
     /**
-     * Instantiates a new adminConsentRequestPolicyRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
-     * @param array<string>|null $select Select properties to be returned
-     * @return AdminConsentRequestPolicyRequestBuilderGetQueryParameters
-    */
-    public static function addQueryParameters(?array $expand = null, ?array $select = null): AdminConsentRequestPolicyRequestBuilderGetQueryParameters {
-        return new AdminConsentRequestPolicyRequestBuilderGetQueryParameters($expand, $select);
-    }
-
-    /**
      * Instantiates a new adminConsentRequestPolicyRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
@@ -44,6 +34,16 @@ class AdminConsentRequestPolicyRequestBuilderGetRequestConfiguration
         $this->headers = $headers;
         $this->options = $options;
         $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new adminConsentRequestPolicyRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return AdminConsentRequestPolicyRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): AdminConsentRequestPolicyRequestBuilderGetQueryParameters {
+        return new AdminConsentRequestPolicyRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }
