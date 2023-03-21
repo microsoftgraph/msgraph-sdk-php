@@ -545,4 +545,34 @@ class AccessPackageAssignmentPolicy extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the customExtensionStageSettings
+    * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
+     *
+     * @return array|null The customExtensionStageSettings
+     */
+    public function getCustomExtensionStageSettings()
+    {
+        if (array_key_exists("customExtensionStageSettings", $this->_propDict)) {
+           return $this->_propDict["customExtensionStageSettings"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customExtensionStageSettings
+    * The collection of stages when to execute one or more custom access package workflow extensions. Supports $expand.
+    *
+    * @param CustomExtensionStageSetting[] $val The customExtensionStageSettings
+    *
+    * @return AccessPackageAssignmentPolicy
+    */
+    public function setCustomExtensionStageSettings($val)
+    {
+        $this->_propDict["customExtensionStageSettings"] = $val;
+        return $this;
+    }
+
 }
