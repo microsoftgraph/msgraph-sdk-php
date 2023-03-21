@@ -26,7 +26,7 @@ class TeamworkTag extends Entity
 {
     /**
     * Gets the description
-    * The description of the tag as it will appear to the user in Microsoft Teams.
+    * The description of the tag as it will appear to the user in Microsoft Teams. A teamworkTag can't have more than 200 teamworkTagMembers.
     *
     * @return string|null The description
     */
@@ -41,7 +41,7 @@ class TeamworkTag extends Entity
 
     /**
     * Sets the description
-    * The description of the tag as it will appear to the user in Microsoft Teams.
+    * The description of the tag as it will appear to the user in Microsoft Teams. A teamworkTag can't have more than 200 teamworkTagMembers.
     *
     * @param string $val The description
     *
