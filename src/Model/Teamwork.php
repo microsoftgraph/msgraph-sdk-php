@@ -55,6 +55,7 @@ class Teamwork extends Entity
 
      /**
      * Gets the deletedTeams
+    * The deleted team.
      *
      * @return array|null The deletedTeams
      */
@@ -69,6 +70,7 @@ class Teamwork extends Entity
 
     /**
     * Sets the deletedTeams
+    * The deleted team.
     *
     * @param DeletedTeam[] $val The deletedTeams
     *

@@ -60,7 +60,7 @@ class DeviceManagementConfigurationSetting extends Entity
 
      /**
      * Gets the settingDefinitions
-    * List of related Setting Definitions. This property is read-only.
+    * List of related Setting Definitions
      *
      * @return array|null The settingDefinitions
      */
@@ -75,7 +75,7 @@ class DeviceManagementConfigurationSetting extends Entity
 
     /**
     * Sets the settingDefinitions
-    * List of related Setting Definitions. This property is read-only.
+    * List of related Setting Definitions
     *
     * @param DeviceManagementConfigurationSettingDefinition[] $val The settingDefinitions
     *

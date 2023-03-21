@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* DeletedTeam File
+* FileValidateOperation File
 * PHP version 7
 *
 * @category  Library
@@ -11,10 +11,10 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\IndustryData\Model;
 
 /**
-* DeletedTeam class
+* FileValidateOperation class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,35 +22,34 @@ namespace Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class DeletedTeam extends Entity
+class FileValidateOperation extends ValidateOperation
 {
-
-     /**
-     * Gets the channels
-    * The channels that are either shared with this deleted team or created in this deleted team.
-     *
-     * @return array|null The channels
-     */
-    public function getChannels()
+    /**
+    * Gets the validatedFiles
+    * Set of files validated by the validate operation.
+    *
+    * @return array|null The validatedFiles
+    */
+    public function getValidatedFiles()
     {
-        if (array_key_exists("channels", $this->_propDict)) {
-           return $this->_propDict["channels"];
+        if (array_key_exists("validatedFiles", $this->_propDict)) {
+            return $this->_propDict["validatedFiles"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the channels
-    * The channels that are either shared with this deleted team or created in this deleted team.
+    * Sets the validatedFiles
+    * Set of files validated by the validate operation.
     *
-    * @param Channel[] $val The channels
+    * @param string[] $val The validatedFiles
     *
-    * @return DeletedTeam
+    * @return FileValidateOperation
     */
-    public function setChannels($val)
+    public function setValidatedFiles($val)
     {
-        $this->_propDict["channels"] = $val;
+        $this->_propDict["validatedFiles"] = $val;
         return $this;
     }
 
