@@ -122,6 +122,36 @@ class AccessPackageAssignmentRequest extends Entity
 
 
      /**
+     * Gets the customExtensionCalloutInstances
+    * Information about all the custom extension calls that were made during the access package assignment request workflow.
+     *
+     * @return array|null The customExtensionCalloutInstances
+     */
+    public function getCustomExtensionCalloutInstances()
+    {
+        if (array_key_exists("customExtensionCalloutInstances", $this->_propDict)) {
+           return $this->_propDict["customExtensionCalloutInstances"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customExtensionCalloutInstances
+    * Information about all the custom extension calls that were made during the access package assignment request workflow.
+    *
+    * @param CustomExtensionCalloutInstance[] $val The customExtensionCalloutInstances
+    *
+    * @return AccessPackageAssignmentRequest
+    */
+    public function setCustomExtensionCalloutInstances($val)
+    {
+        $this->_propDict["customExtensionCalloutInstances"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the customExtensionHandlerInstances
     * A collection of custom workflow extension instances being run on an assignment request. Read-only.
      *
