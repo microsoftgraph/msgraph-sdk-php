@@ -40,6 +40,7 @@ class CalendarViewRequestBuilderGetRequestConfiguration
      * Instantiates a new calendarViewRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
      * @param string|null $endDateTime The end date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T20:00:00-08:00
+     * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values
      * @param array<string>|null $select Select properties to be returned
@@ -48,8 +49,8 @@ class CalendarViewRequestBuilderGetRequestConfiguration
      * @param int|null $top Show only the first n items
      * @return CalendarViewRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?bool $count = null, ?string $endDateTime = null, ?string $filter = null, ?array $orderby = null, ?array $select = null, ?int $skip = null, ?string $startDateTime = null, ?int $top = null): CalendarViewRequestBuilderGetQueryParameters {
-        return new CalendarViewRequestBuilderGetQueryParameters($count, $endDateTime, $filter, $orderby, $select, $skip, $startDateTime, $top);
+    public static function createQueryParameters(?bool $count = null, ?string $endDateTime = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?array $select = null, ?int $skip = null, ?string $startDateTime = null, ?int $top = null): CalendarViewRequestBuilderGetQueryParameters {
+        return new CalendarViewRequestBuilderGetQueryParameters($count, $endDateTime, $expand, $filter, $orderby, $select, $skip, $startDateTime, $top);
     }
 
 }

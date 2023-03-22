@@ -718,7 +718,7 @@ class BaseGraphClient
         if (empty($this->requestAdapter->getBaseUrl())) {
             $this->requestAdapter->setBaseUrl('https://graph.microsoft.com/v1.0');
         }
-        $this->pathParameters['baseUrl'] = $this->requestAdapter->getBaseUrl();
+        $this->pathParameters['baseurl'] = $this->requestAdapter->getBaseUrl();
         $this->requestAdapter->enableBackingStore($backingStore ?? BackingStoreFactorySingleton::getInstance());
     }
 

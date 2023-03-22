@@ -485,6 +485,7 @@ class User extends DirectoryObject implements Parsable
             'securityIdentifier' => fn(ParseNode $n) => $o->setSecurityIdentifier($n->getStringValue()),
             'settings' => fn(ParseNode $n) => $o->setSettings($n->getObjectValue([UserSettings::class, 'createFromDiscriminatorValue'])),
             'showInAddressList' => fn(ParseNode $n) => $o->setShowInAddressList($n->getBooleanValue()),
+            'signInActivity' => fn(ParseNode $n) => $o->setSignInActivity($n->getObjectValue([SignInActivity::class, 'createFromDiscriminatorValue'])),
             'signInSessionsValidFromDateTime' => fn(ParseNode $n) => $o->setSignInSessionsValidFromDateTime($n->getDateTimeValue()),
             'skills' => fn(ParseNode $n) => $o->setSkills($n->getCollectionOfPrimitiveValues()),
             'state' => fn(ParseNode $n) => $o->setState($n->getStringValue()),
@@ -1020,6 +1021,14 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the signInActivity property value. The signInActivity property
+     * @return SignInActivity|null
+    */
+    public function getSignInActivity(): ?SignInActivity {
+        return $this->getBackingStore()->get('signInActivity');
+    }
+
+    /**
      * Gets the signInSessionsValidFromDateTime property value. Any refresh tokens or sessions tokens (session cookies) issued before this time are invalid, and applications will get an error when using an invalid refresh or sessions token to acquire a delegated access token (to access APIs such as Microsoft Graph).  If this happens, the application will need to acquire a new refresh token by making a request to the authorize endpoint. Read-only. Use revokeSignInSessions to reset. Returned only on $select.
      * @return DateTime|null
     */
@@ -1221,6 +1230,7 @@ class User extends DirectoryObject implements Parsable
         $writer->writeStringValue('securityIdentifier', $this->getSecurityIdentifier());
         $writer->writeObjectValue('settings', $this->getSettings());
         $writer->writeBooleanValue('showInAddressList', $this->getShowInAddressList());
+        $writer->writeObjectValue('signInActivity', $this->getSignInActivity());
         $writer->writeDateTimeValue('signInSessionsValidFromDateTime', $this->getSignInSessionsValidFromDateTime());
         $writer->writeCollectionOfPrimitiveValues('skills', $this->getSkills());
         $writer->writeStringValue('state', $this->getState());
@@ -2096,6 +2106,14 @@ class User extends DirectoryObject implements Parsable
     */
     public function setShowInAddressList(?bool $value): void {
         $this->getBackingStore()->set('showInAddressList', $value);
+    }
+
+    /**
+     * Sets the signInActivity property value. The signInActivity property
+     * @param SignInActivity|null $value Value to set for the signInActivity property.
+    */
+    public function setSignInActivity(?SignInActivity $value): void {
+        $this->getBackingStore()->set('signInActivity', $value);
     }
 
     /**

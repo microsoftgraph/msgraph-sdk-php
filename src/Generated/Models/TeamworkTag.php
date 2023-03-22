@@ -25,7 +25,7 @@ class TeamworkTag extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. The description of the tag as it will appear to the user in Microsoft Teams.
+     * Gets the description property value. The description of the tag as it will appear to the user in Microsoft Teams. A teamworkTag can't have more than 200 teamworkTagMembers.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -103,7 +103,7 @@ class TeamworkTag extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. The description of the tag as it will appear to the user in Microsoft Teams.
+     * Sets the description property value. The description of the tag as it will appear to the user in Microsoft Teams. A teamworkTag can't have more than 200 teamworkTagMembers.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {

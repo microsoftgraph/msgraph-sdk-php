@@ -38,11 +38,12 @@ class MessageItemRequestBuilderGetRequestConfiguration
 
     /**
      * Instantiates a new MessageItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return MessageItemRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?array $select = null): MessageItemRequestBuilderGetQueryParameters {
-        return new MessageItemRequestBuilderGetQueryParameters($select);
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): MessageItemRequestBuilderGetQueryParameters {
+        return new MessageItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }
