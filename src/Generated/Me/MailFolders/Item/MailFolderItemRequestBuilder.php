@@ -111,7 +111,7 @@ class MailFolderItemRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/me/mailFolders/{mailFolder%2Did}{?%24select}';
+        $this->urlTemplate = '{+baseurl}/me/mailFolders/{mailFolder%2Did}{?%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;

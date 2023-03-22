@@ -39,6 +39,7 @@ class EventsRequestBuilderGetRequestConfiguration
     /**
      * Instantiates a new eventsRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
+     * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values
      * @param array<string>|null $select Select properties to be returned
@@ -46,8 +47,8 @@ class EventsRequestBuilderGetRequestConfiguration
      * @param int|null $top Show only the first n items
      * @return EventsRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?bool $count = null, ?string $filter = null, ?array $orderby = null, ?array $select = null, ?int $skip = null, ?int $top = null): EventsRequestBuilderGetQueryParameters {
-        return new EventsRequestBuilderGetQueryParameters($count, $filter, $orderby, $select, $skip, $top);
+    public static function createQueryParameters(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?array $select = null, ?int $skip = null, ?int $top = null): EventsRequestBuilderGetQueryParameters {
+        return new EventsRequestBuilderGetQueryParameters($count, $expand, $filter, $orderby, $select, $skip, $top);
     }
 
 }
