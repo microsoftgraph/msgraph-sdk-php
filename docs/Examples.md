@@ -97,21 +97,36 @@ foreach ($messages->getValue() as $message) {
 }
 ```
 
-For now, you can page through the collection using the @odata.nextLink value. We intend to introduce a Page Iterator component in the future releases:
+## Paging through a collection
+
+Using our `PageIterator` you can page through a collection applying a callback to be executed against each item in the collection.
+The Page Iterator automatically requests the next page until the last.
+
+It is initialised with an initial response to a collection request and the request adapter to be used for subsequent page requests.
+
+We call `iterate()` while passing a callback to be executed. If the callback returns `false` iteration pauses at the current item.
+
+Iteration can be resumed by calling `iterate()` again.
 
 ```php
 
-while ($messages->getOdatanextLink()) {
-    $requestInfo = $graphServiceClient->usersById(USER_ID)->messages()->createGetRequestInformation($requestConfig);
-    $requestInfo->setUri($messages->getOdatanextLink());
-    $messages = $requestAdapter->sendAsync($requestInfo, [MessageCollectionResponse::class, 'createFromDiscriminatorValue'])->wait();
+$messages = $graphServiceClient->usersById(USER_ID)->messages()->get()->wait();
 
-    foreach ($messages->getValue() as $message) {
-        echo "Subject: {$message->getSubject()}\n";
-    }
+$pageIterator = new PageIterator($messages, $requestAdapter, [MessageCollectionResponse::class, 'createFromDiscriminatorValue']);
+
+$callback = function (Message $message) {
+    echo "Message ID: {$message->getId()}";
+    return ($message->getId() !== 5);
 }
 
+// iteration will pause at message ID 5
+$pageIterator->iterate($callback);
+
+// resumes iteration from next message (ID 6)
+$pageIterator->iterate($callback);
+
 ```
+
 
 ## Use a Custom Response Handler / Get the raw PSR response
 Define a response handler that implements the [Response Handler interface](https://github.com/microsoft/kiota-abstractions-php/blob/dev/src/ResponseHandler.php) and pass it into the request using the request options.
@@ -235,6 +250,8 @@ try {
 
 ## Upload an item
 
+For files less than 3MB, you can send a byte stream to the API with the sample below. See the next section for files larger than 3MB.
+
 ```php
 
 $driveItemId = 'root:/upload.txt:';
@@ -243,6 +260,52 @@ $inputStream = Utils::streamFor(fopen('upload.txt', 'r'));
 $uploadItem = $graphServiceClient->drivesById('[driveId]')->itemsById($driveItemId)->content()->put($inputStream)->wait();
 
 ```
+
+
+## Uploading large files
+
+To upload files larger than 3MB, the Microsoft Graph API supports uploads using resumable upload sessions where a number of bytes are uploaded at a time.
+
+The SDK provides a `LargeFileUpload` task that slices your file into bytes and progressively uploads them until completion.
+
+To add a large attachment to an Outlook message:
+
+```php
+
+// create a file stream
+$file = Utils::streamFor(fopen('fileName', 'r'));
+
+// create an upload session
+$attachmentItem = new AttachmentItem();
+$attachmentItem->setAttachmentType(new AttachmentType('file'));
+$attachmentItem->setName('fileName');
+$attachmentItem->setSize($file->getSize());
+
+$uploadSessionRequestBody = new CreateUploadSessionPostRequestBody();
+$uploadSessionRequestBody->setAttachmentItem($attachmentItem);
+
+/** @var UploadSession $uploadSession */
+$uploadSession = $graphServiceClient->usersById(USER_ID)->messagesById('[id]')->attachments()->createUploadSession()->post($uploadSessionRequestBody)->wait();
+
+// upload
+$largeFileUpload = new LargeFileUploadTask($uploadSession, $requestAdapter, $file);
+try{
+    $uploadSession = $largeFileUpload->upload()->wait();
+} catch (\Psr\Http\Client\NetworkExceptionInterface $ex) {
+    // resume upload in case of network errors
+    $uploadSession = $largeFileUpload->resume()->wait();
+}
+
+```
+
+You can also cancel a large file upload session:
+
+```php
+$largeFileUpload->cancel()->wait();
+```
+
+*Known Issue*
+At the moment, when attaching large files to Outlook Messages and Events, we don't expose the `Location` header value. For now, you'd need to fetch the message's attachments/events.
 
 ## Passing request headers
 Each execution method i.e. get(), post(), put(), patch(), delete() accepts a Request Configuration object where the request headers can be set:
@@ -301,4 +364,91 @@ $requestConfig->options = [new RetryOption(2, 5)];
 
 $messages = $graphServiceClient->me()->messages()->get($requestConfig)->wait();
 
+```
+
+## Batching requests
+
+Up to 20 individual requests can be batched together to reduce network latency of making each request separately.
+
+The `BatchRequestBuilder` allows you to make requests to the `/$batch` endpoint of the Microsoft Graph API.
+
+- First, we create a `BatchRequestContent` object which is a list of requests to be batched together.
+
+Here we batch 3 requests.
+```php
+use Microsoft\Graph\Core\Requests\BatchRequestContent;
+use Microsoft\Graph\Generated\Models\Message;
+
+$message = new Message();
+$message->setSubject("Test Subject");
+
+$batchRequestContent = new BatchRequestContent([
+    $graphServiceClient->usersById(USER_ID)->messagesById('id')->toDeleteRequestInformation(),
+    $graphServiceClient->usersById(USER_ID)->messages()->toPostRequestInformation($message),
+    $graphServiceClient->usersById(USER_ID)->toGetRequestInformation()
+]);
+
+```
+
+An `id` is automatically assigned to each request in the batch.
+
+If you would like fine-grained control over each request in the batch, you can initialise `BatchRequestItem` objects and set dependencies betweeen requests etc.
+
+For example, here we want to update a message but also want the API to return the previous message object before the update. We would need to set a dependency
+between the requests so that the update only happens after the initial message has been fetched.
+
+```php
+use Microsoft\Graph\Core\Requests\BatchRequestContent;
+use Microsoft\Graph\Core\Requests\BatchRequestItem;
+use Microsoft\Graph\Generated\Models\Message;
+
+$message = new Message();
+$message->setSubject("Test Subject");
+
+$request1 = new BatchRequestItem($graphServiceClient->usersById(USER_ID)->messagesById('[id]')->toGetRequestInformation());
+$request2 = new BatchRequestItem($graphServiceClient->usersById(USER_ID)->messagesById('[id]')->toPatchRequestInformation($message));
+$request2->dependsOn([$request1]);
+
+$batchRequestContent = new BatchRequestContent([
+    $request1, $request2
+]);
+
+```
+
+You can also add requests to the `BatchRequestContent` via `addPsrRequest()`, `addRequest()` and `addRequestInformation()`
+
+- The batch request is sent using the `BatchRequestBuilder` as follows:
+
+```php
+use Microsoft\Graph\BatchRequestBuilder;
+use Microsoft\Graph\Core\Requests\BatchResponseItem;
+
+$requestBuilder = new BatchRequestBuilder($requestAdapter);
+/** @var BatchResponseContent $batchResponse  */
+$batchResponse = $requestBuilder->postAsync($batchRequestContent)->wait();
+
+```
+
+- The responses are by default returned in a `BatchResponseContent` object comprised of various `BatchResponseItem` objects corresponding to the requests made in step 1
+
+The raw response item can be obtained via
+
+```php
+
+$response1 = $batchResponse->getResponse($request1->getId());
+echo "Response1 status code: {$response1->getStatusCode()}";
+
+```
+
+Alternatively, you can deserialize a `BatchResponseItem` to a `Parsable` (model) implementation
+
+```php
+use Microsoft\Graph\Generated\Models\Message;
+
+$message = $batchResponse->getResponseBody($request1->getId(), Message::class);
+echo "Initial subject: {$message->getSubject()}\n";
+
+// patched message
+$updatedMessage = $batchResponse->getResponseBody($request2->getId(), Message::class);
+echo "Updated subject: {$updatedMessage->getSubject()}\n";
 ```

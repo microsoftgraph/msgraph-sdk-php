@@ -124,12 +124,11 @@ $requestAdapter = new GraphRequestAdapter($authProvider);
 $graphServiceClient = new GraphServiceClient($requestAdapter);
 
 try {
-    $response = $graphServiceClient->usersById('[userPrincipalName]')->get();
-    $user = $response->wait();
+    $user = $graphServiceClient->usersById('[userPrincipalName]')->get()->wait();
     echo "Hello, I am {$user->getGivenName()}";
 
 } catch (ApiException $ex) {
-    echo $ex->getMessage();
+    echo $ex->getError()->getMessage();
 }
 
 ```
@@ -156,11 +155,10 @@ $requestAdapter = new GraphRequestAdapter($authProvider);
 $graphServiceClient = new GraphServiceClient($requestAdapter);
 
 try {
-    $response = $graphServiceClient->me()->get();
-    $user = $response->wait();
+    $user = $graphServiceClient->me()->get()->wait();
     echo "Hello, I am {$user->getGivenName()}";
 } catch (ApiException $ex) {
-    echo $ex->getMessage();
+    echo $ex->getError()->getMessage();
 }
 
 ```
