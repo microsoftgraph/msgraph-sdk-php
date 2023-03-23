@@ -1,7 +1,7 @@
 # Get started with the Microsoft Graph SDK for PHP
 
 [![Build Status](https://travis-ci.org/microsoftgraph/msgraph-sdk-php.svg?branch=master)](https://travis-ci.org/microsoftgraph/msgraph-sdk-php)
-[![Latest Stable Version](https://poser.pugx.org/microsoft/microsoft-graph/version)](https://packagist.org/packages/microsoft/microsoft-graph)
+[![Latest Preview Version](http://poser.pugx.org/microsoft/microsoft-graph/v/unstable)](https://packagist.org/packages/microsoft/microsoft-graph)
 
 ## Install the SDK
 You can install the PHP SDK with Composer by editing your `composer.json` file:
