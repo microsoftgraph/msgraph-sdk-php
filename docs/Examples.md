@@ -164,10 +164,10 @@ $pageIterator->iterate($callback);
 ```
 
 
-## Use a Custom Response Handler / Get the raw PSR response
+## Use a Custom Response Handler / Get the raw HTTP response
 Define a response handler that implements the [Response Handler interface](https://github.com/microsoft/kiota-abstractions-php/blob/dev/src/ResponseHandler.php) and pass it into the request using the request options.
 
-The SDK provides a default asynchronous response handler which returns a promise that resolves to a  raw PSR-7 response.
+The SDK provides a default asynchronous response handler which returns a promise that resolves to a raw HTTP response.
 
 To get the raw response:
 ```php
