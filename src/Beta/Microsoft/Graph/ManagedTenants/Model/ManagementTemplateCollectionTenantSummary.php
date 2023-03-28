@@ -438,6 +438,60 @@ class ManagementTemplateCollectionTenantSummary extends \Beta\Microsoft\Graph\Mo
     }
 
     /**
+    * Gets the regressedStepsCount
+    *
+    * @return int|null The regressedStepsCount
+    */
+    public function getRegressedStepsCount()
+    {
+        if (array_key_exists("regressedStepsCount", $this->_propDict)) {
+            return $this->_propDict["regressedStepsCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the regressedStepsCount
+    *
+    * @param int $val The regressedStepsCount
+    *
+    * @return ManagementTemplateCollectionTenantSummary
+    */
+    public function setRegressedStepsCount($val)
+    {
+        $this->_propDict["regressedStepsCount"] = intval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the regressedUsersCount
+    *
+    * @return int|null The regressedUsersCount
+    */
+    public function getRegressedUsersCount()
+    {
+        if (array_key_exists("regressedUsersCount", $this->_propDict)) {
+            return $this->_propDict["regressedUsersCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the regressedUsersCount
+    *
+    * @param int $val The regressedUsersCount
+    *
+    * @return ManagementTemplateCollectionTenantSummary
+    */
+    public function setRegressedUsersCount($val)
+    {
+        $this->_propDict["regressedUsersCount"] = intval($val);
+        return $this;
+    }
+
+    /**
     * Gets the tenantId
     *
     * @return string|null The tenantId
@@ -461,6 +515,33 @@ class ManagementTemplateCollectionTenantSummary extends \Beta\Microsoft\Graph\Mo
     public function setTenantId($val)
     {
         $this->_propDict["tenantId"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the unlicensedUsersCount
+    *
+    * @return int|null The unlicensedUsersCount
+    */
+    public function getUnlicensedUsersCount()
+    {
+        if (array_key_exists("unlicensedUsersCount", $this->_propDict)) {
+            return $this->_propDict["unlicensedUsersCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the unlicensedUsersCount
+    *
+    * @param int $val The unlicensedUsersCount
+    *
+    * @return ManagementTemplateCollectionTenantSummary
+    */
+    public function setUnlicensedUsersCount($val)
+    {
+        $this->_propDict["unlicensedUsersCount"] = intval($val);
         return $this;
     }
 

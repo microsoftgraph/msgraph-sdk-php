@@ -112,6 +112,33 @@ class RiskyServicePrincipal extends Entity
     }
 
     /**
+    * Gets the isEnabled
+    *
+    * @return bool|null The isEnabled
+    */
+    public function getIsEnabled()
+    {
+        if (array_key_exists("isEnabled", $this->_propDict)) {
+            return $this->_propDict["isEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isEnabled
+    *
+    * @param bool $val The isEnabled
+    *
+    * @return RiskyServicePrincipal
+    */
+    public function setIsEnabled($val)
+    {
+        $this->_propDict["isEnabled"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the isProcessing
     * Indicates whether Azure AD is currently processing the service principal's risky state.
     *
