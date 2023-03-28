@@ -114,7 +114,7 @@ class MacOSLobApp extends MobileLobApp
 
     /**
     * Gets the identityVersion
-    * The identity version. This property is deprecated starting  in 2211(November 2022).
+    * The identity version. This property is being deprecated in 2211(November 2022).
     *
     * @return string|null The identityVersion
     */
@@ -129,7 +129,7 @@ class MacOSLobApp extends MobileLobApp
 
     /**
     * Sets the identityVersion
-    * The identity version. This property is deprecated starting  in 2211(November 2022).
+    * The identity version. This property is being deprecated in 2211(November 2022).
     *
     * @param string $val The identityVersion
     *

@@ -180,7 +180,7 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
 
     /**
     * Gets the platform
-    * Platform type of the devices on which the Assignment Filter will be applicable. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
+    * Platform type of the devices on which the Assignment Filter will be applicable. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown, androidAOSP.
     *
     * @return DevicePlatformType|null The platform
     */
@@ -199,7 +199,7 @@ class DeviceAndAppManagementAssignmentFilter extends Entity
 
     /**
     * Sets the platform
-    * Platform type of the devices on which the Assignment Filter will be applicable. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown.
+    * Platform type of the devices on which the Assignment Filter will be applicable. Possible values are: android, androidForWork, iOS, macOS, windowsPhone81, windows81AndLater, windows10AndLater, androidWorkProfile, unknown, androidAOSP.
     *
     * @param DevicePlatformType $val The platform
     *
