@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AuthenticationMethodsPolicy extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new AuthenticationMethodsPolicy and sets the default values.
+     * Instantiates a new authenticationMethodsPolicy and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -60,6 +60,7 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
+            'policyMigrationState' => fn(ParseNode $n) => $o->setPolicyMigrationState($n->getEnumValue(AuthenticationMethodsPolicyMigrationState::class)),
             'policyVersion' => fn(ParseNode $n) => $o->setPolicyVersion($n->getStringValue()),
             'reconfirmationInDays' => fn(ParseNode $n) => $o->setReconfirmationInDays($n->getIntegerValue()),
             'registrationEnforcement' => fn(ParseNode $n) => $o->setRegistrationEnforcement($n->getObjectValue([RegistrationEnforcement::class, 'createFromDiscriminatorValue'])),
@@ -72,6 +73,14 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
     */
     public function getLastModifiedDateTime(): ?DateTime {
         return $this->getBackingStore()->get('lastModifiedDateTime');
+    }
+
+    /**
+     * Gets the policyMigrationState property value. The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authentication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
+     * @return AuthenticationMethodsPolicyMigrationState|null
+    */
+    public function getPolicyMigrationState(): ?AuthenticationMethodsPolicyMigrationState {
+        return $this->getBackingStore()->get('policyMigrationState');
     }
 
     /**
@@ -108,6 +117,7 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
+        $writer->writeEnumValue('policyMigrationState', $this->getPolicyMigrationState());
         $writer->writeStringValue('policyVersion', $this->getPolicyVersion());
         $writer->writeIntegerValue('reconfirmationInDays', $this->getReconfirmationInDays());
         $writer->writeObjectValue('registrationEnforcement', $this->getRegistrationEnforcement());
@@ -143,6 +153,14 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('lastModifiedDateTime', $value);
+    }
+
+    /**
+     * Sets the policyMigrationState property value. The state of migration of the authentication methods policy from the legacy multifactor authentication and self-service password reset (SSPR) policies. The possible values are: premigration - means the authentication methods policy is used for authentication only, legacy policies are respected. migrationInProgress - means the authentication methods policy is used for both authentication and SSPR, legacy policies are respected. migrationComplete - means the authentication methods policy is used for authentication and SSPR, legacy policies are ignored. unknownFutureValue - Evolvable enumeration sentinel value. Do not use.
+     * @param AuthenticationMethodsPolicyMigrationState|null $value Value to set for the policyMigrationState property.
+    */
+    public function setPolicyMigrationState(?AuthenticationMethodsPolicyMigrationState $value): void {
+        $this->getBackingStore()->set('policyMigrationState', $value);
     }
 
     /**

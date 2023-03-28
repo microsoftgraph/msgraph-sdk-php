@@ -59,9 +59,10 @@ class AppManagementPoliciesRequestBuilder
     }
 
     /**
-     * Get appManagementPolicies from policies
+     * Retrieve a list of appManagementPolicy objects.
      * @param AppManagementPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/appmanagementpolicy-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?AppManagementPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -77,10 +78,11 @@ class AppManagementPoliciesRequestBuilder
     }
 
     /**
-     * Create new navigation property to appManagementPolicies for policies
+     * Create an appManagementPolicy object.
      * @param AppManagementPolicy $body The request body
      * @param AppManagementPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/appmanagementpolicy-post?view=graph-rest-1.0 Find more info here
     */
     public function post(AppManagementPolicy $body, ?AppManagementPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -96,7 +98,7 @@ class AppManagementPoliciesRequestBuilder
     }
 
     /**
-     * Get appManagementPolicies from policies
+     * Retrieve a list of appManagementPolicy objects.
      * @param AppManagementPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +123,7 @@ class AppManagementPoliciesRequestBuilder
     }
 
     /**
-     * Create new navigation property to appManagementPolicies for policies
+     * Create an appManagementPolicy object.
      * @param AppManagementPolicy $body The request body
      * @param AppManagementPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

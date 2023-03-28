@@ -50,7 +50,7 @@ class AppManagementPolicyItemRequestBuilder
     }
 
     /**
-     * Get appManagementPolicies from servicePrincipals
+     * The appManagementPolicy applied to this application.
      * @param AppManagementPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -68,7 +68,7 @@ class AppManagementPolicyItemRequestBuilder
     }
 
     /**
-     * Get appManagementPolicies from servicePrincipals
+     * The appManagementPolicy applied to this application.
      * @param AppManagementPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

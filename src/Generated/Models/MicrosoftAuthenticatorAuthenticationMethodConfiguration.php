@@ -42,6 +42,7 @@ class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Authentica
         return array_merge(parent::getFieldDeserializers(), [
             'featureSettings' => fn(ParseNode $n) => $o->setFeatureSettings($n->getObjectValue([MicrosoftAuthenticatorFeatureSettings::class, 'createFromDiscriminatorValue'])),
             'includeTargets' => fn(ParseNode $n) => $o->setIncludeTargets($n->getCollectionOfObjectValues([MicrosoftAuthenticatorAuthenticationMethodTarget::class, 'createFromDiscriminatorValue'])),
+            'isSoftwareOathEnabled' => fn(ParseNode $n) => $o->setIsSoftwareOathEnabled($n->getBooleanValue()),
         ]);
     }
 
@@ -54,6 +55,14 @@ class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Authentica
     }
 
     /**
+     * Gets the isSoftwareOathEnabled property value. The isSoftwareOathEnabled property
+     * @return bool|null
+    */
+    public function getIsSoftwareOathEnabled(): ?bool {
+        return $this->getBackingStore()->get('isSoftwareOathEnabled');
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -61,6 +70,7 @@ class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Authentica
         parent::serialize($writer);
         $writer->writeObjectValue('featureSettings', $this->getFeatureSettings());
         $writer->writeCollectionOfObjectValues('includeTargets', $this->getIncludeTargets());
+        $writer->writeBooleanValue('isSoftwareOathEnabled', $this->getIsSoftwareOathEnabled());
     }
 
     /**
@@ -77,6 +87,14 @@ class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Authentica
     */
     public function setIncludeTargets(?array $value): void {
         $this->getBackingStore()->set('includeTargets', $value);
+    }
+
+    /**
+     * Sets the isSoftwareOathEnabled property value. The isSoftwareOathEnabled property
+     * @param bool|null $value Value to set for the isSoftwareOathEnabled property.
+    */
+    public function setIsSoftwareOathEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isSoftwareOathEnabled', $value);
     }
 
 }

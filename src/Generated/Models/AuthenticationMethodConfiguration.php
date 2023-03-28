@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AuthenticationMethodConfiguration extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new AuthenticationMethodConfiguration and sets the default values.
+     * Instantiates a new authenticationMethodConfiguration and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -28,11 +28,22 @@ class AuthenticationMethodConfiguration extends Entity implements Parsable
                 case '#microsoft.graph.emailAuthenticationMethodConfiguration': return new EmailAuthenticationMethodConfiguration();
                 case '#microsoft.graph.fido2AuthenticationMethodConfiguration': return new Fido2AuthenticationMethodConfiguration();
                 case '#microsoft.graph.microsoftAuthenticatorAuthenticationMethodConfiguration': return new MicrosoftAuthenticatorAuthenticationMethodConfiguration();
+                case '#microsoft.graph.smsAuthenticationMethodConfiguration': return new SmsAuthenticationMethodConfiguration();
+                case '#microsoft.graph.softwareOathAuthenticationMethodConfiguration': return new SoftwareOathAuthenticationMethodConfiguration();
                 case '#microsoft.graph.temporaryAccessPassAuthenticationMethodConfiguration': return new TemporaryAccessPassAuthenticationMethodConfiguration();
+                case '#microsoft.graph.voiceAuthenticationMethodConfiguration': return new VoiceAuthenticationMethodConfiguration();
                 case '#microsoft.graph.x509CertificateAuthenticationMethodConfiguration': return new X509CertificateAuthenticationMethodConfiguration();
             }
         }
         return new AuthenticationMethodConfiguration();
+    }
+
+    /**
+     * Gets the excludeTargets property value. Groups of users that are excluded from a policy.
+     * @return array<ExcludeTarget>|null
+    */
+    public function getExcludeTargets(): ?array {
+        return $this->getBackingStore()->get('excludeTargets');
     }
 
     /**
@@ -42,6 +53,7 @@ class AuthenticationMethodConfiguration extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'excludeTargets' => fn(ParseNode $n) => $o->setExcludeTargets($n->getCollectionOfObjectValues([ExcludeTarget::class, 'createFromDiscriminatorValue'])),
             'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(AuthenticationMethodState::class)),
         ]);
     }
@@ -60,7 +72,16 @@ class AuthenticationMethodConfiguration extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('excludeTargets', $this->getExcludeTargets());
         $writer->writeEnumValue('state', $this->getState());
+    }
+
+    /**
+     * Sets the excludeTargets property value. Groups of users that are excluded from a policy.
+     * @param array<ExcludeTarget>|null $value Value to set for the excludeTargets property.
+    */
+    public function setExcludeTargets(?array $value): void {
+        $this->getBackingStore()->set('excludeTargets', $value);
     }
 
     /**

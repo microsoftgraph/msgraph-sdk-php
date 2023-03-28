@@ -58,9 +58,10 @@ class AppliesToRequestBuilder
     }
 
     /**
-     * Get appliesTo from policies
+     * List application and service principal objects that are assigned an appManagementPolicy policy object.
      * @param AppliesToRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/appManagementPolicy-list-appliesTo?view=graph-rest-1.0 Find more info here
     */
     public function get(?AppliesToRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,7 +77,7 @@ class AppliesToRequestBuilder
     }
 
     /**
-     * Get appliesTo from policies
+     * List application and service principal objects that are assigned an appManagementPolicy policy object.
      * @param AppliesToRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

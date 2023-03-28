@@ -26,7 +26,7 @@ class TenantAppManagementPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Gets the applicationRestrictions property value. The applicationRestrictions property
+     * Gets the applicationRestrictions property value. Restrictions that apply as default to all application objects in the tenant.
      * @return AppManagementConfiguration|null
     */
     public function getApplicationRestrictions(): ?AppManagementConfiguration {
@@ -47,7 +47,7 @@ class TenantAppManagementPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Gets the isEnabled property value. The isEnabled property
+     * Gets the isEnabled property value. Denotes whether the policy is enabled. Default value is false.
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
@@ -55,7 +55,7 @@ class TenantAppManagementPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Gets the servicePrincipalRestrictions property value. The servicePrincipalRestrictions property
+     * Gets the servicePrincipalRestrictions property value. Restrictions that apply as default to all service principal objects in the tenant.
      * @return AppManagementConfiguration|null
     */
     public function getServicePrincipalRestrictions(): ?AppManagementConfiguration {
@@ -74,7 +74,7 @@ class TenantAppManagementPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Sets the applicationRestrictions property value. The applicationRestrictions property
+     * Sets the applicationRestrictions property value. Restrictions that apply as default to all application objects in the tenant.
      * @param AppManagementConfiguration|null $value Value to set for the applicationRestrictions property.
     */
     public function setApplicationRestrictions(?AppManagementConfiguration $value): void {
@@ -82,7 +82,7 @@ class TenantAppManagementPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Sets the isEnabled property value. The isEnabled property
+     * Sets the isEnabled property value. Denotes whether the policy is enabled. Default value is false.
      * @param bool|null $value Value to set for the isEnabled property.
     */
     public function setIsEnabled(?bool $value): void {
@@ -90,7 +90,7 @@ class TenantAppManagementPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Sets the servicePrincipalRestrictions property value. The servicePrincipalRestrictions property
+     * Sets the servicePrincipalRestrictions property value. Restrictions that apply as default to all service principal objects in the tenant.
      * @param AppManagementConfiguration|null $value Value to set for the servicePrincipalRestrictions property.
     */
     public function setServicePrincipalRestrictions(?AppManagementConfiguration $value): void {
