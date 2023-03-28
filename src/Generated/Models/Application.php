@@ -60,7 +60,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the appManagementPolicies property value. The appManagementPolicies property
+     * Gets the appManagementPolicies property value. The appManagementPolicy applied to this application.
      * @return array<AppManagementPolicy>|null
     */
     public function getAppManagementPolicies(): ?array {
@@ -329,7 +329,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the requestSignatureVerification property value. The requestSignatureVerification property
+     * Gets the requestSignatureVerification property value. Specifies whether this application requires Azure AD to verify the signed authentication requests.
      * @return RequestSignatureVerification|null
     */
     public function getRequestSignatureVerification(): ?RequestSignatureVerification {
@@ -508,7 +508,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the appManagementPolicies property value. The appManagementPolicies property
+     * Sets the appManagementPolicies property value. The appManagementPolicy applied to this application.
      * @param array<AppManagementPolicy>|null $value Value to set for the appManagementPolicies property.
     */
     public function setAppManagementPolicies(?array $value): void {
@@ -724,7 +724,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the requestSignatureVerification property value. The requestSignatureVerification property
+     * Sets the requestSignatureVerification property value. Specifies whether this application requires Azure AD to verify the signed authentication requests.
      * @param RequestSignatureVerification|null $value Value to set for the requestSignatureVerification property.
     */
     public function setRequestSignatureVerification(?RequestSignatureVerification $value): void {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\AppManagementPolicies\Item\AppliesT
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get appliesTo from policies
+ * List application and service principal objects that are assigned an appManagementPolicy policy object.
 */
 class AppliesToRequestBuilderGetQueryParameters 
 {

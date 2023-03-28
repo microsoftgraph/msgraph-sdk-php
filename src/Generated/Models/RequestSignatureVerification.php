@@ -43,7 +43,7 @@ class RequestSignatureVerification implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the allowedWeakAlgorithms property value. The allowedWeakAlgorithms property
+     * Gets the allowedWeakAlgorithms property value. Specifies which weak algorithms are allowed.  The possible values are: rsaSha1, unknownFutureValue.
      * @return WeakAlgorithms|null
     */
     public function getAllowedWeakAlgorithms(): ?WeakAlgorithms {
@@ -72,7 +72,7 @@ class RequestSignatureVerification implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Gets the isSignedRequestRequired property value. The isSignedRequestRequired property
+     * Gets the isSignedRequestRequired property value. Specifies whether signed authentication requests for this application should be required.
      * @return bool|null
     */
     public function getIsSignedRequestRequired(): ?bool {
@@ -107,7 +107,7 @@ class RequestSignatureVerification implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the allowedWeakAlgorithms property value. The allowedWeakAlgorithms property
+     * Sets the allowedWeakAlgorithms property value. Specifies which weak algorithms are allowed.  The possible values are: rsaSha1, unknownFutureValue.
      * @param WeakAlgorithms|null $value Value to set for the allowedWeakAlgorithms property.
     */
     public function setAllowedWeakAlgorithms(?WeakAlgorithms $value): void {
@@ -123,7 +123,7 @@ class RequestSignatureVerification implements AdditionalDataHolder, BackedModel,
     }
 
     /**
-     * Sets the isSignedRequestRequired property value. The isSignedRequestRequired property
+     * Sets the isSignedRequestRequired property value. Specifies whether signed authentication requests for this application should be required.
      * @param bool|null $value Value to set for the isSignedRequestRequired property.
     */
     public function setIsSignedRequestRequired(?bool $value): void {

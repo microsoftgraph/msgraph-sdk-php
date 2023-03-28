@@ -83,7 +83,7 @@ class PasswordCredentialConfiguration implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the restrictForAppsCreatedAfterDateTime property value. The restrictForAppsCreatedAfterDateTime property
+     * Gets the restrictForAppsCreatedAfterDateTime property value. Enforces the policy for an app created on or after the enforcement date. For existing applications, the enforcement date would be back dated. To apply to all applications, enforcement datetime would be null.
      * @return DateTime|null
     */
     public function getRestrictForAppsCreatedAfterDateTime(): ?DateTime {
@@ -91,7 +91,7 @@ class PasswordCredentialConfiguration implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Gets the restrictionType property value. The restrictionType property
+     * Gets the restrictionType property value. The type of restriction being applied. The possible values are: passwordAddition, passwordLifetime, symmetricKeyAddition, symmetricKeyLifetime,customPasswordAddition, unknownFutureValue. Each value of restrictionType can be used only once per policy.
      * @return AppCredentialRestrictionType|null
     */
     public function getRestrictionType(): ?AppCredentialRestrictionType {
@@ -143,7 +143,7 @@ class PasswordCredentialConfiguration implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the restrictForAppsCreatedAfterDateTime property value. The restrictForAppsCreatedAfterDateTime property
+     * Sets the restrictForAppsCreatedAfterDateTime property value. Enforces the policy for an app created on or after the enforcement date. For existing applications, the enforcement date would be back dated. To apply to all applications, enforcement datetime would be null.
      * @param DateTime|null $value Value to set for the restrictForAppsCreatedAfterDateTime property.
     */
     public function setRestrictForAppsCreatedAfterDateTime(?DateTime $value): void {
@@ -151,7 +151,7 @@ class PasswordCredentialConfiguration implements AdditionalDataHolder, BackedMod
     }
 
     /**
-     * Sets the restrictionType property value. The restrictionType property
+     * Sets the restrictionType property value. The type of restriction being applied. The possible values are: passwordAddition, passwordLifetime, symmetricKeyAddition, symmetricKeyLifetime,customPasswordAddition, unknownFutureValue. Each value of restrictionType can be used only once per policy.
      * @param AppCredentialRestrictionType|null $value Value to set for the restrictionType property.
     */
     public function setRestrictionType(?AppCredentialRestrictionType $value): void {

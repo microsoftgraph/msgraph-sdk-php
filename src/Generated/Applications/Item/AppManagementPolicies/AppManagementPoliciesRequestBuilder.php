@@ -66,7 +66,7 @@ class AppManagementPoliciesRequestBuilder
     }
 
     /**
-     * Get appManagementPolicies from applications
+     * The appManagementPolicy applied to this application.
      * @param AppManagementPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -84,7 +84,7 @@ class AppManagementPoliciesRequestBuilder
     }
 
     /**
-     * Get appManagementPolicies from applications
+     * The appManagementPolicy applied to this application.
      * @param AppManagementPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

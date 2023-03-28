@@ -51,7 +51,7 @@ class RefRequestBuilder
     }
 
     /**
-     * Get ref of appManagementPolicies from applications
+     * The appManagementPolicy applied to this application.
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -88,7 +88,7 @@ class RefRequestBuilder
     }
 
     /**
-     * Get ref of appManagementPolicies from applications
+     * The appManagementPolicy applied to this application.
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

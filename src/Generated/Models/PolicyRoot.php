@@ -41,7 +41,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the appManagementPolicies property value. The appManagementPolicies property
+     * Gets the appManagementPolicies property value. The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
      * @return array<AppManagementPolicy>|null
     */
     public function getAppManagementPolicies(): ?array {
@@ -97,7 +97,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Gets the defaultAppManagementPolicy property value. The defaultAppManagementPolicy property
+     * Gets the defaultAppManagementPolicy property value. The tenant-wide policy that enforces app management restrictions for all applications and service principals.
      * @return TenantAppManagementPolicy|null
     */
     public function getDefaultAppManagementPolicy(): ?TenantAppManagementPolicy {
@@ -239,7 +239,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the appManagementPolicies property value. The appManagementPolicies property
+     * Sets the appManagementPolicies property value. The policies that enforce app management restrictions for specific applications and service principals, overriding the defaultAppManagementPolicy.
      * @param array<AppManagementPolicy>|null $value Value to set for the appManagementPolicies property.
     */
     public function setAppManagementPolicies(?array $value): void {
@@ -295,7 +295,7 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
-     * Sets the defaultAppManagementPolicy property value. The defaultAppManagementPolicy property
+     * Sets the defaultAppManagementPolicy property value. The tenant-wide policy that enforces app management restrictions for all applications and service principals.
      * @param TenantAppManagementPolicy|null $value Value to set for the defaultAppManagementPolicy property.
     */
     public function setDefaultAppManagementPolicy(?TenantAppManagementPolicy $value): void {

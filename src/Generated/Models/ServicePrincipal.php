@@ -82,7 +82,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the appManagementPolicies property value. The appManagementPolicies property
+     * Gets the appManagementPolicies property value. The appManagementPolicy applied to this application.
      * @return array<AppManagementPolicy>|null
     */
     public function getAppManagementPolicies(): ?array {
@@ -590,7 +590,7 @@ class ServicePrincipal extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the appManagementPolicies property value. The appManagementPolicies property
+     * Sets the appManagementPolicies property value. The appManagementPolicy applied to this application.
      * @param array<AppManagementPolicy>|null $value Value to set for the appManagementPolicies property.
     */
     public function setAppManagementPolicies(?array $value): void {
