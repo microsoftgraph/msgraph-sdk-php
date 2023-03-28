@@ -57,6 +57,7 @@ class KeyCredentialConfiguration extends Entity
 
     /**
     * Gets the restrictForAppsCreatedAfterDateTime
+    * Timestamp when the policy is enforced for all apps created on or after the specified date. For existing applications, the enforcement date would be back dated. To apply to all applications regardless of their creation date, this property would be null. Nullable.
     *
     * @return \DateTime|null The restrictForAppsCreatedAfterDateTime
     */
@@ -75,6 +76,7 @@ class KeyCredentialConfiguration extends Entity
 
     /**
     * Sets the restrictForAppsCreatedAfterDateTime
+    * Timestamp when the policy is enforced for all apps created on or after the specified date. For existing applications, the enforcement date would be back dated. To apply to all applications regardless of their creation date, this property would be null. Nullable.
     *
     * @param \DateTime $val The value to assign to the restrictForAppsCreatedAfterDateTime
     *
@@ -88,6 +90,7 @@ class KeyCredentialConfiguration extends Entity
 
     /**
     * Gets the restrictionType
+    * The type of restriction being applied. Possible values are asymmetricKeyLifetime, unknownFutureValue. Each value of restrictionType can be used only once per policy.
     *
     * @return AppKeyCredentialRestrictionType|null The restrictionType
     */
@@ -106,6 +109,7 @@ class KeyCredentialConfiguration extends Entity
 
     /**
     * Sets the restrictionType
+    * The type of restriction being applied. Possible values are asymmetricKeyLifetime, unknownFutureValue. Each value of restrictionType can be used only once per policy.
     *
     * @param AppKeyCredentialRestrictionType $val The value to assign to the restrictionType
     *

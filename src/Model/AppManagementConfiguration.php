@@ -26,6 +26,7 @@ class AppManagementConfiguration extends Entity
 
     /**
     * Gets the keyCredentials
+    * Collection of keyCredential restrictions settings to be applied to an application or service principal.
     *
     * @return KeyCredentialConfiguration|null The keyCredentials
     */
@@ -44,6 +45,7 @@ class AppManagementConfiguration extends Entity
 
     /**
     * Sets the keyCredentials
+    * Collection of keyCredential restrictions settings to be applied to an application or service principal.
     *
     * @param KeyCredentialConfiguration $val The value to assign to the keyCredentials
     *
@@ -57,6 +59,7 @@ class AppManagementConfiguration extends Entity
 
     /**
     * Gets the passwordCredentials
+    * Collection of password restrictions settings to be applied to an application or service principal.
     *
     * @return PasswordCredentialConfiguration|null The passwordCredentials
     */
@@ -75,6 +78,7 @@ class AppManagementConfiguration extends Entity
 
     /**
     * Sets the passwordCredentials
+    * Collection of password restrictions settings to be applied to an application or service principal.
     *
     * @param PasswordCredentialConfiguration $val The value to assign to the passwordCredentials
     *

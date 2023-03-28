@@ -26,6 +26,7 @@ class TenantAppManagementPolicy extends PolicyBase
 {
     /**
     * Gets the applicationRestrictions
+    * Restrictions that apply as default to all application objects in the tenant.
     *
     * @return AppManagementConfiguration|null The applicationRestrictions
     */
@@ -44,6 +45,7 @@ class TenantAppManagementPolicy extends PolicyBase
 
     /**
     * Sets the applicationRestrictions
+    * Restrictions that apply as default to all application objects in the tenant.
     *
     * @param AppManagementConfiguration $val The applicationRestrictions
     *
@@ -57,6 +59,7 @@ class TenantAppManagementPolicy extends PolicyBase
 
     /**
     * Gets the isEnabled
+    * Denotes whether the policy is enabled. Default value is false.
     *
     * @return bool|null The isEnabled
     */
@@ -71,6 +74,7 @@ class TenantAppManagementPolicy extends PolicyBase
 
     /**
     * Sets the isEnabled
+    * Denotes whether the policy is enabled. Default value is false.
     *
     * @param bool $val The isEnabled
     *
@@ -84,6 +88,7 @@ class TenantAppManagementPolicy extends PolicyBase
 
     /**
     * Gets the servicePrincipalRestrictions
+    * Restrictions that apply as default to all service principal objects in the tenant.
     *
     * @return AppManagementConfiguration|null The servicePrincipalRestrictions
     */
@@ -102,6 +107,7 @@ class TenantAppManagementPolicy extends PolicyBase
 
     /**
     * Sets the servicePrincipalRestrictions
+    * Restrictions that apply as default to all service principal objects in the tenant.
     *
     * @param AppManagementConfiguration $val The servicePrincipalRestrictions
     *

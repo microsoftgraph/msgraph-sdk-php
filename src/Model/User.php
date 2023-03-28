@@ -25,6 +25,37 @@ namespace Microsoft\Graph\Model;
 class User extends DirectoryObject
 {
     /**
+    * Gets the signInActivity
+    *
+    * @return SignInActivity|null The signInActivity
+    */
+    public function getSignInActivity()
+    {
+        if (array_key_exists("signInActivity", $this->_propDict)) {
+            if (is_a($this->_propDict["signInActivity"], "\Microsoft\Graph\Model\SignInActivity") || is_null($this->_propDict["signInActivity"])) {
+                return $this->_propDict["signInActivity"];
+            } else {
+                $this->_propDict["signInActivity"] = new SignInActivity($this->_propDict["signInActivity"]);
+                return $this->_propDict["signInActivity"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the signInActivity
+    *
+    * @param SignInActivity $val The signInActivity
+    *
+    * @return User
+    */
+    public function setSignInActivity($val)
+    {
+        $this->_propDict["signInActivity"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the accountEnabled
     * true if the account is enabled; otherwise, false. This property is required when a user is created. Returned only on $select. Supports $filter (eq, ne, not, and in).
     *
