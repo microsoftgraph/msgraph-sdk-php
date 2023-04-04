@@ -146,6 +146,68 @@ class Security extends Entity
         return $this;
     }
 
+    /**
+    * Gets the triggers
+    *
+    * @return \Microsoft\Graph\SecurityNamespace\Model\TriggersRoot|null The triggers
+    */
+    public function getTriggers()
+    {
+        if (array_key_exists("triggers", $this->_propDict)) {
+            if (is_a($this->_propDict["triggers"], "\Microsoft\Graph\SecurityNamespace\Model\TriggersRoot") || is_null($this->_propDict["triggers"])) {
+                return $this->_propDict["triggers"];
+            } else {
+                $this->_propDict["triggers"] = new \Microsoft\Graph\SecurityNamespace\Model\TriggersRoot($this->_propDict["triggers"]);
+                return $this->_propDict["triggers"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the triggers
+    *
+    * @param \Microsoft\Graph\SecurityNamespace\Model\TriggersRoot $val The triggers
+    *
+    * @return Security
+    */
+    public function setTriggers($val)
+    {
+        $this->_propDict["triggers"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the triggerTypes
+    *
+    * @return \Microsoft\Graph\SecurityNamespace\Model\TriggerTypesRoot|null The triggerTypes
+    */
+    public function getTriggerTypes()
+    {
+        if (array_key_exists("triggerTypes", $this->_propDict)) {
+            if (is_a($this->_propDict["triggerTypes"], "\Microsoft\Graph\SecurityNamespace\Model\TriggerTypesRoot") || is_null($this->_propDict["triggerTypes"])) {
+                return $this->_propDict["triggerTypes"];
+            } else {
+                $this->_propDict["triggerTypes"] = new \Microsoft\Graph\SecurityNamespace\Model\TriggerTypesRoot($this->_propDict["triggerTypes"]);
+                return $this->_propDict["triggerTypes"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the triggerTypes
+    *
+    * @param \Microsoft\Graph\SecurityNamespace\Model\TriggerTypesRoot $val The triggerTypes
+    *
+    * @return Security
+    */
+    public function setTriggerTypes($val)
+    {
+        $this->_propDict["triggerTypes"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the alerts
