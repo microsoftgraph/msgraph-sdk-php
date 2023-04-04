@@ -26,6 +26,7 @@ class TeamsAppPermissionSet extends Entity
 
     /**
     * Gets the resourceSpecificPermissions
+    * A collection of resource-specific permissions.
     *
     * @return TeamsAppResourceSpecificPermission|null The resourceSpecificPermissions
     */
@@ -44,6 +45,7 @@ class TeamsAppPermissionSet extends Entity
 
     /**
     * Sets the resourceSpecificPermissions
+    * A collection of resource-specific permissions.
     *
     * @param TeamsAppResourceSpecificPermission $val The value to assign to the resourceSpecificPermissions
     *

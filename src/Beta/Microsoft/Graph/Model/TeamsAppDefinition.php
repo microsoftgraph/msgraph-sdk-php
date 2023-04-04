@@ -59,6 +59,7 @@ class TeamsAppDefinition extends Entity
 
     /**
     * Gets the authorization
+    * Authorization requirements specified in the Teams app manifest.
     *
     * @return TeamsAppAuthorization|null The authorization
     */
@@ -77,6 +78,7 @@ class TeamsAppDefinition extends Entity
 
     /**
     * Sets the authorization
+    * Authorization requirements specified in the Teams app manifest.
     *
     * @param TeamsAppAuthorization $val The authorization
     *

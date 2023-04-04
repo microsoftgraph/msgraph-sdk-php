@@ -90,4 +90,35 @@ class CallTranscript extends Entity
         return $this;
     }
 
+    /**
+    * Gets the metadataContent
+    *
+    * @return \GuzzleHttp\Psr7\Stream|null The metadataContent
+    */
+    public function getMetadataContent()
+    {
+        if (array_key_exists("metadataContent", $this->_propDict)) {
+            if (is_a($this->_propDict["metadataContent"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["metadataContent"])) {
+                return $this->_propDict["metadataContent"];
+            } else {
+                $this->_propDict["metadataContent"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["metadataContent"]);
+                return $this->_propDict["metadataContent"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the metadataContent
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The metadataContent
+    *
+    * @return CallTranscript
+    */
+    public function setMetadataContent($val)
+    {
+        $this->_propDict["metadataContent"] = $val;
+        return $this;
+    }
+
 }

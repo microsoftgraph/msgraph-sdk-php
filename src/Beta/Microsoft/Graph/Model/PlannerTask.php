@@ -613,6 +613,7 @@ class PlannerTask extends PlannerDelta
 
     /**
     * Gets the recurrence
+    * Defines active or inactive recurrence for the task. null when the recurrence has never been defined for the task.
     *
     * @return PlannerTaskRecurrence|null The recurrence
     */
@@ -631,6 +632,7 @@ class PlannerTask extends PlannerDelta
 
     /**
     * Sets the recurrence
+    * Defines active or inactive recurrence for the task. null when the recurrence has never been defined for the task.
     *
     * @param PlannerTaskRecurrence $val The recurrence
     *
