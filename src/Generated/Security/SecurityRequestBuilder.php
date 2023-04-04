@@ -18,8 +18,6 @@ use Microsoft\Graph\Generated\Security\SecureScoreControlProfiles\SecureScoreCon
 use Microsoft\Graph\Generated\Security\SecureScores\Item\SecureScoreItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecureScores\SecureScoresRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecurityRunHuntingQuery\SecurityRunHuntingQueryRequestBuilder;
-use Microsoft\Graph\Generated\Security\Triggers\TriggersRequestBuilder;
-use Microsoft\Graph\Generated\Security\TriggerTypes\TriggerTypesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -96,20 +94,6 @@ class SecurityRequestBuilder
     */
     public function securityRunHuntingQuery(): SecurityRunHuntingQueryRequestBuilder {
         return new SecurityRunHuntingQueryRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the triggers property of the microsoft.graph.security entity.
-    */
-    public function triggers(): TriggersRequestBuilder {
-        return new TriggersRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the triggerTypes property of the microsoft.graph.security entity.
-    */
-    public function triggerTypes(): TriggerTypesRequestBuilder {
-        return new TriggerTypesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

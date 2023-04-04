@@ -38,12 +38,11 @@ class ContactFolderItemRequestBuilderGetRequestConfiguration
 
     /**
      * Instantiates a new ContactFolderItemRequestBuilderGetQueryParameters.
-     * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return ContactFolderItemRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?array $expand = null, ?array $select = null): ContactFolderItemRequestBuilderGetQueryParameters {
-        return new ContactFolderItemRequestBuilderGetQueryParameters($expand, $select);
+    public static function createQueryParameters(?array $select = null): ContactFolderItemRequestBuilderGetQueryParameters {
+        return new ContactFolderItemRequestBuilderGetQueryParameters($select);
     }
 
 }

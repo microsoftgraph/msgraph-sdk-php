@@ -7,8 +7,6 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\RbacApplication;
-use Microsoft\Graph\Generated\RoleManagement\Directory\ResourceNamespaces\Item\UnifiedRbacResourceNamespaceItemRequestBuilder;
-use Microsoft\Graph\Generated\RoleManagement\Directory\ResourceNamespaces\ResourceNamespacesRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignments\Item\UnifiedRoleAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignments\RoleAssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentScheduleInstances\Item\UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder;
@@ -31,7 +29,6 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
-use Psr\Http\Message\StreamInterface;
 
 /**
  * Provides operations to manage the directory property of the microsoft.graph.roleManagement entity.
@@ -47,13 +44,6 @@ class DirectoryRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
-    
-    /**
-     * Provides operations to manage the resourceNamespaces property of the microsoft.graph.rbacApplication entity.
-    */
-    public function resourceNamespaces(): ResourceNamespacesRequestBuilder {
-        return new ResourceNamespacesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
     
     /**
      * Provides operations to manage the roleAssignments property of the microsoft.graph.rbacApplication entity.
@@ -143,7 +133,7 @@ class DirectoryRequestBuilder
                     '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
                     '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
             ];
-            return $this->requestAdapter->sendPrimitiveAsync($requestInfo, StreamInterface::class, $errorMappings);
+            return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
@@ -184,17 +174,6 @@ class DirectoryRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the resourceNamespaces property of the microsoft.graph.rbacApplication entity.
-     * @param string $id Unique identifier of the item
-     * @return UnifiedRbacResourceNamespaceItemRequestBuilder
-    */
-    public function resourceNamespacesById(string $id): UnifiedRbacResourceNamespaceItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['unifiedRbacResourceNamespace%2Did'] = $id;
-        return new UnifiedRbacResourceNamespaceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

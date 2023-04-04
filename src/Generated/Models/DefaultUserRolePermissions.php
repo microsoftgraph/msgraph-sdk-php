@@ -59,14 +59,6 @@ class DefaultUserRolePermissions implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the allowedToReadBitlockerKeysForOwnedDevice property value. The allowedToReadBitlockerKeysForOwnedDevice property
-     * @return bool|null
-    */
-    public function getAllowedToReadBitlockerKeysForOwnedDevice(): ?bool {
-        return $this->getBackingStore()->get('allowedToReadBitlockerKeysForOwnedDevice');
-    }
-
-    /**
      * Gets the allowedToReadOtherUsers property value. Indicates whether the default user role can read other users.
      * @return bool|null
     */
@@ -91,7 +83,6 @@ class DefaultUserRolePermissions implements AdditionalDataHolder, BackedModel, P
         return  [
             'allowedToCreateApps' => fn(ParseNode $n) => $o->setAllowedToCreateApps($n->getBooleanValue()),
             'allowedToCreateSecurityGroups' => fn(ParseNode $n) => $o->setAllowedToCreateSecurityGroups($n->getBooleanValue()),
-            'allowedToReadBitlockerKeysForOwnedDevice' => fn(ParseNode $n) => $o->setAllowedToReadBitlockerKeysForOwnedDevice($n->getBooleanValue()),
             'allowedToReadOtherUsers' => fn(ParseNode $n) => $o->setAllowedToReadOtherUsers($n->getBooleanValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'permissionGrantPoliciesAssigned' => fn(ParseNode $n) => $o->setPermissionGrantPoliciesAssigned($n->getCollectionOfPrimitiveValues()),
@@ -121,7 +112,6 @@ class DefaultUserRolePermissions implements AdditionalDataHolder, BackedModel, P
     public function serialize(SerializationWriter $writer): void {
         $writer->writeBooleanValue('allowedToCreateApps', $this->getAllowedToCreateApps());
         $writer->writeBooleanValue('allowedToCreateSecurityGroups', $this->getAllowedToCreateSecurityGroups());
-        $writer->writeBooleanValue('allowedToReadBitlockerKeysForOwnedDevice', $this->getAllowedToReadBitlockerKeysForOwnedDevice());
         $writer->writeBooleanValue('allowedToReadOtherUsers', $this->getAllowedToReadOtherUsers());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeCollectionOfPrimitiveValues('permissionGrantPoliciesAssigned', $this->getPermissionGrantPoliciesAssigned());
@@ -150,14 +140,6 @@ class DefaultUserRolePermissions implements AdditionalDataHolder, BackedModel, P
     */
     public function setAllowedToCreateSecurityGroups(?bool $value): void {
         $this->getBackingStore()->set('allowedToCreateSecurityGroups', $value);
-    }
-
-    /**
-     * Sets the allowedToReadBitlockerKeysForOwnedDevice property value. The allowedToReadBitlockerKeysForOwnedDevice property
-     * @param bool|null $value Value to set for the allowedToReadBitlockerKeysForOwnedDevice property.
-    */
-    public function setAllowedToReadBitlockerKeysForOwnedDevice(?bool $value): void {
-        $this->getBackingStore()->set('allowedToReadBitlockerKeysForOwnedDevice', $value);
     }
 
     /**
