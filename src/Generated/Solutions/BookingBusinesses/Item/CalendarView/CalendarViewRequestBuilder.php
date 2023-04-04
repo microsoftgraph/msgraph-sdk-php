@@ -49,7 +49,7 @@ class CalendarViewRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/calendarView{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
+        $this->urlTemplate = '{+baseurl}/solutions/bookingBusinesses/{bookingBusiness%2Did}/calendarView{?start*,end*,%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
         $this->requestAdapter = $requestAdapter;
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
@@ -59,7 +59,7 @@ class CalendarViewRequestBuilder
     }
 
     /**
-     * Get the collection of bookingAppointment objects for a bookingBusiness that occurs in the specified date range.
+     * The set of appointments of this business in a specified date range. Read-only. Nullable.
      * @param CalendarViewRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/bookingbusiness-list-calendarview?view=graph-rest-1.0 Find more info here
@@ -97,7 +97,7 @@ class CalendarViewRequestBuilder
     }
 
     /**
-     * Get the collection of bookingAppointment objects for a bookingBusiness that occurs in the specified date range.
+     * The set of appointments of this business in a specified date range. Read-only. Nullable.
      * @param CalendarViewRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

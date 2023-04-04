@@ -38,11 +38,12 @@ class CalendarItemRequestBuilderGetRequestConfiguration
 
     /**
      * Instantiates a new CalendarItemRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
      * @return CalendarItemRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?array $select = null): CalendarItemRequestBuilderGetQueryParameters {
-        return new CalendarItemRequestBuilderGetQueryParameters($select);
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): CalendarItemRequestBuilderGetQueryParameters {
+        return new CalendarItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

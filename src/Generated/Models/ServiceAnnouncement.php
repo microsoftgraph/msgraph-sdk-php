@@ -5,23 +5,14 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
-use Microsoft\Kiota\Abstractions\Store\BackedModel;
-use Microsoft\Kiota\Abstractions\Store\BackingStore;
-use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ServiceAnnouncement extends Entity implements BackedModel, Parsable 
+class ServiceAnnouncement extends Entity implements Parsable 
 {
     /**
-     * @var BackingStore $backingStore Stores model information.
-    */
-    private BackingStore $backingStore;
-    
-    /**
-     * Instantiates a new serviceAnnouncement and sets the default values.
+     * Instantiates a new ServiceAnnouncement and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
     }
 
     /**
@@ -31,14 +22,6 @@ class ServiceAnnouncement extends Entity implements BackedModel, Parsable
     */
     public static function createFromDiscriminatorValue(ParseNode $parseNode): ServiceAnnouncement {
         return new ServiceAnnouncement();
-    }
-
-    /**
-     * Gets the backingStore property value. Stores model information.
-     * @return BackingStore
-    */
-    public function getBackingStore(): BackingStore {
-        return $this->backingStore;
     }
 
     /**
@@ -87,14 +70,6 @@ class ServiceAnnouncement extends Entity implements BackedModel, Parsable
         $writer->writeCollectionOfObjectValues('healthOverviews', $this->getHealthOverviews());
         $writer->writeCollectionOfObjectValues('issues', $this->getIssues());
         $writer->writeCollectionOfObjectValues('messages', $this->getMessages());
-    }
-
-    /**
-     * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the BackingStore property.
-    */
-    public function setBackingStore(BackingStore $value): void {
-        $this->backingStore = $value;
     }
 
     /**
