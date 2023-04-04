@@ -55,7 +55,7 @@ class CloudPC extends Entity
 
     /**
     * Gets the connectivityResult
-    * The connectivity health check result of a Cloud PC, including the updated timestamp and whether the Cloud PC is able to be connected or not.
+    * The connectivity health check result of a Cloud PC, including the updated timestamp and whether the Cloud PC can be connected.
     *
     * @return CloudPcConnectivityResult|null The connectivityResult
     */
@@ -74,7 +74,7 @@ class CloudPC extends Entity
 
     /**
     * Sets the connectivityResult
-    * The connectivity health check result of a Cloud PC, including the updated timestamp and whether the Cloud PC is able to be connected or not.
+    * The connectivity health check result of a Cloud PC, including the updated timestamp and whether the Cloud PC can be connected.
     *
     * @param CloudPcConnectivityResult $val The connectivityResult
     *

@@ -113,6 +113,7 @@ class CloudPcServicePlan extends Entity
 
     /**
     * Gets the supportedSolution
+    * The supported service or solution for the region. The possible values are: windows365, devBox, rpaBox, unknownFutureValue. Read-only.
     *
     * @return CloudPcManagementService|null The supportedSolution
     */
@@ -131,6 +132,7 @@ class CloudPcServicePlan extends Entity
 
     /**
     * Sets the supportedSolution
+    * The supported service or solution for the region. The possible values are: windows365, devBox, rpaBox, unknownFutureValue. Read-only.
     *
     * @param CloudPcManagementService $val The supportedSolution
     *

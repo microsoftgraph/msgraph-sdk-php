@@ -57,6 +57,7 @@ class PasswordCredentialConfiguration extends Entity
 
     /**
     * Gets the restrictForAppsCreatedAfterDateTime
+    * Enforces the policy for an app created on or after the enforcement date. For existing applications, the enforcement date would be back dated. To apply to all applications, enforcement datetime would be null.
     *
     * @return \DateTime|null The restrictForAppsCreatedAfterDateTime
     */
@@ -75,6 +76,7 @@ class PasswordCredentialConfiguration extends Entity
 
     /**
     * Sets the restrictForAppsCreatedAfterDateTime
+    * Enforces the policy for an app created on or after the enforcement date. For existing applications, the enforcement date would be back dated. To apply to all applications, enforcement datetime would be null.
     *
     * @param \DateTime $val The value to assign to the restrictForAppsCreatedAfterDateTime
     *
@@ -88,6 +90,7 @@ class PasswordCredentialConfiguration extends Entity
 
     /**
     * Gets the restrictionType
+    * The type of restriction being applied. The possible values are: passwordAddition, passwordLifetime, symmetricKeyAddition, symmetricKeyLifetime,customPasswordAddition, unknownFutureValue. Each value of restrictionType can be used only once per policy.
     *
     * @return AppCredentialRestrictionType|null The restrictionType
     */
@@ -106,6 +109,7 @@ class PasswordCredentialConfiguration extends Entity
 
     /**
     * Sets the restrictionType
+    * The type of restriction being applied. The possible values are: passwordAddition, passwordLifetime, symmetricKeyAddition, symmetricKeyLifetime,customPasswordAddition, unknownFutureValue. Each value of restrictionType can be used only once per policy.
     *
     * @param AppCredentialRestrictionType $val The value to assign to the restrictionType
     *

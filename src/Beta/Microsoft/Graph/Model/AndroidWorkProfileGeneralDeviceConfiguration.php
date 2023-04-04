@@ -25,6 +25,35 @@ namespace Beta\Microsoft\Graph\Model;
 class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
 {
     /**
+    * Gets the allowedGoogleAccountDomains
+    * Determine domains allow-list for accounts that can be added to work profile.
+    *
+    * @return array|null The allowedGoogleAccountDomains
+    */
+    public function getAllowedGoogleAccountDomains()
+    {
+        if (array_key_exists("allowedGoogleAccountDomains", $this->_propDict)) {
+            return $this->_propDict["allowedGoogleAccountDomains"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the allowedGoogleAccountDomains
+    * Determine domains allow-list for accounts that can be added to work profile.
+    *
+    * @param string[] $val The allowedGoogleAccountDomains
+    *
+    * @return AndroidWorkProfileGeneralDeviceConfiguration
+    */
+    public function setAllowedGoogleAccountDomains($val)
+    {
+        $this->_propDict["allowedGoogleAccountDomains"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the passwordBlockFaceUnlock
     * Indicates whether or not to block face unlock.
     *
@@ -435,6 +464,39 @@ class AndroidWorkProfileGeneralDeviceConfiguration extends DeviceConfiguration
     public function setVpnEnableAlwaysOnLockdownMode($val)
     {
         $this->_propDict["vpnEnableAlwaysOnLockdownMode"] = boolval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the workProfileAccountUse
+    * Control user's ability to add accounts in work profile including Google accounts. Possible values are: allowAllExceptGoogleAccounts, blockAll, allowAll, unknownFutureValue.
+    *
+    * @return AndroidWorkProfileAccountUse|null The workProfileAccountUse
+    */
+    public function getWorkProfileAccountUse()
+    {
+        if (array_key_exists("workProfileAccountUse", $this->_propDict)) {
+            if (is_a($this->_propDict["workProfileAccountUse"], "\Beta\Microsoft\Graph\Model\AndroidWorkProfileAccountUse") || is_null($this->_propDict["workProfileAccountUse"])) {
+                return $this->_propDict["workProfileAccountUse"];
+            } else {
+                $this->_propDict["workProfileAccountUse"] = new AndroidWorkProfileAccountUse($this->_propDict["workProfileAccountUse"]);
+                return $this->_propDict["workProfileAccountUse"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the workProfileAccountUse
+    * Control user's ability to add accounts in work profile including Google accounts. Possible values are: allowAllExceptGoogleAccounts, blockAll, allowAll, unknownFutureValue.
+    *
+    * @param AndroidWorkProfileAccountUse $val The workProfileAccountUse
+    *
+    * @return AndroidWorkProfileGeneralDeviceConfiguration
+    */
+    public function setWorkProfileAccountUse($val)
+    {
+        $this->_propDict["workProfileAccountUse"] = $val;
         return $this;
     }
 

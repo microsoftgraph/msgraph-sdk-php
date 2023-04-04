@@ -56,6 +56,34 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
 
      /**
+     * Gets the appPerformances
+     *
+     * @return array|null The appPerformances
+     */
+    public function getAppPerformances()
+    {
+        if (array_key_exists("appPerformances", $this->_propDict)) {
+           return $this->_propDict["appPerformances"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the appPerformances
+    *
+    * @param AppPerformance[] $val The appPerformances
+    *
+    * @return ManagedTenant
+    */
+    public function setAppPerformances($val)
+    {
+        $this->_propDict["appPerformances"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the auditEvents
     * The collection of audit events across managed tenants.
      *
@@ -236,6 +264,34 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
 
 
      /**
+     * Gets the deviceAppPerformances
+     *
+     * @return array|null The deviceAppPerformances
+     */
+    public function getDeviceAppPerformances()
+    {
+        if (array_key_exists("deviceAppPerformances", $this->_propDict)) {
+           return $this->_propDict["deviceAppPerformances"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the deviceAppPerformances
+    *
+    * @param DeviceAppPerformance[] $val The deviceAppPerformances
+    *
+    * @return ManagedTenant
+    */
+    public function setDeviceAppPerformances($val)
+    {
+        $this->_propDict["deviceAppPerformances"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the deviceCompliancePolicySettingStateSummaries
     * Summary information for device compliance policy setting states across managed tenants.
      *
@@ -261,6 +317,34 @@ class ManagedTenant extends \Beta\Microsoft\Graph\Model\Entity
     public function setDeviceCompliancePolicySettingStateSummaries($val)
     {
         $this->_propDict["deviceCompliancePolicySettingStateSummaries"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the deviceHealthStatuses
+     *
+     * @return array|null The deviceHealthStatuses
+     */
+    public function getDeviceHealthStatuses()
+    {
+        if (array_key_exists("deviceHealthStatuses", $this->_propDict)) {
+           return $this->_propDict["deviceHealthStatuses"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the deviceHealthStatuses
+    *
+    * @param DeviceHealthStatus[] $val The deviceHealthStatuses
+    *
+    * @return ManagedTenant
+    */
+    public function setDeviceHealthStatuses($val)
+    {
+        $this->_propDict["deviceHealthStatuses"] = $val;
         return $this;
     }
 

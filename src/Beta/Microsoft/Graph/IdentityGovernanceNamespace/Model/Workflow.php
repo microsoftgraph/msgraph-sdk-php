@@ -181,6 +181,7 @@ class Workflow extends WorkflowBase
 
      /**
      * Gets the runs
+    * Workflow runs.
      *
      * @return array|null The runs
      */
@@ -195,6 +196,7 @@ class Workflow extends WorkflowBase
 
     /**
     * Sets the runs
+    * Workflow runs.
     *
     * @param Run[] $val The runs
     *
@@ -239,6 +241,7 @@ class Workflow extends WorkflowBase
 
      /**
      * Gets the userProcessingResults
+    * Per-user workflow execution results.
      *
      * @return array|null The userProcessingResults
      */
@@ -253,6 +256,7 @@ class Workflow extends WorkflowBase
 
     /**
     * Sets the userProcessingResults
+    * Per-user workflow execution results.
     *
     * @param UserProcessingResult[] $val The userProcessingResults
     *

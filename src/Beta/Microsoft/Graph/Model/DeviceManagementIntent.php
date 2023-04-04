@@ -112,6 +112,35 @@ class DeviceManagementIntent extends Entity
     }
 
     /**
+    * Gets the isMigratingToConfigurationPolicy
+    * Signifies whether or not the intent is being migrated to the configurationPolicies endpoint
+    *
+    * @return bool|null The isMigratingToConfigurationPolicy
+    */
+    public function getIsMigratingToConfigurationPolicy()
+    {
+        if (array_key_exists("isMigratingToConfigurationPolicy", $this->_propDict)) {
+            return $this->_propDict["isMigratingToConfigurationPolicy"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isMigratingToConfigurationPolicy
+    * Signifies whether or not the intent is being migrated to the configurationPolicies endpoint
+    *
+    * @param bool $val The isMigratingToConfigurationPolicy
+    *
+    * @return DeviceManagementIntent
+    */
+    public function setIsMigratingToConfigurationPolicy($val)
+    {
+        $this->_propDict["isMigratingToConfigurationPolicy"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the lastModifiedDateTime
     * When the intent was last modified
     *

@@ -57,6 +57,33 @@ class MicrosoftAuthenticatorAuthenticationMethodConfiguration extends Authentica
         return $this;
     }
 
+    /**
+    * Gets the isSoftwareOathEnabled
+    *
+    * @return bool|null The isSoftwareOathEnabled
+    */
+    public function getIsSoftwareOathEnabled()
+    {
+        if (array_key_exists("isSoftwareOathEnabled", $this->_propDict)) {
+            return $this->_propDict["isSoftwareOathEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isSoftwareOathEnabled
+    *
+    * @param bool $val The isSoftwareOathEnabled
+    *
+    * @return MicrosoftAuthenticatorAuthenticationMethodConfiguration
+    */
+    public function setIsSoftwareOathEnabled($val)
+    {
+        $this->_propDict["isSoftwareOathEnabled"] = boolval($val);
+        return $this;
+    }
+
 
      /**
      * Gets the includeTargets

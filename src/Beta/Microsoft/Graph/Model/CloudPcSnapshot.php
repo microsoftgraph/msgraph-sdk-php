@@ -88,7 +88,7 @@ class CloudPcSnapshot extends Entity
 
     /**
     * Gets the expirationDateTime
-    * The date and time when the snapshot expires. The time is shown in ISO 8601 format and Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 appears as'2014-01-01T00:00:00Z'.
+    * The date and time when the snapshot expires. The time is shown in ISO 8601 format and Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The expirationDateTime
     */
@@ -107,7 +107,7 @@ class CloudPcSnapshot extends Entity
 
     /**
     * Sets the expirationDateTime
-    * The date and time when the snapshot expires. The time is shown in ISO 8601 format and Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 appears as'2014-01-01T00:00:00Z'.
+    * The date and time when the snapshot expires. The time is shown in ISO 8601 format and Coordinated Universal Time (UTC) time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -154,7 +154,7 @@ class CloudPcSnapshot extends Entity
 
     /**
     * Gets the snapshotType
-    * The type of snapshot. indicates how the snapshot is to be created. Possible values are automatic, manual. Default value is automatic.
+    * The type of snapshot that indicates how to create the snapshot. Possible values are automatic, manual. Default value is automatic.
     *
     * @return CloudPcSnapshotType|null The snapshotType
     */
@@ -173,7 +173,7 @@ class CloudPcSnapshot extends Entity
 
     /**
     * Sets the snapshotType
-    * The type of snapshot. indicates how the snapshot is to be created. Possible values are automatic, manual. Default value is automatic.
+    * The type of snapshot that indicates how to create the snapshot. Possible values are automatic, manual. Default value is automatic.
     *
     * @param CloudPcSnapshotType $val The snapshotType
     *

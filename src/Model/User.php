@@ -25,6 +25,39 @@ namespace Microsoft\Graph\Model;
 class User extends DirectoryObject
 {
     /**
+    * Gets the signInActivity
+    * Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Returned only on $select. Supports $filter (eq, ne, not, ge, le) but not with any other filterable properties. Note: Details for this property require an Azure AD Premium P1/P2 license and the AuditLog.Read.All permission.There's a known issue with retrieving this property.This property is not returned for a user who has never signed in or last signed in before April 2020.
+    *
+    * @return SignInActivity|null The signInActivity
+    */
+    public function getSignInActivity()
+    {
+        if (array_key_exists("signInActivity", $this->_propDict)) {
+            if (is_a($this->_propDict["signInActivity"], "\Microsoft\Graph\Model\SignInActivity") || is_null($this->_propDict["signInActivity"])) {
+                return $this->_propDict["signInActivity"];
+            } else {
+                $this->_propDict["signInActivity"] = new SignInActivity($this->_propDict["signInActivity"]);
+                return $this->_propDict["signInActivity"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the signInActivity
+    * Get the last signed-in date and request ID of the sign-in for a given user. Read-only.Returned only on $select. Supports $filter (eq, ne, not, ge, le) but not with any other filterable properties. Note: Details for this property require an Azure AD Premium P1/P2 license and the AuditLog.Read.All permission.There's a known issue with retrieving this property.This property is not returned for a user who has never signed in or last signed in before April 2020.
+    *
+    * @param SignInActivity $val The signInActivity
+    *
+    * @return User
+    */
+    public function setSignInActivity($val)
+    {
+        $this->_propDict["signInActivity"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the accountEnabled
     * true if the account is enabled; otherwise, false. This property is required when a user is created. Returned only on $select. Supports $filter (eq, ne, not, and in).
     *

@@ -2679,6 +2679,36 @@ class DeviceManagement extends Entity
 
 
      /**
+     * Gets the privilegeManagementElevations
+    * The endpoint privilege management elevation event entity contains elevation details.
+     *
+     * @return array|null The privilegeManagementElevations
+     */
+    public function getPrivilegeManagementElevations()
+    {
+        if (array_key_exists("privilegeManagementElevations", $this->_propDict)) {
+           return $this->_propDict["privilegeManagementElevations"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the privilegeManagementElevations
+    * The endpoint privilege management elevation event entity contains elevation details.
+    *
+    * @param PrivilegeManagementElevation[] $val The privilegeManagementElevations
+    *
+    * @return DeviceManagement
+    */
+    public function setPrivilegeManagementElevations($val)
+    {
+        $this->_propDict["privilegeManagementElevations"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the remoteActionAudits
     * The list of device remote action audits with the tenant.
      *
