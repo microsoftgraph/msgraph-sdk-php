@@ -26,6 +26,7 @@ class TeamsAppInstallation extends Entity
 {
     /**
     * Gets the consentedPermissionSet
+    * The set of resource-specific permissions consented to while installing or upgrading the teamsApp.
     *
     * @return TeamsAppPermissionSet|null The consentedPermissionSet
     */
@@ -44,6 +45,7 @@ class TeamsAppInstallation extends Entity
 
     /**
     * Sets the consentedPermissionSet
+    * The set of resource-specific permissions consented to while installing or upgrading the teamsApp.
     *
     * @param TeamsAppPermissionSet $val The consentedPermissionSet
     *

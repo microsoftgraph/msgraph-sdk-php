@@ -142,7 +142,7 @@ class ConditionalAccessUsers extends Entity
     }
     /**
     * Gets the includeGroups
-    * Group IDs in scope of policy unless explicitly excluded, or All.
+    * Group IDs in scope of policy unless explicitly excluded.
     *
     * @return string|null The includeGroups
     */
@@ -157,7 +157,7 @@ class ConditionalAccessUsers extends Entity
 
     /**
     * Sets the includeGroups
-    * Group IDs in scope of policy unless explicitly excluded, or All.
+    * Group IDs in scope of policy unless explicitly excluded.
     *
     * @param string $val The value of the includeGroups
     *
@@ -203,7 +203,7 @@ class ConditionalAccessUsers extends Entity
     }
     /**
     * Gets the includeRoles
-    * Role IDs in scope of policy unless explicitly excluded, or All.
+    * Role IDs in scope of policy unless explicitly excluded.
     *
     * @return string|null The includeRoles
     */
@@ -218,7 +218,7 @@ class ConditionalAccessUsers extends Entity
 
     /**
     * Sets the includeRoles
-    * Role IDs in scope of policy unless explicitly excluded, or All.
+    * Role IDs in scope of policy unless explicitly excluded.
     *
     * @param string $val The value of the includeRoles
     *
@@ -231,7 +231,7 @@ class ConditionalAccessUsers extends Entity
     }
     /**
     * Gets the includeUsers
-    * User IDs in scope of policy unless explicitly excluded, or None or All or GuestsOrExternalUsers.
+    * User IDs in scope of policy unless explicitly excluded, None, All, or GuestsOrExternalUsers.
     *
     * @return string|null The includeUsers
     */
@@ -246,7 +246,7 @@ class ConditionalAccessUsers extends Entity
 
     /**
     * Sets the includeUsers
-    * User IDs in scope of policy unless explicitly excluded, or None or All or GuestsOrExternalUsers.
+    * User IDs in scope of policy unless explicitly excluded, None, All, or GuestsOrExternalUsers.
     *
     * @param string $val The value of the includeUsers
     *

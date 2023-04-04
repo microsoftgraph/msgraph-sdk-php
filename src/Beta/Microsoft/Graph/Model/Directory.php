@@ -233,6 +233,7 @@ class Directory extends Entity
 
      /**
      * Gets the inboundSharedUserProfiles
+    * A collection of external Azure AD users whose profile data has been shared with the Azure AD tenant. Nullable.
      *
      * @return array|null The inboundSharedUserProfiles
      */
@@ -247,6 +248,7 @@ class Directory extends Entity
 
     /**
     * Sets the inboundSharedUserProfiles
+    * A collection of external Azure AD users whose profile data has been shared with the Azure AD tenant. Nullable.
     *
     * @param InboundSharedUserProfile[] $val The inboundSharedUserProfiles
     *

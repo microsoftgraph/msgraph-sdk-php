@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* DevicePlatformType File
+* VpnTrafficDirection File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* DevicePlatformType class
+* VpnTrafficDirection class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,22 +24,12 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class DevicePlatformType extends Enum
+class VpnTrafficDirection extends Enum
 {
     /**
-    * The Enum DevicePlatformType
+    * The Enum VpnTrafficDirection
     */
-    const ANDROID = "android";
-    const ANDROID_FOR_WORK = "androidForWork";
-    const I_OS = "iOS";
-    const MAC_OS = "macOS";
-    const WINDOWS_PHONE81 = "windowsPhone81";
-    const WINDOWS81_AND_LATER = "windows81AndLater";
-    const WINDOWS10_AND_LATER = "windows10AndLater";
-    const ANDROID_WORK_PROFILE = "androidWorkProfile";
-    const UNKNOWN = "unknown";
-    const ANDROID_AOSP = "androidAOSP";
-    const ANDROID_MOBILE_APPLICATION_MANAGEMENT = "androidMobileApplicationManagement";
-    const I_OS_MOBILE_APPLICATION_MANAGEMENT = "iOSMobileApplicationManagement";
+    const OUTBOUND = "outbound";
+    const INBOUND = "inbound";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

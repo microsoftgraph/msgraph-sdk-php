@@ -25,6 +25,7 @@ class PlannerTaskRecurrence extends Entity
 {
     /**
     * Gets the nextInSeriesTaskId
+    * The taskId of the next task in this series. This value is assigned at the time the next task in the series is created, and is null prior to that time.
     *
     * @return string|null The nextInSeriesTaskId
     */
@@ -39,6 +40,7 @@ class PlannerTaskRecurrence extends Entity
 
     /**
     * Sets the nextInSeriesTaskId
+    * The taskId of the next task in this series. This value is assigned at the time the next task in the series is created, and is null prior to that time.
     *
     * @param string $val The value of the nextInSeriesTaskId
     *
@@ -51,6 +53,7 @@ class PlannerTaskRecurrence extends Entity
     }
     /**
     * Gets the occurrenceId
+    * The 1-based index of this task within the recurrence series. The first task in a series has the value 1, the next task in the series has the value 2, and so on.
     *
     * @return int|null The occurrenceId
     */
@@ -65,6 +68,7 @@ class PlannerTaskRecurrence extends Entity
 
     /**
     * Sets the occurrenceId
+    * The 1-based index of this task within the recurrence series. The first task in a series has the value 1, the next task in the series has the value 2, and so on.
     *
     * @param int $val The value of the occurrenceId
     *
@@ -77,6 +81,7 @@ class PlannerTaskRecurrence extends Entity
     }
     /**
     * Gets the previousInSeriesTaskId
+    * The taskId of the previous task in this series. null for the first task in a series since it has no predecessor. All subsequent tasks in the series have a value that corresponds to their predecessors.
     *
     * @return string|null The previousInSeriesTaskId
     */
@@ -91,6 +96,7 @@ class PlannerTaskRecurrence extends Entity
 
     /**
     * Sets the previousInSeriesTaskId
+    * The taskId of the previous task in this series. null for the first task in a series since it has no predecessor. All subsequent tasks in the series have a value that corresponds to their predecessors.
     *
     * @param string $val The value of the previousInSeriesTaskId
     *
@@ -104,6 +110,7 @@ class PlannerTaskRecurrence extends Entity
 
     /**
     * Gets the recurrenceStartDateTime
+    * The date and time when this recurrence series begin. For the first task in a series (occurrenceId = 1) this value is copied from schedule.patternStartDateTime. For subsequent tasks in the series (occurrenceId &amp;gt;= 2) this value is copied from the previous task and never changes; it preserves the start date of the recurring series. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The recurrenceStartDateTime
     */
@@ -122,6 +129,7 @@ class PlannerTaskRecurrence extends Entity
 
     /**
     * Sets the recurrenceStartDateTime
+    * The date and time when this recurrence series begin. For the first task in a series (occurrenceId = 1) this value is copied from schedule.patternStartDateTime. For subsequent tasks in the series (occurrenceId &amp;gt;= 2) this value is copied from the previous task and never changes; it preserves the start date of the recurring series. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the recurrenceStartDateTime
     *
@@ -135,6 +143,7 @@ class PlannerTaskRecurrence extends Entity
 
     /**
     * Gets the schedule
+    * The schedule for recurrence. Clients define and edit recurrence by specifying the schedule. If nextInSeriesTaskId isn't assigned, clients may terminate the series by assigning null to this property.
     *
     * @return PlannerRecurrenceSchedule|null The schedule
     */
@@ -153,6 +162,7 @@ class PlannerTaskRecurrence extends Entity
 
     /**
     * Sets the schedule
+    * The schedule for recurrence. Clients define and edit recurrence by specifying the schedule. If nextInSeriesTaskId isn't assigned, clients may terminate the series by assigning null to this property.
     *
     * @param PlannerRecurrenceSchedule $val The value to assign to the schedule
     *
@@ -165,6 +175,7 @@ class PlannerTaskRecurrence extends Entity
     }
     /**
     * Gets the seriesId
+    * The recurrence series this task belongs to. A GUID-based value that serves as the unique identifier for a series.
     *
     * @return string|null The seriesId
     */
@@ -179,6 +190,7 @@ class PlannerTaskRecurrence extends Entity
 
     /**
     * Sets the seriesId
+    * The recurrence series this task belongs to. A GUID-based value that serves as the unique identifier for a series.
     *
     * @param string $val The value of the seriesId
     *

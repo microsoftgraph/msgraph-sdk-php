@@ -1066,7 +1066,7 @@ class ServicePrincipal extends DirectoryObject
 
     /**
     * Gets the tags
-    * Custom strings that can be used to categorize and identify the service principal. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
+    * Custom strings that can be used to categorize and identify the service principal. Not nullable. The value is the union of strings set here and on the associated application entity's tags property.Supports $filter (eq, not, ge, le, startsWith).
     *
     * @return array|null The tags
     */
@@ -1081,7 +1081,7 @@ class ServicePrincipal extends DirectoryObject
 
     /**
     * Sets the tags
-    * Custom strings that can be used to categorize and identify the service principal. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
+    * Custom strings that can be used to categorize and identify the service principal. Not nullable. The value is the union of strings set here and on the associated application entity's tags property.Supports $filter (eq, not, ge, le, startsWith).
     *
     * @param string[] $val The tags
     *
