@@ -11,7 +11,7 @@ use Psr\Http\Message\StreamInterface;
 class Application extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new application and sets the default values.
+     * Instantiates a new Application and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -377,7 +377,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the tags property value. Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
+     * Gets the tags property value. Custom strings that can be used to categorize and identify the application. Not nullable. Strings added here will also appear in the tags property of any associated service principals.Supports $filter (eq, not, ge, le, startsWith).
      * @return array<string>|null
     */
     public function getTags(): ?array {
@@ -772,7 +772,7 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the tags property value. Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, not, ge, le, startsWith).
+     * Sets the tags property value. Custom strings that can be used to categorize and identify the application. Not nullable. Strings added here will also appear in the tags property of any associated service principals.Supports $filter (eq, not, ge, le, startsWith).
      * @param array<string>|null $value Value to set for the tags property.
     */
     public function setTags(?array $value): void {
