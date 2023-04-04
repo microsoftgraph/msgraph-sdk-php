@@ -5,7 +5,6 @@ namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Messages\
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Messages\Item\HostedContents\Item\Value\ContentRequestBuilder;
 use Microsoft\Graph\Generated\Models\ChatMessageHostedContent;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -14,20 +13,12 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 use Microsoft\Kiota\Abstractions\ResponseHandler;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
-use Psr\Http\Message\StreamInterface;
 
 /**
  * Provides operations to manage the hostedContents property of the microsoft.graph.chatMessage entity.
 */
 class ChatMessageHostedContentItemRequestBuilder 
 {
-    /**
-     * Provides operations to manage the media for the user entity.
-    */
-    public function content(): ContentRequestBuilder {
-        return new ContentRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
     /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */
@@ -70,7 +61,7 @@ class ChatMessageHostedContentItemRequestBuilder
                     '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
                     '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
             ];
-            return $this->requestAdapter->sendPrimitiveAsync($requestInfo, StreamInterface::class, $errorMappings);
+            return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }

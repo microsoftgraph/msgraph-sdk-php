@@ -38,14 +38,12 @@ class BookingAppointmentItemRequestBuilderGetRequestConfiguration
 
     /**
      * Instantiates a new BookingAppointmentItemRequestBuilderGetQueryParameters.
-     * @param string|null $end The end date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T20:00:00-08:00
      * @param array<string>|null $expand Expand related entities
      * @param array<string>|null $select Select properties to be returned
-     * @param string|null $start The start date and time of the time range, represented in ISO 8601 format. For example, 2019-11-08T19:00:00-08:00
      * @return BookingAppointmentItemRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?string $end = null, ?array $expand = null, ?array $select = null, ?string $start = null): BookingAppointmentItemRequestBuilderGetQueryParameters {
-        return new BookingAppointmentItemRequestBuilderGetQueryParameters($end, $expand, $select, $start);
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): BookingAppointmentItemRequestBuilderGetQueryParameters {
+        return new BookingAppointmentItemRequestBuilderGetQueryParameters($expand, $select);
     }
 
 }

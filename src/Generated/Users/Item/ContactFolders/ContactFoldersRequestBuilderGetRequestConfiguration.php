@@ -39,7 +39,6 @@ class ContactFoldersRequestBuilderGetRequestConfiguration
     /**
      * Instantiates a new contactFoldersRequestBuilderGetQueryParameters.
      * @param bool|null $count Include count of items
-     * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values
      * @param array<string>|null $select Select properties to be returned
@@ -47,8 +46,8 @@ class ContactFoldersRequestBuilderGetRequestConfiguration
      * @param int|null $top Show only the first n items
      * @return ContactFoldersRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?array $select = null, ?int $skip = null, ?int $top = null): ContactFoldersRequestBuilderGetQueryParameters {
-        return new ContactFoldersRequestBuilderGetQueryParameters($count, $expand, $filter, $orderby, $select, $skip, $top);
+    public static function createQueryParameters(?bool $count = null, ?string $filter = null, ?array $orderby = null, ?array $select = null, ?int $skip = null, ?int $top = null): ContactFoldersRequestBuilderGetQueryParameters {
+        return new ContactFoldersRequestBuilderGetQueryParameters($count, $filter, $orderby, $select, $skip, $top);
     }
 
 }

@@ -6,14 +6,23 @@ use DateInterval;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Store\BackedModel;
+use Microsoft\Kiota\Abstractions\Store\BackingStore;
+use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class Agreement extends Entity implements Parsable 
+class Agreement extends Entity implements BackedModel, Parsable 
 {
+    /**
+     * @var BackingStore $backingStore Stores model information.
+    */
+    private BackingStore $backingStore;
+    
     /**
      * Instantiates a new agreement and sets the default values.
     */
     public function __construct() {
         parent::__construct();
+        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
     }
 
     /**
@@ -31,6 +40,14 @@ class Agreement extends Entity implements Parsable
     */
     public function getAcceptances(): ?array {
         return $this->getBackingStore()->get('acceptances');
+    }
+
+    /**
+     * Gets the backingStore property value. Stores model information.
+     * @return BackingStore
+    */
+    public function getBackingStore(): BackingStore {
+        return $this->backingStore;
     }
 
     /**
@@ -129,6 +146,14 @@ class Agreement extends Entity implements Parsable
     */
     public function setAcceptances(?array $value): void {
         $this->getBackingStore()->set('acceptances', $value);
+    }
+
+    /**
+     * Sets the backingStore property value. Stores model information.
+     * @param BackingStore $value Value to set for the BackingStore property.
+    */
+    public function setBackingStore(BackingStore $value): void {
+        $this->backingStore = $value;
     }
 
     /**
