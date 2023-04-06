@@ -102,7 +102,7 @@ class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the includeGroups property value. Group IDs in scope of policy unless explicitly excluded, or All.
+     * Gets the includeGroups property value. Group IDs in scope of policy unless explicitly excluded.
      * @return array<string>|null
     */
     public function getIncludeGroups(): ?array {
@@ -118,7 +118,7 @@ class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the includeRoles property value. Role IDs in scope of policy unless explicitly excluded, or All.
+     * Gets the includeRoles property value. Role IDs in scope of policy unless explicitly excluded.
      * @return array<string>|null
     */
     public function getIncludeRoles(): ?array {
@@ -126,7 +126,7 @@ class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the includeUsers property value. User IDs in scope of policy unless explicitly excluded, or None or All or GuestsOrExternalUsers.
+     * Gets the includeUsers property value. User IDs in scope of policy unless explicitly excluded, None, All, or GuestsOrExternalUsers.
      * @return array<string>|null
     */
     public function getIncludeUsers(): ?array {
@@ -207,7 +207,7 @@ class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the includeGroups property value. Group IDs in scope of policy unless explicitly excluded, or All.
+     * Sets the includeGroups property value. Group IDs in scope of policy unless explicitly excluded.
      * @param array<string>|null $value Value to set for the includeGroups property.
     */
     public function setIncludeGroups(?array $value): void {
@@ -223,7 +223,7 @@ class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the includeRoles property value. Role IDs in scope of policy unless explicitly excluded, or All.
+     * Sets the includeRoles property value. Role IDs in scope of policy unless explicitly excluded.
      * @param array<string>|null $value Value to set for the includeRoles property.
     */
     public function setIncludeRoles(?array $value): void {
@@ -231,7 +231,7 @@ class ConditionalAccessUsers implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the includeUsers property value. User IDs in scope of policy unless explicitly excluded, or None or All or GuestsOrExternalUsers.
+     * Sets the includeUsers property value. User IDs in scope of policy unless explicitly excluded, None, All, or GuestsOrExternalUsers.
      * @param array<string>|null $value Value to set for the includeUsers property.
     */
     public function setIncludeUsers(?array $value): void {

@@ -31,6 +31,7 @@ class RbacApplication extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'resourceNamespaces' => fn(ParseNode $n) => $o->setResourceNamespaces($n->getCollectionOfObjectValues([UnifiedRbacResourceNamespace::class, 'createFromDiscriminatorValue'])),
             'roleAssignments' => fn(ParseNode $n) => $o->setRoleAssignments($n->getCollectionOfObjectValues([UnifiedRoleAssignment::class, 'createFromDiscriminatorValue'])),
             'roleAssignmentScheduleInstances' => fn(ParseNode $n) => $o->setRoleAssignmentScheduleInstances($n->getCollectionOfObjectValues([UnifiedRoleAssignmentScheduleInstance::class, 'createFromDiscriminatorValue'])),
             'roleAssignmentScheduleRequests' => fn(ParseNode $n) => $o->setRoleAssignmentScheduleRequests($n->getCollectionOfObjectValues([UnifiedRoleAssignmentScheduleRequest::class, 'createFromDiscriminatorValue'])),
@@ -40,6 +41,14 @@ class RbacApplication extends Entity implements Parsable
             'roleEligibilityScheduleRequests' => fn(ParseNode $n) => $o->setRoleEligibilityScheduleRequests($n->getCollectionOfObjectValues([UnifiedRoleEligibilityScheduleRequest::class, 'createFromDiscriminatorValue'])),
             'roleEligibilitySchedules' => fn(ParseNode $n) => $o->setRoleEligibilitySchedules($n->getCollectionOfObjectValues([UnifiedRoleEligibilitySchedule::class, 'createFromDiscriminatorValue'])),
         ]);
+    }
+
+    /**
+     * Gets the resourceNamespaces property value. The resourceNamespaces property
+     * @return array<UnifiedRbacResourceNamespace>|null
+    */
+    public function getResourceNamespaces(): ?array {
+        return $this->getBackingStore()->get('resourceNamespaces');
     }
 
     /**
@@ -112,6 +121,7 @@ class RbacApplication extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeCollectionOfObjectValues('resourceNamespaces', $this->getResourceNamespaces());
         $writer->writeCollectionOfObjectValues('roleAssignments', $this->getRoleAssignments());
         $writer->writeCollectionOfObjectValues('roleAssignmentScheduleInstances', $this->getRoleAssignmentScheduleInstances());
         $writer->writeCollectionOfObjectValues('roleAssignmentScheduleRequests', $this->getRoleAssignmentScheduleRequests());
@@ -120,6 +130,14 @@ class RbacApplication extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('roleEligibilityScheduleInstances', $this->getRoleEligibilityScheduleInstances());
         $writer->writeCollectionOfObjectValues('roleEligibilityScheduleRequests', $this->getRoleEligibilityScheduleRequests());
         $writer->writeCollectionOfObjectValues('roleEligibilitySchedules', $this->getRoleEligibilitySchedules());
+    }
+
+    /**
+     * Sets the resourceNamespaces property value. The resourceNamespaces property
+     * @param array<UnifiedRbacResourceNamespace>|null $value Value to set for the resourceNamespaces property.
+    */
+    public function setResourceNamespaces(?array $value): void {
+        $this->getBackingStore()->set('resourceNamespaces', $value);
     }
 
     /**

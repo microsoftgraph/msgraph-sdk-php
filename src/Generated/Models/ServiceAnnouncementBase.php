@@ -6,23 +6,14 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
-use Microsoft\Kiota\Abstractions\Store\BackedModel;
-use Microsoft\Kiota\Abstractions\Store\BackingStore;
-use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class ServiceAnnouncementBase extends Entity implements BackedModel, Parsable 
+class ServiceAnnouncementBase extends Entity implements Parsable 
 {
-    /**
-     * @var BackingStore $backingStore Stores model information.
-    */
-    private BackingStore $backingStore;
-    
     /**
      * Instantiates a new serviceAnnouncementBase and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
     }
 
     /**
@@ -40,14 +31,6 @@ class ServiceAnnouncementBase extends Entity implements BackedModel, Parsable
             }
         }
         return new ServiceAnnouncementBase();
-    }
-
-    /**
-     * Gets the backingStore property value. Stores model information.
-     * @return BackingStore
-    */
-    public function getBackingStore(): BackingStore {
-        return $this->backingStore;
     }
 
     /**
@@ -116,14 +99,6 @@ class ServiceAnnouncementBase extends Entity implements BackedModel, Parsable
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
         $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
         $writer->writeStringValue('title', $this->getTitle());
-    }
-
-    /**
-     * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the BackingStore property.
-    */
-    public function setBackingStore(BackingStore $value): void {
-        $this->backingStore = $value;
     }
 
     /**

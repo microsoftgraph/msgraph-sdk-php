@@ -67,6 +67,14 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the displayName property value. The displayName property
+     * @return string|null
+    */
+    public function getDisplayName(): ?string {
+        return $this->getBackingStore()->get('displayName');
+    }
+
+    /**
      * Gets the domainName property value. The name of the Active Directory domain of which the user is a member.
      * @return string|null
     */
@@ -83,6 +91,7 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             'accountName' => fn(ParseNode $n) => $o->setAccountName($n->getStringValue()),
             'azureAdUserId' => fn(ParseNode $n) => $o->setAzureAdUserId($n->getStringValue()),
+            'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
             'domainName' => fn(ParseNode $n) => $o->setDomainName($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'userPrincipalName' => fn(ParseNode $n) => $o->setUserPrincipalName($n->getStringValue()),
@@ -121,6 +130,7 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('accountName', $this->getAccountName());
         $writer->writeStringValue('azureAdUserId', $this->getAzureAdUserId());
+        $writer->writeStringValue('displayName', $this->getDisplayName());
         $writer->writeStringValue('domainName', $this->getDomainName());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('userPrincipalName', $this->getUserPrincipalName());
@@ -158,6 +168,14 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
+    }
+
+    /**
+     * Sets the displayName property value. The displayName property
+     * @param string|null $value Value to set for the displayName property.
+    */
+    public function setDisplayName(?string $value): void {
+        $this->getBackingStore()->set('displayName', $value);
     }
 
     /**

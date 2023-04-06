@@ -59,6 +59,7 @@ class SearchQuery implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'queryString' => fn(ParseNode $n) => $o->setQueryString($n->getStringValue()),
+            'queryTemplate' => fn(ParseNode $n) => $o->setQueryTemplate($n->getStringValue()),
         ];
     }
 
@@ -79,12 +80,21 @@ class SearchQuery implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the queryTemplate property value. The queryTemplate property
+     * @return string|null
+    */
+    public function getQueryTemplate(): ?string {
+        return $this->getBackingStore()->get('queryTemplate');
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeStringValue('queryString', $this->getQueryString());
+        $writer->writeStringValue('queryTemplate', $this->getQueryTemplate());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -118,6 +128,14 @@ class SearchQuery implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setQueryString(?string $value): void {
         $this->getBackingStore()->set('queryString', $value);
+    }
+
+    /**
+     * Sets the queryTemplate property value. The queryTemplate property
+     * @param string|null $value Value to set for the queryTemplate property.
+    */
+    public function setQueryTemplate(?string $value): void {
+        $this->getBackingStore()->set('queryTemplate', $value);
     }
 
 }

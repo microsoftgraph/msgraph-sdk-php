@@ -7,6 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\RbacApplication;
+use Microsoft\Graph\Generated\RoleManagement\Directory\ResourceNamespaces\Item\UnifiedRbacResourceNamespaceItemRequestBuilder;
+use Microsoft\Graph\Generated\RoleManagement\Directory\ResourceNamespaces\ResourceNamespacesRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignments\Item\UnifiedRoleAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignments\RoleAssignmentsRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentScheduleInstances\Item\UnifiedRoleAssignmentScheduleInstanceItemRequestBuilder;
@@ -44,6 +46,13 @@ class DirectoryRequestBuilder
      * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     private RequestAdapter $requestAdapter;
+    
+    /**
+     * Provides operations to manage the resourceNamespaces property of the microsoft.graph.rbacApplication entity.
+    */
+    public function resourceNamespaces(): ResourceNamespacesRequestBuilder {
+        return new ResourceNamespacesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * Provides operations to manage the roleAssignments property of the microsoft.graph.rbacApplication entity.
@@ -174,6 +183,17 @@ class DirectoryRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
+    }
+
+    /**
+     * Provides operations to manage the resourceNamespaces property of the microsoft.graph.rbacApplication entity.
+     * @param string $id Unique identifier of the item
+     * @return UnifiedRbacResourceNamespaceItemRequestBuilder
+    */
+    public function resourceNamespacesById(string $id): UnifiedRbacResourceNamespaceItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['unifiedRbacResourceNamespace%2Did'] = $id;
+        return new UnifiedRbacResourceNamespaceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

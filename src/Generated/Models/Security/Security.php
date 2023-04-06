@@ -75,6 +75,8 @@ class Security extends Entity implements Parsable
             'incidents' => fn(ParseNode $n) => $o->setIncidents($n->getCollectionOfObjectValues([Incident::class, 'createFromDiscriminatorValue'])),
             'secureScoreControlProfiles' => fn(ParseNode $n) => $o->setSecureScoreControlProfiles($n->getCollectionOfObjectValues([SecureScoreControlProfile::class, 'createFromDiscriminatorValue'])),
             'secureScores' => fn(ParseNode $n) => $o->setSecureScores($n->getCollectionOfObjectValues([SecureScore::class, 'createFromDiscriminatorValue'])),
+            'triggers' => fn(ParseNode $n) => $o->setTriggers($n->getObjectValue([TriggersRoot::class, 'createFromDiscriminatorValue'])),
+            'triggerTypes' => fn(ParseNode $n) => $o->setTriggerTypes($n->getObjectValue([TriggerTypesRoot::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -103,6 +105,22 @@ class Security extends Entity implements Parsable
     }
 
     /**
+     * Gets the triggers property value. The triggers property
+     * @return TriggersRoot|null
+    */
+    public function getTriggers(): ?TriggersRoot {
+        return $this->getBackingStore()->get('triggers');
+    }
+
+    /**
+     * Gets the triggerTypes property value. The triggerTypes property
+     * @return TriggerTypesRoot|null
+    */
+    public function getTriggerTypes(): ?TriggerTypesRoot {
+        return $this->getBackingStore()->get('triggerTypes');
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -115,6 +133,8 @@ class Security extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('incidents', $this->getIncidents());
         $writer->writeCollectionOfObjectValues('secureScoreControlProfiles', $this->getSecureScoreControlProfiles());
         $writer->writeCollectionOfObjectValues('secureScores', $this->getSecureScores());
+        $writer->writeObjectValue('triggers', $this->getTriggers());
+        $writer->writeObjectValue('triggerTypes', $this->getTriggerTypes());
     }
 
     /**
@@ -171,6 +191,22 @@ class Security extends Entity implements Parsable
     */
     public function setSecureScores(?array $value): void {
         $this->getBackingStore()->set('secureScores', $value);
+    }
+
+    /**
+     * Sets the triggers property value. The triggers property
+     * @param TriggersRoot|null $value Value to set for the triggers property.
+    */
+    public function setTriggers(?TriggersRoot $value): void {
+        $this->getBackingStore()->set('triggers', $value);
+    }
+
+    /**
+     * Sets the triggerTypes property value. The triggerTypes property
+     * @param TriggerTypesRoot|null $value Value to set for the triggerTypes property.
+    */
+    public function setTriggerTypes(?TriggerTypesRoot $value): void {
+        $this->getBackingStore()->set('triggerTypes', $value);
     }
 
 }
