@@ -51,12 +51,21 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the edge property value. The edge property
+     * @return Edge|null
+    */
+    public function getEdge(): ?Edge {
+        return $this->getBackingStore()->get('edge');
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            'edge' => fn(ParseNode $n) => $o->setEdge($n->getObjectValue([Edge::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'serviceAnnouncement' => fn(ParseNode $n) => $o->setServiceAnnouncement($n->getObjectValue([ServiceAnnouncement::class, 'createFromDiscriminatorValue'])),
         ];
@@ -83,6 +92,7 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeObjectValue('edge', $this->getEdge());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('serviceAnnouncement', $this->getServiceAnnouncement());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -102,6 +112,14 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
+    }
+
+    /**
+     * Sets the edge property value. The edge property
+     * @param Edge|null $value Value to set for the edge property.
+    */
+    public function setEdge(?Edge $value): void {
+        $this->getBackingStore()->set('edge', $value);
     }
 
     /**

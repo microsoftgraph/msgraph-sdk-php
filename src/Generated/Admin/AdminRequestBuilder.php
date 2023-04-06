@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Admin;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Admin\Edge\EdgeRequestBuilder;
 use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\ServiceAnnouncementRequestBuilder;
 use Microsoft\Graph\Generated\Models\Admin;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -20,6 +21,13 @@ use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 */
 class AdminRequestBuilder 
 {
+    /**
+     * Provides operations to manage the edge property of the microsoft.graph.admin entity.
+    */
+    public function edge(): EdgeRequestBuilder {
+        return new EdgeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */

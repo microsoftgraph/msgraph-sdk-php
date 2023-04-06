@@ -30,6 +30,7 @@ class MobileLobApp extends MobileApp implements Parsable
                 case '#microsoft.graph.iosLobApp': return new IosLobApp();
                 case '#microsoft.graph.macOSLobApp': return new MacOSLobApp();
                 case '#microsoft.graph.win32LobApp': return new Win32LobApp();
+                case '#microsoft.graph.windowsAppX': return new WindowsAppX();
                 case '#microsoft.graph.windowsMobileMSI': return new WindowsMobileMSI();
                 case '#microsoft.graph.windowsUniversalAppX': return new WindowsUniversalAppX();
             }

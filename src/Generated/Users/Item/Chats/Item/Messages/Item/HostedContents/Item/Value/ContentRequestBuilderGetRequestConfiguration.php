@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Groups\Item\Team;
+namespace Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item\HostedContents\Item\Value;
 
 use Microsoft\Kiota\Abstractions\RequestOption;
 
 /**
  * Configuration for the request such as headers, query parameters, and middleware options.
 */
-class TeamRequestBuilderPatchRequestConfiguration 
+class ContentRequestBuilderGetRequestConfiguration 
 {
     /**
      * @var array<string, array<string>|string>|null $headers Request headers
@@ -20,7 +20,7 @@ class TeamRequestBuilderPatchRequestConfiguration
     public ?array $options = null;
     
     /**
-     * Instantiates a new teamRequestBuilderPatchRequestConfiguration and sets the default values.
+     * Instantiates a new ContentRequestBuilderGetRequestConfiguration and sets the default values.
      * @param array<string, array<string>|string>|null $headers Request headers
      * @param array<RequestOption>|null $options Request options
     */
