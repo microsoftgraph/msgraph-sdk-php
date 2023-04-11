@@ -54,6 +54,39 @@ class CloudPcServicePlan extends Entity
     }
 
     /**
+    * Gets the provisioningType
+    * Specifies the type of license used when provisioning Cloud PCs. By default, the license type is dedicated. Possible values are: dedicated, shared, unknownFutureValue.
+    *
+    * @return CloudPcProvisioningType|null The provisioningType
+    */
+    public function getProvisioningType()
+    {
+        if (array_key_exists("provisioningType", $this->_propDict)) {
+            if (is_a($this->_propDict["provisioningType"], "\Beta\Microsoft\Graph\Model\CloudPcProvisioningType") || is_null($this->_propDict["provisioningType"])) {
+                return $this->_propDict["provisioningType"];
+            } else {
+                $this->_propDict["provisioningType"] = new CloudPcProvisioningType($this->_propDict["provisioningType"]);
+                return $this->_propDict["provisioningType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the provisioningType
+    * Specifies the type of license used when provisioning Cloud PCs. By default, the license type is dedicated. Possible values are: dedicated, shared, unknownFutureValue.
+    *
+    * @param CloudPcProvisioningType $val The provisioningType
+    *
+    * @return CloudPcServicePlan
+    */
+    public function setProvisioningType($val)
+    {
+        $this->_propDict["provisioningType"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the ramInGB
     * The size of the RAM in GB. Read-only.
     *

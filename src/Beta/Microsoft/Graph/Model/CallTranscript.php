@@ -92,6 +92,7 @@ class CallTranscript extends Entity
 
     /**
     * Gets the metadataContent
+    * A field that represents the time-aligned metadata of the utterances in the transcript. Read-only.
     *
     * @return \GuzzleHttp\Psr7\Stream|null The metadataContent
     */
@@ -110,6 +111,7 @@ class CallTranscript extends Entity
 
     /**
     * Sets the metadataContent
+    * A field that represents the time-aligned metadata of the utterances in the transcript. Read-only.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The metadataContent
     *

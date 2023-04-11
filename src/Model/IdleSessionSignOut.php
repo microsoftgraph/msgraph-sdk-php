@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\TenantAdmin\Model;
+namespace Microsoft\Graph\Model;
 /**
 * IdleSessionSignOut class
 *
@@ -21,11 +21,10 @@ namespace Beta\Microsoft\Graph\TenantAdmin\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class IdleSessionSignOut extends \Beta\Microsoft\Graph\Model\Entity
+class IdleSessionSignOut extends Entity
 {
     /**
     * Gets the isEnabled
-    * Indicates whether the idle session sign-out policy is enabled.
     *
     * @return bool|null The isEnabled
     */
@@ -40,7 +39,6 @@ class IdleSessionSignOut extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isEnabled
-    * Indicates whether the idle session sign-out policy is enabled.
     *
     * @param bool $val The value of the isEnabled
     *
@@ -53,7 +51,6 @@ class IdleSessionSignOut extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the signOutAfterInSeconds
-    * Number of seconds of inactivity after which a user is signed out.
     *
     * @return int|null The signOutAfterInSeconds
     */
@@ -68,7 +65,6 @@ class IdleSessionSignOut extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the signOutAfterInSeconds
-    * Number of seconds of inactivity after which a user is signed out.
     *
     * @param int $val The value of the signOutAfterInSeconds
     *
@@ -81,7 +77,6 @@ class IdleSessionSignOut extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the warnAfterInSeconds
-    * Number of seconds of inactivity after which a user is notified that they'll be signed out.
     *
     * @return int|null The warnAfterInSeconds
     */
@@ -96,7 +91,6 @@ class IdleSessionSignOut extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the warnAfterInSeconds
-    * Number of seconds of inactivity after which a user is notified that they'll be signed out.
     *
     * @param int $val The value of the warnAfterInSeconds
     *

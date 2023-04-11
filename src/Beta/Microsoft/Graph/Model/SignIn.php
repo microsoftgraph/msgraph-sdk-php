@@ -996,6 +996,39 @@ class SignIn extends Entity
     }
 
     /**
+    * Gets the managedServiceIdentity
+    * Contains information about the managed identity used for the sign in, including its type and associated Azure Resource Manager (ARM) resource ID.
+    *
+    * @return ManagedIdentity|null The managedServiceIdentity
+    */
+    public function getManagedServiceIdentity()
+    {
+        if (array_key_exists("managedServiceIdentity", $this->_propDict)) {
+            if (is_a($this->_propDict["managedServiceIdentity"], "\Beta\Microsoft\Graph\Model\ManagedIdentity") || is_null($this->_propDict["managedServiceIdentity"])) {
+                return $this->_propDict["managedServiceIdentity"];
+            } else {
+                $this->_propDict["managedServiceIdentity"] = new ManagedIdentity($this->_propDict["managedServiceIdentity"]);
+                return $this->_propDict["managedServiceIdentity"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the managedServiceIdentity
+    * Contains information about the managed identity used for the sign in, including its type and associated Azure Resource Manager (ARM) resource ID.
+    *
+    * @param ManagedIdentity $val The managedServiceIdentity
+    *
+    * @return SignIn
+    */
+    public function setManagedServiceIdentity($val)
+    {
+        $this->_propDict["managedServiceIdentity"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the mfaDetail
     *
     * @return MfaDetail|null The mfaDetail

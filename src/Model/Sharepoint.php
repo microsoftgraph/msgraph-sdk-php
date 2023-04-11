@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\TenantAdmin\Model;
+namespace Microsoft\Graph\Model;
 
 /**
 * Sharepoint class
@@ -22,21 +22,20 @@ namespace Beta\Microsoft\Graph\TenantAdmin\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Sharepoint extends \Beta\Microsoft\Graph\Model\Entity
+class Sharepoint extends Entity
 {
     /**
     * Gets the settings
-    * Represents the tenant-level settings for SharePoint and OneDrive.
     *
-    * @return Settings|null The settings
+    * @return SharepointSettings|null The settings
     */
     public function getSettings()
     {
         if (array_key_exists("settings", $this->_propDict)) {
-            if (is_a($this->_propDict["settings"], "\Beta\Microsoft\Graph\TenantAdmin\Model\Settings") || is_null($this->_propDict["settings"])) {
+            if (is_a($this->_propDict["settings"], "\Microsoft\Graph\Model\SharepointSettings") || is_null($this->_propDict["settings"])) {
                 return $this->_propDict["settings"];
             } else {
-                $this->_propDict["settings"] = new Settings($this->_propDict["settings"]);
+                $this->_propDict["settings"] = new SharepointSettings($this->_propDict["settings"]);
                 return $this->_propDict["settings"];
             }
         }
@@ -45,9 +44,8 @@ class Sharepoint extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the settings
-    * Represents the tenant-level settings for SharePoint and OneDrive.
     *
-    * @param Settings $val The settings
+    * @param SharepointSettings $val The settings
     *
     * @return Sharepoint
     */

@@ -92,15 +92,15 @@ class Admin implements \JsonSerializable
     * Gets the sharepoint
     * A container for administrative resources to manage tenant-level settings for SharePoint and OneDrive.
     *
-    * @return \Beta\Microsoft\Graph\TenantAdmin\Model\Sharepoint|null The sharepoint
+    * @return Sharepoint|null The sharepoint
     */
     public function getSharepoint()
     {
         if (array_key_exists("sharepoint", $this->_propDict)) {
-            if (is_a($this->_propDict["sharepoint"], "\Beta\Microsoft\Graph\TenantAdmin\Model\Sharepoint") || is_null($this->_propDict["sharepoint"])) {
+            if (is_a($this->_propDict["sharepoint"], "\Beta\Microsoft\Graph\Model\Sharepoint") || is_null($this->_propDict["sharepoint"])) {
                 return $this->_propDict["sharepoint"];
             } else {
-                $this->_propDict["sharepoint"] = new \Beta\Microsoft\Graph\TenantAdmin\Model\Sharepoint($this->_propDict["sharepoint"]);
+                $this->_propDict["sharepoint"] = new Sharepoint($this->_propDict["sharepoint"]);
                 return $this->_propDict["sharepoint"];
             }
         }
@@ -111,7 +111,7 @@ class Admin implements \JsonSerializable
     * Sets the sharepoint
     * A container for administrative resources to manage tenant-level settings for SharePoint and OneDrive.
     *
-    * @param \Beta\Microsoft\Graph\TenantAdmin\Model\Sharepoint $val The sharepoint
+    * @param Sharepoint $val The sharepoint
     *
     * @return Admin
     */

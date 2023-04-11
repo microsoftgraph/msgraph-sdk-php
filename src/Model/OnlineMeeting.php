@@ -741,6 +741,39 @@ class OnlineMeeting extends Entity
         return $this;
     }
 
+    /**
+    * Gets the watermarkProtection
+    * Specifies whether a watermark should be applied to a content type by the client application.
+    *
+    * @return WatermarkProtectionValues|null The watermarkProtection
+    */
+    public function getWatermarkProtection()
+    {
+        if (array_key_exists("watermarkProtection", $this->_propDict)) {
+            if (is_a($this->_propDict["watermarkProtection"], "\Microsoft\Graph\Model\WatermarkProtectionValues") || is_null($this->_propDict["watermarkProtection"])) {
+                return $this->_propDict["watermarkProtection"];
+            } else {
+                $this->_propDict["watermarkProtection"] = new WatermarkProtectionValues($this->_propDict["watermarkProtection"]);
+                return $this->_propDict["watermarkProtection"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the watermarkProtection
+    * Specifies whether a watermark should be applied to a content type by the client application.
+    *
+    * @param WatermarkProtectionValues $val The watermarkProtection
+    *
+    * @return OnlineMeeting
+    */
+    public function setWatermarkProtection($val)
+    {
+        $this->_propDict["watermarkProtection"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the attendanceReports

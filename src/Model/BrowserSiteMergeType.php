@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* SharingDomainRestrictionMode File
+* BrowserSiteMergeType File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\TenantAdmin\Model;
+namespace Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* SharingDomainRestrictionMode class
+* BrowserSiteMergeType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,12 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class SharingDomainRestrictionMode extends Enum
+class BrowserSiteMergeType extends Enum
 {
     /**
-    * The Enum SharingDomainRestrictionMode
+    * The Enum BrowserSiteMergeType
     */
-    const NONE = "none";
-    const ALLOW_LIST = "allowList";
-    const BLOCK_LIST = "blockList";
+    const NO_MERGE = "noMerge";
+    const GRAPHDEFAULT = "default";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
