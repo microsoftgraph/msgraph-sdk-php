@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* ShiftWorkCloudPcAccessState File
+* MsiType File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* ShiftWorkCloudPcAccessState class
+* MsiType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,17 +24,13 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class ShiftWorkCloudPcAccessState extends Enum
+class MsiType extends Enum
 {
     /**
-    * The Enum ShiftWorkCloudPcAccessState
+    * The Enum MsiType
     */
-    const UNASSIGNED = "unassigned";
-    const NO_LICENSES_AVAILABLE = "noLicensesAvailable";
-    const ACTIVATION_FAILED = "activationFailed";
-    const ACTIVE = "active";
-    const ACTIVATING = "activating";
-    const WAITLISTED = "waitlisted";
+    const NONE = "none";
+    const USER_ASSIGNED = "userAssigned";
+    const SYSTEM_ASSIGNED = "systemAssigned";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const STANDBY_MODE = "standbyMode";
 }

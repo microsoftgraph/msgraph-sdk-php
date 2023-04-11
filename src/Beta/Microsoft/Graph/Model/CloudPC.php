@@ -460,6 +460,37 @@ class CloudPC extends Entity
     }
 
     /**
+    * Gets the powerState
+    *
+    * @return CloudPcPowerState|null The powerState
+    */
+    public function getPowerState()
+    {
+        if (array_key_exists("powerState", $this->_propDict)) {
+            if (is_a($this->_propDict["powerState"], "\Beta\Microsoft\Graph\Model\CloudPcPowerState") || is_null($this->_propDict["powerState"])) {
+                return $this->_propDict["powerState"];
+            } else {
+                $this->_propDict["powerState"] = new CloudPcPowerState($this->_propDict["powerState"]);
+                return $this->_propDict["powerState"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the powerState
+    *
+    * @param CloudPcPowerState $val The powerState
+    *
+    * @return CloudPC
+    */
+    public function setPowerState($val)
+    {
+        $this->_propDict["powerState"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the provisioningPolicyId
     * The provisioning policy ID of the Cloud PC.
     *

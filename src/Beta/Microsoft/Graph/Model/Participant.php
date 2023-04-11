@@ -235,6 +235,37 @@ class Participant extends Entity
     }
 
     /**
+    * Gets the removedState
+    *
+    * @return RemovedState|null The removedState
+    */
+    public function getRemovedState()
+    {
+        if (array_key_exists("removedState", $this->_propDict)) {
+            if (is_a($this->_propDict["removedState"], "\Beta\Microsoft\Graph\Model\RemovedState") || is_null($this->_propDict["removedState"])) {
+                return $this->_propDict["removedState"];
+            } else {
+                $this->_propDict["removedState"] = new RemovedState($this->_propDict["removedState"]);
+                return $this->_propDict["removedState"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the removedState
+    *
+    * @param RemovedState $val The removedState
+    *
+    * @return Participant
+    */
+    public function setRemovedState($val)
+    {
+        $this->_propDict["removedState"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the restrictedExperience
     * Indicates the reason or reasons why media content from this participant is restricted.
     *
@@ -264,6 +295,33 @@ class Participant extends Entity
     public function setRestrictedExperience($val)
     {
         $this->_propDict["restrictedExperience"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the rosterSequenceNumber
+    *
+    * @return int|null The rosterSequenceNumber
+    */
+    public function getRosterSequenceNumber()
+    {
+        if (array_key_exists("rosterSequenceNumber", $this->_propDict)) {
+            return $this->_propDict["rosterSequenceNumber"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the rosterSequenceNumber
+    *
+    * @param int $val The rosterSequenceNumber
+    *
+    * @return Participant
+    */
+    public function setRosterSequenceNumber($val)
+    {
+        $this->_propDict["rosterSequenceNumber"] = intval($val);
         return $this;
     }
 

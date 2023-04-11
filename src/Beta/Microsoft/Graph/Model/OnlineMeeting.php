@@ -954,7 +954,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Gets the watermarkProtection
-    * Specifies whether a watermark applies for different entities.
+    * Specifies whether a watermark should be applied to a content type by the client application.
     *
     * @return WatermarkProtectionValues|null The watermarkProtection
     */
@@ -973,7 +973,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Sets the watermarkProtection
-    * Specifies whether a watermark applies for different entities.
+    * Specifies whether a watermark should be applied to a content type by the client application.
     *
     * @param WatermarkProtectionValues $val The watermarkProtection
     *

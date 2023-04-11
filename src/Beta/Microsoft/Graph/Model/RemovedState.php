@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* ShiftWorkCloudPcAccessState File
+* RemovedState File
 * PHP version 7
 *
 * @category  Library
@@ -12,11 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
 /**
-* ShiftWorkCloudPcAccessState class
+* RemovedState class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,17 +21,32 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class ShiftWorkCloudPcAccessState extends Enum
+class RemovedState extends Entity
 {
     /**
-    * The Enum ShiftWorkCloudPcAccessState
+    * Gets the reason
+    *
+    * @return string|null The reason
     */
-    const UNASSIGNED = "unassigned";
-    const NO_LICENSES_AVAILABLE = "noLicensesAvailable";
-    const ACTIVATION_FAILED = "activationFailed";
-    const ACTIVE = "active";
-    const ACTIVATING = "activating";
-    const WAITLISTED = "waitlisted";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const STANDBY_MODE = "standbyMode";
+    public function getReason()
+    {
+        if (array_key_exists("reason", $this->_propDict)) {
+            return $this->_propDict["reason"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the reason
+    *
+    * @param string $val The value of the reason
+    *
+    * @return RemovedState
+    */
+    public function setReason($val)
+    {
+        $this->_propDict["reason"] = $val;
+        return $this;
+    }
 }

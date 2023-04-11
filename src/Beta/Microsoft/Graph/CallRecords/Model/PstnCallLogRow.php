@@ -519,6 +519,32 @@ class PstnCallLogRow extends \Beta\Microsoft\Graph\Model\Entity
         $this->_propDict["operator"] = $val;
         return $this;
     }
+    /**
+    * Gets the otherPartyCountryCode
+    *
+    * @return string|null The otherPartyCountryCode
+    */
+    public function getOtherPartyCountryCode()
+    {
+        if (array_key_exists("otherPartyCountryCode", $this->_propDict)) {
+            return $this->_propDict["otherPartyCountryCode"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the otherPartyCountryCode
+    *
+    * @param string $val The value of the otherPartyCountryCode
+    *
+    * @return PstnCallLogRow
+    */
+    public function setOtherPartyCountryCode($val)
+    {
+        $this->_propDict["otherPartyCountryCode"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the startDateTime

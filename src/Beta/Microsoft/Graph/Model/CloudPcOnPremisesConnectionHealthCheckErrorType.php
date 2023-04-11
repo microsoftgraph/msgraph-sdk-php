@@ -88,6 +88,7 @@ class CloudPcOnPremisesConnectionHealthCheckErrorType extends Enum
     const INTERNAL_SERVER_ERROR_ALLOCATE_RESOURCE_FAILED = "internalServerErrorAllocateResourceFailed";
     const INTERNAL_SERVER_ERROR_VM_DEPLOYMENT_TIMEOUT = "internalServerErrorVMDeploymentTimeout";
     const INTERNAL_SERVER_ERROR_UNABLE_TO_RUN_DSC_SCRIPT = "internalServerErrorUnableToRunDscScript";
+    const SSO_CHECK_KERBEROS_CONFIGURATION_ERROR = "ssoCheckKerberosConfigurationError";
     const INTERNAL_SERVER_UNKNOWN_ERROR = "internalServerUnknownError";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }
