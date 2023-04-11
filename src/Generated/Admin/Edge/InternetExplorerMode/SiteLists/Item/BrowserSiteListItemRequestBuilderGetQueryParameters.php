@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\Edge\InternetExplorerMode\SiteLists\It
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get siteLists from admin
+ * A collection of site lists to support Internet Explorer mode.
 */
 class BrowserSiteListItemRequestBuilderGetQueryParameters 
 {

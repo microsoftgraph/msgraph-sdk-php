@@ -36,7 +36,7 @@ class InternetExplorerMode extends Entity implements Parsable
     }
 
     /**
-     * Gets the siteLists property value. The siteLists property
+     * Gets the siteLists property value. A collection of site lists to support Internet Explorer mode.
      * @return array<BrowserSiteList>|null
     */
     public function getSiteLists(): ?array {
@@ -53,7 +53,7 @@ class InternetExplorerMode extends Entity implements Parsable
     }
 
     /**
-     * Sets the siteLists property value. The siteLists property
+     * Sets the siteLists property value. A collection of site lists to support Internet Explorer mode.
      * @param array<BrowserSiteList>|null $value Value to set for the siteLists property.
     */
     public function setSiteLists(?array $value): void {

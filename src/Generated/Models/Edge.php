@@ -36,7 +36,7 @@ class Edge extends Entity implements Parsable
     }
 
     /**
-     * Gets the internetExplorerMode property value. The internetExplorerMode property
+     * Gets the internetExplorerMode property value. A container for Internet Explorer mode resources.
      * @return InternetExplorerMode|null
     */
     public function getInternetExplorerMode(): ?InternetExplorerMode {
@@ -53,7 +53,7 @@ class Edge extends Entity implements Parsable
     }
 
     /**
-     * Sets the internetExplorerMode property value. The internetExplorerMode property
+     * Sets the internetExplorerMode property value. A container for Internet Explorer mode resources.
      * @param InternetExplorerMode|null $value Value to set for the internetExplorerMode property.
     */
     public function setInternetExplorerMode(?InternetExplorerMode $value): void {

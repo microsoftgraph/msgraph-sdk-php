@@ -77,7 +77,7 @@ class InternetExplorerModeRequestBuilder
     }
 
     /**
-     * Get internetExplorerMode from admin
+     * A container for Internet Explorer mode resources.
      * @param InternetExplorerModeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -146,7 +146,7 @@ class InternetExplorerModeRequestBuilder
     }
 
     /**
-     * Get internetExplorerMode from admin
+     * A container for Internet Explorer mode resources.
      * @param InternetExplorerModeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

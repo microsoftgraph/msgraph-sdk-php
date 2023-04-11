@@ -52,7 +52,7 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the comment property value. The comment of the cookie
+     * Gets the comment property value. The comment for the shared cookie.
      * @return string|null
     */
     public function getComment(): ?string {
@@ -60,7 +60,7 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the displayName property value. The name of the cookie
+     * Gets the displayName property value. The name of the cookie.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -87,7 +87,7 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the hostOnly property value. Boolean attribute that determines whether a cookie is  a host-only or domain cookie
+     * Gets the hostOnly property value. Controls whether a cookie is a host-only or domain cookie.
      * @return bool|null
     */
     public function getHostOnly(): ?bool {
@@ -95,7 +95,7 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the hostOrDomain property value. The URL of the cookie
+     * Gets the hostOrDomain property value. The URL of the cookie.
      * @return string|null
     */
     public function getHostOrDomain(): ?string {
@@ -119,7 +119,7 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the path property value. The path of the cookie
+     * Gets the path property value. The path of the cookie.
      * @return string|null
     */
     public function getPath(): ?string {
@@ -127,7 +127,7 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the publishedDateTime property value. The time the cookie was published
+     * Gets the publishedDateTime property value. The date and time when the cookie was last published.
      * @return DateTime|null
     */
     public function getPublishedDateTime(): ?DateTime {
@@ -135,7 +135,7 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the sourceEnvironment property value. Specifies how the cookies are shared between Microsoft Edge and Internet Explorer
+     * Gets the sourceEnvironment property value. Specifies how the cookies are shared between Microsoft Edge and Internet Explorer. The possible values are: microsoftEdge, internetExplorer11, both, unknownFutureValue.
      * @return BrowserSharedCookieSourceEnvironment|null
     */
     public function getSourceEnvironment(): ?BrowserSharedCookieSourceEnvironment {
@@ -176,7 +176,7 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the comment property value. The comment of the cookie
+     * Sets the comment property value. The comment for the shared cookie.
      * @param string|null $value Value to set for the comment property.
     */
     public function setComment(?string $value): void {
@@ -184,7 +184,7 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the displayName property value. The name of the cookie
+     * Sets the displayName property value. The name of the cookie.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -192,7 +192,7 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the hostOnly property value. Boolean attribute that determines whether a cookie is  a host-only or domain cookie
+     * Sets the hostOnly property value. Controls whether a cookie is a host-only or domain cookie.
      * @param bool|null $value Value to set for the hostOnly property.
     */
     public function setHostOnly(?bool $value): void {
@@ -200,7 +200,7 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the hostOrDomain property value. The URL of the cookie
+     * Sets the hostOrDomain property value. The URL of the cookie.
      * @param string|null $value Value to set for the hostOrDomain property.
     */
     public function setHostOrDomain(?string $value): void {
@@ -224,7 +224,7 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the path property value. The path of the cookie
+     * Sets the path property value. The path of the cookie.
      * @param string|null $value Value to set for the path property.
     */
     public function setPath(?string $value): void {
@@ -232,7 +232,7 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the publishedDateTime property value. The time the cookie was published
+     * Sets the publishedDateTime property value. The date and time when the cookie was last published.
      * @param DateTime|null $value Value to set for the publishedDateTime property.
     */
     public function setPublishedDateTime(?DateTime $value): void {
@@ -240,7 +240,7 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the sourceEnvironment property value. Specifies how the cookies are shared between Microsoft Edge and Internet Explorer
+     * Sets the sourceEnvironment property value. Specifies how the cookies are shared between Microsoft Edge and Internet Explorer. The possible values are: microsoftEdge, internetExplorer11, both, unknownFutureValue.
      * @param BrowserSharedCookieSourceEnvironment|null $value Value to set for the sourceEnvironment property.
     */
     public function setSourceEnvironment(?BrowserSharedCookieSourceEnvironment $value): void {

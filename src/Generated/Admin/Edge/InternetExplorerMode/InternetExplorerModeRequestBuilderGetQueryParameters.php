@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\Edge\InternetExplorerMode;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get internetExplorerMode from admin
+ * A container for Internet Explorer mode resources.
 */
 class InternetExplorerModeRequestBuilderGetQueryParameters 
 {

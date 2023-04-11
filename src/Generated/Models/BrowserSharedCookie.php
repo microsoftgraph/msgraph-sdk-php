@@ -26,7 +26,7 @@ class BrowserSharedCookie extends Entity implements Parsable
     }
 
     /**
-     * Gets the comment property value. The comment of the cookie
+     * Gets the comment property value. The comment for the shared cookie.
      * @return string|null
     */
     public function getComment(): ?string {
@@ -34,7 +34,7 @@ class BrowserSharedCookie extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The datetime that the admin created the cookie
+     * Gets the createdDateTime property value. The date and time when the shared cookie was created.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -42,7 +42,7 @@ class BrowserSharedCookie extends Entity implements Parsable
     }
 
     /**
-     * Gets the deletedDateTime property value. The datetime that the admin deleted the cookie
+     * Gets the deletedDateTime property value. The date and time when the shared cookie was deleted.
      * @return DateTime|null
     */
     public function getDeletedDateTime(): ?DateTime {
@@ -50,7 +50,7 @@ class BrowserSharedCookie extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. The name of the cookie
+     * Gets the displayName property value. The name of the cookie.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -80,7 +80,7 @@ class BrowserSharedCookie extends Entity implements Parsable
     }
 
     /**
-     * Gets the history property value. The history of the cookie
+     * Gets the history property value. The history of modifications applied to the cookie.
      * @return array<BrowserSharedCookieHistory>|null
     */
     public function getHistory(): ?array {
@@ -88,7 +88,7 @@ class BrowserSharedCookie extends Entity implements Parsable
     }
 
     /**
-     * Gets the hostOnly property value. Boolean attribute that determines whether a cookie is  a host-only or domain cookie
+     * Gets the hostOnly property value. Controls whether a cookie is a host-only or domain cookie.
      * @return bool|null
     */
     public function getHostOnly(): ?bool {
@@ -96,7 +96,7 @@ class BrowserSharedCookie extends Entity implements Parsable
     }
 
     /**
-     * Gets the hostOrDomain property value. The URL of the cookie
+     * Gets the hostOrDomain property value. The URL of the cookie.
      * @return string|null
     */
     public function getHostOrDomain(): ?string {
@@ -104,7 +104,7 @@ class BrowserSharedCookie extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedBy property value. The identity of the admin who last updated the cookie
+     * Gets the lastModifiedBy property value. The user who last modified the cookie.
      * @return IdentitySet|null
     */
     public function getLastModifiedBy(): ?IdentitySet {
@@ -112,7 +112,7 @@ class BrowserSharedCookie extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. The datetime that the admin last updated the cookie
+     * Gets the lastModifiedDateTime property value. The date and time when the cookie was last modified.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -120,7 +120,7 @@ class BrowserSharedCookie extends Entity implements Parsable
     }
 
     /**
-     * Gets the path property value. The path of the cookie
+     * Gets the path property value. The path of the cookie.
      * @return string|null
     */
     public function getPath(): ?string {
@@ -164,7 +164,7 @@ class BrowserSharedCookie extends Entity implements Parsable
     }
 
     /**
-     * Sets the comment property value. The comment of the cookie
+     * Sets the comment property value. The comment for the shared cookie.
      * @param string|null $value Value to set for the comment property.
     */
     public function setComment(?string $value): void {
@@ -172,7 +172,7 @@ class BrowserSharedCookie extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The datetime that the admin created the cookie
+     * Sets the createdDateTime property value. The date and time when the shared cookie was created.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -180,7 +180,7 @@ class BrowserSharedCookie extends Entity implements Parsable
     }
 
     /**
-     * Sets the deletedDateTime property value. The datetime that the admin deleted the cookie
+     * Sets the deletedDateTime property value. The date and time when the shared cookie was deleted.
      * @param DateTime|null $value Value to set for the deletedDateTime property.
     */
     public function setDeletedDateTime(?DateTime $value): void {
@@ -188,7 +188,7 @@ class BrowserSharedCookie extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. The name of the cookie
+     * Sets the displayName property value. The name of the cookie.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -196,7 +196,7 @@ class BrowserSharedCookie extends Entity implements Parsable
     }
 
     /**
-     * Sets the history property value. The history of the cookie
+     * Sets the history property value. The history of modifications applied to the cookie.
      * @param array<BrowserSharedCookieHistory>|null $value Value to set for the history property.
     */
     public function setHistory(?array $value): void {
@@ -204,7 +204,7 @@ class BrowserSharedCookie extends Entity implements Parsable
     }
 
     /**
-     * Sets the hostOnly property value. Boolean attribute that determines whether a cookie is  a host-only or domain cookie
+     * Sets the hostOnly property value. Controls whether a cookie is a host-only or domain cookie.
      * @param bool|null $value Value to set for the hostOnly property.
     */
     public function setHostOnly(?bool $value): void {
@@ -212,7 +212,7 @@ class BrowserSharedCookie extends Entity implements Parsable
     }
 
     /**
-     * Sets the hostOrDomain property value. The URL of the cookie
+     * Sets the hostOrDomain property value. The URL of the cookie.
      * @param string|null $value Value to set for the hostOrDomain property.
     */
     public function setHostOrDomain(?string $value): void {
@@ -220,7 +220,7 @@ class BrowserSharedCookie extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedBy property value. The identity of the admin who last updated the cookie
+     * Sets the lastModifiedBy property value. The user who last modified the cookie.
      * @param IdentitySet|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?IdentitySet $value): void {
@@ -228,7 +228,7 @@ class BrowserSharedCookie extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. The datetime that the admin last updated the cookie
+     * Sets the lastModifiedDateTime property value. The date and time when the cookie was last modified.
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
@@ -236,7 +236,7 @@ class BrowserSharedCookie extends Entity implements Parsable
     }
 
     /**
-     * Sets the path property value. The path of the cookie
+     * Sets the path property value. The path of the cookie.
      * @param string|null $value Value to set for the path property.
     */
     public function setPath(?string $value): void {

@@ -76,7 +76,7 @@ class EdgeRequestBuilder
     }
 
     /**
-     * Get edge from admin
+     * A container for Microsoft Edge resources. Read-only.
      * @param EdgeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -134,7 +134,7 @@ class EdgeRequestBuilder
     }
 
     /**
-     * Get edge from admin
+     * A container for Microsoft Edge resources. Read-only.
      * @param EdgeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -161,6 +161,7 @@ class OnlineMeeting extends Entity implements Parsable
             'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getDateTimeValue()),
             'subject' => fn(ParseNode $n) => $o->setSubject($n->getStringValue()),
             'videoTeleconferenceId' => fn(ParseNode $n) => $o->setVideoTeleconferenceId($n->getStringValue()),
+            'watermarkProtection' => fn(ParseNode $n) => $o->setWatermarkProtection($n->getObjectValue([WatermarkProtectionValues::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -253,6 +254,14 @@ class OnlineMeeting extends Entity implements Parsable
     }
 
     /**
+     * Gets the watermarkProtection property value. Specifies whether a watermark should be applied to a content type by the client application.
+     * @return WatermarkProtectionValues|null
+    */
+    public function getWatermarkProtection(): ?WatermarkProtectionValues {
+        return $this->getBackingStore()->get('watermarkProtection');
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -282,6 +291,7 @@ class OnlineMeeting extends Entity implements Parsable
         $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
         $writer->writeStringValue('subject', $this->getSubject());
         $writer->writeStringValue('videoTeleconferenceId', $this->getVideoTeleconferenceId());
+        $writer->writeObjectValue('watermarkProtection', $this->getWatermarkProtection());
     }
 
     /**
@@ -474,6 +484,14 @@ class OnlineMeeting extends Entity implements Parsable
     */
     public function setVideoTeleconferenceId(?string $value): void {
         $this->getBackingStore()->set('videoTeleconferenceId', $value);
+    }
+
+    /**
+     * Sets the watermarkProtection property value. Specifies whether a watermark should be applied to a content type by the client application.
+     * @param WatermarkProtectionValues|null $value Value to set for the watermarkProtection property.
+    */
+    public function setWatermarkProtection(?WatermarkProtectionValues $value): void {
+        $this->getBackingStore()->set('watermarkProtection', $value);
     }
 
 }

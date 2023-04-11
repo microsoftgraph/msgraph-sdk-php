@@ -2,26 +2,19 @@
 
 namespace Microsoft\Graph\Generated\Models;
 
+use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
-use Microsoft\Kiota\Abstractions\Store\BackedModel;
-use Microsoft\Kiota\Abstractions\Store\BackingStore;
-use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
 
-class AgreementCollectionResponse extends BaseCollectionPaginationCountResponse implements BackedModel, Parsable 
+class AgreementCollectionResponse extends BaseCollectionPaginationCountResponse implements AdditionalDataHolder, Parsable 
 {
-    /**
-     * @var BackingStore $backingStore Stores model information.
-    */
-    private BackingStore $backingStore;
-    
     /**
      * Instantiates a new AgreementCollectionResponse and sets the default values.
     */
     public function __construct() {
         parent::__construct();
-        $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
+        $this->setAdditionalData([]);
     }
 
     /**
@@ -34,11 +27,11 @@ class AgreementCollectionResponse extends BaseCollectionPaginationCountResponse 
     }
 
     /**
-     * Gets the backingStore property value. Stores model information.
-     * @return BackingStore
+     * Gets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @return array<string, mixed>|null
     */
-    public function getBackingStore(): BackingStore {
-        return $this->backingStore;
+    public function getAdditionalData(): ?array {
+        return $this->getBackingStore()->get('additionalData');
     }
 
     /**
@@ -67,14 +60,15 @@ class AgreementCollectionResponse extends BaseCollectionPaginationCountResponse 
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('value', $this->getValue());
+        $writer->writeAdditionalData($this->getAdditionalData());
     }
 
     /**
-     * Sets the backingStore property value. Stores model information.
-     * @param BackingStore $value Value to set for the BackingStore property.
+     * Sets the additionalData property value. Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.
+     * @param array<string,mixed> $value Value to set for the AdditionalData property.
     */
-    public function setBackingStore(BackingStore $value): void {
-        $this->backingStore = $value;
+    public function setAdditionalData(?array $value): void {
+        $this->getBackingStore()->set('additionalData', $value);
     }
 
     /**
