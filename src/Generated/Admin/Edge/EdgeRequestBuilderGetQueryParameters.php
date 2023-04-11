@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Admin\Edge;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get edge from admin
+ * A container for Microsoft Edge resources. Read-only.
 */
 class EdgeRequestBuilderGetQueryParameters 
 {

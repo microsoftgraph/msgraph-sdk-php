@@ -29,7 +29,7 @@ class BrowserSiteList extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. Description for the site list
+     * Gets the description property value. The description of the site list.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -37,7 +37,7 @@ class BrowserSiteList extends Entity implements Parsable
     }
 
     /**
-     * Gets the displayName property value. Display name of this site list
+     * Gets the displayName property value. The name of the site list.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -65,7 +65,7 @@ class BrowserSiteList extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedBy property value. Name of the admin who made the last update on the site list
+     * Gets the lastModifiedBy property value. The user who last modified the site list.
      * @return IdentitySet|null
     */
     public function getLastModifiedBy(): ?IdentitySet {
@@ -73,7 +73,7 @@ class BrowserSiteList extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. The datetime that the admin last updated the site list.
+     * Gets the lastModifiedDateTime property value. The date and time when the site list was last modified.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -81,7 +81,7 @@ class BrowserSiteList extends Entity implements Parsable
     }
 
     /**
-     * Gets the publishedBy property value. Name of the admin who published the site list
+     * Gets the publishedBy property value. The user who published the site list.
      * @return IdentitySet|null
     */
     public function getPublishedBy(): ?IdentitySet {
@@ -89,7 +89,7 @@ class BrowserSiteList extends Entity implements Parsable
     }
 
     /**
-     * Gets the publishedDateTime property value. The datetime that admin published the site list to users in their organization.
+     * Gets the publishedDateTime property value. The date and time when the site list was published.
      * @return DateTime|null
     */
     public function getPublishedDateTime(): ?DateTime {
@@ -97,7 +97,7 @@ class BrowserSiteList extends Entity implements Parsable
     }
 
     /**
-     * Gets the revision property value. Admin can have multiple revisions of the site list and the revision is generated whenever admin create/update the site list.
+     * Gets the revision property value. The current revision of the site list.
      * @return string|null
     */
     public function getRevision(): ?string {
@@ -105,7 +105,7 @@ class BrowserSiteList extends Entity implements Parsable
     }
 
     /**
-     * Gets the sharedCookies property value. The sharedCookies property
+     * Gets the sharedCookies property value. A collection of shared cookies defined for the site list.
      * @return array<BrowserSharedCookie>|null
     */
     public function getSharedCookies(): ?array {
@@ -113,7 +113,7 @@ class BrowserSiteList extends Entity implements Parsable
     }
 
     /**
-     * Gets the sites property value. The sites property
+     * Gets the sites property value. A collection of sites defined for the site list.
      * @return array<BrowserSite>|null
     */
     public function getSites(): ?array {
@@ -147,7 +147,7 @@ class BrowserSiteList extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. Description for the site list
+     * Sets the description property value. The description of the site list.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -155,7 +155,7 @@ class BrowserSiteList extends Entity implements Parsable
     }
 
     /**
-     * Sets the displayName property value. Display name of this site list
+     * Sets the displayName property value. The name of the site list.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -163,7 +163,7 @@ class BrowserSiteList extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedBy property value. Name of the admin who made the last update on the site list
+     * Sets the lastModifiedBy property value. The user who last modified the site list.
      * @param IdentitySet|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?IdentitySet $value): void {
@@ -171,7 +171,7 @@ class BrowserSiteList extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. The datetime that the admin last updated the site list.
+     * Sets the lastModifiedDateTime property value. The date and time when the site list was last modified.
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
@@ -179,7 +179,7 @@ class BrowserSiteList extends Entity implements Parsable
     }
 
     /**
-     * Sets the publishedBy property value. Name of the admin who published the site list
+     * Sets the publishedBy property value. The user who published the site list.
      * @param IdentitySet|null $value Value to set for the publishedBy property.
     */
     public function setPublishedBy(?IdentitySet $value): void {
@@ -187,7 +187,7 @@ class BrowserSiteList extends Entity implements Parsable
     }
 
     /**
-     * Sets the publishedDateTime property value. The datetime that admin published the site list to users in their organization.
+     * Sets the publishedDateTime property value. The date and time when the site list was published.
      * @param DateTime|null $value Value to set for the publishedDateTime property.
     */
     public function setPublishedDateTime(?DateTime $value): void {
@@ -195,7 +195,7 @@ class BrowserSiteList extends Entity implements Parsable
     }
 
     /**
-     * Sets the revision property value. Admin can have multiple revisions of the site list and the revision is generated whenever admin create/update the site list.
+     * Sets the revision property value. The current revision of the site list.
      * @param string|null $value Value to set for the revision property.
     */
     public function setRevision(?string $value): void {
@@ -203,7 +203,7 @@ class BrowserSiteList extends Entity implements Parsable
     }
 
     /**
-     * Sets the sharedCookies property value. The sharedCookies property
+     * Sets the sharedCookies property value. A collection of shared cookies defined for the site list.
      * @param array<BrowserSharedCookie>|null $value Value to set for the sharedCookies property.
     */
     public function setSharedCookies(?array $value): void {
@@ -211,7 +211,7 @@ class BrowserSiteList extends Entity implements Parsable
     }
 
     /**
-     * Sets the sites property value. The sites property
+     * Sets the sites property value. A collection of sites defined for the site list.
      * @param array<BrowserSite>|null $value Value to set for the sites property.
     */
     public function setSites(?array $value): void {

@@ -50,10 +50,11 @@ class PublishRequestBuilder
     }
 
     /**
-     * Invoke action publish
+     * Publish the specified browserSiteList for devices to download.
      * @param PublishPostRequestBody $body The request body
      * @param PublishRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/browsersitelist-publish?view=graph-rest-1.0 Find more info here
     */
     public function post(PublishPostRequestBody $body, ?PublishRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -69,7 +70,7 @@ class PublishRequestBuilder
     }
 
     /**
-     * Invoke action publish
+     * Publish the specified browserSiteList for devices to download.
      * @param PublishPostRequestBody $body The request body
      * @param PublishRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

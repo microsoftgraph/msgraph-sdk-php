@@ -51,7 +51,7 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the edge property value. The edge property
+     * Gets the edge property value. A container for Microsoft Edge resources. Read-only.
      * @return Edge|null
     */
     public function getEdge(): ?Edge {
@@ -68,6 +68,7 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
             'edge' => fn(ParseNode $n) => $o->setEdge($n->getObjectValue([Edge::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'serviceAnnouncement' => fn(ParseNode $n) => $o->setServiceAnnouncement($n->getObjectValue([ServiceAnnouncement::class, 'createFromDiscriminatorValue'])),
+            'sharepoint' => fn(ParseNode $n) => $o->setSharepoint($n->getObjectValue([Sharepoint::class, 'createFromDiscriminatorValue'])),
         ];
     }
 
@@ -88,6 +89,14 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the sharepoint property value. The sharepoint property
+     * @return Sharepoint|null
+    */
+    public function getSharepoint(): ?Sharepoint {
+        return $this->getBackingStore()->get('sharepoint');
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -95,6 +104,7 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeObjectValue('edge', $this->getEdge());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('serviceAnnouncement', $this->getServiceAnnouncement());
+        $writer->writeObjectValue('sharepoint', $this->getSharepoint());
         $writer->writeAdditionalData($this->getAdditionalData());
     }
 
@@ -115,7 +125,7 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the edge property value. The edge property
+     * Sets the edge property value. A container for Microsoft Edge resources. Read-only.
      * @param Edge|null $value Value to set for the edge property.
     */
     public function setEdge(?Edge $value): void {
@@ -136,6 +146,14 @@ class Admin implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setServiceAnnouncement(?ServiceAnnouncement $value): void {
         $this->getBackingStore()->set('serviceAnnouncement', $value);
+    }
+
+    /**
+     * Sets the sharepoint property value. The sharepoint property
+     * @param Sharepoint|null $value Value to set for the sharepoint property.
+    */
+    public function setSharepoint(?Sharepoint $value): void {
+        $this->getBackingStore()->set('sharepoint', $value);
     }
 
 }

@@ -94,7 +94,7 @@ class BrowserSiteListItemRequestBuilder
     }
 
     /**
-     * Get siteLists from admin
+     * A collection of site lists to support Internet Explorer mode.
      * @param BrowserSiteListItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -174,7 +174,7 @@ class BrowserSiteListItemRequestBuilder
     }
 
     /**
-     * Get siteLists from admin
+     * A collection of site lists to support Internet Explorer mode.
      * @param BrowserSiteListItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

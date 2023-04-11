@@ -29,7 +29,7 @@ class BrowserSite extends Entity implements Parsable
     }
 
     /**
-     * Gets the allowRedirect property value. Boolean attribute that controls the behavior of redirected sites
+     * Gets the allowRedirect property value. Controls the behavior of redirected sites. If true, indicates that the site will open in Internet Explorer 11 or Microsoft Edge even if the site is navigated to as part of a HTTP or meta refresh redirection chain.
      * @return bool|null
     */
     public function getAllowRedirect(): ?bool {
@@ -37,7 +37,7 @@ class BrowserSite extends Entity implements Parsable
     }
 
     /**
-     * Gets the comment property value. The comment for the site
+     * Gets the comment property value. The comment for the site.
      * @return string|null
     */
     public function getComment(): ?string {
@@ -53,7 +53,7 @@ class BrowserSite extends Entity implements Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The datetime that the site is created
+     * Gets the createdDateTime property value. The date and time when the site was created.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
@@ -61,7 +61,7 @@ class BrowserSite extends Entity implements Parsable
     }
 
     /**
-     * Gets the deletedDateTime property value. The datetime that the admin deleted the site
+     * Gets the deletedDateTime property value. The date and time when the site was deleted.
      * @return DateTime|null
     */
     public function getDeletedDateTime(): ?DateTime {
@@ -91,7 +91,7 @@ class BrowserSite extends Entity implements Parsable
     }
 
     /**
-     * Gets the history property value. The collection stores site revision metadata and audit logs.
+     * Gets the history property value. The history of modifications applied to the site.
      * @return array<BrowserSiteHistory>|null
     */
     public function getHistory(): ?array {
@@ -99,7 +99,7 @@ class BrowserSite extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedBy property value. The admin who made the last update on the site.
+     * Gets the lastModifiedBy property value. The user who last modified the site.
      * @return IdentitySet|null
     */
     public function getLastModifiedBy(): ?IdentitySet {
@@ -107,7 +107,7 @@ class BrowserSite extends Entity implements Parsable
     }
 
     /**
-     * Gets the lastModifiedDateTime property value. The datetime that the admin updated the site.
+     * Gets the lastModifiedDateTime property value. The date and time when the site was last modified.
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
@@ -139,7 +139,7 @@ class BrowserSite extends Entity implements Parsable
     }
 
     /**
-     * Gets the webUrl property value. The URL of the site
+     * Gets the webUrl property value. The URL of the site.
      * @return string|null
     */
     public function getWebUrl(): ?string {
@@ -167,7 +167,7 @@ class BrowserSite extends Entity implements Parsable
     }
 
     /**
-     * Sets the allowRedirect property value. Boolean attribute that controls the behavior of redirected sites
+     * Sets the allowRedirect property value. Controls the behavior of redirected sites. If true, indicates that the site will open in Internet Explorer 11 or Microsoft Edge even if the site is navigated to as part of a HTTP or meta refresh redirection chain.
      * @param bool|null $value Value to set for the allowRedirect property.
     */
     public function setAllowRedirect(?bool $value): void {
@@ -175,7 +175,7 @@ class BrowserSite extends Entity implements Parsable
     }
 
     /**
-     * Sets the comment property value. The comment for the site
+     * Sets the comment property value. The comment for the site.
      * @param string|null $value Value to set for the comment property.
     */
     public function setComment(?string $value): void {
@@ -191,7 +191,7 @@ class BrowserSite extends Entity implements Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The datetime that the site is created
+     * Sets the createdDateTime property value. The date and time when the site was created.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
@@ -199,7 +199,7 @@ class BrowserSite extends Entity implements Parsable
     }
 
     /**
-     * Sets the deletedDateTime property value. The datetime that the admin deleted the site
+     * Sets the deletedDateTime property value. The date and time when the site was deleted.
      * @param DateTime|null $value Value to set for the deletedDateTime property.
     */
     public function setDeletedDateTime(?DateTime $value): void {
@@ -207,7 +207,7 @@ class BrowserSite extends Entity implements Parsable
     }
 
     /**
-     * Sets the history property value. The collection stores site revision metadata and audit logs.
+     * Sets the history property value. The history of modifications applied to the site.
      * @param array<BrowserSiteHistory>|null $value Value to set for the history property.
     */
     public function setHistory(?array $value): void {
@@ -215,7 +215,7 @@ class BrowserSite extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedBy property value. The admin who made the last update on the site.
+     * Sets the lastModifiedBy property value. The user who last modified the site.
      * @param IdentitySet|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?IdentitySet $value): void {
@@ -223,7 +223,7 @@ class BrowserSite extends Entity implements Parsable
     }
 
     /**
-     * Sets the lastModifiedDateTime property value. The datetime that the admin updated the site.
+     * Sets the lastModifiedDateTime property value. The date and time when the site was last modified.
      * @param DateTime|null $value Value to set for the lastModifiedDateTime property.
     */
     public function setLastModifiedDateTime(?DateTime $value): void {
@@ -255,7 +255,7 @@ class BrowserSite extends Entity implements Parsable
     }
 
     /**
-     * Sets the webUrl property value. The URL of the site
+     * Sets the webUrl property value. The URL of the site.
      * @param string|null $value Value to set for the webUrl property.
     */
     public function setWebUrl(?string $value): void {

@@ -47,7 +47,7 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the allowRedirect property value. Boolean attribute that controls the behavior of redirected sites
+     * Gets the allowRedirect property value. Controls the behavior of redirected sites. If true, indicates that the site will open in Internet Explorer 11 or Microsoft Edge even if the site is navigated to as part of a HTTP or meta refresh redirection chain.
      * @return bool|null
     */
     public function getAllowRedirect(): ?bool {
@@ -63,7 +63,7 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the comment property value. The content for the site
+     * Gets the comment property value. The comment for the site.
      * @return string|null
     */
     public function getComment(): ?string {
@@ -71,7 +71,7 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the compatibilityMode property value. Controls what compatibility setting is used for specific sites or domains
+     * Gets the compatibilityMode property value. Controls what compatibility setting is used for specific sites or domains. The possible values are: default, internetExplorer8Enterprise, internetExplorer7Enterprise, internetExplorer11, internetExplorer10, internetExplorer9, internetExplorer8, internetExplorer7, internetExplorer5, unknownFutureValue.
      * @return BrowserSiteCompatibilityMode|null
     */
     public function getCompatibilityMode(): ?BrowserSiteCompatibilityMode {
@@ -97,7 +97,7 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the lastModifiedBy property value. The user who modified the site
+     * Gets the lastModifiedBy property value. The user who last modified the site.
      * @return IdentitySet|null
     */
     public function getLastModifiedBy(): ?IdentitySet {
@@ -105,7 +105,7 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the mergeType property value. The merge type of the site
+     * Gets the mergeType property value. The merge type of the site. The possible values are: noMerge, default, unknownFutureValue.
      * @return BrowserSiteMergeType|null
     */
     public function getMergeType(): ?BrowserSiteMergeType {
@@ -121,7 +121,7 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the publishedDateTime property value. The time the site was last published
+     * Gets the publishedDateTime property value. The date and time when the site was last published.
      * @return DateTime|null
     */
     public function getPublishedDateTime(): ?DateTime {
@@ -129,7 +129,7 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the targetEnvironment property value. The render mode in Edge client that the site is supposed to open in
+     * Gets the targetEnvironment property value. The target environment that the site should open in. The possible values are: internetExplorerMode, internetExplorer11, microsoftEdge, configurable, none, unknownFutureValue.Prior to June 15, 2022, the internetExplorer11 option would allow opening a site in the Internet Explorer 11 (IE11) desktop application. Following the retirement of IE11 on June 15, 2022, the internetExplorer11 option will no longer open an IE11 window and will instead behave the same as the internetExplorerMode option.
      * @return BrowserSiteTargetEnvironment|null
     */
     public function getTargetEnvironment(): ?BrowserSiteTargetEnvironment {
@@ -161,7 +161,7 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the allowRedirect property value. Boolean attribute that controls the behavior of redirected sites
+     * Sets the allowRedirect property value. Controls the behavior of redirected sites. If true, indicates that the site will open in Internet Explorer 11 or Microsoft Edge even if the site is navigated to as part of a HTTP or meta refresh redirection chain.
      * @param bool|null $value Value to set for the allowRedirect property.
     */
     public function setAllowRedirect(?bool $value): void {
@@ -177,7 +177,7 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the comment property value. The content for the site
+     * Sets the comment property value. The comment for the site.
      * @param string|null $value Value to set for the comment property.
     */
     public function setComment(?string $value): void {
@@ -185,7 +185,7 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the compatibilityMode property value. Controls what compatibility setting is used for specific sites or domains
+     * Sets the compatibilityMode property value. Controls what compatibility setting is used for specific sites or domains. The possible values are: default, internetExplorer8Enterprise, internetExplorer7Enterprise, internetExplorer11, internetExplorer10, internetExplorer9, internetExplorer8, internetExplorer7, internetExplorer5, unknownFutureValue.
      * @param BrowserSiteCompatibilityMode|null $value Value to set for the compatibilityMode property.
     */
     public function setCompatibilityMode(?BrowserSiteCompatibilityMode $value): void {
@@ -193,7 +193,7 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the lastModifiedBy property value. The user who modified the site
+     * Sets the lastModifiedBy property value. The user who last modified the site.
      * @param IdentitySet|null $value Value to set for the lastModifiedBy property.
     */
     public function setLastModifiedBy(?IdentitySet $value): void {
@@ -201,7 +201,7 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the mergeType property value. The merge type of the site
+     * Sets the mergeType property value. The merge type of the site. The possible values are: noMerge, default, unknownFutureValue.
      * @param BrowserSiteMergeType|null $value Value to set for the mergeType property.
     */
     public function setMergeType(?BrowserSiteMergeType $value): void {
@@ -217,7 +217,7 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the publishedDateTime property value. The time the site was last published
+     * Sets the publishedDateTime property value. The date and time when the site was last published.
      * @param DateTime|null $value Value to set for the publishedDateTime property.
     */
     public function setPublishedDateTime(?DateTime $value): void {
@@ -225,7 +225,7 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the targetEnvironment property value. The render mode in Edge client that the site is supposed to open in
+     * Sets the targetEnvironment property value. The target environment that the site should open in. The possible values are: internetExplorerMode, internetExplorer11, microsoftEdge, configurable, none, unknownFutureValue.Prior to June 15, 2022, the internetExplorer11 option would allow opening a site in the Internet Explorer 11 (IE11) desktop application. Following the retirement of IE11 on June 15, 2022, the internetExplorer11 option will no longer open an IE11 window and will instead behave the same as the internetExplorerMode option.
      * @param BrowserSiteTargetEnvironment|null $value Value to set for the targetEnvironment property.
     */
     public function setTargetEnvironment(?BrowserSiteTargetEnvironment $value): void {

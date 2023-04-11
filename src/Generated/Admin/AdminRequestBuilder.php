@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Admin\Edge\EdgeRequestBuilder;
 use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\ServiceAnnouncementRequestBuilder;
+use Microsoft\Graph\Generated\Admin\Sharepoint\SharepointRequestBuilder;
 use Microsoft\Graph\Generated\Models\Admin;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -43,6 +44,13 @@ class AdminRequestBuilder
     */
     public function serviceAnnouncement(): ServiceAnnouncementRequestBuilder {
         return new ServiceAnnouncementRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the sharepoint property of the microsoft.graph.admin entity.
+    */
+    public function sharepoint(): SharepointRequestBuilder {
+        return new SharepointRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

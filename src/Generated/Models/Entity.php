@@ -190,7 +190,6 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.chatMessageInfo': return new ChatMessageInfo();
                 case '#microsoft.graph.checklistItem': return new ChecklistItem();
                 case '#microsoft.graph.claimsMappingPolicy': return new ClaimsMappingPolicy();
-                case '#microsoft.graph.cloudCommunications': return new CloudCommunications();
                 case '#microsoft.graph.columnDefinition': return new ColumnDefinition();
                 case '#microsoft.graph.columnLink': return new ColumnLink();
                 case '#microsoft.graph.commsOperation': return new CommsOperation();
@@ -579,6 +578,8 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.sharedInsight': return new SharedInsight();
                 case '#microsoft.graph.sharedPCConfiguration': return new SharedPCConfiguration();
                 case '#microsoft.graph.sharedWithChannelTeamInfo': return new SharedWithChannelTeamInfo();
+                case '#microsoft.graph.sharepoint': return new Sharepoint();
+                case '#microsoft.graph.sharepointSettings': return new SharepointSettings();
                 case '#microsoft.graph.shift': return new Shift();
                 case '#microsoft.graph.shiftPreferences': return new ShiftPreferences();
                 case '#microsoft.graph.signIn': return new SignIn();

@@ -68,7 +68,7 @@ class BrowserSharedCookieItemRequestBuilder
     }
 
     /**
-     * Get sharedCookies from admin
+     * A collection of shared cookies defined for the site list.
      * @param BrowserSharedCookieItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -126,7 +126,7 @@ class BrowserSharedCookieItemRequestBuilder
     }
 
     /**
-     * Get sharedCookies from admin
+     * A collection of shared cookies defined for the site list.
      * @param BrowserSharedCookieItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
