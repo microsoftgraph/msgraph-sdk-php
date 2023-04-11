@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Settings File
+* SharepointSettings File
 * PHP version 7
 *
 * @category  Library
@@ -11,10 +11,10 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\TenantAdmin\Model;
+namespace Beta\Microsoft\Graph\Model;
 
 /**
-* Settings class
+* SharepointSettings class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,11 +22,10 @@ namespace Beta\Microsoft\Graph\TenantAdmin\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Settings extends \Beta\Microsoft\Graph\Model\Entity
+class SharepointSettings extends Entity
 {
     /**
     * Gets the allowedDomainGuidsForSyncApp
-    * Collection of trusted domain GUIDs for the OneDrive sync app.
     *
     * @return array|null The allowedDomainGuidsForSyncApp
     */
@@ -41,11 +40,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the allowedDomainGuidsForSyncApp
-    * Collection of trusted domain GUIDs for the OneDrive sync app.
     *
     * @param string[] $val The allowedDomainGuidsForSyncApp
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setAllowedDomainGuidsForSyncApp($val)
     {
@@ -55,7 +53,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the availableManagedPathsForSiteCreation
-    * Collection of managed paths available for site creation. Read-only.
     *
     * @return array|null The availableManagedPathsForSiteCreation
     */
@@ -70,11 +67,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the availableManagedPathsForSiteCreation
-    * Collection of managed paths available for site creation. Read-only.
     *
     * @param string[] $val The availableManagedPathsForSiteCreation
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setAvailableManagedPathsForSiteCreation($val)
     {
@@ -84,7 +80,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the deletedUserPersonalSiteRetentionPeriodInDays
-    * The number of days for preserving a deleted user's OneDrive.
     *
     * @return int|null The deletedUserPersonalSiteRetentionPeriodInDays
     */
@@ -99,11 +94,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the deletedUserPersonalSiteRetentionPeriodInDays
-    * The number of days for preserving a deleted user's OneDrive.
     *
     * @param int $val The deletedUserPersonalSiteRetentionPeriodInDays
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setDeletedUserPersonalSiteRetentionPeriodInDays($val)
     {
@@ -113,7 +107,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the excludedFileExtensionsForSyncApp
-    * Collection of file extensions not uploaded by the OneDrive sync app.
     *
     * @return array|null The excludedFileExtensionsForSyncApp
     */
@@ -128,11 +121,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the excludedFileExtensionsForSyncApp
-    * Collection of file extensions not uploaded by the OneDrive sync app.
     *
     * @param string[] $val The excludedFileExtensionsForSyncApp
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setExcludedFileExtensionsForSyncApp($val)
     {
@@ -142,14 +134,13 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the idleSessionSignOut
-    * Specifies the idle session sign-out policies for the tenant.
     *
     * @return IdleSessionSignOut|null The idleSessionSignOut
     */
     public function getIdleSessionSignOut()
     {
         if (array_key_exists("idleSessionSignOut", $this->_propDict)) {
-            if (is_a($this->_propDict["idleSessionSignOut"], "\Beta\Microsoft\Graph\TenantAdmin\Model\IdleSessionSignOut") || is_null($this->_propDict["idleSessionSignOut"])) {
+            if (is_a($this->_propDict["idleSessionSignOut"], "\Beta\Microsoft\Graph\Model\IdleSessionSignOut") || is_null($this->_propDict["idleSessionSignOut"])) {
                 return $this->_propDict["idleSessionSignOut"];
             } else {
                 $this->_propDict["idleSessionSignOut"] = new IdleSessionSignOut($this->_propDict["idleSessionSignOut"]);
@@ -161,11 +152,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the idleSessionSignOut
-    * Specifies the idle session sign-out policies for the tenant.
     *
     * @param IdleSessionSignOut $val The idleSessionSignOut
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setIdleSessionSignOut($val)
     {
@@ -175,14 +165,13 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the imageTaggingOption
-    * Specifies the image tagging option for the tenant. Possible values are: disabled, basic, enhanced.
     *
     * @return ImageTaggingChoice|null The imageTaggingOption
     */
     public function getImageTaggingOption()
     {
         if (array_key_exists("imageTaggingOption", $this->_propDict)) {
-            if (is_a($this->_propDict["imageTaggingOption"], "\Beta\Microsoft\Graph\TenantAdmin\Model\ImageTaggingChoice") || is_null($this->_propDict["imageTaggingOption"])) {
+            if (is_a($this->_propDict["imageTaggingOption"], "\Beta\Microsoft\Graph\Model\ImageTaggingChoice") || is_null($this->_propDict["imageTaggingOption"])) {
                 return $this->_propDict["imageTaggingOption"];
             } else {
                 $this->_propDict["imageTaggingOption"] = new ImageTaggingChoice($this->_propDict["imageTaggingOption"]);
@@ -194,11 +183,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the imageTaggingOption
-    * Specifies the image tagging option for the tenant. Possible values are: disabled, basic, enhanced.
     *
     * @param ImageTaggingChoice $val The imageTaggingOption
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setImageTaggingOption($val)
     {
@@ -208,7 +196,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the isCommentingOnSitePagesEnabled
-    * Indicates whether comments are allowed on modern site pages in SharePoint.
     *
     * @return bool|null The isCommentingOnSitePagesEnabled
     */
@@ -223,11 +210,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isCommentingOnSitePagesEnabled
-    * Indicates whether comments are allowed on modern site pages in SharePoint.
     *
     * @param bool $val The isCommentingOnSitePagesEnabled
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setIsCommentingOnSitePagesEnabled($val)
     {
@@ -237,7 +223,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the isFileActivityNotificationEnabled
-    * Indicates whether push notifications are enabled for OneDrive events.
     *
     * @return bool|null The isFileActivityNotificationEnabled
     */
@@ -252,11 +237,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isFileActivityNotificationEnabled
-    * Indicates whether push notifications are enabled for OneDrive events.
     *
     * @param bool $val The isFileActivityNotificationEnabled
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setIsFileActivityNotificationEnabled($val)
     {
@@ -266,7 +250,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the isLegacyAuthProtocolsEnabled
-    * Indicates whether legacy authentication protocols are enabled for the tenant.
     *
     * @return bool|null The isLegacyAuthProtocolsEnabled
     */
@@ -281,11 +264,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isLegacyAuthProtocolsEnabled
-    * Indicates whether legacy authentication protocols are enabled for the tenant.
     *
     * @param bool $val The isLegacyAuthProtocolsEnabled
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setIsLegacyAuthProtocolsEnabled($val)
     {
@@ -295,7 +277,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the isLoopEnabled
-    * Indicates whetherif Fluid Framework is allowed on SharePoint sites.
     *
     * @return bool|null The isLoopEnabled
     */
@@ -310,11 +291,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isLoopEnabled
-    * Indicates whetherif Fluid Framework is allowed on SharePoint sites.
     *
     * @param bool $val The isLoopEnabled
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setIsLoopEnabled($val)
     {
@@ -324,7 +304,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the isMacSyncAppEnabled
-    * Indicates whether files can be synced using the OneDrive sync app for Mac.
     *
     * @return bool|null The isMacSyncAppEnabled
     */
@@ -339,11 +318,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isMacSyncAppEnabled
-    * Indicates whether files can be synced using the OneDrive sync app for Mac.
     *
     * @param bool $val The isMacSyncAppEnabled
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setIsMacSyncAppEnabled($val)
     {
@@ -353,7 +331,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the isRequireAcceptingUserToMatchInvitedUserEnabled
-    * Indicates whether guests must sign in using the same account to which sharing invitations are sent.
     *
     * @return bool|null The isRequireAcceptingUserToMatchInvitedUserEnabled
     */
@@ -368,11 +345,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isRequireAcceptingUserToMatchInvitedUserEnabled
-    * Indicates whether guests must sign in using the same account to which sharing invitations are sent.
     *
     * @param bool $val The isRequireAcceptingUserToMatchInvitedUserEnabled
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setIsRequireAcceptingUserToMatchInvitedUserEnabled($val)
     {
@@ -382,7 +358,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the isResharingByExternalUsersEnabled
-    * Indicates whether guests are allowed to reshare files, folders, and sites they don't own.
     *
     * @return bool|null The isResharingByExternalUsersEnabled
     */
@@ -397,11 +372,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isResharingByExternalUsersEnabled
-    * Indicates whether guests are allowed to reshare files, folders, and sites they don't own.
     *
     * @param bool $val The isResharingByExternalUsersEnabled
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setIsResharingByExternalUsersEnabled($val)
     {
@@ -411,7 +385,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the isSharePointMobileNotificationEnabled
-    * Indicates whether mobile push notifications are enabled for SharePoint.
     *
     * @return bool|null The isSharePointMobileNotificationEnabled
     */
@@ -426,11 +399,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isSharePointMobileNotificationEnabled
-    * Indicates whether mobile push notifications are enabled for SharePoint.
     *
     * @param bool $val The isSharePointMobileNotificationEnabled
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setIsSharePointMobileNotificationEnabled($val)
     {
@@ -440,7 +412,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the isSharePointNewsfeedEnabled
-    * Indicates whether the newsfeed is allowed on the modern site pages in SharePoint.
     *
     * @return bool|null The isSharePointNewsfeedEnabled
     */
@@ -455,11 +426,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isSharePointNewsfeedEnabled
-    * Indicates whether the newsfeed is allowed on the modern site pages in SharePoint.
     *
     * @param bool $val The isSharePointNewsfeedEnabled
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setIsSharePointNewsfeedEnabled($val)
     {
@@ -469,7 +439,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the isSiteCreationEnabled
-    * Indicates whether users are allowed to create sites.
     *
     * @return bool|null The isSiteCreationEnabled
     */
@@ -484,11 +453,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isSiteCreationEnabled
-    * Indicates whether users are allowed to create sites.
     *
     * @param bool $val The isSiteCreationEnabled
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setIsSiteCreationEnabled($val)
     {
@@ -498,7 +466,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the isSiteCreationUIEnabled
-    * Indicates whether the UI commands for creating sites are shown.
     *
     * @return bool|null The isSiteCreationUIEnabled
     */
@@ -513,11 +480,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isSiteCreationUIEnabled
-    * Indicates whether the UI commands for creating sites are shown.
     *
     * @param bool $val The isSiteCreationUIEnabled
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setIsSiteCreationUIEnabled($val)
     {
@@ -527,7 +493,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the isSitePagesCreationEnabled
-    * Indicates whether creating new modern pages is allowed on SharePoint sites.
     *
     * @return bool|null The isSitePagesCreationEnabled
     */
@@ -542,11 +507,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isSitePagesCreationEnabled
-    * Indicates whether creating new modern pages is allowed on SharePoint sites.
     *
     * @param bool $val The isSitePagesCreationEnabled
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setIsSitePagesCreationEnabled($val)
     {
@@ -556,7 +520,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the isSitesStorageLimitAutomatic
-    * Indicates whether site storage space is automatically managed or if specific storage limits are set per site.
     *
     * @return bool|null The isSitesStorageLimitAutomatic
     */
@@ -571,11 +534,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isSitesStorageLimitAutomatic
-    * Indicates whether site storage space is automatically managed or if specific storage limits are set per site.
     *
     * @param bool $val The isSitesStorageLimitAutomatic
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setIsSitesStorageLimitAutomatic($val)
     {
@@ -585,7 +547,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the isSyncButtonHiddenOnPersonalSite
-    * Indicates whether the sync button in OneDrive is hidden.
     *
     * @return bool|null The isSyncButtonHiddenOnPersonalSite
     */
@@ -600,11 +561,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isSyncButtonHiddenOnPersonalSite
-    * Indicates whether the sync button in OneDrive is hidden.
     *
     * @param bool $val The isSyncButtonHiddenOnPersonalSite
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setIsSyncButtonHiddenOnPersonalSite($val)
     {
@@ -614,7 +574,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the isUnmanagedSyncAppForTenantRestricted
-    * Indicates whether users are allowed to sync files only on PCs joined to specific domains.
     *
     * @return bool|null The isUnmanagedSyncAppForTenantRestricted
     */
@@ -629,11 +588,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the isUnmanagedSyncAppForTenantRestricted
-    * Indicates whether users are allowed to sync files only on PCs joined to specific domains.
     *
     * @param bool $val The isUnmanagedSyncAppForTenantRestricted
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setIsUnmanagedSyncAppForTenantRestricted($val)
     {
@@ -643,7 +601,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the personalSiteDefaultStorageLimitInMB
-    * The default OneDrive storage limit for all new and existing users who are assigned a qualifying license. Measured in megabytes (MB).
     *
     * @return int|null The personalSiteDefaultStorageLimitInMB
     */
@@ -658,11 +615,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the personalSiteDefaultStorageLimitInMB
-    * The default OneDrive storage limit for all new and existing users who are assigned a qualifying license. Measured in megabytes (MB).
     *
     * @param int $val The personalSiteDefaultStorageLimitInMB
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setPersonalSiteDefaultStorageLimitInMB($val)
     {
@@ -672,7 +628,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the sharingAllowedDomainList
-    * Collection of email domains that are allowed for sharing outside the organization.
     *
     * @return array|null The sharingAllowedDomainList
     */
@@ -687,11 +642,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the sharingAllowedDomainList
-    * Collection of email domains that are allowed for sharing outside the organization.
     *
     * @param string[] $val The sharingAllowedDomainList
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setSharingAllowedDomainList($val)
     {
@@ -701,7 +655,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the sharingBlockedDomainList
-    * Collection of email domains that are blocked for sharing outside the organization.
     *
     * @return array|null The sharingBlockedDomainList
     */
@@ -716,11 +669,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the sharingBlockedDomainList
-    * Collection of email domains that are blocked for sharing outside the organization.
     *
     * @param string[] $val The sharingBlockedDomainList
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setSharingBlockedDomainList($val)
     {
@@ -730,14 +682,13 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the sharingCapability
-    * Sharing capability for the tenant. Possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly.
     *
     * @return SharingCapabilities|null The sharingCapability
     */
     public function getSharingCapability()
     {
         if (array_key_exists("sharingCapability", $this->_propDict)) {
-            if (is_a($this->_propDict["sharingCapability"], "\Beta\Microsoft\Graph\TenantAdmin\Model\SharingCapabilities") || is_null($this->_propDict["sharingCapability"])) {
+            if (is_a($this->_propDict["sharingCapability"], "\Beta\Microsoft\Graph\Model\SharingCapabilities") || is_null($this->_propDict["sharingCapability"])) {
                 return $this->_propDict["sharingCapability"];
             } else {
                 $this->_propDict["sharingCapability"] = new SharingCapabilities($this->_propDict["sharingCapability"]);
@@ -749,11 +700,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the sharingCapability
-    * Sharing capability for the tenant. Possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly.
     *
     * @param SharingCapabilities $val The sharingCapability
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setSharingCapability($val)
     {
@@ -763,14 +713,13 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the sharingDomainRestrictionMode
-    * Specifies the external sharing mode for domains. Possible values are: none, allowList, blockList.
     *
     * @return SharingDomainRestrictionMode|null The sharingDomainRestrictionMode
     */
     public function getSharingDomainRestrictionMode()
     {
         if (array_key_exists("sharingDomainRestrictionMode", $this->_propDict)) {
-            if (is_a($this->_propDict["sharingDomainRestrictionMode"], "\Beta\Microsoft\Graph\TenantAdmin\Model\SharingDomainRestrictionMode") || is_null($this->_propDict["sharingDomainRestrictionMode"])) {
+            if (is_a($this->_propDict["sharingDomainRestrictionMode"], "\Beta\Microsoft\Graph\Model\SharingDomainRestrictionMode") || is_null($this->_propDict["sharingDomainRestrictionMode"])) {
                 return $this->_propDict["sharingDomainRestrictionMode"];
             } else {
                 $this->_propDict["sharingDomainRestrictionMode"] = new SharingDomainRestrictionMode($this->_propDict["sharingDomainRestrictionMode"]);
@@ -782,11 +731,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the sharingDomainRestrictionMode
-    * Specifies the external sharing mode for domains. Possible values are: none, allowList, blockList.
     *
     * @param SharingDomainRestrictionMode $val The sharingDomainRestrictionMode
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setSharingDomainRestrictionMode($val)
     {
@@ -796,7 +744,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the siteCreationDefaultManagedPath
-    * The value of the team site managed path. This is the path under which new team sites will be created.
     *
     * @return string|null The siteCreationDefaultManagedPath
     */
@@ -811,11 +758,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the siteCreationDefaultManagedPath
-    * The value of the team site managed path. This is the path under which new team sites will be created.
     *
     * @param string $val The siteCreationDefaultManagedPath
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setSiteCreationDefaultManagedPath($val)
     {
@@ -825,7 +771,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the siteCreationDefaultStorageLimitInMB
-    * The default storage quota for a new site upon creation. Measured in megabytes (MB).
     *
     * @return int|null The siteCreationDefaultStorageLimitInMB
     */
@@ -840,11 +785,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the siteCreationDefaultStorageLimitInMB
-    * The default storage quota for a new site upon creation. Measured in megabytes (MB).
     *
     * @param int $val The siteCreationDefaultStorageLimitInMB
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setSiteCreationDefaultStorageLimitInMB($val)
     {
@@ -854,7 +798,6 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the tenantDefaultTimezone
-    * The default timezone of a tenant for newly created sites. For a list of possible values, see SPRegionalSettings.TimeZones property.
     *
     * @return string|null The tenantDefaultTimezone
     */
@@ -869,11 +812,10 @@ class Settings extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the tenantDefaultTimezone
-    * The default timezone of a tenant for newly created sites. For a list of possible values, see SPRegionalSettings.TimeZones property.
     *
     * @param string $val The tenantDefaultTimezone
     *
-    * @return Settings
+    * @return SharepointSettings
     */
     public function setTenantDefaultTimezone($val)
     {

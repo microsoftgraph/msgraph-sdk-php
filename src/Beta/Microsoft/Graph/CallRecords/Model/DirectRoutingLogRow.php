@@ -431,6 +431,32 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
         return $this;
     }
     /**
+    * Gets the otherPartyCountryCode
+    *
+    * @return string|null The otherPartyCountryCode
+    */
+    public function getOtherPartyCountryCode()
+    {
+        if (array_key_exists("otherPartyCountryCode", $this->_propDict)) {
+            return $this->_propDict["otherPartyCountryCode"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the otherPartyCountryCode
+    *
+    * @param string $val The value of the otherPartyCountryCode
+    *
+    * @return DirectRoutingLogRow
+    */
+    public function setOtherPartyCountryCode($val)
+    {
+        $this->_propDict["otherPartyCountryCode"] = $val;
+        return $this;
+    }
+    /**
     * Gets the signalingLocation
     * The datacenter used for signaling for both bypass and non-bypass calls.
     *
@@ -545,6 +571,32 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     public function setTrunkFullyQualifiedDomainName($val)
     {
         $this->_propDict["trunkFullyQualifiedDomainName"] = $val;
+        return $this;
+    }
+    /**
+    * Gets the userCountryCode
+    *
+    * @return string|null The userCountryCode
+    */
+    public function getUserCountryCode()
+    {
+        if (array_key_exists("userCountryCode", $this->_propDict)) {
+            return $this->_propDict["userCountryCode"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the userCountryCode
+    *
+    * @param string $val The value of the userCountryCode
+    *
+    * @return DirectRoutingLogRow
+    */
+    public function setUserCountryCode($val)
+    {
+        $this->_propDict["userCountryCode"] = $val;
         return $this;
     }
     /**

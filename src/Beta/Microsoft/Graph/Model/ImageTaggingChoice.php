@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* SharingDomainRestrictionMode File
+* ImageTaggingChoice File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\TenantAdmin\Model;
+namespace Beta\Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* SharingDomainRestrictionMode class
+* ImageTaggingChoice class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,13 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class SharingDomainRestrictionMode extends Enum
+class ImageTaggingChoice extends Enum
 {
     /**
-    * The Enum SharingDomainRestrictionMode
+    * The Enum ImageTaggingChoice
     */
-    const NONE = "none";
-    const ALLOW_LIST = "allowList";
-    const BLOCK_LIST = "blockList";
+    const DISABLED = "disabled";
+    const BASIC = "basic";
+    const ENHANCED = "enhanced";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* ShiftWorkCloudPcAccessState File
+* PstnUserBlockMode File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Beta\Microsoft\Graph\CallRecords\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* ShiftWorkCloudPcAccessState class
+* PstnUserBlockMode class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,17 +24,12 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class ShiftWorkCloudPcAccessState extends Enum
+class PstnUserBlockMode extends Enum
 {
     /**
-    * The Enum ShiftWorkCloudPcAccessState
+    * The Enum PstnUserBlockMode
     */
-    const UNASSIGNED = "unassigned";
-    const NO_LICENSES_AVAILABLE = "noLicensesAvailable";
-    const ACTIVATION_FAILED = "activationFailed";
-    const ACTIVE = "active";
-    const ACTIVATING = "activating";
-    const WAITLISTED = "waitlisted";
+    const BLOCKED = "blocked";
+    const UNBLOCKED = "unblocked";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const STANDBY_MODE = "standbyMode";
 }
