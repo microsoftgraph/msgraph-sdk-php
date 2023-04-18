@@ -25,6 +25,7 @@ class PstnOnlineMeetingDialoutReport extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the currency
+    * Currency used to calculate the cost of the call. For details, see ISO 4217.
     *
     * @return string|null The currency
     */
@@ -39,6 +40,7 @@ class PstnOnlineMeetingDialoutReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the currency
+    * Currency used to calculate the cost of the call. For details, see ISO 4217.
     *
     * @param string $val The value of the currency
     *
@@ -51,6 +53,7 @@ class PstnOnlineMeetingDialoutReport extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the destinationContext
+    * Indicates whether the call was Domestic (within a country or region) or International (outside a country or region) based on the user's location.
     *
     * @return string|null The destinationContext
     */
@@ -65,6 +68,7 @@ class PstnOnlineMeetingDialoutReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the destinationContext
+    * Indicates whether the call was Domestic (within a country or region) or International (outside a country or region) based on the user's location.
     *
     * @param string $val The value of the destinationContext
     *
@@ -78,6 +82,7 @@ class PstnOnlineMeetingDialoutReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the totalCallCharge
+    * Total costs of all the calls within the selected time range, including call charges and connection fees.
     *
     * @return \Beta\Microsoft\Graph\Model\Decimal|null The totalCallCharge
     */
@@ -96,6 +101,7 @@ class PstnOnlineMeetingDialoutReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the totalCallCharge
+    * Total costs of all the calls within the selected time range, including call charges and connection fees.
     *
     * @param \Beta\Microsoft\Graph\Model\Decimal $val The value to assign to the totalCallCharge
     *
@@ -108,6 +114,7 @@ class PstnOnlineMeetingDialoutReport extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the totalCalls
+    * Total number of dial-out calls within the selected time range.
     *
     * @return int|null The totalCalls
     */
@@ -122,6 +129,7 @@ class PstnOnlineMeetingDialoutReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the totalCalls
+    * Total number of dial-out calls within the selected time range.
     *
     * @param int $val The value of the totalCalls
     *
@@ -134,6 +142,7 @@ class PstnOnlineMeetingDialoutReport extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the totalCallSeconds
+    * Total duration of all the calls within the selected time range, in seconds.
     *
     * @return int|null The totalCallSeconds
     */
@@ -148,6 +157,7 @@ class PstnOnlineMeetingDialoutReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the totalCallSeconds
+    * Total duration of all the calls within the selected time range, in seconds.
     *
     * @param int $val The value of the totalCallSeconds
     *
@@ -160,6 +170,7 @@ class PstnOnlineMeetingDialoutReport extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the usageLocation
+    * Country code of the user. For details, see ISO 3166-1 alpha-2.
     *
     * @return string|null The usageLocation
     */
@@ -174,6 +185,7 @@ class PstnOnlineMeetingDialoutReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the usageLocation
+    * Country code of the user. For details, see ISO 3166-1 alpha-2.
     *
     * @param string $val The value of the usageLocation
     *
@@ -186,6 +198,7 @@ class PstnOnlineMeetingDialoutReport extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userDisplayName
+    * Display name of the user.
     *
     * @return string|null The userDisplayName
     */
@@ -200,6 +213,7 @@ class PstnOnlineMeetingDialoutReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userDisplayName
+    * Display name of the user.
     *
     * @param string $val The value of the userDisplayName
     *
@@ -212,6 +226,7 @@ class PstnOnlineMeetingDialoutReport extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userId
+    * The unique identifier (GUID) of the user in Azure Active Directory.
     *
     * @return string|null The userId
     */
@@ -226,6 +241,7 @@ class PstnOnlineMeetingDialoutReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userId
+    * The unique identifier (GUID) of the user in Azure Active Directory.
     *
     * @param string $val The value of the userId
     *
@@ -238,6 +254,7 @@ class PstnOnlineMeetingDialoutReport extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userPrincipalName
+    * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
     *
     * @return string|null The userPrincipalName
     */
@@ -252,6 +269,7 @@ class PstnOnlineMeetingDialoutReport extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userPrincipalName
+    * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
     *
     * @param string $val The value of the userPrincipalName
     *

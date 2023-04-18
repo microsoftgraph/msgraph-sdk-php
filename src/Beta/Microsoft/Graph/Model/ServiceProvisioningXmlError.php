@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* WindowsAppXAppAssignmentSettings File
+* ServiceProvisioningXmlError File
 * PHP version 7
 *
 * @category  Library
@@ -13,7 +13,7 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 /**
-* WindowsAppXAppAssignmentSettings class
+* ServiceProvisioningXmlError class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,7 +21,7 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSettings
+class ServiceProvisioningXmlError extends ServiceProvisioningError
 {
     /**
     * Set the @odata.type since this type is immediately descended from an abstract
@@ -31,35 +31,33 @@ class WindowsAppXAppAssignmentSettings extends MobileAppAssignmentSettings
     public function __construct($propDict = array())
     {
         parent::__construct($propDict);
-        $this->setODataType("#microsoft.graph.windowsAppXAppAssignmentSettings");
+        $this->setODataType("#microsoft.graph.serviceProvisioningXmlError");
     }
 
     /**
-    * Gets the useDeviceContext
-    * Whether or not to use device execution context for Windows AppX mobile app.
+    * Gets the errorDetail
     *
-    * @return bool|null The useDeviceContext
+    * @return string|null The errorDetail
     */
-    public function getUseDeviceContext()
+    public function getErrorDetail()
     {
-        if (array_key_exists("useDeviceContext", $this->_propDict)) {
-            return $this->_propDict["useDeviceContext"];
+        if (array_key_exists("errorDetail", $this->_propDict)) {
+            return $this->_propDict["errorDetail"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the useDeviceContext
-    * Whether or not to use device execution context for Windows AppX mobile app.
+    * Sets the errorDetail
     *
-    * @param bool $val The value of the useDeviceContext
+    * @param string $val The value of the errorDetail
     *
-    * @return WindowsAppXAppAssignmentSettings
+    * @return ServiceProvisioningXmlError
     */
-    public function setUseDeviceContext($val)
+    public function setErrorDetail($val)
     {
-        $this->_propDict["useDeviceContext"] = $val;
+        $this->_propDict["errorDetail"] = $val;
         return $this;
     }
 }
