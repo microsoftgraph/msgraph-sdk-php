@@ -57,6 +57,34 @@ class PolicyRoot extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the authenticationStrengthPolicies
+     *
+     * @return array|null The authenticationStrengthPolicies
+     */
+    public function getAuthenticationStrengthPolicies()
+    {
+        if (array_key_exists("authenticationStrengthPolicies", $this->_propDict)) {
+           return $this->_propDict["authenticationStrengthPolicies"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the authenticationStrengthPolicies
+    *
+    * @param AuthenticationStrengthPolicy[] $val The authenticationStrengthPolicies
+    *
+    * @return PolicyRoot
+    */
+    public function setAuthenticationStrengthPolicies($val)
+    {
+        $this->_propDict["authenticationStrengthPolicies"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the authenticationFlowsPolicy
     * The policy configuration of the self-service sign-up experience of external users.
