@@ -5,7 +5,6 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\Sets\Item\P
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Children\Item\Children\Item\Relations\Item\RelationItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Children\Item\Children\Item\Relations\RelationsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\Sets\Item\ParentGroup\Sets\Item\Children\Item\Children\Item\Set\SetRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -119,17 +118,6 @@ class TermItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the relations property of the microsoft.graph.termStore.term entity.
-     * @param string $id Unique identifier of the item
-     * @return RelationItemRequestBuilder
-    */
-    public function relationsById(string $id): RelationItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['relation%2Did'] = $id;
-        return new RelationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

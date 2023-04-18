@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\Reports\ExportJobs\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\Reports\ExportJobs\Item\DeviceManagementExportJobItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\DeviceManagementExportJob;
 use Microsoft\Graph\Generated\Models\DeviceManagementExportJobCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class ExportJobsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the exportJobs property of the microsoft.graph.deviceManagementReports entity.
+     * @param string $deviceManagementExportJobId Unique identifier of the item
+     * @return DeviceManagementExportJobItemRequestBuilder
+    */
+    public function byDeviceManagementExportJobId(string $deviceManagementExportJobId): DeviceManagementExportJobItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['deviceManagementExportJob%2Did'] = $deviceManagementExportJobId;
+        return new DeviceManagementExportJobItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ExportJobsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

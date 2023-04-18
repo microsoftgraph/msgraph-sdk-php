@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\OnlineMeetings\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Me\OnlineMeetings\CreateOrGet\CreateOrGetRequestBuilder;
+use Microsoft\Graph\Generated\Me\OnlineMeetings\Item\OnlineMeetingItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OnlineMeeting;
 use Microsoft\Graph\Generated\Models\OnlineMeetingCollectionResponse;
@@ -51,6 +52,17 @@ class OnlineMeetingsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the onlineMeetings property of the microsoft.graph.user entity.
+     * @param string $onlineMeetingId Unique identifier of the item
+     * @return OnlineMeetingItemRequestBuilder
+    */
+    public function byOnlineMeetingId(string $onlineMeetingId): OnlineMeetingItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['onlineMeeting%2Did'] = $onlineMeetingId;
+        return new OnlineMeetingItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new OnlineMeetingsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

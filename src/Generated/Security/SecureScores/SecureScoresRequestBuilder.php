@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SecureScore;
 use Microsoft\Graph\Generated\Models\SecureScoreCollectionResponse;
 use Microsoft\Graph\Generated\Security\SecureScores\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Security\SecureScores\Item\SecureScoreItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class SecureScoresRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the secureScores property of the microsoft.graph.security entity.
+     * @param string $secureScoreId Unique identifier of the item
+     * @return SecureScoreItemRequestBuilder
+    */
+    public function bySecureScoreId(string $secureScoreId): SecureScoreItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['secureScore%2Did'] = $secureScoreId;
+        return new SecureScoreItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SecureScoresRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

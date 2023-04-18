@@ -18,11 +18,6 @@ class PersonType implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * @var string|null $escapedClass The type of data source, such as Person.
-    */
-    public ?string $escapedClass = null;
-    
-    /**
      * Instantiates a new personType and sets the default values.
     */
     public function __construct() {

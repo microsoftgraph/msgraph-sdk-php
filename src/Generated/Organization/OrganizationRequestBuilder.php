@@ -12,6 +12,7 @@ use Microsoft\Graph\Generated\Organization\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Organization\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Organization\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Organization\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\Organization\Item\OrganizationItemRequestBuilder;
 use Microsoft\Graph\Generated\Organization\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -75,6 +76,17 @@ class OrganizationRequestBuilder
         return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * Provides operations to manage the collection of organization entities.
+     * @param string $organizationId Unique identifier of the item
+     * @return OrganizationItemRequestBuilder
+    */
+    public function byOrganizationId(string $organizationId): OrganizationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['organization%2Did'] = $organizationId;
+        return new OrganizationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new OrganizationRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

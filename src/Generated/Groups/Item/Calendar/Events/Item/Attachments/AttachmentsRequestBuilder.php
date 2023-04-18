@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Calendar\Events\Item\Attachments\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Calendar\Events\Item\Attachments\CreateUploadSession\CreateUploadSessionRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Calendar\Events\Item\Attachments\Item\AttachmentItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\Attachment;
 use Microsoft\Graph\Generated\Models\AttachmentCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -51,6 +52,17 @@ class AttachmentsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the attachments property of the microsoft.graph.event entity.
+     * @param string $attachmentId Unique identifier of the item
+     * @return AttachmentItemRequestBuilder
+    */
+    public function byAttachmentId(string $attachmentId): AttachmentItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['attachment%2Did'] = $attachmentId;
+        return new AttachmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AttachmentsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

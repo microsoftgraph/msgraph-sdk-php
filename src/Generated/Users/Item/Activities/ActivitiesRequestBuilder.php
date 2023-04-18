@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UserActivity;
 use Microsoft\Graph\Generated\Models\UserActivityCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\Activities\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Activities\Item\UserActivityItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Activities\Recent\RecentRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -51,6 +52,17 @@ class ActivitiesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the activities property of the microsoft.graph.user entity.
+     * @param string $userActivityId Unique identifier of the item
+     * @return UserActivityItemRequestBuilder
+    */
+    public function byUserActivityId(string $userActivityId): UserActivityItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['userActivity%2Did'] = $userActivityId;
+        return new UserActivityItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ActivitiesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

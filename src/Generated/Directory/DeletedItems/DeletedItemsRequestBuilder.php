@@ -12,6 +12,7 @@ use Microsoft\Graph\Generated\Directory\DeletedItems\GetByIds\GetByIdsRequestBui
 use Microsoft\Graph\Generated\Directory\DeletedItems\GraphApplication\GraphApplicationRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\GraphGroup\GraphGroupRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\GraphUser\GraphUserRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\Item\DirectoryObjectItemRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryObject;
 use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
@@ -99,6 +100,17 @@ class DeletedItemsRequestBuilder
         return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * Provides operations to manage the deletedItems property of the microsoft.graph.directory entity.
+     * @param string $directoryObjectId Unique identifier of the item
+     * @return DirectoryObjectItemRequestBuilder
+    */
+    public function byDirectoryObjectId(string $directoryObjectId): DirectoryObjectItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['directoryObject%2Did'] = $directoryObjectId;
+        return new DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new DeletedItemsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

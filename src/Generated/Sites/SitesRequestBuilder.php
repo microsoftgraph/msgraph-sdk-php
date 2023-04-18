@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SiteCollectionResponse;
 use Microsoft\Graph\Generated\Sites\Add\AddRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\SiteItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Remove\RemoveRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -59,6 +60,17 @@ class SitesRequestBuilder
     private string $urlTemplate;
     
     /**
+     * Provides operations to manage the collection of site entities.
+     * @param string $siteId Unique identifier of the item
+     * @return SiteItemRequestBuilder
+    */
+    public function bySiteId(string $siteId): SiteItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['site%2Did'] = $siteId;
+        return new SiteItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
+    /**
      * Instantiates a new SitesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -74,10 +86,10 @@ class SitesRequestBuilder
     }
 
     /**
-     * Search across a SharePoint tenant for [sites][] that match keywords provided. The only property that works for sorting is **createdDateTime**. The search filter is a free text search that uses multiple properties when retrieving the search results.
+     * List all available sites][] in an organization. Specific filter criteria and query options are also supported and described below: In addition, you can use a **[$search][]** query against the `/sites` collection to find sites matching given keywords. For more guidance about building applications that use site discovery for scanning purposes, see [Best practices for discovering files and detecting changes at scale.
      * @param SitesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/site-search?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/site-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?SitesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -93,7 +105,7 @@ class SitesRequestBuilder
     }
 
     /**
-     * Search across a SharePoint tenant for [sites][] that match keywords provided. The only property that works for sorting is **createdDateTime**. The search filter is a free text search that uses multiple properties when retrieving the search results.
+     * List all available sites][] in an organization. Specific filter criteria and query options are also supported and described below: In addition, you can use a **[$search][]** query against the `/sites` collection to find sites matching given keywords. For more guidance about building applications that use site discovery for scanning purposes, see [Best practices for discovering files and detecting changes at scale.
      * @param SitesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

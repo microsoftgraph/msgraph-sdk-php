@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryCase;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryCaseCollectionResponse;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\EdiscoveryCaseItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class EdiscoveryCasesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the ediscoveryCases property of the microsoft.graph.security.casesRoot entity.
+     * @param string $ediscoveryCaseId Unique identifier of the item
+     * @return EdiscoveryCaseItemRequestBuilder
+    */
+    public function byEdiscoveryCaseId(string $ediscoveryCaseId): EdiscoveryCaseItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['ediscoveryCase%2Did'] = $ediscoveryCaseId;
+        return new EdiscoveryCaseItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new EdiscoveryCasesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

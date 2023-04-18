@@ -10,6 +10,7 @@ use Microsoft\Graph\Generated\Models\AttachmentBaseCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Attachments\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Attachments\CreateUploadSession\CreateUploadSessionRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Attachments\Item\AttachmentBaseItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -51,6 +52,17 @@ class AttachmentsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the attachments property of the microsoft.graph.todoTask entity.
+     * @param string $attachmentBaseId Unique identifier of the item
+     * @return AttachmentBaseItemRequestBuilder
+    */
+    public function byAttachmentBaseId(string $attachmentBaseId): AttachmentBaseItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['attachmentBase%2Did'] = $attachmentBaseId;
+        return new AttachmentBaseItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AttachmentsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

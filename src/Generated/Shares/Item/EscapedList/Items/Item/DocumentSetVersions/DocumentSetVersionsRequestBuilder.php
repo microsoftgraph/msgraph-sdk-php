@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\DocumentSetVersion;
 use Microsoft\Graph\Generated\Models\DocumentSetVersionCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\DocumentSetVersions\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\DocumentSetVersions\Item\DocumentSetVersionItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class DocumentSetVersionsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the documentSetVersions property of the microsoft.graph.listItem entity.
+     * @param string $documentSetVersionId Unique identifier of the item
+     * @return DocumentSetVersionItemRequestBuilder
+    */
+    public function byDocumentSetVersionId(string $documentSetVersionId): DocumentSetVersionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['documentSetVersion%2Did'] = $documentSetVersionId;
+        return new DocumentSetVersionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new DocumentSetVersionsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

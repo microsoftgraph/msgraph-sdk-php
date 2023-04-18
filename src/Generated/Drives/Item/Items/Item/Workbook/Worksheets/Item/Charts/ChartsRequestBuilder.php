@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Add\AddRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\WorkbookChartItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\ItemAtWithIndex\ItemAtWithIndexRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\ItemWithName\ItemWithNameRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -53,6 +54,17 @@ class ChartsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the charts property of the microsoft.graph.workbookWorksheet entity.
+     * @param string $workbookChartId Unique identifier of the item
+     * @return WorkbookChartItemRequestBuilder
+    */
+    public function byWorkbookChartId(string $workbookChartId): WorkbookChartItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['workbookChart%2Did'] = $workbookChartId;
+        return new WorkbookChartItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ChartsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

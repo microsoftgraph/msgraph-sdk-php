@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Communications\Calls\Item\AudioRoutingGroups\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\AudioRoutingGroups\Item\AudioRoutingGroupItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\AudioRoutingGroup;
 use Microsoft\Graph\Generated\Models\AudioRoutingGroupCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class AudioRoutingGroupsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the audioRoutingGroups property of the microsoft.graph.call entity.
+     * @param string $audioRoutingGroupId Unique identifier of the item
+     * @return AudioRoutingGroupItemRequestBuilder
+    */
+    public function byAudioRoutingGroupId(string $audioRoutingGroupId): AudioRoutingGroupItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['audioRoutingGroup%2Did'] = $audioRoutingGroupId;
+        return new AudioRoutingGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AudioRoutingGroupsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

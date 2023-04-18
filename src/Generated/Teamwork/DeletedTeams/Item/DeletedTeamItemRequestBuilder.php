@@ -8,7 +8,6 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\DeletedTeam;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\Channels\ChannelsRequestBuilder;
-use Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\Channels\Item\ChannelItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,17 +42,6 @@ class DeletedTeamItemRequestBuilder
     */
     private string $urlTemplate;
     
-    /**
-     * Provides operations to manage the channels property of the microsoft.graph.deletedTeam entity.
-     * @param string $id Unique identifier of the item
-     * @return ChannelItemRequestBuilder
-    */
-    public function channelsById(string $id): ChannelItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['channel%2Did'] = $id;
-        return new ChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
     /**
      * Instantiates a new DeletedTeamItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

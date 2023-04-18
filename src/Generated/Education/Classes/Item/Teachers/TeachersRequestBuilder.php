@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Classes\Item\Teachers\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Education\Classes\Item\Teachers\Item\EducationUserItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Teachers\Ref\RefRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationUserCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -50,6 +51,17 @@ class TeachersRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Gets an item from the Microsoft/Graph/Generated.education.classes.item.teachers.item collection
+     * @param string $educationUserId Unique identifier of the item
+     * @return EducationUserItemRequestBuilder
+    */
+    public function byEducationUserId(string $educationUserId): EducationUserItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['educationUser%2Did'] = $educationUserId;
+        return new EducationUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new TeachersRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

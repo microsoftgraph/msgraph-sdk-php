@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Connections\Item\Groups\Item\Members\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Connections\Item\Groups\Item\Members\Item\IdentityItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ExternalConnectors\Identity;
 use Microsoft\Graph\Generated\Models\ExternalConnectors\IdentityCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class MembersRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the members property of the microsoft.graph.externalConnectors.externalGroup entity.
+     * @param string $identityId Unique identifier of the item
+     * @return IdentityItemRequestBuilder
+    */
+    public function byIdentityId(string $identityId): IdentityItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['identity%2Did'] = $identityId;
+        return new IdentityItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new MembersRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -6,7 +6,6 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions\Item\Instances\InstancesRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions\Item\Instances\Item\AccessReviewHistoryInstanceItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessReviewHistoryDefinition;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -92,17 +91,6 @@ class AccessReviewHistoryDefinitionItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the instances property of the microsoft.graph.accessReviewHistoryDefinition entity.
-     * @param string $id Unique identifier of the item
-     * @return AccessReviewHistoryInstanceItemRequestBuilder
-    */
-    public function instancesById(string $id): AccessReviewHistoryInstanceItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['accessReviewHistoryInstance%2Did'] = $id;
-        return new AccessReviewHistoryInstanceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

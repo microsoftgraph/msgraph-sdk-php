@@ -8,6 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SiteCollectionResponse;
 use Microsoft\Graph\Generated\Sites\Item\Sites\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Sites\Item\SiteItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -42,6 +43,17 @@ class SitesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the sites property of the microsoft.graph.site entity.
+     * @param string $siteId1 Unique identifier of the item
+     * @return SiteItemRequestBuilder
+    */
+    public function bySiteId1(string $siteId1): SiteItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['site%2Did1'] = $siteId1;
+        return new SiteItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SitesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

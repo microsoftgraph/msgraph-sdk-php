@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Add\AddRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\Item\WorkbookTableColumnItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\Columns\ItemAtWithIndex\ItemAtWithIndexRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookTableColumn;
@@ -52,6 +53,17 @@ class ColumnsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the columns property of the microsoft.graph.workbookTable entity.
+     * @param string $workbookTableColumnId Unique identifier of the item
+     * @return WorkbookTableColumnItemRequestBuilder
+    */
+    public function byWorkbookTableColumnId(string $workbookTableColumnId): WorkbookTableColumnItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['workbookTableColumn%2Did'] = $workbookTableColumnId;
+        return new WorkbookTableColumnItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ColumnsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

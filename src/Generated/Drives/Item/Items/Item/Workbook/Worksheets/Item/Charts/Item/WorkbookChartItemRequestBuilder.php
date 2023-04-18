@@ -13,7 +13,6 @@ use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Ch
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\ImageWithWidthWithHeight\ImageWithWidthWithHeightRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\ImageWithWidthWithHeightWithFittingMode\ImageWithWidthWithHeightWithFittingModeRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Legend\LegendRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\Item\WorkbookChartSeriesItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\SeriesRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\SetData\SetDataRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\SetPosition\SetPositionRequestBuilder;
@@ -216,17 +215,6 @@ class WorkbookChartItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the series property of the microsoft.graph.workbookChart entity.
-     * @param string $id Unique identifier of the item
-     * @return WorkbookChartSeriesItemRequestBuilder
-    */
-    public function seriesById(string $id): WorkbookChartSeriesItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['workbookChartSeries%2Did'] = $id;
-        return new WorkbookChartSeriesItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

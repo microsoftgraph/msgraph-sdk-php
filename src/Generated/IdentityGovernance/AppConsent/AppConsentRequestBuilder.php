@@ -6,7 +6,6 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequests\AppConsentRequestsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequests\Item\AppConsentRequestItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\AppConsentApprovalRoute;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -43,17 +42,6 @@ class AppConsentRequestBuilder
     */
     private string $urlTemplate;
     
-    /**
-     * Provides operations to manage the appConsentRequests property of the microsoft.graph.appConsentApprovalRoute entity.
-     * @param string $id Unique identifier of the item
-     * @return AppConsentRequestItemRequestBuilder
-    */
-    public function appConsentRequestsById(string $id): AppConsentRequestItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['appConsentRequest%2Did'] = $id;
-        return new AppConsentRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
     /**
      * Instantiates a new AppConsentRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Domains\Item\ServiceConfigurationRecords\Item\DomainDnsRecordItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\DomainDnsRecord;
 use Microsoft\Graph\Generated\Models\DomainDnsRecordCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class ServiceConfigurationRecordsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the serviceConfigurationRecords property of the microsoft.graph.domain entity.
+     * @param string $domainDnsRecordId Unique identifier of the item
+     * @return DomainDnsRecordItemRequestBuilder
+    */
+    public function byDomainDnsRecordId(string $domainDnsRecordId): DomainDnsRecordItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['domainDnsRecord%2Did'] = $domainDnsRecordId;
+        return new DomainDnsRecordItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ServiceConfigurationRecordsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

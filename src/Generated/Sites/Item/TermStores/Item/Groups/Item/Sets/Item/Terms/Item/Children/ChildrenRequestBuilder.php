@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TermStore\Term;
 use Microsoft\Graph\Generated\Models\TermStore\TermCollectionResponse;
 use Microsoft\Graph\Generated\Sites\Item\TermStores\Item\Groups\Item\Sets\Item\Terms\Item\Children\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\TermStores\Item\Groups\Item\Sets\Item\Terms\Item\Children\Item\TermItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class ChildrenRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the children property of the microsoft.graph.termStore.term entity.
+     * @param string $termId1 Unique identifier of the item
+     * @return TermItemRequestBuilder
+    */
+    public function byTermId1(string $termId1): TermItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['term%2Did1'] = $termId1;
+        return new TermItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ChildrenRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

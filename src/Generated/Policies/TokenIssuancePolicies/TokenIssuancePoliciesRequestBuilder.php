@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TokenIssuancePolicy;
 use Microsoft\Graph\Generated\Models\TokenIssuancePolicyCollectionResponse;
 use Microsoft\Graph\Generated\Policies\TokenIssuancePolicies\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Policies\TokenIssuancePolicies\Item\TokenIssuancePolicyItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class TokenIssuancePoliciesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the tokenIssuancePolicies property of the microsoft.graph.policyRoot entity.
+     * @param string $tokenIssuancePolicyId Unique identifier of the item
+     * @return TokenIssuancePolicyItemRequestBuilder
+    */
+    public function byTokenIssuancePolicyId(string $tokenIssuancePolicyId): TokenIssuancePolicyItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['tokenIssuancePolicy%2Did'] = $tokenIssuancePolicyId;
+        return new TokenIssuancePolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new TokenIssuancePoliciesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

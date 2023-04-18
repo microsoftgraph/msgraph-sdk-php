@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Categories\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Categories\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Categories\Item\EducationCategoryItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Categories\Ref\RefRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationCategory;
 use Microsoft\Graph\Generated\Models\EducationCategoryCollectionResponse;
@@ -59,6 +60,17 @@ class CategoriesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Gets an item from the Microsoft/Graph/Generated.education.classes.item.assignments.item.categories.item collection
+     * @param string $educationCategoryId Unique identifier of the item
+     * @return EducationCategoryItemRequestBuilder
+    */
+    public function byEducationCategoryId(string $educationCategoryId): EducationCategoryItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['educationCategory%2Did'] = $educationCategoryId;
+        return new EducationCategoryItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new CategoriesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

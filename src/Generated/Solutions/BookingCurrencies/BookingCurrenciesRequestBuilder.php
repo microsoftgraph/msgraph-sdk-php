@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\BookingCurrency;
 use Microsoft\Graph\Generated\Models\BookingCurrencyCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Solutions\BookingCurrencies\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BookingCurrencies\Item\BookingCurrencyItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class BookingCurrenciesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the bookingCurrencies property of the microsoft.graph.solutionsRoot entity.
+     * @param string $bookingCurrencyId Unique identifier of the item
+     * @return BookingCurrencyItemRequestBuilder
+    */
+    public function byBookingCurrencyId(string $bookingCurrencyId): BookingCurrencyItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['bookingCurrency%2Did'] = $bookingCurrencyId;
+        return new BookingCurrencyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new BookingCurrenciesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

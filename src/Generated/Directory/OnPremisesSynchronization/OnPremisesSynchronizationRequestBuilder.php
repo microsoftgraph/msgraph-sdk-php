@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Directory\OnPremisesSynchronization\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Directory\OnPremisesSynchronization\Item\OnPremisesDirectorySynchronizationItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OnPremisesDirectorySynchronization;
 use Microsoft\Graph\Generated\Models\OnPremisesDirectorySynchronizationCollectionResponse;
@@ -43,6 +44,17 @@ class OnPremisesSynchronizationRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the onPremisesSynchronization property of the microsoft.graph.directory entity.
+     * @param string $onPremisesDirectorySynchronizationId Unique identifier of the item
+     * @return OnPremisesDirectorySynchronizationItemRequestBuilder
+    */
+    public function byOnPremisesDirectorySynchronizationId(string $onPremisesDirectorySynchronizationId): OnPremisesDirectorySynchronizationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['onPremisesDirectorySynchronization%2Did'] = $onPremisesDirectorySynchronizationId;
+        return new OnPremisesDirectorySynchronizationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new OnPremisesSynchronizationRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

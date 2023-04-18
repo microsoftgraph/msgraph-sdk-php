@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\FederatedIdentityCredential;
 use Microsoft\Graph\Generated\Models\FederatedIdentityCredentialCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\FederatedIdentityCredentials\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\FederatedIdentityCredentials\Item\FederatedIdentityCredentialItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class FederatedIdentityCredentialsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.servicePrincipal entity.
+     * @param string $federatedIdentityCredentialId Unique identifier of the item
+     * @return FederatedIdentityCredentialItemRequestBuilder
+    */
+    public function byFederatedIdentityCredentialId(string $federatedIdentityCredentialId): FederatedIdentityCredentialItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['federatedIdentityCredential%2Did'] = $federatedIdentityCredentialId;
+        return new FederatedIdentityCredentialItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new FederatedIdentityCredentialsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

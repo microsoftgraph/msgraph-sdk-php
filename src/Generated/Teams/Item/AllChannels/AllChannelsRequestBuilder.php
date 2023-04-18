@@ -8,6 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ChannelCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Teams\Item\AllChannels\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\AllChannels\Item\ChannelItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -42,6 +43,17 @@ class AllChannelsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the allChannels property of the microsoft.graph.team entity.
+     * @param string $channelId Unique identifier of the item
+     * @return ChannelItemRequestBuilder
+    */
+    public function byChannelId(string $channelId): ChannelItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['channel%2Did'] = $channelId;
+        return new ChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AllChannelsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Devices\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Devices\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Devices\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Devices\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\DeviceItemRequestBuilder;
 use Microsoft\Graph\Generated\Devices\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\Device;
 use Microsoft\Graph\Generated\Models\DeviceCollectionResponse;
@@ -75,6 +76,17 @@ class DevicesRequestBuilder
         return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * Provides operations to manage the collection of device entities.
+     * @param string $deviceId Unique identifier of the item
+     * @return DeviceItemRequestBuilder
+    */
+    public function byDeviceId(string $deviceId): DeviceItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['device%2Did'] = $deviceId;
+        return new DeviceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new DevicesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

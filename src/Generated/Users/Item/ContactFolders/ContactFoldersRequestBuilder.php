@@ -10,6 +10,7 @@ use Microsoft\Graph\Generated\Models\ContactFolderCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\ContactFolders\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\ContactFolders\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\ContactFolderItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -51,6 +52,17 @@ class ContactFoldersRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the contactFolders property of the microsoft.graph.user entity.
+     * @param string $contactFolderId Unique identifier of the item
+     * @return ContactFolderItemRequestBuilder
+    */
+    public function byContactFolderId(string $contactFolderId): ContactFolderItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['contactFolder%2Did'] = $contactFolderId;
+        return new ContactFolderItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ContactFoldersRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -9,7 +9,6 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OrganizationalBranding;
 use Microsoft\Graph\Generated\Organization\Item\Branding\BackgroundImage\BackgroundImageRequestBuilder;
 use Microsoft\Graph\Generated\Organization\Item\Branding\BannerLogo\BannerLogoRequestBuilder;
-use Microsoft\Graph\Generated\Organization\Item\Branding\Localizations\Item\OrganizationalBrandingLocalizationItemRequestBuilder;
 use Microsoft\Graph\Generated\Organization\Item\Branding\Localizations\LocalizationsRequestBuilder;
 use Microsoft\Graph\Generated\Organization\Item\Branding\SquareLogo\SquareLogoRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -118,17 +117,6 @@ class BrandingRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the localizations property of the microsoft.graph.organizationalBranding entity.
-     * @param string $id Unique identifier of the item
-     * @return OrganizationalBrandingLocalizationItemRequestBuilder
-    */
-    public function localizationsById(string $id): OrganizationalBrandingLocalizationItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['organizationalBrandingLocalization%2Did'] = $id;
-        return new OrganizationalBrandingLocalizationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

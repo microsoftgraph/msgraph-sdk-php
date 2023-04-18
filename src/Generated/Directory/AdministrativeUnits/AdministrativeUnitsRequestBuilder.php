@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\AdministrativeUnitItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\AdministrativeUnit;
 use Microsoft\Graph\Generated\Models\AdministrativeUnitCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -51,6 +52,17 @@ class AdministrativeUnitsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the administrativeUnits property of the microsoft.graph.directory entity.
+     * @param string $administrativeUnitId Unique identifier of the item
+     * @return AdministrativeUnitItemRequestBuilder
+    */
+    public function byAdministrativeUnitId(string $administrativeUnitId): AdministrativeUnitItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['administrativeUnit%2Did'] = $administrativeUnitId;
+        return new AdministrativeUnitItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AdministrativeUnitsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

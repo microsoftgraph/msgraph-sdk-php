@@ -5,7 +5,6 @@ namespace Microsoft\Graph\Generated\Me\Outlook;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\Outlook\MasterCategories\Item\OutlookCategoryItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Outlook\MasterCategories\MasterCategoriesRequestBuilder;
 use Microsoft\Graph\Generated\Me\Outlook\SupportedLanguages\SupportedLanguagesRequestBuilder;
 use Microsoft\Graph\Generated\Me\Outlook\SupportedTimeZones\SupportedTimeZonesRequestBuilder;
@@ -91,17 +90,6 @@ class OutlookRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the masterCategories property of the microsoft.graph.outlookUser entity.
-     * @param string $id Unique identifier of the item
-     * @return OutlookCategoryItemRequestBuilder
-    */
-    public function masterCategoriesById(string $id): OutlookCategoryItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['outlookCategory%2Did'] = $id;
-        return new OutlookCategoryItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

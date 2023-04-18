@@ -5,7 +5,6 @@ namespace Microsoft\Graph\Generated\Connections\Item\Groups\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Connections\Item\Groups\Item\Members\Item\IdentityItemRequestBuilder;
 use Microsoft\Graph\Generated\Connections\Item\Groups\Item\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\Models\ExternalConnectors\ExternalGroup;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -92,17 +91,6 @@ class ExternalGroupItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the members property of the microsoft.graph.externalConnectors.externalGroup entity.
-     * @param string $id Unique identifier of the item
-     * @return IdentityItemRequestBuilder
-    */
-    public function membersById(string $id): IdentityItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['identity%2Did'] = $id;
-        return new IdentityItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

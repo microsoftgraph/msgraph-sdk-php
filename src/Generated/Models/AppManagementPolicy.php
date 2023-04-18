@@ -26,7 +26,7 @@ class AppManagementPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Gets the appliesTo property value. The appliesTo property
+     * Gets the appliesTo property value. Collection of applications and service principals to which the policy is applied.
      * @return array<DirectoryObject>|null
     */
     public function getAppliesTo(): ?array {
@@ -47,7 +47,7 @@ class AppManagementPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Gets the isEnabled property value. The isEnabled property
+     * Gets the isEnabled property value. Denotes whether the policy is enabled.
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
@@ -55,7 +55,7 @@ class AppManagementPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Gets the restrictions property value. The restrictions property
+     * Gets the restrictions property value. Restrictions that apply to an application or service principal object.
      * @return AppManagementConfiguration|null
     */
     public function getRestrictions(): ?AppManagementConfiguration {
@@ -74,7 +74,7 @@ class AppManagementPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Sets the appliesTo property value. The appliesTo property
+     * Sets the appliesTo property value. Collection of applications and service principals to which the policy is applied.
      * @param array<DirectoryObject>|null $value Value to set for the appliesTo property.
     */
     public function setAppliesTo(?array $value): void {
@@ -82,7 +82,7 @@ class AppManagementPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Sets the isEnabled property value. The isEnabled property
+     * Sets the isEnabled property value. Denotes whether the policy is enabled.
      * @param bool|null $value Value to set for the isEnabled property.
     */
     public function setIsEnabled(?bool $value): void {
@@ -90,7 +90,7 @@ class AppManagementPolicy extends PolicyBase implements Parsable
     }
 
     /**
-     * Sets the restrictions property value. The restrictions property
+     * Sets the restrictions property value. Restrictions that apply to an application or service principal object.
      * @param AppManagementConfiguration|null $value Value to set for the restrictions property.
     */
     public function setRestrictions(?AppManagementConfiguration $value): void {

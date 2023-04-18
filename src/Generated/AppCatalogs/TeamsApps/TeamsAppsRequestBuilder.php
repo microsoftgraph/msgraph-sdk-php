@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\AppCatalogs\TeamsApps\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\AppCatalogs\TeamsApps\Item\TeamsAppItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TeamsApp;
 use Microsoft\Graph\Generated\Models\TeamsAppCollectionResponse;
@@ -43,6 +44,17 @@ class TeamsAppsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the teamsApps property of the microsoft.graph.appCatalogs entity.
+     * @param string $teamsAppId Unique identifier of the item
+     * @return TeamsAppItemRequestBuilder
+    */
+    public function byTeamsAppId(string $teamsAppId): TeamsAppItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['teamsApp%2Did'] = $teamsAppId;
+        return new TeamsAppItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new TeamsAppsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

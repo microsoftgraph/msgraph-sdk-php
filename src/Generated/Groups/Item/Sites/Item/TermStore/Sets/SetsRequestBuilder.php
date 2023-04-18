@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\Sets\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\Sets\Item\SetItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TermStore\Set;
 use Microsoft\Graph\Generated\Models\TermStore\SetCollectionResponse;
@@ -43,6 +44,17 @@ class SetsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the sets property of the microsoft.graph.termStore.store entity.
+     * @param string $setId Unique identifier of the item
+     * @return SetItemRequestBuilder
+    */
+    public function bySetId(string $setId): SetItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['set%2Did'] = $setId;
+        return new SetItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SetsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

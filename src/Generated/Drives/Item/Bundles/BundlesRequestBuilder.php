@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Bundles\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Bundles\Item\DriveItemItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\DriveItem;
 use Microsoft\Graph\Generated\Models\DriveItemCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class BundlesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the bundles property of the microsoft.graph.drive entity.
+     * @param string $driveItemId Unique identifier of the item
+     * @return DriveItemItemRequestBuilder
+    */
+    public function byDriveItemId(string $driveItemId): DriveItemItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['driveItem%2Did'] = $driveItemId;
+        return new DriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new BundlesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

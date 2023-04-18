@@ -6,9 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Onenote\Notebooks\Item\CopyNotebook\CopyNotebookRequestBuilder;
-use Microsoft\Graph\Generated\Me\Onenote\Notebooks\Item\SectionGroups\Item\SectionGroupItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Onenote\Notebooks\Item\SectionGroups\SectionGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Onenote\Notebooks\Item\Sections\Item\OnenoteSectionItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Onenote\Notebooks\Item\Sections\SectionsRequestBuilder;
 use Microsoft\Graph\Generated\Models\Notebook;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -128,28 +126,6 @@ class NotebookItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the sectionGroups property of the microsoft.graph.notebook entity.
-     * @param string $id Unique identifier of the item
-     * @return SectionGroupItemRequestBuilder
-    */
-    public function sectionGroupsById(string $id): SectionGroupItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['sectionGroup%2Did'] = $id;
-        return new SectionGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the sections property of the microsoft.graph.notebook entity.
-     * @param string $id Unique identifier of the item
-     * @return OnenoteSectionItemRequestBuilder
-    */
-    public function sectionsById(string $id): OnenoteSectionItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['onenoteSection%2Did'] = $id;
-        return new OnenoteSectionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\ManagedEBookItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ManagedEBook;
 use Microsoft\Graph\Generated\Models\ManagedEBookCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class ManagedEBooksRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the managedEBooks property of the microsoft.graph.deviceAppManagement entity.
+     * @param string $managedEBookId Unique identifier of the item
+     * @return ManagedEBookItemRequestBuilder
+    */
+    public function byManagedEBookId(string $managedEBookId): ManagedEBookItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['managedEBook%2Did'] = $managedEBookId;
+        return new ManagedEBookItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ManagedEBooksRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

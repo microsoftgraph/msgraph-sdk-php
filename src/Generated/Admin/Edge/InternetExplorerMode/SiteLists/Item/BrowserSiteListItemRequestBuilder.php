@@ -6,9 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Admin\Edge\InternetExplorerMode\SiteLists\Item\Publish\PublishRequestBuilder;
-use Microsoft\Graph\Generated\Admin\Edge\InternetExplorerMode\SiteLists\Item\SharedCookies\Item\BrowserSharedCookieItemRequestBuilder;
 use Microsoft\Graph\Generated\Admin\Edge\InternetExplorerMode\SiteLists\Item\SharedCookies\SharedCookiesRequestBuilder;
-use Microsoft\Graph\Generated\Admin\Edge\InternetExplorerMode\SiteLists\Item\Sites\Item\BrowserSiteItemRequestBuilder;
 use Microsoft\Graph\Generated\Admin\Edge\InternetExplorerMode\SiteLists\Item\Sites\SitesRequestBuilder;
 use Microsoft\Graph\Generated\Models\BrowserSiteList;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -128,28 +126,6 @@ class BrowserSiteListItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the sharedCookies property of the microsoft.graph.browserSiteList entity.
-     * @param string $id Unique identifier of the item
-     * @return BrowserSharedCookieItemRequestBuilder
-    */
-    public function sharedCookiesById(string $id): BrowserSharedCookieItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['browserSharedCookie%2Did'] = $id;
-        return new BrowserSharedCookieItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the sites property of the microsoft.graph.browserSiteList entity.
-     * @param string $id Unique identifier of the item
-     * @return BrowserSiteItemRequestBuilder
-    */
-    public function sitesById(string $id): BrowserSiteItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['browserSite%2Did'] = $id;
-        return new BrowserSiteItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

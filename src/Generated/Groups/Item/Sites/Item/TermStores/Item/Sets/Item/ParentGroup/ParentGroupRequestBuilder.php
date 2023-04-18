@@ -5,7 +5,6 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Sets\
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Sets\Item\ParentGroup\Sets\Item\SetItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\Sets\Item\ParentGroup\Sets\SetsRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TermStore\Group;
@@ -111,17 +110,6 @@ class ParentGroupRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the sets property of the microsoft.graph.termStore.group entity.
-     * @param string $id Unique identifier of the item
-     * @return SetItemRequestBuilder
-    */
-    public function setsById(string $id): SetItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['set%2Did1'] = $id;
-        return new SetItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

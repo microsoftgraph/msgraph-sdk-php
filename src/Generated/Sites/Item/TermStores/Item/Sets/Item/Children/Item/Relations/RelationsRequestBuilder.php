@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TermStore\Relation;
 use Microsoft\Graph\Generated\Models\TermStore\RelationCollectionResponse;
 use Microsoft\Graph\Generated\Sites\Item\TermStores\Item\Sets\Item\Children\Item\Relations\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\TermStores\Item\Sets\Item\Children\Item\Relations\Item\RelationItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class RelationsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the relations property of the microsoft.graph.termStore.term entity.
+     * @param string $relationId Unique identifier of the item
+     * @return RelationItemRequestBuilder
+    */
+    public function byRelationId(string $relationId): RelationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['relation%2Did'] = $relationId;
+        return new RelationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new RelationsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

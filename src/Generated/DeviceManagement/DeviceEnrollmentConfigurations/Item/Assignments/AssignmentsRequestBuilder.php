@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assignments\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\Assignments\Item\EnrollmentConfigurationAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\EnrollmentConfigurationAssignment;
 use Microsoft\Graph\Generated\Models\EnrollmentConfigurationAssignmentCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class AssignmentsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.deviceEnrollmentConfiguration entity.
+     * @param string $enrollmentConfigurationAssignmentId Unique identifier of the item
+     * @return EnrollmentConfigurationAssignmentItemRequestBuilder
+    */
+    public function byEnrollmentConfigurationAssignmentId(string $enrollmentConfigurationAssignmentId): EnrollmentConfigurationAssignmentItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['enrollmentConfigurationAssignment%2Did'] = $enrollmentConfigurationAssignmentId;
+        return new EnrollmentConfigurationAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AssignmentsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

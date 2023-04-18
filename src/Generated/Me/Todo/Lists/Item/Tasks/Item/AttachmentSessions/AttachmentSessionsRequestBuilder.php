@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Item\AttachmentSessions\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Item\AttachmentSessions\Item\AttachmentSessionItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\AttachmentSessionCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -42,6 +43,17 @@ class AttachmentSessionsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the attachmentSessions property of the microsoft.graph.todoTask entity.
+     * @param string $attachmentSessionId Unique identifier of the item
+     * @return AttachmentSessionItemRequestBuilder
+    */
+    public function byAttachmentSessionId(string $attachmentSessionId): AttachmentSessionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['attachmentSession%2Did'] = $attachmentSessionId;
+        return new AttachmentSessionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AttachmentSessionsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

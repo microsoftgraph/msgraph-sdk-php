@@ -8,6 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Names\Add\AddRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Names\AddFormulaLocal\AddFormulaLocalRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Names\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Names\Item\WorkbookNamedItemItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookNamedItem;
 use Microsoft\Graph\Generated\Models\WorkbookNamedItemCollectionResponse;
@@ -59,6 +60,17 @@ class NamesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the names property of the microsoft.graph.workbookWorksheet entity.
+     * @param string $workbookNamedItemId Unique identifier of the item
+     * @return WorkbookNamedItemItemRequestBuilder
+    */
+    public function byWorkbookNamedItemId(string $workbookNamedItemId): WorkbookNamedItemItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['workbookNamedItem%2Did'] = $workbookNamedItemId;
+        return new WorkbookNamedItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new NamesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

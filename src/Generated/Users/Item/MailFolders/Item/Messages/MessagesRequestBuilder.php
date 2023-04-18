@@ -10,6 +10,7 @@ use Microsoft\Graph\Generated\Models\MessageCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\MessageItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -51,6 +52,17 @@ class MessagesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the messages property of the microsoft.graph.mailFolder entity.
+     * @param string $messageId Unique identifier of the item
+     * @return MessageItemRequestBuilder
+    */
+    public function byMessageId(string $messageId): MessageItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['message%2Did'] = $messageId;
+        return new MessageItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new MessagesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

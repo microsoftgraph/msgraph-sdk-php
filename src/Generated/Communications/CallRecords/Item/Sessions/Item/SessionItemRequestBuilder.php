@@ -5,7 +5,6 @@ namespace Microsoft\Graph\Generated\Communications\CallRecords\Item\Sessions\Ite
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Communications\CallRecords\Item\Sessions\Item\Segments\Item\SegmentItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\CallRecords\Item\Sessions\Item\Segments\SegmentsRequestBuilder;
 use Microsoft\Graph\Generated\Models\CallRecords\Session;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -111,17 +110,6 @@ class SessionItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the segments property of the microsoft.graph.callRecords.session entity.
-     * @param string $id Unique identifier of the item
-     * @return SegmentItemRequestBuilder
-    */
-    public function segmentsById(string $id): SegmentItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['segment%2Did'] = $id;
-        return new SegmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

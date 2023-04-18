@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Item\SectionGroups\Item\Sections\Item\OnenoteSectionItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OnenoteSection;
 use Microsoft\Graph\Generated\Models\OnenoteSectionCollectionResponse;
@@ -43,6 +44,17 @@ class SectionsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the sections property of the microsoft.graph.sectionGroup entity.
+     * @param string $onenoteSectionId Unique identifier of the item
+     * @return OnenoteSectionItemRequestBuilder
+    */
+    public function byOnenoteSectionId(string $onenoteSectionId): OnenoteSectionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['onenoteSection%2Did'] = $onenoteSectionId;
+        return new OnenoteSectionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SectionsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

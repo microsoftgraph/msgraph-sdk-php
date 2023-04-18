@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Subscription;
 use Microsoft\Graph\Generated\Models\SubscriptionCollectionResponse;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Subscriptions\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Shares\Item\EscapedList\Subscriptions\Item\SubscriptionItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class SubscriptionsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the subscriptions property of the microsoft.graph.list entity.
+     * @param string $subscriptionId Unique identifier of the item
+     * @return SubscriptionItemRequestBuilder
+    */
+    public function bySubscriptionId(string $subscriptionId): SubscriptionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['subscription%2Did'] = $subscriptionId;
+        return new SubscriptionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SubscriptionsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Connections\Item\Operations\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Connections\Item\Operations\Item\ConnectionOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ExternalConnectors\ConnectionOperation;
 use Microsoft\Graph\Generated\Models\ExternalConnectors\ConnectionOperationCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class OperationsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.externalConnectors.externalConnection entity.
+     * @param string $connectionOperationId Unique identifier of the item
+     * @return ConnectionOperationItemRequestBuilder
+    */
+    public function byConnectionOperationId(string $connectionOperationId): ConnectionOperationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['connectionOperation%2Did'] = $connectionOperationId;
+        return new ConnectionOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new OperationsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

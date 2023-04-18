@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\File\Localizations\Item\Versions\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\File\Localizations\Item\Versions\Item\AgreementFileVersionItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\AgreementFileVersion;
 use Microsoft\Graph\Generated\Models\AgreementFileVersionCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class VersionsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the versions property of the microsoft.graph.agreementFileLocalization entity.
+     * @param string $agreementFileVersionId Unique identifier of the item
+     * @return AgreementFileVersionItemRequestBuilder
+    */
+    public function byAgreementFileVersionId(string $agreementFileVersionId): AgreementFileVersionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['agreementFileVersion%2Did'] = $agreementFileVersionId;
+        return new AgreementFileVersionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new VersionsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

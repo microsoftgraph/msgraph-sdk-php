@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Admin\Edge\InternetExplorerMode\SiteLists\Item\Sites\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Admin\Edge\InternetExplorerMode\SiteLists\Item\Sites\Item\BrowserSiteItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\BrowserSite;
 use Microsoft\Graph\Generated\Models\BrowserSiteCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class SitesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the sites property of the microsoft.graph.browserSiteList entity.
+     * @param string $browserSiteId Unique identifier of the item
+     * @return BrowserSiteItemRequestBuilder
+    */
+    public function byBrowserSiteId(string $browserSiteId): BrowserSiteItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['browserSite%2Did'] = $browserSiteId;
+        return new BrowserSiteItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SitesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

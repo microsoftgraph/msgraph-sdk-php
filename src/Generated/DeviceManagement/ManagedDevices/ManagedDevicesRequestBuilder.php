@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\ManagedDeviceItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ManagedDevice;
 use Microsoft\Graph\Generated\Models\ManagedDeviceCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class ManagedDevicesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the managedDevices property of the microsoft.graph.deviceManagement entity.
+     * @param string $managedDeviceId Unique identifier of the item
+     * @return ManagedDeviceItemRequestBuilder
+    */
+    public function byManagedDeviceId(string $managedDeviceId): ManagedDeviceItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['managedDevice%2Did'] = $managedDeviceId;
+        return new ManagedDeviceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ManagedDevicesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

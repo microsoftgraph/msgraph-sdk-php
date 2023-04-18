@@ -6,11 +6,8 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Connectors\ConnectorsRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Connectors\Item\PrintConnectorItemRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\RestoreFactoryDefaults\RestoreFactoryDefaultsRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Shares\Item\PrinterShareItemRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Shares\SharesRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\TaskTriggers\Item\PrintTaskTriggerItemRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\TaskTriggers\TaskTriggersRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Printer;
@@ -69,17 +66,6 @@ class PrinterItemRequestBuilder
     */
     private string $urlTemplate;
     
-    /**
-     * Provides operations to manage the connectors property of the microsoft.graph.printer entity.
-     * @param string $id Unique identifier of the item
-     * @return PrintConnectorItemRequestBuilder
-    */
-    public function connectorsById(string $id): PrintConnectorItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['printConnector%2Did'] = $id;
-        return new PrintConnectorItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
     /**
      * Instantiates a new PrinterItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
@@ -148,28 +134,6 @@ class PrinterItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the shares property of the microsoft.graph.printer entity.
-     * @param string $id Unique identifier of the item
-     * @return PrinterShareItemRequestBuilder
-    */
-    public function sharesById(string $id): PrinterShareItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['printerShare%2Did'] = $id;
-        return new PrinterShareItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the taskTriggers property of the microsoft.graph.printer entity.
-     * @param string $id Unique identifier of the item
-     * @return PrintTaskTriggerItemRequestBuilder
-    */
-    public function taskTriggersById(string $id): PrintTaskTriggerItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['printTaskTrigger%2Did'] = $id;
-        return new PrintTaskTriggerItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

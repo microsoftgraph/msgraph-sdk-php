@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\EducationAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationAssignment;
 use Microsoft\Graph\Generated\Models\EducationAssignmentCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -51,6 +52,17 @@ class AssignmentsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.educationUser entity.
+     * @param string $educationAssignmentId Unique identifier of the item
+     * @return EducationAssignmentItemRequestBuilder
+    */
+    public function byEducationAssignmentId(string $educationAssignmentId): EducationAssignmentItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['educationAssignment%2Did'] = $educationAssignmentId;
+        return new EducationAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AssignmentsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

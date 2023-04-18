@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\CertificateBasedAuthConfiguration\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\CertificateBasedAuthConfiguration\Item\CertificateBasedAuthConfigurationItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\CertificateBasedAuthConfiguration;
 use Microsoft\Graph\Generated\Models\CertificateBasedAuthConfigurationCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class CertificateBasedAuthConfigurationRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the collection of certificateBasedAuthConfiguration entities.
+     * @param string $certificateBasedAuthConfigurationId Unique identifier of the item
+     * @return CertificateBasedAuthConfigurationItemRequestBuilder
+    */
+    public function byCertificateBasedAuthConfigurationId(string $certificateBasedAuthConfigurationId): CertificateBasedAuthConfigurationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['certificateBasedAuthConfiguration%2Did'] = $certificateBasedAuthConfigurationId;
+        return new CertificateBasedAuthConfigurationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new CertificateBasedAuthConfigurationRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

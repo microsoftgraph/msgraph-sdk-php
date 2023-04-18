@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkforceIntegration;
 use Microsoft\Graph\Generated\Models\WorkforceIntegrationCollectionResponse;
 use Microsoft\Graph\Generated\Teamwork\WorkforceIntegrations\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Teamwork\WorkforceIntegrations\Item\WorkforceIntegrationItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class WorkforceIntegrationsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the workforceIntegrations property of the microsoft.graph.teamwork entity.
+     * @param string $workforceIntegrationId Unique identifier of the item
+     * @return WorkforceIntegrationItemRequestBuilder
+    */
+    public function byWorkforceIntegrationId(string $workforceIntegrationId): WorkforceIntegrationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['workforceIntegration%2Did'] = $workforceIntegrationId;
+        return new WorkforceIntegrationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new WorkforceIntegrationsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

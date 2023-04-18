@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\CalendarItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\Calendar;
 use Microsoft\Graph\Generated\Models\CalendarCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class CalendarsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the calendars property of the microsoft.graph.calendarGroup entity.
+     * @param string $calendarId Unique identifier of the item
+     * @return CalendarItemRequestBuilder
+    */
+    public function byCalendarId(string $calendarId): CalendarItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['calendar%2Did'] = $calendarId;
+        return new CalendarItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new CalendarsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -4,6 +4,7 @@ namespace Microsoft\Graph\Generated\Places;
 
 use Microsoft\Graph\Generated\Places\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Places\GraphRoom\GraphRoomRequestBuilder;
+use Microsoft\Graph\Generated\Places\Item\PlaceItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 
 /**
@@ -40,6 +41,17 @@ class PlacesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the collection of place entities.
+     * @param string $placeId Unique identifier of the item
+     * @return PlaceItemRequestBuilder
+    */
+    public function byPlaceId(string $placeId): PlaceItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['place%2Did'] = $placeId;
+        return new PlaceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new PlacesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

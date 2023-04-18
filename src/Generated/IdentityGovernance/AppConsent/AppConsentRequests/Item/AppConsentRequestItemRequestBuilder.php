@@ -5,7 +5,6 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequ
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequests\Item\UserConsentRequests\Item\UserConsentRequestItemRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequests\Item\UserConsentRequests\UserConsentRequestsRequestBuilder;
 use Microsoft\Graph\Generated\Models\AppConsentRequest;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -181,17 +180,6 @@ class AppConsentRequestItemRequestBuilder
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
-    }
-
-    /**
-     * Provides operations to manage the userConsentRequests property of the microsoft.graph.appConsentRequest entity.
-     * @param string $id Unique identifier of the item
-     * @return UserConsentRequestItemRequestBuilder
-    */
-    public function userConsentRequestsById(string $id): UserConsentRequestItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['userConsentRequest%2Did'] = $id;
-        return new UserConsentRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

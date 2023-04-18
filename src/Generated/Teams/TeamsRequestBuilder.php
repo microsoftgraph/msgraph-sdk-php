@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Team;
 use Microsoft\Graph\Generated\Teams\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Teams\GetAllMessages\GetAllMessagesRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\TeamItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -50,6 +51,17 @@ class TeamsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the collection of team entities.
+     * @param string $teamId Unique identifier of the item
+     * @return TeamItemRequestBuilder
+    */
+    public function byTeamId(string $teamId): TeamItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['team%2Did'] = $teamId;
+        return new TeamItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new TeamsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ActivityBasedTimeoutPolicy;
 use Microsoft\Graph\Generated\Models\ActivityBasedTimeoutPolicyCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Policies\ActivityBasedTimeoutPolicies\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Policies\ActivityBasedTimeoutPolicies\Item\ActivityBasedTimeoutPolicyItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class ActivityBasedTimeoutPoliciesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the activityBasedTimeoutPolicies property of the microsoft.graph.policyRoot entity.
+     * @param string $activityBasedTimeoutPolicyId Unique identifier of the item
+     * @return ActivityBasedTimeoutPolicyItemRequestBuilder
+    */
+    public function byActivityBasedTimeoutPolicyId(string $activityBasedTimeoutPolicyId): ActivityBasedTimeoutPolicyItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['activityBasedTimeoutPolicy%2Did'] = $activityBasedTimeoutPolicyId;
+        return new ActivityBasedTimeoutPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ActivityBasedTimeoutPoliciesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -7,7 +7,6 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SimulationAutomation;
-use Microsoft\Graph\Generated\Security\AttackSimulation\SimulationAutomations\Item\Runs\Item\SimulationAutomationRunItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\AttackSimulation\SimulationAutomations\Item\Runs\RunsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -111,17 +110,6 @@ class SimulationAutomationItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the runs property of the microsoft.graph.simulationAutomation entity.
-     * @param string $id Unique identifier of the item
-     * @return SimulationAutomationRunItemRequestBuilder
-    */
-    public function runsById(string $id): SimulationAutomationRunItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['simulationAutomationRun%2Did'] = $id;
-        return new SimulationAutomationRunItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\CalendarPermission;
 use Microsoft\Graph\Generated\Models\CalendarPermissionCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\CalendarPermissions\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\CalendarPermissions\Item\CalendarPermissionItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class CalendarPermissionsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the calendarPermissions property of the microsoft.graph.calendar entity.
+     * @param string $calendarPermissionId Unique identifier of the item
+     * @return CalendarPermissionItemRequestBuilder
+    */
+    public function byCalendarPermissionId(string $calendarPermissionId): CalendarPermissionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['calendarPermission%2Did'] = $calendarPermissionId;
+        return new CalendarPermissionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new CalendarPermissionsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

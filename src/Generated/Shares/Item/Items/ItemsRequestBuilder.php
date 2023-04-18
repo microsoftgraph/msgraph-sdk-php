@@ -8,6 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\DriveItemCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Shares\Item\Items\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Shares\Item\Items\Item\DriveItemItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -42,6 +43,17 @@ class ItemsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the items property of the microsoft.graph.sharedDriveItem entity.
+     * @param string $driveItemId Unique identifier of the item
+     * @return DriveItemItemRequestBuilder
+    */
+    public function byDriveItemId(string $driveItemId): DriveItemItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['driveItem%2Did'] = $driveItemId;
+        return new DriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ItemsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

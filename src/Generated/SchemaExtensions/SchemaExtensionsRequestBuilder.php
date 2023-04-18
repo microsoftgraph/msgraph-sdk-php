@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SchemaExtension;
 use Microsoft\Graph\Generated\Models\SchemaExtensionCollectionResponse;
 use Microsoft\Graph\Generated\SchemaExtensions\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\SchemaExtensions\Item\SchemaExtensionItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class SchemaExtensionsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the collection of schemaExtension entities.
+     * @param string $schemaExtensionId Unique identifier of the item
+     * @return SchemaExtensionItemRequestBuilder
+    */
+    public function bySchemaExtensionId(string $schemaExtensionId): SchemaExtensionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['schemaExtension%2Did'] = $schemaExtensionId;
+        return new SchemaExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SchemaExtensionsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

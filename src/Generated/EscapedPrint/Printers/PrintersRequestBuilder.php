@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Create\CreateRequestBuilder;
+use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\PrinterItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Printer;
 use Microsoft\Graph\Generated\Models\PrinterCollectionResponse;
@@ -51,6 +52,17 @@ class PrintersRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the printers property of the microsoft.graph.print entity.
+     * @param string $printerId Unique identifier of the item
+     * @return PrinterItemRequestBuilder
+    */
+    public function byPrinterId(string $printerId): PrinterItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['printer%2Did'] = $printerId;
+        return new PrinterItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new PrintersRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

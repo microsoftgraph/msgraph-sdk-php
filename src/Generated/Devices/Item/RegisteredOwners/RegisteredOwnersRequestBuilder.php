@@ -10,6 +10,7 @@ use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\GraphAppRoleAssignme
 use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\GraphEndpoint\GraphEndpointRequestBuilder;
 use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
 use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\GraphUser\GraphUserRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Item\DirectoryObjectItemRequestBuilder;
 use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Ref\RefRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -82,6 +83,17 @@ class RegisteredOwnersRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Gets an item from the Microsoft/Graph/Generated.devices.item.registeredOwners.item collection
+     * @param string $directoryObjectId Unique identifier of the item
+     * @return DirectoryObjectItemRequestBuilder
+    */
+    public function byDirectoryObjectId(string $directoryObjectId): DirectoryObjectItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['directoryObject%2Did'] = $directoryObjectId;
+        return new DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new RegisteredOwnersRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

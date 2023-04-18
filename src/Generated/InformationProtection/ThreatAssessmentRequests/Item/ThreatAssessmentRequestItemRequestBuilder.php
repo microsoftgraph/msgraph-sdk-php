@@ -5,7 +5,6 @@ namespace Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentReques
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentRequests\Item\Results\Item\ThreatAssessmentResultItemRequestBuilder;
 use Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentRequests\Item\Results\ResultsRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ThreatAssessmentRequest;
@@ -111,17 +110,6 @@ class ThreatAssessmentRequestItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the results property of the microsoft.graph.threatAssessmentRequest entity.
-     * @param string $id Unique identifier of the item
-     * @return ThreatAssessmentResultItemRequestBuilder
-    */
-    public function resultsById(string $id): ThreatAssessmentResultItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['threatAssessmentResult%2Did'] = $id;
-        return new ThreatAssessmentResultItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

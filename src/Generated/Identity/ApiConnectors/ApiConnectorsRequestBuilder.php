@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Identity\ApiConnectors\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Identity\ApiConnectors\Item\IdentityApiConnectorItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\IdentityApiConnector;
 use Microsoft\Graph\Generated\Models\IdentityApiConnectorCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class ApiConnectorsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the apiConnectors property of the microsoft.graph.identityContainer entity.
+     * @param string $identityApiConnectorId Unique identifier of the item
+     * @return IdentityApiConnectorItemRequestBuilder
+    */
+    public function byIdentityApiConnectorId(string $identityApiConnectorId): IdentityApiConnectorItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['identityApiConnector%2Did'] = $identityApiConnectorId;
+        return new IdentityApiConnectorItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ApiConnectorsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

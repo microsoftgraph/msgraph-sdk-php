@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\UserStatuses\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\UserStatuses\Item\ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ManagedDeviceMobileAppConfigurationUserStatus;
 use Microsoft\Graph\Generated\Models\ManagedDeviceMobileAppConfigurationUserStatusCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class UserStatusesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the userStatuses property of the microsoft.graph.managedDeviceMobileAppConfiguration entity.
+     * @param string $managedDeviceMobileAppConfigurationUserStatusId Unique identifier of the item
+     * @return ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder
+    */
+    public function byManagedDeviceMobileAppConfigurationUserStatusId(string $managedDeviceMobileAppConfigurationUserStatusId): ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['managedDeviceMobileAppConfigurationUserStatus%2Did'] = $managedDeviceMobileAppConfigurationUserStatusId;
+        return new ManagedDeviceMobileAppConfigurationUserStatusItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new UserStatusesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

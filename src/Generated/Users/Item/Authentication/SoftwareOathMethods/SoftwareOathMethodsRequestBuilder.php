@@ -8,6 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SoftwareOathAuthenticationMethodCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\Authentication\SoftwareOathMethods\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Authentication\SoftwareOathMethods\Item\SoftwareOathAuthenticationMethodItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -42,6 +43,17 @@ class SoftwareOathMethodsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the softwareOathMethods property of the microsoft.graph.authentication entity.
+     * @param string $softwareOathAuthenticationMethodId Unique identifier of the item
+     * @return SoftwareOathAuthenticationMethodItemRequestBuilder
+    */
+    public function bySoftwareOathAuthenticationMethodId(string $softwareOathAuthenticationMethodId): SoftwareOathAuthenticationMethodItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['softwareOathAuthenticationMethod%2Did'] = $softwareOathAuthenticationMethodId;
+        return new SoftwareOathAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SoftwareOathMethodsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

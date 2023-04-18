@@ -7,17 +7,11 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Onenote;
-use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\Item\NotebookItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\NotebooksRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Onenote\Operations\Item\OnenoteOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\Operations\OperationsRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Onenote\Pages\Item\OnenotePageItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\Pages\PagesRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Onenote\Resources\Item\OnenoteResourceItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\Resources\ResourcesRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Onenote\SectionGroups\Item\SectionGroupItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\SectionGroups\SectionGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\Onenote\Sections\Item\OnenoteSectionItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\Sections\SectionsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -140,39 +134,6 @@ class OnenoteRequestBuilder
     }
 
     /**
-     * Provides operations to manage the notebooks property of the microsoft.graph.onenote entity.
-     * @param string $id Unique identifier of the item
-     * @return NotebookItemRequestBuilder
-    */
-    public function notebooksById(string $id): NotebookItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['notebook%2Did'] = $id;
-        return new NotebookItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the operations property of the microsoft.graph.onenote entity.
-     * @param string $id Unique identifier of the item
-     * @return OnenoteOperationItemRequestBuilder
-    */
-    public function operationsById(string $id): OnenoteOperationItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['onenoteOperation%2Did'] = $id;
-        return new OnenoteOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the pages property of the microsoft.graph.onenote entity.
-     * @param string $id Unique identifier of the item
-     * @return OnenotePageItemRequestBuilder
-    */
-    public function pagesById(string $id): OnenotePageItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['onenotePage%2Did'] = $id;
-        return new OnenotePageItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Update the navigation property onenote in sites
      * @param Onenote $body The request body
      * @param OnenoteRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
@@ -189,39 +150,6 @@ class OnenoteRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the resources property of the microsoft.graph.onenote entity.
-     * @param string $id Unique identifier of the item
-     * @return OnenoteResourceItemRequestBuilder
-    */
-    public function resourcesById(string $id): OnenoteResourceItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['onenoteResource%2Did'] = $id;
-        return new OnenoteResourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the sectionGroups property of the microsoft.graph.onenote entity.
-     * @param string $id Unique identifier of the item
-     * @return SectionGroupItemRequestBuilder
-    */
-    public function sectionGroupsById(string $id): SectionGroupItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['sectionGroup%2Did'] = $id;
-        return new SectionGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the sections property of the microsoft.graph.onenote entity.
-     * @param string $id Unique identifier of the item
-     * @return OnenoteSectionItemRequestBuilder
-    */
-    public function sectionsById(string $id): OnenoteSectionItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['onenoteSection%2Did'] = $id;
-        return new OnenoteSectionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

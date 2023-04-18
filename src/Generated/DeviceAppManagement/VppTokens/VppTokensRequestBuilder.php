@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\VppTokens\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\VppTokens\Item\VppTokenItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\VppToken;
 use Microsoft\Graph\Generated\Models\VppTokenCollectionResponse;
@@ -43,6 +44,17 @@ class VppTokensRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the vppTokens property of the microsoft.graph.deviceAppManagement entity.
+     * @param string $vppTokenId Unique identifier of the item
+     * @return VppTokenItemRequestBuilder
+    */
+    public function byVppTokenId(string $vppTokenId): VppTokenItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['vppToken%2Did'] = $vppTokenId;
+        return new VppTokenItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new VppTokensRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

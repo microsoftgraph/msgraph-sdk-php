@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\WindowsInformationProtectionAppLearningSummaries\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\WindowsInformationProtectionAppLearningSummaries\Item\WindowsInformationProtectionAppLearningSummaryItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WindowsInformationProtectionAppLearningSummary;
 use Microsoft\Graph\Generated\Models\WindowsInformationProtectionAppLearningSummaryCollectionResponse;
@@ -43,6 +44,17 @@ class WindowsInformationProtectionAppLearningSummariesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the windowsInformationProtectionAppLearningSummaries property of the microsoft.graph.deviceManagement entity.
+     * @param string $windowsInformationProtectionAppLearningSummaryId Unique identifier of the item
+     * @return WindowsInformationProtectionAppLearningSummaryItemRequestBuilder
+    */
+    public function byWindowsInformationProtectionAppLearningSummaryId(string $windowsInformationProtectionAppLearningSummaryId): WindowsInformationProtectionAppLearningSummaryItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['windowsInformationProtectionAppLearningSummary%2Did'] = $windowsInformationProtectionAppLearningSummaryId;
+        return new WindowsInformationProtectionAppLearningSummaryItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new WindowsInformationProtectionAppLearningSummariesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -11,6 +11,7 @@ use Microsoft\Graph\Generated\Users\Item\OwnedObjects\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\OwnedObjects\GraphApplication\GraphApplicationRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\OwnedObjects\GraphGroup\GraphGroupRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\OwnedObjects\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\OwnedObjects\Item\DirectoryObjectItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -66,6 +67,17 @@ class OwnedObjectsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the ownedObjects property of the microsoft.graph.user entity.
+     * @param string $directoryObjectId Unique identifier of the item
+     * @return DirectoryObjectItemRequestBuilder
+    */
+    public function byDirectoryObjectId(string $directoryObjectId): DirectoryObjectItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['directoryObject%2Did'] = $directoryObjectId;
+        return new DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new OwnedObjectsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

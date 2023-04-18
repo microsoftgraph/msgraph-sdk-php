@@ -7,15 +7,11 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\CellWithRowWithColumn\CellWithRowWithColumnRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\ChartsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\WorkbookChartItemRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Names\Item\WorkbookNamedItemItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Names\NamesRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\PivotTables\Item\WorkbookPivotTableItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\PivotTables\PivotTablesRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Protection\ProtectionRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Range\RangeRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\RangeWithAddress\RangeWithAddressRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\Item\WorkbookTableItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Tables\TablesRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\UsedRange\UsedRangeRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\UsedRangeWithValuesOnly\UsedRangeWithValuesOnlyRequestBuilder;
@@ -108,17 +104,6 @@ class WorkbookWorksheetItemRequestBuilder
     }
 
     /**
-     * Provides operations to manage the charts property of the microsoft.graph.workbookWorksheet entity.
-     * @param string $id Unique identifier of the item
-     * @return WorkbookChartItemRequestBuilder
-    */
-    public function chartsById(string $id): WorkbookChartItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['workbookChart%2Did'] = $id;
-        return new WorkbookChartItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Instantiates a new WorkbookWorksheetItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -170,17 +155,6 @@ class WorkbookWorksheetItemRequestBuilder
     }
 
     /**
-     * Provides operations to manage the names property of the microsoft.graph.workbookWorksheet entity.
-     * @param string $id Unique identifier of the item
-     * @return WorkbookNamedItemItemRequestBuilder
-    */
-    public function namesById(string $id): WorkbookNamedItemItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['workbookNamedItem%2Did'] = $id;
-        return new WorkbookNamedItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Update the navigation property worksheets in drives
      * @param WorkbookWorksheet $body The request body
      * @param WorkbookWorksheetItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
@@ -200,34 +174,12 @@ class WorkbookWorksheetItemRequestBuilder
     }
 
     /**
-     * Provides operations to manage the pivotTables property of the microsoft.graph.workbookWorksheet entity.
-     * @param string $id Unique identifier of the item
-     * @return WorkbookPivotTableItemRequestBuilder
-    */
-    public function pivotTablesById(string $id): WorkbookPivotTableItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['workbookPivotTable%2Did'] = $id;
-        return new WorkbookPivotTableItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Provides operations to call the range method.
      * @param string $address Usage: address='{address}'
      * @return RangeWithAddressRequestBuilder
     */
     public function rangeWithAddress(string $address): RangeWithAddressRequestBuilder {
         return new RangeWithAddressRequestBuilder($this->pathParameters, $this->requestAdapter, $address);
-    }
-
-    /**
-     * Provides operations to manage the tables property of the microsoft.graph.workbookWorksheet entity.
-     * @param string $id Unique identifier of the item
-     * @return WorkbookTableItemRequestBuilder
-    */
-    public function tablesById(string $id): WorkbookTableItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['workbookTable%2Did'] = $id;
-        return new WorkbookTableItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

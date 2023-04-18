@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SchedulingGroup;
 use Microsoft\Graph\Generated\Models\SchedulingGroupCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\SchedulingGroups\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\SchedulingGroups\Item\SchedulingGroupItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class SchedulingGroupsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the schedulingGroups property of the microsoft.graph.schedule entity.
+     * @param string $schedulingGroupId Unique identifier of the item
+     * @return SchedulingGroupItemRequestBuilder
+    */
+    public function bySchedulingGroupId(string $schedulingGroupId): SchedulingGroupItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['schedulingGroup%2Did'] = $schedulingGroupId;
+        return new SchedulingGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SchedulingGroupsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

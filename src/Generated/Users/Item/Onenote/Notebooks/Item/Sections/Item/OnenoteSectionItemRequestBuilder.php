@@ -9,7 +9,6 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OnenoteSection;
 use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\Sections\Item\CopyToNotebook\CopyToNotebookRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\Sections\Item\CopyToSectionGroup\CopyToSectionGroupRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\Sections\Item\Pages\Item\OnenotePageItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\Sections\Item\Pages\PagesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\Sections\Item\ParentNotebook\ParentNotebookRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\Sections\Item\ParentSectionGroup\ParentSectionGroupRequestBuilder;
@@ -124,17 +123,6 @@ class OnenoteSectionItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the pages property of the microsoft.graph.onenoteSection entity.
-     * @param string $id Unique identifier of the item
-     * @return OnenotePageItemRequestBuilder
-    */
-    public function pagesById(string $id): OnenotePageItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['onenotePage%2Did'] = $id;
-        return new OnenotePageItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

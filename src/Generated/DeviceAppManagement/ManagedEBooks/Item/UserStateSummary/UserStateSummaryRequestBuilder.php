@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\UserStateSummary\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\UserStateSummary\Item\UserInstallStateSummaryItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UserInstallStateSummary;
 use Microsoft\Graph\Generated\Models\UserInstallStateSummaryCollectionResponse;
@@ -43,6 +44,17 @@ class UserStateSummaryRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the userStateSummary property of the microsoft.graph.managedEBook entity.
+     * @param string $userInstallStateSummaryId Unique identifier of the item
+     * @return UserInstallStateSummaryItemRequestBuilder
+    */
+    public function byUserInstallStateSummaryId(string $userInstallStateSummaryId): UserInstallStateSummaryItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['userInstallStateSummary%2Did'] = $userInstallStateSummaryId;
+        return new UserInstallStateSummaryItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new UserStateSummaryRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

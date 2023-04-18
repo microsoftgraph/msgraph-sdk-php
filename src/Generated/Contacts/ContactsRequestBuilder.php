@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Contacts\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\Contacts\Item\OrgContactItemRequestBuilder;
 use Microsoft\Graph\Generated\Contacts\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OrgContact;
@@ -75,6 +76,17 @@ class ContactsRequestBuilder
         return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * Provides operations to manage the collection of orgContact entities.
+     * @param string $orgContactId Unique identifier of the item
+     * @return OrgContactItemRequestBuilder
+    */
+    public function byOrgContactId(string $orgContactId): OrgContactItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['orgContact%2Did'] = $orgContactId;
+        return new OrgContactItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ContactsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

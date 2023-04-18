@@ -8,7 +8,6 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OnlineMeeting;
 use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\AttendanceReports\AttendanceReportsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\AttendanceReports\Item\MeetingAttendanceReportItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\AttendeeReport\AttendeeReportRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -51,17 +50,6 @@ class OnlineMeetingItemRequestBuilder
     */
     private string $urlTemplate;
     
-    /**
-     * Provides operations to manage the attendanceReports property of the microsoft.graph.onlineMeeting entity.
-     * @param string $id Unique identifier of the item
-     * @return MeetingAttendanceReportItemRequestBuilder
-    */
-    public function attendanceReportsById(string $id): MeetingAttendanceReportItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['meetingAttendanceReport%2Did'] = $id;
-        return new MeetingAttendanceReportItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
     /**
      * Instantiates a new OnlineMeetingItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\Endpoint;
 use Microsoft\Graph\Generated\Models\EndpointCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\Endpoints\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\Endpoints\Item\EndpointItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class EndpointsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the endpoints property of the microsoft.graph.servicePrincipal entity.
+     * @param string $endpointId Unique identifier of the item
+     * @return EndpointItemRequestBuilder
+    */
+    public function byEndpointId(string $endpointId): EndpointItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['endpoint%2Did'] = $endpointId;
+        return new EndpointItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new EndpointsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

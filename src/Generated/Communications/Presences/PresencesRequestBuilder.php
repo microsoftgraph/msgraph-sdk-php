@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Communications\Presences\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Presences\Item\PresenceItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Presence;
 use Microsoft\Graph\Generated\Models\PresenceCollectionResponse;
@@ -43,6 +44,17 @@ class PresencesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the presences property of the microsoft.graph.cloudCommunications entity.
+     * @param string $presenceId Unique identifier of the item
+     * @return PresenceItemRequestBuilder
+    */
+    public function byPresenceId(string $presenceId): PresenceItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['presence%2Did'] = $presenceId;
+        return new PresenceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new PresencesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

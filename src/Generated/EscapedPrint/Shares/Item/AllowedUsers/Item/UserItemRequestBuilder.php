@@ -2,6 +2,7 @@
 
 namespace Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedUsers\Item;
 
+use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedUsers\Item\MailboxSettings\MailboxSettingsRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedUsers\Item\Ref\RefRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 
@@ -10,6 +11,13 @@ use Microsoft\Kiota\Abstractions\RequestAdapter;
 */
 class UserItemRequestBuilder 
 {
+    /**
+     * The mailboxSettings property
+    */
+    public function mailboxSettings(): MailboxSettingsRequestBuilder {
+        return new MailboxSettingsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * @var array<string, mixed> $pathParameters Path parameters for the request
     */

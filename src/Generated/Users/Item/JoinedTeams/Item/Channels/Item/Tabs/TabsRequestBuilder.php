@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TeamsTab;
 use Microsoft\Graph\Generated\Models\TeamsTabCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item\Tabs\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item\Tabs\Item\TeamsTabItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class TabsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the tabs property of the microsoft.graph.channel entity.
+     * @param string $teamsTabId Unique identifier of the item
+     * @return TeamsTabItemRequestBuilder
+    */
+    public function byTeamsTabId(string $teamsTabId): TeamsTabItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['teamsTab%2Did'] = $teamsTabId;
+        return new TeamsTabItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new TabsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

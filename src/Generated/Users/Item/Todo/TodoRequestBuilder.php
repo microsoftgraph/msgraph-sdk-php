@@ -7,7 +7,6 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Todo;
-use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\TodoTaskListItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Todo\Lists\ListsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -92,17 +91,6 @@ class TodoRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the lists property of the microsoft.graph.todo entity.
-     * @param string $id Unique identifier of the item
-     * @return TodoTaskListItemRequestBuilder
-    */
-    public function listsById(string $id): TodoTaskListItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['todoTaskList%2Did'] = $id;
-        return new TodoTaskListItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

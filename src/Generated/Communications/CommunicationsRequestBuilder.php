@@ -6,13 +6,9 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Communications\CallRecords\CallRecordsRequestBuilder;
-use Microsoft\Graph\Generated\Communications\CallRecords\Item\CallRecordItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\CallsRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\CallItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\GetPresencesByUserId\GetPresencesByUserIdRequestBuilder;
-use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\OnlineMeetingItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\OnlineMeetingsRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Presences\Item\PresenceItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Presences\PresencesRequestBuilder;
 use Microsoft\Graph\Generated\Models\CloudCommunications;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -79,28 +75,6 @@ class CommunicationsRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Provides operations to manage the callRecords property of the microsoft.graph.cloudCommunications entity.
-     * @param string $id Unique identifier of the item
-     * @return CallRecordItemRequestBuilder
-    */
-    public function callRecordsById(string $id): CallRecordItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['callRecord%2Did'] = $id;
-        return new CallRecordItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the calls property of the microsoft.graph.cloudCommunications entity.
-     * @param string $id Unique identifier of the item
-     * @return CallItemRequestBuilder
-    */
-    public function callsById(string $id): CallItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['call%2Did'] = $id;
-        return new CallItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Instantiates a new CommunicationsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -134,17 +108,6 @@ class CommunicationsRequestBuilder
     }
 
     /**
-     * Provides operations to manage the onlineMeetings property of the microsoft.graph.cloudCommunications entity.
-     * @param string $id Unique identifier of the item
-     * @return OnlineMeetingItemRequestBuilder
-    */
-    public function onlineMeetingsById(string $id): OnlineMeetingItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['onlineMeeting%2Did'] = $id;
-        return new OnlineMeetingItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Update communications
      * @param CloudCommunications $body The request body
      * @param CommunicationsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
@@ -161,17 +124,6 @@ class CommunicationsRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the presences property of the microsoft.graph.cloudCommunications entity.
-     * @param string $id Unique identifier of the item
-     * @return PresenceItemRequestBuilder
-    */
-    public function presencesById(string $id): PresenceItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['presence%2Did'] = $id;
-        return new PresenceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

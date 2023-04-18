@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\ApplicationTemplates\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\ApplicationTemplates\Item\ApplicationTemplateItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ApplicationTemplateCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -42,6 +43,17 @@ class ApplicationTemplatesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the collection of applicationTemplate entities.
+     * @param string $applicationTemplateId Unique identifier of the item
+     * @return ApplicationTemplateItemRequestBuilder
+    */
+    public function byApplicationTemplateId(string $applicationTemplateId): ApplicationTemplateItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['applicationTemplate%2Did'] = $applicationTemplateId;
+        return new ApplicationTemplateItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ApplicationTemplatesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -6,7 +6,6 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Activities\Item\HistoryItems\HistoryItemsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Activities\Item\HistoryItems\Item\ActivityHistoryItemItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UserActivity;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -92,17 +91,6 @@ class UserActivityItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the historyItems property of the microsoft.graph.userActivity entity.
-     * @param string $id Unique identifier of the item
-     * @return ActivityHistoryItemItemRequestBuilder
-    */
-    public function historyItemsById(string $id): ActivityHistoryItemItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['activityHistoryItem%2Did'] = $id;
-        return new ActivityHistoryItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

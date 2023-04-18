@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Activities\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\Activities\Item\UserActivityItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Activities\Recent\RecentRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UserActivity;
@@ -51,6 +52,17 @@ class ActivitiesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the activities property of the microsoft.graph.user entity.
+     * @param string $userActivityId Unique identifier of the item
+     * @return UserActivityItemRequestBuilder
+    */
+    public function byUserActivityId(string $userActivityId): UserActivityItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['userActivity%2Did'] = $userActivityId;
+        return new UserActivityItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ActivitiesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackageCatalogItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessPackageCatalog;
 use Microsoft\Graph\Generated\Models\AccessPackageCatalogCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class CatalogsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the catalogs property of the microsoft.graph.entitlementManagement entity.
+     * @param string $accessPackageCatalogId Unique identifier of the item
+     * @return AccessPackageCatalogItemRequestBuilder
+    */
+    public function byAccessPackageCatalogId(string $accessPackageCatalogId): AccessPackageCatalogItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['accessPackageCatalog%2Did'] = $accessPackageCatalogId;
+        return new AccessPackageCatalogItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new CatalogsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

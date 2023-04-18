@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PrintUsageByUser;
 use Microsoft\Graph\Generated\Models\PrintUsageByUserCollectionResponse;
 use Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByUser\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByUser\Item\PrintUsageByUserItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class MonthlyPrintUsageByUserRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the monthlyPrintUsageByUser property of the microsoft.graph.reportRoot entity.
+     * @param string $printUsageByUserId Unique identifier of the item
+     * @return PrintUsageByUserItemRequestBuilder
+    */
+    public function byPrintUsageByUserId(string $printUsageByUserId): PrintUsageByUserItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['printUsageByUser%2Did'] = $printUsageByUserId;
+        return new PrintUsageByUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new MonthlyPrintUsageByUserRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

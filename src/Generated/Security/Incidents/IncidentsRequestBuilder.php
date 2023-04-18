@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\Incident;
 use Microsoft\Graph\Generated\Models\Security\IncidentCollectionResponse;
 use Microsoft\Graph\Generated\Security\Incidents\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Security\Incidents\Item\IncidentItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class IncidentsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the incidents property of the microsoft.graph.security entity.
+     * @param string $incidentId Unique identifier of the item
+     * @return IncidentItemRequestBuilder
+    */
+    public function byIncidentId(string $incidentId): IncidentItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['incident%2Did'] = $incidentId;
+        return new IncidentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new IncidentsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

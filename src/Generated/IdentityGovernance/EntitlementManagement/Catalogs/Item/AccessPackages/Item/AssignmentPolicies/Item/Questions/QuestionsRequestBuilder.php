@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\Item\AssignmentPolicies\Item\Questions\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Catalogs\Item\AccessPackages\Item\AssignmentPolicies\Item\Questions\Item\AccessPackageQuestionItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessPackageQuestion;
 use Microsoft\Graph\Generated\Models\AccessPackageQuestionCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class QuestionsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the questions property of the microsoft.graph.accessPackageAssignmentPolicy entity.
+     * @param string $accessPackageQuestionId Unique identifier of the item
+     * @return AccessPackageQuestionItemRequestBuilder
+    */
+    public function byAccessPackageQuestionId(string $accessPackageQuestionId): AccessPackageQuestionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['accessPackageQuestion%2Did'] = $accessPackageQuestionId;
+        return new AccessPackageQuestionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new QuestionsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

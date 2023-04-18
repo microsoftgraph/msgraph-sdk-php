@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\Item\TermsAndConditionsItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TermsAndConditions;
 use Microsoft\Graph\Generated\Models\TermsAndConditionsCollectionResponse;
@@ -43,6 +44,17 @@ class TermsAndConditionsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the termsAndConditions property of the microsoft.graph.deviceManagement entity.
+     * @param string $termsAndConditionsId Unique identifier of the item
+     * @return TermsAndConditionsItemRequestBuilder
+    */
+    public function byTermsAndConditionsId(string $termsAndConditionsId): TermsAndConditionsItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['termsAndConditions%2Did'] = $termsAndConditionsId;
+        return new TermsAndConditionsItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new TermsAndConditionsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

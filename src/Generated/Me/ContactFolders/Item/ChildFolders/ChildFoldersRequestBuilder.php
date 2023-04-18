@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\ContactFolders\Item\ChildFolders\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Me\ContactFolders\Item\ChildFolders\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Me\ContactFolders\Item\ChildFolders\Item\ContactFolderItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ContactFolder;
 use Microsoft\Graph\Generated\Models\ContactFolderCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -51,6 +52,17 @@ class ChildFoldersRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the childFolders property of the microsoft.graph.contactFolder entity.
+     * @param string $contactFolderId1 Unique identifier of the item
+     * @return ContactFolderItemRequestBuilder
+    */
+    public function byContactFolderId1(string $contactFolderId1): ContactFolderItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['contactFolder%2Did1'] = $contactFolderId1;
+        return new ContactFolderItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ChildFoldersRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

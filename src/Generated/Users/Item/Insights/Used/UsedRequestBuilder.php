@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UsedInsight;
 use Microsoft\Graph\Generated\Models\UsedInsightCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\Insights\Used\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Insights\Used\Item\UsedInsightItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class UsedRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the used property of the microsoft.graph.officeGraphInsights entity.
+     * @param string $usedInsightId Unique identifier of the item
+     * @return UsedInsightItemRequestBuilder
+    */
+    public function byUsedInsightId(string $usedInsightId): UsedInsightItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['usedInsight%2Did'] = $usedInsightId;
+        return new UsedInsightItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new UsedRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

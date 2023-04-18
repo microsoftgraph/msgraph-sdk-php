@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OnenoteResource;
 use Microsoft\Graph\Generated\Models\OnenoteResourceCollectionResponse;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\Resources\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Onenote\Resources\Item\OnenoteResourceItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class ResourcesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the resources property of the microsoft.graph.onenote entity.
+     * @param string $onenoteResourceId Unique identifier of the item
+     * @return OnenoteResourceItemRequestBuilder
+    */
+    public function byOnenoteResourceId(string $onenoteResourceId): OnenoteResourceItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['onenoteResource%2Did'] = $onenoteResourceId;
+        return new OnenoteResourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ResourcesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

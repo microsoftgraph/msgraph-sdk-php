@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\InformationProtection\Bitlocker\RecoveryKeys\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\InformationProtection\Bitlocker\RecoveryKeys\Item\BitlockerRecoveryKeyItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\BitlockerRecoveryKeyCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -42,6 +43,17 @@ class RecoveryKeysRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the recoveryKeys property of the microsoft.graph.bitlocker entity.
+     * @param string $bitlockerRecoveryKeyId Unique identifier of the item
+     * @return BitlockerRecoveryKeyItemRequestBuilder
+    */
+    public function byBitlockerRecoveryKeyId(string $bitlockerRecoveryKeyId): BitlockerRecoveryKeyItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['bitlockerRecoveryKey%2Did'] = $bitlockerRecoveryKeyId;
+        return new BitlockerRecoveryKeyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new RecoveryKeysRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

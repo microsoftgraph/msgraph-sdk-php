@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TokenLifetimePolicy;
 use Microsoft\Graph\Generated\Models\TokenLifetimePolicyCollectionResponse;
 use Microsoft\Graph\Generated\Policies\TokenLifetimePolicies\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Policies\TokenLifetimePolicies\Item\TokenLifetimePolicyItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class TokenLifetimePoliciesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the tokenLifetimePolicies property of the microsoft.graph.policyRoot entity.
+     * @param string $tokenLifetimePolicyId Unique identifier of the item
+     * @return TokenLifetimePolicyItemRequestBuilder
+    */
+    public function byTokenLifetimePolicyId(string $tokenLifetimePolicyId): TokenLifetimePolicyItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['tokenLifetimePolicy%2Did'] = $tokenLifetimePolicyId;
+        return new TokenLifetimePolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new TokenLifetimePoliciesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

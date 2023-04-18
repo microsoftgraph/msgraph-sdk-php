@@ -11,6 +11,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\GetNotebookFromWebUrl\GetNotebookFromWebUrlRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\GetRecentNotebooksWithIncludePersonalNotebooks\GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Onenote\Notebooks\Item\NotebookItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -52,6 +53,17 @@ class NotebooksRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the notebooks property of the microsoft.graph.onenote entity.
+     * @param string $notebookId Unique identifier of the item
+     * @return NotebookItemRequestBuilder
+    */
+    public function byNotebookId(string $notebookId): NotebookItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['notebook%2Did'] = $notebookId;
+        return new NotebookItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new NotebooksRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

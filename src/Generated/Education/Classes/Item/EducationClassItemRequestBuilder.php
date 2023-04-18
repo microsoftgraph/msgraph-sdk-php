@@ -6,14 +6,11 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Classes\Item\AssignmentCategories\AssignmentCategoriesRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\AssignmentCategories\Item\EducationCategoryItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\AssignmentDefaults\AssignmentDefaultsRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\AssignmentsRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\EducationAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\AssignmentSettings\AssignmentSettingsRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Group\GroupRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Members\MembersRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Schools\Item\EducationSchoolItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Schools\SchoolsRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Teachers\TeachersRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationClass;
@@ -102,28 +99,6 @@ class EducationClassItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Provides operations to manage the assignmentCategories property of the microsoft.graph.educationClass entity.
-     * @param string $id Unique identifier of the item
-     * @return EducationCategoryItemRequestBuilder
-    */
-    public function assignmentCategoriesById(string $id): EducationCategoryItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['educationCategory%2Did'] = $id;
-        return new EducationCategoryItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the assignments property of the microsoft.graph.educationClass entity.
-     * @param string $id Unique identifier of the item
-     * @return EducationAssignmentItemRequestBuilder
-    */
-    public function assignmentsById(string $id): EducationAssignmentItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['educationAssignment%2Did'] = $id;
-        return new EducationAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Instantiates a new EducationClassItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -175,17 +150,6 @@ class EducationClassItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft/Graph/Generated.education.classes.item.members.item collection
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Education\Classes\Item\Members\Item\EducationUserItemRequestBuilder
-    */
-    public function membersById(string $id): \Microsoft\Graph\Generated\Education\Classes\Item\Members\Item\EducationUserItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['educationUser%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Education\Classes\Item\Members\Item\EducationUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Update the navigation property classes in education
      * @param EducationClass $body The request body
      * @param EducationClassItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
@@ -202,28 +166,6 @@ class EducationClassItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the schools property of the microsoft.graph.educationClass entity.
-     * @param string $id Unique identifier of the item
-     * @return EducationSchoolItemRequestBuilder
-    */
-    public function schoolsById(string $id): EducationSchoolItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['educationSchool%2Did'] = $id;
-        return new EducationSchoolItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Gets an item from the Microsoft/Graph/Generated.education.classes.item.teachers.item collection
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Education\Classes\Item\Teachers\Item\EducationUserItemRequestBuilder
-    */
-    public function teachersById(string $id): \Microsoft\Graph\Generated\Education\Classes\Item\Teachers\Item\EducationUserItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['educationUser%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Education\Classes\Item\Teachers\Item\EducationUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

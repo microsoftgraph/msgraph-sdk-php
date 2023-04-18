@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TeamworkTagMember;
 use Microsoft\Graph\Generated\Models\TeamworkTagMemberCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Tags\Item\Members\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Tags\Item\Members\Item\TeamworkTagMemberItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class MembersRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the members property of the microsoft.graph.teamworkTag entity.
+     * @param string $teamworkTagMemberId Unique identifier of the item
+     * @return TeamworkTagMemberItemRequestBuilder
+    */
+    public function byTeamworkTagMemberId(string $teamworkTagMemberId): TeamworkTagMemberItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['teamworkTagMember%2Did'] = $teamworkTagMemberId;
+        return new TeamworkTagMemberItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new MembersRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

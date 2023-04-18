@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Channels\Item\SharedWithTeams\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Channels\Item\SharedWithTeams\Item\SharedWithChannelTeamInfoItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SharedWithChannelTeamInfo;
 use Microsoft\Graph\Generated\Models\SharedWithChannelTeamInfoCollectionResponse;
@@ -43,6 +44,17 @@ class SharedWithTeamsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the sharedWithTeams property of the microsoft.graph.channel entity.
+     * @param string $sharedWithChannelTeamInfoId Unique identifier of the item
+     * @return SharedWithChannelTeamInfoItemRequestBuilder
+    */
+    public function bySharedWithChannelTeamInfoId(string $sharedWithChannelTeamInfoId): SharedWithChannelTeamInfoItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['sharedWithChannelTeamInfo%2Did'] = $sharedWithChannelTeamInfoId;
+        return new SharedWithChannelTeamInfoItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SharedWithTeamsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

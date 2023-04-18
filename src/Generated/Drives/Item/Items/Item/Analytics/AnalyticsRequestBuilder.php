@@ -6,7 +6,6 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Analytics\AllTime\AllTimeRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Analytics\ItemActivityStats\Item\ItemActivityStatItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Analytics\ItemActivityStats\ItemActivityStatsRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Analytics\LastSevenDays\LastSevenDaysRequestBuilder;
 use Microsoft\Graph\Generated\Models\ItemAnalytics;
@@ -108,17 +107,6 @@ class AnalyticsRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the itemActivityStats property of the microsoft.graph.itemAnalytics entity.
-     * @param string $id Unique identifier of the item
-     * @return ItemActivityStatItemRequestBuilder
-    */
-    public function itemActivityStatsById(string $id): ItemActivityStatItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['itemActivityStat%2Did'] = $id;
-        return new ItemActivityStatItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

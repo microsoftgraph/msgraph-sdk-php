@@ -6,14 +6,11 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Categories\CategoriesRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Categories\Item\EducationCategoryItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Publish\PublishRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Resources\Item\EducationAssignmentResourceItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Resources\ResourcesRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Rubric\RubricRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\SetUpFeedbackResourcesFolder\SetUpFeedbackResourcesFolderRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\SetUpResourcesFolder\SetUpResourcesFolderRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\EducationSubmissionItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\SubmissionsRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationAssignment;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -94,17 +91,6 @@ class EducationAssignmentItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Gets an item from the Microsoft/Graph/Generated.education.me.assignments.item.categories.item collection
-     * @param string $id Unique identifier of the item
-     * @return EducationCategoryItemRequestBuilder
-    */
-    public function categoriesById(string $id): EducationCategoryItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['educationCategory%2Did'] = $id;
-        return new EducationCategoryItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Instantiates a new EducationAssignmentItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -172,28 +158,6 @@ class EducationAssignmentItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the resources property of the microsoft.graph.educationAssignment entity.
-     * @param string $id Unique identifier of the item
-     * @return EducationAssignmentResourceItemRequestBuilder
-    */
-    public function resourcesById(string $id): EducationAssignmentResourceItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['educationAssignmentResource%2Did'] = $id;
-        return new EducationAssignmentResourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the submissions property of the microsoft.graph.educationAssignment entity.
-     * @param string $id Unique identifier of the item
-     * @return EducationSubmissionItemRequestBuilder
-    */
-    public function submissionsById(string $id): EducationSubmissionItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['educationSubmission%2Did'] = $id;
-        return new EducationSubmissionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

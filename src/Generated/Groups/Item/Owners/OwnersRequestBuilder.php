@@ -12,6 +12,7 @@ use Microsoft\Graph\Generated\Groups\Item\Owners\GraphGroup\GraphGroupRequestBui
 use Microsoft\Graph\Generated\Groups\Item\Owners\GraphOrgContact\GraphOrgContactRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Owners\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Owners\GraphUser\GraphUserRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Owners\Item\DirectoryObjectItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Owners\Ref\RefRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -98,6 +99,17 @@ class OwnersRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Gets an item from the Microsoft/Graph/Generated.groups.item.owners.item collection
+     * @param string $directoryObjectId Unique identifier of the item
+     * @return DirectoryObjectItemRequestBuilder
+    */
+    public function byDirectoryObjectId(string $directoryObjectId): DirectoryObjectItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['directoryObject%2Did'] = $directoryObjectId;
+        return new DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new OwnersRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

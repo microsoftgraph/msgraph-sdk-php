@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Analytics\ItemActivityStats\Item\Activities\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Analytics\ItemActivityStats\Item\Activities\Item\ItemActivityItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ItemActivity;
 use Microsoft\Graph\Generated\Models\ItemActivityCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class ActivitiesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the activities property of the microsoft.graph.itemActivityStat entity.
+     * @param string $itemActivityId Unique identifier of the item
+     * @return ItemActivityItemRequestBuilder
+    */
+    public function byItemActivityId(string $itemActivityId): ItemActivityItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['itemActivity%2Did'] = $itemActivityId;
+        return new ItemActivityItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ActivitiesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

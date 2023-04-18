@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item\LocalizedNotificationMessages\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item\LocalizedNotificationMessages\Item\LocalizedNotificationMessageItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\LocalizedNotificationMessage;
 use Microsoft\Graph\Generated\Models\LocalizedNotificationMessageCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class LocalizedNotificationMessagesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the localizedNotificationMessages property of the microsoft.graph.notificationMessageTemplate entity.
+     * @param string $localizedNotificationMessageId Unique identifier of the item
+     * @return LocalizedNotificationMessageItemRequestBuilder
+    */
+    public function byLocalizedNotificationMessageId(string $localizedNotificationMessageId): LocalizedNotificationMessageItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['localizedNotificationMessage%2Did'] = $localizedNotificationMessageId;
+        return new LocalizedNotificationMessageItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new LocalizedNotificationMessagesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SharedDriveItem;
 use Microsoft\Graph\Generated\Models\SharedDriveItemCollectionResponse;
 use Microsoft\Graph\Generated\Shares\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Shares\Item\SharedDriveItemItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class SharesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the collection of sharedDriveItem entities.
+     * @param string $sharedDriveItemId Unique identifier of the item
+     * @return SharedDriveItemItemRequestBuilder
+    */
+    public function bySharedDriveItemId(string $sharedDriveItemId): SharedDriveItemItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['sharedDriveItem%2Did'] = $sharedDriveItemId;
+        return new SharedDriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SharesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

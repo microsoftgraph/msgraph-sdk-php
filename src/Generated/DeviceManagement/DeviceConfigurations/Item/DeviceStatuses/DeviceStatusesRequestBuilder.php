@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceStatuses\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceStatuses\Item\DeviceConfigurationDeviceStatusItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\DeviceConfigurationDeviceStatus;
 use Microsoft\Graph\Generated\Models\DeviceConfigurationDeviceStatusCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class DeviceStatusesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the deviceStatuses property of the microsoft.graph.deviceConfiguration entity.
+     * @param string $deviceConfigurationDeviceStatusId Unique identifier of the item
+     * @return DeviceConfigurationDeviceStatusItemRequestBuilder
+    */
+    public function byDeviceConfigurationDeviceStatusId(string $deviceConfigurationDeviceStatusId): DeviceConfigurationDeviceStatusItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['deviceConfigurationDeviceStatus%2Did'] = $deviceConfigurationDeviceStatusId;
+        return new DeviceConfigurationDeviceStatusItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new DeviceStatusesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

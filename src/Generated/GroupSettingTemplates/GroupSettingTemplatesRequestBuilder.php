@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\GroupSettingTemplates\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\GroupSettingTemplates\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\GroupSettingTemplates\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\GroupSettingTemplates\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\GroupSettingTemplates\Item\GroupSettingTemplateItemRequestBuilder;
 use Microsoft\Graph\Generated\GroupSettingTemplates\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\GroupSettingTemplate;
 use Microsoft\Graph\Generated\Models\GroupSettingTemplateCollectionResponse;
@@ -75,6 +76,17 @@ class GroupSettingTemplatesRequestBuilder
         return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * Provides operations to manage the collection of groupSettingTemplate entities.
+     * @param string $groupSettingTemplateId Unique identifier of the item
+     * @return GroupSettingTemplateItemRequestBuilder
+    */
+    public function byGroupSettingTemplateId(string $groupSettingTemplateId): GroupSettingTemplateItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['groupSettingTemplate%2Did'] = $groupSettingTemplateId;
+        return new GroupSettingTemplateItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new GroupSettingTemplatesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

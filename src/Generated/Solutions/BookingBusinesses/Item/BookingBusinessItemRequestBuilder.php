@@ -10,14 +10,10 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Appointments\AppointmentsRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CalendarView\CalendarViewRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Customers\CustomersRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Customers\Item\BookingCustomerBaseItemRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CustomQuestions\CustomQuestionsRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CustomQuestions\Item\BookingCustomQuestionItemRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\GetStaffAvailability\GetStaffAvailabilityRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Publish\PublishRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Services\Item\BookingServiceItemRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Services\ServicesRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\StaffMembers\Item\BookingStaffMemberBaseItemRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\StaffMembers\StaffMembersRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Unpublish\UnpublishRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -111,28 +107,6 @@ class BookingBusinessItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Provides operations to manage the appointments property of the microsoft.graph.bookingBusiness entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Appointments\Item\BookingAppointmentItemRequestBuilder
-    */
-    public function appointmentsById(string $id): \Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Appointments\Item\BookingAppointmentItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['bookingAppointment%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\Appointments\Item\BookingAppointmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the calendarView property of the microsoft.graph.bookingBusiness entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CalendarView\Item\BookingAppointmentItemRequestBuilder
-    */
-    public function calendarViewById(string $id): \Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CalendarView\Item\BookingAppointmentItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['bookingAppointment%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\CalendarView\Item\BookingAppointmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Instantiates a new BookingBusinessItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -145,28 +119,6 @@ class BookingBusinessItemRequestBuilder
         } else {
             $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
         }
-    }
-
-    /**
-     * Provides operations to manage the customers property of the microsoft.graph.bookingBusiness entity.
-     * @param string $id Unique identifier of the item
-     * @return BookingCustomerBaseItemRequestBuilder
-    */
-    public function customersById(string $id): BookingCustomerBaseItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['bookingCustomerBase%2Did'] = $id;
-        return new BookingCustomerBaseItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the customQuestions property of the microsoft.graph.bookingBusiness entity.
-     * @param string $id Unique identifier of the item
-     * @return BookingCustomQuestionItemRequestBuilder
-    */
-    public function customQuestionsById(string $id): BookingCustomQuestionItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['bookingCustomQuestion%2Did'] = $id;
-        return new BookingCustomQuestionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -222,28 +174,6 @@ class BookingBusinessItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the services property of the microsoft.graph.bookingBusiness entity.
-     * @param string $id Unique identifier of the item
-     * @return BookingServiceItemRequestBuilder
-    */
-    public function servicesById(string $id): BookingServiceItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['bookingService%2Did'] = $id;
-        return new BookingServiceItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the staffMembers property of the microsoft.graph.bookingBusiness entity.
-     * @param string $id Unique identifier of the item
-     * @return BookingStaffMemberBaseItemRequestBuilder
-    */
-    public function staffMembersById(string $id): BookingStaffMemberBaseItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['bookingStaffMemberBase%2Did'] = $id;
-        return new BookingStaffMemberBaseItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

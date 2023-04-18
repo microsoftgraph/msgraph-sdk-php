@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\WindowsAutopilotDeviceIdentityItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WindowsAutopilotDeviceIdentity;
 use Microsoft\Graph\Generated\Models\WindowsAutopilotDeviceIdentityCollectionResponse;
@@ -43,6 +44,17 @@ class WindowsAutopilotDeviceIdentitiesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the windowsAutopilotDeviceIdentities property of the microsoft.graph.deviceManagement entity.
+     * @param string $windowsAutopilotDeviceIdentityId Unique identifier of the item
+     * @return WindowsAutopilotDeviceIdentityItemRequestBuilder
+    */
+    public function byWindowsAutopilotDeviceIdentityId(string $windowsAutopilotDeviceIdentityId): WindowsAutopilotDeviceIdentityItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['windowsAutopilotDeviceIdentity%2Did'] = $windowsAutopilotDeviceIdentityId;
+        return new WindowsAutopilotDeviceIdentityItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new WindowsAutopilotDeviceIdentitiesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

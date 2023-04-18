@@ -7,11 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OfficeGraphInsights;
-use Microsoft\Graph\Generated\Users\Item\Insights\Shared\Item\SharedInsightItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Insights\Shared\SharedRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Insights\Trending\Item\TrendingItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Insights\Trending\TrendingRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Insights\Used\Item\UsedInsightItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Insights\Used\UsedRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -132,17 +129,6 @@ class InsightsRequestBuilder
     }
 
     /**
-     * Provides operations to manage the shared property of the microsoft.graph.officeGraphInsights entity.
-     * @param string $id Unique identifier of the item
-     * @return SharedInsightItemRequestBuilder
-    */
-    public function sharedById(string $id): SharedInsightItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['sharedInsight%2Did'] = $id;
-        return new SharedInsightItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Delete navigation property insights for users
      * @param InsightsRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -210,28 +196,6 @@ class InsightsRequestBuilder
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
-    }
-
-    /**
-     * Provides operations to manage the trending property of the microsoft.graph.officeGraphInsights entity.
-     * @param string $id Unique identifier of the item
-     * @return TrendingItemRequestBuilder
-    */
-    public function trendingById(string $id): TrendingItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['trending%2Did'] = $id;
-        return new TrendingItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the used property of the microsoft.graph.officeGraphInsights entity.
-     * @param string $id Unique identifier of the item
-     * @return UsedInsightItemRequestBuilder
-    */
-    public function usedById(string $id): UsedInsightItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['usedInsight%2Did'] = $id;
-        return new UsedInsightItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

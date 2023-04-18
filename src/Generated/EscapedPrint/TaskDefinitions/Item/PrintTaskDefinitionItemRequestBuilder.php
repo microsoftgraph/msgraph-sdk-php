@@ -5,7 +5,6 @@ namespace Microsoft\Graph\Generated\EscapedPrint\TaskDefinitions\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\EscapedPrint\TaskDefinitions\Item\Tasks\Item\PrintTaskItemRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\TaskDefinitions\Item\Tasks\TasksRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PrintTaskDefinition;
@@ -111,17 +110,6 @@ class PrintTaskDefinitionItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the tasks property of the microsoft.graph.printTaskDefinition entity.
-     * @param string $id Unique identifier of the item
-     * @return PrintTaskItemRequestBuilder
-    */
-    public function tasksById(string $id): PrintTaskItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['printTask%2Did'] = $id;
-        return new PrintTaskItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

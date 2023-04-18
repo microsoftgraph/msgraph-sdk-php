@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Me\Calendar\CalendarView\Item\EventItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\EventCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -50,6 +51,17 @@ class CalendarViewRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the calendarView property of the microsoft.graph.calendar entity.
+     * @param string $eventId Unique identifier of the item
+     * @return EventItemRequestBuilder
+    */
+    public function byEventId(string $eventId): EventItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['event%2Did'] = $eventId;
+        return new EventItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new CalendarViewRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

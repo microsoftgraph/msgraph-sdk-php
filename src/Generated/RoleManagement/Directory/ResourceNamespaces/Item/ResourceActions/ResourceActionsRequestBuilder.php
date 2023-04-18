@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UnifiedRbacResourceAction;
 use Microsoft\Graph\Generated\Models\UnifiedRbacResourceActionCollectionResponse;
 use Microsoft\Graph\Generated\RoleManagement\Directory\ResourceNamespaces\Item\ResourceActions\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\RoleManagement\Directory\ResourceNamespaces\Item\ResourceActions\Item\UnifiedRbacResourceActionItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class ResourceActionsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the resourceActions property of the microsoft.graph.unifiedRbacResourceNamespace entity.
+     * @param string $unifiedRbacResourceActionId Unique identifier of the item
+     * @return UnifiedRbacResourceActionItemRequestBuilder
+    */
+    public function byUnifiedRbacResourceActionId(string $unifiedRbacResourceActionId): UnifiedRbacResourceActionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['unifiedRbacResourceAction%2Did'] = $unifiedRbacResourceActionId;
+        return new UnifiedRbacResourceActionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ResourceActionsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

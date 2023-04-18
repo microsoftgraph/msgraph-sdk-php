@@ -16,6 +16,11 @@ class MailFolderItemRequestBuilderGetQueryParameters
     public ?array $expand = null;
     
     /**
+     * @var string|null $includeHiddenFolders Include Hidden Folders
+    */
+    public ?string $includeHiddenFolders = null;
+    
+    /**
      * @QueryParameter("%24select")
      * @var array<string>|null $select Select properties to be returned
     */
@@ -24,10 +29,12 @@ class MailFolderItemRequestBuilderGetQueryParameters
     /**
      * Instantiates a new MailFolderItemRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $expand Expand related entities
+     * @param string|null $includeHiddenFolders Include Hidden Folders
      * @param array<string>|null $select Select properties to be returned
     */
-    public function __construct(?array $expand = null, ?array $select = null) {
+    public function __construct(?array $expand = null, ?string $includeHiddenFolders = null, ?array $select = null) {
         $this->expand = $expand;
+        $this->includeHiddenFolders = $includeHiddenFolders;
         $this->select = $select;
     }
 

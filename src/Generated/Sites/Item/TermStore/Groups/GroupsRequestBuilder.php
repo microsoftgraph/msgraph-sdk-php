@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TermStore\Group;
 use Microsoft\Graph\Generated\Models\TermStore\GroupCollectionResponse;
 use Microsoft\Graph\Generated\Sites\Item\TermStore\Groups\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\TermStore\Groups\Item\GroupItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class GroupsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the groups property of the microsoft.graph.termStore.store entity.
+     * @param string $groupId Unique identifier of the item
+     * @return GroupItemRequestBuilder
+    */
+    public function byGroupId(string $groupId): GroupItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['group%2Did'] = $groupId;
+        return new GroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new GroupsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

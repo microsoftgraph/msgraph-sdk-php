@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Item\RemoteAssistancePartnerItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\RemoteAssistancePartner;
 use Microsoft\Graph\Generated\Models\RemoteAssistancePartnerCollectionResponse;
@@ -43,6 +44,17 @@ class RemoteAssistancePartnersRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the remoteAssistancePartners property of the microsoft.graph.deviceManagement entity.
+     * @param string $remoteAssistancePartnerId Unique identifier of the item
+     * @return RemoteAssistancePartnerItemRequestBuilder
+    */
+    public function byRemoteAssistancePartnerId(string $remoteAssistancePartnerId): RemoteAssistancePartnerItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['remoteAssistancePartner%2Did'] = $remoteAssistancePartnerId;
+        return new RemoteAssistancePartnerItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new RemoteAssistancePartnersRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityProtection\RiskyServicePrincipals\Item\History\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\IdentityProtection\RiskyServicePrincipals\Item\History\Item\RiskyServicePrincipalHistoryItemItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\RiskyServicePrincipalHistoryItem;
 use Microsoft\Graph\Generated\Models\RiskyServicePrincipalHistoryItemCollectionResponse;
@@ -43,6 +44,17 @@ class HistoryRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the history property of the microsoft.graph.riskyServicePrincipal entity.
+     * @param string $riskyServicePrincipalHistoryItemId Unique identifier of the item
+     * @return RiskyServicePrincipalHistoryItemItemRequestBuilder
+    */
+    public function byRiskyServicePrincipalHistoryItemId(string $riskyServicePrincipalHistoryItemId): RiskyServicePrincipalHistoryItemItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['riskyServicePrincipalHistoryItem%2Did'] = $riskyServicePrincipalHistoryItemId;
+        return new RiskyServicePrincipalHistoryItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new HistoryRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

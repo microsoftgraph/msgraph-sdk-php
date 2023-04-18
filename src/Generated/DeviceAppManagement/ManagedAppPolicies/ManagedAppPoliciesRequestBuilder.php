@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppPolicies\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppPolicies\Item\ManagedAppPolicyItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ManagedAppPolicy;
 use Microsoft\Graph\Generated\Models\ManagedAppPolicyCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class ManagedAppPoliciesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the managedAppPolicies property of the microsoft.graph.deviceAppManagement entity.
+     * @param string $managedAppPolicyId Unique identifier of the item
+     * @return ManagedAppPolicyItemRequestBuilder
+    */
+    public function byManagedAppPolicyId(string $managedAppPolicyId): ManagedAppPolicyItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['managedAppPolicy%2Did'] = $managedAppPolicyId;
+        return new ManagedAppPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ManagedAppPoliciesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

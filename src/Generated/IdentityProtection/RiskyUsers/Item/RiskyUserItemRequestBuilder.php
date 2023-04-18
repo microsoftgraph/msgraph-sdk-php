@@ -6,7 +6,6 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Item\History\HistoryRequestBuilder;
-use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Item\History\Item\RiskyUserHistoryItemItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\RiskyUser;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -92,17 +91,6 @@ class RiskyUserItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the history property of the microsoft.graph.riskyUser entity.
-     * @param string $id Unique identifier of the item
-     * @return RiskyUserHistoryItemItemRequestBuilder
-    */
-    public function historyById(string $id): RiskyUserHistoryItemItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['riskyUserHistoryItem%2Did'] = $id;
-        return new RiskyUserHistoryItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

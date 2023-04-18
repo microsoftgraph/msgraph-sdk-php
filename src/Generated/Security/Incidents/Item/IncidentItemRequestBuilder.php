@@ -8,7 +8,6 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\Incident;
 use Microsoft\Graph\Generated\Security\Incidents\Item\Alerts\AlertsRequestBuilder;
-use Microsoft\Graph\Generated\Security\Incidents\Item\Alerts\Item\AlertItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,17 +42,6 @@ class IncidentItemRequestBuilder
     */
     private string $urlTemplate;
     
-    /**
-     * Provides operations to manage the alerts property of the microsoft.graph.security.incident entity.
-     * @param string $id Unique identifier of the item
-     * @return AlertItemRequestBuilder
-    */
-    public function alertsById(string $id): AlertItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['alert%2Did'] = $id;
-        return new AlertItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
     /**
      * Instantiates a new IncidentItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

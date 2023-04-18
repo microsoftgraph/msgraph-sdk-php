@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Resources\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Resources\Item\EducationSubmissionResourceItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationSubmissionResource;
 use Microsoft\Graph\Generated\Models\EducationSubmissionResourceCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class ResourcesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the resources property of the microsoft.graph.educationSubmission entity.
+     * @param string $educationSubmissionResourceId Unique identifier of the item
+     * @return EducationSubmissionResourceItemRequestBuilder
+    */
+    public function byEducationSubmissionResourceId(string $educationSubmissionResourceId): EducationSubmissionResourceItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['educationSubmissionResource%2Did'] = $educationSubmissionResourceId;
+        return new EducationSubmissionResourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ResourcesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

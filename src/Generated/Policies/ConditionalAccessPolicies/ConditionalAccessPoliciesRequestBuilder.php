@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ConditionalAccessPolicy;
 use Microsoft\Graph\Generated\Models\ConditionalAccessPolicyCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Policies\ConditionalAccessPolicies\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Policies\ConditionalAccessPolicies\Item\ConditionalAccessPolicyItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class ConditionalAccessPoliciesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the conditionalAccessPolicies property of the microsoft.graph.policyRoot entity.
+     * @param string $conditionalAccessPolicyId Unique identifier of the item
+     * @return ConditionalAccessPolicyItemRequestBuilder
+    */
+    public function byConditionalAccessPolicyId(string $conditionalAccessPolicyId): ConditionalAccessPolicyItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['conditionalAccessPolicy%2Did'] = $conditionalAccessPolicyId;
+        return new ConditionalAccessPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ConditionalAccessPoliciesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

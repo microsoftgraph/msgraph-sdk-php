@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceManagementPartners\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceManagementPartners\Item\DeviceManagementPartnerItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\DeviceManagementPartner;
 use Microsoft\Graph\Generated\Models\DeviceManagementPartnerCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class DeviceManagementPartnersRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the deviceManagementPartners property of the microsoft.graph.deviceManagement entity.
+     * @param string $deviceManagementPartnerId Unique identifier of the item
+     * @return DeviceManagementPartnerItemRequestBuilder
+    */
+    public function byDeviceManagementPartnerId(string $deviceManagementPartnerId): DeviceManagementPartnerItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['deviceManagementPartner%2Did'] = $deviceManagementPartnerId;
+        return new DeviceManagementPartnerItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new DeviceManagementPartnersRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

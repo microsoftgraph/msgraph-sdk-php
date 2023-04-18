@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Planner\Plans\Item\Buckets\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Planner\Plans\Item\Buckets\Item\PlannerBucketItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PlannerBucket;
 use Microsoft\Graph\Generated\Models\PlannerBucketCollectionResponse;
@@ -43,6 +44,17 @@ class BucketsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the buckets property of the microsoft.graph.plannerPlan entity.
+     * @param string $plannerBucketId Unique identifier of the item
+     * @return PlannerBucketItemRequestBuilder
+    */
+    public function byPlannerBucketId(string $plannerBucketId): PlannerBucketItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['plannerBucket%2Did'] = $plannerBucketId;
+        return new PlannerBucketItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new BucketsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

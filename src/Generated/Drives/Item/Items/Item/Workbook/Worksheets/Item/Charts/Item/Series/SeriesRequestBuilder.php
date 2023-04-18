@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\Item\WorkbookChartSeriesItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\ItemAtWithIndex\ItemAtWithIndexRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookChartSeries;
@@ -44,6 +45,17 @@ class SeriesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the series property of the microsoft.graph.workbookChart entity.
+     * @param string $workbookChartSeriesId Unique identifier of the item
+     * @return WorkbookChartSeriesItemRequestBuilder
+    */
+    public function byWorkbookChartSeriesId(string $workbookChartSeriesId): WorkbookChartSeriesItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['workbookChartSeries%2Did'] = $workbookChartSeriesId;
+        return new WorkbookChartSeriesItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SeriesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

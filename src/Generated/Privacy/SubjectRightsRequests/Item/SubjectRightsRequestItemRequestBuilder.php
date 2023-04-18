@@ -9,7 +9,6 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SubjectRightsRequest;
 use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\GetFinalAttachment\GetFinalAttachmentRequestBuilder;
 use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\GetFinalReport\GetFinalReportRequestBuilder;
-use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Notes\Item\AuthoredNoteItemRequestBuilder;
 use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Notes\NotesRequestBuilder;
 use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Team\TeamRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -116,17 +115,6 @@ class SubjectRightsRequestItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the notes property of the microsoft.graph.subjectRightsRequest entity.
-     * @param string $id Unique identifier of the item
-     * @return AuthoredNoteItemRequestBuilder
-    */
-    public function notesById(string $id): AuthoredNoteItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['authoredNote%2Did'] = $id;
-        return new AuthoredNoteItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

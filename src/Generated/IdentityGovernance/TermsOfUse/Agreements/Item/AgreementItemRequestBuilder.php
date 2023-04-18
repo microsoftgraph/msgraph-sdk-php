@@ -6,10 +6,8 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\Acceptances\AcceptancesRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\Acceptances\Item\AgreementAcceptanceItemRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\File\FileRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\Files\FilesRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\Files\Item\AgreementFileLocalizationItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\Agreement;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -61,17 +59,6 @@ class AgreementItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Provides operations to manage the acceptances property of the microsoft.graph.agreement entity.
-     * @param string $id Unique identifier of the item
-     * @return AgreementAcceptanceItemRequestBuilder
-    */
-    public function acceptancesById(string $id): AgreementAcceptanceItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['agreementAcceptance%2Did'] = $id;
-        return new AgreementAcceptanceItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Instantiates a new AgreementItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -102,17 +89,6 @@ class AgreementItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the files property of the microsoft.graph.agreement entity.
-     * @param string $id Unique identifier of the item
-     * @return AgreementFileLocalizationItemRequestBuilder
-    */
-    public function filesById(string $id): AgreementFileLocalizationItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['agreementFileLocalization%2Did'] = $id;
-        return new AgreementFileLocalizationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

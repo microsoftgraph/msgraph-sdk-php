@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Submissions\Item\Outcomes\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Submissions\Item\Outcomes\Item\EducationOutcomeItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationOutcome;
 use Microsoft\Graph\Generated\Models\EducationOutcomeCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class OutcomesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the outcomes property of the microsoft.graph.educationSubmission entity.
+     * @param string $educationOutcomeId Unique identifier of the item
+     * @return EducationOutcomeItemRequestBuilder
+    */
+    public function byEducationOutcomeId(string $educationOutcomeId): EducationOutcomeItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['educationOutcome%2Did'] = $educationOutcomeId;
+        return new EducationOutcomeItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new OutcomesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class SharedDriveItem extends BaseItem implements Parsable 
 {
     /**
-     * @var EscapedList|null $escapedList Used to access the underlying list
-    */
-    public ?EscapedList $escapedList = null;
-    
-    /**
      * Instantiates a new SharedDriveItem and sets the default values.
     */
     public function __construct() {

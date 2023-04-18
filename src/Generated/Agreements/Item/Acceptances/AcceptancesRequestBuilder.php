@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Agreements\Item\Acceptances\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Agreements\Item\Acceptances\Item\AgreementAcceptanceItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\AgreementAcceptance;
 use Microsoft\Graph\Generated\Models\AgreementAcceptanceCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class AcceptancesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the acceptances property of the microsoft.graph.agreement entity.
+     * @param string $agreementAcceptanceId Unique identifier of the item
+     * @return AgreementAcceptanceItemRequestBuilder
+    */
+    public function byAgreementAcceptanceId(string $agreementAcceptanceId): AgreementAcceptanceItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['agreementAcceptance%2Did'] = $agreementAcceptanceId;
+        return new AgreementAcceptanceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AcceptancesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -6,9 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\DefinitionsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\Definitions\Item\AccessReviewScheduleDefinitionItemRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions\HistoryDefinitionsRequestBuilder;
-use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions\Item\AccessReviewHistoryDefinitionItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessReviewSet;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -68,17 +66,6 @@ class AccessReviewsRequestBuilder
     }
 
     /**
-     * Provides operations to manage the definitions property of the microsoft.graph.accessReviewSet entity.
-     * @param string $id Unique identifier of the item
-     * @return AccessReviewScheduleDefinitionItemRequestBuilder
-    */
-    public function definitionsById(string $id): AccessReviewScheduleDefinitionItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['accessReviewScheduleDefinition%2Did'] = $id;
-        return new AccessReviewScheduleDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Delete navigation property accessReviews for identityGovernance
      * @param AccessReviewsRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -112,17 +99,6 @@ class AccessReviewsRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the historyDefinitions property of the microsoft.graph.accessReviewSet entity.
-     * @param string $id Unique identifier of the item
-     * @return AccessReviewHistoryDefinitionItemRequestBuilder
-    */
-    public function historyDefinitionsById(string $id): AccessReviewHistoryDefinitionItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['accessReviewHistoryDefinition%2Did'] = $id;
-        return new AccessReviewHistoryDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

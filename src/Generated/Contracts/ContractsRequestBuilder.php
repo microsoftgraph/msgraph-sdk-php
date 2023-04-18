@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Contracts\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Contracts\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Contracts\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Contracts\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\Contracts\Item\ContractItemRequestBuilder;
 use Microsoft\Graph\Generated\Contracts\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\Contract;
 use Microsoft\Graph\Generated\Models\ContractCollectionResponse;
@@ -75,6 +76,17 @@ class ContractsRequestBuilder
         return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * Provides operations to manage the collection of contract entities.
+     * @param string $contractId Unique identifier of the item
+     * @return ContractItemRequestBuilder
+    */
+    public function byContractId(string $contractId): ContractItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['contract%2Did'] = $contractId;
+        return new ContractItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ContractsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

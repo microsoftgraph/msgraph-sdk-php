@@ -7,7 +7,6 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TermStore\Group;
-use Microsoft\Graph\Generated\Sites\Item\TermStores\Item\Groups\Item\Sets\Item\SetItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\TermStores\Item\Groups\Item\Sets\SetsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -111,17 +110,6 @@ class GroupItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the sets property of the microsoft.graph.termStore.group entity.
-     * @param string $id Unique identifier of the item
-     * @return SetItemRequestBuilder
-    */
-    public function setsById(string $id): SetItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['set%2Did'] = $id;
-        return new SetItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

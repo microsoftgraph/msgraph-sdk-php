@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Authentication\EmailMethods\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\Authentication\EmailMethods\Item\EmailAuthenticationMethodItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\EmailAuthenticationMethod;
 use Microsoft\Graph\Generated\Models\EmailAuthenticationMethodCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class EmailMethodsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the emailMethods property of the microsoft.graph.authentication entity.
+     * @param string $emailAuthenticationMethodId Unique identifier of the item
+     * @return EmailAuthenticationMethodItemRequestBuilder
+    */
+    public function byEmailAuthenticationMethodId(string $emailAuthenticationMethodId): EmailAuthenticationMethodItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['emailAuthenticationMethod%2Did'] = $emailAuthenticationMethodId;
+        return new EmailAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new EmailMethodsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

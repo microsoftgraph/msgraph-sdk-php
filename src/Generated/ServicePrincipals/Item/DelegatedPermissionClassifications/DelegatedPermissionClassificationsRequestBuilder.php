@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\DelegatedPermissionClassification;
 use Microsoft\Graph\Generated\Models\DelegatedPermissionClassificationCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\DelegatedPermissionClassifications\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\DelegatedPermissionClassifications\Item\DelegatedPermissionClassificationItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class DelegatedPermissionClassificationsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the delegatedPermissionClassifications property of the microsoft.graph.servicePrincipal entity.
+     * @param string $delegatedPermissionClassificationId Unique identifier of the item
+     * @return DelegatedPermissionClassificationItemRequestBuilder
+    */
+    public function byDelegatedPermissionClassificationId(string $delegatedPermissionClassificationId): DelegatedPermissionClassificationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['delegatedPermissionClassification%2Did'] = $delegatedPermissionClassificationId;
+        return new DelegatedPermissionClassificationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new DelegatedPermissionClassificationsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

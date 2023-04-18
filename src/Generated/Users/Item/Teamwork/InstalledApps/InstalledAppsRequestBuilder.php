@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UserScopeTeamsAppInstallation;
 use Microsoft\Graph\Generated\Models\UserScopeTeamsAppInstallationCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\Teamwork\InstalledApps\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Teamwork\InstalledApps\Item\UserScopeTeamsAppInstallationItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class InstalledAppsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the installedApps property of the microsoft.graph.userTeamwork entity.
+     * @param string $userScopeTeamsAppInstallationId Unique identifier of the item
+     * @return UserScopeTeamsAppInstallationItemRequestBuilder
+    */
+    public function byUserScopeTeamsAppInstallationId(string $userScopeTeamsAppInstallationId): UserScopeTeamsAppInstallationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['userScopeTeamsAppInstallation%2Did'] = $userScopeTeamsAppInstallationId;
+        return new UserScopeTeamsAppInstallationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new InstalledAppsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

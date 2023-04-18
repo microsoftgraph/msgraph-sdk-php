@@ -6,7 +6,6 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicySettingStateSummaries\Item\DeviceComplianceSettingStates\DeviceComplianceSettingStatesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicySettingStateSummaries\Item\DeviceComplianceSettingStates\Item\DeviceComplianceSettingStateItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\DeviceCompliancePolicySettingStateSummary;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -74,17 +73,6 @@ class DeviceCompliancePolicySettingStateSummaryItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the deviceComplianceSettingStates property of the microsoft.graph.deviceCompliancePolicySettingStateSummary entity.
-     * @param string $id Unique identifier of the item
-     * @return DeviceComplianceSettingStateItemRequestBuilder
-    */
-    public function deviceComplianceSettingStatesById(string $id): DeviceComplianceSettingStateItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['deviceComplianceSettingState%2Did'] = $id;
-        return new DeviceComplianceSettingStateItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

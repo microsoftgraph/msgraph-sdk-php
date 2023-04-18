@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UnifiedRoleDefinition;
 use Microsoft\Graph\Generated\Models\UnifiedRoleDefinitionCollectionResponse;
 use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleDefinitions\Item\InheritsPermissionsFrom\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\RoleManagement\EntitlementManagement\RoleDefinitions\Item\InheritsPermissionsFrom\Item\UnifiedRoleDefinitionItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class InheritsPermissionsFromRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the inheritsPermissionsFrom property of the microsoft.graph.unifiedRoleDefinition entity.
+     * @param string $unifiedRoleDefinitionId1 Unique identifier of the item
+     * @return UnifiedRoleDefinitionItemRequestBuilder
+    */
+    public function byUnifiedRoleDefinitionId1(string $unifiedRoleDefinitionId1): UnifiedRoleDefinitionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['unifiedRoleDefinition%2Did1'] = $unifiedRoleDefinitionId1;
+        return new UnifiedRoleDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new InheritsPermissionsFromRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

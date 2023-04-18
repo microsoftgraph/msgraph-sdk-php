@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\DriveItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\Drive;
 use Microsoft\Graph\Generated\Models\DriveCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -44,6 +45,17 @@ class DrivesRequestBuilder
     private string $urlTemplate;
     
     /**
+     * Provides operations to manage the collection of drive entities.
+     * @param string $driveId Unique identifier of the item
+     * @return DriveItemRequestBuilder
+    */
+    public function byDriveId(string $driveId): DriveItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['drive%2Did'] = $driveId;
+        return new DriveItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
+    /**
      * Instantiates a new DrivesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -59,7 +71,7 @@ class DrivesRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a Drive resource. A Drive is the top-level container for a file system, such as OneDrive or SharePoint document libraries.
+     * Get entities from drives
      * @param DrivesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -96,7 +108,7 @@ class DrivesRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a Drive resource. A Drive is the top-level container for a file system, such as OneDrive or SharePoint document libraries.
+     * Get entities from drives
      * @param DrivesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

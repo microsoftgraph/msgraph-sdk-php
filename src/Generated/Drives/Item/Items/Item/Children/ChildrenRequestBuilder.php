@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Children\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Children\Item\DriveItemItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\DriveItem;
 use Microsoft\Graph\Generated\Models\DriveItemCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class ChildrenRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the children property of the microsoft.graph.driveItem entity.
+     * @param string $driveItemId1 Unique identifier of the item
+     * @return DriveItemItemRequestBuilder
+    */
+    public function byDriveItemId1(string $driveItemId1): DriveItemItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['driveItem%2Did1'] = $driveItemId1;
+        return new DriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ChildrenRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

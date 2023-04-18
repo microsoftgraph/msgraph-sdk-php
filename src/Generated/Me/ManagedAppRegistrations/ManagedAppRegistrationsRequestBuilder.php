@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\ManagedAppRegistrations\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\ManagedAppRegistrations\Item\ManagedAppRegistrationItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ManagedAppRegistrationCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -42,6 +43,17 @@ class ManagedAppRegistrationsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the managedAppRegistrations property of the microsoft.graph.user entity.
+     * @param string $managedAppRegistrationId Unique identifier of the item
+     * @return ManagedAppRegistrationItemRequestBuilder
+    */
+    public function byManagedAppRegistrationId(string $managedAppRegistrationId): ManagedAppRegistrationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['managedAppRegistration%2Did'] = $managedAppRegistrationId;
+        return new ManagedAppRegistrationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ManagedAppRegistrationsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -65,6 +65,14 @@ class PolicyRoot extends Entity implements Parsable
     }
 
     /**
+     * Gets the authenticationStrengthPolicies property value. The authenticationStrengthPolicies property
+     * @return array<AuthenticationStrengthPolicy>|null
+    */
+    public function getAuthenticationStrengthPolicies(): ?array {
+        return $this->getBackingStore()->get('authenticationStrengthPolicies');
+    }
+
+    /**
      * Gets the authorizationPolicy property value. The policy that controls Azure AD authorization settings.
      * @return AuthorizationPolicy|null
     */
@@ -124,6 +132,7 @@ class PolicyRoot extends Entity implements Parsable
             'appManagementPolicies' => fn(ParseNode $n) => $o->setAppManagementPolicies($n->getCollectionOfObjectValues([AppManagementPolicy::class, 'createFromDiscriminatorValue'])),
             'authenticationFlowsPolicy' => fn(ParseNode $n) => $o->setAuthenticationFlowsPolicy($n->getObjectValue([AuthenticationFlowsPolicy::class, 'createFromDiscriminatorValue'])),
             'authenticationMethodsPolicy' => fn(ParseNode $n) => $o->setAuthenticationMethodsPolicy($n->getObjectValue([AuthenticationMethodsPolicy::class, 'createFromDiscriminatorValue'])),
+            'authenticationStrengthPolicies' => fn(ParseNode $n) => $o->setAuthenticationStrengthPolicies($n->getCollectionOfObjectValues([AuthenticationStrengthPolicy::class, 'createFromDiscriminatorValue'])),
             'authorizationPolicy' => fn(ParseNode $n) => $o->setAuthorizationPolicy($n->getObjectValue([AuthorizationPolicy::class, 'createFromDiscriminatorValue'])),
             'claimsMappingPolicies' => fn(ParseNode $n) => $o->setClaimsMappingPolicies($n->getCollectionOfObjectValues([ClaimsMappingPolicy::class, 'createFromDiscriminatorValue'])),
             'conditionalAccessPolicies' => fn(ParseNode $n) => $o->setConditionalAccessPolicies($n->getCollectionOfObjectValues([ConditionalAccessPolicy::class, 'createFromDiscriminatorValue'])),
@@ -207,6 +216,7 @@ class PolicyRoot extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('appManagementPolicies', $this->getAppManagementPolicies());
         $writer->writeObjectValue('authenticationFlowsPolicy', $this->getAuthenticationFlowsPolicy());
         $writer->writeObjectValue('authenticationMethodsPolicy', $this->getAuthenticationMethodsPolicy());
+        $writer->writeCollectionOfObjectValues('authenticationStrengthPolicies', $this->getAuthenticationStrengthPolicies());
         $writer->writeObjectValue('authorizationPolicy', $this->getAuthorizationPolicy());
         $writer->writeCollectionOfObjectValues('claimsMappingPolicies', $this->getClaimsMappingPolicies());
         $writer->writeCollectionOfObjectValues('conditionalAccessPolicies', $this->getConditionalAccessPolicies());
@@ -260,6 +270,14 @@ class PolicyRoot extends Entity implements Parsable
     */
     public function setAuthenticationMethodsPolicy(?AuthenticationMethodsPolicy $value): void {
         $this->getBackingStore()->set('authenticationMethodsPolicy', $value);
+    }
+
+    /**
+     * Sets the authenticationStrengthPolicies property value. The authenticationStrengthPolicies property
+     * @param array<AuthenticationStrengthPolicy>|null $value Value to set for the authenticationStrengthPolicies property.
+    */
+    public function setAuthenticationStrengthPolicies(?array $value): void {
+        $this->getBackingStore()->set('authenticationStrengthPolicies', $value);
     }
 
     /**

@@ -12,10 +12,7 @@ use Microsoft\Graph\Generated\Security\Alerts\AlertsRequestBuilder;
 use Microsoft\Graph\Generated\Security\AttackSimulation\AttackSimulationRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\CasesRequestBuilder;
 use Microsoft\Graph\Generated\Security\Incidents\IncidentsRequestBuilder;
-use Microsoft\Graph\Generated\Security\Incidents\Item\IncidentItemRequestBuilder;
-use Microsoft\Graph\Generated\Security\SecureScoreControlProfiles\Item\SecureScoreControlProfileItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecureScoreControlProfiles\SecureScoreControlProfilesRequestBuilder;
-use Microsoft\Graph\Generated\Security\SecureScores\Item\SecureScoreItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecureScores\SecureScoresRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecurityRunHuntingQuery\SecurityRunHuntingQueryRequestBuilder;
 use Microsoft\Graph\Generated\Security\Triggers\TriggersRequestBuilder;
@@ -118,28 +115,6 @@ class SecurityRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Provides operations to manage the alerts_v2 property of the microsoft.graph.security entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Security\Alerts_v2\Item\AlertItemRequestBuilder
-    */
-    public function alerts_v2ById(string $id): \Microsoft\Graph\Generated\Security\Alerts_v2\Item\AlertItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['alert%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Security\Alerts_v2\Item\AlertItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the alerts property of the microsoft.graph.security entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Security\Alerts\Item\AlertItemRequestBuilder
-    */
-    public function alertsById(string $id): \Microsoft\Graph\Generated\Security\Alerts\Item\AlertItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['alert%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Security\Alerts\Item\AlertItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Instantiates a new SecurityRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -173,17 +148,6 @@ class SecurityRequestBuilder
     }
 
     /**
-     * Provides operations to manage the incidents property of the microsoft.graph.security entity.
-     * @param string $id Unique identifier of the item
-     * @return IncidentItemRequestBuilder
-    */
-    public function incidentsById(string $id): IncidentItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['incident%2Did'] = $id;
-        return new IncidentItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Update security
      * @param Security $body The request body
      * @param SecurityRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
@@ -200,28 +164,6 @@ class SecurityRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the secureScoreControlProfiles property of the microsoft.graph.security entity.
-     * @param string $id Unique identifier of the item
-     * @return SecureScoreControlProfileItemRequestBuilder
-    */
-    public function secureScoreControlProfilesById(string $id): SecureScoreControlProfileItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['secureScoreControlProfile%2Did'] = $id;
-        return new SecureScoreControlProfileItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the secureScores property of the microsoft.graph.security entity.
-     * @param string $id Unique identifier of the item
-     * @return SecureScoreItemRequestBuilder
-    */
-    public function secureScoresById(string $id): SecureScoreItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['secureScore%2Did'] = $id;
-        return new SecureScoreItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

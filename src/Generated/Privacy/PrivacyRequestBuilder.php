@@ -7,7 +7,6 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Privacy;
-use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\SubjectRightsRequestItemRequestBuilder;
 use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\SubjectRightsRequestsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -93,17 +92,6 @@ class PrivacyRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the subjectRightsRequests property of the microsoft.graph.privacy entity.
-     * @param string $id Unique identifier of the item
-     * @return SubjectRightsRequestItemRequestBuilder
-    */
-    public function subjectRightsRequestsById(string $id): SubjectRightsRequestItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['subjectRightsRequest%2Did'] = $id;
-        return new SubjectRightsRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

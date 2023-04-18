@@ -1,0 +1,49 @@
+<?php
+
+namespace Microsoft\Graph\Generated\Invitations\Item\InvitedUser\MailboxSettings;
+
+use Microsoft\Kiota\Abstractions\RequestOption;
+
+/**
+ * Configuration for the request such as headers, query parameters, and middleware options.
+*/
+class MailboxSettingsRequestBuilderGetRequestConfiguration 
+{
+    /**
+     * @var array<string, array<string>|string>|null $headers Request headers
+    */
+    public ?array $headers = null;
+    
+    /**
+     * @var array<RequestOption>|null $options Request options
+    */
+    public ?array $options = null;
+    
+    /**
+     * @var MailboxSettingsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public ?MailboxSettingsRequestBuilderGetQueryParameters $queryParameters = null;
+    
+    /**
+     * Instantiates a new mailboxSettingsRequestBuilderGetRequestConfiguration and sets the default values.
+     * @param array<string, array<string>|string>|null $headers Request headers
+     * @param array<RequestOption>|null $options Request options
+     * @param MailboxSettingsRequestBuilderGetQueryParameters|null $queryParameters Request query parameters
+    */
+    public function __construct(?array $headers = null, ?array $options = null, ?MailboxSettingsRequestBuilderGetQueryParameters $queryParameters = null) {
+        $this->headers = $headers;
+        $this->options = $options;
+        $this->queryParameters = $queryParameters;
+    }
+
+    /**
+     * Instantiates a new mailboxSettingsRequestBuilderGetQueryParameters.
+     * @param array<string>|null $expand Expand related entities
+     * @param array<string>|null $select Select properties to be returned
+     * @return MailboxSettingsRequestBuilderGetQueryParameters
+    */
+    public static function createQueryParameters(?array $expand = null, ?array $select = null): MailboxSettingsRequestBuilderGetQueryParameters {
+        return new MailboxSettingsRequestBuilderGetQueryParameters($expand, $select);
+    }
+
+}

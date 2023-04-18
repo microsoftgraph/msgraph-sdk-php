@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\LongRunningOperation;
 use Microsoft\Graph\Generated\Models\LongRunningOperationCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\Authentication\Operations\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Authentication\Operations\Item\LongRunningOperationItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class OperationsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.authentication entity.
+     * @param string $longRunningOperationId Unique identifier of the item
+     * @return LongRunningOperationItemRequestBuilder
+    */
+    public function byLongRunningOperationId(string $longRunningOperationId): LongRunningOperationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['longRunningOperation%2Did'] = $longRunningOperationId;
+        return new LongRunningOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new OperationsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

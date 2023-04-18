@@ -10,6 +10,7 @@ use Microsoft\Graph\Generated\Models\UnifiedRoleEligibilitySchedule;
 use Microsoft\Graph\Generated\Models\UnifiedRoleEligibilityScheduleCollectionResponse;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilitySchedules\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilitySchedules\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
+use Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilitySchedules\Item\UnifiedRoleEligibilityScheduleItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -44,6 +45,17 @@ class RoleEligibilitySchedulesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the roleEligibilitySchedules property of the microsoft.graph.rbacApplication entity.
+     * @param string $unifiedRoleEligibilityScheduleId Unique identifier of the item
+     * @return UnifiedRoleEligibilityScheduleItemRequestBuilder
+    */
+    public function byUnifiedRoleEligibilityScheduleId(string $unifiedRoleEligibilityScheduleId): UnifiedRoleEligibilityScheduleItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['unifiedRoleEligibilitySchedule%2Did'] = $unifiedRoleEligibilityScheduleId;
+        return new UnifiedRoleEligibilityScheduleItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new RoleEligibilitySchedulesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

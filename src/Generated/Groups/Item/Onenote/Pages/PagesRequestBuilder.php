@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Onenote\Pages\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Onenote\Pages\Item\OnenotePageItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OnenotePage;
 use Microsoft\Graph\Generated\Models\OnenotePageCollectionResponse;
@@ -43,6 +44,17 @@ class PagesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the pages property of the microsoft.graph.onenote entity.
+     * @param string $onenotePageId Unique identifier of the item
+     * @return OnenotePageItemRequestBuilder
+    */
+    public function byOnenotePageId(string $onenotePageId): OnenotePageItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['onenotePage%2Did'] = $onenotePageId;
+        return new OnenotePageItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new PagesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

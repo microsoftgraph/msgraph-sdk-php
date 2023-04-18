@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\AgreementItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\Agreement;
 use Microsoft\Graph\Generated\Models\AgreementCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class AgreementsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the agreements property of the microsoft.graph.termsOfUseContainer entity.
+     * @param string $agreementId Unique identifier of the item
+     * @return AgreementItemRequestBuilder
+    */
+    public function byAgreementId(string $agreementId): AgreementItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['agreement%2Did'] = $agreementId;
+        return new AgreementItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AgreementsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

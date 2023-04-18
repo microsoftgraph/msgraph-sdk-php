@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\PivotTables\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\PivotTables\Item\WorkbookPivotTableItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\PivotTables\RefreshAll\RefreshAllRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookPivotTable;
@@ -51,6 +52,17 @@ class PivotTablesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the pivotTables property of the microsoft.graph.workbookWorksheet entity.
+     * @param string $workbookPivotTableId Unique identifier of the item
+     * @return WorkbookPivotTableItemRequestBuilder
+    */
+    public function byWorkbookPivotTableId(string $workbookPivotTableId): WorkbookPivotTableItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['workbookPivotTable%2Did'] = $workbookPivotTableId;
+        return new WorkbookPivotTableItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new PivotTablesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

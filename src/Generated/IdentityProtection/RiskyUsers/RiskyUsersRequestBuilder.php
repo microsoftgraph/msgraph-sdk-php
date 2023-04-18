@@ -8,6 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\ConfirmCompromised\ConfirmCompromisedRequestBuilder;
 use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Dismiss\DismissRequestBuilder;
+use Microsoft\Graph\Generated\IdentityProtection\RiskyUsers\Item\RiskyUserItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\RiskyUser;
 use Microsoft\Graph\Generated\Models\RiskyUserCollectionResponse;
@@ -59,6 +60,17 @@ class RiskyUsersRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the riskyUsers property of the microsoft.graph.identityProtectionRoot entity.
+     * @param string $riskyUserId Unique identifier of the item
+     * @return RiskyUserItemRequestBuilder
+    */
+    public function byRiskyUserId(string $riskyUserId): RiskyUserItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['riskyUser%2Did'] = $riskyUserId;
+        return new RiskyUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new RiskyUsersRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SectionGroup;
 use Microsoft\Graph\Generated\Models\SectionGroupCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\SectionGroups\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\SectionGroups\Item\SectionGroupItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class SectionGroupsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the sectionGroups property of the microsoft.graph.notebook entity.
+     * @param string $sectionGroupId Unique identifier of the item
+     * @return SectionGroupItemRequestBuilder
+    */
+    public function bySectionGroupId(string $sectionGroupId): SectionGroupItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['sectionGroup%2Did'] = $sectionGroupId;
+        return new SectionGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SectionGroupsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

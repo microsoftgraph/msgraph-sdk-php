@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\OpenShifts\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\OpenShifts\Item\OpenShiftItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OpenShift;
 use Microsoft\Graph\Generated\Models\OpenShiftCollectionResponse;
@@ -44,6 +45,17 @@ class OpenShiftsRequestBuilder
     private string $urlTemplate;
     
     /**
+     * Provides operations to manage the openShifts property of the microsoft.graph.schedule entity.
+     * @param string $openShiftId Unique identifier of the item
+     * @return OpenShiftItemRequestBuilder
+    */
+    public function byOpenShiftId(string $openShiftId): OpenShiftItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['openShift%2Did'] = $openShiftId;
+        return new OpenShiftItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
+    /**
      * Instantiates a new OpenShiftsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -78,10 +90,11 @@ class OpenShiftsRequestBuilder
     }
 
     /**
-     * Create new navigation property to openShifts for me
+     * Create an instance of an openShift object.
      * @param OpenShift $body The request body
      * @param OpenShiftsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/openshift-post?view=graph-rest-1.0 Find more info here
     */
     public function post(OpenShift $body, ?OpenShiftsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -122,7 +135,7 @@ class OpenShiftsRequestBuilder
     }
 
     /**
-     * Create new navigation property to openShifts for me
+     * Create an instance of an openShift object.
      * @param OpenShift $body The request body
      * @param OpenShiftsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

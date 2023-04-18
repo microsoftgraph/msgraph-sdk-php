@@ -7,7 +7,6 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\InferenceClassification;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Users\Item\InferenceClassification\Overrides\Item\InferenceClassificationOverrideItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\InferenceClassification\Overrides\OverridesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -74,17 +73,6 @@ class InferenceClassificationRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the overrides property of the microsoft.graph.inferenceClassification entity.
-     * @param string $id Unique identifier of the item
-     * @return InferenceClassificationOverrideItemRequestBuilder
-    */
-    public function overridesById(string $id): InferenceClassificationOverrideItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['inferenceClassificationOverride%2Did'] = $id;
-        return new InferenceClassificationOverrideItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

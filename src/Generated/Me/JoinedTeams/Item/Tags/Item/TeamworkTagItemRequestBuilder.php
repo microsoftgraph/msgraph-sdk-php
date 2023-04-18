@@ -5,7 +5,6 @@ namespace Microsoft\Graph\Generated\Me\JoinedTeams\Item\Tags\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Tags\Item\Members\Item\TeamworkTagMemberItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Tags\Item\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TeamworkTag;
@@ -92,17 +91,6 @@ class TeamworkTagItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the members property of the microsoft.graph.teamworkTag entity.
-     * @param string $id Unique identifier of the item
-     * @return TeamworkTagMemberItemRequestBuilder
-    */
-    public function membersById(string $id): TeamworkTagMemberItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['teamworkTagMember%2Did'] = $id;
-        return new TeamworkTagMemberItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

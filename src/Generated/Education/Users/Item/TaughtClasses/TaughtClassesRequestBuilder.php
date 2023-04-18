@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Users\Item\TaughtClasses\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Education\Users\Item\TaughtClasses\Item\EducationClassItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationClassCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -42,6 +43,17 @@ class TaughtClassesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the taughtClasses property of the microsoft.graph.educationUser entity.
+     * @param string $educationClassId Unique identifier of the item
+     * @return EducationClassItemRequestBuilder
+    */
+    public function byEducationClassId(string $educationClassId): EducationClassItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['educationClass%2Did'] = $educationClassId;
+        return new EducationClassItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new TaughtClassesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

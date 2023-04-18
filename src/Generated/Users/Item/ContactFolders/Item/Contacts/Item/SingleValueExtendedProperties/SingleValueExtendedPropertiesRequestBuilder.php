@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SingleValueLegacyExtendedProperty;
 use Microsoft\Graph\Generated\Models\SingleValueLegacyExtendedPropertyCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\Contacts\Item\SingleValueExtendedProperties\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\Contacts\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class SingleValueExtendedPropertiesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.contact entity.
+     * @param string $singleValueLegacyExtendedPropertyId Unique identifier of the item
+     * @return SingleValueLegacyExtendedPropertyItemRequestBuilder
+    */
+    public function bySingleValueLegacyExtendedPropertyId(string $singleValueLegacyExtendedPropertyId): SingleValueLegacyExtendedPropertyItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['singleValueLegacyExtendedProperty%2Did'] = $singleValueLegacyExtendedPropertyId;
+        return new SingleValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SingleValueExtendedPropertiesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

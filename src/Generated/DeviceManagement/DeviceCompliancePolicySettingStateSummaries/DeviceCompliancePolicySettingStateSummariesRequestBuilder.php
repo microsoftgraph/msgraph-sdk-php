@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicySettingStateSummaries\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicySettingStateSummaries\Item\DeviceCompliancePolicySettingStateSummaryItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\DeviceCompliancePolicySettingStateSummary;
 use Microsoft\Graph\Generated\Models\DeviceCompliancePolicySettingStateSummaryCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class DeviceCompliancePolicySettingStateSummariesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the deviceCompliancePolicySettingStateSummaries property of the microsoft.graph.deviceManagement entity.
+     * @param string $deviceCompliancePolicySettingStateSummaryId Unique identifier of the item
+     * @return DeviceCompliancePolicySettingStateSummaryItemRequestBuilder
+    */
+    public function byDeviceCompliancePolicySettingStateSummaryId(string $deviceCompliancePolicySettingStateSummaryId): DeviceCompliancePolicySettingStateSummaryItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['deviceCompliancePolicySettingStateSummary%2Did'] = $deviceCompliancePolicySettingStateSummaryId;
+        return new DeviceCompliancePolicySettingStateSummaryItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new DeviceCompliancePolicySettingStateSummariesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

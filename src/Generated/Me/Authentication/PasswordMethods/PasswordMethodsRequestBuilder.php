@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Authentication\PasswordMethods\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\Authentication\PasswordMethods\Item\PasswordAuthenticationMethodItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PasswordAuthenticationMethod;
 use Microsoft\Graph\Generated\Models\PasswordAuthenticationMethodCollectionResponse;
@@ -43,6 +44,17 @@ class PasswordMethodsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the passwordMethods property of the microsoft.graph.authentication entity.
+     * @param string $passwordAuthenticationMethodId Unique identifier of the item
+     * @return PasswordAuthenticationMethodItemRequestBuilder
+    */
+    public function byPasswordAuthenticationMethodId(string $passwordAuthenticationMethodId): PasswordAuthenticationMethodItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['passwordAuthenticationMethod%2Did'] = $passwordAuthenticationMethodId;
+        return new PasswordAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new PasswordMethodsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

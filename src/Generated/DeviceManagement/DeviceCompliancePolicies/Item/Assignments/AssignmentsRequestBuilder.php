@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\Assignments\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\Assignments\Item\DeviceCompliancePolicyAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\DeviceCompliancePolicyAssignment;
 use Microsoft\Graph\Generated\Models\DeviceCompliancePolicyAssignmentCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class AssignmentsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.deviceCompliancePolicy entity.
+     * @param string $deviceCompliancePolicyAssignmentId Unique identifier of the item
+     * @return DeviceCompliancePolicyAssignmentItemRequestBuilder
+    */
+    public function byDeviceCompliancePolicyAssignmentId(string $deviceCompliancePolicyAssignmentId): DeviceCompliancePolicyAssignmentItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['deviceCompliancePolicyAssignment%2Did'] = $deviceCompliancePolicyAssignmentId;
+        return new DeviceCompliancePolicyAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AssignmentsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

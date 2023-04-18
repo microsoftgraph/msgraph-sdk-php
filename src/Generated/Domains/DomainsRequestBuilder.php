@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Domains\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Domains\Item\DomainItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\Domain;
 use Microsoft\Graph\Generated\Models\DomainCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class DomainsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the collection of domain entities.
+     * @param string $domainId Unique identifier of the item
+     * @return DomainItemRequestBuilder
+    */
+    public function byDomainId(string $domainId): DomainItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['domain%2Did'] = $domainId;
+        return new DomainItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new DomainsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

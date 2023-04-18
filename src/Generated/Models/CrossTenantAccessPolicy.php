@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CrossTenantAccessPolicy extends PolicyBase implements Parsable 
 {
     /**
-     * @var CrossTenantAccessPolicyConfigurationDefault|null $escapedDefault Defines the default configuration for how your organization interacts with external Azure Active Directory organizations.
-    */
-    public ?CrossTenantAccessPolicyConfigurationDefault $escapedDefault = null;
-    
-    /**
      * Instantiates a new CrossTenantAccessPolicy and sets the default values.
     */
     public function __construct() {

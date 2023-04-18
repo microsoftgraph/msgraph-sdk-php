@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\ConnectedOrganizations\Item\ConnectedOrganizationItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ConnectedOrganization;
 use Microsoft\Graph\Generated\Models\ConnectedOrganizationCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class ConnectedOrganizationsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the connectedOrganizations property of the microsoft.graph.entitlementManagement entity.
+     * @param string $connectedOrganizationId Unique identifier of the item
+     * @return ConnectedOrganizationItemRequestBuilder
+    */
+    public function byConnectedOrganizationId(string $connectedOrganizationId): ConnectedOrganizationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['connectedOrganization%2Did'] = $connectedOrganizationId;
+        return new ConnectedOrganizationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ConnectedOrganizationsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

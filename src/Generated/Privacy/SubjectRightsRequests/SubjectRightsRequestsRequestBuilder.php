@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SubjectRightsRequest;
 use Microsoft\Graph\Generated\Models\SubjectRightsRequestCollectionResponse;
 use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\SubjectRightsRequestItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class SubjectRightsRequestsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the subjectRightsRequests property of the microsoft.graph.privacy entity.
+     * @param string $subjectRightsRequestId Unique identifier of the item
+     * @return SubjectRightsRequestItemRequestBuilder
+    */
+    public function bySubjectRightsRequestId(string $subjectRightsRequestId): SubjectRightsRequestItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['subjectRightsRequest%2Did'] = $subjectRightsRequestId;
+        return new SubjectRightsRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SubjectRightsRequestsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

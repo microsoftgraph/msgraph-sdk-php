@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\People\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\People\Item\PersonItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PersonCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -42,6 +43,17 @@ class PeopleRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the people property of the microsoft.graph.user entity.
+     * @param string $personId Unique identifier of the item
+     * @return PersonItemRequestBuilder
+    */
+    public function byPersonId(string $personId): PersonItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['person%2Did'] = $personId;
+        return new PersonItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new PeopleRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\AuthoredNote;
 use Microsoft\Graph\Generated\Models\AuthoredNoteCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Notes\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Privacy\SubjectRightsRequests\Item\Notes\Item\AuthoredNoteItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class NotesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the notes property of the microsoft.graph.subjectRightsRequest entity.
+     * @param string $authoredNoteId Unique identifier of the item
+     * @return AuthoredNoteItemRequestBuilder
+    */
+    public function byAuthoredNoteId(string $authoredNoteId): AuthoredNoteItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['authoredNote%2Did'] = $authoredNoteId;
+        return new AuthoredNoteItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new NotesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

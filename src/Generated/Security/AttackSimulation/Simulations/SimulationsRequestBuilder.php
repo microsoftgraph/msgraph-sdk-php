@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Simulation;
 use Microsoft\Graph\Generated\Models\SimulationCollectionResponse;
 use Microsoft\Graph\Generated\Security\AttackSimulation\Simulations\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Security\AttackSimulation\Simulations\Item\SimulationItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class SimulationsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the simulations property of the microsoft.graph.attackSimulationRoot entity.
+     * @param string $simulationId Unique identifier of the item
+     * @return SimulationItemRequestBuilder
+    */
+    public function bySimulationId(string $simulationId): SimulationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['simulation%2Did'] = $simulationId;
+        return new SimulationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SimulationsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

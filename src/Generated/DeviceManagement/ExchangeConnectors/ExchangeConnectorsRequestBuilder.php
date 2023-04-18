@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\ExchangeConnectors\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ExchangeConnectors\Item\DeviceManagementExchangeConnectorItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\DeviceManagementExchangeConnector;
 use Microsoft\Graph\Generated\Models\DeviceManagementExchangeConnectorCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class ExchangeConnectorsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the exchangeConnectors property of the microsoft.graph.deviceManagement entity.
+     * @param string $deviceManagementExchangeConnectorId Unique identifier of the item
+     * @return DeviceManagementExchangeConnectorItemRequestBuilder
+    */
+    public function byDeviceManagementExchangeConnectorId(string $deviceManagementExchangeConnectorId): DeviceManagementExchangeConnectorItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['deviceManagementExchangeConnector%2Did'] = $deviceManagementExchangeConnectorId;
+        return new DeviceManagementExchangeConnectorItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ExchangeConnectorsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

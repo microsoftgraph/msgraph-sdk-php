@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ListItemVersion;
 use Microsoft\Graph\Generated\Models\ListItemVersionCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\Versions\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\Versions\Item\ListItemVersionItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class VersionsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the versions property of the microsoft.graph.listItem entity.
+     * @param string $listItemVersionId Unique identifier of the item
+     * @return ListItemVersionItemRequestBuilder
+    */
+    public function byListItemVersionId(string $listItemVersionId): ListItemVersionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['listItemVersion%2Did'] = $listItemVersionId;
+        return new ListItemVersionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new VersionsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

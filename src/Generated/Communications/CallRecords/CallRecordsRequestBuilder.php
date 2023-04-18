@@ -9,6 +9,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Communications\CallRecords\CallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTime\CallRecordsGetDirectRoutingCallsWithFromDateTimeWithToDateTimeRequestBuilder;
 use Microsoft\Graph\Generated\Communications\CallRecords\CallRecordsGetPstnCallsWithFromDateTimeWithToDateTime\CallRecordsGetPstnCallsWithFromDateTimeWithToDateTimeRequestBuilder;
 use Microsoft\Graph\Generated\Communications\CallRecords\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Communications\CallRecords\Item\CallRecordItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\CallRecords\CallRecord;
 use Microsoft\Graph\Generated\Models\CallRecords\CallRecordCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -46,6 +47,17 @@ class CallRecordsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the callRecords property of the microsoft.graph.cloudCommunications entity.
+     * @param string $callRecordId Unique identifier of the item
+     * @return CallRecordItemRequestBuilder
+    */
+    public function byCallRecordId(string $callRecordId): CallRecordItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['callRecord%2Did'] = $callRecordId;
+        return new CallRecordItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Provides operations to call the getDirectRoutingCalls method.
      * @param DateTime $fromDateTime Usage: fromDateTime={fromDateTime}

@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\EscapedPrint\Services\Item\Endpoints\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\EscapedPrint\Services\Item\Endpoints\Item\PrintServiceEndpointItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PrintServiceEndpoint;
 use Microsoft\Graph\Generated\Models\PrintServiceEndpointCollectionResponse;
@@ -43,6 +44,17 @@ class EndpointsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the endpoints property of the microsoft.graph.printService entity.
+     * @param string $printServiceEndpointId Unique identifier of the item
+     * @return PrintServiceEndpointItemRequestBuilder
+    */
+    public function byPrintServiceEndpointId(string $printServiceEndpointId): PrintServiceEndpointItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['printServiceEndpoint%2Did'] = $printServiceEndpointId;
+        return new PrintServiceEndpointItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new EndpointsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

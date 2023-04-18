@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Drives\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\Drives\Item\DriveItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\DriveCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -42,6 +43,17 @@ class DrivesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the drives property of the microsoft.graph.user entity.
+     * @param string $driveId Unique identifier of the item
+     * @return DriveItemRequestBuilder
+    */
+    public function byDriveId(string $driveId): DriveItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['drive%2Did'] = $driveId;
+        return new DriveItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new DrivesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

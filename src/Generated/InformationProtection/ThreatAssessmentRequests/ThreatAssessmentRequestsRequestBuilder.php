@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentRequests\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentRequests\Item\ThreatAssessmentRequestItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ThreatAssessmentRequest;
 use Microsoft\Graph\Generated\Models\ThreatAssessmentRequestCollectionResponse;
@@ -43,6 +44,17 @@ class ThreatAssessmentRequestsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the threatAssessmentRequests property of the microsoft.graph.informationProtection entity.
+     * @param string $threatAssessmentRequestId Unique identifier of the item
+     * @return ThreatAssessmentRequestItemRequestBuilder
+    */
+    public function byThreatAssessmentRequestId(string $threatAssessmentRequestId): ThreatAssessmentRequestItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['threatAssessmentRequest%2Did'] = $threatAssessmentRequestId;
+        return new ThreatAssessmentRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ThreatAssessmentRequestsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

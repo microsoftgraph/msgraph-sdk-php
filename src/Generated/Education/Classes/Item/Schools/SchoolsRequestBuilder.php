@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Classes\Item\Schools\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Education\Classes\Item\Schools\Item\EducationSchoolItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationSchoolCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -42,6 +43,17 @@ class SchoolsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the schools property of the microsoft.graph.educationClass entity.
+     * @param string $educationSchoolId Unique identifier of the item
+     * @return EducationSchoolItemRequestBuilder
+    */
+    public function byEducationSchoolId(string $educationSchoolId): EducationSchoolItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['educationSchool%2Did'] = $educationSchoolId;
+        return new EducationSchoolItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SchoolsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

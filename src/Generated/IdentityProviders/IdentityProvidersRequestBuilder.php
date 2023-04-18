@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityProviders\AvailableProviderTypes\AvailableProviderTypesRequestBuilder;
 use Microsoft\Graph\Generated\IdentityProviders\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\IdentityProviders\Item\IdentityProviderItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\IdentityProvider;
 use Microsoft\Graph\Generated\Models\IdentityProviderCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -51,6 +52,17 @@ class IdentityProvidersRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the collection of identityProvider entities.
+     * @param string $identityProviderId Unique identifier of the item
+     * @return IdentityProviderItemRequestBuilder
+    */
+    public function byIdentityProviderId(string $identityProviderId): IdentityProviderItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['identityProvider%2Did'] = $identityProviderId;
+        return new IdentityProviderItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new IdentityProvidersRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

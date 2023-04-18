@@ -8,9 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SolutionsRoot;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\BookingBusinessesRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\BookingBusinessItemRequestBuilder;
 use Microsoft\Graph\Generated\Solutions\BookingCurrencies\BookingCurrenciesRequestBuilder;
-use Microsoft\Graph\Generated\Solutions\BookingCurrencies\Item\BookingCurrencyItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -52,28 +50,6 @@ class SolutionsRequestBuilder
     */
     private string $urlTemplate;
     
-    /**
-     * Provides operations to manage the bookingBusinesses property of the microsoft.graph.solutionsRoot entity.
-     * @param string $id Unique identifier of the item
-     * @return BookingBusinessItemRequestBuilder
-    */
-    public function bookingBusinessesById(string $id): BookingBusinessItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['bookingBusiness%2Did'] = $id;
-        return new BookingBusinessItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the bookingCurrencies property of the microsoft.graph.solutionsRoot entity.
-     * @param string $id Unique identifier of the item
-     * @return BookingCurrencyItemRequestBuilder
-    */
-    public function bookingCurrenciesById(string $id): BookingCurrencyItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['bookingCurrency%2Did'] = $id;
-        return new BookingCurrencyItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
     /**
      * Instantiates a new SolutionsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

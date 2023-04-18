@@ -6,9 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Teamwork\AssociatedTeams\AssociatedTeamsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Teamwork\AssociatedTeams\Item\AssociatedTeamInfoItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Teamwork\InstalledApps\InstalledAppsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Teamwork\InstalledApps\Item\UserScopeTeamsAppInstallationItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Teamwork\SendActivityNotification\SendActivityNotificationRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UserTeamwork;
@@ -61,17 +59,6 @@ class TeamworkRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Provides operations to manage the associatedTeams property of the microsoft.graph.userTeamwork entity.
-     * @param string $id Unique identifier of the item
-     * @return AssociatedTeamInfoItemRequestBuilder
-    */
-    public function associatedTeamsById(string $id): AssociatedTeamInfoItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['associatedTeamInfo%2Did'] = $id;
-        return new AssociatedTeamInfoItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Instantiates a new TeamworkRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -120,17 +107,6 @@ class TeamworkRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the installedApps property of the microsoft.graph.userTeamwork entity.
-     * @param string $id Unique identifier of the item
-     * @return UserScopeTeamsAppInstallationItemRequestBuilder
-    */
-    public function installedAppsById(string $id): UserScopeTeamsAppInstallationItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['userScopeTeamsAppInstallation%2Did'] = $id;
-        return new UserScopeTeamsAppInstallationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

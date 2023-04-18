@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\ResourceOperations\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ResourceOperations\Item\ResourceOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ResourceOperation;
 use Microsoft\Graph\Generated\Models\ResourceOperationCollectionResponse;
@@ -43,6 +44,17 @@ class ResourceOperationsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the resourceOperations property of the microsoft.graph.deviceManagement entity.
+     * @param string $resourceOperationId Unique identifier of the item
+     * @return ResourceOperationItemRequestBuilder
+    */
+    public function byResourceOperationId(string $resourceOperationId): ResourceOperationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['resourceOperation%2Did'] = $resourceOperationId;
+        return new ResourceOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ResourceOperationsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

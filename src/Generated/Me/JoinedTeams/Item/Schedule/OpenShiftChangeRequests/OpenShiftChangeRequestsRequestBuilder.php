@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\OpenShiftChangeRequests\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\OpenShiftChangeRequests\Item\OpenShiftChangeRequestItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OpenShiftChangeRequest;
 use Microsoft\Graph\Generated\Models\OpenShiftChangeRequestCollectionResponse;
@@ -43,6 +44,17 @@ class OpenShiftChangeRequestsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the openShiftChangeRequests property of the microsoft.graph.schedule entity.
+     * @param string $openShiftChangeRequestId Unique identifier of the item
+     * @return OpenShiftChangeRequestItemRequestBuilder
+    */
+    public function byOpenShiftChangeRequestId(string $openShiftChangeRequestId): OpenShiftChangeRequestItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['openShiftChangeRequest%2Did'] = $openShiftChangeRequestId;
+        return new OpenShiftChangeRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new OpenShiftChangeRequestsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

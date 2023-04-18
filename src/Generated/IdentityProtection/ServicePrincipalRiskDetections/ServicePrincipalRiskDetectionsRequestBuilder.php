@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityProtection\ServicePrincipalRiskDetections\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\IdentityProtection\ServicePrincipalRiskDetections\Item\ServicePrincipalRiskDetectionItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ServicePrincipalRiskDetection;
 use Microsoft\Graph\Generated\Models\ServicePrincipalRiskDetectionCollectionResponse;
@@ -43,6 +44,17 @@ class ServicePrincipalRiskDetectionsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the servicePrincipalRiskDetections property of the microsoft.graph.identityProtectionRoot entity.
+     * @param string $servicePrincipalRiskDetectionId Unique identifier of the item
+     * @return ServicePrincipalRiskDetectionItemRequestBuilder
+    */
+    public function byServicePrincipalRiskDetectionId(string $servicePrincipalRiskDetectionId): ServicePrincipalRiskDetectionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['servicePrincipalRiskDetection%2Did'] = $servicePrincipalRiskDetectionId;
+        return new ServicePrincipalRiskDetectionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ServicePrincipalRiskDetectionsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\AuditLogs\DirectoryAudits\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\AuditLogs\DirectoryAudits\Item\DirectoryAuditItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryAudit;
 use Microsoft\Graph\Generated\Models\DirectoryAuditCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class DirectoryAuditsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the directoryAudits property of the microsoft.graph.auditLogRoot entity.
+     * @param string $directoryAuditId Unique identifier of the item
+     * @return DirectoryAuditItemRequestBuilder
+    */
+    public function byDirectoryAuditId(string $directoryAuditId): DirectoryAuditItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['directoryAudit%2Did'] = $directoryAuditId;
+        return new DirectoryAuditItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new DirectoryAuditsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

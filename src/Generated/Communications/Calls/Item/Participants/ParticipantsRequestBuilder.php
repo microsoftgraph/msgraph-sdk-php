@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Invite\InviteRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\ParticipantItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Participant;
 use Microsoft\Graph\Generated\Models\ParticipantCollectionResponse;
@@ -51,6 +52,17 @@ class ParticipantsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the participants property of the microsoft.graph.call entity.
+     * @param string $participantId Unique identifier of the item
+     * @return ParticipantItemRequestBuilder
+    */
+    public function byParticipantId(string $participantId): ParticipantItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['participant%2Did'] = $participantId;
+        return new ParticipantItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ParticipantsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

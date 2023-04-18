@@ -8,7 +8,6 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\CrossTenantAccessPolicy;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\EscapedDefault\DefaultRequestBuilder;
-use Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\Partners\Item\CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder;
 use Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\Partners\PartnersRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -101,17 +100,6 @@ class CrossTenantAccessPolicyRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the partners property of the microsoft.graph.crossTenantAccessPolicy entity.
-     * @param string $id Unique identifier of the item
-     * @return CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder
-    */
-    public function partnersById(string $id): CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['crossTenantAccessPolicyConfigurationPartner%2DtenantId'] = $id;
-        return new CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

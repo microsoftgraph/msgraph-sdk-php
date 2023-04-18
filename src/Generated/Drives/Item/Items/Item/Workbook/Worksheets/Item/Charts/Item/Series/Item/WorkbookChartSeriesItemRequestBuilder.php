@@ -6,7 +6,6 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\Item\Format\FormatRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\Item\Points\Item\WorkbookChartPointItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\Item\Charts\Item\Series\Item\Points\PointsRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookChartSeries;
@@ -119,17 +118,6 @@ class WorkbookChartSeriesItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the points property of the microsoft.graph.workbookChartSeries entity.
-     * @param string $id Unique identifier of the item
-     * @return WorkbookChartPointItemRequestBuilder
-    */
-    public function pointsById(string $id): WorkbookChartPointItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['workbookChartPoint%2Did'] = $id;
-        return new WorkbookChartPointItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\DefaultManagedAppProtections\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\DefaultManagedAppProtections\Item\DefaultManagedAppProtectionItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\DefaultManagedAppProtection;
 use Microsoft\Graph\Generated\Models\DefaultManagedAppProtectionCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class DefaultManagedAppProtectionsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the defaultManagedAppProtections property of the microsoft.graph.deviceAppManagement entity.
+     * @param string $defaultManagedAppProtectionId Unique identifier of the item
+     * @return DefaultManagedAppProtectionItemRequestBuilder
+    */
+    public function byDefaultManagedAppProtectionId(string $defaultManagedAppProtectionId): DefaultManagedAppProtectionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['defaultManagedAppProtection%2Did'] = $defaultManagedAppProtectionId;
+        return new DefaultManagedAppProtectionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new DefaultManagedAppProtectionsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

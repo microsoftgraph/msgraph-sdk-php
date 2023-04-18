@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStores\Item\StoreItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TermStore\Store;
 use Microsoft\Graph\Generated\Models\TermStore\StoreCollectionResponse;
@@ -43,6 +44,17 @@ class TermStoresRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the termStores property of the microsoft.graph.site entity.
+     * @param string $storeId Unique identifier of the item
+     * @return StoreItemRequestBuilder
+    */
+    public function byStoreId(string $storeId): StoreItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['store%2Did'] = $storeId;
+        return new StoreItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new TermStoresRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

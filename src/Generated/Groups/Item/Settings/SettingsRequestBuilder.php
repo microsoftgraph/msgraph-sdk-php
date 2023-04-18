@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Settings\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Settings\Item\GroupSettingItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\GroupSetting;
 use Microsoft\Graph\Generated\Models\GroupSettingCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class SettingsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the settings property of the microsoft.graph.group entity.
+     * @param string $groupSettingId Unique identifier of the item
+     * @return GroupSettingItemRequestBuilder
+    */
+    public function byGroupSettingId(string $groupSettingId): GroupSettingItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['groupSetting%2Did'] = $groupSettingId;
+        return new GroupSettingItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SettingsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

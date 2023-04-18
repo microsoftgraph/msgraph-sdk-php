@@ -5,7 +5,6 @@ namespace Microsoft\Graph\Generated\Admin\Edge\InternetExplorerMode;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Admin\Edge\InternetExplorerMode\SiteLists\Item\BrowserSiteListItemRequestBuilder;
 use Microsoft\Graph\Generated\Admin\Edge\InternetExplorerMode\SiteLists\SiteListsRequestBuilder;
 use Microsoft\Graph\Generated\Models\InternetExplorerMode;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -111,17 +110,6 @@ class InternetExplorerModeRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the siteLists property of the microsoft.graph.internetExplorerMode entity.
-     * @param string $id Unique identifier of the item
-     * @return BrowserSiteListItemRequestBuilder
-    */
-    public function siteListsById(string $id): BrowserSiteListItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['browserSiteList%2Did'] = $id;
-        return new BrowserSiteListItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

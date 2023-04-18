@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\RoleDefinitions\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\RoleDefinitions\Item\RoleDefinitionItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\RoleDefinition;
 use Microsoft\Graph\Generated\Models\RoleDefinitionCollectionResponse;
@@ -43,6 +44,17 @@ class RoleDefinitionsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the roleDefinitions property of the microsoft.graph.deviceManagement entity.
+     * @param string $roleDefinitionId Unique identifier of the item
+     * @return RoleDefinitionItemRequestBuilder
+    */
+    public function byRoleDefinitionId(string $roleDefinitionId): RoleDefinitionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['roleDefinition%2Did'] = $roleDefinitionId;
+        return new RoleDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new RoleDefinitionsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

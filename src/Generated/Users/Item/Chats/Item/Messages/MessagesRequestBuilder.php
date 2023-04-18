@@ -10,6 +10,7 @@ use Microsoft\Graph\Generated\Models\ChatMessageCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item\ChatMessageItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -52,6 +53,17 @@ class MessagesRequestBuilder
     private string $urlTemplate;
     
     /**
+     * Provides operations to manage the messages property of the microsoft.graph.chat entity.
+     * @param string $chatMessageId Unique identifier of the item
+     * @return ChatMessageItemRequestBuilder
+    */
+    public function byChatMessageId(string $chatMessageId): ChatMessageItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['chatMessage%2Did'] = $chatMessageId;
+        return new ChatMessageItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
+    /**
      * Instantiates a new MessagesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -86,11 +98,11 @@ class MessagesRequestBuilder
     }
 
     /**
-     * Send a new chatMessage in the specified channel or a chat.
+     * Send a new chatMessage in the specified chat. This API can't create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can create a chat message.
      * @param ChatMessage $body The request body
      * @param MessagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chatmessage-post?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/chat-post-messages?view=graph-rest-1.0 Find more info here
     */
     public function post(ChatMessage $body, ?MessagesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -131,7 +143,7 @@ class MessagesRequestBuilder
     }
 
     /**
-     * Send a new chatMessage in the specified channel or a chat.
+     * Send a new chatMessage in the specified chat. This API can't create a new chat; you must use the list chats method to retrieve the ID of an existing chat before you can create a chat message.
      * @param ChatMessage $body The request body
      * @param MessagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

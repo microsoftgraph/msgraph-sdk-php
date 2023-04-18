@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppStatuses\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\ManagedAppStatuses\Item\ManagedAppStatusItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ManagedAppStatus;
 use Microsoft\Graph\Generated\Models\ManagedAppStatusCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class ManagedAppStatusesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the managedAppStatuses property of the microsoft.graph.deviceAppManagement entity.
+     * @param string $managedAppStatusId Unique identifier of the item
+     * @return ManagedAppStatusItemRequestBuilder
+    */
+    public function byManagedAppStatusId(string $managedAppStatusId): ManagedAppStatusItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['managedAppStatus%2Did'] = $managedAppStatusId;
+        return new ManagedAppStatusItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ManagedAppStatusesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

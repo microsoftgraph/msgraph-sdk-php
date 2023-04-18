@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\DelegatedAdminAccessAssignment;
 use Microsoft\Graph\Generated\Models\DelegatedAdminAccessAssignmentCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminRelationships\Item\AccessAssignments\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminRelationships\Item\AccessAssignments\Item\DelegatedAdminAccessAssignmentItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class AccessAssignmentsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the accessAssignments property of the microsoft.graph.delegatedAdminRelationship entity.
+     * @param string $delegatedAdminAccessAssignmentId Unique identifier of the item
+     * @return DelegatedAdminAccessAssignmentItemRequestBuilder
+    */
+    public function byDelegatedAdminAccessAssignmentId(string $delegatedAdminAccessAssignmentId): DelegatedAdminAccessAssignmentItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['delegatedAdminAccessAssignment%2Did'] = $delegatedAdminAccessAssignmentId;
+        return new DelegatedAdminAccessAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AccessAssignmentsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

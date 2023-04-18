@@ -100,17 +100,6 @@ class DriveItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Provides operations to manage the bundles property of the microsoft.graph.drive entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Drives\Item\Bundles\Item\DriveItemItemRequestBuilder
-    */
-    public function bundlesById(string $id): \Microsoft\Graph\Generated\Drives\Item\Bundles\Item\DriveItemItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['driveItem%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Drives\Item\Bundles\Item\DriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Instantiates a new DriveItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -144,21 +133,9 @@ class DriveItemRequestBuilder
     }
 
     /**
-     * Provides operations to manage the following property of the microsoft.graph.drive entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Drives\Item\Following\Item\DriveItemItemRequestBuilder
-    */
-    public function followingById(string $id): \Microsoft\Graph\Generated\Drives\Item\Following\Item\DriveItemItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['driveItem%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Drives\Item\Following\Item\DriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Retrieve the properties and relationships of a Drive resource. A Drive is the top-level container for a file system, such as OneDrive or SharePoint document libraries.
+     * Get entity from drives by key
      * @param DriveItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/drive-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DriveItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -171,17 +148,6 @@ class DriveItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the items property of the microsoft.graph.drive entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Drives\Item\Items\Item\DriveItemItemRequestBuilder
-    */
-    public function itemsById(string $id): \Microsoft\Graph\Generated\Drives\Item\Items\Item\DriveItemItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['driveItem%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Drives\Item\Items\Item\DriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -213,17 +179,6 @@ class DriveItemRequestBuilder
     }
 
     /**
-     * Provides operations to manage the special property of the microsoft.graph.drive entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Drives\Item\Special\Item\DriveItemItemRequestBuilder
-    */
-    public function specialById(string $id): \Microsoft\Graph\Generated\Drives\Item\Special\Item\DriveItemItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['driveItem%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Drives\Item\Special\Item\DriveItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Delete entity from drives
      * @param DriveItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -245,7 +200,7 @@ class DriveItemRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a Drive resource. A Drive is the top-level container for a file system, such as OneDrive or SharePoint document libraries.
+     * Get entity from drives by key
      * @param DriveItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

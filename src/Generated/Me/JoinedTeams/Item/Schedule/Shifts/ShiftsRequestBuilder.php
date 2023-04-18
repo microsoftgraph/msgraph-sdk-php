@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\Shifts\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\Schedule\Shifts\Item\ShiftItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Shift;
 use Microsoft\Graph\Generated\Models\ShiftCollectionResponse;
@@ -43,6 +44,17 @@ class ShiftsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the shifts property of the microsoft.graph.schedule entity.
+     * @param string $shiftId Unique identifier of the item
+     * @return ShiftItemRequestBuilder
+    */
+    public function byShiftId(string $shiftId): ShiftItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['shift%2Did'] = $shiftId;
+        return new ShiftItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ShiftsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

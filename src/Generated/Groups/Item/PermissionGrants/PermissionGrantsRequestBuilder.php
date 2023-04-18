@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\Count\CountRequestBui
 use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\Item\ResourceSpecificPermissionGrantItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\PermissionGrants\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ResourceSpecificPermissionGrant;
@@ -75,6 +76,17 @@ class PermissionGrantsRequestBuilder
         return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * Provides operations to manage the permissionGrants property of the microsoft.graph.group entity.
+     * @param string $resourceSpecificPermissionGrantId Unique identifier of the item
+     * @return ResourceSpecificPermissionGrantItemRequestBuilder
+    */
+    public function byResourceSpecificPermissionGrantId(string $resourceSpecificPermissionGrantId): ResourceSpecificPermissionGrantItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['resourceSpecificPermissionGrant%2Did'] = $resourceSpecificPermissionGrantId;
+        return new ResourceSpecificPermissionGrantItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new PermissionGrantsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

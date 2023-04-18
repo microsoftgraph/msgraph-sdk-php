@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\AuditLogs\Provisioning\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\AuditLogs\Provisioning\Item\ProvisioningObjectSummaryItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ProvisioningObjectSummary;
 use Microsoft\Graph\Generated\Models\ProvisioningObjectSummaryCollectionResponse;
@@ -43,6 +44,17 @@ class ProvisioningRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the provisioning property of the microsoft.graph.auditLogRoot entity.
+     * @param string $provisioningObjectSummaryId Unique identifier of the item
+     * @return ProvisioningObjectSummaryItemRequestBuilder
+    */
+    public function byProvisioningObjectSummaryId(string $provisioningObjectSummaryId): ProvisioningObjectSummaryItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['provisioningObjectSummary%2Did'] = $provisioningObjectSummaryId;
+        return new ProvisioningObjectSummaryItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ProvisioningRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

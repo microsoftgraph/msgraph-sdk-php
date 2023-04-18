@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PrintUsageByPrinter;
 use Microsoft\Graph\Generated\Models\PrintUsageByPrinterCollectionResponse;
 use Microsoft\Graph\Generated\Reports\DailyPrintUsageByPrinter\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Reports\DailyPrintUsageByPrinter\Item\PrintUsageByPrinterItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class DailyPrintUsageByPrinterRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the dailyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity.
+     * @param string $printUsageByPrinterId Unique identifier of the item
+     * @return PrintUsageByPrinterItemRequestBuilder
+    */
+    public function byPrintUsageByPrinterId(string $printUsageByPrinterId): PrintUsageByPrinterItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['printUsageByPrinter%2Did'] = $printUsageByPrinterId;
+        return new PrintUsageByPrinterItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new DailyPrintUsageByPrinterRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

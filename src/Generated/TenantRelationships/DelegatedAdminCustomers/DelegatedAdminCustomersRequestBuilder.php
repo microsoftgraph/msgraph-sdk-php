@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\DelegatedAdminCustomer;
 use Microsoft\Graph\Generated\Models\DelegatedAdminCustomerCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminCustomers\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminCustomers\Item\DelegatedAdminCustomerItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class DelegatedAdminCustomersRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the delegatedAdminCustomers property of the microsoft.graph.tenantRelationship entity.
+     * @param string $delegatedAdminCustomerId Unique identifier of the item
+     * @return DelegatedAdminCustomerItemRequestBuilder
+    */
+    public function byDelegatedAdminCustomerId(string $delegatedAdminCustomerId): DelegatedAdminCustomerItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['delegatedAdminCustomer%2Did'] = $delegatedAdminCustomerId;
+        return new DelegatedAdminCustomerItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new DelegatedAdminCustomersRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

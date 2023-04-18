@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Agreements\Item\Files\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Agreements\Item\Files\Item\AgreementFileLocalizationItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\AgreementFileLocalization;
 use Microsoft\Graph\Generated\Models\AgreementFileLocalizationCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class FilesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the files property of the microsoft.graph.agreement entity.
+     * @param string $agreementFileLocalizationId Unique identifier of the item
+     * @return AgreementFileLocalizationItemRequestBuilder
+    */
+    public function byAgreementFileLocalizationId(string $agreementFileLocalizationId): AgreementFileLocalizationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['agreementFileLocalization%2Did'] = $agreementFileLocalizationId;
+        return new AgreementFileLocalizationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new FilesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

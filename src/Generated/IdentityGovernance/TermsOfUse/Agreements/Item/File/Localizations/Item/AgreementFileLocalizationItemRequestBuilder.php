@@ -5,7 +5,6 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Ite
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\File\Localizations\Item\Versions\Item\AgreementFileVersionItemRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Item\File\Localizations\Item\Versions\VersionsRequestBuilder;
 use Microsoft\Graph\Generated\Models\AgreementFileLocalization;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -181,17 +180,6 @@ class AgreementFileLocalizationItemRequestBuilder
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
-    }
-
-    /**
-     * Provides operations to manage the versions property of the microsoft.graph.agreementFileLocalization entity.
-     * @param string $id Unique identifier of the item
-     * @return AgreementFileVersionItemRequestBuilder
-    */
-    public function versionsById(string $id): AgreementFileVersionItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['agreementFileVersion%2Did'] = $id;
-        return new AgreementFileVersionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

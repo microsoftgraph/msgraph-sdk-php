@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SwapShiftsChangeRequest;
 use Microsoft\Graph\Generated\Models\SwapShiftsChangeRequestCollectionResponse;
 use Microsoft\Graph\Generated\Teams\Item\Schedule\SwapShiftsChangeRequests\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\Schedule\SwapShiftsChangeRequests\Item\SwapShiftsChangeRequestItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class SwapShiftsChangeRequestsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the swapShiftsChangeRequests property of the microsoft.graph.schedule entity.
+     * @param string $swapShiftsChangeRequestId Unique identifier of the item
+     * @return SwapShiftsChangeRequestItemRequestBuilder
+    */
+    public function bySwapShiftsChangeRequestId(string $swapShiftsChangeRequestId): SwapShiftsChangeRequestItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['swapShiftsChangeRequest%2Did'] = $swapShiftsChangeRequestId;
+        return new SwapShiftsChangeRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SwapShiftsChangeRequestsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

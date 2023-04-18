@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\IosManagedAppProtections\Item\Apps\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\IosManagedAppProtections\Item\Apps\Item\ManagedMobileAppItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ManagedMobileApp;
 use Microsoft\Graph\Generated\Models\ManagedMobileAppCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class AppsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the apps property of the microsoft.graph.iosManagedAppProtection entity.
+     * @param string $managedMobileAppId Unique identifier of the item
+     * @return ManagedMobileAppItemRequestBuilder
+    */
+    public function byManagedMobileAppId(string $managedMobileAppId): ManagedMobileAppItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['managedMobileApp%2Did'] = $managedMobileAppId;
+        return new ManagedMobileAppItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AppsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

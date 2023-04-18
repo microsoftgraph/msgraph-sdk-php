@@ -6,7 +6,6 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews\Item\Issues\IssuesRequestBuilder;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews\Item\Issues\Item\ServiceHealthIssueItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ServiceHealth;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -92,17 +91,6 @@ class ServiceHealthItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the issues property of the microsoft.graph.serviceHealth entity.
-     * @param string $id Unique identifier of the item
-     * @return ServiceHealthIssueItemRequestBuilder
-    */
-    public function issuesById(string $id): ServiceHealthIssueItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['serviceHealthIssue%2Did'] = $id;
-        return new ServiceHealthIssueItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

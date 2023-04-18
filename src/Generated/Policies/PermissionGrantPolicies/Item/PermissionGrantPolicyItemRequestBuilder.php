@@ -84,17 +84,6 @@ class PermissionGrantPolicyItemRequestBuilder
     }
 
     /**
-     * Provides operations to manage the excludes property of the microsoft.graph.permissionGrantPolicy entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Excludes\Item\PermissionGrantConditionSetItemRequestBuilder
-    */
-    public function excludesById(string $id): \Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Excludes\Item\PermissionGrantConditionSetItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['permissionGrantConditionSet%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Excludes\Item\PermissionGrantConditionSetItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * The policy that specifies the conditions under which consent can be granted.
      * @param PermissionGrantPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -110,17 +99,6 @@ class PermissionGrantPolicyItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the includes property of the microsoft.graph.permissionGrantPolicy entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Includes\Item\PermissionGrantConditionSetItemRequestBuilder
-    */
-    public function includesById(string $id): \Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Includes\Item\PermissionGrantConditionSetItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['permissionGrantConditionSet%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Includes\Item\PermissionGrantConditionSetItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

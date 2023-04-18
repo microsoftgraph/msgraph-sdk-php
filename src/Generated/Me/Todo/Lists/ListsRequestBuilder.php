@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Todo\Lists\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Me\Todo\Lists\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Me\Todo\Lists\Item\TodoTaskListItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TodoTaskList;
 use Microsoft\Graph\Generated\Models\TodoTaskListCollectionResponse;
@@ -51,6 +52,17 @@ class ListsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the lists property of the microsoft.graph.todo entity.
+     * @param string $todoTaskListId Unique identifier of the item
+     * @return TodoTaskListItemRequestBuilder
+    */
+    public function byTodoTaskListId(string $todoTaskListId): TodoTaskListItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['todoTaskList%2Did'] = $todoTaskListId;
+        return new TodoTaskListItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ListsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

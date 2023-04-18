@@ -7,18 +7,14 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Events\Item\Accept\AcceptRequestBuilder;
 use Microsoft\Graph\Generated\Me\Events\Item\Attachments\AttachmentsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Events\Item\Attachments\Item\AttachmentItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Events\Item\Calendar\CalendarRequestBuilder;
 use Microsoft\Graph\Generated\Me\Events\Item\Cancel\CancelRequestBuilder;
 use Microsoft\Graph\Generated\Me\Events\Item\Decline\DeclineRequestBuilder;
 use Microsoft\Graph\Generated\Me\Events\Item\DismissReminder\DismissReminderRequestBuilder;
 use Microsoft\Graph\Generated\Me\Events\Item\Extensions\ExtensionsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Events\Item\Extensions\Item\ExtensionItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Events\Item\Forward\ForwardRequestBuilder;
 use Microsoft\Graph\Generated\Me\Events\Item\Instances\InstancesRequestBuilder;
-use Microsoft\Graph\Generated\Me\Events\Item\MultiValueExtendedProperties\Item\MultiValueLegacyExtendedPropertyItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Events\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Me\Events\Item\SingleValueExtendedProperties\Item\SingleValueLegacyExtendedPropertyItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Events\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Me\Events\Item\SnoozeReminder\SnoozeReminderRequestBuilder;
 use Microsoft\Graph\Generated\Me\Events\Item\TentativelyAccept\TentativelyAcceptRequestBuilder;
@@ -143,17 +139,6 @@ class EventItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Provides operations to manage the attachments property of the microsoft.graph.event entity.
-     * @param string $id Unique identifier of the item
-     * @return AttachmentItemRequestBuilder
-    */
-    public function attachmentsById(string $id): AttachmentItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['attachment%2Did'] = $id;
-        return new AttachmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Instantiates a new EventItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -187,17 +172,6 @@ class EventItemRequestBuilder
     }
 
     /**
-     * Provides operations to manage the extensions property of the microsoft.graph.event entity.
-     * @param string $id Unique identifier of the item
-     * @return ExtensionItemRequestBuilder
-    */
-    public function extensionsById(string $id): ExtensionItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['extension%2Did'] = $id;
-        return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
      * @param EventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -213,28 +187,6 @@ class EventItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the instances property of the microsoft.graph.event entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Me\Events\Item\Instances\Item\EventItemRequestBuilder
-    */
-    public function instancesById(string $id): \Microsoft\Graph\Generated\Me\Events\Item\Instances\Item\EventItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['event%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\Me\Events\Item\Instances\Item\EventItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.event entity.
-     * @param string $id Unique identifier of the item
-     * @return MultiValueLegacyExtendedPropertyItemRequestBuilder
-    */
-    public function multiValueExtendedPropertiesById(string $id): MultiValueLegacyExtendedPropertyItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['multiValueLegacyExtendedProperty%2Did'] = $id;
-        return new MultiValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -254,17 +206,6 @@ class EventItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.event entity.
-     * @param string $id Unique identifier of the item
-     * @return SingleValueLegacyExtendedPropertyItemRequestBuilder
-    */
-    public function singleValueExtendedPropertiesById(string $id): SingleValueLegacyExtendedPropertyItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['singleValueLegacyExtendedProperty%2Did'] = $id;
-        return new SingleValueLegacyExtendedPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

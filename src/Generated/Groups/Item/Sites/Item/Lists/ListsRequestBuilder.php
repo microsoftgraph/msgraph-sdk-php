@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\ListItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\EscapedList;
 use Microsoft\Graph\Generated\Models\ListCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class ListsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the lists property of the microsoft.graph.site entity.
+     * @param string $listId Unique identifier of the item
+     * @return ListItemRequestBuilder
+    */
+    public function byListId(string $listId): ListItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['list%2Did'] = $listId;
+        return new ListItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ListsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

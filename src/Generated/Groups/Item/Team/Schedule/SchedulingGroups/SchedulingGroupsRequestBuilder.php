@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\SchedulingGroups\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\SchedulingGroups\Item\SchedulingGroupItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SchedulingGroup;
 use Microsoft\Graph\Generated\Models\SchedulingGroupCollectionResponse;
@@ -43,6 +44,17 @@ class SchedulingGroupsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the schedulingGroups property of the microsoft.graph.schedule entity.
+     * @param string $schedulingGroupId Unique identifier of the item
+     * @return SchedulingGroupItemRequestBuilder
+    */
+    public function bySchedulingGroupId(string $schedulingGroupId): SchedulingGroupItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['schedulingGroup%2Did'] = $schedulingGroupId;
+        return new SchedulingGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SchedulingGroupsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

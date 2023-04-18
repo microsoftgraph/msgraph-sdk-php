@@ -8,9 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TenantRelationship;
 use Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminCustomers\DelegatedAdminCustomersRequestBuilder;
-use Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminCustomers\Item\DelegatedAdminCustomerItemRequestBuilder;
 use Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminRelationships\DelegatedAdminRelationshipsRequestBuilder;
-use Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminRelationships\Item\DelegatedAdminRelationshipItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -65,28 +63,6 @@ class TenantRelationshipsRequestBuilder
         } else {
             $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
         }
-    }
-
-    /**
-     * Provides operations to manage the delegatedAdminCustomers property of the microsoft.graph.tenantRelationship entity.
-     * @param string $id Unique identifier of the item
-     * @return DelegatedAdminCustomerItemRequestBuilder
-    */
-    public function delegatedAdminCustomersById(string $id): DelegatedAdminCustomerItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['delegatedAdminCustomer%2Did'] = $id;
-        return new DelegatedAdminCustomerItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the delegatedAdminRelationships property of the microsoft.graph.tenantRelationship entity.
-     * @param string $id Unique identifier of the item
-     * @return DelegatedAdminRelationshipItemRequestBuilder
-    */
-    public function delegatedAdminRelationshipsById(string $id): DelegatedAdminRelationshipItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['delegatedAdminRelationship%2Did'] = $id;
-        return new DelegatedAdminRelationshipItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

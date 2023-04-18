@@ -8,7 +8,6 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ChatMessage;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item\Messages\Item\Replies\Item\HostedContents\HostedContentsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item\Messages\Item\Replies\Item\HostedContents\Item\ChatMessageHostedContentItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item\Messages\Item\Replies\Item\SoftDelete\SoftDeleteRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Channels\Item\Messages\Item\Replies\Item\UndoSoftDelete\UndoSoftDeleteRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -108,17 +107,6 @@ class ChatMessageItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the hostedContents property of the microsoft.graph.chatMessage entity.
-     * @param string $id Unique identifier of the item
-     * @return ChatMessageHostedContentItemRequestBuilder
-    */
-    public function hostedContentsById(string $id): ChatMessageHostedContentItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['chatMessageHostedContent%2Did'] = $id;
-        return new ChatMessageHostedContentItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

@@ -39,11 +39,12 @@ class MessageItemRequestBuilderGetRequestConfiguration
     /**
      * Instantiates a new MessageItemRequestBuilderGetQueryParameters.
      * @param array<string>|null $expand Expand related entities
+     * @param string|null $includeHiddenMessages Include Hidden Messages
      * @param array<string>|null $select Select properties to be returned
      * @return MessageItemRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?array $expand = null, ?array $select = null): MessageItemRequestBuilderGetQueryParameters {
-        return new MessageItemRequestBuilderGetQueryParameters($expand, $select);
+    public static function createQueryParameters(?array $expand = null, ?string $includeHiddenMessages = null, ?array $select = null): MessageItemRequestBuilderGetQueryParameters {
+        return new MessageItemRequestBuilderGetQueryParameters($expand, $includeHiddenMessages, $select);
     }
 
 }

@@ -5,7 +5,6 @@ namespace Microsoft\Graph\Generated\Groups\Item\Planner;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Planner\Plans\Item\PlannerPlanItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Planner\Plans\PlansRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PlannerGroup;
@@ -111,17 +110,6 @@ class PlannerRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the plans property of the microsoft.graph.plannerGroup entity.
-     * @param string $id Unique identifier of the item
-     * @return PlannerPlanItemRequestBuilder
-    */
-    public function plansById(string $id): PlannerPlanItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['plannerPlan%2Did'] = $id;
-        return new PlannerPlanItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

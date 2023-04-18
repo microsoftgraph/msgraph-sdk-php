@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\AuthenticationMethod;
 use Microsoft\Graph\Generated\Models\AuthenticationMethodCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\Authentication\Methods\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Authentication\Methods\Item\AuthenticationMethodItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class MethodsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the methods property of the microsoft.graph.authentication entity.
+     * @param string $authenticationMethodId Unique identifier of the item
+     * @return AuthenticationMethodItemRequestBuilder
+    */
+    public function byAuthenticationMethodId(string $authenticationMethodId): AuthenticationMethodItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['authenticationMethod%2Did'] = $authenticationMethodId;
+        return new AuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new MethodsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

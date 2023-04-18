@@ -8,6 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Names\Add\AddRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Names\AddFormulaLocal\AddFormulaLocalRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Names\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Names\Item\WorkbookNamedItemItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookNamedItem;
 use Microsoft\Graph\Generated\Models\WorkbookNamedItemCollectionResponse;
@@ -60,6 +61,17 @@ class NamesRequestBuilder
     private string $urlTemplate;
     
     /**
+     * Provides operations to manage the names property of the microsoft.graph.workbook entity.
+     * @param string $workbookNamedItemId Unique identifier of the item
+     * @return WorkbookNamedItemItemRequestBuilder
+    */
+    public function byWorkbookNamedItemId(string $workbookNamedItemId): WorkbookNamedItemItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['workbookNamedItem%2Did'] = $workbookNamedItemId;
+        return new WorkbookNamedItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
+    /**
      * Instantiates a new NamesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -78,7 +90,7 @@ class NamesRequestBuilder
      * Retrieve a list of nameditem objects.
      * @param NamesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/nameditem-list?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/workbook-list-names?view=graph-rest-1.0 Find more info here
     */
     public function get(?NamesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

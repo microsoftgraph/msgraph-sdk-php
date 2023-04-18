@@ -8,7 +8,6 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TermStore\Term;
 use Microsoft\Graph\Generated\Sites\Item\TermStore\Groups\Item\Sets\Item\Terms\Item\Children\ChildrenRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\TermStore\Groups\Item\Sets\Item\Terms\Item\Relations\Item\RelationItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\TermStore\Groups\Item\Sets\Item\Terms\Item\Relations\RelationsRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\TermStore\Groups\Item\Sets\Item\Terms\Item\Set\SetRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -59,17 +58,6 @@ class TermItemRequestBuilder
     */
     private string $urlTemplate;
     
-    /**
-     * Provides operations to manage the children property of the microsoft.graph.termStore.term entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Sites\Item\TermStore\Groups\Item\Sets\Item\Terms\Item\Children\Item\TermItemRequestBuilder
-    */
-    public function childrenById(string $id): \Microsoft\Graph\Generated\Sites\Item\TermStore\Groups\Item\Sets\Item\Terms\Item\Children\Item\TermItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['term%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\Sites\Item\TermStore\Groups\Item\Sets\Item\Terms\Item\Children\Item\TermItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
     /**
      * Instantiates a new TermItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
@@ -138,17 +126,6 @@ class TermItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the relations property of the microsoft.graph.termStore.term entity.
-     * @param string $id Unique identifier of the item
-     * @return RelationItemRequestBuilder
-    */
-    public function relationsById(string $id): RelationItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['relation%2Did'] = $id;
-        return new RelationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

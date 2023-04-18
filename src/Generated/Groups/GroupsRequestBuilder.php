@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Groups\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Groups\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\GroupItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\Group;
 use Microsoft\Graph\Generated\Models\GroupCollectionResponse;
@@ -75,6 +76,17 @@ class GroupsRequestBuilder
         return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * Provides operations to manage the collection of group entities.
+     * @param string $groupId Unique identifier of the item
+     * @return GroupItemRequestBuilder
+    */
+    public function byGroupId(string $groupId): GroupItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['group%2Did'] = $groupId;
+        return new GroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new GroupsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

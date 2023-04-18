@@ -8,8 +8,6 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TodoTaskList;
 use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Extensions\ExtensionsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Extensions\Item\ExtensionItemRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\TodoTaskItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\TasksRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -86,17 +84,6 @@ class TodoTaskListItemRequestBuilder
     }
 
     /**
-     * Provides operations to manage the extensions property of the microsoft.graph.todoTaskList entity.
-     * @param string $id Unique identifier of the item
-     * @return ExtensionItemRequestBuilder
-    */
-    public function extensionsById(string $id): ExtensionItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['extension%2Did'] = $id;
-        return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * The task lists in the users mailbox.
      * @param TodoTaskListItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -131,17 +118,6 @@ class TodoTaskListItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the tasks property of the microsoft.graph.todoTaskList entity.
-     * @param string $id Unique identifier of the item
-     * @return TodoTaskItemRequestBuilder
-    */
-    public function tasksById(string $id): TodoTaskItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['todoTask%2Did'] = $id;
-        return new TodoTaskItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

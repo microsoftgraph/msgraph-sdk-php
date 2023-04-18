@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Columns\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Columns\Item\ColumnDefinitionItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ColumnDefinition;
 use Microsoft\Graph\Generated\Models\ColumnDefinitionCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class ColumnsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the columns property of the microsoft.graph.list entity.
+     * @param string $columnDefinitionId Unique identifier of the item
+     * @return ColumnDefinitionItemRequestBuilder
+    */
+    public function byColumnDefinitionId(string $columnDefinitionId): ColumnDefinitionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['columnDefinition%2Did'] = $columnDefinitionId;
+        return new ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ColumnsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

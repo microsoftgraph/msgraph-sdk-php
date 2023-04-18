@@ -10,6 +10,7 @@ use Microsoft\Graph\Generated\Models\ChatMessageCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\Channels\Item\Messages\Item\Replies\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\Channels\Item\Messages\Item\Replies\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Teamwork\DeletedTeams\Item\Channels\Item\Messages\Item\Replies\Item\ChatMessageItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -52,6 +53,17 @@ class RepliesRequestBuilder
     private string $urlTemplate;
     
     /**
+     * Provides operations to manage the replies property of the microsoft.graph.chatMessage entity.
+     * @param string $chatMessageId1 Unique identifier of the item
+     * @return ChatMessageItemRequestBuilder
+    */
+    public function byChatMessageId1(string $chatMessageId1): ChatMessageItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['chatMessage%2Did1'] = $chatMessageId1;
+        return new ChatMessageItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
+    /**
      * Instantiates a new RepliesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -86,11 +98,11 @@ class RepliesRequestBuilder
     }
 
     /**
-     * Send a new reply to a chatMessage in a specified channel.
+     * Create a new reply to a chatMessage in a specified channel.
      * @param ChatMessage $body The request body
      * @param RepliesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/chatmessage-post-replies?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0 Find more info here
     */
     public function post(ChatMessage $body, ?RepliesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -131,7 +143,7 @@ class RepliesRequestBuilder
     }
 
     /**
-     * Send a new reply to a chatMessage in a specified channel.
+     * Create a new reply to a chatMessage in a specified channel.
      * @param ChatMessage $body The request body
      * @param RepliesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

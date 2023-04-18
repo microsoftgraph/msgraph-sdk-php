@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Applications\Item\AppManagementPolicies\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\AppManagementPolicies\Item\AppManagementPolicyItemRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\AppManagementPolicies\Ref\RefRequestBuilder;
 use Microsoft\Graph\Generated\Models\AppManagementPolicyCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -50,6 +51,17 @@ class AppManagementPoliciesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Gets an item from the Microsoft/Graph/Generated.applications.item.appManagementPolicies.item collection
+     * @param string $appManagementPolicyId Unique identifier of the item
+     * @return AppManagementPolicyItemRequestBuilder
+    */
+    public function byAppManagementPolicyId(string $appManagementPolicyId): AppManagementPolicyItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['appManagementPolicy%2Did'] = $appManagementPolicyId;
+        return new AppManagementPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AppManagementPoliciesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Item\Attachments\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Item\Attachments\Item\ServiceAnnouncementAttachmentItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ServiceAnnouncementAttachment;
 use Microsoft\Graph\Generated\Models\ServiceAnnouncementAttachmentCollectionResponse;
@@ -43,6 +44,17 @@ class AttachmentsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the attachments property of the microsoft.graph.serviceUpdateMessage entity.
+     * @param string $serviceAnnouncementAttachmentId Unique identifier of the item
+     * @return ServiceAnnouncementAttachmentItemRequestBuilder
+    */
+    public function byServiceAnnouncementAttachmentId(string $serviceAnnouncementAttachmentId): ServiceAnnouncementAttachmentItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['serviceAnnouncementAttachment%2Did'] = $serviceAnnouncementAttachmentId;
+        return new ServiceAnnouncementAttachmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AttachmentsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

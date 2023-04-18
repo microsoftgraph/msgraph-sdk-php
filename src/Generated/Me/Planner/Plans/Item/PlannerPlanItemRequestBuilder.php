@@ -6,9 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Planner\Plans\Item\Buckets\BucketsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Planner\Plans\Item\Buckets\Item\PlannerBucketItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Planner\Plans\Item\Details\DetailsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Planner\Plans\Item\Tasks\Item\PlannerTaskItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Planner\Plans\Item\Tasks\TasksRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PlannerPlan;
@@ -60,17 +58,6 @@ class PlannerPlanItemRequestBuilder
     */
     private string $urlTemplate;
     
-    /**
-     * Provides operations to manage the buckets property of the microsoft.graph.plannerPlan entity.
-     * @param string $id Unique identifier of the item
-     * @return PlannerBucketItemRequestBuilder
-    */
-    public function bucketsById(string $id): PlannerBucketItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['plannerBucket%2Did'] = $id;
-        return new PlannerBucketItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
     /**
      * Instantiates a new PlannerPlanItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
@@ -139,17 +126,6 @@ class PlannerPlanItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the tasks property of the microsoft.graph.plannerPlan entity.
-     * @param string $id Unique identifier of the item
-     * @return PlannerTaskItemRequestBuilder
-    */
-    public function tasksById(string $id): PlannerTaskItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['plannerTask%2Did'] = $id;
-        return new PlannerTaskItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

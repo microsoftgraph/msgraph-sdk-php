@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Localizations\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Localizations\Item\OrganizationalBrandingLocalizationItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OrganizationalBrandingLocalization;
 use Microsoft\Graph\Generated\Models\OrganizationalBrandingLocalizationCollectionResponse;
@@ -43,6 +44,17 @@ class LocalizationsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the collection of organizationalBrandingLocalization entities.
+     * @param string $organizationalBrandingLocalizationId Unique identifier of the item
+     * @return OrganizationalBrandingLocalizationItemRequestBuilder
+    */
+    public function byOrganizationalBrandingLocalizationId(string $organizationalBrandingLocalizationId): OrganizationalBrandingLocalizationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['organizationalBrandingLocalization%2Did'] = $organizationalBrandingLocalizationId;
+        return new OrganizationalBrandingLocalizationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new LocalizationsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

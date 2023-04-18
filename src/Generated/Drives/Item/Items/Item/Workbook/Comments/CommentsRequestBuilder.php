@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Comments\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Comments\Item\WorkbookCommentItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookComment;
 use Microsoft\Graph\Generated\Models\WorkbookCommentCollectionResponse;
@@ -43,6 +44,17 @@ class CommentsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the comments property of the microsoft.graph.workbook entity.
+     * @param string $workbookCommentId Unique identifier of the item
+     * @return WorkbookCommentItemRequestBuilder
+    */
+    public function byWorkbookCommentId(string $workbookCommentId): WorkbookCommentItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['workbookComment%2Did'] = $workbookCommentId;
+        return new WorkbookCommentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new CommentsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

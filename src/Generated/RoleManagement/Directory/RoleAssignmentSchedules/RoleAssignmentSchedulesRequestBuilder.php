@@ -10,6 +10,7 @@ use Microsoft\Graph\Generated\Models\UnifiedRoleAssignmentSchedule;
 use Microsoft\Graph\Generated\Models\UnifiedRoleAssignmentScheduleCollectionResponse;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentSchedules\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentSchedules\FilterByCurrentUserWithOn\FilterByCurrentUserWithOnRequestBuilder;
+use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentSchedules\Item\UnifiedRoleAssignmentScheduleItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -44,6 +45,17 @@ class RoleAssignmentSchedulesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the roleAssignmentSchedules property of the microsoft.graph.rbacApplication entity.
+     * @param string $unifiedRoleAssignmentScheduleId Unique identifier of the item
+     * @return UnifiedRoleAssignmentScheduleItemRequestBuilder
+    */
+    public function byUnifiedRoleAssignmentScheduleId(string $unifiedRoleAssignmentScheduleId): UnifiedRoleAssignmentScheduleItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['unifiedRoleAssignmentSchedule%2Did'] = $unifiedRoleAssignmentScheduleId;
+        return new UnifiedRoleAssignmentScheduleItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new RoleAssignmentSchedulesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

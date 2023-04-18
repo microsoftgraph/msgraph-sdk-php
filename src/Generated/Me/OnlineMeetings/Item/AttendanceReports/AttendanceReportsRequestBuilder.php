@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\OnlineMeetings\Item\AttendanceReports\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\OnlineMeetings\Item\AttendanceReports\Item\MeetingAttendanceReportItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\MeetingAttendanceReport;
 use Microsoft\Graph\Generated\Models\MeetingAttendanceReportCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class AttendanceReportsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the attendanceReports property of the microsoft.graph.onlineMeeting entity.
+     * @param string $meetingAttendanceReportId Unique identifier of the item
+     * @return MeetingAttendanceReportItemRequestBuilder
+    */
+    public function byMeetingAttendanceReportId(string $meetingAttendanceReportId): MeetingAttendanceReportItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['meetingAttendanceReport%2Did'] = $meetingAttendanceReportId;
+        return new MeetingAttendanceReportItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AttendanceReportsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

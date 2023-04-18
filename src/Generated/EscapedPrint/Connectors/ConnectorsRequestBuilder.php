@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\EscapedPrint\Connectors\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\EscapedPrint\Connectors\Item\PrintConnectorItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PrintConnector;
 use Microsoft\Graph\Generated\Models\PrintConnectorCollectionResponse;
@@ -43,6 +44,17 @@ class ConnectorsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the connectors property of the microsoft.graph.print entity.
+     * @param string $printConnectorId Unique identifier of the item
+     * @return PrintConnectorItemRequestBuilder
+    */
+    public function byPrintConnectorId(string $printConnectorId): PrintConnectorItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['printConnector%2Did'] = $printConnectorId;
+        return new PrintConnectorItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ConnectorsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

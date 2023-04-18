@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\TaskTriggers\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\TaskTriggers\Item\PrintTaskTriggerItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PrintTaskTrigger;
 use Microsoft\Graph\Generated\Models\PrintTaskTriggerCollectionResponse;
@@ -43,6 +44,17 @@ class TaskTriggersRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the taskTriggers property of the microsoft.graph.printer entity.
+     * @param string $printTaskTriggerId Unique identifier of the item
+     * @return PrintTaskTriggerItemRequestBuilder
+    */
+    public function byPrintTaskTriggerId(string $printTaskTriggerId): PrintTaskTriggerItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['printTaskTrigger%2Did'] = $printTaskTriggerId;
+        return new PrintTaskTriggerItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new TaskTriggersRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

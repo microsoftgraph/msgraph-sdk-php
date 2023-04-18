@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\FeatureRolloutPolicy;
 use Microsoft\Graph\Generated\Models\FeatureRolloutPolicyCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Policies\FeatureRolloutPolicies\Item\FeatureRolloutPolicyItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class FeatureRolloutPoliciesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the featureRolloutPolicies property of the microsoft.graph.policyRoot entity.
+     * @param string $featureRolloutPolicyId Unique identifier of the item
+     * @return FeatureRolloutPolicyItemRequestBuilder
+    */
+    public function byFeatureRolloutPolicyId(string $featureRolloutPolicyId): FeatureRolloutPolicyItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['featureRolloutPolicy%2Did'] = $featureRolloutPolicyId;
+        return new FeatureRolloutPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new FeatureRolloutPoliciesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

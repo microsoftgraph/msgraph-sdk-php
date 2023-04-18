@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Insights\Trending\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\Insights\Trending\Item\TrendingItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Trending;
 use Microsoft\Graph\Generated\Models\TrendingCollectionResponse;
@@ -43,6 +44,17 @@ class TrendingRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the trending property of the microsoft.graph.officeGraphInsights entity.
+     * @param string $trendingId Unique identifier of the item
+     * @return TrendingItemRequestBuilder
+    */
+    public function byTrendingId(string $trendingId): TrendingItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['trending%2Did'] = $trendingId;
+        return new TrendingItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new TrendingRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\DirectoryRoleTemplates\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\DirectoryRoleTemplates\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\DirectoryRoleTemplates\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\DirectoryRoleTemplates\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\DirectoryRoleTemplates\Item\DirectoryRoleTemplateItemRequestBuilder;
 use Microsoft\Graph\Generated\DirectoryRoleTemplates\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryRoleTemplate;
 use Microsoft\Graph\Generated\Models\DirectoryRoleTemplateCollectionResponse;
@@ -75,6 +76,17 @@ class DirectoryRoleTemplatesRequestBuilder
         return new ValidatePropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
+    /**
+     * Provides operations to manage the collection of directoryRoleTemplate entities.
+     * @param string $directoryRoleTemplateId Unique identifier of the item
+     * @return DirectoryRoleTemplateItemRequestBuilder
+    */
+    public function byDirectoryRoleTemplateId(string $directoryRoleTemplateId): DirectoryRoleTemplateItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['directoryRoleTemplate%2Did'] = $directoryRoleTemplateId;
+        return new DirectoryRoleTemplateItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new DirectoryRoleTemplatesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

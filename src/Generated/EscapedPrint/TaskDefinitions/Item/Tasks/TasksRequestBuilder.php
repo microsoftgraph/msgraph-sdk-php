@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\EscapedPrint\TaskDefinitions\Item\Tasks\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\EscapedPrint\TaskDefinitions\Item\Tasks\Item\PrintTaskItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PrintTask;
 use Microsoft\Graph\Generated\Models\PrintTaskCollectionResponse;
@@ -43,6 +44,17 @@ class TasksRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the tasks property of the microsoft.graph.printTaskDefinition entity.
+     * @param string $printTaskId Unique identifier of the item
+     * @return PrintTaskItemRequestBuilder
+    */
+    public function byPrintTaskId(string $printTaskId): PrintTaskItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['printTask%2Did'] = $printTaskId;
+        return new PrintTaskItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new TasksRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

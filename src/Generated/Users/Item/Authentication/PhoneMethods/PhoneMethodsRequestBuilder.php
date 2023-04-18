@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PhoneAuthenticationMethod;
 use Microsoft\Graph\Generated\Models\PhoneAuthenticationMethodCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\Authentication\PhoneMethods\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Authentication\PhoneMethods\Item\PhoneAuthenticationMethodItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class PhoneMethodsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the phoneMethods property of the microsoft.graph.authentication entity.
+     * @param string $phoneAuthenticationMethodId Unique identifier of the item
+     * @return PhoneAuthenticationMethodItemRequestBuilder
+    */
+    public function byPhoneAuthenticationMethodId(string $phoneAuthenticationMethodId): PhoneAuthenticationMethodItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['phoneAuthenticationMethod%2Did'] = $phoneAuthenticationMethodId;
+        return new PhoneAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new PhoneMethodsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

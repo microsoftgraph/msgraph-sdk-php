@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Invitations\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Invitations\Item\InvitationItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\Invitation;
 use Microsoft\Graph\Generated\Models\InvitationCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class InvitationsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the collection of invitation entities.
+     * @param string $invitationId Unique identifier of the item
+     * @return InvitationItemRequestBuilder
+    */
+    public function byInvitationId(string $invitationId): InvitationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['invitation%2Did'] = $invitationId;
+        return new InvitationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new InvitationsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

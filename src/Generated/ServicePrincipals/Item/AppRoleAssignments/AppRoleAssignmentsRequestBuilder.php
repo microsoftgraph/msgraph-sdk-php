@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\AppRoleAssignment;
 use Microsoft\Graph\Generated\Models\AppRoleAssignmentCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\AppRoleAssignments\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\AppRoleAssignments\Item\AppRoleAssignmentItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class AppRoleAssignmentsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the appRoleAssignments property of the microsoft.graph.servicePrincipal entity.
+     * @param string $appRoleAssignmentId Unique identifier of the item
+     * @return AppRoleAssignmentItemRequestBuilder
+    */
+    public function byAppRoleAssignmentId(string $appRoleAssignmentId): AppRoleAssignmentItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['appRoleAssignment%2Did'] = $appRoleAssignmentId;
+        return new AppRoleAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AppRoleAssignmentsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

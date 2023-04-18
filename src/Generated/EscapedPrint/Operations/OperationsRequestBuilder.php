@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\EscapedPrint\Operations\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\EscapedPrint\Operations\Item\PrintOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PrintOperation;
 use Microsoft\Graph\Generated\Models\PrintOperationCollectionResponse;
@@ -43,6 +44,17 @@ class OperationsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.print entity.
+     * @param string $printOperationId Unique identifier of the item
+     * @return PrintOperationItemRequestBuilder
+    */
+    public function byPrintOperationId(string $printOperationId): PrintOperationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['printOperation%2Did'] = $printOperationId;
+        return new PrintOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new OperationsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

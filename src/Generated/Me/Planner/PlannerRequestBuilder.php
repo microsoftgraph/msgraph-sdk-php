@@ -5,9 +5,7 @@ namespace Microsoft\Graph\Generated\Me\Planner;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Me\Planner\Plans\Item\PlannerPlanItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Planner\Plans\PlansRequestBuilder;
-use Microsoft\Graph\Generated\Me\Planner\Tasks\Item\PlannerTaskItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Planner\Tasks\TasksRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PlannerUser;
@@ -120,28 +118,6 @@ class PlannerRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the plans property of the microsoft.graph.plannerUser entity.
-     * @param string $id Unique identifier of the item
-     * @return PlannerPlanItemRequestBuilder
-    */
-    public function plansById(string $id): PlannerPlanItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['plannerPlan%2Did'] = $id;
-        return new PlannerPlanItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the tasks property of the microsoft.graph.plannerUser entity.
-     * @param string $id Unique identifier of the item
-     * @return PlannerTaskItemRequestBuilder
-    */
-    public function tasksById(string $id): PlannerTaskItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['plannerTask%2Did'] = $id;
-        return new PlannerTaskItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

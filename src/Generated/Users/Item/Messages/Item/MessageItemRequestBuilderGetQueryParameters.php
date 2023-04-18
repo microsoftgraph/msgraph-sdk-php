@@ -16,6 +16,11 @@ class MessageItemRequestBuilderGetQueryParameters
     public ?array $expand = null;
     
     /**
+     * @var string|null $includeHiddenMessages Include Hidden Messages
+    */
+    public ?string $includeHiddenMessages = null;
+    
+    /**
      * @QueryParameter("%24select")
      * @var array<string>|null $select Select properties to be returned
     */
@@ -24,10 +29,12 @@ class MessageItemRequestBuilderGetQueryParameters
     /**
      * Instantiates a new MessageItemRequestBuilderGetQueryParameters and sets the default values.
      * @param array<string>|null $expand Expand related entities
+     * @param string|null $includeHiddenMessages Include Hidden Messages
      * @param array<string>|null $select Select properties to be returned
     */
-    public function __construct(?array $expand = null, ?array $select = null) {
+    public function __construct(?array $expand = null, ?string $includeHiddenMessages = null, ?array $select = null) {
         $this->expand = $expand;
+        $this->includeHiddenMessages = $includeHiddenMessages;
         $this->select = $select;
     }
 

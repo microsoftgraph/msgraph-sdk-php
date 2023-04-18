@@ -8,6 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\AuditEvents\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\AuditEvents\GetAuditActivityTypesWithCategory\GetAuditActivityTypesWithCategoryRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\AuditEvents\GetAuditCategories\GetAuditCategoriesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\AuditEvents\Item\AuditEventItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\AuditEvent;
 use Microsoft\Graph\Generated\Models\AuditEventCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -52,6 +53,17 @@ class AuditEventsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the auditEvents property of the microsoft.graph.deviceManagement entity.
+     * @param string $auditEventId Unique identifier of the item
+     * @return AuditEventItemRequestBuilder
+    */
+    public function byAuditEventId(string $auditEventId): AuditEventItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['auditEvent%2Did'] = $auditEventId;
+        return new AuditEventItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AuditEventsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

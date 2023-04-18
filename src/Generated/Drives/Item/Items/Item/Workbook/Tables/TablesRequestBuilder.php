@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Add\AddRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\WorkbookTableItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\ItemAtWithIndex\ItemAtWithIndexRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookTable;
@@ -52,6 +53,17 @@ class TablesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the tables property of the microsoft.graph.workbook entity.
+     * @param string $workbookTableId Unique identifier of the item
+     * @return WorkbookTableItemRequestBuilder
+    */
+    public function byWorkbookTableId(string $workbookTableId): WorkbookTableItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['workbookTable%2Did'] = $workbookTableId;
+        return new WorkbookTableItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new TablesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

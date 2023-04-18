@@ -5,7 +5,6 @@ namespace Microsoft\Graph\Generated\InformationProtection\Bitlocker;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\InformationProtection\Bitlocker\RecoveryKeys\Item\BitlockerRecoveryKeyItemRequestBuilder;
 use Microsoft\Graph\Generated\InformationProtection\Bitlocker\RecoveryKeys\RecoveryKeysRequestBuilder;
 use Microsoft\Graph\Generated\Models\Bitlocker;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -74,17 +73,6 @@ class BitlockerRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the recoveryKeys property of the microsoft.graph.bitlocker entity.
-     * @param string $id Unique identifier of the item
-     * @return BitlockerRecoveryKeyItemRequestBuilder
-    */
-    public function recoveryKeysById(string $id): BitlockerRecoveryKeyItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['bitlockerRecoveryKey%2Did'] = $id;
-        return new BitlockerRecoveryKeyItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

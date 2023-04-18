@@ -7,8 +7,6 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Schools\Item\AdministrativeUnit\AdministrativeUnitRequestBuilder;
 use Microsoft\Graph\Generated\Education\Schools\Item\Classes\ClassesRequestBuilder;
-use Microsoft\Graph\Generated\Education\Schools\Item\Classes\Item\EducationClassItemRequestBuilder;
-use Microsoft\Graph\Generated\Education\Schools\Item\Users\Item\EducationUserItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Schools\Item\Users\UsersRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationSchool;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -60,17 +58,6 @@ class EducationSchoolItemRequestBuilder
         return new UsersRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
-    /**
-     * Gets an item from the Microsoft/Graph/Generated.education.schools.item.classes.item collection
-     * @param string $id Unique identifier of the item
-     * @return EducationClassItemRequestBuilder
-    */
-    public function classesById(string $id): EducationClassItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['educationClass%2Did'] = $id;
-        return new EducationClassItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
     /**
      * Instantiates a new EducationSchoolItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
@@ -209,17 +196,6 @@ class EducationSchoolItemRequestBuilder
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
-    }
-
-    /**
-     * Gets an item from the Microsoft/Graph/Generated.education.schools.item.users.item collection
-     * @param string $id Unique identifier of the item
-     * @return EducationUserItemRequestBuilder
-    */
-    public function usersById(string $id): EducationUserItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['educationUser%2Did'] = $id;
-        return new EducationUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

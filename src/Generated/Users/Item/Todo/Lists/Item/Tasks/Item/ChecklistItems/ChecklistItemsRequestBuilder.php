@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ChecklistItem;
 use Microsoft\Graph\Generated\Models\ChecklistItemCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\ChecklistItems\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\ChecklistItems\Item\ChecklistItemItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -44,6 +45,17 @@ class ChecklistItemsRequestBuilder
     private string $urlTemplate;
     
     /**
+     * Provides operations to manage the checklistItems property of the microsoft.graph.todoTask entity.
+     * @param string $checklistItemId Unique identifier of the item
+     * @return ChecklistItemItemRequestBuilder
+    */
+    public function byChecklistItemId(string $checklistItemId): ChecklistItemItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['checklistItem%2Did'] = $checklistItemId;
+        return new ChecklistItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
+    /**
      * Instantiates a new ChecklistItemsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -59,9 +71,10 @@ class ChecklistItemsRequestBuilder
     }
 
     /**
-     * A collection of checklistItems linked to a task.
+     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property.
      * @param ChecklistItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/todotask-list-checklistitems?view=graph-rest-1.0 Find more info here
     */
     public function get(?ChecklistItemsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -77,10 +90,11 @@ class ChecklistItemsRequestBuilder
     }
 
     /**
-     * Create new navigation property to checklistItems for users
+     * Create a new checklistItem object.
      * @param ChecklistItem $body The request body
      * @param ChecklistItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/todotask-post-checklistitems?view=graph-rest-1.0 Find more info here
     */
     public function post(ChecklistItem $body, ?ChecklistItemsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -96,7 +110,7 @@ class ChecklistItemsRequestBuilder
     }
 
     /**
-     * A collection of checklistItems linked to a task.
+     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property.
      * @param ChecklistItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +135,7 @@ class ChecklistItemsRequestBuilder
     }
 
     /**
-     * Create new navigation property to checklistItems for users
+     * Create a new checklistItem object.
      * @param ChecklistItem $body The request body
      * @param ChecklistItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Photos\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Photos\Item\ProfilePhotoItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ProfilePhotoCollectionResponse;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -42,6 +43,17 @@ class PhotosRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the photos property of the microsoft.graph.group entity.
+     * @param string $profilePhotoId Unique identifier of the item
+     * @return ProfilePhotoItemRequestBuilder
+    */
+    public function byProfilePhotoId(string $profilePhotoId): ProfilePhotoItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['profilePhoto%2Did'] = $profilePhotoId;
+        return new ProfilePhotoItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new PhotosRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

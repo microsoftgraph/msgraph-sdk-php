@@ -8,10 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\DelegatedAdminRelationship;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminRelationships\Item\AccessAssignments\AccessAssignmentsRequestBuilder;
-use Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminRelationships\Item\AccessAssignments\Item\DelegatedAdminAccessAssignmentItemRequestBuilder;
-use Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminRelationships\Item\Operations\Item\DelegatedAdminRelationshipOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminRelationships\Item\Operations\OperationsRequestBuilder;
-use Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminRelationships\Item\Requests\Item\DelegatedAdminRelationshipRequestItemRequestBuilder;
 use Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminRelationships\Item\Requests\RequestsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -61,17 +58,6 @@ class DelegatedAdminRelationshipItemRequestBuilder
     */
     private string $urlTemplate;
     
-    /**
-     * Provides operations to manage the accessAssignments property of the microsoft.graph.delegatedAdminRelationship entity.
-     * @param string $id Unique identifier of the item
-     * @return DelegatedAdminAccessAssignmentItemRequestBuilder
-    */
-    public function accessAssignmentsById(string $id): DelegatedAdminAccessAssignmentItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['delegatedAdminAccessAssignment%2Did'] = $id;
-        return new DelegatedAdminAccessAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
     /**
      * Instantiates a new DelegatedAdminRelationshipItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
@@ -124,17 +110,6 @@ class DelegatedAdminRelationshipItemRequestBuilder
     }
 
     /**
-     * Provides operations to manage the operations property of the microsoft.graph.delegatedAdminRelationship entity.
-     * @param string $id Unique identifier of the item
-     * @return DelegatedAdminRelationshipOperationItemRequestBuilder
-    */
-    public function operationsById(string $id): DelegatedAdminRelationshipOperationItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['delegatedAdminRelationshipOperation%2Did'] = $id;
-        return new DelegatedAdminRelationshipOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Update the navigation property delegatedAdminRelationships in tenantRelationships
      * @param DelegatedAdminRelationship $body The request body
      * @param DelegatedAdminRelationshipItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
@@ -151,17 +126,6 @@ class DelegatedAdminRelationshipItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the requests property of the microsoft.graph.delegatedAdminRelationship entity.
-     * @param string $id Unique identifier of the item
-     * @return DelegatedAdminRelationshipRequestItemRequestBuilder
-    */
-    public function requestsById(string $id): DelegatedAdminRelationshipRequestItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['delegatedAdminRelationshipRequest%2Did'] = $id;
-        return new DelegatedAdminRelationshipRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

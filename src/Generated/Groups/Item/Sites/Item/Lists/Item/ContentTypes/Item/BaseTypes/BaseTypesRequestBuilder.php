@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\ContentTypes\Item\BaseTypes\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\ContentTypes\Item\BaseTypes\Item\ContentTypeItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ContentTypeCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -42,6 +43,17 @@ class BaseTypesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the baseTypes property of the microsoft.graph.contentType entity.
+     * @param string $contentTypeId1 Unique identifier of the item
+     * @return ContentTypeItemRequestBuilder
+    */
+    public function byContentTypeId1(string $contentTypeId1): ContentTypeItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['contentType%2Did1'] = $contentTypeId1;
+        return new ContentTypeItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new BaseTypesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\Alert;
 use Microsoft\Graph\Generated\Models\Security\AlertCollectionResponse;
 use Microsoft\Graph\Generated\Security\Alerts_v2\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Security\Alerts_v2\Item\AlertItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class Alerts_v2RequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the alerts_v2 property of the microsoft.graph.security entity.
+     * @param string $alertId Unique identifier of the item
+     * @return AlertItemRequestBuilder
+    */
+    public function byAlertId(string $alertId): AlertItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['alert%2Did'] = $alertId;
+        return new AlertItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new Alerts_v2RequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

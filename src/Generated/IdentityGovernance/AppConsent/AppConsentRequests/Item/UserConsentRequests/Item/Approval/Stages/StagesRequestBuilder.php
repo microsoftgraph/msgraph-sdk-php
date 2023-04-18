@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequests\Item\UserConsentRequests\Item\Approval\Stages\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequests\Item\UserConsentRequests\Item\Approval\Stages\Item\ApprovalStageItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ApprovalStage;
 use Microsoft\Graph\Generated\Models\ApprovalStageCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class StagesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the stages property of the microsoft.graph.approval entity.
+     * @param string $approvalStageId Unique identifier of the item
+     * @return ApprovalStageItemRequestBuilder
+    */
+    public function byApprovalStageId(string $approvalStageId): ApprovalStageItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['approvalStage%2Did'] = $approvalStageId;
+        return new ApprovalStageItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new StagesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -8,6 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryReviewTagCollectionResponse;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\Item\ChildTags\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\Item\ChildTags\Item\EdiscoveryReviewTagItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -42,6 +43,17 @@ class ChildTagsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the childTags property of the microsoft.graph.security.ediscoveryReviewTag entity.
+     * @param string $ediscoveryReviewTagId1 Unique identifier of the item
+     * @return EdiscoveryReviewTagItemRequestBuilder
+    */
+    public function byEdiscoveryReviewTagId1(string $ediscoveryReviewTagId1): EdiscoveryReviewTagItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['ediscoveryReviewTag%2Did1'] = $ediscoveryReviewTagId1;
+        return new EdiscoveryReviewTagItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ChildTagsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

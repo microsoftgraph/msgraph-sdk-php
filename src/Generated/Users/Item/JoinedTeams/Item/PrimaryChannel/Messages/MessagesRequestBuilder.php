@@ -10,6 +10,7 @@ use Microsoft\Graph\Generated\Models\ChatMessageCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Messages\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Messages\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\Messages\Item\ChatMessageItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -51,6 +52,17 @@ class MessagesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the messages property of the microsoft.graph.channel entity.
+     * @param string $chatMessageId Unique identifier of the item
+     * @return ChatMessageItemRequestBuilder
+    */
+    public function byChatMessageId(string $chatMessageId): ChatMessageItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['chatMessage%2Did'] = $chatMessageId;
+        return new ChatMessageItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new MessagesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

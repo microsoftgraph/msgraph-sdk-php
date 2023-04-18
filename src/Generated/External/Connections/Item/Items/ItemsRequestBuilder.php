@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\External\Connections\Item\Items\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\External\Connections\Item\Items\Item\ExternalItemItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ExternalConnectors\ExternalItem;
 use Microsoft\Graph\Generated\Models\ExternalConnectors\ExternalItemCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class ItemsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the items property of the microsoft.graph.externalConnectors.externalConnection entity.
+     * @param string $externalItemId Unique identifier of the item
+     * @return ExternalItemItemRequestBuilder
+    */
+    public function byExternalItemId(string $externalItemId): ExternalItemItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['externalItem%2Did'] = $externalItemId;
+        return new ExternalItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ItemsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

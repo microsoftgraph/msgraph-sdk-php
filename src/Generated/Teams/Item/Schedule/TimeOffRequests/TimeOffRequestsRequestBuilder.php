@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TimeOffRequest;
 use Microsoft\Graph\Generated\Models\TimeOffRequestCollectionResponse;
 use Microsoft\Graph\Generated\Teams\Item\Schedule\TimeOffRequests\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\Schedule\TimeOffRequests\Item\TimeOffRequestItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class TimeOffRequestsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the timeOffRequests property of the microsoft.graph.schedule entity.
+     * @param string $timeOffRequestId Unique identifier of the item
+     * @return TimeOffRequestItemRequestBuilder
+    */
+    public function byTimeOffRequestId(string $timeOffRequestId): TimeOffRequestItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['timeOffRequest%2Did'] = $timeOffRequestId;
+        return new TimeOffRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new TimeOffRequestsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Communications\CallRecords\Item\Sessions\Item\Segments\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Communications\CallRecords\Item\Sessions\Item\Segments\Item\SegmentItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\CallRecords\Segment;
 use Microsoft\Graph\Generated\Models\CallRecords\SegmentCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class SegmentsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the segments property of the microsoft.graph.callRecords.session entity.
+     * @param string $segmentId Unique identifier of the item
+     * @return SegmentItemRequestBuilder
+    */
+    public function bySegmentId(string $segmentId): SegmentItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['segment%2Did'] = $segmentId;
+        return new SegmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SegmentsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

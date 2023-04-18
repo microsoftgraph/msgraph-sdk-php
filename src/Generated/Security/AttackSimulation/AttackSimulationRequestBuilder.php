@@ -7,9 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\AttackSimulationRoot;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Security\AttackSimulation\SimulationAutomations\Item\SimulationAutomationItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\AttackSimulation\SimulationAutomations\SimulationAutomationsRequestBuilder;
-use Microsoft\Graph\Generated\Security\AttackSimulation\Simulations\Item\SimulationItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\AttackSimulation\Simulations\SimulationsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -120,28 +118,6 @@ class AttackSimulationRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the simulationAutomations property of the microsoft.graph.attackSimulationRoot entity.
-     * @param string $id Unique identifier of the item
-     * @return SimulationAutomationItemRequestBuilder
-    */
-    public function simulationAutomationsById(string $id): SimulationAutomationItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['simulationAutomation%2Did'] = $id;
-        return new SimulationAutomationItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the simulations property of the microsoft.graph.attackSimulationRoot entity.
-     * @param string $id Unique identifier of the item
-     * @return SimulationItemRequestBuilder
-    */
-    public function simulationsById(string $id): SimulationItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['simulation%2Did'] = $id;
-        return new SimulationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

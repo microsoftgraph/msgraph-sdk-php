@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Trending;
 use Microsoft\Graph\Generated\Models\TrendingCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\Insights\Trending\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Insights\Trending\Item\TrendingItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class TrendingRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the trending property of the microsoft.graph.officeGraphInsights entity.
+     * @param string $trendingId Unique identifier of the item
+     * @return TrendingItemRequestBuilder
+    */
+    public function byTrendingId(string $trendingId): TrendingItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['trending%2Did'] = $trendingId;
+        return new TrendingItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new TrendingRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

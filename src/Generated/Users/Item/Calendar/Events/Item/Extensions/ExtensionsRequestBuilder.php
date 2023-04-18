@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\Extension;
 use Microsoft\Graph\Generated\Models\ExtensionCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\Calendar\Events\Item\Extensions\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Calendar\Events\Item\Extensions\Item\ExtensionItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class ExtensionsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the extensions property of the microsoft.graph.event entity.
+     * @param string $extensionId Unique identifier of the item
+     * @return ExtensionItemRequestBuilder
+    */
+    public function byExtensionId(string $extensionId): ExtensionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['extension%2Did'] = $extensionId;
+        return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ExtensionsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

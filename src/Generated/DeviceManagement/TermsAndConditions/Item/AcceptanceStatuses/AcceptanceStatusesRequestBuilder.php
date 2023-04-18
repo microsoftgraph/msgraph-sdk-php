@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\Item\AcceptanceStatuses\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\Item\AcceptanceStatuses\Item\TermsAndConditionsAcceptanceStatusItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TermsAndConditionsAcceptanceStatus;
 use Microsoft\Graph\Generated\Models\TermsAndConditionsAcceptanceStatusCollectionResponse;
@@ -43,6 +44,17 @@ class AcceptanceStatusesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the acceptanceStatuses property of the microsoft.graph.termsAndConditions entity.
+     * @param string $termsAndConditionsAcceptanceStatusId Unique identifier of the item
+     * @return TermsAndConditionsAcceptanceStatusItemRequestBuilder
+    */
+    public function byTermsAndConditionsAcceptanceStatusId(string $termsAndConditionsAcceptanceStatusId): TermsAndConditionsAcceptanceStatusItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['termsAndConditionsAcceptanceStatus%2Did'] = $termsAndConditionsAcceptanceStatusId;
+        return new TermsAndConditionsAcceptanceStatusItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AcceptanceStatusesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

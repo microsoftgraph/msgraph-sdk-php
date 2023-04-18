@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Issues\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Issues\Item\ServiceHealthIssueItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ServiceHealthIssue;
 use Microsoft\Graph\Generated\Models\ServiceHealthIssueCollectionResponse;
@@ -43,6 +44,17 @@ class IssuesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the issues property of the microsoft.graph.serviceAnnouncement entity.
+     * @param string $serviceHealthIssueId Unique identifier of the item
+     * @return ServiceHealthIssueItemRequestBuilder
+    */
+    public function byServiceHealthIssueId(string $serviceHealthIssueId): ServiceHealthIssueItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['serviceHealthIssue%2Did'] = $serviceHealthIssueId;
+        return new ServiceHealthIssueItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new IssuesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

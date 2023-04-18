@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ColumnLink;
 use Microsoft\Graph\Generated\Models\ColumnLinkCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\ColumnLinks\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\ColumnLinks\Item\ColumnLinkItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class ColumnLinksRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the columnLinks property of the microsoft.graph.contentType entity.
+     * @param string $columnLinkId Unique identifier of the item
+     * @return ColumnLinkItemRequestBuilder
+    */
+    public function byColumnLinkId(string $columnLinkId): ColumnLinkItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['columnLink%2Did'] = $columnLinkId;
+        return new ColumnLinkItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ColumnLinksRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

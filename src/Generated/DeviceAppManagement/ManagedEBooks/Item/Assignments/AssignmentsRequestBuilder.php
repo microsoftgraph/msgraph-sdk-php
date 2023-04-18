@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\Assignments\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\ManagedEBooks\Item\Assignments\Item\ManagedEBookAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ManagedEBookAssignment;
 use Microsoft\Graph\Generated\Models\ManagedEBookAssignmentCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class AssignmentsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.managedEBook entity.
+     * @param string $managedEBookAssignmentId Unique identifier of the item
+     * @return ManagedEBookAssignmentItemRequestBuilder
+    */
+    public function byManagedEBookAssignmentId(string $managedEBookAssignmentId): ManagedEBookAssignmentItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['managedEBookAssignment%2Did'] = $managedEBookAssignmentId;
+        return new ManagedEBookAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AssignmentsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

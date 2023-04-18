@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\AndroidManagedAppProtections\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\AndroidManagedAppProtections\Item\AndroidManagedAppProtectionItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\AndroidManagedAppProtection;
 use Microsoft\Graph\Generated\Models\AndroidManagedAppProtectionCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class AndroidManagedAppProtectionsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the androidManagedAppProtections property of the microsoft.graph.deviceAppManagement entity.
+     * @param string $androidManagedAppProtectionId Unique identifier of the item
+     * @return AndroidManagedAppProtectionItemRequestBuilder
+    */
+    public function byAndroidManagedAppProtectionId(string $androidManagedAppProtectionId): AndroidManagedAppProtectionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['androidManagedAppProtection%2Did'] = $androidManagedAppProtectionId;
+        return new AndroidManagedAppProtectionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AndroidManagedAppProtectionsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

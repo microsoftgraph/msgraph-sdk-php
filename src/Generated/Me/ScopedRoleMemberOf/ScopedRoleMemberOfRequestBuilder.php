@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\ScopedRoleMemberOf\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\ScopedRoleMemberOf\Item\ScopedRoleMembershipItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ScopedRoleMembership;
 use Microsoft\Graph\Generated\Models\ScopedRoleMembershipCollectionResponse;
@@ -43,6 +44,17 @@ class ScopedRoleMemberOfRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the scopedRoleMemberOf property of the microsoft.graph.user entity.
+     * @param string $scopedRoleMembershipId Unique identifier of the item
+     * @return ScopedRoleMembershipItemRequestBuilder
+    */
+    public function byScopedRoleMembershipId(string $scopedRoleMembershipId): ScopedRoleMembershipItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['scopedRoleMembership%2Did'] = $scopedRoleMembershipId;
+        return new ScopedRoleMembershipItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ScopedRoleMemberOfRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

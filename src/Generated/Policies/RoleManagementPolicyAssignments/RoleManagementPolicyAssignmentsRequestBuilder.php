@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UnifiedRoleManagementPolicyAssignment;
 use Microsoft\Graph\Generated\Models\UnifiedRoleManagementPolicyAssignmentCollectionResponse;
 use Microsoft\Graph\Generated\Policies\RoleManagementPolicyAssignments\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Policies\RoleManagementPolicyAssignments\Item\UnifiedRoleManagementPolicyAssignmentItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class RoleManagementPolicyAssignmentsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the roleManagementPolicyAssignments property of the microsoft.graph.policyRoot entity.
+     * @param string $unifiedRoleManagementPolicyAssignmentId Unique identifier of the item
+     * @return UnifiedRoleManagementPolicyAssignmentItemRequestBuilder
+    */
+    public function byUnifiedRoleManagementPolicyAssignmentId(string $unifiedRoleManagementPolicyAssignmentId): UnifiedRoleManagementPolicyAssignmentItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['unifiedRoleManagementPolicyAssignment%2Did'] = $unifiedRoleManagementPolicyAssignmentId;
+        return new UnifiedRoleManagementPolicyAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new RoleManagementPolicyAssignmentsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

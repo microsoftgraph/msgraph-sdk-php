@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PermissionGrantConditionSet;
 use Microsoft\Graph\Generated\Models\PermissionGrantConditionSetCollectionResponse;
 use Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Excludes\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Policies\PermissionGrantPolicies\Item\Excludes\Item\PermissionGrantConditionSetItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class ExcludesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the excludes property of the microsoft.graph.permissionGrantPolicy entity.
+     * @param string $permissionGrantConditionSetId Unique identifier of the item
+     * @return PermissionGrantConditionSetItemRequestBuilder
+    */
+    public function byPermissionGrantConditionSetId(string $permissionGrantConditionSetId): PermissionGrantConditionSetItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['permissionGrantConditionSet%2Did'] = $permissionGrantConditionSetId;
+        return new PermissionGrantConditionSetItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ExcludesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

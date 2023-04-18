@@ -145,12 +145,16 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.auditEvent': return new AuditEvent();
                 case '#microsoft.graph.auditLogRoot': return new AuditLogRoot();
                 case '#microsoft.graph.authentication': return new Authentication();
+                case '#microsoft.graph.authenticationCombinationConfiguration': return new AuthenticationCombinationConfiguration();
                 case '#microsoft.graph.authenticationContextClassReference': return new AuthenticationContextClassReference();
                 case '#microsoft.graph.authenticationFlowsPolicy': return new AuthenticationFlowsPolicy();
                 case '#microsoft.graph.authenticationMethod': return new AuthenticationMethod();
                 case '#microsoft.graph.authenticationMethodConfiguration': return new AuthenticationMethodConfiguration();
+                case '#microsoft.graph.authenticationMethodModeDetail': return new AuthenticationMethodModeDetail();
                 case '#microsoft.graph.authenticationMethodsPolicy': return new AuthenticationMethodsPolicy();
                 case '#microsoft.graph.authenticationMethodTarget': return new AuthenticationMethodTarget();
+                case '#microsoft.graph.authenticationStrengthPolicy': return new AuthenticationStrengthPolicy();
+                case '#microsoft.graph.authenticationStrengthRoot': return new AuthenticationStrengthRoot();
                 case '#microsoft.graph.authoredNote': return new AuthoredNote();
                 case '#microsoft.graph.authorizationPolicy': return new AuthorizationPolicy();
                 case '#microsoft.graph.azureCommunicationServicesUserConversationMember': return new AzureCommunicationServicesUserConversationMember();
@@ -319,6 +323,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.federatedIdentityCredential': return new FederatedIdentityCredential();
                 case '#microsoft.graph.fido2AuthenticationMethod': return new Fido2AuthenticationMethod();
                 case '#microsoft.graph.fido2AuthenticationMethodConfiguration': return new Fido2AuthenticationMethodConfiguration();
+                case '#microsoft.graph.fido2CombinationConfiguration': return new Fido2CombinationConfiguration();
                 case '#microsoft.graph.fieldValueSet': return new FieldValueSet();
                 case '#microsoft.graph.fileAssessmentRequest': return new FileAssessmentRequest();
                 case '#microsoft.graph.fileAttachment': return new FileAttachment();

@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Thumbnails\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Thumbnails\Item\ThumbnailSetItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ThumbnailSet;
 use Microsoft\Graph\Generated\Models\ThumbnailSetCollectionResponse;
@@ -43,6 +44,17 @@ class ThumbnailsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the thumbnails property of the microsoft.graph.driveItem entity.
+     * @param string $thumbnailSetId Unique identifier of the item
+     * @return ThumbnailSetItemRequestBuilder
+    */
+    public function byThumbnailSetId(string $thumbnailSetId): ThumbnailSetItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['thumbnailSet%2Did'] = $thumbnailSetId;
+        return new ThumbnailSetItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ThumbnailsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

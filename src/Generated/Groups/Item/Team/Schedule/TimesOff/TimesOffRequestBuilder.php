@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\TimesOff\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\TimesOff\Item\TimeOffItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TimeOff;
 use Microsoft\Graph\Generated\Models\TimeOffCollectionResponse;
@@ -43,6 +44,17 @@ class TimesOffRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the timesOff property of the microsoft.graph.schedule entity.
+     * @param string $timeOffId Unique identifier of the item
+     * @return TimeOffItemRequestBuilder
+    */
+    public function byTimeOffId(string $timeOffId): TimeOffItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['timeOff%2Did'] = $timeOffId;
+        return new TimeOffItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new TimesOffRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

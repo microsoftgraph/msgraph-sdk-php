@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\MdmWindowsInformationProtectionPolicies\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MdmWindowsInformationProtectionPolicies\Item\MdmWindowsInformationProtectionPolicyItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\MdmWindowsInformationProtectionPolicy;
 use Microsoft\Graph\Generated\Models\MdmWindowsInformationProtectionPolicyCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class MdmWindowsInformationProtectionPoliciesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the mdmWindowsInformationProtectionPolicies property of the microsoft.graph.deviceAppManagement entity.
+     * @param string $mdmWindowsInformationProtectionPolicyId Unique identifier of the item
+     * @return MdmWindowsInformationProtectionPolicyItemRequestBuilder
+    */
+    public function byMdmWindowsInformationProtectionPolicyId(string $mdmWindowsInformationProtectionPolicyId): MdmWindowsInformationProtectionPolicyItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['mdmWindowsInformationProtectionPolicy%2Did'] = $mdmWindowsInformationProtectionPolicyId;
+        return new MdmWindowsInformationProtectionPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new MdmWindowsInformationProtectionPoliciesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

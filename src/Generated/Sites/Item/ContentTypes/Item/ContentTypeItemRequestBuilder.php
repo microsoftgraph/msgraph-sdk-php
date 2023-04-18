@@ -11,7 +11,6 @@ use Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\AssociateWithHubSites
 use Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\Base\BaseRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\BaseTypes\BaseTypesRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\ColumnLinks\ColumnLinksRequestBuilder;
-use Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\ColumnLinks\Item\ColumnLinkItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\ColumnPositions\ColumnPositionsRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\Columns\ColumnsRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\CopyToDefaultContentLocation\CopyToDefaultContentLocationRequestBuilder;
@@ -115,50 +114,6 @@ class ContentTypeItemRequestBuilder
     */
     private string $urlTemplate;
     
-    /**
-     * Provides operations to manage the baseTypes property of the microsoft.graph.contentType entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\BaseTypes\Item\ContentTypeItemRequestBuilder
-    */
-    public function baseTypesById(string $id): \Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\BaseTypes\Item\ContentTypeItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['contentType%2Did1'] = $id;
-        return new \Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\BaseTypes\Item\ContentTypeItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the columnLinks property of the microsoft.graph.contentType entity.
-     * @param string $id Unique identifier of the item
-     * @return ColumnLinkItemRequestBuilder
-    */
-    public function columnLinksById(string $id): ColumnLinkItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['columnLink%2Did'] = $id;
-        return new ColumnLinkItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the columnPositions property of the microsoft.graph.contentType entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\ColumnPositions\Item\ColumnDefinitionItemRequestBuilder
-    */
-    public function columnPositionsById(string $id): \Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\ColumnPositions\Item\ColumnDefinitionItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['columnDefinition%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\ColumnPositions\Item\ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the columns property of the microsoft.graph.contentType entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\Columns\Item\ColumnDefinitionItemRequestBuilder
-    */
-    public function columnsById(string $id): \Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\Columns\Item\ColumnDefinitionItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['columnDefinition%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\Columns\Item\ColumnDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
     /**
      * Instantiates a new ContentTypeItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

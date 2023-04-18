@@ -6,7 +6,6 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\InformationProtection\Bitlocker\BitlockerRequestBuilder;
-use Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentRequests\Item\ThreatAssessmentRequestItemRequestBuilder;
 use Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentRequests\ThreatAssessmentRequestsRequestBuilder;
 use Microsoft\Graph\Generated\Models\InformationProtection;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -101,17 +100,6 @@ class InformationProtectionRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the threatAssessmentRequests property of the microsoft.graph.informationProtection entity.
-     * @param string $id Unique identifier of the item
-     * @return ThreatAssessmentRequestItemRequestBuilder
-    */
-    public function threatAssessmentRequestsById(string $id): ThreatAssessmentRequestItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['threatAssessmentRequest%2Did'] = $id;
-        return new ThreatAssessmentRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

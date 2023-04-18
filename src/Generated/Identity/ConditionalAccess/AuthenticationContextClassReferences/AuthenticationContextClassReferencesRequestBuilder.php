@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Identity\ConditionalAccess\AuthenticationContextClassReferences\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Identity\ConditionalAccess\AuthenticationContextClassReferences\Item\AuthenticationContextClassReferenceItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\AuthenticationContextClassReference;
 use Microsoft\Graph\Generated\Models\AuthenticationContextClassReferenceCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class AuthenticationContextClassReferencesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the authenticationContextClassReferences property of the microsoft.graph.conditionalAccessRoot entity.
+     * @param string $authenticationContextClassReferenceId Unique identifier of the item
+     * @return AuthenticationContextClassReferenceItemRequestBuilder
+    */
+    public function byAuthenticationContextClassReferenceId(string $authenticationContextClassReferenceId): AuthenticationContextClassReferenceItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['authenticationContextClassReference%2Did'] = $authenticationContextClassReferenceId;
+        return new AuthenticationContextClassReferenceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AuthenticationContextClassReferencesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

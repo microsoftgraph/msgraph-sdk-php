@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\RetentionEventType;
 use Microsoft\Graph\Generated\Models\Security\RetentionEventTypeCollectionResponse;
 use Microsoft\Graph\Generated\Security\TriggerTypes\RetentionEventTypes\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Security\TriggerTypes\RetentionEventTypes\Item\RetentionEventTypeItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class RetentionEventTypesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the retentionEventTypes property of the microsoft.graph.security.triggerTypesRoot entity.
+     * @param string $retentionEventTypeId Unique identifier of the item
+     * @return RetentionEventTypeItemRequestBuilder
+    */
+    public function byRetentionEventTypeId(string $retentionEventTypeId): RetentionEventTypeItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['retentionEventType%2Did'] = $retentionEventTypeId;
+        return new RetentionEventTypeItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new RetentionEventTypesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

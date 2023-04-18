@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Communications\Calls\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\CallItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\LogTeleconferenceDeviceQuality\LogTeleconferenceDeviceQualityRequestBuilder;
 use Microsoft\Graph\Generated\Models\Call;
 use Microsoft\Graph\Generated\Models\CallCollectionResponse;
@@ -51,6 +52,17 @@ class CallsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the calls property of the microsoft.graph.cloudCommunications entity.
+     * @param string $callId Unique identifier of the item
+     * @return CallItemRequestBuilder
+    */
+    public function byCallId(string $callId): CallItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['call%2Did'] = $callId;
+        return new CallItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new CallsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

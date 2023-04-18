@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Extensions\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\Extensions\Item\ExtensionItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\Extension;
 use Microsoft\Graph\Generated\Models\ExtensionCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class ExtensionsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the extensions property of the microsoft.graph.user entity.
+     * @param string $extensionId Unique identifier of the item
+     * @return ExtensionItemRequestBuilder
+    */
+    public function byExtensionId(string $extensionId): ExtensionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['extension%2Did'] = $extensionId;
+        return new ExtensionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ExtensionsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\AssociatedTeamInfo;
 use Microsoft\Graph\Generated\Models\AssociatedTeamInfoCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\Teamwork\AssociatedTeams\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Teamwork\AssociatedTeams\Item\AssociatedTeamInfoItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class AssociatedTeamsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the associatedTeams property of the microsoft.graph.userTeamwork entity.
+     * @param string $associatedTeamInfoId Unique identifier of the item
+     * @return AssociatedTeamInfoItemRequestBuilder
+    */
+    public function byAssociatedTeamInfoId(string $associatedTeamInfoId): AssociatedTeamInfoItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['associatedTeamInfo%2Did'] = $associatedTeamInfoId;
+        return new AssociatedTeamInfoItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AssociatedTeamsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

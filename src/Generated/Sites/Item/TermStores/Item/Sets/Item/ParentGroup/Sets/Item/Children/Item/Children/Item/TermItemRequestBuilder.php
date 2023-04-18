@@ -7,7 +7,6 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TermStore\Term;
-use Microsoft\Graph\Generated\Sites\Item\TermStores\Item\Sets\Item\ParentGroup\Sets\Item\Children\Item\Children\Item\Relations\Item\RelationItemRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\TermStores\Item\Sets\Item\ParentGroup\Sets\Item\Children\Item\Children\Item\Relations\RelationsRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\TermStores\Item\Sets\Item\ParentGroup\Sets\Item\Children\Item\Children\Item\Set\SetRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -119,17 +118,6 @@ class TermItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the relations property of the microsoft.graph.termStore.term entity.
-     * @param string $id Unique identifier of the item
-     * @return RelationItemRequestBuilder
-    */
-    public function relationsById(string $id): RelationItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['relation%2Did'] = $id;
-        return new RelationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

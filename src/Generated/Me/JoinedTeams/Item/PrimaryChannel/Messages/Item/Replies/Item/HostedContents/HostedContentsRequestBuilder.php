@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Messages\Item\Replies\Item\HostedContents\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\PrimaryChannel\Messages\Item\Replies\Item\HostedContents\Item\ChatMessageHostedContentItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ChatMessageHostedContent;
 use Microsoft\Graph\Generated\Models\ChatMessageHostedContentCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class HostedContentsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the hostedContents property of the microsoft.graph.chatMessage entity.
+     * @param string $chatMessageHostedContentId Unique identifier of the item
+     * @return ChatMessageHostedContentItemRequestBuilder
+    */
+    public function byChatMessageHostedContentId(string $chatMessageHostedContentId): ChatMessageHostedContentItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['chatMessageHostedContent%2Did'] = $chatMessageHostedContentId;
+        return new ChatMessageHostedContentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new HostedContentsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

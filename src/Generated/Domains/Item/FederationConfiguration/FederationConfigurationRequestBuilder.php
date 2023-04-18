@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Domains\Item\FederationConfiguration\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Domains\Item\FederationConfiguration\Item\InternalDomainFederationItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\InternalDomainFederation;
 use Microsoft\Graph\Generated\Models\InternalDomainFederationCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class FederationConfigurationRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the federationConfiguration property of the microsoft.graph.domain entity.
+     * @param string $internalDomainFederationId Unique identifier of the item
+     * @return InternalDomainFederationItemRequestBuilder
+    */
+    public function byInternalDomainFederationId(string $internalDomainFederationId): InternalDomainFederationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['internalDomainFederation%2Did'] = $internalDomainFederationId;
+        return new InternalDomainFederationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new FederationConfigurationRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

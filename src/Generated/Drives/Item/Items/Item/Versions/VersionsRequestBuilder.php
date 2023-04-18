@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Versions\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Versions\Item\DriveItemVersionItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\DriveItemVersion;
 use Microsoft\Graph\Generated\Models\DriveItemVersionCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class VersionsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the versions property of the microsoft.graph.driveItem entity.
+     * @param string $driveItemVersionId Unique identifier of the item
+     * @return DriveItemVersionItemRequestBuilder
+    */
+    public function byDriveItemVersionId(string $driveItemVersionId): DriveItemVersionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['driveItemVersion%2Did'] = $driveItemVersionId;
+        return new DriveItemVersionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new VersionsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\EscapedPrint\Shares\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\PrinterShareItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PrinterShare;
 use Microsoft\Graph\Generated\Models\PrinterShareCollectionResponse;
@@ -43,6 +44,17 @@ class SharesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the shares property of the microsoft.graph.print entity.
+     * @param string $printerShareId Unique identifier of the item
+     * @return PrinterShareItemRequestBuilder
+    */
+    public function byPrinterShareId(string $printerShareId): PrinterShareItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['printerShare%2Did'] = $printerShareId;
+        return new PrinterShareItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SharesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

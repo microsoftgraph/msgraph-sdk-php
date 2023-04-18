@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\Groups\Item\Sets\Item\Terms\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\TermStore\Groups\Item\Sets\Item\Terms\Item\TermItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TermStore\Term;
 use Microsoft\Graph\Generated\Models\TermStore\TermCollectionResponse;
@@ -43,6 +44,17 @@ class TermsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the terms property of the microsoft.graph.termStore.set entity.
+     * @param string $termId Unique identifier of the item
+     * @return TermItemRequestBuilder
+    */
+    public function byTermId(string $termId): TermItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['term%2Did'] = $termId;
+        return new TermItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new TermsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -6,10 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews\HealthOverviewsRequestBuilder;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\HealthOverviews\Item\ServiceHealthItemRequestBuilder;
 use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Issues\IssuesRequestBuilder;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Issues\Item\ServiceHealthIssueItemRequestBuilder;
-use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\Item\ServiceUpdateMessageItemRequestBuilder;
 use Microsoft\Graph\Generated\Admin\ServiceAnnouncement\Messages\MessagesRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ServiceAnnouncement;
@@ -110,39 +107,6 @@ class ServiceAnnouncementRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the healthOverviews property of the microsoft.graph.serviceAnnouncement entity.
-     * @param string $id Unique identifier of the item
-     * @return ServiceHealthItemRequestBuilder
-    */
-    public function healthOverviewsById(string $id): ServiceHealthItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['serviceHealth%2Did'] = $id;
-        return new ServiceHealthItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the issues property of the microsoft.graph.serviceAnnouncement entity.
-     * @param string $id Unique identifier of the item
-     * @return ServiceHealthIssueItemRequestBuilder
-    */
-    public function issuesById(string $id): ServiceHealthIssueItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['serviceHealthIssue%2Did'] = $id;
-        return new ServiceHealthIssueItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the messages property of the microsoft.graph.serviceAnnouncement entity.
-     * @param string $id Unique identifier of the item
-     * @return ServiceUpdateMessageItemRequestBuilder
-    */
-    public function messagesById(string $id): ServiceUpdateMessageItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['serviceUpdateMessage%2Did'] = $id;
-        return new ServiceUpdateMessageItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\BookingBusiness;
 use Microsoft\Graph\Generated\Models\BookingBusinessCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\BookingBusinessItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class BookingBusinessesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the bookingBusinesses property of the microsoft.graph.solutionsRoot entity.
+     * @param string $bookingBusinessId Unique identifier of the item
+     * @return BookingBusinessItemRequestBuilder
+    */
+    public function byBookingBusinessId(string $bookingBusinessId): BookingBusinessItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['bookingBusiness%2Did'] = $bookingBusinessId;
+        return new BookingBusinessItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new BookingBusinessesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

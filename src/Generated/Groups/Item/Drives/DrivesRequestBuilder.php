@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Drives\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Drives\Item\DriveItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\DriveCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -43,6 +44,17 @@ class DrivesRequestBuilder
     private string $urlTemplate;
     
     /**
+     * Provides operations to manage the drives property of the microsoft.graph.group entity.
+     * @param string $driveId Unique identifier of the item
+     * @return DriveItemRequestBuilder
+    */
+    public function byDriveId(string $driveId): DriveItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['drive%2Did'] = $driveId;
+        return new DriveItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
+    /**
      * Instantiates a new DrivesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -58,10 +70,9 @@ class DrivesRequestBuilder
     }
 
     /**
-     * Retrieve the list of Drive resources available for a target User, Group, or Site.
+     * The group's drives. Read-only.
      * @param DrivesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/drive-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?DrivesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -77,7 +88,7 @@ class DrivesRequestBuilder
     }
 
     /**
-     * Retrieve the list of Drive resources available for a target User, Group, or Site.
+     * The group's drives. Read-only.
      * @param DrivesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

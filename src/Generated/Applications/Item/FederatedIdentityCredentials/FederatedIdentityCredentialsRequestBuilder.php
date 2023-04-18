@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Applications\Item\FederatedIdentityCredentials\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\FederatedIdentityCredentials\Item\FederatedIdentityCredentialItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\FederatedIdentityCredential;
 use Microsoft\Graph\Generated\Models\FederatedIdentityCredentialCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class FederatedIdentityCredentialsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the federatedIdentityCredentials property of the microsoft.graph.application entity.
+     * @param string $federatedIdentityCredentialId Unique identifier of the item
+     * @return FederatedIdentityCredentialItemRequestBuilder
+    */
+    public function byFederatedIdentityCredentialId(string $federatedIdentityCredentialId): FederatedIdentityCredentialItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['federatedIdentityCredential%2Did'] = $federatedIdentityCredentialId;
+        return new FederatedIdentityCredentialItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new FederatedIdentityCredentialsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

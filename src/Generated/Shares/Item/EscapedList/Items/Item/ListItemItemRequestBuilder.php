@@ -9,12 +9,10 @@ use Microsoft\Graph\Generated\Models\ListItem;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\Analytics\AnalyticsRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\DocumentSetVersions\DocumentSetVersionsRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\DocumentSetVersions\Item\DocumentSetVersionItemRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\DriveItem\DriveItemRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\Fields\FieldsRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\Versions\Item\ListItemVersionItemRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\Versions\VersionsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -116,17 +114,6 @@ class ListItemItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the documentSetVersions property of the microsoft.graph.listItem entity.
-     * @param string $id Unique identifier of the item
-     * @return DocumentSetVersionItemRequestBuilder
-    */
-    public function documentSetVersionsById(string $id): DocumentSetVersionItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['documentSetVersion%2Did'] = $id;
-        return new DocumentSetVersionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -245,17 +232,6 @@ class ListItemItemRequestBuilder
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
-    }
-
-    /**
-     * Provides operations to manage the versions property of the microsoft.graph.listItem entity.
-     * @param string $id Unique identifier of the item
-     * @return ListItemVersionItemRequestBuilder
-    */
-    public function versionsById(string $id): ListItemVersionItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['listItemVersion%2Did'] = $id;
-        return new ListItemVersionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

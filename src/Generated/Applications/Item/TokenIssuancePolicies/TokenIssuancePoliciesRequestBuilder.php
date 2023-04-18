@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Applications\Item\TokenIssuancePolicies\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\TokenIssuancePolicies\Item\TokenIssuancePolicyItemRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\TokenIssuancePolicies\Ref\RefRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TokenIssuancePolicyCollectionResponse;
@@ -50,6 +51,17 @@ class TokenIssuancePoliciesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Gets an item from the Microsoft/Graph/Generated.applications.item.tokenIssuancePolicies.item collection
+     * @param string $tokenIssuancePolicyId Unique identifier of the item
+     * @return TokenIssuancePolicyItemRequestBuilder
+    */
+    public function byTokenIssuancePolicyId(string $tokenIssuancePolicyId): TokenIssuancePolicyItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['tokenIssuancePolicy%2Did'] = $tokenIssuancePolicyId;
+        return new TokenIssuancePolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new TokenIssuancePoliciesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

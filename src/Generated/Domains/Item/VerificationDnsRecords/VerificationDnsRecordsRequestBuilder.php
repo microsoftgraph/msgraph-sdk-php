@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Domains\Item\VerificationDnsRecords\Item\DomainDnsRecordItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\DomainDnsRecord;
 use Microsoft\Graph\Generated\Models\DomainDnsRecordCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class VerificationDnsRecordsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the verificationDnsRecords property of the microsoft.graph.domain entity.
+     * @param string $domainDnsRecordId Unique identifier of the item
+     * @return DomainDnsRecordItemRequestBuilder
+    */
+    public function byDomainDnsRecordId(string $domainDnsRecordId): DomainDnsRecordItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['domainDnsRecord%2Did'] = $domainDnsRecordId;
+        return new DomainDnsRecordItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new VerificationDnsRecordsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

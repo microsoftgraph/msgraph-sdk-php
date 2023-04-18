@@ -6,10 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Connections\Item\Groups\GroupsRequestBuilder;
-use Microsoft\Graph\Generated\Connections\Item\Groups\Item\ExternalGroupItemRequestBuilder;
-use Microsoft\Graph\Generated\Connections\Item\Items\Item\ExternalItemItemRequestBuilder;
 use Microsoft\Graph\Generated\Connections\Item\Items\ItemsRequestBuilder;
-use Microsoft\Graph\Generated\Connections\Item\Operations\Item\ConnectionOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\Connections\Item\Operations\OperationsRequestBuilder;
 use Microsoft\Graph\Generated\Connections\Item\Schema\SchemaRequestBuilder;
 use Microsoft\Graph\Generated\Models\ExternalConnectors\ExternalConnection;
@@ -118,39 +115,6 @@ class ExternalConnectionItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the groups property of the microsoft.graph.externalConnectors.externalConnection entity.
-     * @param string $id Unique identifier of the item
-     * @return ExternalGroupItemRequestBuilder
-    */
-    public function groupsById(string $id): ExternalGroupItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['externalGroup%2Did'] = $id;
-        return new ExternalGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the items property of the microsoft.graph.externalConnectors.externalConnection entity.
-     * @param string $id Unique identifier of the item
-     * @return ExternalItemItemRequestBuilder
-    */
-    public function itemsById(string $id): ExternalItemItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['externalItem%2Did'] = $id;
-        return new ExternalItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the operations property of the microsoft.graph.externalConnectors.externalConnection entity.
-     * @param string $id Unique identifier of the item
-     * @return ConnectionOperationItemRequestBuilder
-    */
-    public function operationsById(string $id): ConnectionOperationItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['connectionOperation%2Did'] = $id;
-        return new ConnectionOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

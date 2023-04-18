@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\DelegatedAdminServiceManagementDetail;
 use Microsoft\Graph\Generated\Models\DelegatedAdminServiceManagementDetailCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminCustomers\Item\ServiceManagementDetails\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminCustomers\Item\ServiceManagementDetails\Item\DelegatedAdminServiceManagementDetailItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class ServiceManagementDetailsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the serviceManagementDetails property of the microsoft.graph.delegatedAdminCustomer entity.
+     * @param string $delegatedAdminServiceManagementDetailId Unique identifier of the item
+     * @return DelegatedAdminServiceManagementDetailItemRequestBuilder
+    */
+    public function byDelegatedAdminServiceManagementDetailId(string $delegatedAdminServiceManagementDetailId): DelegatedAdminServiceManagementDetailItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['delegatedAdminServiceManagementDetail%2Did'] = $delegatedAdminServiceManagementDetailId;
+        return new DelegatedAdminServiceManagementDetailItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ServiceManagementDetailsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

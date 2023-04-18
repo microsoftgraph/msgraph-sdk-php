@@ -8,6 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SiteCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\FollowedSites\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\FollowedSites\Item\SiteItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -42,6 +43,17 @@ class FollowedSitesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the followedSites property of the microsoft.graph.user entity.
+     * @param string $siteId Unique identifier of the item
+     * @return SiteItemRequestBuilder
+    */
+    public function bySiteId(string $siteId): SiteItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['site%2Did'] = $siteId;
+        return new SiteItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new FollowedSitesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\ComplianceManagementPartners\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\ComplianceManagementPartners\Item\ComplianceManagementPartnerItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ComplianceManagementPartner;
 use Microsoft\Graph\Generated\Models\ComplianceManagementPartnerCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class ComplianceManagementPartnersRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the complianceManagementPartners property of the microsoft.graph.deviceManagement entity.
+     * @param string $complianceManagementPartnerId Unique identifier of the item
+     * @return ComplianceManagementPartnerItemRequestBuilder
+    */
+    public function byComplianceManagementPartnerId(string $complianceManagementPartnerId): ComplianceManagementPartnerItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['complianceManagementPartner%2Did'] = $complianceManagementPartnerId;
+        return new ComplianceManagementPartnerItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ComplianceManagementPartnersRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Oauth2PermissionGrants\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\Oauth2PermissionGrants\Item\OAuth2PermissionGrantItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\OAuth2PermissionGrantCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -42,6 +43,17 @@ class Oauth2PermissionGrantsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the oauth2PermissionGrants property of the microsoft.graph.user entity.
+     * @param string $oAuth2PermissionGrantId Unique identifier of the item
+     * @return OAuth2PermissionGrantItemRequestBuilder
+    */
+    public function byOAuth2PermissionGrantId(string $oAuth2PermissionGrantId): OAuth2PermissionGrantItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['oAuth2PermissionGrant%2Did'] = $oAuth2PermissionGrantId;
+        return new OAuth2PermissionGrantItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new Oauth2PermissionGrantsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

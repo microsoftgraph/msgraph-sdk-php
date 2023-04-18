@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\Events\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\Events\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\Events\Item\EventItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\Event;
 use Microsoft\Graph\Generated\Models\EventCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -51,6 +52,17 @@ class EventsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the events property of the microsoft.graph.calendar entity.
+     * @param string $eventId Unique identifier of the item
+     * @return EventItemRequestBuilder
+    */
+    public function byEventId(string $eventId): EventItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['event%2Did'] = $eventId;
+        return new EventItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new EventsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

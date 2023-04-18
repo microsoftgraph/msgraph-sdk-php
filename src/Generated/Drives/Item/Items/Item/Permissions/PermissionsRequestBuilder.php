@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Permissions\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Permissions\Item\PermissionItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Permission;
 use Microsoft\Graph\Generated\Models\PermissionCollectionResponse;
@@ -43,6 +44,17 @@ class PermissionsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the permissions property of the microsoft.graph.driveItem entity.
+     * @param string $permissionId Unique identifier of the item
+     * @return PermissionItemRequestBuilder
+    */
+    public function byPermissionId(string $permissionId): PermissionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['permission%2Did'] = $permissionId;
+        return new PermissionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new PermissionsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

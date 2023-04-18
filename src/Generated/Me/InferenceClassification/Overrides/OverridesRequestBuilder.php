@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\InferenceClassification\Overrides\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\InferenceClassification\Overrides\Item\InferenceClassificationOverrideItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\InferenceClassificationOverride;
 use Microsoft\Graph\Generated\Models\InferenceClassificationOverrideCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class OverridesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the overrides property of the microsoft.graph.inferenceClassification entity.
+     * @param string $inferenceClassificationOverrideId Unique identifier of the item
+     * @return InferenceClassificationOverrideItemRequestBuilder
+    */
+    public function byInferenceClassificationOverrideId(string $inferenceClassificationOverrideId): InferenceClassificationOverrideItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['inferenceClassificationOverride%2Did'] = $inferenceClassificationOverrideId;
+        return new InferenceClassificationOverrideItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new OverridesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

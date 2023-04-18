@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PinnedChatMessageInfo;
 use Microsoft\Graph\Generated\Models\PinnedChatMessageInfoCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\Chats\Item\PinnedMessages\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Chats\Item\PinnedMessages\Item\PinnedChatMessageInfoItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class PinnedMessagesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the pinnedMessages property of the microsoft.graph.chat entity.
+     * @param string $pinnedChatMessageInfoId Unique identifier of the item
+     * @return PinnedChatMessageInfoItemRequestBuilder
+    */
+    public function byPinnedChatMessageInfoId(string $pinnedChatMessageInfoId): PinnedChatMessageInfoItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['pinnedChatMessageInfo%2Did'] = $pinnedChatMessageInfoId;
+        return new PinnedChatMessageInfoItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new PinnedMessagesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

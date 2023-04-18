@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Team\Members\Add\AddRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Members\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\Members\Item\ConversationMemberItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ConversationMember;
 use Microsoft\Graph\Generated\Models\ConversationMemberCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -51,6 +52,17 @@ class MembersRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the members property of the microsoft.graph.team entity.
+     * @param string $conversationMemberId Unique identifier of the item
+     * @return ConversationMemberItemRequestBuilder
+    */
+    public function byConversationMemberId(string $conversationMemberId): ConversationMemberItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['conversationMember%2Did'] = $conversationMemberId;
+        return new ConversationMemberItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new MembersRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

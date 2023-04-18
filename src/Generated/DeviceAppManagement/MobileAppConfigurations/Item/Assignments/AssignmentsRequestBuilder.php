@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\Assignments\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\Item\Assignments\Item\ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ManagedDeviceMobileAppConfigurationAssignment;
 use Microsoft\Graph\Generated\Models\ManagedDeviceMobileAppConfigurationAssignmentCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class AssignmentsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.managedDeviceMobileAppConfiguration entity.
+     * @param string $managedDeviceMobileAppConfigurationAssignmentId Unique identifier of the item
+     * @return ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder
+    */
+    public function byManagedDeviceMobileAppConfigurationAssignmentId(string $managedDeviceMobileAppConfigurationAssignmentId): ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['managedDeviceMobileAppConfigurationAssignment%2Did'] = $managedDeviceMobileAppConfigurationAssignmentId;
+        return new ManagedDeviceMobileAppConfigurationAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AssignmentsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -12,6 +12,7 @@ use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\AddCopy\AddCopy
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\AddCopyFromContentTypeHub\AddCopyFromContentTypeHubRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\GetCompatibleHubContentTypes\GetCompatibleHubContentTypesRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Lists\Item\ContentTypes\Item\ContentTypeItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -67,6 +68,17 @@ class ContentTypesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the contentTypes property of the microsoft.graph.list entity.
+     * @param string $contentTypeId Unique identifier of the item
+     * @return ContentTypeItemRequestBuilder
+    */
+    public function byContentTypeId(string $contentTypeId): ContentTypeItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['contentType%2Did'] = $contentTypeId;
+        return new ContentTypeItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ContentTypesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -6,7 +6,6 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\EscapedPrint\Services\Item\Endpoints\EndpointsRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Services\Item\Endpoints\Item\PrintServiceEndpointItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PrintService;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -74,17 +73,6 @@ class PrintServiceItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the endpoints property of the microsoft.graph.printService entity.
-     * @param string $id Unique identifier of the item
-     * @return PrintServiceEndpointItemRequestBuilder
-    */
-    public function endpointsById(string $id): PrintServiceEndpointItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['printServiceEndpoint%2Did'] = $id;
-        return new PrintServiceEndpointItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

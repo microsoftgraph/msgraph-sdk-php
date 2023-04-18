@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Operations\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Operations\Item\OnenoteOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OnenoteOperation;
 use Microsoft\Graph\Generated\Models\OnenoteOperationCollectionResponse;
@@ -43,6 +44,17 @@ class OperationsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.onenote entity.
+     * @param string $onenoteOperationId Unique identifier of the item
+     * @return OnenoteOperationItemRequestBuilder
+    */
+    public function byOnenoteOperationId(string $onenoteOperationId): OnenoteOperationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['onenoteOperation%2Did'] = $onenoteOperationId;
+        return new OnenoteOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new OperationsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

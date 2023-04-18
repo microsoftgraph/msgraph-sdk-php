@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefinitions\Item\AccessReviewHistoryDefinitionItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\AccessReviewHistoryDefinition;
 use Microsoft\Graph\Generated\Models\AccessReviewHistoryDefinitionCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class HistoryDefinitionsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the historyDefinitions property of the microsoft.graph.accessReviewSet entity.
+     * @param string $accessReviewHistoryDefinitionId Unique identifier of the item
+     * @return AccessReviewHistoryDefinitionItemRequestBuilder
+    */
+    public function byAccessReviewHistoryDefinitionId(string $accessReviewHistoryDefinitionId): AccessReviewHistoryDefinitionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['accessReviewHistoryDefinition%2Did'] = $accessReviewHistoryDefinitionId;
+        return new AccessReviewHistoryDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new HistoryDefinitionsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

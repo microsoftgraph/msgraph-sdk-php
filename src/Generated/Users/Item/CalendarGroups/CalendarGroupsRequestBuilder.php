@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\CalendarGroup;
 use Microsoft\Graph\Generated\Models\CalendarGroupCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\CalendarGroupItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class CalendarGroupsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the calendarGroups property of the microsoft.graph.user entity.
+     * @param string $calendarGroupId Unique identifier of the item
+     * @return CalendarGroupItemRequestBuilder
+    */
+    public function byCalendarGroupId(string $calendarGroupId): CalendarGroupItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['calendarGroup%2Did'] = $calendarGroupId;
+        return new CalendarGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new CalendarGroupsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

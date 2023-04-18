@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\GroupLifecyclePolicies\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\GroupLifecyclePolicies\Item\GroupLifecyclePolicyItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\GroupLifecyclePolicy;
 use Microsoft\Graph\Generated\Models\GroupLifecyclePolicyCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class GroupLifecyclePoliciesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the collection of groupLifecyclePolicy entities.
+     * @param string $groupLifecyclePolicyId Unique identifier of the item
+     * @return GroupLifecyclePolicyItemRequestBuilder
+    */
+    public function byGroupLifecyclePolicyId(string $groupLifecyclePolicyId): GroupLifecyclePolicyItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['groupLifecyclePolicy%2Did'] = $groupLifecyclePolicyId;
+        return new GroupLifecyclePolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new GroupLifecyclePoliciesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

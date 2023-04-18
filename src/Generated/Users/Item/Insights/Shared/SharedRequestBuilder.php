@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SharedInsight;
 use Microsoft\Graph\Generated\Models\SharedInsightCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\Insights\Shared\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Insights\Shared\Item\SharedInsightItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class SharedRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the shared property of the microsoft.graph.officeGraphInsights entity.
+     * @param string $sharedInsightId Unique identifier of the item
+     * @return SharedInsightItemRequestBuilder
+    */
+    public function bySharedInsightId(string $sharedInsightId): SharedInsightItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['sharedInsight%2Did'] = $sharedInsightId;
+        return new SharedInsightItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SharedRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

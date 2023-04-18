@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Operations\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Communications\Calls\Item\Operations\Item\CommsOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\CommsOperation;
 use Microsoft\Graph\Generated\Models\CommsOperationCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class OperationsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.call entity.
+     * @param string $commsOperationId Unique identifier of the item
+     * @return CommsOperationItemRequestBuilder
+    */
+    public function byCommsOperationId(string $commsOperationId): CommsOperationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['commsOperation%2Did'] = $commsOperationId;
+        return new CommsOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new OperationsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

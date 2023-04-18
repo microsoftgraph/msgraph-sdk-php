@@ -50,7 +50,7 @@ class DirectoryObjectItemRequestBuilder
     }
 
     /**
-     * Get appliesTo from policies
+     * Collection of applications and service principals to which the policy is applied.
      * @param DirectoryObjectItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -68,7 +68,7 @@ class DirectoryObjectItemRequestBuilder
     }
 
     /**
-     * Get appliesTo from policies
+     * Collection of applications and service principals to which the policy is applied.
      * @param DirectoryObjectItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

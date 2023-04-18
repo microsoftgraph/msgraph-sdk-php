@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\TelecomExpenseManagementPartners\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\TelecomExpenseManagementPartners\Item\TelecomExpenseManagementPartnerItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TelecomExpenseManagementPartner;
 use Microsoft\Graph\Generated\Models\TelecomExpenseManagementPartnerCollectionResponse;
@@ -43,6 +44,17 @@ class TelecomExpenseManagementPartnersRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the telecomExpenseManagementPartners property of the microsoft.graph.deviceManagement entity.
+     * @param string $telecomExpenseManagementPartnerId Unique identifier of the item
+     * @return TelecomExpenseManagementPartnerItemRequestBuilder
+    */
+    public function byTelecomExpenseManagementPartnerId(string $telecomExpenseManagementPartnerId): TelecomExpenseManagementPartnerItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['telecomExpenseManagementPartner%2Did'] = $telecomExpenseManagementPartnerId;
+        return new TelecomExpenseManagementPartnerItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new TelecomExpenseManagementPartnersRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

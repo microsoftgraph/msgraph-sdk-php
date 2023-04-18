@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\LicenseDetails;
 use Microsoft\Graph\Generated\Models\LicenseDetailsCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\LicenseDetails\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\LicenseDetails\Item\LicenseDetailsItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class LicenseDetailsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the licenseDetails property of the microsoft.graph.user entity.
+     * @param string $licenseDetailsId Unique identifier of the item
+     * @return LicenseDetailsItemRequestBuilder
+    */
+    public function byLicenseDetailsId(string $licenseDetailsId): LicenseDetailsItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['licenseDetails%2Did'] = $licenseDetailsId;
+        return new LicenseDetailsItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new LicenseDetailsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

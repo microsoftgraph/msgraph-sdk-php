@@ -7,13 +7,11 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\ClearFilters\ClearFiltersRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Columns\ColumnsRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Columns\Item\WorkbookTableColumnItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\ConvertToRange\ConvertToRangeRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\DataBodyRange\DataBodyRangeRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\HeaderRowRange\HeaderRowRangeRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Range\RangeRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\ReapplyFilters\ReapplyFiltersRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Rows\Item\WorkbookTableRowItemRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Rows\RowsRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\Sort\SortRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Tables\Item\TotalRowRange\TotalRowRangeRequestBuilder;
@@ -125,17 +123,6 @@ class WorkbookTableItemRequestBuilder
     }
     
     /**
-     * Provides operations to manage the columns property of the microsoft.graph.workbookTable entity.
-     * @param string $id Unique identifier of the item
-     * @return WorkbookTableColumnItemRequestBuilder
-    */
-    public function columnsById(string $id): WorkbookTableColumnItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['workbookTableColumn%2Did'] = $id;
-        return new WorkbookTableColumnItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Instantiates a new WorkbookTableItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -203,17 +190,6 @@ class WorkbookTableItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the rows property of the microsoft.graph.workbookTable entity.
-     * @param string $id Unique identifier of the item
-     * @return WorkbookTableRowItemRequestBuilder
-    */
-    public function rowsById(string $id): WorkbookTableRowItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['workbookTableRow%2Did'] = $id;
-        return new WorkbookTableRowItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ScopedRoleMembership;
 use Microsoft\Graph\Generated\Models\ScopedRoleMembershipCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\ScopedRoleMemberOf\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\ScopedRoleMemberOf\Item\ScopedRoleMembershipItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class ScopedRoleMemberOfRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the scopedRoleMemberOf property of the microsoft.graph.user entity.
+     * @param string $scopedRoleMembershipId Unique identifier of the item
+     * @return ScopedRoleMembershipItemRequestBuilder
+    */
+    public function byScopedRoleMembershipId(string $scopedRoleMembershipId): ScopedRoleMembershipItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['scopedRoleMembership%2Did'] = $scopedRoleMembershipId;
+        return new ScopedRoleMembershipItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ScopedRoleMemberOfRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

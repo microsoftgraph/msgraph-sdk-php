@@ -7,7 +7,6 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\TriggersRoot;
-use Microsoft\Graph\Generated\Security\Triggers\RetentionEvents\Item\RetentionEventItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\Triggers\RetentionEvents\RetentionEventsRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -111,17 +110,6 @@ class TriggersRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the retentionEvents property of the microsoft.graph.security.triggersRoot entity.
-     * @param string $id Unique identifier of the item
-     * @return RetentionEventItemRequestBuilder
-    */
-    public function retentionEventsById(string $id): RetentionEventItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['retentionEvent%2Did'] = $id;
-        return new RetentionEventItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

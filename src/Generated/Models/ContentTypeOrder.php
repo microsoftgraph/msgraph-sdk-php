@@ -18,11 +18,6 @@ class ContentTypeOrder implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * @var bool|null $escapedDefault Whether this is the default Content Type
-    */
-    public ?bool $escapedDefault = null;
-    
-    /**
      * Instantiates a new contentTypeOrder and sets the default values.
     */
     public function __construct() {

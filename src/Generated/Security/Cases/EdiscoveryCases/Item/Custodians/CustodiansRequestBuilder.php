@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryCustodian;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryCustodianCollectionResponse;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\EdiscoveryCustodianItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\SecurityApplyHold\SecurityApplyHoldRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\SecurityRemoveHold\SecurityRemoveHoldRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -59,6 +60,17 @@ class CustodiansRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the custodians property of the microsoft.graph.security.ediscoveryCase entity.
+     * @param string $ediscoveryCustodianId Unique identifier of the item
+     * @return EdiscoveryCustodianItemRequestBuilder
+    */
+    public function byEdiscoveryCustodianId(string $ediscoveryCustodianId): EdiscoveryCustodianItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['ediscoveryCustodian%2Did'] = $ediscoveryCustodianId;
+        return new EdiscoveryCustodianItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new CustodiansRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

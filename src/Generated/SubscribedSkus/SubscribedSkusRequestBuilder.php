@@ -8,6 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SubscribedSku;
 use Microsoft\Graph\Generated\Models\SubscribedSkuCollectionResponse;
+use Microsoft\Graph\Generated\SubscribedSkus\Item\SubscribedSkuItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -35,6 +36,17 @@ class SubscribedSkusRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the collection of subscribedSku entities.
+     * @param string $subscribedSkuId Unique identifier of the item
+     * @return SubscribedSkuItemRequestBuilder
+    */
+    public function bySubscribedSkuId(string $subscribedSkuId): SubscribedSkuItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['subscribedSku%2Did'] = $subscribedSkuId;
+        return new SubscribedSkuItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SubscribedSkusRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

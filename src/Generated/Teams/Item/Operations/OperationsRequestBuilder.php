@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TeamsAsyncOperation;
 use Microsoft\Graph\Generated\Models\TeamsAsyncOperationCollectionResponse;
 use Microsoft\Graph\Generated\Teams\Item\Operations\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Teams\Item\Operations\Item\TeamsAsyncOperationItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class OperationsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.team entity.
+     * @param string $teamsAsyncOperationId Unique identifier of the item
+     * @return TeamsAsyncOperationItemRequestBuilder
+    */
+    public function byTeamsAsyncOperationId(string $teamsAsyncOperationId): TeamsAsyncOperationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['teamsAsyncOperation%2Did'] = $teamsAsyncOperationId;
+        return new TeamsAsyncOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new OperationsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

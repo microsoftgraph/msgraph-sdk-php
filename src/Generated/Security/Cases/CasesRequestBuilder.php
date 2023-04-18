@@ -8,7 +8,6 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\CasesRoot;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\EdiscoveryCasesRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\EdiscoveryCaseItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -74,17 +73,6 @@ class CasesRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the ediscoveryCases property of the microsoft.graph.security.casesRoot entity.
-     * @param string $id Unique identifier of the item
-     * @return EdiscoveryCaseItemRequestBuilder
-    */
-    public function ediscoveryCasesById(string $id): EdiscoveryCaseItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['ediscoveryCase%2Did'] = $id;
-        return new EdiscoveryCaseItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Chats\Item\InstalledApps\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Chats\Item\InstalledApps\Item\TeamsAppInstallationItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TeamsAppInstallation;
 use Microsoft\Graph\Generated\Models\TeamsAppInstallationCollectionResponse;
@@ -43,6 +44,17 @@ class InstalledAppsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the installedApps property of the microsoft.graph.chat entity.
+     * @param string $teamsAppInstallationId Unique identifier of the item
+     * @return TeamsAppInstallationItemRequestBuilder
+    */
+    public function byTeamsAppInstallationId(string $teamsAppInstallationId): TeamsAppInstallationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['teamsAppInstallation%2Did'] = $teamsAppInstallationId;
+        return new TeamsAppInstallationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new InstalledAppsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

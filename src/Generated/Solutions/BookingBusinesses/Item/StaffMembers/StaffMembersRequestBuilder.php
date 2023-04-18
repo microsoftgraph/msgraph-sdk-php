@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\BookingStaffMemberBase;
 use Microsoft\Graph\Generated\Models\BookingStaffMemberBaseCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\StaffMembers\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Solutions\BookingBusinesses\Item\StaffMembers\Item\BookingStaffMemberBaseItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class StaffMembersRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the staffMembers property of the microsoft.graph.bookingBusiness entity.
+     * @param string $bookingStaffMemberBaseId Unique identifier of the item
+     * @return BookingStaffMemberBaseItemRequestBuilder
+    */
+    public function byBookingStaffMemberBaseId(string $bookingStaffMemberBaseId): BookingStaffMemberBaseItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['bookingStaffMemberBase%2Did'] = $bookingStaffMemberBaseId;
+        return new BookingStaffMemberBaseItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new StaffMembersRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

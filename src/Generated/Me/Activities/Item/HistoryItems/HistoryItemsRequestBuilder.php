@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Activities\Item\HistoryItems\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\Activities\Item\HistoryItems\Item\ActivityHistoryItemItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ActivityHistoryItem;
 use Microsoft\Graph\Generated\Models\ActivityHistoryItemCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class HistoryItemsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the historyItems property of the microsoft.graph.userActivity entity.
+     * @param string $activityHistoryItemId Unique identifier of the item
+     * @return ActivityHistoryItemItemRequestBuilder
+    */
+    public function byActivityHistoryItemId(string $activityHistoryItemId): ActivityHistoryItemItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['activityHistoryItem%2Did'] = $activityHistoryItemId;
+        return new ActivityHistoryItemItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new HistoryItemsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

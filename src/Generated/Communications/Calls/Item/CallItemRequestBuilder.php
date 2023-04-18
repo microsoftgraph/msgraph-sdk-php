@@ -8,16 +8,12 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Communications\Calls\Item\AddLargeGalleryView\AddLargeGalleryViewRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Answer\AnswerRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\AudioRoutingGroups\AudioRoutingGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\AudioRoutingGroups\Item\AudioRoutingGroupItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\CancelMediaProcessing\CancelMediaProcessingRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\ChangeScreenSharingRole\ChangeScreenSharingRoleRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\ContentSharingSessions\ContentSharingSessionsRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\ContentSharingSessions\Item\ContentSharingSessionItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\KeepAlive\KeepAliveRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Mute\MuteRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Operations\Item\CommsOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Operations\OperationsRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\ParticipantItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\ParticipantsRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\PlayPrompt\PlayPromptRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\RecordResponse\RecordResponseRequestBuilder;
@@ -183,17 +179,6 @@ class CallItemRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Provides operations to manage the audioRoutingGroups property of the microsoft.graph.call entity.
-     * @param string $id Unique identifier of the item
-     * @return AudioRoutingGroupItemRequestBuilder
-    */
-    public function audioRoutingGroupsById(string $id): AudioRoutingGroupItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['audioRoutingGroup%2Did'] = $id;
-        return new AudioRoutingGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Instantiates a new CallItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -206,17 +191,6 @@ class CallItemRequestBuilder
         } else {
             $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
         }
-    }
-
-    /**
-     * Provides operations to manage the contentSharingSessions property of the microsoft.graph.call entity.
-     * @param string $id Unique identifier of the item
-     * @return ContentSharingSessionItemRequestBuilder
-    */
-    public function contentSharingSessionsById(string $id): ContentSharingSessionItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['contentSharingSession%2Did'] = $id;
-        return new ContentSharingSessionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -253,28 +227,6 @@ class CallItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the operations property of the microsoft.graph.call entity.
-     * @param string $id Unique identifier of the item
-     * @return CommsOperationItemRequestBuilder
-    */
-    public function operationsById(string $id): CommsOperationItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['commsOperation%2Did'] = $id;
-        return new CommsOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the participants property of the microsoft.graph.call entity.
-     * @param string $id Unique identifier of the item
-     * @return ParticipantItemRequestBuilder
-    */
-    public function participantsById(string $id): ParticipantItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['participant%2Did'] = $id;
-        return new ParticipantItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

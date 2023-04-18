@@ -5,7 +5,6 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Acc
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackageAssignmentApprovals\Item\Stages\Item\ApprovalStageItemRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\AccessPackageAssignmentApprovals\Item\Stages\StagesRequestBuilder;
 use Microsoft\Graph\Generated\Models\Approval;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -111,17 +110,6 @@ class ApprovalItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the stages property of the microsoft.graph.approval entity.
-     * @param string $id Unique identifier of the item
-     * @return ApprovalStageItemRequestBuilder
-    */
-    public function stagesById(string $id): ApprovalStageItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['approvalStage%2Did'] = $id;
-        return new ApprovalStageItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

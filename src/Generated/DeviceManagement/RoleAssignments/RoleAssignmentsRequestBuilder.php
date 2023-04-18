@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\RoleAssignments\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\RoleAssignments\Item\DeviceAndAppManagementRoleAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\DeviceAndAppManagementRoleAssignment;
 use Microsoft\Graph\Generated\Models\DeviceAndAppManagementRoleAssignmentCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class RoleAssignmentsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the roleAssignments property of the microsoft.graph.deviceManagement entity.
+     * @param string $deviceAndAppManagementRoleAssignmentId Unique identifier of the item
+     * @return DeviceAndAppManagementRoleAssignmentItemRequestBuilder
+    */
+    public function byDeviceAndAppManagementRoleAssignmentId(string $deviceAndAppManagementRoleAssignmentId): DeviceAndAppManagementRoleAssignmentItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['deviceAndAppManagementRoleAssignment%2Did'] = $deviceAndAppManagementRoleAssignmentId;
+        return new DeviceAndAppManagementRoleAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new RoleAssignmentsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

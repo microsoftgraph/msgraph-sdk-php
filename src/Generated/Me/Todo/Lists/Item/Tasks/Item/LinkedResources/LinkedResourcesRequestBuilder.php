@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Item\LinkedResources\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\Todo\Lists\Item\Tasks\Item\LinkedResources\Item\LinkedResourceItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\LinkedResource;
 use Microsoft\Graph\Generated\Models\LinkedResourceCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class LinkedResourcesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the linkedResources property of the microsoft.graph.todoTask entity.
+     * @param string $linkedResourceId Unique identifier of the item
+     * @return LinkedResourceItemRequestBuilder
+    */
+    public function byLinkedResourceId(string $linkedResourceId): LinkedResourceItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['linkedResource%2Did'] = $linkedResourceId;
+        return new LinkedResourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new LinkedResourcesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

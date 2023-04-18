@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Planner\Plans\Item\Buckets\Item\Tasks\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Planner\Plans\Item\Buckets\Item\Tasks\Item\PlannerTaskItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PlannerTask;
 use Microsoft\Graph\Generated\Models\PlannerTaskCollectionResponse;
@@ -43,6 +44,17 @@ class TasksRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the tasks property of the microsoft.graph.plannerBucket entity.
+     * @param string $plannerTaskId Unique identifier of the item
+     * @return PlannerTaskItemRequestBuilder
+    */
+    public function byPlannerTaskId(string $plannerTaskId): PlannerTaskItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['plannerTask%2Did'] = $plannerTaskId;
+        return new PlannerTaskItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new TasksRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -5,7 +5,6 @@ namespace Microsoft\Graph\Generated\Groups\Item\Conversations\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\Item\ConversationThreadItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Conversations\Item\Threads\ThreadsRequestBuilder;
 use Microsoft\Graph\Generated\Models\Conversation;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -92,17 +91,6 @@ class ConversationItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the threads property of the microsoft.graph.conversation entity.
-     * @param string $id Unique identifier of the item
-     * @return ConversationThreadItemRequestBuilder
-    */
-    public function threadsById(string $id): ConversationThreadItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['conversationThread%2Did'] = $id;
-        return new ConversationThreadItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

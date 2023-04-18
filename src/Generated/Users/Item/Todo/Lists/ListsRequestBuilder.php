@@ -10,6 +10,7 @@ use Microsoft\Graph\Generated\Models\TodoTaskList;
 use Microsoft\Graph\Generated\Models\TodoTaskListCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\TodoTaskListItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -51,6 +52,17 @@ class ListsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the lists property of the microsoft.graph.todo entity.
+     * @param string $todoTaskListId Unique identifier of the item
+     * @return TodoTaskListItemRequestBuilder
+    */
+    public function byTodoTaskListId(string $todoTaskListId): TodoTaskListItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['todoTaskList%2Did'] = $todoTaskListId;
+        return new TodoTaskListItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ListsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\JoinedTeams\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Me\JoinedTeams\GetAllMessages\GetAllMessagesRequestBuilder;
+use Microsoft\Graph\Generated\Me\JoinedTeams\Item\TeamItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Team;
 use Microsoft\Graph\Generated\Models\TeamCollectionResponse;
@@ -51,6 +52,17 @@ class JoinedTeamsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the joinedTeams property of the microsoft.graph.user entity.
+     * @param string $teamId Unique identifier of the item
+     * @return TeamItemRequestBuilder
+    */
+    public function byTeamId(string $teamId): TeamItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['team%2Did'] = $teamId;
+        return new TeamItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new JoinedTeamsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

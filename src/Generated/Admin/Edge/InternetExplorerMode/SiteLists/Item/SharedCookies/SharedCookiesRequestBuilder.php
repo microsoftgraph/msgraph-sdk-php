@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Admin\Edge\InternetExplorerMode\SiteLists\Item\SharedCookies\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Admin\Edge\InternetExplorerMode\SiteLists\Item\SharedCookies\Item\BrowserSharedCookieItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\BrowserSharedCookie;
 use Microsoft\Graph\Generated\Models\BrowserSharedCookieCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class SharedCookiesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the sharedCookies property of the microsoft.graph.browserSiteList entity.
+     * @param string $browserSharedCookieId Unique identifier of the item
+     * @return BrowserSharedCookieItemRequestBuilder
+    */
+    public function byBrowserSharedCookieId(string $browserSharedCookieId): BrowserSharedCookieItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['browserSharedCookie%2Did'] = $browserSharedCookieId;
+        return new BrowserSharedCookieItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SharedCookiesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

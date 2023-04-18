@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\DetectedApps\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceManagement\DetectedApps\Item\DetectedAppItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\DetectedApp;
 use Microsoft\Graph\Generated\Models\DetectedAppCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class DetectedAppsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the detectedApps property of the microsoft.graph.deviceManagement entity.
+     * @param string $detectedAppId Unique identifier of the item
+     * @return DetectedAppItemRequestBuilder
+    */
+    public function byDetectedAppId(string $detectedAppId): DetectedAppItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['detectedApp%2Did'] = $detectedAppId;
+        return new DetectedAppItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new DetectedAppsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

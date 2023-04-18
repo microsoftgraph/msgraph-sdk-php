@@ -8,6 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WindowsHelloForBusinessAuthenticationMethodCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Authentication\WindowsHelloForBusinessMethods\Item\WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -42,6 +43,17 @@ class WindowsHelloForBusinessMethodsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the windowsHelloForBusinessMethods property of the microsoft.graph.authentication entity.
+     * @param string $windowsHelloForBusinessAuthenticationMethodId Unique identifier of the item
+     * @return WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder
+    */
+    public function byWindowsHelloForBusinessAuthenticationMethodId(string $windowsHelloForBusinessAuthenticationMethodId): WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['windowsHelloForBusinessAuthenticationMethod%2Did'] = $windowsHelloForBusinessAuthenticationMethodId;
+        return new WindowsHelloForBusinessAuthenticationMethodItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new WindowsHelloForBusinessMethodsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EscapedList extends BaseItem implements Parsable 
 {
     /**
-     * @var ListInfo|null $escapedList Provides additional details about the list.
-    */
-    public ?ListInfo $escapedList = null;
-    
-    /**
      * Instantiates a new EscapedList and sets the default values.
     */
     public function __construct() {

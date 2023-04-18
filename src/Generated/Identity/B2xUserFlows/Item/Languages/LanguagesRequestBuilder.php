@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\Languages\Item\UserFlowLanguageConfigurationItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UserFlowLanguageConfiguration;
 use Microsoft\Graph\Generated\Models\UserFlowLanguageConfigurationCollectionResponse;
@@ -43,6 +44,17 @@ class LanguagesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the languages property of the microsoft.graph.b2xIdentityUserFlow entity.
+     * @param string $userFlowLanguageConfigurationId Unique identifier of the item
+     * @return UserFlowLanguageConfigurationItemRequestBuilder
+    */
+    public function byUserFlowLanguageConfigurationId(string $userFlowLanguageConfigurationId): UserFlowLanguageConfigurationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['userFlowLanguageConfiguration%2Did'] = $userFlowLanguageConfigurationId;
+        return new UserFlowLanguageConfigurationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new LanguagesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

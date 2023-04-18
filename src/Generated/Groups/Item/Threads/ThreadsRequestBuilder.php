@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Threads\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Threads\Item\ConversationThreadItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ConversationThread;
 use Microsoft\Graph\Generated\Models\ConversationThreadCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class ThreadsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the threads property of the microsoft.graph.group entity.
+     * @param string $conversationThreadId Unique identifier of the item
+     * @return ConversationThreadItemRequestBuilder
+    */
+    public function byConversationThreadId(string $conversationThreadId): ConversationThreadItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['conversationThread%2Did'] = $conversationThreadId;
+        return new ConversationThreadItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ThreadsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

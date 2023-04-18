@@ -5,7 +5,6 @@ namespace Microsoft\Graph\Generated\DeviceManagement\DetectedApps\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\DeviceManagement\DetectedApps\Item\ManagedDevices\Item\ManagedDeviceItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DetectedApps\Item\ManagedDevices\ManagedDevicesRequestBuilder;
 use Microsoft\Graph\Generated\Models\DetectedApp;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -92,17 +91,6 @@ class DetectedAppItemRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the managedDevices property of the microsoft.graph.detectedApp entity.
-     * @param string $id Unique identifier of the item
-     * @return ManagedDeviceItemRequestBuilder
-    */
-    public function managedDevicesById(string $id): ManagedDeviceItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['managedDevice%2Did'] = $id;
-        return new ManagedDeviceItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

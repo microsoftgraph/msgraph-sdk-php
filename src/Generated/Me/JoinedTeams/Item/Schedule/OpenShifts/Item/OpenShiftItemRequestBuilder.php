@@ -68,7 +68,7 @@ class OpenShiftItemRequestBuilder
     }
 
     /**
-     * Get openShifts from me
+     * The set of open shifts in a scheduling group in the schedule.
      * @param OpenShiftItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -126,7 +126,7 @@ class OpenShiftItemRequestBuilder
     }
 
     /**
-     * Get openShifts from me
+     * The set of open shifts in a scheduling group in the schedule.
      * @param OpenShiftItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

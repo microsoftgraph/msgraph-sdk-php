@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentRequests\Item\Results\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\InformationProtection\ThreatAssessmentRequests\Item\Results\Item\ThreatAssessmentResultItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\ThreatAssessmentResult;
 use Microsoft\Graph\Generated\Models\ThreatAssessmentResultCollectionResponse;
@@ -43,6 +44,17 @@ class ResultsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the results property of the microsoft.graph.threatAssessmentRequest entity.
+     * @param string $threatAssessmentResultId Unique identifier of the item
+     * @return ThreatAssessmentResultItemRequestBuilder
+    */
+    public function byThreatAssessmentResultId(string $threatAssessmentResultId): ThreatAssessmentResultItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['threatAssessmentResult%2Did'] = $threatAssessmentResultId;
+        return new ThreatAssessmentResultItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ResultsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

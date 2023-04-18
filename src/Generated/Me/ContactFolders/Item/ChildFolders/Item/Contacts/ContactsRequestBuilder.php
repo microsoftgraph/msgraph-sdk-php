@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\ContactFolders\Item\ChildFolders\Item\Contacts\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Me\ContactFolders\Item\ChildFolders\Item\Contacts\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Me\ContactFolders\Item\ChildFolders\Item\Contacts\Item\ContactItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\Contact;
 use Microsoft\Graph\Generated\Models\ContactCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -51,6 +52,17 @@ class ContactsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the contacts property of the microsoft.graph.contactFolder entity.
+     * @param string $contactId Unique identifier of the item
+     * @return ContactItemRequestBuilder
+    */
+    public function byContactId(string $contactId): ContactItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['contact%2Did'] = $contactId;
+        return new ContactItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ContactsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

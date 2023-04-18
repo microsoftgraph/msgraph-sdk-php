@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\MailFolders\Item\MessageRules\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Me\MailFolders\Item\MessageRules\Item\MessageRuleItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\MessageRule;
 use Microsoft\Graph\Generated\Models\MessageRuleCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class MessageRulesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the messageRules property of the microsoft.graph.mailFolder entity.
+     * @param string $messageRuleId Unique identifier of the item
+     * @return MessageRuleItemRequestBuilder
+    */
+    public function byMessageRuleId(string $messageRuleId): MessageRuleItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['messageRule%2Did'] = $messageRuleId;
+        return new MessageRuleItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new MessageRulesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

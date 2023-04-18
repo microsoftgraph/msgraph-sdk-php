@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UnifiedRoleManagementPolicy;
 use Microsoft\Graph\Generated\Models\UnifiedRoleManagementPolicyCollectionResponse;
 use Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Policies\RoleManagementPolicies\Item\UnifiedRoleManagementPolicyItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class RoleManagementPoliciesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the roleManagementPolicies property of the microsoft.graph.policyRoot entity.
+     * @param string $unifiedRoleManagementPolicyId Unique identifier of the item
+     * @return UnifiedRoleManagementPolicyItemRequestBuilder
+    */
+    public function byUnifiedRoleManagementPolicyId(string $unifiedRoleManagementPolicyId): UnifiedRoleManagementPolicyItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['unifiedRoleManagementPolicy%2Did'] = $unifiedRoleManagementPolicyId;
+        return new UnifiedRoleManagementPolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new RoleManagementPoliciesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

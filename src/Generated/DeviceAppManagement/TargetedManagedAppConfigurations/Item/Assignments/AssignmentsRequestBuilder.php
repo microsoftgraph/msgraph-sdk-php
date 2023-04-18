@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\Assignments\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\TargetedManagedAppConfigurations\Item\Assignments\Item\TargetedManagedAppPolicyAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TargetedManagedAppPolicyAssignment;
 use Microsoft\Graph\Generated\Models\TargetedManagedAppPolicyAssignmentCollectionResponse;
@@ -43,6 +44,17 @@ class AssignmentsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.targetedManagedAppConfiguration entity.
+     * @param string $targetedManagedAppPolicyAssignmentId Unique identifier of the item
+     * @return TargetedManagedAppPolicyAssignmentItemRequestBuilder
+    */
+    public function byTargetedManagedAppPolicyAssignmentId(string $targetedManagedAppPolicyAssignmentId): TargetedManagedAppPolicyAssignmentItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['targetedManagedAppPolicyAssignment%2Did'] = $targetedManagedAppPolicyAssignmentId;
+        return new TargetedManagedAppPolicyAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new AssignmentsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

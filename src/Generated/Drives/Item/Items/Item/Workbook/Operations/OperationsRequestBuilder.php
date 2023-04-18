@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Operations\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Operations\Item\WorkbookOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookOperation;
 use Microsoft\Graph\Generated\Models\WorkbookOperationCollectionResponse;
@@ -43,6 +44,17 @@ class OperationsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the operations property of the microsoft.graph.workbook entity.
+     * @param string $workbookOperationId Unique identifier of the item
+     * @return WorkbookOperationItemRequestBuilder
+    */
+    public function byWorkbookOperationId(string $workbookOperationId): WorkbookOperationItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['workbookOperation%2Did'] = $workbookOperationId;
+        return new WorkbookOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new OperationsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

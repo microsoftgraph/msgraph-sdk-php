@@ -7,62 +7,37 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DeviceManagement\ApplePushNotificationCertificate\ApplePushNotificationCertificateRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\AuditEvents\AuditEventsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\AuditEvents\Item\AuditEventItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\ComplianceManagementPartners\ComplianceManagementPartnersRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ComplianceManagementPartners\Item\ComplianceManagementPartnerItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\ConditionalAccessSettings\ConditionalAccessSettingsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DetectedApps\DetectedAppsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DetectedApps\Item\DetectedAppItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCategories\DeviceCategoriesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCategories\Item\DeviceCategoryItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\DeviceCompliancePoliciesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicies\Item\DeviceCompliancePolicyItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicyDeviceStateSummary\DeviceCompliancePolicyDeviceStateSummaryRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicySettingStateSummaries\DeviceCompliancePolicySettingStateSummariesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceCompliancePolicySettingStateSummaries\Item\DeviceCompliancePolicySettingStateSummaryItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurationDeviceStateSummaries\DeviceConfigurationDeviceStateSummariesRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\DeviceConfigurationsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceConfigurations\Item\DeviceConfigurationItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\DeviceEnrollmentConfigurationsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceEnrollmentConfigurations\Item\DeviceEnrollmentConfigurationItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\DeviceManagementPartners\DeviceManagementPartnersRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\DeviceManagementPartners\Item\DeviceManagementPartnerItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\ExchangeConnectors\ExchangeConnectorsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ExchangeConnectors\Item\DeviceManagementExchangeConnectorItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\GetEffectivePermissionsWithScope\GetEffectivePermissionsWithScopeRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\ImportedWindowsAutopilotDeviceIdentitiesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ImportedWindowsAutopilotDeviceIdentities\Item\ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\IosUpdateStatuses\IosUpdateStatusesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\IosUpdateStatuses\Item\IosUpdateDeviceStatusItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\ManagedDeviceOverview\ManagedDeviceOverviewRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\Item\ManagedDeviceItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\ManagedDevices\ManagedDevicesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\MobileThreatDefenseConnectors\Item\MobileThreatDefenseConnectorItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\MobileThreatDefenseConnectors\MobileThreatDefenseConnectorsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\Item\NotificationMessageTemplateItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\NotificationMessageTemplates\NotificationMessageTemplatesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\Item\RemoteAssistancePartnerItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\RemoteAssistancePartners\RemoteAssistancePartnersRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\Reports\ReportsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\ResourceOperations\Item\ResourceOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\ResourceOperations\ResourceOperationsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\RoleAssignments\Item\DeviceAndAppManagementRoleAssignmentItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\RoleAssignments\RoleAssignmentsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\RoleDefinitions\Item\RoleDefinitionItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\RoleDefinitions\RoleDefinitionsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\SoftwareUpdateStatusSummary\SoftwareUpdateStatusSummaryRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\TelecomExpenseManagementPartners\Item\TelecomExpenseManagementPartnerItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\TelecomExpenseManagementPartners\TelecomExpenseManagementPartnersRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\Item\TermsAndConditionsItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\TermsAndConditions\TermsAndConditionsRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\TroubleshootingEvents\Item\DeviceManagementTroubleshootingEventItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\TroubleshootingEvents\TroubleshootingEventsRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\VerifyWindowsEnrollmentAutoDiscoveryWithDomainName\VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\Item\WindowsAutopilotDeviceIdentityItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\WindowsAutopilotDeviceIdentities\WindowsAutopilotDeviceIdentitiesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\WindowsInformationProtectionAppLearningSummaries\Item\WindowsInformationProtectionAppLearningSummaryItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\WindowsInformationProtectionAppLearningSummaries\WindowsInformationProtectionAppLearningSummariesRequestBuilder;
-use Microsoft\Graph\Generated\DeviceManagement\WindowsInformationProtectionNetworkLearningSummaries\Item\WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder;
 use Microsoft\Graph\Generated\DeviceManagement\WindowsInformationProtectionNetworkLearningSummaries\WindowsInformationProtectionNetworkLearningSummariesRequestBuilder;
 use Microsoft\Graph\Generated\Models\DeviceManagement;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -318,28 +293,6 @@ class DeviceManagementRequestBuilder
     }
     
     /**
-     * Provides operations to manage the auditEvents property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return AuditEventItemRequestBuilder
-    */
-    public function auditEventsById(string $id): AuditEventItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['auditEvent%2Did'] = $id;
-        return new AuditEventItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the complianceManagementPartners property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return ComplianceManagementPartnerItemRequestBuilder
-    */
-    public function complianceManagementPartnersById(string $id): ComplianceManagementPartnerItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['complianceManagementPartner%2Did'] = $id;
-        return new ComplianceManagementPartnerItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Instantiates a new DeviceManagementRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -352,94 +305,6 @@ class DeviceManagementRequestBuilder
         } else {
             $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
         }
-    }
-
-    /**
-     * Provides operations to manage the detectedApps property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return DetectedAppItemRequestBuilder
-    */
-    public function detectedAppsById(string $id): DetectedAppItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['detectedApp%2Did'] = $id;
-        return new DetectedAppItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the deviceCategories property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return DeviceCategoryItemRequestBuilder
-    */
-    public function deviceCategoriesById(string $id): DeviceCategoryItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['deviceCategory%2Did'] = $id;
-        return new DeviceCategoryItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the deviceCompliancePolicies property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return DeviceCompliancePolicyItemRequestBuilder
-    */
-    public function deviceCompliancePoliciesById(string $id): DeviceCompliancePolicyItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['deviceCompliancePolicy%2Did'] = $id;
-        return new DeviceCompliancePolicyItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the deviceCompliancePolicySettingStateSummaries property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return DeviceCompliancePolicySettingStateSummaryItemRequestBuilder
-    */
-    public function deviceCompliancePolicySettingStateSummariesById(string $id): DeviceCompliancePolicySettingStateSummaryItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['deviceCompliancePolicySettingStateSummary%2Did'] = $id;
-        return new DeviceCompliancePolicySettingStateSummaryItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the deviceConfigurations property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return DeviceConfigurationItemRequestBuilder
-    */
-    public function deviceConfigurationsById(string $id): DeviceConfigurationItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['deviceConfiguration%2Did'] = $id;
-        return new DeviceConfigurationItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the deviceEnrollmentConfigurations property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return DeviceEnrollmentConfigurationItemRequestBuilder
-    */
-    public function deviceEnrollmentConfigurationsById(string $id): DeviceEnrollmentConfigurationItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['deviceEnrollmentConfiguration%2Did'] = $id;
-        return new DeviceEnrollmentConfigurationItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the deviceManagementPartners property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return DeviceManagementPartnerItemRequestBuilder
-    */
-    public function deviceManagementPartnersById(string $id): DeviceManagementPartnerItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['deviceManagementPartner%2Did'] = $id;
-        return new DeviceManagementPartnerItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the exchangeConnectors property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return DeviceManagementExchangeConnectorItemRequestBuilder
-    */
-    public function exchangeConnectorsById(string $id): DeviceManagementExchangeConnectorItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['deviceManagementExchangeConnector%2Did'] = $id;
-        return new DeviceManagementExchangeConnectorItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -470,61 +335,6 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Provides operations to manage the importedWindowsAutopilotDeviceIdentities property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder
-    */
-    public function importedWindowsAutopilotDeviceIdentitiesById(string $id): ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['importedWindowsAutopilotDeviceIdentity%2Did'] = $id;
-        return new ImportedWindowsAutopilotDeviceIdentityItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the iosUpdateStatuses property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return IosUpdateDeviceStatusItemRequestBuilder
-    */
-    public function iosUpdateStatusesById(string $id): IosUpdateDeviceStatusItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['iosUpdateDeviceStatus%2Did'] = $id;
-        return new IosUpdateDeviceStatusItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the managedDevices property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return ManagedDeviceItemRequestBuilder
-    */
-    public function managedDevicesById(string $id): ManagedDeviceItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['managedDevice%2Did'] = $id;
-        return new ManagedDeviceItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the mobileThreatDefenseConnectors property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return MobileThreatDefenseConnectorItemRequestBuilder
-    */
-    public function mobileThreatDefenseConnectorsById(string $id): MobileThreatDefenseConnectorItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['mobileThreatDefenseConnector%2Did'] = $id;
-        return new MobileThreatDefenseConnectorItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the notificationMessageTemplates property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return NotificationMessageTemplateItemRequestBuilder
-    */
-    public function notificationMessageTemplatesById(string $id): NotificationMessageTemplateItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['notificationMessageTemplate%2Did'] = $id;
-        return new NotificationMessageTemplateItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Update deviceManagement
      * @param DeviceManagement $body The request body
      * @param DeviceManagementRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
@@ -541,72 +351,6 @@ class DeviceManagementRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the remoteAssistancePartners property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return RemoteAssistancePartnerItemRequestBuilder
-    */
-    public function remoteAssistancePartnersById(string $id): RemoteAssistancePartnerItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['remoteAssistancePartner%2Did'] = $id;
-        return new RemoteAssistancePartnerItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the resourceOperations property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return ResourceOperationItemRequestBuilder
-    */
-    public function resourceOperationsById(string $id): ResourceOperationItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['resourceOperation%2Did'] = $id;
-        return new ResourceOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the roleAssignments property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return DeviceAndAppManagementRoleAssignmentItemRequestBuilder
-    */
-    public function roleAssignmentsById(string $id): DeviceAndAppManagementRoleAssignmentItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['deviceAndAppManagementRoleAssignment%2Did'] = $id;
-        return new DeviceAndAppManagementRoleAssignmentItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the roleDefinitions property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return RoleDefinitionItemRequestBuilder
-    */
-    public function roleDefinitionsById(string $id): RoleDefinitionItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['roleDefinition%2Did'] = $id;
-        return new RoleDefinitionItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the telecomExpenseManagementPartners property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return TelecomExpenseManagementPartnerItemRequestBuilder
-    */
-    public function telecomExpenseManagementPartnersById(string $id): TelecomExpenseManagementPartnerItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['telecomExpenseManagementPartner%2Did'] = $id;
-        return new TelecomExpenseManagementPartnerItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the termsAndConditions property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return TermsAndConditionsItemRequestBuilder
-    */
-    public function termsAndConditionsById(string $id): TermsAndConditionsItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['termsAndConditions%2Did'] = $id;
-        return new TermsAndConditionsItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -659,56 +403,12 @@ class DeviceManagementRequestBuilder
     }
 
     /**
-     * Provides operations to manage the troubleshootingEvents property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return DeviceManagementTroubleshootingEventItemRequestBuilder
-    */
-    public function troubleshootingEventsById(string $id): DeviceManagementTroubleshootingEventItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['deviceManagementTroubleshootingEvent%2Did'] = $id;
-        return new DeviceManagementTroubleshootingEventItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Provides operations to call the verifyWindowsEnrollmentAutoDiscovery method.
      * @param string $domainName Usage: domainName='{domainName}'
      * @return VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder
     */
     public function verifyWindowsEnrollmentAutoDiscoveryWithDomainName(string $domainName): VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder {
         return new VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder($this->pathParameters, $this->requestAdapter, $domainName);
-    }
-
-    /**
-     * Provides operations to manage the windowsAutopilotDeviceIdentities property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return WindowsAutopilotDeviceIdentityItemRequestBuilder
-    */
-    public function windowsAutopilotDeviceIdentitiesById(string $id): WindowsAutopilotDeviceIdentityItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['windowsAutopilotDeviceIdentity%2Did'] = $id;
-        return new WindowsAutopilotDeviceIdentityItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the windowsInformationProtectionAppLearningSummaries property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return WindowsInformationProtectionAppLearningSummaryItemRequestBuilder
-    */
-    public function windowsInformationProtectionAppLearningSummariesById(string $id): WindowsInformationProtectionAppLearningSummaryItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['windowsInformationProtectionAppLearningSummary%2Did'] = $id;
-        return new WindowsInformationProtectionAppLearningSummaryItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the windowsInformationProtectionNetworkLearningSummaries property of the microsoft.graph.deviceManagement entity.
-     * @param string $id Unique identifier of the item
-     * @return WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder
-    */
-    public function windowsInformationProtectionNetworkLearningSummariesById(string $id): WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['windowsInformationProtectionNetworkLearningSummary%2Did'] = $id;
-        return new WindowsInformationProtectionNetworkLearningSummaryItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

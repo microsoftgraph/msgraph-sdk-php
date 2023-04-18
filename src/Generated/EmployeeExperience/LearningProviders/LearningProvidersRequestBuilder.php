@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\EmployeeExperience\LearningProviders\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\EmployeeExperience\LearningProviders\Item\LearningProviderItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\LearningProvider;
 use Microsoft\Graph\Generated\Models\LearningProviderCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class LearningProvidersRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the learningProviders property of the microsoft.graph.employeeExperience entity.
+     * @param string $learningProviderId Unique identifier of the item
+     * @return LearningProviderItemRequestBuilder
+    */
+    public function byLearningProviderId(string $learningProviderId): LearningProviderItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['learningProvider%2Did'] = $learningProviderId;
+        return new LearningProviderItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new LearningProvidersRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

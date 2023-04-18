@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\EmployeeExperience\LearningProviders\Item\LearningContents\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\EmployeeExperience\LearningProviders\Item\LearningContents\Item\LearningContentItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\LearningContent;
 use Microsoft\Graph\Generated\Models\LearningContentCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class LearningContentsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the learningContents property of the microsoft.graph.learningProvider entity.
+     * @param string $learningContentId Unique identifier of the item
+     * @return LearningContentItemRequestBuilder
+    */
+    public function byLearningContentId(string $learningContentId): LearningContentItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['learningContent%2Did'] = $learningContentId;
+        return new LearningContentItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new LearningContentsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

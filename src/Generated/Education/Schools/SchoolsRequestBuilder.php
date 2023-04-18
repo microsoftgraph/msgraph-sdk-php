@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Schools\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Education\Schools\Delta\DeltaRequestBuilder;
+use Microsoft\Graph\Generated\Education\Schools\Item\EducationSchoolItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationSchool;
 use Microsoft\Graph\Generated\Models\EducationSchoolCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -51,6 +52,17 @@ class SchoolsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the schools property of the microsoft.graph.educationRoot entity.
+     * @param string $educationSchoolId Unique identifier of the item
+     * @return EducationSchoolItemRequestBuilder
+    */
+    public function byEducationSchoolId(string $educationSchoolId): EducationSchoolItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['educationSchool%2Did'] = $educationSchoolId;
+        return new EducationSchoolItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new SchoolsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

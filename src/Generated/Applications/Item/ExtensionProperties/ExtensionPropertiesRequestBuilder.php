@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Applications\Item\ExtensionProperties\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\ExtensionProperties\Item\ExtensionPropertyItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\ExtensionProperty;
 use Microsoft\Graph\Generated\Models\ExtensionPropertyCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class ExtensionPropertiesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the extensionProperties property of the microsoft.graph.application entity.
+     * @param string $extensionPropertyId Unique identifier of the item
+     * @return ExtensionPropertyItemRequestBuilder
+    */
+    public function byExtensionPropertyId(string $extensionPropertyId): ExtensionPropertyItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['extensionProperty%2Did'] = $extensionPropertyId;
+        return new ExtensionPropertyItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new ExtensionPropertiesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

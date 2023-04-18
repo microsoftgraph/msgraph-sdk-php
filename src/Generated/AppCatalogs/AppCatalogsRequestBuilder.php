@@ -5,7 +5,6 @@ namespace Microsoft\Graph\Generated\AppCatalogs;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\AppCatalogs\TeamsApps\Item\TeamsAppItemRequestBuilder;
 use Microsoft\Graph\Generated\AppCatalogs\TeamsApps\TeamsAppsRequestBuilder;
 use Microsoft\Graph\Generated\Models\AppCatalogs;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -93,17 +92,6 @@ class AppCatalogsRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the teamsApps property of the microsoft.graph.appCatalogs entity.
-     * @param string $id Unique identifier of the item
-     * @return TeamsAppItemRequestBuilder
-    */
-    public function teamsAppsById(string $id): TeamsAppItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['teamsApp%2Did'] = $id;
-        return new TeamsAppItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

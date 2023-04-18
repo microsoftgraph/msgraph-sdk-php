@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Permission;
 use Microsoft\Graph\Generated\Models\PermissionCollectionResponse;
 use Microsoft\Graph\Generated\Sites\Item\Permissions\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Permissions\Item\PermissionItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class PermissionsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the permissions property of the microsoft.graph.site entity.
+     * @param string $permissionId Unique identifier of the item
+     * @return PermissionItemRequestBuilder
+    */
+    public function byPermissionId(string $permissionId): PermissionItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['permission%2Did'] = $permissionId;
+        return new PermissionItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new PermissionsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

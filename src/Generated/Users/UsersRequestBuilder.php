@@ -12,6 +12,7 @@ use Microsoft\Graph\Generated\Users\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Users\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Users\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Users\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\UserItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -76,6 +77,17 @@ class UsersRequestBuilder
     }
     
     /**
+     * Provides operations to manage the collection of user entities.
+     * @param string $userId Unique identifier of the item
+     * @return UserItemRequestBuilder
+    */
+    public function byUserId(string $userId): UserItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['user%2Did'] = $userId;
+        return new UserItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
+    /**
      * Instantiates a new UsersRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -91,10 +103,10 @@ class UsersRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of user object.
+     * Retrieve a list of user objects.
      * @param UsersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/user-get?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/user-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?UsersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -130,7 +142,7 @@ class UsersRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of user object.
+     * Retrieve a list of user objects.
      * @param UsersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

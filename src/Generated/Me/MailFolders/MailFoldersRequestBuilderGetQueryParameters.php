@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Me\MailFolders;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the mail folder collection directly under the root folder of the signed-in user. The returned collection includes any mail search folders directly under the root. By default, this operation does not return hidden folders. Use a query parameter _includeHiddenFolders_ to include them in the response.
+ * The user's mail folders. Read-only. Nullable.
 */
 class MailFoldersRequestBuilderGetQueryParameters 
 {
@@ -26,6 +26,11 @@ class MailFoldersRequestBuilderGetQueryParameters
      * @var string|null $filter Filter items by property values
     */
     public ?string $filter = null;
+    
+    /**
+     * @var string|null $includeHiddenFolders Include Hidden Folders
+    */
+    public ?string $includeHiddenFolders = null;
     
     /**
      * @QueryParameter("%24orderby")
@@ -56,15 +61,17 @@ class MailFoldersRequestBuilderGetQueryParameters
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values
+     * @param string|null $includeHiddenFolders Include Hidden Folders
      * @param array<string>|null $orderby Order items by property values
      * @param array<string>|null $select Select properties to be returned
      * @param int|null $skip Skip the first n items
      * @param int|null $top Show only the first n items
     */
-    public function __construct(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?array $select = null, ?int $skip = null, ?int $top = null) {
+    public function __construct(?bool $count = null, ?array $expand = null, ?string $filter = null, ?string $includeHiddenFolders = null, ?array $orderby = null, ?array $select = null, ?int $skip = null, ?int $top = null) {
         $this->count = $count;
         $this->expand = $expand;
         $this->filter = $filter;
+        $this->includeHiddenFolders = $includeHiddenFolders;
         $this->orderby = $orderby;
         $this->select = $select;
         $this->skip = $skip;

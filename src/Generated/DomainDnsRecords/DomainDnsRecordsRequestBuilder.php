@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\DomainDnsRecords\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\DomainDnsRecords\Item\DomainDnsRecordItemRequestBuilder;
 use Microsoft\Graph\Generated\Models\DomainDnsRecord;
 use Microsoft\Graph\Generated\Models\DomainDnsRecordCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -43,6 +44,17 @@ class DomainDnsRecordsRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the collection of domainDnsRecord entities.
+     * @param string $domainDnsRecordId Unique identifier of the item
+     * @return DomainDnsRecordItemRequestBuilder
+    */
+    public function byDomainDnsRecordId(string $domainDnsRecordId): DomainDnsRecordItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['domainDnsRecord%2Did'] = $domainDnsRecordId;
+        return new DomainDnsRecordItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new DomainDnsRecordsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

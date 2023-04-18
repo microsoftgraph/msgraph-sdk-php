@@ -8,10 +8,7 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Planner;
 use Microsoft\Graph\Generated\Planner\Buckets\BucketsRequestBuilder;
-use Microsoft\Graph\Generated\Planner\Buckets\Item\PlannerBucketItemRequestBuilder;
-use Microsoft\Graph\Generated\Planner\Plans\Item\PlannerPlanItemRequestBuilder;
 use Microsoft\Graph\Generated\Planner\Plans\PlansRequestBuilder;
-use Microsoft\Graph\Generated\Planner\Tasks\Item\PlannerTaskItemRequestBuilder;
 use Microsoft\Graph\Generated\Planner\Tasks\TasksRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -62,17 +59,6 @@ class PlannerRequestBuilder
     private string $urlTemplate;
     
     /**
-     * Provides operations to manage the buckets property of the microsoft.graph.planner entity.
-     * @param string $id Unique identifier of the item
-     * @return PlannerBucketItemRequestBuilder
-    */
-    public function bucketsById(string $id): PlannerBucketItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['plannerBucket%2Did'] = $id;
-        return new PlannerBucketItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Instantiates a new PlannerRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -122,28 +108,6 @@ class PlannerRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the plans property of the microsoft.graph.planner entity.
-     * @param string $id Unique identifier of the item
-     * @return PlannerPlanItemRequestBuilder
-    */
-    public function plansById(string $id): PlannerPlanItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['plannerPlan%2Did'] = $id;
-        return new PlannerPlanItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the tasks property of the microsoft.graph.planner entity.
-     * @param string $id Unique identifier of the item
-     * @return PlannerTaskItemRequestBuilder
-    */
-    public function tasksById(string $id): PlannerTaskItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['plannerTask%2Did'] = $id;
-        return new PlannerTaskItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**

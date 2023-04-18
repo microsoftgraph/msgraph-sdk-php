@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OutlookCategory;
 use Microsoft\Graph\Generated\Models\OutlookCategoryCollectionResponse;
 use Microsoft\Graph\Generated\Users\Item\Outlook\MasterCategories\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Outlook\MasterCategories\Item\OutlookCategoryItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
@@ -43,6 +44,17 @@ class MasterCategoriesRequestBuilder
     */
     private string $urlTemplate;
     
+    /**
+     * Provides operations to manage the masterCategories property of the microsoft.graph.outlookUser entity.
+     * @param string $outlookCategoryId Unique identifier of the item
+     * @return OutlookCategoryItemRequestBuilder
+    */
+    public function byOutlookCategoryId(string $outlookCategoryId): OutlookCategoryItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['outlookCategory%2Did'] = $outlookCategoryId;
+        return new OutlookCategoryItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new MasterCategoriesRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
