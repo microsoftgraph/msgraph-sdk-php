@@ -53,6 +53,7 @@ class SearchQuery extends Entity
     }
     /**
     * Gets the queryTemplate
+    * Provides a way to decorate the query string. Supports both KQL and query variables. Optional.
     *
     * @return string|null The queryTemplate
     */
@@ -67,6 +68,7 @@ class SearchQuery extends Entity
 
     /**
     * Sets the queryTemplate
+    * Provides a way to decorate the query string. Supports both KQL and query variables. Optional.
     *
     * @param string $val The value of the queryTemplate
     *
