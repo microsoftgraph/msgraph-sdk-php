@@ -26,7 +26,7 @@ class TeamsAppSettings extends Entity
 {
     /**
     * Gets the allowUserRequestsForAppAccess
-    * Indicates whether Teams users are allowed to request admins access to certain Teams apps.
+    * Indicates whether users are allowed to request access to the unavailable Teams apps.
     *
     * @return bool|null The allowUserRequestsForAppAccess
     */
@@ -41,7 +41,7 @@ class TeamsAppSettings extends Entity
 
     /**
     * Sets the allowUserRequestsForAppAccess
-    * Indicates whether Teams users are allowed to request admins access to certain Teams apps.
+    * Indicates whether users are allowed to request access to the unavailable Teams apps.
     *
     * @param bool $val The allowUserRequestsForAppAccess
     *

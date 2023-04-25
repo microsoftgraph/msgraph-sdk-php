@@ -239,6 +239,39 @@ class AuthenticationMethodsPolicy extends Entity
         return $this;
     }
 
+    /**
+    * Gets the systemCredentialPreferences
+    * Prompt users with their most-preferred credential for multifactor authentication.
+    *
+    * @return SystemCredentialPreferences|null The systemCredentialPreferences
+    */
+    public function getSystemCredentialPreferences()
+    {
+        if (array_key_exists("systemCredentialPreferences", $this->_propDict)) {
+            if (is_a($this->_propDict["systemCredentialPreferences"], "\Beta\Microsoft\Graph\Model\SystemCredentialPreferences") || is_null($this->_propDict["systemCredentialPreferences"])) {
+                return $this->_propDict["systemCredentialPreferences"];
+            } else {
+                $this->_propDict["systemCredentialPreferences"] = new SystemCredentialPreferences($this->_propDict["systemCredentialPreferences"]);
+                return $this->_propDict["systemCredentialPreferences"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the systemCredentialPreferences
+    * Prompt users with their most-preferred credential for multifactor authentication.
+    *
+    * @param SystemCredentialPreferences $val The systemCredentialPreferences
+    *
+    * @return AuthenticationMethodsPolicy
+    */
+    public function setSystemCredentialPreferences($val)
+    {
+        $this->_propDict["systemCredentialPreferences"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the authenticationMethodConfigurations
