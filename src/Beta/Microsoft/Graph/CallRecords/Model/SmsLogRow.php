@@ -26,6 +26,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the callCharge
+    * Amount of money or cost of the SMS that is charged.
     *
     * @return \Beta\Microsoft\Graph\Model\Decimal|null The callCharge
     */
@@ -44,6 +45,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the callCharge
+    * Amount of money or cost of the SMS that is charged.
     *
     * @param \Beta\Microsoft\Graph\Model\Decimal $val The value to assign to the callCharge
     *
@@ -56,6 +58,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the currency
+    * Currency used to calculate the cost of the call. For details, see ISO 4217.
     *
     * @return string|null The currency
     */
@@ -70,6 +73,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the currency
+    * Currency used to calculate the cost of the call. For details, see ISO 4217.
     *
     * @param string $val The value of the currency
     *
@@ -82,6 +86,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the destinationContext
+    * Indicates whether the SMS was Domestic (within a country or region) or International (outside a country or region) based on the user's location.
     *
     * @return string|null The destinationContext
     */
@@ -96,6 +101,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the destinationContext
+    * Indicates whether the SMS was Domestic (within a country or region) or International (outside a country or region) based on the user's location.
     *
     * @param string $val The value of the destinationContext
     *
@@ -108,6 +114,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the destinationName
+    * Country or region of a phone number that received the SMS.
     *
     * @return string|null The destinationName
     */
@@ -122,6 +129,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the destinationName
+    * Country or region of a phone number that received the SMS.
     *
     * @param string $val The value of the destinationName
     *
@@ -134,6 +142,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the destinationNumber
+    * Partially obfuscated phone number that received the SMS. For details, see E.164.
     *
     * @return string|null The destinationNumber
     */
@@ -148,6 +157,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the destinationNumber
+    * Partially obfuscated phone number that received the SMS. For details, see E.164.
     *
     * @param string $val The value of the destinationNumber
     *
@@ -160,6 +170,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the id
+    * Unique identifier (GUID) for the SMS.
     *
     * @return string|null The id
     */
@@ -174,6 +185,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the id
+    * Unique identifier (GUID) for the SMS.
     *
     * @param string $val The value of the id
     *
@@ -186,6 +198,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the licenseCapability
+    * The license used for the SMS.
     *
     * @return string|null The licenseCapability
     */
@@ -200,6 +213,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the licenseCapability
+    * The license used for the SMS.
     *
     * @param string $val The value of the licenseCapability
     *
@@ -212,6 +226,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the otherPartyCountryCode
+    * For an outbound SMS, the country code of the receiver; otherwise (inbound SMS) the country code of the sender. For details, see ISO 3166-1 alpha-2.
     *
     * @return string|null The otherPartyCountryCode
     */
@@ -226,6 +241,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the otherPartyCountryCode
+    * For an outbound SMS, the country code of the receiver; otherwise (inbound SMS) the country code of the sender. For details, see ISO 3166-1 alpha-2.
     *
     * @param string $val The value of the otherPartyCountryCode
     *
@@ -239,6 +255,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the sentDateTime
+    * The date and time when the SMS was sent.
     *
     * @return \DateTime|null The sentDateTime
     */
@@ -257,6 +274,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the sentDateTime
+    * The date and time when the SMS was sent.
     *
     * @param \DateTime $val The value to assign to the sentDateTime
     *
@@ -269,6 +287,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the smsId
+    * SMS identifier. Not guaranteed to be unique.
     *
     * @return string|null The smsId
     */
@@ -283,6 +302,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the smsId
+    * SMS identifier. Not guaranteed to be unique.
     *
     * @param string $val The value of the smsId
     *
@@ -295,6 +315,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the smsType
+    * Type of SMS such as outbound or inbound.
     *
     * @return string|null The smsType
     */
@@ -309,6 +330,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the smsType
+    * Type of SMS such as outbound or inbound.
     *
     * @param string $val The value of the smsType
     *
@@ -321,6 +343,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the smsUnits
+    * Number of SMS units sent/received.
     *
     * @return int|null The smsUnits
     */
@@ -335,6 +358,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the smsUnits
+    * Number of SMS units sent/received.
     *
     * @param int $val The value of the smsUnits
     *
@@ -347,6 +371,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the sourceNumber
+    * Partially obfuscated phone number that sent the SMS. For details, see E.164.
     *
     * @return string|null The sourceNumber
     */
@@ -361,6 +386,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the sourceNumber
+    * Partially obfuscated phone number that sent the SMS. For details, see E.164.
     *
     * @param string $val The value of the sourceNumber
     *
@@ -373,6 +399,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the tenantCountryCode
+    * Country code of the tenant. For details, see ISO 3166-1 alpha-2.
     *
     * @return string|null The tenantCountryCode
     */
@@ -387,6 +414,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the tenantCountryCode
+    * Country code of the tenant. For details, see ISO 3166-1 alpha-2.
     *
     * @param string $val The value of the tenantCountryCode
     *
@@ -399,6 +427,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userCountryCode
+    * Country code of the user. For details, see ISO 3166-1 alpha-2.
     *
     * @return string|null The userCountryCode
     */
@@ -413,6 +442,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userCountryCode
+    * Country code of the user. For details, see ISO 3166-1 alpha-2.
     *
     * @param string $val The value of the userCountryCode
     *
@@ -425,6 +455,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userDisplayName
+    * Display name of the user.
     *
     * @return string|null The userDisplayName
     */
@@ -439,6 +470,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userDisplayName
+    * Display name of the user.
     *
     * @param string $val The value of the userDisplayName
     *
@@ -451,6 +483,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userId
+    * The unique identifier (GUID) of the user in Azure Active Directory.
     *
     * @return string|null The userId
     */
@@ -465,6 +498,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userId
+    * The unique identifier (GUID) of the user in Azure Active Directory.
     *
     * @param string $val The value of the userId
     *
@@ -477,6 +511,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userPrincipalName
+    * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
     *
     * @return string|null The userPrincipalName
     */
@@ -491,6 +526,7 @@ class SmsLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userPrincipalName
+    * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
     *
     * @param string $val The value of the userPrincipalName
     *

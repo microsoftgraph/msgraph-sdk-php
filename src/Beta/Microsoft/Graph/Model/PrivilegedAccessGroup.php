@@ -26,6 +26,34 @@ class PrivilegedAccessGroup extends Entity
 {
 
      /**
+     * Gets the assignmentApprovals
+     *
+     * @return array|null The assignmentApprovals
+     */
+    public function getAssignmentApprovals()
+    {
+        if (array_key_exists("assignmentApprovals", $this->_propDict)) {
+           return $this->_propDict["assignmentApprovals"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the assignmentApprovals
+    *
+    * @param Approval[] $val The assignmentApprovals
+    *
+    * @return PrivilegedAccessGroup
+    */
+    public function setAssignmentApprovals($val)
+    {
+        $this->_propDict["assignmentApprovals"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the assignmentScheduleInstances
      *
      * @return array|null The assignmentScheduleInstances

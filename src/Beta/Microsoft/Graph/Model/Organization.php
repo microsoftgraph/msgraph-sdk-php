@@ -868,6 +868,37 @@ class Organization extends DirectoryObject
         return $this;
     }
 
+    /**
+    * Gets the partnerInformation
+    *
+    * @return PartnerInformation|null The partnerInformation
+    */
+    public function getPartnerInformation()
+    {
+        if (array_key_exists("partnerInformation", $this->_propDict)) {
+            if (is_a($this->_propDict["partnerInformation"], "\Beta\Microsoft\Graph\Model\PartnerInformation") || is_null($this->_propDict["partnerInformation"])) {
+                return $this->_propDict["partnerInformation"];
+            } else {
+                $this->_propDict["partnerInformation"] = new PartnerInformation($this->_propDict["partnerInformation"]);
+                return $this->_propDict["partnerInformation"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the partnerInformation
+    *
+    * @param PartnerInformation $val The partnerInformation
+    *
+    * @return Organization
+    */
+    public function setPartnerInformation($val)
+    {
+        $this->_propDict["partnerInformation"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the extensions

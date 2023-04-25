@@ -832,6 +832,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Gets the shareMeetingChatHistoryDefault
+    * Specifies whether meeting chat history is shared with participants.  Possible values are: all, none, unknownFutureValue.
     *
     * @return MeetingChatHistoryDefaultMode|null The shareMeetingChatHistoryDefault
     */
@@ -850,6 +851,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Sets the shareMeetingChatHistoryDefault
+    * Specifies whether meeting chat history is shared with participants.  Possible values are: all, none, unknownFutureValue.
     *
     * @param MeetingChatHistoryDefaultMode $val The shareMeetingChatHistoryDefault
     *

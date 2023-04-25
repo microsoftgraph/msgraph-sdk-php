@@ -378,7 +378,7 @@ class Subscription extends Entity
 
     /**
     * Gets the notificationUrl
-    * Required. The URL of the endpoint that receives the change notifications. This URL must make use of the HTTPS protocol.
+    * Required. The URL of the endpoint that receives the change notifications. This URL must make use of the HTTPS protocol. Any query string parameter included in the notificationUrl property will be included in the HTTP POST request when Microsoft Graph sends the change notifications.
     *
     * @return string|null The notificationUrl
     */
@@ -393,7 +393,7 @@ class Subscription extends Entity
 
     /**
     * Sets the notificationUrl
-    * Required. The URL of the endpoint that receives the change notifications. This URL must make use of the HTTPS protocol.
+    * Required. The URL of the endpoint that receives the change notifications. This URL must make use of the HTTPS protocol. Any query string parameter included in the notificationUrl property will be included in the HTTP POST request when Microsoft Graph sends the change notifications.
     *
     * @param string $val The notificationUrl
     *

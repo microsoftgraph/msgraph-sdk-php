@@ -26,6 +26,7 @@ class PstnBlockedUsersLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the blockDateTime
+    * The date and time when the user was blocked/unblocked from making PSTN calls. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The blockDateTime
     */
@@ -44,6 +45,7 @@ class PstnBlockedUsersLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the blockDateTime
+    * The date and time when the user was blocked/unblocked from making PSTN calls. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the blockDateTime
     *
@@ -56,6 +58,7 @@ class PstnBlockedUsersLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the blockReason
+    * The reason why the user is blocked/unblocked from making calls.
     *
     * @return string|null The blockReason
     */
@@ -70,6 +73,7 @@ class PstnBlockedUsersLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the blockReason
+    * The reason why the user is blocked/unblocked from making calls.
     *
     * @param string $val The value of the blockReason
     *
@@ -82,6 +86,7 @@ class PstnBlockedUsersLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the remediationId
+    * Unique identifier (GUID) for the blocking/unblocking action.
     *
     * @return string|null The remediationId
     */
@@ -96,6 +101,7 @@ class PstnBlockedUsersLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the remediationId
+    * Unique identifier (GUID) for the blocking/unblocking action.
     *
     * @param string $val The value of the remediationId
     *
@@ -109,6 +115,7 @@ class PstnBlockedUsersLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the userBlockMode
+    * Indicates whether the user is blocked or unblocked from making PSTN calls in Microsoft Teams. The possible values are: blocked, unblocked, unknownFutureValue.
     *
     * @return PstnUserBlockMode|null The userBlockMode
     */
@@ -127,6 +134,7 @@ class PstnBlockedUsersLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userBlockMode
+    * Indicates whether the user is blocked or unblocked from making PSTN calls in Microsoft Teams. The possible values are: blocked, unblocked, unknownFutureValue.
     *
     * @param PstnUserBlockMode $val The value to assign to the userBlockMode
     *
@@ -139,6 +147,7 @@ class PstnBlockedUsersLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userDisplayName
+    * Display name of the user.
     *
     * @return string|null The userDisplayName
     */
@@ -153,6 +162,7 @@ class PstnBlockedUsersLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userDisplayName
+    * Display name of the user.
     *
     * @param string $val The value of the userDisplayName
     *
@@ -165,6 +175,7 @@ class PstnBlockedUsersLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userId
+    * The unique identifier (GUID) of the user in Azure Active Directory.
     *
     * @return string|null The userId
     */
@@ -179,6 +190,7 @@ class PstnBlockedUsersLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userId
+    * The unique identifier (GUID) of the user in Azure Active Directory.
     *
     * @param string $val The value of the userId
     *
@@ -191,6 +203,7 @@ class PstnBlockedUsersLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userPrincipalName
+    * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
     *
     * @return string|null The userPrincipalName
     */
@@ -205,6 +218,7 @@ class PstnBlockedUsersLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userPrincipalName
+    * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
     *
     * @param string $val The value of the userPrincipalName
     *
@@ -217,6 +231,7 @@ class PstnBlockedUsersLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userTelephoneNumber
+    * User's blocked number. For details, see E.164.
     *
     * @return string|null The userTelephoneNumber
     */
@@ -231,6 +246,7 @@ class PstnBlockedUsersLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userTelephoneNumber
+    * User's blocked number. For details, see E.164.
     *
     * @param string $val The value of the userTelephoneNumber
     *
