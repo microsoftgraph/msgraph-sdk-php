@@ -26,7 +26,7 @@ class CustomTaskExtension extends \Beta\Microsoft\Graph\Model\CustomCalloutExten
 {
     /**
     * Gets the callbackConfiguration
-    * The callback configuration for a custom extension.
+    * The callback configuration for a custom task extension.
     *
     * @return \Beta\Microsoft\Graph\Model\CustomExtensionCallbackConfiguration|null The callbackConfiguration
     */
@@ -45,7 +45,7 @@ class CustomTaskExtension extends \Beta\Microsoft\Graph\Model\CustomCalloutExten
 
     /**
     * Sets the callbackConfiguration
-    * The callback configuration for a custom extension.
+    * The callback configuration for a custom task extension.
     *
     * @param \Beta\Microsoft\Graph\Model\CustomExtensionCallbackConfiguration $val The callbackConfiguration
     *

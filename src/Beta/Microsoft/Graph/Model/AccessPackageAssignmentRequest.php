@@ -389,6 +389,36 @@ class AccessPackageAssignmentRequest extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the verifiedCredentialsData
+    * The details of the verifiable credential that was presented by the requestor, such as the issuer and claims. Read-only.
+     *
+     * @return array|null The verifiedCredentialsData
+     */
+    public function getVerifiedCredentialsData()
+    {
+        if (array_key_exists("verifiedCredentialsData", $this->_propDict)) {
+           return $this->_propDict["verifiedCredentialsData"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the verifiedCredentialsData
+    * The details of the verifiable credential that was presented by the requestor, such as the issuer and claims. Read-only.
+    *
+    * @param VerifiedCredentialData[] $val The verifiedCredentialsData
+    *
+    * @return AccessPackageAssignmentRequest
+    */
+    public function setVerifiedCredentialsData($val)
+    {
+        $this->_propDict["verifiedCredentialsData"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the accessPackage
     * The access package associated with the accessPackageAssignmentRequest. An access package defines the collections of resource roles and the policies for how one or more users can get access to those resources. Read-only. Nullable. Supports $expand.

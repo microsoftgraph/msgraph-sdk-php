@@ -26,6 +26,7 @@ class ConditionalAccessRoot extends Entity
 {
     /**
     * Gets the authenticationStrength
+    * Defines the authentication strength policies, valid authentication method combinations, and authentication method mode details that can be required by a conditional access policy.
     *
     * @return AuthenticationStrengthRoot|null The authenticationStrength
     */
@@ -44,6 +45,7 @@ class ConditionalAccessRoot extends Entity
 
     /**
     * Sets the authenticationStrength
+    * Defines the authentication strength policies, valid authentication method combinations, and authentication method mode details that can be required by a conditional access policy.
     *
     * @param AuthenticationStrengthRoot $val The authenticationStrength
     *
@@ -57,7 +59,6 @@ class ConditionalAccessRoot extends Entity
 
     /**
     * Gets the authenticationStrengths
-    * Defines the authentication strength policies, valid authentication method combinations, and authentication method mode details that can be required by a conditional access policy .
     *
     * @return AuthenticationStrengthRoot|null The authenticationStrengths
     */
@@ -76,7 +77,6 @@ class ConditionalAccessRoot extends Entity
 
     /**
     * Sets the authenticationStrengths
-    * Defines the authentication strength policies, valid authentication method combinations, and authentication method mode details that can be required by a conditional access policy .
     *
     * @param AuthenticationStrengthRoot $val The authenticationStrengths
     *

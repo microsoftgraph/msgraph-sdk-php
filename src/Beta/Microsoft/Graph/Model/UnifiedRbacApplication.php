@@ -27,6 +27,7 @@ class UnifiedRbacApplication extends Entity
 
      /**
      * Gets the resourceNamespaces
+    * Resource that represents a collection of related actions.
      *
      * @return array|null The resourceNamespaces
      */
@@ -41,6 +42,7 @@ class UnifiedRbacApplication extends Entity
 
     /**
     * Sets the resourceNamespaces
+    * Resource that represents a collection of related actions.
     *
     * @param UnifiedRbacResourceNamespace[] $val The resourceNamespaces
     *
@@ -55,6 +57,7 @@ class UnifiedRbacApplication extends Entity
 
      /**
      * Gets the roleAssignments
+    * Resource to grant access to users or groups.
      *
      * @return array|null The roleAssignments
      */
@@ -69,6 +72,7 @@ class UnifiedRbacApplication extends Entity
 
     /**
     * Sets the roleAssignments
+    * Resource to grant access to users or groups.
     *
     * @param UnifiedRoleAssignment[] $val The roleAssignments
     *
@@ -83,6 +87,7 @@ class UnifiedRbacApplication extends Entity
 
      /**
      * Gets the roleDefinitions
+    * The roles allowed by RBAC providers and the permissions assigned to the roles.
      *
      * @return array|null The roleDefinitions
      */
@@ -97,6 +102,7 @@ class UnifiedRbacApplication extends Entity
 
     /**
     * Sets the roleDefinitions
+    * The roles allowed by RBAC providers and the permissions assigned to the roles.
     *
     * @param UnifiedRoleDefinition[] $val The roleDefinitions
     *
@@ -111,6 +117,7 @@ class UnifiedRbacApplication extends Entity
 
      /**
      * Gets the transitiveRoleAssignments
+    * Resource to grant access to users or groups that are transitive.
      *
      * @return array|null The transitiveRoleAssignments
      */
@@ -125,6 +132,7 @@ class UnifiedRbacApplication extends Entity
 
     /**
     * Sets the transitiveRoleAssignments
+    * Resource to grant access to users or groups that are transitive.
     *
     * @param UnifiedRoleAssignment[] $val The transitiveRoleAssignments
     *

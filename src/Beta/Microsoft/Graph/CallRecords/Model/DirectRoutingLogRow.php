@@ -25,7 +25,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the calleeNumber
-    * Number of the user or bot who received the call. E.164 format, but may include additional data.
+    * Number of the user or bot who received the call (E.164 format, but may include additional data).
     *
     * @return string|null The calleeNumber
     */
@@ -40,7 +40,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the calleeNumber
-    * Number of the user or bot who received the call. E.164 format, but may include additional data.
+    * Number of the user or bot who received the call (E.164 format, but may include additional data).
     *
     * @param string $val The value of the calleeNumber
     *
@@ -81,7 +81,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the callerNumber
-    * Number of the user or bot who made the call. E.164 format, but may include additional data.
+    * Number of the user or bot who made the call (E.164 format, but may include additional data).
     *
     * @return string|null The callerNumber
     */
@@ -96,7 +96,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the callerNumber
-    * Number of the user or bot who made the call. E.164 format, but may include additional data.
+    * Number of the user or bot who made the call (E.164 format, but may include additional data).
     *
     * @param string $val The value of the callerNumber
     *
@@ -137,7 +137,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the correlationId
-    * Identifier for the call that you can use when calling Microsoft Support. GUID.
+    * Identifier (GUID) for the call that you can use when calling Microsoft Support.
     *
     * @return string|null The correlationId
     */
@@ -152,7 +152,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the correlationId
-    * Identifier for the call that you can use when calling Microsoft Support. GUID.
+    * Identifier (GUID) for the call that you can use when calling Microsoft Support.
     *
     * @param string $val The value of the correlationId
     *
@@ -259,7 +259,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the finalSipCode
-    * The code with which the call ended, RFC 3261.
+    * The code with which the call ended (RFC 3261).
     *
     * @return int|null The finalSipCode
     */
@@ -274,7 +274,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the finalSipCode
-    * The code with which the call ended, RFC 3261.
+    * The code with which the call ended (RFC 3261).
     *
     * @param int $val The value of the finalSipCode
     *
@@ -315,7 +315,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the id
-    * Unique call identifier. GUID.
+    * Unique call identifier (GUID).
     *
     * @return string|null The id
     */
@@ -330,7 +330,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the id
-    * Unique call identifier. GUID.
+    * Unique call identifier (GUID).
     *
     * @param string $val The value of the id
     *
@@ -404,7 +404,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the mediaPathLocation
-    * The datacenter used for media path in non-bypass call.
+    * The data center used for media path in non-bypass call.
     *
     * @return string|null The mediaPathLocation
     */
@@ -419,7 +419,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the mediaPathLocation
-    * The datacenter used for media path in non-bypass call.
+    * The data center used for media path in non-bypass call.
     *
     * @param string $val The value of the mediaPathLocation
     *
@@ -432,6 +432,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the otherPartyCountryCode
+    * Country code of the caller in case of an incoming call, or callee in case of an outgoing call. For details, see ISO 3166-1 alpha-2.
     *
     * @return string|null The otherPartyCountryCode
     */
@@ -446,6 +447,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the otherPartyCountryCode
+    * Country code of the caller in case of an incoming call, or callee in case of an outgoing call. For details, see ISO 3166-1 alpha-2.
     *
     * @param string $val The value of the otherPartyCountryCode
     *
@@ -458,7 +460,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the signalingLocation
-    * The datacenter used for signaling for both bypass and non-bypass calls.
+    * The data center used for signaling for both bypass and non-bypass calls.
     *
     * @return string|null The signalingLocation
     */
@@ -473,7 +475,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the signalingLocation
-    * The datacenter used for signaling for both bypass and non-bypass calls.
+    * The data center used for signaling for both bypass and non-bypass calls.
     *
     * @param string $val The value of the signalingLocation
     *
@@ -575,6 +577,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userCountryCode
+    * Country code of the user. For details, see ISO 3166-1 alpha-2.
     *
     * @return string|null The userCountryCode
     */
@@ -589,6 +592,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userCountryCode
+    * Country code of the user. For details, see ISO 3166-1 alpha-2.
     *
     * @param string $val The value of the userCountryCode
     *
@@ -629,7 +633,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userId
-    * Calling user's ID in Graph. This and other user info will be null/empty for bot call types. GUID.
+    * The unique identifier (GUID) of the user in Azure Active Directory. This and other user info will be null/empty for bot call types.
     *
     * @return string|null The userId
     */
@@ -644,7 +648,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userId
-    * Calling user's ID in Graph. This and other user info will be null/empty for bot call types. GUID.
+    * The unique identifier (GUID) of the user in Azure Active Directory. This and other user info will be null/empty for bot call types.
     *
     * @param string $val The value of the userId
     *
@@ -657,7 +661,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the userPrincipalName
-    * UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address.
+    * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
     *
     * @return string|null The userPrincipalName
     */
@@ -672,7 +676,7 @@ class DirectRoutingLogRow extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the userPrincipalName
-    * UserPrincipalName (sign-in name) in Azure Active Directory. This is usually the same as user's SIP Address, and can be same as user's e-mail address.
+    * The user principal name (sign-in name) in Azure Active Directory. This is usually the same as the user's SIP address, and can be same as the user's e-mail address.
     *
     * @param string $val The value of the userPrincipalName
     *

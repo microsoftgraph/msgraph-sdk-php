@@ -254,6 +254,39 @@ class Property extends \Beta\Microsoft\Graph\Model\Entity
     }
 
     /**
+    * Gets the rankingHint
+    * Specifies the property ranking hint. Developers can specify which properties are most important, allowing Microsoft Search to determine the search relevance of the content.
+    *
+    * @return RankingHint|null The rankingHint
+    */
+    public function getRankingHint()
+    {
+        if (array_key_exists("rankingHint", $this->_propDict)) {
+            if (is_a($this->_propDict["rankingHint"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\RankingHint") || is_null($this->_propDict["rankingHint"])) {
+                return $this->_propDict["rankingHint"];
+            } else {
+                $this->_propDict["rankingHint"] = new RankingHint($this->_propDict["rankingHint"]);
+                return $this->_propDict["rankingHint"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the rankingHint
+    * Specifies the property ranking hint. Developers can specify which properties are most important, allowing Microsoft Search to determine the search relevance of the content.
+    *
+    * @param RankingHint $val The value to assign to the rankingHint
+    *
+    * @return Property The Property
+    */
+    public function setRankingHint($val)
+    {
+        $this->_propDict["rankingHint"] = $val;
+         return $this;
+    }
+
+    /**
     * Gets the type
     * The data type of the property. Possible values are: string, int64, double, dateTime, boolean, stringCollection, int64Collection, doubleCollection, dateTimeCollection, unknownFutureValue. Required.
     *

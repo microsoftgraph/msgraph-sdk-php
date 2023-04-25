@@ -56,6 +56,62 @@ class Directory extends Entity
 
 
      /**
+     * Gets the attributeSets
+     *
+     * @return array|null The attributeSets
+     */
+    public function getAttributeSets()
+    {
+        if (array_key_exists("attributeSets", $this->_propDict)) {
+           return $this->_propDict["attributeSets"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the attributeSets
+    *
+    * @param AttributeSet[] $val The attributeSets
+    *
+    * @return Directory
+    */
+    public function setAttributeSets($val)
+    {
+        $this->_propDict["attributeSets"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the customSecurityAttributeDefinitions
+     *
+     * @return array|null The customSecurityAttributeDefinitions
+     */
+    public function getCustomSecurityAttributeDefinitions()
+    {
+        if (array_key_exists("customSecurityAttributeDefinitions", $this->_propDict)) {
+           return $this->_propDict["customSecurityAttributeDefinitions"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customSecurityAttributeDefinitions
+    *
+    * @param CustomSecurityAttributeDefinition[] $val The customSecurityAttributeDefinitions
+    *
+    * @return Directory
+    */
+    public function setCustomSecurityAttributeDefinitions($val)
+    {
+        $this->_propDict["customSecurityAttributeDefinitions"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the deletedItems
     * Recently deleted items. Read-only. Nullable.
      *
