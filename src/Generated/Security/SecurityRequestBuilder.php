@@ -12,25 +12,20 @@ use Microsoft\Graph\Generated\Security\Alerts\AlertsRequestBuilder;
 use Microsoft\Graph\Generated\Security\AttackSimulation\AttackSimulationRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\CasesRequestBuilder;
 use Microsoft\Graph\Generated\Security\Incidents\IncidentsRequestBuilder;
-use Microsoft\Graph\Generated\Security\Incidents\Item\IncidentItemRequestBuilder;
-use Microsoft\Graph\Generated\Security\SecureScoreControlProfiles\Item\SecureScoreControlProfileItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecureScoreControlProfiles\SecureScoreControlProfilesRequestBuilder;
-use Microsoft\Graph\Generated\Security\SecureScores\Item\SecureScoreItemRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecureScores\SecureScoresRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecurityRunHuntingQuery\SecurityRunHuntingQueryRequestBuilder;
 use Microsoft\Graph\Generated\Security\Triggers\TriggersRequestBuilder;
 use Microsoft\Graph\Generated\Security\TriggerTypes\TriggerTypesRequestBuilder;
+use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 /**
  * Provides operations to manage the security singleton.
 */
-class SecurityRequestBuilder 
+class SecurityRequestBuilder extends BaseRequestBuilder 
 {
     /**
      * Provides operations to manage the alerts property of the microsoft.graph.security entity.
@@ -68,16 +63,6 @@ class SecurityRequestBuilder
     }
     
     /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
-    */
-    private array $pathParameters;
-    
-    /**
-     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-    */
-    private RequestAdapter $requestAdapter;
-    
-    /**
      * Provides operations to manage the secureScoreControlProfiles property of the microsoft.graph.security entity.
     */
     public function secureScoreControlProfiles(): SecureScoreControlProfilesRequestBuilder {
@@ -113,40 +98,12 @@ class SecurityRequestBuilder
     }
     
     /**
-     * @var string $urlTemplate Url template to use to build the URL for the current request builder
-    */
-    private string $urlTemplate;
-    
-    /**
-     * Provides operations to manage the alerts_v2 property of the microsoft.graph.security entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Security\Alerts_v2\Item\AlertItemRequestBuilder
-    */
-    public function alerts_v2ById(string $id): \Microsoft\Graph\Generated\Security\Alerts_v2\Item\AlertItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['alert%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Security\Alerts_v2\Item\AlertItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the alerts property of the microsoft.graph.security entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Security\Alerts\Item\AlertItemRequestBuilder
-    */
-    public function alertsById(string $id): \Microsoft\Graph\Generated\Security\Alerts\Item\AlertItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['alert%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Security\Alerts\Item\AlertItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Instantiates a new SecurityRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/security{?%24select,%24expand}';
-        $this->requestAdapter = $requestAdapter;
+        parent::__construct($requestAdapter, [], "{+baseurl}/security{?%24select,%24expand}");
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -173,17 +130,6 @@ class SecurityRequestBuilder
     }
 
     /**
-     * Provides operations to manage the incidents property of the microsoft.graph.security entity.
-     * @param string $id Unique identifier of the item
-     * @return IncidentItemRequestBuilder
-    */
-    public function incidentsById(string $id): IncidentItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['incident%2Did'] = $id;
-        return new IncidentItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Update security
      * @param Security $body The request body
      * @param SecurityRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
@@ -203,28 +149,6 @@ class SecurityRequestBuilder
     }
 
     /**
-     * Provides operations to manage the secureScoreControlProfiles property of the microsoft.graph.security entity.
-     * @param string $id Unique identifier of the item
-     * @return SecureScoreControlProfileItemRequestBuilder
-    */
-    public function secureScoreControlProfilesById(string $id): SecureScoreControlProfileItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['secureScoreControlProfile%2Did'] = $id;
-        return new SecureScoreControlProfileItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the secureScores property of the microsoft.graph.security entity.
-     * @param string $id Unique identifier of the item
-     * @return SecureScoreItemRequestBuilder
-    */
-    public function secureScoresById(string $id): SecureScoreItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['secureScore%2Did'] = $id;
-        return new SecureScoreItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Get security
      * @param SecurityRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -236,15 +160,11 @@ class SecurityRequestBuilder
         $requestInfo->httpMethod = HttpMethod::GET;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -262,12 +182,8 @@ class SecurityRequestBuilder
         $requestInfo->httpMethod = HttpMethod::PATCH;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;

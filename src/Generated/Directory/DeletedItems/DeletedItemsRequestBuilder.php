@@ -12,21 +12,20 @@ use Microsoft\Graph\Generated\Directory\DeletedItems\GetByIds\GetByIdsRequestBui
 use Microsoft\Graph\Generated\Directory\DeletedItems\GraphApplication\GraphApplicationRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\GraphGroup\GraphGroupRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\GraphUser\GraphUserRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\Item\DirectoryObjectItemRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\ValidateProperties\ValidatePropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryObject;
 use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 /**
  * Provides operations to manage the deletedItems property of the microsoft.graph.directory entity.
 */
-class DeletedItemsRequestBuilder 
+class DeletedItemsRequestBuilder extends BaseRequestBuilder 
 {
     /**
      * Provides operations to count the resources in the collection.
@@ -78,21 +77,6 @@ class DeletedItemsRequestBuilder
     }
     
     /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
-    */
-    private array $pathParameters;
-    
-    /**
-     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-    */
-    private RequestAdapter $requestAdapter;
-    
-    /**
-     * @var string $urlTemplate Url template to use to build the URL for the current request builder
-    */
-    private string $urlTemplate;
-    
-    /**
      * Provides operations to call the validateProperties method.
     */
     public function validateProperties(): ValidatePropertiesRequestBuilder {
@@ -100,13 +84,23 @@ class DeletedItemsRequestBuilder
     }
     
     /**
+     * Provides operations to manage the deletedItems property of the microsoft.graph.directory entity.
+     * @param string $directoryObjectId Unique identifier of the item
+     * @return DirectoryObjectItemRequestBuilder
+    */
+    public function byDirectoryObjectId(string $directoryObjectId): DirectoryObjectItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['directoryObject%2Did'] = $directoryObjectId;
+        return new DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
+    /**
      * Instantiates a new DeletedItemsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/directory/deletedItems{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
-        $this->requestAdapter = $requestAdapter;
+        parent::__construct($requestAdapter, [], "{+baseurl}/directory/deletedItems{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}");
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -163,15 +157,11 @@ class DeletedItemsRequestBuilder
         $requestInfo->httpMethod = HttpMethod::GET;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -189,12 +179,8 @@ class DeletedItemsRequestBuilder
         $requestInfo->httpMethod = HttpMethod::POST;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;

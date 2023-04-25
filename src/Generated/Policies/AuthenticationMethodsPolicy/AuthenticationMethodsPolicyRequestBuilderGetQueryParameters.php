@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\AuthenticationMethodsPolicy;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read the properties and relationships of an authenticationMethodsPolicy object.
+ * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Azure Active Directory (Azure AD).
 */
 class AuthenticationMethodsPolicyRequestBuilderGetQueryParameters 
 {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\AdministrativeUnits;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of administrativeUnit objects.
+ * Conceptual container for user and group directory objects.
 */
 class AdministrativeUnitsRequestBuilderGetQueryParameters 
 {

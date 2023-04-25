@@ -85,6 +85,11 @@ use Microsoft\Graph\Generated\Reports\GetTeamsDeviceUsageDistributionUserCountsW
 use Microsoft\Graph\Generated\Reports\GetTeamsDeviceUsageUserCountsWithPeriod\GetTeamsDeviceUsageUserCountsWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetTeamsDeviceUsageUserDetailWithDate\GetTeamsDeviceUsageUserDetailWithDateRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetTeamsDeviceUsageUserDetailWithPeriod\GetTeamsDeviceUsageUserDetailWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\GetTeamsTeamActivityCountsWithPeriod\GetTeamsTeamActivityCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\GetTeamsTeamActivityDetailWithDate\GetTeamsTeamActivityDetailWithDateRequestBuilder;
+use Microsoft\Graph\Generated\Reports\GetTeamsTeamActivityDetailWithPeriod\GetTeamsTeamActivityDetailWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\GetTeamsTeamActivityDistributionCountsWithPeriod\GetTeamsTeamActivityDistributionCountsWithPeriodRequestBuilder;
+use Microsoft\Graph\Generated\Reports\GetTeamsTeamCountsWithPeriod\GetTeamsTeamCountsWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetTeamsUserActivityCountsWithPeriod\GetTeamsUserActivityCountsWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetTeamsUserActivityUserCountsWithPeriod\GetTeamsUserActivityUserCountsWithPeriodRequestBuilder;
 use Microsoft\Graph\Generated\Reports\GetTeamsUserActivityUserDetailWithDate\GetTeamsUserActivityUserDetailWithDateRequestBuilder;
@@ -109,18 +114,16 @@ use Microsoft\Graph\Generated\Reports\ManagedDeviceEnrollmentTopFailuresWithPeri
 use Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByPrinter\MonthlyPrintUsageByPrinterRequestBuilder;
 use Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByUser\MonthlyPrintUsageByUserRequestBuilder;
 use Microsoft\Graph\Generated\Reports\Security\SecurityRequestBuilder;
+use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 use Microsoft\Kiota\Abstractions\Types\Date;
 
 /**
  * Provides operations to manage the reportRoot singleton.
 */
-class ReportsRequestBuilder 
+class ReportsRequestBuilder extends BaseRequestBuilder 
 {
     /**
      * Provides operations to manage the dailyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity.
@@ -200,16 +203,6 @@ class ReportsRequestBuilder
     }
     
     /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
-    */
-    private array $pathParameters;
-    
-    /**
-     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-    */
-    private RequestAdapter $requestAdapter;
-    
-    /**
      * Provides operations to manage the security property of the microsoft.graph.reportRoot entity.
     */
     public function security(): SecurityRequestBuilder {
@@ -217,45 +210,17 @@ class ReportsRequestBuilder
     }
     
     /**
-     * @var string $urlTemplate Url template to use to build the URL for the current request builder
-    */
-    private string $urlTemplate;
-    
-    /**
      * Instantiates a new ReportsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/reports{?%24select,%24expand}';
-        $this->requestAdapter = $requestAdapter;
+        parent::__construct($requestAdapter, [], "{+baseurl}/reports{?%24select,%24expand}");
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
             $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
         }
-    }
-
-    /**
-     * Provides operations to manage the dailyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Reports\DailyPrintUsageByPrinter\Item\PrintUsageByPrinterItemRequestBuilder
-    */
-    public function dailyPrintUsageByPrinterById(string $id): \Microsoft\Graph\Generated\Reports\DailyPrintUsageByPrinter\Item\PrintUsageByPrinterItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['printUsageByPrinter%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Reports\DailyPrintUsageByPrinter\Item\PrintUsageByPrinterItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the dailyPrintUsageByUser property of the microsoft.graph.reportRoot entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Reports\DailyPrintUsageByUser\Item\PrintUsageByUserItemRequestBuilder
-    */
-    public function dailyPrintUsageByUserById(string $id): \Microsoft\Graph\Generated\Reports\DailyPrintUsageByUser\Item\PrintUsageByUserItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['printUsageByUser%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Reports\DailyPrintUsageByUser\Item\PrintUsageByUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -911,6 +876,51 @@ class ReportsRequestBuilder
     }
 
     /**
+     * Provides operations to call the getTeamsTeamActivityCounts method.
+     * @param string $period Usage: period='{period}'
+     * @return GetTeamsTeamActivityCountsWithPeriodRequestBuilder
+    */
+    public function getTeamsTeamActivityCountsWithPeriod(string $period): GetTeamsTeamActivityCountsWithPeriodRequestBuilder {
+        return new GetTeamsTeamActivityCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
+    }
+
+    /**
+     * Provides operations to call the getTeamsTeamActivityDetail method.
+     * @param Date $date Usage: date={date}
+     * @return GetTeamsTeamActivityDetailWithDateRequestBuilder
+    */
+    public function getTeamsTeamActivityDetailWithDate(Date $date): GetTeamsTeamActivityDetailWithDateRequestBuilder {
+        return new GetTeamsTeamActivityDetailWithDateRequestBuilder($this->pathParameters, $this->requestAdapter, $date);
+    }
+
+    /**
+     * Provides operations to call the getTeamsTeamActivityDetail method.
+     * @param string $period Usage: period='{period}'
+     * @return GetTeamsTeamActivityDetailWithPeriodRequestBuilder
+    */
+    public function getTeamsTeamActivityDetailWithPeriod(string $period): GetTeamsTeamActivityDetailWithPeriodRequestBuilder {
+        return new GetTeamsTeamActivityDetailWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
+    }
+
+    /**
+     * Provides operations to call the getTeamsTeamActivityDistributionCounts method.
+     * @param string $period Usage: period='{period}'
+     * @return GetTeamsTeamActivityDistributionCountsWithPeriodRequestBuilder
+    */
+    public function getTeamsTeamActivityDistributionCountsWithPeriod(string $period): GetTeamsTeamActivityDistributionCountsWithPeriodRequestBuilder {
+        return new GetTeamsTeamActivityDistributionCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
+    }
+
+    /**
+     * Provides operations to call the getTeamsTeamCounts method.
+     * @param string $period Usage: period='{period}'
+     * @return GetTeamsTeamCountsWithPeriodRequestBuilder
+    */
+    public function getTeamsTeamCountsWithPeriod(string $period): GetTeamsTeamCountsWithPeriodRequestBuilder {
+        return new GetTeamsTeamCountsWithPeriodRequestBuilder($this->pathParameters, $this->requestAdapter, $period);
+    }
+
+    /**
      * Provides operations to call the getTeamsUserActivityCounts method.
      * @param string $period Usage: period='{period}'
      * @return GetTeamsUserActivityCountsWithPeriodRequestBuilder
@@ -1087,28 +1097,6 @@ class ReportsRequestBuilder
     }
 
     /**
-     * Provides operations to manage the monthlyPrintUsageByPrinter property of the microsoft.graph.reportRoot entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByPrinter\Item\PrintUsageByPrinterItemRequestBuilder
-    */
-    public function monthlyPrintUsageByPrinterById(string $id): \Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByPrinter\Item\PrintUsageByPrinterItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['printUsageByPrinter%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByPrinter\Item\PrintUsageByPrinterItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the monthlyPrintUsageByUser property of the microsoft.graph.reportRoot entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByUser\Item\PrintUsageByUserItemRequestBuilder
-    */
-    public function monthlyPrintUsageByUserById(string $id): \Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByUser\Item\PrintUsageByUserItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['printUsageByUser%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Reports\MonthlyPrintUsageByUser\Item\PrintUsageByUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Update reports
      * @param ReportRoot $body The request body
      * @param ReportsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
@@ -1139,15 +1127,11 @@ class ReportsRequestBuilder
         $requestInfo->httpMethod = HttpMethod::GET;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -1165,12 +1149,8 @@ class ReportsRequestBuilder
         $requestInfo->httpMethod = HttpMethod::PATCH;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;

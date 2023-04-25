@@ -10,20 +10,19 @@ use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\GraphAppRoleAssignme
 use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\GraphEndpoint\GraphEndpointRequestBuilder;
 use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
 use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\GraphUser\GraphUserRequestBuilder;
+use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Item\DirectoryObjectItemRequestBuilder;
 use Microsoft\Graph\Generated\Devices\Item\RegisteredOwners\Ref\RefRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryObjectCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 /**
  * Provides operations to manage the registeredOwners property of the microsoft.graph.device entity.
 */
-class RegisteredOwnersRequestBuilder 
+class RegisteredOwnersRequestBuilder extends BaseRequestBuilder 
 {
     /**
      * Provides operations to count the resources in the collection.
@@ -61,11 +60,6 @@ class RegisteredOwnersRequestBuilder
     }
     
     /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
-    */
-    private array $pathParameters;
-    
-    /**
      * Provides operations to manage the collection of device entities.
     */
     public function ref(): RefRequestBuilder {
@@ -73,23 +67,23 @@ class RegisteredOwnersRequestBuilder
     }
     
     /**
-     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * Gets an item from the Microsoft/Graph/Generated.devices.item.registeredOwners.item collection
+     * @param string $directoryObjectId Unique identifier of the item
+     * @return DirectoryObjectItemRequestBuilder
     */
-    private RequestAdapter $requestAdapter;
-    
-    /**
-     * @var string $urlTemplate Url template to use to build the URL for the current request builder
-    */
-    private string $urlTemplate;
-    
+    public function byDirectoryObjectId(string $directoryObjectId): DirectoryObjectItemRequestBuilder {
+        $urlTplParams = $this->pathParameters;
+        $urlTplParams['directoryObject%2Did'] = $directoryObjectId;
+        return new DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
+    }
+
     /**
      * Instantiates a new RegisteredOwnersRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/devices/{device%2Did}/registeredOwners{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}';
-        $this->requestAdapter = $requestAdapter;
+        parent::__construct($requestAdapter, [], "{+baseurl}/devices/{device%2Did}/registeredOwners{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}");
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -98,10 +92,9 @@ class RegisteredOwnersRequestBuilder
     }
 
     /**
-     * The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable. Supports $expand.
+     * The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Read-only. Nullable. Supports $expand.
      * @param RegisteredOwnersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/device-list-registeredowners?view=graph-rest-1.0 Find more info here
     */
     public function get(?RegisteredOwnersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -117,7 +110,7 @@ class RegisteredOwnersRequestBuilder
     }
 
     /**
-     * The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable. Supports $expand.
+     * The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Read-only. Nullable. Supports $expand.
      * @param RegisteredOwnersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,15 +121,11 @@ class RegisteredOwnersRequestBuilder
         $requestInfo->httpMethod = HttpMethod::GET;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }

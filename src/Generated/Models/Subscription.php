@@ -138,7 +138,7 @@ class Subscription extends Entity implements Parsable
     }
 
     /**
-     * Gets the notificationUrl property value. Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.
+     * Gets the notificationUrl property value. Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol. Any query string parameter included in the notificationUrl property will be included in the HTTP POST request when Microsoft Graph sends the change notifications.
      * @return string|null
     */
     public function getNotificationUrl(): ?string {
@@ -272,7 +272,7 @@ class Subscription extends Entity implements Parsable
     }
 
     /**
-     * Sets the notificationUrl property value. Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol.
+     * Sets the notificationUrl property value. Required. The URL of the endpoint that will receive the change notifications. This URL must make use of the HTTPS protocol. Any query string parameter included in the notificationUrl property will be included in the HTTP POST request when Microsoft Graph sends the change notifications.
      * @param string|null $value Value to set for the notificationUrl property.
     */
     public function setNotificationUrl(?string $value): void {

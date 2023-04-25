@@ -6,7 +6,6 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\EscapedReturn\ReturnRequestBuilder;
-use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Outcomes\Item\EducationOutcomeItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Outcomes\OutcomesRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Reassign\ReassignRequestBuilder;
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Resources\ResourcesRequestBuilder;
@@ -16,17 +15,15 @@ use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Sub
 use Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Unsubmit\UnsubmitRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationSubmission;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 /**
  * Provides operations to manage the submissions property of the microsoft.graph.educationAssignment entity.
 */
-class EducationSubmissionItemRequestBuilder 
+class EducationSubmissionItemRequestBuilder extends BaseRequestBuilder 
 {
     /**
      * Provides operations to call the return method.
@@ -43,21 +40,11 @@ class EducationSubmissionItemRequestBuilder
     }
     
     /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
-    */
-    private array $pathParameters;
-    
-    /**
      * Provides operations to call the reassign method.
     */
     public function reassign(): ReassignRequestBuilder {
         return new ReassignRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
-    
-    /**
-     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-    */
-    private RequestAdapter $requestAdapter;
     
     /**
      * Provides operations to manage the resources property of the microsoft.graph.educationSubmission entity.
@@ -95,18 +82,12 @@ class EducationSubmissionItemRequestBuilder
     }
     
     /**
-     * @var string $urlTemplate Url template to use to build the URL for the current request builder
-    */
-    private string $urlTemplate;
-    
-    /**
      * Instantiates a new EducationSubmissionItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/education/me/assignments/{educationAssignment%2Did}/submissions/{educationSubmission%2Did}{?%24select,%24expand}';
-        $this->requestAdapter = $requestAdapter;
+        parent::__construct($requestAdapter, [], "{+baseurl}/education/me/assignments/{educationAssignment%2Did}/submissions/{educationSubmission%2Did}{?%24select,%24expand}");
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -151,17 +132,6 @@ class EducationSubmissionItemRequestBuilder
     }
 
     /**
-     * Provides operations to manage the outcomes property of the microsoft.graph.educationSubmission entity.
-     * @param string $id Unique identifier of the item
-     * @return EducationOutcomeItemRequestBuilder
-    */
-    public function outcomesById(string $id): EducationOutcomeItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['educationOutcome%2Did'] = $id;
-        return new EducationOutcomeItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Update the navigation property submissions in education
      * @param EducationSubmission $body The request body
      * @param EducationSubmissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
@@ -181,28 +151,6 @@ class EducationSubmissionItemRequestBuilder
     }
 
     /**
-     * Provides operations to manage the resources property of the microsoft.graph.educationSubmission entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Resources\Item\EducationSubmissionResourceItemRequestBuilder
-    */
-    public function resourcesById(string $id): \Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Resources\Item\EducationSubmissionResourceItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['educationSubmissionResource%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\Resources\Item\EducationSubmissionResourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the submittedResources property of the microsoft.graph.educationSubmission entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\SubmittedResources\Item\EducationSubmissionResourceItemRequestBuilder
-    */
-    public function submittedResourcesById(string $id): \Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\SubmittedResources\Item\EducationSubmissionResourceItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['educationSubmissionResource%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Education\Me\Assignments\Item\Submissions\Item\SubmittedResources\Item\EducationSubmissionResourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Delete navigation property submissions for education
      * @param EducationSubmissionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -213,12 +161,8 @@ class EducationSubmissionItemRequestBuilder
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -235,15 +179,11 @@ class EducationSubmissionItemRequestBuilder
         $requestInfo->httpMethod = HttpMethod::GET;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -261,12 +201,8 @@ class EducationSubmissionItemRequestBuilder
         $requestInfo->httpMethod = HttpMethod::PATCH;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;

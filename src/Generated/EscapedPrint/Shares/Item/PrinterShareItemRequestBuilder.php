@@ -6,23 +6,19 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedGroups\AllowedGroupsRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedGroups\Item\GroupItemRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedUsers\AllowedUsersRequestBuilder;
-use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedUsers\Item\UserItemRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\Printer\PrinterRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PrinterShare;
+use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 /**
  * Provides operations to manage the shares property of the microsoft.graph.print entity.
 */
-class PrinterShareItemRequestBuilder 
+class PrinterShareItemRequestBuilder extends BaseRequestBuilder 
 {
     /**
      * Provides operations to manage the allowedGroups property of the microsoft.graph.printerShare entity.
@@ -39,11 +35,6 @@ class PrinterShareItemRequestBuilder
     }
     
     /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
-    */
-    private array $pathParameters;
-    
-    /**
      * Provides operations to manage the printer property of the microsoft.graph.printerShare entity.
     */
     public function printer(): PrinterRequestBuilder {
@@ -51,45 +42,12 @@ class PrinterShareItemRequestBuilder
     }
     
     /**
-     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-    */
-    private RequestAdapter $requestAdapter;
-    
-    /**
-     * @var string $urlTemplate Url template to use to build the URL for the current request builder
-    */
-    private string $urlTemplate;
-    
-    /**
-     * Gets an item from the Microsoft/Graph/Generated.print.shares.item.allowedGroups.item collection
-     * @param string $id Unique identifier of the item
-     * @return GroupItemRequestBuilder
-    */
-    public function allowedGroupsById(string $id): GroupItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['group%2Did'] = $id;
-        return new GroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Gets an item from the Microsoft/Graph/Generated.print.shares.item.allowedUsers.item collection
-     * @param string $id Unique identifier of the item
-     * @return UserItemRequestBuilder
-    */
-    public function allowedUsersById(string $id): UserItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['user%2Did'] = $id;
-        return new UserItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Instantiates a new PrinterShareItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/print/shares/{printerShare%2Did}{?%24select,%24expand}';
-        $this->requestAdapter = $requestAdapter;
+        parent::__construct($requestAdapter, [], "{+baseurl}/print/shares/{printerShare%2Did}{?%24select,%24expand}");
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -163,12 +121,8 @@ class PrinterShareItemRequestBuilder
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -185,15 +139,11 @@ class PrinterShareItemRequestBuilder
         $requestInfo->httpMethod = HttpMethod::GET;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -211,12 +161,8 @@ class PrinterShareItemRequestBuilder
         $requestInfo->httpMethod = HttpMethod::PATCH;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;

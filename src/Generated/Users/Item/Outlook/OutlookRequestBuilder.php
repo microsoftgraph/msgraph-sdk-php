@@ -7,22 +7,19 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OutlookUser;
-use Microsoft\Graph\Generated\Users\Item\Outlook\MasterCategories\Item\OutlookCategoryItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Outlook\MasterCategories\MasterCategoriesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Outlook\SupportedLanguages\SupportedLanguagesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Outlook\SupportedTimeZones\SupportedTimeZonesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Outlook\SupportedTimeZonesWithTimeZoneStandard\SupportedTimeZonesWithTimeZoneStandardRequestBuilder;
+use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 /**
  * Provides operations to manage the outlook property of the microsoft.graph.user entity.
 */
-class OutlookRequestBuilder 
+class OutlookRequestBuilder extends BaseRequestBuilder 
 {
     /**
      * Provides operations to manage the masterCategories property of the microsoft.graph.outlookUser entity.
@@ -30,16 +27,6 @@ class OutlookRequestBuilder
     public function masterCategories(): MasterCategoriesRequestBuilder {
         return new MasterCategoriesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
-    
-    /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
-    */
-    private array $pathParameters;
-    
-    /**
-     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-    */
-    private RequestAdapter $requestAdapter;
     
     /**
      * Provides operations to call the supportedLanguages method.
@@ -56,18 +43,12 @@ class OutlookRequestBuilder
     }
     
     /**
-     * @var string $urlTemplate Url template to use to build the URL for the current request builder
-    */
-    private string $urlTemplate;
-    
-    /**
      * Instantiates a new OutlookRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/users/{user%2Did}/outlook{?%24select}';
-        $this->requestAdapter = $requestAdapter;
+        parent::__construct($requestAdapter, [], "{+baseurl}/users/{user%2Did}/outlook{?%24select}");
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -94,17 +75,6 @@ class OutlookRequestBuilder
     }
 
     /**
-     * Provides operations to manage the masterCategories property of the microsoft.graph.outlookUser entity.
-     * @param string $id Unique identifier of the item
-     * @return OutlookCategoryItemRequestBuilder
-    */
-    public function masterCategoriesById(string $id): OutlookCategoryItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['outlookCategory%2Did'] = $id;
-        return new OutlookCategoryItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Provides operations to call the supportedTimeZones method.
      * @param string $timeZoneStandard Usage: TimeZoneStandard='{TimeZoneStandard}'
      * @return SupportedTimeZonesWithTimeZoneStandardRequestBuilder
@@ -125,15 +95,11 @@ class OutlookRequestBuilder
         $requestInfo->httpMethod = HttpMethod::GET;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }

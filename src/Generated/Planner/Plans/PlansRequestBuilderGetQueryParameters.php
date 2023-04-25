@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Planner\Plans;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of **plannerplan** objects.
+ * Read-only. Nullable. Returns a collection of the specified plans
 */
 class PlansRequestBuilderGetQueryParameters 
 {

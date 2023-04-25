@@ -7,33 +7,26 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Me\Chats\Item\HideForUser\HideForUserRequestBuilder;
 use Microsoft\Graph\Generated\Me\Chats\Item\InstalledApps\InstalledAppsRequestBuilder;
-use Microsoft\Graph\Generated\Me\Chats\Item\InstalledApps\Item\TeamsAppInstallationItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Chats\Item\LastMessagePreview\LastMessagePreviewRequestBuilder;
 use Microsoft\Graph\Generated\Me\Chats\Item\MarkChatReadForUser\MarkChatReadForUserRequestBuilder;
 use Microsoft\Graph\Generated\Me\Chats\Item\MarkChatUnreadForUser\MarkChatUnreadForUserRequestBuilder;
-use Microsoft\Graph\Generated\Me\Chats\Item\Members\Item\ConversationMemberItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Chats\Item\Members\MembersRequestBuilder;
-use Microsoft\Graph\Generated\Me\Chats\Item\Messages\Item\ChatMessageItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Chats\Item\Messages\MessagesRequestBuilder;
-use Microsoft\Graph\Generated\Me\Chats\Item\PinnedMessages\Item\PinnedChatMessageInfoItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Chats\Item\PinnedMessages\PinnedMessagesRequestBuilder;
 use Microsoft\Graph\Generated\Me\Chats\Item\SendActivityNotification\SendActivityNotificationRequestBuilder;
-use Microsoft\Graph\Generated\Me\Chats\Item\Tabs\Item\TeamsTabItemRequestBuilder;
 use Microsoft\Graph\Generated\Me\Chats\Item\Tabs\TabsRequestBuilder;
 use Microsoft\Graph\Generated\Me\Chats\Item\UnhideForUser\UnhideForUserRequestBuilder;
 use Microsoft\Graph\Generated\Models\Chat;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 /**
  * Provides operations to manage the chats property of the microsoft.graph.user entity.
 */
-class ChatItemRequestBuilder 
+class ChatItemRequestBuilder extends BaseRequestBuilder 
 {
     /**
      * Provides operations to call the hideForUser method.
@@ -85,21 +78,11 @@ class ChatItemRequestBuilder
     }
     
     /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
-    */
-    private array $pathParameters;
-    
-    /**
      * Provides operations to manage the pinnedMessages property of the microsoft.graph.chat entity.
     */
     public function pinnedMessages(): PinnedMessagesRequestBuilder {
         return new PinnedMessagesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
-    
-    /**
-     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-    */
-    private RequestAdapter $requestAdapter;
     
     /**
      * Provides operations to call the sendActivityNotification method.
@@ -123,18 +106,12 @@ class ChatItemRequestBuilder
     }
     
     /**
-     * @var string $urlTemplate Url template to use to build the URL for the current request builder
-    */
-    private string $urlTemplate;
-    
-    /**
      * Instantiates a new ChatItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/me/chats/{chat%2Did}{?%24select,%24expand}';
-        $this->requestAdapter = $requestAdapter;
+        parent::__construct($requestAdapter, [], "{+baseurl}/me/chats/{chat%2Did}{?%24select,%24expand}");
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -179,39 +156,6 @@ class ChatItemRequestBuilder
     }
 
     /**
-     * Provides operations to manage the installedApps property of the microsoft.graph.chat entity.
-     * @param string $id Unique identifier of the item
-     * @return TeamsAppInstallationItemRequestBuilder
-    */
-    public function installedAppsById(string $id): TeamsAppInstallationItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['teamsAppInstallation%2Did'] = $id;
-        return new TeamsAppInstallationItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the members property of the microsoft.graph.chat entity.
-     * @param string $id Unique identifier of the item
-     * @return ConversationMemberItemRequestBuilder
-    */
-    public function membersById(string $id): ConversationMemberItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['conversationMember%2Did'] = $id;
-        return new ConversationMemberItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the messages property of the microsoft.graph.chat entity.
-     * @param string $id Unique identifier of the item
-     * @return ChatMessageItemRequestBuilder
-    */
-    public function messagesById(string $id): ChatMessageItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['chatMessage%2Did'] = $id;
-        return new ChatMessageItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Update the navigation property chats in me
      * @param Chat $body The request body
      * @param ChatItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
@@ -231,28 +175,6 @@ class ChatItemRequestBuilder
     }
 
     /**
-     * Provides operations to manage the pinnedMessages property of the microsoft.graph.chat entity.
-     * @param string $id Unique identifier of the item
-     * @return PinnedChatMessageInfoItemRequestBuilder
-    */
-    public function pinnedMessagesById(string $id): PinnedChatMessageInfoItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['pinnedChatMessageInfo%2Did'] = $id;
-        return new PinnedChatMessageInfoItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the tabs property of the microsoft.graph.chat entity.
-     * @param string $id Unique identifier of the item
-     * @return TeamsTabItemRequestBuilder
-    */
-    public function tabsById(string $id): TeamsTabItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['teamsTab%2Did'] = $id;
-        return new TeamsTabItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Delete navigation property chats for me
      * @param ChatItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -263,12 +185,8 @@ class ChatItemRequestBuilder
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -285,15 +203,11 @@ class ChatItemRequestBuilder
         $requestInfo->httpMethod = HttpMethod::GET;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -311,12 +225,8 @@ class ChatItemRequestBuilder
         $requestInfo->httpMethod = HttpMethod::PATCH;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;

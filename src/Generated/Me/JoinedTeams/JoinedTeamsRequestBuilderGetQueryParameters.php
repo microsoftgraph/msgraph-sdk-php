@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Me\JoinedTeams;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the teams in Microsoft Teams that the user is a direct member of.
+ * Get joinedTeams from me
 */
 class JoinedTeamsRequestBuilderGetQueryParameters 
 {

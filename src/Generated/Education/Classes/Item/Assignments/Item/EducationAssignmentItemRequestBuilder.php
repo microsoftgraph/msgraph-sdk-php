@@ -6,28 +6,23 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Categories\CategoriesRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Categories\Item\EducationCategoryItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Publish\PublishRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Resources\Item\EducationAssignmentResourceItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Resources\ResourcesRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Rubric\RubricRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\SetUpFeedbackResourcesFolder\SetUpFeedbackResourcesFolderRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\SetUpResourcesFolder\SetUpResourcesFolderRequestBuilder;
-use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Submissions\Item\EducationSubmissionItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Submissions\SubmissionsRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationAssignment;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 /**
  * Provides operations to manage the assignments property of the microsoft.graph.educationClass entity.
 */
-class EducationAssignmentItemRequestBuilder 
+class EducationAssignmentItemRequestBuilder extends BaseRequestBuilder 
 {
     /**
      * Provides operations to manage the categories property of the microsoft.graph.educationAssignment entity.
@@ -37,21 +32,11 @@ class EducationAssignmentItemRequestBuilder
     }
     
     /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
-    */
-    private array $pathParameters;
-    
-    /**
      * Provides operations to call the publish method.
     */
     public function publish(): PublishRequestBuilder {
         return new PublishRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
-    
-    /**
-     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-    */
-    private RequestAdapter $requestAdapter;
     
     /**
      * Provides operations to manage the resources property of the microsoft.graph.educationAssignment entity.
@@ -89,29 +74,12 @@ class EducationAssignmentItemRequestBuilder
     }
     
     /**
-     * @var string $urlTemplate Url template to use to build the URL for the current request builder
-    */
-    private string $urlTemplate;
-    
-    /**
-     * Gets an item from the Microsoft/Graph/Generated.education.classes.item.assignments.item.categories.item collection
-     * @param string $id Unique identifier of the item
-     * @return EducationCategoryItemRequestBuilder
-    */
-    public function categoriesById(string $id): EducationCategoryItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['educationCategory%2Did'] = $id;
-        return new EducationCategoryItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Instantiates a new EducationAssignmentItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/education/classes/{educationClass%2Did}/assignments/{educationAssignment%2Did}{?%24select,%24expand}';
-        $this->requestAdapter = $requestAdapter;
+        parent::__construct($requestAdapter, [], "{+baseurl}/education/classes/{educationClass%2Did}/assignments/{educationAssignment%2Did}{?%24select,%24expand}");
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -175,28 +143,6 @@ class EducationAssignmentItemRequestBuilder
     }
 
     /**
-     * Provides operations to manage the resources property of the microsoft.graph.educationAssignment entity.
-     * @param string $id Unique identifier of the item
-     * @return EducationAssignmentResourceItemRequestBuilder
-    */
-    public function resourcesById(string $id): EducationAssignmentResourceItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['educationAssignmentResource%2Did'] = $id;
-        return new EducationAssignmentResourceItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the submissions property of the microsoft.graph.educationAssignment entity.
-     * @param string $id Unique identifier of the item
-     * @return EducationSubmissionItemRequestBuilder
-    */
-    public function submissionsById(string $id): EducationSubmissionItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['educationSubmission%2Did'] = $id;
-        return new EducationSubmissionItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Delete navigation property assignments for education
      * @param EducationAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -207,12 +153,8 @@ class EducationAssignmentItemRequestBuilder
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -229,15 +171,11 @@ class EducationAssignmentItemRequestBuilder
         $requestInfo->httpMethod = HttpMethod::GET;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -255,12 +193,8 @@ class EducationAssignmentItemRequestBuilder
         $requestInfo->httpMethod = HttpMethod::PATCH;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;

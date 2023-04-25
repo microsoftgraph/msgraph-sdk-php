@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Chats\Item\Messages;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the list of messages in a chat. This method supports federation. To list chat messages in application context, the request must be made from the tenant that the channel owner belongs to (represented by the **tenantId** property on the channel).
+ * A collection of all the messages in the chat. Nullable.
 */
 class MessagesRequestBuilderGetQueryParameters 
 {

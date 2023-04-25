@@ -3,18 +3,14 @@
 namespace Microsoft\Graph\Generated\Education\Schools\Item\Classes\Item;
 
 use Microsoft\Graph\Generated\Education\Schools\Item\Classes\Item\Ref\RefRequestBuilder;
+use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 
 /**
  * Builds and executes requests for operations under /education/schools/{educationSchool-id}/classes/{educationClass-id}
 */
-class EducationClassItemRequestBuilder 
+class EducationClassItemRequestBuilder extends BaseRequestBuilder 
 {
-    /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
-    */
-    private array $pathParameters;
-    
     /**
      * Provides operations to manage the collection of educationRoot entities.
     */
@@ -23,23 +19,12 @@ class EducationClassItemRequestBuilder
     }
     
     /**
-     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-    */
-    private RequestAdapter $requestAdapter;
-    
-    /**
-     * @var string $urlTemplate Url template to use to build the URL for the current request builder
-    */
-    private string $urlTemplate;
-    
-    /**
      * Instantiates a new EducationClassItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/education/schools/{educationSchool%2Did}/classes/{educationClass%2Did}';
-        $this->requestAdapter = $requestAdapter;
+        parent::__construct($requestAdapter, [], "{+baseurl}/education/schools/{educationSchool%2Did}/classes/{educationClass%2Did}");
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

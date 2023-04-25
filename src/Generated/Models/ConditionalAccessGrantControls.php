@@ -43,6 +43,14 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, BackedMode
     }
 
     /**
+     * Gets the authenticationStrength property value. The authenticationStrength property
+     * @return AuthenticationStrengthPolicy|null
+    */
+    public function getAuthenticationStrength(): ?AuthenticationStrengthPolicy {
+        return $this->getBackingStore()->get('authenticationStrength');
+    }
+
+    /**
      * Gets the backingStore property value. Stores model information.
      * @return BackingStore
     */
@@ -73,6 +81,7 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, BackedMode
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            'authenticationStrength' => fn(ParseNode $n) => $o->setAuthenticationStrength($n->getObjectValue([AuthenticationStrengthPolicy::class, 'createFromDiscriminatorValue'])),
             'builtInControls' => fn(ParseNode $n) => $o->setBuiltInControls($n->getCollectionOfEnumValues(ConditionalAccessGrantControl::class)),
             'customAuthenticationFactors' => fn(ParseNode $n) => $o->setCustomAuthenticationFactors($n->getCollectionOfPrimitiveValues()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
@@ -110,6 +119,7 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, BackedMode
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeObjectValue('authenticationStrength', $this->getAuthenticationStrength());
         $writer->writeCollectionOfEnumValues('builtInControls', $this->getBuiltInControls());
         $writer->writeCollectionOfPrimitiveValues('customAuthenticationFactors', $this->getCustomAuthenticationFactors());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
@@ -124,6 +134,14 @@ class ConditionalAccessGrantControls implements AdditionalDataHolder, BackedMode
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the authenticationStrength property value. The authenticationStrength property
+     * @param AuthenticationStrengthPolicy|null $value Value to set for the authenticationStrength property.
+    */
+    public function setAuthenticationStrength(?AuthenticationStrengthPolicy $value): void {
+        $this->getBackingStore()->set('authenticationStrength', $value);
     }
 
     /**

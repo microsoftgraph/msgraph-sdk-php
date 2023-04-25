@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teams\Item\Channels\Item\Messages;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve the list of messages (without the replies) in a channel of a team.  To get the replies for a message, call the list message replies or the get message reply API.  This method supports federation. To list channel messages in application context, the request must be made from the tenant that the channel owner belongs to (represented by the **tenantId** property on the channel).
+ * A collection of all the messages in the channel. A navigation property. Nullable.
 */
 class MessagesRequestBuilderGetQueryParameters 
 {

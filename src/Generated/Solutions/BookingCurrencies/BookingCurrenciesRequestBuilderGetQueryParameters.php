@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Solutions\BookingCurrencies;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of bookingCurrency objects available to a Microsoft Bookings business.
+ * Get bookingCurrencies from solutions
 */
 class BookingCurrenciesRequestBuilderGetQueryParameters 
 {

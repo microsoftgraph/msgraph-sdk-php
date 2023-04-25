@@ -7,32 +7,39 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ItemAnalytics;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Sites\Item\Analytics\AllTime\AllTimeRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Analytics\ItemActivityStats\ItemActivityStatsRequestBuilder;
+use Microsoft\Graph\Generated\Sites\Item\Analytics\LastSevenDays\LastSevenDaysRequestBuilder;
+use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 /**
  * Provides operations to manage the analytics property of the microsoft.graph.site entity.
 */
-class AnalyticsRequestBuilder 
+class AnalyticsRequestBuilder extends BaseRequestBuilder 
 {
     /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
+     * Provides operations to manage the allTime property of the microsoft.graph.itemAnalytics entity.
     */
-    private array $pathParameters;
+    public function allTime(): AllTimeRequestBuilder {
+        return new AllTimeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
-     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
+     * Provides operations to manage the itemActivityStats property of the microsoft.graph.itemAnalytics entity.
     */
-    private RequestAdapter $requestAdapter;
+    public function itemActivityStats(): ItemActivityStatsRequestBuilder {
+        return new ItemActivityStatsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
-     * @var string $urlTemplate Url template to use to build the URL for the current request builder
+     * Provides operations to manage the lastSevenDays property of the microsoft.graph.itemAnalytics entity.
     */
-    private string $urlTemplate;
+    public function lastSevenDays(): LastSevenDaysRequestBuilder {
+        return new LastSevenDaysRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
     
     /**
      * Instantiates a new AnalyticsRequestBuilder and sets the default values.
@@ -40,12 +47,29 @@ class AnalyticsRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/sites/{site%2Did}/analytics{?%24select,%24expand}';
-        $this->requestAdapter = $requestAdapter;
+        parent::__construct($requestAdapter, [], "{+baseurl}/sites/{site%2Did}/analytics{?%24select,%24expand}");
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
             $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
+        }
+    }
+
+    /**
+     * Delete navigation property analytics for sites
+     * @param AnalyticsRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return Promise
+    */
+    public function delete(?AnalyticsRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+        $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
+        try {
+            $errorMappings = [
+                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+            ];
+            return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
+        } catch(Exception $ex) {
+            return new RejectedPromise($ex);
         }
     }
 
@@ -68,6 +92,42 @@ class AnalyticsRequestBuilder
     }
 
     /**
+     * Update the navigation property analytics in sites
+     * @param ItemAnalytics $body The request body
+     * @param AnalyticsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return Promise
+    */
+    public function patch(ItemAnalytics $body, ?AnalyticsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
+        $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
+        try {
+            $errorMappings = [
+                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+            ];
+            return $this->requestAdapter->sendAsync($requestInfo, [ItemAnalytics::class, 'createFromDiscriminatorValue'], $errorMappings);
+        } catch(Exception $ex) {
+            return new RejectedPromise($ex);
+        }
+    }
+
+    /**
+     * Delete navigation property analytics for sites
+     * @param AnalyticsRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return RequestInformation
+    */
+    public function toDeleteRequestInformation(?AnalyticsRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+        $requestInfo = new RequestInformation();
+        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->pathParameters = $this->pathParameters;
+        $requestInfo->httpMethod = HttpMethod::DELETE;
+        if ($requestConfiguration !== null) {
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
+        }
+        return $requestInfo;
+    }
+
+    /**
      * Analytics about the view activities that took place in this site.
      * @param AnalyticsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -79,16 +139,32 @@ class AnalyticsRequestBuilder
         $requestInfo->httpMethod = HttpMethod::GET;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
+        return $requestInfo;
+    }
+
+    /**
+     * Update the navigation property analytics in sites
+     * @param ItemAnalytics $body The request body
+     * @param AnalyticsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return RequestInformation
+    */
+    public function toPatchRequestInformation(ItemAnalytics $body, ?AnalyticsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): RequestInformation {
+        $requestInfo = new RequestInformation();
+        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->pathParameters = $this->pathParameters;
+        $requestInfo->httpMethod = HttpMethod::PATCH;
+        $requestInfo->addHeader('Accept', "application/json");
+        if ($requestConfiguration !== null) {
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
+        }
+        $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
     }
 

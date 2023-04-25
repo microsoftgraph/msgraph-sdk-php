@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks\Item\Linked
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get information of one or more items in a partner application, based on which a specified task was created. The information is represented in a linkedResource object for each item. It includes an external ID for the item in the partner application, and if applicable, a deep link to that item in the application.
+ * A collection of resources linked to the task.
 */
 class LinkedResourcesRequestBuilderGetQueryParameters 
 {

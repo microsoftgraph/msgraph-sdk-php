@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Team\Schedule\OpenShifts\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get openShifts from groups
+ * The set of open shifts in a scheduling group in the schedule.
 */
 class OpenShiftItemRequestBuilderGetQueryParameters 
 {

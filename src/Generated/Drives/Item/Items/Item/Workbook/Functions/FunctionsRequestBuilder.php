@@ -28,7 +28,7 @@ use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\AverageA
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\AverageIf\AverageIfRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\AverageIfs\AverageIfsRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\BahtText\BahtTextRequestBuilder;
-use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Base\BaseRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Base\EscapedBaseRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\BesselI\BesselIRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\BesselJ\BesselJRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\BesselK\BesselKRequestBuilder;
@@ -373,17 +373,15 @@ use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\YieldMat
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Functions\Z_Test\Z_TestRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WorkbookFunctions;
+use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 /**
  * Provides operations to manage the functions property of the microsoft.graph.workbook entity.
 */
-class FunctionsRequestBuilder 
+class FunctionsRequestBuilder extends BaseRequestBuilder 
 {
     /**
      * Provides operations to call the abs method.
@@ -549,8 +547,8 @@ class FunctionsRequestBuilder
     /**
      * Provides operations to call the base method.
     */
-    public function base(): BaseRequestBuilder {
-        return new BaseRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function base(): EscapedBaseRequestBuilder {
+        return new EscapedBaseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -2178,11 +2176,6 @@ class FunctionsRequestBuilder
     }
     
     /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
-    */
-    private array $pathParameters;
-    
-    /**
      * Provides operations to call the pduration method.
     */
     public function pduration(): PdurationRequestBuilder {
@@ -2405,11 +2398,6 @@ class FunctionsRequestBuilder
     public function rept(): ReptRequestBuilder {
         return new ReptRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
-    
-    /**
-     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-    */
-    private RequestAdapter $requestAdapter;
     
     /**
      * Provides operations to call the right method.
@@ -2818,11 +2806,6 @@ class FunctionsRequestBuilder
     }
     
     /**
-     * @var string $urlTemplate Url template to use to build the URL for the current request builder
-    */
-    private string $urlTemplate;
-    
-    /**
      * Provides operations to call the usdollar method.
     */
     public function usdollar(): UsdollarRequestBuilder {
@@ -2968,8 +2951,7 @@ class FunctionsRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/functions{?%24select,%24expand}';
-        $this->requestAdapter = $requestAdapter;
+        parent::__construct($requestAdapter, [], "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/functions{?%24select,%24expand}");
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -3043,12 +3025,8 @@ class FunctionsRequestBuilder
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -3065,15 +3043,11 @@ class FunctionsRequestBuilder
         $requestInfo->httpMethod = HttpMethod::GET;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -3091,12 +3065,8 @@ class FunctionsRequestBuilder
         $requestInfo->httpMethod = HttpMethod::PATCH;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;

@@ -7,34 +7,19 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OfficeGraphInsights;
-use Microsoft\Graph\Generated\Users\Item\Insights\Shared\Item\SharedInsightItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Insights\Shared\SharedRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Insights\Trending\Item\TrendingItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Insights\Trending\TrendingRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Insights\Used\Item\UsedInsightItemRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Insights\Used\UsedRequestBuilder;
+use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 /**
  * Provides operations to manage the insights property of the microsoft.graph.user entity.
 */
-class InsightsRequestBuilder 
+class InsightsRequestBuilder extends BaseRequestBuilder 
 {
-    /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
-    */
-    private array $pathParameters;
-    
-    /**
-     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-    */
-    private RequestAdapter $requestAdapter;
-    
     /**
      * Provides operations to manage the shared property of the microsoft.graph.officeGraphInsights entity.
     */
@@ -50,11 +35,6 @@ class InsightsRequestBuilder
     }
     
     /**
-     * @var string $urlTemplate Url template to use to build the URL for the current request builder
-    */
-    private string $urlTemplate;
-    
-    /**
      * Provides operations to manage the used property of the microsoft.graph.officeGraphInsights entity.
     */
     public function used(): UsedRequestBuilder {
@@ -67,8 +47,7 @@ class InsightsRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/users/{user%2Did}/insights{?%24select,%24expand}';
-        $this->requestAdapter = $requestAdapter;
+        parent::__construct($requestAdapter, [], "{+baseurl}/users/{user%2Did}/insights{?%24select,%24expand}");
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -132,17 +111,6 @@ class InsightsRequestBuilder
     }
 
     /**
-     * Provides operations to manage the shared property of the microsoft.graph.officeGraphInsights entity.
-     * @param string $id Unique identifier of the item
-     * @return SharedInsightItemRequestBuilder
-    */
-    public function sharedById(string $id): SharedInsightItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['sharedInsight%2Did'] = $id;
-        return new SharedInsightItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Delete navigation property insights for users
      * @param InsightsRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -153,12 +121,8 @@ class InsightsRequestBuilder
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -175,15 +139,11 @@ class InsightsRequestBuilder
         $requestInfo->httpMethod = HttpMethod::GET;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -201,37 +161,11 @@ class InsightsRequestBuilder
         $requestInfo->httpMethod = HttpMethod::PATCH;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
-    }
-
-    /**
-     * Provides operations to manage the trending property of the microsoft.graph.officeGraphInsights entity.
-     * @param string $id Unique identifier of the item
-     * @return TrendingItemRequestBuilder
-    */
-    public function trendingById(string $id): TrendingItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['trending%2Did'] = $id;
-        return new TrendingItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the used property of the microsoft.graph.officeGraphInsights entity.
-     * @param string $id Unique identifier of the item
-     * @return UsedInsightItemRequestBuilder
-    */
-    public function usedById(string $id): UsedInsightItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['usedInsight%2Did'] = $id;
-        return new UsedInsightItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

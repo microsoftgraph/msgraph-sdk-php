@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Chats\Item\InstalledApps;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List all app installations within a chat.
+ * A collection of all the apps in the chat. Nullable.
 */
 class InstalledAppsRequestBuilderGetQueryParameters 
 {

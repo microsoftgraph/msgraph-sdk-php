@@ -9,24 +9,20 @@ use Microsoft\Graph\Generated\DirectoryRoles\Item\CheckMemberGroups\CheckMemberG
 use Microsoft\Graph\Generated\DirectoryRoles\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
 use Microsoft\Graph\Generated\DirectoryRoles\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
 use Microsoft\Graph\Generated\DirectoryRoles\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoles\Item\Members\Item\DirectoryObjectItemRequestBuilder;
 use Microsoft\Graph\Generated\DirectoryRoles\Item\Members\MembersRequestBuilder;
 use Microsoft\Graph\Generated\DirectoryRoles\Item\Restore\RestoreRequestBuilder;
-use Microsoft\Graph\Generated\DirectoryRoles\Item\ScopedMembers\Item\ScopedRoleMembershipItemRequestBuilder;
 use Microsoft\Graph\Generated\DirectoryRoles\Item\ScopedMembers\ScopedMembersRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryRole;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 /**
  * Provides operations to manage the collection of directoryRole entities.
 */
-class DirectoryRoleItemRequestBuilder 
+class DirectoryRoleItemRequestBuilder extends BaseRequestBuilder 
 {
     /**
      * Provides operations to call the checkMemberGroups method.
@@ -64,16 +60,6 @@ class DirectoryRoleItemRequestBuilder
     }
     
     /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
-    */
-    private array $pathParameters;
-    
-    /**
-     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-    */
-    private RequestAdapter $requestAdapter;
-    
-    /**
      * Provides operations to call the restore method.
     */
     public function restore(): RestoreRequestBuilder {
@@ -88,18 +74,12 @@ class DirectoryRoleItemRequestBuilder
     }
     
     /**
-     * @var string $urlTemplate Url template to use to build the URL for the current request builder
-    */
-    private string $urlTemplate;
-    
-    /**
      * Instantiates a new DirectoryRoleItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/directoryRoles/{directoryRole%2Did}{?%24select,%24expand}';
-        $this->requestAdapter = $requestAdapter;
+        parent::__construct($requestAdapter, [], "{+baseurl}/directoryRoles/{directoryRole%2Did}{?%24select,%24expand}");
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -145,17 +125,6 @@ class DirectoryRoleItemRequestBuilder
     }
 
     /**
-     * Gets an item from the Microsoft/Graph/Generated.directoryRoles.item.members.item collection
-     * @param string $id Unique identifier of the item
-     * @return DirectoryObjectItemRequestBuilder
-    */
-    public function membersById(string $id): DirectoryObjectItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['directoryObject%2Did'] = $id;
-        return new DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Update entity in directoryRoles
      * @param DirectoryRole $body The request body
      * @param DirectoryRoleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
@@ -175,17 +144,6 @@ class DirectoryRoleItemRequestBuilder
     }
 
     /**
-     * Provides operations to manage the scopedMembers property of the microsoft.graph.directoryRole entity.
-     * @param string $id Unique identifier of the item
-     * @return ScopedRoleMembershipItemRequestBuilder
-    */
-    public function scopedMembersById(string $id): ScopedRoleMembershipItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['scopedRoleMembership%2Did'] = $id;
-        return new ScopedRoleMembershipItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Delete entity from directoryRoles
      * @param DirectoryRoleItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -196,12 +154,8 @@ class DirectoryRoleItemRequestBuilder
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -218,15 +172,11 @@ class DirectoryRoleItemRequestBuilder
         $requestInfo->httpMethod = HttpMethod::GET;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -244,12 +194,8 @@ class DirectoryRoleItemRequestBuilder
         $requestInfo->httpMethod = HttpMethod::PATCH;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;

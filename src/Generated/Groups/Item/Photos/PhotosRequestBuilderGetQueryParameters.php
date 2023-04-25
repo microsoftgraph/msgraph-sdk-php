@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Photos;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of profilePhoto objects.
+ * The profile photos owned by the group. Read-only. Nullable.
 */
 class PhotosRequestBuilderGetQueryParameters 
 {

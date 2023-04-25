@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\RoleManagementPolicies;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get role management policies and their details.
+ * Specifies the various policies associated with scopes and roles.
 */
 class RoleManagementPoliciesRequestBuilderGetQueryParameters 
 {

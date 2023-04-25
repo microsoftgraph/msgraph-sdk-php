@@ -7,23 +7,20 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Sections\Item\CopyToNotebook\CopyToNotebookRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Sections\Item\CopyToSectionGroup\CopyToSectionGroupRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Sections\Item\Pages\Item\OnenotePageItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Sections\Item\Pages\PagesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Sections\Item\ParentNotebook\ParentNotebookRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Sections\Item\ParentSectionGroup\ParentSectionGroupRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OnenoteSection;
+use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 /**
  * Provides operations to manage the sections property of the microsoft.graph.onenote entity.
 */
-class OnenoteSectionItemRequestBuilder 
+class OnenoteSectionItemRequestBuilder extends BaseRequestBuilder 
 {
     /**
      * Provides operations to call the copyToNotebook method.
@@ -61,28 +58,12 @@ class OnenoteSectionItemRequestBuilder
     }
     
     /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
-    */
-    private array $pathParameters;
-    
-    /**
-     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-    */
-    private RequestAdapter $requestAdapter;
-    
-    /**
-     * @var string $urlTemplate Url template to use to build the URL for the current request builder
-    */
-    private string $urlTemplate;
-    
-    /**
      * Instantiates a new OnenoteSectionItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/onenote/sections/{onenoteSection%2Did}{?%24select,%24expand}';
-        $this->requestAdapter = $requestAdapter;
+        parent::__construct($requestAdapter, [], "{+baseurl}/groups/{group%2Did}/sites/{site%2Did}/onenote/sections/{onenoteSection%2Did}{?%24select,%24expand}");
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -127,17 +108,6 @@ class OnenoteSectionItemRequestBuilder
     }
 
     /**
-     * Provides operations to manage the pages property of the microsoft.graph.onenoteSection entity.
-     * @param string $id Unique identifier of the item
-     * @return OnenotePageItemRequestBuilder
-    */
-    public function pagesById(string $id): OnenotePageItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['onenotePage%2Did'] = $id;
-        return new OnenotePageItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Update the navigation property sections in groups
      * @param OnenoteSection $body The request body
      * @param OnenoteSectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
@@ -167,12 +137,8 @@ class OnenoteSectionItemRequestBuilder
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -189,15 +155,11 @@ class OnenoteSectionItemRequestBuilder
         $requestInfo->httpMethod = HttpMethod::GET;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -215,12 +177,8 @@ class OnenoteSectionItemRequestBuilder
         $requestInfo->httpMethod = HttpMethod::PATCH;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;

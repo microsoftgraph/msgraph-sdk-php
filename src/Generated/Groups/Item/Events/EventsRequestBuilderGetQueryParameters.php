@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Events;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of event objects.
+ * The group's calendar events.
 */
 class EventsRequestBuilderGetQueryParameters 
 {

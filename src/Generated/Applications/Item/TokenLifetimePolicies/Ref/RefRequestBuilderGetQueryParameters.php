@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Applications\Item\TokenLifetimePolicies\Ref;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List the tokenLifetimePolicy objects that are assigned to an application.
+ * Get ref of tokenLifetimePolicies from applications
 */
 class RefRequestBuilderGetQueryParameters 
 {

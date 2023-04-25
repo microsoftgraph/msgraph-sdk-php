@@ -7,22 +7,18 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Education\Schools\Item\AdministrativeUnit\AdministrativeUnitRequestBuilder;
 use Microsoft\Graph\Generated\Education\Schools\Item\Classes\ClassesRequestBuilder;
-use Microsoft\Graph\Generated\Education\Schools\Item\Classes\Item\EducationClassItemRequestBuilder;
-use Microsoft\Graph\Generated\Education\Schools\Item\Users\Item\EducationUserItemRequestBuilder;
 use Microsoft\Graph\Generated\Education\Schools\Item\Users\UsersRequestBuilder;
 use Microsoft\Graph\Generated\Models\EducationSchool;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 /**
  * Provides operations to manage the schools property of the microsoft.graph.educationRoot entity.
 */
-class EducationSchoolItemRequestBuilder 
+class EducationSchoolItemRequestBuilder extends BaseRequestBuilder 
 {
     /**
      * Provides operations to manage the administrativeUnit property of the microsoft.graph.educationSchool entity.
@@ -39,21 +35,6 @@ class EducationSchoolItemRequestBuilder
     }
     
     /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
-    */
-    private array $pathParameters;
-    
-    /**
-     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-    */
-    private RequestAdapter $requestAdapter;
-    
-    /**
-     * @var string $urlTemplate Url template to use to build the URL for the current request builder
-    */
-    private string $urlTemplate;
-    
-    /**
      * Provides operations to manage the users property of the microsoft.graph.educationSchool entity.
     */
     public function users(): UsersRequestBuilder {
@@ -61,24 +42,12 @@ class EducationSchoolItemRequestBuilder
     }
     
     /**
-     * Gets an item from the Microsoft/Graph/Generated.education.schools.item.classes.item collection
-     * @param string $id Unique identifier of the item
-     * @return EducationClassItemRequestBuilder
-    */
-    public function classesById(string $id): EducationClassItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['educationClass%2Did'] = $id;
-        return new EducationClassItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Instantiates a new EducationSchoolItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/education/schools/{educationSchool%2Did}{?%24select,%24expand}';
-        $this->requestAdapter = $requestAdapter;
+        parent::__construct($requestAdapter, [], "{+baseurl}/education/schools/{educationSchool%2Did}{?%24select,%24expand}");
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -152,12 +121,8 @@ class EducationSchoolItemRequestBuilder
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -174,15 +139,11 @@ class EducationSchoolItemRequestBuilder
         $requestInfo->httpMethod = HttpMethod::GET;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -200,26 +161,11 @@ class EducationSchoolItemRequestBuilder
         $requestInfo->httpMethod = HttpMethod::PATCH;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
-    }
-
-    /**
-     * Gets an item from the Microsoft/Graph/Generated.education.schools.item.users.item collection
-     * @param string $id Unique identifier of the item
-     * @return EducationUserItemRequestBuilder
-    */
-    public function usersById(string $id): EducationUserItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['educationUser%2Did'] = $id;
-        return new EducationUserItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityProtection\RiskyUsers;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the riskyUser objects and their properties.
+ * Users that are flagged as at-risk by Azure AD Identity Protection.
 */
 class RiskyUsersRequestBuilderGetQueryParameters 
 {

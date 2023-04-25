@@ -6,32 +6,42 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Directory\AdministrativeUnits\AdministrativeUnitsRequestBuilder;
-use Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\AdministrativeUnitItemRequestBuilder;
+use Microsoft\Graph\Generated\Directory\AttributeSets\AttributeSetsRequestBuilder;
+use Microsoft\Graph\Generated\Directory\CustomSecurityAttributeDefinitions\CustomSecurityAttributeDefinitionsRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\DeletedItemsRequestBuilder;
-use Microsoft\Graph\Generated\Directory\DeletedItems\Item\DirectoryObjectItemRequestBuilder;
 use Microsoft\Graph\Generated\Directory\FederationConfigurations\FederationConfigurationsRequestBuilder;
-use Microsoft\Graph\Generated\Directory\FederationConfigurations\Item\IdentityProviderBaseItemRequestBuilder;
-use Microsoft\Graph\Generated\Directory\OnPremisesSynchronization\Item\OnPremisesDirectorySynchronizationItemRequestBuilder;
 use Microsoft\Graph\Generated\Directory\OnPremisesSynchronization\OnPremisesSynchronizationRequestBuilder;
 use Microsoft\Graph\Generated\Models\Directory;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 /**
  * Provides operations to manage the directory singleton.
 */
-class DirectoryRequestBuilder 
+class DirectoryRequestBuilder extends BaseRequestBuilder 
 {
     /**
      * Provides operations to manage the administrativeUnits property of the microsoft.graph.directory entity.
     */
     public function administrativeUnits(): AdministrativeUnitsRequestBuilder {
         return new AdministrativeUnitsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the attributeSets property of the microsoft.graph.directory entity.
+    */
+    public function attributeSets(): AttributeSetsRequestBuilder {
+        return new AttributeSetsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the customSecurityAttributeDefinitions property of the microsoft.graph.directory entity.
+    */
+    public function customSecurityAttributeDefinitions(): CustomSecurityAttributeDefinitionsRequestBuilder {
+        return new CustomSecurityAttributeDefinitionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -56,66 +66,17 @@ class DirectoryRequestBuilder
     }
     
     /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
-    */
-    private array $pathParameters;
-    
-    /**
-     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-    */
-    private RequestAdapter $requestAdapter;
-    
-    /**
-     * @var string $urlTemplate Url template to use to build the URL for the current request builder
-    */
-    private string $urlTemplate;
-    
-    /**
-     * Provides operations to manage the administrativeUnits property of the microsoft.graph.directory entity.
-     * @param string $id Unique identifier of the item
-     * @return AdministrativeUnitItemRequestBuilder
-    */
-    public function administrativeUnitsById(string $id): AdministrativeUnitItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['administrativeUnit%2Did'] = $id;
-        return new AdministrativeUnitItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Instantiates a new DirectoryRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/directory{?%24select,%24expand}';
-        $this->requestAdapter = $requestAdapter;
+        parent::__construct($requestAdapter, [], "{+baseurl}/directory{?%24select,%24expand}");
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
             $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
         }
-    }
-
-    /**
-     * Provides operations to manage the deletedItems property of the microsoft.graph.directory entity.
-     * @param string $id Unique identifier of the item
-     * @return DirectoryObjectItemRequestBuilder
-    */
-    public function deletedItemsById(string $id): DirectoryObjectItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['directoryObject%2Did'] = $id;
-        return new DirectoryObjectItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the federationConfigurations property of the microsoft.graph.directory entity.
-     * @param string $id Unique identifier of the item
-     * @return IdentityProviderBaseItemRequestBuilder
-    */
-    public function federationConfigurationsById(string $id): IdentityProviderBaseItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['identityProviderBase%2Did'] = $id;
-        return new IdentityProviderBaseItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -134,17 +95,6 @@ class DirectoryRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the onPremisesSynchronization property of the microsoft.graph.directory entity.
-     * @param string $id Unique identifier of the item
-     * @return OnPremisesDirectorySynchronizationItemRequestBuilder
-    */
-    public function onPremisesSynchronizationById(string $id): OnPremisesDirectorySynchronizationItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['onPremisesDirectorySynchronization%2Did'] = $id;
-        return new OnPremisesDirectorySynchronizationItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -178,15 +128,11 @@ class DirectoryRequestBuilder
         $requestInfo->httpMethod = HttpMethod::GET;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -204,12 +150,8 @@ class DirectoryRequestBuilder
         $requestInfo->httpMethod = HttpMethod::PATCH;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;

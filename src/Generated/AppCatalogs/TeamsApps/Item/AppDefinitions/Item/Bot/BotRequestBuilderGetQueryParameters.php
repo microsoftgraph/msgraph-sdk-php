@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\AppCatalogs\TeamsApps\Item\AppDefinitions\It
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the bot associated with a specific definition of the  TeamsApp.
+ * The details of the bot specified in the Teams app manifest.
 */
 class BotRequestBuilderGetQueryParameters 
 {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Me\Events;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of event objects in the user's mailbox. The list contains single instance meetings and series masters. To get expanded event instances, you can get the calendar view, or get the instances of an event. Currently, this operation returns event bodies in only HTML format. There are two scenarios where an app can get events in another user's calendar:
+ * The user's events. Default is to show Events under the Default Calendar. Read-only. Nullable.
 */
 class EventsRequestBuilderGetQueryParameters 
 {
