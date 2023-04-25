@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Me\CalendarGroups\Item\Calendars\Item\Calend
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the occurrences, exceptions and single instances of events in a calendar view defined by a time range,from a user's default calendar `(../me/calendarview)` or some other calendar of the user's.
+ * The calendar view for the calendar. Navigation property. Read-only.
 */
 class CalendarViewRequestBuilderGetQueryParameters 
 {

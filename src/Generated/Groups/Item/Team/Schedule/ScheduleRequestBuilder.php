@@ -5,38 +5,27 @@ namespace Microsoft\Graph\Generated\Groups\Item\Team\Schedule;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
-use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\OfferShiftRequests\Item\OfferShiftRequestItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\OfferShiftRequests\OfferShiftRequestsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\OpenShiftChangeRequests\Item\OpenShiftChangeRequestItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\OpenShiftChangeRequests\OpenShiftChangeRequestsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\OpenShifts\Item\OpenShiftItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\OpenShifts\OpenShiftsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\SchedulingGroups\Item\SchedulingGroupItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\SchedulingGroups\SchedulingGroupsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\Share\ShareRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\Shifts\Item\ShiftItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\Shifts\ShiftsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\SwapShiftsChangeRequests\Item\SwapShiftsChangeRequestItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\SwapShiftsChangeRequests\SwapShiftsChangeRequestsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\TimeOffReasons\Item\TimeOffReasonItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\TimeOffReasons\TimeOffReasonsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\TimeOffRequests\Item\TimeOffRequestItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\TimeOffRequests\TimeOffRequestsRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\TimesOff\Item\TimeOffItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Team\Schedule\TimesOff\TimesOffRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Schedule;
+use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 /**
  * Provides operations to manage the schedule property of the microsoft.graph.team entity.
 */
-class ScheduleRequestBuilder 
+class ScheduleRequestBuilder extends BaseRequestBuilder 
 {
     /**
      * Provides operations to manage the offerShiftRequests property of the microsoft.graph.schedule entity.
@@ -58,16 +47,6 @@ class ScheduleRequestBuilder
     public function openShifts(): OpenShiftsRequestBuilder {
         return new OpenShiftsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
-    
-    /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
-    */
-    private array $pathParameters;
-    
-    /**
-     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-    */
-    private RequestAdapter $requestAdapter;
     
     /**
      * Provides operations to manage the schedulingGroups property of the microsoft.graph.schedule entity.
@@ -119,18 +98,12 @@ class ScheduleRequestBuilder
     }
     
     /**
-     * @var string $urlTemplate Url template to use to build the URL for the current request builder
-    */
-    private string $urlTemplate;
-    
-    /**
      * Instantiates a new ScheduleRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/groups/{group%2Did}/team/schedule{?%24select,%24expand}';
-        $this->requestAdapter = $requestAdapter;
+        parent::__construct($requestAdapter, [], "{+baseurl}/groups/{group%2Did}/team/schedule{?%24select,%24expand}");
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -157,10 +130,9 @@ class ScheduleRequestBuilder
     }
 
     /**
-     * Retrieve the properties and relationships of a schedule object. The schedule creation process conforms to the One API guideline for resource based long running operations (RELO).When clients use the PUT method, if the schedule is provisioned, the operation updates the schedule; otherwise, the operation starts the schedule provisioning process in the background. During schedule provisioning, clients can use the GET method to get the schedule and look at the `provisionStatus` property for the current state of the provisioning. If the provisioning failed, clients can get additional information from the `provisionStatusCode` property. Clients can also inspect the configuration of the schedule.
+     * The schedule of shifts for this team.
      * @param ScheduleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/schedule-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ScheduleRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -173,39 +145,6 @@ class ScheduleRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the offerShiftRequests property of the microsoft.graph.schedule entity.
-     * @param string $id Unique identifier of the item
-     * @return OfferShiftRequestItemRequestBuilder
-    */
-    public function offerShiftRequestsById(string $id): OfferShiftRequestItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['offerShiftRequest%2Did'] = $id;
-        return new OfferShiftRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the openShiftChangeRequests property of the microsoft.graph.schedule entity.
-     * @param string $id Unique identifier of the item
-     * @return OpenShiftChangeRequestItemRequestBuilder
-    */
-    public function openShiftChangeRequestsById(string $id): OpenShiftChangeRequestItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['openShiftChangeRequest%2Did'] = $id;
-        return new OpenShiftChangeRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the openShifts property of the microsoft.graph.schedule entity.
-     * @param string $id Unique identifier of the item
-     * @return OpenShiftItemRequestBuilder
-    */
-    public function openShiftsById(string $id): OpenShiftItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['openShift%2Did'] = $id;
-        return new OpenShiftItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -228,72 +167,6 @@ class ScheduleRequestBuilder
     }
 
     /**
-     * Provides operations to manage the schedulingGroups property of the microsoft.graph.schedule entity.
-     * @param string $id Unique identifier of the item
-     * @return SchedulingGroupItemRequestBuilder
-    */
-    public function schedulingGroupsById(string $id): SchedulingGroupItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['schedulingGroup%2Did'] = $id;
-        return new SchedulingGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the shifts property of the microsoft.graph.schedule entity.
-     * @param string $id Unique identifier of the item
-     * @return ShiftItemRequestBuilder
-    */
-    public function shiftsById(string $id): ShiftItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['shift%2Did'] = $id;
-        return new ShiftItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the swapShiftsChangeRequests property of the microsoft.graph.schedule entity.
-     * @param string $id Unique identifier of the item
-     * @return SwapShiftsChangeRequestItemRequestBuilder
-    */
-    public function swapShiftsChangeRequestsById(string $id): SwapShiftsChangeRequestItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['swapShiftsChangeRequest%2Did'] = $id;
-        return new SwapShiftsChangeRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the timeOffReasons property of the microsoft.graph.schedule entity.
-     * @param string $id Unique identifier of the item
-     * @return TimeOffReasonItemRequestBuilder
-    */
-    public function timeOffReasonsById(string $id): TimeOffReasonItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['timeOffReason%2Did'] = $id;
-        return new TimeOffReasonItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the timeOffRequests property of the microsoft.graph.schedule entity.
-     * @param string $id Unique identifier of the item
-     * @return TimeOffRequestItemRequestBuilder
-    */
-    public function timeOffRequestsById(string $id): TimeOffRequestItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['timeOffRequest%2Did'] = $id;
-        return new TimeOffRequestItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the timesOff property of the microsoft.graph.schedule entity.
-     * @param string $id Unique identifier of the item
-     * @return TimeOffItemRequestBuilder
-    */
-    public function timesOffById(string $id): TimeOffItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['timeOff%2Did'] = $id;
-        return new TimeOffItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Delete navigation property schedule for groups
      * @param ScheduleRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -304,18 +177,14 @@ class ScheduleRequestBuilder
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
 
     /**
-     * Retrieve the properties and relationships of a schedule object. The schedule creation process conforms to the One API guideline for resource based long running operations (RELO).When clients use the PUT method, if the schedule is provisioned, the operation updates the schedule; otherwise, the operation starts the schedule provisioning process in the background. During schedule provisioning, clients can use the GET method to get the schedule and look at the `provisionStatus` property for the current state of the provisioning. If the provisioning failed, clients can get additional information from the `provisionStatusCode` property. Clients can also inspect the configuration of the schedule.
+     * The schedule of shifts for this team.
      * @param ScheduleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -326,15 +195,11 @@ class ScheduleRequestBuilder
         $requestInfo->httpMethod = HttpMethod::GET;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -352,12 +217,8 @@ class ScheduleRequestBuilder
         $requestInfo->httpMethod = HttpMethod::PUT;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;

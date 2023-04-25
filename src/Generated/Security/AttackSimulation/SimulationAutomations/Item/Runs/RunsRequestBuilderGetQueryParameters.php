@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\AttackSimulation\SimulationAutomati
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of the attack simulation automation runs for a tenant.
+ * A collection of simulation automation runs.
 */
 class RunsRequestBuilderGetQueryParameters 
 {

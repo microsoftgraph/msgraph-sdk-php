@@ -18,11 +18,6 @@ class CallRoute implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * @var IdentitySet|null $escapedFinal The final property
-    */
-    public ?IdentitySet $escapedFinal = null;
-    
-    /**
      * Instantiates a new callRoute and sets the default values.
     */
     public function __construct() {

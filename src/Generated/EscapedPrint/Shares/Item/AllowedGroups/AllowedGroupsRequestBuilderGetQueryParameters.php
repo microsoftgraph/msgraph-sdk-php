@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedGroups;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of groups that have been granted access to submit print jobs to the associated printerShare.
+ * The groups whose users have access to print using the printer.
 */
 class AllowedGroupsRequestBuilderGetQueryParameters 
 {

@@ -15,30 +15,24 @@ use Microsoft\Graph\Generated\Teams\Item\EscapedClone\CloneRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Group\GroupRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\IncomingChannels\IncomingChannelsRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\InstalledApps\InstalledAppsRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\InstalledApps\Item\TeamsAppInstallationItemRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Members\Item\ConversationMemberItemRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Members\MembersRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Operations\Item\TeamsAsyncOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Operations\OperationsRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Photo\PhotoRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\PrimaryChannelRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Schedule\ScheduleRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\SendActivityNotification\SendActivityNotificationRequestBuilder;
-use Microsoft\Graph\Generated\Teams\Item\Tags\Item\TeamworkTagItemRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Tags\TagsRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Template\TemplateRequestBuilder;
 use Microsoft\Graph\Generated\Teams\Item\Unarchive\UnarchiveRequestBuilder;
+use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 /**
  * Provides operations to manage the collection of team entities.
 */
-class TeamItemRequestBuilder 
+class TeamItemRequestBuilder extends BaseRequestBuilder 
 {
     /**
      * Provides operations to manage the allChannels property of the microsoft.graph.team entity.
@@ -111,11 +105,6 @@ class TeamItemRequestBuilder
     }
     
     /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
-    */
-    private array $pathParameters;
-    
-    /**
      * Provides operations to manage the photo property of the microsoft.graph.team entity.
     */
     public function photo(): PhotoRequestBuilder {
@@ -128,11 +117,6 @@ class TeamItemRequestBuilder
     public function primaryChannel(): PrimaryChannelRequestBuilder {
         return new PrimaryChannelRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
-    
-    /**
-     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-    */
-    private RequestAdapter $requestAdapter;
     
     /**
      * Provides operations to manage the schedule property of the microsoft.graph.team entity.
@@ -170,40 +154,12 @@ class TeamItemRequestBuilder
     }
     
     /**
-     * @var string $urlTemplate Url template to use to build the URL for the current request builder
-    */
-    private string $urlTemplate;
-    
-    /**
-     * Provides operations to manage the allChannels property of the microsoft.graph.team entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Teams\Item\AllChannels\Item\ChannelItemRequestBuilder
-    */
-    public function allChannelsById(string $id): \Microsoft\Graph\Generated\Teams\Item\AllChannels\Item\ChannelItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['channel%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Teams\Item\AllChannels\Item\ChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the channels property of the microsoft.graph.team entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Teams\Item\Channels\Item\ChannelItemRequestBuilder
-    */
-    public function channelsById(string $id): \Microsoft\Graph\Generated\Teams\Item\Channels\Item\ChannelItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['channel%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Teams\Item\Channels\Item\ChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Instantiates a new TeamItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/teams/{team%2Did}{?%24select,%24expand}';
-        $this->requestAdapter = $requestAdapter;
+        parent::__construct($requestAdapter, [], "{+baseurl}/teams/{team%2Did}{?%24select,%24expand}");
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -249,50 +205,6 @@ class TeamItemRequestBuilder
     }
 
     /**
-     * Provides operations to manage the incomingChannels property of the microsoft.graph.team entity.
-     * @param string $id Unique identifier of the item
-     * @return \Microsoft\Graph\Generated\Teams\Item\IncomingChannels\Item\ChannelItemRequestBuilder
-    */
-    public function incomingChannelsById(string $id): \Microsoft\Graph\Generated\Teams\Item\IncomingChannels\Item\ChannelItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['channel%2Did'] = $id;
-        return new \Microsoft\Graph\Generated\Teams\Item\IncomingChannels\Item\ChannelItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the installedApps property of the microsoft.graph.team entity.
-     * @param string $id Unique identifier of the item
-     * @return TeamsAppInstallationItemRequestBuilder
-    */
-    public function installedAppsById(string $id): TeamsAppInstallationItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['teamsAppInstallation%2Did'] = $id;
-        return new TeamsAppInstallationItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the members property of the microsoft.graph.team entity.
-     * @param string $id Unique identifier of the item
-     * @return ConversationMemberItemRequestBuilder
-    */
-    public function membersById(string $id): ConversationMemberItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['conversationMember%2Did'] = $id;
-        return new ConversationMemberItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the operations property of the microsoft.graph.team entity.
-     * @param string $id Unique identifier of the item
-     * @return TeamsAsyncOperationItemRequestBuilder
-    */
-    public function operationsById(string $id): TeamsAsyncOperationItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['teamsAsyncOperation%2Did'] = $id;
-        return new TeamsAsyncOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Update the properties of the specified team.
      * @param Team $body The request body
      * @param TeamItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
@@ -313,17 +225,6 @@ class TeamItemRequestBuilder
     }
 
     /**
-     * Provides operations to manage the tags property of the microsoft.graph.team entity.
-     * @param string $id Unique identifier of the item
-     * @return TeamworkTagItemRequestBuilder
-    */
-    public function tagsById(string $id): TeamworkTagItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['teamworkTag%2Did'] = $id;
-        return new TeamworkTagItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Delete entity from teams
      * @param TeamItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -334,12 +235,8 @@ class TeamItemRequestBuilder
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -356,15 +253,11 @@ class TeamItemRequestBuilder
         $requestInfo->httpMethod = HttpMethod::GET;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -382,12 +275,8 @@ class TeamItemRequestBuilder
         $requestInfo->httpMethod = HttpMethod::PATCH;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;

@@ -8,16 +8,12 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Communications\Calls\Item\AddLargeGalleryView\AddLargeGalleryViewRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Answer\AnswerRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\AudioRoutingGroups\AudioRoutingGroupsRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\AudioRoutingGroups\Item\AudioRoutingGroupItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\CancelMediaProcessing\CancelMediaProcessingRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\ChangeScreenSharingRole\ChangeScreenSharingRoleRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\ContentSharingSessions\ContentSharingSessionsRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\ContentSharingSessions\Item\ContentSharingSessionItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\KeepAlive\KeepAliveRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Mute\MuteRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Operations\Item\CommsOperationItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Operations\OperationsRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\Item\ParticipantItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\Participants\ParticipantsRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\PlayPrompt\PlayPromptRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\Item\RecordResponse\RecordResponseRequestBuilder;
@@ -29,17 +25,15 @@ use Microsoft\Graph\Generated\Communications\Calls\Item\Unmute\UnmuteRequestBuil
 use Microsoft\Graph\Generated\Communications\Calls\Item\UpdateRecordingStatus\UpdateRecordingStatusRequestBuilder;
 use Microsoft\Graph\Generated\Models\Call;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 /**
  * Provides operations to manage the calls property of the microsoft.graph.cloudCommunications entity.
 */
-class CallItemRequestBuilder 
+class CallItemRequestBuilder extends BaseRequestBuilder 
 {
     /**
      * Provides operations to call the addLargeGalleryView method.
@@ -112,11 +106,6 @@ class CallItemRequestBuilder
     }
     
     /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
-    */
-    private array $pathParameters;
-    
-    /**
      * Provides operations to call the playPrompt method.
     */
     public function playPrompt(): PlayPromptRequestBuilder {
@@ -143,11 +132,6 @@ class CallItemRequestBuilder
     public function reject(): RejectRequestBuilder {
         return new RejectRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
-    
-    /**
-     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-    */
-    private RequestAdapter $requestAdapter;
     
     /**
      * Provides operations to call the subscribeToTone method.
@@ -178,45 +162,17 @@ class CallItemRequestBuilder
     }
     
     /**
-     * @var string $urlTemplate Url template to use to build the URL for the current request builder
-    */
-    private string $urlTemplate;
-    
-    /**
-     * Provides operations to manage the audioRoutingGroups property of the microsoft.graph.call entity.
-     * @param string $id Unique identifier of the item
-     * @return AudioRoutingGroupItemRequestBuilder
-    */
-    public function audioRoutingGroupsById(string $id): AudioRoutingGroupItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['audioRoutingGroup%2Did'] = $id;
-        return new AudioRoutingGroupItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Instantiates a new CallItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/communications/calls/{call%2Did}{?%24select,%24expand}';
-        $this->requestAdapter = $requestAdapter;
+        parent::__construct($requestAdapter, [], "{+baseurl}/communications/calls/{call%2Did}{?%24select,%24expand}");
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
             $this->pathParameters = ['request-raw-url' => $pathParametersOrRawUrl];
         }
-    }
-
-    /**
-     * Provides operations to manage the contentSharingSessions property of the microsoft.graph.call entity.
-     * @param string $id Unique identifier of the item
-     * @return ContentSharingSessionItemRequestBuilder
-    */
-    public function contentSharingSessionsById(string $id): ContentSharingSessionItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['contentSharingSession%2Did'] = $id;
-        return new ContentSharingSessionItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -256,28 +212,6 @@ class CallItemRequestBuilder
     }
 
     /**
-     * Provides operations to manage the operations property of the microsoft.graph.call entity.
-     * @param string $id Unique identifier of the item
-     * @return CommsOperationItemRequestBuilder
-    */
-    public function operationsById(string $id): CommsOperationItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['commsOperation%2Did'] = $id;
-        return new CommsOperationItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the participants property of the microsoft.graph.call entity.
-     * @param string $id Unique identifier of the item
-     * @return ParticipantItemRequestBuilder
-    */
-    public function participantsById(string $id): ParticipantItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['participant%2Did'] = $id;
-        return new ParticipantItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Update the navigation property calls in communications
      * @param Call $body The request body
      * @param CallItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
@@ -307,12 +241,8 @@ class CallItemRequestBuilder
         $requestInfo->pathParameters = $this->pathParameters;
         $requestInfo->httpMethod = HttpMethod::DELETE;
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -329,15 +259,11 @@ class CallItemRequestBuilder
         $requestInfo->httpMethod = HttpMethod::GET;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -355,12 +281,8 @@ class CallItemRequestBuilder
         $requestInfo->httpMethod = HttpMethod::PATCH;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;

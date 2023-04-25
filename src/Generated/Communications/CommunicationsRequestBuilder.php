@@ -6,27 +6,21 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Communications\CallRecords\CallRecordsRequestBuilder;
-use Microsoft\Graph\Generated\Communications\CallRecords\Item\CallRecordItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Calls\CallsRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Calls\Item\CallItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\GetPresencesByUserId\GetPresencesByUserIdRequestBuilder;
-use Microsoft\Graph\Generated\Communications\OnlineMeetings\Item\OnlineMeetingItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\OnlineMeetings\OnlineMeetingsRequestBuilder;
-use Microsoft\Graph\Generated\Communications\Presences\Item\PresenceItemRequestBuilder;
 use Microsoft\Graph\Generated\Communications\Presences\PresencesRequestBuilder;
 use Microsoft\Graph\Generated\Models\CloudCommunications;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 /**
  * Provides operations to manage the cloudCommunications singleton.
 */
-class CommunicationsRequestBuilder 
+class CommunicationsRequestBuilder extends BaseRequestBuilder 
 {
     /**
      * Provides operations to manage the callRecords property of the microsoft.graph.cloudCommunications entity.
@@ -57,11 +51,6 @@ class CommunicationsRequestBuilder
     }
     
     /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
-    */
-    private array $pathParameters;
-    
-    /**
      * Provides operations to manage the presences property of the microsoft.graph.cloudCommunications entity.
     */
     public function presences(): PresencesRequestBuilder {
@@ -69,45 +58,12 @@ class CommunicationsRequestBuilder
     }
     
     /**
-     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-    */
-    private RequestAdapter $requestAdapter;
-    
-    /**
-     * @var string $urlTemplate Url template to use to build the URL for the current request builder
-    */
-    private string $urlTemplate;
-    
-    /**
-     * Provides operations to manage the callRecords property of the microsoft.graph.cloudCommunications entity.
-     * @param string $id Unique identifier of the item
-     * @return CallRecordItemRequestBuilder
-    */
-    public function callRecordsById(string $id): CallRecordItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['callRecord%2Did'] = $id;
-        return new CallRecordItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the calls property of the microsoft.graph.cloudCommunications entity.
-     * @param string $id Unique identifier of the item
-     * @return CallItemRequestBuilder
-    */
-    public function callsById(string $id): CallItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['call%2Did'] = $id;
-        return new CallItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Instantiates a new CommunicationsRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/communications{?%24select,%24expand}';
-        $this->requestAdapter = $requestAdapter;
+        parent::__construct($requestAdapter, [], "{+baseurl}/communications{?%24select,%24expand}");
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -134,17 +90,6 @@ class CommunicationsRequestBuilder
     }
 
     /**
-     * Provides operations to manage the onlineMeetings property of the microsoft.graph.cloudCommunications entity.
-     * @param string $id Unique identifier of the item
-     * @return OnlineMeetingItemRequestBuilder
-    */
-    public function onlineMeetingsById(string $id): OnlineMeetingItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['onlineMeeting%2Did'] = $id;
-        return new OnlineMeetingItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Update communications
      * @param CloudCommunications $body The request body
      * @param CommunicationsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
@@ -164,17 +109,6 @@ class CommunicationsRequestBuilder
     }
 
     /**
-     * Provides operations to manage the presences property of the microsoft.graph.cloudCommunications entity.
-     * @param string $id Unique identifier of the item
-     * @return PresenceItemRequestBuilder
-    */
-    public function presencesById(string $id): PresenceItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['presence%2Did'] = $id;
-        return new PresenceItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Get communications
      * @param CommunicationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
@@ -186,15 +120,11 @@ class CommunicationsRequestBuilder
         $requestInfo->httpMethod = HttpMethod::GET;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -212,12 +142,8 @@ class CommunicationsRequestBuilder
         $requestInfo->httpMethod = HttpMethod::PATCH;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;

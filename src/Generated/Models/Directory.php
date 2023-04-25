@@ -33,6 +33,22 @@ class Directory extends Entity implements Parsable
     }
 
     /**
+     * Gets the attributeSets property value. The attributeSets property
+     * @return array<AttributeSet>|null
+    */
+    public function getAttributeSets(): ?array {
+        return $this->getBackingStore()->get('attributeSets');
+    }
+
+    /**
+     * Gets the customSecurityAttributeDefinitions property value. The customSecurityAttributeDefinitions property
+     * @return array<CustomSecurityAttributeDefinition>|null
+    */
+    public function getCustomSecurityAttributeDefinitions(): ?array {
+        return $this->getBackingStore()->get('customSecurityAttributeDefinitions');
+    }
+
+    /**
      * Gets the deletedItems property value. Recently deleted items. Read-only. Nullable.
      * @return array<DirectoryObject>|null
     */
@@ -56,6 +72,8 @@ class Directory extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'administrativeUnits' => fn(ParseNode $n) => $o->setAdministrativeUnits($n->getCollectionOfObjectValues([AdministrativeUnit::class, 'createFromDiscriminatorValue'])),
+            'attributeSets' => fn(ParseNode $n) => $o->setAttributeSets($n->getCollectionOfObjectValues([AttributeSet::class, 'createFromDiscriminatorValue'])),
+            'customSecurityAttributeDefinitions' => fn(ParseNode $n) => $o->setCustomSecurityAttributeDefinitions($n->getCollectionOfObjectValues([CustomSecurityAttributeDefinition::class, 'createFromDiscriminatorValue'])),
             'deletedItems' => fn(ParseNode $n) => $o->setDeletedItems($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'federationConfigurations' => fn(ParseNode $n) => $o->setFederationConfigurations($n->getCollectionOfObjectValues([IdentityProviderBase::class, 'createFromDiscriminatorValue'])),
             'onPremisesSynchronization' => fn(ParseNode $n) => $o->setOnPremisesSynchronization($n->getCollectionOfObjectValues([OnPremisesDirectorySynchronization::class, 'createFromDiscriminatorValue'])),
@@ -77,6 +95,8 @@ class Directory extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('administrativeUnits', $this->getAdministrativeUnits());
+        $writer->writeCollectionOfObjectValues('attributeSets', $this->getAttributeSets());
+        $writer->writeCollectionOfObjectValues('customSecurityAttributeDefinitions', $this->getCustomSecurityAttributeDefinitions());
         $writer->writeCollectionOfObjectValues('deletedItems', $this->getDeletedItems());
         $writer->writeCollectionOfObjectValues('federationConfigurations', $this->getFederationConfigurations());
         $writer->writeCollectionOfObjectValues('onPremisesSynchronization', $this->getOnPremisesSynchronization());
@@ -88,6 +108,22 @@ class Directory extends Entity implements Parsable
     */
     public function setAdministrativeUnits(?array $value): void {
         $this->getBackingStore()->set('administrativeUnits', $value);
+    }
+
+    /**
+     * Sets the attributeSets property value. The attributeSets property
+     * @param array<AttributeSet>|null $value Value to set for the attributeSets property.
+    */
+    public function setAttributeSets(?array $value): void {
+        $this->getBackingStore()->set('attributeSets', $value);
+    }
+
+    /**
+     * Sets the customSecurityAttributeDefinitions property value. The customSecurityAttributeDefinitions property
+     * @param array<CustomSecurityAttributeDefinition>|null $value Value to set for the customSecurityAttributeDefinitions property.
+    */
+    public function setCustomSecurityAttributeDefinitions(?array $value): void {
+        $this->getBackingStore()->set('customSecurityAttributeDefinitions', $value);
     }
 
     /**

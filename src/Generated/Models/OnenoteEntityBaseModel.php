@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OnenoteEntityBaseModel extends Entity implements Parsable 
 {
     /**
-     * @var string|null $escapedSelf The endpoint where you can get details about the page. Read-only.
-    */
-    public ?string $escapedSelf = null;
-    
-    /**
      * Instantiates a new onenoteEntityBaseModel and sets the default values.
     */
     public function __construct() {

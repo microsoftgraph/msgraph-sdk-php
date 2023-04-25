@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\CreatedObjects;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a list of directory objects that were created by the user. This API returns only those directory objects that were created by a user who isn't in any administrator role; otherwise, it returns an empty object.
+ * Directory objects that were created by the user. Read-only. Nullable.
 */
 class CreatedObjectsRequestBuilderGetQueryParameters 
 {

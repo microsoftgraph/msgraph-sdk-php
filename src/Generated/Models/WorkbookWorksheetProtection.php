@@ -9,11 +9,6 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WorkbookWorksheetProtection extends Entity implements Parsable 
 {
     /**
-     * @var bool|null $escapedProtected Indicates if the worksheet is protected.  Read-only.
-    */
-    public ?bool $escapedProtected = null;
-    
-    /**
      * Instantiates a new workbookWorksheetProtection and sets the default values.
     */
     public function __construct() {

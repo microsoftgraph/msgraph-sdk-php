@@ -6,27 +6,21 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Identity\ApiConnectors\ApiConnectorsRequestBuilder;
-use Microsoft\Graph\Generated\Identity\ApiConnectors\Item\IdentityApiConnectorItemRequestBuilder;
 use Microsoft\Graph\Generated\Identity\B2xUserFlows\B2xUserFlowsRequestBuilder;
-use Microsoft\Graph\Generated\Identity\B2xUserFlows\Item\B2xIdentityUserFlowItemRequestBuilder;
 use Microsoft\Graph\Generated\Identity\ConditionalAccess\ConditionalAccessRequestBuilder;
 use Microsoft\Graph\Generated\Identity\IdentityProviders\IdentityProvidersRequestBuilder;
-use Microsoft\Graph\Generated\Identity\IdentityProviders\Item\IdentityProviderBaseItemRequestBuilder;
-use Microsoft\Graph\Generated\Identity\UserFlowAttributes\Item\IdentityUserFlowAttributeItemRequestBuilder;
 use Microsoft\Graph\Generated\Identity\UserFlowAttributes\UserFlowAttributesRequestBuilder;
 use Microsoft\Graph\Generated\Models\IdentityContainer;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
 use Microsoft\Kiota\Abstractions\RequestInformation;
-use Microsoft\Kiota\Abstractions\ResponseHandler;
-use Microsoft\Kiota\Abstractions\Serialization\Parsable;
-use Microsoft\Kiota\Abstractions\Serialization\ParsableFactory;
 
 /**
  * Provides operations to manage the identityContainer singleton.
 */
-class IdentityRequestBuilder 
+class IdentityRequestBuilder extends BaseRequestBuilder 
 {
     /**
      * Provides operations to manage the apiConnectors property of the microsoft.graph.identityContainer entity.
@@ -57,21 +51,6 @@ class IdentityRequestBuilder
     }
     
     /**
-     * @var array<string, mixed> $pathParameters Path parameters for the request
-    */
-    private array $pathParameters;
-    
-    /**
-     * @var RequestAdapter $requestAdapter The request adapter to use to execute the requests.
-    */
-    private RequestAdapter $requestAdapter;
-    
-    /**
-     * @var string $urlTemplate Url template to use to build the URL for the current request builder
-    */
-    private string $urlTemplate;
-    
-    /**
      * Provides operations to manage the userFlowAttributes property of the microsoft.graph.identityContainer entity.
     */
     public function userFlowAttributes(): UserFlowAttributesRequestBuilder {
@@ -79,35 +58,12 @@ class IdentityRequestBuilder
     }
     
     /**
-     * Provides operations to manage the apiConnectors property of the microsoft.graph.identityContainer entity.
-     * @param string $id Unique identifier of the item
-     * @return IdentityApiConnectorItemRequestBuilder
-    */
-    public function apiConnectorsById(string $id): IdentityApiConnectorItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['identityApiConnector%2Did'] = $id;
-        return new IdentityApiConnectorItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
-     * Provides operations to manage the b2xUserFlows property of the microsoft.graph.identityContainer entity.
-     * @param string $id Unique identifier of the item
-     * @return B2xIdentityUserFlowItemRequestBuilder
-    */
-    public function b2xUserFlowsById(string $id): B2xIdentityUserFlowItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['b2xIdentityUserFlow%2Did'] = $id;
-        return new B2xIdentityUserFlowItemRequestBuilder($urlTplParams, $this->requestAdapter);
-    }
-
-    /**
      * Instantiates a new IdentityRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        $this->urlTemplate = '{+baseurl}/identity{?%24select,%24expand}';
-        $this->requestAdapter = $requestAdapter;
+        parent::__construct($requestAdapter, [], "{+baseurl}/identity{?%24select,%24expand}");
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {
@@ -131,17 +87,6 @@ class IdentityRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
-    }
-
-    /**
-     * Provides operations to manage the identityProviders property of the microsoft.graph.identityContainer entity.
-     * @param string $id Unique identifier of the item
-     * @return IdentityProviderBaseItemRequestBuilder
-    */
-    public function identityProvidersById(string $id): IdentityProviderBaseItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['identityProviderBase%2Did'] = $id;
-        return new IdentityProviderBaseItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
     /**
@@ -175,15 +120,11 @@ class IdentityRequestBuilder
         $requestInfo->httpMethod = HttpMethod::GET;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
             if ($requestConfiguration->queryParameters !== null) {
                 $requestInfo->setQueryParameters($requestConfiguration->queryParameters);
             }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         return $requestInfo;
     }
@@ -201,26 +142,11 @@ class IdentityRequestBuilder
         $requestInfo->httpMethod = HttpMethod::PATCH;
         $requestInfo->addHeader('Accept', "application/json");
         if ($requestConfiguration !== null) {
-            if ($requestConfiguration->headers !== null) {
-                $requestInfo->addHeaders($requestConfiguration->headers);
-            }
-            if ($requestConfiguration->options !== null) {
-                $requestInfo->addRequestOptions(...$requestConfiguration->options);
-            }
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
         }
         $requestInfo->setContentFromParsable($this->requestAdapter, "application/json", $body);
         return $requestInfo;
-    }
-
-    /**
-     * Provides operations to manage the userFlowAttributes property of the microsoft.graph.identityContainer entity.
-     * @param string $id Unique identifier of the item
-     * @return IdentityUserFlowAttributeItemRequestBuilder
-    */
-    public function userFlowAttributesById(string $id): IdentityUserFlowAttributeItemRequestBuilder {
-        $urlTplParams = $this->pathParameters;
-        $urlTplParams['identityUserFlowAttribute%2Did'] = $id;
-        return new IdentityUserFlowAttributeItemRequestBuilder($urlTplParams, $this->requestAdapter);
     }
 
 }

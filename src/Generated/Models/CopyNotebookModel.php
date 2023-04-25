@@ -19,11 +19,6 @@ class CopyNotebookModel implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * @var string|null $escapedSelf The self property
-    */
-    public ?string $escapedSelf = null;
-    
-    /**
      * Instantiates a new CopyNotebookModel and sets the default values.
     */
     public function __construct() {

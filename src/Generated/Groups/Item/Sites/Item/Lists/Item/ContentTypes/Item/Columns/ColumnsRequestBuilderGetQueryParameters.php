@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\ContentTyp
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the collection of columns represented as [columnDefinition][columnDefinition] resources in a [content type][contentType].
+ * The collection of column definitions for this contentType.
 */
 class ColumnsRequestBuilderGetQueryParameters 
 {

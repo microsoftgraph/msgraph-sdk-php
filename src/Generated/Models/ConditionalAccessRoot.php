@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ConditionalAccessRoot extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new conditionalAccessRoot and sets the default values.
+     * Instantiates a new ConditionalAccessRoot and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -33,6 +33,14 @@ class ConditionalAccessRoot extends Entity implements Parsable
     }
 
     /**
+     * Gets the authenticationStrength property value. The authenticationStrength property
+     * @return AuthenticationStrengthRoot|null
+    */
+    public function getAuthenticationStrength(): ?AuthenticationStrengthRoot {
+        return $this->getBackingStore()->get('authenticationStrength');
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable>
     */
@@ -40,6 +48,7 @@ class ConditionalAccessRoot extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'authenticationContextClassReferences' => fn(ParseNode $n) => $o->setAuthenticationContextClassReferences($n->getCollectionOfObjectValues([AuthenticationContextClassReference::class, 'createFromDiscriminatorValue'])),
+            'authenticationStrength' => fn(ParseNode $n) => $o->setAuthenticationStrength($n->getObjectValue([AuthenticationStrengthRoot::class, 'createFromDiscriminatorValue'])),
             'namedLocations' => fn(ParseNode $n) => $o->setNamedLocations($n->getCollectionOfObjectValues([NamedLocation::class, 'createFromDiscriminatorValue'])),
             'policies' => fn(ParseNode $n) => $o->setPolicies($n->getCollectionOfObjectValues([ConditionalAccessPolicy::class, 'createFromDiscriminatorValue'])),
             'templates' => fn(ParseNode $n) => $o->setTemplates($n->getCollectionOfObjectValues([ConditionalAccessTemplate::class, 'createFromDiscriminatorValue'])),
@@ -77,6 +86,7 @@ class ConditionalAccessRoot extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('authenticationContextClassReferences', $this->getAuthenticationContextClassReferences());
+        $writer->writeObjectValue('authenticationStrength', $this->getAuthenticationStrength());
         $writer->writeCollectionOfObjectValues('namedLocations', $this->getNamedLocations());
         $writer->writeCollectionOfObjectValues('policies', $this->getPolicies());
         $writer->writeCollectionOfObjectValues('templates', $this->getTemplates());
@@ -88,6 +98,14 @@ class ConditionalAccessRoot extends Entity implements Parsable
     */
     public function setAuthenticationContextClassReferences(?array $value): void {
         $this->getBackingStore()->set('authenticationContextClassReferences', $value);
+    }
+
+    /**
+     * Sets the authenticationStrength property value. The authenticationStrength property
+     * @param AuthenticationStrengthRoot|null $value Value to set for the authenticationStrength property.
+    */
+    public function setAuthenticationStrength(?AuthenticationStrengthRoot $value): void {
+        $this->getBackingStore()->set('authenticationStrength', $value);
     }
 
     /**

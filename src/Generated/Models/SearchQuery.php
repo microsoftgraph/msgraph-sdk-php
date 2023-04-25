@@ -80,7 +80,7 @@ class SearchQuery implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the queryTemplate property value. The queryTemplate property
+     * Gets the queryTemplate property value. Provides a way to decorate the query string. Supports both KQL and query variables. Optional.
      * @return string|null
     */
     public function getQueryTemplate(): ?string {
@@ -131,7 +131,7 @@ class SearchQuery implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the queryTemplate property value. The queryTemplate property
+     * Sets the queryTemplate property value. Provides a way to decorate the query string. Supports both KQL and query variables. Optional.
      * @param string|null $value Value to set for the queryTemplate property.
     */
     public function setQueryTemplate(?string $value): void {

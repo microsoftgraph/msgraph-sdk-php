@@ -111,6 +111,7 @@ class ChatMessage extends Entity implements Parsable
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
             'locale' => fn(ParseNode $n) => $o->setLocale($n->getStringValue()),
             'mentions' => fn(ParseNode $n) => $o->setMentions($n->getCollectionOfObjectValues([ChatMessageMention::class, 'createFromDiscriminatorValue'])),
+            'messageHistory' => fn(ParseNode $n) => $o->setMessageHistory($n->getCollectionOfObjectValues([ChatMessageHistoryItem::class, 'createFromDiscriminatorValue'])),
             'messageType' => fn(ParseNode $n) => $o->setMessageType($n->getEnumValue(ChatMessageType::class)),
             'policyViolation' => fn(ParseNode $n) => $o->setPolicyViolation($n->getObjectValue([ChatMessagePolicyViolation::class, 'createFromDiscriminatorValue'])),
             'reactions' => fn(ParseNode $n) => $o->setReactions($n->getCollectionOfObjectValues([ChatMessageReaction::class, 'createFromDiscriminatorValue'])),
@@ -176,6 +177,14 @@ class ChatMessage extends Entity implements Parsable
     */
     public function getMentions(): ?array {
         return $this->getBackingStore()->get('mentions');
+    }
+
+    /**
+     * Gets the messageHistory property value. The messageHistory property
+     * @return array<ChatMessageHistoryItem>|null
+    */
+    public function getMessageHistory(): ?array {
+        return $this->getBackingStore()->get('messageHistory');
     }
 
     /**
@@ -263,6 +272,7 @@ class ChatMessage extends Entity implements Parsable
         $writer->writeDateTimeValue('lastModifiedDateTime', $this->getLastModifiedDateTime());
         $writer->writeStringValue('locale', $this->getLocale());
         $writer->writeCollectionOfObjectValues('mentions', $this->getMentions());
+        $writer->writeCollectionOfObjectValues('messageHistory', $this->getMessageHistory());
         $writer->writeEnumValue('messageType', $this->getMessageType());
         $writer->writeObjectValue('policyViolation', $this->getPolicyViolation());
         $writer->writeCollectionOfObjectValues('reactions', $this->getReactions());
@@ -391,6 +401,14 @@ class ChatMessage extends Entity implements Parsable
     */
     public function setMentions(?array $value): void {
         $this->getBackingStore()->set('mentions', $value);
+    }
+
+    /**
+     * Sets the messageHistory property value. The messageHistory property
+     * @param array<ChatMessageHistoryItem>|null $value Value to set for the messageHistory property.
+    */
+    public function setMessageHistory(?array $value): void {
+        $this->getBackingStore()->set('messageHistory', $value);
     }
 
     /**

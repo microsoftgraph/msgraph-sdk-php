@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleEligibilitySche
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get the instances of role eligibilities.
+ * Instances for role eligibility requests.
 */
 class RoleEligibilityScheduleInstancesRequestBuilderGetQueryParameters 
 {

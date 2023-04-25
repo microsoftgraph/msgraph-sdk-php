@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Me\Presence;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get a user's presence information.
+ * Get presence from me
 */
 class PresenceRequestBuilderGetQueryParameters 
 {

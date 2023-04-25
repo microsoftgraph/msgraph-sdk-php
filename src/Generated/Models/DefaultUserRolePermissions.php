@@ -59,7 +59,7 @@ class DefaultUserRolePermissions implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the allowedToReadBitlockerKeysForOwnedDevice property value. The allowedToReadBitlockerKeysForOwnedDevice property
+     * Gets the allowedToReadBitlockerKeysForOwnedDevice property value. Indicates whether the registered owners of a device can read their own BitLocker recovery keys with default user role.
      * @return bool|null
     */
     public function getAllowedToReadBitlockerKeysForOwnedDevice(): ?bool {
@@ -153,7 +153,7 @@ class DefaultUserRolePermissions implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the allowedToReadBitlockerKeysForOwnedDevice property value. The allowedToReadBitlockerKeysForOwnedDevice property
+     * Sets the allowedToReadBitlockerKeysForOwnedDevice property value. Indicates whether the registered owners of a device can read their own BitLocker recovery keys with default user role.
      * @param bool|null $value Value to set for the allowedToReadBitlockerKeysForOwnedDevice property.
     */
     public function setAllowedToReadBitlockerKeysForOwnedDevice(?bool $value): void {
