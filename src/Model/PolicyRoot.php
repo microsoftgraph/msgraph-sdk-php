@@ -26,7 +26,7 @@ class PolicyRoot extends Entity
 {
     /**
     * Gets the authenticationMethodsPolicy
-    * The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD).
+    * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Azure Active Directory (Azure AD).
     *
     * @return AuthenticationMethodsPolicy|null The authenticationMethodsPolicy
     */
@@ -45,7 +45,7 @@ class PolicyRoot extends Entity
 
     /**
     * Sets the authenticationMethodsPolicy
-    * The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD).
+    * The authentication methods and the users that are allowed to use them to sign in and perform multifactor authentication (MFA) in Azure Active Directory (Azure AD).
     *
     * @param AuthenticationMethodsPolicy $val The authenticationMethodsPolicy
     *
@@ -54,6 +54,36 @@ class PolicyRoot extends Entity
     public function setAuthenticationMethodsPolicy($val)
     {
         $this->_propDict["authenticationMethodsPolicy"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the authenticationStrengthPolicies
+    * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
+     *
+     * @return array|null The authenticationStrengthPolicies
+     */
+    public function getAuthenticationStrengthPolicies()
+    {
+        if (array_key_exists("authenticationStrengthPolicies", $this->_propDict)) {
+           return $this->_propDict["authenticationStrengthPolicies"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the authenticationStrengthPolicies
+    * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
+    *
+    * @param AuthenticationStrengthPolicy[] $val The authenticationStrengthPolicies
+    *
+    * @return PolicyRoot
+    */
+    public function setAuthenticationStrengthPolicies($val)
+    {
+        $this->_propDict["authenticationStrengthPolicies"] = $val;
         return $this;
     }
 

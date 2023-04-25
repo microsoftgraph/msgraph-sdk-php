@@ -81,6 +81,7 @@ class DefaultUserRolePermissions extends Entity
     }
     /**
     * Gets the allowedToReadBitlockerKeysForOwnedDevice
+    * Indicates whether the registered owners of a device can read their own BitLocker recovery keys with default user role.
     *
     * @return bool|null The allowedToReadBitlockerKeysForOwnedDevice
     */
@@ -95,6 +96,7 @@ class DefaultUserRolePermissions extends Entity
 
     /**
     * Sets the allowedToReadBitlockerKeysForOwnedDevice
+    * Indicates whether the registered owners of a device can read their own BitLocker recovery keys with default user role.
     *
     * @param bool $val The value of the allowedToReadBitlockerKeysForOwnedDevice
     *
