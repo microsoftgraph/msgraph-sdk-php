@@ -120,13 +120,12 @@ $tokenRequestContext = new ClientCredentialContext(
     'clientId',
     'clientSecret'
 );
-$scopes = ['https://graph.microsoft.com/.default'];
-$authProvider = new GraphPhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
+$authProvider = new GraphPhpLeagueAuthenticationProvider($tokenRequestContext);
 $requestAdapter = new GraphRequestAdapter($authProvider);
 $graphServiceClient = new GraphServiceClient($requestAdapter);
 
 try {
-    $user = $graphServiceClient->usersById('[userPrincipalName]')->get()->wait();
+    $user = $graphServiceClient->users()->byUserId('[userPrincipalName]')->get()->wait();
     echo "Hello, I am {$user->getGivenName()}";
 
 } catch (ApiException $ex) {

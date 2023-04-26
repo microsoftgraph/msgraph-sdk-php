@@ -98,7 +98,7 @@ $user = $graphServiceClient->me()->get()->wait();
 
 // Or
 
-$user = $graphServiceClient->usersById('userPrincipalName')->get()->wait();
+$user = $graphServiceClient->users()->byUserId('userPrincipalName')->get()->wait();
 ```
 
 ## Get a collection of items
@@ -112,21 +112,21 @@ use Microsoft\Graph\Generated\Users\Item\Messages\MessagesRequestBuilderGetQuery
 use Microsoft\Graph\Generated\Users\Item\Messages\MessagesRequestBuilderGetRequestConfiguration;
 
 $requestConfig = new MessagesRequestBuilderGetRequestConfiguration();
-$requestConfig->queryParameters = new MessagesRequestBuilderGetQueryParameters();
+$requestConfig->queryParameters = MessagesRequestBuilderGetRequestConfiguration::createQueryParameters();
 $requestConfig->queryParameters->select = ['subject'];
 $requestConfig->queryParameters->top = 2;
 $requestConfig->headers = ['Prefer' => 'outlook.body-content-type=text'];
 
 // or with PHP 8
 $requestConfig = new MessagesRequestBuilderGetRequestConfiguration(
-    queryParameters: MessagesRequestBuilderGetRequestConfiguration::addQueryParameters(
+    queryParameters: MessagesRequestBuilderGetRequestConfiguration::createQueryParameters(
         select: ['subject'],
         top: 2
     ),
     headers: ['Prefer' => 'outlook.body-content-type=text']
 );
 
-$messages = $graphServiceClient->usersById(USER_ID)->messages()->get($requestConfig)->wait();
+$messages = $graphServiceClient->users()->byUserId(USER_ID)->messages()->get($requestConfig)->wait();
 
 foreach ($messages->getValue() as $message) {
     echo "Subject: {$message->getSubject()}\n";
@@ -146,7 +146,7 @@ Iteration can be resumed by calling `iterate()` again.
 
 ```php
 
-$messages = $graphServiceClient->usersById(USER_ID)->messages()->get()->wait();
+$messages = $graphServiceClient->users()->byUserId(USER_ID)->messages()->get()->wait();
 
 $pageIterator = new PageIterator($messages, $requestAdapter, [MessageCollectionResponse::class, 'createFromDiscriminatorValue']);
 
@@ -275,7 +275,7 @@ $requestAdapter = new GraphRequestAdapter($authProvider);
 $graphServiceClient = new GraphServiceClient($requestAdapter);
 
 try {
-    $fileContents = $graphServiceclient->drivesById('driveId')->itemsById('itemId')->content()->get()->wait();
+    $fileContents = $graphServiceclient->drives()->byDriveId('driveId')->items()->byDriveItemId('itemId')->content()->get()->wait();
 
 } catch (ApiException $ex) {
     echo $ex->getError()->getMessage();
@@ -321,7 +321,7 @@ $uploadSessionRequestBody = new CreateUploadSessionPostRequestBody();
 $uploadSessionRequestBody->setAttachmentItem($attachmentItem);
 
 /** @var UploadSession $uploadSession */
-$uploadSession = $graphServiceClient->usersById(USER_ID)->messagesById('[id]')->attachments()->createUploadSession()->post($uploadSessionRequestBody)->wait();
+$uploadSession = $graphServiceClient->users()->byUserId(USER_ID)->messages()->byMessageId('[id]')->attachments()->createUploadSession()->post($uploadSessionRequestBody)->wait();
 
 // upload
 $largeFileUpload = new LargeFileUploadTask($uploadSession, $requestAdapter, $file);
@@ -369,7 +369,7 @@ $messages = $graphServiceClient->me()->messages()->get(new MessagesRequestBuilde
 use Microsoft\Graph\Generated\Me\Messages\MessagesRequestBuilderGetRequestConfiguration;
 
 $requestConfig = new MessagesRequestBuilderGetRequestConfiguration();
-$requestConfig->queryParameters = MessagesRequestBuilderGetRequestConfiguration::addQueryParameters();
+$requestConfig->queryParameters = MessagesRequestBuilderGetRequestConfiguration::createQueryParameters();
 $requestConfig->queryParameters->select = ['subject', 'from'];
 $requestConfig->queryParameters->skip = 2;
 $requestConfig->queryParameters->top = 3;
@@ -378,7 +378,7 @@ $messages = $graphServiceClient->me()->messages()->get($requestConfig)->wait();
 
 // PHP 8
 $messages = $graphServiceClient->me()->messages()->get(new MessagesRequestBuilderGetRequestConfiguration(
-    queryParameters: MessagesRequestBuilderGetRequestConfiguration::addQueryParameters(
+    queryParameters: MessagesRequestBuilderGetRequestConfiguration::createQueryParameters(
         select: ['subject', 'from'],
         skip: 2,
         top: 3
@@ -419,9 +419,9 @@ $message = new Message();
 $message->setSubject("Test Subject");
 
 $batchRequestContent = new BatchRequestContent([
-    $graphServiceClient->usersById(USER_ID)->messagesById('id')->toDeleteRequestInformation(),
-    $graphServiceClient->usersById(USER_ID)->messages()->toPostRequestInformation($message),
-    $graphServiceClient->usersById(USER_ID)->toGetRequestInformation()
+    $graphServiceClient->users()->byUserId(USER_ID)->messages()->byMessageId('id')->toDeleteRequestInformation(),
+    $graphServiceClient->users()->byUserId(USER_ID)->messages()->toPostRequestInformation($message),
+    $graphServiceClient->users()->byUserId(USER_ID)->toGetRequestInformation()
 ]);
 
 ```
@@ -441,8 +441,8 @@ use Microsoft\Graph\Generated\Models\Message;
 $message = new Message();
 $message->setSubject("Test Subject");
 
-$request1 = new BatchRequestItem($graphServiceClient->usersById(USER_ID)->messagesById('[id]')->toGetRequestInformation());
-$request2 = new BatchRequestItem($graphServiceClient->usersById(USER_ID)->messagesById('[id]')->toPatchRequestInformation($message));
+$request1 = new BatchRequestItem($graphServiceClient->users()->byUserId(USER_ID)->messages()->byMessageId('[id]')->toGetRequestInformation());
+$request2 = new BatchRequestItem($graphServiceClient->users()->byUserId(USER_ID)->messages()->byMessageId('[id]')->toPatchRequestInformation($message));
 $request2->dependsOn([$request1]);
 
 $batchRequestContent = new BatchRequestContent([
