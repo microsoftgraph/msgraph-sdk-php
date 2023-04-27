@@ -22,7 +22,7 @@ class DoesUserHaveAccessuserIdUserIdTenantIdTenantIdUserPrincipalNameUserPrincip
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/me/joinedTeams/{team%2Did}/primaryChannel/doesUserHaveAccess(userId='@userId',tenantId='@tenantId',userPrincipalName='@userPrincipalName'){?userId*,tenantId*,userPrincipalName*}");
+        parent::__construct($requestAdapter, [], '{+baseurl}/me/joinedTeams/{team%2Did}/primaryChannel/doesUserHaveAccess(userId=\'@userId\',tenantId=\'@tenantId\',userPrincipalName=\'@userPrincipalName\'){?userId*,tenantId*,userPrincipalName*}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

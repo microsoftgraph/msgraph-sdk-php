@@ -24,7 +24,7 @@ class GetEmailAppUsageAppsUserCountsWithPeriodRequestBuilder extends BaseRequest
      * @param string|null $period Usage: period='{period}'
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $period = null) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/reports/getEmailAppUsageAppsUserCounts(period='{period}')");
+        parent::__construct($requestAdapter, [], '{+baseurl}/reports/getEmailAppUsageAppsUserCounts(period=\'{period}\')');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['period'] = $period;

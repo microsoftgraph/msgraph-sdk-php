@@ -23,7 +23,7 @@ class GetOmaSettingPlainTextValueWithSecretReferenceValueIdRequestBuilder extend
      * @param string|null $secretReferenceValueId Usage: secretReferenceValueId='{secretReferenceValueId}'
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $secretReferenceValueId = null) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/deviceManagement/deviceConfigurations/{deviceConfiguration%2Did}/getOmaSettingPlainTextValue(secretReferenceValueId='{secretReferenceValueId}')");
+        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/deviceConfigurations/{deviceConfiguration%2Did}/getOmaSettingPlainTextValue(secretReferenceValueId=\'{secretReferenceValueId}\')');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['secretReferenceValueId'] = $secretReferenceValueId;

@@ -23,7 +23,7 @@ class PreviewRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/sites/{site%2Did}/onenote/pages/{onenotePage%2Did}/preview()");
+        parent::__construct($requestAdapter, [], '{+baseurl}/sites/{site%2Did}/onenote/pages/{onenotePage%2Did}/preview()');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

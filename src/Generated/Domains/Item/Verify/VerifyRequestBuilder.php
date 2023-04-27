@@ -23,7 +23,7 @@ class VerifyRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/domains/{domain%2Did}/verify");
+        parent::__construct($requestAdapter, [], '{+baseurl}/domains/{domain%2Did}/verify');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

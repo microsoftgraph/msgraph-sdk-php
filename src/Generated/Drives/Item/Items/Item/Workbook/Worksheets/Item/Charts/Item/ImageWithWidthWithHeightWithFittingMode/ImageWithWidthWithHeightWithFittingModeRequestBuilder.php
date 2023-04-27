@@ -25,7 +25,7 @@ class ImageWithWidthWithHeightWithFittingModeRequestBuilder extends BaseRequestB
      * @param int|null $width Usage: width={width}
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $fittingMode = null, ?int $height = null, ?int $width = null) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/image(width={width},height={height},fittingMode='{fittingMode}')");
+        parent::__construct($requestAdapter, [], '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/image(width={width},height={height},fittingMode=\'{fittingMode}\')');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['fittingMode'] = $fittingMode;

@@ -25,7 +25,7 @@ class CellWithRowWithColumnRequestBuilder extends BaseRequestBuilder
      * @param int|null $row Usage: row={row}
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?int $column = null, ?int $row = null) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/cell(row={row},column={column})");
+        parent::__construct($requestAdapter, [], '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/cell(row={row},column={column})');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['column'] = $column;

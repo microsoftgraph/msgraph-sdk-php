@@ -22,7 +22,7 @@ class GetMemberGroupsRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/directoryObjects/{directoryObject%2Did}/getMemberGroups");
+        parent::__construct($requestAdapter, [], '{+baseurl}/directoryObjects/{directoryObject%2Did}/getMemberGroups');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

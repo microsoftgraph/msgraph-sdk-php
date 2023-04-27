@@ -22,7 +22,7 @@ class DeclineRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/me/calendar/calendarView/{event%2Did}/instances/{event%2Did1}/decline");
+        parent::__construct($requestAdapter, [], '{+baseurl}/me/calendar/calendarView/{event%2Did}/instances/{event%2Did1}/decline');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

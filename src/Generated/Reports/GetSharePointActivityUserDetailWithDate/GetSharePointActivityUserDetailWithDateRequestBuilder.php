@@ -25,7 +25,7 @@ class GetSharePointActivityUserDetailWithDateRequestBuilder extends BaseRequestB
      * @param Date|null $date Usage: date={date}
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?Date $date = null) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/reports/getSharePointActivityUserDetail(date={date})");
+        parent::__construct($requestAdapter, [], '{+baseurl}/reports/getSharePointActivityUserDetail(date={date})');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['date'] = $date;

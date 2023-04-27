@@ -22,7 +22,7 @@ class UnsetVerifiedPublisherRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/applications/{application%2Did}/unsetVerifiedPublisher");
+        parent::__construct($requestAdapter, [], '{+baseurl}/applications/{application%2Did}/unsetVerifiedPublisher');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

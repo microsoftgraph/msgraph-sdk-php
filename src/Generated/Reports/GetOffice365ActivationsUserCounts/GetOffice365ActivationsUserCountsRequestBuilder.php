@@ -23,7 +23,7 @@ class GetOffice365ActivationsUserCountsRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/reports/getOffice365ActivationsUserCounts()");
+        parent::__construct($requestAdapter, [], '{+baseurl}/reports/getOffice365ActivationsUserCounts()');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

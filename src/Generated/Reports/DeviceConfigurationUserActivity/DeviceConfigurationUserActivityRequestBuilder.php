@@ -23,7 +23,7 @@ class DeviceConfigurationUserActivityRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/reports/deviceConfigurationUserActivity()");
+        parent::__construct($requestAdapter, [], '{+baseurl}/reports/deviceConfigurationUserActivity()');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

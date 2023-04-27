@@ -23,7 +23,7 @@ class VerifyWindowsEnrollmentAutoDiscoveryWithDomainNameRequestBuilder extends B
      * @param string|null $domainName Usage: domainName='{domainName}'
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $domainName = null) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/deviceManagement/verifyWindowsEnrollmentAutoDiscovery(domainName='{domainName}')");
+        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/verifyWindowsEnrollmentAutoDiscovery(domainName=\'{domainName}\')');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['domainName'] = $domainName;

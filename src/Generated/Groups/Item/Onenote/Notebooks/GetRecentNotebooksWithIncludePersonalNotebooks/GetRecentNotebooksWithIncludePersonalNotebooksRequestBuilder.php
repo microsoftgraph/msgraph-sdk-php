@@ -23,7 +23,7 @@ class GetRecentNotebooksWithIncludePersonalNotebooksRequestBuilder extends BaseR
      * @param bool|null $includePersonalNotebooks Usage: includePersonalNotebooks={includePersonalNotebooks}
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?bool $includePersonalNotebooks = null) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/groups/{group%2Did}/onenote/notebooks/getRecentNotebooks(includePersonalNotebooks={includePersonalNotebooks}){?%24top,%24skip,%24search,%24filter,%24count}");
+        parent::__construct($requestAdapter, [], '{+baseurl}/groups/{group%2Did}/onenote/notebooks/getRecentNotebooks(includePersonalNotebooks={includePersonalNotebooks}){?%24top,%24skip,%24search,%24filter,%24count}');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['includePersonalNotebooks'] = $includePersonalNotebooks;

@@ -22,7 +22,7 @@ class SetUserPreferredPresenceRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/communications/presences/{presence%2Did}/setUserPreferredPresence");
+        parent::__construct($requestAdapter, [], '{+baseurl}/communications/presences/{presence%2Did}/setUserPreferredPresence');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

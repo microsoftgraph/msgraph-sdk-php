@@ -24,7 +24,7 @@ class ImageWithWidthWithHeightRequestBuilder extends BaseRequestBuilder
      * @param int|null $width Usage: width={width}
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?int $height = null, ?int $width = null) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/image(width={width},height={height})");
+        parent::__construct($requestAdapter, [], '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/charts/{workbookChart%2Did}/image(width={width},height={height})');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['height'] = $height;
