@@ -23,7 +23,7 @@ class GetEffectivePermissionsWithScopeRequestBuilder extends BaseRequestBuilder
      * @param string|null $scope Usage: scope='{scope}'
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $scope = null) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/deviceManagement/getEffectivePermissions(scope='{scope}'){?%24top,%24skip,%24search,%24filter,%24count}");
+        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/getEffectivePermissions(scope=\'{scope}\'){?%24top,%24skip,%24search,%24filter,%24count}');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['scope'] = $scope;

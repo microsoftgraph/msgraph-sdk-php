@@ -22,7 +22,7 @@ class CountRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/me/mailFolders/{mailFolder%2Did}/messageRules/$count{?%24filter}");
+        parent::__construct($requestAdapter, [], '{+baseurl}/me/mailFolders/{mailFolder%2Did}/messageRules/$count{?%24filter}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

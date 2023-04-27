@@ -23,7 +23,7 @@ class ManagedDeviceEnrollmentTopFailuresRequestBuilder extends BaseRequestBuilde
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/reports/managedDeviceEnrollmentTopFailures()");
+        parent::__construct($requestAdapter, [], '{+baseurl}/reports/managedDeviceEnrollmentTopFailures()');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

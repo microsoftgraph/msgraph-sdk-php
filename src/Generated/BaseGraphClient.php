@@ -567,7 +567,7 @@ class BaseGraphClient extends BaseRequestBuilder
      * @param BackingStoreFactory|null $backingStore The backing store to use for the models.
     */
     public function __construct(RequestAdapter $requestAdapter, ?BackingStoreFactory $backingStore = null) {
-        parent::__construct($requestAdapter, [], "{+baseurl}");
+        parent::__construct($requestAdapter, [], '{+baseurl}');
         ApiClientBuilder::registerDefaultSerializer(JsonSerializationWriterFactory::class);
         ApiClientBuilder::registerDefaultSerializer(TextSerializationWriterFactory::class);
         ApiClientBuilder::registerDefaultDeserializer(JsonParseNodeFactory::class);

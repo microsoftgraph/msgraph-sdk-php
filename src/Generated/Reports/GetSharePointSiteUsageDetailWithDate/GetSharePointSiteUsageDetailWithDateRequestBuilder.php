@@ -25,7 +25,7 @@ class GetSharePointSiteUsageDetailWithDateRequestBuilder extends BaseRequestBuil
      * @param Date|null $date Usage: date={date}
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?Date $date = null) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/reports/getSharePointSiteUsageDetail(date={date})");
+        parent::__construct($requestAdapter, [], '{+baseurl}/reports/getSharePointSiteUsageDetail(date={date})');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['date'] = $date;

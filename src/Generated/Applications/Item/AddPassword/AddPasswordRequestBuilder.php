@@ -23,7 +23,7 @@ class AddPasswordRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/applications/{application%2Did}/addPassword");
+        parent::__construct($requestAdapter, [], '{+baseurl}/applications/{application%2Did}/addPassword');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

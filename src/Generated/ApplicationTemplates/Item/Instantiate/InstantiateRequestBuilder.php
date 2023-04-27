@@ -23,7 +23,7 @@ class InstantiateRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/applicationTemplates/{applicationTemplate%2Did}/instantiate");
+        parent::__construct($requestAdapter, [], '{+baseurl}/applicationTemplates/{applicationTemplate%2Did}/instantiate');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

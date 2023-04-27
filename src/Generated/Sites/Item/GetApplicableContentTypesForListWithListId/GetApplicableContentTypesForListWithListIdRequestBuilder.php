@@ -23,7 +23,7 @@ class GetApplicableContentTypesForListWithListIdRequestBuilder extends BaseReque
      * @param string|null $listId Usage: listId='{listId}'
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $listId = null) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/sites/{site%2Did}/getApplicableContentTypesForList(listId='{listId}'){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}");
+        parent::__construct($requestAdapter, [], '{+baseurl}/sites/{site%2Did}/getApplicableContentTypesForList(listId=\'{listId}\'){?%24top,%24skip,%24search,%24filter,%24count,%24select,%24orderby}');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['listId'] = $listId;

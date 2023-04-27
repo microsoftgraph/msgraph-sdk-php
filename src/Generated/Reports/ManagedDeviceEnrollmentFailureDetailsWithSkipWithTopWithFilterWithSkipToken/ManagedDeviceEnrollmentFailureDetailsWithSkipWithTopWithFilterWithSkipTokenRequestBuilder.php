@@ -27,7 +27,7 @@ class ManagedDeviceEnrollmentFailureDetailsWithSkipWithTopWithFilterWithSkipToke
      * @param int|null $top Usage: top={top}
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $filter = null, ?int $skip = null, ?string $skipToken = null, ?int $top = null) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/reports/managedDeviceEnrollmentFailureDetails(skip={skip},top={top},filter='{filter}',skipToken='{skipToken}')");
+        parent::__construct($requestAdapter, [], '{+baseurl}/reports/managedDeviceEnrollmentFailureDetails(skip={skip},top={top},filter=\'{filter}\',skipToken=\'{skipToken}\')');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['filter'] = $filter;

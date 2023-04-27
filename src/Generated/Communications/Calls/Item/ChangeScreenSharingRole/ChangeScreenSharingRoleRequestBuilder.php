@@ -22,7 +22,7 @@ class ChangeScreenSharingRoleRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/communications/calls/{call%2Did}/changeScreenSharingRole");
+        parent::__construct($requestAdapter, [], '{+baseurl}/communications/calls/{call%2Did}/changeScreenSharingRole');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

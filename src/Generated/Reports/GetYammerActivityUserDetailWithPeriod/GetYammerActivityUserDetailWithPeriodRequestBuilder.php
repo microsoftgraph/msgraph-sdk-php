@@ -24,7 +24,7 @@ class GetYammerActivityUserDetailWithPeriodRequestBuilder extends BaseRequestBui
      * @param string|null $period Usage: period='{period}'
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $period = null) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/reports/getYammerActivityUserDetail(period='{period}')");
+        parent::__construct($requestAdapter, [], '{+baseurl}/reports/getYammerActivityUserDetail(period=\'{period}\')');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['period'] = $period;

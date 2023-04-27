@@ -22,7 +22,7 @@ class GetAvailableExtensionPropertiesRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/directory/deletedItems/getAvailableExtensionProperties");
+        parent::__construct($requestAdapter, [], '{+baseurl}/directory/deletedItems/getAvailableExtensionProperties');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

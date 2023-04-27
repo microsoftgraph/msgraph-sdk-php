@@ -25,7 +25,7 @@ class ExportDeviceAndAppManagementDataWithSkipWithTopRequestBuilder extends Base
      * @param int|null $top Usage: top={top}
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?int $skip = null, ?int $top = null) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/me/exportDeviceAndAppManagementData(skip={skip},top={top})");
+        parent::__construct($requestAdapter, [], '{+baseurl}/me/exportDeviceAndAppManagementData(skip={skip},top={top})');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['skip'] = $skip;

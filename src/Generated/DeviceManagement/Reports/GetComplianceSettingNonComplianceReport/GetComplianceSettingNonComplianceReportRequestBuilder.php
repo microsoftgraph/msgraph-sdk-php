@@ -23,7 +23,7 @@ class GetComplianceSettingNonComplianceReportRequestBuilder extends BaseRequestB
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/deviceManagement/reports/getComplianceSettingNonComplianceReport");
+        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/reports/getComplianceSettingNonComplianceReport');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

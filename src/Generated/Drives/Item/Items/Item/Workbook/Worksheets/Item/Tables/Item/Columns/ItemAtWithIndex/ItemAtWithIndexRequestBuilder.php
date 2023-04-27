@@ -24,7 +24,7 @@ class ItemAtWithIndexRequestBuilder extends BaseRequestBuilder
      * @param int|null $index Usage: index={index}
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?int $index = null) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/tables/{workbookTable%2Did}/columns/itemAt(index={index})");
+        parent::__construct($requestAdapter, [], '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/tables/{workbookTable%2Did}/columns/itemAt(index={index})');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['index'] = $index;

@@ -24,7 +24,7 @@ class UsedRangeWithValuesOnlyRequestBuilder extends BaseRequestBuilder
      * @param bool|null $valuesOnly Usage: valuesOnly={valuesOnly}
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?bool $valuesOnly = null) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/usedRange(valuesOnly={valuesOnly})");
+        parent::__construct($requestAdapter, [], '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/worksheets/{workbookWorksheet%2Did}/usedRange(valuesOnly={valuesOnly})');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['valuesOnly'] = $valuesOnly;

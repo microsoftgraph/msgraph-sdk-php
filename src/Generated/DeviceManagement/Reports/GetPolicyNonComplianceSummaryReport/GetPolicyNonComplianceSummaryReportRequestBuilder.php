@@ -23,7 +23,7 @@ class GetPolicyNonComplianceSummaryReportRequestBuilder extends BaseRequestBuild
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/deviceManagement/reports/getPolicyNonComplianceSummaryReport");
+        parent::__construct($requestAdapter, [], '{+baseurl}/deviceManagement/reports/getPolicyNonComplianceSummaryReport');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

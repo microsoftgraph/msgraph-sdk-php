@@ -24,7 +24,7 @@ class SessionInfoResourceWithKeyRequestBuilder extends BaseRequestBuilder
      * @param string|null $key Usage: key='{key}'
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $key = null) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/sessionInfoResource(key='{key}')");
+        parent::__construct($requestAdapter, [], '{+baseurl}/drives/{drive%2Did}/items/{driveItem%2Did}/workbook/sessionInfoResource(key=\'{key}\')');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['key'] = $key;

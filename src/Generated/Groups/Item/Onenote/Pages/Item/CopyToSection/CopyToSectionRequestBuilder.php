@@ -23,7 +23,7 @@ class CopyToSectionRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/groups/{group%2Did}/onenote/pages/{onenotePage%2Did}/copyToSection");
+        parent::__construct($requestAdapter, [], '{+baseurl}/groups/{group%2Did}/onenote/pages/{onenotePage%2Did}/copyToSection');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

@@ -24,7 +24,7 @@ class GetByPathWithPathRequestBuilder extends BaseRequestBuilder
      * @param string|null $path Usage: path='{path}'
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter, ?string $path = null) {
-        parent::__construct($requestAdapter, [], "{+baseurl}/sites/{site%2Did}/getByPath(path='{path}')");
+        parent::__construct($requestAdapter, [], '{+baseurl}/sites/{site%2Did}/getByPath(path=\'{path}\')');
         if (is_array($pathParametersOrRawUrl)) {
             $urlTplParams = $pathParametersOrRawUrl;
             $urlTplParams['path'] = $path;
