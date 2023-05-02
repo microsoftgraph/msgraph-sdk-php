@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class OfficeGraphInsights extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new OfficeGraphInsights and sets the default values.
+     * Instantiates a new officeGraphInsights and sets the default values.
     */
     public function __construct() {
         parent::__construct();

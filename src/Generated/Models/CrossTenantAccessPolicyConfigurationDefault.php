@@ -25,6 +25,14 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
     }
 
     /**
+     * Gets the automaticUserConsentSettings property value. The automaticUserConsentSettings property
+     * @return InboundOutboundPolicyConfiguration|null
+    */
+    public function getAutomaticUserConsentSettings(): ?InboundOutboundPolicyConfiguration {
+        return $this->getBackingStore()->get('automaticUserConsentSettings');
+    }
+
+    /**
      * Gets the b2bCollaborationInbound property value. Defines your default configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
      * @return CrossTenantAccessPolicyB2BSetting|null
     */
@@ -63,6 +71,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'automaticUserConsentSettings' => fn(ParseNode $n) => $o->setAutomaticUserConsentSettings($n->getObjectValue([InboundOutboundPolicyConfiguration::class, 'createFromDiscriminatorValue'])),
             'b2bCollaborationInbound' => fn(ParseNode $n) => $o->setB2bCollaborationInbound($n->getObjectValue([CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'])),
             'b2bCollaborationOutbound' => fn(ParseNode $n) => $o->setB2bCollaborationOutbound($n->getObjectValue([CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'])),
             'b2bDirectConnectInbound' => fn(ParseNode $n) => $o->setB2bDirectConnectInbound($n->getObjectValue([CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'])),
@@ -94,12 +103,21 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('automaticUserConsentSettings', $this->getAutomaticUserConsentSettings());
         $writer->writeObjectValue('b2bCollaborationInbound', $this->getB2bCollaborationInbound());
         $writer->writeObjectValue('b2bCollaborationOutbound', $this->getB2bCollaborationOutbound());
         $writer->writeObjectValue('b2bDirectConnectInbound', $this->getB2bDirectConnectInbound());
         $writer->writeObjectValue('b2bDirectConnectOutbound', $this->getB2bDirectConnectOutbound());
         $writer->writeObjectValue('inboundTrust', $this->getInboundTrust());
         $writer->writeBooleanValue('isServiceDefault', $this->getIsServiceDefault());
+    }
+
+    /**
+     * Sets the automaticUserConsentSettings property value. The automaticUserConsentSettings property
+     * @param InboundOutboundPolicyConfiguration|null $value Value to set for the automaticUserConsentSettings property.
+    */
+    public function setAutomaticUserConsentSettings(?InboundOutboundPolicyConfiguration $value): void {
+        $this->getBackingStore()->set('automaticUserConsentSettings', $value);
     }
 
     /**
