@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* EducationAssignmentStatus File
+* ObliterationBehavior File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* EducationAssignmentStatus class
+* ObliterationBehavior class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +24,14 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class EducationAssignmentStatus extends Enum
+class ObliterationBehavior extends Enum
 {
     /**
-    * The Enum EducationAssignmentStatus
+    * The Enum ObliterationBehavior
     */
-    const DRAFT = "draft";
-    const PUBLISHED = "published";
-    const ASSIGNED = "assigned";
+    const GRAPHDEFAULT = "default";
+    const DO_NOT_OBLITERATE = "doNotObliterate";
+    const OBLITERATE_WITH_WARNING = "obliterateWithWarning";
+    const ALWAYS = "always";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const INACTIVE = "inactive";
 }

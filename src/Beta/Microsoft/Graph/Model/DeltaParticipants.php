@@ -26,6 +26,7 @@ class DeltaParticipants extends Entity
 {
     /**
     * Gets the sequenceNumber
+    * The sequence number for the roster update that is used to identify the notification order.
     *
     * @return int|null The sequenceNumber
     */
@@ -40,6 +41,7 @@ class DeltaParticipants extends Entity
 
     /**
     * Sets the sequenceNumber
+    * The sequence number for the roster update that is used to identify the notification order.
     *
     * @param int $val The sequenceNumber
     *

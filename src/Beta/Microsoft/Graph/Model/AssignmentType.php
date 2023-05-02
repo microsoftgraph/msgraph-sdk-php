@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* OfficeConfigurationAssignmentTarget File
+* AssignmentType File
 * PHP version 7
 *
 * @category  Library
@@ -12,8 +12,11 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
+
+use Microsoft\Graph\Core\Enum;
+
 /**
-* OfficeConfigurationAssignmentTarget class
+* AssignmentType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,6 +24,12 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class OfficeConfigurationAssignmentTarget extends Entity
+class AssignmentType extends Enum
 {
+    /**
+    * The Enum AssignmentType
+    */
+    const REQUIRED = "required";
+    const RECOMMENDED = "recommended";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

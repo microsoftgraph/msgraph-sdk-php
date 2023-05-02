@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* RemovedState File
+* DeviceManagementTemplateInsightsDefinition File
 * PHP version 7
 *
 * @category  Library
@@ -12,8 +12,9 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
+
 /**
-* RemovedState class
+* DeviceManagementTemplateInsightsDefinition class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,34 +22,36 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class RemovedState extends Entity
+class DeviceManagementTemplateInsightsDefinition extends Entity
 {
-    /**
-    * Gets the reason
-    * The removal reason for the participant resource.
-    *
-    * @return string|null The reason
-    */
-    public function getReason()
+
+     /**
+     * Gets the settingInsights
+    * Setting insights in a template
+     *
+     * @return array|null The settingInsights
+     */
+    public function getSettingInsights()
     {
-        if (array_key_exists("reason", $this->_propDict)) {
-            return $this->_propDict["reason"];
+        if (array_key_exists("settingInsights", $this->_propDict)) {
+           return $this->_propDict["settingInsights"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the reason
-    * The removal reason for the participant resource.
+    * Sets the settingInsights
+    * Setting insights in a template
     *
-    * @param string $val The value of the reason
+    * @param DeviceManagementSettingInsightsDefinition[] $val The settingInsights
     *
-    * @return RemovedState
+    * @return DeviceManagementTemplateInsightsDefinition
     */
-    public function setReason($val)
+    public function setSettingInsights($val)
     {
-        $this->_propDict["reason"] = $val;
+        $this->_propDict["settingInsights"] = $val;
         return $this;
     }
+
 }

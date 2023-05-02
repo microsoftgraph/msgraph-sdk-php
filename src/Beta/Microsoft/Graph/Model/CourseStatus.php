@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* EducationAssignmentStatus File
+* CourseStatus File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* EducationAssignmentStatus class
+* CourseStatus class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,14 +24,13 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class EducationAssignmentStatus extends Enum
+class CourseStatus extends Enum
 {
     /**
-    * The Enum EducationAssignmentStatus
+    * The Enum CourseStatus
     */
-    const DRAFT = "draft";
-    const PUBLISHED = "published";
-    const ASSIGNED = "assigned";
+    const NOT_STARTED = "notStarted";
+    const IN_PROGRESS = "inProgress";
+    const COMPLETED = "completed";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const INACTIVE = "inactive";
 }
