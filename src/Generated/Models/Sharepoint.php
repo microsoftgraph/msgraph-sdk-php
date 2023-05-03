@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Sharepoint extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new Sharepoint and sets the default values.
+     * Instantiates a new sharepoint and sets the default values.
     */
     public function __construct() {
         parent::__construct();

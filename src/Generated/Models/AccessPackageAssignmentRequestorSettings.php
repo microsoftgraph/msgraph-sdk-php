@@ -43,7 +43,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
     }
 
     /**
-     * Gets the allowCustomAssignmentSchedule property value. If false, the requestor is not permitted to include a schedule in their request.
+     * Gets the allowCustomAssignmentSchedule property value. False indicates that the requestor is not permitted to include a schedule in their request.
      * @return bool|null
     */
     public function getAllowCustomAssignmentSchedule(): ?bool {
@@ -59,7 +59,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
     }
 
     /**
-     * Gets the enableOnBehalfRequestorsToAddAccess property value. If true, allows on-behalf-of requestors to create a request to add access for another principal.
+     * Gets the enableOnBehalfRequestorsToAddAccess property value. True allows on-behalf-of requestors to create a request to add access for another principal.
      * @return bool|null
     */
     public function getEnableOnBehalfRequestorsToAddAccess(): ?bool {
@@ -67,7 +67,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
     }
 
     /**
-     * Gets the enableOnBehalfRequestorsToRemoveAccess property value. If true, allows on-behalf-of requestors to create a request to remove access for another principal.
+     * Gets the enableOnBehalfRequestorsToRemoveAccess property value. True allows on-behalf-of requestors to create a request to remove access for another principal.
      * @return bool|null
     */
     public function getEnableOnBehalfRequestorsToRemoveAccess(): ?bool {
@@ -75,7 +75,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
     }
 
     /**
-     * Gets the enableOnBehalfRequestorsToUpdateAccess property value. If true, allows on-behalf-of requestors to create a request to update access for another principal.
+     * Gets the enableOnBehalfRequestorsToUpdateAccess property value. True allows on-behalf-of requestors to create a request to update access for another principal.
      * @return bool|null
     */
     public function getEnableOnBehalfRequestorsToUpdateAccess(): ?bool {
@@ -83,7 +83,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
     }
 
     /**
-     * Gets the enableTargetsToSelfAddAccess property value. If true, allows requestors to create a request to add access for themselves.
+     * Gets the enableTargetsToSelfAddAccess property value. True allows requestors to create a request to add access for themselves.
      * @return bool|null
     */
     public function getEnableTargetsToSelfAddAccess(): ?bool {
@@ -91,7 +91,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
     }
 
     /**
-     * Gets the enableTargetsToSelfRemoveAccess property value. If true, allows requestors to create a request to remove their access.
+     * Gets the enableTargetsToSelfRemoveAccess property value. True allows requestors to create a request to remove their access.
      * @return bool|null
     */
     public function getEnableTargetsToSelfRemoveAccess(): ?bool {
@@ -99,7 +99,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
     }
 
     /**
-     * Gets the enableTargetsToSelfUpdateAccess property value. If true, allows requestors to create a request to update their access.
+     * Gets the enableTargetsToSelfUpdateAccess property value. True allows requestors to create a request to update their access.
      * @return bool|null
     */
     public function getEnableTargetsToSelfUpdateAccess(): ?bool {
@@ -167,7 +167,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
     }
 
     /**
-     * Sets the allowCustomAssignmentSchedule property value. If false, the requestor is not permitted to include a schedule in their request.
+     * Sets the allowCustomAssignmentSchedule property value. False indicates that the requestor is not permitted to include a schedule in their request.
      * @param bool|null $value Value to set for the allowCustomAssignmentSchedule property.
     */
     public function setAllowCustomAssignmentSchedule(?bool $value): void {
@@ -183,7 +183,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
     }
 
     /**
-     * Sets the enableOnBehalfRequestorsToAddAccess property value. If true, allows on-behalf-of requestors to create a request to add access for another principal.
+     * Sets the enableOnBehalfRequestorsToAddAccess property value. True allows on-behalf-of requestors to create a request to add access for another principal.
      * @param bool|null $value Value to set for the enableOnBehalfRequestorsToAddAccess property.
     */
     public function setEnableOnBehalfRequestorsToAddAccess(?bool $value): void {
@@ -191,7 +191,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
     }
 
     /**
-     * Sets the enableOnBehalfRequestorsToRemoveAccess property value. If true, allows on-behalf-of requestors to create a request to remove access for another principal.
+     * Sets the enableOnBehalfRequestorsToRemoveAccess property value. True allows on-behalf-of requestors to create a request to remove access for another principal.
      * @param bool|null $value Value to set for the enableOnBehalfRequestorsToRemoveAccess property.
     */
     public function setEnableOnBehalfRequestorsToRemoveAccess(?bool $value): void {
@@ -199,7 +199,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
     }
 
     /**
-     * Sets the enableOnBehalfRequestorsToUpdateAccess property value. If true, allows on-behalf-of requestors to create a request to update access for another principal.
+     * Sets the enableOnBehalfRequestorsToUpdateAccess property value. True allows on-behalf-of requestors to create a request to update access for another principal.
      * @param bool|null $value Value to set for the enableOnBehalfRequestorsToUpdateAccess property.
     */
     public function setEnableOnBehalfRequestorsToUpdateAccess(?bool $value): void {
@@ -207,7 +207,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
     }
 
     /**
-     * Sets the enableTargetsToSelfAddAccess property value. If true, allows requestors to create a request to add access for themselves.
+     * Sets the enableTargetsToSelfAddAccess property value. True allows requestors to create a request to add access for themselves.
      * @param bool|null $value Value to set for the enableTargetsToSelfAddAccess property.
     */
     public function setEnableTargetsToSelfAddAccess(?bool $value): void {
@@ -215,7 +215,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
     }
 
     /**
-     * Sets the enableTargetsToSelfRemoveAccess property value. If true, allows requestors to create a request to remove their access.
+     * Sets the enableTargetsToSelfRemoveAccess property value. True allows requestors to create a request to remove their access.
      * @param bool|null $value Value to set for the enableTargetsToSelfRemoveAccess property.
     */
     public function setEnableTargetsToSelfRemoveAccess(?bool $value): void {
@@ -223,7 +223,7 @@ class AccessPackageAssignmentRequestorSettings implements AdditionalDataHolder, 
     }
 
     /**
-     * Sets the enableTargetsToSelfUpdateAccess property value. If true, allows requestors to create a request to update their access.
+     * Sets the enableTargetsToSelfUpdateAccess property value. True allows requestors to create a request to update their access.
      * @param bool|null $value Value to set for the enableTargetsToSelfUpdateAccess property.
     */
     public function setEnableTargetsToSelfUpdateAccess(?bool $value): void {

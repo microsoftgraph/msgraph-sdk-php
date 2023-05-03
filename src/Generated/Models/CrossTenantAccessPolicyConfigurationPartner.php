@@ -43,6 +43,14 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     }
 
     /**
+     * Gets the automaticUserConsentSettings property value. The automaticUserConsentSettings property
+     * @return InboundOutboundPolicyConfiguration|null
+    */
+    public function getAutomaticUserConsentSettings(): ?InboundOutboundPolicyConfiguration {
+        return $this->getBackingStore()->get('automaticUserConsentSettings');
+    }
+
+    /**
      * Gets the b2bCollaborationInbound property value. Defines your partner-specific configuration for users from other organizations accessing your resources via Azure AD B2B collaboration.
      * @return CrossTenantAccessPolicyB2BSetting|null
     */
@@ -89,6 +97,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            'automaticUserConsentSettings' => fn(ParseNode $n) => $o->setAutomaticUserConsentSettings($n->getObjectValue([InboundOutboundPolicyConfiguration::class, 'createFromDiscriminatorValue'])),
             'b2bCollaborationInbound' => fn(ParseNode $n) => $o->setB2bCollaborationInbound($n->getObjectValue([CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'])),
             'b2bCollaborationOutbound' => fn(ParseNode $n) => $o->setB2bCollaborationOutbound($n->getObjectValue([CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'])),
             'b2bDirectConnectInbound' => fn(ParseNode $n) => $o->setB2bDirectConnectInbound($n->getObjectValue([CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'])),
@@ -137,6 +146,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeObjectValue('automaticUserConsentSettings', $this->getAutomaticUserConsentSettings());
         $writer->writeObjectValue('b2bCollaborationInbound', $this->getB2bCollaborationInbound());
         $writer->writeObjectValue('b2bCollaborationOutbound', $this->getB2bCollaborationOutbound());
         $writer->writeObjectValue('b2bDirectConnectInbound', $this->getB2bDirectConnectInbound());
@@ -154,6 +164,14 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the automaticUserConsentSettings property value. The automaticUserConsentSettings property
+     * @param InboundOutboundPolicyConfiguration|null $value Value to set for the automaticUserConsentSettings property.
+    */
+    public function setAutomaticUserConsentSettings(?InboundOutboundPolicyConfiguration $value): void {
+        $this->getBackingStore()->set('automaticUserConsentSettings', $value);
     }
 
     /**

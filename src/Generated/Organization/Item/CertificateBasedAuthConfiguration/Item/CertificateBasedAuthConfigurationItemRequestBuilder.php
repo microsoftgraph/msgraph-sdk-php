@@ -32,6 +32,24 @@ class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseRequestBui
     }
 
     /**
+     * Delete navigation property certificateBasedAuthConfiguration for organization
+     * @param CertificateBasedAuthConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return Promise
+    */
+    public function delete(?CertificateBasedAuthConfigurationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+        $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
+        try {
+            $errorMappings = [
+                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+            ];
+            return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
+        } catch(Exception $ex) {
+            return new RejectedPromise($ex);
+        }
+    }
+
+    /**
      * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
      * @param CertificateBasedAuthConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -47,6 +65,23 @@ class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseRequestBui
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
+    }
+
+    /**
+     * Delete navigation property certificateBasedAuthConfiguration for organization
+     * @param CertificateBasedAuthConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return RequestInformation
+    */
+    public function toDeleteRequestInformation(?CertificateBasedAuthConfigurationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+        $requestInfo = new RequestInformation();
+        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->pathParameters = $this->pathParameters;
+        $requestInfo->httpMethod = HttpMethod::DELETE;
+        if ($requestConfiguration !== null) {
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
+        }
+        return $requestInfo;
     }
 
     /**

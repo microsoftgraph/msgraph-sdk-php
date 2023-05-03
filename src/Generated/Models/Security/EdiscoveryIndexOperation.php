@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EdiscoveryIndexOperation extends CaseOperation implements Parsable 
 {
     /**
-     * Instantiates a new ediscoveryIndexOperation and sets the default values.
+     * Instantiates a new EdiscoveryIndexOperation and sets the default values.
     */
     public function __construct() {
         parent::__construct();
