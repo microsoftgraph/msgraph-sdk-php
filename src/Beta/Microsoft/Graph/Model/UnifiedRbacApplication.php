@@ -26,6 +26,34 @@ class UnifiedRbacApplication extends Entity
 {
 
      /**
+     * Gets the customAppScopes
+     *
+     * @return array|null The customAppScopes
+     */
+    public function getCustomAppScopes()
+    {
+        if (array_key_exists("customAppScopes", $this->_propDict)) {
+           return $this->_propDict["customAppScopes"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customAppScopes
+    *
+    * @param CustomAppScope[] $val The customAppScopes
+    *
+    * @return UnifiedRbacApplication
+    */
+    public function setCustomAppScopes($val)
+    {
+        $this->_propDict["customAppScopes"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the resourceNamespaces
     * Resource that represents a collection of related actions.
      *

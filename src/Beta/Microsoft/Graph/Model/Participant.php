@@ -236,6 +236,7 @@ class Participant extends Entity
 
     /**
     * Gets the removedState
+    * Indicates the reason why the participant was removed from the roster.
     *
     * @return RemovedState|null The removedState
     */
@@ -254,6 +255,7 @@ class Participant extends Entity
 
     /**
     * Sets the removedState
+    * Indicates the reason why the participant was removed from the roster.
     *
     * @param RemovedState $val The removedState
     *
@@ -300,6 +302,7 @@ class Participant extends Entity
 
     /**
     * Gets the rosterSequenceNumber
+    * Indicates the roster sequence number the participant was last updated in.
     *
     * @return int|null The rosterSequenceNumber
     */
@@ -314,6 +317,7 @@ class Participant extends Entity
 
     /**
     * Sets the rosterSequenceNumber
+    * Indicates the roster sequence number the participant was last updated in.
     *
     * @param int $val The rosterSequenceNumber
     *

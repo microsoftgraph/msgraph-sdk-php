@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* RemovedState File
+* EmployeeExperienceUser File
 * PHP version 7
 *
 * @category  Library
@@ -12,8 +12,9 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
+
 /**
-* RemovedState class
+* EmployeeExperienceUser class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,34 +22,34 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class RemovedState extends Entity
+class EmployeeExperienceUser extends Entity
 {
-    /**
-    * Gets the reason
-    * The removal reason for the participant resource.
-    *
-    * @return string|null The reason
-    */
-    public function getReason()
+
+     /**
+     * Gets the learningCourseActivities
+     *
+     * @return array|null The learningCourseActivities
+     */
+    public function getLearningCourseActivities()
     {
-        if (array_key_exists("reason", $this->_propDict)) {
-            return $this->_propDict["reason"];
+        if (array_key_exists("learningCourseActivities", $this->_propDict)) {
+           return $this->_propDict["learningCourseActivities"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the reason
-    * The removal reason for the participant resource.
+    * Sets the learningCourseActivities
     *
-    * @param string $val The value of the reason
+    * @param LearningCourseActivity[] $val The learningCourseActivities
     *
-    * @return RemovedState
+    * @return EmployeeExperienceUser
     */
-    public function setReason($val)
+    public function setLearningCourseActivities($val)
     {
-        $this->_propDict["reason"] = $val;
+        $this->_propDict["learningCourseActivities"] = $val;
         return $this;
     }
+
 }
