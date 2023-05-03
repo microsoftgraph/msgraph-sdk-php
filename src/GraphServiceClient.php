@@ -30,6 +30,10 @@ class GraphServiceClient extends BaseGraphClient
         parent::__construct($requestAdapter);
     }
 
+    /**
+     * A method that abstracts the /me endpoint and users /users/{{user-id}} under
+     * the hood.
+     */
     public function me(): UserItemRequestBuilder {
         $urlTplParameters = $this->pathParameters;
         $urlTplParameters['user%2Did'] = 'me-token-to-replace';
