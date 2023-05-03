@@ -1797,6 +1797,36 @@ class DeviceManagement extends Entity
 
 
      /**
+     * Gets the templateInsights
+    * List of setting insights in a template
+     *
+     * @return array|null The templateInsights
+     */
+    public function getTemplateInsights()
+    {
+        if (array_key_exists("templateInsights", $this->_propDict)) {
+           return $this->_propDict["templateInsights"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the templateInsights
+    * List of setting insights in a template
+    *
+    * @param DeviceManagementTemplateInsightsDefinition[] $val The templateInsights
+    *
+    * @return DeviceManagement
+    */
+    public function setTemplateInsights($val)
+    {
+        $this->_propDict["templateInsights"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the templateSettings
     * List of all TemplateSettings
      *
@@ -2644,66 +2674,6 @@ class DeviceManagement extends Entity
     public function setMobileAppTroubleshootingEvents($val)
     {
         $this->_propDict["mobileAppTroubleshootingEvents"] = $val;
-        return $this;
-    }
-
-
-     /**
-     * Gets the oemWarrantyInformationOnboarding
-    * List of OEM Warranty Statuses
-     *
-     * @return array|null The oemWarrantyInformationOnboarding
-     */
-    public function getOemWarrantyInformationOnboarding()
-    {
-        if (array_key_exists("oemWarrantyInformationOnboarding", $this->_propDict)) {
-           return $this->_propDict["oemWarrantyInformationOnboarding"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the oemWarrantyInformationOnboarding
-    * List of OEM Warranty Statuses
-    *
-    * @param OemWarrantyInformationOnboarding[] $val The oemWarrantyInformationOnboarding
-    *
-    * @return DeviceManagement
-    */
-    public function setOemWarrantyInformationOnboarding($val)
-    {
-        $this->_propDict["oemWarrantyInformationOnboarding"] = $val;
-        return $this;
-    }
-
-
-     /**
-     * Gets the privilegeManagementElevations
-    * The endpoint privilege management elevation event entity contains elevation details.
-     *
-     * @return array|null The privilegeManagementElevations
-     */
-    public function getPrivilegeManagementElevations()
-    {
-        if (array_key_exists("privilegeManagementElevations", $this->_propDict)) {
-           return $this->_propDict["privilegeManagementElevations"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the privilegeManagementElevations
-    * The endpoint privilege management elevation event entity contains elevation details.
-    *
-    * @param PrivilegeManagementElevation[] $val The privilegeManagementElevations
-    *
-    * @return DeviceManagement
-    */
-    public function setPrivilegeManagementElevations($val)
-    {
-        $this->_propDict["privilegeManagementElevations"] = $val;
         return $this;
     }
 

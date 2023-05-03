@@ -25,6 +25,39 @@ namespace Beta\Microsoft\Graph\Model;
 class DeviceAndAppManagementAssignmentFilter extends Entity
 {
     /**
+    * Gets the assignmentFilterManagementType
+    * Indicates filter is applied to either 'devices' or 'apps' management type. Possible values are devices, apps. Default filter will be applied to 'devices'. Possible values are: devices, apps, unknownFutureValue.
+    *
+    * @return AssignmentFilterManagementType|null The assignmentFilterManagementType
+    */
+    public function getAssignmentFilterManagementType()
+    {
+        if (array_key_exists("assignmentFilterManagementType", $this->_propDict)) {
+            if (is_a($this->_propDict["assignmentFilterManagementType"], "\Beta\Microsoft\Graph\Model\AssignmentFilterManagementType") || is_null($this->_propDict["assignmentFilterManagementType"])) {
+                return $this->_propDict["assignmentFilterManagementType"];
+            } else {
+                $this->_propDict["assignmentFilterManagementType"] = new AssignmentFilterManagementType($this->_propDict["assignmentFilterManagementType"]);
+                return $this->_propDict["assignmentFilterManagementType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the assignmentFilterManagementType
+    * Indicates filter is applied to either 'devices' or 'apps' management type. Possible values are devices, apps. Default filter will be applied to 'devices'. Possible values are: devices, apps, unknownFutureValue.
+    *
+    * @param AssignmentFilterManagementType $val The assignmentFilterManagementType
+    *
+    * @return DeviceAndAppManagementAssignmentFilter
+    */
+    public function setAssignmentFilterManagementType($val)
+    {
+        $this->_propDict["assignmentFilterManagementType"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the createdDateTime
     * The creation time of the assignment filter. The value cannot be modified and is automatically populated during new assignment filter process. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     *
