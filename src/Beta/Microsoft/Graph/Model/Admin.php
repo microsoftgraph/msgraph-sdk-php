@@ -90,7 +90,6 @@ class Admin implements \JsonSerializable
 
     /**
     * Gets the sharepoint
-    * A container for administrative resources to manage tenant-level settings for SharePoint and OneDrive.
     *
     * @return Sharepoint|null The sharepoint
     */
@@ -109,7 +108,6 @@ class Admin implements \JsonSerializable
 
     /**
     * Sets the sharepoint
-    * A container for administrative resources to manage tenant-level settings for SharePoint and OneDrive.
     *
     * @param Sharepoint $val The sharepoint
     *

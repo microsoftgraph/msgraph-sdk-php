@@ -26,6 +26,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
 {
     /**
     * Gets the accessId
+    * The identifier of a membership or ownership assignment relationship to the group. Required. The possible values are: owner, member, unknownFutureValue.
     *
     * @return PrivilegedAccessGroupRelationships|null The accessId
     */
@@ -44,6 +45,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
 
     /**
     * Sets the accessId
+    * The identifier of a membership or ownership assignment relationship to the group. Required. The possible values are: owner, member, unknownFutureValue.
     *
     * @param PrivilegedAccessGroupRelationships $val The accessId
     *
@@ -57,6 +59,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
 
     /**
     * Gets the groupId
+    * The identifier of the group representing the scope of the membership or ownership assignment through PIM for groups. Required.
     *
     * @return string|null The groupId
     */
@@ -71,6 +74,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
 
     /**
     * Sets the groupId
+    * The identifier of the group representing the scope of the membership or ownership assignment through PIM for groups. Required.
     *
     * @param string $val The groupId
     *
@@ -84,6 +88,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
 
     /**
     * Gets the principalId
+    * The identifier of the principal whose membership or ownership assignment to the group is managed through PIM for groups. Supports $filter (eq, ne).
     *
     * @return string|null The principalId
     */
@@ -98,6 +103,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
 
     /**
     * Sets the principalId
+    * The identifier of the principal whose membership or ownership assignment to the group is managed through PIM for groups. Supports $filter (eq, ne).
     *
     * @param string $val The principalId
     *
@@ -111,6 +117,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
 
     /**
     * Gets the targetScheduleId
+    * The identifier of the schedule that's created from the membership or ownership assignment request. Supports $filter (eq, ne).
     *
     * @return string|null The targetScheduleId
     */
@@ -125,6 +132,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
 
     /**
     * Sets the targetScheduleId
+    * The identifier of the schedule that's created from the membership or ownership assignment request. Supports $filter (eq, ne).
     *
     * @param string $val The targetScheduleId
     *
@@ -138,6 +146,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
 
     /**
     * Gets the activatedUsing
+    * When the request activates a membership or ownership assignment in PIM for groups, this object represents the eligibility policy for the group. Otherwise, it is null. Supports $expand.
     *
     * @return PrivilegedAccessGroupEligibilitySchedule|null The activatedUsing
     */
@@ -156,6 +165,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
 
     /**
     * Sets the activatedUsing
+    * When the request activates a membership or ownership assignment in PIM for groups, this object represents the eligibility policy for the group. Otherwise, it is null. Supports $expand.
     *
     * @param PrivilegedAccessGroupEligibilitySchedule $val The activatedUsing
     *
@@ -169,6 +179,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
 
     /**
     * Gets the group
+    * References the group that is the scope of the membership or ownership assignment request through PIM for groups. Supports $expand.
     *
     * @return Group|null The group
     */
@@ -187,6 +198,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
 
     /**
     * Sets the group
+    * References the group that is the scope of the membership or ownership assignment request through PIM for groups. Supports $expand.
     *
     * @param Group $val The group
     *
@@ -200,6 +212,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
 
     /**
     * Gets the principal
+    * References the principal that's in the scope of this membership or ownership assignment request through the group that's governed by PIM. Supports $expand.
     *
     * @return DirectoryObject|null The principal
     */
@@ -218,6 +231,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
 
     /**
     * Sets the principal
+    * References the principal that's in the scope of this membership or ownership assignment request through the group that's governed by PIM. Supports $expand.
     *
     * @param DirectoryObject $val The principal
     *
@@ -231,6 +245,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
 
     /**
     * Gets the targetSchedule
+    * Schedule created by this request. Supports $expand.
     *
     * @return PrivilegedAccessGroupEligibilitySchedule|null The targetSchedule
     */
@@ -249,6 +264,7 @@ class PrivilegedAccessGroupAssignmentScheduleRequest extends PrivilegedAccessSch
 
     /**
     * Sets the targetSchedule
+    * Schedule created by this request. Supports $expand.
     *
     * @param PrivilegedAccessGroupEligibilitySchedule $val The targetSchedule
     *

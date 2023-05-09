@@ -60,6 +60,7 @@ class CloudPcProvisioningPolicyAssignment extends Entity
 
      /**
      * Gets the assignedUsers
+    * The assignment targeted users for the provisioning policy. This list of users is computed based on assignments, licenses, group memberships, and policies. This property is read-only. Supports$expand.
      *
      * @return array|null The assignedUsers
      */
@@ -74,6 +75,7 @@ class CloudPcProvisioningPolicyAssignment extends Entity
 
     /**
     * Sets the assignedUsers
+    * The assignment targeted users for the provisioning policy. This list of users is computed based on assignments, licenses, group memberships, and policies. This property is read-only. Supports$expand.
     *
     * @param User[] $val The assignedUsers
     *
