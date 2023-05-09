@@ -25,6 +25,7 @@ class IdleSessionSignOut extends Entity
 {
     /**
     * Gets the isEnabled
+    * Indicates whether the idle session sign-out policy is enabled.
     *
     * @return bool|null The isEnabled
     */
@@ -39,6 +40,7 @@ class IdleSessionSignOut extends Entity
 
     /**
     * Sets the isEnabled
+    * Indicates whether the idle session sign-out policy is enabled.
     *
     * @param bool $val The value of the isEnabled
     *
@@ -51,6 +53,7 @@ class IdleSessionSignOut extends Entity
     }
     /**
     * Gets the signOutAfterInSeconds
+    * Number of seconds of inactivity after which a user is signed out.
     *
     * @return int|null The signOutAfterInSeconds
     */
@@ -65,6 +68,7 @@ class IdleSessionSignOut extends Entity
 
     /**
     * Sets the signOutAfterInSeconds
+    * Number of seconds of inactivity after which a user is signed out.
     *
     * @param int $val The value of the signOutAfterInSeconds
     *
@@ -77,6 +81,7 @@ class IdleSessionSignOut extends Entity
     }
     /**
     * Gets the warnAfterInSeconds
+    * Number of seconds of inactivity after which a user is notified that they'll be signed out.
     *
     * @return int|null The warnAfterInSeconds
     */
@@ -91,6 +96,7 @@ class IdleSessionSignOut extends Entity
 
     /**
     * Sets the warnAfterInSeconds
+    * Number of seconds of inactivity after which a user is notified that they'll be signed out.
     *
     * @param int $val The value of the warnAfterInSeconds
     *

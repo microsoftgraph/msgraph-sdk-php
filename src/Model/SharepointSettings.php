@@ -26,6 +26,7 @@ class SharepointSettings extends Entity
 {
     /**
     * Gets the allowedDomainGuidsForSyncApp
+    * Collection of trusted domain GUIDs for the OneDrive sync app.
     *
     * @return array|null The allowedDomainGuidsForSyncApp
     */
@@ -40,6 +41,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the allowedDomainGuidsForSyncApp
+    * Collection of trusted domain GUIDs for the OneDrive sync app.
     *
     * @param string[] $val The allowedDomainGuidsForSyncApp
     *
@@ -53,6 +55,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the availableManagedPathsForSiteCreation
+    * Collection of managed paths available for site creation. Read-only.
     *
     * @return array|null The availableManagedPathsForSiteCreation
     */
@@ -67,6 +70,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the availableManagedPathsForSiteCreation
+    * Collection of managed paths available for site creation. Read-only.
     *
     * @param string[] $val The availableManagedPathsForSiteCreation
     *
@@ -80,6 +84,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the deletedUserPersonalSiteRetentionPeriodInDays
+    * The number of days for preserving a deleted user's OneDrive.
     *
     * @return int|null The deletedUserPersonalSiteRetentionPeriodInDays
     */
@@ -94,6 +99,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the deletedUserPersonalSiteRetentionPeriodInDays
+    * The number of days for preserving a deleted user's OneDrive.
     *
     * @param int $val The deletedUserPersonalSiteRetentionPeriodInDays
     *
@@ -107,6 +113,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the excludedFileExtensionsForSyncApp
+    * Collection of file extensions not uploaded by the OneDrive sync app.
     *
     * @return array|null The excludedFileExtensionsForSyncApp
     */
@@ -121,6 +128,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the excludedFileExtensionsForSyncApp
+    * Collection of file extensions not uploaded by the OneDrive sync app.
     *
     * @param string[] $val The excludedFileExtensionsForSyncApp
     *
@@ -134,6 +142,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the idleSessionSignOut
+    * Specifies the idle session sign-out policies for the tenant.
     *
     * @return IdleSessionSignOut|null The idleSessionSignOut
     */
@@ -152,6 +161,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the idleSessionSignOut
+    * Specifies the idle session sign-out policies for the tenant.
     *
     * @param IdleSessionSignOut $val The idleSessionSignOut
     *
@@ -165,6 +175,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the imageTaggingOption
+    * Specifies the image tagging option for the tenant. Possible values are: disabled, basic, enhanced.
     *
     * @return ImageTaggingChoice|null The imageTaggingOption
     */
@@ -183,6 +194,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the imageTaggingOption
+    * Specifies the image tagging option for the tenant. Possible values are: disabled, basic, enhanced.
     *
     * @param ImageTaggingChoice $val The imageTaggingOption
     *
@@ -196,6 +208,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the isCommentingOnSitePagesEnabled
+    * Indicates whether comments are allowed on modern site pages in SharePoint.
     *
     * @return bool|null The isCommentingOnSitePagesEnabled
     */
@@ -210,6 +223,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the isCommentingOnSitePagesEnabled
+    * Indicates whether comments are allowed on modern site pages in SharePoint.
     *
     * @param bool $val The isCommentingOnSitePagesEnabled
     *
@@ -223,6 +237,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the isFileActivityNotificationEnabled
+    * Indicates whether push notifications are enabled for OneDrive events.
     *
     * @return bool|null The isFileActivityNotificationEnabled
     */
@@ -237,6 +252,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the isFileActivityNotificationEnabled
+    * Indicates whether push notifications are enabled for OneDrive events.
     *
     * @param bool $val The isFileActivityNotificationEnabled
     *
@@ -250,6 +266,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the isLegacyAuthProtocolsEnabled
+    * Indicates whether legacy authentication protocols are enabled for the tenant.
     *
     * @return bool|null The isLegacyAuthProtocolsEnabled
     */
@@ -264,6 +281,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the isLegacyAuthProtocolsEnabled
+    * Indicates whether legacy authentication protocols are enabled for the tenant.
     *
     * @param bool $val The isLegacyAuthProtocolsEnabled
     *
@@ -277,6 +295,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the isLoopEnabled
+    * Indicates whether if Fluid Framework is allowed on SharePoint sites.
     *
     * @return bool|null The isLoopEnabled
     */
@@ -291,6 +310,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the isLoopEnabled
+    * Indicates whether if Fluid Framework is allowed on SharePoint sites.
     *
     * @param bool $val The isLoopEnabled
     *
@@ -304,6 +324,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the isMacSyncAppEnabled
+    * Indicates whether files can be synced using the OneDrive sync app for Mac.
     *
     * @return bool|null The isMacSyncAppEnabled
     */
@@ -318,6 +339,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the isMacSyncAppEnabled
+    * Indicates whether files can be synced using the OneDrive sync app for Mac.
     *
     * @param bool $val The isMacSyncAppEnabled
     *
@@ -331,6 +353,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the isRequireAcceptingUserToMatchInvitedUserEnabled
+    * Indicates whether guests must sign in using the same account to which sharing invitations are sent.
     *
     * @return bool|null The isRequireAcceptingUserToMatchInvitedUserEnabled
     */
@@ -345,6 +368,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the isRequireAcceptingUserToMatchInvitedUserEnabled
+    * Indicates whether guests must sign in using the same account to which sharing invitations are sent.
     *
     * @param bool $val The isRequireAcceptingUserToMatchInvitedUserEnabled
     *
@@ -358,6 +382,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the isResharingByExternalUsersEnabled
+    * Indicates whether guests are allowed to reshare files, folders, and sites they don't own.
     *
     * @return bool|null The isResharingByExternalUsersEnabled
     */
@@ -372,6 +397,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the isResharingByExternalUsersEnabled
+    * Indicates whether guests are allowed to reshare files, folders, and sites they don't own.
     *
     * @param bool $val The isResharingByExternalUsersEnabled
     *
@@ -385,6 +411,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the isSharePointMobileNotificationEnabled
+    * Indicates whether mobile push notifications are enabled for SharePoint.
     *
     * @return bool|null The isSharePointMobileNotificationEnabled
     */
@@ -399,6 +426,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the isSharePointMobileNotificationEnabled
+    * Indicates whether mobile push notifications are enabled for SharePoint.
     *
     * @param bool $val The isSharePointMobileNotificationEnabled
     *
@@ -412,6 +440,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the isSharePointNewsfeedEnabled
+    * Indicates whether the newsfeed is allowed on the modern site pages in SharePoint.
     *
     * @return bool|null The isSharePointNewsfeedEnabled
     */
@@ -426,6 +455,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the isSharePointNewsfeedEnabled
+    * Indicates whether the newsfeed is allowed on the modern site pages in SharePoint.
     *
     * @param bool $val The isSharePointNewsfeedEnabled
     *
@@ -439,6 +469,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the isSiteCreationEnabled
+    * Indicates whether users are allowed to create sites.
     *
     * @return bool|null The isSiteCreationEnabled
     */
@@ -453,6 +484,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the isSiteCreationEnabled
+    * Indicates whether users are allowed to create sites.
     *
     * @param bool $val The isSiteCreationEnabled
     *
@@ -466,6 +498,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the isSiteCreationUIEnabled
+    * Indicates whether the UI commands for creating sites are shown.
     *
     * @return bool|null The isSiteCreationUIEnabled
     */
@@ -480,6 +513,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the isSiteCreationUIEnabled
+    * Indicates whether the UI commands for creating sites are shown.
     *
     * @param bool $val The isSiteCreationUIEnabled
     *
@@ -493,6 +527,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the isSitePagesCreationEnabled
+    * Indicates whether creating new modern pages is allowed on SharePoint sites.
     *
     * @return bool|null The isSitePagesCreationEnabled
     */
@@ -507,6 +542,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the isSitePagesCreationEnabled
+    * Indicates whether creating new modern pages is allowed on SharePoint sites.
     *
     * @param bool $val The isSitePagesCreationEnabled
     *
@@ -520,6 +556,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the isSitesStorageLimitAutomatic
+    * Indicates whether site storage space is automatically managed or if specific storage limits are set per site.
     *
     * @return bool|null The isSitesStorageLimitAutomatic
     */
@@ -534,6 +571,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the isSitesStorageLimitAutomatic
+    * Indicates whether site storage space is automatically managed or if specific storage limits are set per site.
     *
     * @param bool $val The isSitesStorageLimitAutomatic
     *
@@ -547,6 +585,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the isSyncButtonHiddenOnPersonalSite
+    * Indicates whether the sync button in OneDrive is hidden.
     *
     * @return bool|null The isSyncButtonHiddenOnPersonalSite
     */
@@ -561,6 +600,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the isSyncButtonHiddenOnPersonalSite
+    * Indicates whether the sync button in OneDrive is hidden.
     *
     * @param bool $val The isSyncButtonHiddenOnPersonalSite
     *
@@ -574,6 +614,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the isUnmanagedSyncAppForTenantRestricted
+    * Indicates whether users are allowed to sync files only on PCs joined to specific domains.
     *
     * @return bool|null The isUnmanagedSyncAppForTenantRestricted
     */
@@ -588,6 +629,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the isUnmanagedSyncAppForTenantRestricted
+    * Indicates whether users are allowed to sync files only on PCs joined to specific domains.
     *
     * @param bool $val The isUnmanagedSyncAppForTenantRestricted
     *
@@ -601,6 +643,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the personalSiteDefaultStorageLimitInMB
+    * The default OneDrive storage limit for all new and existing users who are assigned a qualifying license. Measured in megabytes (MB).
     *
     * @return int|null The personalSiteDefaultStorageLimitInMB
     */
@@ -615,6 +658,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the personalSiteDefaultStorageLimitInMB
+    * The default OneDrive storage limit for all new and existing users who are assigned a qualifying license. Measured in megabytes (MB).
     *
     * @param int $val The personalSiteDefaultStorageLimitInMB
     *
@@ -628,6 +672,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the sharingAllowedDomainList
+    * Collection of email domains that are allowed for sharing outside the organization.
     *
     * @return array|null The sharingAllowedDomainList
     */
@@ -642,6 +687,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the sharingAllowedDomainList
+    * Collection of email domains that are allowed for sharing outside the organization.
     *
     * @param string[] $val The sharingAllowedDomainList
     *
@@ -655,6 +701,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the sharingBlockedDomainList
+    * Collection of email domains that are blocked for sharing outside the organization.
     *
     * @return array|null The sharingBlockedDomainList
     */
@@ -669,6 +716,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the sharingBlockedDomainList
+    * Collection of email domains that are blocked for sharing outside the organization.
     *
     * @param string[] $val The sharingBlockedDomainList
     *
@@ -682,6 +730,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the sharingCapability
+    * Sharing capability for the tenant. Possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly.
     *
     * @return SharingCapabilities|null The sharingCapability
     */
@@ -700,6 +749,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the sharingCapability
+    * Sharing capability for the tenant. Possible values are: disabled, externalUserSharingOnly, externalUserAndGuestSharing, existingExternalUserSharingOnly.
     *
     * @param SharingCapabilities $val The sharingCapability
     *
@@ -713,6 +763,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the sharingDomainRestrictionMode
+    * Specifies the external sharing mode for domains. Possible values are: none, allowList, blockList.
     *
     * @return SharingDomainRestrictionMode|null The sharingDomainRestrictionMode
     */
@@ -731,6 +782,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the sharingDomainRestrictionMode
+    * Specifies the external sharing mode for domains. Possible values are: none, allowList, blockList.
     *
     * @param SharingDomainRestrictionMode $val The sharingDomainRestrictionMode
     *
@@ -744,6 +796,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the siteCreationDefaultManagedPath
+    * The value of the team site managed path. This is the path under which new team sites will be created.
     *
     * @return string|null The siteCreationDefaultManagedPath
     */
@@ -758,6 +811,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the siteCreationDefaultManagedPath
+    * The value of the team site managed path. This is the path under which new team sites will be created.
     *
     * @param string $val The siteCreationDefaultManagedPath
     *
@@ -771,6 +825,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the siteCreationDefaultStorageLimitInMB
+    * The default storage quota for a new site upon creation. Measured in megabytes (MB).
     *
     * @return int|null The siteCreationDefaultStorageLimitInMB
     */
@@ -785,6 +840,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the siteCreationDefaultStorageLimitInMB
+    * The default storage quota for a new site upon creation. Measured in megabytes (MB).
     *
     * @param int $val The siteCreationDefaultStorageLimitInMB
     *
@@ -798,6 +854,7 @@ class SharepointSettings extends Entity
 
     /**
     * Gets the tenantDefaultTimezone
+    * The default timezone of a tenant for newly created sites. For a list of possible values, see SPRegionalSettings.TimeZones property.
     *
     * @return string|null The tenantDefaultTimezone
     */
@@ -812,6 +869,7 @@ class SharepointSettings extends Entity
 
     /**
     * Sets the tenantDefaultTimezone
+    * The default timezone of a tenant for newly created sites. For a list of possible values, see SPRegionalSettings.TimeZones property.
     *
     * @param string $val The tenantDefaultTimezone
     *
