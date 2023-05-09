@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedGroups\AllowedGroupsRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\AllowedUsers\AllowedUsersRequestBuilder;
+use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\Jobs\JobsRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Shares\Item\Printer\PrinterRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\PrinterShare;
@@ -32,6 +33,13 @@ class PrinterShareItemRequestBuilder extends BaseRequestBuilder
     */
     public function allowedUsers(): AllowedUsersRequestBuilder {
         return new AllowedUsersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the jobs property of the microsoft.graph.printerBase entity.
+    */
+    public function jobs(): JobsRequestBuilder {
+        return new JobsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

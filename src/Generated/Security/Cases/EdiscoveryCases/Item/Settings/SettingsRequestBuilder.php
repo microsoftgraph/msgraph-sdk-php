@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryCaseSettings;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Settings\SecurityResetToDefault\SecurityResetToDefaultRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Settings\MicrosoftGraphSecurityResetToDefault\MicrosoftGraphSecurityResetToDefaultRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -21,8 +21,8 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to call the resetToDefault method.
     */
-    public function securityResetToDefault(): SecurityResetToDefaultRequestBuilder {
-        return new SecurityResetToDefaultRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityResetToDefault(): MicrosoftGraphSecurityResetToDefaultRequestBuilder {
+        return new MicrosoftGraphSecurityResetToDefaultRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

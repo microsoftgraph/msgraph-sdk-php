@@ -7,9 +7,11 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SharedDriveItem;
+use Microsoft\Graph\Generated\Shares\Item\CreatedByUser\CreatedByUserRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\DriveItem\DriveItemRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\ListRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\Items\ItemsRequestBuilder;
+use Microsoft\Graph\Generated\Shares\Item\LastModifiedByUser\LastModifiedByUserRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\ListItem\ListItemRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\Permission\PermissionRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\Root\RootRequestBuilder;
@@ -24,6 +26,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity.
+    */
+    public function createdByUser(): CreatedByUserRequestBuilder {
+        return new CreatedByUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to manage the driveItem property of the microsoft.graph.sharedDriveItem entity.
     */
@@ -43,6 +52,13 @@ class SharedDriveItemItemRequestBuilder extends BaseRequestBuilder
     */
     public function items(): ItemsRequestBuilder {
         return new ItemsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity.
+    */
+    public function lastModifiedByUser(): LastModifiedByUserRequestBuilder {
+        return new LastModifiedByUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

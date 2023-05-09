@@ -10,7 +10,7 @@ use Microsoft\Graph\Generated\Models\Security\EdiscoveryReviewTag;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryReviewTagCollectionResponse;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\Item\EdiscoveryReviewTagItemRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\SecurityAsHierarchy\SecurityAsHierarchyRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Tags\MicrosoftGraphSecurityAsHierarchy\MicrosoftGraphSecurityAsHierarchyRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -31,8 +31,8 @@ class TagsRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to call the asHierarchy method.
     */
-    public function securityAsHierarchy(): SecurityAsHierarchyRequestBuilder {
-        return new SecurityAsHierarchyRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityAsHierarchy(): MicrosoftGraphSecurityAsHierarchyRequestBuilder {
+        return new MicrosoftGraphSecurityAsHierarchyRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

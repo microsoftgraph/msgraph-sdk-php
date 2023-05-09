@@ -8,8 +8,6 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ContactFolder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\ChildFolders\Item\Contacts\ContactsRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\ChildFolders\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\ContactFolders\Item\ChildFolders\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -25,20 +23,6 @@ class ContactFolderItemRequestBuilder extends BaseRequestBuilder
     */
     public function contacts(): ContactsRequestBuilder {
         return new ContactsRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.contactFolder entity.
-    */
-    public function multiValueExtendedProperties(): MultiValueExtendedPropertiesRequestBuilder {
-        return new MultiValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.contactFolder entity.
-    */
-    public function singleValueExtendedProperties(): SingleValueExtendedPropertiesRequestBuilder {
-        return new SingleValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -14,8 +14,6 @@ use Microsoft\Graph\Generated\Me\Calendars\Item\CalendarView\Item\DismissReminde
 use Microsoft\Graph\Generated\Me\Calendars\Item\CalendarView\Item\Extensions\ExtensionsRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendars\Item\CalendarView\Item\Forward\ForwardRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendars\Item\CalendarView\Item\Instances\InstancesRequestBuilder;
-use Microsoft\Graph\Generated\Me\Calendars\Item\CalendarView\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Me\Calendars\Item\CalendarView\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendars\Item\CalendarView\Item\SnoozeReminder\SnoozeReminderRequestBuilder;
 use Microsoft\Graph\Generated\Me\Calendars\Item\CalendarView\Item\TentativelyAccept\TentativelyAcceptRequestBuilder;
 use Microsoft\Graph\Generated\Models\Event;
@@ -91,20 +89,6 @@ class EventItemRequestBuilder extends BaseRequestBuilder
     */
     public function instances(): InstancesRequestBuilder {
         return new InstancesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.event entity.
-    */
-    public function multiValueExtendedProperties(): MultiValueExtendedPropertiesRequestBuilder {
-        return new MultiValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.event entity.
-    */
-    public function singleValueExtendedProperties(): SingleValueExtendedPropertiesRequestBuilder {
-        return new SingleValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

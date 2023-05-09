@@ -12,8 +12,6 @@ use Microsoft\Graph\Generated\Users\Item\Calendar\CalendarPermissions\CalendarPe
 use Microsoft\Graph\Generated\Users\Item\Calendar\CalendarView\CalendarViewRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Calendar\Events\EventsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\Calendar\GetSchedule\GetScheduleRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Calendar\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\Calendar\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -50,20 +48,6 @@ class CalendarRequestBuilder extends BaseRequestBuilder
     */
     public function getSchedule(): GetScheduleRequestBuilder {
         return new GetScheduleRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.calendar entity.
-    */
-    public function multiValueExtendedProperties(): MultiValueExtendedPropertiesRequestBuilder {
-        return new MultiValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.calendar entity.
-    */
-    public function singleValueExtendedProperties(): SingleValueExtendedPropertiesRequestBuilder {
-        return new SingleValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

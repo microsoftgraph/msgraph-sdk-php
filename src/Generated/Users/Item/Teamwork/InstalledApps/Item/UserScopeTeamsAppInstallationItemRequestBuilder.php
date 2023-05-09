@@ -8,6 +8,8 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UserScopeTeamsAppInstallation;
 use Microsoft\Graph\Generated\Users\Item\Teamwork\InstalledApps\Item\Chat\ChatRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Teamwork\InstalledApps\Item\TeamsApp\TeamsAppRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Teamwork\InstalledApps\Item\TeamsAppDefinition\TeamsAppDefinitionRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -23,6 +25,20 @@ class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     */
     public function chat(): ChatRequestBuilder {
         return new ChatRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the teamsApp property of the microsoft.graph.teamsAppInstallation entity.
+    */
+    public function teamsApp(): TeamsAppRequestBuilder {
+        return new TeamsAppRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the teamsAppDefinition property of the microsoft.graph.teamsAppInstallation entity.
+    */
+    public function teamsAppDefinition(): TeamsAppDefinitionRequestBuilder {
+        return new TeamsAppDefinitionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

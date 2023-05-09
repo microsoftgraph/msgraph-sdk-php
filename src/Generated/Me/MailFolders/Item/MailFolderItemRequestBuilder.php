@@ -10,8 +10,6 @@ use Microsoft\Graph\Generated\Me\MailFolders\Item\Copy\CopyRequestBuilder;
 use Microsoft\Graph\Generated\Me\MailFolders\Item\MessageRules\MessageRulesRequestBuilder;
 use Microsoft\Graph\Generated\Me\MailFolders\Item\Messages\MessagesRequestBuilder;
 use Microsoft\Graph\Generated\Me\MailFolders\Item\Move\MoveRequestBuilder;
-use Microsoft\Graph\Generated\Me\MailFolders\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Me\MailFolders\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\MailFolder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -57,20 +55,6 @@ class MailFolderItemRequestBuilder extends BaseRequestBuilder
     */
     public function move(): MoveRequestBuilder {
         return new MoveRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.mailFolder entity.
-    */
-    public function multiValueExtendedProperties(): MultiValueExtendedPropertiesRequestBuilder {
-        return new MultiValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.mailFolder entity.
-    */
-    public function singleValueExtendedProperties(): SingleValueExtendedPropertiesRequestBuilder {
-        return new SingleValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

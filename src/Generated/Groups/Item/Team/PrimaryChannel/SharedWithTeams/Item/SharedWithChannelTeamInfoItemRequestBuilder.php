@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\SharedWithTeams\Item\AllowedMembers\AllowedMembersRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\SharedWithTeams\Item\Team\TeamRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\SharedWithChannelTeamInfo;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -23,6 +24,13 @@ class SharedWithChannelTeamInfoItemRequestBuilder extends BaseRequestBuilder
     */
     public function allowedMembers(): AllowedMembersRequestBuilder {
         return new AllowedMembersRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the team property of the microsoft.graph.teamInfo entity.
+    */
+    public function team(): TeamRequestBuilder {
+        return new TeamRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

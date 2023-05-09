@@ -71,7 +71,7 @@ class ConditionalAccessExternalTenants implements AdditionalDataHolder, BackedMo
     }
 
     /**
-     * Gets the membershipKind property value. The membershipKind property
+     * Gets the membershipKind property value. The membership kind. Possible values are: all, enumerated, unknownFutureValue. The enumerated member references an conditionalAccessEnumeratedExternalTenants object.
      * @return ConditionalAccessExternalTenantsMembershipKind|null
     */
     public function getMembershipKind(): ?ConditionalAccessExternalTenantsMembershipKind {
@@ -113,7 +113,7 @@ class ConditionalAccessExternalTenants implements AdditionalDataHolder, BackedMo
     }
 
     /**
-     * Sets the membershipKind property value. The membershipKind property
+     * Sets the membershipKind property value. The membership kind. Possible values are: all, enumerated, unknownFutureValue. The enumerated member references an conditionalAccessEnumeratedExternalTenants object.
      * @param ConditionalAccessExternalTenantsMembershipKind|null $value Value to set for the membershipKind property.
     */
     public function setMembershipKind(?ConditionalAccessExternalTenantsMembershipKind $value): void {

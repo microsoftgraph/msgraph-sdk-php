@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Connectors\ConnectorsRequestBuilder;
+use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Jobs\JobsRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\RestoreFactoryDefaults\RestoreFactoryDefaultsRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\Shares\SharesRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\Printers\Item\TaskTriggers\TaskTriggersRequestBuilder;
@@ -26,6 +27,13 @@ class PrinterItemRequestBuilder extends BaseRequestBuilder
     */
     public function connectors(): ConnectorsRequestBuilder {
         return new ConnectorsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the jobs property of the microsoft.graph.printerBase entity.
+    */
+    public function jobs(): JobsRequestBuilder {
+        return new JobsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

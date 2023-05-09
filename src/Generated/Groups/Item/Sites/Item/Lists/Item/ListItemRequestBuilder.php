@@ -7,8 +7,10 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Columns\ColumnsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\ContentTypes\ContentTypesRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\CreatedByUser\CreatedByUserRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Drive\DriveRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\ItemsRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\LastModifiedByUser\LastModifiedByUserRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Operations\OperationsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Subscriptions\SubscriptionsRequestBuilder;
 use Microsoft\Graph\Generated\Models\EscapedList;
@@ -38,6 +40,13 @@ class ListItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity.
+    */
+    public function createdByUser(): CreatedByUserRequestBuilder {
+        return new CreatedByUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the drive property of the microsoft.graph.list entity.
     */
     public function drive(): DriveRequestBuilder {
@@ -49,6 +58,13 @@ class ListItemRequestBuilder extends BaseRequestBuilder
     */
     public function items(): ItemsRequestBuilder {
         return new ItemsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity.
+    */
+    public function lastModifiedByUser(): LastModifiedByUserRequestBuilder {
+        return new LastModifiedByUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

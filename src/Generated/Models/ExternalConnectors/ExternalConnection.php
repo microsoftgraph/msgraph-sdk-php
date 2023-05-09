@@ -26,6 +26,14 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
+     * Gets the activitySettings property value. Collects configurable settings related to activities involving connector content.
+     * @return ActivitySettings|null
+    */
+    public function getActivitySettings(): ?ActivitySettings {
+        return $this->getBackingStore()->get('activitySettings');
+    }
+
+    /**
      * Gets the configuration property value. Specifies additional application IDs that are allowed to manage the connection and to index content in the connection. Optional.
      * @return Configuration|null
     */
@@ -48,6 +56,7 @@ class ExternalConnection extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'activitySettings' => fn(ParseNode $n) => $o->setActivitySettings($n->getObjectValue([ActivitySettings::class, 'createFromDiscriminatorValue'])),
             'configuration' => fn(ParseNode $n) => $o->setConfiguration($n->getObjectValue([Configuration::class, 'createFromDiscriminatorValue'])),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'groups' => fn(ParseNode $n) => $o->setGroups($n->getCollectionOfObjectValues([ExternalGroup::class, 'createFromDiscriminatorValue'])),
@@ -55,6 +64,7 @@ class ExternalConnection extends Entity implements Parsable
             'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
             'operations' => fn(ParseNode $n) => $o->setOperations($n->getCollectionOfObjectValues([ConnectionOperation::class, 'createFromDiscriminatorValue'])),
             'schema' => fn(ParseNode $n) => $o->setSchema($n->getObjectValue([Schema::class, 'createFromDiscriminatorValue'])),
+            'searchSettings' => fn(ParseNode $n) => $o->setSearchSettings($n->getObjectValue([SearchSettings::class, 'createFromDiscriminatorValue'])),
             'state' => fn(ParseNode $n) => $o->setState($n->getEnumValue(ConnectionState::class)),
         ]);
     }
@@ -100,6 +110,14 @@ class ExternalConnection extends Entity implements Parsable
     }
 
     /**
+     * Gets the searchSettings property value. The settings configuring the search experience for content in this connection, such as the display templates for search results.
+     * @return SearchSettings|null
+    */
+    public function getSearchSettings(): ?SearchSettings {
+        return $this->getBackingStore()->get('searchSettings');
+    }
+
+    /**
      * Gets the state property value. Indicates the current state of the connection. Possible values are: draft, ready, obsolete, limitExceeded, unknownFutureValue.
      * @return ConnectionState|null
     */
@@ -113,6 +131,7 @@ class ExternalConnection extends Entity implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeObjectValue('activitySettings', $this->getActivitySettings());
         $writer->writeObjectValue('configuration', $this->getConfiguration());
         $writer->writeStringValue('description', $this->getDescription());
         $writer->writeCollectionOfObjectValues('groups', $this->getGroups());
@@ -120,6 +139,15 @@ class ExternalConnection extends Entity implements Parsable
         $writer->writeStringValue('name', $this->getName());
         $writer->writeCollectionOfObjectValues('operations', $this->getOperations());
         $writer->writeObjectValue('schema', $this->getSchema());
+        $writer->writeObjectValue('searchSettings', $this->getSearchSettings());
+    }
+
+    /**
+     * Sets the activitySettings property value. Collects configurable settings related to activities involving connector content.
+     * @param ActivitySettings|null $value Value to set for the activitySettings property.
+    */
+    public function setActivitySettings(?ActivitySettings $value): void {
+        $this->getBackingStore()->set('activitySettings', $value);
     }
 
     /**
@@ -176,6 +204,14 @@ class ExternalConnection extends Entity implements Parsable
     */
     public function setSchema(?Schema $value): void {
         $this->getBackingStore()->set('schema', $value);
+    }
+
+    /**
+     * Sets the searchSettings property value. The settings configuring the search experience for content in this connection, such as the display templates for search results.
+     * @param SearchSettings|null $value Value to set for the searchSettings property.
+    */
+    public function setSearchSettings(?SearchSettings $value): void {
+        $this->getBackingStore()->set('searchSettings', $value);
     }
 
     /**

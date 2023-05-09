@@ -8,11 +8,11 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryCustodian;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\LastIndexOperation\LastIndexOperationRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\SecurityActivate\SecurityActivateRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\SecurityApplyHold\SecurityApplyHoldRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\SecurityRelease\SecurityReleaseRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\SecurityRemoveHold\SecurityRemoveHoldRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\SecurityUpdateIndex\SecurityUpdateIndexRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\MicrosoftGraphSecurityActivate\MicrosoftGraphSecurityActivateRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\MicrosoftGraphSecurityApplyHold\MicrosoftGraphSecurityApplyHoldRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\MicrosoftGraphSecurityRelease\MicrosoftGraphSecurityReleaseRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\MicrosoftGraphSecurityRemoveHold\MicrosoftGraphSecurityRemoveHoldRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\MicrosoftGraphSecurityUpdateIndex\MicrosoftGraphSecurityUpdateIndexRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\SiteSources\SiteSourcesRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\UnifiedGroupSources\UnifiedGroupSourcesRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\UserSources\UserSourcesRequestBuilder;
@@ -36,36 +36,36 @@ class EdiscoveryCustodianItemRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to call the activate method.
     */
-    public function securityActivate(): SecurityActivateRequestBuilder {
-        return new SecurityActivateRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityActivate(): MicrosoftGraphSecurityActivateRequestBuilder {
+        return new MicrosoftGraphSecurityActivateRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the applyHold method.
     */
-    public function securityApplyHold(): SecurityApplyHoldRequestBuilder {
-        return new SecurityApplyHoldRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityApplyHold(): MicrosoftGraphSecurityApplyHoldRequestBuilder {
+        return new MicrosoftGraphSecurityApplyHoldRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the release method.
     */
-    public function securityRelease(): SecurityReleaseRequestBuilder {
-        return new SecurityReleaseRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityRelease(): MicrosoftGraphSecurityReleaseRequestBuilder {
+        return new MicrosoftGraphSecurityReleaseRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the removeHold method.
     */
-    public function securityRemoveHold(): SecurityRemoveHoldRequestBuilder {
-        return new SecurityRemoveHoldRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityRemoveHold(): MicrosoftGraphSecurityRemoveHoldRequestBuilder {
+        return new MicrosoftGraphSecurityRemoveHoldRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the updateIndex method.
     */
-    public function securityUpdateIndex(): SecurityUpdateIndexRequestBuilder {
-        return new SecurityUpdateIndexRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityUpdateIndex(): MicrosoftGraphSecurityUpdateIndexRequestBuilder {
+        return new MicrosoftGraphSecurityUpdateIndexRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

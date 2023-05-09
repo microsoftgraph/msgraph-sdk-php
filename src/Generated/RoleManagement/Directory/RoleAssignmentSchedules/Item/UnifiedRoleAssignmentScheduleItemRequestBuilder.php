@@ -8,6 +8,10 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UnifiedRoleAssignmentSchedule;
 use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentSchedules\Item\ActivatedUsing\ActivatedUsingRequestBuilder;
+use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentSchedules\Item\AppScope\AppScopeRequestBuilder;
+use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentSchedules\Item\DirectoryScope\DirectoryScopeRequestBuilder;
+use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentSchedules\Item\Principal\PrincipalRequestBuilder;
+use Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentSchedules\Item\RoleDefinition\RoleDefinitionRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -23,6 +27,34 @@ class UnifiedRoleAssignmentScheduleItemRequestBuilder extends BaseRequestBuilder
     */
     public function activatedUsing(): ActivatedUsingRequestBuilder {
         return new ActivatedUsingRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the appScope property of the microsoft.graph.unifiedRoleScheduleBase entity.
+    */
+    public function appScope(): AppScopeRequestBuilder {
+        return new AppScopeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the directoryScope property of the microsoft.graph.unifiedRoleScheduleBase entity.
+    */
+    public function directoryScope(): DirectoryScopeRequestBuilder {
+        return new DirectoryScopeRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the principal property of the microsoft.graph.unifiedRoleScheduleBase entity.
+    */
+    public function principal(): PrincipalRequestBuilder {
+        return new PrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the roleDefinition property of the microsoft.graph.unifiedRoleScheduleBase entity.
+    */
+    public function roleDefinition(): RoleDefinitionRequestBuilder {
+        return new RoleDefinitionRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

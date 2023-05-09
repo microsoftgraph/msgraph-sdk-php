@@ -13,11 +13,9 @@ use Microsoft\Graph\Generated\Me\Messages\Item\CreateReplyAll\CreateReplyAllRequ
 use Microsoft\Graph\Generated\Me\Messages\Item\Extensions\ExtensionsRequestBuilder;
 use Microsoft\Graph\Generated\Me\Messages\Item\Forward\ForwardRequestBuilder;
 use Microsoft\Graph\Generated\Me\Messages\Item\Move\MoveRequestBuilder;
-use Microsoft\Graph\Generated\Me\Messages\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Me\Messages\Item\Reply\ReplyRequestBuilder;
 use Microsoft\Graph\Generated\Me\Messages\Item\ReplyAll\ReplyAllRequestBuilder;
 use Microsoft\Graph\Generated\Me\Messages\Item\Send\SendRequestBuilder;
-use Microsoft\Graph\Generated\Me\Messages\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Me\Messages\Item\Value\ContentRequestBuilder;
 use Microsoft\Graph\Generated\Models\Message;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -95,13 +93,6 @@ class MessageItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.message entity.
-    */
-    public function multiValueExtendedProperties(): MultiValueExtendedPropertiesRequestBuilder {
-        return new MultiValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the reply method.
     */
     public function reply(): ReplyRequestBuilder {
@@ -120,13 +111,6 @@ class MessageItemRequestBuilder extends BaseRequestBuilder
     */
     public function send(): SendRequestBuilder {
         return new SendRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.message entity.
-    */
-    public function singleValueExtendedProperties(): SingleValueExtendedPropertiesRequestBuilder {
-        return new SingleValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Me\Teamwork\AssociatedTeams\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Me\Teamwork\AssociatedTeams\Item\Team\TeamRequestBuilder;
 use Microsoft\Graph\Generated\Models\AssociatedTeamInfo;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -17,6 +18,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class AssociatedTeamInfoItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the team property of the microsoft.graph.teamInfo entity.
+    */
+    public function team(): TeamRequestBuilder {
+        return new TeamRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Instantiates a new AssociatedTeamInfoItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

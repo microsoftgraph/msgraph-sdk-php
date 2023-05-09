@@ -9,9 +9,7 @@ use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\Attachments\At
 use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\Extensions\ExtensionsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\Forward\ForwardRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\InReplyTo\InReplyToRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\Reply\ReplyRequestBuilder;
-use Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Post;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -53,24 +51,10 @@ class PostItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.post entity.
-    */
-    public function multiValueExtendedProperties(): MultiValueExtendedPropertiesRequestBuilder {
-        return new MultiValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the reply method.
     */
     public function reply(): ReplyRequestBuilder {
         return new ReplyRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.post entity.
-    */
-    public function singleValueExtendedProperties(): SingleValueExtendedPropertiesRequestBuilder {
-        return new SingleValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

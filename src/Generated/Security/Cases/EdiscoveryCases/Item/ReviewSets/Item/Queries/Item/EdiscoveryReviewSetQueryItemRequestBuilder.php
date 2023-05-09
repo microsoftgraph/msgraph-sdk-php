@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryReviewSetQuery;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSets\Item\Queries\Item\SecurityApplyTags\SecurityApplyTagsRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSets\Item\Queries\Item\MicrosoftGraphSecurityApplyTags\MicrosoftGraphSecurityApplyTagsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -21,8 +21,8 @@ class EdiscoveryReviewSetQueryItemRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to call the applyTags method.
     */
-    public function securityApplyTags(): SecurityApplyTagsRequestBuilder {
-        return new SecurityApplyTagsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityApplyTags(): MicrosoftGraphSecurityApplyTagsRequestBuilder {
+        return new MicrosoftGraphSecurityApplyTagsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

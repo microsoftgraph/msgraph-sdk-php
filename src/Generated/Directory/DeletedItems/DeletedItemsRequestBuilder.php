@@ -9,8 +9,11 @@ use Microsoft\Graph\Generated\Directory\DeletedItems\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\GetAvailableExtensionProperties\GetAvailableExtensionPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\GetByIds\GetByIdsRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\GraphAdministrativeUnit\GraphAdministrativeUnitRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\GraphApplication\GraphApplicationRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\GraphDevice\GraphDeviceRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\GraphGroup\GraphGroupRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\GraphUser\GraphUserRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\Item\DirectoryObjectItemRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\ValidateProperties\ValidatePropertiesRequestBuilder;
@@ -56,6 +59,13 @@ class DeletedItemsRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Casts the previous resource to administrativeUnit.
+    */
+    public function graphAdministrativeUnit(): GraphAdministrativeUnitRequestBuilder {
+        return new GraphAdministrativeUnitRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Casts the previous resource to application.
     */
     public function graphApplication(): GraphApplicationRequestBuilder {
@@ -63,10 +73,24 @@ class DeletedItemsRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Casts the previous resource to device.
+    */
+    public function graphDevice(): GraphDeviceRequestBuilder {
+        return new GraphDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Casts the previous resource to group.
     */
     public function graphGroup(): GraphGroupRequestBuilder {
         return new GraphGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to servicePrincipal.
+    */
+    public function graphServicePrincipal(): GraphServicePrincipalRequestBuilder {
+        return new GraphServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

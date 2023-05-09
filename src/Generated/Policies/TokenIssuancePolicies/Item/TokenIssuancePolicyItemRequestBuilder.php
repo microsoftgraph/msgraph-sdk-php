@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TokenIssuancePolicy;
+use Microsoft\Graph\Generated\Policies\TokenIssuancePolicies\Item\AppliesTo\AppliesToRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -17,6 +18,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the appliesTo property of the microsoft.graph.stsPolicy entity.
+    */
+    public function appliesTo(): AppliesToRequestBuilder {
+        return new AppliesToRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Instantiates a new TokenIssuancePolicyItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

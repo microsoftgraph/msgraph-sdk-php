@@ -10,8 +10,8 @@ use Microsoft\Graph\Generated\Models\Security\EdiscoveryCustodian;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryCustodianCollectionResponse;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\Item\EdiscoveryCustodianItemRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\SecurityApplyHold\SecurityApplyHoldRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\SecurityRemoveHold\SecurityRemoveHoldRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\MicrosoftGraphSecurityApplyHold\MicrosoftGraphSecurityApplyHoldRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Custodians\MicrosoftGraphSecurityRemoveHold\MicrosoftGraphSecurityRemoveHoldRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -32,15 +32,15 @@ class CustodiansRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to call the applyHold method.
     */
-    public function securityApplyHold(): SecurityApplyHoldRequestBuilder {
-        return new SecurityApplyHoldRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityApplyHold(): MicrosoftGraphSecurityApplyHoldRequestBuilder {
+        return new MicrosoftGraphSecurityApplyHoldRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the removeHold method.
     */
-    public function securityRemoveHold(): SecurityRemoveHoldRequestBuilder {
-        return new SecurityRemoveHoldRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityRemoveHold(): MicrosoftGraphSecurityRemoveHoldRequestBuilder {
+        return new MicrosoftGraphSecurityRemoveHoldRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -5,6 +5,9 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\WindowsInformationProtec
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\DeviceAppManagement\WindowsInformationProtectionPolicies\Item\Assignments\AssignmentsRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\WindowsInformationProtectionPolicies\Item\ExemptAppLockerFiles\ExemptAppLockerFilesRequestBuilder;
+use Microsoft\Graph\Generated\DeviceAppManagement\WindowsInformationProtectionPolicies\Item\ProtectedAppLockerFiles\ProtectedAppLockerFilesRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\WindowsInformationProtectionPolicy;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -17,6 +20,27 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class WindowsInformationProtectionPolicyItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the assignments property of the microsoft.graph.windowsInformationProtection entity.
+    */
+    public function assignments(): AssignmentsRequestBuilder {
+        return new AssignmentsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the exemptAppLockerFiles property of the microsoft.graph.windowsInformationProtection entity.
+    */
+    public function exemptAppLockerFiles(): ExemptAppLockerFilesRequestBuilder {
+        return new ExemptAppLockerFilesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the protectedAppLockerFiles property of the microsoft.graph.windowsInformationProtection entity.
+    */
+    public function protectedAppLockerFiles(): ProtectedAppLockerFilesRequestBuilder {
+        return new ProtectedAppLockerFilesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Instantiates a new WindowsInformationProtectionPolicyItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryReviewSet;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSets\Item\MicrosoftGraphSecurityAddToReviewSet\MicrosoftGraphSecurityAddToReviewSetRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSets\Item\Queries\QueriesRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSets\Item\SecurityAddToReviewSet\SecurityAddToReviewSetRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -20,17 +20,17 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 class EdiscoveryReviewSetItemRequestBuilder extends BaseRequestBuilder 
 {
     /**
+     * Provides operations to call the addToReviewSet method.
+    */
+    public function microsoftGraphSecurityAddToReviewSet(): MicrosoftGraphSecurityAddToReviewSetRequestBuilder {
+        return new MicrosoftGraphSecurityAddToReviewSetRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the queries property of the microsoft.graph.security.ediscoveryReviewSet entity.
     */
     public function queries(): QueriesRequestBuilder {
         return new QueriesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the addToReviewSet method.
-    */
-    public function securityAddToReviewSet(): SecurityAddToReviewSetRequestBuilder {
-        return new SecurityAddToReviewSetRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
