@@ -150,6 +150,35 @@ class Device extends DirectoryObject
     }
 
     /**
+    * Gets the deviceCategory
+    * User-defined property set by Intune to automatically add devices to groups and simplify managing devices.
+    *
+    * @return string|null The deviceCategory
+    */
+    public function getDeviceCategory()
+    {
+        if (array_key_exists("deviceCategory", $this->_propDict)) {
+            return $this->_propDict["deviceCategory"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the deviceCategory
+    * User-defined property set by Intune to automatically add devices to groups and simplify managing devices.
+    *
+    * @param string $val The deviceCategory
+    *
+    * @return Device
+    */
+    public function setDeviceCategory($val)
+    {
+        $this->_propDict["deviceCategory"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the deviceId
     * Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith).
     *
@@ -208,6 +237,35 @@ class Device extends DirectoryObject
     }
 
     /**
+    * Gets the deviceOwnership
+    * Ownership of the device. This property is set by Intune. Possible values are: unknown, company, personal.
+    *
+    * @return string|null The deviceOwnership
+    */
+    public function getDeviceOwnership()
+    {
+        if (array_key_exists("deviceOwnership", $this->_propDict)) {
+            return $this->_propDict["deviceOwnership"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the deviceOwnership
+    * Ownership of the device. This property is set by Intune. Possible values are: unknown, company, personal.
+    *
+    * @param string $val The deviceOwnership
+    *
+    * @return Device
+    */
+    public function setDeviceOwnership($val)
+    {
+        $this->_propDict["deviceOwnership"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the deviceVersion
     * For internal use only.
     *
@@ -262,6 +320,35 @@ class Device extends DirectoryObject
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the enrollmentProfileName
+    * Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. This property is set by Intune.
+    *
+    * @return string|null The enrollmentProfileName
+    */
+    public function getEnrollmentProfileName()
+    {
+        if (array_key_exists("enrollmentProfileName", $this->_propDict)) {
+            return $this->_propDict["enrollmentProfileName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the enrollmentProfileName
+    * Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. This property is set by Intune.
+    *
+    * @param string $val The enrollmentProfileName
+    *
+    * @return Device
+    */
+    public function setEnrollmentProfileName($val)
+    {
+        $this->_propDict["enrollmentProfileName"] = $val;
         return $this;
     }
 
@@ -527,6 +614,39 @@ class Device extends DirectoryObject
     public function setProfileType($val)
     {
         $this->_propDict["profileType"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the registrationDateTime
+    * Date and time of when the device was registered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+    *
+    * @return \DateTime|null The registrationDateTime
+    */
+    public function getRegistrationDateTime()
+    {
+        if (array_key_exists("registrationDateTime", $this->_propDict)) {
+            if (is_a($this->_propDict["registrationDateTime"], "\DateTime") || is_null($this->_propDict["registrationDateTime"])) {
+                return $this->_propDict["registrationDateTime"];
+            } else {
+                $this->_propDict["registrationDateTime"] = new \DateTime($this->_propDict["registrationDateTime"]);
+                return $this->_propDict["registrationDateTime"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the registrationDateTime
+    * Date and time of when the device was registered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+    *
+    * @param \DateTime $val The registrationDateTime
+    *
+    * @return Device
+    */
+    public function setRegistrationDateTime($val)
+    {
+        $this->_propDict["registrationDateTime"] = $val;
         return $this;
     }
 
