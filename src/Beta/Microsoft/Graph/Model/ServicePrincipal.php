@@ -767,7 +767,7 @@ class ServicePrincipal extends DirectoryObject
 
     /**
     * Gets the preferredTokenSigningKeyEndDateTime
-    * Specifies the expiration date of the keyCredential used for token signing, marked by preferredTokenSigningKeyThumbprint.
+    * Specifies the expiration date of the keyCredential used for token signing, marked by preferredTokenSigningKeyThumbprint. Updating this attribute is not currentlysupported. For details, see ServicePrincipal property differences.
     *
     * @return \DateTime|null The preferredTokenSigningKeyEndDateTime
     */
@@ -786,7 +786,7 @@ class ServicePrincipal extends DirectoryObject
 
     /**
     * Sets the preferredTokenSigningKeyEndDateTime
-    * Specifies the expiration date of the keyCredential used for token signing, marked by preferredTokenSigningKeyThumbprint.
+    * Specifies the expiration date of the keyCredential used for token signing, marked by preferredTokenSigningKeyThumbprint. Updating this attribute is not currentlysupported. For details, see ServicePrincipal property differences.
     *
     * @param \DateTime $val The preferredTokenSigningKeyEndDateTime
     *

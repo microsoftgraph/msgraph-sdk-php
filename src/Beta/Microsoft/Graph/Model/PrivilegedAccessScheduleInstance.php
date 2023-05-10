@@ -26,6 +26,7 @@ class PrivilegedAccessScheduleInstance extends Entity
 {
     /**
     * Gets the endDateTime
+    * When the schedule instance ends. Required.
     *
     * @return \DateTime|null The endDateTime
     */
@@ -44,6 +45,7 @@ class PrivilegedAccessScheduleInstance extends Entity
 
     /**
     * Sets the endDateTime
+    * When the schedule instance ends. Required.
     *
     * @param \DateTime $val The endDateTime
     *
@@ -57,6 +59,7 @@ class PrivilegedAccessScheduleInstance extends Entity
 
     /**
     * Gets the startDateTime
+    * When this instance starts. Required.
     *
     * @return \DateTime|null The startDateTime
     */
@@ -75,6 +78,7 @@ class PrivilegedAccessScheduleInstance extends Entity
 
     /**
     * Sets the startDateTime
+    * When this instance starts. Required.
     *
     * @param \DateTime $val The startDateTime
     *

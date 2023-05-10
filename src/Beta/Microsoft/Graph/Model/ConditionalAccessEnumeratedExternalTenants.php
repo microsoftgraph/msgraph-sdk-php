@@ -25,7 +25,7 @@ class ConditionalAccessEnumeratedExternalTenants extends ConditionalAccessExtern
 {
     /**
     * Gets the members
-    * Represents a collection of tenant ids in the scope of Conditional Access for guests and external users policy targeting.
+    * A collection of tenant IDs that define the scope of a policy targeting conditional access for guests and external users.
     *
     * @return string|null The members
     */
@@ -40,7 +40,7 @@ class ConditionalAccessEnumeratedExternalTenants extends ConditionalAccessExtern
 
     /**
     * Sets the members
-    * Represents a collection of tenant ids in the scope of Conditional Access for guests and external users policy targeting.
+    * A collection of tenant IDs that define the scope of a policy targeting conditional access for guests and external users.
     *
     * @param string $val The value of the members
     *

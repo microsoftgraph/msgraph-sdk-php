@@ -53,4 +53,32 @@ class EducationAssignmentSettings extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the gradingCategories
+     *
+     * @return array|null The gradingCategories
+     */
+    public function getGradingCategories()
+    {
+        if (array_key_exists("gradingCategories", $this->_propDict)) {
+           return $this->_propDict["gradingCategories"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the gradingCategories
+    *
+    * @param EducationGradingCategory[] $val The gradingCategories
+    *
+    * @return EducationAssignmentSettings
+    */
+    public function setGradingCategories($val)
+    {
+        $this->_propDict["gradingCategories"] = $val;
+        return $this;
+    }
+
 }

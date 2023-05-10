@@ -195,6 +195,37 @@ class UnifiedRbacResourceAction extends Entity
     }
 
     /**
+    * Gets the authenticationContext
+    *
+    * @return AuthenticationContextClassReference|null The authenticationContext
+    */
+    public function getAuthenticationContext()
+    {
+        if (array_key_exists("authenticationContext", $this->_propDict)) {
+            if (is_a($this->_propDict["authenticationContext"], "\Beta\Microsoft\Graph\Model\AuthenticationContextClassReference") || is_null($this->_propDict["authenticationContext"])) {
+                return $this->_propDict["authenticationContext"];
+            } else {
+                $this->_propDict["authenticationContext"] = new AuthenticationContextClassReference($this->_propDict["authenticationContext"]);
+                return $this->_propDict["authenticationContext"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the authenticationContext
+    *
+    * @param AuthenticationContextClassReference $val The authenticationContext
+    *
+    * @return UnifiedRbacResourceAction
+    */
+    public function setAuthenticationContext($val)
+    {
+        $this->_propDict["authenticationContext"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the resourceScope
     *
     * @return UnifiedRbacResourceScope|null The resourceScope

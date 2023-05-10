@@ -183,6 +183,7 @@ class MembershipOutlierInsight extends GovernanceInsight
 
     /**
     * Gets the lastModifiedBy
+    * Navigation link to a member object who modified the record. For example, to a user.
     *
     * @return User|null The lastModifiedBy
     */
@@ -201,6 +202,7 @@ class MembershipOutlierInsight extends GovernanceInsight
 
     /**
     * Sets the lastModifiedBy
+    * Navigation link to a member object who modified the record. For example, to a user.
     *
     * @param User $val The lastModifiedBy
     *

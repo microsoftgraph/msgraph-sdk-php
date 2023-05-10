@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* Identity File
+* EducationGradingCategory File
 * PHP version 7
 *
 * @category  Library
@@ -12,8 +12,9 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
+
 /**
-* Identity class
+* EducationGradingCategory class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,11 +22,10 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class Identity extends Entity
+class EducationGradingCategory extends Entity
 {
     /**
     * Gets the displayName
-    * The display name of the identity. This property is read-only.
     *
     * @return string|null The displayName
     */
@@ -40,43 +40,42 @@ class Identity extends Entity
 
     /**
     * Sets the displayName
-    * The display name of the identity. This property is read-only.
     *
-    * @param string $val The value of the displayName
+    * @param string $val The displayName
     *
-    * @return Identity
+    * @return EducationGradingCategory
     */
     public function setDisplayName($val)
     {
         $this->_propDict["displayName"] = $val;
         return $this;
     }
+
     /**
-    * Gets the id
-    * The identifier of the identity. This property is read-only.
+    * Gets the percentageWeight
     *
-    * @return string|null The id
+    * @return int|null The percentageWeight
     */
-    public function getId()
+    public function getPercentageWeight()
     {
-        if (array_key_exists("id", $this->_propDict)) {
-            return $this->_propDict["id"];
+        if (array_key_exists("percentageWeight", $this->_propDict)) {
+            return $this->_propDict["percentageWeight"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the id
-    * The identifier of the identity. This property is read-only.
+    * Sets the percentageWeight
     *
-    * @param string $val The value of the id
+    * @param int $val The percentageWeight
     *
-    * @return Identity
+    * @return EducationGradingCategory
     */
-    public function setId($val)
+    public function setPercentageWeight($val)
     {
-        $this->_propDict["id"] = $val;
+        $this->_propDict["percentageWeight"] = intval($val);
         return $this;
     }
+
 }
