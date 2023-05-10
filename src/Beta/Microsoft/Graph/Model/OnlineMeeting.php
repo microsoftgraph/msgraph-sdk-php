@@ -178,6 +178,33 @@ class OnlineMeeting extends Entity
     }
 
     /**
+    * Gets the allowRecording
+    *
+    * @return bool|null The allowRecording
+    */
+    public function getAllowRecording()
+    {
+        if (array_key_exists("allowRecording", $this->_propDict)) {
+            return $this->_propDict["allowRecording"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the allowRecording
+    *
+    * @param bool $val The allowRecording
+    *
+    * @return OnlineMeeting
+    */
+    public function setAllowRecording($val)
+    {
+        $this->_propDict["allowRecording"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the allowTeamworkReactions
     * Indicates if Teams reactions are enabled for the meeting.
     *
@@ -203,6 +230,33 @@ class OnlineMeeting extends Entity
     public function setAllowTeamworkReactions($val)
     {
         $this->_propDict["allowTeamworkReactions"] = boolval($val);
+        return $this;
+    }
+
+    /**
+    * Gets the allowTranscription
+    *
+    * @return bool|null The allowTranscription
+    */
+    public function getAllowTranscription()
+    {
+        if (array_key_exists("allowTranscription", $this->_propDict)) {
+            return $this->_propDict["allowTranscription"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the allowTranscription
+    *
+    * @param bool $val The allowTranscription
+    *
+    * @return OnlineMeeting
+    */
+    public function setAllowTranscription($val)
+    {
+        $this->_propDict["allowTranscription"] = boolval($val);
         return $this;
     }
 

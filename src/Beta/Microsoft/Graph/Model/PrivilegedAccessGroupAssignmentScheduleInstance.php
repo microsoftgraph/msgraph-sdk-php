@@ -26,6 +26,7 @@ class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedAccessSc
 {
     /**
     * Gets the accessId
+    * The identifier of the membership or ownership assignment relationship to the group. Required. The possible values are: owner, member,  unknownFutureValue.
     *
     * @return PrivilegedAccessGroupRelationships|null The accessId
     */
@@ -44,6 +45,7 @@ class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedAccessSc
 
     /**
     * Sets the accessId
+    * The identifier of the membership or ownership assignment relationship to the group. Required. The possible values are: owner, member,  unknownFutureValue.
     *
     * @param PrivilegedAccessGroupRelationships $val The accessId
     *
@@ -57,6 +59,7 @@ class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedAccessSc
 
     /**
     * Gets the assignmentScheduleId
+    * The identifier of the privilegedAccessGroupAssignmentSchedule from which this instance was created. Required.
     *
     * @return string|null The assignmentScheduleId
     */
@@ -71,6 +74,7 @@ class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedAccessSc
 
     /**
     * Sets the assignmentScheduleId
+    * The identifier of the privilegedAccessGroupAssignmentSchedule from which this instance was created. Required.
     *
     * @param string $val The assignmentScheduleId
     *
@@ -84,6 +88,7 @@ class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedAccessSc
 
     /**
     * Gets the assignmentType
+    * Indicates whether the membership or ownership assignment is granted through activation of an eligibility or through direct assignment. Required. The possible values are: assigned, activated, unknownFutureValue.
     *
     * @return PrivilegedAccessGroupAssignmentType|null The assignmentType
     */
@@ -102,6 +107,7 @@ class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedAccessSc
 
     /**
     * Sets the assignmentType
+    * Indicates whether the membership or ownership assignment is granted through activation of an eligibility or through direct assignment. Required. The possible values are: assigned, activated, unknownFutureValue.
     *
     * @param PrivilegedAccessGroupAssignmentType $val The assignmentType
     *
@@ -115,6 +121,7 @@ class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedAccessSc
 
     /**
     * Gets the groupId
+    * The identifier of the group representing the scope of the membership or ownership assignment through PIM for groups. Optional.
     *
     * @return string|null The groupId
     */
@@ -129,6 +136,7 @@ class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedAccessSc
 
     /**
     * Sets the groupId
+    * The identifier of the group representing the scope of the membership or ownership assignment through PIM for groups. Optional.
     *
     * @param string $val The groupId
     *
@@ -142,6 +150,7 @@ class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedAccessSc
 
     /**
     * Gets the memberType
+    * Indicates whether the assignment is derived from a group assignment. It can further imply whether the caller can manage the assignment schedule. Required. The possible values are: direct, group, unknownFutureValue.
     *
     * @return PrivilegedAccessGroupMemberType|null The memberType
     */
@@ -160,6 +169,7 @@ class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedAccessSc
 
     /**
     * Sets the memberType
+    * Indicates whether the assignment is derived from a group assignment. It can further imply whether the caller can manage the assignment schedule. Required. The possible values are: direct, group, unknownFutureValue.
     *
     * @param PrivilegedAccessGroupMemberType $val The memberType
     *
@@ -173,6 +183,7 @@ class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedAccessSc
 
     /**
     * Gets the principalId
+    * The identifier of the principal whose membership or ownership assignment to the group is managed through PIM for groups. Required.
     *
     * @return string|null The principalId
     */
@@ -187,6 +198,7 @@ class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedAccessSc
 
     /**
     * Sets the principalId
+    * The identifier of the principal whose membership or ownership assignment to the group is managed through PIM for groups. Required.
     *
     * @param string $val The principalId
     *
@@ -200,6 +212,7 @@ class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedAccessSc
 
     /**
     * Gets the activatedUsing
+    * When the request activates a membership or ownership in PIM for groups, this object represents the eligibility request for the group. Otherwise, it is null.
     *
     * @return PrivilegedAccessGroupEligibilityScheduleInstance|null The activatedUsing
     */
@@ -218,6 +231,7 @@ class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedAccessSc
 
     /**
     * Sets the activatedUsing
+    * When the request activates a membership or ownership in PIM for groups, this object represents the eligibility request for the group. Otherwise, it is null.
     *
     * @param PrivilegedAccessGroupEligibilityScheduleInstance $val The activatedUsing
     *
@@ -231,6 +245,7 @@ class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedAccessSc
 
     /**
     * Gets the group
+    * References the group that is the scope of the membership or ownership assignment through PIM for groups. Supports $expand.
     *
     * @return Group|null The group
     */
@@ -249,6 +264,7 @@ class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedAccessSc
 
     /**
     * Sets the group
+    * References the group that is the scope of the membership or ownership assignment through PIM for groups. Supports $expand.
     *
     * @param Group $val The group
     *
@@ -262,6 +278,7 @@ class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedAccessSc
 
     /**
     * Gets the principal
+    * References the principal that's in the scope of the membership or ownership assignment request through the group that's governed by PIM. Supports $expand.
     *
     * @return DirectoryObject|null The principal
     */
@@ -280,6 +297,7 @@ class PrivilegedAccessGroupAssignmentScheduleInstance extends PrivilegedAccessSc
 
     /**
     * Sets the principal
+    * References the principal that's in the scope of the membership or ownership assignment request through the group that's governed by PIM. Supports $expand.
     *
     * @param DirectoryObject $val The principal
     *

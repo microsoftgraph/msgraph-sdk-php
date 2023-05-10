@@ -59,7 +59,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
 
     /**
     * Gets the applicability
-    * Details which device setting is applicable on. Supports: $filters.
+    * Details which device setting is applicable on
     *
     * @return DeviceManagementConfigurationSettingApplicability|null The applicability
     */
@@ -78,7 +78,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
 
     /**
     * Sets the applicability
-    * Details which device setting is applicable on. Supports: $filters.
+    * Details which device setting is applicable on
     *
     * @param DeviceManagementConfigurationSettingApplicability $val The applicability
     *
@@ -121,7 +121,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
 
     /**
     * Gets the categoryId
-    * Specify category in which the setting is under. Support $filters.
+    * Specifies the area group under which the setting is configured in a specified configuration service provider (CSP)
     *
     * @return string|null The categoryId
     */
@@ -136,7 +136,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
 
     /**
     * Sets the categoryId
-    * Specify category in which the setting is under. Support $filters.
+    * Specifies the area group under which the setting is configured in a specified configuration service provider (CSP)
     *
     * @param string $val The categoryId
     *
@@ -150,7 +150,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
 
     /**
     * Gets the description
-    * Description of the setting.
+    * Description of the item
     *
     * @return string|null The description
     */
@@ -165,7 +165,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
 
     /**
     * Sets the description
-    * Description of the setting.
+    * Description of the item
     *
     * @param string $val The description
     *
@@ -179,7 +179,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
 
     /**
     * Gets the displayName
-    * Name of the setting. For example: Allow Toast.
+    * Display name of the item
     *
     * @return string|null The displayName
     */
@@ -194,7 +194,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
 
     /**
     * Sets the displayName
-    * Name of the setting. For example: Allow Toast.
+    * Display name of the item
     *
     * @param string $val The displayName
     *
@@ -208,7 +208,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
 
     /**
     * Gets the helpText
-    * Help text of the setting. Give more details of the setting.
+    * Help text of the item
     *
     * @return string|null The helpText
     */
@@ -223,7 +223,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
 
     /**
     * Sets the helpText
-    * Help text of the setting. Give more details of the setting.
+    * Help text of the item
     *
     * @param string $val The helpText
     *
@@ -237,7 +237,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
 
     /**
     * Gets the infoUrls
-    * List of links more info for the setting can be found at.
+    * List of links more info for the setting can be found at
     *
     * @return array|null The infoUrls
     */
@@ -252,7 +252,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
 
     /**
     * Sets the infoUrls
-    * List of links more info for the setting can be found at.
+    * List of links more info for the setting can be found at
     *
     * @param string[] $val The infoUrls
     *
@@ -416,7 +416,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
 
     /**
     * Gets the rootDefinitionId
-    * Root setting definition id if the setting is a child setting.
+    * Root setting definition if the setting is a child setting.
     *
     * @return string|null The rootDefinitionId
     */
@@ -431,7 +431,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
 
     /**
     * Sets the rootDefinitionId
-    * Root setting definition id if the setting is a child setting.
+    * Root setting definition if the setting is a child setting.
     *
     * @param string $val The rootDefinitionId
     *
@@ -445,7 +445,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
 
     /**
     * Gets the settingUsage
-    * Indicate setting type for the setting. Possible values are: configuration, compliance, reusableSetting. Each setting usage has separate API end-point to call. Possible values are: none, configuration, compliance, unknownFutureValue.
+    * Setting type, for example, configuration and compliance. Possible values are: none, configuration, compliance.
     *
     * @return DeviceManagementConfigurationSettingUsage|null The settingUsage
     */
@@ -464,7 +464,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
 
     /**
     * Sets the settingUsage
-    * Indicate setting type for the setting. Possible values are: configuration, compliance, reusableSetting. Each setting usage has separate API end-point to call. Possible values are: none, configuration, compliance, unknownFutureValue.
+    * Setting type, for example, configuration and compliance. Possible values are: none, configuration, compliance.
     *
     * @param DeviceManagementConfigurationSettingUsage $val The settingUsage
     *
@@ -478,7 +478,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
 
     /**
     * Gets the uxBehavior
-    * Setting control type representation in the UX. Possible values are: default, dropdown, smallTextBox, largeTextBox, toggle, multiheaderGrid, contextPane. Possible values are: default, dropdown, smallTextBox, largeTextBox, toggle, multiheaderGrid, contextPane, unknownFutureValue.
+    * Setting control type representation in the UX. Possible values are: default, dropdown, smallTextBox, largeTextBox, toggle, multiheaderGrid, contextPane.
     *
     * @return DeviceManagementConfigurationControlType|null The uxBehavior
     */
@@ -497,7 +497,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
 
     /**
     * Sets the uxBehavior
-    * Setting control type representation in the UX. Possible values are: default, dropdown, smallTextBox, largeTextBox, toggle, multiheaderGrid, contextPane. Possible values are: default, dropdown, smallTextBox, largeTextBox, toggle, multiheaderGrid, contextPane, unknownFutureValue.
+    * Setting control type representation in the UX. Possible values are: default, dropdown, smallTextBox, largeTextBox, toggle, multiheaderGrid, contextPane.
     *
     * @param DeviceManagementConfigurationControlType $val The uxBehavior
     *
@@ -540,7 +540,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
 
     /**
     * Gets the visibility
-    * Setting visibility scope to UX. Possible values are: none, settingsCatalog, template. Possible values are: none, settingsCatalog, template, unknownFutureValue.
+    * Setting visibility scope to UX. Possible values are: none, settingsCatalog, template.
     *
     * @return DeviceManagementConfigurationSettingVisibility|null The visibility
     */
@@ -559,7 +559,7 @@ class DeviceManagementConfigurationSettingDefinition extends Entity
 
     /**
     * Sets the visibility
-    * Setting visibility scope to UX. Possible values are: none, settingsCatalog, template. Possible values are: none, settingsCatalog, template, unknownFutureValue.
+    * Setting visibility scope to UX. Possible values are: none, settingsCatalog, template.
     *
     * @param DeviceManagementConfigurationSettingVisibility $val The visibility
     *

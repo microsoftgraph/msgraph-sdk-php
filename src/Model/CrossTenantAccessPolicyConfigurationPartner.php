@@ -310,6 +310,37 @@ class CrossTenantAccessPolicyConfigurationPartner implements \JsonSerializable
     }
 
     /**
+    * Gets the identitySynchronization
+    *
+    * @return CrossTenantIdentitySyncPolicyPartner|null The identitySynchronization
+    */
+    public function getIdentitySynchronization()
+    {
+        if (array_key_exists("identitySynchronization", $this->_propDict)) {
+            if (is_a($this->_propDict["identitySynchronization"], "\Microsoft\Graph\Model\CrossTenantIdentitySyncPolicyPartner") || is_null($this->_propDict["identitySynchronization"])) {
+                return $this->_propDict["identitySynchronization"];
+            } else {
+                $this->_propDict["identitySynchronization"] = new CrossTenantIdentitySyncPolicyPartner($this->_propDict["identitySynchronization"]);
+                return $this->_propDict["identitySynchronization"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the identitySynchronization
+    *
+    * @param CrossTenantIdentitySyncPolicyPartner $val The identitySynchronization
+    *
+    * @return CrossTenantAccessPolicyConfigurationPartner
+    */
+    public function setIdentitySynchronization($val)
+    {
+        $this->_propDict["identitySynchronization"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the ODataType
     *
     * @return string|null The ODataType

@@ -26,7 +26,7 @@ class ConditionalAccessExternalTenants extends Entity
 
     /**
     * Gets the membershipKind
-    * Represents the membership kind. The possible values are: all, enumerated, unknownFutureValue. enumerated references an object of conditionalAccessEnumeratedExternalTenants derived type.
+    * The membership kind. Possible values are: all, enumerated, unknownFutureValue. The enumerated member references an conditionalAccessEnumeratedExternalTenants object.
     *
     * @return ConditionalAccessExternalTenantsMembershipKind|null The membershipKind
     */
@@ -45,7 +45,7 @@ class ConditionalAccessExternalTenants extends Entity
 
     /**
     * Sets the membershipKind
-    * Represents the membership kind. The possible values are: all, enumerated, unknownFutureValue. enumerated references an object of conditionalAccessEnumeratedExternalTenants derived type.
+    * The membership kind. Possible values are: all, enumerated, unknownFutureValue. The enumerated member references an conditionalAccessEnumeratedExternalTenants object.
     *
     * @param ConditionalAccessExternalTenantsMembershipKind $val The value to assign to the membershipKind
     *

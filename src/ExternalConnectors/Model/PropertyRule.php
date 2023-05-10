@@ -11,7 +11,7 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\ExternalConnectors\Model;
+namespace Microsoft\Graph\ExternalConnectors\Model;
 /**
 * PropertyRule class
 *
@@ -21,7 +21,7 @@ namespace Beta\Microsoft\Graph\ExternalConnectors\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class PropertyRule extends \Beta\Microsoft\Graph\Model\Entity
+class PropertyRule extends \Microsoft\Graph\Model\Entity
 {
 
     /**
@@ -33,7 +33,7 @@ class PropertyRule extends \Beta\Microsoft\Graph\Model\Entity
     public function getOperation()
     {
         if (array_key_exists("operation", $this->_propDict)) {
-            if (is_a($this->_propDict["operation"], "\Beta\Microsoft\Graph\ExternalConnectors\Model\RuleOperation") || is_null($this->_propDict["operation"])) {
+            if (is_a($this->_propDict["operation"], "\Microsoft\Graph\ExternalConnectors\Model\RuleOperation") || is_null($this->_propDict["operation"])) {
                 return $this->_propDict["operation"];
             } else {
                 $this->_propDict["operation"] = new RuleOperation($this->_propDict["operation"]);
@@ -117,15 +117,15 @@ class PropertyRule extends \Beta\Microsoft\Graph\Model\Entity
     * Gets the valuesJoinedBy
     * The join operator for evaluating multiple propertyRules. For example, if and is specified, then all propertyRules must be true for the propertyRule to be true. Possible values are: or, and. Required.
     *
-    * @return \Beta\Microsoft\Graph\Model\BinaryOperator|null The valuesJoinedBy
+    * @return \Microsoft\Graph\Model\BinaryOperator|null The valuesJoinedBy
     */
     public function getValuesJoinedBy()
     {
         if (array_key_exists("valuesJoinedBy", $this->_propDict)) {
-            if (is_a($this->_propDict["valuesJoinedBy"], "\Beta\Microsoft\Graph\Model\BinaryOperator") || is_null($this->_propDict["valuesJoinedBy"])) {
+            if (is_a($this->_propDict["valuesJoinedBy"], "\Microsoft\Graph\Model\BinaryOperator") || is_null($this->_propDict["valuesJoinedBy"])) {
                 return $this->_propDict["valuesJoinedBy"];
             } else {
-                $this->_propDict["valuesJoinedBy"] = new \Beta\Microsoft\Graph\Model\BinaryOperator($this->_propDict["valuesJoinedBy"]);
+                $this->_propDict["valuesJoinedBy"] = new \Microsoft\Graph\Model\BinaryOperator($this->_propDict["valuesJoinedBy"]);
                 return $this->_propDict["valuesJoinedBy"];
             }
         }
@@ -136,7 +136,7 @@ class PropertyRule extends \Beta\Microsoft\Graph\Model\Entity
     * Sets the valuesJoinedBy
     * The join operator for evaluating multiple propertyRules. For example, if and is specified, then all propertyRules must be true for the propertyRule to be true. Possible values are: or, and. Required.
     *
-    * @param \Beta\Microsoft\Graph\Model\BinaryOperator $val The value to assign to the valuesJoinedBy
+    * @param \Microsoft\Graph\Model\BinaryOperator $val The value to assign to the valuesJoinedBy
     *
     * @return PropertyRule The PropertyRule
     */

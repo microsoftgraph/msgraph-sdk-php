@@ -117,6 +117,34 @@ class RoleManagement implements \JsonSerializable
         return $this;
     }
 
+
+     /**
+     * Gets the enterpriseApps
+     *
+     * @return array|null The enterpriseApps
+     */
+    public function getEnterpriseApps()
+    {
+        if (array_key_exists("enterpriseApps", $this->_propDict)) {
+           return $this->_propDict["enterpriseApps"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the enterpriseApps
+    *
+    * @param RbacApplication[] $val The enterpriseApps
+    *
+    * @return RoleManagement
+    */
+    public function setEnterpriseApps($val)
+    {
+        $this->_propDict["enterpriseApps"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the exchange
     *
