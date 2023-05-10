@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\AdministrativeUnits\Item\Members\I
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Delete ref of navigation property members for directory
+ * Use this API to remove a member (user, group, or device) from an administrative unit.
 */
 class RefRequestBuilderDeleteQueryParameters 
 {

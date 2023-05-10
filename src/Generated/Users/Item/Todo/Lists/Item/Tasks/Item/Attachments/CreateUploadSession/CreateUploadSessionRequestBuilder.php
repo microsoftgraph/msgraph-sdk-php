@@ -32,10 +32,11 @@ class CreateUploadSessionRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action createUploadSession
+     * Create an upload session to iteratively upload ranges of a file as an attachment to a todoTask. As part of the response, this action returns an upload URL that you can use in subsequent sequential `PUT` queries. The request headers for each `PUT` operation let you specify the exact range of bytes to be uploaded. This allows the transfer to be resumed, in case the network connection is dropped during the upload. The following are the steps to attach a file to a Microsoft To Do task using an upload session: For an example that describes the end-to-end attachment process, see attach files to a To Do task.
      * @param CreateUploadSessionPostRequestBody $body The request body
      * @param CreateUploadSessionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/taskfileattachment-createuploadsession?view=graph-rest-1.0 Find more info here
     */
     public function post(CreateUploadSessionPostRequestBody $body, ?CreateUploadSessionRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -51,7 +52,7 @@ class CreateUploadSessionRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action createUploadSession
+     * Create an upload session to iteratively upload ranges of a file as an attachment to a todoTask. As part of the response, this action returns an upload URL that you can use in subsequent sequential `PUT` queries. The request headers for each `PUT` operation let you specify the exact range of bytes to be uploaded. This allows the transfer to be resumed, in case the network connection is dropped during the upload. The following are the steps to attach a file to a Microsoft To Do task using an upload session: For an example that describes the end-to-end attachment process, see attach files to a To Do task.
      * @param CreateUploadSessionPostRequestBody $body The request body
      * @param CreateUploadSessionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

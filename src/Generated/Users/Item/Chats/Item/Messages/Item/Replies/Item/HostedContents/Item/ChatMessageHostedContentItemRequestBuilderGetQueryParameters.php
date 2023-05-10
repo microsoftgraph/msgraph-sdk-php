@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Chats\Item\Messages\Item\Replies\
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Content in a message hosted by Microsoft Teams - for example, images or code snippets.
+ * Retrieve the properties and relationships of chatMessageHostedContent object.
 */
 class ChatMessageHostedContentItemRequestBuilderGetQueryParameters 
 {

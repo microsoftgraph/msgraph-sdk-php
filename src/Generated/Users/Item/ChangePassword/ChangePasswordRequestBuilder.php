@@ -31,10 +31,11 @@ class ChangePasswordRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action changePassword
+     * Enable the user to update their password. Any user can update their password without belonging to any administrator role.
      * @param ChangePasswordPostRequestBody $body The request body
      * @param ChangePasswordRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/user-changepassword?view=graph-rest-1.0 Find more info here
     */
     public function post(ChangePasswordPostRequestBody $body, ?ChangePasswordRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class ChangePasswordRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action changePassword
+     * Enable the user to update their password. Any user can update their password without belonging to any administrator role.
      * @param ChangePasswordPostRequestBody $body The request body
      * @param ChangePasswordRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -40,9 +40,10 @@ class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Delete navigation property userAttributeAssignments for identity
+     * Delete an identityUserFlowAttributeAssignment object.
      * @param IdentityUserFlowAttributeAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/identityuserflowattributeassignment-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?IdentityUserFlowAttributeAssignmentItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -58,9 +59,10 @@ class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * The user attribute assignments included in the user flow.
+     * Read the properties and relationships of an identityUserFlowAttributeAssignment object.
      * @param IdentityUserFlowAttributeAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/identityuserflowattributeassignment-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?IdentityUserFlowAttributeAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,10 +78,11 @@ class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Update the navigation property userAttributeAssignments in identity
+     * Update the properties of a identityUserFlowAttributeAssignment object.
      * @param IdentityUserFlowAttributeAssignment $body The request body
      * @param IdentityUserFlowAttributeAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/identityuserflowattributeassignment-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(IdentityUserFlowAttributeAssignment $body, ?IdentityUserFlowAttributeAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -95,7 +98,7 @@ class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Delete navigation property userAttributeAssignments for identity
+     * Delete an identityUserFlowAttributeAssignment object.
      * @param IdentityUserFlowAttributeAssignmentItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,7 +115,7 @@ class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * The user attribute assignments included in the user flow.
+     * Read the properties and relationships of an identityUserFlowAttributeAssignment object.
      * @param IdentityUserFlowAttributeAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -133,7 +136,7 @@ class IdentityUserFlowAttributeAssignmentItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Update the navigation property userAttributeAssignments in identity
+     * Update the properties of a identityUserFlowAttributeAssignment object.
      * @param IdentityUserFlowAttributeAssignment $body The request body
      * @param IdentityUserFlowAttributeAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

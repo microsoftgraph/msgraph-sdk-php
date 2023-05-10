@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Onenote\Notebooks\Ite
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The sections in the section group. Read-only. Nullable.
+ * Retrieve a list of onenoteSection objects from the specified section group.
 */
 class SectionsRequestBuilderGetQueryParameters 
 {

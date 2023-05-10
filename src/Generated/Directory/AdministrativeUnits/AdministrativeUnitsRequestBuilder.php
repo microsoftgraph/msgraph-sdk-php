@@ -61,9 +61,10 @@ class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Conceptual container for user and group directory objects.
+     * Retrieve a list of administrativeUnit objects.
      * @param AdministrativeUnitsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/directory-list-administrativeunits?view=graph-rest-1.0 Find more info here
     */
     public function get(?AdministrativeUnitsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -79,10 +80,11 @@ class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to administrativeUnits for directory
+     * Use this API to create a new administrativeUnit.
      * @param AdministrativeUnit $body The request body
      * @param AdministrativeUnitsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/directory-post-administrativeunits?view=graph-rest-1.0 Find more info here
     */
     public function post(AdministrativeUnit $body, ?AdministrativeUnitsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -98,7 +100,7 @@ class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Conceptual container for user and group directory objects.
+     * Retrieve a list of administrativeUnit objects.
      * @param AdministrativeUnitsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -119,7 +121,7 @@ class AdministrativeUnitsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to administrativeUnits for directory
+     * Use this API to create a new administrativeUnit.
      * @param AdministrativeUnit $body The request body
      * @param AdministrativeUnitsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

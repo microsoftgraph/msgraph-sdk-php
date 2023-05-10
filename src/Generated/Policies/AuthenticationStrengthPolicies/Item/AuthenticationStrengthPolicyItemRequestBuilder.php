@@ -56,9 +56,10 @@ class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property authenticationStrengthPolicies for policies
+     * Delete a custom authenticationStrengthPolicy object.
      * @param AuthenticationStrengthPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/authenticationstrengthroot-delete-policies?view=graph-rest-1.0 Find more info here
     */
     public function delete(?AuthenticationStrengthPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -74,9 +75,10 @@ class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
+     * Read the properties and relationships of an authenticationStrengthPolicy object.
      * @param AuthenticationStrengthPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/authenticationstrengthpolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AuthenticationStrengthPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -92,10 +94,11 @@ class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property authenticationStrengthPolicies in policies
+     * Update the properties of an authenticationStrengthPolicy object. You cannot update the allowed auth method combinations using this request. To do so, use the Update allowed combinations action.
      * @param AuthenticationStrengthPolicy $body The request body
      * @param AuthenticationStrengthPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/authenticationstrengthpolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(AuthenticationStrengthPolicy $body, ?AuthenticationStrengthPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -111,7 +114,7 @@ class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property authenticationStrengthPolicies for policies
+     * Delete a custom authenticationStrengthPolicy object.
      * @param AuthenticationStrengthPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +131,7 @@ class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
+     * Read the properties and relationships of an authenticationStrengthPolicy object.
      * @param AuthenticationStrengthPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -149,7 +152,7 @@ class AuthenticationStrengthPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property authenticationStrengthPolicies in policies
+     * Update the properties of an authenticationStrengthPolicy object. You cannot update the allowed auth method combinations using this request. To do so, use the Update allowed combinations action.
      * @param AuthenticationStrengthPolicy $body The request body
      * @param AuthenticationStrengthPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

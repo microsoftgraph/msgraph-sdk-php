@@ -58,9 +58,10 @@ class ServiceHealthIssueItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * Retrieve the properties and relationships of a serviceHealthIssue object. This operation retrieves a specified service health issue for tenant. The operation returns an error if the issue does not exist for the tenant.
      * @param ServiceHealthIssueItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/servicehealthissue-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ServiceHealthIssueItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -112,7 +113,7 @@ class ServiceHealthIssueItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.
+     * Retrieve the properties and relationships of a serviceHealthIssue object. This operation retrieves a specified service health issue for tenant. The operation returns an error if the issue does not exist for the tenant.
      * @param ServiceHealthIssueItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

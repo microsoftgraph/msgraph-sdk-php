@@ -33,9 +33,10 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The claimsMappingPolicies assigned to this service principal. Supports $expand.
+     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/serviceprincipal-list-claimsmappingpolicies?view=graph-rest-1.0 Find more info here
     */
     public function get(?RefRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -51,10 +52,11 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property ref to claimsMappingPolicies for servicePrincipals
+     * Assign a claimsMappingPolicy to a servicePrincipal.
      * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/serviceprincipal-post-claimsmappingpolicies?view=graph-rest-1.0 Find more info here
     */
     public function post(ReferenceCreate $body, ?RefRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -70,7 +72,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The claimsMappingPolicies assigned to this service principal. Supports $expand.
+     * List the claimsMappingPolicy objects that are assigned to a servicePrincipal.
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -91,7 +93,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property ref to claimsMappingPolicies for servicePrincipals
+     * Assign a claimsMappingPolicy to a servicePrincipal.
      * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

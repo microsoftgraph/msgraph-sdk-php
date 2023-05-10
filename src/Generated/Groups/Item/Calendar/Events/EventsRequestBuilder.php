@@ -61,9 +61,10 @@ class EventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The events in the calendar. Navigation property. Read-only.
+     * Retrieve a list of events in a calendar. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. The list of events contains single instance meetings and series masters. To get expanded event instances, you can get the calendar view, or get the instances of an event.
      * @param EventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/calendar-list-events?view=graph-rest-1.0 Find more info here
     */
     public function get(?EventsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -79,10 +80,11 @@ class EventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to events for groups
+     * Use this API to create a new event in a calendar. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. 
      * @param Event $body The request body
      * @param EventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/calendar-post-events?view=graph-rest-1.0 Find more info here
     */
     public function post(Event $body, ?EventsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -98,7 +100,7 @@ class EventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The events in the calendar. Navigation property. Read-only.
+     * Retrieve a list of events in a calendar. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. The list of events contains single instance meetings and series masters. To get expanded event instances, you can get the calendar view, or get the instances of an event.
      * @param EventsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -119,7 +121,7 @@ class EventsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to events for groups
+     * Use this API to create a new event in a calendar. The calendar can be one for a user, or the default calendar of a Microsoft 365 group. 
      * @param Event $body The request body
      * @param EventsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

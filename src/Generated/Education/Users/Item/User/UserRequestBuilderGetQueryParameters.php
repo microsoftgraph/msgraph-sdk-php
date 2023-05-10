@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Users\Item\User;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The directory user that corresponds to this user.
+ * Retrieve the simple directory **user** that corresponds to this **educationUser**.
 */
 class UserRequestBuilderGetQueryParameters 
 {

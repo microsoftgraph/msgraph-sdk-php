@@ -31,9 +31,10 @@ class SupportedLanguagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function supportedLanguages
+     * Get the list of locales and languages that are supported for the user, as configured on the user's mailbox server. When setting up an Outlook client, the user selects the preferred language from this supported list. You can subsequently get the preferred language by getting the user's mailbox settings.
      * @param SupportedLanguagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/outlookuser-supportedlanguages?view=graph-rest-1.0 Find more info here
     */
     public function get(?SupportedLanguagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -49,7 +50,7 @@ class SupportedLanguagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function supportedLanguages
+     * Get the list of locales and languages that are supported for the user, as configured on the user's mailbox server. When setting up an Outlook client, the user selects the preferred language from this supported list. You can subsequently get the preferred language by getting the user's mailbox settings.
      * @param SupportedLanguagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

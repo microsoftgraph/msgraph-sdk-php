@@ -31,10 +31,11 @@ class ReplyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action reply
+     * Reply to a thread in a group conversation and add a new post to it. You can specify the parent conversation in the request, or, you can specify just the thread without the parent conversation.
      * @param ReplyPostRequestBody $body The request body
      * @param ReplyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/conversationthread-reply?view=graph-rest-1.0 Find more info here
     */
     public function post(ReplyPostRequestBody $body, ?ReplyRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class ReplyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action reply
+     * Reply to a thread in a group conversation and add a new post to it. You can specify the parent conversation in the request, or, you can specify just the thread without the parent conversation.
      * @param ReplyPostRequestBody $body The request body
      * @param ReplyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

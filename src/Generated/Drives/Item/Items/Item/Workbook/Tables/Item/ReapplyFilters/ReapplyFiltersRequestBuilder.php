@@ -31,9 +31,10 @@ class ReapplyFiltersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action reapplyFilters
+     * Reapplies all the filters currently on the table.
      * @param ReapplyFiltersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/table-reapplyfilters?view=graph-rest-1.0 Find more info here
     */
     public function post(?ReapplyFiltersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -49,7 +50,7 @@ class ReapplyFiltersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action reapplyFilters
+     * Reapplies all the filters currently on the table.
      * @param ReapplyFiltersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

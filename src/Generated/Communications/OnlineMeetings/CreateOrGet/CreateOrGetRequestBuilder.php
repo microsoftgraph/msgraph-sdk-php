@@ -32,10 +32,11 @@ class CreateOrGetRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action createOrGet
+     * Create an onlineMeeting object with a custom specified external ID. If the external ID already exists, this API will return the onlineMeeting object with that external ID. 
      * @param CreateOrGetPostRequestBody $body The request body
      * @param CreateOrGetRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/onlinemeeting-createorget?view=graph-rest-1.0 Find more info here
     */
     public function post(CreateOrGetPostRequestBody $body, ?CreateOrGetRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -51,7 +52,7 @@ class CreateOrGetRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action createOrGet
+     * Create an onlineMeeting object with a custom specified external ID. If the external ID already exists, this API will return the onlineMeeting object with that external ID. 
      * @param CreateOrGetPostRequestBody $body The request body
      * @param CreateOrGetRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

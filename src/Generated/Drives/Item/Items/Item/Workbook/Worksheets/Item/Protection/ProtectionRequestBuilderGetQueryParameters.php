@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Returns sheet protection object for a worksheet. Read-only.
+ * Retrieve the properties and relationships of worksheetprotection object.
 */
 class ProtectionRequestBuilderGetQueryParameters 
 {

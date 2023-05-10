@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Sites\Item\Lists\Item\Items\Item\DocumentSet
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Version information for a document set version created by a user.
+ * Read the properties and relationships of a documentSetVersion object.
 */
 class DocumentSetVersionItemRequestBuilderGetQueryParameters 
 {

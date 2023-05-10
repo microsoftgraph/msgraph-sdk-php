@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Collection of tables that are part of the worksheet. Read-only.
+ * Retrieve a list of table objects.
 */
 class TablesRequestBuilderGetQueryParameters 
 {

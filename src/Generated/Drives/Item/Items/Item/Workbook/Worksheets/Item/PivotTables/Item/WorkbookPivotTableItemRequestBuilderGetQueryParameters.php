@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Worksheets\I
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Collection of PivotTables that are part of the worksheet.
+ * Retrieve the properties and relationships of workbookPivotTable object.
 */
 class WorkbookPivotTableItemRequestBuilderGetQueryParameters 
 {

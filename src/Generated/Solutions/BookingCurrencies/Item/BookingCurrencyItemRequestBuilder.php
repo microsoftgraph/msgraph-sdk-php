@@ -50,9 +50,10 @@ class BookingCurrencyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get bookingCurrencies from solutions
+     * Get the properties of a bookingCurrency object that is available to a Microsoft Bookings business. Use the **id** property, which is the currency code, to specify the currency.
      * @param BookingCurrencyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/bookingcurrency-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?BookingCurrencyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -104,7 +105,7 @@ class BookingCurrencyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get bookingCurrencies from solutions
+     * Get the properties of a bookingCurrency object that is available to a Microsoft Bookings business. Use the **id** property, which is the currency code, to specify the currency.
      * @param BookingCurrencyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

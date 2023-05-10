@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Schools\Item\AdministrativeUnit;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The underlying administrativeUnit for this school.
+ * Get a list of **administrativeUnits** associated with an educationSchool object.
 */
 class AdministrativeUnitRequestBuilderGetQueryParameters 
 {

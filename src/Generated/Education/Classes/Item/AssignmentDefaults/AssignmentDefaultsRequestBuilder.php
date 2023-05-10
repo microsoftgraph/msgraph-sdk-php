@@ -50,9 +50,10 @@ class AssignmentDefaultsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Specifies class-level defaults respected by new assignments created in the class.
+     * Read the properties and relationships of an educationAssignmentDefaults object.  These are the class-level assignment defaults respected by new assignments created in the class. Callers can continue to specify custom values on each **assignment** creation if they don't want the default behaviors. Only teachers can perform this operation.
      * @param AssignmentDefaultsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/educationassignmentdefaults-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AssignmentDefaultsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,10 +69,11 @@ class AssignmentDefaultsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property assignmentDefaults in education
+     * Update the properties of an educationAssignmentDefaults object. Only teachers can update these settings.
      * @param EducationAssignmentDefaults $body The request body
      * @param AssignmentDefaultsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/educationassignmentdefaults-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(EducationAssignmentDefaults $body, ?AssignmentDefaultsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -104,7 +106,7 @@ class AssignmentDefaultsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Specifies class-level defaults respected by new assignments created in the class.
+     * Read the properties and relationships of an educationAssignmentDefaults object.  These are the class-level assignment defaults respected by new assignments created in the class. Callers can continue to specify custom values on each **assignment** creation if they don't want the default behaviors. Only teachers can perform this operation.
      * @param AssignmentDefaultsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +127,7 @@ class AssignmentDefaultsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property assignmentDefaults in education
+     * Update the properties of an educationAssignmentDefaults object. Only teachers can update these settings.
      * @param EducationAssignmentDefaults $body The request body
      * @param AssignmentDefaultsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -32,9 +32,10 @@ class TotalRowRangeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function totalRowRange
+     * Gets the range object associated with the totals row of the column.
      * @param TotalRowRangeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/tablecolumn-totalrowrange?view=graph-rest-1.0 Find more info here
     */
     public function get(?TotalRowRangeRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class TotalRowRangeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function totalRowRange
+     * Gets the range object associated with the totals row of the column.
      * @param TotalRowRangeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -31,9 +31,10 @@ class CloseSessionRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action closeSession
+     * Use this API to close an existing workbook session.
      * @param CloseSessionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/workbook-closesession?view=graph-rest-1.0 Find more info here
     */
     public function post(?CloseSessionRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -49,7 +50,7 @@ class CloseSessionRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action closeSession
+     * Use this API to close an existing workbook session.
      * @param CloseSessionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

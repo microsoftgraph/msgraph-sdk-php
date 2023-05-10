@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\RoleManagement\Directory\RoleAssignmentSched
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Requests for active role assignments to principals through PIM.
+ * In PIM, read the details of a request for an active and persistent role assignment made through the unifiedRoleAssignmentScheduleRequest object.
 */
 class UnifiedRoleAssignmentScheduleRequestItemRequestBuilderGetQueryParameters 
 {

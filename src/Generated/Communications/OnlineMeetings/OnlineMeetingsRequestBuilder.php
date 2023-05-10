@@ -61,9 +61,10 @@ class OnlineMeetingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get onlineMeetings from communications
+     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions.
      * @param OnlineMeetingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/onlinemeeting-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?OnlineMeetingsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -98,7 +99,7 @@ class OnlineMeetingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get onlineMeetings from communications
+     * Retrieve the properties and relationships of an onlineMeeting object. For example, you can: Teams live event attendee report is an online meeting artifact. For details, see Online meeting artifacts and permissions.
      * @param OnlineMeetingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

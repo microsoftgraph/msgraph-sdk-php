@@ -79,6 +79,7 @@ class OwnedObjectsRequestBuilder extends BaseRequestBuilder
      * Directory objects that are owned by the user. Read-only. Nullable. Supports $expand.
      * @param OwnedObjectsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/user-list-ownedobjects?view=graph-rest-1.0 Find more info here
     */
     public function get(?OwnedObjectsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

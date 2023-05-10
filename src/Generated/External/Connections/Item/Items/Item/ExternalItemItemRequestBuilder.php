@@ -32,9 +32,10 @@ class ExternalItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property items for external
+     * Delete an externalItem object.
      * @param ExternalItemItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/externalconnectors-externalitem-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ExternalItemItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -50,9 +51,10 @@ class ExternalItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get items from external
+     * Read the properties and relationships of an externalItem object.
      * @param ExternalItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/externalconnectors-externalitem-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ExternalItemItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -87,7 +89,7 @@ class ExternalItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property items for external
+     * Delete an externalItem object.
      * @param ExternalItemItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +106,7 @@ class ExternalItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get items from external
+     * Read the properties and relationships of an externalItem object.
      * @param ExternalItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -53,9 +53,10 @@ class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The policy to control Azure AD authentication behavior for federated users.
+     * Get a list of homeRealmDiscoveryPolicy objects.
      * @param HomeRealmDiscoveryPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/homerealmdiscoverypolicy-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?HomeRealmDiscoveryPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to homeRealmDiscoveryPolicies for policies
+     * Create a new homeRealmDiscoveryPolicy object.
      * @param HomeRealmDiscoveryPolicy $body The request body
      * @param HomeRealmDiscoveryPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/homerealmdiscoverypolicy-post-homerealmdiscoverypolicies?view=graph-rest-1.0 Find more info here
     */
     public function post(HomeRealmDiscoveryPolicy $body, ?HomeRealmDiscoveryPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The policy to control Azure AD authentication behavior for federated users.
+     * Get a list of homeRealmDiscoveryPolicy objects.
      * @param HomeRealmDiscoveryPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class HomeRealmDiscoveryPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to homeRealmDiscoveryPolicies for policies
+     * Create a new homeRealmDiscoveryPolicy object.
      * @param HomeRealmDiscoveryPolicy $body The request body
      * @param HomeRealmDiscoveryPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

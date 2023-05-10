@@ -63,7 +63,7 @@ class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Approval stages for decisions associated with access package assignment requests.
+     * In Azure AD entitlement management, retrieve the properties of an approval object.  This call can be made by an approver, providing the identifier of the access package assignment request.
      * @param AccessPackageAssignmentApprovalsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -100,7 +100,7 @@ class AccessPackageAssignmentApprovalsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Approval stages for decisions associated with access package assignment requests.
+     * In Azure AD entitlement management, retrieve the properties of an approval object.  This call can be made by an approver, providing the identifier of the access package assignment request.
      * @param AccessPackageAssignmentApprovalsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

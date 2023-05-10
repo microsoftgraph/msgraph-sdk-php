@@ -53,7 +53,7 @@ class CalendarPermissionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The permissions of the users with whom the calendar is shared.
+     * Get the specified permissions object of a user or group calendar that has been shared.
      * @param CalendarPermissionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -71,10 +71,11 @@ class CalendarPermissionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to calendarPermissions for groups
+     * Create a calendarPermission resource to specify the identity and role of the user with whom the specified calendar is being shared or delegated.
      * @param CalendarPermission $body The request body
      * @param CalendarPermissionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/calendar-post-calendarpermissions?view=graph-rest-1.0 Find more info here
     */
     public function post(CalendarPermission $body, ?CalendarPermissionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +91,7 @@ class CalendarPermissionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The permissions of the users with whom the calendar is shared.
+     * Get the specified permissions object of a user or group calendar that has been shared.
      * @param CalendarPermissionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +112,7 @@ class CalendarPermissionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to calendarPermissions for groups
+     * Create a calendarPermission resource to specify the identity and role of the user with whom the specified calendar is being shared or delegated.
      * @param CalendarPermission $body The request body
      * @param CalendarPermissionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

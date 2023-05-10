@@ -53,9 +53,10 @@ class InstalledAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The apps installed in this team.
+     * Retrieve a list of apps installed in the specified team.
      * @param InstalledAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/team-list-installedapps?view=graph-rest-1.0 Find more info here
     */
     public function get(?InstalledAppsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class InstalledAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to installedApps for groups
+     * Install an app to the specified team.
      * @param TeamsAppInstallation $body The request body
      * @param InstalledAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/team-post-installedapps?view=graph-rest-1.0 Find more info here
     */
     public function post(TeamsAppInstallation $body, ?InstalledAppsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class InstalledAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The apps installed in this team.
+     * Retrieve a list of apps installed in the specified team.
      * @param InstalledAppsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class InstalledAppsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to installedApps for groups
+     * Install an app to the specified team.
      * @param TeamsAppInstallation $body The request body
      * @param InstalledAppsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -53,9 +53,10 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns a list of case caseOperation objects for this case.
+     * Get a list of the caseOperation objects and their properties.
      * @param OperationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/security-ediscoverycase-list-operations?view=graph-rest-1.0 Find more info here
     */
     public function get(?OperationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +91,7 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns a list of case caseOperation objects for this case.
+     * Get a list of the caseOperation objects and their properties.
      * @param OperationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

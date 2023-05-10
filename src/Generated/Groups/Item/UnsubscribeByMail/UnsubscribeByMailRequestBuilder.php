@@ -31,9 +31,10 @@ class UnsubscribeByMailRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action unsubscribeByMail
+     * Calling this method will prevent the current user from receiving email notifications for this group about new posts, events, and files in that group. Supported for Microsoft 365 groups only.
      * @param UnsubscribeByMailRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/group-unsubscribebymail?view=graph-rest-1.0 Find more info here
     */
     public function post(?UnsubscribeByMailRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -49,7 +50,7 @@ class UnsubscribeByMailRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action unsubscribeByMail
+     * Calling this method will prevent the current user from receiving email notifications for this group about new posts, events, and files in that group. Supported for Microsoft 365 groups only.
      * @param UnsubscribeByMailRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

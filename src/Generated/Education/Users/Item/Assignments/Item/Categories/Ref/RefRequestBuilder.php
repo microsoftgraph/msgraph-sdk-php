@@ -33,9 +33,10 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * When set, enables users to easily find assignments of a given type.  Read-only. Nullable.
+     * List all the categories associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation.
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/educationassignment-list-categories?view=graph-rest-1.0 Find more info here
     */
     public function get(?RefRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -51,10 +52,11 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property ref to categories for education
+     * Add one or more existing educationCategory objects to the specified  educationAssignment. Only teachers can perform this operation.
      * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/educationassignment-post-categories?view=graph-rest-1.0 Find more info here
     */
     public function post(ReferenceCreate $body, ?RefRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -70,7 +72,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * When set, enables users to easily find assignments of a given type.  Read-only. Nullable.
+     * List all the categories associated with an assignment. Only teachers, students, and applications with application permissions can perform this operation.
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -91,7 +93,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property ref to categories for education
+     * Add one or more existing educationCategory objects to the specified  educationAssignment. Only teachers can perform this operation.
      * @param ReferenceCreate $body The request body
      * @param RefRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

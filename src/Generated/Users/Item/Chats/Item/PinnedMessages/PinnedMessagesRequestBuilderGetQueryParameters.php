@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Chats\Item\PinnedMessages;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * A collection of all the pinned messages in the chat. Nullable.
+ * Get a list of pinnedChatMessages in a chat.
 */
 class PinnedMessagesRequestBuilderGetQueryParameters 
 {

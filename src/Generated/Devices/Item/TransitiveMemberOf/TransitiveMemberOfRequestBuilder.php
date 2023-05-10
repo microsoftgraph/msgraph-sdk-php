@@ -71,6 +71,7 @@ class TransitiveMemberOfRequestBuilder extends BaseRequestBuilder
      * Groups and administrative units that the device is a member of. This operation is transitive. Supports $expand.
      * @param TransitiveMemberOfRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/device-list-transitivememberof?view=graph-rest-1.0 Find more info here
     */
     public function get(?TransitiveMemberOfRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

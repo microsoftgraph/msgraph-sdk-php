@@ -32,9 +32,10 @@ class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property scopedRoleMembers for directory
+     * Remove an Azure Active Directory (Azure AD) role assignment with administrative unit scope.
      * @param ScopedRoleMembershipItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/administrativeunit-delete-scopedrolemembers?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ScopedRoleMembershipItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -50,9 +51,10 @@ class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Scoped-role members of this administrative unit.
+     * Get an Azure Active Directory (Azure AD) role assignment with administrative unit scope.
      * @param ScopedRoleMembershipItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/administrativeunit-get-scopedrolemembers?view=graph-rest-1.0 Find more info here
     */
     public function get(?ScopedRoleMembershipItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -87,7 +89,7 @@ class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property scopedRoleMembers for directory
+     * Remove an Azure Active Directory (Azure AD) role assignment with administrative unit scope.
      * @param ScopedRoleMembershipItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +106,7 @@ class ScopedRoleMembershipItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Scoped-role members of this administrative unit.
+     * Get an Azure Active Directory (Azure AD) role assignment with administrative unit scope.
      * @param ScopedRoleMembershipItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -32,9 +32,10 @@ class ConvertToRangeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action convertToRange
+     * Converts the table into a normal range of cells. All data is preserved.
      * @param ConvertToRangeRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/table-converttorange?view=graph-rest-1.0 Find more info here
     */
     public function post(?ConvertToRangeRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class ConvertToRangeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action convertToRange
+     * Converts the table into a normal range of cells. All data is preserved.
      * @param ConvertToRangeRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

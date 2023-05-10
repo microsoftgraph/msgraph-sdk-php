@@ -32,10 +32,11 @@ class CopyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action copy
+     * Copy a mailfolder and its contents to another mailfolder.
      * @param CopyPostRequestBody $body The request body
      * @param CopyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/mailfolder-copy?view=graph-rest-1.0 Find more info here
     */
     public function post(CopyPostRequestBody $body, ?CopyRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -51,7 +52,7 @@ class CopyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action copy
+     * Copy a mailfolder and its contents to another mailfolder.
      * @param CopyPostRequestBody $body The request body
      * @param CopyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

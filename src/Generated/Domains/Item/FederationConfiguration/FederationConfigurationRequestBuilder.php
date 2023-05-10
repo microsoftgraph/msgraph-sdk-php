@@ -53,7 +53,7 @@ class FederationConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Domain settings configured by a customer when federated with Azure AD. Supports $expand.
+     * Read the properties and relationships of an internalDomainFederation object.
      * @param FederationConfigurationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -71,10 +71,11 @@ class FederationConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to federationConfiguration for domains
+     * Create a new internalDomainFederation object.
      * @param InternalDomainFederation $body The request body
      * @param FederationConfigurationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/domain-post-federationconfiguration?view=graph-rest-1.0 Find more info here
     */
     public function post(InternalDomainFederation $body, ?FederationConfigurationRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +91,7 @@ class FederationConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Domain settings configured by a customer when federated with Azure AD. Supports $expand.
+     * Read the properties and relationships of an internalDomainFederation object.
      * @param FederationConfigurationRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +112,7 @@ class FederationConfigurationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to federationConfiguration for domains
+     * Create a new internalDomainFederation object.
      * @param InternalDomainFederation $body The request body
      * @param FederationConfigurationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

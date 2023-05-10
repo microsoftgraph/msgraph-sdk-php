@@ -7,7 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryCaseSettings;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Settings\SecurityResetToDefault\SecurityResetToDefaultRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Settings\MicrosoftGraphSecurityResetToDefault\MicrosoftGraphSecurityResetToDefaultRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -21,8 +21,8 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     /**
      * Provides operations to call the resetToDefault method.
     */
-    public function securityResetToDefault(): SecurityResetToDefaultRequestBuilder {
-        return new SecurityResetToDefaultRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityResetToDefault(): MicrosoftGraphSecurityResetToDefaultRequestBuilder {
+        return new MicrosoftGraphSecurityResetToDefaultRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -58,9 +58,10 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns a list of eDIscoverySettings objects in the case.
+     * Read the properties and relationships of an ediscoveryCaseSettings object.
      * @param SettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/security-ediscoverycasesettings-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SettingsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,10 +77,11 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property settings in security
+     * Update the properties of an ediscoveryCaseSettings object.
      * @param EdiscoveryCaseSettings $body The request body
      * @param SettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/security-ediscoverycasesettings-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(EdiscoveryCaseSettings $body, ?SettingsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -112,7 +114,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns a list of eDIscoverySettings objects in the case.
+     * Read the properties and relationships of an ediscoveryCaseSettings object.
      * @param SettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -133,7 +135,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property settings in security
+     * Update the properties of an ediscoveryCaseSettings object.
      * @param EdiscoveryCaseSettings $body The request body
      * @param SettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

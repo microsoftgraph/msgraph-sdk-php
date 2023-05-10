@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Device extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new device and sets the default values.
+     * Instantiates a new Device and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -59,6 +59,14 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the deviceCategory property value. User-defined property set by Intune to automatically add devices to groups and simplify managing devices.
+     * @return string|null
+    */
+    public function getDeviceCategory(): ?string {
+        return $this->getBackingStore()->get('deviceCategory');
+    }
+
+    /**
      * Gets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith).
      * @return string|null
     */
@@ -75,6 +83,14 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the deviceOwnership property value. Ownership of the device. This property is set by Intune. Possible values are: unknown, company, personal.
+     * @return string|null
+    */
+    public function getDeviceOwnership(): ?string {
+        return $this->getBackingStore()->get('deviceOwnership');
+    }
+
+    /**
      * Gets the deviceVersion property value. For internal use only.
      * @return int|null
     */
@@ -88,6 +104,14 @@ class Device extends DirectoryObject implements Parsable
     */
     public function getDisplayName(): ?string {
         return $this->getBackingStore()->get('displayName');
+    }
+
+    /**
+     * Gets the enrollmentProfileName property value. Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. This property is set by Intune.
+     * @return string|null
+    */
+    public function getEnrollmentProfileName(): ?string {
+        return $this->getBackingStore()->get('enrollmentProfileName');
     }
 
     /**
@@ -109,10 +133,13 @@ class Device extends DirectoryObject implements Parsable
             'alternativeSecurityIds' => fn(ParseNode $n) => $o->setAlternativeSecurityIds($n->getCollectionOfObjectValues([AlternativeSecurityId::class, 'createFromDiscriminatorValue'])),
             'approximateLastSignInDateTime' => fn(ParseNode $n) => $o->setApproximateLastSignInDateTime($n->getDateTimeValue()),
             'complianceExpirationDateTime' => fn(ParseNode $n) => $o->setComplianceExpirationDateTime($n->getDateTimeValue()),
+            'deviceCategory' => fn(ParseNode $n) => $o->setDeviceCategory($n->getStringValue()),
             'deviceId' => fn(ParseNode $n) => $o->setDeviceId($n->getStringValue()),
             'deviceMetadata' => fn(ParseNode $n) => $o->setDeviceMetadata($n->getStringValue()),
+            'deviceOwnership' => fn(ParseNode $n) => $o->setDeviceOwnership($n->getStringValue()),
             'deviceVersion' => fn(ParseNode $n) => $o->setDeviceVersion($n->getIntegerValue()),
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'enrollmentProfileName' => fn(ParseNode $n) => $o->setEnrollmentProfileName($n->getStringValue()),
             'extensions' => fn(ParseNode $n) => $o->setExtensions($n->getCollectionOfObjectValues([Extension::class, 'createFromDiscriminatorValue'])),
             'isCompliant' => fn(ParseNode $n) => $o->setIsCompliant($n->getBooleanValue()),
             'isManaged' => fn(ParseNode $n) => $o->setIsManaged($n->getBooleanValue()),
@@ -126,6 +153,7 @@ class Device extends DirectoryObject implements Parsable
             'profileType' => fn(ParseNode $n) => $o->setProfileType($n->getStringValue()),
             'registeredOwners' => fn(ParseNode $n) => $o->setRegisteredOwners($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'registeredUsers' => fn(ParseNode $n) => $o->setRegisteredUsers($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
+            'registrationDateTime' => fn(ParseNode $n) => $o->setRegistrationDateTime($n->getDateTimeValue()),
             'systemLabels' => fn(ParseNode $n) => $o->setSystemLabels($n->getCollectionOfPrimitiveValues()),
             'transitiveMemberOf' => fn(ParseNode $n) => $o->setTransitiveMemberOf($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'trustType' => fn(ParseNode $n) => $o->setTrustType($n->getStringValue()),
@@ -229,6 +257,14 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the registrationDateTime property value. Date and time of when the device was registered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * @return DateTime|null
+    */
+    public function getRegistrationDateTime(): ?DateTime {
+        return $this->getBackingStore()->get('registrationDateTime');
+    }
+
+    /**
      * Gets the systemLabels property value. List of labels applied to the device by the system. Supports $filter (/$count eq 0, /$count ne 0).
      * @return array<string>|null
     */
@@ -262,10 +298,13 @@ class Device extends DirectoryObject implements Parsable
         $writer->writeCollectionOfObjectValues('alternativeSecurityIds', $this->getAlternativeSecurityIds());
         $writer->writeDateTimeValue('approximateLastSignInDateTime', $this->getApproximateLastSignInDateTime());
         $writer->writeDateTimeValue('complianceExpirationDateTime', $this->getComplianceExpirationDateTime());
+        $writer->writeStringValue('deviceCategory', $this->getDeviceCategory());
         $writer->writeStringValue('deviceId', $this->getDeviceId());
         $writer->writeStringValue('deviceMetadata', $this->getDeviceMetadata());
+        $writer->writeStringValue('deviceOwnership', $this->getDeviceOwnership());
         $writer->writeIntegerValue('deviceVersion', $this->getDeviceVersion());
         $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeStringValue('enrollmentProfileName', $this->getEnrollmentProfileName());
         $writer->writeCollectionOfObjectValues('extensions', $this->getExtensions());
         $writer->writeBooleanValue('isCompliant', $this->getIsCompliant());
         $writer->writeBooleanValue('isManaged', $this->getIsManaged());
@@ -279,6 +318,7 @@ class Device extends DirectoryObject implements Parsable
         $writer->writeStringValue('profileType', $this->getProfileType());
         $writer->writeCollectionOfObjectValues('registeredOwners', $this->getRegisteredOwners());
         $writer->writeCollectionOfObjectValues('registeredUsers', $this->getRegisteredUsers());
+        $writer->writeDateTimeValue('registrationDateTime', $this->getRegistrationDateTime());
         $writer->writeCollectionOfPrimitiveValues('systemLabels', $this->getSystemLabels());
         $writer->writeCollectionOfObjectValues('transitiveMemberOf', $this->getTransitiveMemberOf());
         $writer->writeStringValue('trustType', $this->getTrustType());
@@ -317,6 +357,14 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
+     * Sets the deviceCategory property value. User-defined property set by Intune to automatically add devices to groups and simplify managing devices.
+     * @param string|null $value Value to set for the deviceCategory property.
+    */
+    public function setDeviceCategory(?string $value): void {
+        $this->getBackingStore()->set('deviceCategory', $value);
+    }
+
+    /**
      * Sets the deviceId property value. Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith).
      * @param string|null $value Value to set for the deviceId property.
     */
@@ -333,6 +381,14 @@ class Device extends DirectoryObject implements Parsable
     }
 
     /**
+     * Sets the deviceOwnership property value. Ownership of the device. This property is set by Intune. Possible values are: unknown, company, personal.
+     * @param string|null $value Value to set for the deviceOwnership property.
+    */
+    public function setDeviceOwnership(?string $value): void {
+        $this->getBackingStore()->set('deviceOwnership', $value);
+    }
+
+    /**
      * Sets the deviceVersion property value. For internal use only.
      * @param int|null $value Value to set for the deviceVersion property.
     */
@@ -346,6 +402,14 @@ class Device extends DirectoryObject implements Parsable
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
+    }
+
+    /**
+     * Sets the enrollmentProfileName property value. Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. This property is set by Intune.
+     * @param string|null $value Value to set for the enrollmentProfileName property.
+    */
+    public function setEnrollmentProfileName(?string $value): void {
+        $this->getBackingStore()->set('enrollmentProfileName', $value);
     }
 
     /**
@@ -450,6 +514,14 @@ class Device extends DirectoryObject implements Parsable
     */
     public function setRegisteredUsers(?array $value): void {
         $this->getBackingStore()->set('registeredUsers', $value);
+    }
+
+    /**
+     * Sets the registrationDateTime property value. Date and time of when the device was registered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.
+     * @param DateTime|null $value Value to set for the registrationDateTime property.
+    */
+    public function setRegistrationDateTime(?DateTime $value): void {
+        $this->getBackingStore()->set('registrationDateTime', $value);
     }
 
     /**

@@ -58,9 +58,10 @@ class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get threatAssessmentRequests from informationProtection
+     * Retrieve the properties and relationships of a specified threatAssessmentRequest object. A threat assessment request can be one of the following types:
      * @param ThreatAssessmentRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/threatassessmentrequest-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ThreatAssessmentRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -112,7 +113,7 @@ class ThreatAssessmentRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get threatAssessmentRequests from informationProtection
+     * Retrieve the properties and relationships of a specified threatAssessmentRequest object. A threat assessment request can be one of the following types:
      * @param ThreatAssessmentRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

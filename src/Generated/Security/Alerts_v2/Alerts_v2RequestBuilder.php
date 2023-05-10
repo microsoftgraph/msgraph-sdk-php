@@ -53,9 +53,10 @@ class Alerts_v2RequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of alerts in Microsoft 365 Defender.
+     * Get a list of alert resources that have been created to track suspicious activities in an organization. This operation lets you filter and sort through alerts to create an informed cyber security response. It exposes a collection of alerts that were flagged in your network, within the time range you specified in your environment retention policy. The most recent alerts are displayed at the top of the list.
      * @param Alerts_v2RequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/security-list-alerts_v2?view=graph-rest-1.0 Find more info here
     */
     public function get(?Alerts_v2RequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +91,7 @@ class Alerts_v2RequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of alerts in Microsoft 365 Defender.
+     * Get a list of alert resources that have been created to track suspicious activities in an organization. This operation lets you filter and sort through alerts to create an informed cyber security response. It exposes a collection of alerts that were flagged in your network, within the time range you specified in your environment retention policy. The most recent alerts are displayed at the top of the list.
      * @param Alerts_v2RequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

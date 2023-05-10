@@ -50,9 +50,10 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The settings that control the behavior of Azure AD entitlement management.
+     * Retrieve the properties of an entitlementManagementSettings object.
      * @param SettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/entitlementmanagementsettings-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SettingsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,10 +69,11 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property settings in identityGovernance
+     * Update an existing entitlementManagementSettings object to change one or more of its properties.
      * @param EntitlementManagementSettings $body The request body
      * @param SettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/entitlementmanagementsettings-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(EntitlementManagementSettings $body, ?SettingsRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -104,7 +106,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The settings that control the behavior of Azure AD entitlement management.
+     * Retrieve the properties of an entitlementManagementSettings object.
      * @param SettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +127,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property settings in identityGovernance
+     * Update an existing entitlementManagementSettings object to change one or more of its properties.
      * @param EntitlementManagementSettings $body The request body
      * @param SettingsRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

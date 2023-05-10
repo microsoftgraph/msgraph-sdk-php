@@ -31,10 +31,11 @@ class AssociateWithHubSitesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action associateWithHubSites
+     * Associate a published [content type][contentType] present in a content type hub with a list of hub sites.
      * @param AssociateWithHubSitesPostRequestBody $body The request body
      * @param AssociateWithHubSitesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/contenttype-associatewithhubsites?view=graph-rest-1.0 Find more info here
     */
     public function post(AssociateWithHubSitesPostRequestBody $body, ?AssociateWithHubSitesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class AssociateWithHubSitesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action associateWithHubSites
+     * Associate a published [content type][contentType] present in a content type hub with a list of hub sites.
      * @param AssociateWithHubSitesPostRequestBody $body The request body
      * @param AssociateWithHubSitesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

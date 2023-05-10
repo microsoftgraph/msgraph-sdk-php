@@ -52,9 +52,10 @@ class SchoolsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Schools to which the user belongs. Nullable.
+     * Retrieve a list of schools for a user.
      * @param SchoolsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/educationuser-list-schools?view=graph-rest-1.0 Find more info here
     */
     public function get(?SchoolsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -70,7 +71,7 @@ class SchoolsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Schools to which the user belongs. Nullable.
+     * Retrieve a list of schools for a user.
      * @param SchoolsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

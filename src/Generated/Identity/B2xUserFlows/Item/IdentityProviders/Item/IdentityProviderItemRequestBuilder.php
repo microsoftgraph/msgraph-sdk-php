@@ -32,6 +32,25 @@ class IdentityProviderItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
+     * Delete an identity provider from a b2xIdentityUserFlow object. For self-service sign-up user flows, the values can be `Google-OAUTH` or `Facebook-OAUTH`.
+     * @param IdentityProviderItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return Promise
+     * @link https://docs.microsoft.com/graph/api/b2xidentityuserflow-delete-identityproviders?view=graph-rest-1.0 Find more info here
+    */
+    public function delete(?IdentityProviderItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
+        $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
+        try {
+            $errorMappings = [
+                    '4XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+                    '5XX' => [ODataError::class, 'createFromDiscriminatorValue'],
+            ];
+            return $this->requestAdapter->sendNoContentAsync($requestInfo, $errorMappings);
+        } catch(Exception $ex) {
+            return new RejectedPromise($ex);
+        }
+    }
+
+    /**
      * The identity providers included in the user flow.
      * @param IdentityProviderItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -47,6 +66,23 @@ class IdentityProviderItemRequestBuilder extends BaseRequestBuilder
         } catch(Exception $ex) {
             return new RejectedPromise($ex);
         }
+    }
+
+    /**
+     * Delete an identity provider from a b2xIdentityUserFlow object. For self-service sign-up user flows, the values can be `Google-OAUTH` or `Facebook-OAUTH`.
+     * @param IdentityProviderItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
+     * @return RequestInformation
+    */
+    public function toDeleteRequestInformation(?IdentityProviderItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): RequestInformation {
+        $requestInfo = new RequestInformation();
+        $requestInfo->urlTemplate = $this->urlTemplate;
+        $requestInfo->pathParameters = $this->pathParameters;
+        $requestInfo->httpMethod = HttpMethod::DELETE;
+        if ($requestConfiguration !== null) {
+            $requestInfo->addHeaders($requestConfiguration->headers);
+            $requestInfo->addRequestOptions(...$requestConfiguration->options);
+        }
+        return $requestInfo;
     }
 
     /**

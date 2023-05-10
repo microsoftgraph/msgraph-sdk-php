@@ -48,9 +48,10 @@ class TodoTaskListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property lists for users
+     * Deletes a todoTaskList object.
      * @param TodoTaskListItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/todotasklist-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?TodoTaskListItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -66,9 +67,10 @@ class TodoTaskListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The task lists in the users mailbox.
+     * Read the properties and relationships of a todoTaskList object.
      * @param TodoTaskListItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/todotasklist-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?TodoTaskListItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -84,10 +86,11 @@ class TodoTaskListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property lists in users
+     * Update the properties of a todoTaskList object.
      * @param TodoTaskList $body The request body
      * @param TodoTaskListItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/todotasklist-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(TodoTaskList $body, ?TodoTaskListItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -103,7 +106,7 @@ class TodoTaskListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property lists for users
+     * Deletes a todoTaskList object.
      * @param TodoTaskListItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -120,7 +123,7 @@ class TodoTaskListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The task lists in the users mailbox.
+     * Read the properties and relationships of a todoTaskList object.
      * @param TodoTaskListItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -141,7 +144,7 @@ class TodoTaskListItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property lists in users
+     * Update the properties of a todoTaskList object.
      * @param TodoTaskList $body The request body
      * @param TodoTaskListItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

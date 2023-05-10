@@ -63,6 +63,7 @@ class CalendarViewRequestBuilder extends BaseRequestBuilder
      * The calendar view for the calendar. Read-only.
      * @param CalendarViewRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/group-list-calendarview?view=graph-rest-1.0 Find more info here
     */
     public function get(?CalendarViewRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

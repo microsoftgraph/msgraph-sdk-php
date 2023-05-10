@@ -53,9 +53,10 @@ class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * References to a directory or domain of another organization whose users can request access.
+     * Retrieve a list of connectedOrganization objects.
      * @param ConnectedOrganizationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/entitlementmanagement-list-connectedorganizations?view=graph-rest-1.0 Find more info here
     */
     public function get(?ConnectedOrganizationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +91,7 @@ class ConnectedOrganizationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * References to a directory or domain of another organization whose users can request access.
+     * Retrieve a list of connectedOrganization objects.
      * @param ConnectedOrganizationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

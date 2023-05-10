@@ -61,7 +61,7 @@ class CallsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get calls from communications
+     * Retrieve the properties and relationships of a call object.
      * @param CallsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -79,10 +79,11 @@ class CallsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to calls for communications
+     * Create call enables your bot to create a new outgoing peer-to-peer or group call, or join an existing meeting. You will need to register the calling bot and go through the list of permissions needed as mentioned below.
      * @param Call $body The request body
      * @param CallsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/application-post-calls?view=graph-rest-1.0 Find more info here
     */
     public function post(Call $body, ?CallsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -98,7 +99,7 @@ class CallsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get calls from communications
+     * Retrieve the properties and relationships of a call object.
      * @param CallsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -119,7 +120,7 @@ class CallsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to calls for communications
+     * Create call enables your bot to create a new outgoing peer-to-peer or group call, or join an existing meeting. You will need to register the calling bot and go through the list of permissions needed as mentioned below.
      * @param Call $body The request body
      * @param CallsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

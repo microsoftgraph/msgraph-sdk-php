@@ -32,9 +32,10 @@ class BookingServiceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property services for solutions
+     * Delete a bookingService object in the specified bookingBusiness.
      * @param BookingServiceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/bookingservice-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?BookingServiceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -50,9 +51,10 @@ class BookingServiceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * All the services offered by this business. Read-only. Nullable.
+     * Get the properties and relationships of a bookingService object in the specified bookingBusiness.
      * @param BookingServiceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/bookingservice-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?BookingServiceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,10 +70,11 @@ class BookingServiceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property services in solutions
+     * Update the properties of a bookingService object in the specified bookingBusiness. The following are some examples you can customize for a service:- Price- Typical length of an appointment- Reminders- Any time buffer to set up before or finish up after the service- Scheduling policy parameters, such as minimum notice to book or cancel, and whether customers can select specific staff members for an appointment.
      * @param BookingService $body The request body
      * @param BookingServiceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/bookingservice-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(BookingService $body, ?BookingServiceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -87,7 +90,7 @@ class BookingServiceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property services for solutions
+     * Delete a bookingService object in the specified bookingBusiness.
      * @param BookingServiceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +107,7 @@ class BookingServiceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * All the services offered by this business. Read-only. Nullable.
+     * Get the properties and relationships of a bookingService object in the specified bookingBusiness.
      * @param BookingServiceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +128,7 @@ class BookingServiceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property services in solutions
+     * Update the properties of a bookingService object in the specified bookingBusiness. The following are some examples you can customize for a service:- Price- Typical length of an appointment- Reminders- Any time buffer to set up before or finish up after the service- Scheduling policy parameters, such as minimum notice to book or cancel, and whether customers can select specific staff members for an appointment.
      * @param BookingService $body The request body
      * @param BookingServiceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

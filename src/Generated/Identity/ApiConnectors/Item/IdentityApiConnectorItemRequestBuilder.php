@@ -40,9 +40,10 @@ class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property apiConnectors for identity
+     * Delete an identityApiConnector object.
      * @param IdentityApiConnectorItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/identityapiconnector-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?IdentityApiConnectorItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -58,9 +59,10 @@ class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents entry point for API connectors.
+     * Read the properties of an identityApiConnector object.
      * @param IdentityApiConnectorItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/identityapiconnector-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?IdentityApiConnectorItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,10 +78,11 @@ class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property apiConnectors in identity
+     * Update the properties of an identityApiConnector object.
      * @param IdentityApiConnector $body The request body
      * @param IdentityApiConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/identityapiconnector-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(IdentityApiConnector $body, ?IdentityApiConnectorItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -95,7 +98,7 @@ class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property apiConnectors for identity
+     * Delete an identityApiConnector object.
      * @param IdentityApiConnectorItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,7 +115,7 @@ class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents entry point for API connectors.
+     * Read the properties of an identityApiConnector object.
      * @param IdentityApiConnectorItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -133,7 +136,7 @@ class IdentityApiConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property apiConnectors in identity
+     * Update the properties of an identityApiConnector object.
      * @param IdentityApiConnector $body The request body
      * @param IdentityApiConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -53,9 +53,10 @@ class RoleManagementPolicyAssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The assignment of a role management policy to a role definition object.
+     * Get the details of all role management policy assignments including the policies and rules associated with the Azure AD roles.
      * @param RoleManagementPolicyAssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/policyroot-list-rolemanagementpolicyassignments?view=graph-rest-1.0 Find more info here
     */
     public function get(?RoleManagementPolicyAssignmentsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +91,7 @@ class RoleManagementPolicyAssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The assignment of a role management policy to a role definition object.
+     * Get the details of all role management policy assignments including the policies and rules associated with the Azure AD roles.
      * @param RoleManagementPolicyAssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

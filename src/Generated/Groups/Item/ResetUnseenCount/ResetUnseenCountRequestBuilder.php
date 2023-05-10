@@ -31,9 +31,10 @@ class ResetUnseenCountRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action resetUnseenCount
+     * Reset the unseenCount of all the posts that the current user has not seen since their last visit. Supported for Microsoft 365 groups only.
      * @param ResetUnseenCountRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/group-resetunseencount?view=graph-rest-1.0 Find more info here
     */
     public function post(?ResetUnseenCountRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -49,7 +50,7 @@ class ResetUnseenCountRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action resetUnseenCount
+     * Reset the unseenCount of all the posts that the current user has not seen since their last visit. Supported for Microsoft 365 groups only.
      * @param ResetUnseenCountRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

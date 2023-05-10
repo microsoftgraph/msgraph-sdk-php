@@ -32,9 +32,10 @@ class InferenceClassificationOverrideItemRequestBuilder extends BaseRequestBuild
     }
 
     /**
-     * Delete navigation property overrides for users
+     * Delete an override specified by its ID.
      * @param InferenceClassificationOverrideItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/inferenceclassificationoverride-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?InferenceClassificationOverrideItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -68,10 +69,11 @@ class InferenceClassificationOverrideItemRequestBuilder extends BaseRequestBuild
     }
 
     /**
-     * Update the navigation property overrides in users
+     * Change the **classifyAs** field of an override as specified. You cannot use PATCH to change any other fields in an inferenceClassificationOverride instance. If an override exists for a sender and the sender changes his/her display name, you can use POST to force an update to the name field in the existing override. If an override exists for a sender and the sender changes his/her SMTP address, deleting the existing override and creating a new one withthe new SMTP address is the only way to 'update' the override for this sender.
      * @param InferenceClassificationOverride $body The request body
      * @param InferenceClassificationOverrideItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/inferenceclassificationoverride-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(InferenceClassificationOverride $body, ?InferenceClassificationOverrideItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -87,7 +89,7 @@ class InferenceClassificationOverrideItemRequestBuilder extends BaseRequestBuild
     }
 
     /**
-     * Delete navigation property overrides for users
+     * Delete an override specified by its ID.
      * @param InferenceClassificationOverrideItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +127,7 @@ class InferenceClassificationOverrideItemRequestBuilder extends BaseRequestBuild
     }
 
     /**
-     * Update the navigation property overrides in users
+     * Change the **classifyAs** field of an override as specified. You cannot use PATCH to change any other fields in an inferenceClassificationOverride instance. If an override exists for a sender and the sender changes his/her display name, you can use POST to force an update to the name field in the existing override. If an override exists for a sender and the sender changes his/her SMTP address, deleting the existing override and creating a new one withthe new SMTP address is the only way to 'update' the override for this sender.
      * @param InferenceClassificationOverride $body The request body
      * @param InferenceClassificationOverrideItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

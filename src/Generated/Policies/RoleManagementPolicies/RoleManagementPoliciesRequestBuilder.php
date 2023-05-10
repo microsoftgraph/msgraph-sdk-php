@@ -53,9 +53,10 @@ class RoleManagementPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Specifies the various policies associated with scopes and roles.
+     * Get role management policies and their details.
      * @param RoleManagementPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/policyroot-list-rolemanagementpolicies?view=graph-rest-1.0 Find more info here
     */
     public function get(?RoleManagementPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +91,7 @@ class RoleManagementPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Specifies the various policies associated with scopes and roles.
+     * Get role management policies and their details.
      * @param RoleManagementPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

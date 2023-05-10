@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\PrimaryChannel\F
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Metadata for the location where the channel's files are stored.
+ * Get the metadata for the location where the files of a channel are stored. 
 */
 class FilesFolderRequestBuilderGetQueryParameters 
 {

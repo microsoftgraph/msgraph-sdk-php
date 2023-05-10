@@ -7,8 +7,8 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\Security\EdiscoveryReviewSet;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSets\Item\MicrosoftGraphSecurityAddToReviewSet\MicrosoftGraphSecurityAddToReviewSetRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSets\Item\Queries\QueriesRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\ReviewSets\Item\SecurityAddToReviewSet\SecurityAddToReviewSetRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -20,17 +20,17 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 class EdiscoveryReviewSetItemRequestBuilder extends BaseRequestBuilder 
 {
     /**
+     * Provides operations to call the addToReviewSet method.
+    */
+    public function microsoftGraphSecurityAddToReviewSet(): MicrosoftGraphSecurityAddToReviewSetRequestBuilder {
+        return new MicrosoftGraphSecurityAddToReviewSetRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the queries property of the microsoft.graph.security.ediscoveryReviewSet entity.
     */
     public function queries(): QueriesRequestBuilder {
         return new QueriesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the addToReviewSet method.
-    */
-    public function securityAddToReviewSet(): SecurityAddToReviewSetRequestBuilder {
-        return new SecurityAddToReviewSetRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -66,9 +66,10 @@ class EdiscoveryReviewSetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns a list of eDiscoveryReviewSet objects in the case.
+     * Read the properties and relationships of an ediscoveryReviewSet object.
      * @param EdiscoveryReviewSetItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/security-ediscoveryreviewset-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?EdiscoveryReviewSetItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -120,7 +121,7 @@ class EdiscoveryReviewSetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns a list of eDiscoveryReviewSet objects in the case.
+     * Read the properties and relationships of an ediscoveryReviewSet object.
      * @param EdiscoveryReviewSetItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

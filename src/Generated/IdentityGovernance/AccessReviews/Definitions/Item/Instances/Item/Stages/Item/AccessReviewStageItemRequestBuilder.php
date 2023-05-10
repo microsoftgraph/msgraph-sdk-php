@@ -66,9 +66,10 @@ class AccessReviewStageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * If the instance has multiple stages, this returns the collection of stages. A new stage will only be created when the previous stage ends. The existence, number, and settings of stages on a review instance are created based on the accessReviewStageSettings on the parent accessReviewScheduleDefinition.
+     * Retrieve the properties and relationships of an accessReviewStage object.
      * @param AccessReviewStageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/accessreviewstage-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AccessReviewStageItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -84,10 +85,11 @@ class AccessReviewStageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property stages in identityGovernance
+     * Update the properties of an accessReviewStage object. Only the **reviewers** and **fallbackReviewers** properties can be updated. You can only add reviewers to the **fallbackReviewers** property but can't remove existing **fallbackReviewers**. To update an **accessReviewStage**, its **status** must be `NotStarted`, `Initializing`, or `InProgress`.
      * @param AccessReviewStage $body The request body
      * @param AccessReviewStageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/accessreviewstage-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(AccessReviewStage $body, ?AccessReviewStageItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -120,7 +122,7 @@ class AccessReviewStageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * If the instance has multiple stages, this returns the collection of stages. A new stage will only be created when the previous stage ends. The existence, number, and settings of stages on a review instance are created based on the accessReviewStageSettings on the parent accessReviewScheduleDefinition.
+     * Retrieve the properties and relationships of an accessReviewStage object.
      * @param AccessReviewStageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -141,7 +143,7 @@ class AccessReviewStageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property stages in identityGovernance
+     * Update the properties of an accessReviewStage object. Only the **reviewers** and **fallbackReviewers** properties can be updated. You can only add reviewers to the **fallbackReviewers** property but can't remove existing **fallbackReviewers**. To update an **accessReviewStage**, its **status** must be `NotStarted`, `Initializing`, or `InProgress`.
      * @param AccessReviewStage $body The request body
      * @param AccessReviewStageItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

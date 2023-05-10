@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Special;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Collection of common folders available in OneDrive. Read-only. Nullable.
+ * Use the special collection to access a special folder by name. Special folders provide simple aliases to access well-known folders in OneDrive without the need to look up the folder by path (which would require localization), or reference the folder with an ID. If a special folder is renamed or moved to another location within the drive, this syntax will continue to find that folder. Special folders are automatically created the first time an application attempts to write to one, if it doesn't already exist. If a user deletes one, it is recreated when written to again.
 */
 class SpecialRequestBuilderGetQueryParameters 
 {

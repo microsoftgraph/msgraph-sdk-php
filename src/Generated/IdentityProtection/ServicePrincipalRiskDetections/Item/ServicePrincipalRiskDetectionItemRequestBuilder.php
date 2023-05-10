@@ -50,9 +50,10 @@ class ServicePrincipalRiskDetectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents information about detected at-risk service principals in an Azure AD tenant.
+     * Read the properties and relationships of a servicePrincipalRiskDetection object.
      * @param ServicePrincipalRiskDetectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/serviceprincipalriskdetection-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ServicePrincipalRiskDetectionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -104,7 +105,7 @@ class ServicePrincipalRiskDetectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents information about detected at-risk service principals in an Azure AD tenant.
+     * Read the properties and relationships of a servicePrincipalRiskDetection object.
      * @param ServicePrincipalRiskDetectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

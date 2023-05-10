@@ -50,9 +50,10 @@ class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends BaseReques
     }
 
     /**
-     * The policy that represents the security defaults that protect against common attacks.
+     * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object.
      * @param IdentitySecurityDefaultsEnforcementPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/identitysecuritydefaultsenforcementpolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?IdentitySecurityDefaultsEnforcementPolicyRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,10 +69,11 @@ class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends BaseReques
     }
 
     /**
-     * Update the navigation property identitySecurityDefaultsEnforcementPolicy in policies
+     * Update the properties of an identitySecurityDefaultsEnforcementPolicy object.
      * @param IdentitySecurityDefaultsEnforcementPolicy $body The request body
      * @param IdentitySecurityDefaultsEnforcementPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/identitysecuritydefaultsenforcementpolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(IdentitySecurityDefaultsEnforcementPolicy $body, ?IdentitySecurityDefaultsEnforcementPolicyRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -104,7 +106,7 @@ class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends BaseReques
     }
 
     /**
-     * The policy that represents the security defaults that protect against common attacks.
+     * Retrieve the properties of an identitySecurityDefaultsEnforcementPolicy object.
      * @param IdentitySecurityDefaultsEnforcementPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +127,7 @@ class IdentitySecurityDefaultsEnforcementPolicyRequestBuilder extends BaseReques
     }
 
     /**
-     * Update the navigation property identitySecurityDefaultsEnforcementPolicy in policies
+     * Update the properties of an identitySecurityDefaultsEnforcementPolicy object.
      * @param IdentitySecurityDefaultsEnforcementPolicy $body The request body
      * @param IdentitySecurityDefaultsEnforcementPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

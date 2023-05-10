@@ -61,9 +61,10 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Members and owners of the team.
+     * Get the conversationMember collection of a team.
      * @param MembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/team-list-members?view=graph-rest-1.0 Find more info here
     */
     public function get(?MembersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -79,10 +80,11 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to members for groups
+     * Add a new conversationMember to a team.
      * @param ConversationMember $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/team-post-members?view=graph-rest-1.0 Find more info here
     */
     public function post(ConversationMember $body, ?MembersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -98,7 +100,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Members and owners of the team.
+     * Get the conversationMember collection of a team.
      * @param MembersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -119,7 +121,7 @@ class MembersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to members for groups
+     * Add a new conversationMember to a team.
      * @param ConversationMember $body The request body
      * @param MembersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

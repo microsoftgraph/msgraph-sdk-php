@@ -52,9 +52,10 @@ class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get oauth2PermissionGrants from users
+     * Retrieve a list of oAuth2PermissionGrant entities, which represent delegated permissions granted to enable a client application to access an API on behalf of the user.
      * @param Oauth2PermissionGrantsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/user-list-oauth2permissiongrants?view=graph-rest-1.0 Find more info here
     */
     public function get(?Oauth2PermissionGrantsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -70,7 +71,7 @@ class Oauth2PermissionGrantsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get oauth2PermissionGrants from users
+     * Retrieve a list of oAuth2PermissionGrant entities, which represent delegated permissions granted to enable a client application to access an API on behalf of the user.
      * @param Oauth2PermissionGrantsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

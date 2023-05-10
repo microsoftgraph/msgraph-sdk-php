@@ -52,9 +52,10 @@ class TaughtClassesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Classes for which the user is a teacher.
+     * Get the educationClass resources owned by an educationUser.
      * @param TaughtClassesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/educationuser-list-taughtclasses?view=graph-rest-1.0 Find more info here
     */
     public function get(?TaughtClassesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -70,7 +71,7 @@ class TaughtClassesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Classes for which the user is a teacher.
+     * Get the educationClass resources owned by an educationUser.
      * @param TaughtClassesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

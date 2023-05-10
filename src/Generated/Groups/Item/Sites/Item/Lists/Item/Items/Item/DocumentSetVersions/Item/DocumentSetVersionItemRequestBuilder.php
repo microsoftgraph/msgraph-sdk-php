@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\DocumentSetVersions\Item\Fields\FieldsRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\Items\Item\DocumentSetVersions\Item\Restore\RestoreRequestBuilder;
 use Microsoft\Graph\Generated\Models\DocumentSetVersion;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -18,6 +19,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the fields property of the microsoft.graph.listItemVersion entity.
+    */
+    public function fields(): FieldsRequestBuilder {
+        return new FieldsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Provides operations to call the restore method.
     */
@@ -40,9 +48,10 @@ class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property documentSetVersions for groups
+     * Delete a version of a document set in a list.
      * @param DocumentSetVersionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/documentsetversion-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DocumentSetVersionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -58,9 +67,10 @@ class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Version information for a document set version created by a user.
+     * Read the properties and relationships of a documentSetVersion object.
      * @param DocumentSetVersionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/documentsetversion-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DocumentSetVersionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -95,7 +105,7 @@ class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property documentSetVersions for groups
+     * Delete a version of a document set in a list.
      * @param DocumentSetVersionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,7 +122,7 @@ class DocumentSetVersionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Version information for a document set version created by a user.
+     * Read the properties and relationships of a documentSetVersion object.
      * @param DocumentSetVersionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -32,10 +32,11 @@ class UpdateRecordingStatusRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action updateRecordingStatus
+     * Update the application's recording status associated with a call. This requires the use of the Teams policy-based recording solution.
      * @param UpdateRecordingStatusPostRequestBody $body The request body
      * @param UpdateRecordingStatusRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/call-updaterecordingstatus?view=graph-rest-1.0 Find more info here
     */
     public function post(UpdateRecordingStatusPostRequestBody $body, ?UpdateRecordingStatusRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -51,7 +52,7 @@ class UpdateRecordingStatusRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action updateRecordingStatus
+     * Update the application's recording status associated with a call. This requires the use of the Teams policy-based recording solution.
      * @param UpdateRecordingStatusPostRequestBody $body The request body
      * @param UpdateRecordingStatusRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

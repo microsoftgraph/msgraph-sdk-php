@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Settings;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Settings that can govern this group's behavior, like whether members can invite guest users to the group. Nullable.
+ * Retrieve a list of tenant-level or group-specific group settings objects.
 */
 class SettingsRequestBuilderGetQueryParameters 
 {

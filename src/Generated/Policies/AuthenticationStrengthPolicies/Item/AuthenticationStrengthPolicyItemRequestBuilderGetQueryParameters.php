@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\AuthenticationStrengthPolicies\Item
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The authentication method combinations that are to be used in scenarios defined by Azure AD Conditional Access.
+ * Read the properties and relationships of an authenticationStrengthPolicy object.
 */
 class AuthenticationStrengthPolicyItemRequestBuilderGetQueryParameters 
 {

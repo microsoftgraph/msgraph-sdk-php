@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Application;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get application from drives
+ * Retrieve the properties and relationships of a workbookApplication object.
 */
 class ApplicationRequestBuilderGetQueryParameters 
 {

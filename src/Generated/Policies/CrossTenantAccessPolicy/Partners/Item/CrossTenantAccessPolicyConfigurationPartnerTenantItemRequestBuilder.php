@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\CrossTenantAccessPolicyConfigurationPartner;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Policies\CrossTenantAccessPolicy\Partners\Item\IdentitySynchronization\IdentitySynchronizationRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -17,6 +18,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the identitySynchronization property of the microsoft.graph.crossTenantAccessPolicyConfigurationPartner entity.
+    */
+    public function identitySynchronization(): IdentitySynchronizationRequestBuilder {
+        return new IdentitySynchronizationRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Instantiates a new CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
@@ -32,9 +40,10 @@ class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder extend
     }
 
     /**
-     * Delete navigation property partners for policies
+     * Delete a partner-specific configuration in a cross-tenant access policy.
      * @param CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -50,9 +59,10 @@ class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder extend
     }
 
     /**
-     * Defines partner-specific configurations for external Azure Active Directory organizations.
+     * Read the properties and relationships of a partner-specific configuration.
      * @param CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,10 +78,11 @@ class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder extend
     }
 
     /**
-     * Update the navigation property partners in policies
+     * Update the properties of a partner-specific configuration.
      * @param CrossTenantAccessPolicyConfigurationPartner $body The request body
      * @param CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(CrossTenantAccessPolicyConfigurationPartner $body, ?CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -87,7 +98,7 @@ class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder extend
     }
 
     /**
-     * Delete navigation property partners for policies
+     * Delete a partner-specific configuration in a cross-tenant access policy.
      * @param CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +115,7 @@ class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder extend
     }
 
     /**
-     * Defines partner-specific configurations for external Azure Active Directory organizations.
+     * Read the properties and relationships of a partner-specific configuration.
      * @param CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +136,7 @@ class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder extend
     }
 
     /**
-     * Update the navigation property partners in policies
+     * Update the properties of a partner-specific configuration.
      * @param CrossTenantAccessPolicyConfigurationPartner $body The request body
      * @param CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -60,9 +60,10 @@ class RejectedSendersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
+     * Users in the rejected senders list cannot post to conversations of the group (identified in the GET request URL). Make sure you do not specify the same user or group in the rejected senders and accepted senders lists, otherwise you will get an error.
      * @param RejectedSendersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/group-list-rejectedsenders?view=graph-rest-1.0 Find more info here
     */
     public function get(?RejectedSendersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -78,7 +79,7 @@ class RejectedSendersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of users or groups that are not allowed to create posts or calendar events in this group. Nullable
+     * Users in the rejected senders list cannot post to conversations of the group (identified in the GET request URL). Make sure you do not specify the same user or group in the rejected senders and accepted senders lists, otherwise you will get an error.
      * @param RejectedSendersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

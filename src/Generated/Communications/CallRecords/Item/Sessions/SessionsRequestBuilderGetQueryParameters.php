@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Communications\CallRecords\Item\Sessions;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable.
+ * Retrieve the list of sessions associated with a callRecord object.
 */
 class SessionsRequestBuilderGetQueryParameters 
 {

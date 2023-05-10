@@ -31,9 +31,10 @@ class UnfollowRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action unfollow
+     * Unfollow a driveItem.
      * @param UnfollowRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/driveitem-unfollow?view=graph-rest-1.0 Find more info here
     */
     public function post(?UnfollowRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -49,7 +50,7 @@ class UnfollowRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action unfollow
+     * Unfollow a driveItem.
      * @param UnfollowRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

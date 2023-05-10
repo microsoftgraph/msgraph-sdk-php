@@ -61,9 +61,10 @@ class SchoolsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get schools from education
+     * Get a list of the educationSchool objects and their properties.
      * @param SchoolsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/educationschool-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?SchoolsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -79,10 +80,11 @@ class SchoolsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to schools for education
+     * Create a new educationSchool object.
      * @param EducationSchool $body The request body
      * @param SchoolsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/educationschool-post?view=graph-rest-1.0 Find more info here
     */
     public function post(EducationSchool $body, ?SchoolsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -98,7 +100,7 @@ class SchoolsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get schools from education
+     * Get a list of the educationSchool objects and their properties.
      * @param SchoolsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -119,7 +121,7 @@ class SchoolsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to schools for education
+     * Create a new educationSchool object.
      * @param EducationSchool $body The request body
      * @param SchoolsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

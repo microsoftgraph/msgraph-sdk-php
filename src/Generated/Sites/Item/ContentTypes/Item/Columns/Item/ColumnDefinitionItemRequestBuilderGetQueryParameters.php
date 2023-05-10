@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Sites\Item\ContentTypes\Item\Columns\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The collection of column definitions for this contentType.
+ * Retrieve the metadata for a [site][], a [list][], or a [contentType][] [column][columnDefinition].
 */
 class ColumnDefinitionItemRequestBuilderGetQueryParameters 
 {

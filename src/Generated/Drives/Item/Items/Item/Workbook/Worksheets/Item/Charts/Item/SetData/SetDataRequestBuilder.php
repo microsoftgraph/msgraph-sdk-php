@@ -31,10 +31,11 @@ class SetDataRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action setData
+     * Resets the source data for the chart.
      * @param SetDataPostRequestBody $body The request body
      * @param SetDataRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/chart-setdata?view=graph-rest-1.0 Find more info here
     */
     public function post(SetDataPostRequestBody $body, ?SetDataRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class SetDataRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action setData
+     * Resets the source data for the chart.
      * @param SetDataPostRequestBody $body The request body
      * @param SetDataRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

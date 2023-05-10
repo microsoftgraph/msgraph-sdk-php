@@ -58,9 +58,10 @@ class DelegatedAdminCustomerItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The customer who has a delegated admin relationship with a Microsoft partner.
+     * Read the properties of a delegatedAdminCustomer object.
      * @param DelegatedAdminCustomerItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/delegatedadmincustomer-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DelegatedAdminCustomerItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -112,7 +113,7 @@ class DelegatedAdminCustomerItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The customer who has a delegated admin relationship with a Microsoft partner.
+     * Read the properties of a delegatedAdminCustomer object.
      * @param DelegatedAdminCustomerItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

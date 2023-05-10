@@ -53,9 +53,10 @@ class SharedCookiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of shared cookies defined for the site list.
+     * Get a list of the browserSharedCookie objects and their properties.
      * @param SharedCookiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/browsersitelist-list-sharedcookies?view=graph-rest-1.0 Find more info here
     */
     public function get(?SharedCookiesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class SharedCookiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to sharedCookies for admin
+     * Create a new browserSharedCookie object in a browserSiteList.
      * @param BrowserSharedCookie $body The request body
      * @param SharedCookiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/browsersitelist-post-sharedcookies?view=graph-rest-1.0 Find more info here
     */
     public function post(BrowserSharedCookie $body, ?SharedCookiesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class SharedCookiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of shared cookies defined for the site list.
+     * Get a list of the browserSharedCookie objects and their properties.
      * @param SharedCookiesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class SharedCookiesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to sharedCookies for admin
+     * Create a new browserSharedCookie object in a browserSiteList.
      * @param BrowserSharedCookie $body The request body
      * @param SharedCookiesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

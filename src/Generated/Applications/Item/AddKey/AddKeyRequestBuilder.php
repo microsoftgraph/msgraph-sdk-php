@@ -32,10 +32,11 @@ class AddKeyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action addKey
+     * Add a key credential to an application. This method, along with removeKey can be used by an application to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  Applications that don’t have any existing valid certificates (no certificates have been added yet, or all certificates have expired), won’t be able to use this service action. You can use the Update application operation to perform an update instead.
      * @param AddKeyPostRequestBody $body The request body
      * @param AddKeyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/application-addkey?view=graph-rest-1.0 Find more info here
     */
     public function post(AddKeyPostRequestBody $body, ?AddKeyRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -51,7 +52,7 @@ class AddKeyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action addKey
+     * Add a key credential to an application. This method, along with removeKey can be used by an application to automate rolling its expiring keys. As part of the request validation for this method, a proof of possession of an existing key is verified before the action can be performed.  Applications that don’t have any existing valid certificates (no certificates have been added yet, or all certificates have expired), won’t be able to use this service action. You can use the Update application operation to perform an update instead.
      * @param AddKeyPostRequestBody $body The request body
      * @param AddKeyRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

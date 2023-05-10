@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Item\ChildFolders\Del
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Invoke function delta
+ * Get a set of mail folders that have been added, deleted, or removed from the user's mailbox. A **delta** function call for mail folders in a mailbox is similar to a GET request, except that by appropriately applying state tokens in one or more of these calls, you can query for incremental changes in the mail folders. This allows you to maintain and synchronize a local store of a user's mail folders without having to fetch all the mail folders of that mailbox from the server every time.
 */
 class DeltaRequestBuilderGetQueryParameters 
 {

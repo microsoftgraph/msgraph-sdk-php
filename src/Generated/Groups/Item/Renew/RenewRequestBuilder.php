@@ -31,9 +31,10 @@ class RenewRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action renew
+     * Renews a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy.
      * @param RenewRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/group-renew?view=graph-rest-1.0 Find more info here
     */
     public function post(?RenewRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -49,7 +50,7 @@ class RenewRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action renew
+     * Renews a group's expiration. When a group is renewed, the group expiration is extended by the number of days defined in the policy.
      * @param RenewRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

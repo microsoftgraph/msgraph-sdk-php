@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceManagement\RoleAssignments\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\DeviceManagement\RoleAssignments\Item\RoleDefinition\RoleDefinitionRequestBuilder;
 use Microsoft\Graph\Generated\Models\DeviceAndAppManagementRoleAssignment;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -17,6 +18,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class DeviceAndAppManagementRoleAssignmentItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the roleDefinition property of the microsoft.graph.roleAssignment entity.
+    */
+    public function roleDefinition(): RoleDefinitionRequestBuilder {
+        return new RoleDefinitionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Instantiates a new DeviceAndAppManagementRoleAssignmentItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

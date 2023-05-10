@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Con
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get internalSponsors from identityGovernance
+ * Retrieve a list of a connectedOrganization's internal sponsors.  The internal sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
 */
 class InternalSponsorsRequestBuilderGetQueryParameters 
 {

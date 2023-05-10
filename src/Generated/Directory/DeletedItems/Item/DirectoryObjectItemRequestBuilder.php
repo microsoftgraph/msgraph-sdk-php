@@ -9,8 +9,11 @@ use Microsoft\Graph\Generated\Directory\DeletedItems\Item\CheckMemberGroups\Chec
 use Microsoft\Graph\Generated\Directory\DeletedItems\Item\CheckMemberObjects\CheckMemberObjectsRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\Item\GetMemberGroups\GetMemberGroupsRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\Item\GetMemberObjects\GetMemberObjectsRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\Item\GraphAdministrativeUnit\GraphAdministrativeUnitRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\Item\GraphApplication\GraphApplicationRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\Item\GraphDevice\GraphDeviceRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\Item\GraphGroup\GraphGroupRequestBuilder;
+use Microsoft\Graph\Generated\Directory\DeletedItems\Item\GraphServicePrincipal\GraphServicePrincipalRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\Item\GraphUser\GraphUserRequestBuilder;
 use Microsoft\Graph\Generated\Directory\DeletedItems\Item\Restore\RestoreRequestBuilder;
 use Microsoft\Graph\Generated\Models\DirectoryObject;
@@ -54,6 +57,13 @@ class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Casts the previous resource to administrativeUnit.
+    */
+    public function graphAdministrativeUnit(): GraphAdministrativeUnitRequestBuilder {
+        return new GraphAdministrativeUnitRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Casts the previous resource to application.
     */
     public function graphApplication(): GraphApplicationRequestBuilder {
@@ -61,10 +71,24 @@ class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Casts the previous resource to device.
+    */
+    public function graphDevice(): GraphDeviceRequestBuilder {
+        return new GraphDeviceRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Casts the previous resource to group.
     */
     public function graphGroup(): GraphGroupRequestBuilder {
         return new GraphGroupRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Casts the previous resource to servicePrincipal.
+    */
+    public function graphServicePrincipal(): GraphServicePrincipalRequestBuilder {
+        return new GraphServicePrincipalRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -96,9 +120,10 @@ class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property deletedItems for directory
+     * Permanently delete a recently deleted application, group, servicePrincipal, or user object from deleted items. After an item is permanently deleted, it **cannot** be restored. Administrative units **cannot** be permanently deleted by using the **deletedItems** API. Soft-deleted administrative units will be permanently deleted 30 days after initial deletion unless they are restored.
      * @param DirectoryObjectItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/directory-deleteditems-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DirectoryObjectItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -114,9 +139,10 @@ class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Recently deleted items. Read-only. Nullable.
+     * Retrieve the properties of a recently deleted application, group, servicePrincipal, administrative unit, or user object from deleted items.
      * @param DirectoryObjectItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/directory-deleteditems-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DirectoryObjectItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -151,7 +177,7 @@ class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property deletedItems for directory
+     * Permanently delete a recently deleted application, group, servicePrincipal, or user object from deleted items. After an item is permanently deleted, it **cannot** be restored. Administrative units **cannot** be permanently deleted by using the **deletedItems** API. Soft-deleted administrative units will be permanently deleted 30 days after initial deletion unless they are restored.
      * @param DirectoryObjectItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -168,7 +194,7 @@ class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Recently deleted items. Read-only. Nullable.
+     * Retrieve the properties of a recently deleted application, group, servicePrincipal, administrative unit, or user object from deleted items.
      * @param DirectoryObjectItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

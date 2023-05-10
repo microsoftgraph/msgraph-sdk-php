@@ -32,9 +32,10 @@ class DataBodyRangeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function dataBodyRange
+     * Gets the range object associated with the data body of the column.
      * @param DataBodyRangeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/tablecolumn-databodyrange?view=graph-rest-1.0 Find more info here
     */
     public function get(?DataBodyRangeRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class DataBodyRangeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function dataBodyRange
+     * Gets the range object associated with the data body of the column.
      * @param DataBodyRangeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

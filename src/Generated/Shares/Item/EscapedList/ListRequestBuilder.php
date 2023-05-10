@@ -9,8 +9,10 @@ use Microsoft\Graph\Generated\Models\EscapedList;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Columns\ColumnsRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\ContentTypes\ContentTypesRequestBuilder;
+use Microsoft\Graph\Generated\Shares\Item\EscapedList\CreatedByUser\CreatedByUserRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Drive\DriveRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\ItemsRequestBuilder;
+use Microsoft\Graph\Generated\Shares\Item\EscapedList\LastModifiedByUser\LastModifiedByUserRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Operations\OperationsRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Subscriptions\SubscriptionsRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -38,6 +40,13 @@ class ListRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to manage the createdByUser property of the microsoft.graph.baseItem entity.
+    */
+    public function createdByUser(): CreatedByUserRequestBuilder {
+        return new CreatedByUserRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the drive property of the microsoft.graph.list entity.
     */
     public function drive(): DriveRequestBuilder {
@@ -49,6 +58,13 @@ class ListRequestBuilder extends BaseRequestBuilder
     */
     public function items(): ItemsRequestBuilder {
         return new ItemsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the lastModifiedByUser property of the microsoft.graph.baseItem entity.
+    */
+    public function lastModifiedByUser(): LastModifiedByUserRequestBuilder {
+        return new LastModifiedByUserRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

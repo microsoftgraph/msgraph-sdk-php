@@ -53,9 +53,10 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * All items contained in the list.
+     * Get the collection of [items][item] in a [list][].
      * @param ItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/listitem-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ItemsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to items for sites
+     * Create a new [listItem][] in a [list][].
      * @param ListItem $body The request body
      * @param ItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/listitem-create?view=graph-rest-1.0 Find more info here
     */
     public function post(ListItem $body, ?ItemsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * All items contained in the list.
+     * Get the collection of [items][item] in a [list][].
      * @param ItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class ItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to items for sites
+     * Create a new [listItem][] in a [list][].
      * @param ListItem $body The request body
      * @param ItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\EscapedList\Items;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * All items contained in the list.
+ * Get the collection of [items][item] in a [list][].
 */
 class ItemsRequestBuilderGetQueryParameters 
 {

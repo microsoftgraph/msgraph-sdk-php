@@ -53,9 +53,10 @@ class SecureScoreControlProfilesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get secureScoreControlProfiles from security
+     * Retrieve the properties and relationships of a secureScoreControlProfiles object.
      * @param SecureScoreControlProfilesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/security-list-securescorecontrolprofiles?view=graph-rest-1.0 Find more info here
     */
     public function get(?SecureScoreControlProfilesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +91,7 @@ class SecureScoreControlProfilesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get secureScoreControlProfiles from security
+     * Retrieve the properties and relationships of a secureScoreControlProfiles object.
      * @param SecureScoreControlProfilesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

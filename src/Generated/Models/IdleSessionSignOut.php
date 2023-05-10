@@ -65,7 +65,7 @@ class IdleSessionSignOut implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the isEnabled property value. The isEnabled property
+     * Gets the isEnabled property value. Indicates whether the idle session sign-out policy is enabled.
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
@@ -81,7 +81,7 @@ class IdleSessionSignOut implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the signOutAfterInSeconds property value. The signOutAfterInSeconds property
+     * Gets the signOutAfterInSeconds property value. Number of seconds of inactivity after which a user is signed out.
      * @return int|null
     */
     public function getSignOutAfterInSeconds(): ?int {
@@ -89,7 +89,7 @@ class IdleSessionSignOut implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the warnAfterInSeconds property value. The warnAfterInSeconds property
+     * Gets the warnAfterInSeconds property value. Number of seconds of inactivity after which a user is notified that they'll be signed out.
      * @return int|null
     */
     public function getWarnAfterInSeconds(): ?int {
@@ -125,7 +125,7 @@ class IdleSessionSignOut implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the isEnabled property value. The isEnabled property
+     * Sets the isEnabled property value. Indicates whether the idle session sign-out policy is enabled.
      * @param bool|null $value Value to set for the isEnabled property.
     */
     public function setIsEnabled(?bool $value): void {
@@ -141,7 +141,7 @@ class IdleSessionSignOut implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the signOutAfterInSeconds property value. The signOutAfterInSeconds property
+     * Sets the signOutAfterInSeconds property value. Number of seconds of inactivity after which a user is signed out.
      * @param int|null $value Value to set for the signOutAfterInSeconds property.
     */
     public function setSignOutAfterInSeconds(?int $value): void {
@@ -149,7 +149,7 @@ class IdleSessionSignOut implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the warnAfterInSeconds property value. The warnAfterInSeconds property
+     * Sets the warnAfterInSeconds property value. Number of seconds of inactivity after which a user is notified that they'll be signed out.
      * @param int|null $value Value to set for the warnAfterInSeconds property.
     */
     public function setWarnAfterInSeconds(?int $value): void {

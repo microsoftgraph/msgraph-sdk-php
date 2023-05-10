@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teams\Item\Channels;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The collection of channels and messages associated with the team.
+ * Retrieve the list of channels in this team.
 */
 class ChannelsRequestBuilderGetQueryParameters 
 {

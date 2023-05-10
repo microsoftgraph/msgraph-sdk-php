@@ -31,10 +31,11 @@ class CalculateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action calculate
+     * Recalculate all currently opened workbooks in Excel.
      * @param CalculatePostRequestBody $body The request body
      * @param CalculateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/workbookapplication-calculate?view=graph-rest-1.0 Find more info here
     */
     public function post(CalculatePostRequestBody $body, ?CalculateRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class CalculateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action calculate
+     * Recalculate all currently opened workbooks in Excel.
      * @param CalculatePostRequestBody $body The request body
      * @param CalculateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

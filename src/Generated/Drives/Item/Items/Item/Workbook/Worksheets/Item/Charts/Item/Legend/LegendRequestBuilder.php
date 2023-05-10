@@ -58,9 +58,10 @@ class LegendRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the legend for the chart. Read-only.
+     * Retrieve the properties and relationships of chartlegend object.
      * @param LegendRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/chartlegend-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?LegendRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,10 +77,11 @@ class LegendRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property legend in drives
+     * Update the properties of chartlegend object.
      * @param WorkbookChartLegend $body The request body
      * @param LegendRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/chartlegend-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkbookChartLegend $body, ?LegendRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -112,7 +114,7 @@ class LegendRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the legend for the chart. Read-only.
+     * Retrieve the properties and relationships of chartlegend object.
      * @param LegendRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -133,7 +135,7 @@ class LegendRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property legend in drives
+     * Update the properties of chartlegend object.
      * @param WorkbookChartLegend $body The request body
      * @param LegendRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

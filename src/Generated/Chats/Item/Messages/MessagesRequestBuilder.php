@@ -61,9 +61,10 @@ class MessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of all the messages in the chat. Nullable.
+     * Retrieve the list of messages in a chat. This method supports federation. To list chat messages in application context, the request must be made from the tenant that the channel owner belongs to (represented by the **tenantId** property on the channel).
      * @param MessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/chat-list-messages?view=graph-rest-1.0 Find more info here
     */
     public function get(?MessagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -79,10 +80,11 @@ class MessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to messages for chats
+     * Send a new chatMessage in the specified channel or a chat.
      * @param ChatMessage $body The request body
      * @param MessagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/chatmessage-post?view=graph-rest-1.0 Find more info here
     */
     public function post(ChatMessage $body, ?MessagesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -98,7 +100,7 @@ class MessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of all the messages in the chat. Nullable.
+     * Retrieve the list of messages in a chat. This method supports federation. To list chat messages in application context, the request must be made from the tenant that the channel owner belongs to (represented by the **tenantId** property on the channel).
      * @param MessagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -119,7 +121,7 @@ class MessagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to messages for chats
+     * Send a new chatMessage in the specified channel or a chat.
      * @param ChatMessage $body The request body
      * @param MessagesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

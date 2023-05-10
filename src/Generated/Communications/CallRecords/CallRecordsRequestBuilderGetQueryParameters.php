@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Communications\CallRecords;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get callRecords from communications
+ * Retrieve the properties and relationships of a callRecord object. There are two ways to get the **id** of a **callRecord**:
 */
 class CallRecordsRequestBuilderGetQueryParameters 
 {

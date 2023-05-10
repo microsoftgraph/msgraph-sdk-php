@@ -32,10 +32,11 @@ class InstantiateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action instantiate
+     * Add an instance of an application from the Azure AD application gallery into your directory. You can also use this API to instantiate non-gallery apps. Use the following ID for the **applicationTemplate** object: `8adf8e6e-67b2-4cf2-a259-e3dc5476c621`.
      * @param InstantiatePostRequestBody $body The request body
      * @param InstantiateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/applicationtemplate-instantiate?view=graph-rest-1.0 Find more info here
     */
     public function post(InstantiatePostRequestBody $body, ?InstantiateRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -51,7 +52,7 @@ class InstantiateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action instantiate
+     * Add an instance of an application from the Azure AD application gallery into your directory. You can also use this API to instantiate non-gallery apps. Use the following ID for the **applicationTemplate** object: `8adf8e6e-67b2-4cf2-a259-e3dc5476c621`.
      * @param InstantiatePostRequestBody $body The request body
      * @param InstantiateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

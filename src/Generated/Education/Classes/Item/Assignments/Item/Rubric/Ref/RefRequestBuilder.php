@@ -32,9 +32,10 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete ref of navigation property rubric for education
+     * Remove an educationRubric from an educationAssignment. This method does not delete the rubric itself and can only be performed by teachers.
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/educationassignment-delete-rubric?view=graph-rest-1.0 Find more info here
     */
     public function delete(?RefRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -50,9 +51,10 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * When set, the grading rubric attached to this assignment.
+     * Get the educationRubric object attached to an educationAssignment, if one exists. Only teachers, students, and applications with application permissions can perform this operation.
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/educationassignment-get-rubric?view=graph-rest-1.0 Find more info here
     */
     public function get(?RefRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,10 +70,11 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the ref of navigation property rubric in education
+     * Attach an existing educationRubric object to an educationAssignment. Only teachers can perform this operation.
      * @param ReferenceUpdate $body The request body
      * @param RefRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/educationassignment-put-rubric?view=graph-rest-1.0 Find more info here
     */
     public function put(ReferenceUpdate $body, ?RefRequestBuilderPutRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPutRequestInformation($body, $requestConfiguration);
@@ -87,7 +90,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete ref of navigation property rubric for education
+     * Remove an educationRubric from an educationAssignment. This method does not delete the rubric itself and can only be performed by teachers.
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +107,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * When set, the grading rubric attached to this assignment.
+     * Get the educationRubric object attached to an educationAssignment, if one exists. Only teachers, students, and applications with application permissions can perform this operation.
      * @param RefRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -122,7 +125,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the ref of navigation property rubric in education
+     * Attach an existing educationRubric object to an educationAssignment. Only teachers can perform this operation.
      * @param ReferenceUpdate $body The request body
      * @param RefRequestBuilderPutRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

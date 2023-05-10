@@ -31,9 +31,10 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete ref of navigation property internalSponsors for identityGovernance
+     * Remove a user or a group from the connected organization's internal sponsors. The internal sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/connectedorganization-delete-internalsponsors?view=graph-rest-1.0 Find more info here
     */
     public function delete(?RefRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -49,7 +50,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete ref of navigation property internalSponsors for identityGovernance
+     * Remove a user or a group from the connected organization's internal sponsors. The internal sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

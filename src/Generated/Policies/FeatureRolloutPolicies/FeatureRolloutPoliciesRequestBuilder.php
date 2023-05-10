@@ -53,9 +53,10 @@ class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The feature rollout policy associated with a directory object.
+     * Retrieve a list of featureRolloutPolicy objects.
      * @param FeatureRolloutPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/featurerolloutpolicies-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?FeatureRolloutPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to featureRolloutPolicies for policies
+     * Create a new featureRolloutPolicy object.
      * @param FeatureRolloutPolicy $body The request body
      * @param FeatureRolloutPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/featurerolloutpolicies-post?view=graph-rest-1.0 Find more info here
     */
     public function post(FeatureRolloutPolicy $body, ?FeatureRolloutPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The feature rollout policy associated with a directory object.
+     * Retrieve a list of featureRolloutPolicy objects.
      * @param FeatureRolloutPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class FeatureRolloutPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to featureRolloutPolicies for policies
+     * Create a new featureRolloutPolicy object.
      * @param FeatureRolloutPolicy $body The request body
      * @param FeatureRolloutPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -31,9 +31,10 @@ class RemoveEmailRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action removeEmail
+     * Remove the email address of a channel. You can remove an email address only if it was provisioned using the provisionEmail method or through the Microsoft Teams client.
      * @param RemoveEmailRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/channel-removeemail?view=graph-rest-1.0 Find more info here
     */
     public function post(?RemoveEmailRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -49,7 +50,7 @@ class RemoveEmailRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action removeEmail
+     * Remove the email address of a channel. You can remove an email address only if it was provisioned using the provisionEmail method or through the Microsoft Teams client.
      * @param RemoveEmailRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

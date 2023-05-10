@@ -48,7 +48,7 @@ class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get memberOf from contacts
+     * Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
      * @param DirectoryObjectItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -66,7 +66,7 @@ class DirectoryObjectItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get memberOf from contacts
+     * Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
      * @param DirectoryObjectItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

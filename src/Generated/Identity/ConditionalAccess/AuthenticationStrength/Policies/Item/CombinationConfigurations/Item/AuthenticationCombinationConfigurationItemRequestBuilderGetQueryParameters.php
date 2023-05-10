@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Identity\ConditionalAccess\AuthenticationStr
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Settings that may be used to require specific types or instances of an authentication method to be used when authenticating with a specified combination of authentication methods.
+ * Read the properties and relationships of an authenticationCombinationConfiguration object.
 */
 class AuthenticationCombinationConfigurationItemRequestBuilderGetQueryParameters 
 {

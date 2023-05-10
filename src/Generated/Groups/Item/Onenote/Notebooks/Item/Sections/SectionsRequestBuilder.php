@@ -53,9 +53,10 @@ class SectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The sections in the notebook. Read-only. Nullable.
+     * Retrieve a list of onenoteSection objects from the specified notebook.
      * @param SectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/notebook-list-sections?view=graph-rest-1.0 Find more info here
     */
     public function get(?SectionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class SectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to sections for groups
+     * Create a new onenoteSection in the specified notebook.
      * @param OnenoteSection $body The request body
      * @param SectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/notebook-post-sections?view=graph-rest-1.0 Find more info here
     */
     public function post(OnenoteSection $body, ?SectionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class SectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The sections in the notebook. Read-only. Nullable.
+     * Retrieve a list of onenoteSection objects from the specified notebook.
      * @param SectionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class SectionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to sections for groups
+     * Create a new onenoteSection in the specified notebook.
      * @param OnenoteSection $body The request body
      * @param SectionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Threads\Item\Posts\Item\Attachme
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read-only. Nullable. Supports $expand.
+ * Retrieve a list of attachment objects attached to a post.
 */
 class AttachmentsRequestBuilderGetQueryParameters 
 {

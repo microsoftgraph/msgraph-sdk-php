@@ -53,9 +53,10 @@ class AttachmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of serviceAnnouncementAttachments.
+     * Get the list of attachments associated with a service message.
      * @param AttachmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/serviceupdatemessage-list-attachments?view=graph-rest-1.0 Find more info here
     */
     public function get(?AttachmentsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +91,7 @@ class AttachmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of serviceAnnouncementAttachments.
+     * Get the list of attachments associated with a service message.
      * @param AttachmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

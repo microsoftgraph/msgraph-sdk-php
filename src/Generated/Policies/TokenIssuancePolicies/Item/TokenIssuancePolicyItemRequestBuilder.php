@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\TokenIssuancePolicy;
+use Microsoft\Graph\Generated\Policies\TokenIssuancePolicies\Item\AppliesTo\AppliesToRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -17,6 +18,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the appliesTo property of the microsoft.graph.stsPolicy entity.
+    */
+    public function appliesTo(): AppliesToRequestBuilder {
+        return new AppliesToRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Instantiates a new TokenIssuancePolicyItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
@@ -32,9 +40,10 @@ class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property tokenIssuancePolicies for policies
+     * Delete a tokenIssuancePolicy object.
      * @param TokenIssuancePolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/tokenissuancepolicy-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?TokenIssuancePolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -68,10 +77,11 @@ class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property tokenIssuancePolicies in policies
+     * Update the properties of a tokenIssuancePolicy object.
      * @param TokenIssuancePolicy $body The request body
      * @param TokenIssuancePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/tokenissuancepolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(TokenIssuancePolicy $body, ?TokenIssuancePolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -87,7 +97,7 @@ class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property tokenIssuancePolicies for policies
+     * Delete a tokenIssuancePolicy object.
      * @param TokenIssuancePolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +135,7 @@ class TokenIssuancePolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property tokenIssuancePolicies in policies
+     * Update the properties of a tokenIssuancePolicy object.
      * @param TokenIssuancePolicy $body The request body
      * @param TokenIssuancePolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

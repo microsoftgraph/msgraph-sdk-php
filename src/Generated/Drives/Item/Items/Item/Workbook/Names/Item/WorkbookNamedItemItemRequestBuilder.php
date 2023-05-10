@@ -66,9 +66,10 @@ class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
+     * Retrieve the properties and relationships of nameditem object.
      * @param WorkbookNamedItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/nameditem-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WorkbookNamedItemItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -84,10 +85,11 @@ class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property names in drives
+     * Update the properties of nameditem object.
      * @param WorkbookNamedItem $body The request body
      * @param WorkbookNamedItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/nameditem-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkbookNamedItem $body, ?WorkbookNamedItemItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -120,7 +122,7 @@ class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
+     * Retrieve the properties and relationships of nameditem object.
      * @param WorkbookNamedItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -141,7 +143,7 @@ class WorkbookNamedItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property names in drives
+     * Update the properties of nameditem object.
      * @param WorkbookNamedItem $body The request body
      * @param WorkbookNamedItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

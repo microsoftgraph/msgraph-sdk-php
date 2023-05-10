@@ -56,9 +56,10 @@ class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property installedApps for users
+     * Uninstall an app installed within a chat.
      * @param TeamsAppInstallationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/chat-delete-installedapps?view=graph-rest-1.0 Find more info here
     */
     public function delete(?TeamsAppInstallationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -74,9 +75,10 @@ class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of all the apps in the chat. Nullable.
+     * Get an app installed in a chat.
      * @param TeamsAppInstallationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/chat-get-installedapps?view=graph-rest-1.0 Find more info here
     */
     public function get(?TeamsAppInstallationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -111,7 +113,7 @@ class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property installedApps for users
+     * Uninstall an app installed within a chat.
      * @param TeamsAppInstallationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +130,7 @@ class TeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of all the apps in the chat. Nullable.
+     * Get an app installed in a chat.
      * @param TeamsAppInstallationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

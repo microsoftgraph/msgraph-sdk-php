@@ -53,9 +53,10 @@ class CalendarGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The user's calendar groups. Read-only. Nullable.
+     * Get the user's calendar groups.
      * @param CalendarGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/user-list-calendargroups?view=graph-rest-1.0 Find more info here
     */
     public function get(?CalendarGroupsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class CalendarGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to calendarGroups for users
+     * Use this API to create a new CalendarGroup.
      * @param CalendarGroup $body The request body
      * @param CalendarGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/user-post-calendargroups?view=graph-rest-1.0 Find more info here
     */
     public function post(CalendarGroup $body, ?CalendarGroupsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class CalendarGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The user's calendar groups. Read-only. Nullable.
+     * Get the user's calendar groups.
      * @param CalendarGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class CalendarGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to calendarGroups for users
+     * Use this API to create a new CalendarGroup.
      * @param CalendarGroup $body The request body
      * @param CalendarGroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

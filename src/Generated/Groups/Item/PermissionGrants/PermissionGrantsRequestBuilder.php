@@ -85,9 +85,10 @@ class PermissionGrantsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The permission that has been granted for a group to a specific application. Supports $expand.
+     * List all resource-specific permission grants on the group. This list specifies the Azure AD apps that have access to the **group**, along with the corresponding kind of resource-specific access that each app has.
      * @param PermissionGrantsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/group-list-permissiongrants?view=graph-rest-1.0 Find more info here
     */
     public function get(?PermissionGrantsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -122,7 +123,7 @@ class PermissionGrantsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The permission that has been granted for a group to a specific application. Supports $expand.
+     * List all resource-specific permission grants on the group. This list specifies the Azure AD apps that have access to the **group**, along with the corresponding kind of resource-specific access that each app has.
      * @param PermissionGrantsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

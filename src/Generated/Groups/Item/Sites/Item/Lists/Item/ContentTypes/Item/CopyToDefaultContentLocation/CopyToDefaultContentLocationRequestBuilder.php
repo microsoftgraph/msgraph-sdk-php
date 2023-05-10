@@ -31,10 +31,11 @@ class CopyToDefaultContentLocationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action copyToDefaultContentLocation
+     * Copy a file to a default content location in a [content type][contentType]. The file can then be added as a default file or template via a POST operation.
      * @param CopyToDefaultContentLocationPostRequestBody $body The request body
      * @param CopyToDefaultContentLocationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/contenttype-copytodefaultcontentlocation?view=graph-rest-1.0 Find more info here
     */
     public function post(CopyToDefaultContentLocationPostRequestBody $body, ?CopyToDefaultContentLocationRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class CopyToDefaultContentLocationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action copyToDefaultContentLocation
+     * Copy a file to a default content location in a [content type][contentType]. The file can then be added as a default file or template via a POST operation.
      * @param CopyToDefaultContentLocationPostRequestBody $body The request body
      * @param CopyToDefaultContentLocationRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

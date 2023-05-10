@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\FollowedSites;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get followedSites from users
+ * List the sites that have been followed by the signed in user.
 */
 class FollowedSitesRequestBuilderGetQueryParameters 
 {

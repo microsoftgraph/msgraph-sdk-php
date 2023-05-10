@@ -53,9 +53,10 @@ class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
+     * Get a list of the federatedIdentityCredential objects and their properties.
      * @param FederatedIdentityCredentialsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/application-list-federatedidentitycredentials?view=graph-rest-1.0 Find more info here
     */
     public function get(?FederatedIdentityCredentialsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to federatedIdentityCredentials for applications
+     * Create a new federatedIdentityCredential object for an application. By configuring a trust relationship between your Azure AD application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application.
      * @param FederatedIdentityCredential $body The request body
      * @param FederatedIdentityCredentialsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/application-post-federatedidentitycredentials?view=graph-rest-1.0 Find more info here
     */
     public function post(FederatedIdentityCredential $body, ?FederatedIdentityCredentialsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Federated identities for applications. Supports $expand and $filter (startsWith, /$count eq 0, /$count ne 0).
+     * Get a list of the federatedIdentityCredential objects and their properties.
      * @param FederatedIdentityCredentialsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class FederatedIdentityCredentialsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to federatedIdentityCredentials for applications
+     * Create a new federatedIdentityCredential object for an application. By configuring a trust relationship between your Azure AD application registration and the identity provider for your compute platform, you can use tokens issued by that platform to authenticate with Microsoft identity platform and call APIs in the Microsoft ecosystem. Maximum of 20 objects can be added to an application.
      * @param FederatedIdentityCredential $body The request body
      * @param FederatedIdentityCredentialsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

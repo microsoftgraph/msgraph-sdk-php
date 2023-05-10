@@ -66,9 +66,10 @@ class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Specifies the various policies associated with scopes and roles.
+     * Retrieve the details of a role management policy.
      * @param UnifiedRoleManagementPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/unifiedrolemanagementpolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?UnifiedRoleManagementPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -120,7 +121,7 @@ class UnifiedRoleManagementPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Specifies the various policies associated with scopes and roles.
+     * Retrieve the details of a role management policy.
      * @param UnifiedRoleManagementPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

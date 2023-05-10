@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\TenantRelationships\DelegatedAdminCustomers;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The customer who has a delegated admin relationship with a Microsoft partner.
+ * Get a list of the delegatedAdminCustomer objects and their properties.
 */
 class DelegatedAdminCustomersRequestBuilderGetQueryParameters 
 {

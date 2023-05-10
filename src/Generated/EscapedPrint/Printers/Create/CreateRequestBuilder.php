@@ -31,10 +31,11 @@ class CreateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action create
+     * Create (register) a printer with the Universal Print service. This is a long-running operation and as such, it returns a printerCreateOperation that can be used to track and verify the registration of the printer. For help creating the required Certificate Signing Request (CSR) for creating printer, see the CSR generation code sample.
      * @param CreatePostRequestBody $body The request body
      * @param CreateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/printer-create?view=graph-rest-1.0 Find more info here
     */
     public function post(CreatePostRequestBody $body, ?CreateRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class CreateRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action create
+     * Create (register) a printer with the Universal Print service. This is a long-running operation and as such, it returns a printerCreateOperation that can be used to track and verify the registration of the printer. For help creating the required Certificate Signing Request (CSR) for creating printer, see the CSR generation code sample.
      * @param CreatePostRequestBody $body The request body
      * @param CreateRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

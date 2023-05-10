@@ -32,9 +32,10 @@ class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property userFlowAttributes for identity
+     * Delete an identityUserFlowAttribute. Only custom user flow attributes can be deleted.
      * @param IdentityUserFlowAttributeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/identityuserflowattribute-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?IdentityUserFlowAttributeItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -50,9 +51,10 @@ class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents entry point for identity userflow attributes.
+     * Retrieve the properties and relationships of a identityUserFlowAttribute object.
      * @param IdentityUserFlowAttributeItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/identityuserflowattribute-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?IdentityUserFlowAttributeItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,10 +70,11 @@ class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property userFlowAttributes in identity
+     * Update the properties of a identityUserFlowAttribute object. Only custom user flow attributes can be updated.
      * @param IdentityUserFlowAttribute $body The request body
      * @param IdentityUserFlowAttributeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/identityuserflowattribute-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(IdentityUserFlowAttribute $body, ?IdentityUserFlowAttributeItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -87,7 +90,7 @@ class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property userFlowAttributes for identity
+     * Delete an identityUserFlowAttribute. Only custom user flow attributes can be deleted.
      * @param IdentityUserFlowAttributeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +107,7 @@ class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents entry point for identity userflow attributes.
+     * Retrieve the properties and relationships of a identityUserFlowAttribute object.
      * @param IdentityUserFlowAttributeItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +128,7 @@ class IdentityUserFlowAttributeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property userFlowAttributes in identity
+     * Update the properties of a identityUserFlowAttribute object. Only custom user flow attributes can be updated.
      * @param IdentityUserFlowAttribute $body The request body
      * @param IdentityUserFlowAttributeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

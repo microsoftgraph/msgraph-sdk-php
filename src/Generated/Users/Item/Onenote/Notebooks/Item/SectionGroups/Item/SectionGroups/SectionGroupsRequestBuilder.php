@@ -52,9 +52,10 @@ class SectionGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The section groups in the section. Read-only. Nullable.
+     * Retrieve a list of section groups from the specified section group.
      * @param SectionGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/sectiongroup-list-sectiongroups?view=graph-rest-1.0 Find more info here
     */
     public function get(?SectionGroupsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -70,7 +71,7 @@ class SectionGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The section groups in the section. Read-only. Nullable.
+     * Retrieve a list of section groups from the specified section group.
      * @param SectionGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

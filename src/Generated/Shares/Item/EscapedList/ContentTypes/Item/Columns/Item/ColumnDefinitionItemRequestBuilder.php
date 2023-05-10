@@ -40,9 +40,10 @@ class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property columns for shares
+     * Remove a [column][columndefinition] from a [site][], a [list][], or a [content type][contentType].
      * @param ColumnDefinitionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/columndefinition-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ColumnDefinitionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -58,9 +59,10 @@ class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The collection of column definitions for this contentType.
+     * Retrieve the metadata for a [site][], a [list][], or a [contentType][] [column][columnDefinition].
      * @param ColumnDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/columndefinition-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ColumnDefinitionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -95,7 +97,7 @@ class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property columns for shares
+     * Remove a [column][columndefinition] from a [site][], a [list][], or a [content type][contentType].
      * @param ColumnDefinitionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,7 +114,7 @@ class ColumnDefinitionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The collection of column definitions for this contentType.
+     * Retrieve the metadata for a [site][], a [list][], or a [contentType][] [column][columnDefinition].
      * @param ColumnDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

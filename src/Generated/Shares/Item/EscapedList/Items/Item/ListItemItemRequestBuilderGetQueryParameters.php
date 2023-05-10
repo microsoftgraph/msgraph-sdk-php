@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * All items contained in the list.
+ * Returns the metadata for an [item][] in a [list][].
 */
 class ListItemItemRequestBuilderGetQueryParameters 
 {

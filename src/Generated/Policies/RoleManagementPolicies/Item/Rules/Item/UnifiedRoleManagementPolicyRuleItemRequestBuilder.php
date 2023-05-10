@@ -50,9 +50,10 @@ class UnifiedRoleManagementPolicyRuleItemRequestBuilder extends BaseRequestBuild
     }
 
     /**
-     * The collection of rules like approval rules and expiration rules. Supports $expand.
+     * Retrieve a rule or settings defined for a role management policy. The rule can be one of the following types that are derived from the unifiedRoleManagementPolicyRule object:+ unifiedRoleManagementPolicyApprovalRule+ unifiedRoleManagementPolicyAuthenticationContextRule+ unifiedRoleManagementPolicyEnablementRule+ unifiedRoleManagementPolicyExpirationRule+ unifiedRoleManagementPolicyNotificationRule
      * @param UnifiedRoleManagementPolicyRuleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/unifiedrolemanagementpolicyrule-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?UnifiedRoleManagementPolicyRuleItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,10 +69,11 @@ class UnifiedRoleManagementPolicyRuleItemRequestBuilder extends BaseRequestBuild
     }
 
     /**
-     * Update the navigation property rules in policies
+     * Update a rule defined for a role management policy. The rule can be one of the following types that are derived from the unifiedRoleManagementPolicyRule object: For more information about rules for Azure AD roles and examples of updating rules, see the following articles:
      * @param UnifiedRoleManagementPolicyRule $body The request body
      * @param UnifiedRoleManagementPolicyRuleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/unifiedrolemanagementpolicyrule-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(UnifiedRoleManagementPolicyRule $body, ?UnifiedRoleManagementPolicyRuleItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -104,7 +106,7 @@ class UnifiedRoleManagementPolicyRuleItemRequestBuilder extends BaseRequestBuild
     }
 
     /**
-     * The collection of rules like approval rules and expiration rules. Supports $expand.
+     * Retrieve a rule or settings defined for a role management policy. The rule can be one of the following types that are derived from the unifiedRoleManagementPolicyRule object:+ unifiedRoleManagementPolicyApprovalRule+ unifiedRoleManagementPolicyAuthenticationContextRule+ unifiedRoleManagementPolicyEnablementRule+ unifiedRoleManagementPolicyExpirationRule+ unifiedRoleManagementPolicyNotificationRule
      * @param UnifiedRoleManagementPolicyRuleItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +127,7 @@ class UnifiedRoleManagementPolicyRuleItemRequestBuilder extends BaseRequestBuild
     }
 
     /**
-     * Update the navigation property rules in policies
+     * Update a rule defined for a role management policy. The rule can be one of the following types that are derived from the unifiedRoleManagementPolicyRule object: For more information about rules for Azure AD roles and examples of updating rules, see the following articles:
      * @param UnifiedRoleManagementPolicyRule $body The request body
      * @param UnifiedRoleManagementPolicyRuleItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

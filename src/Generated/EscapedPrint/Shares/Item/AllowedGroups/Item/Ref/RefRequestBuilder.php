@@ -31,9 +31,10 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete ref of navigation property allowedGroups for print
+     * Revoke the specified group's access to submit print jobs to the associated printerShare.
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/printershare-delete-allowedgroup?view=graph-rest-1.0 Find more info here
     */
     public function delete(?RefRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -49,7 +50,7 @@ class RefRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete ref of navigation property allowedGroups for print
+     * Revoke the specified group's access to submit print jobs to the associated printerShare.
      * @param RefRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

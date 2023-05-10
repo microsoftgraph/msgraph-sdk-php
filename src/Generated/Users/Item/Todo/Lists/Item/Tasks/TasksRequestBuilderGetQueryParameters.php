@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Todo\Lists\Item\Tasks;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The tasks in this task list. Read-only. Nullable.
+ * Get the **todoTask** resources from the **tasks** navigation property of a specified todoTaskList.
 */
 class TasksRequestBuilderGetQueryParameters 
 {

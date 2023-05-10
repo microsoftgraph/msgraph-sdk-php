@@ -53,9 +53,10 @@ class CalendarsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The calendars in the calendar group. Navigation property. Read-only. Nullable.
+     * Retrieve a list of calendars belonging to a calendar group.
      * @param CalendarsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/calendargroup-list-calendars?view=graph-rest-1.0 Find more info here
     */
     public function get(?CalendarsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class CalendarsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to calendars for users
+     * Use this API to create a new calendar in a calendar group for a user.
      * @param Calendar $body The request body
      * @param CalendarsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/calendargroup-post-calendars?view=graph-rest-1.0 Find more info here
     */
     public function post(Calendar $body, ?CalendarsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class CalendarsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The calendars in the calendar group. Navigation property. Read-only. Nullable.
+     * Retrieve a list of calendars belonging to a calendar group.
      * @param CalendarsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class CalendarsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to calendars for users
+     * Use this API to create a new calendar in a calendar group for a user.
      * @param Calendar $body The request body
      * @param CalendarsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

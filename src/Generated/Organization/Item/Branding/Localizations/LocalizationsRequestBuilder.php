@@ -53,9 +53,10 @@ class LocalizationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add different branding based on a locale.
+     * Retrieve all localization branding objects, including the default branding.
      * @param LocalizationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/organizationalbranding-list-localizations?view=graph-rest-1.0 Find more info here
     */
     public function get(?LocalizationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class LocalizationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to localizations for organization
+     * Create a new organizationalBrandingLocalization object. This creates a localized branding and at the same time, the default branding if it doesn't exist. The default branding is created only once. It's loaded when a localized branding isn't configured for the user's browser language. To retrieve the default branding, see Get branding.
      * @param OrganizationalBrandingLocalization $body The request body
      * @param LocalizationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/organizationalbranding-post-localizations?view=graph-rest-1.0 Find more info here
     */
     public function post(OrganizationalBrandingLocalization $body, ?LocalizationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class LocalizationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add different branding based on a locale.
+     * Retrieve all localization branding objects, including the default branding.
      * @param LocalizationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class LocalizationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to localizations for organization
+     * Create a new organizationalBrandingLocalization object. This creates a localized branding and at the same time, the default branding if it doesn't exist. The default branding is created only once. It's loaded when a localized branding isn't configured for the user's browser language. To retrieve the default branding, see Get branding.
      * @param OrganizationalBrandingLocalization $body The request body
      * @param LocalizationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -32,9 +32,10 @@ class ConditionalAccessTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
+     * Read the properties and relationships of a conditionalAccessTemplate object.
      * @param ConditionalAccessTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/conditionalaccesstemplate-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ConditionalAccessTemplateItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class ConditionalAccessTemplateItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read-only. Nullable. Returns a collection of the specified Conditional Access templates.
+     * Read the properties and relationships of a conditionalAccessTemplate object.
      * @param ConditionalAccessTemplateItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -62,9 +62,10 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents a collection of all the columns in the table. Read-only.
+     * Retrieve a list of tablecolumn objects.
      * @param ColumnsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/tablecolumn-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?ColumnsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -89,10 +90,11 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to columns for drives
+     * Use this API to create a new TableColumn.
      * @param WorkbookTableColumn $body The request body
      * @param ColumnsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/table-post-columns?view=graph-rest-1.0 Find more info here
     */
     public function post(WorkbookTableColumn $body, ?ColumnsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -108,7 +110,7 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents a collection of all the columns in the table. Read-only.
+     * Retrieve a list of tablecolumn objects.
      * @param ColumnsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -129,7 +131,7 @@ class ColumnsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to columns for drives
+     * Use this API to create a new TableColumn.
      * @param WorkbookTableColumn $body The request body
      * @param ColumnsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

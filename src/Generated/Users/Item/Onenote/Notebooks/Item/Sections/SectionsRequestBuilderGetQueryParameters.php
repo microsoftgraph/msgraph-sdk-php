@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks\Item\Sections;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The sections in the notebook. Read-only. Nullable.
+ * Retrieve a list of onenoteSection objects from the specified notebook.
 */
 class SectionsRequestBuilderGetQueryParameters 
 {

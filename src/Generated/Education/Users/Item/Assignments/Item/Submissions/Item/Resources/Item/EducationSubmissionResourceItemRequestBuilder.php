@@ -32,9 +32,10 @@ class EducationSubmissionResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property resources for education
+     * Delete an educationSubmissionResource from the submission. Only teachers and students can perform this operation. If the resource was copied from the assignment, a new copy of the resource will be created after the current copy is deleted. This allows you to 'reset' the resource to its original state. If the resource was not copied from the assignment but was added from the student, the resource is simply deleted.
      * @param EducationSubmissionResourceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/educationsubmissionresource-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?EducationSubmissionResourceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -50,9 +51,10 @@ class EducationSubmissionResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get resources from education
+     * Retrieve the properties of a specific resource associated with a submission. Only teachers, students, and applications with application permissions can perform this operation. This resource is in the 'working' resource list and should be considered work in process by a student. This resource is wrapped with a possible pointer back to the assignment resource if it was copied from the assignment.
      * @param EducationSubmissionResourceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/educationsubmissionresource-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?EducationSubmissionResourceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -87,7 +89,7 @@ class EducationSubmissionResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property resources for education
+     * Delete an educationSubmissionResource from the submission. Only teachers and students can perform this operation. If the resource was copied from the assignment, a new copy of the resource will be created after the current copy is deleted. This allows you to 'reset' the resource to its original state. If the resource was not copied from the assignment but was added from the student, the resource is simply deleted.
      * @param EducationSubmissionResourceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +106,7 @@ class EducationSubmissionResourceItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get resources from education
+     * Retrieve the properties of a specific resource associated with a submission. Only teachers, students, and applications with application permissions can perform this operation. This resource is in the 'working' resource list and should be considered work in process by a student. This resource is wrapped with a possible pointer back to the assignment resource if it was copied from the assignment.
      * @param EducationSubmissionResourceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

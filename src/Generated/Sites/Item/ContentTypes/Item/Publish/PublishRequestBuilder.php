@@ -31,9 +31,10 @@ class PublishRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action publish
+     * Publishes a [contentType][] present in the content type hub site.
      * @param PublishRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/contenttype-publish?view=graph-rest-1.0 Find more info here
     */
     public function post(?PublishRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -49,7 +50,7 @@ class PublishRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action publish
+     * Publishes a [contentType][] present in the content type hub site.
      * @param PublishRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

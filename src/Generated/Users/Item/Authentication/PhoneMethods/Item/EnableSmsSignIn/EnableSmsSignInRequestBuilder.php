@@ -31,9 +31,10 @@ class EnableSmsSignInRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action enableSmsSignIn
+     * Enable SMS sign-in for an existing `mobile` phone number registered to a user. To be successfully enabled:
      * @param EnableSmsSignInRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/phoneauthenticationmethod-enablesmssignin?view=graph-rest-1.0 Find more info here
     */
     public function post(?EnableSmsSignInRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -49,7 +50,7 @@ class EnableSmsSignInRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action enableSmsSignIn
+     * Enable SMS sign-in for an existing `mobile` phone number registered to a user. To be successfully enabled:
      * @param EnableSmsSignInRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

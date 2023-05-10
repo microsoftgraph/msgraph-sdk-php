@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teams\Item\InstalledApps;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The apps installed in this team.
+ * Retrieve a list of apps installed in the specified team.
 */
 class InstalledAppsRequestBuilderGetQueryParameters 
 {

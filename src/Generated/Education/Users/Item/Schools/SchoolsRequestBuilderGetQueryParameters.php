@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Users\Item\Schools;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Schools to which the user belongs. Nullable.
+ * Retrieve a list of schools for a user.
 */
 class SchoolsRequestBuilderGetQueryParameters 
 {

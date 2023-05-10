@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Planner\Tasks\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read-only. Nullable. Returns a collection of the specified tasks
+ * Retrieve the properties and relationships of plannerTask object.
 */
 class PlannerTaskItemRequestBuilderGetQueryParameters 
 {

@@ -56,9 +56,10 @@ class EducationSchoolItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property schools for education
+     * Delete a school.
      * @param EducationSchoolItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/educationschool-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?EducationSchoolItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -74,9 +75,10 @@ class EducationSchoolItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get schools from education
+     * Read the properties and relationships of an educationSchool object.
      * @param EducationSchoolItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/educationschool-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?EducationSchoolItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -92,10 +94,11 @@ class EducationSchoolItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property schools in education
+     * Update the properties of an educationSchool object.
      * @param EducationSchool $body The request body
      * @param EducationSchoolItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/educationschool-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(EducationSchool $body, ?EducationSchoolItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -111,7 +114,7 @@ class EducationSchoolItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property schools for education
+     * Delete a school.
      * @param EducationSchoolItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +131,7 @@ class EducationSchoolItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get schools from education
+     * Read the properties and relationships of an educationSchool object.
      * @param EducationSchoolItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -149,7 +152,7 @@ class EducationSchoolItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property schools in education
+     * Update the properties of an educationSchool object.
      * @param EducationSchool $body The request body
      * @param EducationSchoolItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

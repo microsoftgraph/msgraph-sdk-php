@@ -53,9 +53,10 @@ class TimesOffRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The instances of times off in the schedule.
+     * Get the list of timeOff instances in a schedule.
      * @param TimesOffRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/schedule-list-timesoff?view=graph-rest-1.0 Find more info here
     */
     public function get(?TimesOffRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class TimesOffRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to timesOff for users
+     * Create a new timeOff instance in a schedule.
      * @param TimeOff $body The request body
      * @param TimesOffRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/schedule-post-timesoff?view=graph-rest-1.0 Find more info here
     */
     public function post(TimeOff $body, ?TimesOffRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class TimesOffRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The instances of times off in the schedule.
+     * Get the list of timeOff instances in a schedule.
      * @param TimesOffRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class TimesOffRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to timesOff for users
+     * Create a new timeOff instance in a schedule.
      * @param TimeOff $body The request body
      * @param TimesOffRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

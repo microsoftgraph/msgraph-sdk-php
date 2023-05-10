@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Ass
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The assignment of an access package to a subject for a period of time.
+ * In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object.
 */
 class AccessPackageAssignmentItemRequestBuilderGetQueryParameters 
 {

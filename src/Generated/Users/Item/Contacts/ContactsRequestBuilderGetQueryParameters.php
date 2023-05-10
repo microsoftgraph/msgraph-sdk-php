@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Contacts;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The user's contacts. Read-only. Nullable.
+ * Get a contact collection from the default contacts folder of the signed-in user. There are two scenarios where an app can get contacts in another user's contact folder:
 */
 class ContactsRequestBuilderGetQueryParameters 
 {

@@ -74,9 +74,10 @@ class NotebookItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
+     * Retrieve the properties and relationships of a notebook object.
      * @param NotebookItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/notebook-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?NotebookItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -128,7 +129,7 @@ class NotebookItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
+     * Retrieve the properties and relationships of a notebook object.
      * @param NotebookItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

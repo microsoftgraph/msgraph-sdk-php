@@ -52,9 +52,10 @@ class FollowingRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of items the user is following. Only in OneDrive for Business.
+     * List the items that have been followed by the signed in user.This collection includes items that are in the user's drive as well as items they have access to from other drives.
      * @param FollowingRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/drive-list-following?view=graph-rest-1.0 Find more info here
     */
     public function get(?FollowingRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -70,7 +71,7 @@ class FollowingRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of items the user is following. Only in OneDrive for Business.
+     * List the items that have been followed by the signed in user.This collection includes items that are in the user's drive as well as items they have access to from other drives.
      * @param FollowingRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

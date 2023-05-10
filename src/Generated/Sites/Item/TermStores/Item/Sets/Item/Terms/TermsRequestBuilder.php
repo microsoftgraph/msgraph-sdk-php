@@ -53,7 +53,7 @@ class TermsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * All the terms under the set.
+     * Read the properties and relationships of a term object.
      * @param TermsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -90,7 +90,7 @@ class TermsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * All the terms under the set.
+     * Read the properties and relationships of a term object.
      * @param TermsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

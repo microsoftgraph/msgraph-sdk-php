@@ -32,9 +32,10 @@ class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property calendarPermissions for users
+     * Delete calendarPermission.
      * @param CalendarPermissionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/calendarpermission-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?CalendarPermissionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -50,9 +51,10 @@ class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The permissions of the users with whom the calendar is shared.
+     * Get the specified permissions object of a user or group calendar that has been shared.
      * @param CalendarPermissionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/calendarpermission-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?CalendarPermissionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,10 +70,11 @@ class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property calendarPermissions in users
+     * Update the permissions assigned to an existing sharee or delegate, through the corresponding <b>calendarPermission</b> object for a calendar.
      * @param CalendarPermission $body The request body
      * @param CalendarPermissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/calendarpermission-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(CalendarPermission $body, ?CalendarPermissionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -87,7 +90,7 @@ class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property calendarPermissions for users
+     * Delete calendarPermission.
      * @param CalendarPermissionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +107,7 @@ class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The permissions of the users with whom the calendar is shared.
+     * Get the specified permissions object of a user or group calendar that has been shared.
      * @param CalendarPermissionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +128,7 @@ class CalendarPermissionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property calendarPermissions in users
+     * Update the permissions assigned to an existing sharee or delegate, through the corresponding <b>calendarPermission</b> object for a calendar.
      * @param CalendarPermission $body The request body
      * @param CalendarPermissionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

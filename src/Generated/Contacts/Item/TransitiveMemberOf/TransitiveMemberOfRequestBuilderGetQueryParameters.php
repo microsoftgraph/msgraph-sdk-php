@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Contacts\Item\TransitiveMemberOf;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get transitiveMemberOf from contacts
+ * Groups that this contact is a member of, including groups that the contact is nested under. Read-only. Nullable.
 */
 class TransitiveMemberOfRequestBuilderGetQueryParameters 
 {

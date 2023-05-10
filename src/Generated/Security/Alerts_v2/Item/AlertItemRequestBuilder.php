@@ -50,9 +50,10 @@ class AlertItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of alerts in Microsoft 365 Defender.
+     * Get the properties and relationships of an alert in an organization based on the specified alert **id** property.
      * @param AlertItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/security-alert-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AlertItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,10 +69,11 @@ class AlertItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property alerts_v2 in security
+     * Update the properties of an alert object in an organization based on the specified alert **id** property.
      * @param Alert $body The request body
      * @param AlertItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/security-alert-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(Alert $body, ?AlertItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -104,7 +106,7 @@ class AlertItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of alerts in Microsoft 365 Defender.
+     * Get the properties and relationships of an alert in an organization based on the specified alert **id** property.
      * @param AlertItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +127,7 @@ class AlertItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property alerts_v2 in security
+     * Update the properties of an alert object in an organization based on the specified alert **id** property.
      * @param Alert $body The request body
      * @param AlertItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

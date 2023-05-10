@@ -32,10 +32,11 @@ class AddFormulaLocalRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action addFormulaLocal
+     * Adds a new name to the collection of the given scope using the user's locale for the formula.
      * @param AddFormulaLocalPostRequestBody $body The request body
      * @param AddFormulaLocalRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/nameditem-addformulalocal?view=graph-rest-1.0 Find more info here
     */
     public function post(AddFormulaLocalPostRequestBody $body, ?AddFormulaLocalRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -51,7 +52,7 @@ class AddFormulaLocalRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action addFormulaLocal
+     * Adds a new name to the collection of the given scope using the user's locale for the formula.
      * @param AddFormulaLocalPostRequestBody $body The request body
      * @param AddFormulaLocalRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

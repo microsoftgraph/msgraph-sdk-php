@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ClaimsMappingPolicy;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
+use Microsoft\Graph\Generated\Policies\ClaimsMappingPolicies\Item\AppliesTo\AppliesToRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -17,6 +18,13 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the appliesTo property of the microsoft.graph.stsPolicy entity.
+    */
+    public function appliesTo(): AppliesToRequestBuilder {
+        return new AppliesToRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Instantiates a new ClaimsMappingPolicyItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
@@ -32,9 +40,10 @@ class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property claimsMappingPolicies for policies
+     * Delete a claimsMappingPolicy object.
      * @param ClaimsMappingPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/claimsmappingpolicy-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ClaimsMappingPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -50,9 +59,10 @@ class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
+     * Retrieve the properties and relationships of a claimsMappingPolicy object.
      * @param ClaimsMappingPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/claimsmappingpolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ClaimsMappingPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,10 +78,11 @@ class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property claimsMappingPolicies in policies
+     * Update the properties of a claimsMappingPolicy object.
      * @param ClaimsMappingPolicy $body The request body
      * @param ClaimsMappingPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/claimsmappingpolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ClaimsMappingPolicy $body, ?ClaimsMappingPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -87,7 +98,7 @@ class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property claimsMappingPolicies for policies
+     * Delete a claimsMappingPolicy object.
      * @param ClaimsMappingPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +115,7 @@ class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
+     * Retrieve the properties and relationships of a claimsMappingPolicy object.
      * @param ClaimsMappingPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +136,7 @@ class ClaimsMappingPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property claimsMappingPolicies in policies
+     * Update the properties of a claimsMappingPolicy object.
      * @param ClaimsMappingPolicy $body The request body
      * @param ClaimsMappingPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

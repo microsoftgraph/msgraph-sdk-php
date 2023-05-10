@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Team\PrimaryChannel\Messages\Ite
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * A collection of all the messages in the channel. A navigation property. Nullable.
+ * Retrieve a single message or a message reply in a channel or a chat.
 */
 class ChatMessageItemRequestBuilderGetQueryParameters 
 {

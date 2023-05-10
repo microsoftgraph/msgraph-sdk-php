@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\ClaimsMappingPolicies\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.
+ * Retrieve the properties and relationships of a claimsMappingPolicy object.
 */
 class ClaimsMappingPolicyItemRequestBuilderGetQueryParameters 
 {

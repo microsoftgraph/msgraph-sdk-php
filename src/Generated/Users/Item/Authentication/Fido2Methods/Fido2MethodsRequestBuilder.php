@@ -52,7 +52,7 @@ class Fido2MethodsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the FIDO2 security keys registered to a user for authentication.
+     * Retrieve a user's single FIDO2 Security Key Authentication Method object.
      * @param Fido2MethodsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -70,7 +70,7 @@ class Fido2MethodsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the FIDO2 security keys registered to a user for authentication.
+     * Retrieve a user's single FIDO2 Security Key Authentication Method object.
      * @param Fido2MethodsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

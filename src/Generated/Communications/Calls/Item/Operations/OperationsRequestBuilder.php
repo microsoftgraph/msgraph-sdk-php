@@ -53,7 +53,7 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get operations from communications
+     * Get the status of an operation that adds the large gallery view to a call.
      * @param OperationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -90,7 +90,7 @@ class OperationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get operations from communications
+     * Get the status of an operation that adds the large gallery view to a call.
      * @param OperationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

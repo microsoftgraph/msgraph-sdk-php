@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\Agreements\Ite
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read-only. Information about acceptances of this agreement.
+ * Get the details about the acceptance records for a specific agreement.
 */
 class AcceptancesRequestBuilderGetQueryParameters 
 {

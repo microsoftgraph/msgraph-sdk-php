@@ -31,10 +31,11 @@ class InviteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action invite
+     * Sends a sharing invitation for a **driveItem**.A sharing invitation provides permissions to the recipients and optionally sends them an email with a [sharing link][].
      * @param InvitePostRequestBody $body The request body
      * @param InviteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/driveitem-invite?view=graph-rest-1.0 Find more info here
     */
     public function post(InvitePostRequestBody $body, ?InviteRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class InviteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action invite
+     * Sends a sharing invitation for a **driveItem**.A sharing invitation provides permissions to the recipients and optionally sends them an email with a [sharing link][].
      * @param InvitePostRequestBody $body The request body
      * @param InviteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

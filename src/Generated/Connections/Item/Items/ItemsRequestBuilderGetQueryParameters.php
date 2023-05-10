@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Connections\Item\Items;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get items from connections
+ * Read the properties and relationships of an externalItem object.
 */
 class ItemsRequestBuilderGetQueryParameters 
 {

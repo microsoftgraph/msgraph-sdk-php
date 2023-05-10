@@ -16,8 +16,6 @@ use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\Even
 use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\Events\Item\Extensions\ExtensionsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\Events\Item\Forward\ForwardRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\Events\Item\Instances\InstancesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\Events\Item\MultiValueExtendedProperties\MultiValueExtendedPropertiesRequestBuilder;
-use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\Events\Item\SingleValueExtendedProperties\SingleValueExtendedPropertiesRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\Events\Item\SnoozeReminder\SnoozeReminderRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\CalendarGroups\Item\Calendars\Item\Events\Item\TentativelyAccept\TentativelyAcceptRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -94,20 +92,6 @@ class EventItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * Provides operations to manage the multiValueExtendedProperties property of the microsoft.graph.event entity.
-    */
-    public function multiValueExtendedProperties(): MultiValueExtendedPropertiesRequestBuilder {
-        return new MultiValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the singleValueExtendedProperties property of the microsoft.graph.event entity.
-    */
-    public function singleValueExtendedProperties(): SingleValueExtendedPropertiesRequestBuilder {
-        return new SingleValueExtendedPropertiesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the snoozeReminder method.
     */
     public function snoozeReminder(): SnoozeReminderRequestBuilder {
@@ -172,10 +156,11 @@ class EventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property events in users
+     * Update an event object.
      * @param Event $body The request body
      * @param EventItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/group-update-event?view=graph-rest-1.0 Find more info here
     */
     public function patch(Event $body, ?EventItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -229,7 +214,7 @@ class EventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property events in users
+     * Update an event object.
      * @param Event $body The request body
      * @param EventItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

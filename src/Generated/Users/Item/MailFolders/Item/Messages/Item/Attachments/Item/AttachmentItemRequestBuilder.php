@@ -50,9 +50,10 @@ class AttachmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The fileAttachment and itemAttachment attachments for the message.
+     * Read the properties, relationships, or raw contents of an attachment that is attached to a user event, message, or group post.  An attachment can be one of the following types: All these types of attachments are derived from the attachment resource. 
      * @param AttachmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/attachment-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AttachmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -85,7 +86,7 @@ class AttachmentItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The fileAttachment and itemAttachment attachments for the message.
+     * Read the properties, relationships, or raw contents of an attachment that is attached to a user event, message, or group post.  An attachment can be one of the following types: All these types of attachments are derived from the attachment resource. 
      * @param AttachmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

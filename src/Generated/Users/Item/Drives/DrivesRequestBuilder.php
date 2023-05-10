@@ -52,9 +52,10 @@ class DrivesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of drives available for this user. Read-only.
+     * Retrieve the list of Drive resources available for a target User, Group, or Site.
      * @param DrivesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/drive-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?DrivesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -70,7 +71,7 @@ class DrivesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of drives available for this user. Read-only.
+     * Retrieve the list of Drive resources available for a target User, Group, or Site.
      * @param DrivesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -31,9 +31,10 @@ class RefreshSessionRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action refreshSession
+     * Use this API to refresh an existing workbook session. 
      * @param RefreshSessionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/workbook-refreshsession?view=graph-rest-1.0 Find more info here
     */
     public function post(?RefreshSessionRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -49,7 +50,7 @@ class RefreshSessionRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action refreshSession
+     * Use this API to refresh an existing workbook session. 
      * @param RefreshSessionRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

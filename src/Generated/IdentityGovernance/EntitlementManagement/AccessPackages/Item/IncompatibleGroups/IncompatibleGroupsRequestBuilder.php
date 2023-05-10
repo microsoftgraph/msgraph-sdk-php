@@ -60,9 +60,10 @@ class IncompatibleGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The groups whose members are ineligible to be assigned this access package.
+     * Retrieve a list of the group objects that have been marked as incompatible on an accessPackage.  
      * @param IncompatibleGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/accesspackage-list-incompatiblegroups?view=graph-rest-1.0 Find more info here
     */
     public function get(?IncompatibleGroupsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -78,7 +79,7 @@ class IncompatibleGroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The groups whose members are ineligible to be assigned this access package.
+     * Retrieve a list of the group objects that have been marked as incompatible on an accessPackage.  
      * @param IncompatibleGroupsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

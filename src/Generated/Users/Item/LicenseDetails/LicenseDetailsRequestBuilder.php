@@ -53,9 +53,10 @@ class LicenseDetailsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of this user's license details. Read-only.
+     * Retrieve a list of licenseDetails objects for enterprise users. This API returns details for licenses that are directly assigned and those transitively assigned through memberships in licensed groups.
      * @param LicenseDetailsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/user-list-licensedetails?view=graph-rest-1.0 Find more info here
     */
     public function get(?LicenseDetailsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +91,7 @@ class LicenseDetailsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of this user's license details. Read-only.
+     * Retrieve a list of licenseDetails objects for enterprise users. This API returns details for licenses that are directly assigned and those transitively assigned through memberships in licensed groups.
      * @param LicenseDetailsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
