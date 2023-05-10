@@ -50,9 +50,10 @@ class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The policy by which consent requests are created and managed for the entire tenant.
+     * Read the properties and relationships of an adminConsentRequestPolicy object.
      * @param AdminConsentRequestPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/adminconsentrequestpolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AdminConsentRequestPolicyRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,10 +69,11 @@ class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property adminConsentRequestPolicy in policies
+     * Update the properties of an adminConsentRequestPolicy object.
      * @param AdminConsentRequestPolicy $body The request body
      * @param AdminConsentRequestPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/adminconsentrequestpolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(AdminConsentRequestPolicy $body, ?AdminConsentRequestPolicyRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -104,7 +106,7 @@ class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The policy by which consent requests are created and managed for the entire tenant.
+     * Read the properties and relationships of an adminConsentRequestPolicy object.
      * @param AdminConsentRequestPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +127,7 @@ class AdminConsentRequestPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property adminConsentRequestPolicy in policies
+     * Update the properties of an adminConsentRequestPolicy object.
      * @param AdminConsentRequestPolicy $body The request body
      * @param AdminConsentRequestPolicyRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

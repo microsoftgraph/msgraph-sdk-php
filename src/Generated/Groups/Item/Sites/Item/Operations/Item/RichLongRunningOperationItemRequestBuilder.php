@@ -50,9 +50,10 @@ class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The collection of long-running operations on the site.
+     * Get the status of a rich long-running operation on a site or a list.
      * @param RichLongRunningOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/richlongrunningoperation-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?RichLongRunningOperationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -104,7 +105,7 @@ class RichLongRunningOperationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The collection of long-running operations on the site.
+     * Get the status of a rich long-running operation on a site or a list.
      * @param RichLongRunningOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

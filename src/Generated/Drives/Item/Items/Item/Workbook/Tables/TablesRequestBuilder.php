@@ -62,9 +62,10 @@ class TablesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents a collection of tables associated with the workbook. Read-only.
+     * Retrieve a list of table objects.
      * @param TablesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/table-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?TablesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -108,7 +109,7 @@ class TablesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents a collection of tables associated with the workbook. Read-only.
+     * Retrieve a list of table objects.
      * @param TablesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -58,9 +58,10 @@ class MinorGridlinesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
+     * Retrieve the properties and relationships of chartgridlines object.
      * @param MinorGridlinesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/chartgridlines-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MinorGridlinesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,10 +77,11 @@ class MinorGridlinesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property minorGridlines in drives
+     * Update the properties of chartgridlines object.
      * @param WorkbookChartGridlines $body The request body
      * @param MinorGridlinesRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/chartgridlines-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkbookChartGridlines $body, ?MinorGridlinesRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -112,7 +114,7 @@ class MinorGridlinesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns a Gridlines object that represents the minor gridlines for the specified axis. Read-only.
+     * Retrieve the properties and relationships of chartgridlines object.
      * @param MinorGridlinesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -133,7 +135,7 @@ class MinorGridlinesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property minorGridlines in drives
+     * Update the properties of chartgridlines object.
      * @param WorkbookChartGridlines $body The request body
      * @param MinorGridlinesRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

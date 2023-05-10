@@ -53,9 +53,10 @@ class DailyPrintUsageByPrinterRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get dailyPrintUsageByPrinter from reports
+     * Retrieve a list of daily print usage summaries, grouped by printer.
      * @param DailyPrintUsageByPrinterRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/reportroot-list-dailyprintusagebyprinter?view=graph-rest-1.0 Find more info here
     */
     public function get(?DailyPrintUsageByPrinterRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +91,7 @@ class DailyPrintUsageByPrinterRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get dailyPrintUsageByPrinter from reports
+     * Retrieve a list of daily print usage summaries, grouped by printer.
      * @param DailyPrintUsageByPrinterRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

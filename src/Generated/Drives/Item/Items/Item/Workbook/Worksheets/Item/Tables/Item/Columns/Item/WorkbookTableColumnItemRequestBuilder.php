@@ -72,9 +72,10 @@ class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property columns for drives
+     * Deletes the column from the table.
      * @param WorkbookTableColumnItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/tablecolumn-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?WorkbookTableColumnItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -90,9 +91,10 @@ class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents a collection of all the columns in the table. Read-only.
+     * Retrieve the properties and relationships of tablecolumn object.
      * @param WorkbookTableColumnItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/tablecolumn-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?WorkbookTableColumnItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -108,10 +110,11 @@ class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property columns in drives
+     * Update the properties of tablecolumn object.
      * @param WorkbookTableColumn $body The request body
      * @param WorkbookTableColumnItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/tablecolumn-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkbookTableColumn $body, ?WorkbookTableColumnItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -127,7 +130,7 @@ class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property columns for drives
+     * Deletes the column from the table.
      * @param WorkbookTableColumnItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -144,7 +147,7 @@ class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents a collection of all the columns in the table. Read-only.
+     * Retrieve the properties and relationships of tablecolumn object.
      * @param WorkbookTableColumnItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -165,7 +168,7 @@ class WorkbookTableColumnItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property columns in drives
+     * Update the properties of tablecolumn object.
      * @param WorkbookTableColumn $body The request body
      * @param WorkbookTableColumnItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

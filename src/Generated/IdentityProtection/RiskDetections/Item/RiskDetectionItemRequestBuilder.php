@@ -50,9 +50,10 @@ class RiskDetectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Risk detection in Azure AD Identity Protection and the associated information about the detection.
+     * Read the properties and relationships of a riskDetection object.
      * @param RiskDetectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/riskdetection-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?RiskDetectionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -104,7 +105,7 @@ class RiskDetectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Risk detection in Azure AD Identity Protection and the associated information about the detection.
+     * Read the properties and relationships of a riskDetection object.
      * @param RiskDetectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

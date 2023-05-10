@@ -53,9 +53,10 @@ class PermissionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The set of permissions for the item. Read-only. Nullable.
+     * List the effective sharing permissions on a driveItem.
      * @param PermissionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/driveitem-list-permissions?view=graph-rest-1.0 Find more info here
     */
     public function get(?PermissionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +91,7 @@ class PermissionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The set of permissions for the item. Read-only. Nullable.
+     * List the effective sharing permissions on a driveItem.
      * @param PermissionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

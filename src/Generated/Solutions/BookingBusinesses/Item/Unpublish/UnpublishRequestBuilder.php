@@ -31,9 +31,10 @@ class UnpublishRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Prevents the general public from seeing the scheduling page of this business.
+     * Make the scheduling page of this business not available to external customers. Set the **isPublished** property to `false`, and the **publicUrl** property to `null`.
      * @param UnpublishRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/bookingbusiness-unpublish?view=graph-rest-1.0 Find more info here
     */
     public function post(?UnpublishRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -49,7 +50,7 @@ class UnpublishRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Prevents the general public from seeing the scheduling page of this business.
+     * Make the scheduling page of this business not available to external customers. Set the **isPublished** property to `false`, and the **publicUrl** property to `null`.
      * @param UnpublishRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

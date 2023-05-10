@@ -50,9 +50,10 @@ class SimulationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents an attack simulation training campaign in a tenant.
+     * Get an attack simulation campaign for a tenant.
      * @param SimulationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/simulation-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SimulationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -104,7 +105,7 @@ class SimulationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents an attack simulation training campaign in a tenant.
+     * Get an attack simulation campaign for a tenant.
      * @param SimulationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

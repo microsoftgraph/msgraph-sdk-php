@@ -33,7 +33,7 @@ class AttendanceRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the emailAddress property value. Email address of the user associated with this atttendance record.
+     * Gets the emailAddress property value. Email address of the user associated with this attendance record.
      * @return string|null
     */
     public function getEmailAddress(): ?string {
@@ -56,7 +56,7 @@ class AttendanceRecord extends Entity implements Parsable
     }
 
     /**
-     * Gets the identity property value. Identity of the user associated with this atttendance record.
+     * Gets the identity property value. Identity of the user associated with this attendance record.
      * @return Identity|null
     */
     public function getIdentity(): ?Identity {
@@ -101,7 +101,7 @@ class AttendanceRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the emailAddress property value. Email address of the user associated with this atttendance record.
+     * Sets the emailAddress property value. Email address of the user associated with this attendance record.
      * @param string|null $value Value to set for the emailAddress property.
     */
     public function setEmailAddress(?string $value): void {
@@ -109,7 +109,7 @@ class AttendanceRecord extends Entity implements Parsable
     }
 
     /**
-     * Sets the identity property value. Identity of the user associated with this atttendance record.
+     * Sets the identity property value. Identity of the user associated with this attendance record.
      * @param Identity|null $value Value to set for the identity property.
     */
     public function setIdentity(?Identity $value): void {

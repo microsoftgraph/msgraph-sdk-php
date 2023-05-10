@@ -53,9 +53,10 @@ class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get subjectRightsRequests from privacy
+     * Get a list of subjectRightsRequest objects and their properties.
      * @param SubjectRightsRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/subjectrightsrequest-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?SubjectRightsRequestsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to subjectRightsRequests for privacy
+     * Create a new subjectRightsRequest object.
      * @param SubjectRightsRequest $body The request body
      * @param SubjectRightsRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/subjectrightsrequest-post?view=graph-rest-1.0 Find more info here
     */
     public function post(SubjectRightsRequest $body, ?SubjectRightsRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get subjectRightsRequests from privacy
+     * Get a list of subjectRightsRequest objects and their properties.
      * @param SubjectRightsRequestsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class SubjectRightsRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to subjectRightsRequests for privacy
+     * Create a new subjectRightsRequest object.
      * @param SubjectRightsRequest $body The request body
      * @param SubjectRightsRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

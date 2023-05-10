@@ -31,10 +31,11 @@ class TransferRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action transfer
+     * Transfer an active peer-to-peer call or group call. A consultative transfer means that the transferor can inform the person they want to transfer the call to (the transferee), before the transfer is made. This is opposed to transfering the call directly.
      * @param TransferPostRequestBody $body The request body
      * @param TransferRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/call-transfer?view=graph-rest-1.0 Find more info here
     */
     public function post(TransferPostRequestBody $body, ?TransferRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class TransferRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action transfer
+     * Transfer an active peer-to-peer call or group call. A consultative transfer means that the transferor can inform the person they want to transfer the call to (the transferee), before the transfer is made. This is opposed to transfering the call directly.
      * @param TransferPostRequestBody $body The request body
      * @param TransferRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

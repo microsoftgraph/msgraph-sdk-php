@@ -12,9 +12,9 @@ use Microsoft\Graph\Generated\Security\Alerts\AlertsRequestBuilder;
 use Microsoft\Graph\Generated\Security\AttackSimulation\AttackSimulationRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\CasesRequestBuilder;
 use Microsoft\Graph\Generated\Security\Incidents\IncidentsRequestBuilder;
+use Microsoft\Graph\Generated\Security\MicrosoftGraphSecurityRunHuntingQuery\MicrosoftGraphSecurityRunHuntingQueryRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecureScoreControlProfiles\SecureScoreControlProfilesRequestBuilder;
 use Microsoft\Graph\Generated\Security\SecureScores\SecureScoresRequestBuilder;
-use Microsoft\Graph\Generated\Security\SecurityRunHuntingQuery\SecurityRunHuntingQueryRequestBuilder;
 use Microsoft\Graph\Generated\Security\Triggers\TriggersRequestBuilder;
 use Microsoft\Graph\Generated\Security\TriggerTypes\TriggerTypesRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -63,6 +63,13 @@ class SecurityRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to call the runHuntingQuery method.
+    */
+    public function microsoftGraphSecurityRunHuntingQuery(): MicrosoftGraphSecurityRunHuntingQueryRequestBuilder {
+        return new MicrosoftGraphSecurityRunHuntingQueryRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the secureScoreControlProfiles property of the microsoft.graph.security entity.
     */
     public function secureScoreControlProfiles(): SecureScoreControlProfilesRequestBuilder {
@@ -74,13 +81,6 @@ class SecurityRequestBuilder extends BaseRequestBuilder
     */
     public function secureScores(): SecureScoresRequestBuilder {
         return new SecureScoresRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to call the runHuntingQuery method.
-    */
-    public function securityRunHuntingQuery(): SecurityRunHuntingQueryRequestBuilder {
-        return new SecurityRunHuntingQueryRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

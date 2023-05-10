@@ -62,9 +62,10 @@ class TablesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Collection of tables that are part of the worksheet. Read-only.
+     * Retrieve a list of table objects.
      * @param TablesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/worksheet-list-tables?view=graph-rest-1.0 Find more info here
     */
     public function get(?TablesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -108,7 +109,7 @@ class TablesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Collection of tables that are part of the worksheet. Read-only.
+     * Retrieve a list of table objects.
      * @param TablesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

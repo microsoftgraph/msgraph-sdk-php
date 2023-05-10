@@ -106,9 +106,10 @@ class UnifiedRoleAssignmentScheduleRequestItemRequestBuilder extends BaseRequest
     }
 
     /**
-     * Requests for active role assignments to principals through PIM.
+     * In PIM, read the details of a request for an active and persistent role assignment made through the unifiedRoleAssignmentScheduleRequest object.
      * @param UnifiedRoleAssignmentScheduleRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/unifiedroleassignmentschedulerequest-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?UnifiedRoleAssignmentScheduleRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -160,7 +161,7 @@ class UnifiedRoleAssignmentScheduleRequestItemRequestBuilder extends BaseRequest
     }
 
     /**
-     * Requests for active role assignments to principals through PIM.
+     * In PIM, read the details of a request for an active and persistent role assignment made through the unifiedRoleAssignmentScheduleRequest object.
      * @param UnifiedRoleAssignmentScheduleRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

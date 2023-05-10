@@ -53,7 +53,7 @@ class RepliesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get replies from drives
+     * Retrieve the properties and relationships of workbookCommentReply object.
      * @param RepliesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -90,7 +90,7 @@ class RepliesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get replies from drives
+     * Retrieve the properties and relationships of workbookCommentReply object.
      * @param RepliesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

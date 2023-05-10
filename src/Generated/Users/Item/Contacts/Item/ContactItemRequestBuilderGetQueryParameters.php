@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Contacts\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The user's contacts. Read-only. Nullable.
+ * Retrieve the properties and relationships of a contact object. There are two scenarios where an app can get a contact in another user's contact folder:
 */
 class ContactItemRequestBuilderGetQueryParameters 
 {

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\EscapedList\Items\Item\Versions\
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The list of previous versions of the list item.
+ * Retrieve the metadata for a specific version of a ListItem.
 */
 class ListItemVersionItemRequestBuilderGetQueryParameters 
 {

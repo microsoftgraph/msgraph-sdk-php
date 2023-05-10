@@ -53,9 +53,10 @@ class AccessAssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The access assignments associated with the delegated admin relationship.
+     * Get a list of the delegatedAdminAccessAssignment objects and their properties.
      * @param AccessAssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/delegatedadminrelationship-list-accessassignments?view=graph-rest-1.0 Find more info here
     */
     public function get(?AccessAssignmentsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class AccessAssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to accessAssignments for tenantRelationships
+     * Create a new delegatedAdminAccessAssignment object.
      * @param DelegatedAdminAccessAssignment $body The request body
      * @param AccessAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/delegatedadminrelationship-post-accessassignments?view=graph-rest-1.0 Find more info here
     */
     public function post(DelegatedAdminAccessAssignment $body, ?AccessAssignmentsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class AccessAssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The access assignments associated with the delegated admin relationship.
+     * Get a list of the delegatedAdminAccessAssignment objects and their properties.
      * @param AccessAssignmentsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class AccessAssignmentsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to accessAssignments for tenantRelationships
+     * Create a new delegatedAdminAccessAssignment object.
      * @param DelegatedAdminAccessAssignment $body The request body
      * @param AccessAssignmentsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

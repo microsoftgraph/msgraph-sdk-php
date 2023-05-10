@@ -11,9 +11,9 @@ use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\AddToReviewSetOperation\AddToReviewSetOperationRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\CustodianSources\CustodianSourcesRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\LastEstimateStatisticsOperation\LastEstimateStatisticsOperationRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\MicrosoftGraphSecurityEstimateStatistics\MicrosoftGraphSecurityEstimateStatisticsRequestBuilder;
+use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\MicrosoftGraphSecurityPurgeData\MicrosoftGraphSecurityPurgeDataRequestBuilder;
 use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\NoncustodialSources\NoncustodialSourcesRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\SecurityEstimateStatistics\SecurityEstimateStatisticsRequestBuilder;
-use Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Searches\Item\SecurityPurgeData\SecurityPurgeDataRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -53,24 +53,24 @@ class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
-     * Provides operations to manage the noncustodialSources property of the microsoft.graph.security.ediscoverySearch entity.
-    */
-    public function noncustodialSources(): NoncustodialSourcesRequestBuilder {
-        return new NoncustodialSourcesRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
      * Provides operations to call the estimateStatistics method.
     */
-    public function securityEstimateStatistics(): SecurityEstimateStatisticsRequestBuilder {
-        return new SecurityEstimateStatisticsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityEstimateStatistics(): MicrosoftGraphSecurityEstimateStatisticsRequestBuilder {
+        return new MicrosoftGraphSecurityEstimateStatisticsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
      * Provides operations to call the purgeData method.
     */
-    public function securityPurgeData(): SecurityPurgeDataRequestBuilder {
-        return new SecurityPurgeDataRequestBuilder($this->pathParameters, $this->requestAdapter);
+    public function microsoftGraphSecurityPurgeData(): MicrosoftGraphSecurityPurgeDataRequestBuilder {
+        return new MicrosoftGraphSecurityPurgeDataRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the noncustodialSources property of the microsoft.graph.security.ediscoverySearch entity.
+    */
+    public function noncustodialSources(): NoncustodialSourcesRequestBuilder {
+        return new NoncustodialSourcesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -88,9 +88,10 @@ class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property searches for security
+     * Delete an ediscoverySearch object.
      * @param EdiscoverySearchItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/security-ediscoverycase-delete-searches?view=graph-rest-1.0 Find more info here
     */
     public function delete(?EdiscoverySearchItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -106,9 +107,10 @@ class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns a list of eDiscoverySearch objects associated with this case.
+     * Read the properties and relationships of an ediscoverySearch object.
      * @param EdiscoverySearchItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/security-ediscoverysearch-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?EdiscoverySearchItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -124,10 +126,11 @@ class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property searches in security
+     * Update the properties of an ediscoverySearch object.
      * @param EdiscoverySearch $body The request body
      * @param EdiscoverySearchItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/security-ediscoverysearch-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(EdiscoverySearch $body, ?EdiscoverySearchItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -143,7 +146,7 @@ class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property searches for security
+     * Delete an ediscoverySearch object.
      * @param EdiscoverySearchItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -160,7 +163,7 @@ class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Returns a list of eDiscoverySearch objects associated with this case.
+     * Read the properties and relationships of an ediscoverySearch object.
      * @param EdiscoverySearchItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -181,7 +184,7 @@ class EdiscoverySearchItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property searches in security
+     * Update the properties of an ediscoverySearch object.
      * @param EdiscoverySearch $body The request body
      * @param EdiscoverySearchItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

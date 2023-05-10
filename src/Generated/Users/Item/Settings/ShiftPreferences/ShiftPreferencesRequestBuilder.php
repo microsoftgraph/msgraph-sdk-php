@@ -50,9 +50,10 @@ class ShiftPreferencesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get shiftPreferences from users
+     * Retrieve the properties and relationships of a shiftPreferences object by ID.
      * @param ShiftPreferencesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/shiftpreferences-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ShiftPreferencesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,10 +69,11 @@ class ShiftPreferencesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property shiftPreferences in users
+     * Update the properties and relationships of a shiftPreferences object.
      * @param ShiftPreferences $body The request body
      * @param ShiftPreferencesRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/shiftpreferences-put?view=graph-rest-1.0 Find more info here
     */
     public function patch(ShiftPreferences $body, ?ShiftPreferencesRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -104,7 +106,7 @@ class ShiftPreferencesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get shiftPreferences from users
+     * Retrieve the properties and relationships of a shiftPreferences object by ID.
      * @param ShiftPreferencesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +127,7 @@ class ShiftPreferencesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property shiftPreferences in users
+     * Update the properties and relationships of a shiftPreferences object.
      * @param ShiftPreferences $body The request body
      * @param ShiftPreferencesRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

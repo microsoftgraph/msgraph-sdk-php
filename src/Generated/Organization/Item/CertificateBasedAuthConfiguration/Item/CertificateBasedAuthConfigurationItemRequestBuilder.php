@@ -32,9 +32,10 @@ class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Delete navigation property certificateBasedAuthConfiguration for organization
+     * Delete a certificateBasedAuthConfiguration object.
      * @param CertificateBasedAuthConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/certificatebasedauthconfiguration-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?CertificateBasedAuthConfigurationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -50,9 +51,10 @@ class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
+     * Get the properties of a certificateBasedAuthConfiguration object.
      * @param CertificateBasedAuthConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/certificatebasedauthconfiguration-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?CertificateBasedAuthConfigurationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,7 +70,7 @@ class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Delete navigation property certificateBasedAuthConfiguration for organization
+     * Delete a certificateBasedAuthConfiguration object.
      * @param CertificateBasedAuthConfigurationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -85,7 +87,7 @@ class CertificateBasedAuthConfigurationItemRequestBuilder extends BaseRequestBui
     }
 
     /**
-     * Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
+     * Get the properties of a certificateBasedAuthConfiguration object.
      * @param CertificateBasedAuthConfigurationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

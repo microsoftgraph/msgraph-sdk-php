@@ -53,9 +53,10 @@ class ChecklistItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of checklistItems linked to a task.
+     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property.
      * @param ChecklistItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/todotask-list-checklistitems?view=graph-rest-1.0 Find more info here
     */
     public function get(?ChecklistItemsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class ChecklistItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to checklistItems for users
+     * Create a new checklistItem object.
      * @param ChecklistItem $body The request body
      * @param ChecklistItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/todotask-post-checklistitems?view=graph-rest-1.0 Find more info here
     */
     public function post(ChecklistItem $body, ?ChecklistItemsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class ChecklistItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of checklistItems linked to a task.
+     * Get the checklistItem resources associated to a todoTask from the checklistItems navigation property.
      * @param ChecklistItemsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class ChecklistItemsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to checklistItems for users
+     * Create a new checklistItem object.
      * @param ChecklistItem $body The request body
      * @param ChecklistItemsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

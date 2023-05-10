@@ -31,9 +31,10 @@ class RestoreFactoryDefaultsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action restoreFactoryDefaults
+     * Restore a printer's default settings to the values specified by the manufacturer.
      * @param RestoreFactoryDefaultsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/printer-restorefactorydefaults?view=graph-rest-1.0 Find more info here
     */
     public function post(?RestoreFactoryDefaultsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -49,7 +50,7 @@ class RestoreFactoryDefaultsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action restoreFactoryDefaults
+     * Restore a printer's default settings to the values specified by the manufacturer.
      * @param RestoreFactoryDefaultsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

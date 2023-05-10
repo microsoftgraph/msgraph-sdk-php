@@ -32,9 +32,10 @@ class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property includes for policies
+     * Deletes a permissionGrantConditionSet from the **includes** collection of a permissionGrantPolicy.
      * @param PermissionGrantConditionSetItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/permissiongrantpolicy-delete-includes?view=graph-rest-1.0 Find more info here
     */
     public function delete(?PermissionGrantConditionSetItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -87,7 +88,7 @@ class PermissionGrantConditionSetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property includes for policies
+     * Deletes a permissionGrantConditionSet from the **includes** collection of a permissionGrantPolicy.
      * @param PermissionGrantConditionSetItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

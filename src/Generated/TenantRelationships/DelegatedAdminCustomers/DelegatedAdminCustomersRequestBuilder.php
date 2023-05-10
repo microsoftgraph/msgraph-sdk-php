@@ -53,9 +53,10 @@ class DelegatedAdminCustomersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The customer who has a delegated admin relationship with a Microsoft partner.
+     * Get a list of the delegatedAdminCustomer objects and their properties.
      * @param DelegatedAdminCustomersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/tenantrelationship-list-delegatedadmincustomers?view=graph-rest-1.0 Find more info here
     */
     public function get(?DelegatedAdminCustomersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +91,7 @@ class DelegatedAdminCustomersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The customer who has a delegated admin relationship with a Microsoft partner.
+     * Get a list of the delegatedAdminCustomer objects and their properties.
      * @param DelegatedAdminCustomersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

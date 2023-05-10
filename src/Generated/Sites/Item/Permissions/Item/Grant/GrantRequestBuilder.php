@@ -31,10 +31,11 @@ class GrantRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action grant
+     * Grant users access to a link represented by a [permission][].
      * @param GrantPostRequestBody $body The request body
      * @param GrantRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/permission-grant?view=graph-rest-1.0 Find more info here
     */
     public function post(GrantPostRequestBody $body, ?GrantRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class GrantRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action grant
+     * Grant users access to a link represented by a [permission][].
      * @param GrantPostRequestBody $body The request body
      * @param GrantRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Users\Item\Assignments\Item\Catego
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Delete ref of navigation property categories for education
+ * Remove an educationCategory from an educationAssignment. Only teachers can perform this operation.
 */
 class RefRequestBuilderDeleteQueryParameters 
 {

@@ -48,9 +48,10 @@ class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Delete navigation property definitions for identityGovernance
+     * Deletes an accessReviewScheduleDefinition object.
      * @param AccessReviewScheduleDefinitionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/accessreviewscheduledefinition-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?AccessReviewScheduleDefinitionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -66,9 +67,10 @@ class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Represents the template and scheduling for an access review.
+     * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API.
      * @param AccessReviewScheduleDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/accessreviewscheduledefinition-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AccessReviewScheduleDefinitionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -84,10 +86,11 @@ class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Update the navigation property definitions in identityGovernance
+     * Update an existing accessReviewScheduleDefinition object to change one or more of its properties.
      * @param AccessReviewScheduleDefinition $body The request body
      * @param AccessReviewScheduleDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/accessreviewscheduledefinition-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(AccessReviewScheduleDefinition $body, ?AccessReviewScheduleDefinitionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -103,7 +106,7 @@ class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Delete navigation property definitions for identityGovernance
+     * Deletes an accessReviewScheduleDefinition object.
      * @param AccessReviewScheduleDefinitionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -120,7 +123,7 @@ class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Represents the template and scheduling for an access review.
+     * Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API.
      * @param AccessReviewScheduleDefinitionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -141,7 +144,7 @@ class AccessReviewScheduleDefinitionItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Update the navigation property definitions in identityGovernance
+     * Update an existing accessReviewScheduleDefinition object to change one or more of its properties.
      * @param AccessReviewScheduleDefinition $body The request body
      * @param AccessReviewScheduleDefinitionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

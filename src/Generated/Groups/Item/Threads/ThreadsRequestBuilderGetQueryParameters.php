@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Threads;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The group's conversation threads. Nullable.
+ * Get all the threads of a group.
 */
 class ThreadsRequestBuilderGetQueryParameters 
 {

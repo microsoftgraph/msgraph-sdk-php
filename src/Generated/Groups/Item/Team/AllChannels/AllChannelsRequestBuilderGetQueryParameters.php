@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Team\AllChannels;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * List of channels either hosted in or shared with the team (incoming channels).
+ * Get the list of channels either in this team or shared with this team (incoming channels).
 */
 class AllChannelsRequestBuilderGetQueryParameters 
 {

@@ -63,9 +63,10 @@ class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Instances for role eligibility requests.
+     * Get the instances of role eligibilities.
      * @param RoleEligibilityScheduleInstancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/rbacapplication-list-roleeligibilityscheduleinstances?view=graph-rest-1.0 Find more info here
     */
     public function get(?RoleEligibilityScheduleInstancesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -100,7 +101,7 @@ class RoleEligibilityScheduleInstancesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Instances for role eligibility requests.
+     * Get the instances of role eligibilities.
      * @param RoleEligibilityScheduleInstancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

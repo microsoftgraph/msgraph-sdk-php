@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\TokenLifetimePolicies\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.
+ * Retrieve the properties and relationships of a tokenLifetimePolicy object.
 */
 class TokenLifetimePolicyItemRequestBuilderGetQueryParameters 
 {

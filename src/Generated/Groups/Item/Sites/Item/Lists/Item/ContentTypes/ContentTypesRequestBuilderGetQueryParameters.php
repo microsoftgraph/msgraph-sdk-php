@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Sites\Item\Lists\Item\ContentTyp
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The collection of content types present in this list.
+ * Get the collection of [contentType][contentType] resources in a [list][].
 */
 class ContentTypesRequestBuilderGetQueryParameters 
 {

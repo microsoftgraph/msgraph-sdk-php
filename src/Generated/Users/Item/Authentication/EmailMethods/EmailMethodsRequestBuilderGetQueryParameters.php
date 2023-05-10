@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Authentication\EmailMethods;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The email address registered to a user for authentication.
+ * Retrieve a list of a user's emailAuthenticationMethod objects and their properties. This API will return only a single object in the collection as only one email method can be set for a user.
 */
 class EmailMethodsRequestBuilderGetQueryParameters 
 {

@@ -112,9 +112,10 @@ class ContentTypeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property contentTypes for groups
+     * Remove a [content type][contentType] from a [list][] or a [site][].
      * @param ContentTypeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/contenttype-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ContentTypeItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -130,9 +131,10 @@ class ContentTypeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The collection of content types defined for this site.
+     * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
      * @param ContentTypeItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/contenttype-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ContentTypeItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -148,10 +150,11 @@ class ContentTypeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property contentTypes in groups
+     * Update a [content type][contentType].
      * @param ContentType $body The request body
      * @param ContentTypeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/contenttype-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ContentType $body, ?ContentTypeItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -167,7 +170,7 @@ class ContentTypeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property contentTypes for groups
+     * Remove a [content type][contentType] from a [list][] or a [site][].
      * @param ContentTypeItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -184,7 +187,7 @@ class ContentTypeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The collection of content types defined for this site.
+     * Retrieve the metadata for a [content type][contentType] in a [site][] or a [list][].
      * @param ContentTypeItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -205,7 +208,7 @@ class ContentTypeItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property contentTypes in groups
+     * Update a [content type][contentType].
      * @param ContentType $body The request body
      * @param ContentTypeItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

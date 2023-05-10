@@ -32,9 +32,10 @@ class HeaderRowRangeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function headerRowRange
+     * Gets the range object associated with header row of the table.
      * @param HeaderRowRangeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/table-headerrowrange?view=graph-rest-1.0 Find more info here
     */
     public function get(?HeaderRowRangeRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -50,7 +51,7 @@ class HeaderRowRangeRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke function headerRowRange
+     * Gets the range object associated with header row of the table.
      * @param HeaderRowRangeRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

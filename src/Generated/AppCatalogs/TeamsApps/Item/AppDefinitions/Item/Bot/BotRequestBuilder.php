@@ -50,9 +50,10 @@ class BotRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The details of the bot specified in the Teams app manifest.
+     * Get the bot associated with a specific definition of the  TeamsApp.
      * @param BotRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/teamworkbot-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?BotRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -104,7 +105,7 @@ class BotRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The details of the bot specified in the Teams app manifest.
+     * Get the bot associated with a specific definition of the  TeamsApp.
      * @param BotRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

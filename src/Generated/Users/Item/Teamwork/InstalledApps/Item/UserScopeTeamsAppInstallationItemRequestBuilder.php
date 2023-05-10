@@ -8,6 +8,8 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\UserScopeTeamsAppInstallation;
 use Microsoft\Graph\Generated\Users\Item\Teamwork\InstalledApps\Item\Chat\ChatRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Teamwork\InstalledApps\Item\TeamsApp\TeamsAppRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\Teamwork\InstalledApps\Item\TeamsAppDefinition\TeamsAppDefinitionRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -26,6 +28,20 @@ class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to manage the teamsApp property of the microsoft.graph.teamsAppInstallation entity.
+    */
+    public function teamsApp(): TeamsAppRequestBuilder {
+        return new TeamsAppRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the teamsAppDefinition property of the microsoft.graph.teamsAppInstallation entity.
+    */
+    public function teamsAppDefinition(): TeamsAppDefinitionRequestBuilder {
+        return new TeamsAppDefinitionRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Instantiates a new UserScopeTeamsAppInstallationItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
@@ -40,9 +56,10 @@ class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property installedApps for users
+     * Uninstall an app from the personal scope of the specified user.
      * @param UserScopeTeamsAppInstallationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/userteamwork-delete-installedapps?view=graph-rest-1.0 Find more info here
     */
     public function delete(?UserScopeTeamsAppInstallationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -58,9 +75,10 @@ class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The apps installed in the personal scope of this user.
+     * Retrieve the app installed in the personal scope of the specified user.
      * @param UserScopeTeamsAppInstallationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/userteamwork-get-installedapps?view=graph-rest-1.0 Find more info here
     */
     public function get(?UserScopeTeamsAppInstallationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -95,7 +113,7 @@ class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property installedApps for users
+     * Uninstall an app from the personal scope of the specified user.
      * @param UserScopeTeamsAppInstallationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,7 +130,7 @@ class UserScopeTeamsAppInstallationItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The apps installed in the personal scope of this user.
+     * Retrieve the app installed in the personal scope of the specified user.
      * @param UserScopeTeamsAppInstallationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

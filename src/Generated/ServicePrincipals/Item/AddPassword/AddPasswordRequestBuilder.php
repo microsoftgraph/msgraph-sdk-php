@@ -32,10 +32,11 @@ class AddPasswordRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action addPassword
+     * Add a strong password or secret to a servicePrincipal object.
      * @param AddPasswordPostRequestBody $body The request body
      * @param AddPasswordRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/serviceprincipal-addpassword?view=graph-rest-1.0 Find more info here
     */
     public function post(AddPasswordPostRequestBody $body, ?AddPasswordRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -51,7 +52,7 @@ class AddPasswordRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action addPassword
+     * Add a strong password or secret to a servicePrincipal object.
      * @param AddPasswordPostRequestBody $body The request body
      * @param AddPasswordRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

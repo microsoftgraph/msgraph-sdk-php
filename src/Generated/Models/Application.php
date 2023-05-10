@@ -11,7 +11,7 @@ use Psr\Http\Message\StreamInterface;
 class Application extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new application and sets the default values.
+     * Instantiates a new Application and sets the default values.
     */
     public function __construct() {
         parent::__construct();

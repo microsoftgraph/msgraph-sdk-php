@@ -53,9 +53,10 @@ class SiteListsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of site lists to support Internet Explorer mode.
+     * Get a list of the browserSiteList objects and their properties.
      * @param SiteListsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/internetexplorermode-list-sitelists?view=graph-rest-1.0 Find more info here
     */
     public function get(?SiteListsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class SiteListsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to siteLists for admin
+     * Create a new browserSiteList object to support Internet Explorer mode.
      * @param BrowserSiteList $body The request body
      * @param SiteListsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/internetexplorermode-post-sitelists?view=graph-rest-1.0 Find more info here
     */
     public function post(BrowserSiteList $body, ?SiteListsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class SiteListsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of site lists to support Internet Explorer mode.
+     * Get a list of the browserSiteList objects and their properties.
      * @param SiteListsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class SiteListsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to siteLists for admin
+     * Create a new browserSiteList object to support Internet Explorer mode.
      * @param BrowserSiteList $body The request body
      * @param SiteListsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -40,9 +40,10 @@ class PlannerBucketItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property buckets for planner
+     * Delete **plannerBucket**.
      * @param PlannerBucketItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/plannerbucket-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?PlannerBucketItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -58,9 +59,10 @@ class PlannerBucketItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read-only. Nullable. Returns a collection of the specified buckets
+     * Retrieve the properties and relationships of a plannerBucket object.
      * @param PlannerBucketItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/plannerbucket-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?PlannerBucketItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -80,6 +82,7 @@ class PlannerBucketItemRequestBuilder extends BaseRequestBuilder
      * @param PlannerBucket $body The request body
      * @param PlannerBucketItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/plannerbucket-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(PlannerBucket $body, ?PlannerBucketItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -95,7 +98,7 @@ class PlannerBucketItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property buckets for planner
+     * Delete **plannerBucket**.
      * @param PlannerBucketItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,7 +115,7 @@ class PlannerBucketItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Read-only. Nullable. Returns a collection of the specified buckets
+     * Retrieve the properties and relationships of a plannerBucket object.
      * @param PlannerBucketItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

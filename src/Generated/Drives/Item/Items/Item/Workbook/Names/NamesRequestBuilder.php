@@ -69,9 +69,10 @@ class NamesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
+     * Retrieve a list of nameditem objects.
      * @param NamesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/workbook-list-names?view=graph-rest-1.0 Find more info here
     */
     public function get(?NamesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -106,7 +107,7 @@ class NamesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents a collection of workbooks scoped named items (named ranges and constants). Read-only.
+     * Retrieve a list of nameditem objects.
      * @param NamesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

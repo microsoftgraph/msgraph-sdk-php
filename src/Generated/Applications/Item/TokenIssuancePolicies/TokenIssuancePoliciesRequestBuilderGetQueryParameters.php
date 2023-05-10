@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Applications\Item\TokenIssuancePolicies;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get tokenIssuancePolicies from applications
+ * List the tokenIssuancePolicy objects that are assigned to an application.
 */
 class TokenIssuancePoliciesRequestBuilderGetQueryParameters 
 {

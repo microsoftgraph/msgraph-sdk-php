@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Onenote\Notebooks;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
+ * Retrieve a list of notebook objects.
 */
 class NotebooksRequestBuilderGetQueryParameters 
 {

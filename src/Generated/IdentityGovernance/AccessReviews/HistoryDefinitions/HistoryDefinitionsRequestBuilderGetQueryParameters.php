@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\HistoryDefi
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Represents a collection of access review history data and the scopes used to collect that data.
+ * Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.
 */
 class HistoryDefinitionsRequestBuilderGetQueryParameters 
 {

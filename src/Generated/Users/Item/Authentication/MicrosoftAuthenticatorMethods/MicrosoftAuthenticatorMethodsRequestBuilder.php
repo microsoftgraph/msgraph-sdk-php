@@ -52,9 +52,10 @@ class MicrosoftAuthenticatorMethodsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The details of the Microsoft Authenticator app registered to a user for authentication.
+     * Get a list of the microsoftAuthenticatorAuthenticationMethod objects and their properties.
      * @param MicrosoftAuthenticatorMethodsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/microsoftauthenticatorauthenticationmethod-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?MicrosoftAuthenticatorMethodsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -70,7 +71,7 @@ class MicrosoftAuthenticatorMethodsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The details of the Microsoft Authenticator app registered to a user for authentication.
+     * Get a list of the microsoftAuthenticatorAuthenticationMethod objects and their properties.
      * @param MicrosoftAuthenticatorMethodsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

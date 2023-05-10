@@ -53,9 +53,10 @@ class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The policy that specifies the conditions under which consent can be granted.
+     * Retrieve the list of permissionGrantPolicy objects.
      * @param PermissionGrantPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/permissiongrantpolicy-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?PermissionGrantPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to permissionGrantPolicies for policies
+     * Creates a permissionGrantPolicy. A permission grant policy is used to describe the conditions under which permissions can be granted (for example, during application consent). After creating the permission grant policy, you can add include condition sets to add matching rules, and add exclude condition sets to add exclusion rules.
      * @param PermissionGrantPolicy $body The request body
      * @param PermissionGrantPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/permissiongrantpolicy-post-permissiongrantpolicies?view=graph-rest-1.0 Find more info here
     */
     public function post(PermissionGrantPolicy $body, ?PermissionGrantPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The policy that specifies the conditions under which consent can be granted.
+     * Retrieve the list of permissionGrantPolicy objects.
      * @param PermissionGrantPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class PermissionGrantPoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to permissionGrantPolicies for policies
+     * Creates a permissionGrantPolicy. A permission grant policy is used to describe the conditions under which permissions can be granted (for example, during application consent). After creating the permission grant policy, you can add include condition sets to add matching rules, and add exclude condition sets to add exclusion rules.
      * @param PermissionGrantPolicy $body The request body
      * @param PermissionGrantPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

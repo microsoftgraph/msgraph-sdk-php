@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\AuditLogs\SignIns\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get signIns from auditLogs
+ * Retrieve a specific Azure AD user sign-in event for your tenant. Sign-ins that are interactive in nature (where a username/password is passed as part of auth token) and successful federated sign-ins are currently included in the sign-in logs.
 */
 class SignInItemRequestBuilderGetQueryParameters 
 {

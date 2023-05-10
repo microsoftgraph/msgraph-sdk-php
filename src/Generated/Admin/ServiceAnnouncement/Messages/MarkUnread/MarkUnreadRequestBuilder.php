@@ -31,10 +31,11 @@ class MarkUnreadRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action markUnread
+     * Mark a list of serviceUpdateMessages as **unread** for the signed in user.
      * @param MarkUnreadPostRequestBody $body The request body
      * @param MarkUnreadRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/serviceupdatemessage-markunread?view=graph-rest-1.0 Find more info here
     */
     public function post(MarkUnreadPostRequestBody $body, ?MarkUnreadRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class MarkUnreadRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action markUnread
+     * Mark a list of serviceUpdateMessages as **unread** for the signed in user.
      * @param MarkUnreadPostRequestBody $body The request body
      * @param MarkUnreadRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

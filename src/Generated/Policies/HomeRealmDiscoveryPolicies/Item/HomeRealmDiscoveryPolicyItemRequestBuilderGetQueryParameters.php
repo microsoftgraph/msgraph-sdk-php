@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\HomeRealmDiscoveryPolicies\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The policy to control Azure AD authentication behavior for federated users.
+ * Retrieve the properties and relationships of a homeRealmDiscoveryPolicy object.
 */
 class HomeRealmDiscoveryPolicyItemRequestBuilderGetQueryParameters 
 {

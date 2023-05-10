@@ -31,10 +31,11 @@ class CheckinRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action checkin
+     * Check in a checked out **driveItem** resource, which makes the version of the document available to others.
      * @param CheckinPostRequestBody $body The request body
      * @param CheckinRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/driveitem-checkin?view=graph-rest-1.0 Find more info here
     */
     public function post(CheckinPostRequestBody $body, ?CheckinRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class CheckinRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action checkin
+     * Check in a checked out **driveItem** resource, which makes the version of the document available to others.
      * @param CheckinPostRequestBody $body The request body
      * @param CheckinRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

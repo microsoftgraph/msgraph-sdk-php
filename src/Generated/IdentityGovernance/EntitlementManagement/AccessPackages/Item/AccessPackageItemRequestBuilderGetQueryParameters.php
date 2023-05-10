@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\Acc
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
+ * Retrieve the properties and relationships of an accessPackage object.
 */
 class AccessPackageItemRequestBuilderGetQueryParameters 
 {

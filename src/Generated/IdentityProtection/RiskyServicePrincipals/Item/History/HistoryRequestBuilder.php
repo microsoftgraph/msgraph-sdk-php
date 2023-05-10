@@ -53,9 +53,10 @@ class HistoryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the risk history of Azure AD service principals.
+     * Get the risk history of a riskyServicePrincipal object.
      * @param HistoryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/riskyserviceprincipal-list-history?view=graph-rest-1.0 Find more info here
     */
     public function get(?HistoryRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +91,7 @@ class HistoryRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the risk history of Azure AD service principals.
+     * Get the risk history of a riskyServicePrincipal object.
      * @param HistoryRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

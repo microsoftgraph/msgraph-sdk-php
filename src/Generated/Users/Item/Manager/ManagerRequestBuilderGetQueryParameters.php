@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Manager;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The user or contact that is this user's manager. Read-only. (HTTP Methods: GET, PUT, DELETE.). Supports $expand.
+ * Returns the user or organizational contact assigned as the user's manager. Optionally, you can expand the manager's chain up to the root node.
 */
 class ManagerRequestBuilderGetQueryParameters 
 {

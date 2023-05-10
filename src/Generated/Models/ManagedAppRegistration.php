@@ -7,13 +7,10 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 
-/**
- * The ManagedAppEntity is the base entity type for all other entity types under app management workflow.
-*/
 class ManagedAppRegistration extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new managedAppRegistration and sets the default values.
+     * Instantiates a new ManagedAppRegistration and sets the default values.
     */
     public function __construct() {
         parent::__construct();

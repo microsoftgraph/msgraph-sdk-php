@@ -31,9 +31,10 @@ class RefreshRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action refresh
+     * Refreshes the PivotTable.
      * @param RefreshRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/workbookpivottable-refresh?view=graph-rest-1.0 Find more info here
     */
     public function post(?RefreshRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -49,7 +50,7 @@ class RefreshRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action refresh
+     * Refreshes the PivotTable.
      * @param RefreshRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

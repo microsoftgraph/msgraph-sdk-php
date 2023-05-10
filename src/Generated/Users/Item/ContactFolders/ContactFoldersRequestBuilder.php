@@ -61,9 +61,10 @@ class ContactFoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The user's contacts folders. Read-only. Nullable.
+     * Get the contact folder collection in the default Contacts folder of the signed-in user.
      * @param ContactFoldersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/user-list-contactfolders?view=graph-rest-1.0 Find more info here
     */
     public function get(?ContactFoldersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -79,10 +80,11 @@ class ContactFoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to contactFolders for users
+     * Create a new contactFolder under the user's default contacts folder. You can also create a new contactfolder as a child of any specified contact folder.
      * @param ContactFolder $body The request body
      * @param ContactFoldersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/user-post-contactfolders?view=graph-rest-1.0 Find more info here
     */
     public function post(ContactFolder $body, ?ContactFoldersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -98,7 +100,7 @@ class ContactFoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The user's contacts folders. Read-only. Nullable.
+     * Get the contact folder collection in the default Contacts folder of the signed-in user.
      * @param ContactFoldersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -119,7 +121,7 @@ class ContactFoldersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to contactFolders for users
+     * Create a new contactFolder under the user's default contacts folder. You can also create a new contactfolder as a child of any specified contact folder.
      * @param ContactFolder $body The request body
      * @param ContactFoldersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

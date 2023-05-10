@@ -31,10 +31,11 @@ class SetOrderRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action setOrder
+     * Set the order of identityUserFlowAttributeAssignments being collected within a user flow.
      * @param SetOrderPostRequestBody $body The request body
      * @param SetOrderRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/identityuserflowattributeassignment-setorder?view=graph-rest-1.0 Find more info here
     */
     public function post(SetOrderPostRequestBody $body, ?SetOrderRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class SetOrderRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action setOrder
+     * Set the order of identityUserFlowAttributeAssignments being collected within a user flow.
      * @param SetOrderPostRequestBody $body The request body
      * @param SetOrderRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

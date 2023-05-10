@@ -62,9 +62,10 @@ class NotebooksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
+     * Retrieve a list of notebook objects.
      * @param NotebooksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/onenote-list-notebooks?view=graph-rest-1.0 Find more info here
     */
     public function get(?NotebooksRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -89,10 +90,11 @@ class NotebooksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to notebooks for sites
+     * Create a new OneNote notebook.
      * @param Notebook $body The request body
      * @param NotebooksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/onenote-post-notebooks?view=graph-rest-1.0 Find more info here
     */
     public function post(Notebook $body, ?NotebooksRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -108,7 +110,7 @@ class NotebooksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
+     * Retrieve a list of notebook objects.
      * @param NotebooksRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -129,7 +131,7 @@ class NotebooksRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to notebooks for sites
+     * Create a new OneNote notebook.
      * @param Notebook $body The request body
      * @param NotebooksRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

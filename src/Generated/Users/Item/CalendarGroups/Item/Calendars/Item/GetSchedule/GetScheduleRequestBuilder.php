@@ -31,10 +31,11 @@ class GetScheduleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action getSchedule
+     * Get the free/busy availability information for a collection of users, distributions lists, or resources (rooms or equipment) for a specified time period.
      * @param GetSchedulePostRequestBody $body The request body
      * @param GetScheduleRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/calendar-getschedule?view=graph-rest-1.0 Find more info here
     */
     public function post(GetSchedulePostRequestBody $body, ?GetScheduleRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class GetScheduleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action getSchedule
+     * Get the free/busy availability information for a collection of users, distributions lists, or resources (rooms or equipment) for a specified time period.
      * @param GetSchedulePostRequestBody $body The request body
      * @param GetScheduleRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

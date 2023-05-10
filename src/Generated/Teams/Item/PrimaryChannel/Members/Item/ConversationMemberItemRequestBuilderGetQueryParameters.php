@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Teams\Item\PrimaryChannel\Members\Item;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * A collection of membership records associated with the channel.
+ * Get a conversationMember from a channel.
 */
 class ConversationMemberItemRequestBuilderGetQueryParameters 
 {

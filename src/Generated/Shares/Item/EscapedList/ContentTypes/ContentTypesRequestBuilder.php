@@ -77,9 +77,10 @@ class ContentTypesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The collection of content types present in this list.
+     * Get the collection of [contentType][contentType] resources in a [list][].
      * @param ContentTypesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/list-list-contenttypes?view=graph-rest-1.0 Find more info here
     */
     public function get(?ContentTypesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -114,7 +115,7 @@ class ContentTypesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The collection of content types present in this list.
+     * Get the collection of [contentType][contentType] resources in a [list][].
      * @param ContentTypesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

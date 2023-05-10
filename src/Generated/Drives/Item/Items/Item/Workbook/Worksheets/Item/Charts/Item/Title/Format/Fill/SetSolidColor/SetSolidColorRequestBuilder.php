@@ -31,10 +31,11 @@ class SetSolidColorRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action setSolidColor
+     * Sets the fill formatting of a chart element to a uniform color.
      * @param SetSolidColorPostRequestBody $body The request body
      * @param SetSolidColorRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/chartfill-setsolidcolor?view=graph-rest-1.0 Find more info here
     */
     public function post(SetSolidColorPostRequestBody $body, ?SetSolidColorRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class SetSolidColorRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action setSolidColor
+     * Sets the fill formatting of a chart element to a uniform color.
      * @param SetSolidColorPostRequestBody $body The request body
      * @param SetSolidColorRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

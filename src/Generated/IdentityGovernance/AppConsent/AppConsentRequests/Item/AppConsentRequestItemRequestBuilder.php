@@ -58,9 +58,10 @@ class AppConsentRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of userConsentRequest objects for a specific application.
+     * Read the properties and relationships of an appConsentRequest object.
      * @param AppConsentRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/appconsentrequest-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AppConsentRequestItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -112,7 +113,7 @@ class AppConsentRequestItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of userConsentRequest objects for a specific application.
+     * Read the properties and relationships of an appConsentRequest object.
      * @param AppConsentRequestItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

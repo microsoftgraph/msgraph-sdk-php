@@ -102,11 +102,20 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
             'b2bCollaborationOutbound' => fn(ParseNode $n) => $o->setB2bCollaborationOutbound($n->getObjectValue([CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'])),
             'b2bDirectConnectInbound' => fn(ParseNode $n) => $o->setB2bDirectConnectInbound($n->getObjectValue([CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'])),
             'b2bDirectConnectOutbound' => fn(ParseNode $n) => $o->setB2bDirectConnectOutbound($n->getObjectValue([CrossTenantAccessPolicyB2BSetting::class, 'createFromDiscriminatorValue'])),
+            'identitySynchronization' => fn(ParseNode $n) => $o->setIdentitySynchronization($n->getObjectValue([CrossTenantIdentitySyncPolicyPartner::class, 'createFromDiscriminatorValue'])),
             'inboundTrust' => fn(ParseNode $n) => $o->setInboundTrust($n->getObjectValue([CrossTenantAccessPolicyInboundTrust::class, 'createFromDiscriminatorValue'])),
             'isServiceProvider' => fn(ParseNode $n) => $o->setIsServiceProvider($n->getBooleanValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'tenantId' => fn(ParseNode $n) => $o->setTenantId($n->getStringValue()),
         ];
+    }
+
+    /**
+     * Gets the identitySynchronization property value. The identitySynchronization property
+     * @return CrossTenantIdentitySyncPolicyPartner|null
+    */
+    public function getIdentitySynchronization(): ?CrossTenantIdentitySyncPolicyPartner {
+        return $this->getBackingStore()->get('identitySynchronization');
     }
 
     /**
@@ -151,6 +160,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
         $writer->writeObjectValue('b2bCollaborationOutbound', $this->getB2bCollaborationOutbound());
         $writer->writeObjectValue('b2bDirectConnectInbound', $this->getB2bDirectConnectInbound());
         $writer->writeObjectValue('b2bDirectConnectOutbound', $this->getB2bDirectConnectOutbound());
+        $writer->writeObjectValue('identitySynchronization', $this->getIdentitySynchronization());
         $writer->writeObjectValue('inboundTrust', $this->getInboundTrust());
         $writer->writeBooleanValue('isServiceProvider', $this->getIsServiceProvider());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
@@ -212,6 +222,14 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
+    }
+
+    /**
+     * Sets the identitySynchronization property value. The identitySynchronization property
+     * @param CrossTenantIdentitySyncPolicyPartner|null $value Value to set for the identitySynchronization property.
+    */
+    public function setIdentitySynchronization(?CrossTenantIdentitySyncPolicyPartner $value): void {
+        $this->getBackingStore()->set('identitySynchronization', $value);
     }
 
     /**

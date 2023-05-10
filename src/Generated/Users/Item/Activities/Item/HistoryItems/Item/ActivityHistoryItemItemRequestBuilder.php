@@ -76,10 +76,11 @@ class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property historyItems in users
+     * Delete an existing history item for an existing user activity.
      * @param ActivityHistoryItem $body The request body
      * @param ActivityHistoryItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/projectrome-delete-historyitem?view=graph-rest-1.0 Find more info here
     */
     public function patch(ActivityHistoryItem $body, ?ActivityHistoryItemItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -133,7 +134,7 @@ class ActivityHistoryItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property historyItems in users
+     * Delete an existing history item for an existing user activity.
      * @param ActivityHistoryItem $body The request body
      * @param ActivityHistoryItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

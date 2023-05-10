@@ -53,9 +53,10 @@ class QueriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents queries within the review set.
+     * Get the list of queries associated with an eDiscovery review set.
      * @param QueriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/security-ediscoveryreviewset-list-queries?view=graph-rest-1.0 Find more info here
     */
     public function get(?QueriesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class QueriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to queries for security
+     * Create a new ediscoveryReviewSetQuery object.
      * @param EdiscoveryReviewSetQuery $body The request body
      * @param QueriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/security-ediscoveryreviewset-post-queries?view=graph-rest-1.0 Find more info here
     */
     public function post(EdiscoveryReviewSetQuery $body, ?QueriesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class QueriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents queries within the review set.
+     * Get the list of queries associated with an eDiscovery review set.
      * @param QueriesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class QueriesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to queries for security
+     * Create a new ediscoveryReviewSetQuery object.
      * @param EdiscoveryReviewSetQuery $body The request body
      * @param QueriesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

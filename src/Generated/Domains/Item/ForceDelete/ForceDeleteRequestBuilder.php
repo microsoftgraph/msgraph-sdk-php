@@ -31,10 +31,11 @@ class ForceDeleteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action forceDelete
+     * Deletes a domain using an asynchronous long-running operation. Prior to calling forceDelete, you must update or remove any references to **Exchange** as the provisioning service. The following actions are performed as part of this operation: After the domain deletion completes, API operations for the deleted domain will return a HTTP 404 status code. To verify deletion of a domain, you can perform a get domain operation.
      * @param ForceDeletePostRequestBody $body The request body
      * @param ForceDeleteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/domain-forcedelete?view=graph-rest-1.0 Find more info here
     */
     public function post(ForceDeletePostRequestBody $body, ?ForceDeleteRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class ForceDeleteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action forceDelete
+     * Deletes a domain using an asynchronous long-running operation. Prior to calling forceDelete, you must update or remove any references to **Exchange** as the provisioning service. The following actions are performed as part of this operation: After the domain deletion completes, API operations for the deleted domain will return a HTTP 404 status code. To verify deletion of a domain, you can perform a get domain operation.
      * @param ForceDeletePostRequestBody $body The request body
      * @param ForceDeleteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -53,9 +53,10 @@ class CustomersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * All the customers of this business. Read-only. Nullable.
+     * Get a list of bookingCustomer objects of a business.
      * @param CustomersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/bookingbusiness-list-customers?view=graph-rest-1.0 Find more info here
     */
     public function get(?CustomersRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class CustomersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to customers for solutions
+     * Create a new bookingCustomer object.
      * @param BookingCustomerBase $body The request body
      * @param CustomersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/bookingbusiness-post-customers?view=graph-rest-1.0 Find more info here
     */
     public function post(BookingCustomerBase $body, ?CustomersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class CustomersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * All the customers of this business. Read-only. Nullable.
+     * Get a list of bookingCustomer objects of a business.
      * @param CustomersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class CustomersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to customers for solutions
+     * Create a new bookingCustomer object.
      * @param BookingCustomerBase $body The request body
      * @param CustomersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

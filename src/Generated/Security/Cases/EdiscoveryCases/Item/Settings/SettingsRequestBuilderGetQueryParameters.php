@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Security\Cases\EdiscoveryCases\Item\Settings
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Returns a list of eDIscoverySettings objects in the case.
+ * Read the properties and relationships of an ediscoveryCaseSettings object.
 */
 class SettingsRequestBuilderGetQueryParameters 
 {

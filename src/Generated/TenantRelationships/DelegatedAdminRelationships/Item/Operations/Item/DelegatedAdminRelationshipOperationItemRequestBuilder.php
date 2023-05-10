@@ -50,9 +50,10 @@ class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * The long running operations associated with the delegated admin relationship.
+     * Read the properties of a delegatedAdminRelationshipOperation object.
      * @param DelegatedAdminRelationshipOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/delegatedadminrelationshipoperation-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DelegatedAdminRelationshipOperationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -104,7 +105,7 @@ class DelegatedAdminRelationshipOperationItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * The long running operations associated with the delegated admin relationship.
+     * Read the properties of a delegatedAdminRelationshipOperation object.
      * @param DelegatedAdminRelationshipOperationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

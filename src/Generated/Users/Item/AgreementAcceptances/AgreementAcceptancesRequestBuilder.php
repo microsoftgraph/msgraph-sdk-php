@@ -52,9 +52,10 @@ class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The user's terms of use acceptance statuses. Read-only. Nullable.
+     * Retrieve the signed-in user's agreementAcceptance objects.
      * @param AgreementAcceptancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/user-list-agreementacceptances?view=graph-rest-1.0 Find more info here
     */
     public function get(?AgreementAcceptancesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -70,7 +71,7 @@ class AgreementAcceptancesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The user's terms of use acceptance statuses. Read-only. Nullable.
+     * Retrieve the signed-in user's agreementAcceptance objects.
      * @param AgreementAcceptancesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -53,9 +53,10 @@ class SetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * All sets under the group in a term [store].
+     * Get a list of the set objects and their properties.
      * @param SetsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/termstore-group-list-sets?view=graph-rest-1.0 Find more info here
     */
     public function get(?SetsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +91,7 @@ class SetsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * All sets under the group in a term [store].
+     * Get a list of the set objects and their properties.
      * @param SetsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

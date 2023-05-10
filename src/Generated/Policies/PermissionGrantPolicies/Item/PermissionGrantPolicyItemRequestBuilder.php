@@ -48,9 +48,10 @@ class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property permissionGrantPolicies for policies
+     * Delete a permissionGrantPolicy object.
      * @param PermissionGrantPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/permissiongrantpolicy-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?PermissionGrantPolicyItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -66,9 +67,10 @@ class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The policy that specifies the conditions under which consent can be granted.
+     * Retrieve a single permissionGrantPolicy object.
      * @param PermissionGrantPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/permissiongrantpolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?PermissionGrantPolicyItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -84,10 +86,11 @@ class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property permissionGrantPolicies in policies
+     * Update properties of a  permissionGrantPolicy.
      * @param PermissionGrantPolicy $body The request body
      * @param PermissionGrantPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/permissiongrantpolicy-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(PermissionGrantPolicy $body, ?PermissionGrantPolicyItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -103,7 +106,7 @@ class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property permissionGrantPolicies for policies
+     * Delete a permissionGrantPolicy object.
      * @param PermissionGrantPolicyItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -120,7 +123,7 @@ class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The policy that specifies the conditions under which consent can be granted.
+     * Retrieve a single permissionGrantPolicy object.
      * @param PermissionGrantPolicyItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -141,7 +144,7 @@ class PermissionGrantPolicyItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property permissionGrantPolicies in policies
+     * Update properties of a  permissionGrantPolicy.
      * @param PermissionGrantPolicy $body The request body
      * @param PermissionGrantPolicyItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

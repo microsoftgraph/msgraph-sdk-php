@@ -31,9 +31,10 @@ class ClearRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action clear
+     * Clears the sorting that is currently on the table. While this doesn't modify the table's ordering, it clears the state of the header buttons.
      * @param ClearRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/tablesort-clear?view=graph-rest-1.0 Find more info here
     */
     public function post(?ClearRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);
@@ -49,7 +50,7 @@ class ClearRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action clear
+     * Clears the sorting that is currently on the table. While this doesn't modify the table's ordering, it clears the state of the header buttons.
      * @param ClearRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

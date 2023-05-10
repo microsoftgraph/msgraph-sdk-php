@@ -56,9 +56,10 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Delete navigation property localizations for organization
+     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object.
      * @param OrganizationalBrandingLocalizationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/organizationalbrandinglocalization-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?OrganizationalBrandingLocalizationItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -74,9 +75,10 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Add different branding based on a locale.
+     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of **id** in the URL.
      * @param OrganizationalBrandingLocalizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/organizationalbrandinglocalization-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?OrganizationalBrandingLocalizationItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -92,10 +94,11 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Update the navigation property localizations in organization
+     * Update the properties of an organizationalBrandingLocalization object for a specific localization.
      * @param OrganizationalBrandingLocalization $body The request body
      * @param OrganizationalBrandingLocalizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/organizationalbrandinglocalization-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(OrganizationalBrandingLocalization $body, ?OrganizationalBrandingLocalizationItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -111,7 +114,7 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Delete navigation property localizations for organization
+     * Delete a localized branding object. To delete the organizationalBrandingLocalization object, all images (Stream types) must first be removed from the object.
      * @param OrganizationalBrandingLocalizationItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -128,7 +131,7 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Add different branding based on a locale.
+     * Read the properties and relationships of an organizationalBrandingLocalization object. To retrieve a localization branding object, specify the value of **id** in the URL.
      * @param OrganizationalBrandingLocalizationItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -149,7 +152,7 @@ class OrganizationalBrandingLocalizationItemRequestBuilder extends BaseRequestBu
     }
 
     /**
-     * Update the navigation property localizations in organization
+     * Update the properties of an organizationalBrandingLocalization object for a specific localization.
      * @param OrganizationalBrandingLocalization $body The request body
      * @param OrganizationalBrandingLocalizationItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

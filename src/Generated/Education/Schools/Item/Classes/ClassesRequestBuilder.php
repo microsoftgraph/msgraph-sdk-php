@@ -60,9 +60,10 @@ class ClassesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Classes taught at the school. Nullable.
+     * Get the educationClass resources owned by an educationSchool.
      * @param ClassesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/educationschool-list-classes?view=graph-rest-1.0 Find more info here
     */
     public function get(?ClassesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -78,7 +79,7 @@ class ClassesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Classes taught at the school. Nullable.
+     * Get the educationClass resources owned by an educationSchool.
      * @param ClassesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

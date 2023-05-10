@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Reports\DailyPrintUsageByUser;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get dailyPrintUsageByUser from reports
+ * Retrieve a list of daily print usage summaries, grouped by user.
 */
 class DailyPrintUsageByUserRequestBuilderGetQueryParameters 
 {

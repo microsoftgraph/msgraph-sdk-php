@@ -31,10 +31,11 @@ class ProtectRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action protect
+     * Protect a worksheet. It throws if the worksheet has been protected.
      * @param ProtectPostRequestBody $body The request body
      * @param ProtectRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/worksheetprotection-protect?view=graph-rest-1.0 Find more info here
     */
     public function post(ProtectPostRequestBody $body, ?ProtectRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class ProtectRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action protect
+     * Protect a worksheet. It throws if the worksheet has been protected.
      * @param ProtectPostRequestBody $body The request body
      * @param ProtectRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

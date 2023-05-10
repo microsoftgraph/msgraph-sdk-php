@@ -32,10 +32,11 @@ class PlayPromptRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action playPrompt
+     * Play a prompt in the call. For more information about how to handle operations, see commsOperation
      * @param PlayPromptPostRequestBody $body The request body
      * @param PlayPromptRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/call-playprompt?view=graph-rest-1.0 Find more info here
     */
     public function post(PlayPromptPostRequestBody $body, ?PlayPromptRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -51,7 +52,7 @@ class PlayPromptRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action playPrompt
+     * Play a prompt in the call. For more information about how to handle operations, see commsOperation
      * @param PlayPromptPostRequestBody $body The request body
      * @param PlayPromptRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

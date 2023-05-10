@@ -32,9 +32,10 @@ class ChecklistItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property checklistItems for users
+     * Delete a checklistItem object.
      * @param ChecklistItemItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/checklistitem-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ChecklistItemItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -50,9 +51,10 @@ class ChecklistItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of checklistItems linked to a task.
+     * Read the properties and relationships of a checklistItem object.
      * @param ChecklistItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/checklistitem-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ChecklistItemItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,10 +70,11 @@ class ChecklistItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property checklistItems in users
+     * Update the properties of a checklistItem object.
      * @param ChecklistItem $body The request body
      * @param ChecklistItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/checklistitem-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ChecklistItem $body, ?ChecklistItemItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -87,7 +90,7 @@ class ChecklistItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property checklistItems for users
+     * Delete a checklistItem object.
      * @param ChecklistItemItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +107,7 @@ class ChecklistItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of checklistItems linked to a task.
+     * Read the properties and relationships of a checklistItem object.
      * @param ChecklistItemItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +128,7 @@ class ChecklistItemItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property checklistItems in users
+     * Update the properties of a checklistItem object.
      * @param ChecklistItem $body The request body
      * @param ChecklistItemItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -58,9 +58,10 @@ class TitleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the axis title. Read-only.
+     * Retrieve the properties and relationships of chartaxistitle object.
      * @param TitleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/chartaxistitle-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?TitleRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,10 +77,11 @@ class TitleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property title in drives
+     * Update the properties of chartaxistitle object.
      * @param WorkbookChartAxisTitle $body The request body
      * @param TitleRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/chartaxistitle-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(WorkbookChartAxisTitle $body, ?TitleRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -112,7 +114,7 @@ class TitleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the axis title. Read-only.
+     * Retrieve the properties and relationships of chartaxistitle object.
      * @param TitleRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -133,7 +135,7 @@ class TitleRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property title in drives
+     * Update the properties of chartaxistitle object.
      * @param WorkbookChartAxisTitle $body The request body
      * @param TitleRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

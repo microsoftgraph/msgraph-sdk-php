@@ -53,9 +53,10 @@ class ServicesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * All the services offered by this business. Read-only. Nullable.
+     * Get a list of bookingService objects in the specified bookingBusiness.
      * @param ServicesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/bookingbusiness-list-services?view=graph-rest-1.0 Find more info here
     */
     public function get(?ServicesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class ServicesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to services for solutions
+     * Create a new bookingService for the specified bookingBusiness.
      * @param BookingService $body The request body
      * @param ServicesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/bookingbusiness-post-services?view=graph-rest-1.0 Find more info here
     */
     public function post(BookingService $body, ?ServicesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class ServicesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * All the services offered by this business. Read-only. Nullable.
+     * Get a list of bookingService objects in the specified bookingBusiness.
      * @param ServicesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class ServicesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to services for solutions
+     * Create a new bookingService for the specified bookingBusiness.
      * @param BookingService $body The request body
      * @param ServicesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

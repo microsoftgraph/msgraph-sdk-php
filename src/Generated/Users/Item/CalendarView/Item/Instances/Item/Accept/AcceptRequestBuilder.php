@@ -31,10 +31,11 @@ class AcceptRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action accept
+     * Accept the specified event in a user calendar.
      * @param AcceptPostRequestBody $body The request body
      * @param AcceptRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/event-accept?view=graph-rest-1.0 Find more info here
     */
     public function post(AcceptPostRequestBody $body, ?AcceptRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class AcceptRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action accept
+     * Accept the specified event in a user calendar.
      * @param AcceptPostRequestBody $body The request body
      * @param AcceptRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

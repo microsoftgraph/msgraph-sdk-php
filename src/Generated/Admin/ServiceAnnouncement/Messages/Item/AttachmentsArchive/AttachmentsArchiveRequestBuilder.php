@@ -35,6 +35,7 @@ class AttachmentsArchiveRequestBuilder extends BaseRequestBuilder
      * The zip file that contains all attachments for a message.
      * @param AttachmentsArchiveRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/serviceannouncement-list-messages?view=graph-rest-1.0 Find more info here
     */
     public function get(?AttachmentsArchiveRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);

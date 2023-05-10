@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Groups\Item\Planner\Plans\Item\Buckets\Item\
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Read-only. Nullable. Used to render the task correctly in the task board view when grouped by assignedTo.
+ * Retrieve the properties and relationships of a **plannerAssignedToTaskBoardTaskFormat** object.
 */
 class AssignedToTaskBoardFormatRequestBuilderGetQueryParameters 
 {

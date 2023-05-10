@@ -32,10 +32,11 @@ class MuteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action mute
+     * Allows the application to mute itself. This is a server mute, meaning that the server will drop all audio packets for this participant, even if the participant continues to stream audio. For more details about how to handle mute operations, see muteParticipantOperation
      * @param MutePostRequestBody $body The request body
      * @param MuteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/call-mute?view=graph-rest-1.0 Find more info here
     */
     public function post(MutePostRequestBody $body, ?MuteRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -51,7 +52,7 @@ class MuteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action mute
+     * Allows the application to mute itself. This is a server mute, meaning that the server will drop all audio packets for this participant, even if the participant continues to stream audio. For more details about how to handle mute operations, see muteParticipantOperation
      * @param MutePostRequestBody $body The request body
      * @param MuteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

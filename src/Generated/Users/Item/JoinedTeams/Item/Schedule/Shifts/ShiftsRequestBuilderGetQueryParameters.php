@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\Shifts;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The shifts in the schedule.
+ * Get the list of shift instances in a schedule.
 */
 class ShiftsRequestBuilderGetQueryParameters 
 {

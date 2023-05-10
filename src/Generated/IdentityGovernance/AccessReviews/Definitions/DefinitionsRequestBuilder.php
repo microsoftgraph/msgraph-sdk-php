@@ -63,9 +63,10 @@ class DefinitionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the template and scheduling for an access review.
+     * Get a list of the accessReviewScheduleDefinition objects and their properties.
      * @param DefinitionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/accessreviewset-list-definitions?view=graph-rest-1.0 Find more info here
     */
     public function get(?DefinitionsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -81,10 +82,11 @@ class DefinitionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to definitions for identityGovernance
+     * Create a new accessReviewScheduleDefinition object.
      * @param AccessReviewScheduleDefinition $body The request body
      * @param DefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/accessreviewset-post-definitions?view=graph-rest-1.0 Find more info here
     */
     public function post(AccessReviewScheduleDefinition $body, ?DefinitionsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -100,7 +102,7 @@ class DefinitionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the template and scheduling for an access review.
+     * Get a list of the accessReviewScheduleDefinition objects and their properties.
      * @param DefinitionsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -121,7 +123,7 @@ class DefinitionsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to definitions for identityGovernance
+     * Create a new accessReviewScheduleDefinition object.
      * @param AccessReviewScheduleDefinition $body The request body
      * @param DefinitionsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

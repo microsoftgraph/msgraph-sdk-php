@@ -31,10 +31,11 @@ class CancelRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Cancels the giving booking appointment, sending a message to the involved parties.
+     * Cancel the specified bookingAppointment in the specified bookingBusiness and send a message to the involved customer and staff members.
      * @param CancelPostRequestBody $body The request body
      * @param CancelRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/bookingappointment-cancel?view=graph-rest-1.0 Find more info here
     */
     public function post(CancelPostRequestBody $body, ?CancelRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class CancelRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Cancels the giving booking appointment, sending a message to the involved parties.
+     * Cancel the specified bookingAppointment in the specified bookingBusiness and send a message to the involved customer and staff members.
      * @param CancelPostRequestBody $body The request body
      * @param CancelRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Policies\RoleManagementPolicyAssignments\Ite
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The assignment of a role management policy to a role definition object.
+ * Get the details of a role management policy assignment including the policy and rules associated with the Azure AD role.
 */
 class UnifiedRoleManagementPolicyAssignmentItemRequestBuilderGetQueryParameters 
 {

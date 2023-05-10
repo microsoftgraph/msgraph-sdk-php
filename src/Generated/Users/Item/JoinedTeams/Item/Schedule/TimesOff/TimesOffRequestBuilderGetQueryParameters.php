@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\JoinedTeams\Item\Schedule\TimesOf
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * The instances of times off in the schedule.
+ * Get the list of timeOff instances in a schedule.
 */
 class TimesOffRequestBuilderGetQueryParameters 
 {

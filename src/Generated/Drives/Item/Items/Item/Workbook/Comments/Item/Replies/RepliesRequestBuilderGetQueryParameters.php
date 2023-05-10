@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Comments\Ite
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get replies from drives
+ * Retrieve the properties and relationships of workbookCommentReply object.
 */
 class RepliesRequestBuilderGetQueryParameters 
 {

@@ -53,9 +53,10 @@ class ChildrenRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
+     * Return a collection of DriveItems in the **children** relationship of a DriveItem. DriveItems with a non-null **folder** or **package** facet can have one or more child DriveItems.
      * @param ChildrenRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/driveitem-list-children?view=graph-rest-1.0 Find more info here
     */
     public function get(?ChildrenRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -75,6 +76,7 @@ class ChildrenRequestBuilder extends BaseRequestBuilder
      * @param DriveItem $body The request body
      * @param ChildrenRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/driveitem-post-children?view=graph-rest-1.0 Find more info here
     */
     public function post(DriveItem $body, ?ChildrenRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class ChildrenRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable.
+     * Return a collection of DriveItems in the **children** relationship of a DriveItem. DriveItems with a non-null **folder** or **package** facet can have one or more child DriveItems.
      * @param ChildrenRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

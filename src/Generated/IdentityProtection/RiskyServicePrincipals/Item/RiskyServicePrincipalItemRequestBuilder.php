@@ -58,9 +58,10 @@ class RiskyServicePrincipalItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Azure AD service principals that are at risk.
+     * Read the properties and relationships of a riskyServicePrincipal object.
      * @param RiskyServicePrincipalItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/riskyserviceprincipal-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?RiskyServicePrincipalItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -112,7 +113,7 @@ class RiskyServicePrincipalItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Azure AD service principals that are at risk.
+     * Read the properties and relationships of a riskyServicePrincipal object.
      * @param RiskyServicePrincipalItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

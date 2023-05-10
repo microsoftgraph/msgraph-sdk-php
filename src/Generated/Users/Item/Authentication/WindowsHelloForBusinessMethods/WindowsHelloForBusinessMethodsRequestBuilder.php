@@ -52,9 +52,10 @@ class WindowsHelloForBusinessMethodsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the Windows Hello for Business authentication method registered to a user for authentication.
+     * Get a list of the windowsHelloForBusinessAuthenticationMethod objects and their properties.
      * @param WindowsHelloForBusinessMethodsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/windowshelloforbusinessauthenticationmethod-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?WindowsHelloForBusinessMethodsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -70,7 +71,7 @@ class WindowsHelloForBusinessMethodsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Represents the Windows Hello for Business authentication method registered to a user for authentication.
+     * Get a list of the windowsHelloForBusinessAuthenticationMethod objects and their properties.
      * @param WindowsHelloForBusinessMethodsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

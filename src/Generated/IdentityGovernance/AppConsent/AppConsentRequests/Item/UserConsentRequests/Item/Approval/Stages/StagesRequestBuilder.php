@@ -53,9 +53,10 @@ class StagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of stages in the approval decision.
+     * In Azure AD entitlement management, list the approvalStage objects associated with an approval object. This call can be made by an approver, providing the identifier of the access package assignment request.
      * @param StagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/approval-list-stages?view=graph-rest-1.0 Find more info here
     */
     public function get(?StagesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +91,7 @@ class StagesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * A collection of stages in the approval decision.
+     * In Azure AD entitlement management, list the approvalStage objects associated with an approval object. This call can be made by an approver, providing the identifier of the access package assignment request.
      * @param StagesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
