@@ -53,7 +53,7 @@ class PartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of all partner configurations within a cross-tenant access policy.
+     * Get a list of all partner configurations within a cross-tenant access policy. You can also use the `$expand` parameter to list the user synchronization policy for all partner configurations.
      * @param PartnersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/crosstenantaccesspolicy-list-partners?view=graph-rest-1.0 Find more info here
@@ -92,7 +92,7 @@ class PartnersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get a list of all partner configurations within a cross-tenant access policy.
+     * Get a list of all partner configurations within a cross-tenant access policy. You can also use the `$expand` parameter to list the user synchronization policy for all partner configurations.
      * @param PartnersRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -28,7 +28,6 @@ class DrivesRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
 
     /**
      * Instantiates a new drivesRequestBuilderGetQueryParameters.
-     * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values
@@ -38,8 +37,8 @@ class DrivesRequestBuilderGetRequestConfiguration extends BaseRequestConfigurati
      * @param int|null $top Show only the first n items
      * @return DrivesRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): DrivesRequestBuilderGetQueryParameters {
-        return new DrivesRequestBuilderGetQueryParameters($count, $expand, $filter, $orderby, $search, $select, $skip, $top);
+    public static function createQueryParameters(?array $expand = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): DrivesRequestBuilderGetQueryParameters {
+        return new DrivesRequestBuilderGetQueryParameters($expand, $filter, $orderby, $search, $select, $skip, $top);
     }
 
 }

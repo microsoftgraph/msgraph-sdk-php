@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AttributeSet extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new AttributeSet and sets the default values.
+     * Instantiates a new attributeSet and sets the default values.
     */
     public function __construct() {
         parent::__construct();

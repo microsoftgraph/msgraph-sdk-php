@@ -40,7 +40,7 @@ class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder extend
     }
 
     /**
-     * Delete a partner-specific configuration in a cross-tenant access policy.
+     * Delete a partner-specific configuration in a cross-tenant access policy. If a configuration includes a user synchronization policy, you must first delete the user synchronization policy before you can delete the partner-specific configuration.
      * @param CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-delete?view=graph-rest-1.0 Find more info here
@@ -98,7 +98,7 @@ class CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilder extend
     }
 
     /**
-     * Delete a partner-specific configuration in a cross-tenant access policy.
+     * Delete a partner-specific configuration in a cross-tenant access policy. If a configuration includes a user synchronization policy, you must first delete the user synchronization policy before you can delete the partner-specific configuration.
      * @param CrossTenantAccessPolicyConfigurationPartnerTenantItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

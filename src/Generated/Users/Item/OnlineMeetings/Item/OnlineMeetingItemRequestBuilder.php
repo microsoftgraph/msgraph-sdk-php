@@ -9,6 +9,7 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OnlineMeeting;
 use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\AttendanceReports\AttendanceReportsRequestBuilder;
 use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\AttendeeReport\AttendeeReportRequestBuilder;
+use Microsoft\Graph\Generated\Users\Item\OnlineMeetings\Item\GetVirtualAppointmentJoinWebUrl\GetVirtualAppointmentJoinWebUrlRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -31,6 +32,13 @@ class OnlineMeetingItemRequestBuilder extends BaseRequestBuilder
     */
     public function attendeeReport(): AttendeeReportRequestBuilder {
         return new AttendeeReportRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getVirtualAppointmentJoinWebUrl method.
+    */
+    public function getVirtualAppointmentJoinWebUrl(): GetVirtualAppointmentJoinWebUrlRequestBuilder {
+        return new GetVirtualAppointmentJoinWebUrlRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

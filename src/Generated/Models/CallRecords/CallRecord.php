@@ -12,7 +12,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CallRecord extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new CallRecord and sets the default values.
+     * Instantiates a new callRecord and sets the default values.
     */
     public function __construct() {
         parent::__construct();

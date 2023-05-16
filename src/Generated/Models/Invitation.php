@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Invitation extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new Invitation and sets the default values.
+     * Instantiates a new invitation and sets the default values.
     */
     public function __construct() {
         parent::__construct();

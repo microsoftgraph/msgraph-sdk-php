@@ -8,7 +8,6 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Models\ListItem;
 use Microsoft\Graph\Generated\Models\ListItemCollectionResponse;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
-use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Count\CountRequestBuilder;
 use Microsoft\Graph\Generated\Shares\Item\EscapedList\Items\Item\ListItemItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -20,13 +19,6 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class ItemsRequestBuilder extends BaseRequestBuilder 
 {
-    /**
-     * Provides operations to count the resources in the collection.
-    */
-    public function count(): CountRequestBuilder {
-        return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
     /**
      * Provides operations to manage the items property of the microsoft.graph.list entity.
      * @param string $listItemId Unique identifier of the item
@@ -44,7 +36,7 @@ class ItemsRequestBuilder extends BaseRequestBuilder
      * @param RequestAdapter $requestAdapter The request adapter to use to execute the requests.
     */
     public function __construct($pathParametersOrRawUrl, RequestAdapter $requestAdapter) {
-        parent::__construct($requestAdapter, [], '{+baseurl}/shares/{sharedDriveItem%2Did}/list/items{?%24top,%24skip,%24search,%24filter,%24count,%24orderby,%24select,%24expand}');
+        parent::__construct($requestAdapter, [], '{+baseurl}/shares/{sharedDriveItem%2Did}/list/items{?%24top,%24skip,%24search,%24filter,%24orderby,%24select,%24expand}');
         if (is_array($pathParametersOrRawUrl)) {
             $this->pathParameters = $pathParametersOrRawUrl;
         } else {

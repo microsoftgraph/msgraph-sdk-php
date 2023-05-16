@@ -28,7 +28,6 @@ class ItemsRequestBuilderGetRequestConfiguration extends BaseRequestConfiguratio
 
     /**
      * Instantiates a new itemsRequestBuilderGetQueryParameters.
-     * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values
@@ -38,8 +37,8 @@ class ItemsRequestBuilderGetRequestConfiguration extends BaseRequestConfiguratio
      * @param int|null $top Show only the first n items
      * @return ItemsRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): ItemsRequestBuilderGetQueryParameters {
-        return new ItemsRequestBuilderGetQueryParameters($count, $expand, $filter, $orderby, $search, $select, $skip, $top);
+    public static function createQueryParameters(?array $expand = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null): ItemsRequestBuilderGetQueryParameters {
+        return new ItemsRequestBuilderGetQueryParameters($expand, $filter, $orderby, $search, $select, $skip, $top);
     }
 
 }

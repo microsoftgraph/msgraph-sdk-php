@@ -7,6 +7,7 @@ use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Add\AddRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Count\CountRequestBuilder;
+use Microsoft\Graph\Generated\Groups\Item\Sites\GetAllSites\GetAllSitesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Item\SiteItemRequestBuilder;
 use Microsoft\Graph\Generated\Groups\Item\Sites\Remove\RemoveRequestBuilder;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
@@ -33,6 +34,13 @@ class SitesRequestBuilder extends BaseRequestBuilder
     */
     public function count(): CountRequestBuilder {
         return new CountRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the getAllSites method.
+    */
+    public function getAllSites(): GetAllSitesRequestBuilder {
+        return new GetAllSitesRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

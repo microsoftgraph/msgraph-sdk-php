@@ -150,7 +150,7 @@ class MessageItemRequestBuilder extends BaseRequestBuilder
      * The messages in a mailbox or folder. Read-only. Nullable.
      * @param MessageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/message-get?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/eventmessage-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MessageItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
