@@ -57,6 +57,7 @@ class AuthenticationConditionApplication implements \JsonSerializable
 
     /**
     * Gets the appId
+    * The identifier for an application corresponding to a condition which will trigger an authenticationEventListener.
     *
     * @return string|null The appId
     */
@@ -71,6 +72,7 @@ class AuthenticationConditionApplication implements \JsonSerializable
 
     /**
     * Sets the appId
+    * The identifier for an application corresponding to a condition which will trigger an authenticationEventListener.
     *
     * @param string $val The appId
     *

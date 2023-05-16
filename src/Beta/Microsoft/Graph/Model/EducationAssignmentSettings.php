@@ -26,7 +26,7 @@ class EducationAssignmentSettings extends Entity
 {
     /**
     * Gets the submissionAnimationDisabled
-    * Indicates whether turn-in celebration animation will be shown. A value of true indicates that the animation will not be shown. Default value is false.
+    * Indicates whether turn-in celebration animation will be shown. If true, the animation will not be shown. The default value is false.
     *
     * @return bool|null The submissionAnimationDisabled
     */
@@ -41,7 +41,7 @@ class EducationAssignmentSettings extends Entity
 
     /**
     * Sets the submissionAnimationDisabled
-    * Indicates whether turn-in celebration animation will be shown. A value of true indicates that the animation will not be shown. Default value is false.
+    * Indicates whether turn-in celebration animation will be shown. If true, the animation will not be shown. The default value is false.
     *
     * @param bool $val The submissionAnimationDisabled
     *

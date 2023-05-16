@@ -168,6 +168,34 @@ class UserSimulationDetails extends Entity
         $this->_propDict["isCompromised"] = $val;
         return $this;
     }
+    /**
+    * Gets the latestSimulationActivity
+    * Indicates latest user activity.
+    *
+    * @return string|null The latestSimulationActivity
+    */
+    public function getLatestSimulationActivity()
+    {
+        if (array_key_exists("latestSimulationActivity", $this->_propDict)) {
+            return $this->_propDict["latestSimulationActivity"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the latestSimulationActivity
+    * Indicates latest user activity.
+    *
+    * @param string $val The value of the latestSimulationActivity
+    *
+    * @return UserSimulationDetails
+    */
+    public function setLatestSimulationActivity($val)
+    {
+        $this->_propDict["latestSimulationActivity"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the reportedPhishDateTime

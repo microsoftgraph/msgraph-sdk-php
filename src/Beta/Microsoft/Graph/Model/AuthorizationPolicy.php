@@ -55,7 +55,7 @@ class AuthorizationPolicy extends PolicyBase
 
     /**
     * Gets the allowedToUseSSPR
-    * Indicates whether the Self-Serve Password Reset feature can be used by users on the tenant.
+    * Indicates whether the Admin Self-Serve Password Reset feature is enabled on the tenant.
     *
     * @return bool|null The allowedToUseSSPR
     */
@@ -70,7 +70,7 @@ class AuthorizationPolicy extends PolicyBase
 
     /**
     * Sets the allowedToUseSSPR
-    * Indicates whether the Self-Serve Password Reset feature can be used by users on the tenant.
+    * Indicates whether the Admin Self-Serve Password Reset feature is enabled on the tenant.
     *
     * @param bool $val The allowedToUseSSPR
     *
@@ -146,7 +146,7 @@ class AuthorizationPolicy extends PolicyBase
 
     /**
     * Gets the allowUserConsentForRiskyApps
-    * Indicates whether user consent for risky apps is allowed. We recommend to keep this as false.
+    * Indicates whether user consent for risky apps is allowed. Default value is false. We recommend that you keep the value set to false.
     *
     * @return bool|null The allowUserConsentForRiskyApps
     */
@@ -161,7 +161,7 @@ class AuthorizationPolicy extends PolicyBase
 
     /**
     * Sets the allowUserConsentForRiskyApps
-    * Indicates whether user consent for risky apps is allowed. We recommend to keep this as false.
+    * Indicates whether user consent for risky apps is allowed. Default value is false. We recommend that you keep the value set to false.
     *
     * @param bool $val The allowUserConsentForRiskyApps
     *

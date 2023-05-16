@@ -26,6 +26,7 @@ class EducationGradingCategory extends Entity
 {
     /**
     * Gets the displayName
+    * The name of the grading category.
     *
     * @return string|null The displayName
     */
@@ -40,6 +41,7 @@ class EducationGradingCategory extends Entity
 
     /**
     * Sets the displayName
+    * The name of the grading category.
     *
     * @param string $val The displayName
     *
@@ -53,6 +55,7 @@ class EducationGradingCategory extends Entity
 
     /**
     * Gets the percentageWeight
+    * The weight of the category; an integer between 0 and 100.
     *
     * @return int|null The percentageWeight
     */
@@ -67,6 +70,7 @@ class EducationGradingCategory extends Entity
 
     /**
     * Sets the percentageWeight
+    * The weight of the category; an integer between 0 and 100.
     *
     * @param int $val The percentageWeight
     *
