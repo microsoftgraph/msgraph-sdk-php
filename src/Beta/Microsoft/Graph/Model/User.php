@@ -896,6 +896,35 @@ class User extends DirectoryObject
     }
 
     /**
+    * Gets the isLicenseReconciliationNeeded
+    * Indicates whether the user is pending an exchange mailbox license assignment.  Read-only.  Supports $filter (eq where true only).
+    *
+    * @return bool|null The isLicenseReconciliationNeeded
+    */
+    public function getIsLicenseReconciliationNeeded()
+    {
+        if (array_key_exists("isLicenseReconciliationNeeded", $this->_propDict)) {
+            return $this->_propDict["isLicenseReconciliationNeeded"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isLicenseReconciliationNeeded
+    * Indicates whether the user is pending an exchange mailbox license assignment.  Read-only.  Supports $filter (eq where true only).
+    *
+    * @param bool $val The isLicenseReconciliationNeeded
+    *
+    * @return User
+    */
+    public function setIsLicenseReconciliationNeeded($val)
+    {
+        $this->_propDict["isLicenseReconciliationNeeded"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the isManagementRestricted
     *
     * @return bool|null The isManagementRestricted
@@ -1789,6 +1818,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the serviceProvisioningErrors
+    * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a user object .  Supports $filter (eq, not, for isResolved and serviceInstance).
      *
      * @return array|null The serviceProvisioningErrors
      */
@@ -1803,6 +1833,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the serviceProvisioningErrors
+    * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a user object .  Supports $filter (eq, not, for isResolved and serviceInstance).
     *
     * @param ServiceProvisioningError[] $val The serviceProvisioningErrors
     *
