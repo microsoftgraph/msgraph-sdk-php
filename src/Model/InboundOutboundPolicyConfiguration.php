@@ -25,6 +25,7 @@ class InboundOutboundPolicyConfiguration extends Entity
 {
     /**
     * Gets the inboundAllowed
+    * Defines whether external users coming inbound are allowed.
     *
     * @return bool|null The inboundAllowed
     */
@@ -39,6 +40,7 @@ class InboundOutboundPolicyConfiguration extends Entity
 
     /**
     * Sets the inboundAllowed
+    * Defines whether external users coming inbound are allowed.
     *
     * @param bool $val The value of the inboundAllowed
     *
@@ -51,6 +53,7 @@ class InboundOutboundPolicyConfiguration extends Entity
     }
     /**
     * Gets the outboundAllowed
+    * Defines whether internal users are allowed to go outbound.
     *
     * @return bool|null The outboundAllowed
     */
@@ -65,6 +68,7 @@ class InboundOutboundPolicyConfiguration extends Entity
 
     /**
     * Sets the outboundAllowed
+    * Defines whether internal users are allowed to go outbound.
     *
     * @param bool $val The value of the outboundAllowed
     *
