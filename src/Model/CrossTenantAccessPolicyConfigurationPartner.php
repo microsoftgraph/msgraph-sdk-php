@@ -57,6 +57,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements \JsonSerializable
 
     /**
     * Gets the automaticUserConsentSettings
+    * Determines the partner-specific configuration for automatic user consent settings. Unless specifically configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
     *
     * @return InboundOutboundPolicyConfiguration|null The automaticUserConsentSettings
     */
@@ -75,6 +76,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements \JsonSerializable
 
     /**
     * Sets the automaticUserConsentSettings
+    * Determines the partner-specific configuration for automatic user consent settings. Unless specifically configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
     *
     * @param InboundOutboundPolicyConfiguration $val The automaticUserConsentSettings
     *
@@ -311,6 +313,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements \JsonSerializable
 
     /**
     * Gets the identitySynchronization
+    * Defines the cross-tenant policy for the synchronization of users from a partner tenant. Use this user synchronization policy to streamline collaboration between users in a multi-tenant organization by automating the creation, update, and deletion of users from one tenant to another.
     *
     * @return CrossTenantIdentitySyncPolicyPartner|null The identitySynchronization
     */
@@ -329,6 +332,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements \JsonSerializable
 
     /**
     * Sets the identitySynchronization
+    * Defines the cross-tenant policy for the synchronization of users from a partner tenant. Use this user synchronization policy to streamline collaboration between users in a multi-tenant organization by automating the creation, update, and deletion of users from one tenant to another.
     *
     * @param CrossTenantIdentitySyncPolicyPartner $val The identitySynchronization
     *

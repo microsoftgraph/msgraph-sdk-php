@@ -25,6 +25,7 @@ class CrossTenantUserSyncInbound extends Entity
 {
     /**
     * Gets the isSyncAllowed
+    * Defines whether user objects should be synchronized from the partner tenant. false causes any current user synchronization from the source tenant to the target tenant to stop. This property has no impact on existing users who have already been synchronized.
     *
     * @return bool|null The isSyncAllowed
     */
@@ -39,6 +40,7 @@ class CrossTenantUserSyncInbound extends Entity
 
     /**
     * Sets the isSyncAllowed
+    * Defines whether user objects should be synchronized from the partner tenant. false causes any current user synchronization from the source tenant to the target tenant to stop. This property has no impact on existing users who have already been synchronized.
     *
     * @param bool $val The value of the isSyncAllowed
     *
