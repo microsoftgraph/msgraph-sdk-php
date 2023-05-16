@@ -51,7 +51,7 @@ class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolder, Back
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. Display name for the cross-tenant user synchronization policy. Use the name of the partner Azure AD (Azure Active Directory) tenant to easily identify the policy. Optional.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -81,7 +81,7 @@ class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolder, Back
     }
 
     /**
-     * Gets the tenantId property value. The tenantId property
+     * Gets the tenantId property value. Tenant identifier for the partner Azure AD organization. Read-only.
      * @return string|null
     */
     public function getTenantId(): ?string {
@@ -89,7 +89,7 @@ class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolder, Back
     }
 
     /**
-     * Gets the userSyncInbound property value. The userSyncInbound property
+     * Gets the userSyncInbound property value. Defines whether users can be synchronized from the partner tenant. Key.
      * @return CrossTenantUserSyncInbound|null
     */
     public function getUserSyncInbound(): ?CrossTenantUserSyncInbound {
@@ -125,7 +125,7 @@ class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolder, Back
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. Display name for the cross-tenant user synchronization policy. Use the name of the partner Azure AD (Azure Active Directory) tenant to easily identify the policy. Optional.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {
@@ -141,7 +141,7 @@ class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolder, Back
     }
 
     /**
-     * Sets the tenantId property value. The tenantId property
+     * Sets the tenantId property value. Tenant identifier for the partner Azure AD organization. Read-only.
      * @param string|null $value Value to set for the tenantId property.
     */
     public function setTenantId(?string $value): void {
@@ -149,7 +149,7 @@ class CrossTenantIdentitySyncPolicyPartner implements AdditionalDataHolder, Back
     }
 
     /**
-     * Sets the userSyncInbound property value. The userSyncInbound property
+     * Sets the userSyncInbound property value. Defines whether users can be synchronized from the partner tenant. Key.
      * @param CrossTenantUserSyncInbound|null $value Value to set for the userSyncInbound property.
     */
     public function setUserSyncInbound(?CrossTenantUserSyncInbound $value): void {

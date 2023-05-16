@@ -32,7 +32,7 @@ class AssignLicenseRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action assignLicense
+     * Add or remove subscriptions for the user. You can also enable and disable specific plans associated with a subscription.
      * @param AssignLicensePostRequestBody $body The request body
      * @param AssignLicenseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
@@ -52,7 +52,7 @@ class AssignLicenseRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action assignLicense
+     * Add or remove subscriptions for the user. You can also enable and disable specific plans associated with a subscription.
      * @param AssignLicensePostRequestBody $body The request body
      * @param AssignLicenseRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

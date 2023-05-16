@@ -64,7 +64,7 @@ class InboundOutboundPolicyConfiguration implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the inboundAllowed property value. The inboundAllowed property
+     * Gets the inboundAllowed property value. Defines whether external users coming inbound are allowed.
      * @return bool|null
     */
     public function getInboundAllowed(): ?bool {
@@ -80,7 +80,7 @@ class InboundOutboundPolicyConfiguration implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Gets the outboundAllowed property value. The outboundAllowed property
+     * Gets the outboundAllowed property value. Defines whether internal users are allowed to go outbound.
      * @return bool|null
     */
     public function getOutboundAllowed(): ?bool {
@@ -115,7 +115,7 @@ class InboundOutboundPolicyConfiguration implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the inboundAllowed property value. The inboundAllowed property
+     * Sets the inboundAllowed property value. Defines whether external users coming inbound are allowed.
      * @param bool|null $value Value to set for the inboundAllowed property.
     */
     public function setInboundAllowed(?bool $value): void {
@@ -131,7 +131,7 @@ class InboundOutboundPolicyConfiguration implements AdditionalDataHolder, Backed
     }
 
     /**
-     * Sets the outboundAllowed property value. The outboundAllowed property
+     * Sets the outboundAllowed property value. Defines whether internal users are allowed to go outbound.
      * @param bool|null $value Value to set for the outboundAllowed property.
     */
     public function setOutboundAllowed(?bool $value): void {

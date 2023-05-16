@@ -6,6 +6,8 @@ use Microsoft\Graph\Generated\Models\CallRecords\CallRecord;
 use Microsoft\Graph\Generated\Models\CallRecords\Segment;
 use Microsoft\Graph\Generated\Models\CallRecords\Session;
 use Microsoft\Graph\Generated\Models\ExternalConnectors\ConnectionOperation;
+use Microsoft\Graph\Generated\Models\ExternalConnectors\ExternalActivity;
+use Microsoft\Graph\Generated\Models\ExternalConnectors\ExternalActivityResult;
 use Microsoft\Graph\Generated\Models\ExternalConnectors\ExternalConnection;
 use Microsoft\Graph\Generated\Models\ExternalConnectors\ExternalGroup;
 use Microsoft\Graph\Generated\Models\ExternalConnectors\ExternalItem;
@@ -316,6 +318,8 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.extension': return new Extension();
                 case '#microsoft.graph.extensionProperty': return new ExtensionProperty();
                 case '#microsoft.graph.externalConnectors.connectionOperation': return new ConnectionOperation();
+                case '#microsoft.graph.externalConnectors.externalActivity': return new ExternalActivity();
+                case '#microsoft.graph.externalConnectors.externalActivityResult': return new ExternalActivityResult();
                 case '#microsoft.graph.externalConnectors.externalConnection': return new ExternalConnection();
                 case '#microsoft.graph.externalConnectors.externalGroup': return new ExternalGroup();
                 case '#microsoft.graph.externalConnectors.externalItem': return new ExternalItem();

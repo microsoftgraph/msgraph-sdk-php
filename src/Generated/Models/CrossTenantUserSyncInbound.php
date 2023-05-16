@@ -63,7 +63,7 @@ class CrossTenantUserSyncInbound implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the isSyncAllowed property value. The isSyncAllowed property
+     * Gets the isSyncAllowed property value. Defines whether user objects should be synchronized from the partner tenant. false causes any current user synchronization from the source tenant to the target tenant to stop. This property has no impact on existing users who have already been synchronized.
      * @return bool|null
     */
     public function getIsSyncAllowed(): ?bool {
@@ -105,7 +105,7 @@ class CrossTenantUserSyncInbound implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the isSyncAllowed property value. The isSyncAllowed property
+     * Sets the isSyncAllowed property value. Defines whether user objects should be synchronized from the partner tenant. false causes any current user synchronization from the source tenant to the target tenant to stop. This property has no impact on existing users who have already been synchronized.
      * @param bool|null $value Value to set for the isSyncAllowed property.
     */
     public function setIsSyncAllowed(?bool $value): void {

@@ -43,7 +43,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     }
 
     /**
-     * Gets the automaticUserConsentSettings property value. The automaticUserConsentSettings property
+     * Gets the automaticUserConsentSettings property value. Determines the partner-specific configuration for automatic user consent settings. Unless specifically configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
      * @return InboundOutboundPolicyConfiguration|null
     */
     public function getAutomaticUserConsentSettings(): ?InboundOutboundPolicyConfiguration {
@@ -111,7 +111,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     }
 
     /**
-     * Gets the identitySynchronization property value. The identitySynchronization property
+     * Gets the identitySynchronization property value. Defines the cross-tenant policy for the synchronization of users from a partner tenant. Use this user synchronization policy to streamline collaboration between users in a multi-tenant organization by automating the creation, update, and deletion of users from one tenant to another.
      * @return CrossTenantIdentitySyncPolicyPartner|null
     */
     public function getIdentitySynchronization(): ?CrossTenantIdentitySyncPolicyPartner {
@@ -177,7 +177,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     }
 
     /**
-     * Sets the automaticUserConsentSettings property value. The automaticUserConsentSettings property
+     * Sets the automaticUserConsentSettings property value. Determines the partner-specific configuration for automatic user consent settings. Unless specifically configured, the inboundAllowed and outboundAllowed properties are null and inherit from the default settings, which is always false.
      * @param InboundOutboundPolicyConfiguration|null $value Value to set for the automaticUserConsentSettings property.
     */
     public function setAutomaticUserConsentSettings(?InboundOutboundPolicyConfiguration $value): void {
@@ -225,7 +225,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
     }
 
     /**
-     * Sets the identitySynchronization property value. The identitySynchronization property
+     * Sets the identitySynchronization property value. Defines the cross-tenant policy for the synchronization of users from a partner tenant. Use this user synchronization policy to streamline collaboration between users in a multi-tenant organization by automating the creation, update, and deletion of users from one tenant to another.
      * @param CrossTenantIdentitySyncPolicyPartner|null $value Value to set for the identitySynchronization property.
     */
     public function setIdentitySynchronization(?CrossTenantIdentitySyncPolicyPartner $value): void {

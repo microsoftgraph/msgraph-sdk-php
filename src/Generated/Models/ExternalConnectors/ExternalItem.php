@@ -34,6 +34,14 @@ class ExternalItem extends Entity implements Parsable
     }
 
     /**
+     * Gets the activities property value. Returns a list of activities performed on the item. Write-only.
+     * @return array<ExternalActivity>|null
+    */
+    public function getActivities(): ?array {
+        return $this->getBackingStore()->get('activities');
+    }
+
+    /**
      * Gets the content property value. A plain-text  representation of the contents of the item. The text in this property is full-text indexed. Optional.
      * @return ExternalItemContent|null
     */
@@ -49,6 +57,7 @@ class ExternalItem extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'acl' => fn(ParseNode $n) => $o->setAcl($n->getCollectionOfObjectValues([Acl::class, 'createFromDiscriminatorValue'])),
+            'activities' => fn(ParseNode $n) => $o->setActivities($n->getCollectionOfObjectValues([ExternalActivity::class, 'createFromDiscriminatorValue'])),
             'content' => fn(ParseNode $n) => $o->setContent($n->getObjectValue([ExternalItemContent::class, 'createFromDiscriminatorValue'])),
             'properties' => fn(ParseNode $n) => $o->setProperties($n->getObjectValue([Properties::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -69,6 +78,7 @@ class ExternalItem extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeCollectionOfObjectValues('acl', $this->getAcl());
+        $writer->writeCollectionOfObjectValues('activities', $this->getActivities());
         $writer->writeObjectValue('content', $this->getContent());
         $writer->writeObjectValue('properties', $this->getProperties());
     }
@@ -79,6 +89,14 @@ class ExternalItem extends Entity implements Parsable
     */
     public function setAcl(?array $value): void {
         $this->getBackingStore()->set('acl', $value);
+    }
+
+    /**
+     * Sets the activities property value. Returns a list of activities performed on the item. Write-only.
+     * @param array<ExternalActivity>|null $value Value to set for the activities property.
+    */
+    public function setActivities(?array $value): void {
+        $this->getBackingStore()->set('activities', $value);
     }
 
     /**

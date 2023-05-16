@@ -5,6 +5,8 @@ namespace Microsoft\Graph\Generated\External\Connections\Item\Items\Item;
 use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
+use Microsoft\Graph\Generated\External\Connections\Item\Items\Item\Activities\ActivitiesRequestBuilder;
+use Microsoft\Graph\Generated\External\Connections\Item\Items\Item\MicrosoftGraphExternalConnectorsAddActivities\MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder;
 use Microsoft\Graph\Generated\Models\ExternalConnectors\ExternalItem;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
@@ -17,6 +19,20 @@ use Microsoft\Kiota\Abstractions\RequestInformation;
 */
 class ExternalItemItemRequestBuilder extends BaseRequestBuilder 
 {
+    /**
+     * Provides operations to manage the activities property of the microsoft.graph.externalConnectors.externalItem entity.
+    */
+    public function activities(): ActivitiesRequestBuilder {
+        return new ActivitiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the addActivities method.
+    */
+    public function microsoftGraphExternalConnectorsAddActivities(): MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder {
+        return new MicrosoftGraphExternalConnectorsAddActivitiesRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
     /**
      * Instantiates a new ExternalItemItemRequestBuilder and sets the default values.
      * @param array<string, mixed>|string $pathParametersOrRawUrl Path parameters for the request or a String representing the raw URL.

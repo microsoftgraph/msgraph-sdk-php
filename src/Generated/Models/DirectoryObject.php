@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class DirectoryObject extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new directoryObject and sets the default values.
+     * Instantiates a new DirectoryObject and sets the default values.
     */
     public function __construct() {
         parent::__construct();

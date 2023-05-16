@@ -51,7 +51,7 @@ class DefaultUserRolePermissions implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Gets the allowedToCreateSecurityGroups property value. Indicates whether the default user role can create security groups.
+     * Gets the allowedToCreateSecurityGroups property value. Indicates whether the default user role can create security groups. This setting corresponds to the The Users can create security groups in Azure portals, API or PowerShell setting in the group settings menu in the Azure portal.
      * @return bool|null
     */
     public function getAllowedToCreateSecurityGroups(): ?bool {
@@ -145,7 +145,7 @@ class DefaultUserRolePermissions implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
-     * Sets the allowedToCreateSecurityGroups property value. Indicates whether the default user role can create security groups.
+     * Sets the allowedToCreateSecurityGroups property value. Indicates whether the default user role can create security groups. This setting corresponds to the The Users can create security groups in Azure portals, API or PowerShell setting in the group settings menu in the Azure portal.
      * @param bool|null $value Value to set for the allowedToCreateSecurityGroups property.
     */
     public function setAllowedToCreateSecurityGroups(?bool $value): void {
