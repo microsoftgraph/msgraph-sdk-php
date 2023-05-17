@@ -26,6 +26,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity
 {
     /**
     * Gets the automaticUserConsentSettings
+    * Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and cannot be updated in the default configuration. Read-only.
     *
     * @return InboundOutboundPolicyConfiguration|null The automaticUserConsentSettings
     */
@@ -44,6 +45,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity
 
     /**
     * Sets the automaticUserConsentSettings
+    * Determines the default configuration for automatic user consent settings. The inboundAllowed and outboundAllowed properties are always false and cannot be updated in the default configuration. Read-only.
     *
     * @param InboundOutboundPolicyConfiguration $val The automaticUserConsentSettings
     *

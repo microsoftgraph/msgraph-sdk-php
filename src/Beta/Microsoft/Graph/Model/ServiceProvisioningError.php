@@ -26,6 +26,7 @@ class ServiceProvisioningError extends Entity
 
     /**
     * Gets the createdDateTime
+    * The date and time at which the error occurred.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -44,6 +45,7 @@ class ServiceProvisioningError extends Entity
 
     /**
     * Sets the createdDateTime
+    * The date and time at which the error occurred.
     *
     * @param \DateTime $val The value to assign to the createdDateTime
     *
@@ -56,6 +58,7 @@ class ServiceProvisioningError extends Entity
     }
     /**
     * Gets the isResolved
+    * Indicates whether the Error has been attended to.
     *
     * @return bool|null The isResolved
     */
@@ -70,6 +73,7 @@ class ServiceProvisioningError extends Entity
 
     /**
     * Sets the isResolved
+    * Indicates whether the Error has been attended to.
     *
     * @param bool $val The value of the isResolved
     *
@@ -82,6 +86,7 @@ class ServiceProvisioningError extends Entity
     }
     /**
     * Gets the serviceInstance
+    * Qualified service instance (e.g., 'SharePoint/Dublin') that published the service error information.
     *
     * @return string|null The serviceInstance
     */
@@ -96,6 +101,7 @@ class ServiceProvisioningError extends Entity
 
     /**
     * Sets the serviceInstance
+    * Qualified service instance (e.g., 'SharePoint/Dublin') that published the service error information.
     *
     * @param string $val The value of the serviceInstance
     *

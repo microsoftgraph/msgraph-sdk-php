@@ -1061,6 +1061,7 @@ class Group extends DirectoryObject
 
      /**
      * Gets the serviceProvisioningErrors
+    * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a group object .  Supports $filter (eq, not, for isResolved and serviceInstance).
      *
      * @return array|null The serviceProvisioningErrors
      */
@@ -1075,6 +1076,7 @@ class Group extends DirectoryObject
 
     /**
     * Sets the serviceProvisioningErrors
+    * Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a group object .  Supports $filter (eq, not, for isResolved and serviceInstance).
     *
     * @param ServiceProvisioningError[] $val The serviceProvisioningErrors
     *
