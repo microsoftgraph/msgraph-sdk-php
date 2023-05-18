@@ -488,3 +488,49 @@ echo "Initial subject: {$message->getSubject()}\n";
 $updatedMessage = $batchResponse->getResponseBody($request2->getId(), Message::class);
 echo "Updated subject: {$updatedMessage->getSubject()}\n";
 ```
+
+## Continuous Access Evaluation (CAE)
+
+See https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/concept-continuous-access-evaluation
+
+CAE is disabled by default. The SDK attempts to refresh the access token only ONCE when a claims challenge is returned by the Microsoft Graph API.
+Should the SDK be unable to refresh the token, it calls a custom method provided by you which should ensure the user logs in again and provides an
+updated `TokenRequestContext`. The SDK uses this new `TokenRequestContext` to fetch a new access token. If the same request fails again with the new
+access token, the SDK returns the deserialized 401 response body:
+
+```php
+
+$tokenRequestContext = new AuthorizationCodeContext(
+    'tenantId',
+    'clientId',
+    'clientSecret',
+    'authCode',
+    'redirectUri'
+);
+$authProvider = new GraphPhpLeagueAuthenticationProvider($tokenRequestContext);
+$requestAdapter = new GraphRequestAdapter($authProvider);
+$graphServiceClient = new GraphServiceClient($requestAdapter);
+
+$tokenRequestContext->setCAEEnabled(true);
+$tokenRequestContext->setCAERedirectCallback(function (string $claims) {
+    // your app makes the user log in again asynchronously
+    return yourCustomLoginAsync()->then(
+        function (string $authCode) {
+            $newTokenRequestContext = new AuthorizationCodeContext(
+                'tenantId',
+                'clientId',
+                'clientSecret',
+                $authCode,
+                'redirectUri'
+            );
+            return $newTokenRequestContext;
+        }
+    );
+});
+
+try {
+    $numUsers = $graphServiceClient->users()->count()->get()->wait();
+} catch (ContinuousAccessEvaluationException $ex) {
+    echo $ex->getError()->getMessage();
+}
+```
