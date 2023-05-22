@@ -8,10 +8,8 @@ user to the sign-in page. The same redirect URI provided while requesting the au
 
 ```php
 
-use Microsoft\Graph\GraphRequestAdapter;
 use Microsoft\Graph\GraphServiceClient;
 use Microsoft\Kiota\Authentication\Oauth\AuthorizationCodeContext;
-use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAuthenticationProvider;
 
 $tokenRequestContext = new AuthorizationCodeContext(
     'tenantId',
@@ -21,9 +19,7 @@ $tokenRequestContext = new AuthorizationCodeContext(
     'redirectUri'
 );
 $scopes = ['User.Read', 'Mail.ReadWrite'];
-$authProvider = new GraphPhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
-$requestAdapter = new GraphRequestAdapter($authProvider);
-$graphServiceClient = new GraphServiceClient($requestAdapter);
+$graphServiceClient = new GraphServiceClient($tokenRequestContext, $scopes);
 
 ```
 
@@ -31,10 +27,8 @@ To make requests on behalf of an already signed in user where your front-end app
 an access token for your backend application to access the Microsoft Graph API. To do this, you pass the already acquired access token as the "assertion";
 
 ```php
-use Microsoft\Graph\GraphRequestAdapter;
 use Microsoft\Graph\GraphServiceClient;
 use Microsoft\Kiota\Authentication\Oauth\OnBehalfOfContext;
-use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAuthenticationProvider;
 
 $tokenRequestContext = new OnBehalfOfContext(
     'tenantId',
@@ -44,9 +38,7 @@ $tokenRequestContext = new OnBehalfOfContext(
 );
 
 $scopes = ['User.Read', 'Mail.ReadWrite'];
-$authProvider = new GraphPhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
-$requestAdapter = new GraphRequestAdapter($authProvider);
-$graphServiceClient = new GraphServiceClient($requestAdapter);
+$graphServiceClient = new GraphServiceClient($tokenRequestContext, $scopes);
 
 ```
 
@@ -54,10 +46,8 @@ $graphServiceClient = new GraphServiceClient($requestAdapter);
 To make requests without a signed-in user (using application permissions), you can initialise a `ClientCredentialsContext` object:
 
 ```php
-use Microsoft\Graph\GraphRequestAdapter;
 use Microsoft\Graph\GraphServiceClient;
 use Microsoft\Kiota\Authentication\Oauth\ClientCredentialContext;
-use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAuthenticationProvider;
 
 // Uses https://graph.microsoft.com/.default scopes if none are specified
 $tokenRequestContext = new ClientCredentialContext(
@@ -65,9 +55,7 @@ $tokenRequestContext = new ClientCredentialContext(
     'clientId',
     'clientSecret'
 );
-$authProvider = new GraphPhpLeagueAuthenticationProvider($tokenRequestContext);
-$requestAdapter = new GraphRequestAdapter($authProvider);
-$graphServiceClient = new GraphServiceClient($requestAdapter);
+$graphServiceClient = new GraphServiceClient($tokenRequestContext);
 
 ```
 
@@ -77,7 +65,14 @@ Customizing the default Guzzle client:
 use Microsoft\Graph\Core\GraphClientFactory;
 use Microsoft\Graph\GraphRequestAdapter;
 use Microsoft\Graph\GraphServiceClient;
+use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAuthenticationProvider;
 
+$tokenRequestContext = new ClientCredentialContext(
+    'tenantId',
+    'clientId',
+    'clientSecret'
+);
+$authProvider = new GraphPhpLeagueAuthenticationProvider($tokenRequestContext);
 $guzzleConfig = [
     // your custom config
 ];
@@ -196,11 +191,9 @@ use Microsoft\Graph\Generated\Models\EmailAddress;
 use Microsoft\Graph\Generated\Models\ItemBody;
 use Microsoft\Graph\Generated\Models\Message;
 use Microsoft\Graph\Generated\Models\Recipient;
-use Microsoft\Graph\GraphRequestAdapter;
 use Microsoft\Graph\GraphServiceClient;
 use Microsoft\Kiota\Abstractions\ApiException;
 use Microsoft\Kiota\Authentication\Oauth\AuthorizationCodeContext;
-use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAuthenticationProvider;
 
 
 $tokenRequestContext = new AuthorizationCodeContext(
@@ -211,9 +204,7 @@ $tokenRequestContext = new AuthorizationCodeContext(
     'redirectUri'
 );
 $scopes = ['Mail.Send'];
-$authProvider = new GraphPhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
-$requestAdapter = new GraphRequestAdapter($authProvider);
-$graphServiceClient = new GraphServiceClient($requestAdapter);
+$graphServiceClient = new GraphServiceClient($tokenRequestContext, $scopes);
 
 try {
     $sender = new EmailAddress();
@@ -256,11 +247,9 @@ try {
 
 ```php
 
-use Microsoft\Graph\GraphRequestAdapter;
 use Microsoft\Graph\GraphServiceClient;
 use Microsoft\Kiota\Abstractions\ApiException;
 use Microsoft\Kiota\Authentication\Oauth\AuthorizationCodeContext;
-use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAuthenticationProvider;
 
 $tokenRequestContext = new AuthorizationCodeContext(
     'tenantId',
@@ -270,9 +259,7 @@ $tokenRequestContext = new AuthorizationCodeContext(
     'redirectUri'
 );
 $scopes = ['Files.ReadWrite'];
-$authProvider = new GraphPhpLeagueAuthenticationProvider($tokenRequestContext, $scopes);
-$requestAdapter = new GraphRequestAdapter($authProvider);
-$graphServiceClient = new GraphServiceClient($requestAdapter);
+$graphServiceClient = new GraphServiceClient($tokenRequestContext, $scopes);
 
 try {
     $fileContents = $graphServiceclient->drives()->byDriveId('driveId')->items()->byDriveItemId('itemId')->content()->get()->wait();
@@ -293,7 +280,7 @@ For files less than 3MB, you can send a byte stream to the API with the sample b
 $driveItemId = 'root:/upload.txt:';
 
 $inputStream = Utils::streamFor(fopen('upload.txt', 'r'));
-$uploadItem = $graphServiceClient->drivesById('[driveId]')->itemsById($driveItemId)->content()->put($inputStream)->wait();
+$uploadItem = $graphServiceClient->drives()->byDriveId('[driveId]')->items()->byDriveItemId($driveItemId)->content()->put($inputStream)->wait();
 
 ```
 
@@ -507,9 +494,7 @@ $tokenRequestContext = new AuthorizationCodeContext(
     'authCode',
     'redirectUri'
 );
-$authProvider = new GraphPhpLeagueAuthenticationProvider($tokenRequestContext);
-$requestAdapter = new GraphRequestAdapter($authProvider);
-$graphServiceClient = new GraphServiceClient($requestAdapter);
+$graphServiceClient = new GraphServiceClient($tokenRequestContext);
 
 $tokenRequestContext->setCAEEnabled(true);
 $tokenRequestContext->setCAERedirectCallback(function (string $claims) {
