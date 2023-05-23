@@ -59,6 +59,16 @@ class GraphServiceClient extends BaseGraphClient
     }
 
     /**
+     * Returns the request adapter instance in use
+     *
+     * @return RequestAdapter
+     */
+    public function getRequestAdapter(): RequestAdapter
+    {
+        return $this->requestAdapter;
+    }
+
+    /**
      * A method that abstracts the /me endpoint and users /users/{{user-id}} under
      * the hood.
      */
