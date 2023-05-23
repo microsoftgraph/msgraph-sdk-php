@@ -143,7 +143,7 @@ Iteration can be resumed by calling `iterate()` again.
 
 $messages = $graphServiceClient->users()->byUserId(USER_ID)->messages()->get()->wait();
 
-$pageIterator = new PageIterator($messages, $requestAdapter, [MessageCollectionResponse::class, 'createFromDiscriminatorValue']);
+$pageIterator = new PageIterator($messages, $graphServiceClient->getRequestAdapter());
 
 $callback = function (Message $message) {
     echo "Message ID: {$message->getId()}";
@@ -311,7 +311,7 @@ $uploadSessionRequestBody->setAttachmentItem($attachmentItem);
 $uploadSession = $graphServiceClient->users()->byUserId(USER_ID)->messages()->byMessageId('[id]')->attachments()->createUploadSession()->post($uploadSessionRequestBody)->wait();
 
 // upload
-$largeFileUpload = new LargeFileUploadTask($uploadSession, $requestAdapter, $file);
+$largeFileUpload = new LargeFileUploadTask($uploadSession, $graphServiceClient->getRequestAdapter(), $file);
 try{
     $uploadSession = $largeFileUpload->upload()->wait();
 } catch (\Psr\Http\Client\NetworkExceptionInterface $ex) {
@@ -446,7 +446,7 @@ You can also add requests to the `BatchRequestContent` via `addPsrRequest()`, `a
 use Microsoft\Graph\BatchRequestBuilder;
 use Microsoft\Graph\Core\Requests\BatchResponseItem;
 
-$requestBuilder = new BatchRequestBuilder($requestAdapter);
+$requestBuilder = new BatchRequestBuilder($graphServiceClient->getRequestAdapter());
 /** @var BatchResponseContent $batchResponse  */
 $batchResponse = $requestBuilder->postAsync($batchRequestContent)->wait();
 
