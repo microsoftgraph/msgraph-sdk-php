@@ -25,7 +25,7 @@ class OutlookCategory extends Entity implements Parsable
     }
 
     /**
-     * Gets the color property value. A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. See the note below.
+     * Gets the color property value. A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. For more details, see the following note.
      * @return CategoryColor|null
     */
     public function getColor(): ?CategoryColor {
@@ -63,7 +63,7 @@ class OutlookCategory extends Entity implements Parsable
     }
 
     /**
-     * Sets the color property value. A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. See the note below.
+     * Sets the color property value. A pre-set color constant that characterizes a category, and that is mapped to one of 25 predefined colors. For more details, see the following note.
      * @param CategoryColor|null $value Value to set for the color property.
     */
     public function setColor(?CategoryColor $value): void {

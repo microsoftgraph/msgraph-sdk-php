@@ -37,6 +37,7 @@ class Participant extends Entity implements Parsable
             'mediaStreams' => fn(ParseNode $n) => $o->setMediaStreams($n->getCollectionOfObjectValues([MediaStream::class, 'createFromDiscriminatorValue'])),
             'metadata' => fn(ParseNode $n) => $o->setMetadata($n->getStringValue()),
             'recordingInfo' => fn(ParseNode $n) => $o->setRecordingInfo($n->getObjectValue([RecordingInfo::class, 'createFromDiscriminatorValue'])),
+            'restrictedExperience' => fn(ParseNode $n) => $o->setRestrictedExperience($n->getObjectValue([OnlineMeetingRestricted::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -89,6 +90,14 @@ class Participant extends Entity implements Parsable
     }
 
     /**
+     * Gets the restrictedExperience property value. Indicates the reason or reasons media content from this participant is restricted.
+     * @return OnlineMeetingRestricted|null
+    */
+    public function getRestrictedExperience(): ?OnlineMeetingRestricted {
+        return $this->getBackingStore()->get('restrictedExperience');
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
@@ -100,6 +109,7 @@ class Participant extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('mediaStreams', $this->getMediaStreams());
         $writer->writeStringValue('metadata', $this->getMetadata());
         $writer->writeObjectValue('recordingInfo', $this->getRecordingInfo());
+        $writer->writeObjectValue('restrictedExperience', $this->getRestrictedExperience());
     }
 
     /**
@@ -148,6 +158,14 @@ class Participant extends Entity implements Parsable
     */
     public function setRecordingInfo(?RecordingInfo $value): void {
         $this->getBackingStore()->set('recordingInfo', $value);
+    }
+
+    /**
+     * Sets the restrictedExperience property value. Indicates the reason or reasons media content from this participant is restricted.
+     * @param OnlineMeetingRestricted|null $value Value to set for the restrictedExperience property.
+    */
+    public function setRestrictedExperience(?OnlineMeetingRestricted $value): void {
+        $this->getBackingStore()->set('restrictedExperience', $value);
     }
 
 }

@@ -34,6 +34,8 @@ use Microsoft\Graph\Generated\Education\EducationRequestBuilder;
 use Microsoft\Graph\Generated\EmployeeExperience\EmployeeExperienceRequestBuilder;
 use Microsoft\Graph\Generated\EscapedPrint\PrintRequestBuilder;
 use Microsoft\Graph\Generated\External\ExternalRequestBuilder;
+use Microsoft\Graph\Generated\FilterOperators\FilterOperatorsRequestBuilder;
+use Microsoft\Graph\Generated\Functions\FunctionsRequestBuilder;
 use Microsoft\Graph\Generated\GroupLifecyclePolicies\GroupLifecyclePoliciesRequestBuilder;
 use Microsoft\Graph\Generated\Groups\GroupsRequestBuilder;
 use Microsoft\Graph\Generated\GroupSettings\GroupSettingsRequestBuilder;
@@ -306,6 +308,20 @@ class BaseGraphClient extends BaseRequestBuilder
     */
     public function external(): ExternalRequestBuilder {
         return new ExternalRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the collection of filterOperatorSchema entities.
+    */
+    public function filterOperators(): FilterOperatorsRequestBuilder {
+        return new FilterOperatorsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the collection of attributeMappingFunctionSchema entities.
+    */
+    public function functions(): FunctionsRequestBuilder {
+        return new FunctionsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

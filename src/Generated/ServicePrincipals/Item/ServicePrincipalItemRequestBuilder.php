@@ -30,6 +30,7 @@ use Microsoft\Graph\Generated\ServicePrincipals\Item\Owners\OwnersRequestBuilder
 use Microsoft\Graph\Generated\ServicePrincipals\Item\RemoveKey\RemoveKeyRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\RemovePassword\RemovePasswordRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\Restore\RestoreRequestBuilder;
+use Microsoft\Graph\Generated\ServicePrincipals\Item\Synchronization\SynchronizationRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\TokenIssuancePolicies\TokenIssuancePoliciesRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\TokenLifetimePolicies\TokenLifetimePoliciesRequestBuilder;
 use Microsoft\Graph\Generated\ServicePrincipals\Item\TransitiveMemberOf\TransitiveMemberOfRequestBuilder;
@@ -202,6 +203,13 @@ class ServicePrincipalItemRequestBuilder extends BaseRequestBuilder
     */
     public function restore(): RestoreRequestBuilder {
         return new RestoreRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the synchronization property of the microsoft.graph.servicePrincipal entity.
+    */
+    public function synchronization(): SynchronizationRequestBuilder {
+        return new SynchronizationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

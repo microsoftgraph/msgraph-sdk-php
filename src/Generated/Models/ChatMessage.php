@@ -180,7 +180,7 @@ class ChatMessage extends Entity implements Parsable
     }
 
     /**
-     * Gets the messageHistory property value. The messageHistory property
+     * Gets the messageHistory property value. List of activity history of a message item, including modification time and actions, such as reactionAdded, reactionRemoved, or reaction changes, on the message.
      * @return array<ChatMessageHistoryItem>|null
     */
     public function getMessageHistory(): ?array {
@@ -404,7 +404,7 @@ class ChatMessage extends Entity implements Parsable
     }
 
     /**
-     * Sets the messageHistory property value. The messageHistory property
+     * Sets the messageHistory property value. List of activity history of a message item, including modification time and actions, such as reactionAdded, reactionRemoved, or reaction changes, on the message.
      * @param array<ChatMessageHistoryItem>|null $value Value to set for the messageHistory property.
     */
     public function setMessageHistory(?array $value): void {
