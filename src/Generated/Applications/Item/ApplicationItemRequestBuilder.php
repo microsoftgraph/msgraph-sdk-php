@@ -22,6 +22,7 @@ use Microsoft\Graph\Generated\Applications\Item\RemoveKey\RemoveKeyRequestBuilde
 use Microsoft\Graph\Generated\Applications\Item\RemovePassword\RemovePasswordRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\Restore\RestoreRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\SetVerifiedPublisher\SetVerifiedPublisherRequestBuilder;
+use Microsoft\Graph\Generated\Applications\Item\Synchronization\SynchronizationRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\TokenIssuancePolicies\TokenIssuancePoliciesRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\TokenLifetimePolicies\TokenLifetimePoliciesRequestBuilder;
 use Microsoft\Graph\Generated\Applications\Item\UnsetVerifiedPublisher\UnsetVerifiedPublisherRequestBuilder;
@@ -154,6 +155,13 @@ class ApplicationItemRequestBuilder extends BaseRequestBuilder
     */
     public function setVerifiedPublisher(): SetVerifiedPublisherRequestBuilder {
         return new SetVerifiedPublisherRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the synchronization property of the microsoft.graph.application entity.
+    */
+    public function synchronization(): SynchronizationRequestBuilder {
+        return new SynchronizationRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

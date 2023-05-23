@@ -74,7 +74,7 @@ class ChatMessageHistoryItem implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the modifiedDateTime property value. The modifiedDateTime property
+     * Gets the modifiedDateTime property value. The date and time when the message was modified.
      * @return DateTime|null
     */
     public function getModifiedDateTime(): ?DateTime {
@@ -90,7 +90,7 @@ class ChatMessageHistoryItem implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Gets the reaction property value. The reaction property
+     * Gets the reaction property value. The reaction in the modified message.
      * @return ChatMessageReaction|null
     */
     public function getReaction(): ?ChatMessageReaction {
@@ -134,7 +134,7 @@ class ChatMessageHistoryItem implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the modifiedDateTime property value. The modifiedDateTime property
+     * Sets the modifiedDateTime property value. The date and time when the message was modified.
      * @param DateTime|null $value Value to set for the modifiedDateTime property.
     */
     public function setModifiedDateTime(?DateTime $value): void {
@@ -150,7 +150,7 @@ class ChatMessageHistoryItem implements AdditionalDataHolder, BackedModel, Parsa
     }
 
     /**
-     * Sets the reaction property value. The reaction property
+     * Sets the reaction property value. The reaction in the modified message.
      * @param ChatMessageReaction|null $value Value to set for the reaction property.
     */
     public function setReaction(?ChatMessageReaction $value): void {

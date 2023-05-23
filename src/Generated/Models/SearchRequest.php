@@ -67,6 +67,14 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the collapseProperties property value. The collapseProperties property
+     * @return array<CollapseProperty>|null
+    */
+    public function getCollapseProperties(): ?array {
+        return $this->getBackingStore()->get('collapseProperties');
+    }
+
+    /**
      * Gets the contentSources property value. The contentSources property
      * @return array<string>|null
     */
@@ -99,6 +107,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             'aggregationFilters' => fn(ParseNode $n) => $o->setAggregationFilters($n->getCollectionOfPrimitiveValues()),
             'aggregations' => fn(ParseNode $n) => $o->setAggregations($n->getCollectionOfObjectValues([AggregationOption::class, 'createFromDiscriminatorValue'])),
+            'collapseProperties' => fn(ParseNode $n) => $o->setCollapseProperties($n->getCollectionOfObjectValues([CollapseProperty::class, 'createFromDiscriminatorValue'])),
             'contentSources' => fn(ParseNode $n) => $o->setContentSources($n->getCollectionOfPrimitiveValues()),
             'enableTopResults' => fn(ParseNode $n) => $o->setEnableTopResults($n->getBooleanValue()),
             'entityTypes' => fn(ParseNode $n) => $o->setEntityTypes($n->getCollectionOfEnumValues(EntityType::class)),
@@ -202,6 +211,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeCollectionOfPrimitiveValues('aggregationFilters', $this->getAggregationFilters());
         $writer->writeCollectionOfObjectValues('aggregations', $this->getAggregations());
+        $writer->writeCollectionOfObjectValues('collapseProperties', $this->getCollapseProperties());
         $writer->writeCollectionOfPrimitiveValues('contentSources', $this->getContentSources());
         $writer->writeBooleanValue('enableTopResults', $this->getEnableTopResults());
         $writer->writeCollectionOfEnumValues('entityTypes', $this->getEntityTypes());
@@ -248,6 +258,14 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setBackingStore(BackingStore $value): void {
         $this->backingStore = $value;
+    }
+
+    /**
+     * Sets the collapseProperties property value. The collapseProperties property
+     * @param array<CollapseProperty>|null $value Value to set for the collapseProperties property.
+    */
+    public function setCollapseProperties(?array $value): void {
+        $this->getBackingStore()->set('collapseProperties', $value);
     }
 
     /**

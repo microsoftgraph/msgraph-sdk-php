@@ -144,6 +144,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.attachmentSession': return new AttachmentSession();
                 case '#microsoft.graph.attackSimulationRoot': return new AttackSimulationRoot();
                 case '#microsoft.graph.attendanceRecord': return new AttendanceRecord();
+                case '#microsoft.graph.attributeMappingFunctionSchema': return new AttributeMappingFunctionSchema();
                 case '#microsoft.graph.attributeSet': return new AttributeSet();
                 case '#microsoft.graph.audioRoutingGroup': return new AudioRoutingGroup();
                 case '#microsoft.graph.auditEvent': return new AuditEvent();
@@ -267,6 +268,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.deviceManagementTroubleshootingEvent': return new DeviceManagementTroubleshootingEvent();
                 case '#microsoft.graph.directory': return new Directory();
                 case '#microsoft.graph.directoryAudit': return new DirectoryAudit();
+                case '#microsoft.graph.directoryDefinition': return new DirectoryDefinition();
                 case '#microsoft.graph.directoryObject': return new DirectoryObject();
                 case '#microsoft.graph.directoryObjectPartnerReference': return new DirectoryObjectPartnerReference();
                 case '#microsoft.graph.directoryRole': return new DirectoryRole();
@@ -334,6 +336,7 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.fieldValueSet': return new FieldValueSet();
                 case '#microsoft.graph.fileAssessmentRequest': return new FileAssessmentRequest();
                 case '#microsoft.graph.fileAttachment': return new FileAttachment();
+                case '#microsoft.graph.filterOperatorSchema': return new FilterOperatorSchema();
                 case '#microsoft.graph.group': return new Group();
                 case '#microsoft.graph.groupLifecyclePolicy': return new GroupLifecyclePolicy();
                 case '#microsoft.graph.groupSetting': return new GroupSetting();
@@ -616,6 +619,10 @@ class Entity implements AdditionalDataHolder, BackedModel, Parsable
                 case '#microsoft.graph.subscribeToToneOperation': return new SubscribeToToneOperation();
                 case '#microsoft.graph.subscription': return new Subscription();
                 case '#microsoft.graph.swapShiftsChangeRequest': return new SwapShiftsChangeRequest();
+                case '#microsoft.graph.synchronization': return new Synchronization();
+                case '#microsoft.graph.synchronizationJob': return new SynchronizationJob();
+                case '#microsoft.graph.synchronizationSchema': return new SynchronizationSchema();
+                case '#microsoft.graph.synchronizationTemplate': return new SynchronizationTemplate();
                 case '#microsoft.graph.targetedManagedAppConfiguration': return new TargetedManagedAppConfiguration();
                 case '#microsoft.graph.targetedManagedAppPolicyAssignment': return new TargetedManagedAppPolicyAssignment();
                 case '#microsoft.graph.targetedManagedAppProtection': return new TargetedManagedAppProtection();

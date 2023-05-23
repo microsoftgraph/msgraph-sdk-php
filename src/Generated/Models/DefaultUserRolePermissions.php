@@ -59,6 +59,14 @@ class DefaultUserRolePermissions implements AdditionalDataHolder, BackedModel, P
     }
 
     /**
+     * Gets the allowedToCreateTenants property value. Indicates whether the default user role can create tenants.
+     * @return bool|null
+    */
+    public function getAllowedToCreateTenants(): ?bool {
+        return $this->getBackingStore()->get('allowedToCreateTenants');
+    }
+
+    /**
      * Gets the allowedToReadBitlockerKeysForOwnedDevice property value. Indicates whether the registered owners of a device can read their own BitLocker recovery keys with default user role.
      * @return bool|null
     */
@@ -91,6 +99,7 @@ class DefaultUserRolePermissions implements AdditionalDataHolder, BackedModel, P
         return  [
             'allowedToCreateApps' => fn(ParseNode $n) => $o->setAllowedToCreateApps($n->getBooleanValue()),
             'allowedToCreateSecurityGroups' => fn(ParseNode $n) => $o->setAllowedToCreateSecurityGroups($n->getBooleanValue()),
+            'allowedToCreateTenants' => fn(ParseNode $n) => $o->setAllowedToCreateTenants($n->getBooleanValue()),
             'allowedToReadBitlockerKeysForOwnedDevice' => fn(ParseNode $n) => $o->setAllowedToReadBitlockerKeysForOwnedDevice($n->getBooleanValue()),
             'allowedToReadOtherUsers' => fn(ParseNode $n) => $o->setAllowedToReadOtherUsers($n->getBooleanValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
@@ -121,6 +130,7 @@ class DefaultUserRolePermissions implements AdditionalDataHolder, BackedModel, P
     public function serialize(SerializationWriter $writer): void {
         $writer->writeBooleanValue('allowedToCreateApps', $this->getAllowedToCreateApps());
         $writer->writeBooleanValue('allowedToCreateSecurityGroups', $this->getAllowedToCreateSecurityGroups());
+        $writer->writeBooleanValue('allowedToCreateTenants', $this->getAllowedToCreateTenants());
         $writer->writeBooleanValue('allowedToReadBitlockerKeysForOwnedDevice', $this->getAllowedToReadBitlockerKeysForOwnedDevice());
         $writer->writeBooleanValue('allowedToReadOtherUsers', $this->getAllowedToReadOtherUsers());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
@@ -150,6 +160,14 @@ class DefaultUserRolePermissions implements AdditionalDataHolder, BackedModel, P
     */
     public function setAllowedToCreateSecurityGroups(?bool $value): void {
         $this->getBackingStore()->set('allowedToCreateSecurityGroups', $value);
+    }
+
+    /**
+     * Sets the allowedToCreateTenants property value. Indicates whether the default user role can create tenants.
+     * @param bool|null $value Value to set for the allowedToCreateTenants property.
+    */
+    public function setAllowedToCreateTenants(?bool $value): void {
+        $this->getBackingStore()->set('allowedToCreateTenants', $value);
     }
 
     /**

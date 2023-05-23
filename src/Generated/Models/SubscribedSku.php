@@ -25,6 +25,22 @@ class SubscribedSku extends Entity implements Parsable
     }
 
     /**
+     * Gets the accountId property value. The accountId property
+     * @return string|null
+    */
+    public function getAccountId(): ?string {
+        return $this->getBackingStore()->get('accountId');
+    }
+
+    /**
+     * Gets the accountName property value. The accountName property
+     * @return string|null
+    */
+    public function getAccountName(): ?string {
+        return $this->getBackingStore()->get('accountName');
+    }
+
+    /**
      * Gets the appliesTo property value. For example, 'User' or 'Company'.
      * @return string|null
     */
@@ -55,6 +71,8 @@ class SubscribedSku extends Entity implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'accountId' => fn(ParseNode $n) => $o->setAccountId($n->getStringValue()),
+            'accountName' => fn(ParseNode $n) => $o->setAccountName($n->getStringValue()),
             'appliesTo' => fn(ParseNode $n) => $o->setAppliesTo($n->getStringValue()),
             'capabilityStatus' => fn(ParseNode $n) => $o->setCapabilityStatus($n->getStringValue()),
             'consumedUnits' => fn(ParseNode $n) => $o->setConsumedUnits($n->getIntegerValue()),
@@ -62,6 +80,7 @@ class SubscribedSku extends Entity implements Parsable
             'servicePlans' => fn(ParseNode $n) => $o->setServicePlans($n->getCollectionOfObjectValues([ServicePlanInfo::class, 'createFromDiscriminatorValue'])),
             'skuId' => fn(ParseNode $n) => $o->setSkuId($n->getStringValue()),
             'skuPartNumber' => fn(ParseNode $n) => $o->setSkuPartNumber($n->getStringValue()),
+            'subscriptionIds' => fn(ParseNode $n) => $o->setSubscriptionIds($n->getCollectionOfPrimitiveValues()),
         ]);
     }
 
@@ -98,11 +117,21 @@ class SubscribedSku extends Entity implements Parsable
     }
 
     /**
+     * Gets the subscriptionIds property value. The subscriptionIds property
+     * @return array<string>|null
+    */
+    public function getSubscriptionIds(): ?array {
+        return $this->getBackingStore()->get('subscriptionIds');
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('accountId', $this->getAccountId());
+        $writer->writeStringValue('accountName', $this->getAccountName());
         $writer->writeStringValue('appliesTo', $this->getAppliesTo());
         $writer->writeStringValue('capabilityStatus', $this->getCapabilityStatus());
         $writer->writeIntegerValue('consumedUnits', $this->getConsumedUnits());
@@ -110,6 +139,23 @@ class SubscribedSku extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('servicePlans', $this->getServicePlans());
         $writer->writeStringValue('skuId', $this->getSkuId());
         $writer->writeStringValue('skuPartNumber', $this->getSkuPartNumber());
+        $writer->writeCollectionOfPrimitiveValues('subscriptionIds', $this->getSubscriptionIds());
+    }
+
+    /**
+     * Sets the accountId property value. The accountId property
+     * @param string|null $value Value to set for the accountId property.
+    */
+    public function setAccountId(?string $value): void {
+        $this->getBackingStore()->set('accountId', $value);
+    }
+
+    /**
+     * Sets the accountName property value. The accountName property
+     * @param string|null $value Value to set for the accountName property.
+    */
+    public function setAccountName(?string $value): void {
+        $this->getBackingStore()->set('accountName', $value);
     }
 
     /**
@@ -166,6 +212,14 @@ class SubscribedSku extends Entity implements Parsable
     */
     public function setSkuPartNumber(?string $value): void {
         $this->getBackingStore()->set('skuPartNumber', $value);
+    }
+
+    /**
+     * Sets the subscriptionIds property value. The subscriptionIds property
+     * @param array<string>|null $value Value to set for the subscriptionIds property.
+    */
+    public function setSubscriptionIds(?array $value): void {
+        $this->getBackingStore()->set('subscriptionIds', $value);
     }
 
 }

@@ -191,6 +191,7 @@ class Application extends DirectoryObject implements Parsable
             'serviceManagementReference' => fn(ParseNode $n) => $o->setServiceManagementReference($n->getStringValue()),
             'signInAudience' => fn(ParseNode $n) => $o->setSignInAudience($n->getStringValue()),
             'spa' => fn(ParseNode $n) => $o->setSpa($n->getObjectValue([SpaApplication::class, 'createFromDiscriminatorValue'])),
+            'synchronization' => fn(ParseNode $n) => $o->setSynchronization($n->getObjectValue([Synchronization::class, 'createFromDiscriminatorValue'])),
             'tags' => fn(ParseNode $n) => $o->setTags($n->getCollectionOfPrimitiveValues()),
             'tokenEncryptionKeyId' => fn(ParseNode $n) => $o->setTokenEncryptionKeyId($n->getStringValue()),
             'tokenIssuancePolicies' => fn(ParseNode $n) => $o->setTokenIssuancePolicies($n->getCollectionOfObjectValues([TokenIssuancePolicy::class, 'createFromDiscriminatorValue'])),
@@ -377,6 +378,14 @@ class Application extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the synchronization property value. The synchronization property
+     * @return Synchronization|null
+    */
+    public function getSynchronization(): ?Synchronization {
+        return $this->getBackingStore()->get('synchronization');
+    }
+
+    /**
      * Gets the tags property value. Custom strings that can be used to categorize and identify the application. Not nullable. Strings added here will also appear in the tags property of any associated service principals.Supports $filter (eq, not, ge, le, startsWith) and $search.
      * @return array<string>|null
     */
@@ -467,6 +476,7 @@ class Application extends DirectoryObject implements Parsable
         $writer->writeStringValue('serviceManagementReference', $this->getServiceManagementReference());
         $writer->writeStringValue('signInAudience', $this->getSignInAudience());
         $writer->writeObjectValue('spa', $this->getSpa());
+        $writer->writeObjectValue('synchronization', $this->getSynchronization());
         $writer->writeCollectionOfPrimitiveValues('tags', $this->getTags());
         $writer->writeStringValue('tokenEncryptionKeyId', $this->getTokenEncryptionKeyId());
         $writer->writeCollectionOfObjectValues('tokenIssuancePolicies', $this->getTokenIssuancePolicies());
@@ -769,6 +779,14 @@ class Application extends DirectoryObject implements Parsable
     */
     public function setSpa(?SpaApplication $value): void {
         $this->getBackingStore()->set('spa', $value);
+    }
+
+    /**
+     * Sets the synchronization property value. The synchronization property
+     * @param Synchronization|null $value Value to set for the synchronization property.
+    */
+    public function setSynchronization(?Synchronization $value): void {
+        $this->getBackingStore()->set('synchronization', $value);
     }
 
     /**
