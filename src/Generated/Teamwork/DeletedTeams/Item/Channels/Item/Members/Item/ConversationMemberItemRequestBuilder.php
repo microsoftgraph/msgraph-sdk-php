@@ -32,10 +32,10 @@ class ConversationMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a conversationMember from a channel. This operation is allowed only for channels with a **membershipType** value of `private` or `shared`.
+     * Delete a conversationMember from a channel.
      * @param ConversationMemberItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/channel-delete-members?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/conversationmember-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ConversationMemberItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -90,7 +90,7 @@ class ConversationMemberItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a conversationMember from a channel. This operation is allowed only for channels with a **membershipType** value of `private` or `shared`.
+     * Delete a conversationMember from a channel.
      * @param ConversationMemberItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

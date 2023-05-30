@@ -167,7 +167,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Gets the threats property value. List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
+     * Gets the threats property value. List of threats the control mitigates (accountBreach, dataDeletion, dataExfiltration, dataSpillage,
      * @return array<string>|null
     */
     public function getThreats(): ?array {
@@ -346,7 +346,7 @@ class SecureScoreControlProfile extends Entity implements Parsable
     }
 
     /**
-     * Sets the threats property value. List of threats the control mitigates (accountBreach,dataDeletion,dataExfiltration,dataSpillage,
+     * Sets the threats property value. List of threats the control mitigates (accountBreach, dataDeletion, dataExfiltration, dataSpillage,
      * @param array<string>|null $value Value to set for the threats property.
     */
     public function setThreats(?array $value): void {
