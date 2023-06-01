@@ -78,7 +78,7 @@ $guzzleConfig = [
 ];
 $httpClient = GraphClientFactory::createWithConfig($guzzleConfig);
 $requestAdapter = new GraphRequestAdapter($authProvider, $httpClient);
-$graphServiceClient = new GraphServiceClient($requestAdapter);
+$graphServiceClient = GraphServiceClient::createWithRequestAdapter($requestAdapter);
 
 ```
 
