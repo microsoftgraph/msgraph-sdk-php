@@ -8,9 +8,12 @@
 
 namespace Microsoft\Graph;
 
+use Microsoft\Graph\Core\Authentication\GraphPhpLeagueAuthenticationProvider;
 use Microsoft\Graph\Generated\BaseGraphClient;
 use Microsoft\Graph\Generated\Users\Item\UserItemRequestBuilder;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
+use Microsoft\Kiota\Authentication\Oauth\ClientCredentialContext;
+use Microsoft\Kiota\Authentication\Oauth\TokenRequestContext;
 
 /**
  * Class GraphServiceClient
@@ -23,11 +26,35 @@ use Microsoft\Kiota\Abstractions\RequestAdapter;
 class GraphServiceClient extends BaseGraphClient
 {
     /**
-     * @param RequestAdapter $requestAdapter
+     * @param TokenRequestContext $tokenRequestContext
+     * @param array $scopes
+     * @param RequestAdapter|null $requestAdapter. Use createWithRequestAdapter() to set the request adapter.
      */
-    public function __construct(RequestAdapter $requestAdapter)
+    public function __construct(
+        TokenRequestContext $tokenRequestContext,
+        array $scopes = [],
+        ?RequestAdapter $requestAdapter = null
+    )
     {
-        parent::__construct($requestAdapter);
+        if ($requestAdapter) {
+            parent::__construct($requestAdapter);
+            return;
+        }
+        parent::__construct(new GraphRequestAdapter(new GraphPhpLeagueAuthenticationProvider(
+            $tokenRequestContext, $scopes
+        )));
+    }
+
+    /**
+     * Get an instance of GraphServiceClient that uses $requestAdapter
+     *
+     * @param RequestAdapter $requestAdapter
+     * @return GraphServiceClient
+     */
+    public static function createWithRequestAdapter(RequestAdapter $requestAdapter): GraphServiceClient
+    {
+        $placeholder = new ClientCredentialContext('tenant', 'client', 'secret');
+        return new GraphServiceClient($placeholder, [], $requestAdapter);
     }
 
     /**
