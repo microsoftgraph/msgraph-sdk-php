@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Directory\CustomSecurityAttributeDefinitions
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get customSecurityAttributeDefinitions from directory
+ * Get a list of the customSecurityAttributeDefinition objects and their properties.
 */
 class CustomSecurityAttributeDefinitionsRequestBuilderGetQueryParameters 
 {

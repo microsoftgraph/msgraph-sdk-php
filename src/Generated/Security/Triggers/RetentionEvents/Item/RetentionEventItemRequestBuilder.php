@@ -40,9 +40,10 @@ class RetentionEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property retentionEvents for security
+     * Delete a retentionEvent object.
      * @param RetentionEventItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/security-retentionevent-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?RetentionEventItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -58,9 +59,10 @@ class RetentionEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get retentionEvents from security
+     * Read the properties and relationships of a retentionEvent object.
      * @param RetentionEventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/security-retentionevent-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?RetentionEventItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -95,7 +97,7 @@ class RetentionEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property retentionEvents for security
+     * Delete a retentionEvent object.
      * @param RetentionEventItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,7 +114,7 @@ class RetentionEventItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get retentionEvents from security
+     * Read the properties and relationships of a retentionEvent object.
      * @param RetentionEventItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

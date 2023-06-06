@@ -23,4 +23,5 @@ class DetectionSource extends Enum {
     public const APP_GOVERNANCE_POLICY = 'appGovernancePolicy';
     public const APP_GOVERNANCE_DETECTION = 'appGovernanceDetection';
     public const UNKNOWN_FUTURE_VALUE = 'unknownFutureValue';
+    public const MICROSOFT_DEFENDER_FOR_CLOUD = 'microsoftDefenderForCloud';
 }

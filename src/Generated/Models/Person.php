@@ -102,7 +102,7 @@ class Person extends Entity implements Parsable
     }
 
     /**
-     * Gets the isFavorite property value. true if the user has flagged this person as a favorite.
+     * Gets the isFavorite property value. True if the user has flagged this person as a favorite.
      * @return bool|null
     */
     public function getIsFavorite(): ?bool {
@@ -281,7 +281,7 @@ class Person extends Entity implements Parsable
     }
 
     /**
-     * Sets the isFavorite property value. true if the user has flagged this person as a favorite.
+     * Sets the isFavorite property value. True if the user has flagged this person as a favorite.
      * @param bool|null $value Value to set for the isFavorite property.
     */
     public function setIsFavorite(?bool $value): void {

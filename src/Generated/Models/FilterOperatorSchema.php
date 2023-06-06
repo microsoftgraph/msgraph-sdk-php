@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class FilterOperatorSchema extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new filterOperatorSchema and sets the default values.
+     * Instantiates a new FilterOperatorSchema and sets the default values.
     */
     public function __construct() {
         parent::__construct();

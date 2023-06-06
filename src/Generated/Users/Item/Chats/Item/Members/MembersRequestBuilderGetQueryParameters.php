@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Chats\Item\Members;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a conversationMember from a chat or channel.
+ * List all conversation members in a chat or channel.
 */
 class MembersRequestBuilderGetQueryParameters 
 {

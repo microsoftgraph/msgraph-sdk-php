@@ -35,7 +35,7 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the accountName property value. The user account's displayed name.
+     * Gets the accountName property value. The displayed name of the user account.
      * @return string|null
     */
     public function getAccountName(): ?string {
@@ -51,7 +51,7 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the azureAdUserId property value. The user object identifier in Azure AD.
+     * Gets the azureAdUserId property value. The user object identifier in Azure Active Directory (Azure AD).
      * @return string|null
     */
     public function getAzureAdUserId(): ?string {
@@ -67,7 +67,7 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the displayName property value. The displayName property
+     * Gets the displayName property value. The user display name in Azure AD.
      * @return string|null
     */
     public function getDisplayName(): ?string {
@@ -139,7 +139,7 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the accountName property value. The user account's displayed name.
+     * Sets the accountName property value. The displayed name of the user account.
      * @param string|null $value Value to set for the accountName property.
     */
     public function setAccountName(?string $value): void {
@@ -155,7 +155,7 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the azureAdUserId property value. The user object identifier in Azure AD.
+     * Sets the azureAdUserId property value. The user object identifier in Azure Active Directory (Azure AD).
      * @param string|null $value Value to set for the azureAdUserId property.
     */
     public function setAzureAdUserId(?string $value): void {
@@ -171,7 +171,7 @@ class UserAccount implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the displayName property value. The displayName property
+     * Sets the displayName property value. The user display name in Azure AD.
      * @param string|null $value Value to set for the displayName property.
     */
     public function setDisplayName(?string $value): void {

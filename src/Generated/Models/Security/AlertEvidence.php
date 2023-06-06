@@ -36,10 +36,13 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
         if ($mappingValueNode !== null) {
             $mappingValue = $mappingValueNode->getStringValue();
             switch ($mappingValue) {
+                case '#microsoft.graph.security.amazonResourceEvidence': return new AmazonResourceEvidence();
                 case '#microsoft.graph.security.analyzedMessageEvidence': return new AnalyzedMessageEvidence();
+                case '#microsoft.graph.security.azureResourceEvidence': return new AzureResourceEvidence();
                 case '#microsoft.graph.security.cloudApplicationEvidence': return new CloudApplicationEvidence();
                 case '#microsoft.graph.security.deviceEvidence': return new DeviceEvidence();
                 case '#microsoft.graph.security.fileEvidence': return new FileEvidence();
+                case '#microsoft.graph.security.googleCloudResourceEvidence': return new GoogleCloudResourceEvidence();
                 case '#microsoft.graph.security.ipEvidence': return new IpEvidence();
                 case '#microsoft.graph.security.mailboxEvidence': return new MailboxEvidence();
                 case '#microsoft.graph.security.mailClusterEvidence': return new MailClusterEvidence();
@@ -72,11 +75,19 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the createdDateTime property value. The time the evidence was created and added to the alert.
+     * Gets the createdDateTime property value. The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
         return $this->getBackingStore()->get('createdDateTime');
+    }
+
+    /**
+     * Gets the detailedRoles property value. The detailedRoles property
+     * @return array<string>|null
+    */
+    public function getDetailedRoles(): ?array {
+        return $this->getBackingStore()->get('detailedRoles');
     }
 
     /**
@@ -87,6 +98,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
         $o = $this;
         return  [
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
+            'detailedRoles' => fn(ParseNode $n) => $o->setDetailedRoles($n->getCollectionOfPrimitiveValues()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'remediationStatus' => fn(ParseNode $n) => $o->setRemediationStatus($n->getEnumValue(EvidenceRemediationStatus::class)),
             'remediationStatusDetails' => fn(ParseNode $n) => $o->setRemediationStatusDetails($n->getStringValue()),
@@ -121,7 +133,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the roles property value. The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role 'Attacker'.
+     * Gets the roles property value. One or more roles that an evidence entity represents in an alert. For example, an IP address that is associated with an attacker has the evidence role Attacker.
      * @return array<EvidenceRole>|null
     */
     public function getRoles(): ?array {
@@ -129,7 +141,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the tags property value. Array of custom tags associated with an evidence instance, for example to denote a group of devices, high value assets, etc.
+     * Gets the tags property value. Array of custom tags associated with an evidence instance. For example, to denote a group of devices or high value assets.
      * @return array<string>|null
     */
     public function getTags(): ?array {
@@ -150,6 +162,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
+        $writer->writeCollectionOfPrimitiveValues('detailedRoles', $this->getDetailedRoles());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeEnumValue('remediationStatus', $this->getRemediationStatus());
         $writer->writeStringValue('remediationStatusDetails', $this->getRemediationStatusDetails());
@@ -176,11 +189,19 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the createdDateTime property value. The time the evidence was created and added to the alert.
+     * Sets the createdDateTime property value. The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
      * @param DateTime|null $value Value to set for the createdDateTime property.
     */
     public function setCreatedDateTime(?DateTime $value): void {
         $this->getBackingStore()->set('createdDateTime', $value);
+    }
+
+    /**
+     * Sets the detailedRoles property value. The detailedRoles property
+     * @param array<string>|null $value Value to set for the detailedRoles property.
+    */
+    public function setDetailedRoles(?array $value): void {
+        $this->getBackingStore()->set('detailedRoles', $value);
     }
 
     /**
@@ -208,7 +229,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the roles property value. The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role 'Attacker'.
+     * Sets the roles property value. One or more roles that an evidence entity represents in an alert. For example, an IP address that is associated with an attacker has the evidence role Attacker.
      * @param array<EvidenceRole>|null $value Value to set for the roles property.
     */
     public function setRoles(?array $value): void {
@@ -216,7 +237,7 @@ class AlertEvidence implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the tags property value. Array of custom tags associated with an evidence instance, for example to denote a group of devices, high value assets, etc.
+     * Sets the tags property value. Array of custom tags associated with an evidence instance. For example, to denote a group of devices or high value assets.
      * @param array<string>|null $value Value to set for the tags property.
     */
     public function setTags(?array $value): void {

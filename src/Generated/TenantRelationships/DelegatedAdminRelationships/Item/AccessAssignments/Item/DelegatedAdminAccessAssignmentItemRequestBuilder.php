@@ -51,9 +51,10 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * The access assignments associated with the delegated admin relationship.
+     * Read the properties of a delegatedAdminAccessAssignment object.
      * @param DelegatedAdminAccessAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/delegatedadminaccessassignment-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DelegatedAdminAccessAssignmentItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -69,10 +70,11 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Update the navigation property accessAssignments in tenantRelationships
+     * Update the properties of a delegatedAdminAccessAssignment object.
      * @param DelegatedAdminAccessAssignment $body The request body
      * @param DelegatedAdminAccessAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/delegatedadminaccessassignment-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DelegatedAdminAccessAssignment $body, ?DelegatedAdminAccessAssignmentItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -105,7 +107,7 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * The access assignments associated with the delegated admin relationship.
+     * Read the properties of a delegatedAdminAccessAssignment object.
      * @param DelegatedAdminAccessAssignmentItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -126,7 +128,7 @@ class DelegatedAdminAccessAssignmentItemRequestBuilder extends BaseRequestBuilde
     }
 
     /**
-     * Update the navigation property accessAssignments in tenantRelationships
+     * Update the properties of a delegatedAdminAccessAssignment object.
      * @param DelegatedAdminAccessAssignment $body The request body
      * @param DelegatedAdminAccessAssignmentItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

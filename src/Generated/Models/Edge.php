@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Edge extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new edge and sets the default values.
+     * Instantiates a new Edge and sets the default values.
     */
     public function __construct() {
         parent::__construct();

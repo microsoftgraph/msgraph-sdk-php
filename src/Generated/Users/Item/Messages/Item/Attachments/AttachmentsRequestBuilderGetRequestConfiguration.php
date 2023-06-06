@@ -33,12 +33,10 @@ class AttachmentsRequestBuilderGetRequestConfiguration extends BaseRequestConfig
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values
      * @param array<string>|null $select Select properties to be returned
-     * @param int|null $skip Skip the first n items
-     * @param int|null $top Show only the first n items
      * @return AttachmentsRequestBuilderGetQueryParameters
     */
-    public static function createQueryParameters(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?array $select = null, ?int $skip = null, ?int $top = null): AttachmentsRequestBuilderGetQueryParameters {
-        return new AttachmentsRequestBuilderGetQueryParameters($count, $expand, $filter, $orderby, $select, $skip, $top);
+    public static function createQueryParameters(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?array $select = null): AttachmentsRequestBuilderGetQueryParameters {
+        return new AttachmentsRequestBuilderGetQueryParameters($count, $expand, $filter, $orderby, $select);
     }
 
 }

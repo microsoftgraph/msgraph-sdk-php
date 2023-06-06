@@ -9,8 +9,12 @@ use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Graph\Generated\Models\OrganizationalBranding;
 use Microsoft\Graph\Generated\Organization\Item\Branding\BackgroundImage\BackgroundImageRequestBuilder;
 use Microsoft\Graph\Generated\Organization\Item\Branding\BannerLogo\BannerLogoRequestBuilder;
+use Microsoft\Graph\Generated\Organization\Item\Branding\CustomCSS\CustomCSSRequestBuilder;
+use Microsoft\Graph\Generated\Organization\Item\Branding\Favicon\FaviconRequestBuilder;
+use Microsoft\Graph\Generated\Organization\Item\Branding\HeaderLogo\HeaderLogoRequestBuilder;
 use Microsoft\Graph\Generated\Organization\Item\Branding\Localizations\LocalizationsRequestBuilder;
 use Microsoft\Graph\Generated\Organization\Item\Branding\SquareLogo\SquareLogoRequestBuilder;
+use Microsoft\Graph\Generated\Organization\Item\Branding\SquareLogoDark\SquareLogoDarkRequestBuilder;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
 use Microsoft\Kiota\Abstractions\RequestAdapter;
@@ -36,6 +40,27 @@ class BrandingRequestBuilder extends BaseRequestBuilder
     }
     
     /**
+     * Provides operations to manage the media for the organization entity.
+    */
+    public function customCSS(): CustomCSSRequestBuilder {
+        return new CustomCSSRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the media for the organization entity.
+    */
+    public function favicon(): FaviconRequestBuilder {
+        return new FaviconRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the media for the organization entity.
+    */
+    public function headerLogo(): HeaderLogoRequestBuilder {
+        return new HeaderLogoRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
      * Provides operations to manage the localizations property of the microsoft.graph.organizationalBranding entity.
     */
     public function localizations(): LocalizationsRequestBuilder {
@@ -47,6 +72,13 @@ class BrandingRequestBuilder extends BaseRequestBuilder
     */
     public function squareLogo(): SquareLogoRequestBuilder {
         return new SquareLogoRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the media for the organization entity.
+    */
+    public function squareLogoDark(): SquareLogoDarkRequestBuilder {
+        return new SquareLogoDarkRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
