@@ -1325,4 +1325,35 @@ class Application extends DirectoryObject
         return $this;
     }
 
+    /**
+    * Gets the synchronization
+    *
+    * @return Synchronization|null The synchronization
+    */
+    public function getSynchronization()
+    {
+        if (array_key_exists("synchronization", $this->_propDict)) {
+            if (is_a($this->_propDict["synchronization"], "\Microsoft\Graph\Model\Synchronization") || is_null($this->_propDict["synchronization"])) {
+                return $this->_propDict["synchronization"];
+            } else {
+                $this->_propDict["synchronization"] = new Synchronization($this->_propDict["synchronization"]);
+                return $this->_propDict["synchronization"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the synchronization
+    *
+    * @param Synchronization $val The synchronization
+    *
+    * @return Application
+    */
+    public function setSynchronization($val)
+    {
+        $this->_propDict["synchronization"] = $val;
+        return $this;
+    }
+
 }

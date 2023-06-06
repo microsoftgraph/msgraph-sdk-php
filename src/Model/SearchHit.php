@@ -80,6 +80,34 @@ class SearchHit extends Entity
         return $this;
     }
     /**
+    * Gets the isCollapsed
+    * Indicates whether the current result is collapsed when the collapseProperties property is used.
+    *
+    * @return bool|null The isCollapsed
+    */
+    public function getIsCollapsed()
+    {
+        if (array_key_exists("isCollapsed", $this->_propDict)) {
+            return $this->_propDict["isCollapsed"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isCollapsed
+    * Indicates whether the current result is collapsed when the collapseProperties property is used.
+    *
+    * @param bool $val The value of the isCollapsed
+    *
+    * @return SearchHit
+    */
+    public function setIsCollapsed($val)
+    {
+        $this->_propDict["isCollapsed"] = $val;
+        return $this;
+    }
+    /**
     * Gets the rank
     * The rank or the order of the result.
     *
