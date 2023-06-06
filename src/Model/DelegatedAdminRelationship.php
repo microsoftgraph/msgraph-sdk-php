@@ -26,7 +26,7 @@ class DelegatedAdminRelationship extends Entity
 {
     /**
     * Gets the accessDetails
-    * The access details containing the identifiers of the administrative roles that the partner admin is requesting in the customer tenant.
+    * The access details that contain the identifiers of the administrative roles that the partner admin is requesting in the customer tenant.
     *
     * @return DelegatedAdminAccessDetails|null The accessDetails
     */
@@ -45,7 +45,7 @@ class DelegatedAdminRelationship extends Entity
 
     /**
     * Sets the accessDetails
-    * The access details containing the identifiers of the administrative roles that the partner admin is requesting in the customer tenant.
+    * The access details that contain the identifiers of the administrative roles that the partner admin is requesting in the customer tenant.
     *
     * @param DelegatedAdminAccessDetails $val The accessDetails
     *

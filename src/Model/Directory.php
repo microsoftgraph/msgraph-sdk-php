@@ -57,6 +57,7 @@ class Directory extends Entity
 
      /**
      * Gets the attributeSets
+    * Group of related custom security attribute definitions.
      *
      * @return array|null The attributeSets
      */
@@ -71,6 +72,7 @@ class Directory extends Entity
 
     /**
     * Sets the attributeSets
+    * Group of related custom security attribute definitions.
     *
     * @param AttributeSet[] $val The attributeSets
     *
@@ -85,6 +87,7 @@ class Directory extends Entity
 
      /**
      * Gets the customSecurityAttributeDefinitions
+    * Schema of a custom security attributes (key-value pairs).
      *
      * @return array|null The customSecurityAttributeDefinitions
      */
@@ -99,6 +102,7 @@ class Directory extends Entity
 
     /**
     * Sets the customSecurityAttributeDefinitions
+    * Schema of a custom security attributes (key-value pairs).
     *
     * @param CustomSecurityAttributeDefinition[] $val The customSecurityAttributeDefinitions
     *

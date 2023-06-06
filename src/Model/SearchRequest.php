@@ -80,6 +80,37 @@ class SearchRequest extends Entity
         $this->_propDict["aggregations"] = $val;
          return $this;
     }
+
+    /**
+    * Gets the collapseProperties
+    *
+    * @return CollapseProperty|null The collapseProperties
+    */
+    public function getCollapseProperties()
+    {
+        if (array_key_exists("collapseProperties", $this->_propDict)) {
+            if (is_a($this->_propDict["collapseProperties"], "\Microsoft\Graph\Model\CollapseProperty") || is_null($this->_propDict["collapseProperties"])) {
+                return $this->_propDict["collapseProperties"];
+            } else {
+                $this->_propDict["collapseProperties"] = new CollapseProperty($this->_propDict["collapseProperties"]);
+                return $this->_propDict["collapseProperties"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the collapseProperties
+    *
+    * @param CollapseProperty $val The value to assign to the collapseProperties
+    *
+    * @return SearchRequest The SearchRequest
+    */
+    public function setCollapseProperties($val)
+    {
+        $this->_propDict["collapseProperties"] = $val;
+         return $this;
+    }
     /**
     * Gets the contentSources
     *
