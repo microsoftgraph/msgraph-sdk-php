@@ -30,5 +30,6 @@ class AppKeyCredentialRestrictionType extends Enum
     * The Enum AppKeyCredentialRestrictionType
     */
     const ASYMMETRIC_KEY_LIFETIME = "asymmetricKeyLifetime";
+    const TRUSTED_CERTIFICATE_AUTHORITY = "trustedCertificateAuthority";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

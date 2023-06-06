@@ -219,6 +219,7 @@ class PlannerPlan extends PlannerDelta
 
      /**
      * Gets the sharedWithContainers
+    * List of containers the plan is shared with.
      *
      * @return array|null The sharedWithContainers
      */
@@ -233,6 +234,7 @@ class PlannerPlan extends PlannerDelta
 
     /**
     * Sets the sharedWithContainers
+    * List of containers the plan is shared with.
     *
     * @param PlannerSharedWithContainer[] $val The sharedWithContainers
     *

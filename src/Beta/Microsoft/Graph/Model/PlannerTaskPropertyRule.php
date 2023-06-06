@@ -123,6 +123,32 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
          return $this;
     }
     /**
+    * Gets the completionRequirements
+    *
+    * @return string|null The completionRequirements
+    */
+    public function getCompletionRequirements()
+    {
+        if (array_key_exists("completionRequirements", $this->_propDict)) {
+            return $this->_propDict["completionRequirements"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the completionRequirements
+    *
+    * @param string $val The value of the completionRequirements
+    *
+    * @return PlannerTaskPropertyRule
+    */
+    public function setCompletionRequirements($val)
+    {
+        $this->_propDict["completionRequirements"] = $val;
+        return $this;
+    }
+    /**
     * Gets the delete
     * Rules and restrictions for deleting the task. Accepted values are allow and block.
     *

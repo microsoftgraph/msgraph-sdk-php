@@ -267,7 +267,7 @@ class Alert extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the detectionSource
-    * Detection technology or sensor that identified the notable component or activity.
+    * Detection technology or sensor that identified the notable component or activity. Possible values are: unknown, microsoftDefenderForEndpoint, antivirus, smartScreen, customTi, microsoftDefenderForOffice365, automatedInvestigation, microsoftThreatExperts, customDetection, microsoftDefenderForIdentity, cloudAppSecurity, microsoft365Defender, azureAdIdentityProtection, manual, microsoftDataLossPrevention, appGovernancePolicy, appGovernanceDetection, unknownFutureValue, microsoftDefenderForCloud. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud.
     *
     * @return DetectionSource|null The detectionSource
     */
@@ -286,7 +286,7 @@ class Alert extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the detectionSource
-    * Detection technology or sensor that identified the notable component or activity.
+    * Detection technology or sensor that identified the notable component or activity. Possible values are: unknown, microsoftDefenderForEndpoint, antivirus, smartScreen, customTi, microsoftDefenderForOffice365, automatedInvestigation, microsoftThreatExperts, customDetection, microsoftDefenderForIdentity, cloudAppSecurity, microsoft365Defender, azureAdIdentityProtection, manual, microsoftDataLossPrevention, appGovernancePolicy, appGovernanceDetection, unknownFutureValue, microsoftDefenderForCloud. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud.
     *
     * @param DetectionSource $val The detectionSource
     *
@@ -669,7 +669,7 @@ class Alert extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the serviceSource
-    * The service or product that created this alert. Possible values are: microsoftDefenderForEndpoint, microsoftDefenderForIdentity, microsoftCloudAppSecurity, microsoftDefenderForOffice365, microsoft365Defender, aadIdentityProtection, appGovernance, dataLossPrevention.
+    * The service or product that created this alert. Possible values are: unknown, microsoftDefenderForEndpoint, microsoftDefenderForIdentity, microsoftDefenderForCloudApps, microsoftDefenderForOffice365, microsoft365Defender, azureAdIdentityProtection, microsoftAppGovernance, dataLossPrevention, unknownFutureValue, microsoftDefenderForCloud. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud.
     *
     * @return ServiceSource|null The serviceSource
     */
@@ -688,7 +688,7 @@ class Alert extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the serviceSource
-    * The service or product that created this alert. Possible values are: microsoftDefenderForEndpoint, microsoftDefenderForIdentity, microsoftCloudAppSecurity, microsoftDefenderForOffice365, microsoft365Defender, aadIdentityProtection, appGovernance, dataLossPrevention.
+    * The service or product that created this alert. Possible values are: unknown, microsoftDefenderForEndpoint, microsoftDefenderForIdentity, microsoftDefenderForCloudApps, microsoftDefenderForOffice365, microsoft365Defender, azureAdIdentityProtection, microsoftAppGovernance, dataLossPrevention, unknownFutureValue, microsoftDefenderForCloud. Note that you must use the Prefer: include-unknown-enum-members request header to get the following value(s) in this evolvable enum: microsoftDefenderForCloud.
     *
     * @param ServiceSource $val The serviceSource
     *

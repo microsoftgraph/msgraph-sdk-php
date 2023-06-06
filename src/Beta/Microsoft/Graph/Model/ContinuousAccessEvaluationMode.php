@@ -32,4 +32,5 @@ class ContinuousAccessEvaluationMode extends Enum
     const STRICT_ENFORCEMENT = "strictEnforcement";
     const DISABLED = "disabled";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const STRICT_LOCATION = "strictLocation";
 }

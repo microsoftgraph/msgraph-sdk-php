@@ -168,7 +168,7 @@ class Workflow extends WorkflowBase
     * Sets the executionScope
     * The unique identifier of the Azure AD identity that last modified the workflow object.
     *
-    * @param \Beta\Microsoft\Graph\Model\User[] $val The executionScope
+    * @param UserProcessingResult[] $val The executionScope
     *
     * @return Workflow
     */

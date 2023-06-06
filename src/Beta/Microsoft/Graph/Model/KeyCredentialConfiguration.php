@@ -23,6 +23,32 @@ namespace Beta\Microsoft\Graph\Model;
 */
 class KeyCredentialConfiguration extends Entity
 {
+    /**
+    * Gets the certificateBasedApplicationConfigurationIds
+    *
+    * @return string|null The certificateBasedApplicationConfigurationIds
+    */
+    public function getCertificateBasedApplicationConfigurationIds()
+    {
+        if (array_key_exists("certificateBasedApplicationConfigurationIds", $this->_propDict)) {
+            return $this->_propDict["certificateBasedApplicationConfigurationIds"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the certificateBasedApplicationConfigurationIds
+    *
+    * @param string $val The value of the certificateBasedApplicationConfigurationIds
+    *
+    * @return KeyCredentialConfiguration
+    */
+    public function setCertificateBasedApplicationConfigurationIds($val)
+    {
+        $this->_propDict["certificateBasedApplicationConfigurationIds"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the maxLifetime

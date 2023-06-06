@@ -26,6 +26,7 @@ class PlannerSharedWithContainer extends PlannerPlanContainer
 
     /**
     * Gets the accessLevel
+    * The maxmimum access level the shared container can provide to the plan. The possible values are: readAccess, readWriteAccess, fullAccess, unknownFutureValue.
     *
     * @return PlannerPlanAccessLevel|null The accessLevel
     */
@@ -44,6 +45,7 @@ class PlannerSharedWithContainer extends PlannerPlanContainer
 
     /**
     * Sets the accessLevel
+    * The maxmimum access level the shared container can provide to the plan. The possible values are: readAccess, readWriteAccess, fullAccess, unknownFutureValue.
     *
     * @param PlannerPlanAccessLevel $val The value to assign to the accessLevel
     *

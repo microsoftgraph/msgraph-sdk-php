@@ -51,4 +51,35 @@ class SignInPreferences extends Entity
         $this->_propDict["isSystemPreferredAuthenticationMethodEnabled"] = $val;
         return $this;
     }
+
+    /**
+    * Gets the userPreferredMethodForSecondaryAuthentication
+    *
+    * @return UserDefaultAuthenticationMethodType|null The userPreferredMethodForSecondaryAuthentication
+    */
+    public function getUserPreferredMethodForSecondaryAuthentication()
+    {
+        if (array_key_exists("userPreferredMethodForSecondaryAuthentication", $this->_propDict)) {
+            if (is_a($this->_propDict["userPreferredMethodForSecondaryAuthentication"], "\Beta\Microsoft\Graph\Model\UserDefaultAuthenticationMethodType") || is_null($this->_propDict["userPreferredMethodForSecondaryAuthentication"])) {
+                return $this->_propDict["userPreferredMethodForSecondaryAuthentication"];
+            } else {
+                $this->_propDict["userPreferredMethodForSecondaryAuthentication"] = new UserDefaultAuthenticationMethodType($this->_propDict["userPreferredMethodForSecondaryAuthentication"]);
+                return $this->_propDict["userPreferredMethodForSecondaryAuthentication"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the userPreferredMethodForSecondaryAuthentication
+    *
+    * @param UserDefaultAuthenticationMethodType $val The value to assign to the userPreferredMethodForSecondaryAuthentication
+    *
+    * @return SignInPreferences The SignInPreferences
+    */
+    public function setUserPreferredMethodForSecondaryAuthentication($val)
+    {
+        $this->_propDict["userPreferredMethodForSecondaryAuthentication"] = $val;
+         return $this;
+    }
 }

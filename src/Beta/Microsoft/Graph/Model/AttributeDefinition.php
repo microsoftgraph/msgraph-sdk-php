@@ -167,17 +167,17 @@ class AttributeDefinition extends Entity
 
     /**
     * Gets the metadata
-    * Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
+    * Metadata for the given object.
     *
-    * @return MetadataEntry|null The metadata
+    * @return AttributeDefinitionMetadataEntry|null The metadata
     */
     public function getMetadata()
     {
         if (array_key_exists("metadata", $this->_propDict)) {
-            if (is_a($this->_propDict["metadata"], "\Beta\Microsoft\Graph\Model\MetadataEntry") || is_null($this->_propDict["metadata"])) {
+            if (is_a($this->_propDict["metadata"], "\Beta\Microsoft\Graph\Model\AttributeDefinitionMetadataEntry") || is_null($this->_propDict["metadata"])) {
                 return $this->_propDict["metadata"];
             } else {
-                $this->_propDict["metadata"] = new MetadataEntry($this->_propDict["metadata"]);
+                $this->_propDict["metadata"] = new AttributeDefinitionMetadataEntry($this->_propDict["metadata"]);
                 return $this->_propDict["metadata"];
             }
         }
@@ -186,9 +186,9 @@ class AttributeDefinition extends Entity
 
     /**
     * Sets the metadata
-    * Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
+    * Metadata for the given object.
     *
-    * @param MetadataEntry $val The value to assign to the metadata
+    * @param AttributeDefinitionMetadataEntry $val The value to assign to the metadata
     *
     * @return AttributeDefinition The AttributeDefinition
     */

@@ -84,6 +84,7 @@ class ExtensionProperty extends DirectoryObject
 
     /**
     * Gets the isMultiValued
+    * Defines the directory extension as a multi-valued property. When true, the directory extension property can store a collection of objects of the dataType; for example, a collection of integers. The default value is false.
     *
     * @return bool|null The isMultiValued
     */
@@ -98,6 +99,7 @@ class ExtensionProperty extends DirectoryObject
 
     /**
     * Sets the isMultiValued
+    * Defines the directory extension as a multi-valued property. When true, the directory extension property can store a collection of objects of the dataType; for example, a collection of integers. The default value is false.
     *
     * @param bool $val The isMultiValued
     *

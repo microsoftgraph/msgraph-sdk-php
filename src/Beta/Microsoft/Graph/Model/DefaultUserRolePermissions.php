@@ -25,7 +25,7 @@ class DefaultUserRolePermissions extends Entity
 {
     /**
     * Gets the allowedToCreateApps
-    * Indicates whether the default user role can create applications.
+    * Indicates whether the default user role can create applications. This setting corresponds to the Users can register applications setting in the User settings menu in the Azure portal.
     *
     * @return bool|null The allowedToCreateApps
     */
@@ -40,7 +40,7 @@ class DefaultUserRolePermissions extends Entity
 
     /**
     * Sets the allowedToCreateApps
-    * Indicates whether the default user role can create applications.
+    * Indicates whether the default user role can create applications. This setting corresponds to the Users can register applications setting in the User settings menu in the Azure portal.
     *
     * @param bool $val The value of the allowedToCreateApps
     *
@@ -53,7 +53,7 @@ class DefaultUserRolePermissions extends Entity
     }
     /**
     * Gets the allowedToCreateSecurityGroups
-    * Indicates whether the default user role can create security groups.
+    * Indicates whether the default user role can create security groups. This setting corresponds to the following menus in the Azure portal:  The Users can create security groups in Azure portals, API or PowerShell setting in the Group settings menu.  Users can create security groups setting in the User settings menu.
     *
     * @return bool|null The allowedToCreateSecurityGroups
     */
@@ -68,7 +68,7 @@ class DefaultUserRolePermissions extends Entity
 
     /**
     * Sets the allowedToCreateSecurityGroups
-    * Indicates whether the default user role can create security groups.
+    * Indicates whether the default user role can create security groups. This setting corresponds to the following menus in the Azure portal:  The Users can create security groups in Azure portals, API or PowerShell setting in the Group settings menu.  Users can create security groups setting in the User settings menu.
     *
     * @param bool $val The value of the allowedToCreateSecurityGroups
     *
@@ -81,7 +81,7 @@ class DefaultUserRolePermissions extends Entity
     }
     /**
     * Gets the allowedToCreateTenants
-    * Indicates whether the default user role can create tenants.
+    * Indicates whether the default user role can create tenants. This setting corresponds to the Restrict non-admin users from creating tenants setting in the User settings menu in the Azure portal. When this setting is false, users assigned the Tenant Creator role can still create tenants.
     *
     * @return bool|null The allowedToCreateTenants
     */
@@ -96,7 +96,7 @@ class DefaultUserRolePermissions extends Entity
 
     /**
     * Sets the allowedToCreateTenants
-    * Indicates whether the default user role can create tenants.
+    * Indicates whether the default user role can create tenants. This setting corresponds to the Restrict non-admin users from creating tenants setting in the User settings menu in the Azure portal. When this setting is false, users assigned the Tenant Creator role can still create tenants.
     *
     * @param bool $val The value of the allowedToCreateTenants
     *

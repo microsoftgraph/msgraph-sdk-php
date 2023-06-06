@@ -34,4 +34,5 @@ class IncidentStatus extends Enum
     const IN_PROGRESS = "inProgress";
     const REDIRECTED = "redirected";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const AWAITING_ACTION = "awaitingAction";
 }

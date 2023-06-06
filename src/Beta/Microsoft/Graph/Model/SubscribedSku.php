@@ -25,6 +25,60 @@ namespace Beta\Microsoft\Graph\Model;
 class SubscribedSku extends Entity
 {
     /**
+    * Gets the accountId
+    *
+    * @return string|null The accountId
+    */
+    public function getAccountId()
+    {
+        if (array_key_exists("accountId", $this->_propDict)) {
+            return $this->_propDict["accountId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the accountId
+    *
+    * @param string $val The accountId
+    *
+    * @return SubscribedSku
+    */
+    public function setAccountId($val)
+    {
+        $this->_propDict["accountId"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the accountName
+    *
+    * @return string|null The accountName
+    */
+    public function getAccountName()
+    {
+        if (array_key_exists("accountName", $this->_propDict)) {
+            return $this->_propDict["accountName"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the accountName
+    *
+    * @param string $val The accountName
+    *
+    * @return SubscribedSku
+    */
+    public function setAccountName($val)
+    {
+        $this->_propDict["accountName"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the appliesTo
     * For example, 'User' or 'Company'.
     *
@@ -229,6 +283,33 @@ class SubscribedSku extends Entity
     public function setSkuPartNumber($val)
     {
         $this->_propDict["skuPartNumber"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the subscriptionIds
+    *
+    * @return array|null The subscriptionIds
+    */
+    public function getSubscriptionIds()
+    {
+        if (array_key_exists("subscriptionIds", $this->_propDict)) {
+            return $this->_propDict["subscriptionIds"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the subscriptionIds
+    *
+    * @param string[] $val The subscriptionIds
+    *
+    * @return SubscribedSku
+    */
+    public function setSubscriptionIds($val)
+    {
+        $this->_propDict["subscriptionIds"] = $val;
         return $this;
     }
 

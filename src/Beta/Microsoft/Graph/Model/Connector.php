@@ -115,6 +115,33 @@ class Connector extends Entity
         return $this;
     }
 
+    /**
+    * Gets the version
+    *
+    * @return string|null The version
+    */
+    public function getVersion()
+    {
+        if (array_key_exists("version", $this->_propDict)) {
+            return $this->_propDict["version"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the version
+    *
+    * @param string $val The version
+    *
+    * @return Connector
+    */
+    public function setVersion($val)
+    {
+        $this->_propDict["version"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the memberOf

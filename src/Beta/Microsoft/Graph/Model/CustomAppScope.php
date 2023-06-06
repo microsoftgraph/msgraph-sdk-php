@@ -26,6 +26,7 @@ class CustomAppScope extends AppScope
 {
     /**
     * Gets the customAttributes
+    * An open dictionary type that holds workload-specific properties for the scope object.
     *
     * @return CustomAppScopeAttributesDictionary|null The customAttributes
     */
@@ -44,6 +45,7 @@ class CustomAppScope extends AppScope
 
     /**
     * Sets the customAttributes
+    * An open dictionary type that holds workload-specific properties for the scope object.
     *
     * @param CustomAppScopeAttributesDictionary $val The customAttributes
     *

@@ -313,6 +313,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements \JsonSerializable
 
     /**
     * Gets the tenantRestrictions
+    * Defines the partner-specific tenant restrictions configuration for your organization users accessing a partner organization using partner supplied idenities on your network or devices.
     *
     * @return CrossTenantAccessPolicyTenantRestrictions|null The tenantRestrictions
     */
@@ -331,6 +332,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements \JsonSerializable
 
     /**
     * Sets the tenantRestrictions
+    * Defines the partner-specific tenant restrictions configuration for your organization users accessing a partner organization using partner supplied idenities on your network or devices.
     *
     * @param CrossTenantAccessPolicyTenantRestrictions $val The tenantRestrictions
     *

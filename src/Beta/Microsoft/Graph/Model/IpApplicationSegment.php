@@ -78,4 +78,31 @@ class IpApplicationSegment extends ApplicationSegment
         return $this;
     }
 
+    /**
+    * Gets the ports
+    *
+    * @return array|null The ports
+    */
+    public function getPorts()
+    {
+        if (array_key_exists("ports", $this->_propDict)) {
+            return $this->_propDict["ports"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the ports
+    *
+    * @param string[] $val The ports
+    *
+    * @return IpApplicationSegment
+    */
+    public function setPorts($val)
+    {
+        $this->_propDict["ports"] = $val;
+        return $this;
+    }
+
 }
