@@ -112,6 +112,39 @@ class DefaultManagedAppProtection extends ManagedAppProtection
     }
 
     /**
+    * Gets the appActionIfAccountIsClockedOut
+    * Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time).
+    *
+    * @return ManagedAppRemediationAction|null The appActionIfAccountIsClockedOut
+    */
+    public function getAppActionIfAccountIsClockedOut()
+    {
+        if (array_key_exists("appActionIfAccountIsClockedOut", $this->_propDict)) {
+            if (is_a($this->_propDict["appActionIfAccountIsClockedOut"], "\Beta\Microsoft\Graph\Model\ManagedAppRemediationAction") || is_null($this->_propDict["appActionIfAccountIsClockedOut"])) {
+                return $this->_propDict["appActionIfAccountIsClockedOut"];
+            } else {
+                $this->_propDict["appActionIfAccountIsClockedOut"] = new ManagedAppRemediationAction($this->_propDict["appActionIfAccountIsClockedOut"]);
+                return $this->_propDict["appActionIfAccountIsClockedOut"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the appActionIfAccountIsClockedOut
+    * Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time).
+    *
+    * @param ManagedAppRemediationAction $val The appActionIfAccountIsClockedOut
+    *
+    * @return DefaultManagedAppProtection
+    */
+    public function setAppActionIfAccountIsClockedOut($val)
+    {
+        $this->_propDict["appActionIfAccountIsClockedOut"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the appActionIfAndroidDeviceManufacturerNotAllowed
     * Defines a managed app behavior, either block or wipe, if the specified device manufacturer is not allowed. (Android only). Possible values are: block, wipe, warn.
     *

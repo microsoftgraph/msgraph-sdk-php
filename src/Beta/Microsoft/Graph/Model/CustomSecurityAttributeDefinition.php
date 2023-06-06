@@ -113,7 +113,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
     /**
     * Gets the isSearchable
-    * Indicates whether custom security attribute values will be indexed for searching on objects that are assigned attribute values. Cannot be changed later.
+    * Indicates whether custom security attribute values are indexed for searching on objects that are assigned attribute values. Cannot be changed later.
     *
     * @return bool|null The isSearchable
     */
@@ -128,7 +128,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
     /**
     * Sets the isSearchable
-    * Indicates whether custom security attribute values will be indexed for searching on objects that are assigned attribute values. Cannot be changed later.
+    * Indicates whether custom security attribute values are indexed for searching on objects that are assigned attribute values. Cannot be changed later.
     *
     * @param bool $val The isSearchable
     *
@@ -171,7 +171,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
     /**
     * Gets the status
-    * Specifies whether the custom security attribute is active or deactivated. Acceptable values are Available and Deprecated. Can be changed later.
+    * Specifies whether the custom security attribute is active or deactivated. Acceptable values are: Available and Deprecated. Can be changed later.
     *
     * @return string|null The status
     */
@@ -186,7 +186,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
     /**
     * Sets the status
-    * Specifies whether the custom security attribute is active or deactivated. Acceptable values are Available and Deprecated. Can be changed later.
+    * Specifies whether the custom security attribute is active or deactivated. Acceptable values are: Available and Deprecated. Can be changed later.
     *
     * @param string $val The status
     *
@@ -200,7 +200,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
     /**
     * Gets the type
-    * Data type for the custom security attribute values. Supported types are Boolean, Integer, and String. Cannot be changed later.
+    * Data type for the custom security attribute values. Supported types are: Boolean, Integer, and String. Cannot be changed later.
     *
     * @return string|null The type
     */
@@ -215,7 +215,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
     /**
     * Sets the type
-    * Data type for the custom security attribute values. Supported types are Boolean, Integer, and String. Cannot be changed later.
+    * Data type for the custom security attribute values. Supported types are: Boolean, Integer, and String. Cannot be changed later.
     *
     * @param string $val The type
     *
@@ -259,7 +259,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
      /**
      * Gets the allowedValues
-    * Values that are predefined for this custom security attribute.This navigation property is not returned by default and must be specified in an $expand query. For example, /directory/customSecurityAttributeDefinitions?$expand=allowedValues.
+    * Values that are predefined for this custom security attribute. This navigation property is not returned by default and must be specified in an $expand query. For example, /directory/customSecurityAttributeDefinitions?$expand=allowedValues.
      *
      * @return array|null The allowedValues
      */
@@ -274,7 +274,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
     /**
     * Sets the allowedValues
-    * Values that are predefined for this custom security attribute.This navigation property is not returned by default and must be specified in an $expand query. For example, /directory/customSecurityAttributeDefinitions?$expand=allowedValues.
+    * Values that are predefined for this custom security attribute. This navigation property is not returned by default and must be specified in an $expand query. For example, /directory/customSecurityAttributeDefinitions?$expand=allowedValues.
     *
     * @param AllowedValue[] $val The allowedValues
     *

@@ -388,6 +388,37 @@ class OnlineMeeting extends Entity
     }
 
     /**
+    * Gets the broadcastRecording
+    *
+    * @return \GuzzleHttp\Psr7\Stream|null The broadcastRecording
+    */
+    public function getBroadcastRecording()
+    {
+        if (array_key_exists("broadcastRecording", $this->_propDict)) {
+            if (is_a($this->_propDict["broadcastRecording"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["broadcastRecording"])) {
+                return $this->_propDict["broadcastRecording"];
+            } else {
+                $this->_propDict["broadcastRecording"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["broadcastRecording"]);
+                return $this->_propDict["broadcastRecording"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the broadcastRecording
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The broadcastRecording
+    *
+    * @return OnlineMeeting
+    */
+    public function setBroadcastRecording($val)
+    {
+        $this->_propDict["broadcastRecording"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the broadcastSettings
     * Settings related to a live event.
     *
@@ -1163,6 +1194,34 @@ class OnlineMeeting extends Entity
     public function setRegistration($val)
     {
         $this->_propDict["registration"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the recordings
+     *
+     * @return array|null The recordings
+     */
+    public function getRecordings()
+    {
+        if (array_key_exists("recordings", $this->_propDict)) {
+           return $this->_propDict["recordings"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the recordings
+    *
+    * @param CallRecording[] $val The recordings
+    *
+    * @return OnlineMeeting
+    */
+    public function setRecordings($val)
+    {
+        $this->_propDict["recordings"] = $val;
         return $this;
     }
 

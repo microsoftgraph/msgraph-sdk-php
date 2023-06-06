@@ -32,4 +32,5 @@ class LifecycleTaskCategory extends Enum
     const JOINER = "joiner";
     const LEAVER = "leaver";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const MOVER = "mover";
 }

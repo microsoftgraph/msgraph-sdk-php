@@ -253,6 +253,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity
 
     /**
     * Gets the tenantRestrictions
+    * Defines the default tenant restrictions configuration for your organization users accessing an external organization on your network or devices.
     *
     * @return CrossTenantAccessPolicyTenantRestrictions|null The tenantRestrictions
     */
@@ -271,6 +272,7 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity
 
     /**
     * Sets the tenantRestrictions
+    * Defines the default tenant restrictions configuration for your organization users accessing an external organization on your network or devices.
     *
     * @param CrossTenantAccessPolicyTenantRestrictions $val The tenantRestrictions
     *

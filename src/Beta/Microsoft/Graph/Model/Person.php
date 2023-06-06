@@ -201,7 +201,7 @@ class Person extends Entity
 
     /**
     * Gets the isFavorite
-    * true if the user has flagged this person as a favorite.
+    * True if the user has flagged this person as a favorite.
     *
     * @return bool|null The isFavorite
     */
@@ -216,7 +216,7 @@ class Person extends Entity
 
     /**
     * Sets the isFavorite
-    * true if the user has flagged this person as a favorite.
+    * True if the user has flagged this person as a favorite.
     *
     * @param bool $val The isFavorite
     *

@@ -81,6 +81,7 @@ class AttackSimulationUser extends Entity
     }
     /**
     * Gets the outOfOfficeDays
+    * Number of days the user is OOF during a simulation journey/course of a campaign.
     *
     * @return int|null The outOfOfficeDays
     */
@@ -95,6 +96,7 @@ class AttackSimulationUser extends Entity
 
     /**
     * Sets the outOfOfficeDays
+    * Number of days the user is OOF during a simulation journey/course of a campaign.
     *
     * @param int $val The value of the outOfOfficeDays
     *
@@ -107,7 +109,7 @@ class AttackSimulationUser extends Entity
     }
     /**
     * Gets the userId
-    * id property value of the user resource that represents the user in the Azure Active Directory tenant.
+    * The id property value of the user resource that represents the user in the Azure Active Directory tenant.
     *
     * @return string|null The userId
     */
@@ -122,7 +124,7 @@ class AttackSimulationUser extends Entity
 
     /**
     * Sets the userId
-    * id property value of the user resource that represents the user in the Azure Active Directory tenant.
+    * The id property value of the user resource that represents the user in the Azure Active Directory tenant.
     *
     * @param string $val The value of the userId
     *

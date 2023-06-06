@@ -32,4 +32,5 @@ class WorkflowTriggerTimeBasedAttribute extends Enum
     const EMPLOYEE_HIRE_DATE = "employeeHireDate";
     const EMPLOYEE_LEAVE_DATE_TIME = "employeeLeaveDateTime";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const CREATED_DATE_TIME = "createdDateTime";
 }

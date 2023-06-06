@@ -84,6 +84,37 @@ class SolutionsRoot implements \JsonSerializable
     }
 
     /**
+    * Gets the virtualEvents
+    *
+    * @return VirtualEventsRoot|null The virtualEvents
+    */
+    public function getVirtualEvents()
+    {
+        if (array_key_exists("virtualEvents", $this->_propDict)) {
+            if (is_a($this->_propDict["virtualEvents"], "\Beta\Microsoft\Graph\Model\VirtualEventsRoot") || is_null($this->_propDict["virtualEvents"])) {
+                return $this->_propDict["virtualEvents"];
+            } else {
+                $this->_propDict["virtualEvents"] = new VirtualEventsRoot($this->_propDict["virtualEvents"]);
+                return $this->_propDict["virtualEvents"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the virtualEvents
+    *
+    * @param VirtualEventsRoot $val The virtualEvents
+    *
+    * @return SolutionsRoot
+    */
+    public function setVirtualEvents($val)
+    {
+        $this->_propDict["virtualEvents"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the ODataType
     *
     * @return string|null The ODataType

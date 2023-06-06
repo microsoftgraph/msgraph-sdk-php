@@ -26,7 +26,7 @@ class AppliedAuthenticationEventListener extends Entity
 
     /**
     * Gets the eventType
-    * The type of authentication event that triggered the custom extension request. The possible values are: tokenIssuanceStart, pageRenderStart, unknownFutureValue.
+    * The type of authentication event that triggered the custom authentication extension request. The possible values are: tokenIssuanceStart, pageRenderStart, unknownFutureValue.
     *
     * @return AuthenticationEventType|null The eventType
     */
@@ -45,7 +45,7 @@ class AppliedAuthenticationEventListener extends Entity
 
     /**
     * Sets the eventType
-    * The type of authentication event that triggered the custom extension request. The possible values are: tokenIssuanceStart, pageRenderStart, unknownFutureValue.
+    * The type of authentication event that triggered the custom authentication extension request. The possible values are: tokenIssuanceStart, pageRenderStart, unknownFutureValue.
     *
     * @param AuthenticationEventType $val The value to assign to the eventType
     *
@@ -58,7 +58,7 @@ class AppliedAuthenticationEventListener extends Entity
     }
     /**
     * Gets the executedListenerId
-    * ID of the Event Listener that was executed.
+    * ID of the authentication event listener that was executed.
     *
     * @return string|null The executedListenerId
     */
@@ -73,7 +73,7 @@ class AppliedAuthenticationEventListener extends Entity
 
     /**
     * Sets the executedListenerId
-    * ID of the Event Listener that was executed.
+    * ID of the authentication event listener that was executed.
     *
     * @param string $val The value of the executedListenerId
     *

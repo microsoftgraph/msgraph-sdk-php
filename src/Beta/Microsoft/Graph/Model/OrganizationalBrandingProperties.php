@@ -207,6 +207,37 @@ class OrganizationalBrandingProperties extends Entity
     }
 
     /**
+    * Gets the contentCustomization
+    *
+    * @return ContentCustomization|null The contentCustomization
+    */
+    public function getContentCustomization()
+    {
+        if (array_key_exists("contentCustomization", $this->_propDict)) {
+            if (is_a($this->_propDict["contentCustomization"], "\Beta\Microsoft\Graph\Model\ContentCustomization") || is_null($this->_propDict["contentCustomization"])) {
+                return $this->_propDict["contentCustomization"];
+            } else {
+                $this->_propDict["contentCustomization"] = new ContentCustomization($this->_propDict["contentCustomization"]);
+                return $this->_propDict["contentCustomization"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the contentCustomization
+    *
+    * @param ContentCustomization $val The contentCustomization
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setContentCustomization($val)
+    {
+        $this->_propDict["contentCustomization"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the customAccountResetCredentialsUrl
     * A custom URL for resetting account credentials. This URL must be in ASCII format or non-ASCII characters must be URL encoded, and not exceed 128 characters.
     *

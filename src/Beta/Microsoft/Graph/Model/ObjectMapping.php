@@ -122,15 +122,15 @@ class ObjectMapping extends Entity
     * Gets the metadata
     * Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
     *
-    * @return MetadataEntry|null The metadata
+    * @return ObjectMappingMetadataEntry|null The metadata
     */
     public function getMetadata()
     {
         if (array_key_exists("metadata", $this->_propDict)) {
-            if (is_a($this->_propDict["metadata"], "\Beta\Microsoft\Graph\Model\MetadataEntry") || is_null($this->_propDict["metadata"])) {
+            if (is_a($this->_propDict["metadata"], "\Beta\Microsoft\Graph\Model\ObjectMappingMetadataEntry") || is_null($this->_propDict["metadata"])) {
                 return $this->_propDict["metadata"];
             } else {
-                $this->_propDict["metadata"] = new MetadataEntry($this->_propDict["metadata"]);
+                $this->_propDict["metadata"] = new ObjectMappingMetadataEntry($this->_propDict["metadata"]);
                 return $this->_propDict["metadata"];
             }
         }
@@ -141,7 +141,7 @@ class ObjectMapping extends Entity
     * Sets the metadata
     * Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.
     *
-    * @param MetadataEntry $val The value to assign to the metadata
+    * @param ObjectMappingMetadataEntry $val The value to assign to the metadata
     *
     * @return ObjectMapping The ObjectMapping
     */

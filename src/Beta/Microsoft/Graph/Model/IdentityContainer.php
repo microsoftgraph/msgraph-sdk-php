@@ -115,6 +115,36 @@ class IdentityContainer implements \JsonSerializable
 
 
      /**
+     * Gets the authenticationEventsFlows
+    * Represents the entry point for self-service sign up and sign in user flows in both Azure AD workforce and customer tenants.
+     *
+     * @return array|null The authenticationEventsFlows
+     */
+    public function getAuthenticationEventsFlows()
+    {
+        if (array_key_exists("authenticationEventsFlows", $this->_propDict)) {
+           return $this->_propDict["authenticationEventsFlows"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the authenticationEventsFlows
+    * Represents the entry point for self-service sign up and sign in user flows in both Azure AD workforce and customer tenants.
+    *
+    * @param AuthenticationEventsFlow[] $val The authenticationEventsFlows
+    *
+    * @return IdentityContainer
+    */
+    public function setAuthenticationEventsFlows($val)
+    {
+        $this->_propDict["authenticationEventsFlows"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the b2cUserFlows
     * Represents entry point for B2C identity userflows.
      *

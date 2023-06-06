@@ -674,6 +674,37 @@ class PlannerTask extends PlannerDelta
     }
 
     /**
+    * Gets the specifiedCompletionRequirements
+    *
+    * @return PlannerTaskCompletionRequirements|null The specifiedCompletionRequirements
+    */
+    public function getSpecifiedCompletionRequirements()
+    {
+        if (array_key_exists("specifiedCompletionRequirements", $this->_propDict)) {
+            if (is_a($this->_propDict["specifiedCompletionRequirements"], "\Beta\Microsoft\Graph\Model\PlannerTaskCompletionRequirements") || is_null($this->_propDict["specifiedCompletionRequirements"])) {
+                return $this->_propDict["specifiedCompletionRequirements"];
+            } else {
+                $this->_propDict["specifiedCompletionRequirements"] = new PlannerTaskCompletionRequirements($this->_propDict["specifiedCompletionRequirements"]);
+                return $this->_propDict["specifiedCompletionRequirements"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the specifiedCompletionRequirements
+    *
+    * @param PlannerTaskCompletionRequirements $val The specifiedCompletionRequirements
+    *
+    * @return PlannerTask
+    */
+    public function setSpecifiedCompletionRequirements($val)
+    {
+        $this->_propDict["specifiedCompletionRequirements"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the startDateTime
     * Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
     *

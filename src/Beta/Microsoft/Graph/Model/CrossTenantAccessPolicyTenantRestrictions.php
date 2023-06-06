@@ -26,6 +26,7 @@ class CrossTenantAccessPolicyTenantRestrictions extends CrossTenantAccessPolicyB
 
     /**
     * Gets the devices
+    * Defines the rule for filtering devices and whether devices satisfying the rule should be allowed or blocked. Not implemented.
     *
     * @return DevicesFilter|null The devices
     */
@@ -44,6 +45,7 @@ class CrossTenantAccessPolicyTenantRestrictions extends CrossTenantAccessPolicyB
 
     /**
     * Sets the devices
+    * Defines the rule for filtering devices and whether devices satisfying the rule should be allowed or blocked. Not implemented.
     *
     * @param DevicesFilter $val The value to assign to the devices
     *
