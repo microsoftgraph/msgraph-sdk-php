@@ -33,7 +33,7 @@ class Directory extends Entity implements Parsable
     }
 
     /**
-     * Gets the attributeSets property value. The attributeSets property
+     * Gets the attributeSets property value. Group of related custom security attribute definitions.
      * @return array<AttributeSet>|null
     */
     public function getAttributeSets(): ?array {
@@ -41,7 +41,7 @@ class Directory extends Entity implements Parsable
     }
 
     /**
-     * Gets the customSecurityAttributeDefinitions property value. The customSecurityAttributeDefinitions property
+     * Gets the customSecurityAttributeDefinitions property value. Schema of a custom security attributes (key-value pairs).
      * @return array<CustomSecurityAttributeDefinition>|null
     */
     public function getCustomSecurityAttributeDefinitions(): ?array {
@@ -111,7 +111,7 @@ class Directory extends Entity implements Parsable
     }
 
     /**
-     * Sets the attributeSets property value. The attributeSets property
+     * Sets the attributeSets property value. Group of related custom security attribute definitions.
      * @param array<AttributeSet>|null $value Value to set for the attributeSets property.
     */
     public function setAttributeSets(?array $value): void {
@@ -119,7 +119,7 @@ class Directory extends Entity implements Parsable
     }
 
     /**
-     * Sets the customSecurityAttributeDefinitions property value. The customSecurityAttributeDefinitions property
+     * Sets the customSecurityAttributeDefinitions property value. Schema of a custom security attributes (key-value pairs).
      * @param array<CustomSecurityAttributeDefinition>|null $value Value to set for the customSecurityAttributeDefinitions property.
     */
     public function setCustomSecurityAttributeDefinitions(?array $value): void {

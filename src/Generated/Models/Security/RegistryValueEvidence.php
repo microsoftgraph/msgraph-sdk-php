@@ -31,12 +31,21 @@ class RegistryValueEvidence extends AlertEvidence implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'mdeDeviceId' => fn(ParseNode $n) => $o->setMdeDeviceId($n->getStringValue()),
             'registryHive' => fn(ParseNode $n) => $o->setRegistryHive($n->getStringValue()),
             'registryKey' => fn(ParseNode $n) => $o->setRegistryKey($n->getStringValue()),
             'registryValue' => fn(ParseNode $n) => $o->setRegistryValue($n->getStringValue()),
             'registryValueName' => fn(ParseNode $n) => $o->setRegistryValueName($n->getStringValue()),
             'registryValueType' => fn(ParseNode $n) => $o->setRegistryValueType($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the mdeDeviceId property value. The mdeDeviceId property
+     * @return string|null
+    */
+    public function getMdeDeviceId(): ?string {
+        return $this->getBackingStore()->get('mdeDeviceId');
     }
 
     /**
@@ -85,11 +94,20 @@ class RegistryValueEvidence extends AlertEvidence implements Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeStringValue('mdeDeviceId', $this->getMdeDeviceId());
         $writer->writeStringValue('registryHive', $this->getRegistryHive());
         $writer->writeStringValue('registryKey', $this->getRegistryKey());
         $writer->writeStringValue('registryValue', $this->getRegistryValue());
         $writer->writeStringValue('registryValueName', $this->getRegistryValueName());
         $writer->writeStringValue('registryValueType', $this->getRegistryValueType());
+    }
+
+    /**
+     * Sets the mdeDeviceId property value. The mdeDeviceId property
+     * @param string|null $value Value to set for the mdeDeviceId property.
+    */
+    public function setMdeDeviceId(?string $value): void {
+        $this->getBackingStore()->set('mdeDeviceId', $value);
     }
 
     /**

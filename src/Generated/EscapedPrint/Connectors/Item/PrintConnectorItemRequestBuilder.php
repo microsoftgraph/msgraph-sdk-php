@@ -32,7 +32,7 @@ class PrintConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete (unregister) a **printConnector**.
+     * Delete (unregister) a printConnector.
      * @param PrintConnectorItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
      * @link https://docs.microsoft.com/graph/api/printconnector-delete?view=graph-rest-1.0 Find more info here
@@ -90,7 +90,7 @@ class PrintConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete (unregister) a **printConnector**.
+     * Delete (unregister) a printConnector.
      * @param PrintConnectorItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

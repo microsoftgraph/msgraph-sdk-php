@@ -70,11 +70,11 @@ class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a cross-tenant user synchronization policy for a partner-specific configuration.
+     * Update the user synchronization policy of a partner-specific configuration.
      * @param CrossTenantIdentitySyncPolicyPartner $body The request body
      * @param IdentitySynchronizationRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/crosstenantaccesspolicyconfigurationpartner-put-identitysynchronization?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/crosstenantidentitysyncpolicypartner-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(CrossTenantIdentitySyncPolicyPartner $body, ?IdentitySynchronizationRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -128,7 +128,7 @@ class IdentitySynchronizationRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a cross-tenant user synchronization policy for a partner-specific configuration.
+     * Update the user synchronization policy of a partner-specific configuration.
      * @param CrossTenantIdentitySyncPolicyPartner $body The request body
      * @param IdentitySynchronizationRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

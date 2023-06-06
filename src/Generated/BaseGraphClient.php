@@ -11,7 +11,6 @@ use Microsoft\Graph\Generated\ApplicationTemplates\ApplicationTemplatesRequestBu
 use Microsoft\Graph\Generated\AuditLogs\AuditLogsRequestBuilder;
 use Microsoft\Graph\Generated\AuthenticationMethodConfigurations\AuthenticationMethodConfigurationsRequestBuilder;
 use Microsoft\Graph\Generated\AuthenticationMethodsPolicy\AuthenticationMethodsPolicyRequestBuilder;
-use Microsoft\Graph\Generated\Branding\BrandingRequestBuilder;
 use Microsoft\Graph\Generated\CertificateBasedAuthConfiguration\CertificateBasedAuthConfigurationRequestBuilder;
 use Microsoft\Graph\Generated\Chats\ChatsRequestBuilder;
 use Microsoft\Graph\Generated\Communications\CommunicationsRequestBuilder;
@@ -147,13 +146,6 @@ class BaseGraphClient extends BaseRequestBuilder
     */
     public function authenticationMethodsPolicy(): AuthenticationMethodsPolicyRequestBuilder {
         return new AuthenticationMethodsPolicyRequestBuilder($this->pathParameters, $this->requestAdapter);
-    }
-    
-    /**
-     * Provides operations to manage the organizationalBranding singleton.
-    */
-    public function branding(): BrandingRequestBuilder {
-        return new BrandingRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

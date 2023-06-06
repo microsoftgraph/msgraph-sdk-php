@@ -64,7 +64,7 @@ class CollapseProperty implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the fields property value. The fields property
+     * Gets the fields property value. Defines the collapse group to trim results. The properties in this collection must be sortable/refinable properties. Required.
      * @return array<string>|null
     */
     public function getFields(): ?array {
@@ -72,7 +72,7 @@ class CollapseProperty implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the limit property value. The limit property
+     * Gets the limit property value. Defines a maximum limit count for this field. This numeric value must be a positive integer. Required.
      * @return int|null
     */
     public function getLimit(): ?int {
@@ -115,7 +115,7 @@ class CollapseProperty implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the fields property value. The fields property
+     * Sets the fields property value. Defines the collapse group to trim results. The properties in this collection must be sortable/refinable properties. Required.
      * @param array<string>|null $value Value to set for the fields property.
     */
     public function setFields(?array $value): void {
@@ -123,7 +123,7 @@ class CollapseProperty implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the limit property value. The limit property
+     * Sets the limit property value. Defines a maximum limit count for this field. This numeric value must be a positive integer. Required.
      * @param int|null $value Value to set for the limit property.
     */
     public function setLimit(?int $value): void {

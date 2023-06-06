@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class CustomSecurityAttributeDefinition extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new CustomSecurityAttributeDefinition and sets the default values.
+     * Instantiates a new customSecurityAttributeDefinition and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -25,7 +25,7 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the allowedValues property value. The allowedValues property
+     * Gets the allowedValues property value. Values that are predefined for this custom security attribute. This navigation property is not returned by default and must be specified in an $expand query. For example, /directory/customSecurityAttributeDefinitions?$expand=allowedValues.
      * @return array<AllowedValue>|null
     */
     public function getAllowedValues(): ?array {
@@ -33,7 +33,7 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the attributeSet property value. The attributeSet property
+     * Gets the attributeSet property value. Name of the attribute set. Case insensitive.
      * @return string|null
     */
     public function getAttributeSet(): ?string {
@@ -41,7 +41,7 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the description property value. The description property
+     * Gets the description property value. Description of the custom security attribute. Can be up to 128 characters long and include Unicode characters. Can be changed later.
      * @return string|null
     */
     public function getDescription(): ?string {
@@ -68,7 +68,7 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the isCollection property value. The isCollection property
+     * Gets the isCollection property value. Indicates whether multiple values can be assigned to the custom security attribute. Cannot be changed later. If type is set to Boolean, isCollection cannot be set to true.
      * @return bool|null
     */
     public function getIsCollection(): ?bool {
@@ -76,7 +76,7 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the isSearchable property value. The isSearchable property
+     * Gets the isSearchable property value. Indicates whether custom security attribute values are indexed for searching on objects that are assigned attribute values. Cannot be changed later.
      * @return bool|null
     */
     public function getIsSearchable(): ?bool {
@@ -84,7 +84,7 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the name property value. The name property
+     * Gets the name property value. Name of the custom security attribute. Must be unique within an attribute set. Can be up to 32 characters long and include Unicode characters. Cannot contain spaces or special characters. Cannot be changed later. Case insensitive.
      * @return string|null
     */
     public function getName(): ?string {
@@ -92,7 +92,7 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the status property value. The status property
+     * Gets the status property value. Specifies whether the custom security attribute is active or deactivated. Acceptable values are: Available and Deprecated. Can be changed later.
      * @return string|null
     */
     public function getStatus(): ?string {
@@ -100,7 +100,7 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the type property value. The type property
+     * Gets the type property value. Data type for the custom security attribute values. Supported types are: Boolean, Integer, and String. Cannot be changed later.
      * @return string|null
     */
     public function getType(): ?string {
@@ -108,7 +108,7 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
     }
 
     /**
-     * Gets the usePreDefinedValuesOnly property value. The usePreDefinedValuesOnly property
+     * Gets the usePreDefinedValuesOnly property value. Indicates whether only predefined values can be assigned to the custom security attribute. If set to false, free-form values are allowed. Can later be changed from true to false, but cannot be changed from false to true. If type is set to Boolean, usePreDefinedValuesOnly cannot be set to true.
      * @return bool|null
     */
     public function getUsePreDefinedValuesOnly(): ?bool {
@@ -133,7 +133,7 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the allowedValues property value. The allowedValues property
+     * Sets the allowedValues property value. Values that are predefined for this custom security attribute. This navigation property is not returned by default and must be specified in an $expand query. For example, /directory/customSecurityAttributeDefinitions?$expand=allowedValues.
      * @param array<AllowedValue>|null $value Value to set for the allowedValues property.
     */
     public function setAllowedValues(?array $value): void {
@@ -141,7 +141,7 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the attributeSet property value. The attributeSet property
+     * Sets the attributeSet property value. Name of the attribute set. Case insensitive.
      * @param string|null $value Value to set for the attributeSet property.
     */
     public function setAttributeSet(?string $value): void {
@@ -149,7 +149,7 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the description property value. The description property
+     * Sets the description property value. Description of the custom security attribute. Can be up to 128 characters long and include Unicode characters. Can be changed later.
      * @param string|null $value Value to set for the description property.
     */
     public function setDescription(?string $value): void {
@@ -157,7 +157,7 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the isCollection property value. The isCollection property
+     * Sets the isCollection property value. Indicates whether multiple values can be assigned to the custom security attribute. Cannot be changed later. If type is set to Boolean, isCollection cannot be set to true.
      * @param bool|null $value Value to set for the isCollection property.
     */
     public function setIsCollection(?bool $value): void {
@@ -165,7 +165,7 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the isSearchable property value. The isSearchable property
+     * Sets the isSearchable property value. Indicates whether custom security attribute values are indexed for searching on objects that are assigned attribute values. Cannot be changed later.
      * @param bool|null $value Value to set for the isSearchable property.
     */
     public function setIsSearchable(?bool $value): void {
@@ -173,7 +173,7 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the name property value. The name property
+     * Sets the name property value. Name of the custom security attribute. Must be unique within an attribute set. Can be up to 32 characters long and include Unicode characters. Cannot contain spaces or special characters. Cannot be changed later. Case insensitive.
      * @param string|null $value Value to set for the name property.
     */
     public function setName(?string $value): void {
@@ -181,7 +181,7 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the status property value. The status property
+     * Sets the status property value. Specifies whether the custom security attribute is active or deactivated. Acceptable values are: Available and Deprecated. Can be changed later.
      * @param string|null $value Value to set for the status property.
     */
     public function setStatus(?string $value): void {
@@ -189,7 +189,7 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the type property value. The type property
+     * Sets the type property value. Data type for the custom security attribute values. Supported types are: Boolean, Integer, and String. Cannot be changed later.
      * @param string|null $value Value to set for the type property.
     */
     public function setType(?string $value): void {
@@ -197,7 +197,7 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
     }
 
     /**
-     * Sets the usePreDefinedValuesOnly property value. The usePreDefinedValuesOnly property
+     * Sets the usePreDefinedValuesOnly property value. Indicates whether only predefined values can be assigned to the custom security attribute. If set to false, free-form values are allowed. Can later be changed from true to false, but cannot be changed from false to true. If type is set to Boolean, usePreDefinedValuesOnly cannot be set to true.
      * @param bool|null $value Value to set for the usePreDefinedValuesOnly property.
     */
     public function setUsePreDefinedValuesOnly(?bool $value): void {

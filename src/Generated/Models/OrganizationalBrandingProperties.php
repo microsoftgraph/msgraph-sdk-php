@@ -82,6 +82,110 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
     }
 
     /**
+     * Gets the customAccountResetCredentialsUrl property value. The customAccountResetCredentialsUrl property
+     * @return string|null
+    */
+    public function getCustomAccountResetCredentialsUrl(): ?string {
+        return $this->getBackingStore()->get('customAccountResetCredentialsUrl');
+    }
+
+    /**
+     * Gets the customCannotAccessYourAccountText property value. The customCannotAccessYourAccountText property
+     * @return string|null
+    */
+    public function getCustomCannotAccessYourAccountText(): ?string {
+        return $this->getBackingStore()->get('customCannotAccessYourAccountText');
+    }
+
+    /**
+     * Gets the customCannotAccessYourAccountUrl property value. The customCannotAccessYourAccountUrl property
+     * @return string|null
+    */
+    public function getCustomCannotAccessYourAccountUrl(): ?string {
+        return $this->getBackingStore()->get('customCannotAccessYourAccountUrl');
+    }
+
+    /**
+     * Gets the customCSS property value. The customCSS property
+     * @return StreamInterface|null
+    */
+    public function getCustomCSS(): ?StreamInterface {
+        return $this->getBackingStore()->get('customCSS');
+    }
+
+    /**
+     * Gets the customCSSRelativeUrl property value. The customCSSRelativeUrl property
+     * @return string|null
+    */
+    public function getCustomCSSRelativeUrl(): ?string {
+        return $this->getBackingStore()->get('customCSSRelativeUrl');
+    }
+
+    /**
+     * Gets the customForgotMyPasswordText property value. The customForgotMyPasswordText property
+     * @return string|null
+    */
+    public function getCustomForgotMyPasswordText(): ?string {
+        return $this->getBackingStore()->get('customForgotMyPasswordText');
+    }
+
+    /**
+     * Gets the customPrivacyAndCookiesText property value. The customPrivacyAndCookiesText property
+     * @return string|null
+    */
+    public function getCustomPrivacyAndCookiesText(): ?string {
+        return $this->getBackingStore()->get('customPrivacyAndCookiesText');
+    }
+
+    /**
+     * Gets the customPrivacyAndCookiesUrl property value. The customPrivacyAndCookiesUrl property
+     * @return string|null
+    */
+    public function getCustomPrivacyAndCookiesUrl(): ?string {
+        return $this->getBackingStore()->get('customPrivacyAndCookiesUrl');
+    }
+
+    /**
+     * Gets the customResetItNowText property value. The customResetItNowText property
+     * @return string|null
+    */
+    public function getCustomResetItNowText(): ?string {
+        return $this->getBackingStore()->get('customResetItNowText');
+    }
+
+    /**
+     * Gets the customTermsOfUseText property value. The customTermsOfUseText property
+     * @return string|null
+    */
+    public function getCustomTermsOfUseText(): ?string {
+        return $this->getBackingStore()->get('customTermsOfUseText');
+    }
+
+    /**
+     * Gets the customTermsOfUseUrl property value. The customTermsOfUseUrl property
+     * @return string|null
+    */
+    public function getCustomTermsOfUseUrl(): ?string {
+        return $this->getBackingStore()->get('customTermsOfUseUrl');
+    }
+
+    /**
+     * Gets the favicon property value. The favicon property
+     * @return StreamInterface|null
+    */
+    public function getFavicon(): ?StreamInterface {
+        return $this->getBackingStore()->get('favicon');
+    }
+
+    /**
+     * Gets the faviconRelativeUrl property value. The faviconRelativeUrl property
+     * @return string|null
+    */
+    public function getFaviconRelativeUrl(): ?string {
+        return $this->getBackingStore()->get('faviconRelativeUrl');
+    }
+
+    /**
      * The deserialization information for the current model
      * @return array<string, callable>
     */
@@ -94,11 +198,71 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
             'bannerLogo' => fn(ParseNode $n) => $o->setBannerLogo($n->getBinaryContent()),
             'bannerLogoRelativeUrl' => fn(ParseNode $n) => $o->setBannerLogoRelativeUrl($n->getStringValue()),
             'cdnList' => fn(ParseNode $n) => $o->setCdnList($n->getCollectionOfPrimitiveValues()),
+            'customAccountResetCredentialsUrl' => fn(ParseNode $n) => $o->setCustomAccountResetCredentialsUrl($n->getStringValue()),
+            'customCannotAccessYourAccountText' => fn(ParseNode $n) => $o->setCustomCannotAccessYourAccountText($n->getStringValue()),
+            'customCannotAccessYourAccountUrl' => fn(ParseNode $n) => $o->setCustomCannotAccessYourAccountUrl($n->getStringValue()),
+            'customCSS' => fn(ParseNode $n) => $o->setCustomCSS($n->getBinaryContent()),
+            'customCSSRelativeUrl' => fn(ParseNode $n) => $o->setCustomCSSRelativeUrl($n->getStringValue()),
+            'customForgotMyPasswordText' => fn(ParseNode $n) => $o->setCustomForgotMyPasswordText($n->getStringValue()),
+            'customPrivacyAndCookiesText' => fn(ParseNode $n) => $o->setCustomPrivacyAndCookiesText($n->getStringValue()),
+            'customPrivacyAndCookiesUrl' => fn(ParseNode $n) => $o->setCustomPrivacyAndCookiesUrl($n->getStringValue()),
+            'customResetItNowText' => fn(ParseNode $n) => $o->setCustomResetItNowText($n->getStringValue()),
+            'customTermsOfUseText' => fn(ParseNode $n) => $o->setCustomTermsOfUseText($n->getStringValue()),
+            'customTermsOfUseUrl' => fn(ParseNode $n) => $o->setCustomTermsOfUseUrl($n->getStringValue()),
+            'favicon' => fn(ParseNode $n) => $o->setFavicon($n->getBinaryContent()),
+            'faviconRelativeUrl' => fn(ParseNode $n) => $o->setFaviconRelativeUrl($n->getStringValue()),
+            'headerBackgroundColor' => fn(ParseNode $n) => $o->setHeaderBackgroundColor($n->getStringValue()),
+            'headerLogo' => fn(ParseNode $n) => $o->setHeaderLogo($n->getBinaryContent()),
+            'headerLogoRelativeUrl' => fn(ParseNode $n) => $o->setHeaderLogoRelativeUrl($n->getStringValue()),
+            'loginPageLayoutConfiguration' => fn(ParseNode $n) => $o->setLoginPageLayoutConfiguration($n->getObjectValue([LoginPageLayoutConfiguration::class, 'createFromDiscriminatorValue'])),
+            'loginPageTextVisibilitySettings' => fn(ParseNode $n) => $o->setLoginPageTextVisibilitySettings($n->getObjectValue([LoginPageTextVisibilitySettings::class, 'createFromDiscriminatorValue'])),
             'signInPageText' => fn(ParseNode $n) => $o->setSignInPageText($n->getStringValue()),
             'squareLogo' => fn(ParseNode $n) => $o->setSquareLogo($n->getBinaryContent()),
+            'squareLogoDark' => fn(ParseNode $n) => $o->setSquareLogoDark($n->getBinaryContent()),
+            'squareLogoDarkRelativeUrl' => fn(ParseNode $n) => $o->setSquareLogoDarkRelativeUrl($n->getStringValue()),
             'squareLogoRelativeUrl' => fn(ParseNode $n) => $o->setSquareLogoRelativeUrl($n->getStringValue()),
             'usernameHintText' => fn(ParseNode $n) => $o->setUsernameHintText($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the headerBackgroundColor property value. The headerBackgroundColor property
+     * @return string|null
+    */
+    public function getHeaderBackgroundColor(): ?string {
+        return $this->getBackingStore()->get('headerBackgroundColor');
+    }
+
+    /**
+     * Gets the headerLogo property value. The headerLogo property
+     * @return StreamInterface|null
+    */
+    public function getHeaderLogo(): ?StreamInterface {
+        return $this->getBackingStore()->get('headerLogo');
+    }
+
+    /**
+     * Gets the headerLogoRelativeUrl property value. The headerLogoRelativeUrl property
+     * @return string|null
+    */
+    public function getHeaderLogoRelativeUrl(): ?string {
+        return $this->getBackingStore()->get('headerLogoRelativeUrl');
+    }
+
+    /**
+     * Gets the loginPageLayoutConfiguration property value. The loginPageLayoutConfiguration property
+     * @return LoginPageLayoutConfiguration|null
+    */
+    public function getLoginPageLayoutConfiguration(): ?LoginPageLayoutConfiguration {
+        return $this->getBackingStore()->get('loginPageLayoutConfiguration');
+    }
+
+    /**
+     * Gets the loginPageTextVisibilitySettings property value. The loginPageTextVisibilitySettings property
+     * @return LoginPageTextVisibilitySettings|null
+    */
+    public function getLoginPageTextVisibilitySettings(): ?LoginPageTextVisibilitySettings {
+        return $this->getBackingStore()->get('loginPageTextVisibilitySettings');
     }
 
     /**
@@ -115,6 +279,22 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
     */
     public function getSquareLogo(): ?StreamInterface {
         return $this->getBackingStore()->get('squareLogo');
+    }
+
+    /**
+     * Gets the squareLogoDark property value. The squareLogoDark property
+     * @return StreamInterface|null
+    */
+    public function getSquareLogoDark(): ?StreamInterface {
+        return $this->getBackingStore()->get('squareLogoDark');
+    }
+
+    /**
+     * Gets the squareLogoDarkRelativeUrl property value. The squareLogoDarkRelativeUrl property
+     * @return string|null
+    */
+    public function getSquareLogoDarkRelativeUrl(): ?string {
+        return $this->getBackingStore()->get('squareLogoDarkRelativeUrl');
     }
 
     /**
@@ -145,8 +325,28 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
         $writer->writeBinaryContent('bannerLogo', $this->getBannerLogo());
         $writer->writeStringValue('bannerLogoRelativeUrl', $this->getBannerLogoRelativeUrl());
         $writer->writeCollectionOfPrimitiveValues('cdnList', $this->getCdnList());
+        $writer->writeStringValue('customAccountResetCredentialsUrl', $this->getCustomAccountResetCredentialsUrl());
+        $writer->writeStringValue('customCannotAccessYourAccountText', $this->getCustomCannotAccessYourAccountText());
+        $writer->writeStringValue('customCannotAccessYourAccountUrl', $this->getCustomCannotAccessYourAccountUrl());
+        $writer->writeBinaryContent('customCSS', $this->getCustomCSS());
+        $writer->writeStringValue('customCSSRelativeUrl', $this->getCustomCSSRelativeUrl());
+        $writer->writeStringValue('customForgotMyPasswordText', $this->getCustomForgotMyPasswordText());
+        $writer->writeStringValue('customPrivacyAndCookiesText', $this->getCustomPrivacyAndCookiesText());
+        $writer->writeStringValue('customPrivacyAndCookiesUrl', $this->getCustomPrivacyAndCookiesUrl());
+        $writer->writeStringValue('customResetItNowText', $this->getCustomResetItNowText());
+        $writer->writeStringValue('customTermsOfUseText', $this->getCustomTermsOfUseText());
+        $writer->writeStringValue('customTermsOfUseUrl', $this->getCustomTermsOfUseUrl());
+        $writer->writeBinaryContent('favicon', $this->getFavicon());
+        $writer->writeStringValue('faviconRelativeUrl', $this->getFaviconRelativeUrl());
+        $writer->writeStringValue('headerBackgroundColor', $this->getHeaderBackgroundColor());
+        $writer->writeBinaryContent('headerLogo', $this->getHeaderLogo());
+        $writer->writeStringValue('headerLogoRelativeUrl', $this->getHeaderLogoRelativeUrl());
+        $writer->writeObjectValue('loginPageLayoutConfiguration', $this->getLoginPageLayoutConfiguration());
+        $writer->writeObjectValue('loginPageTextVisibilitySettings', $this->getLoginPageTextVisibilitySettings());
         $writer->writeStringValue('signInPageText', $this->getSignInPageText());
         $writer->writeBinaryContent('squareLogo', $this->getSquareLogo());
+        $writer->writeBinaryContent('squareLogoDark', $this->getSquareLogoDark());
+        $writer->writeStringValue('squareLogoDarkRelativeUrl', $this->getSquareLogoDarkRelativeUrl());
         $writer->writeStringValue('squareLogoRelativeUrl', $this->getSquareLogoRelativeUrl());
         $writer->writeStringValue('usernameHintText', $this->getUsernameHintText());
     }
@@ -200,6 +400,150 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
     }
 
     /**
+     * Sets the customAccountResetCredentialsUrl property value. The customAccountResetCredentialsUrl property
+     * @param string|null $value Value to set for the customAccountResetCredentialsUrl property.
+    */
+    public function setCustomAccountResetCredentialsUrl(?string $value): void {
+        $this->getBackingStore()->set('customAccountResetCredentialsUrl', $value);
+    }
+
+    /**
+     * Sets the customCannotAccessYourAccountText property value. The customCannotAccessYourAccountText property
+     * @param string|null $value Value to set for the customCannotAccessYourAccountText property.
+    */
+    public function setCustomCannotAccessYourAccountText(?string $value): void {
+        $this->getBackingStore()->set('customCannotAccessYourAccountText', $value);
+    }
+
+    /**
+     * Sets the customCannotAccessYourAccountUrl property value. The customCannotAccessYourAccountUrl property
+     * @param string|null $value Value to set for the customCannotAccessYourAccountUrl property.
+    */
+    public function setCustomCannotAccessYourAccountUrl(?string $value): void {
+        $this->getBackingStore()->set('customCannotAccessYourAccountUrl', $value);
+    }
+
+    /**
+     * Sets the customCSS property value. The customCSS property
+     * @param StreamInterface|null $value Value to set for the customCSS property.
+    */
+    public function setCustomCSS(?StreamInterface $value): void {
+        $this->getBackingStore()->set('customCSS', $value);
+    }
+
+    /**
+     * Sets the customCSSRelativeUrl property value. The customCSSRelativeUrl property
+     * @param string|null $value Value to set for the customCSSRelativeUrl property.
+    */
+    public function setCustomCSSRelativeUrl(?string $value): void {
+        $this->getBackingStore()->set('customCSSRelativeUrl', $value);
+    }
+
+    /**
+     * Sets the customForgotMyPasswordText property value. The customForgotMyPasswordText property
+     * @param string|null $value Value to set for the customForgotMyPasswordText property.
+    */
+    public function setCustomForgotMyPasswordText(?string $value): void {
+        $this->getBackingStore()->set('customForgotMyPasswordText', $value);
+    }
+
+    /**
+     * Sets the customPrivacyAndCookiesText property value. The customPrivacyAndCookiesText property
+     * @param string|null $value Value to set for the customPrivacyAndCookiesText property.
+    */
+    public function setCustomPrivacyAndCookiesText(?string $value): void {
+        $this->getBackingStore()->set('customPrivacyAndCookiesText', $value);
+    }
+
+    /**
+     * Sets the customPrivacyAndCookiesUrl property value. The customPrivacyAndCookiesUrl property
+     * @param string|null $value Value to set for the customPrivacyAndCookiesUrl property.
+    */
+    public function setCustomPrivacyAndCookiesUrl(?string $value): void {
+        $this->getBackingStore()->set('customPrivacyAndCookiesUrl', $value);
+    }
+
+    /**
+     * Sets the customResetItNowText property value. The customResetItNowText property
+     * @param string|null $value Value to set for the customResetItNowText property.
+    */
+    public function setCustomResetItNowText(?string $value): void {
+        $this->getBackingStore()->set('customResetItNowText', $value);
+    }
+
+    /**
+     * Sets the customTermsOfUseText property value. The customTermsOfUseText property
+     * @param string|null $value Value to set for the customTermsOfUseText property.
+    */
+    public function setCustomTermsOfUseText(?string $value): void {
+        $this->getBackingStore()->set('customTermsOfUseText', $value);
+    }
+
+    /**
+     * Sets the customTermsOfUseUrl property value. The customTermsOfUseUrl property
+     * @param string|null $value Value to set for the customTermsOfUseUrl property.
+    */
+    public function setCustomTermsOfUseUrl(?string $value): void {
+        $this->getBackingStore()->set('customTermsOfUseUrl', $value);
+    }
+
+    /**
+     * Sets the favicon property value. The favicon property
+     * @param StreamInterface|null $value Value to set for the favicon property.
+    */
+    public function setFavicon(?StreamInterface $value): void {
+        $this->getBackingStore()->set('favicon', $value);
+    }
+
+    /**
+     * Sets the faviconRelativeUrl property value. The faviconRelativeUrl property
+     * @param string|null $value Value to set for the faviconRelativeUrl property.
+    */
+    public function setFaviconRelativeUrl(?string $value): void {
+        $this->getBackingStore()->set('faviconRelativeUrl', $value);
+    }
+
+    /**
+     * Sets the headerBackgroundColor property value. The headerBackgroundColor property
+     * @param string|null $value Value to set for the headerBackgroundColor property.
+    */
+    public function setHeaderBackgroundColor(?string $value): void {
+        $this->getBackingStore()->set('headerBackgroundColor', $value);
+    }
+
+    /**
+     * Sets the headerLogo property value. The headerLogo property
+     * @param StreamInterface|null $value Value to set for the headerLogo property.
+    */
+    public function setHeaderLogo(?StreamInterface $value): void {
+        $this->getBackingStore()->set('headerLogo', $value);
+    }
+
+    /**
+     * Sets the headerLogoRelativeUrl property value. The headerLogoRelativeUrl property
+     * @param string|null $value Value to set for the headerLogoRelativeUrl property.
+    */
+    public function setHeaderLogoRelativeUrl(?string $value): void {
+        $this->getBackingStore()->set('headerLogoRelativeUrl', $value);
+    }
+
+    /**
+     * Sets the loginPageLayoutConfiguration property value. The loginPageLayoutConfiguration property
+     * @param LoginPageLayoutConfiguration|null $value Value to set for the loginPageLayoutConfiguration property.
+    */
+    public function setLoginPageLayoutConfiguration(?LoginPageLayoutConfiguration $value): void {
+        $this->getBackingStore()->set('loginPageLayoutConfiguration', $value);
+    }
+
+    /**
+     * Sets the loginPageTextVisibilitySettings property value. The loginPageTextVisibilitySettings property
+     * @param LoginPageTextVisibilitySettings|null $value Value to set for the loginPageTextVisibilitySettings property.
+    */
+    public function setLoginPageTextVisibilitySettings(?LoginPageTextVisibilitySettings $value): void {
+        $this->getBackingStore()->set('loginPageTextVisibilitySettings', $value);
+    }
+
+    /**
      * Sets the signInPageText property value. Text that appears at the bottom of the sign-in box. You can use this to communicate additional information, such as the phone number to your help desk or a legal statement. This text must be Unicode and not exceed 1024 characters.
      * @param string|null $value Value to set for the signInPageText property.
     */
@@ -213,6 +557,22 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
     */
     public function setSquareLogo(?StreamInterface $value): void {
         $this->getBackingStore()->set('squareLogo', $value);
+    }
+
+    /**
+     * Sets the squareLogoDark property value. The squareLogoDark property
+     * @param StreamInterface|null $value Value to set for the squareLogoDark property.
+    */
+    public function setSquareLogoDark(?StreamInterface $value): void {
+        $this->getBackingStore()->set('squareLogoDark', $value);
+    }
+
+    /**
+     * Sets the squareLogoDarkRelativeUrl property value. The squareLogoDarkRelativeUrl property
+     * @param string|null $value Value to set for the squareLogoDarkRelativeUrl property.
+    */
+    public function setSquareLogoDarkRelativeUrl(?string $value): void {
+        $this->getBackingStore()->set('squareLogoDarkRelativeUrl', $value);
     }
 
     /**

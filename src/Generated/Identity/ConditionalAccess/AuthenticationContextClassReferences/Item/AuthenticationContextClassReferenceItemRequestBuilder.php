@@ -32,9 +32,10 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Delete navigation property authenticationContextClassReferences for identity
+     * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy.
      * @param AuthenticationContextClassReferenceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/authenticationcontextclassreference-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?AuthenticationContextClassReferenceItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -50,9 +51,10 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Read-only. Nullable. Returns a collection of the specified authentication context class references.
+     * Retrieve the properties and relationships of a authenticationContextClassReference object.
      * @param AuthenticationContextClassReferenceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/authenticationcontextclassreference-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AuthenticationContextClassReferenceItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,10 +70,11 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Update the navigation property authenticationContextClassReferences in identity
+     * Create an authenticationContextClassReference object, if the ID has not been used. If ID has been used, this call updates the authenticationContextClassReference object.
      * @param AuthenticationContextClassReference $body The request body
      * @param AuthenticationContextClassReferenceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/authenticationcontextclassreference-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(AuthenticationContextClassReference $body, ?AuthenticationContextClassReferenceItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -87,7 +90,7 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Delete navigation property authenticationContextClassReferences for identity
+     * Delete an authenticationContextClassReference object that's not published or used by a conditional access policy.
      * @param AuthenticationContextClassReferenceItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +107,7 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Read-only. Nullable. Returns a collection of the specified authentication context class references.
+     * Retrieve the properties and relationships of a authenticationContextClassReference object.
      * @param AuthenticationContextClassReferenceItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +128,7 @@ class AuthenticationContextClassReferenceItemRequestBuilder extends BaseRequestB
     }
 
     /**
-     * Update the navigation property authenticationContextClassReferences in identity
+     * Create an authenticationContextClassReference object, if the ID has not been used. If ID has been used, this call updates the authenticationContextClassReference object.
      * @param AuthenticationContextClassReference $body The request body
      * @param AuthenticationContextClassReferenceItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

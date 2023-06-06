@@ -50,9 +50,10 @@ class AttributeSetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get attributeSets from directory
+     * Read the properties and relationships of an attributeSet object.
      * @param AttributeSetItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/attributeset-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AttributeSetItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,10 +69,11 @@ class AttributeSetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property attributeSets in directory
+     * Update the properties of an attributeSet object.
      * @param AttributeSet $body The request body
      * @param AttributeSetItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/attributeset-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(AttributeSet $body, ?AttributeSetItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -104,7 +106,7 @@ class AttributeSetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get attributeSets from directory
+     * Read the properties and relationships of an attributeSet object.
      * @param AttributeSetItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +127,7 @@ class AttributeSetItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property attributeSets in directory
+     * Update the properties of an attributeSet object.
      * @param AttributeSet $body The request body
      * @param AttributeSetItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

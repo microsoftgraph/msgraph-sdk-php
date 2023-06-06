@@ -61,6 +61,7 @@ class DeviceEvidence extends AlertEvidence implements Parsable
             'deviceDnsName' => fn(ParseNode $n) => $o->setDeviceDnsName($n->getStringValue()),
             'firstSeenDateTime' => fn(ParseNode $n) => $o->setFirstSeenDateTime($n->getDateTimeValue()),
             'healthStatus' => fn(ParseNode $n) => $o->setHealthStatus($n->getEnumValue(DeviceHealthStatus::class)),
+            'ipInterfaces' => fn(ParseNode $n) => $o->setIpInterfaces($n->getCollectionOfPrimitiveValues()),
             'loggedOnUsers' => fn(ParseNode $n) => $o->setLoggedOnUsers($n->getCollectionOfObjectValues([LoggedOnUser::class, 'createFromDiscriminatorValue'])),
             'mdeDeviceId' => fn(ParseNode $n) => $o->setMdeDeviceId($n->getStringValue()),
             'onboardingStatus' => fn(ParseNode $n) => $o->setOnboardingStatus($n->getEnumValue(OnboardingStatus::class)),
@@ -88,6 +89,14 @@ class DeviceEvidence extends AlertEvidence implements Parsable
     */
     public function getHealthStatus(): ?DeviceHealthStatus {
         return $this->getBackingStore()->get('healthStatus');
+    }
+
+    /**
+     * Gets the ipInterfaces property value. The ipInterfaces property
+     * @return array<string>|null
+    */
+    public function getIpInterfaces(): ?array {
+        return $this->getBackingStore()->get('ipInterfaces');
     }
 
     /**
@@ -181,6 +190,7 @@ class DeviceEvidence extends AlertEvidence implements Parsable
         $writer->writeStringValue('deviceDnsName', $this->getDeviceDnsName());
         $writer->writeDateTimeValue('firstSeenDateTime', $this->getFirstSeenDateTime());
         $writer->writeEnumValue('healthStatus', $this->getHealthStatus());
+        $writer->writeCollectionOfPrimitiveValues('ipInterfaces', $this->getIpInterfaces());
         $writer->writeCollectionOfObjectValues('loggedOnUsers', $this->getLoggedOnUsers());
         $writer->writeStringValue('mdeDeviceId', $this->getMdeDeviceId());
         $writer->writeEnumValue('onboardingStatus', $this->getOnboardingStatus());
@@ -231,6 +241,14 @@ class DeviceEvidence extends AlertEvidence implements Parsable
     */
     public function setHealthStatus(?DeviceHealthStatus $value): void {
         $this->getBackingStore()->set('healthStatus', $value);
+    }
+
+    /**
+     * Sets the ipInterfaces property value. The ipInterfaces property
+     * @param array<string>|null $value Value to set for the ipInterfaces property.
+    */
+    public function setIpInterfaces(?array $value): void {
+        $this->getBackingStore()->set('ipInterfaces', $value);
     }
 
     /**
