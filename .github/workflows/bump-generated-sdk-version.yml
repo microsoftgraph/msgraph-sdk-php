@@ -1,11 +1,7 @@
 # Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
 
-# This action will automatically create a pull request against feat/kiota-preview if the pushed branch
-# has a branch path spec like kiota/v1.0/pipelinebuild/*. Configure this action by updating the
-# environment variable values[0].
-
-name: "create Kiota Preview pull request"
+name: "Bump SDK version in generated pull request"
 
 # Controls when the action will run. Triggers the workflow on push
 # events but only for branches with the following branch spec: kiota/v1.0/pipelinebuild/*
