@@ -25,6 +25,7 @@ class AttributeMappingSource extends Entity
 {
     /**
     * Gets the expression
+    * Equivalent expression representation of this attributeMappingSource object.
     *
     * @return string|null The expression
     */
@@ -39,6 +40,7 @@ class AttributeMappingSource extends Entity
 
     /**
     * Sets the expression
+    * Equivalent expression representation of this attributeMappingSource object.
     *
     * @param string $val The value of the expression
     *
@@ -51,6 +53,7 @@ class AttributeMappingSource extends Entity
     }
     /**
     * Gets the name
+    * Name parameter of the mapping source. Depending on the type property value, this can be the name of the function, the name of the source attribute, or a constant value to be used.
     *
     * @return string|null The name
     */
@@ -65,6 +68,7 @@ class AttributeMappingSource extends Entity
 
     /**
     * Sets the name
+    * Name parameter of the mapping source. Depending on the type property value, this can be the name of the function, the name of the source attribute, or a constant value to be used.
     *
     * @param string $val The value of the name
     *
@@ -78,6 +82,7 @@ class AttributeMappingSource extends Entity
 
     /**
     * Gets the parameters
+    * If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type is not Function, this property will be null/empty array.
     *
     * @return StringKeyAttributeMappingSourceValuePair|null The parameters
     */
@@ -96,6 +101,7 @@ class AttributeMappingSource extends Entity
 
     /**
     * Sets the parameters
+    * If this object represents a function, lists function parameters. Parameters consist of attributeMappingSource objects themselves, allowing for complex expressions. If type is not Function, this property will be null/empty array.
     *
     * @param StringKeyAttributeMappingSourceValuePair $val The value to assign to the parameters
     *
@@ -109,6 +115,7 @@ class AttributeMappingSource extends Entity
 
     /**
     * Gets the type
+    * The type of this attribute mapping source. Possible values are: Attribute, Constant, Function. Default is Attribute.
     *
     * @return AttributeMappingSourceType|null The type
     */
@@ -127,6 +134,7 @@ class AttributeMappingSource extends Entity
 
     /**
     * Sets the type
+    * The type of this attribute mapping source. Possible values are: Attribute, Constant, Function. Default is Attribute.
     *
     * @param AttributeMappingSourceType $val The value to assign to the type
     *

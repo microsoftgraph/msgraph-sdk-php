@@ -25,6 +25,7 @@ class PlannerChecklistRequirement extends Entity
 {
     /**
     * Gets the requiredChecklistItemIds
+    * A collection of required plannerChecklistItems identifiers to complete the plannerTask.
     *
     * @return string|null The requiredChecklistItemIds
     */
@@ -39,6 +40,7 @@ class PlannerChecklistRequirement extends Entity
 
     /**
     * Sets the requiredChecklistItemIds
+    * A collection of required plannerChecklistItems identifiers to complete the plannerTask.
     *
     * @param string $val The value of the requiredChecklistItemIds
     *

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* WarrantyType File
+* UserExperienceAnalyticsDeviceStatus File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* WarrantyType class
+* UserExperienceAnalyticsDeviceStatus class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,13 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class WarrantyType extends Enum
+class UserExperienceAnalyticsDeviceStatus extends Enum
 {
     /**
-    * The Enum WarrantyType
+    * The Enum UserExperienceAnalyticsDeviceStatus
     */
-    const UNKNOWN = "unknown";
-    const MANUFACTURER = "manufacturer";
-    const CONTRACTUAL = "contractual";
+    const ANOMALOUS = "anomalous";
+    const AFFECTED = "affected";
+    const AT_RISK = "atRisk";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

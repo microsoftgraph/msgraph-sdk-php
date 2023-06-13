@@ -54,6 +54,7 @@ class SignInPreferences extends Entity
 
     /**
     * Gets the userPreferredMethodForSecondaryAuthentication
+    * The default second-factor method used by the user when signing in. If a user is enabled for system-preferred authentication, then this value is ignored except for a few scenarios where a user is authenticating via NPS extension or ADFS adapter. Possible values are push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, and unknownFutureValue
     *
     * @return UserDefaultAuthenticationMethodType|null The userPreferredMethodForSecondaryAuthentication
     */
@@ -72,6 +73,7 @@ class SignInPreferences extends Entity
 
     /**
     * Sets the userPreferredMethodForSecondaryAuthentication
+    * The default second-factor method used by the user when signing in. If a user is enabled for system-preferred authentication, then this value is ignored except for a few scenarios where a user is authenticating via NPS extension or ADFS adapter. Possible values are push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, and unknownFutureValue
     *
     * @param UserDefaultAuthenticationMethodType $val The value to assign to the userPreferredMethodForSecondaryAuthentication
     *

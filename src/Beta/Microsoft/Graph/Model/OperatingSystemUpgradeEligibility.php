@@ -33,4 +33,5 @@ class OperatingSystemUpgradeEligibility extends Enum
     const UNKNOWN = "unknown";
     const NOT_CAPABLE = "notCapable";
     const CAPABLE = "capable";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

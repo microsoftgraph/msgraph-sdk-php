@@ -150,6 +150,39 @@ class DeviceHealthScript extends Entity
     }
 
     /**
+    * Gets the deviceHealthScriptType
+    * DeviceHealthScriptType for the script policy
+    *
+    * @return DeviceHealthScriptType|null The deviceHealthScriptType
+    */
+    public function getDeviceHealthScriptType()
+    {
+        if (array_key_exists("deviceHealthScriptType", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceHealthScriptType"], "\Beta\Microsoft\Graph\Model\DeviceHealthScriptType") || is_null($this->_propDict["deviceHealthScriptType"])) {
+                return $this->_propDict["deviceHealthScriptType"];
+            } else {
+                $this->_propDict["deviceHealthScriptType"] = new DeviceHealthScriptType($this->_propDict["deviceHealthScriptType"]);
+                return $this->_propDict["deviceHealthScriptType"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the deviceHealthScriptType
+    * DeviceHealthScriptType for the script policy
+    *
+    * @param DeviceHealthScriptType $val The deviceHealthScriptType
+    *
+    * @return DeviceHealthScript
+    */
+    public function setDeviceHealthScriptType($val)
+    {
+        $this->_propDict["deviceHealthScriptType"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the displayName
     * Name of the device health script
     *

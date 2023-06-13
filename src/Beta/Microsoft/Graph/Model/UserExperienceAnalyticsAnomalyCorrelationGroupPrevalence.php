@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* OemWarrantyInformationOnboarding File
+* UserExperienceAnalyticsAnomalyCorrelationGroupPrevalence File
 * PHP version 7
 *
 * @category  Library
@@ -13,8 +13,10 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 
+use Microsoft\Graph\Core\Enum;
+
 /**
-* OemWarrantyInformationOnboarding class
+* UserExperienceAnalyticsAnomalyCorrelationGroupPrevalence class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,6 +24,13 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class OemWarrantyInformationOnboarding extends Entity
+class UserExperienceAnalyticsAnomalyCorrelationGroupPrevalence extends Enum
 {
+    /**
+    * The Enum UserExperienceAnalyticsAnomalyCorrelationGroupPrevalence
+    */
+    const HIGH = "high";
+    const MEDIUM = "medium";
+    const LOW = "low";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

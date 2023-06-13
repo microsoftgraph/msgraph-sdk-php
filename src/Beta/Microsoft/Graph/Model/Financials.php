@@ -55,6 +55,33 @@ class Financials implements \JsonSerializable
         return $this->_propDict;
     }
 
+    /**
+    * Gets the id
+    *
+    * @return string|null The id
+    */
+    public function getId()
+    {
+        if (array_key_exists("id", $this->_propDict)) {
+            return $this->_propDict["id"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the id
+    *
+    * @param string $val The id
+    *
+    * @return Financials
+    */
+    public function setId($val)
+    {
+        $this->_propDict["id"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the companies

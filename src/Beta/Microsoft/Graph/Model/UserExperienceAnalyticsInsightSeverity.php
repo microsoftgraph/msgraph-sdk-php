@@ -33,4 +33,5 @@ class UserExperienceAnalyticsInsightSeverity extends Enum
     const INFORMATIONAL = "informational";
     const WARNING = "warning";
     const ERROR = "error";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

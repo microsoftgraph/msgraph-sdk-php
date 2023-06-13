@@ -489,6 +489,35 @@ class DepMacOSEnrollmentProfile extends DepEnrollmentBaseProfile
     }
 
     /**
+    * Gets the requestRequiresNetworkTether
+    * Indicates if the device is network-tethered to run the command
+    *
+    * @return bool|null The requestRequiresNetworkTether
+    */
+    public function getRequestRequiresNetworkTether()
+    {
+        if (array_key_exists("requestRequiresNetworkTether", $this->_propDict)) {
+            return $this->_propDict["requestRequiresNetworkTether"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the requestRequiresNetworkTether
+    * Indicates if the device is network-tethered to run the command
+    *
+    * @param bool $val The requestRequiresNetworkTether
+    *
+    * @return DepMacOSEnrollmentProfile
+    */
+    public function setRequestRequiresNetworkTether($val)
+    {
+        $this->_propDict["requestRequiresNetworkTether"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the setPrimarySetupAccountAsRegularUser
     * Indicates whether Setup Assistant will set the account as a regular user
     *
