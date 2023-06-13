@@ -1,13 +1,13 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Users\Item\MailFolders\Item\Messages\Item\Attachments;
+namespace Microsoft\Graph\Generated\Teams;
 
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Retrieve a list of attachment objects attached to a message.
+ * Retrieve the properties and relationships of the specified team.
 */
-class AttachmentsRequestBuilderGetQueryParameters 
+class TeamsRequestBuilderGetQueryParameters 
 {
     /**
      * @QueryParameter("%24count")
@@ -34,25 +34,49 @@ class AttachmentsRequestBuilderGetQueryParameters
     public ?array $orderby = null;
     
     /**
+     * @QueryParameter("%24search")
+     * @var string|null $search Search items by search phrases
+    */
+    public ?string $search = null;
+    
+    /**
      * @QueryParameter("%24select")
      * @var array<string>|null $select Select properties to be returned
     */
     public ?array $select = null;
     
     /**
-     * Instantiates a new attachmentsRequestBuilderGetQueryParameters and sets the default values.
+     * @QueryParameter("%24skip")
+     * @var int|null $skip Skip the first n items
+    */
+    public ?int $skip = null;
+    
+    /**
+     * @QueryParameter("%24top")
+     * @var int|null $top Show only the first n items
+    */
+    public ?int $top = null;
+    
+    /**
+     * Instantiates a new teamsRequestBuilderGetQueryParameters and sets the default values.
      * @param bool|null $count Include count of items
      * @param array<string>|null $expand Expand related entities
      * @param string|null $filter Filter items by property values
      * @param array<string>|null $orderby Order items by property values
+     * @param string|null $search Search items by search phrases
      * @param array<string>|null $select Select properties to be returned
+     * @param int|null $skip Skip the first n items
+     * @param int|null $top Show only the first n items
     */
-    public function __construct(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?array $select = null) {
+    public function __construct(?bool $count = null, ?array $expand = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null) {
         $this->count = $count;
         $this->expand = $expand;
         $this->filter = $filter;
         $this->orderby = $orderby;
+        $this->search = $search;
         $this->select = $select;
+        $this->skip = $skip;
+        $this->top = $top;
     }
 
 }

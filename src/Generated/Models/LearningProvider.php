@@ -40,6 +40,7 @@ class LearningProvider extends Entity implements Parsable
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'displayName' => fn(ParseNode $n) => $o->setDisplayName($n->getStringValue()),
+            'isCourseActivitySyncEnabled' => fn(ParseNode $n) => $o->setIsCourseActivitySyncEnabled($n->getBooleanValue()),
             'learningContents' => fn(ParseNode $n) => $o->setLearningContents($n->getCollectionOfObjectValues([LearningContent::class, 'createFromDiscriminatorValue'])),
             'loginWebUrl' => fn(ParseNode $n) => $o->setLoginWebUrl($n->getStringValue()),
             'longLogoWebUrlForDarkTheme' => fn(ParseNode $n) => $o->setLongLogoWebUrlForDarkTheme($n->getStringValue()),
@@ -47,6 +48,14 @@ class LearningProvider extends Entity implements Parsable
             'squareLogoWebUrlForDarkTheme' => fn(ParseNode $n) => $o->setSquareLogoWebUrlForDarkTheme($n->getStringValue()),
             'squareLogoWebUrlForLightTheme' => fn(ParseNode $n) => $o->setSquareLogoWebUrlForLightTheme($n->getStringValue()),
         ]);
+    }
+
+    /**
+     * Gets the isCourseActivitySyncEnabled property value. Indicates whether a provider can ingest learning course activity records. The default value is false. Set to true to make learningCourseActivities available for this provider.
+     * @return bool|null
+    */
+    public function getIsCourseActivitySyncEnabled(): ?bool {
+        return $this->getBackingStore()->get('isCourseActivitySyncEnabled');
     }
 
     /**
@@ -104,6 +113,7 @@ class LearningProvider extends Entity implements Parsable
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
         $writer->writeStringValue('displayName', $this->getDisplayName());
+        $writer->writeBooleanValue('isCourseActivitySyncEnabled', $this->getIsCourseActivitySyncEnabled());
         $writer->writeCollectionOfObjectValues('learningContents', $this->getLearningContents());
         $writer->writeStringValue('loginWebUrl', $this->getLoginWebUrl());
         $writer->writeStringValue('longLogoWebUrlForDarkTheme', $this->getLongLogoWebUrlForDarkTheme());
@@ -118,6 +128,14 @@ class LearningProvider extends Entity implements Parsable
     */
     public function setDisplayName(?string $value): void {
         $this->getBackingStore()->set('displayName', $value);
+    }
+
+    /**
+     * Sets the isCourseActivitySyncEnabled property value. Indicates whether a provider can ingest learning course activity records. The default value is false. Set to true to make learningCourseActivities available for this provider.
+     * @param bool|null $value Value to set for the isCourseActivitySyncEnabled property.
+    */
+    public function setIsCourseActivitySyncEnabled(?bool $value): void {
+        $this->getBackingStore()->set('isCourseActivitySyncEnabled', $value);
     }
 
     /**

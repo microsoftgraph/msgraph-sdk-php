@@ -50,9 +50,10 @@ class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The policy that controls Azure AD authorization settings.
+     * Retrieve the properties of an authorizationPolicy object.
      * @param AuthorizationPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/authorizationpolicy-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?AuthorizationPolicyRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -105,7 +106,7 @@ class AuthorizationPolicyRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The policy that controls Azure AD authorization settings.
+     * Retrieve the properties of an authorizationPolicy object.
      * @param AuthorizationPolicyRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
