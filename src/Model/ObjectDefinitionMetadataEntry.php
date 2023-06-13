@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* MetadataEntry File
+* ObjectDefinitionMetadataEntry File
 * PHP version 7
 *
 * @category  Library
@@ -11,9 +11,9 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Microsoft\Graph\Model;
 /**
-* MetadataEntry class
+* ObjectDefinitionMetadataEntry class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,39 +21,41 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class MetadataEntry extends Entity
+class ObjectDefinitionMetadataEntry extends Entity
 {
+
     /**
     * Gets the key
-    * Name of the metadata property.
     *
-    * @return string|null The key
+    * @return ObjectDefinitionMetadata|null The key
     */
     public function getKey()
     {
         if (array_key_exists("key", $this->_propDict)) {
-            return $this->_propDict["key"];
-        } else {
-            return null;
+            if (is_a($this->_propDict["key"], "\Microsoft\Graph\Model\ObjectDefinitionMetadata") || is_null($this->_propDict["key"])) {
+                return $this->_propDict["key"];
+            } else {
+                $this->_propDict["key"] = new ObjectDefinitionMetadata($this->_propDict["key"]);
+                return $this->_propDict["key"];
+            }
         }
+        return null;
     }
 
     /**
     * Sets the key
-    * Name of the metadata property.
     *
-    * @param string $val The value of the key
+    * @param ObjectDefinitionMetadata $val The value to assign to the key
     *
-    * @return MetadataEntry
+    * @return ObjectDefinitionMetadataEntry The ObjectDefinitionMetadataEntry
     */
     public function setKey($val)
     {
         $this->_propDict["key"] = $val;
-        return $this;
+         return $this;
     }
     /**
     * Gets the value
-    * Value of the metadata property.
     *
     * @return string|null The value
     */
@@ -68,11 +70,10 @@ class MetadataEntry extends Entity
 
     /**
     * Sets the value
-    * Value of the metadata property.
     *
     * @param string $val The value of the value
     *
-    * @return MetadataEntry
+    * @return ObjectDefinitionMetadataEntry
     */
     public function setValue($val)
     {

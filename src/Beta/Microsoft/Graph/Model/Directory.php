@@ -142,6 +142,37 @@ class Directory extends Entity
         return $this;
     }
 
+    /**
+    * Gets the certificateAuthorities
+    *
+    * @return CertificateAuthorityPath|null The certificateAuthorities
+    */
+    public function getCertificateAuthorities()
+    {
+        if (array_key_exists("certificateAuthorities", $this->_propDict)) {
+            if (is_a($this->_propDict["certificateAuthorities"], "\Beta\Microsoft\Graph\Model\CertificateAuthorityPath") || is_null($this->_propDict["certificateAuthorities"])) {
+                return $this->_propDict["certificateAuthorities"];
+            } else {
+                $this->_propDict["certificateAuthorities"] = new CertificateAuthorityPath($this->_propDict["certificateAuthorities"]);
+                return $this->_propDict["certificateAuthorities"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the certificateAuthorities
+    *
+    * @param CertificateAuthorityPath $val The certificateAuthorities
+    *
+    * @return Directory
+    */
+    public function setCertificateAuthorities($val)
+    {
+        $this->_propDict["certificateAuthorities"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the customSecurityAttributeDefinitions

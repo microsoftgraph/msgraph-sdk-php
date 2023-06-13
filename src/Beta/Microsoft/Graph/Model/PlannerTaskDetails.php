@@ -58,6 +58,39 @@ class PlannerTaskDetails extends PlannerDelta
     }
 
     /**
+    * Gets the completionRequirements
+    * Contains detailed information about requirements on the task.
+    *
+    * @return PlannerTaskCompletionRequirementDetails|null The completionRequirements
+    */
+    public function getCompletionRequirements()
+    {
+        if (array_key_exists("completionRequirements", $this->_propDict)) {
+            if (is_a($this->_propDict["completionRequirements"], "\Beta\Microsoft\Graph\Model\PlannerTaskCompletionRequirementDetails") || is_null($this->_propDict["completionRequirements"])) {
+                return $this->_propDict["completionRequirements"];
+            } else {
+                $this->_propDict["completionRequirements"] = new PlannerTaskCompletionRequirementDetails($this->_propDict["completionRequirements"]);
+                return $this->_propDict["completionRequirements"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the completionRequirements
+    * Contains detailed information about requirements on the task.
+    *
+    * @param PlannerTaskCompletionRequirementDetails $val The completionRequirements
+    *
+    * @return PlannerTaskDetails
+    */
+    public function setCompletionRequirements($val)
+    {
+        $this->_propDict["completionRequirements"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the description
     * Description of the task.
     *

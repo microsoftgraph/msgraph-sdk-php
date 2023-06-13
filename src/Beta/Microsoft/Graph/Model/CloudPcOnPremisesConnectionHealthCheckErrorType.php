@@ -80,9 +80,13 @@ class CloudPcOnPremisesConnectionHealthCheckErrorType extends Enum
     const PERMISSION_CHECK_NO_RESOURCE_GROUP_OWNER_ROLE = "permissionCheckNoResourceGroupOwnerRole";
     const PERMISSION_CHECK_NO_V_NET_CONTRIBUTOR_ROLE = "permissionCheckNoVNetContributorRole";
     const PERMISSION_CHECK_NO_RESOURCE_GROUP_NETWORK_CONTRIBUTOR_ROLE = "permissionCheckNoResourceGroupNetworkContributorRole";
+    const PERMISSION_CHECK_NO_WINDOWS365_NETWORK_USER_ROLE = "permissionCheckNoWindows365NetworkUserRole";
+    const PERMISSION_CHECK_NO_WINDOWS365_NETWORK_INTERFACE_CONTRIBUTOR_ROLE = "permissionCheckNoWindows365NetworkInterfaceContributorRole";
     const PERMISSION_CHECK_TRANSIENT_SERVICE_ERROR = "permissionCheckTransientServiceError";
     const PERMISSION_CHECK_UNKNOWN_ERROR = "permissionCheckUnknownError";
     const UDP_CONNECTIVITY_CHECK_STUN_URL_NOT_ALLOW_LISTED = "udpConnectivityCheckStunUrlNotAllowListed";
+    const UDP_CONNECTIVITY_CHECK_TURN_URL_NOT_ALLOW_LISTED = "udpConnectivityCheckTurnUrlNotAllowListed";
+    const UDP_CONNECTIVITY_CHECK_URLS_NOT_ALLOW_LISTED = "udpConnectivityCheckUrlsNotAllowListed";
     const UDP_CONNECTIVITY_CHECK_UNKNOWN_ERROR = "udpConnectivityCheckUnknownError";
     const INTERNAL_SERVER_ERROR_DEPLOYMENT_CANCELED = "internalServerErrorDeploymentCanceled";
     const INTERNAL_SERVER_ERROR_ALLOCATE_RESOURCE_FAILED = "internalServerErrorAllocateResourceFailed";

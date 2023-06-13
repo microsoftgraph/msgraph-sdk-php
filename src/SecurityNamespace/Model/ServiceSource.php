@@ -39,4 +39,5 @@ class ServiceSource extends Enum
     const MICROSOFT_APP_GOVERNANCE = "microsoftAppGovernance";
     const DATA_LOSS_PREVENTION = "dataLossPrevention";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    const MICROSOFT_DEFENDER_FOR_CLOUD = "microsoftDefenderForCloud";
 }

@@ -24,6 +24,32 @@ namespace Microsoft\Graph\SecurityNamespace\Model;
 class RegistryValueEvidence extends AlertEvidence
 {
     /**
+    * Gets the mdeDeviceId
+    *
+    * @return string|null The mdeDeviceId
+    */
+    public function getMdeDeviceId()
+    {
+        if (array_key_exists("mdeDeviceId", $this->_propDict)) {
+            return $this->_propDict["mdeDeviceId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the mdeDeviceId
+    *
+    * @param string $val The value of the mdeDeviceId
+    *
+    * @return RegistryValueEvidence
+    */
+    public function setMdeDeviceId($val)
+    {
+        $this->_propDict["mdeDeviceId"] = $val;
+        return $this;
+    }
+    /**
     * Gets the registryHive
     * Registry hive of the key that the recorded action was applied to.
     *

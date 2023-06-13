@@ -27,6 +27,7 @@ class Approval extends Entity
 
      /**
      * Gets the steps
+    * Used to represent the decision associated with a single step in the approval process configured in approvalStage.
      *
      * @return array|null The steps
      */
@@ -41,6 +42,7 @@ class Approval extends Entity
 
     /**
     * Sets the steps
+    * Used to represent the decision associated with a single step in the approval process configured in approvalStage.
     *
     * @param ApprovalStep[] $val The steps
     *

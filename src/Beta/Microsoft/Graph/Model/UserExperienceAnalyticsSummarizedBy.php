@@ -35,4 +35,5 @@ class UserExperienceAnalyticsSummarizedBy extends Enum
     const MODEL_REGRESSION = "modelRegression";
     const MANUFACTURER_REGRESSION = "manufacturerRegression";
     const OPERATING_SYSTEM_VERSION_REGRESSION = "operatingSystemVersionRegression";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

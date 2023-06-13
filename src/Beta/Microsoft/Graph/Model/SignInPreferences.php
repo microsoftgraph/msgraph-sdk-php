@@ -51,4 +51,37 @@ class SignInPreferences extends Entity
         $this->_propDict["isSystemPreferredAuthenticationMethodEnabled"] = $val;
         return $this;
     }
+
+    /**
+    * Gets the userPreferredMethodForSecondaryAuthentication
+    * The default second-factor method used by the user when signing in. If a user is enabled for system-preferred authentication, then this value is ignored except for a few scenarios where a user is authenticating via NPS extension or ADFS adapter. Possible values are push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, and unknownFutureValue
+    *
+    * @return UserDefaultAuthenticationMethodType|null The userPreferredMethodForSecondaryAuthentication
+    */
+    public function getUserPreferredMethodForSecondaryAuthentication()
+    {
+        if (array_key_exists("userPreferredMethodForSecondaryAuthentication", $this->_propDict)) {
+            if (is_a($this->_propDict["userPreferredMethodForSecondaryAuthentication"], "\Beta\Microsoft\Graph\Model\UserDefaultAuthenticationMethodType") || is_null($this->_propDict["userPreferredMethodForSecondaryAuthentication"])) {
+                return $this->_propDict["userPreferredMethodForSecondaryAuthentication"];
+            } else {
+                $this->_propDict["userPreferredMethodForSecondaryAuthentication"] = new UserDefaultAuthenticationMethodType($this->_propDict["userPreferredMethodForSecondaryAuthentication"]);
+                return $this->_propDict["userPreferredMethodForSecondaryAuthentication"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the userPreferredMethodForSecondaryAuthentication
+    * The default second-factor method used by the user when signing in. If a user is enabled for system-preferred authentication, then this value is ignored except for a few scenarios where a user is authenticating via NPS extension or ADFS adapter. Possible values are push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, and unknownFutureValue
+    *
+    * @param UserDefaultAuthenticationMethodType $val The value to assign to the userPreferredMethodForSecondaryAuthentication
+    *
+    * @return SignInPreferences The SignInPreferences
+    */
+    public function setUserPreferredMethodForSecondaryAuthentication($val)
+    {
+        $this->_propDict["userPreferredMethodForSecondaryAuthentication"] = $val;
+         return $this;
+    }
 }

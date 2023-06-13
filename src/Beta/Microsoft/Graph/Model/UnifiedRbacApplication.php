@@ -27,6 +27,7 @@ class UnifiedRbacApplication extends Entity
 
      /**
      * Gets the customAppScopes
+    * Workload-specific scope object that represents the resources for which the principal has been granted access.
      *
      * @return array|null The customAppScopes
      */
@@ -41,6 +42,7 @@ class UnifiedRbacApplication extends Entity
 
     /**
     * Sets the customAppScopes
+    * Workload-specific scope object that represents the resources for which the principal has been granted access.
     *
     * @param CustomAppScope[] $val The customAppScopes
     *

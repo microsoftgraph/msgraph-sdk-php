@@ -424,7 +424,7 @@ class SearchRequest extends Entity
     }
     /**
     * Gets the size
-    * The size of the page to be retrieved. Optional.
+    * The size of the page to be retrieved. The maximum value is 500. Optional.
     *
     * @return int|null The size
     */
@@ -439,7 +439,7 @@ class SearchRequest extends Entity
 
     /**
     * Sets the size
-    * The size of the page to be retrieved. Optional.
+    * The size of the page to be retrieved. The maximum value is 500. Optional.
     *
     * @param int $val The value of the size
     *

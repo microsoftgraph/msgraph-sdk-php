@@ -207,6 +207,512 @@ class OrganizationalBrandingProperties extends Entity
     }
 
     /**
+    * Gets the customAccountResetCredentialsUrl
+    *
+    * @return string|null The customAccountResetCredentialsUrl
+    */
+    public function getCustomAccountResetCredentialsUrl()
+    {
+        if (array_key_exists("customAccountResetCredentialsUrl", $this->_propDict)) {
+            return $this->_propDict["customAccountResetCredentialsUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customAccountResetCredentialsUrl
+    *
+    * @param string $val The customAccountResetCredentialsUrl
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setCustomAccountResetCredentialsUrl($val)
+    {
+        $this->_propDict["customAccountResetCredentialsUrl"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the customCannotAccessYourAccountText
+    *
+    * @return string|null The customCannotAccessYourAccountText
+    */
+    public function getCustomCannotAccessYourAccountText()
+    {
+        if (array_key_exists("customCannotAccessYourAccountText", $this->_propDict)) {
+            return $this->_propDict["customCannotAccessYourAccountText"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customCannotAccessYourAccountText
+    *
+    * @param string $val The customCannotAccessYourAccountText
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setCustomCannotAccessYourAccountText($val)
+    {
+        $this->_propDict["customCannotAccessYourAccountText"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the customCannotAccessYourAccountUrl
+    *
+    * @return string|null The customCannotAccessYourAccountUrl
+    */
+    public function getCustomCannotAccessYourAccountUrl()
+    {
+        if (array_key_exists("customCannotAccessYourAccountUrl", $this->_propDict)) {
+            return $this->_propDict["customCannotAccessYourAccountUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customCannotAccessYourAccountUrl
+    *
+    * @param string $val The customCannotAccessYourAccountUrl
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setCustomCannotAccessYourAccountUrl($val)
+    {
+        $this->_propDict["customCannotAccessYourAccountUrl"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the customCSS
+    *
+    * @return \GuzzleHttp\Psr7\Stream|null The customCSS
+    */
+    public function getCustomCSS()
+    {
+        if (array_key_exists("customCSS", $this->_propDict)) {
+            if (is_a($this->_propDict["customCSS"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["customCSS"])) {
+                return $this->_propDict["customCSS"];
+            } else {
+                $this->_propDict["customCSS"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["customCSS"]);
+                return $this->_propDict["customCSS"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the customCSS
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The customCSS
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setCustomCSS($val)
+    {
+        $this->_propDict["customCSS"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the customCSSRelativeUrl
+    *
+    * @return string|null The customCSSRelativeUrl
+    */
+    public function getCustomCSSRelativeUrl()
+    {
+        if (array_key_exists("customCSSRelativeUrl", $this->_propDict)) {
+            return $this->_propDict["customCSSRelativeUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customCSSRelativeUrl
+    *
+    * @param string $val The customCSSRelativeUrl
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setCustomCSSRelativeUrl($val)
+    {
+        $this->_propDict["customCSSRelativeUrl"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the customForgotMyPasswordText
+    *
+    * @return string|null The customForgotMyPasswordText
+    */
+    public function getCustomForgotMyPasswordText()
+    {
+        if (array_key_exists("customForgotMyPasswordText", $this->_propDict)) {
+            return $this->_propDict["customForgotMyPasswordText"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customForgotMyPasswordText
+    *
+    * @param string $val The customForgotMyPasswordText
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setCustomForgotMyPasswordText($val)
+    {
+        $this->_propDict["customForgotMyPasswordText"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the customPrivacyAndCookiesText
+    *
+    * @return string|null The customPrivacyAndCookiesText
+    */
+    public function getCustomPrivacyAndCookiesText()
+    {
+        if (array_key_exists("customPrivacyAndCookiesText", $this->_propDict)) {
+            return $this->_propDict["customPrivacyAndCookiesText"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customPrivacyAndCookiesText
+    *
+    * @param string $val The customPrivacyAndCookiesText
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setCustomPrivacyAndCookiesText($val)
+    {
+        $this->_propDict["customPrivacyAndCookiesText"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the customPrivacyAndCookiesUrl
+    *
+    * @return string|null The customPrivacyAndCookiesUrl
+    */
+    public function getCustomPrivacyAndCookiesUrl()
+    {
+        if (array_key_exists("customPrivacyAndCookiesUrl", $this->_propDict)) {
+            return $this->_propDict["customPrivacyAndCookiesUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customPrivacyAndCookiesUrl
+    *
+    * @param string $val The customPrivacyAndCookiesUrl
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setCustomPrivacyAndCookiesUrl($val)
+    {
+        $this->_propDict["customPrivacyAndCookiesUrl"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the customResetItNowText
+    *
+    * @return string|null The customResetItNowText
+    */
+    public function getCustomResetItNowText()
+    {
+        if (array_key_exists("customResetItNowText", $this->_propDict)) {
+            return $this->_propDict["customResetItNowText"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customResetItNowText
+    *
+    * @param string $val The customResetItNowText
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setCustomResetItNowText($val)
+    {
+        $this->_propDict["customResetItNowText"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the customTermsOfUseText
+    *
+    * @return string|null The customTermsOfUseText
+    */
+    public function getCustomTermsOfUseText()
+    {
+        if (array_key_exists("customTermsOfUseText", $this->_propDict)) {
+            return $this->_propDict["customTermsOfUseText"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customTermsOfUseText
+    *
+    * @param string $val The customTermsOfUseText
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setCustomTermsOfUseText($val)
+    {
+        $this->_propDict["customTermsOfUseText"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the customTermsOfUseUrl
+    *
+    * @return string|null The customTermsOfUseUrl
+    */
+    public function getCustomTermsOfUseUrl()
+    {
+        if (array_key_exists("customTermsOfUseUrl", $this->_propDict)) {
+            return $this->_propDict["customTermsOfUseUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customTermsOfUseUrl
+    *
+    * @param string $val The customTermsOfUseUrl
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setCustomTermsOfUseUrl($val)
+    {
+        $this->_propDict["customTermsOfUseUrl"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the favicon
+    *
+    * @return \GuzzleHttp\Psr7\Stream|null The favicon
+    */
+    public function getFavicon()
+    {
+        if (array_key_exists("favicon", $this->_propDict)) {
+            if (is_a($this->_propDict["favicon"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["favicon"])) {
+                return $this->_propDict["favicon"];
+            } else {
+                $this->_propDict["favicon"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["favicon"]);
+                return $this->_propDict["favicon"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the favicon
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The favicon
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setFavicon($val)
+    {
+        $this->_propDict["favicon"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the faviconRelativeUrl
+    *
+    * @return string|null The faviconRelativeUrl
+    */
+    public function getFaviconRelativeUrl()
+    {
+        if (array_key_exists("faviconRelativeUrl", $this->_propDict)) {
+            return $this->_propDict["faviconRelativeUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the faviconRelativeUrl
+    *
+    * @param string $val The faviconRelativeUrl
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setFaviconRelativeUrl($val)
+    {
+        $this->_propDict["faviconRelativeUrl"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the headerBackgroundColor
+    *
+    * @return string|null The headerBackgroundColor
+    */
+    public function getHeaderBackgroundColor()
+    {
+        if (array_key_exists("headerBackgroundColor", $this->_propDict)) {
+            return $this->_propDict["headerBackgroundColor"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the headerBackgroundColor
+    *
+    * @param string $val The headerBackgroundColor
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setHeaderBackgroundColor($val)
+    {
+        $this->_propDict["headerBackgroundColor"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the headerLogo
+    *
+    * @return \GuzzleHttp\Psr7\Stream|null The headerLogo
+    */
+    public function getHeaderLogo()
+    {
+        if (array_key_exists("headerLogo", $this->_propDict)) {
+            if (is_a($this->_propDict["headerLogo"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["headerLogo"])) {
+                return $this->_propDict["headerLogo"];
+            } else {
+                $this->_propDict["headerLogo"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["headerLogo"]);
+                return $this->_propDict["headerLogo"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the headerLogo
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The headerLogo
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setHeaderLogo($val)
+    {
+        $this->_propDict["headerLogo"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the headerLogoRelativeUrl
+    *
+    * @return string|null The headerLogoRelativeUrl
+    */
+    public function getHeaderLogoRelativeUrl()
+    {
+        if (array_key_exists("headerLogoRelativeUrl", $this->_propDict)) {
+            return $this->_propDict["headerLogoRelativeUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the headerLogoRelativeUrl
+    *
+    * @param string $val The headerLogoRelativeUrl
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setHeaderLogoRelativeUrl($val)
+    {
+        $this->_propDict["headerLogoRelativeUrl"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the loginPageLayoutConfiguration
+    *
+    * @return LoginPageLayoutConfiguration|null The loginPageLayoutConfiguration
+    */
+    public function getLoginPageLayoutConfiguration()
+    {
+        if (array_key_exists("loginPageLayoutConfiguration", $this->_propDict)) {
+            if (is_a($this->_propDict["loginPageLayoutConfiguration"], "\Microsoft\Graph\Model\LoginPageLayoutConfiguration") || is_null($this->_propDict["loginPageLayoutConfiguration"])) {
+                return $this->_propDict["loginPageLayoutConfiguration"];
+            } else {
+                $this->_propDict["loginPageLayoutConfiguration"] = new LoginPageLayoutConfiguration($this->_propDict["loginPageLayoutConfiguration"]);
+                return $this->_propDict["loginPageLayoutConfiguration"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the loginPageLayoutConfiguration
+    *
+    * @param LoginPageLayoutConfiguration $val The loginPageLayoutConfiguration
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setLoginPageLayoutConfiguration($val)
+    {
+        $this->_propDict["loginPageLayoutConfiguration"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the loginPageTextVisibilitySettings
+    *
+    * @return LoginPageTextVisibilitySettings|null The loginPageTextVisibilitySettings
+    */
+    public function getLoginPageTextVisibilitySettings()
+    {
+        if (array_key_exists("loginPageTextVisibilitySettings", $this->_propDict)) {
+            if (is_a($this->_propDict["loginPageTextVisibilitySettings"], "\Microsoft\Graph\Model\LoginPageTextVisibilitySettings") || is_null($this->_propDict["loginPageTextVisibilitySettings"])) {
+                return $this->_propDict["loginPageTextVisibilitySettings"];
+            } else {
+                $this->_propDict["loginPageTextVisibilitySettings"] = new LoginPageTextVisibilitySettings($this->_propDict["loginPageTextVisibilitySettings"]);
+                return $this->_propDict["loginPageTextVisibilitySettings"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the loginPageTextVisibilitySettings
+    *
+    * @param LoginPageTextVisibilitySettings $val The loginPageTextVisibilitySettings
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setLoginPageTextVisibilitySettings($val)
+    {
+        $this->_propDict["loginPageTextVisibilitySettings"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the signInPageText
     * Text that appears at the bottom of the sign-in box. You can use this to communicate additional information, such as the phone number to your help desk or a legal statement. This text must be Unicode and not exceed 1024 characters.
     *
@@ -265,6 +771,64 @@ class OrganizationalBrandingProperties extends Entity
     public function setSquareLogo($val)
     {
         $this->_propDict["squareLogo"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the squareLogoDark
+    *
+    * @return \GuzzleHttp\Psr7\Stream|null The squareLogoDark
+    */
+    public function getSquareLogoDark()
+    {
+        if (array_key_exists("squareLogoDark", $this->_propDict)) {
+            if (is_a($this->_propDict["squareLogoDark"], "\GuzzleHttp\Psr7\Stream") || is_null($this->_propDict["squareLogoDark"])) {
+                return $this->_propDict["squareLogoDark"];
+            } else {
+                $this->_propDict["squareLogoDark"] = \GuzzleHttp\Psr7\Utils::streamFor($this->_propDict["squareLogoDark"]);
+                return $this->_propDict["squareLogoDark"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the squareLogoDark
+    *
+    * @param \GuzzleHttp\Psr7\Stream $val The squareLogoDark
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setSquareLogoDark($val)
+    {
+        $this->_propDict["squareLogoDark"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the squareLogoDarkRelativeUrl
+    *
+    * @return string|null The squareLogoDarkRelativeUrl
+    */
+    public function getSquareLogoDarkRelativeUrl()
+    {
+        if (array_key_exists("squareLogoDarkRelativeUrl", $this->_propDict)) {
+            return $this->_propDict["squareLogoDarkRelativeUrl"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the squareLogoDarkRelativeUrl
+    *
+    * @param string $val The squareLogoDarkRelativeUrl
+    *
+    * @return OrganizationalBrandingProperties
+    */
+    public function setSquareLogoDarkRelativeUrl($val)
+    {
+        $this->_propDict["squareLogoDarkRelativeUrl"] = $val;
         return $this;
     }
 

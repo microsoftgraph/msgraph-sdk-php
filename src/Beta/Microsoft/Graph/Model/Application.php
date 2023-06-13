@@ -117,6 +117,37 @@ class Application extends DirectoryObject
     }
 
     /**
+    * Gets the authenticationBehaviors
+    *
+    * @return AuthenticationBehaviors|null The authenticationBehaviors
+    */
+    public function getAuthenticationBehaviors()
+    {
+        if (array_key_exists("authenticationBehaviors", $this->_propDict)) {
+            if (is_a($this->_propDict["authenticationBehaviors"], "\Beta\Microsoft\Graph\Model\AuthenticationBehaviors") || is_null($this->_propDict["authenticationBehaviors"])) {
+                return $this->_propDict["authenticationBehaviors"];
+            } else {
+                $this->_propDict["authenticationBehaviors"] = new AuthenticationBehaviors($this->_propDict["authenticationBehaviors"]);
+                return $this->_propDict["authenticationBehaviors"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the authenticationBehaviors
+    *
+    * @param AuthenticationBehaviors $val The authenticationBehaviors
+    *
+    * @return Application
+    */
+    public function setAuthenticationBehaviors($val)
+    {
+        $this->_propDict["authenticationBehaviors"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the certification
     * Specifies the certification status of the application.
     *

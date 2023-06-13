@@ -25,7 +25,7 @@ class CrossTenantAccessPolicyTarget extends Entity
 {
     /**
     * Gets the target
-    * The unique identifier of the user, group, or application; one of the following keywords: AllUsers and AllApplications; or for targets that are applications, you may use reserved values.
+    * Can be one of the following values:  The unique identifier of the user, group, or application  AllUsers  AllApplications - Refers to any Microsoft cloud application.  Office365 - Includes the applications mentioned as part of the Office365 suite.
     *
     * @return string|null The target
     */
@@ -40,7 +40,7 @@ class CrossTenantAccessPolicyTarget extends Entity
 
     /**
     * Sets the target
-    * The unique identifier of the user, group, or application; one of the following keywords: AllUsers and AllApplications; or for targets that are applications, you may use reserved values.
+    * Can be one of the following values:  The unique identifier of the user, group, or application  AllUsers  AllApplications - Refers to any Microsoft cloud application.  Office365 - Includes the applications mentioned as part of the Office365 suite.
     *
     * @param string $val The value of the target
     *

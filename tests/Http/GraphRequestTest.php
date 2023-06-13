@@ -1,4 +1,6 @@
 <?php
+
+use GuzzleHttp\Promise\Utils;
 use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 use Microsoft\Graph\Core\GraphConstants;
@@ -173,7 +175,7 @@ class GraphRequestTest extends TestCase
         $promise2 = $this->requests[2]
                           ->executeAsync($this->client);
 
-        $response = \GuzzleHttp\Promise\unwrap(array($promise));
+        $response = Utils::unwrap(array($promise));
         foreach ($response as $responseItem) {
             $this->assertInstanceOf(Microsoft\Graph\Http\GraphResponse::class, $responseItem);
         }

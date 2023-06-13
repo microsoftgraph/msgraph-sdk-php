@@ -26,6 +26,7 @@ class ObjectDefinition extends Entity
 
     /**
     * Gets the attributes
+    * Defines attributes of the object.
     *
     * @return AttributeDefinition|null The attributes
     */
@@ -44,6 +45,7 @@ class ObjectDefinition extends Entity
 
     /**
     * Sets the attributes
+    * Defines attributes of the object.
     *
     * @param AttributeDefinition $val The value to assign to the attributes
     *
@@ -57,16 +59,17 @@ class ObjectDefinition extends Entity
 
     /**
     * Gets the metadata
+    * Metadata for the given object.
     *
-    * @return MetadataEntry|null The metadata
+    * @return ObjectDefinitionMetadataEntry|null The metadata
     */
     public function getMetadata()
     {
         if (array_key_exists("metadata", $this->_propDict)) {
-            if (is_a($this->_propDict["metadata"], "\Beta\Microsoft\Graph\Model\MetadataEntry") || is_null($this->_propDict["metadata"])) {
+            if (is_a($this->_propDict["metadata"], "\Beta\Microsoft\Graph\Model\ObjectDefinitionMetadataEntry") || is_null($this->_propDict["metadata"])) {
                 return $this->_propDict["metadata"];
             } else {
-                $this->_propDict["metadata"] = new MetadataEntry($this->_propDict["metadata"]);
+                $this->_propDict["metadata"] = new ObjectDefinitionMetadataEntry($this->_propDict["metadata"]);
                 return $this->_propDict["metadata"];
             }
         }
@@ -75,8 +78,9 @@ class ObjectDefinition extends Entity
 
     /**
     * Sets the metadata
+    * Metadata for the given object.
     *
-    * @param MetadataEntry $val The value to assign to the metadata
+    * @param ObjectDefinitionMetadataEntry $val The value to assign to the metadata
     *
     * @return ObjectDefinition The ObjectDefinition
     */
@@ -87,6 +91,7 @@ class ObjectDefinition extends Entity
     }
     /**
     * Gets the name
+    * Name of the object. Must be unique within a directory definition. Not nullable.
     *
     * @return string|null The name
     */
@@ -101,6 +106,7 @@ class ObjectDefinition extends Entity
 
     /**
     * Sets the name
+    * Name of the object. Must be unique within a directory definition. Not nullable.
     *
     * @param string $val The value of the name
     *
@@ -113,6 +119,7 @@ class ObjectDefinition extends Entity
     }
     /**
     * Gets the supportedApis
+    * The API that the provisioning service queries to retrieve data for synchronization.
     *
     * @return string|null The supportedApis
     */
@@ -127,6 +134,7 @@ class ObjectDefinition extends Entity
 
     /**
     * Sets the supportedApis
+    * The API that the provisioning service queries to retrieve data for synchronization.
     *
     * @param string $val The value of the supportedApis
     *

@@ -52,6 +52,34 @@ class CloudPcOnPremisesConnectionHealthCheck extends Entity
         return $this;
     }
     /**
+    * Gets the correlationId
+    * The unique identifier of the health check item-related activities. This identifier can be useful in troubleshooting.
+    *
+    * @return string|null The correlationId
+    */
+    public function getCorrelationId()
+    {
+        if (array_key_exists("correlationId", $this->_propDict)) {
+            return $this->_propDict["correlationId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the correlationId
+    * The unique identifier of the health check item-related activities. This identifier can be useful in troubleshooting.
+    *
+    * @param string $val The value of the correlationId
+    *
+    * @return CloudPcOnPremisesConnectionHealthCheck
+    */
+    public function setCorrelationId($val)
+    {
+        $this->_propDict["correlationId"] = $val;
+        return $this;
+    }
+    /**
     * Gets the displayName
     * The display name for this health check item.
     *

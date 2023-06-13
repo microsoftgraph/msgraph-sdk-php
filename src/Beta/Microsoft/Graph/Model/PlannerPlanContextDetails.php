@@ -54,7 +54,7 @@ class PlannerPlanContextDetails extends Entity
 
     /**
     * Gets the displayLinkType
-    * Specifies how an application should display the link to the associated plannerPlanContext. Applications may choose to provide customized text, description, icons, or other experiences based on the type of the link. Possible values are: teamsTab, sharePointPage, meetingNotes, other, unknownFutureValue.
+    * Specifies how an application should display the link to the associated plannerPlanContext. Applications may choose to provide customized text, description, icons, or other experiences based on the type of the link. Possible values are: teamsTab, sharePointPage, meetingNotes, loopPage, project, other, unknownFutureValue.
     *
     * @return PlannerPlanContextType|null The displayLinkType
     */
@@ -73,7 +73,7 @@ class PlannerPlanContextDetails extends Entity
 
     /**
     * Sets the displayLinkType
-    * Specifies how an application should display the link to the associated plannerPlanContext. Applications may choose to provide customized text, description, icons, or other experiences based on the type of the link. Possible values are: teamsTab, sharePointPage, meetingNotes, other, unknownFutureValue.
+    * Specifies how an application should display the link to the associated plannerPlanContext. Applications may choose to provide customized text, description, icons, or other experiences based on the type of the link. Possible values are: teamsTab, sharePointPage, meetingNotes, loopPage, project, other, unknownFutureValue.
     *
     * @param PlannerPlanContextType $val The value to assign to the displayLinkType
     *

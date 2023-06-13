@@ -170,35 +170,6 @@ class UserExperienceAnalyticsAppHealthApplicationPerformance extends Entity
     }
 
     /**
-    * Gets the appHealthStatus
-    * The overall health status of the app.
-    *
-    * @return string|null The appHealthStatus
-    */
-    public function getAppHealthStatus()
-    {
-        if (array_key_exists("appHealthStatus", $this->_propDict)) {
-            return $this->_propDict["appHealthStatus"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the appHealthStatus
-    * The overall health status of the app.
-    *
-    * @param string $val The appHealthStatus
-    *
-    * @return UserExperienceAnalyticsAppHealthApplicationPerformance
-    */
-    public function setAppHealthStatus($val)
-    {
-        $this->_propDict["appHealthStatus"] = $val;
-        return $this;
-    }
-
-    /**
     * Gets the appName
     * The name of the application.
     *

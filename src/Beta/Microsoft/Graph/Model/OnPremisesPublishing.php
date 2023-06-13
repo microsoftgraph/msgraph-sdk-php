@@ -197,6 +197,32 @@ class OnPremisesPublishing extends Entity
         return $this;
     }
     /**
+    * Gets the isAccessibleViaZTNAClient
+    *
+    * @return bool|null The isAccessibleViaZTNAClient
+    */
+    public function getIsAccessibleViaZTNAClient()
+    {
+        if (array_key_exists("isAccessibleViaZTNAClient", $this->_propDict)) {
+            return $this->_propDict["isAccessibleViaZTNAClient"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isAccessibleViaZTNAClient
+    *
+    * @param bool $val The value of the isAccessibleViaZTNAClient
+    *
+    * @return OnPremisesPublishing
+    */
+    public function setIsAccessibleViaZTNAClient($val)
+    {
+        $this->_propDict["isAccessibleViaZTNAClient"] = $val;
+        return $this;
+    }
+    /**
     * Gets the isBackendCertificateValidationEnabled
     * Indicates whether backend SSL certificate validation is enabled for the application. For all new Application Proxy apps, the property will be set to true by default. For all existing apps, the property will be set to false.
     *

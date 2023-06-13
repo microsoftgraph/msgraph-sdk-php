@@ -262,6 +262,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the lastUpdatedDateTime
+    * The date and time (UTC) when the record was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The lastUpdatedDateTime
     */
@@ -280,6 +281,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the lastUpdatedDateTime
+    * The date and time (UTC) when the record was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The lastUpdatedDateTime
     *

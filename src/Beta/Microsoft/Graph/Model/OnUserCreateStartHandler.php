@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* WarrantyType File
+* OnUserCreateStartHandler File
 * PHP version 7
 *
 * @category  Library
@@ -12,11 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Model;
-
-use Microsoft\Graph\Core\Enum;
-
 /**
-* WarrantyType class
+* OnUserCreateStartHandler class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +21,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class WarrantyType extends Enum
+class OnUserCreateStartHandler extends Entity
 {
-    /**
-    * The Enum WarrantyType
-    */
-    const UNKNOWN = "unknown";
-    const MANUFACTURER = "manufacturer";
-    const CONTRACTUAL = "contractual";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

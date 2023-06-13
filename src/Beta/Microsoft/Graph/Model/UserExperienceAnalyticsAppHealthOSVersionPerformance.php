@@ -169,33 +169,4 @@ class UserExperienceAnalyticsAppHealthOSVersionPerformance extends Entity
         return $this;
     }
 
-    /**
-    * Gets the osVersionAppHealthStatus
-    * The overall app health status of the OS version.
-    *
-    * @return string|null The osVersionAppHealthStatus
-    */
-    public function getOsVersionAppHealthStatus()
-    {
-        if (array_key_exists("osVersionAppHealthStatus", $this->_propDict)) {
-            return $this->_propDict["osVersionAppHealthStatus"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the osVersionAppHealthStatus
-    * The overall app health status of the OS version.
-    *
-    * @param string $val The osVersionAppHealthStatus
-    *
-    * @return UserExperienceAnalyticsAppHealthOSVersionPerformance
-    */
-    public function setOsVersionAppHealthStatus($val)
-    {
-        $this->_propDict["osVersionAppHealthStatus"] = $val;
-        return $this;
-    }
-
 }

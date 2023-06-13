@@ -178,6 +178,32 @@ class DeviceEvidence extends AlertEvidence
         $this->_propDict["healthStatus"] = $val;
          return $this;
     }
+    /**
+    * Gets the ipInterfaces
+    *
+    * @return string|null The ipInterfaces
+    */
+    public function getIpInterfaces()
+    {
+        if (array_key_exists("ipInterfaces", $this->_propDict)) {
+            return $this->_propDict["ipInterfaces"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the ipInterfaces
+    *
+    * @param string $val The value of the ipInterfaces
+    *
+    * @return DeviceEvidence
+    */
+    public function setIpInterfaces($val)
+    {
+        $this->_propDict["ipInterfaces"] = $val;
+        return $this;
+    }
 
     /**
     * Gets the loggedOnUsers

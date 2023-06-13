@@ -57,6 +57,34 @@ class DeviceHealthScriptRemediationHistoryData extends Entity
          return $this;
     }
     /**
+    * Gets the detectFailedDeviceCount
+    * The number of devices for which the detection script found an issue.
+    *
+    * @return int|null The detectFailedDeviceCount
+    */
+    public function getDetectFailedDeviceCount()
+    {
+        if (array_key_exists("detectFailedDeviceCount", $this->_propDict)) {
+            return $this->_propDict["detectFailedDeviceCount"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the detectFailedDeviceCount
+    * The number of devices for which the detection script found an issue.
+    *
+    * @param int $val The value of the detectFailedDeviceCount
+    *
+    * @return DeviceHealthScriptRemediationHistoryData
+    */
+    public function setDetectFailedDeviceCount($val)
+    {
+        $this->_propDict["detectFailedDeviceCount"] = $val;
+        return $this;
+    }
+    /**
     * Gets the noIssueDeviceCount
     * The number of devices that were found to have no issue by the device health script.
     *

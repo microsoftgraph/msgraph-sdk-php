@@ -88,6 +88,69 @@ class OrganizationSettings extends Entity
         return $this;
     }
 
+
+     /**
+     * Gets the profileCardProperties
+    * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card. Get organization settings returns the properties configured for profile cards for the organization.
+     *
+     * @return array|null The profileCardProperties
+     */
+    public function getProfileCardProperties()
+    {
+        if (array_key_exists("profileCardProperties", $this->_propDict)) {
+           return $this->_propDict["profileCardProperties"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the profileCardProperties
+    * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card. Get organization settings returns the properties configured for profile cards for the organization.
+    *
+    * @param ProfileCardProperty[] $val The profileCardProperties
+    *
+    * @return OrganizationSettings
+    */
+    public function setProfileCardProperties($val)
+    {
+        $this->_propDict["profileCardProperties"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the pronouns
+    * Represents administrator settings that manage the support of pronouns in an organization.
+    *
+    * @return PronounsSettings|null The pronouns
+    */
+    public function getPronouns()
+    {
+        if (array_key_exists("pronouns", $this->_propDict)) {
+            if (is_a($this->_propDict["pronouns"], "\Beta\Microsoft\Graph\Model\PronounsSettings") || is_null($this->_propDict["pronouns"])) {
+                return $this->_propDict["pronouns"];
+            } else {
+                $this->_propDict["pronouns"] = new PronounsSettings($this->_propDict["pronouns"]);
+                return $this->_propDict["pronouns"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the pronouns
+    * Represents administrator settings that manage the support of pronouns in an organization.
+    *
+    * @param PronounsSettings $val The pronouns
+    *
+    * @return OrganizationSettings
+    */
+    public function setPronouns($val)
+    {
+        $this->_propDict["pronouns"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the itemInsights
     * Contains the properties that are configured by an administrator for the visibility of Microsoft Graph-derived insights, between a user and other items in Microsoft 365, such as documents or sites. List itemInsights returns the settings to display or return item insights in an organization.
@@ -151,69 +214,6 @@ class OrganizationSettings extends Entity
     public function setPeopleInsights($val)
     {
         $this->_propDict["peopleInsights"] = $val;
-        return $this;
-    }
-
-
-     /**
-     * Gets the profileCardProperties
-    * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card. Get organization settings returns the properties configured for profile cards for the organization.
-     *
-     * @return array|null The profileCardProperties
-     */
-    public function getProfileCardProperties()
-    {
-        if (array_key_exists("profileCardProperties", $this->_propDict)) {
-           return $this->_propDict["profileCardProperties"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the profileCardProperties
-    * Contains a collection of the properties an administrator has defined as visible on the Microsoft 365 profile card. Get organization settings returns the properties configured for profile cards for the organization.
-    *
-    * @param ProfileCardProperty[] $val The profileCardProperties
-    *
-    * @return OrganizationSettings
-    */
-    public function setProfileCardProperties($val)
-    {
-        $this->_propDict["profileCardProperties"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the pronouns
-    * Represents administrator settings that manage the support of pronouns in an organization.
-    *
-    * @return PronounsSettings|null The pronouns
-    */
-    public function getPronouns()
-    {
-        if (array_key_exists("pronouns", $this->_propDict)) {
-            if (is_a($this->_propDict["pronouns"], "\Beta\Microsoft\Graph\Model\PronounsSettings") || is_null($this->_propDict["pronouns"])) {
-                return $this->_propDict["pronouns"];
-            } else {
-                $this->_propDict["pronouns"] = new PronounsSettings($this->_propDict["pronouns"]);
-                return $this->_propDict["pronouns"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the pronouns
-    * Represents administrator settings that manage the support of pronouns in an organization.
-    *
-    * @param PronounsSettings $val The pronouns
-    *
-    * @return OrganizationSettings
-    */
-    public function setPronouns($val)
-    {
-        $this->_propDict["pronouns"] = $val;
         return $this;
     }
 

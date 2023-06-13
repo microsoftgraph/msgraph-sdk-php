@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* OemWarrantyInformationOnboarding File
+* AuthenticationAttributeCollectionInputType File
 * PHP version 7
 *
 * @category  Library
@@ -13,8 +13,10 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 
+use Microsoft\Graph\Core\Enum;
+
 /**
-* OemWarrantyInformationOnboarding class
+* AuthenticationAttributeCollectionInputType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,6 +24,14 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class OemWarrantyInformationOnboarding extends Entity
+class AuthenticationAttributeCollectionInputType extends Enum
 {
+    /**
+    * The Enum AuthenticationAttributeCollectionInputType
+    */
+    const TEXT = "text";
+    const RADIO_SINGLE_SELECT = "radioSingleSelect";
+    const CHECKBOX_MULTI_SELECT = "checkboxMultiSelect";
+    const BOOLEAN = "boolean";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

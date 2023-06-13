@@ -141,35 +141,6 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
     }
 
     /**
-    * Gets the deviceAppHealthStatus
-    * The overall app health status of the device.
-    *
-    * @return string|null The deviceAppHealthStatus
-    */
-    public function getDeviceAppHealthStatus()
-    {
-        if (array_key_exists("deviceAppHealthStatus", $this->_propDict)) {
-            return $this->_propDict["deviceAppHealthStatus"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the deviceAppHealthStatus
-    * The overall app health status of the device.
-    *
-    * @param string $val The deviceAppHealthStatus
-    *
-    * @return UserExperienceAnalyticsAppHealthDevicePerformance
-    */
-    public function setDeviceAppHealthStatus($val)
-    {
-        $this->_propDict["deviceAppHealthStatus"] = $val;
-        return $this;
-    }
-
-    /**
     * Gets the deviceDisplayName
     * The name of the device.
     *

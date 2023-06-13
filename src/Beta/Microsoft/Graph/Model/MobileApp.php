@@ -653,69 +653,6 @@ class MobileApp extends Entity
 
 
      /**
-     * Gets the deviceStatuses
-    * The list of installation states for this mobile app.
-     *
-     * @return array|null The deviceStatuses
-     */
-    public function getDeviceStatuses()
-    {
-        if (array_key_exists("deviceStatuses", $this->_propDict)) {
-           return $this->_propDict["deviceStatuses"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the deviceStatuses
-    * The list of installation states for this mobile app.
-    *
-    * @param MobileAppInstallStatus[] $val The deviceStatuses
-    *
-    * @return MobileApp
-    */
-    public function setDeviceStatuses($val)
-    {
-        $this->_propDict["deviceStatuses"] = $val;
-        return $this;
-    }
-
-    /**
-    * Gets the installSummary
-    * Mobile App Install Summary.
-    *
-    * @return MobileAppInstallSummary|null The installSummary
-    */
-    public function getInstallSummary()
-    {
-        if (array_key_exists("installSummary", $this->_propDict)) {
-            if (is_a($this->_propDict["installSummary"], "\Beta\Microsoft\Graph\Model\MobileAppInstallSummary") || is_null($this->_propDict["installSummary"])) {
-                return $this->_propDict["installSummary"];
-            } else {
-                $this->_propDict["installSummary"] = new MobileAppInstallSummary($this->_propDict["installSummary"]);
-                return $this->_propDict["installSummary"];
-            }
-        }
-        return null;
-    }
-
-    /**
-    * Sets the installSummary
-    * Mobile App Install Summary.
-    *
-    * @param MobileAppInstallSummary $val The installSummary
-    *
-    * @return MobileApp
-    */
-    public function setInstallSummary($val)
-    {
-        $this->_propDict["installSummary"] = $val;
-        return $this;
-    }
-
-
-     /**
      * Gets the relationships
     * List of relationships for this mobile app.
      *
@@ -741,36 +678,6 @@ class MobileApp extends Entity
     public function setRelationships($val)
     {
         $this->_propDict["relationships"] = $val;
-        return $this;
-    }
-
-
-     /**
-     * Gets the userStatuses
-    * The list of installation states for this mobile app.
-     *
-     * @return array|null The userStatuses
-     */
-    public function getUserStatuses()
-    {
-        if (array_key_exists("userStatuses", $this->_propDict)) {
-           return $this->_propDict["userStatuses"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the userStatuses
-    * The list of installation states for this mobile app.
-    *
-    * @param UserAppInstallStatus[] $val The userStatuses
-    *
-    * @return MobileApp
-    */
-    public function setUserStatuses($val)
-    {
-        $this->_propDict["userStatuses"] = $val;
         return $this;
     }
 

@@ -26,6 +26,7 @@ class CustomSecurityAttributeDefinition extends Entity
 {
     /**
     * Gets the attributeSet
+    * Name of the attribute set. Case insensitive.
     *
     * @return string|null The attributeSet
     */
@@ -40,6 +41,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
     /**
     * Sets the attributeSet
+    * Name of the attribute set. Case insensitive.
     *
     * @param string $val The attributeSet
     *
@@ -53,6 +55,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
     /**
     * Gets the description
+    * Description of the custom security attribute. Can be up to 128 characters long and include Unicode characters. Can be changed later.
     *
     * @return string|null The description
     */
@@ -67,6 +70,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
     /**
     * Sets the description
+    * Description of the custom security attribute. Can be up to 128 characters long and include Unicode characters. Can be changed later.
     *
     * @param string $val The description
     *
@@ -80,6 +84,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
     /**
     * Gets the isCollection
+    * Indicates whether multiple values can be assigned to the custom security attribute. Cannot be changed later. If type is set to Boolean, isCollection cannot be set to true.
     *
     * @return bool|null The isCollection
     */
@@ -94,6 +99,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
     /**
     * Sets the isCollection
+    * Indicates whether multiple values can be assigned to the custom security attribute. Cannot be changed later. If type is set to Boolean, isCollection cannot be set to true.
     *
     * @param bool $val The isCollection
     *
@@ -107,6 +113,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
     /**
     * Gets the isSearchable
+    * Indicates whether custom security attribute values are indexed for searching on objects that are assigned attribute values. Cannot be changed later.
     *
     * @return bool|null The isSearchable
     */
@@ -121,6 +128,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
     /**
     * Sets the isSearchable
+    * Indicates whether custom security attribute values are indexed for searching on objects that are assigned attribute values. Cannot be changed later.
     *
     * @param bool $val The isSearchable
     *
@@ -134,6 +142,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
     /**
     * Gets the name
+    * Name of the custom security attribute. Must be unique within an attribute set. Can be up to 32 characters long and include Unicode characters. Cannot contain spaces or special characters. Cannot be changed later. Case insensitive.
     *
     * @return string|null The name
     */
@@ -148,6 +157,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
     /**
     * Sets the name
+    * Name of the custom security attribute. Must be unique within an attribute set. Can be up to 32 characters long and include Unicode characters. Cannot contain spaces or special characters. Cannot be changed later. Case insensitive.
     *
     * @param string $val The name
     *
@@ -161,6 +171,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
     /**
     * Gets the status
+    * Specifies whether the custom security attribute is active or deactivated. Acceptable values are: Available and Deprecated. Can be changed later.
     *
     * @return string|null The status
     */
@@ -175,6 +186,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
     /**
     * Sets the status
+    * Specifies whether the custom security attribute is active or deactivated. Acceptable values are: Available and Deprecated. Can be changed later.
     *
     * @param string $val The status
     *
@@ -188,6 +200,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
     /**
     * Gets the type
+    * Data type for the custom security attribute values. Supported types are: Boolean, Integer, and String. Cannot be changed later.
     *
     * @return string|null The type
     */
@@ -202,6 +215,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
     /**
     * Sets the type
+    * Data type for the custom security attribute values. Supported types are: Boolean, Integer, and String. Cannot be changed later.
     *
     * @param string $val The type
     *
@@ -215,6 +229,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
     /**
     * Gets the usePreDefinedValuesOnly
+    * Indicates whether only predefined values can be assigned to the custom security attribute. If set to false, free-form values are allowed. Can later be changed from true to false, but cannot be changed from false to true. If type is set to Boolean, usePreDefinedValuesOnly cannot be set to true.
     *
     * @return bool|null The usePreDefinedValuesOnly
     */
@@ -229,6 +244,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
     /**
     * Sets the usePreDefinedValuesOnly
+    * Indicates whether only predefined values can be assigned to the custom security attribute. If set to false, free-form values are allowed. Can later be changed from true to false, but cannot be changed from false to true. If type is set to Boolean, usePreDefinedValuesOnly cannot be set to true.
     *
     * @param bool $val The usePreDefinedValuesOnly
     *
@@ -243,6 +259,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
      /**
      * Gets the allowedValues
+    * Values that are predefined for this custom security attribute. This navigation property is not returned by default and must be specified in an $expand query. For example, /directory/customSecurityAttributeDefinitions?$expand=allowedValues.
      *
      * @return array|null The allowedValues
      */
@@ -257,6 +274,7 @@ class CustomSecurityAttributeDefinition extends Entity
 
     /**
     * Sets the allowedValues
+    * Values that are predefined for this custom security attribute. This navigation property is not returned by default and must be specified in an $expand query. For example, /directory/customSecurityAttributeDefinitions?$expand=allowedValues.
     *
     * @param AllowedValue[] $val The allowedValues
     *

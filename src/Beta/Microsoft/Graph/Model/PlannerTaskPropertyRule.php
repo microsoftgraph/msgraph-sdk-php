@@ -123,6 +123,34 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
          return $this;
     }
     /**
+    * Gets the completionRequirements
+    * Rules and restrictions for completion requirements of the task. Accepted values are allow, add, remove, edit, and block.
+    *
+    * @return string|null The completionRequirements
+    */
+    public function getCompletionRequirements()
+    {
+        if (array_key_exists("completionRequirements", $this->_propDict)) {
+            return $this->_propDict["completionRequirements"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the completionRequirements
+    * Rules and restrictions for completion requirements of the task. Accepted values are allow, add, remove, edit, and block.
+    *
+    * @param string $val The value of the completionRequirements
+    *
+    * @return PlannerTaskPropertyRule
+    */
+    public function setCompletionRequirements($val)
+    {
+        $this->_propDict["completionRequirements"] = $val;
+        return $this;
+    }
+    /**
     * Gets the delete
     * Rules and restrictions for deleting the task. Accepted values are allow and block.
     *
@@ -264,7 +292,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
     }
     /**
     * Gets the percentComplete
-    * Rules and restrictions for changing the completion percentage of the task. Accepted values are allow, setToComplete, setToNotStarted, setToInProgress, and block.
+    * Rules and restrictions for changing the completion percentage of the task. Accepted values are allow, setToComplete, overrideRequirements, setToNotStarted, setToInProgress, and block.
     *
     * @return string|null The percentComplete
     */
@@ -279,7 +307,7 @@ class PlannerTaskPropertyRule extends PlannerPropertyRule
 
     /**
     * Sets the percentComplete
-    * Rules and restrictions for changing the completion percentage of the task. Accepted values are allow, setToComplete, setToNotStarted, setToInProgress, and block.
+    * Rules and restrictions for changing the completion percentage of the task. Accepted values are allow, setToComplete, overrideRequirements, setToNotStarted, setToInProgress, and block.
     *
     * @param string $val The value of the percentComplete
     *

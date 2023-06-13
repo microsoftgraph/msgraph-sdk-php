@@ -54,6 +54,35 @@ class LearningProvider extends Entity
     }
 
     /**
+    * Gets the isCourseActivitySyncEnabled
+    * Indicates whether a provider can ingest learning course activity records. The default value is false. Set to true to make learningCourseActivities available for this provider.
+    *
+    * @return bool|null The isCourseActivitySyncEnabled
+    */
+    public function getIsCourseActivitySyncEnabled()
+    {
+        if (array_key_exists("isCourseActivitySyncEnabled", $this->_propDict)) {
+            return $this->_propDict["isCourseActivitySyncEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isCourseActivitySyncEnabled
+    * Indicates whether a provider can ingest learning course activity records. The default value is false. Set to true to make learningCourseActivities available for this provider.
+    *
+    * @param bool $val The isCourseActivitySyncEnabled
+    *
+    * @return LearningProvider
+    */
+    public function setIsCourseActivitySyncEnabled($val)
+    {
+        $this->_propDict["isCourseActivitySyncEnabled"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the loginWebUrl
     * Authentication URL to access the courses for the provider. Optional.
     *

@@ -26,7 +26,7 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the createdDateTime
-    * The time the evidence was created and added to the alert.
+    * The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -45,7 +45,7 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the createdDateTime
-    * The time the evidence was created and added to the alert.
+    * The date and time when the evidence was created and added to the alert. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
     * @param \DateTime $val The value to assign to the createdDateTime
     *
@@ -55,6 +55,32 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
     {
         $this->_propDict["createdDateTime"] = $val;
          return $this;
+    }
+    /**
+    * Gets the detailedRoles
+    *
+    * @return string|null The detailedRoles
+    */
+    public function getDetailedRoles()
+    {
+        if (array_key_exists("detailedRoles", $this->_propDict)) {
+            return $this->_propDict["detailedRoles"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the detailedRoles
+    *
+    * @param string $val The value of the detailedRoles
+    *
+    * @return AlertEvidence
+    */
+    public function setDetailedRoles($val)
+    {
+        $this->_propDict["detailedRoles"] = $val;
+        return $this;
     }
 
     /**
@@ -120,7 +146,7 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Gets the roles
-    * The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role 'Attacker'.
+    * One or more roles that an evidence entity represents in an alert. For example, an IP address that is associated with an attacker has the evidence role Attacker.
     *
     * @return EvidenceRole|null The roles
     */
@@ -139,7 +165,7 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the roles
-    * The role/s that an evidence entity represents in an alert, e.g., an IP address that is associated with an attacker will have the evidence role 'Attacker'.
+    * One or more roles that an evidence entity represents in an alert. For example, an IP address that is associated with an attacker has the evidence role Attacker.
     *
     * @param EvidenceRole $val The value to assign to the roles
     *
@@ -152,7 +178,7 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the tags
-    * Array of custom tags associated with an evidence instance, for example to denote a group of devices, high value assets, etc.
+    * Array of custom tags associated with an evidence instance. For example, to denote a group of devices or high value assets.
     *
     * @return string|null The tags
     */
@@ -167,7 +193,7 @@ class AlertEvidence extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the tags
-    * Array of custom tags associated with an evidence instance, for example to denote a group of devices, high value assets, etc.
+    * Array of custom tags associated with an evidence instance. For example, to denote a group of devices or high value assets.
     *
     * @param string $val The value of the tags
     *

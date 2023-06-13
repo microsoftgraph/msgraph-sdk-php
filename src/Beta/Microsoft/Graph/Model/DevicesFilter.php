@@ -26,6 +26,7 @@ class DevicesFilter extends Entity
 
     /**
     * Gets the mode
+    * Determines whether devices satisfying the rule should be allowed or blocked.The possible values are: allowed, blocked, unknownFutureValue.Not implemented yet
     *
     * @return CrossTenantAccessPolicyTargetConfigurationAccessType|null The mode
     */
@@ -44,6 +45,7 @@ class DevicesFilter extends Entity
 
     /**
     * Sets the mode
+    * Determines whether devices satisfying the rule should be allowed or blocked.The possible values are: allowed, blocked, unknownFutureValue.Not implemented yet
     *
     * @param CrossTenantAccessPolicyTargetConfigurationAccessType $val The value to assign to the mode
     *
@@ -56,6 +58,7 @@ class DevicesFilter extends Entity
     }
     /**
     * Gets the rule
+    * Defines the rule to filter the devices. An example would be device.deviceAttribute2 -eq 'PrivilegedAccessWorkstation' Not implemented yet
     *
     * @return string|null The rule
     */
@@ -70,6 +73,7 @@ class DevicesFilter extends Entity
 
     /**
     * Sets the rule
+    * Defines the rule to filter the devices. An example would be device.deviceAttribute2 -eq 'PrivilegedAccessWorkstation' Not implemented yet
     *
     * @param string $val The value of the rule
     *
