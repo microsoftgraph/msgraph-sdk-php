@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CloudPcReportName File
+* UserExperienceAnalyticsAnomalyDeviceFeatureType File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* CloudPcReportName class
+* UserExperienceAnalyticsAnomalyDeviceFeatureType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,16 +24,15 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CloudPcReportName extends Enum
+class UserExperienceAnalyticsAnomalyDeviceFeatureType extends Enum
 {
     /**
-    * The Enum CloudPcReportName
+    * The Enum UserExperienceAnalyticsAnomalyDeviceFeatureType
     */
-    const REMOTE_CONNECTION_HISTORICAL_REPORTS = "remoteConnectionHistoricalReports";
-    const DAILY_AGGREGATED_REMOTE_CONNECTION_REPORTS = "dailyAggregatedRemoteConnectionReports";
-    const TOTAL_AGGREGATED_REMOTE_CONNECTION_REPORTS = "totalAggregatedRemoteConnectionReports";
-    const SHARED_USE_LICENSE_USAGE_REPORT = "sharedUseLicenseUsageReport";
-    const SHARED_USE_LICENSE_USAGE_REAL_TIME_REPORT = "sharedUseLicenseUsageRealTimeReport";
+    const MANUFACTURER = "manufacturer";
+    const MODEL = "model";
+    const OS_VERSION = "osVersion";
+    const APPLICATION = "application";
+    const DRIVER = "driver";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const NO_LICENSE_AVAILABLE_CONNECTIVITY_FAILURE_REPORT = "noLicenseAvailableConnectivityFailureReport";
 }

@@ -675,6 +675,7 @@ class PlannerTask extends PlannerDelta
 
     /**
     * Gets the specifiedCompletionRequirements
+    * Indicates all the requirements specified on the plannerTask. Possible values are: none, checklistCompletion, unknownFutureValue. Read-only. The plannerTaskCompletionRequirementDetails in plannerTaskDetails has details of the requirements specified, if any.
     *
     * @return PlannerTaskCompletionRequirements|null The specifiedCompletionRequirements
     */
@@ -693,6 +694,7 @@ class PlannerTask extends PlannerDelta
 
     /**
     * Sets the specifiedCompletionRequirements
+    * Indicates all the requirements specified on the plannerTask. Possible values are: none, checklistCompletion, unknownFutureValue. Read-only. The plannerTaskCompletionRequirementDetails in plannerTaskDetails has details of the requirements specified, if any.
     *
     * @param PlannerTaskCompletionRequirements $val The specifiedCompletionRequirements
     *

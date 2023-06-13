@@ -926,6 +926,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the isManagementRestricted
+    * true if the user is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.
     *
     * @return bool|null The isManagementRestricted
     */
@@ -940,6 +941,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the isManagementRestricted
+    * true if the user is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.
     *
     * @param bool $val The isManagementRestricted
     *
@@ -1161,7 +1163,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the mobilePhone
-    * The primary cellular telephone number for the user. Read-only for users synced from on-premises directory.  Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+    * The primary cellular telephone number for the user. Read-only for users synced from on-premises directory.  Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) and $search.
     *
     * @return string|null The mobilePhone
     */
@@ -1176,7 +1178,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the mobilePhone
-    * The primary cellular telephone number for the user. Read-only for users synced from on-premises directory.  Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).
+    * The primary cellular telephone number for the user. Read-only for users synced from on-premises directory.  Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) and $search.
     *
     * @param string $val The mobilePhone
     *

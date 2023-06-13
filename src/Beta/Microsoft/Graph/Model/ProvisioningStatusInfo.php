@@ -26,6 +26,7 @@ class ProvisioningStatusInfo extends Entity
 
     /**
     * Gets the errorInformation
+    * If status is not success/ skipped details for the error are contained in this.
     *
     * @return ProvisioningErrorInfo|null The errorInformation
     */
@@ -44,6 +45,7 @@ class ProvisioningStatusInfo extends Entity
 
     /**
     * Sets the errorInformation
+    * If status is not success/ skipped details for the error are contained in this.
     *
     * @param ProvisioningErrorInfo $val The value to assign to the errorInformation
     *
@@ -57,7 +59,7 @@ class ProvisioningStatusInfo extends Entity
 
     /**
     * Gets the status
-    * Possible values are: success, warning, failure, skipped, unknownFutureValue.
+    * Possible values are: success, failure, skipped, warning, unknownFutureValue.
     *
     * @return ProvisioningResult|null The status
     */
@@ -76,7 +78,7 @@ class ProvisioningStatusInfo extends Entity
 
     /**
     * Sets the status
-    * Possible values are: success, warning, failure, skipped, unknownFutureValue.
+    * Possible values are: success, failure, skipped, warning, unknownFutureValue.
     *
     * @param ProvisioningResult $val The value to assign to the status
     *

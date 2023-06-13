@@ -56,6 +56,34 @@ class VirtualEndpoint extends Entity
 
 
      /**
+     * Gets the bulkActions
+     *
+     * @return array|null The bulkActions
+     */
+    public function getBulkActions()
+    {
+        if (array_key_exists("bulkActions", $this->_propDict)) {
+           return $this->_propDict["bulkActions"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the bulkActions
+    *
+    * @param CloudPcBulkAction[] $val The bulkActions
+    *
+    * @return VirtualEndpoint
+    */
+    public function setBulkActions($val)
+    {
+        $this->_propDict["bulkActions"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the cloudPCs
     * Cloud managed virtual desktops.
      *

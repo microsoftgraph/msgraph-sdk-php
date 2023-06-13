@@ -179,6 +179,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Gets the allowRecording
+    * Indicates whether recording is enabled for the meeting.
     *
     * @return bool|null The allowRecording
     */
@@ -193,6 +194,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Sets the allowRecording
+    * Indicates whether recording is enabled for the meeting.
     *
     * @param bool $val The allowRecording
     *
@@ -235,6 +237,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Gets the allowTranscription
+    * Indicates whether transcription is enabled for the meeting.
     *
     * @return bool|null The allowTranscription
     */
@@ -249,6 +252,7 @@ class OnlineMeeting extends Entity
 
     /**
     * Sets the allowTranscription
+    * Indicates whether transcription is enabled for the meeting.
     *
     * @param bool $val The allowTranscription
     *

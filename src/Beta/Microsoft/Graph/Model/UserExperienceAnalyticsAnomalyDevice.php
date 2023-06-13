@@ -120,6 +120,35 @@ class UserExperienceAnalyticsAnomalyDevice extends Entity
     }
 
     /**
+    * Gets the correlationGroupId
+    * The unique identifier of the correlation group.
+    *
+    * @return string|null The correlationGroupId
+    */
+    public function getCorrelationGroupId()
+    {
+        if (array_key_exists("correlationGroupId", $this->_propDict)) {
+            return $this->_propDict["correlationGroupId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the correlationGroupId
+    * The unique identifier of the correlation group.
+    *
+    * @param string $val The correlationGroupId
+    *
+    * @return UserExperienceAnalyticsAnomalyDevice
+    */
+    public function setCorrelationGroupId($val)
+    {
+        $this->_propDict["correlationGroupId"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the deviceId
     * The unique identifier of the device.
     *
@@ -232,6 +261,39 @@ class UserExperienceAnalyticsAnomalyDevice extends Entity
     public function setDeviceName($val)
     {
         $this->_propDict["deviceName"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the deviceStatus
+    * Indicates the device status with respect to the correlation group. At risk devices are devices that share correlation group features but may not yet be affected by an anomaly, such as when a device is experiencing crashes on an application but that application has not been used on the device but is currently installed. This could lead to the device becoming anomalous if the application in question were to be used. Possible values are: anomolous, affected or atRisk
+    *
+    * @return UserExperienceAnalyticsDeviceStatus|null The deviceStatus
+    */
+    public function getDeviceStatus()
+    {
+        if (array_key_exists("deviceStatus", $this->_propDict)) {
+            if (is_a($this->_propDict["deviceStatus"], "\Beta\Microsoft\Graph\Model\UserExperienceAnalyticsDeviceStatus") || is_null($this->_propDict["deviceStatus"])) {
+                return $this->_propDict["deviceStatus"];
+            } else {
+                $this->_propDict["deviceStatus"] = new UserExperienceAnalyticsDeviceStatus($this->_propDict["deviceStatus"]);
+                return $this->_propDict["deviceStatus"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the deviceStatus
+    * Indicates the device status with respect to the correlation group. At risk devices are devices that share correlation group features but may not yet be affected by an anomaly, such as when a device is experiencing crashes on an application but that application has not been used on the device but is currently installed. This could lead to the device becoming anomalous if the application in question were to be used. Possible values are: anomolous, affected or atRisk
+    *
+    * @param UserExperienceAnalyticsDeviceStatus $val The deviceStatus
+    *
+    * @return UserExperienceAnalyticsAnomalyDevice
+    */
+    public function setDeviceStatus($val)
+    {
+        $this->_propDict["deviceStatus"] = $val;
         return $this;
     }
 

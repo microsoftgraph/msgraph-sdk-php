@@ -58,6 +58,35 @@ class DeviceEnrollmentWindowsHelloForBusinessConfiguration extends DeviceEnrollm
     }
 
     /**
+    * Gets the enhancedSignInSecurity
+    * Setting to configure Enahcned sign-in security. Default is enabled on one secure modality (face or fingerprint)
+    *
+    * @return int|null The enhancedSignInSecurity
+    */
+    public function getEnhancedSignInSecurity()
+    {
+        if (array_key_exists("enhancedSignInSecurity", $this->_propDict)) {
+            return $this->_propDict["enhancedSignInSecurity"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the enhancedSignInSecurity
+    * Setting to configure Enahcned sign-in security. Default is enabled on one secure modality (face or fingerprint)
+    *
+    * @param int $val The enhancedSignInSecurity
+    *
+    * @return DeviceEnrollmentWindowsHelloForBusinessConfiguration
+    */
+    public function setEnhancedSignInSecurity($val)
+    {
+        $this->_propDict["enhancedSignInSecurity"] = intval($val);
+        return $this;
+    }
+
+    /**
     * Gets the pinExpirationInDays
     * Controls the period of time (in days) that a PIN can be used before the system requires the user to change it. This must be set between 0 and 730, inclusive. If set to 0, the user's PIN will never expire
     *

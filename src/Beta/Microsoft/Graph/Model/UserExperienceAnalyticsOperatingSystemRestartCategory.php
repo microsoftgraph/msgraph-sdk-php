@@ -38,4 +38,5 @@ class UserExperienceAnalyticsOperatingSystemRestartCategory extends Enum
     const LONG_POWER_BUTTON_PRESS = "longPowerButtonPress";
     const BOOT_ERROR = "bootError";
     const UPDATE = "update";
+    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

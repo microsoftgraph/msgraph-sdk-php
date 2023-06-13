@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* NetworkAccessRoot File
+* PolicyRuleDelta File
 * PHP version 7
 *
 * @category  Library
@@ -12,9 +12,8 @@
 * @link      https://graph.microsoft.com
 */
 namespace Beta\Microsoft\Graph\Networkaccess\Model;
-
 /**
-* NetworkAccessRoot class
+* PolicyRuleDelta class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -22,6 +21,32 @@ namespace Beta\Microsoft\Graph\Networkaccess\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class NetworkAccessRoot extends \Beta\Microsoft\Graph\Model\Entity
+class PolicyRuleDelta extends \Beta\Microsoft\Graph\Model\Entity
 {
+    /**
+    * Gets the ruleId
+    *
+    * @return string|null The ruleId
+    */
+    public function getRuleId()
+    {
+        if (array_key_exists("ruleId", $this->_propDict)) {
+            return $this->_propDict["ruleId"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the ruleId
+    *
+    * @param string $val The value of the ruleId
+    *
+    * @return PolicyRuleDelta
+    */
+    public function setRuleId($val)
+    {
+        $this->_propDict["ruleId"] = $val;
+        return $this;
+    }
 }

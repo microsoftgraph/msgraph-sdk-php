@@ -26,6 +26,7 @@ class PlannerTaskCompletionRequirementDetails extends Entity
 
     /**
     * Gets the checklistRequirement
+    * Information about the requirements for completing the checklist.
     *
     * @return PlannerChecklistRequirement|null The checklistRequirement
     */
@@ -44,6 +45,7 @@ class PlannerTaskCompletionRequirementDetails extends Entity
 
     /**
     * Sets the checklistRequirement
+    * Information about the requirements for completing the checklist.
     *
     * @param PlannerChecklistRequirement $val The value to assign to the checklistRequirement
     *

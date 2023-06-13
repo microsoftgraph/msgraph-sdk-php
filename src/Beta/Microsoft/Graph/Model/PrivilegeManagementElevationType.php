@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* CloudPcReportName File
+* PrivilegeManagementElevationType File
 * PHP version 7
 *
 * @category  Library
@@ -16,7 +16,7 @@ namespace Beta\Microsoft\Graph\Model;
 use Microsoft\Graph\Core\Enum;
 
 /**
-* CloudPcReportName class
+* PrivilegeManagementElevationType class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,16 +24,15 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class CloudPcReportName extends Enum
+class PrivilegeManagementElevationType extends Enum
 {
     /**
-    * The Enum CloudPcReportName
+    * The Enum PrivilegeManagementElevationType
     */
-    const REMOTE_CONNECTION_HISTORICAL_REPORTS = "remoteConnectionHistoricalReports";
-    const DAILY_AGGREGATED_REMOTE_CONNECTION_REPORTS = "dailyAggregatedRemoteConnectionReports";
-    const TOTAL_AGGREGATED_REMOTE_CONNECTION_REPORTS = "totalAggregatedRemoteConnectionReports";
-    const SHARED_USE_LICENSE_USAGE_REPORT = "sharedUseLicenseUsageReport";
-    const SHARED_USE_LICENSE_USAGE_REAL_TIME_REPORT = "sharedUseLicenseUsageRealTimeReport";
+    const UNDETERMINED = "undetermined";
+    const UNMANAGED_ELEVATION = "unmanagedElevation";
+    const ZERO_TOUCH_ELEVATION = "zeroTouchElevation";
+    const USER_CONFIRMED_ELEVATION = "userConfirmedElevation";
+    const SUPPORT_APPROVED_ELEVATION = "supportApprovedElevation";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
-    const NO_LICENSE_AVAILABLE_CONNECTIVITY_FAILURE_REPORT = "noLicenseAvailableConnectivityFailureReport";
 }

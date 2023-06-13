@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* UserExperienceAnalyticsSummarizedBy File
+* CloudPcBulkPowerOff File
 * PHP version 7
 *
 * @category  Library
@@ -13,10 +13,8 @@
 */
 namespace Beta\Microsoft\Graph\Model;
 
-use Microsoft\Graph\Core\Enum;
-
 /**
-* UserExperienceAnalyticsSummarizedBy class
+* CloudPcBulkPowerOff class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,16 +22,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class UserExperienceAnalyticsSummarizedBy extends Enum
+class CloudPcBulkPowerOff extends CloudPcBulkAction
 {
-    /**
-    * The Enum UserExperienceAnalyticsSummarizedBy
-    */
-    const NONE = "none";
-    const MODEL = "model";
-    const ALL_REGRESSIONS = "allRegressions";
-    const MODEL_REGRESSION = "modelRegression";
-    const MANUFACTURER_REGRESSION = "manufacturerRegression";
-    const OPERATING_SYSTEM_VERSION_REGRESSION = "operatingSystemVersionRegression";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

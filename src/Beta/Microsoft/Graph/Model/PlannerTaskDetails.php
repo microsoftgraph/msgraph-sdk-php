@@ -59,6 +59,7 @@ class PlannerTaskDetails extends PlannerDelta
 
     /**
     * Gets the completionRequirements
+    * Contains detailed information about requirements on the task.
     *
     * @return PlannerTaskCompletionRequirementDetails|null The completionRequirements
     */
@@ -77,6 +78,7 @@ class PlannerTaskDetails extends PlannerDelta
 
     /**
     * Sets the completionRequirements
+    * Contains detailed information about requirements on the task.
     *
     * @param PlannerTaskCompletionRequirementDetails $val The completionRequirements
     *

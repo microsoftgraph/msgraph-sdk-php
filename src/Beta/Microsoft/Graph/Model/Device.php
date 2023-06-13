@@ -532,6 +532,7 @@ class Device extends DirectoryObject
 
     /**
     * Gets the isManagementRestricted
+    * true if the device is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.
     *
     * @return bool|null The isManagementRestricted
     */
@@ -546,6 +547,7 @@ class Device extends DirectoryObject
 
     /**
     * Sets the isManagementRestricted
+    * true if the device is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.
     *
     * @param bool $val The isManagementRestricted
     *
