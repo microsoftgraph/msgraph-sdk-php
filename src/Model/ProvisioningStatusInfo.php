@@ -26,6 +26,7 @@ class ProvisioningStatusInfo extends Entity
 
     /**
     * Gets the errorInformation
+    * If status is not success/ skipped details for the error are contained in this.
     *
     * @return ProvisioningErrorInfo|null The errorInformation
     */
@@ -44,6 +45,7 @@ class ProvisioningStatusInfo extends Entity
 
     /**
     * Sets the errorInformation
+    * If status is not success/ skipped details for the error are contained in this.
     *
     * @param ProvisioningErrorInfo $val The value to assign to the errorInformation
     *

@@ -52,6 +52,32 @@ class LicenseUnitsDetail extends Entity
         return $this;
     }
     /**
+    * Gets the lockedOut
+    *
+    * @return int|null The lockedOut
+    */
+    public function getLockedOut()
+    {
+        if (array_key_exists("lockedOut", $this->_propDict)) {
+            return $this->_propDict["lockedOut"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the lockedOut
+    *
+    * @param int $val The value of the lockedOut
+    *
+    * @return LicenseUnitsDetail
+    */
+    public function setLockedOut($val)
+    {
+        $this->_propDict["lockedOut"] = $val;
+        return $this;
+    }
+    /**
     * Gets the suspended
     * The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted.
     *
