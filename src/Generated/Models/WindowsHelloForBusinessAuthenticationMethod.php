@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class WindowsHelloForBusinessAuthenticationMethod extends AuthenticationMethod implements Parsable 
 {
     /**
-     * Instantiates a new windowsHelloForBusinessAuthenticationMethod and sets the default values.
+     * Instantiates a new WindowsHelloForBusinessAuthenticationMethod and sets the default values.
     */
     public function __construct() {
         parent::__construct();

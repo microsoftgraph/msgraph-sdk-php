@@ -66,10 +66,19 @@ class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable
         $o = $this;
         return  [
             'enabled' => fn(ParseNode $n) => $o->setEnabled($n->getIntegerValue()),
+            'lockedOut' => fn(ParseNode $n) => $o->setLockedOut($n->getIntegerValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'suspended' => fn(ParseNode $n) => $o->setSuspended($n->getIntegerValue()),
             'warning' => fn(ParseNode $n) => $o->setWarning($n->getIntegerValue()),
         ];
+    }
+
+    /**
+     * Gets the lockedOut property value. The lockedOut property
+     * @return int|null
+    */
+    public function getLockedOut(): ?int {
+        return $this->getBackingStore()->get('lockedOut');
     }
 
     /**
@@ -102,6 +111,7 @@ class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function serialize(SerializationWriter $writer): void {
         $writer->writeIntegerValue('enabled', $this->getEnabled());
+        $writer->writeIntegerValue('lockedOut', $this->getLockedOut());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('suspended', $this->getSuspended());
         $writer->writeIntegerValue('warning', $this->getWarning());
@@ -130,6 +140,14 @@ class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setEnabled(?int $value): void {
         $this->getBackingStore()->set('enabled', $value);
+    }
+
+    /**
+     * Sets the lockedOut property value. The lockedOut property
+     * @param int|null $value Value to set for the lockedOut property.
+    */
+    public function setLockedOut(?int $value): void {
+        $this->getBackingStore()->set('lockedOut', $value);
     }
 
     /**
