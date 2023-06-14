@@ -59,6 +59,11 @@ $graphServiceClient = new GraphServiceClient($tokenRequestContext);
 
 ```
 
+Using a custom National Cloud deployment:
+```php
+$graphServiceClient = new GraphServiceClient($tokenRequestContext, $scopes, NationalCloud::CHINA);
+```
+
 Customizing the default Guzzle client:
 ```php
 
