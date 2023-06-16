@@ -2,8 +2,7 @@
 
 namespace Microsoft\Graph\Test;
 
-use Microsoft\Graph\Core\BaseGraphRequestAdapter;
-use Microsoft\Graph\GraphRequestAdapter;
+use Microsoft\Graph\Core\NationalCloud;
 use Microsoft\Graph\GraphServiceClient;
 use Microsoft\Kiota\Abstractions\Authentication\AnonymousAuthenticationProvider;
 use Microsoft\Kiota\Authentication\Oauth\ClientCredentialContext;
@@ -21,5 +20,24 @@ class GraphServiceClientTest extends TestCase
         $this->assertInstanceOf(GraphServiceClient::class, $client);
         $client = new GraphServiceClient($testContext, ['Users.Read']);
         $this->assertInstanceOf(GraphServiceClient::class, $client);
+    }
+
+    public function testCorrectDefaultBaseUrlIsSetWhenRequestAdapterHasEmptyBaseUrl(): void
+    {
+        $requestAdapter = new GuzzleRequestAdapter(new AnonymousAuthenticationProvider());
+        $client = GraphServiceClient::createWithRequestAdapter($requestAdapter);
+        $this->assertEquals(NationalCloud::GLOBAL.'/v1.0', $client->getRequestAdapter()->getBaseUrl());
+
+        $requestAdapter = new GuzzleRequestAdapter(new AnonymousAuthenticationProvider());
+        $client = GraphServiceClient::createWithRequestAdapter($requestAdapter, NationalCloud::CHINA);
+        $this->assertEquals(NationalCloud::CHINA.'/v1.0', $client->getRequestAdapter()->getBaseUrl());
+    }
+
+    public function testCustomBaseUrlIsNotOverriden(): void
+    {
+        $requestAdapter = new GuzzleRequestAdapter(new AnonymousAuthenticationProvider());
+        $requestAdapter->setBaseUrl(NationalCloud::CHINA);
+        $client = GraphServiceClient::createWithRequestAdapter($requestAdapter, NationalCloud::US_DOD);
+        $this->assertEquals(NationalCloud::CHINA, $client->getRequestAdapter()->getBaseUrl());
     }
 }
