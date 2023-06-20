@@ -99,9 +99,10 @@ class OnenotePageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * Retrieve the properties and relationships of a page object. **Getting page information** Access a page's metadata by page identifier: **Getting page content** You can use the page's `content` endpoint to get the HTML content of a page: The `includeIDs=true` query option is used to update pages.
      * @param OnenotePageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/page-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?OnenotePageItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -153,7 +154,7 @@ class OnenotePageItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
+     * Retrieve the properties and relationships of a page object. **Getting page information** Access a page's metadata by page identifier: **Getting page content** You can use the page's `content` endpoint to get the HTML content of a page: The `includeIDs=true` query option is used to update pages.
      * @param OnenotePageItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

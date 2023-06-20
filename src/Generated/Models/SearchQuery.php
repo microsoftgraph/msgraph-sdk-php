@@ -18,7 +18,7 @@ class SearchQuery implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new searchQuery and sets the default values.
+     * Instantiates a new SearchQuery and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

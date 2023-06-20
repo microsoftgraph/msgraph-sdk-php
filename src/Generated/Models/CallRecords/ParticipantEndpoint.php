@@ -27,6 +27,30 @@ class ParticipantEndpoint extends Endpoint implements Parsable
     }
 
     /**
+     * Gets the cpuCoresCount property value. CPU number of cores used by the media endpoint.
+     * @return int|null
+    */
+    public function getCpuCoresCount(): ?int {
+        return $this->getBackingStore()->get('cpuCoresCount');
+    }
+
+    /**
+     * Gets the cpuName property value. CPU name used by the media endpoint.
+     * @return string|null
+    */
+    public function getCpuName(): ?string {
+        return $this->getBackingStore()->get('cpuName');
+    }
+
+    /**
+     * Gets the cpuProcessorSpeedInMhz property value. CPU processor speed used by the media endpoint.
+     * @return int|null
+    */
+    public function getCpuProcessorSpeedInMhz(): ?int {
+        return $this->getBackingStore()->get('cpuProcessorSpeedInMhz');
+    }
+
+    /**
      * Gets the feedback property value. The feedback provided by the user of this endpoint about the quality of the session.
      * @return UserFeedback|null
     */
@@ -41,8 +65,12 @@ class ParticipantEndpoint extends Endpoint implements Parsable
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
+            'cpuCoresCount' => fn(ParseNode $n) => $o->setCpuCoresCount($n->getIntegerValue()),
+            'cpuName' => fn(ParseNode $n) => $o->setCpuName($n->getStringValue()),
+            'cpuProcessorSpeedInMhz' => fn(ParseNode $n) => $o->setCpuProcessorSpeedInMhz($n->getIntegerValue()),
             'feedback' => fn(ParseNode $n) => $o->setFeedback($n->getObjectValue([UserFeedback::class, 'createFromDiscriminatorValue'])),
             'identity' => fn(ParseNode $n) => $o->setIdentity($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
+            'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
         ]);
     }
 
@@ -55,13 +83,49 @@ class ParticipantEndpoint extends Endpoint implements Parsable
     }
 
     /**
+     * Gets the name property value. Name of the device used by the media endpoint.
+     * @return string|null
+    */
+    public function getName(): ?string {
+        return $this->getBackingStore()->get('name');
+    }
+
+    /**
      * Serializes information the current object
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
         parent::serialize($writer);
+        $writer->writeIntegerValue('cpuCoresCount', $this->getCpuCoresCount());
+        $writer->writeStringValue('cpuName', $this->getCpuName());
+        $writer->writeIntegerValue('cpuProcessorSpeedInMhz', $this->getCpuProcessorSpeedInMhz());
         $writer->writeObjectValue('feedback', $this->getFeedback());
         $writer->writeObjectValue('identity', $this->getIdentity());
+        $writer->writeStringValue('name', $this->getName());
+    }
+
+    /**
+     * Sets the cpuCoresCount property value. CPU number of cores used by the media endpoint.
+     * @param int|null $value Value to set for the cpuCoresCount property.
+    */
+    public function setCpuCoresCount(?int $value): void {
+        $this->getBackingStore()->set('cpuCoresCount', $value);
+    }
+
+    /**
+     * Sets the cpuName property value. CPU name used by the media endpoint.
+     * @param string|null $value Value to set for the cpuName property.
+    */
+    public function setCpuName(?string $value): void {
+        $this->getBackingStore()->set('cpuName', $value);
+    }
+
+    /**
+     * Sets the cpuProcessorSpeedInMhz property value. CPU processor speed used by the media endpoint.
+     * @param int|null $value Value to set for the cpuProcessorSpeedInMhz property.
+    */
+    public function setCpuProcessorSpeedInMhz(?int $value): void {
+        $this->getBackingStore()->set('cpuProcessorSpeedInMhz', $value);
     }
 
     /**
@@ -78,6 +142,14 @@ class ParticipantEndpoint extends Endpoint implements Parsable
     */
     public function setIdentity(?IdentitySet $value): void {
         $this->getBackingStore()->set('identity', $value);
+    }
+
+    /**
+     * Sets the name property value. Name of the device used by the media endpoint.
+     * @param string|null $value Value to set for the name property.
+    */
+    public function setName(?string $value): void {
+        $this->getBackingStore()->set('name', $value);
     }
 
 }

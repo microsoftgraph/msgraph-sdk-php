@@ -77,6 +77,14 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the averageFreezeDuration property value. Average duration of the received freezing time in the video stream.
+     * @return DateInterval|null
+    */
+    public function getAverageFreezeDuration(): ?DateInterval {
+        return $this->getBackingStore()->get('averageFreezeDuration');
+    }
+
+    /**
      * Gets the averageJitter property value. Average jitter for the stream computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as 'PT1S', where 'P' is the duration designator, 'T' is the time designator, and 'S' is the second designator.
      * @return DateInterval|null
     */
@@ -167,6 +175,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
             'averageAudioDegradation' => fn(ParseNode $n) => $o->setAverageAudioDegradation($n->getFloatValue()),
             'averageAudioNetworkJitter' => fn(ParseNode $n) => $o->setAverageAudioNetworkJitter($n->getDateIntervalValue()),
             'averageBandwidthEstimate' => fn(ParseNode $n) => $o->setAverageBandwidthEstimate($n->getIntegerValue()),
+            'averageFreezeDuration' => fn(ParseNode $n) => $o->setAverageFreezeDuration($n->getDateIntervalValue()),
             'averageJitter' => fn(ParseNode $n) => $o->setAverageJitter($n->getDateIntervalValue()),
             'averagePacketLossRate' => fn(ParseNode $n) => $o->setAveragePacketLossRate($n->getFloatValue()),
             'averageRatioOfConcealedSamples' => fn(ParseNode $n) => $o->setAverageRatioOfConcealedSamples($n->getFloatValue()),
@@ -176,6 +185,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
             'averageVideoFrameRate' => fn(ParseNode $n) => $o->setAverageVideoFrameRate($n->getFloatValue()),
             'averageVideoPacketLossRate' => fn(ParseNode $n) => $o->setAverageVideoPacketLossRate($n->getFloatValue()),
             'endDateTime' => fn(ParseNode $n) => $o->setEndDateTime($n->getDateTimeValue()),
+            'isAudioForwardErrorCorrectionUsed' => fn(ParseNode $n) => $o->setIsAudioForwardErrorCorrectionUsed($n->getBooleanValue()),
             'lowFrameRateRatio' => fn(ParseNode $n) => $o->setLowFrameRateRatio($n->getFloatValue()),
             'lowVideoProcessingCapabilityRatio' => fn(ParseNode $n) => $o->setLowVideoProcessingCapabilityRatio($n->getFloatValue()),
             'maxAudioNetworkJitter' => fn(ParseNode $n) => $o->setMaxAudioNetworkJitter($n->getDateIntervalValue()),
@@ -186,12 +196,21 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'packetUtilization' => fn(ParseNode $n) => $o->setPacketUtilization($n->getIntegerValue()),
             'postForwardErrorCorrectionPacketLossRate' => fn(ParseNode $n) => $o->setPostForwardErrorCorrectionPacketLossRate($n->getFloatValue()),
+            'rmsFreezeDuration' => fn(ParseNode $n) => $o->setRmsFreezeDuration($n->getDateIntervalValue()),
             'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getDateTimeValue()),
             'streamDirection' => fn(ParseNode $n) => $o->setStreamDirection($n->getEnumValue(MediaStreamDirection::class)),
             'streamId' => fn(ParseNode $n) => $o->setStreamId($n->getStringValue()),
             'videoCodec' => fn(ParseNode $n) => $o->setVideoCodec($n->getEnumValue(VideoCodec::class)),
             'wasMediaBypassed' => fn(ParseNode $n) => $o->setWasMediaBypassed($n->getBooleanValue()),
         ];
+    }
+
+    /**
+     * Gets the isAudioForwardErrorCorrectionUsed property value. Indicates whether the forward error correction (FEC) was used at some point during the session. The default value is null.
+     * @return bool|null
+    */
+    public function getIsAudioForwardErrorCorrectionUsed(): ?bool {
+        return $this->getBackingStore()->get('isAudioForwardErrorCorrectionUsed');
     }
 
     /**
@@ -275,6 +294,14 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Gets the rmsFreezeDuration property value. Average duration of the received freezing time in the video stream represented in root mean square.
+     * @return DateInterval|null
+    */
+    public function getRmsFreezeDuration(): ?DateInterval {
+        return $this->getBackingStore()->get('rmsFreezeDuration');
+    }
+
+    /**
      * Gets the startDateTime property value. UTC time when the stream started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z
      * @return DateTime|null
     */
@@ -323,6 +350,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeFloatValue('averageAudioDegradation', $this->getAverageAudioDegradation());
         $writer->writeDateIntervalValue('averageAudioNetworkJitter', $this->getAverageAudioNetworkJitter());
         $writer->writeIntegerValue('averageBandwidthEstimate', $this->getAverageBandwidthEstimate());
+        $writer->writeDateIntervalValue('averageFreezeDuration', $this->getAverageFreezeDuration());
         $writer->writeDateIntervalValue('averageJitter', $this->getAverageJitter());
         $writer->writeFloatValue('averagePacketLossRate', $this->getAveragePacketLossRate());
         $writer->writeFloatValue('averageRatioOfConcealedSamples', $this->getAverageRatioOfConcealedSamples());
@@ -332,6 +360,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeFloatValue('averageVideoFrameRate', $this->getAverageVideoFrameRate());
         $writer->writeFloatValue('averageVideoPacketLossRate', $this->getAverageVideoPacketLossRate());
         $writer->writeDateTimeValue('endDateTime', $this->getEndDateTime());
+        $writer->writeBooleanValue('isAudioForwardErrorCorrectionUsed', $this->getIsAudioForwardErrorCorrectionUsed());
         $writer->writeFloatValue('lowFrameRateRatio', $this->getLowFrameRateRatio());
         $writer->writeFloatValue('lowVideoProcessingCapabilityRatio', $this->getLowVideoProcessingCapabilityRatio());
         $writer->writeDateIntervalValue('maxAudioNetworkJitter', $this->getMaxAudioNetworkJitter());
@@ -342,6 +371,7 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeIntegerValue('packetUtilization', $this->getPacketUtilization());
         $writer->writeFloatValue('postForwardErrorCorrectionPacketLossRate', $this->getPostForwardErrorCorrectionPacketLossRate());
+        $writer->writeDateIntervalValue('rmsFreezeDuration', $this->getRmsFreezeDuration());
         $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
         $writer->writeEnumValue('streamDirection', $this->getStreamDirection());
         $writer->writeStringValue('streamId', $this->getStreamId());
@@ -388,6 +418,14 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setAverageBandwidthEstimate(?int $value): void {
         $this->getBackingStore()->set('averageBandwidthEstimate', $value);
+    }
+
+    /**
+     * Sets the averageFreezeDuration property value. Average duration of the received freezing time in the video stream.
+     * @param DateInterval|null $value Value to set for the averageFreezeDuration property.
+    */
+    public function setAverageFreezeDuration(?DateInterval $value): void {
+        $this->getBackingStore()->set('averageFreezeDuration', $value);
     }
 
     /**
@@ -471,6 +509,14 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
+     * Sets the isAudioForwardErrorCorrectionUsed property value. Indicates whether the forward error correction (FEC) was used at some point during the session. The default value is null.
+     * @param bool|null $value Value to set for the isAudioForwardErrorCorrectionUsed property.
+    */
+    public function setIsAudioForwardErrorCorrectionUsed(?bool $value): void {
+        $this->getBackingStore()->set('isAudioForwardErrorCorrectionUsed', $value);
+    }
+
+    /**
      * Sets the lowFrameRateRatio property value. Fraction of the call where frame rate is less than 7.5 frames per second.
      * @param float|null $value Value to set for the lowFrameRateRatio property.
     */
@@ -548,6 +594,14 @@ class MediaStream implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setPostForwardErrorCorrectionPacketLossRate(?float $value): void {
         $this->getBackingStore()->set('postForwardErrorCorrectionPacketLossRate', $value);
+    }
+
+    /**
+     * Sets the rmsFreezeDuration property value. Average duration of the received freezing time in the video stream represented in root mean square.
+     * @param DateInterval|null $value Value to set for the rmsFreezeDuration property.
+    */
+    public function setRmsFreezeDuration(?DateInterval $value): void {
+        $this->getBackingStore()->set('rmsFreezeDuration', $value);
     }
 
     /**

@@ -18,7 +18,7 @@ class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new visualInfo and sets the default values.
+     * Instantiates a new VisualInfo and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -72,11 +72,10 @@ class GroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new group object in a term store.
+     * Create new navigation property to groups for groups
      * @param Group $body The request body
      * @param GroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/termstore-group-post?view=graph-rest-1.0 Find more info here
     */
     public function post(Group $body, ?GroupsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -113,7 +112,7 @@ class GroupsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new group object in a term store.
+     * Create new navigation property to groups for groups
      * @param Group $body The request body
      * @param GroupsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

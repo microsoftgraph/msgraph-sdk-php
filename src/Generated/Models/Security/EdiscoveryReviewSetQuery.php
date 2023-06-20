@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class EdiscoveryReviewSetQuery extends Search implements Parsable 
 {
     /**
-     * Instantiates a new EdiscoveryReviewSetQuery and sets the default values.
+     * Instantiates a new ediscoveryReviewSetQuery and sets the default values.
     */
     public function __construct() {
         parent::__construct();

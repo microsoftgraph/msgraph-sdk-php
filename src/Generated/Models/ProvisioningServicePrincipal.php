@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class ProvisioningServicePrincipal extends Identity implements Parsable 
 {
     /**
-     * Instantiates a new provisioningServicePrincipal and sets the default values.
+     * Instantiates a new ProvisioningServicePrincipal and sets the default values.
     */
     public function __construct() {
         parent::__construct();

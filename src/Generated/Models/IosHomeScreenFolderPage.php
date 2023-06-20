@@ -21,7 +21,7 @@ class IosHomeScreenFolderPage implements AdditionalDataHolder, BackedModel, Pars
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new iosHomeScreenFolderPage and sets the default values.
+     * Instantiates a new IosHomeScreenFolderPage and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

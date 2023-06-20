@@ -58,9 +58,10 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get settings from users
+     * Read the user and organization userSettings object.To learn how to update the properties of the userSettings object, see update user settings.
      * @param SettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/usersettings-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?SettingsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -112,7 +113,7 @@ class SettingsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get settings from users
+     * Read the user and organization userSettings object.To learn how to update the properties of the userSettings object, see update user settings.
      * @param SettingsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

@@ -72,10 +72,11 @@ class TabsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to tabs for users
+     * Adds (pins) a tab to the specified channel within a team. The corresponding app must already be installed in the team.
      * @param TeamsTab $body The request body
      * @param TabsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/channel-post-tabs?view=graph-rest-1.0 Find more info here
     */
     public function post(TeamsTab $body, ?TabsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -112,7 +113,7 @@ class TabsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to tabs for users
+     * Adds (pins) a tab to the specified channel within a team. The corresponding app must already be installed in the team.
      * @param TeamsTab $body The request body
      * @param TabsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

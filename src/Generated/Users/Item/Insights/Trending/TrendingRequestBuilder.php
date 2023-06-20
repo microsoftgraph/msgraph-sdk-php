@@ -53,9 +53,10 @@ class TrendingRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
+     * Calculated insight that includes a list of documents trending around the user.
      * @param TrendingRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/insights-list-trending?view=graph-rest-1.0 Find more info here
     */
     public function get(?TrendingRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -90,7 +91,7 @@ class TrendingRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Calculated relationship identifying documents trending around a user. Trending documents are calculated based on activity of the user's closest network of people and include files stored in OneDrive for Business and SharePoint. Trending insights help the user to discover potentially useful content that the user has access to, but has never viewed before.
+     * Calculated insight that includes a list of documents trending around the user.
      * @param TrendingRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

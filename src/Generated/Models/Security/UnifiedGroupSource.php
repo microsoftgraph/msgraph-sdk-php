@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class UnifiedGroupSource extends DataSource implements Parsable 
 {
     /**
-     * Instantiates a new unifiedGroupSource and sets the default values.
+     * Instantiates a new UnifiedGroupSource and sets the default values.
     */
     public function __construct() {
         parent::__construct();

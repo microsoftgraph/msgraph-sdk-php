@@ -25,7 +25,7 @@ class AppConsentApprovalRoute extends Entity implements Parsable
     }
 
     /**
-     * Gets the appConsentRequests property value. A collection of userConsentRequest objects for a specific application.
+     * Gets the appConsentRequests property value. A collection of appConsentRequest objects representing apps for which admin consent has been requested by one or more users.
      * @return array<AppConsentRequest>|null
     */
     public function getAppConsentRequests(): ?array {
@@ -53,7 +53,7 @@ class AppConsentApprovalRoute extends Entity implements Parsable
     }
 
     /**
-     * Sets the appConsentRequests property value. A collection of userConsentRequest objects for a specific application.
+     * Sets the appConsentRequests property value. A collection of appConsentRequest objects representing apps for which admin consent has been requested by one or more users.
      * @param array<AppConsentRequest>|null $value Value to set for the appConsentRequests property.
     */
     public function setAppConsentRequests(?array $value): void {
