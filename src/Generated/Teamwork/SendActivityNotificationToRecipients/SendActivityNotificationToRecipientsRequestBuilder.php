@@ -31,10 +31,11 @@ class SendActivityNotificationToRecipientsRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Invoke action sendActivityNotificationToRecipients
+     * Send activity feed notifications to multiple users, in bulk.  For more details about sending notifications and the requirements for doing so, seesending Teams activity notifications.
      * @param SendActivityNotificationToRecipientsPostRequestBody $body The request body
      * @param SendActivityNotificationToRecipientsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/teamwork-sendactivitynotificationtorecipients?view=graph-rest-1.0 Find more info here
     */
     public function post(SendActivityNotificationToRecipientsPostRequestBody $body, ?SendActivityNotificationToRecipientsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class SendActivityNotificationToRecipientsRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Invoke action sendActivityNotificationToRecipients
+     * Send activity feed notifications to multiple users, in bulk.  For more details about sending notifications and the requirements for doing so, seesending Teams activity notifications.
      * @param SendActivityNotificationToRecipientsPostRequestBody $body The request body
      * @param SendActivityNotificationToRecipientsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -21,7 +21,7 @@ class DeviceConfigurationSettingState implements AdditionalDataHolder, BackedMod
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new deviceConfigurationSettingState and sets the default values.
+     * Instantiates a new DeviceConfigurationSettingState and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

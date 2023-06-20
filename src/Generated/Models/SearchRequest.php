@@ -18,7 +18,7 @@ class SearchRequest implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new searchRequest and sets the default values.
+     * Instantiates a new SearchRequest and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

@@ -80,10 +80,11 @@ class IdentityProvidersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add new entity to identityProviders
+     * Create a new identityProvider by specifying display name, identityProvider type, client ID, and client secret.
      * @param IdentityProvider $body The request body
      * @param IdentityProvidersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/identityprovider-post-identityproviders?view=graph-rest-1.0 Find more info here
     */
     public function post(IdentityProvider $body, ?IdentityProvidersRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -120,7 +121,7 @@ class IdentityProvidersRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Add new entity to identityProviders
+     * Create a new identityProvider by specifying display name, identityProvider type, client ID, and client secret.
      * @param IdentityProvider $body The request body
      * @param IdentityProvidersRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

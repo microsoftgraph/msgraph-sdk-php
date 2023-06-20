@@ -21,7 +21,7 @@ class ProxiedDomain implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new proxiedDomain and sets the default values.
+     * Instantiates a new ProxiedDomain and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

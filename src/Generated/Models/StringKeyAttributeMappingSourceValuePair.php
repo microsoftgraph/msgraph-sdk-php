@@ -18,7 +18,7 @@ class StringKeyAttributeMappingSourceValuePair implements AdditionalDataHolder, 
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new stringKeyAttributeMappingSourceValuePair and sets the default values.
+     * Instantiates a new StringKeyAttributeMappingSourceValuePair and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

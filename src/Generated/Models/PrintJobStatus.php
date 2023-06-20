@@ -18,7 +18,7 @@ class PrintJobStatus implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new printJobStatus and sets the default values.
+     * Instantiates a new PrintJobStatus and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

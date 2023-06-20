@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Education\Classes\Item\Assignments\Item\Subm
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get submittedResources from education
+ * Retrieve a submitted resource. Only teachers, students, and applications with application permissions can perform this operation. Resources are available to a teacher or an application with application permissions after a student submits it, and are available to the student after the teacher returns the submission. Note that teachers can leave notes in some resources.
 */
 class EducationSubmissionResourceItemRequestBuilderGetQueryParameters 
 {

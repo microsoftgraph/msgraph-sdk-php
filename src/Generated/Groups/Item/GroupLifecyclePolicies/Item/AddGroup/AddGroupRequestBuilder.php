@@ -31,10 +31,11 @@ class AddGroupRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action addGroup
+     * Adds specific groups to a lifecycle policy. This action limits the group lifecycle policy to a set of groups only if the **managedGroupTypes** property of groupLifecyclePolicy is set to `Selected`.
      * @param AddGroupPostRequestBody $body The request body
      * @param AddGroupRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/grouplifecyclepolicy-addgroup?view=graph-rest-1.0 Find more info here
     */
     public function post(AddGroupPostRequestBody $body, ?AddGroupRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class AddGroupRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action addGroup
+     * Adds specific groups to a lifecycle policy. This action limits the group lifecycle policy to a set of groups only if the **managedGroupTypes** property of groupLifecyclePolicy is set to `Selected`.
      * @param AddGroupPostRequestBody $body The request body
      * @param AddGroupRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

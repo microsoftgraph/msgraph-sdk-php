@@ -69,10 +69,19 @@ class Session extends Entity implements Parsable
             'caller' => fn(ParseNode $n) => $o->setCaller($n->getObjectValue([Endpoint::class, 'createFromDiscriminatorValue'])),
             'endDateTime' => fn(ParseNode $n) => $o->setEndDateTime($n->getDateTimeValue()),
             'failureInfo' => fn(ParseNode $n) => $o->setFailureInfo($n->getObjectValue([FailureInfo::class, 'createFromDiscriminatorValue'])),
+            'isTest' => fn(ParseNode $n) => $o->setIsTest($n->getBooleanValue()),
             'modalities' => fn(ParseNode $n) => $o->setModalities($n->getCollectionOfEnumValues(Modality::class)),
             'segments' => fn(ParseNode $n) => $o->setSegments($n->getCollectionOfObjectValues([Segment::class, 'createFromDiscriminatorValue'])),
             'startDateTime' => fn(ParseNode $n) => $o->setStartDateTime($n->getDateTimeValue()),
         ]);
+    }
+
+    /**
+     * Gets the isTest property value. Specifies whether the session is a test.
+     * @return bool|null
+    */
+    public function getIsTest(): ?bool {
+        return $this->getBackingStore()->get('isTest');
     }
 
     /**
@@ -109,6 +118,7 @@ class Session extends Entity implements Parsable
         $writer->writeObjectValue('caller', $this->getCaller());
         $writer->writeDateTimeValue('endDateTime', $this->getEndDateTime());
         $writer->writeObjectValue('failureInfo', $this->getFailureInfo());
+        $writer->writeBooleanValue('isTest', $this->getIsTest());
         $writer->writeCollectionOfEnumValues('modalities', $this->getModalities());
         $writer->writeCollectionOfObjectValues('segments', $this->getSegments());
         $writer->writeDateTimeValue('startDateTime', $this->getStartDateTime());
@@ -144,6 +154,14 @@ class Session extends Entity implements Parsable
     */
     public function setFailureInfo(?FailureInfo $value): void {
         $this->getBackingStore()->set('failureInfo', $value);
+    }
+
+    /**
+     * Sets the isTest property value. Specifies whether the session is a test.
+     * @param bool|null $value Value to set for the isTest property.
+    */
+    public function setIsTest(?bool $value): void {
+        $this->getBackingStore()->set('isTest', $value);
     }
 
     /**

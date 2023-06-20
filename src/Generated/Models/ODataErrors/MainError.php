@@ -75,18 +75,18 @@ class MainError implements AdditionalDataHolder, BackedModel, Parsable
         return  [
             'code' => fn(ParseNode $n) => $o->setCode($n->getStringValue()),
             'details' => fn(ParseNode $n) => $o->setDetails($n->getCollectionOfObjectValues([ErrorDetails::class, 'createFromDiscriminatorValue'])),
-            'innererror' => fn(ParseNode $n) => $o->setInnererror($n->getObjectValue([InnerError::class, 'createFromDiscriminatorValue'])),
+            'innerError' => fn(ParseNode $n) => $o->setInnerError($n->getObjectValue([InnerError::class, 'createFromDiscriminatorValue'])),
             'message' => fn(ParseNode $n) => $o->setMessage($n->getStringValue()),
             'target' => fn(ParseNode $n) => $o->setTarget($n->getStringValue()),
         ];
     }
 
     /**
-     * Gets the innererror property value. The innererror property
+     * Gets the innerError property value. The innerError property
      * @return InnerError|null
     */
-    public function getInnererror(): ?InnerError {
-        return $this->getBackingStore()->get('innererror');
+    public function getInnerError(): ?InnerError {
+        return $this->getBackingStore()->get('innerError');
     }
 
     /**
@@ -112,7 +112,7 @@ class MainError implements AdditionalDataHolder, BackedModel, Parsable
     public function serialize(SerializationWriter $writer): void {
         $writer->writeStringValue('code', $this->getCode());
         $writer->writeCollectionOfObjectValues('details', $this->getDetails());
-        $writer->writeObjectValue('innererror', $this->getInnererror());
+        $writer->writeObjectValue('innerError', $this->getInnerError());
         $writer->writeStringValue('message', $this->getMessage());
         $writer->writeStringValue('target', $this->getTarget());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -151,11 +151,11 @@ class MainError implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the innererror property value. The innererror property
-     * @param InnerError|null $value Value to set for the innererror property.
+     * Sets the innerError property value. The innerError property
+     * @param InnerError|null $value Value to set for the innerError property.
     */
-    public function setInnererror(?InnerError $value): void {
-        $this->getBackingStore()->set('innererror', $value);
+    public function setInnerError(?InnerError $value): void {
+        $this->getBackingStore()->set('innerError', $value);
     }
 
     /**
