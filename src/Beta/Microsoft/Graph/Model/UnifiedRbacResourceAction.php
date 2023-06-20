@@ -137,6 +137,33 @@ class UnifiedRbacResourceAction extends Entity
     }
 
     /**
+    * Gets the isPrivileged
+    *
+    * @return bool|null The isPrivileged
+    */
+    public function getIsPrivileged()
+    {
+        if (array_key_exists("isPrivileged", $this->_propDict)) {
+            return $this->_propDict["isPrivileged"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isPrivileged
+    *
+    * @param bool $val The isPrivileged
+    *
+    * @return UnifiedRbacResourceAction
+    */
+    public function setIsPrivileged($val)
+    {
+        $this->_propDict["isPrivileged"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the name
     * Name for the action within the resource namespace, such as microsoft.insights/programs/update. Can include slash character (/). Case insensitive. Required. Supports $filter (eq).
     *

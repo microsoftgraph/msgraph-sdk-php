@@ -23,6 +23,37 @@ namespace Beta\Microsoft\Graph\Networkaccess\Model;
 */
 class PolicyRuleDelta extends \Beta\Microsoft\Graph\Model\Entity
 {
+
+    /**
+    * Gets the action
+    *
+    * @return ForwardingRuleAction|null The action
+    */
+    public function getAction()
+    {
+        if (array_key_exists("action", $this->_propDict)) {
+            if (is_a($this->_propDict["action"], "\Beta\Microsoft\Graph\Networkaccess\Model\ForwardingRuleAction") || is_null($this->_propDict["action"])) {
+                return $this->_propDict["action"];
+            } else {
+                $this->_propDict["action"] = new ForwardingRuleAction($this->_propDict["action"]);
+                return $this->_propDict["action"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the action
+    *
+    * @param ForwardingRuleAction $val The value to assign to the action
+    *
+    * @return PolicyRuleDelta The PolicyRuleDelta
+    */
+    public function setAction($val)
+    {
+        $this->_propDict["action"] = $val;
+         return $this;
+    }
     /**
     * Gets the ruleId
     *

@@ -261,6 +261,33 @@ class UserRegistrationDetails extends Entity
     }
 
     /**
+    * Gets the isSystemPreferredAuthenticationMethodEnabled
+    *
+    * @return bool|null The isSystemPreferredAuthenticationMethodEnabled
+    */
+    public function getIsSystemPreferredAuthenticationMethodEnabled()
+    {
+        if (array_key_exists("isSystemPreferredAuthenticationMethodEnabled", $this->_propDict)) {
+            return $this->_propDict["isSystemPreferredAuthenticationMethodEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isSystemPreferredAuthenticationMethodEnabled
+    *
+    * @param bool $val The isSystemPreferredAuthenticationMethodEnabled
+    *
+    * @return UserRegistrationDetails
+    */
+    public function setIsSystemPreferredAuthenticationMethodEnabled($val)
+    {
+        $this->_propDict["isSystemPreferredAuthenticationMethodEnabled"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the lastUpdatedDateTime
     * The date and time (UTC) when the record was last updated. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.
     *
@@ -323,6 +350,33 @@ class UserRegistrationDetails extends Entity
     }
 
     /**
+    * Gets the systemPreferredAuthenticationMethods
+    *
+    * @return array|null The systemPreferredAuthenticationMethods
+    */
+    public function getSystemPreferredAuthenticationMethods()
+    {
+        if (array_key_exists("systemPreferredAuthenticationMethods", $this->_propDict)) {
+            return $this->_propDict["systemPreferredAuthenticationMethods"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the systemPreferredAuthenticationMethods
+    *
+    * @param string[] $val The systemPreferredAuthenticationMethods
+    *
+    * @return UserRegistrationDetails
+    */
+    public function setSystemPreferredAuthenticationMethods($val)
+    {
+        $this->_propDict["systemPreferredAuthenticationMethods"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the userDisplayName
     * The user display name, such as Adele Vance. Supports $filter (eq, startsWith) and $orderBy.
     *
@@ -348,6 +402,37 @@ class UserRegistrationDetails extends Entity
     public function setUserDisplayName($val)
     {
         $this->_propDict["userDisplayName"] = $val;
+        return $this;
+    }
+
+    /**
+    * Gets the userPreferredMethodForSecondaryAuthentication
+    *
+    * @return UserDefaultAuthenticationMethod|null The userPreferredMethodForSecondaryAuthentication
+    */
+    public function getUserPreferredMethodForSecondaryAuthentication()
+    {
+        if (array_key_exists("userPreferredMethodForSecondaryAuthentication", $this->_propDict)) {
+            if (is_a($this->_propDict["userPreferredMethodForSecondaryAuthentication"], "\Beta\Microsoft\Graph\Model\UserDefaultAuthenticationMethod") || is_null($this->_propDict["userPreferredMethodForSecondaryAuthentication"])) {
+                return $this->_propDict["userPreferredMethodForSecondaryAuthentication"];
+            } else {
+                $this->_propDict["userPreferredMethodForSecondaryAuthentication"] = new UserDefaultAuthenticationMethod($this->_propDict["userPreferredMethodForSecondaryAuthentication"]);
+                return $this->_propDict["userPreferredMethodForSecondaryAuthentication"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the userPreferredMethodForSecondaryAuthentication
+    *
+    * @param UserDefaultAuthenticationMethod $val The userPreferredMethodForSecondaryAuthentication
+    *
+    * @return UserRegistrationDetails
+    */
+    public function setUserPreferredMethodForSecondaryAuthentication($val)
+    {
+        $this->_propDict["userPreferredMethodForSecondaryAuthentication"] = $val;
         return $this;
     }
 
