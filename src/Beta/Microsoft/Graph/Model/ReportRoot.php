@@ -26,6 +26,36 @@ class ReportRoot extends Entity
 {
 
      /**
+     * Gets the appCredentialSignInActivities
+    * Represents a collection of sign-in activities of application credentials.
+     *
+     * @return array|null The appCredentialSignInActivities
+     */
+    public function getAppCredentialSignInActivities()
+    {
+        if (array_key_exists("appCredentialSignInActivities", $this->_propDict)) {
+           return $this->_propDict["appCredentialSignInActivities"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the appCredentialSignInActivities
+    * Represents a collection of sign-in activities of application credentials.
+    *
+    * @param AppCredentialSignInActivity[] $val The appCredentialSignInActivities
+    *
+    * @return ReportRoot
+    */
+    public function setAppCredentialSignInActivities($val)
+    {
+        $this->_propDict["appCredentialSignInActivities"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the applicationSignInDetailedSummary
     * Represents a detailed summary of an application sign-in.
      *
@@ -114,6 +144,36 @@ class ReportRoot extends Entity
     public function setCredentialUserRegistrationDetails($val)
     {
         $this->_propDict["credentialUserRegistrationDetails"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the servicePrincipalSignInActivities
+    * Represents a collection of sign-in activities of service principals.
+     *
+     * @return array|null The servicePrincipalSignInActivities
+     */
+    public function getServicePrincipalSignInActivities()
+    {
+        if (array_key_exists("servicePrincipalSignInActivities", $this->_propDict)) {
+           return $this->_propDict["servicePrincipalSignInActivities"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the servicePrincipalSignInActivities
+    * Represents a collection of sign-in activities of service principals.
+    *
+    * @param ServicePrincipalSignInActivity[] $val The servicePrincipalSignInActivities
+    *
+    * @return ReportRoot
+    */
+    public function setServicePrincipalSignInActivities($val)
+    {
+        $this->_propDict["servicePrincipalSignInActivities"] = $val;
         return $this;
     }
 

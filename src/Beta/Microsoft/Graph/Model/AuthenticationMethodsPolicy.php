@@ -240,6 +240,39 @@ class AuthenticationMethodsPolicy extends Entity
     }
 
     /**
+    * Gets the reportSuspiciousActivitySettings
+    * Enable users to report unexpected voice call or phone app notification multi-factor authentication prompts as suspicious.
+    *
+    * @return ReportSuspiciousActivitySettings|null The reportSuspiciousActivitySettings
+    */
+    public function getReportSuspiciousActivitySettings()
+    {
+        if (array_key_exists("reportSuspiciousActivitySettings", $this->_propDict)) {
+            if (is_a($this->_propDict["reportSuspiciousActivitySettings"], "\Beta\Microsoft\Graph\Model\ReportSuspiciousActivitySettings") || is_null($this->_propDict["reportSuspiciousActivitySettings"])) {
+                return $this->_propDict["reportSuspiciousActivitySettings"];
+            } else {
+                $this->_propDict["reportSuspiciousActivitySettings"] = new ReportSuspiciousActivitySettings($this->_propDict["reportSuspiciousActivitySettings"]);
+                return $this->_propDict["reportSuspiciousActivitySettings"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the reportSuspiciousActivitySettings
+    * Enable users to report unexpected voice call or phone app notification multi-factor authentication prompts as suspicious.
+    *
+    * @param ReportSuspiciousActivitySettings $val The reportSuspiciousActivitySettings
+    *
+    * @return AuthenticationMethodsPolicy
+    */
+    public function setReportSuspiciousActivitySettings($val)
+    {
+        $this->_propDict["reportSuspiciousActivitySettings"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the systemCredentialPreferences
     * Prompt users with their most-preferred credential for multifactor authentication.
     *
