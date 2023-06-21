@@ -36,7 +36,7 @@ class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignmentSetti
 
     /**
     * Gets the useDeviceContext
-    * If true, uses device execution context for Windows Universal AppX mobile app. Device-context install is not allowed when this type of app is targeted with Available intent. Defaults to false.
+    * Whether or not to use device execution context for Windows Universal AppX mobile app.
     *
     * @return bool|null The useDeviceContext
     */
@@ -51,7 +51,7 @@ class WindowsUniversalAppXAppAssignmentSettings extends MobileAppAssignmentSetti
 
     /**
     * Sets the useDeviceContext
-    * If true, uses device execution context for Windows Universal AppX mobile app. Device-context install is not allowed when this type of app is targeted with Available intent. Defaults to false.
+    * Whether or not to use device execution context for Windows Universal AppX mobile app.
     *
     * @param bool $val The value of the useDeviceContext
     *

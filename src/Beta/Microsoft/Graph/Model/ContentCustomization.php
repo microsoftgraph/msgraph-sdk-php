@@ -26,6 +26,7 @@ class ContentCustomization extends Entity
 
     /**
     * Gets the attributeCollection
+    * Represents the content options of External Identities to be customized throughout the authentication flow for a tenant.
     *
     * @return KeyValue|null The attributeCollection
     */
@@ -44,6 +45,7 @@ class ContentCustomization extends Entity
 
     /**
     * Sets the attributeCollection
+    * Represents the content options of External Identities to be customized throughout the authentication flow for a tenant.
     *
     * @param KeyValue $val The value to assign to the attributeCollection
     *
@@ -56,6 +58,7 @@ class ContentCustomization extends Entity
     }
     /**
     * Gets the attributeCollectionRelativeUrl
+    * A relative URL for the content options of External Identities to be customized throughout the authentication flow for a tenant.
     *
     * @return string|null The attributeCollectionRelativeUrl
     */
@@ -70,6 +73,7 @@ class ContentCustomization extends Entity
 
     /**
     * Sets the attributeCollectionRelativeUrl
+    * A relative URL for the content options of External Identities to be customized throughout the authentication flow for a tenant.
     *
     * @param string $val The value of the attributeCollectionRelativeUrl
     *

@@ -25,6 +25,7 @@ class ChannelSummary extends Entity
 {
     /**
     * Gets the guestsCount
+    * Count of guests in a channel.
     *
     * @return int|null The guestsCount
     */
@@ -39,6 +40,7 @@ class ChannelSummary extends Entity
 
     /**
     * Sets the guestsCount
+    * Count of guests in a channel.
     *
     * @param int $val The value of the guestsCount
     *
@@ -51,6 +53,7 @@ class ChannelSummary extends Entity
     }
     /**
     * Gets the hasMembersFromOtherTenants
+    * Indicates whether external members are included on the channel.
     *
     * @return bool|null The hasMembersFromOtherTenants
     */
@@ -65,6 +68,7 @@ class ChannelSummary extends Entity
 
     /**
     * Sets the hasMembersFromOtherTenants
+    * Indicates whether external members are included on the channel.
     *
     * @param bool $val The value of the hasMembersFromOtherTenants
     *
@@ -77,6 +81,7 @@ class ChannelSummary extends Entity
     }
     /**
     * Gets the membersCount
+    * Count of members in a channel.
     *
     * @return int|null The membersCount
     */
@@ -91,6 +96,7 @@ class ChannelSummary extends Entity
 
     /**
     * Sets the membersCount
+    * Count of members in a channel.
     *
     * @param int $val The value of the membersCount
     *
@@ -103,6 +109,7 @@ class ChannelSummary extends Entity
     }
     /**
     * Gets the ownersCount
+    * Count of owners in a channel.
     *
     * @return int|null The ownersCount
     */
@@ -117,6 +124,7 @@ class ChannelSummary extends Entity
 
     /**
     * Sets the ownersCount
+    * Count of owners in a channel.
     *
     * @param int $val The value of the ownersCount
     *

@@ -379,6 +379,34 @@ class Directory extends Entity
 
 
      /**
+     * Gets the subscriptions
+     *
+     * @return array|null The subscriptions
+     */
+    public function getSubscriptions()
+    {
+        if (array_key_exists("subscriptions", $this->_propDict)) {
+           return $this->_propDict["subscriptions"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the subscriptions
+    *
+    * @param CompanySubscription[] $val The subscriptions
+    *
+    * @return Directory
+    */
+    public function setSubscriptions($val)
+    {
+        $this->_propDict["subscriptions"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the featureRolloutPolicies
      *
      * @return array|null The featureRolloutPolicies

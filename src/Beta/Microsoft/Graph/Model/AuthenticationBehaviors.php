@@ -25,6 +25,7 @@ class AuthenticationBehaviors extends Entity
 {
     /**
     * Gets the removeUnverifiedEmailClaim
+    * Removes the email claim from tokens sent to an application when the email address's domain cannot be verified.
     *
     * @return bool|null The removeUnverifiedEmailClaim
     */
@@ -39,6 +40,7 @@ class AuthenticationBehaviors extends Entity
 
     /**
     * Sets the removeUnverifiedEmailClaim
+    * Removes the email claim from tokens sent to an application when the email address's domain cannot be verified.
     *
     * @param bool $val The value of the removeUnverifiedEmailClaim
     *

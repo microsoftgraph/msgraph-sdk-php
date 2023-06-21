@@ -172,6 +172,33 @@ class UnifiedRoleDefinition extends Entity
     }
 
     /**
+    * Gets the isPrivileged
+    *
+    * @return bool|null The isPrivileged
+    */
+    public function getIsPrivileged()
+    {
+        if (array_key_exists("isPrivileged", $this->_propDict)) {
+            return $this->_propDict["isPrivileged"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isPrivileged
+    *
+    * @param bool $val The isPrivileged
+    *
+    * @return UnifiedRoleDefinition
+    */
+    public function setIsPrivileged($val)
+    {
+        $this->_propDict["isPrivileged"] = boolval($val);
+        return $this;
+    }
+
+    /**
     * Gets the resourceScopes
     * List of scopes permissions granted by the role definition apply to. Currently only / is supported. Read-only when isBuiltIn is true. DO NOT USE. This will be deprecated soon. Attach scope to role assignment
     *

@@ -118,6 +118,7 @@ class Application extends DirectoryObject
 
     /**
     * Gets the authenticationBehaviors
+    * The collection of authentication behaviors set for the application. Authentication behaviors are unset by default and must be explicitly enabled (or disabled). Returned only on $select.
     *
     * @return AuthenticationBehaviors|null The authenticationBehaviors
     */
@@ -136,6 +137,7 @@ class Application extends DirectoryObject
 
     /**
     * Sets the authenticationBehaviors
+    * The collection of authentication behaviors set for the application. Authentication behaviors are unset by default and must be explicitly enabled (or disabled). Returned only on $select.
     *
     * @param AuthenticationBehaviors $val The authenticationBehaviors
     *

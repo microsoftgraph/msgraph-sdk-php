@@ -208,6 +208,7 @@ class OrganizationalBrandingProperties extends Entity
 
     /**
     * Gets the contentCustomization
+    * Represents the various content options to be customized throughout the authentication flow for a tenant. NOTE: Supported by Azure Active Directory for customers tenants only.
     *
     * @return ContentCustomization|null The contentCustomization
     */
@@ -226,6 +227,7 @@ class OrganizationalBrandingProperties extends Entity
 
     /**
     * Sets the contentCustomization
+    * Represents the various content options to be customized throughout the authentication flow for a tenant. NOTE: Supported by Azure Active Directory for customers tenants only.
     *
     * @param ContentCustomization $val The contentCustomization
     *
