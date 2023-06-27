@@ -58,6 +58,7 @@ class Workbook extends Entity
 
      /**
      * Gets the comments
+    * Represents a collection of comments in a workbook.
      *
      * @return array|null The comments
      */
@@ -72,6 +73,7 @@ class Workbook extends Entity
 
     /**
     * Sets the comments
+    * Represents a collection of comments in a workbook.
     *
     * @param WorkbookComment[] $val The comments
     *
