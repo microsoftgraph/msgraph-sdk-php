@@ -53,9 +53,10 @@ class VppTokensRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List of Vpp tokens for this organization.
+     * List properties and relationships of the vppToken objects.
      * @param VppTokensRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-onboarding-vpptoken-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?VppTokensRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class VppTokensRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to vppTokens for deviceAppManagement
+     * Create a new vppToken object.
      * @param VppToken $body The request body
      * @param VppTokensRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-onboarding-vpptoken-create?view=graph-rest-1.0 Find more info here
     */
     public function post(VppToken $body, ?VppTokensRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class VppTokensRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List of Vpp tokens for this organization.
+     * List properties and relationships of the vppToken objects.
      * @param VppTokensRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class VppTokensRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to vppTokens for deviceAppManagement
+     * Create a new vppToken object.
      * @param VppToken $body The request body
      * @param VppTokensRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

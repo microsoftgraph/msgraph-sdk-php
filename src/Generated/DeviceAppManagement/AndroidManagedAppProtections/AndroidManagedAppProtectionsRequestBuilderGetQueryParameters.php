@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\AndroidManagedAppProtect
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Android managed app policies.
+ * List properties and relationships of the androidManagedAppProtection objects.
 */
 class AndroidManagedAppProtectionsRequestBuilderGetQueryParameters 
 {

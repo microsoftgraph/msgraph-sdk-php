@@ -31,10 +31,11 @@ class WindowsDefenderScanRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action windowsDefenderScan
+     * Not yet documented
      * @param WindowsDefenderScanPostRequestBody $body The request body
      * @param WindowsDefenderScanRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-devices-manageddevice-windowsdefenderscan?view=graph-rest-1.0 Find more info here
     */
     public function post(WindowsDefenderScanPostRequestBody $body, ?WindowsDefenderScanRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -50,7 +51,7 @@ class WindowsDefenderScanRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Invoke action windowsDefenderScan
+     * Not yet documented
      * @param WindowsDefenderScanPostRequestBody $body The request body
      * @param WindowsDefenderScanRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

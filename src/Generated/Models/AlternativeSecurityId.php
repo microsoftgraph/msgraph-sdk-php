@@ -66,7 +66,7 @@ class AlternativeSecurityId implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the identityProvider property value. For internal use only
+     * Gets the identityProvider property value. For internal use only.
      * @return string|null
     */
     public function getIdentityProvider(): ?string {
@@ -74,7 +74,7 @@ class AlternativeSecurityId implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the key property value. For internal use only
+     * Gets the key property value. For internal use only.
      * @return StreamInterface|null
     */
     public function getKey(): ?StreamInterface {
@@ -90,7 +90,7 @@ class AlternativeSecurityId implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Gets the type property value. For internal use only
+     * Gets the type property value. For internal use only.
      * @return int|null
     */
     public function getType(): ?int {
@@ -126,7 +126,7 @@ class AlternativeSecurityId implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the identityProvider property value. For internal use only
+     * Sets the identityProvider property value. For internal use only.
      * @param string|null $value Value to set for the identityProvider property.
     */
     public function setIdentityProvider(?string $value): void {
@@ -134,7 +134,7 @@ class AlternativeSecurityId implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the key property value. For internal use only
+     * Sets the key property value. For internal use only.
      * @param StreamInterface|null $value Value to set for the key property.
     */
     public function setKey(?StreamInterface $value): void {
@@ -150,7 +150,7 @@ class AlternativeSecurityId implements AdditionalDataHolder, BackedModel, Parsab
     }
 
     /**
-     * Sets the type property value. For internal use only
+     * Sets the type property value. For internal use only.
      * @param int|null $value Value to set for the type property.
     */
     public function setType(?int $value): void {

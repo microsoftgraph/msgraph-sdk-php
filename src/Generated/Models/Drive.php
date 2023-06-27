@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class Drive extends BaseItem implements Parsable 
 {
     /**
-     * Instantiates a new Drive and sets the default values.
+     * Instantiates a new drive and sets the default values.
     */
     public function __construct() {
         parent::__construct();

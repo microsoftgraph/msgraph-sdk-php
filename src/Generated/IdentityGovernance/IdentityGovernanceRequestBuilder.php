@@ -8,8 +8,9 @@ use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\IdentityGovernance\AccessReviews\AccessReviewsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\AppConsent\AppConsentRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\EntitlementManagement\EntitlementManagementRequestBuilder;
+use Microsoft\Graph\Generated\IdentityGovernance\LifecycleWorkflows\LifecycleWorkflowsRequestBuilder;
 use Microsoft\Graph\Generated\IdentityGovernance\TermsOfUse\TermsOfUseRequestBuilder;
-use Microsoft\Graph\Generated\Models\IdentityGovernance;
+use Microsoft\Graph\Generated\Models\IdentityGovernance\IdentityGovernance;
 use Microsoft\Graph\Generated\Models\ODataErrors\ODataError;
 use Microsoft\Kiota\Abstractions\BaseRequestBuilder;
 use Microsoft\Kiota\Abstractions\HttpMethod;
@@ -40,6 +41,13 @@ class IdentityGovernanceRequestBuilder extends BaseRequestBuilder
     */
     public function entitlementManagement(): EntitlementManagementRequestBuilder {
         return new EntitlementManagementRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to manage the lifecycleWorkflows property of the microsoft.graph.identityGovernance entity.
+    */
+    public function lifecycleWorkflows(): LifecycleWorkflowsRequestBuilder {
+        return new LifecycleWorkflowsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

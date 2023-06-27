@@ -64,7 +64,7 @@ class ContentTypeInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the id property value. The id of the content type.
+     * Gets the id property value. The ID of the content type.
      * @return string|null
     */
     public function getId(): ?string {
@@ -115,7 +115,7 @@ class ContentTypeInfo implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the id property value. The id of the content type.
+     * Sets the id property value. The ID of the content type.
      * @param string|null $value Value to set for the id property.
     */
     public function setId(?string $value): void {

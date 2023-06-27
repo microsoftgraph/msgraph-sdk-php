@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Users\Item\Teamwork;
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get teamwork from users
+ * A container for Microsoft Teams features available for the user. Read-only. Nullable.
 */
 class TeamworkRequestBuilderGetQueryParameters 
 {

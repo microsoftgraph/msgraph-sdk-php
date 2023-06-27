@@ -18,7 +18,7 @@ class ProvisioningStep implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new provisioningStep and sets the default values.
+     * Instantiates a new ProvisioningStep and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

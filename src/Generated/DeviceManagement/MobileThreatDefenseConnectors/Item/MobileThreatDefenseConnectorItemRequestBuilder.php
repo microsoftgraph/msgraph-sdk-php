@@ -32,9 +32,10 @@ class MobileThreatDefenseConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property mobileThreatDefenseConnectors for deviceManagement
+     * Deletes a mobileThreatDefenseConnector.
      * @param MobileThreatDefenseConnectorItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-onboarding-mobilethreatdefenseconnector-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?MobileThreatDefenseConnectorItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -50,9 +51,10 @@ class MobileThreatDefenseConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of Mobile threat Defense connectors configured by the tenant.
+     * Read properties and relationships of the mobileThreatDefenseConnector object.
      * @param MobileThreatDefenseConnectorItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-onboarding-mobilethreatdefenseconnector-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?MobileThreatDefenseConnectorItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,10 +70,11 @@ class MobileThreatDefenseConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property mobileThreatDefenseConnectors in deviceManagement
+     * Update the properties of a mobileThreatDefenseConnector object.
      * @param MobileThreatDefenseConnector $body The request body
      * @param MobileThreatDefenseConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-onboarding-mobilethreatdefenseconnector-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(MobileThreatDefenseConnector $body, ?MobileThreatDefenseConnectorItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -87,7 +90,7 @@ class MobileThreatDefenseConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property mobileThreatDefenseConnectors for deviceManagement
+     * Deletes a mobileThreatDefenseConnector.
      * @param MobileThreatDefenseConnectorItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +107,7 @@ class MobileThreatDefenseConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of Mobile threat Defense connectors configured by the tenant.
+     * Read properties and relationships of the mobileThreatDefenseConnector object.
      * @param MobileThreatDefenseConnectorItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +128,7 @@ class MobileThreatDefenseConnectorItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property mobileThreatDefenseConnectors in deviceManagement
+     * Update the properties of a mobileThreatDefenseConnector object.
      * @param MobileThreatDefenseConnector $body The request body
      * @param MobileThreatDefenseConnectorItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

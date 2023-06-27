@@ -53,9 +53,10 @@ class WindowsInformationProtectionPoliciesRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Windows information protection for apps running on devices which are not MDM enrolled.
+     * List properties and relationships of the windowsInformationProtectionPolicy objects.
      * @param WindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-mam-windowsinformationprotectionpolicy-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?WindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class WindowsInformationProtectionPoliciesRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Create new navigation property to windowsInformationProtectionPolicies for deviceAppManagement
+     * Create a new windowsInformationProtectionPolicy object.
      * @param WindowsInformationProtectionPolicy $body The request body
      * @param WindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-mam-windowsinformationprotectionpolicy-create?view=graph-rest-1.0 Find more info here
     */
     public function post(WindowsInformationProtectionPolicy $body, ?WindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class WindowsInformationProtectionPoliciesRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Windows information protection for apps running on devices which are not MDM enrolled.
+     * List properties and relationships of the windowsInformationProtectionPolicy objects.
      * @param WindowsInformationProtectionPoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class WindowsInformationProtectionPoliciesRequestBuilder extends BaseRequestBuil
     }
 
     /**
-     * Create new navigation property to windowsInformationProtectionPolicies for deviceAppManagement
+     * Create a new windowsInformationProtectionPolicy object.
      * @param WindowsInformationProtectionPolicy $body The request body
      * @param WindowsInformationProtectionPoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

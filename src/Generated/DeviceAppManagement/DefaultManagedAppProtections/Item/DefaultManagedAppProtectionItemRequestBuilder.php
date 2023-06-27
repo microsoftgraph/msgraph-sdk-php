@@ -48,9 +48,10 @@ class DefaultManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property defaultManagedAppProtections for deviceAppManagement
+     * Deletes a defaultManagedAppProtection.
      * @param DefaultManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DefaultManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -66,9 +67,10 @@ class DefaultManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Default managed app policies.
+     * Read properties and relationships of the defaultManagedAppProtection object.
      * @param DefaultManagedAppProtectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DefaultManagedAppProtectionItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -84,10 +86,11 @@ class DefaultManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property defaultManagedAppProtections in deviceAppManagement
+     * Update the properties of a defaultManagedAppProtection object.
      * @param DefaultManagedAppProtection $body The request body
      * @param DefaultManagedAppProtectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-mam-defaultmanagedappprotection-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DefaultManagedAppProtection $body, ?DefaultManagedAppProtectionItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -103,7 +106,7 @@ class DefaultManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property defaultManagedAppProtections for deviceAppManagement
+     * Deletes a defaultManagedAppProtection.
      * @param DefaultManagedAppProtectionItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -120,7 +123,7 @@ class DefaultManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Default managed app policies.
+     * Read properties and relationships of the defaultManagedAppProtection object.
      * @param DefaultManagedAppProtectionItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -141,7 +144,7 @@ class DefaultManagedAppProtectionItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property defaultManagedAppProtections in deviceAppManagement
+     * Update the properties of a defaultManagedAppProtection object.
      * @param DefaultManagedAppProtection $body The request body
      * @param DefaultManagedAppProtectionItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -35,6 +35,7 @@ class WipeManagedAppRegistrationsByDeviceTagRequestBuilder extends BaseRequestBu
      * @param WipeManagedAppRegistrationsByDeviceTagPostRequestBody $body The request body
      * @param WipeManagedAppRegistrationsByDeviceTagRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-mam-user-wipemanagedappregistrationsbydevicetag?view=graph-rest-1.0 Find more info here
     */
     public function post(WipeManagedAppRegistrationsByDeviceTagPostRequestBody $body, ?WipeManagedAppRegistrationsByDeviceTagRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);

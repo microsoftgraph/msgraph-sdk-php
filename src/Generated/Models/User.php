@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class User extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new User and sets the default values.
+     * Instantiates a new user and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -415,6 +415,7 @@ class User extends DirectoryObject implements Parsable
             'employeeLeaveDateTime' => fn(ParseNode $n) => $o->setEmployeeLeaveDateTime($n->getDateTimeValue()),
             'employeeOrgData' => fn(ParseNode $n) => $o->setEmployeeOrgData($n->getObjectValue([EmployeeOrgData::class, 'createFromDiscriminatorValue'])),
             'employeeType' => fn(ParseNode $n) => $o->setEmployeeType($n->getStringValue()),
+            'print' => fn(ParseNode $n) => $o->setPrint($n->getObjectValue([UserPrint::class, 'createFromDiscriminatorValue'])),
             'events' => fn(ParseNode $n) => $o->setEvents($n->getCollectionOfObjectValues([Event::class, 'createFromDiscriminatorValue'])),
             'extensions' => fn(ParseNode $n) => $o->setExtensions($n->getCollectionOfObjectValues([Extension::class, 'createFromDiscriminatorValue'])),
             'externalUserState' => fn(ParseNode $n) => $o->setExternalUserState($n->getStringValue()),
@@ -733,7 +734,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the onlineMeetings property value. The onlineMeetings property
+     * Gets the onlineMeetings property value. Information about a meeting, including the URL used to join a meeting, the attendees' list, and the description.
      * @return array<OnlineMeeting>|null
     */
     public function getOnlineMeetings(): ?array {
@@ -949,6 +950,14 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
+     * Gets the print property value. The print property
+     * @return UserPrint|null
+    */
+    public function getPrint(): ?UserPrint {
+        return $this->getBackingStore()->get('escapedPrint');
+    }
+
+    /**
      * Gets the provisionedPlans property value. The plans that are provisioned for the user. Read-only. Not nullable. Returned only on $select. Supports $filter (eq, not, ge, le).
      * @return array<ProvisionedPlan>|null
     */
@@ -1069,7 +1078,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the teamwork property value. The teamwork property
+     * Gets the teamwork property value. A container for Microsoft Teams features available for the user. Read-only. Nullable.
      * @return UserTeamwork|null
     */
     public function getTeamwork(): ?UserTeamwork {
@@ -1160,6 +1169,7 @@ class User extends DirectoryObject implements Parsable
         $writer->writeDateTimeValue('employeeLeaveDateTime', $this->getEmployeeLeaveDateTime());
         $writer->writeObjectValue('employeeOrgData', $this->getEmployeeOrgData());
         $writer->writeStringValue('employeeType', $this->getEmployeeType());
+        $writer->writeObjectValue('print', $this->getPrint());
         $writer->writeCollectionOfObjectValues('events', $this->getEvents());
         $writer->writeCollectionOfObjectValues('extensions', $this->getExtensions());
         $writer->writeStringValue('externalUserState', $this->getExternalUserState());
@@ -1821,7 +1831,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the onlineMeetings property value. The onlineMeetings property
+     * Sets the onlineMeetings property value. Information about a meeting, including the URL used to join a meeting, the attendees' list, and the description.
      * @param array<OnlineMeeting>|null $value Value to set for the onlineMeetings property.
     */
     public function setOnlineMeetings(?array $value): void {
@@ -2037,6 +2047,14 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
+     * Sets the print property value. The print property
+     * @param UserPrint|null $value Value to set for the EscapedPrint property.
+    */
+    public function setPrint(?UserPrint $value): void {
+        $this->getBackingStore()->set('escapedPrint', $value);
+    }
+
+    /**
      * Sets the provisionedPlans property value. The plans that are provisioned for the user. Read-only. Not nullable. Returned only on $select. Supports $filter (eq, not, ge, le).
      * @param array<ProvisionedPlan>|null $value Value to set for the provisionedPlans property.
     */
@@ -2157,7 +2175,7 @@ class User extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the teamwork property value. The teamwork property
+     * Sets the teamwork property value. A container for Microsoft Teams features available for the user. Read-only. Nullable.
      * @param UserTeamwork|null $value Value to set for the teamwork property.
     */
     public function setTeamwork(?UserTeamwork $value): void {

@@ -1,7 +1,11 @@
 <?php
 
-namespace Microsoft\Graph\Generated\Models;
+namespace Microsoft\Graph\Generated\Models\IdentityGovernance;
 
+use Microsoft\Graph\Generated\Models\AccessReviewSet;
+use Microsoft\Graph\Generated\Models\AppConsentApprovalRoute;
+use Microsoft\Graph\Generated\Models\EntitlementManagement;
+use Microsoft\Graph\Generated\Models\TermsOfUseContainer;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -84,9 +88,18 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
             'accessReviews' => fn(ParseNode $n) => $o->setAccessReviews($n->getObjectValue([AccessReviewSet::class, 'createFromDiscriminatorValue'])),
             'appConsent' => fn(ParseNode $n) => $o->setAppConsent($n->getObjectValue([AppConsentApprovalRoute::class, 'createFromDiscriminatorValue'])),
             'entitlementManagement' => fn(ParseNode $n) => $o->setEntitlementManagement($n->getObjectValue([EntitlementManagement::class, 'createFromDiscriminatorValue'])),
+            'lifecycleWorkflows' => fn(ParseNode $n) => $o->setLifecycleWorkflows($n->getObjectValue([LifecycleWorkflowsContainer::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'termsOfUse' => fn(ParseNode $n) => $o->setTermsOfUse($n->getObjectValue([TermsOfUseContainer::class, 'createFromDiscriminatorValue'])),
         ];
+    }
+
+    /**
+     * Gets the lifecycleWorkflows property value. The lifecycleWorkflows property
+     * @return LifecycleWorkflowsContainer|null
+    */
+    public function getLifecycleWorkflows(): ?LifecycleWorkflowsContainer {
+        return $this->getBackingStore()->get('lifecycleWorkflows');
     }
 
     /**
@@ -113,6 +126,7 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
         $writer->writeObjectValue('accessReviews', $this->getAccessReviews());
         $writer->writeObjectValue('appConsent', $this->getAppConsent());
         $writer->writeObjectValue('entitlementManagement', $this->getEntitlementManagement());
+        $writer->writeObjectValue('lifecycleWorkflows', $this->getLifecycleWorkflows());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
         $writer->writeObjectValue('termsOfUse', $this->getTermsOfUse());
         $writer->writeAdditionalData($this->getAdditionalData());
@@ -156,6 +170,14 @@ class IdentityGovernance implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setEntitlementManagement(?EntitlementManagement $value): void {
         $this->getBackingStore()->set('entitlementManagement', $value);
+    }
+
+    /**
+     * Sets the lifecycleWorkflows property value. The lifecycleWorkflows property
+     * @param LifecycleWorkflowsContainer|null $value Value to set for the lifecycleWorkflows property.
+    */
+    public function setLifecycleWorkflows(?LifecycleWorkflowsContainer $value): void {
+        $this->getBackingStore()->set('lifecycleWorkflows', $value);
     }
 
     /**

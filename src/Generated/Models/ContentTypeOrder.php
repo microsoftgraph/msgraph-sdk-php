@@ -51,7 +51,7 @@ class ContentTypeOrder implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the default property value. Whether this is the default Content Type
+     * Gets the default property value. Indicates whether this is the default content type
      * @return bool|null
     */
     public function getDefault(): ?bool {
@@ -80,7 +80,7 @@ class ContentTypeOrder implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the position property value. Specifies the position in which the Content Type appears in the selection UI.
+     * Gets the position property value. Specifies the position in which the content type appears in the selection UI.
      * @return int|null
     */
     public function getPosition(): ?int {
@@ -115,7 +115,7 @@ class ContentTypeOrder implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the default property value. Whether this is the default Content Type
+     * Sets the default property value. Indicates whether this is the default content type
      * @param bool|null $value Value to set for the EscapedDefault property.
     */
     public function setDefault(?bool $value): void {
@@ -131,7 +131,7 @@ class ContentTypeOrder implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the position property value. Specifies the position in which the Content Type appears in the selection UI.
+     * Sets the position property value. Specifies the position in which the content type appears in the selection UI.
      * @param int|null $value Value to set for the position property.
     */
     public function setPosition(?int $value): void {

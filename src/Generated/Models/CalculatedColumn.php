@@ -65,7 +65,7 @@ class CalculatedColumn implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the format property value. For dateTime output types, the format of the value. Must be one of dateOnly or dateTime.
+     * Gets the format property value. For dateTime output types, the format of the value. Possible values are: dateOnly or dateTime.
      * @return string|null
     */
     public function getFormat(): ?string {
@@ -89,7 +89,7 @@ class CalculatedColumn implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the outputType property value. The output type used to format values in this column. Must be one of boolean, currency, dateTime, number, or text.
+     * Gets the outputType property value. The output type used to format values in this column. Possible values are: boolean, currency, dateTime, number, or text.
      * @return string|null
     */
     public function getOutputType(): ?string {
@@ -125,7 +125,7 @@ class CalculatedColumn implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the format property value. For dateTime output types, the format of the value. Must be one of dateOnly or dateTime.
+     * Sets the format property value. For dateTime output types, the format of the value. Possible values are: dateOnly or dateTime.
      * @param string|null $value Value to set for the format property.
     */
     public function setFormat(?string $value): void {
@@ -149,7 +149,7 @@ class CalculatedColumn implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the outputType property value. The output type used to format values in this column. Must be one of boolean, currency, dateTime, number, or text.
+     * Sets the outputType property value. The output type used to format values in this column. Possible values are: boolean, currency, dateTime, number, or text.
      * @param string|null $value Value to set for the outputType property.
     */
     public function setOutputType(?string $value): void {
