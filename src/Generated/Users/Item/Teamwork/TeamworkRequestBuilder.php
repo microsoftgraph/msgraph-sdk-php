@@ -74,7 +74,7 @@ class TeamworkRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get teamwork from users
+     * A container for Microsoft Teams features available for the user. Read-only. Nullable.
      * @param TeamworkRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
     */
@@ -128,7 +128,7 @@ class TeamworkRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get teamwork from users
+     * A container for Microsoft Teams features available for the user. Read-only. Nullable.
      * @param TeamworkRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */

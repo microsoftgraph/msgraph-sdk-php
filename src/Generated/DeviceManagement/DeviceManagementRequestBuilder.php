@@ -290,9 +290,10 @@ class DeviceManagementRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get deviceManagement
+     * Read properties and relationships of the deviceManagement object.
      * @param DeviceManagementRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-tem-devicemanagement-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceManagementRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -317,10 +318,11 @@ class DeviceManagementRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update deviceManagement
+     * Update the properties of a deviceManagement object.
      * @param DeviceManagement $body The request body
      * @param DeviceManagementRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-enrollment-devicemanagement-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceManagement $body, ?DeviceManagementRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -336,7 +338,7 @@ class DeviceManagementRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Get deviceManagement
+     * Read properties and relationships of the deviceManagement object.
      * @param DeviceManagementRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -357,7 +359,7 @@ class DeviceManagementRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update deviceManagement
+     * Update the properties of a deviceManagement object.
      * @param DeviceManagement $body The request body
      * @param DeviceManagementRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

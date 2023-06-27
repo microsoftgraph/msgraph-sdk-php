@@ -6,6 +6,7 @@ use Exception;
 use Http\Promise\Promise;
 use Http\Promise\RejectedPromise;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Analytics\AnalyticsRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\AssignSensitivityLabel\AssignSensitivityLabelRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Checkin\CheckinRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Checkout\CheckoutRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Children\ChildrenRequestBuilder;
@@ -16,6 +17,7 @@ use Microsoft\Graph\Generated\Drives\Item\Items\Item\CreateLink\CreateLinkReques
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\CreateUploadSession\CreateUploadSessionRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Delta\DeltaRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\DeltaWithToken\DeltaWithTokenRequestBuilder;
+use Microsoft\Graph\Generated\Drives\Item\Items\Item\ExtractSensitivityLabels\ExtractSensitivityLabelsRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\Follow\FollowRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\GetActivitiesByInterval\GetActivitiesByIntervalRequestBuilder;
 use Microsoft\Graph\Generated\Drives\Item\Items\Item\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithInterval\GetActivitiesByIntervalWithStartDateTimeWithEndDateTimeWithIntervalRequestBuilder;
@@ -49,6 +51,13 @@ class DriveItemItemRequestBuilder extends BaseRequestBuilder
     */
     public function analytics(): AnalyticsRequestBuilder {
         return new AnalyticsRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the assignSensitivityLabel method.
+    */
+    public function assignSensitivityLabel(): AssignSensitivityLabelRequestBuilder {
+        return new AssignSensitivityLabelRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**
@@ -112,6 +121,13 @@ class DriveItemItemRequestBuilder extends BaseRequestBuilder
     */
     public function delta(): DeltaRequestBuilder {
         return new DeltaRequestBuilder($this->pathParameters, $this->requestAdapter);
+    }
+    
+    /**
+     * Provides operations to call the extractSensitivityLabels method.
+    */
+    public function extractSensitivityLabels(): ExtractSensitivityLabelsRequestBuilder {
+        return new ExtractSensitivityLabelsRequestBuilder($this->pathParameters, $this->requestAdapter);
     }
     
     /**

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\Drives\Item\Items\Item\Workbook\Comments\Ite
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * Get comments from drives
+ * Represents a collection of comments in a workbook.
 */
 class WorkbookCommentItemRequestBuilderGetQueryParameters 
 {

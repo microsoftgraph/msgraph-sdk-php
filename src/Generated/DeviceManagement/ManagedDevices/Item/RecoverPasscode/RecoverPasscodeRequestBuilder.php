@@ -34,6 +34,7 @@ class RecoverPasscodeRequestBuilder extends BaseRequestBuilder
      * Recover passcode
      * @param RecoverPasscodeRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-devices-manageddevice-recoverpasscode?view=graph-rest-1.0 Find more info here
     */
     public function post(?RecoverPasscodeRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

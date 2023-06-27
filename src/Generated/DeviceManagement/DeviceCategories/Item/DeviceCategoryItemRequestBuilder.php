@@ -32,9 +32,10 @@ class DeviceCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property deviceCategories for deviceManagement
+     * Deletes a deviceCategory.
      * @param DeviceCategoryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-onboarding-devicecategory-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DeviceCategoryItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -50,9 +51,10 @@ class DeviceCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of device categories with the tenant.
+     * Read properties and relationships of the deviceCategory object.
      * @param DeviceCategoryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-onboarding-devicecategory-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceCategoryItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,10 +70,11 @@ class DeviceCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property deviceCategories in deviceManagement
+     * Update the properties of a deviceCategory object.
      * @param DeviceCategory $body The request body
      * @param DeviceCategoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-onboarding-devicecategory-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceCategory $body, ?DeviceCategoryItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -87,7 +90,7 @@ class DeviceCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property deviceCategories for deviceManagement
+     * Deletes a deviceCategory.
      * @param DeviceCategoryItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +107,7 @@ class DeviceCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of device categories with the tenant.
+     * Read properties and relationships of the deviceCategory object.
      * @param DeviceCategoryItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +128,7 @@ class DeviceCategoryItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property deviceCategories in deviceManagement
+     * Update the properties of a deviceCategory object.
      * @param DeviceCategory $body The request body
      * @param DeviceCategoryItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -5,7 +5,7 @@ namespace Microsoft\Graph\Generated\DeviceAppManagement\MobileAppConfigurations\
 use Microsoft\Kiota\Abstractions\QueryParameter;
 
 /**
- * App configuration user status summary.
+ * Read properties and relationships of the managedDeviceMobileAppConfigurationUserSummary object.
 */
 class UserStatusSummaryRequestBuilderGetQueryParameters 
 {

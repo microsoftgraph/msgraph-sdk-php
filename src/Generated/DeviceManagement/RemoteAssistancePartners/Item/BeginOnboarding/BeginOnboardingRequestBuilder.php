@@ -34,6 +34,7 @@ class BeginOnboardingRequestBuilder extends BaseRequestBuilder
      * A request to start onboarding.  Must be coupled with the appropriate TeamViewer account information
      * @param BeginOnboardingRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-remoteassistance-remoteassistancepartner-beginonboarding?view=graph-rest-1.0 Find more info here
     */
     public function post(?BeginOnboardingRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($requestConfiguration);

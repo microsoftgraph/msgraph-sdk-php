@@ -72,10 +72,11 @@ class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to offerShiftRequests for groups
+     * Create an instance of an offerShiftRequest.
      * @param OfferShiftRequest $body The request body
      * @param OfferShiftRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/offershiftrequest-post?view=graph-rest-1.0 Find more info here
     */
     public function post(OfferShiftRequest $body, ?OfferShiftRequestsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -112,7 +113,7 @@ class OfferShiftRequestsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to offerShiftRequests for groups
+     * Create an instance of an offerShiftRequest.
      * @param OfferShiftRequest $body The request body
      * @param OfferShiftRequestsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

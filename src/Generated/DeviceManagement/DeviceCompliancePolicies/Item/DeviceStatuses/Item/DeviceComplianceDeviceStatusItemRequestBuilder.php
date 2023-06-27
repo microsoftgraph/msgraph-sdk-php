@@ -32,9 +32,10 @@ class DeviceComplianceDeviceStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property deviceStatuses for deviceManagement
+     * Deletes a deviceComplianceDeviceStatus.
      * @param DeviceComplianceDeviceStatusItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancedevicestatus-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?DeviceComplianceDeviceStatusItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -50,9 +51,10 @@ class DeviceComplianceDeviceStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List of DeviceComplianceDeviceStatus.
+     * Read properties and relationships of the deviceComplianceDeviceStatus object.
      * @param DeviceComplianceDeviceStatusItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancedevicestatus-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceComplianceDeviceStatusItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,10 +70,11 @@ class DeviceComplianceDeviceStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property deviceStatuses in deviceManagement
+     * Update the properties of a deviceComplianceDeviceStatus object.
      * @param DeviceComplianceDeviceStatus $body The request body
      * @param DeviceComplianceDeviceStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-devicecompliancedevicestatus-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(DeviceComplianceDeviceStatus $body, ?DeviceComplianceDeviceStatusItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -87,7 +90,7 @@ class DeviceComplianceDeviceStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property deviceStatuses for deviceManagement
+     * Deletes a deviceComplianceDeviceStatus.
      * @param DeviceComplianceDeviceStatusItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +107,7 @@ class DeviceComplianceDeviceStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List of DeviceComplianceDeviceStatus.
+     * Read properties and relationships of the deviceComplianceDeviceStatus object.
      * @param DeviceComplianceDeviceStatusItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +128,7 @@ class DeviceComplianceDeviceStatusItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property deviceStatuses in deviceManagement
+     * Update the properties of a deviceComplianceDeviceStatus object.
      * @param DeviceComplianceDeviceStatus $body The request body
      * @param DeviceComplianceDeviceStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

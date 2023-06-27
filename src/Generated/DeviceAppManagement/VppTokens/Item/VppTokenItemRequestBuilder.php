@@ -40,9 +40,10 @@ class VppTokenItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property vppTokens for deviceAppManagement
+     * Deletes a vppToken.
      * @param VppTokenItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-onboarding-vpptoken-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?VppTokenItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -58,9 +59,10 @@ class VppTokenItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List of Vpp tokens for this organization.
+     * Read properties and relationships of the vppToken object.
      * @param VppTokenItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-onboarding-vpptoken-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?VppTokenItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -76,10 +78,11 @@ class VppTokenItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property vppTokens in deviceAppManagement
+     * Update the properties of a vppToken object.
      * @param VppToken $body The request body
      * @param VppTokenItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-onboarding-vpptoken-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(VppToken $body, ?VppTokenItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -95,7 +98,7 @@ class VppTokenItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete navigation property vppTokens for deviceAppManagement
+     * Deletes a vppToken.
      * @param VppTokenItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -112,7 +115,7 @@ class VppTokenItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List of Vpp tokens for this organization.
+     * Read properties and relationships of the vppToken object.
      * @param VppTokenItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -133,7 +136,7 @@ class VppTokenItemRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Update the navigation property vppTokens in deviceAppManagement
+     * Update the properties of a vppToken object.
      * @param VppToken $body The request body
      * @param VppTokenItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

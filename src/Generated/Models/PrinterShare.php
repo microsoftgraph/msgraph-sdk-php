@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class PrinterShare extends PrinterBase implements Parsable 
 {
     /**
-     * Instantiates a new printerShare and sets the default values.
+     * Instantiates a new PrinterShare and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -70,6 +70,7 @@ class PrinterShare extends PrinterBase implements Parsable
             'allowedUsers' => fn(ParseNode $n) => $o->setAllowedUsers($n->getCollectionOfObjectValues([User::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'printer' => fn(ParseNode $n) => $o->setPrinter($n->getObjectValue([Printer::class, 'createFromDiscriminatorValue'])),
+            'viewPoint' => fn(ParseNode $n) => $o->setViewPoint($n->getObjectValue([PrinterShareViewpoint::class, 'createFromDiscriminatorValue'])),
         ]);
     }
 
@@ -79,6 +80,14 @@ class PrinterShare extends PrinterBase implements Parsable
     */
     public function getPrinter(): ?Printer {
         return $this->getBackingStore()->get('printer');
+    }
+
+    /**
+     * Gets the viewPoint property value. Additional data for a printer share as viewed by the signed-in user.
+     * @return PrinterShareViewpoint|null
+    */
+    public function getViewPoint(): ?PrinterShareViewpoint {
+        return $this->getBackingStore()->get('viewPoint');
     }
 
     /**
@@ -92,6 +101,7 @@ class PrinterShare extends PrinterBase implements Parsable
         $writer->writeCollectionOfObjectValues('allowedUsers', $this->getAllowedUsers());
         $writer->writeDateTimeValue('createdDateTime', $this->getCreatedDateTime());
         $writer->writeObjectValue('printer', $this->getPrinter());
+        $writer->writeObjectValue('viewPoint', $this->getViewPoint());
     }
 
     /**
@@ -132,6 +142,14 @@ class PrinterShare extends PrinterBase implements Parsable
     */
     public function setPrinter(?Printer $value): void {
         $this->getBackingStore()->set('printer', $value);
+    }
+
+    /**
+     * Sets the viewPoint property value. Additional data for a printer share as viewed by the signed-in user.
+     * @param PrinterShareViewpoint|null $value Value to set for the viewPoint property.
+    */
+    public function setViewPoint(?PrinterShareViewpoint $value): void {
+        $this->getBackingStore()->set('viewPoint', $value);
     }
 
 }

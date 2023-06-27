@@ -22,6 +22,11 @@ class GetAllMessagesRequestBuilderGetQueryParameters
     public ?string $filter = null;
     
     /**
+     * @var string|null $model The payment model for the API
+    */
+    public ?string $model = null;
+    
+    /**
      * @QueryParameter("%24orderby")
      * @var array<string>|null $orderby Order items by property values
     */
@@ -55,15 +60,17 @@ class GetAllMessagesRequestBuilderGetQueryParameters
      * Instantiates a new getAllMessagesRequestBuilderGetQueryParameters and sets the default values.
      * @param bool|null $count Include count of items
      * @param string|null $filter Filter items by property values
+     * @param string|null $model The payment model for the API
      * @param array<string>|null $orderby Order items by property values
      * @param string|null $search Search items by search phrases
      * @param array<string>|null $select Select properties to be returned
      * @param int|null $skip Skip the first n items
      * @param int|null $top Show only the first n items
     */
-    public function __construct(?bool $count = null, ?string $filter = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null) {
+    public function __construct(?bool $count = null, ?string $filter = null, ?string $model = null, ?array $orderby = null, ?string $search = null, ?array $select = null, ?int $skip = null, ?int $top = null) {
         $this->count = $count;
         $this->filter = $filter;
+        $this->model = $model;
         $this->orderby = $orderby;
         $this->search = $search;
         $this->select = $select;

@@ -53,9 +53,10 @@ class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The device compliance policies.
+     * List properties and relationships of the androidCompliancePolicy objects.
      * @param DeviceCompliancePoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-androidcompliancepolicy-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceCompliancePoliciesRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to deviceCompliancePolicies for deviceManagement
+     * Create a new windows10CompliancePolicy object.
      * @param DeviceCompliancePolicy $body The request body
      * @param DeviceCompliancePoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-windows10compliancepolicy-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DeviceCompliancePolicy $body, ?DeviceCompliancePoliciesRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The device compliance policies.
+     * List properties and relationships of the androidCompliancePolicy objects.
      * @param DeviceCompliancePoliciesRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class DeviceCompliancePoliciesRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to deviceCompliancePolicies for deviceManagement
+     * Create a new windows10CompliancePolicy object.
      * @param DeviceCompliancePolicy $body The request body
      * @param DeviceCompliancePoliciesRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

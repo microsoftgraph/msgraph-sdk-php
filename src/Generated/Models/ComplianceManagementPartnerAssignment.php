@@ -21,7 +21,7 @@ class ComplianceManagementPartnerAssignment implements AdditionalDataHolder, Bac
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new complianceManagementPartnerAssignment and sets the default values.
+     * Instantiates a new ComplianceManagementPartnerAssignment and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();

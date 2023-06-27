@@ -53,9 +53,10 @@ class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of device enrollment configurations
+     * List properties and relationships of the deviceEnrollmentLimitConfiguration objects.
      * @param DeviceEnrollmentConfigurationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-onboarding-deviceenrollmentlimitconfiguration-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceEnrollmentConfigurationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -71,10 +72,11 @@ class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to deviceEnrollmentConfigurations for deviceManagement
+     * Create a new deviceEnrollmentWindowsHelloForBusinessConfiguration object.
      * @param DeviceEnrollmentConfiguration $body The request body
      * @param DeviceEnrollmentConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-onboarding-deviceenrollmentwindowshelloforbusinessconfiguration-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DeviceEnrollmentConfiguration $body, ?DeviceEnrollmentConfigurationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -90,7 +92,7 @@ class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * The list of device enrollment configurations
+     * List properties and relationships of the deviceEnrollmentLimitConfiguration objects.
      * @param DeviceEnrollmentConfigurationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -111,7 +113,7 @@ class DeviceEnrollmentConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create new navigation property to deviceEnrollmentConfigurations for deviceManagement
+     * Create a new deviceEnrollmentWindowsHelloForBusinessConfiguration object.
      * @param DeviceEnrollmentConfiguration $body The request body
      * @param DeviceEnrollmentConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

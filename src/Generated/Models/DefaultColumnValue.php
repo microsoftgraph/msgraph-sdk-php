@@ -64,7 +64,7 @@ class DefaultColumnValue implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the formula property value. The formula used to compute the default value for this column.
+     * Gets the formula property value. The formula used to compute the default value for the column.
      * @return string|null
     */
     public function getFormula(): ?string {
@@ -80,7 +80,7 @@ class DefaultColumnValue implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the value property value. The direct value to use as the default value for this column.
+     * Gets the value property value. The direct value to use as the default value for the column.
      * @return string|null
     */
     public function getValue(): ?string {
@@ -115,7 +115,7 @@ class DefaultColumnValue implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the formula property value. The formula used to compute the default value for this column.
+     * Sets the formula property value. The formula used to compute the default value for the column.
      * @param string|null $value Value to set for the formula property.
     */
     public function setFormula(?string $value): void {
@@ -131,7 +131,7 @@ class DefaultColumnValue implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the value property value. The direct value to use as the default value for this column.
+     * Sets the value property value. The direct value to use as the default value for the column.
      * @param string|null $value Value to set for the value property.
     */
     public function setValue(?string $value): void {

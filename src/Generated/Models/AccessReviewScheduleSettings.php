@@ -2,6 +2,7 @@
 
 namespace Microsoft\Graph\Generated\Models;
 
+use DateInterval;
 use Microsoft\Kiota\Abstractions\Serialization\AdditionalDataHolder;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
@@ -106,6 +107,8 @@ class AccessReviewScheduleSettings implements AdditionalDataHolder, BackedModel,
             'justificationRequiredOnApproval' => fn(ParseNode $n) => $o->setJustificationRequiredOnApproval($n->getBooleanValue()),
             'mailNotificationsEnabled' => fn(ParseNode $n) => $o->setMailNotificationsEnabled($n->getBooleanValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'recommendationInsightSettings' => fn(ParseNode $n) => $o->setRecommendationInsightSettings($n->getCollectionOfObjectValues([AccessReviewRecommendationInsightSetting::class, 'createFromDiscriminatorValue'])),
+            'recommendationLookBackDuration' => fn(ParseNode $n) => $o->setRecommendationLookBackDuration($n->getDateIntervalValue()),
             'recommendationsEnabled' => fn(ParseNode $n) => $o->setRecommendationsEnabled($n->getBooleanValue()),
             'recurrence' => fn(ParseNode $n) => $o->setRecurrence($n->getObjectValue([PatternedRecurrence::class, 'createFromDiscriminatorValue'])),
             'reminderNotificationsEnabled' => fn(ParseNode $n) => $o->setReminderNotificationsEnabled($n->getBooleanValue()),
@@ -142,6 +145,22 @@ class AccessReviewScheduleSettings implements AdditionalDataHolder, BackedModel,
     */
     public function getOdataType(): ?string {
         return $this->getBackingStore()->get('odataType');
+    }
+
+    /**
+     * Gets the recommendationInsightSettings property value. The recommendationInsightSettings property
+     * @return array<AccessReviewRecommendationInsightSetting>|null
+    */
+    public function getRecommendationInsightSettings(): ?array {
+        return $this->getBackingStore()->get('recommendationInsightSettings');
+    }
+
+    /**
+     * Gets the recommendationLookBackDuration property value. The recommendationLookBackDuration property
+     * @return DateInterval|null
+    */
+    public function getRecommendationLookBackDuration(): ?DateInterval {
+        return $this->getBackingStore()->get('recommendationLookBackDuration');
     }
 
     /**
@@ -182,6 +201,8 @@ class AccessReviewScheduleSettings implements AdditionalDataHolder, BackedModel,
         $writer->writeBooleanValue('justificationRequiredOnApproval', $this->getJustificationRequiredOnApproval());
         $writer->writeBooleanValue('mailNotificationsEnabled', $this->getMailNotificationsEnabled());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeCollectionOfObjectValues('recommendationInsightSettings', $this->getRecommendationInsightSettings());
+        $writer->writeDateIntervalValue('recommendationLookBackDuration', $this->getRecommendationLookBackDuration());
         $writer->writeBooleanValue('recommendationsEnabled', $this->getRecommendationsEnabled());
         $writer->writeObjectValue('recurrence', $this->getRecurrence());
         $writer->writeBooleanValue('reminderNotificationsEnabled', $this->getReminderNotificationsEnabled());
@@ -274,6 +295,22 @@ class AccessReviewScheduleSettings implements AdditionalDataHolder, BackedModel,
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
+    }
+
+    /**
+     * Sets the recommendationInsightSettings property value. The recommendationInsightSettings property
+     * @param array<AccessReviewRecommendationInsightSetting>|null $value Value to set for the recommendationInsightSettings property.
+    */
+    public function setRecommendationInsightSettings(?array $value): void {
+        $this->getBackingStore()->set('recommendationInsightSettings', $value);
+    }
+
+    /**
+     * Sets the recommendationLookBackDuration property value. The recommendationLookBackDuration property
+     * @param DateInterval|null $value Value to set for the recommendationLookBackDuration property.
+    */
+    public function setRecommendationLookBackDuration(?DateInterval $value): void {
+        $this->getBackingStore()->set('recommendationLookBackDuration', $value);
     }
 
     /**

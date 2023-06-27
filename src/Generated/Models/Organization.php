@@ -224,7 +224,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the securityComplianceNotificationMails property value. The securityComplianceNotificationMails property
+     * Gets the securityComplianceNotificationMails property value. Not nullable.
      * @return array<string>|null
     */
     public function getSecurityComplianceNotificationMails(): ?array {
@@ -232,7 +232,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Gets the securityComplianceNotificationPhones property value. The securityComplianceNotificationPhones property
+     * Gets the securityComplianceNotificationPhones property value. Not nullable.
      * @return array<string>|null
     */
     public function getSecurityComplianceNotificationPhones(): ?array {
@@ -475,7 +475,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the securityComplianceNotificationMails property value. The securityComplianceNotificationMails property
+     * Sets the securityComplianceNotificationMails property value. Not nullable.
      * @param array<string>|null $value Value to set for the securityComplianceNotificationMails property.
     */
     public function setSecurityComplianceNotificationMails(?array $value): void {
@@ -483,7 +483,7 @@ class Organization extends DirectoryObject implements Parsable
     }
 
     /**
-     * Sets the securityComplianceNotificationPhones property value. The securityComplianceNotificationPhones property
+     * Sets the securityComplianceNotificationPhones property value. Not nullable.
      * @param array<string>|null $value Value to set for the securityComplianceNotificationPhones property.
     */
     public function setSecurityComplianceNotificationPhones(?array $value): void {

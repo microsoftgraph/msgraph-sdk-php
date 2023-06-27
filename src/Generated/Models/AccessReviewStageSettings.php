@@ -94,6 +94,7 @@ class AccessReviewStageSettings implements AdditionalDataHolder, BackedModel, Pa
             'durationInDays' => fn(ParseNode $n) => $o->setDurationInDays($n->getIntegerValue()),
             'fallbackReviewers' => fn(ParseNode $n) => $o->setFallbackReviewers($n->getCollectionOfObjectValues([AccessReviewReviewerScope::class, 'createFromDiscriminatorValue'])),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
+            'recommendationInsightSettings' => fn(ParseNode $n) => $o->setRecommendationInsightSettings($n->getCollectionOfObjectValues([AccessReviewRecommendationInsightSetting::class, 'createFromDiscriminatorValue'])),
             'recommendationsEnabled' => fn(ParseNode $n) => $o->setRecommendationsEnabled($n->getBooleanValue()),
             'reviewers' => fn(ParseNode $n) => $o->setReviewers($n->getCollectionOfObjectValues([AccessReviewReviewerScope::class, 'createFromDiscriminatorValue'])),
             'stageId' => fn(ParseNode $n) => $o->setStageId($n->getStringValue()),
@@ -106,6 +107,14 @@ class AccessReviewStageSettings implements AdditionalDataHolder, BackedModel, Pa
     */
     public function getOdataType(): ?string {
         return $this->getBackingStore()->get('odataType');
+    }
+
+    /**
+     * Gets the recommendationInsightSettings property value. The recommendationInsightSettings property
+     * @return array<AccessReviewRecommendationInsightSetting>|null
+    */
+    public function getRecommendationInsightSettings(): ?array {
+        return $this->getBackingStore()->get('recommendationInsightSettings');
     }
 
     /**
@@ -142,6 +151,7 @@ class AccessReviewStageSettings implements AdditionalDataHolder, BackedModel, Pa
         $writer->writeIntegerValue('durationInDays', $this->getDurationInDays());
         $writer->writeCollectionOfObjectValues('fallbackReviewers', $this->getFallbackReviewers());
         $writer->writeStringValue('@odata.type', $this->getOdataType());
+        $writer->writeCollectionOfObjectValues('recommendationInsightSettings', $this->getRecommendationInsightSettings());
         $writer->writeBooleanValue('recommendationsEnabled', $this->getRecommendationsEnabled());
         $writer->writeCollectionOfObjectValues('reviewers', $this->getReviewers());
         $writer->writeStringValue('stageId', $this->getStageId());
@@ -202,6 +212,14 @@ class AccessReviewStageSettings implements AdditionalDataHolder, BackedModel, Pa
     */
     public function setOdataType(?string $value): void {
         $this->getBackingStore()->set('odataType', $value);
+    }
+
+    /**
+     * Sets the recommendationInsightSettings property value. The recommendationInsightSettings property
+     * @param array<AccessReviewRecommendationInsightSetting>|null $value Value to set for the recommendationInsightSettings property.
+    */
+    public function setRecommendationInsightSettings(?array $value): void {
+        $this->getBackingStore()->set('recommendationInsightSettings', $value);
     }
 
     /**

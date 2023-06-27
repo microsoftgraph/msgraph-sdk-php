@@ -32,11 +32,11 @@ class InviteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a specific participant in a call. In some situations, it is appropriate for an application to remove a participant from an active call. This action can be done before or after the participant answers the call. When an active caller is removed, they are immediately dropped from the call with no pre- or post-removal notification. When an invited participant is removed, any outstanding add participant request is canceled. 
+     * Invite participants to the active call. For more information about how to handle operations, see commsOperation.
      * @param InvitePostRequestBody $body The request body
      * @param InviteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/participant-delete?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/participant-invite?view=graph-rest-1.0 Find more info here
     */
     public function post(InvitePostRequestBody $body, ?InviteRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -52,7 +52,7 @@ class InviteRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Delete a specific participant in a call. In some situations, it is appropriate for an application to remove a participant from an active call. This action can be done before or after the participant answers the call. When an active caller is removed, they are immediately dropped from the call with no pre- or post-removal notification. When an invited participant is removed, any outstanding add participant request is canceled. 
+     * Invite participants to the active call. For more information about how to handle operations, see commsOperation.
      * @param InvitePostRequestBody $body The request body
      * @param InviteRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

@@ -32,9 +32,10 @@ class ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder extends 
     }
 
     /**
-     * Delete navigation property deviceStatuses for deviceAppManagement
+     * Deletes a managedDeviceMobileAppConfigurationDeviceStatus.
      * @param ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationdevicestatus-delete?view=graph-rest-1.0 Find more info here
     */
     public function delete(?ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilderDeleteRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toDeleteRequestInformation($requestConfiguration);
@@ -50,9 +51,10 @@ class ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder extends 
     }
 
     /**
-     * List of ManagedDeviceMobileAppConfigurationDeviceStatus.
+     * Read properties and relationships of the managedDeviceMobileAppConfigurationDeviceStatus object.
      * @param ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationdevicestatus-get?view=graph-rest-1.0 Find more info here
     */
     public function get(?ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -68,10 +70,11 @@ class ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder extends 
     }
 
     /**
-     * Update the navigation property deviceStatuses in deviceAppManagement
+     * Update the properties of a managedDeviceMobileAppConfigurationDeviceStatus object.
      * @param ManagedDeviceMobileAppConfigurationDeviceStatus $body The request body
      * @param ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
+     * @link https://docs.microsoft.com/graph/api/intune-apps-manageddevicemobileappconfigurationdevicestatus-update?view=graph-rest-1.0 Find more info here
     */
     public function patch(ManagedDeviceMobileAppConfigurationDeviceStatus $body, ?ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilderPatchRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPatchRequestInformation($body, $requestConfiguration);
@@ -87,7 +90,7 @@ class ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder extends 
     }
 
     /**
-     * Delete navigation property deviceStatuses for deviceAppManagement
+     * Deletes a managedDeviceMobileAppConfigurationDeviceStatus.
      * @param ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilderDeleteRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -104,7 +107,7 @@ class ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder extends 
     }
 
     /**
-     * List of ManagedDeviceMobileAppConfigurationDeviceStatus.
+     * Read properties and relationships of the managedDeviceMobileAppConfigurationDeviceStatus object.
      * @param ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -125,7 +128,7 @@ class ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilder extends 
     }
 
     /**
-     * Update the navigation property deviceStatuses in deviceAppManagement
+     * Update the properties of a managedDeviceMobileAppConfigurationDeviceStatus object.
      * @param ManagedDeviceMobileAppConfigurationDeviceStatus $body The request body
      * @param ManagedDeviceMobileAppConfigurationDeviceStatusItemRequestBuilderPatchRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

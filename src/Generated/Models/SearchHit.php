@@ -85,7 +85,7 @@ class SearchHit implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Gets the isCollapsed property value. Indicates whether the current result is collapsed when the collapseProperties property is used.
+     * Gets the isCollapsed property value. Indicates whether the current result is collapsed when the collapseProperties property in the searchRequest is used.
      * @return bool|null
     */
     public function getIsCollapsed(): ?bool {
@@ -181,7 +181,7 @@ class SearchHit implements AdditionalDataHolder, BackedModel, Parsable
     }
 
     /**
-     * Sets the isCollapsed property value. Indicates whether the current result is collapsed when the collapseProperties property is used.
+     * Sets the isCollapsed property value. Indicates whether the current result is collapsed when the collapseProperties property in the searchRequest is used.
      * @param bool|null $value Value to set for the isCollapsed property.
     */
     public function setIsCollapsed(?bool $value): void {
