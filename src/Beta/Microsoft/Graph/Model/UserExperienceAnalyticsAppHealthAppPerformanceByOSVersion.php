@@ -26,7 +26,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
 {
     /**
     * Gets the activeDeviceCount
-    * The number of devices where the app has been active. Valid values -2147483648 to 2147483647
+    * The number of devices where the application has been active. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
     *
     * @return int|null The activeDeviceCount
     */
@@ -41,7 +41,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
 
     /**
     * Sets the activeDeviceCount
-    * The number of devices where the app has been active. Valid values -2147483648 to 2147483647
+    * The number of devices where the application has been active. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
     *
     * @param int $val The activeDeviceCount
     *
@@ -55,7 +55,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
 
     /**
     * Gets the appCrashCount
-    * The number of crashes for the app. Valid values -2147483648 to 2147483647
+    * The number of crashes for the application. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
     *
     * @return int|null The appCrashCount
     */
@@ -70,7 +70,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
 
     /**
     * Sets the appCrashCount
-    * The number of crashes for the app. Valid values -2147483648 to 2147483647
+    * The number of crashes for the application. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
     *
     * @param int $val The appCrashCount
     *
@@ -84,7 +84,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
 
     /**
     * Gets the appDisplayName
-    * The friendly name of the application.
+    * The friendly name of the application. Possible values are: Outlook, Excel. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The appDisplayName
     */
@@ -99,7 +99,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
 
     /**
     * Sets the appDisplayName
-    * The friendly name of the application.
+    * The friendly name of the application. Possible values are: Outlook, Excel. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The appDisplayName
     *
@@ -113,7 +113,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
 
     /**
     * Gets the appName
-    * The name of the application.
+    * The name of the application. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The appName
     */
@@ -128,7 +128,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
 
     /**
     * Sets the appName
-    * The name of the application.
+    * The name of the application. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The appName
     *
@@ -142,7 +142,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
 
     /**
     * Gets the appPublisher
-    * The publisher of the application.
+    * The publisher of the application. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The appPublisher
     */
@@ -157,7 +157,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
 
     /**
     * Sets the appPublisher
-    * The publisher of the application.
+    * The publisher of the application. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The appPublisher
     *
@@ -171,7 +171,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
 
     /**
     * Gets the appUsageDuration
-    * The total usage time of the application in minutes. Valid values -2147483648 to 2147483647
+    * The total usage time of the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
     *
     * @return int|null The appUsageDuration
     */
@@ -186,7 +186,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
 
     /**
     * Sets the appUsageDuration
-    * The total usage time of the application in minutes. Valid values -2147483648 to 2147483647
+    * The total usage time of the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
     *
     * @param int $val The appUsageDuration
     *
@@ -200,7 +200,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
 
     /**
     * Gets the meanTimeToFailureInMinutes
-    * The mean time to failure for the app in minutes. Valid values -2147483648 to 2147483647
+    * The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
     *
     * @return int|null The meanTimeToFailureInMinutes
     */
@@ -215,7 +215,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
 
     /**
     * Sets the meanTimeToFailureInMinutes
-    * The mean time to failure for the app in minutes. Valid values -2147483648 to 2147483647
+    * The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
     *
     * @param int $val The meanTimeToFailureInMinutes
     *
@@ -229,7 +229,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
 
     /**
     * Gets the osBuildNumber
-    * The os build number of the application.
+    * The OS build number of the application. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The osBuildNumber
     */
@@ -244,7 +244,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
 
     /**
     * Sets the osBuildNumber
-    * The os build number of the application.
+    * The OS build number of the application. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The osBuildNumber
     *
@@ -258,7 +258,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
 
     /**
     * Gets the osVersion
-    * The os version of the application.
+    * The OS version of the application. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The osVersion
     */
@@ -273,7 +273,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByOSVersion extends Entity
 
     /**
     * Sets the osVersion
-    * The os version of the application.
+    * The OS version of the application. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The osVersion
     *

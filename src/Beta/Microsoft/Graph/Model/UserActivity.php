@@ -26,6 +26,7 @@ class UserActivity extends Entity
 {
     /**
     * Gets the activationUrl
+    * Required. URL used to launch the activity in the best native experience represented by the appId. Might launch a web-based app if no native app exists.
     *
     * @return string|null The activationUrl
     */
@@ -40,6 +41,7 @@ class UserActivity extends Entity
 
     /**
     * Sets the activationUrl
+    * Required. URL used to launch the activity in the best native experience represented by the appId. Might launch a web-based app if no native app exists.
     *
     * @param string $val The activationUrl
     *
@@ -53,6 +55,7 @@ class UserActivity extends Entity
 
     /**
     * Gets the activitySourceHost
+    * Required. URL for the domain representing the cross-platform identity mapping for the app. Mapping is stored either as a JSON file hosted on the domain or configurable via Windows Dev Center. The JSON file is named cross-platform-app-identifiers and is hosted at root of your HTTPS domain, either at the top level domain or include a sub domain. For example: https://contoso.com or https://myapp.contoso.com but NOT https://myapp.contoso.com/somepath. You must have a unique file and domain (or sub domain) per cross-platform app identity. For example, a separate file and domain is needed for Word vs. PowerPoint.
     *
     * @return string|null The activitySourceHost
     */
@@ -67,6 +70,7 @@ class UserActivity extends Entity
 
     /**
     * Sets the activitySourceHost
+    * Required. URL for the domain representing the cross-platform identity mapping for the app. Mapping is stored either as a JSON file hosted on the domain or configurable via Windows Dev Center. The JSON file is named cross-platform-app-identifiers and is hosted at root of your HTTPS domain, either at the top level domain or include a sub domain. For example: https://contoso.com or https://myapp.contoso.com but NOT https://myapp.contoso.com/somepath. You must have a unique file and domain (or sub domain) per cross-platform app identity. For example, a separate file and domain is needed for Word vs. PowerPoint.
     *
     * @param string $val The activitySourceHost
     *
@@ -80,6 +84,7 @@ class UserActivity extends Entity
 
     /**
     * Gets the appActivityId
+    * Required. The unique activity ID in the context of the app - supplied by caller and immutable thereafter.
     *
     * @return string|null The appActivityId
     */
@@ -94,6 +99,7 @@ class UserActivity extends Entity
 
     /**
     * Sets the appActivityId
+    * Required. The unique activity ID in the context of the app - supplied by caller and immutable thereafter.
     *
     * @param string $val The appActivityId
     *
@@ -107,6 +113,7 @@ class UserActivity extends Entity
 
     /**
     * Gets the appDisplayName
+    * Optional. Short text description of the app used to generate the activity for use in cases when the app is not installed on the user’s local device.
     *
     * @return string|null The appDisplayName
     */
@@ -121,6 +128,7 @@ class UserActivity extends Entity
 
     /**
     * Sets the appDisplayName
+    * Optional. Short text description of the app used to generate the activity for use in cases when the app is not installed on the user’s local device.
     *
     * @param string $val The appDisplayName
     *
@@ -134,6 +142,7 @@ class UserActivity extends Entity
 
     /**
     * Gets the contentInfo
+    * Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax.
     *
     * @return string|null The contentInfo
     */
@@ -148,6 +157,7 @@ class UserActivity extends Entity
 
     /**
     * Sets the contentInfo
+    * Optional. A custom piece of data - JSON-LD extensible description of content according to schema.org syntax.
     *
     * @param string $val The contentInfo
     *
@@ -161,6 +171,7 @@ class UserActivity extends Entity
 
     /**
     * Gets the contentUrl
+    * Optional. Used in the event the content can be rendered outside of a native or web-based app experience (for example, a pointer to an item in an RSS feed).
     *
     * @return string|null The contentUrl
     */
@@ -175,6 +186,7 @@ class UserActivity extends Entity
 
     /**
     * Sets the contentUrl
+    * Optional. Used in the event the content can be rendered outside of a native or web-based app experience (for example, a pointer to an item in an RSS feed).
     *
     * @param string $val The contentUrl
     *
@@ -188,6 +200,7 @@ class UserActivity extends Entity
 
     /**
     * Gets the createdDateTime
+    * Set by the server. DateTime in UTC when the object was created on the server.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -206,6 +219,7 @@ class UserActivity extends Entity
 
     /**
     * Sets the createdDateTime
+    * Set by the server. DateTime in UTC when the object was created on the server.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -219,6 +233,7 @@ class UserActivity extends Entity
 
     /**
     * Gets the expirationDateTime
+    * Set by the server. DateTime in UTC when the object expired on the server.
     *
     * @return \DateTime|null The expirationDateTime
     */
@@ -237,6 +252,7 @@ class UserActivity extends Entity
 
     /**
     * Sets the expirationDateTime
+    * Set by the server. DateTime in UTC when the object expired on the server.
     *
     * @param \DateTime $val The expirationDateTime
     *
@@ -250,6 +266,7 @@ class UserActivity extends Entity
 
     /**
     * Gets the fallbackUrl
+    * Optional. URL used to launch the activity in a web-based app, if available.
     *
     * @return string|null The fallbackUrl
     */
@@ -264,6 +281,7 @@ class UserActivity extends Entity
 
     /**
     * Sets the fallbackUrl
+    * Optional. URL used to launch the activity in a web-based app, if available.
     *
     * @param string $val The fallbackUrl
     *
@@ -277,6 +295,7 @@ class UserActivity extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * Set by the server. DateTime in UTC when the object was modified on the server.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -295,6 +314,7 @@ class UserActivity extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * Set by the server. DateTime in UTC when the object was modified on the server.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -308,6 +328,7 @@ class UserActivity extends Entity
 
     /**
     * Gets the status
+    * Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
     *
     * @return Status|null The status
     */
@@ -326,6 +347,7 @@ class UserActivity extends Entity
 
     /**
     * Sets the status
+    * Set by the server. A status code used to identify valid objects. Values: active, updated, deleted, ignored.
     *
     * @param Status $val The status
     *
@@ -339,6 +361,7 @@ class UserActivity extends Entity
 
     /**
     * Gets the userTimezone
+    * Optional. The timezone in which the user's device used to generate the activity was located at activity creation time; values supplied as Olson IDs in order to support cross-platform representation.
     *
     * @return string|null The userTimezone
     */
@@ -353,6 +376,7 @@ class UserActivity extends Entity
 
     /**
     * Sets the userTimezone
+    * Optional. The timezone in which the user's device used to generate the activity was located at activity creation time; values supplied as Olson IDs in order to support cross-platform representation.
     *
     * @param string $val The userTimezone
     *
@@ -366,6 +390,7 @@ class UserActivity extends Entity
 
     /**
     * Gets the visualElements
+    * Required. The object containing information to render the activity in the UX.
     *
     * @return VisualInfo|null The visualElements
     */
@@ -384,6 +409,7 @@ class UserActivity extends Entity
 
     /**
     * Sets the visualElements
+    * Required. The object containing information to render the activity in the UX.
     *
     * @param VisualInfo $val The visualElements
     *
@@ -398,6 +424,7 @@ class UserActivity extends Entity
 
      /**
      * Gets the historyItems
+    * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
      *
      * @return array|null The historyItems
      */
@@ -412,6 +439,7 @@ class UserActivity extends Entity
 
     /**
     * Sets the historyItems
+    * Optional. NavigationProperty/Containment; navigation property to the activity's historyItems.
     *
     * @param ActivityHistoryItem[] $val The historyItems
     *

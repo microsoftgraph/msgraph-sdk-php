@@ -27,7 +27,7 @@ class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity
 
      /**
      * Gets the metricDevices
-    * The work from anywhere metric devices.
+    * The work from anywhere metric devices. Read-only.
      *
      * @return array|null The metricDevices
      */
@@ -42,7 +42,7 @@ class UserExperienceAnalyticsWorkFromAnywhereMetric extends Entity
 
     /**
     * Sets the metricDevices
-    * The work from anywhere metric devices.
+    * The work from anywhere metric devices. Read-only.
     *
     * @param UserExperienceAnalyticsWorkFromAnywhereDevice[] $val The metricDevices
     *

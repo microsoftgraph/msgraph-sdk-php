@@ -26,7 +26,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
 {
     /**
     * Gets the activeDeviceCount
-    * The number of active devices for the model. Valid values -2147483648 to 2147483647
+    * The number of active devices for the model. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
     *
     * @return int|null The activeDeviceCount
     */
@@ -41,7 +41,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
 
     /**
     * Sets the activeDeviceCount
-    * The number of active devices for the model. Valid values -2147483648 to 2147483647
+    * The number of active devices for the model. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
     *
     * @param int $val The activeDeviceCount
     *
@@ -55,7 +55,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
 
     /**
     * Gets the deviceManufacturer
-    * The manufacturer name of the device.
+    * The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The deviceManufacturer
     */
@@ -70,7 +70,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
 
     /**
     * Sets the deviceManufacturer
-    * The manufacturer name of the device.
+    * The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The deviceManufacturer
     *
@@ -84,7 +84,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
 
     /**
     * Gets the deviceModel
-    * The model name of the device.
+    * The model name of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The deviceModel
     */
@@ -99,7 +99,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
 
     /**
     * Sets the deviceModel
-    * The model name of the device.
+    * The model name of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The deviceModel
     *
@@ -113,7 +113,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
 
     /**
     * Gets the healthStatus
-    * The health state of the user experience analytics model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
+    * The health state of the user experience analytics model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. Unknown by default. Supports: $filter, $select, $OrderBy. Read-only. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
     *
     * @return UserExperienceAnalyticsHealthState|null The healthStatus
     */
@@ -132,7 +132,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
 
     /**
     * Sets the healthStatus
-    * The health state of the user experience analytics model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
+    * The health state of the user experience analytics model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. Unknown by default. Supports: $filter, $select, $OrderBy. Read-only. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
     *
     * @param UserExperienceAnalyticsHealthState $val The healthStatus
     *
@@ -146,7 +146,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
 
     /**
     * Gets the meanTimeToFailureInMinutes
-    * The mean time to failure for the model device in minutes. Valid values -2147483648 to 2147483647
+    * The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
     *
     * @return int|null The meanTimeToFailureInMinutes
     */
@@ -161,7 +161,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
 
     /**
     * Sets the meanTimeToFailureInMinutes
-    * The mean time to failure for the model device in minutes. Valid values -2147483648 to 2147483647
+    * The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
     *
     * @param int $val The meanTimeToFailureInMinutes
     *
@@ -175,7 +175,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
 
     /**
     * Gets the modelAppHealthScore
-    * The app health score of the device model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * The application health score of the device model. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @return float|null The modelAppHealthScore
     */
@@ -190,7 +190,7 @@ class UserExperienceAnalyticsAppHealthDeviceModelPerformance extends Entity
 
     /**
     * Sets the modelAppHealthScore
-    * The app health score of the device model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * The application health score of the device model. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @param float $val The modelAppHealthScore
     *

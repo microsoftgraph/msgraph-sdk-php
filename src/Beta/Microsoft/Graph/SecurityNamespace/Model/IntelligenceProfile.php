@@ -53,6 +53,34 @@ class IntelligenceProfile extends \Beta\Microsoft\Graph\Model\Entity
         return $this;
     }
 
+
+     /**
+     * Gets the countriesOrRegionsOfOrigin
+     *
+     * @return array|null The countriesOrRegionsOfOrigin
+     */
+    public function getCountriesOrRegionsOfOrigin()
+    {
+        if (array_key_exists("countriesOrRegionsOfOrigin", $this->_propDict)) {
+           return $this->_propDict["countriesOrRegionsOfOrigin"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the countriesOrRegionsOfOrigin
+    *
+    * @param IntelligenceProfileCountryOrRegionOfOrigin[] $val The countriesOrRegionsOfOrigin
+    *
+    * @return IntelligenceProfile
+    */
+    public function setCountriesOrRegionsOfOrigin($val)
+    {
+        $this->_propDict["countriesOrRegionsOfOrigin"] = $val;
+        return $this;
+    }
+
     /**
     * Gets the description
     * A synopsis of the threat actor. This property places the threat actor in wider context, tracing its discovery, history, significant campaigns, targeting, techniques of note, affiliations with governments, law enforcement countermeasures, and any areas of dispute among the security community regarding attribution.
@@ -149,36 +177,6 @@ class IntelligenceProfile extends \Beta\Microsoft\Graph\Model\Entity
     public function setKind($val)
     {
         $this->_propDict["kind"] = $val;
-        return $this;
-    }
-
-
-     /**
-     * Gets the sponsorStates
-    * Known states (such as a country or government) who have sponsored threat actors associated with this intelligenceProfile. This is also known as the country/region of origin for the given actor or threat.
-     *
-     * @return array|null The sponsorStates
-     */
-    public function getSponsorStates()
-    {
-        if (array_key_exists("sponsorStates", $this->_propDict)) {
-           return $this->_propDict["sponsorStates"];
-        } else {
-            return null;
-        }
-    }
-
-    /**
-    * Sets the sponsorStates
-    * Known states (such as a country or government) who have sponsored threat actors associated with this intelligenceProfile. This is also known as the country/region of origin for the given actor or threat.
-    *
-    * @param IntelligenceProfileSponsorState[] $val The sponsorStates
-    *
-    * @return IntelligenceProfile
-    */
-    public function setSponsorStates($val)
-    {
-        $this->_propDict["sponsorStates"] = $val;
         return $this;
     }
 

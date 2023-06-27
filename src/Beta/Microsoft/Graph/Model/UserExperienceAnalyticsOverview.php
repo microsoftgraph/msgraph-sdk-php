@@ -27,7 +27,7 @@ class UserExperienceAnalyticsOverview extends Entity
 
      /**
      * Gets the insights
-    * The user experience analytics insights.
+    * The user experience analytics insights. Read-only.
      *
      * @return array|null The insights
      */
@@ -42,7 +42,7 @@ class UserExperienceAnalyticsOverview extends Entity
 
     /**
     * Sets the insights
-    * The user experience analytics insights.
+    * The user experience analytics insights. Read-only.
     *
     * @param UserExperienceAnalyticsInsight[] $val The insights
     *

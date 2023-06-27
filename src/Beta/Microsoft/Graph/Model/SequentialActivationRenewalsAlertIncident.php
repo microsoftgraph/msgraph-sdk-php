@@ -26,6 +26,7 @@ class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManagementAle
 {
     /**
     * Gets the activationCount
+    * The length of sequential activation of the same role.
     *
     * @return int|null The activationCount
     */
@@ -40,6 +41,7 @@ class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManagementAle
 
     /**
     * Sets the activationCount
+    * The length of sequential activation of the same role.
     *
     * @param int $val The activationCount
     *
@@ -53,6 +55,7 @@ class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManagementAle
 
     /**
     * Gets the assigneeDisplayName
+    * Display name of the subject that the incident applies to.
     *
     * @return string|null The assigneeDisplayName
     */
@@ -67,6 +70,7 @@ class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManagementAle
 
     /**
     * Sets the assigneeDisplayName
+    * Display name of the subject that the incident applies to.
     *
     * @param string $val The assigneeDisplayName
     *
@@ -80,6 +84,7 @@ class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManagementAle
 
     /**
     * Gets the assigneeId
+    * The identifier of the subject that the incident applies to.
     *
     * @return string|null The assigneeId
     */
@@ -94,6 +99,7 @@ class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManagementAle
 
     /**
     * Sets the assigneeId
+    * The identifier of the subject that the incident applies to.
     *
     * @param string $val The assigneeId
     *
@@ -107,6 +113,7 @@ class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManagementAle
 
     /**
     * Gets the assigneeUserPrincipalName
+    * User principal name of the subject that the incident applies to. Applies to user principals.
     *
     * @return string|null The assigneeUserPrincipalName
     */
@@ -121,6 +128,7 @@ class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManagementAle
 
     /**
     * Sets the assigneeUserPrincipalName
+    * User principal name of the subject that the incident applies to. Applies to user principals.
     *
     * @param string $val The assigneeUserPrincipalName
     *
@@ -134,6 +142,7 @@ class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManagementAle
 
     /**
     * Gets the roleDefinitionId
+    * The identifier for the directory role definition that's in scope of this incident.
     *
     * @return string|null The roleDefinitionId
     */
@@ -148,6 +157,7 @@ class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManagementAle
 
     /**
     * Sets the roleDefinitionId
+    * The identifier for the directory role definition that's in scope of this incident.
     *
     * @param string $val The roleDefinitionId
     *
@@ -161,6 +171,7 @@ class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManagementAle
 
     /**
     * Gets the roleDisplayName
+    * The display name for the directory role.
     *
     * @return string|null The roleDisplayName
     */
@@ -175,6 +186,7 @@ class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManagementAle
 
     /**
     * Sets the roleDisplayName
+    * The display name for the directory role.
     *
     * @param string $val The roleDisplayName
     *
@@ -188,6 +200,7 @@ class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManagementAle
 
     /**
     * Gets the roleTemplateId
+    * The globally unique identifier for the directory role.
     *
     * @return string|null The roleTemplateId
     */
@@ -202,6 +215,7 @@ class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManagementAle
 
     /**
     * Sets the roleTemplateId
+    * The globally unique identifier for the directory role.
     *
     * @param string $val The roleTemplateId
     *
@@ -215,6 +229,7 @@ class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManagementAle
 
     /**
     * Gets the sequenceEndDateTime
+    * End date time of the sequential activation event.
     *
     * @return \DateTime|null The sequenceEndDateTime
     */
@@ -233,6 +248,7 @@ class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManagementAle
 
     /**
     * Sets the sequenceEndDateTime
+    * End date time of the sequential activation event.
     *
     * @param \DateTime $val The sequenceEndDateTime
     *
@@ -246,6 +262,7 @@ class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManagementAle
 
     /**
     * Gets the sequenceStartDateTime
+    * Start date time of the sequential activation event.
     *
     * @return \DateTime|null The sequenceStartDateTime
     */
@@ -264,6 +281,7 @@ class SequentialActivationRenewalsAlertIncident extends UnifiedRoleManagementAle
 
     /**
     * Sets the sequenceStartDateTime
+    * Start date time of the sequential activation event.
     *
     * @param \DateTime $val The sequenceStartDateTime
     *

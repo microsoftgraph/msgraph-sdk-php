@@ -26,7 +26,7 @@ class UserExperienceAnalyticsDeviceStartupProcess extends Entity
 {
     /**
     * Gets the managedDeviceId
-    * The user experience analytics device id.
+    * The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The managedDeviceId
     */
@@ -41,7 +41,7 @@ class UserExperienceAnalyticsDeviceStartupProcess extends Entity
 
     /**
     * Sets the managedDeviceId
-    * The user experience analytics device id.
+    * The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The managedDeviceId
     *
@@ -55,7 +55,7 @@ class UserExperienceAnalyticsDeviceStartupProcess extends Entity
 
     /**
     * Gets the processName
-    * User experience analytics device startup process name.
+    * The name of the process. Examples: outlook, excel. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The processName
     */
@@ -70,7 +70,7 @@ class UserExperienceAnalyticsDeviceStartupProcess extends Entity
 
     /**
     * Sets the processName
-    * User experience analytics device startup process name.
+    * The name of the process. Examples: outlook, excel. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The processName
     *
@@ -84,7 +84,7 @@ class UserExperienceAnalyticsDeviceStartupProcess extends Entity
 
     /**
     * Gets the productName
-    * The user experience analytics device startup process product name.
+    * The product name of the process. Examples: Microsoft Outlook, Microsoft Excel. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The productName
     */
@@ -99,7 +99,7 @@ class UserExperienceAnalyticsDeviceStartupProcess extends Entity
 
     /**
     * Sets the productName
-    * The user experience analytics device startup process product name.
+    * The product name of the process. Examples: Microsoft Outlook, Microsoft Excel. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The productName
     *
@@ -113,7 +113,7 @@ class UserExperienceAnalyticsDeviceStartupProcess extends Entity
 
     /**
     * Gets the publisher
-    * The User experience analytics device startup process publisher.
+    * The publisher of the process. Examples: Microsoft Corporation, Contoso Corp. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The publisher
     */
@@ -128,7 +128,7 @@ class UserExperienceAnalyticsDeviceStartupProcess extends Entity
 
     /**
     * Sets the publisher
-    * The User experience analytics device startup process publisher.
+    * The publisher of the process. Examples: Microsoft Corporation, Contoso Corp. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The publisher
     *
@@ -142,7 +142,7 @@ class UserExperienceAnalyticsDeviceStartupProcess extends Entity
 
     /**
     * Gets the startupImpactInMs
-    * User experience analytics device startup process impact in milliseconds.
+    * The impact of startup process on device boot time in milliseconds. Supports: $select, $OrderBy. Read-only.
     *
     * @return int|null The startupImpactInMs
     */
@@ -157,7 +157,7 @@ class UserExperienceAnalyticsDeviceStartupProcess extends Entity
 
     /**
     * Sets the startupImpactInMs
-    * User experience analytics device startup process impact in milliseconds.
+    * The impact of startup process on device boot time in milliseconds. Supports: $select, $OrderBy. Read-only.
     *
     * @param int $val The startupImpactInMs
     *

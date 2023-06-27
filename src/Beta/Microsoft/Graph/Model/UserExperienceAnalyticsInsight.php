@@ -54,7 +54,7 @@ class UserExperienceAnalyticsInsight extends Entity
 
     /**
     * Gets the severity
-    * The value of the user experience analytics insight. Possible values are: none, informational, warning, error.
+    * The severity of the user experience analytics insight. Possible values are: none, informational, warning, error. None by default. Possible values are: none, informational, warning, error, unknownFutureValue.
     *
     * @return UserExperienceAnalyticsInsightSeverity|null The severity
     */
@@ -73,7 +73,7 @@ class UserExperienceAnalyticsInsight extends Entity
 
     /**
     * Sets the severity
-    * The value of the user experience analytics insight. Possible values are: none, informational, warning, error.
+    * The severity of the user experience analytics insight. Possible values are: none, informational, warning, error. None by default. Possible values are: none, informational, warning, error, unknownFutureValue.
     *
     * @param UserExperienceAnalyticsInsightSeverity $val The value to assign to the severity
     *
@@ -86,7 +86,7 @@ class UserExperienceAnalyticsInsight extends Entity
     }
     /**
     * Gets the userExperienceAnalyticsMetricId
-    * The unique identifier of the user experience analytics insight.
+    * The unique identifier of the user experience analytics metric.
     *
     * @return string|null The userExperienceAnalyticsMetricId
     */
@@ -101,7 +101,7 @@ class UserExperienceAnalyticsInsight extends Entity
 
     /**
     * Sets the userExperienceAnalyticsMetricId
-    * The unique identifier of the user experience analytics insight.
+    * The unique identifier of the user experience analytics metric.
     *
     * @param string $val The value of the userExperienceAnalyticsMetricId
     *

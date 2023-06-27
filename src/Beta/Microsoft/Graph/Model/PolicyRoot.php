@@ -434,6 +434,37 @@ class PolicyRoot implements \JsonSerializable
         return $this;
     }
 
+    /**
+    * Gets the federatedTokenValidationPolicy
+    *
+    * @return FederatedTokenValidationPolicy|null The federatedTokenValidationPolicy
+    */
+    public function getFederatedTokenValidationPolicy()
+    {
+        if (array_key_exists("federatedTokenValidationPolicy", $this->_propDict)) {
+            if (is_a($this->_propDict["federatedTokenValidationPolicy"], "\Beta\Microsoft\Graph\Model\FederatedTokenValidationPolicy") || is_null($this->_propDict["federatedTokenValidationPolicy"])) {
+                return $this->_propDict["federatedTokenValidationPolicy"];
+            } else {
+                $this->_propDict["federatedTokenValidationPolicy"] = new FederatedTokenValidationPolicy($this->_propDict["federatedTokenValidationPolicy"]);
+                return $this->_propDict["federatedTokenValidationPolicy"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the federatedTokenValidationPolicy
+    *
+    * @param FederatedTokenValidationPolicy $val The federatedTokenValidationPolicy
+    *
+    * @return PolicyRoot
+    */
+    public function setFederatedTokenValidationPolicy($val)
+    {
+        $this->_propDict["federatedTokenValidationPolicy"] = $val;
+        return $this;
+    }
+
 
      /**
      * Gets the homeRealmDiscoveryPolicies

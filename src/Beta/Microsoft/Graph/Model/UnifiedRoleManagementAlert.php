@@ -26,6 +26,7 @@ class UnifiedRoleManagementAlert extends Entity
 {
     /**
     * Gets the alertDefinitionId
+    * The identifier of an alert definition. Supports $filter (eq, ne).
     *
     * @return string|null The alertDefinitionId
     */
@@ -40,6 +41,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Sets the alertDefinitionId
+    * The identifier of an alert definition. Supports $filter (eq, ne).
     *
     * @param string $val The alertDefinitionId
     *
@@ -53,6 +55,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Gets the incidentCount
+    * The number of incidents triggered in the tenant and relating to the alert. Can only be a positive integer.
     *
     * @return int|null The incidentCount
     */
@@ -67,6 +70,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Sets the incidentCount
+    * The number of incidents triggered in the tenant and relating to the alert. Can only be a positive integer.
     *
     * @param int $val The incidentCount
     *
@@ -80,6 +84,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Gets the isActive
+    * false by default. true if the alert is active.
     *
     * @return bool|null The isActive
     */
@@ -94,6 +99,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Sets the isActive
+    * false by default. true if the alert is active.
     *
     * @param bool $val The isActive
     *
@@ -107,6 +113,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Gets the lastModifiedDateTime
+    * The date time when the alert configuration was updated or new incidents generated.
     *
     * @return \DateTime|null The lastModifiedDateTime
     */
@@ -125,6 +132,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Sets the lastModifiedDateTime
+    * The date time when the alert configuration was updated or new incidents generated.
     *
     * @param \DateTime $val The lastModifiedDateTime
     *
@@ -138,6 +146,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Gets the lastScannedDateTime
+    * The date time when the tenant was last scanned for incidents that trigger this alert.
     *
     * @return \DateTime|null The lastScannedDateTime
     */
@@ -156,6 +165,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Sets the lastScannedDateTime
+    * The date time when the tenant was last scanned for incidents that trigger this alert.
     *
     * @param \DateTime $val The lastScannedDateTime
     *
@@ -169,6 +179,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Gets the scopeId
+    * The identifier of the scope where the alert is related. / is the only supported one for the tenant. Supports $filter (eq, ne).
     *
     * @return string|null The scopeId
     */
@@ -183,6 +194,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Sets the scopeId
+    * The identifier of the scope where the alert is related. / is the only supported one for the tenant. Supports $filter (eq, ne).
     *
     * @param string $val The scopeId
     *
@@ -196,6 +208,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Gets the scopeType
+    * The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD roles.
     *
     * @return string|null The scopeType
     */
@@ -210,6 +223,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Sets the scopeType
+    * The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD roles.
     *
     * @param string $val The scopeType
     *
@@ -223,6 +237,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Gets the alertConfiguration
+    * The configuration of the alert in PIM for Azure AD roles. Alert configurations are pre-defined and cannot be created or deleted, but some configurations can be modified. Supports $expand.
     *
     * @return UnifiedRoleManagementAlertConfiguration|null The alertConfiguration
     */
@@ -241,6 +256,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Sets the alertConfiguration
+    * The configuration of the alert in PIM for Azure AD roles. Alert configurations are pre-defined and cannot be created or deleted, but some configurations can be modified. Supports $expand.
     *
     * @param UnifiedRoleManagementAlertConfiguration $val The alertConfiguration
     *
@@ -254,6 +270,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Gets the alertDefinition
+    * Contains the description, impact, and measures to mitigate or prevent the security alert from being triggered in your tenant. Supports $expand.
     *
     * @return UnifiedRoleManagementAlertDefinition|null The alertDefinition
     */
@@ -272,6 +289,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Sets the alertDefinition
+    * Contains the description, impact, and measures to mitigate or prevent the security alert from being triggered in your tenant. Supports $expand.
     *
     * @param UnifiedRoleManagementAlertDefinition $val The alertDefinition
     *
@@ -286,6 +304,7 @@ class UnifiedRoleManagementAlert extends Entity
 
      /**
      * Gets the alertIncidents
+    * Represents the incidents of this alert that have been triggered in Privileged Identity Management (PIM) for Azure AD roles in the tenant. Supports $expand.
      *
      * @return array|null The alertIncidents
      */
@@ -300,6 +319,7 @@ class UnifiedRoleManagementAlert extends Entity
 
     /**
     * Sets the alertIncidents
+    * Represents the incidents of this alert that have been triggered in Privileged Identity Management (PIM) for Azure AD roles in the tenant. Supports $expand.
     *
     * @param UnifiedRoleManagementAlertIncident[] $val The alertIncidents
     *

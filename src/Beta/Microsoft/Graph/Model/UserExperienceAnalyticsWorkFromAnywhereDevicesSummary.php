@@ -26,7 +26,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
 
     /**
     * Gets the autopilotDevicesSummary
-    * The value of work from anywhere autopilot devices summary.
+    * The user experience analytics work from anywhere Autopilot devices summary. Read-only.
     *
     * @return UserExperienceAnalyticsAutopilotDevicesSummary|null The autopilotDevicesSummary
     */
@@ -45,7 +45,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
 
     /**
     * Sets the autopilotDevicesSummary
-    * The value of work from anywhere autopilot devices summary.
+    * The user experience analytics work from anywhere Autopilot devices summary. Read-only.
     *
     * @param UserExperienceAnalyticsAutopilotDevicesSummary $val The value to assign to the autopilotDevicesSummary
     *
@@ -59,7 +59,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
 
     /**
     * Gets the cloudIdentityDevicesSummary
-    * The user experience analytics work from anywhere Cloud Identity devices summary.
+    * The user experience analytics work from anywhere Cloud Identity devices summary. Read-only.
     *
     * @return UserExperienceAnalyticsCloudIdentityDevicesSummary|null The cloudIdentityDevicesSummary
     */
@@ -78,7 +78,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
 
     /**
     * Sets the cloudIdentityDevicesSummary
-    * The user experience analytics work from anywhere Cloud Identity devices summary.
+    * The user experience analytics work from anywhere Cloud Identity devices summary. Read-only.
     *
     * @param UserExperienceAnalyticsCloudIdentityDevicesSummary $val The value to assign to the cloudIdentityDevicesSummary
     *
@@ -92,7 +92,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
 
     /**
     * Gets the cloudManagementDevicesSummary
-    * The user experience work from anywhere Cloud management devices summary.
+    * The user experience analytics work from anywhere Cloud management devices summary. Read-only.
     *
     * @return UserExperienceAnalyticsCloudManagementDevicesSummary|null The cloudManagementDevicesSummary
     */
@@ -111,7 +111,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
 
     /**
     * Sets the cloudManagementDevicesSummary
-    * The user experience work from anywhere Cloud management devices summary.
+    * The user experience analytics work from anywhere Cloud management devices summary. Read-only.
     *
     * @param UserExperienceAnalyticsCloudManagementDevicesSummary $val The value to assign to the cloudManagementDevicesSummary
     *
@@ -124,7 +124,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
     }
     /**
     * Gets the coManagedDevices
-    * Total number of co-managed devices. Valid values -2147483648 to 2147483647
+    * Total number of co-managed devices. Read-only. Valid values -2147483648 to 2147483647
     *
     * @return int|null The coManagedDevices
     */
@@ -139,7 +139,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
 
     /**
     * Sets the coManagedDevices
-    * Total number of co-managed devices. Valid values -2147483648 to 2147483647
+    * Total number of co-managed devices. Read-only. Valid values -2147483648 to 2147483647
     *
     * @param int $val The value of the coManagedDevices
     *
@@ -152,7 +152,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
     }
     /**
     * Gets the devicesNotAutopilotRegistered
-    * The count of intune devices that are not autopilot registerd. Valid values -2147483648 to 2147483647
+    * The count of intune devices that are not autopilot registerd. Read-only. Valid values -2147483648 to 2147483647
     *
     * @return int|null The devicesNotAutopilotRegistered
     */
@@ -167,7 +167,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
 
     /**
     * Sets the devicesNotAutopilotRegistered
-    * The count of intune devices that are not autopilot registerd. Valid values -2147483648 to 2147483647
+    * The count of intune devices that are not autopilot registerd. Read-only. Valid values -2147483648 to 2147483647
     *
     * @param int $val The value of the devicesNotAutopilotRegistered
     *
@@ -180,7 +180,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
     }
     /**
     * Gets the devicesWithoutAutopilotProfileAssigned
-    * The count of intune devices not autopilot profile assigned. Valid values -2147483648 to 2147483647
+    * The count of intune devices not autopilot profile assigned. Read-only. Valid values -2147483648 to 2147483647
     *
     * @return int|null The devicesWithoutAutopilotProfileAssigned
     */
@@ -195,7 +195,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
 
     /**
     * Sets the devicesWithoutAutopilotProfileAssigned
-    * The count of intune devices not autopilot profile assigned. Valid values -2147483648 to 2147483647
+    * The count of intune devices not autopilot profile assigned. Read-only. Valid values -2147483648 to 2147483647
     *
     * @param int $val The value of the devicesWithoutAutopilotProfileAssigned
     *
@@ -208,7 +208,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
     }
     /**
     * Gets the devicesWithoutCloudIdentity
-    * The count of devices that are not cloud identity. Valid values -2147483648 to 2147483647
+    * The count of devices that are not cloud identity. Read-only. Valid values -2147483648 to 2147483647
     *
     * @return int|null The devicesWithoutCloudIdentity
     */
@@ -223,7 +223,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
 
     /**
     * Sets the devicesWithoutCloudIdentity
-    * The count of devices that are not cloud identity. Valid values -2147483648 to 2147483647
+    * The count of devices that are not cloud identity. Read-only. Valid values -2147483648 to 2147483647
     *
     * @param int $val The value of the devicesWithoutCloudIdentity
     *
@@ -236,7 +236,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
     }
     /**
     * Gets the intuneDevices
-    * The count of intune devices that are not autopilot registerd. Valid values -2147483648 to 2147483647
+    * The count of intune devices that are not autopilot registerd. Read-only. Valid values -2147483648 to 2147483647
     *
     * @return int|null The intuneDevices
     */
@@ -251,7 +251,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
 
     /**
     * Sets the intuneDevices
-    * The count of intune devices that are not autopilot registerd. Valid values -2147483648 to 2147483647
+    * The count of intune devices that are not autopilot registerd. Read-only. Valid values -2147483648 to 2147483647
     *
     * @param int $val The value of the intuneDevices
     *
@@ -264,7 +264,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
     }
     /**
     * Gets the tenantAttachDevices
-    * Total count of tenant attach devices. Valid values -2147483648 to 2147483647
+    * Total count of tenant attach devices. Read-only. Valid values -2147483648 to 2147483647
     *
     * @return int|null The tenantAttachDevices
     */
@@ -279,7 +279,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
 
     /**
     * Sets the tenantAttachDevices
-    * Total count of tenant attach devices. Valid values -2147483648 to 2147483647
+    * Total count of tenant attach devices. Read-only. Valid values -2147483648 to 2147483647
     *
     * @param int $val The value of the tenantAttachDevices
     *
@@ -292,7 +292,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
     }
     /**
     * Gets the totalDevices
-    * The total count of devices. Valid values -2147483648 to 2147483647
+    * The total count of devices. Read-only. Valid values -2147483648 to 2147483647
     *
     * @return int|null The totalDevices
     */
@@ -307,7 +307,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
 
     /**
     * Sets the totalDevices
-    * The total count of devices. Valid values -2147483648 to 2147483647
+    * The total count of devices. Read-only. Valid values -2147483648 to 2147483647
     *
     * @param int $val The value of the totalDevices
     *
@@ -320,7 +320,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
     }
     /**
     * Gets the unsupportedOSversionDevices
-    * The count of Windows 10 devices that have unsupported OS versions. Valid values -2147483648 to 2147483647
+    * The count of Windows 10 devices that have unsupported OS versions. Read-only. Valid values -2147483648 to 2147483647
     *
     * @return int|null The unsupportedOSversionDevices
     */
@@ -335,7 +335,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
 
     /**
     * Sets the unsupportedOSversionDevices
-    * The count of Windows 10 devices that have unsupported OS versions. Valid values -2147483648 to 2147483647
+    * The count of Windows 10 devices that have unsupported OS versions. Read-only. Valid values -2147483648 to 2147483647
     *
     * @param int $val The value of the unsupportedOSversionDevices
     *
@@ -348,7 +348,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
     }
     /**
     * Gets the windows10Devices
-    * The count of windows 10 devices. Valid values -2147483648 to 2147483647
+    * The count of windows 10 devices. Read-only. Valid values -2147483648 to 2147483647
     *
     * @return int|null The windows10Devices
     */
@@ -363,7 +363,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
 
     /**
     * Sets the windows10Devices
-    * The count of windows 10 devices. Valid values -2147483648 to 2147483647
+    * The count of windows 10 devices. Read-only. Valid values -2147483648 to 2147483647
     *
     * @param int $val The value of the windows10Devices
     *
@@ -377,7 +377,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
 
     /**
     * Gets the windows10DevicesSummary
-    * The user experience analytics work from anywhere Windows 10 devices summary.
+    * The user experience analytics work from anywhere Windows 10 devices summary. Read-only.
     *
     * @return UserExperienceAnalyticsWindows10DevicesSummary|null The windows10DevicesSummary
     */
@@ -396,7 +396,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
 
     /**
     * Sets the windows10DevicesSummary
-    * The user experience analytics work from anywhere Windows 10 devices summary.
+    * The user experience analytics work from anywhere Windows 10 devices summary. Read-only.
     *
     * @param UserExperienceAnalyticsWindows10DevicesSummary $val The value to assign to the windows10DevicesSummary
     *
@@ -409,7 +409,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
     }
     /**
     * Gets the windows10DevicesWithoutTenantAttach
-    * The count of windows 10 devices that are Intune and Comanaged. Valid values -2147483648 to 2147483647
+    * The count of windows 10 devices that are Intune and co-managed. Read-only. Valid values -2147483648 to 2147483647
     *
     * @return int|null The windows10DevicesWithoutTenantAttach
     */
@@ -424,7 +424,7 @@ class UserExperienceAnalyticsWorkFromAnywhereDevicesSummary extends Entity
 
     /**
     * Sets the windows10DevicesWithoutTenantAttach
-    * The count of windows 10 devices that are Intune and Comanaged. Valid values -2147483648 to 2147483647
+    * The count of windows 10 devices that are Intune and co-managed. Read-only. Valid values -2147483648 to 2147483647
     *
     * @param int $val The value of the windows10DevicesWithoutTenantAttach
     *

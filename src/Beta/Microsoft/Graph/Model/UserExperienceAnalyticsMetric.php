@@ -26,7 +26,7 @@ class UserExperienceAnalyticsMetric extends Entity
 {
     /**
     * Gets the unit
-    * The unit of the user experience analytics metric.
+    * The unit of the user experience analytics metric. Examples: none, percentage, count, seconds, score.
     *
     * @return string|null The unit
     */
@@ -41,7 +41,7 @@ class UserExperienceAnalyticsMetric extends Entity
 
     /**
     * Sets the unit
-    * The unit of the user experience analytics metric.
+    * The unit of the user experience analytics metric. Examples: none, percentage, count, seconds, score.
     *
     * @param string $val The unit
     *

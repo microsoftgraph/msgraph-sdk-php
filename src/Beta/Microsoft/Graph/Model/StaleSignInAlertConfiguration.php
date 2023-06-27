@@ -26,6 +26,7 @@ class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertConfigurat
 {
     /**
     * Gets the duration
+    * The number of days to look back from current timestamp within which the account has not signed in.
     *
     * @return \DateInterval|null The duration
     */
@@ -44,6 +45,7 @@ class StaleSignInAlertConfiguration extends UnifiedRoleManagementAlertConfigurat
 
     /**
     * Sets the duration
+    * The number of days to look back from current timestamp within which the account has not signed in.
     *
     * @param \DateInterval $val The duration
     *

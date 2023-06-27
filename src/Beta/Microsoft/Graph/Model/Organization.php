@@ -603,6 +603,7 @@ class Organization extends DirectoryObject
 
     /**
     * Gets the securityComplianceNotificationMails
+    * Not nullable.
     *
     * @return array|null The securityComplianceNotificationMails
     */
@@ -617,6 +618,7 @@ class Organization extends DirectoryObject
 
     /**
     * Sets the securityComplianceNotificationMails
+    * Not nullable.
     *
     * @param string[] $val The securityComplianceNotificationMails
     *
@@ -630,6 +632,7 @@ class Organization extends DirectoryObject
 
     /**
     * Gets the securityComplianceNotificationPhones
+    * Not nullable.
     *
     * @return array|null The securityComplianceNotificationPhones
     */
@@ -644,6 +647,7 @@ class Organization extends DirectoryObject
 
     /**
     * Sets the securityComplianceNotificationPhones
+    * Not nullable.
     *
     * @param string[] $val The securityComplianceNotificationPhones
     *

@@ -926,7 +926,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the isManagementRestricted
-    * true if the user is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.
+    * true if the user is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.  To manage a user who is a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
     *
     * @return bool|null The isManagementRestricted
     */
@@ -941,7 +941,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the isManagementRestricted
-    * true if the user is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.
+    * true if the user is a member of a restricted management administrative unit, in which case it requires a role scoped to the restricted administrative unit to manage. Default value is false. Read-only.  To manage a user who is a member of a restricted administrative unit, the calling app must be assigned the Directory.Write.Restricted permission. For delegated scenarios, the administrators must also be explicitly assigned supported roles at the restricted administrative unit scope.
     *
     * @param bool $val The isManagementRestricted
     *
@@ -2953,6 +2953,34 @@ class User extends DirectoryObject
 
 
      /**
+     * Gets the sponsors
+     *
+     * @return array|null The sponsors
+     */
+    public function getSponsors()
+    {
+        if (array_key_exists("sponsors", $this->_propDict)) {
+           return $this->_propDict["sponsors"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the sponsors
+    *
+    * @param DirectoryObject[] $val The sponsors
+    *
+    * @return User
+    */
+    public function setSponsors($val)
+    {
+        $this->_propDict["sponsors"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the transitiveMemberOf
     * The groups, including nested groups, and directory roles that a user is a member of. Nullable.
      *
@@ -4137,6 +4165,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the activities
+    * The user's activities across devices. Read-only. Nullable.
      *
      * @return array|null The activities
      */
@@ -4151,6 +4180,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the activities
+    * The user's activities across devices. Read-only. Nullable.
     *
     * @param UserActivity[] $val The activities
     *
@@ -4193,6 +4223,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the onlineMeetings
+    * Information about a meeting, including the URL used to join a meeting, the attendees' list, and the description.
      *
      * @return array|null The onlineMeetings
      */
@@ -4207,6 +4238,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the onlineMeetings
+    * Information about a meeting, including the URL used to join a meeting, the attendees' list, and the description.
     *
     * @param OnlineMeeting[] $val The onlineMeetings
     *
@@ -4251,6 +4283,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the authentication
+    * The authentication methods that are supported for the user.
     *
     * @return Authentication|null The authentication
     */
@@ -4269,6 +4302,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the authentication
+    * The authentication methods that are supported for the user.
     *
     * @param Authentication $val The authentication
     *
@@ -4335,6 +4369,34 @@ class User extends DirectoryObject
     public function setJoinedTeams($val)
     {
         $this->_propDict["joinedTeams"] = $val;
+        return $this;
+    }
+
+
+     /**
+     * Gets the permissionGrants
+     *
+     * @return array|null The permissionGrants
+     */
+    public function getPermissionGrants()
+    {
+        if (array_key_exists("permissionGrants", $this->_propDict)) {
+           return $this->_propDict["permissionGrants"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the permissionGrants
+    *
+    * @param ResourceSpecificPermissionGrant[] $val The permissionGrants
+    *
+    * @return User
+    */
+    public function setPermissionGrants($val)
+    {
+        $this->_propDict["permissionGrants"] = $val;
         return $this;
     }
 

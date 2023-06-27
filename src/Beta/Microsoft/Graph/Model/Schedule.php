@@ -350,6 +350,7 @@ class Schedule extends Entity
 
      /**
      * Gets the offerShiftRequests
+    * The offer requests for shifts in the schedule.
      *
      * @return array|null The offerShiftRequests
      */
@@ -364,6 +365,7 @@ class Schedule extends Entity
 
     /**
     * Sets the offerShiftRequests
+    * The offer requests for shifts in the schedule.
     *
     * @param OfferShiftRequest[] $val The offerShiftRequests
     *

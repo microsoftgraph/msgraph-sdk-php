@@ -26,6 +26,7 @@ class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
 {
     /**
     * Gets the assigneeDisplayName
+    * Display name of the subject that the incident applies to.
     *
     * @return string|null The assigneeDisplayName
     */
@@ -40,6 +41,7 @@ class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
 
     /**
     * Sets the assigneeDisplayName
+    * Display name of the subject that the incident applies to.
     *
     * @param string $val The assigneeDisplayName
     *
@@ -53,6 +55,7 @@ class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
 
     /**
     * Gets the assigneeId
+    * The identifier of the subject that the incident applies to.
     *
     * @return string|null The assigneeId
     */
@@ -67,6 +70,7 @@ class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
 
     /**
     * Sets the assigneeId
+    * The identifier of the subject that the incident applies to.
     *
     * @param string $val The assigneeId
     *
@@ -80,6 +84,7 @@ class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
 
     /**
     * Gets the assigneeUserPrincipalName
+    * User principal name of the subject that the incident applies to. Applies to user principals.
     *
     * @return string|null The assigneeUserPrincipalName
     */
@@ -94,6 +99,7 @@ class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
 
     /**
     * Sets the assigneeUserPrincipalName
+    * User principal name of the subject that the incident applies to. Applies to user principals.
     *
     * @param string $val The assigneeUserPrincipalName
     *
@@ -107,6 +113,7 @@ class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
 
     /**
     * Gets the assignmentCreatedDateTime
+    * Date and time of assignment creation.
     *
     * @return \DateTime|null The assignmentCreatedDateTime
     */
@@ -125,6 +132,7 @@ class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
 
     /**
     * Sets the assignmentCreatedDateTime
+    * Date and time of assignment creation.
     *
     * @param \DateTime $val The assignmentCreatedDateTime
     *
@@ -138,6 +146,7 @@ class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
 
     /**
     * Gets the lastSignInDateTime
+    * Date and time of last sign in.
     *
     * @return \DateTime|null The lastSignInDateTime
     */
@@ -156,6 +165,7 @@ class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
 
     /**
     * Sets the lastSignInDateTime
+    * Date and time of last sign in.
     *
     * @param \DateTime $val The lastSignInDateTime
     *
@@ -169,6 +179,7 @@ class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
 
     /**
     * Gets the roleDefinitionId
+    * The identifier for the directory role definition that's in scope of this incident.
     *
     * @return string|null The roleDefinitionId
     */
@@ -183,6 +194,7 @@ class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
 
     /**
     * Sets the roleDefinitionId
+    * The identifier for the directory role definition that's in scope of this incident.
     *
     * @param string $val The roleDefinitionId
     *
@@ -196,6 +208,7 @@ class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
 
     /**
     * Gets the roleDisplayName
+    * The display name for the directory role.
     *
     * @return string|null The roleDisplayName
     */
@@ -210,6 +223,7 @@ class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
 
     /**
     * Sets the roleDisplayName
+    * The display name for the directory role.
     *
     * @param string $val The roleDisplayName
     *
@@ -223,6 +237,7 @@ class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
 
     /**
     * Gets the roleTemplateId
+    * The globally unique identifier for the directory role.
     *
     * @return string|null The roleTemplateId
     */
@@ -237,6 +252,7 @@ class StaleSignInAlertIncident extends UnifiedRoleManagementAlertIncident
 
     /**
     * Sets the roleTemplateId
+    * The globally unique identifier for the directory role.
     *
     * @param string $val The roleTemplateId
     *

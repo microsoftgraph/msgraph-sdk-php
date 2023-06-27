@@ -26,6 +26,7 @@ class TooManyGlobalAdminsAssignedToTenantAlertIncident extends UnifiedRoleManage
 {
     /**
     * Gets the assigneeDisplayName
+    * Display name of the subject that the incident applies to.
     *
     * @return string|null The assigneeDisplayName
     */
@@ -40,6 +41,7 @@ class TooManyGlobalAdminsAssignedToTenantAlertIncident extends UnifiedRoleManage
 
     /**
     * Sets the assigneeDisplayName
+    * Display name of the subject that the incident applies to.
     *
     * @param string $val The assigneeDisplayName
     *
@@ -53,6 +55,7 @@ class TooManyGlobalAdminsAssignedToTenantAlertIncident extends UnifiedRoleManage
 
     /**
     * Gets the assigneeId
+    * The identifier of the subject that the incident applies to.
     *
     * @return string|null The assigneeId
     */
@@ -67,6 +70,7 @@ class TooManyGlobalAdminsAssignedToTenantAlertIncident extends UnifiedRoleManage
 
     /**
     * Sets the assigneeId
+    * The identifier of the subject that the incident applies to.
     *
     * @param string $val The assigneeId
     *
@@ -80,6 +84,7 @@ class TooManyGlobalAdminsAssignedToTenantAlertIncident extends UnifiedRoleManage
 
     /**
     * Gets the assigneeUserPrincipalName
+    * User principal name of the subject that the incident applies to. Applies to user principals.
     *
     * @return string|null The assigneeUserPrincipalName
     */
@@ -94,6 +99,7 @@ class TooManyGlobalAdminsAssignedToTenantAlertIncident extends UnifiedRoleManage
 
     /**
     * Sets the assigneeUserPrincipalName
+    * User principal name of the subject that the incident applies to. Applies to user principals.
     *
     * @param string $val The assigneeUserPrincipalName
     *

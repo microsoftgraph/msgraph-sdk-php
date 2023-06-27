@@ -171,7 +171,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
 
     /**
     * Gets the deviceCountWithCrashes
-    * The total number of devices that have reported one or more application crashes for this application and version. Valid values -2147483648 to 2147483647
+    * The total number of devices that have reported one or more application crashes for this application and version. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
     *
     * @return int|null The deviceCountWithCrashes
     */
@@ -186,7 +186,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
 
     /**
     * Sets the deviceCountWithCrashes
-    * The total number of devices that have reported one or more application crashes for this application and version. Valid values -2147483648 to 2147483647
+    * The total number of devices that have reported one or more application crashes for this application and version. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
     *
     * @param int $val The deviceCountWithCrashes
     *
@@ -200,7 +200,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
 
     /**
     * Gets the isLatestUsedVersion
-    * Is the version of application the latest version for that app that is in use.
+    * When TRUE, indicates the version of application is the latest version for that application that is in use. When FALSE, indicates the version is not the latest version. FALSE by default. Supports: $select, $OrderBy.
     *
     * @return bool|null The isLatestUsedVersion
     */
@@ -215,7 +215,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
 
     /**
     * Sets the isLatestUsedVersion
-    * Is the version of application the latest version for that app that is in use.
+    * When TRUE, indicates the version of application is the latest version for that application that is in use. When FALSE, indicates the version is not the latest version. FALSE by default. Supports: $select, $OrderBy.
     *
     * @param bool $val The isLatestUsedVersion
     *
@@ -229,7 +229,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
 
     /**
     * Gets the isMostUsedVersion
-    * Is the version of application the most used version for that app.
+    * When TRUE, indicates the version of application is the most used version for that application. When FALSE, indicates the version is not the most used version. FALSE by default. Supports: $select, $OrderBy. Read-only.
     *
     * @return bool|null The isMostUsedVersion
     */
@@ -244,7 +244,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDetails extends 
 
     /**
     * Sets the isMostUsedVersion
-    * Is the version of application the most used version for that app.
+    * When TRUE, indicates the version of application is the most used version for that application. When FALSE, indicates the version is not the most used version. FALSE by default. Supports: $select, $OrderBy. Read-only.
     *
     * @param bool $val The isMostUsedVersion
     *

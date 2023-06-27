@@ -54,7 +54,7 @@ class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger
 
     /**
     * Gets the timeBasedAttribute
-    * Determines which time-based identity property to reference. The possible values are: employeeHireDate, employeeLeaveDateTime, unknownFutureValue.
+    * Determines which time-based identity property to reference. The possible values are: employeeHireDate, employeeLeaveDateTime, createdDateTime, unknownFutureValue.
     *
     * @return WorkflowTriggerTimeBasedAttribute|null The timeBasedAttribute
     */
@@ -73,7 +73,7 @@ class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger
 
     /**
     * Sets the timeBasedAttribute
-    * Determines which time-based identity property to reference. The possible values are: employeeHireDate, employeeLeaveDateTime, unknownFutureValue.
+    * Determines which time-based identity property to reference. The possible values are: employeeHireDate, employeeLeaveDateTime, createdDateTime, unknownFutureValue.
     *
     * @param WorkflowTriggerTimeBasedAttribute $val The value to assign to the timeBasedAttribute
     *

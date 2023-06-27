@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* IndicatorSource File
+* ConditionalAccessAuthenticationFlows File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,9 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\SecurityNamespace\Model;
-
-use Microsoft\Graph\Core\Enum;
-
+namespace Beta\Microsoft\Graph\Model;
 /**
-* IndicatorSource class
+* ConditionalAccessAuthenticationFlows class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +21,6 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class IndicatorSource extends Enum
+class ConditionalAccessAuthenticationFlows extends Entity
 {
-    /**
-    * The Enum IndicatorSource
-    */
-    const MICROSOFT = "microsoft";
-    const OSINT = "osint";
-    const GRAPHPUBLIC = "public";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

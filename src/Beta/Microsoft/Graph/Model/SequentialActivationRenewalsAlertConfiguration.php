@@ -26,6 +26,7 @@ class SequentialActivationRenewalsAlertConfiguration extends UnifiedRoleManageme
 {
     /**
     * Gets the sequentialActivationCounterThreshold
+    * The minimum number of activations within the timeIntervalBetweenActivations period to trigger an alert.
     *
     * @return int|null The sequentialActivationCounterThreshold
     */
@@ -40,6 +41,7 @@ class SequentialActivationRenewalsAlertConfiguration extends UnifiedRoleManageme
 
     /**
     * Sets the sequentialActivationCounterThreshold
+    * The minimum number of activations within the timeIntervalBetweenActivations period to trigger an alert.
     *
     * @param int $val The sequentialActivationCounterThreshold
     *
@@ -53,6 +55,7 @@ class SequentialActivationRenewalsAlertConfiguration extends UnifiedRoleManageme
 
     /**
     * Gets the timeIntervalBetweenActivations
+    * Time interval between activations to trigger an alert.
     *
     * @return \DateInterval|null The timeIntervalBetweenActivations
     */
@@ -71,6 +74,7 @@ class SequentialActivationRenewalsAlertConfiguration extends UnifiedRoleManageme
 
     /**
     * Sets the timeIntervalBetweenActivations
+    * Time interval between activations to trigger an alert.
     *
     * @param \DateInterval $val The timeIntervalBetweenActivations
     *

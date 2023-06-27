@@ -26,6 +26,7 @@ class UnifiedRoleManagementAlertConfiguration extends Entity
 {
     /**
     * Gets the alertDefinitionId
+    * The identifier of an alert definition. Supports $filter (eq, ne).
     *
     * @return string|null The alertDefinitionId
     */
@@ -40,6 +41,7 @@ class UnifiedRoleManagementAlertConfiguration extends Entity
 
     /**
     * Sets the alertDefinitionId
+    * The identifier of an alert definition. Supports $filter (eq, ne).
     *
     * @param string $val The alertDefinitionId
     *
@@ -53,6 +55,7 @@ class UnifiedRoleManagementAlertConfiguration extends Entity
 
     /**
     * Gets the isEnabled
+    * true if the alert is enabled. Setting it to false disables PIM scanning the tenant to identify instances that trigger the alert.
     *
     * @return bool|null The isEnabled
     */
@@ -67,6 +70,7 @@ class UnifiedRoleManagementAlertConfiguration extends Entity
 
     /**
     * Sets the isEnabled
+    * true if the alert is enabled. Setting it to false disables PIM scanning the tenant to identify instances that trigger the alert.
     *
     * @param bool $val The isEnabled
     *
@@ -80,6 +84,7 @@ class UnifiedRoleManagementAlertConfiguration extends Entity
 
     /**
     * Gets the scopeId
+    * The identifier of the scope to which the alert is related. Only / is supported to represent the tenant scope. Supports $filter (eq, ne).
     *
     * @return string|null The scopeId
     */
@@ -94,6 +99,7 @@ class UnifiedRoleManagementAlertConfiguration extends Entity
 
     /**
     * Sets the scopeId
+    * The identifier of the scope to which the alert is related. Only / is supported to represent the tenant scope. Supports $filter (eq, ne).
     *
     * @param string $val The scopeId
     *
@@ -107,6 +113,7 @@ class UnifiedRoleManagementAlertConfiguration extends Entity
 
     /**
     * Gets the scopeType
+    * The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD roles.
     *
     * @return string|null The scopeType
     */
@@ -121,6 +128,7 @@ class UnifiedRoleManagementAlertConfiguration extends Entity
 
     /**
     * Sets the scopeType
+    * The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD roles.
     *
     * @param string $val The scopeType
     *
@@ -134,6 +142,7 @@ class UnifiedRoleManagementAlertConfiguration extends Entity
 
     /**
     * Gets the alertDefinition
+    * The definition of the alert that contains its description, impact, and measures to mitigate or prevent it. Supports $expand.
     *
     * @return UnifiedRoleManagementAlertDefinition|null The alertDefinition
     */
@@ -152,6 +161,7 @@ class UnifiedRoleManagementAlertConfiguration extends Entity
 
     /**
     * Sets the alertDefinition
+    * The definition of the alert that contains its description, impact, and measures to mitigate or prevent it. Supports $expand.
     *
     * @param UnifiedRoleManagementAlertDefinition $val The alertDefinition
     *

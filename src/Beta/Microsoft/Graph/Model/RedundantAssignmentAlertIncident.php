@@ -26,6 +26,7 @@ class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlertInciden
 {
     /**
     * Gets the assigneeDisplayName
+    * Display name of the subject that the incident applies to.
     *
     * @return string|null The assigneeDisplayName
     */
@@ -40,6 +41,7 @@ class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlertInciden
 
     /**
     * Sets the assigneeDisplayName
+    * Display name of the subject that the incident applies to.
     *
     * @param string $val The assigneeDisplayName
     *
@@ -53,6 +55,7 @@ class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlertInciden
 
     /**
     * Gets the assigneeId
+    * The identifier of the subject that the incident applies to.
     *
     * @return string|null The assigneeId
     */
@@ -67,6 +70,7 @@ class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlertInciden
 
     /**
     * Sets the assigneeId
+    * The identifier of the subject that the incident applies to.
     *
     * @param string $val The assigneeId
     *
@@ -80,6 +84,7 @@ class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlertInciden
 
     /**
     * Gets the assigneeUserPrincipalName
+    * User principal name of the subject that the incident applies to. Applies to user principals only.
     *
     * @return string|null The assigneeUserPrincipalName
     */
@@ -94,6 +99,7 @@ class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlertInciden
 
     /**
     * Sets the assigneeUserPrincipalName
+    * User principal name of the subject that the incident applies to. Applies to user principals only.
     *
     * @param string $val The assigneeUserPrincipalName
     *
@@ -107,6 +113,7 @@ class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlertInciden
 
     /**
     * Gets the lastActivationDateTime
+    * Date and time of the last activation of the eligible assignment.
     *
     * @return \DateTime|null The lastActivationDateTime
     */
@@ -125,6 +132,7 @@ class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlertInciden
 
     /**
     * Sets the lastActivationDateTime
+    * Date and time of the last activation of the eligible assignment.
     *
     * @param \DateTime $val The lastActivationDateTime
     *
@@ -138,6 +146,7 @@ class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlertInciden
 
     /**
     * Gets the roleDefinitionId
+    * The identifier for the directory role definition that's in scope of this incident.
     *
     * @return string|null The roleDefinitionId
     */
@@ -152,6 +161,7 @@ class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlertInciden
 
     /**
     * Sets the roleDefinitionId
+    * The identifier for the directory role definition that's in scope of this incident.
     *
     * @param string $val The roleDefinitionId
     *
@@ -165,6 +175,7 @@ class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlertInciden
 
     /**
     * Gets the roleDisplayName
+    * The display name for the directory role.
     *
     * @return string|null The roleDisplayName
     */
@@ -179,6 +190,7 @@ class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlertInciden
 
     /**
     * Sets the roleDisplayName
+    * The display name for the directory role.
     *
     * @param string $val The roleDisplayName
     *
@@ -192,6 +204,7 @@ class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlertInciden
 
     /**
     * Gets the roleTemplateId
+    * The globally unique identifier for the directory role.
     *
     * @return string|null The roleTemplateId
     */
@@ -206,6 +219,7 @@ class RedundantAssignmentAlertIncident extends UnifiedRoleManagementAlertInciden
 
     /**
     * Sets the roleTemplateId
+    * The globally unique identifier for the directory role.
     *
     * @param string $val The roleTemplateId
     *

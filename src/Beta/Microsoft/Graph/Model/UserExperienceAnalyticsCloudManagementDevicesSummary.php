@@ -25,7 +25,7 @@ class UserExperienceAnalyticsCloudManagementDevicesSummary extends Entity
 {
     /**
     * Gets the coManagedDeviceCount
-    * Total number of  co-managed devices.
+    * Total number of  co-managed devices. Read-only.
     *
     * @return int|null The coManagedDeviceCount
     */
@@ -40,7 +40,7 @@ class UserExperienceAnalyticsCloudManagementDevicesSummary extends Entity
 
     /**
     * Sets the coManagedDeviceCount
-    * Total number of  co-managed devices.
+    * Total number of  co-managed devices. Read-only.
     *
     * @param int $val The value of the coManagedDeviceCount
     *
@@ -53,7 +53,7 @@ class UserExperienceAnalyticsCloudManagementDevicesSummary extends Entity
     }
     /**
     * Gets the intuneDeviceCount
-    * The count of intune devices that are not autopilot registerd.
+    * The count of intune devices that are not autopilot registerd. Read-only.
     *
     * @return int|null The intuneDeviceCount
     */
@@ -68,7 +68,7 @@ class UserExperienceAnalyticsCloudManagementDevicesSummary extends Entity
 
     /**
     * Sets the intuneDeviceCount
-    * The count of intune devices that are not autopilot registerd.
+    * The count of intune devices that are not autopilot registerd. Read-only.
     *
     * @param int $val The value of the intuneDeviceCount
     *
@@ -81,7 +81,7 @@ class UserExperienceAnalyticsCloudManagementDevicesSummary extends Entity
     }
     /**
     * Gets the tenantAttachDeviceCount
-    * Total count of tenant attach devices.
+    * Total count of tenant attach devices. Read-only.
     *
     * @return int|null The tenantAttachDeviceCount
     */
@@ -96,7 +96,7 @@ class UserExperienceAnalyticsCloudManagementDevicesSummary extends Entity
 
     /**
     * Sets the tenantAttachDeviceCount
-    * Total count of tenant attach devices.
+    * Total count of tenant attach devices. Read-only.
     *
     * @param int $val The value of the tenantAttachDeviceCount
     *
