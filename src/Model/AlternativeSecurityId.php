@@ -25,7 +25,7 @@ class AlternativeSecurityId extends Entity
 {
     /**
     * Gets the identityProvider
-    * For internal use only
+    * For internal use only.
     *
     * @return string|null The identityProvider
     */
@@ -40,7 +40,7 @@ class AlternativeSecurityId extends Entity
 
     /**
     * Sets the identityProvider
-    * For internal use only
+    * For internal use only.
     *
     * @param string $val The value of the identityProvider
     *
@@ -54,7 +54,7 @@ class AlternativeSecurityId extends Entity
 
     /**
     * Gets the key
-    * For internal use only
+    * For internal use only.
     *
     * @return \GuzzleHttp\Psr7\Stream|null The key
     */
@@ -73,7 +73,7 @@ class AlternativeSecurityId extends Entity
 
     /**
     * Sets the key
-    * For internal use only
+    * For internal use only.
     *
     * @param \GuzzleHttp\Psr7\Stream $val The value to assign to the key
     *
@@ -86,7 +86,7 @@ class AlternativeSecurityId extends Entity
     }
     /**
     * Gets the type
-    * For internal use only
+    * For internal use only.
     *
     * @return int|null The type
     */
@@ -101,7 +101,7 @@ class AlternativeSecurityId extends Entity
 
     /**
     * Sets the type
-    * For internal use only
+    * For internal use only.
     *
     * @param int $val The value of the type
     *

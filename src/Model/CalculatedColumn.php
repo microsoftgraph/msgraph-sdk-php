@@ -25,7 +25,7 @@ class CalculatedColumn extends Entity
 {
     /**
     * Gets the format
-    * For dateTime output types, the format of the value. Must be one of dateOnly or dateTime.
+    * For dateTime output types, the format of the value. Possible values are: dateOnly or dateTime.
     *
     * @return string|null The format
     */
@@ -40,7 +40,7 @@ class CalculatedColumn extends Entity
 
     /**
     * Sets the format
-    * For dateTime output types, the format of the value. Must be one of dateOnly or dateTime.
+    * For dateTime output types, the format of the value. Possible values are: dateOnly or dateTime.
     *
     * @param string $val The value of the format
     *
@@ -81,7 +81,7 @@ class CalculatedColumn extends Entity
     }
     /**
     * Gets the outputType
-    * The output type used to format values in this column. Must be one of boolean, currency, dateTime, number, or text.
+    * The output type used to format values in this column. Possible values are: boolean, currency, dateTime, number, or text.
     *
     * @return string|null The outputType
     */
@@ -96,7 +96,7 @@ class CalculatedColumn extends Entity
 
     /**
     * Sets the outputType
-    * The output type used to format values in this column. Must be one of boolean, currency, dateTime, number, or text.
+    * The output type used to format values in this column. Possible values are: boolean, currency, dateTime, number, or text.
     *
     * @param string $val The value of the outputType
     *

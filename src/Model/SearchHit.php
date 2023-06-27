@@ -81,7 +81,7 @@ class SearchHit extends Entity
     }
     /**
     * Gets the isCollapsed
-    * Indicates whether the current result is collapsed when the collapseProperties property is used.
+    * Indicates whether the current result is collapsed when the collapseProperties property in the searchRequest is used.
     *
     * @return bool|null The isCollapsed
     */
@@ -96,7 +96,7 @@ class SearchHit extends Entity
 
     /**
     * Sets the isCollapsed
-    * Indicates whether the current result is collapsed when the collapseProperties property is used.
+    * Indicates whether the current result is collapsed when the collapseProperties property in the searchRequest is used.
     *
     * @param bool $val The value of the isCollapsed
     *

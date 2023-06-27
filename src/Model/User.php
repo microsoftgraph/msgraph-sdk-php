@@ -1937,6 +1937,37 @@ class User extends DirectoryObject
     }
 
     /**
+    * Gets the print
+    *
+    * @return UserPrint|null The print
+    */
+    public function getPrint()
+    {
+        if (array_key_exists("print", $this->_propDict)) {
+            if (is_a($this->_propDict["print"], "\Microsoft\Graph\Model\UserPrint") || is_null($this->_propDict["print"])) {
+                return $this->_propDict["print"];
+            } else {
+                $this->_propDict["print"] = new UserPrint($this->_propDict["print"]);
+                return $this->_propDict["print"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the print
+    *
+    * @param UserPrint $val The print
+    *
+    * @return User
+    */
+    public function setPrint($val)
+    {
+        $this->_propDict["print"] = $val;
+        return $this;
+    }
+
+    /**
     * Gets the aboutMe
     * A freeform text entry field for the user to describe themselves. Returned only on $select.
     *
@@ -3421,6 +3452,7 @@ class User extends DirectoryObject
 
      /**
      * Gets the onlineMeetings
+    * Information about a meeting, including the URL used to join a meeting, the attendees' list, and the description.
      *
      * @return array|null The onlineMeetings
      */
@@ -3435,6 +3467,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the onlineMeetings
+    * Information about a meeting, including the URL used to join a meeting, the attendees' list, and the description.
     *
     * @param OnlineMeeting[] $val The onlineMeetings
     *
@@ -3568,6 +3601,7 @@ class User extends DirectoryObject
 
     /**
     * Gets the teamwork
+    * A container for Microsoft Teams features available for the user. Read-only. Nullable.
     *
     * @return UserTeamwork|null The teamwork
     */
@@ -3586,6 +3620,7 @@ class User extends DirectoryObject
 
     /**
     * Sets the teamwork
+    * A container for Microsoft Teams features available for the user. Read-only. Nullable.
     *
     * @param UserTeamwork $val The teamwork
     *

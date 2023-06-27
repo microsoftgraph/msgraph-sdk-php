@@ -140,6 +140,37 @@ class AccessReviewStageSettings extends Entity
         $this->_propDict["fallbackReviewers"] = $val;
          return $this;
     }
+
+    /**
+    * Gets the recommendationInsightSettings
+    *
+    * @return AccessReviewRecommendationInsightSetting|null The recommendationInsightSettings
+    */
+    public function getRecommendationInsightSettings()
+    {
+        if (array_key_exists("recommendationInsightSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["recommendationInsightSettings"], "\Microsoft\Graph\Model\AccessReviewRecommendationInsightSetting") || is_null($this->_propDict["recommendationInsightSettings"])) {
+                return $this->_propDict["recommendationInsightSettings"];
+            } else {
+                $this->_propDict["recommendationInsightSettings"] = new AccessReviewRecommendationInsightSetting($this->_propDict["recommendationInsightSettings"]);
+                return $this->_propDict["recommendationInsightSettings"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the recommendationInsightSettings
+    *
+    * @param AccessReviewRecommendationInsightSetting $val The value to assign to the recommendationInsightSettings
+    *
+    * @return AccessReviewStageSettings The AccessReviewStageSettings
+    */
+    public function setRecommendationInsightSettings($val)
+    {
+        $this->_propDict["recommendationInsightSettings"] = $val;
+         return $this;
+    }
     /**
     * Gets the recommendationsEnabled
     * Indicates whether showing recommendations to reviewers is enabled. Required. NOTE: The value of this property will override override the corresponding setting on the accessReviewScheduleDefinition object.
