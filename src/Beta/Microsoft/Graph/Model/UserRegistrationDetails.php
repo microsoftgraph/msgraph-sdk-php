@@ -262,6 +262,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the isSystemPreferredAuthenticationMethodEnabled
+    * Indicates whether system preferred authentication method is enabled. If enabled, the system dynamically determines the most secure authentication method among the methods registered by the user. Supports $filter (eq).
     *
     * @return bool|null The isSystemPreferredAuthenticationMethodEnabled
     */
@@ -276,6 +277,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the isSystemPreferredAuthenticationMethodEnabled
+    * Indicates whether system preferred authentication method is enabled. If enabled, the system dynamically determines the most secure authentication method among the methods registered by the user. Supports $filter (eq).
     *
     * @param bool $val The isSystemPreferredAuthenticationMethodEnabled
     *
@@ -351,6 +353,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the systemPreferredAuthenticationMethods
+    * Collection of authentication methods that the system determined to be the most secure authentication methods among the registered methods for second factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue. Supports $filter (any with eq).
     *
     * @return array|null The systemPreferredAuthenticationMethods
     */
@@ -365,6 +368,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the systemPreferredAuthenticationMethods
+    * Collection of authentication methods that the system determined to be the most secure authentication methods among the registered methods for second factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue. Supports $filter (any with eq).
     *
     * @param string[] $val The systemPreferredAuthenticationMethods
     *
@@ -407,6 +411,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Gets the userPreferredMethodForSecondaryAuthentication
+    * The method the user selected as the default second-factor for performing multi-factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue.
     *
     * @return UserDefaultAuthenticationMethod|null The userPreferredMethodForSecondaryAuthentication
     */
@@ -425,6 +430,7 @@ class UserRegistrationDetails extends Entity
 
     /**
     * Sets the userPreferredMethodForSecondaryAuthentication
+    * The method the user selected as the default second-factor for performing multi-factor authentication. Possible values are: push, oath, voiceMobile, voiceAlternateMobile, voiceOffice, sms, none, unknownFutureValue.
     *
     * @param UserDefaultAuthenticationMethod $val The userPreferredMethodForSecondaryAuthentication
     *

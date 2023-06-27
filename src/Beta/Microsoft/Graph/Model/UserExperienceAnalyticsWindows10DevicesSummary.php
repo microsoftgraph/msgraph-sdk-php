@@ -25,7 +25,7 @@ class UserExperienceAnalyticsWindows10DevicesSummary extends Entity
 {
     /**
     * Gets the unsupportedOSversionDeviceCount
-    * The count of Windows 10 devices that have unsupported OS versions.
+    * The count of Windows 10 devices that have unsupported OS versions. Read-only.
     *
     * @return int|null The unsupportedOSversionDeviceCount
     */
@@ -40,7 +40,7 @@ class UserExperienceAnalyticsWindows10DevicesSummary extends Entity
 
     /**
     * Sets the unsupportedOSversionDeviceCount
-    * The count of Windows 10 devices that have unsupported OS versions.
+    * The count of Windows 10 devices that have unsupported OS versions. Read-only.
     *
     * @param int $val The value of the unsupportedOSversionDeviceCount
     *

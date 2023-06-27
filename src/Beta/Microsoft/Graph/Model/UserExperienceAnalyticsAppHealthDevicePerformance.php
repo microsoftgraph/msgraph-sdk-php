@@ -26,7 +26,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
 {
     /**
     * Gets the appCrashCount
-    * The number of app crashes for the device. Valid values -2147483648 to 2147483647
+    * The number of application crashes for the device. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
     *
     * @return int|null The appCrashCount
     */
@@ -41,7 +41,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
 
     /**
     * Sets the appCrashCount
-    * The number of app crashes for the device. Valid values -2147483648 to 2147483647
+    * The number of application crashes for the device. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
     *
     * @param int $val The appCrashCount
     *
@@ -55,7 +55,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
 
     /**
     * Gets the appHangCount
-    * The number of app hangs for the device. Valid values -2147483648 to 2147483647
+    * The number of application hangs for the device. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
     *
     * @return int|null The appHangCount
     */
@@ -70,7 +70,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
 
     /**
     * Sets the appHangCount
-    * The number of app hangs for the device. Valid values -2147483648 to 2147483647
+    * The number of application hangs for the device. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
     *
     * @param int $val The appHangCount
     *
@@ -84,7 +84,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
 
     /**
     * Gets the crashedAppCount
-    * The number of distinct app crashes for the device. Valid values -2147483648 to 2147483647
+    * The number of distinct application crashes for the device. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
     *
     * @return int|null The crashedAppCount
     */
@@ -99,7 +99,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
 
     /**
     * Sets the crashedAppCount
-    * The number of distinct app crashes for the device. Valid values -2147483648 to 2147483647
+    * The number of distinct application crashes for the device. Valid values 0 to 2147483647. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
     *
     * @param int $val The crashedAppCount
     *
@@ -113,7 +113,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
 
     /**
     * Gets the deviceAppHealthScore
-    * The app health score of the device. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * The application health score of the device. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @return float|null The deviceAppHealthScore
     */
@@ -128,7 +128,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
 
     /**
     * Sets the deviceAppHealthScore
-    * The app health score of the device. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * The application health score of the device. Valid values 0 to 100. Supports: $filter, $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @param float $val The deviceAppHealthScore
     *
@@ -142,7 +142,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
 
     /**
     * Gets the deviceDisplayName
-    * The name of the device.
+    * The name of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The deviceDisplayName
     */
@@ -157,7 +157,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
 
     /**
     * Sets the deviceDisplayName
-    * The name of the device.
+    * The name of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The deviceDisplayName
     *
@@ -171,7 +171,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
 
     /**
     * Gets the deviceId
-    * The id of the device.
+    * The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The deviceId
     */
@@ -186,7 +186,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
 
     /**
     * Sets the deviceId
-    * The id of the device.
+    * The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The deviceId
     *
@@ -200,7 +200,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
 
     /**
     * Gets the deviceManufacturer
-    * The manufacturer name of the device.
+    * The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The deviceManufacturer
     */
@@ -215,7 +215,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
 
     /**
     * Sets the deviceManufacturer
-    * The manufacturer name of the device.
+    * The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The deviceManufacturer
     *
@@ -229,7 +229,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
 
     /**
     * Gets the deviceModel
-    * The model name of the device.
+    * The model name of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The deviceModel
     */
@@ -244,7 +244,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
 
     /**
     * Sets the deviceModel
-    * The model name of the device.
+    * The model name of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The deviceModel
     *
@@ -258,7 +258,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
 
     /**
     * Gets the healthStatus
-    * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
+    * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. Unknown by default. Supports: $filter, $select, $OrderBy. Read-only. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
     *
     * @return UserExperienceAnalyticsHealthState|null The healthStatus
     */
@@ -277,7 +277,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
 
     /**
     * Sets the healthStatus
-    * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
+    * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. Unknown by default. Supports: $filter, $select, $OrderBy. Read-only. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
     *
     * @param UserExperienceAnalyticsHealthState $val The healthStatus
     *
@@ -291,7 +291,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
 
     /**
     * Gets the meanTimeToFailureInMinutes
-    * The mean time to failure for the device in minutes. Valid values -2147483648 to 2147483647
+    * The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
     *
     * @return int|null The meanTimeToFailureInMinutes
     */
@@ -306,7 +306,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
 
     /**
     * Sets the meanTimeToFailureInMinutes
-    * The mean time to failure for the device in minutes. Valid values -2147483648 to 2147483647
+    * The mean time to failure for the application in minutes. Valid values 0 to 2147483647. Supports: $filter, $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
     *
     * @param int $val The meanTimeToFailureInMinutes
     *
@@ -320,7 +320,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
 
     /**
     * Gets the processedDateTime
-    * The date and time when the statistics were last computed.
+    * The date and time when the statistics were last computed. The value cannot be modified and is automatically populated when the statistics are computed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
     *
     * @return \DateTime|null The processedDateTime
     */
@@ -339,7 +339,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformance extends Entity
 
     /**
     * Sets the processedDateTime
-    * The date and time when the statistics were last computed.
+    * The date and time when the statistics were last computed. The value cannot be modified and is automatically populated when the statistics are computed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
     *
     * @param \DateTime $val The processedDateTime
     *

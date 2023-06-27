@@ -245,6 +245,36 @@ class Host extends Artifact
 
 
      /**
+     * Gets the subdomains
+    * The subdomains that are associated with this host.
+     *
+     * @return array|null The subdomains
+     */
+    public function getSubdomains()
+    {
+        if (array_key_exists("subdomains", $this->_propDict)) {
+           return $this->_propDict["subdomains"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the subdomains
+    * The subdomains that are associated with this host.
+    *
+    * @param Subdomain[] $val The subdomains
+    *
+    * @return Host
+    */
+    public function setSubdomains($val)
+    {
+        $this->_propDict["subdomains"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the trackers
     * The hostTrackers that are associated with this host.
      *

@@ -294,6 +294,36 @@ class ThreatIntelligence extends \Beta\Microsoft\Graph\Model\Entity
 
 
      /**
+     * Gets the subdomains
+    * Retrieve details about the microsoft.graph.security.subdomain.Note: List retrieval is not yet supported.
+     *
+     * @return array|null The subdomains
+     */
+    public function getSubdomains()
+    {
+        if (array_key_exists("subdomains", $this->_propDict)) {
+           return $this->_propDict["subdomains"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the subdomains
+    * Retrieve details about the microsoft.graph.security.subdomain.Note: List retrieval is not yet supported.
+    *
+    * @param Subdomain[] $val The subdomains
+    *
+    * @return ThreatIntelligence
+    */
+    public function setSubdomains($val)
+    {
+        $this->_propDict["subdomains"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the vulnerabilities
     * Retrieve details about microsoft.graph.security.vulnerabilities.Note: List retrieval is not yet supported.
      *

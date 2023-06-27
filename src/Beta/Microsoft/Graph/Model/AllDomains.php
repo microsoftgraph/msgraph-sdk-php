@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* IndicatorSource File
+* AllDomains File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,9 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\SecurityNamespace\Model;
-
-use Microsoft\Graph\Core\Enum;
-
+namespace Beta\Microsoft\Graph\Model;
 /**
-* IndicatorSource class
+* AllDomains class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +21,17 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class IndicatorSource extends Enum
+class AllDomains extends ValidatingDomains
 {
     /**
-    * The Enum IndicatorSource
+    * Set the @odata.type since this type is immediately descended from an abstract
+    * type that is referenced as the type in an entity.
+    * @param array $propDict The property dictionary
     */
-    const MICROSOFT = "microsoft";
-    const OSINT = "osint";
-    const GRAPHPUBLIC = "public";
-    const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
+    public function __construct($propDict = array())
+    {
+        parent::__construct($propDict);
+        $this->setODataType("#microsoft.graph.allDomains");
+    }
+
 }

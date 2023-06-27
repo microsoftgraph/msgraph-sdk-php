@@ -25,7 +25,7 @@ class UserExperienceAnalyticsAutopilotDevicesSummary extends Entity
 {
     /**
     * Gets the devicesNotAutopilotRegistered
-    * The count of intune devices that are not autopilot registerd.
+    * The count of intune devices that are not autopilot registerd. Read-only.
     *
     * @return int|null The devicesNotAutopilotRegistered
     */
@@ -40,7 +40,7 @@ class UserExperienceAnalyticsAutopilotDevicesSummary extends Entity
 
     /**
     * Sets the devicesNotAutopilotRegistered
-    * The count of intune devices that are not autopilot registerd.
+    * The count of intune devices that are not autopilot registerd. Read-only.
     *
     * @param int $val The value of the devicesNotAutopilotRegistered
     *
@@ -53,7 +53,7 @@ class UserExperienceAnalyticsAutopilotDevicesSummary extends Entity
     }
     /**
     * Gets the devicesWithoutAutopilotProfileAssigned
-    * The count of intune devices not autopilot profile assigned.
+    * The count of intune devices not autopilot profile assigned. Read-only.
     *
     * @return int|null The devicesWithoutAutopilotProfileAssigned
     */
@@ -68,7 +68,7 @@ class UserExperienceAnalyticsAutopilotDevicesSummary extends Entity
 
     /**
     * Sets the devicesWithoutAutopilotProfileAssigned
-    * The count of intune devices not autopilot profile assigned.
+    * The count of intune devices not autopilot profile assigned. Read-only.
     *
     * @param int $val The value of the devicesWithoutAutopilotProfileAssigned
     *
@@ -81,7 +81,7 @@ class UserExperienceAnalyticsAutopilotDevicesSummary extends Entity
     }
     /**
     * Gets the totalWindows10DevicesWithoutTenantAttached
-    * The count of windows 10 devices that are Intune and Comanaged.
+    * The count of windows 10 devices that are Intune and co-managed. Read-only.
     *
     * @return int|null The totalWindows10DevicesWithoutTenantAttached
     */
@@ -96,7 +96,7 @@ class UserExperienceAnalyticsAutopilotDevicesSummary extends Entity
 
     /**
     * Sets the totalWindows10DevicesWithoutTenantAttached
-    * The count of windows 10 devices that are Intune and Comanaged.
+    * The count of windows 10 devices that are Intune and co-managed. Read-only.
     *
     * @param int $val The value of the totalWindows10DevicesWithoutTenantAttached
     *

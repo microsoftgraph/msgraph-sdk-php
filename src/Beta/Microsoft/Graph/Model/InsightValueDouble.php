@@ -25,7 +25,7 @@ class InsightValueDouble extends UserExperienceAnalyticsInsightValue
 {
     /**
     * Gets the value
-    * Not yet documented
+    * The double value of the user experience analytics insight.
     *
     * @return float|null The value
     */
@@ -40,7 +40,7 @@ class InsightValueDouble extends UserExperienceAnalyticsInsightValue
 
     /**
     * Sets the value
-    * Not yet documented
+    * The double value of the user experience analytics insight.
     *
     * @param float $val The value of the value
     *

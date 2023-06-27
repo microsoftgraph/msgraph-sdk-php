@@ -26,7 +26,7 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity
 {
     /**
     * Gets the cloudIdentityScore
-    * The user experience work from anywhere's cloud identity score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * The cloud identity score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @return float|null The cloudIdentityScore
     */
@@ -41,7 +41,7 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity
 
     /**
     * Sets the cloudIdentityScore
-    * The user experience work from anywhere's cloud identity score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * The cloud identity score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @param float $val The cloudIdentityScore
     *
@@ -55,7 +55,7 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity
 
     /**
     * Gets the cloudManagementScore
-    * The user experience work from anywhere's cloud management score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * The cloud management score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @return float|null The cloudManagementScore
     */
@@ -70,7 +70,7 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity
 
     /**
     * Sets the cloudManagementScore
-    * The user experience work from anywhere's cloud management score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * The cloud management score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @param float $val The cloudManagementScore
     *
@@ -84,7 +84,7 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity
 
     /**
     * Gets the cloudProvisioningScore
-    * The user experience work from anywhere's cloud provisioning score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * The cloud provisioning score of the device model.  Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @return float|null The cloudProvisioningScore
     */
@@ -99,7 +99,7 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity
 
     /**
     * Sets the cloudProvisioningScore
-    * The user experience work from anywhere's cloud provisioning score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * The cloud provisioning score of the device model.  Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @param float $val The cloudProvisioningScore
     *
@@ -113,7 +113,7 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity
 
     /**
     * Gets the healthStatus
-    * The health state of the user experience analytics work from anywhere model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
+    * The health state of the user experience analytics work from anywhere device model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. Unknown by default. Supports: $select, $OrderBy. Read-only. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
     *
     * @return UserExperienceAnalyticsHealthState|null The healthStatus
     */
@@ -132,7 +132,7 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity
 
     /**
     * Sets the healthStatus
-    * The health state of the user experience analytics work from anywhere model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
+    * The health state of the user experience analytics work from anywhere device model. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. Unknown by default. Supports: $select, $OrderBy. Read-only. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
     *
     * @param UserExperienceAnalyticsHealthState $val The healthStatus
     *
@@ -146,7 +146,7 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity
 
     /**
     * Gets the manufacturer
-    * The user experience work from anywhere's manufacturer name of the devices.
+    * The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The manufacturer
     */
@@ -161,7 +161,7 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity
 
     /**
     * Sets the manufacturer
-    * The user experience work from anywhere's manufacturer name of the devices.
+    * The manufacturer name of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The manufacturer
     *
@@ -175,7 +175,7 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity
 
     /**
     * Gets the model
-    * The user experience work from anywhere's model name of the devices.
+    * The model name of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The model
     */
@@ -190,7 +190,7 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity
 
     /**
     * Sets the model
-    * The user experience work from anywhere's model name of the devices.
+    * The model name of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The model
     *
@@ -204,7 +204,7 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity
 
     /**
     * Gets the modelDeviceCount
-    * The user experience work from anywhere's devices count for the model. Valid values -2147483648 to 2147483647
+    * The devices count for the model. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
     *
     * @return int|null The modelDeviceCount
     */
@@ -219,7 +219,7 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity
 
     /**
     * Sets the modelDeviceCount
-    * The user experience work from anywhere's devices count for the model. Valid values -2147483648 to 2147483647
+    * The devices count for the model. Supports: $select, $OrderBy. Read-only. Valid values -2147483648 to 2147483647
     *
     * @param int $val The modelDeviceCount
     *
@@ -233,7 +233,7 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity
 
     /**
     * Gets the windowsScore
-    * The user experience work from anywhere windows score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * The window score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @return float|null The windowsScore
     */
@@ -248,7 +248,7 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity
 
     /**
     * Sets the windowsScore
-    * The user experience work from anywhere windows score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * The window score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @param float $val The windowsScore
     *
@@ -262,7 +262,7 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity
 
     /**
     * Gets the workFromAnywhereScore
-    * The user experience work from anywhere overall score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * The work from anywhere score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @return float|null The workFromAnywhereScore
     */
@@ -277,7 +277,7 @@ class UserExperienceAnalyticsWorkFromAnywhereModelPerformance extends Entity
 
     /**
     * Sets the workFromAnywhereScore
-    * The user experience work from anywhere overall score for the model. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * The work from anywhere score of the device model. Valid values 0 to 100. Value -1 means associated score is unavailable. Supports: $select, $OrderBy. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @param float $val The workFromAnywhereScore
     *

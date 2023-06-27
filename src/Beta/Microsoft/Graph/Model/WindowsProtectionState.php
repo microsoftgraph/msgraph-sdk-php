@@ -55,7 +55,7 @@ class WindowsProtectionState extends Entity
 
     /**
     * Gets the deviceState
-    * Computer's state (like clean or pending full scan or pending reboot etc). Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical.
+    * Indicates device's health state. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical.
     *
     * @return WindowsDeviceHealthState|null The deviceState
     */
@@ -74,7 +74,7 @@ class WindowsProtectionState extends Entity
 
     /**
     * Sets the deviceState
-    * Computer's state (like clean or pending full scan or pending reboot etc). Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical.
+    * Indicates device's health state. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical. Possible values are: clean, fullScanPending, rebootPending, manualStepsPending, offlineScanPending, critical.
     *
     * @param WindowsDeviceHealthState $val The deviceState
     *
@@ -117,7 +117,7 @@ class WindowsProtectionState extends Entity
 
     /**
     * Gets the fullScanOverdue
-    * Full scan overdue or not?
+    * When TRUE indicates full scan is overdue, when FALSE indicates full scan is not overdue. Defaults to setting on client device.
     *
     * @return bool|null The fullScanOverdue
     */
@@ -132,7 +132,7 @@ class WindowsProtectionState extends Entity
 
     /**
     * Sets the fullScanOverdue
-    * Full scan overdue or not?
+    * When TRUE indicates full scan is overdue, when FALSE indicates full scan is not overdue. Defaults to setting on client device.
     *
     * @param bool $val The fullScanOverdue
     *
@@ -146,7 +146,7 @@ class WindowsProtectionState extends Entity
 
     /**
     * Gets the fullScanRequired
-    * Full scan required or not?
+    * When TRUE indicates full scan is required, when FALSE indicates full scan is not required. Defaults to setting on client device.
     *
     * @return bool|null The fullScanRequired
     */
@@ -161,7 +161,7 @@ class WindowsProtectionState extends Entity
 
     /**
     * Sets the fullScanRequired
-    * Full scan required or not?
+    * When TRUE indicates full scan is required, when FALSE indicates full scan is not required. Defaults to setting on client device.
     *
     * @param bool $val The fullScanRequired
     *
@@ -175,7 +175,7 @@ class WindowsProtectionState extends Entity
 
     /**
     * Gets the isVirtualMachine
-    * Indicates whether the device is a virtual machine.
+    * When TRUE indicates the device is a virtual machine, when FALSE indicates the device is not a virtual machine. Defaults to setting on client device.
     *
     * @return bool|null The isVirtualMachine
     */
@@ -190,7 +190,7 @@ class WindowsProtectionState extends Entity
 
     /**
     * Sets the isVirtualMachine
-    * Indicates whether the device is a virtual machine.
+    * When TRUE indicates the device is a virtual machine, when FALSE indicates the device is not a virtual machine. Defaults to setting on client device.
     *
     * @param bool $val The isVirtualMachine
     *
@@ -361,7 +361,7 @@ class WindowsProtectionState extends Entity
 
     /**
     * Gets the malwareProtectionEnabled
-    * Anti malware is enabled or not
+    * When TRUE indicates anti malware is enabled when FALSE indicates anti malware is not enabled.
     *
     * @return bool|null The malwareProtectionEnabled
     */
@@ -376,7 +376,7 @@ class WindowsProtectionState extends Entity
 
     /**
     * Sets the malwareProtectionEnabled
-    * Anti malware is enabled or not
+    * When TRUE indicates anti malware is enabled when FALSE indicates anti malware is not enabled.
     *
     * @param bool $val The malwareProtectionEnabled
     *
@@ -390,7 +390,7 @@ class WindowsProtectionState extends Entity
 
     /**
     * Gets the networkInspectionSystemEnabled
-    * Network inspection system enabled or not?
+    * When TRUE indicates network inspection system enabled, when FALSE indicates network inspection system is not enabled. Defaults to setting on client device.
     *
     * @return bool|null The networkInspectionSystemEnabled
     */
@@ -405,7 +405,7 @@ class WindowsProtectionState extends Entity
 
     /**
     * Sets the networkInspectionSystemEnabled
-    * Network inspection system enabled or not?
+    * When TRUE indicates network inspection system enabled, when FALSE indicates network inspection system is not enabled. Defaults to setting on client device.
     *
     * @param bool $val The networkInspectionSystemEnabled
     *
@@ -419,7 +419,7 @@ class WindowsProtectionState extends Entity
 
     /**
     * Gets the productStatus
-    * Product Status of Windows Defender Antivirus. Possible values are: noStatus, serviceNotRunning, serviceStartedWithoutMalwareProtection, pendingFullScanDueToThreatAction, pendingRebootDueToThreatAction, pendingManualStepsDueToThreatAction, avSignaturesOutOfDate, asSignaturesOutOfDate, noQuickScanHappenedForSpecifiedPeriod, noFullScanHappenedForSpecifiedPeriod, systemInitiatedScanInProgress, systemInitiatedCleanInProgress, samplesPendingSubmission, productRunningInEvaluationMode, productRunningInNonGenuineMode, productExpired, offlineScanRequired, serviceShutdownAsPartOfSystemShutdown, threatRemediationFailedCritically, threatRemediationFailedNonCritically, noStatusFlagsSet, platformOutOfDate, platformUpdateInProgress, platformAboutToBeOutdated, signatureOrPlatformEndOfLifeIsPastOrIsImpending, windowsSModeSignaturesInUseOnNonWin10SInstall.
+    * Product Status of Windows Defender Antivirus. Possible values are: noStatus, serviceNotRunning, serviceStartedWithoutMalwareProtection, pendingFullScanDueToThreatAction, pendingRebootDueToThreatAction, pendingManualStepsDueToThreatAction, avSignaturesOutOfDate, asSignaturesOutOfDate, noQuickScanHappenedForSpecifiedPeriod, noFullScanHappenedForSpecifiedPeriod, systemInitiatedScanInProgress, systemInitiatedCleanInProgress, samplesPendingSubmission, productRunningInEvaluationMode, productRunningInNonGenuineMode, productExpired, offlineScanRequired, serviceShutdownAsPartOfSystemShutdown, threatRemediationFailedCritically, threatRemediationFailedNonCritically, noStatusFlagsSet, platformOutOfDate, platformUpdateInProgress, platformAboutToBeOutdated, signatureOrPlatformEndOfLifeIsPastOrIsImpending, windowsSModeSignaturesInUseOnNonWin10SInstall. Possible values are: noStatus, serviceNotRunning, serviceStartedWithoutMalwareProtection, pendingFullScanDueToThreatAction, pendingRebootDueToThreatAction, pendingManualStepsDueToThreatAction, avSignaturesOutOfDate, asSignaturesOutOfDate, noQuickScanHappenedForSpecifiedPeriod, noFullScanHappenedForSpecifiedPeriod, systemInitiatedScanInProgress, systemInitiatedCleanInProgress, samplesPendingSubmission, productRunningInEvaluationMode, productRunningInNonGenuineMode, productExpired, offlineScanRequired, serviceShutdownAsPartOfSystemShutdown, threatRemediationFailedCritically, threatRemediationFailedNonCritically, noStatusFlagsSet, platformOutOfDate, platformUpdateInProgress, platformAboutToBeOutdated, signatureOrPlatformEndOfLifeIsPastOrIsImpending, windowsSModeSignaturesInUseOnNonWin10SInstall.
     *
     * @return WindowsDefenderProductStatus|null The productStatus
     */
@@ -438,7 +438,7 @@ class WindowsProtectionState extends Entity
 
     /**
     * Sets the productStatus
-    * Product Status of Windows Defender Antivirus. Possible values are: noStatus, serviceNotRunning, serviceStartedWithoutMalwareProtection, pendingFullScanDueToThreatAction, pendingRebootDueToThreatAction, pendingManualStepsDueToThreatAction, avSignaturesOutOfDate, asSignaturesOutOfDate, noQuickScanHappenedForSpecifiedPeriod, noFullScanHappenedForSpecifiedPeriod, systemInitiatedScanInProgress, systemInitiatedCleanInProgress, samplesPendingSubmission, productRunningInEvaluationMode, productRunningInNonGenuineMode, productExpired, offlineScanRequired, serviceShutdownAsPartOfSystemShutdown, threatRemediationFailedCritically, threatRemediationFailedNonCritically, noStatusFlagsSet, platformOutOfDate, platformUpdateInProgress, platformAboutToBeOutdated, signatureOrPlatformEndOfLifeIsPastOrIsImpending, windowsSModeSignaturesInUseOnNonWin10SInstall.
+    * Product Status of Windows Defender Antivirus. Possible values are: noStatus, serviceNotRunning, serviceStartedWithoutMalwareProtection, pendingFullScanDueToThreatAction, pendingRebootDueToThreatAction, pendingManualStepsDueToThreatAction, avSignaturesOutOfDate, asSignaturesOutOfDate, noQuickScanHappenedForSpecifiedPeriod, noFullScanHappenedForSpecifiedPeriod, systemInitiatedScanInProgress, systemInitiatedCleanInProgress, samplesPendingSubmission, productRunningInEvaluationMode, productRunningInNonGenuineMode, productExpired, offlineScanRequired, serviceShutdownAsPartOfSystemShutdown, threatRemediationFailedCritically, threatRemediationFailedNonCritically, noStatusFlagsSet, platformOutOfDate, platformUpdateInProgress, platformAboutToBeOutdated, signatureOrPlatformEndOfLifeIsPastOrIsImpending, windowsSModeSignaturesInUseOnNonWin10SInstall. Possible values are: noStatus, serviceNotRunning, serviceStartedWithoutMalwareProtection, pendingFullScanDueToThreatAction, pendingRebootDueToThreatAction, pendingManualStepsDueToThreatAction, avSignaturesOutOfDate, asSignaturesOutOfDate, noQuickScanHappenedForSpecifiedPeriod, noFullScanHappenedForSpecifiedPeriod, systemInitiatedScanInProgress, systemInitiatedCleanInProgress, samplesPendingSubmission, productRunningInEvaluationMode, productRunningInNonGenuineMode, productExpired, offlineScanRequired, serviceShutdownAsPartOfSystemShutdown, threatRemediationFailedCritically, threatRemediationFailedNonCritically, noStatusFlagsSet, platformOutOfDate, platformUpdateInProgress, platformAboutToBeOutdated, signatureOrPlatformEndOfLifeIsPastOrIsImpending, windowsSModeSignaturesInUseOnNonWin10SInstall.
     *
     * @param WindowsDefenderProductStatus $val The productStatus
     *
@@ -452,7 +452,7 @@ class WindowsProtectionState extends Entity
 
     /**
     * Gets the quickScanOverdue
-    * Quick scan overdue or not?
+    * When TRUE indicates quick scan is overdue, when FALSE indicates quick scan is not overdue. Defaults to setting on client device.
     *
     * @return bool|null The quickScanOverdue
     */
@@ -467,7 +467,7 @@ class WindowsProtectionState extends Entity
 
     /**
     * Sets the quickScanOverdue
-    * Quick scan overdue or not?
+    * When TRUE indicates quick scan is overdue, when FALSE indicates quick scan is not overdue. Defaults to setting on client device.
     *
     * @param bool $val The quickScanOverdue
     *
@@ -481,7 +481,7 @@ class WindowsProtectionState extends Entity
 
     /**
     * Gets the realTimeProtectionEnabled
-    * Real time protection is enabled or not?
+    * When TRUE indicates real time protection is enabled, when FALSE indicates real time protection is not enabled. Defaults to setting on client device.
     *
     * @return bool|null The realTimeProtectionEnabled
     */
@@ -496,7 +496,7 @@ class WindowsProtectionState extends Entity
 
     /**
     * Sets the realTimeProtectionEnabled
-    * Real time protection is enabled or not?
+    * When TRUE indicates real time protection is enabled, when FALSE indicates real time protection is not enabled. Defaults to setting on client device.
     *
     * @param bool $val The realTimeProtectionEnabled
     *
@@ -510,7 +510,7 @@ class WindowsProtectionState extends Entity
 
     /**
     * Gets the rebootRequired
-    * Reboot required or not?
+    * When TRUE indicates reboot is required, when FALSE indicates when TRUE indicates reboot is not required. Defaults to setting on client device.
     *
     * @return bool|null The rebootRequired
     */
@@ -525,7 +525,7 @@ class WindowsProtectionState extends Entity
 
     /**
     * Sets the rebootRequired
-    * Reboot required or not?
+    * When TRUE indicates reboot is required, when FALSE indicates when TRUE indicates reboot is not required. Defaults to setting on client device.
     *
     * @param bool $val The rebootRequired
     *
@@ -539,7 +539,7 @@ class WindowsProtectionState extends Entity
 
     /**
     * Gets the signatureUpdateOverdue
-    * Signature out of date or not?
+    * When TRUE indicates signature is out of date, when FALSE indicates signature is not out of date. Defaults to setting on client device.
     *
     * @return bool|null The signatureUpdateOverdue
     */
@@ -554,7 +554,7 @@ class WindowsProtectionState extends Entity
 
     /**
     * Sets the signatureUpdateOverdue
-    * Signature out of date or not?
+    * When TRUE indicates signature is out of date, when FALSE indicates signature is not out of date. Defaults to setting on client device.
     *
     * @param bool $val The signatureUpdateOverdue
     *
@@ -597,7 +597,7 @@ class WindowsProtectionState extends Entity
 
     /**
     * Gets the tamperProtectionEnabled
-    * Indicates whether the Windows Defender tamper protection feature is enabled.
+    * When TRUE indicates the Windows Defender tamper protection feature is enabled, when FALSE indicates the Windows Defender tamper protection feature is not enabled. Defaults to setting on client device.
     *
     * @return bool|null The tamperProtectionEnabled
     */
@@ -612,7 +612,7 @@ class WindowsProtectionState extends Entity
 
     /**
     * Sets the tamperProtectionEnabled
-    * Indicates whether the Windows Defender tamper protection feature is enabled.
+    * When TRUE indicates the Windows Defender tamper protection feature is enabled, when FALSE indicates the Windows Defender tamper protection feature is not enabled. Defaults to setting on client device.
     *
     * @param bool $val The tamperProtectionEnabled
     *

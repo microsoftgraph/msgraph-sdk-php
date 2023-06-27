@@ -26,6 +26,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 {
     /**
     * Gets the description
+    * The description of the alert.
     *
     * @return string|null The description
     */
@@ -40,6 +41,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Sets the description
+    * The description of the alert.
     *
     * @param string $val The description
     *
@@ -53,6 +55,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Gets the displayName
+    * The friendly display name that renders in Privileged Identity Management (PIM) alerts in the Azure portal.
     *
     * @return string|null The displayName
     */
@@ -67,6 +70,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Sets the displayName
+    * The friendly display name that renders in Privileged Identity Management (PIM) alerts in the Azure portal.
     *
     * @param string $val The displayName
     *
@@ -80,6 +84,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Gets the howToPrevent
+    * Long-form text that indicates the ways to prevent the alert from being triggered in your tenant.
     *
     * @return string|null The howToPrevent
     */
@@ -94,6 +99,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Sets the howToPrevent
+    * Long-form text that indicates the ways to prevent the alert from being triggered in your tenant.
     *
     * @param string $val The howToPrevent
     *
@@ -107,6 +113,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Gets the isConfigurable
+    * true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization does not have Azure AD Premium P2' cannot be configured, because the criteria is restricted.
     *
     * @return bool|null The isConfigurable
     */
@@ -121,6 +128,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Sets the isConfigurable
+    * true if the alert configuration can be customized in the tenant, and false otherwise. For example, the number and percentage thresholds of the 'There are too many global administrators' alert can be configured by users, while the 'This organization does not have Azure AD Premium P2' cannot be configured, because the criteria is restricted.
     *
     * @param bool $val The isConfigurable
     *
@@ -134,6 +142,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Gets the isRemediatable
+    * true if the alert can be remediated, and false otherwise.
     *
     * @return bool|null The isRemediatable
     */
@@ -148,6 +157,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Sets the isRemediatable
+    * true if the alert can be remediated, and false otherwise.
     *
     * @param bool $val The isRemediatable
     *
@@ -161,6 +171,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Gets the mitigationSteps
+    * The methods to mitigate the alert when it's triggered in the tenant. For example, to mitigate the 'There are too many global administrators', you could remove redundant privileged role assignments.
     *
     * @return string|null The mitigationSteps
     */
@@ -175,6 +186,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Sets the mitigationSteps
+    * The methods to mitigate the alert when it's triggered in the tenant. For example, to mitigate the 'There are too many global administrators', you could remove redundant privileged role assignments.
     *
     * @param string $val The mitigationSteps
     *
@@ -188,6 +200,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Gets the scopeId
+    * The identifier of the scope where the alert is related. / is the only supported one for the tenant. Supports $filter (eq, ne).
     *
     * @return string|null The scopeId
     */
@@ -202,6 +215,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Sets the scopeId
+    * The identifier of the scope where the alert is related. / is the only supported one for the tenant. Supports $filter (eq, ne).
     *
     * @param string $val The scopeId
     *
@@ -215,6 +229,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Gets the scopeType
+    * The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD Roles.
     *
     * @return string|null The scopeType
     */
@@ -229,6 +244,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Sets the scopeType
+    * The type of scope where the alert is created. DirectoryRole is the only currently supported scope type for Azure AD Roles.
     *
     * @param string $val The scopeType
     *
@@ -242,6 +258,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Gets the securityImpact
+    * Security impact of the alert. For example, it could be information leaks or unauthorized access.
     *
     * @return string|null The securityImpact
     */
@@ -256,6 +273,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Sets the securityImpact
+    * Security impact of the alert. For example, it could be information leaks or unauthorized access.
     *
     * @param string $val The securityImpact
     *
@@ -269,6 +287,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Gets the severityLevel
+    * Severity level of the alert. The possible values are: unknown, informational, low, medium, high, unknownFutureValue.
     *
     * @return AlertSeverity|null The severityLevel
     */
@@ -287,6 +306,7 @@ class UnifiedRoleManagementAlertDefinition extends Entity
 
     /**
     * Sets the severityLevel
+    * Severity level of the alert. The possible values are: unknown, informational, low, medium, high, unknownFutureValue.
     *
     * @param AlertSeverity $val The severityLevel
     *

@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* IndicatorSource File
+* RootDomains File
 * PHP version 7
 *
 * @category  Library
@@ -11,12 +11,12 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\SecurityNamespace\Model;
+namespace Beta\Microsoft\Graph\Model;
 
 use Microsoft\Graph\Core\Enum;
 
 /**
-* IndicatorSource class
+* RootDomains class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -24,13 +24,16 @@ use Microsoft\Graph\Core\Enum;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class IndicatorSource extends Enum
+class RootDomains extends Enum
 {
     /**
-    * The Enum IndicatorSource
+    * The Enum RootDomains
     */
-    const MICROSOFT = "microsoft";
-    const OSINT = "osint";
-    const GRAPHPUBLIC = "public";
+    const NONE = "none";
+    const ALL = "all";
+    const ALL_FEDERATED = "allFederated";
+    const ALL_MANAGED = "allManaged";
+    const ENUMERATED = "enumerated";
+    const ALL_MANAGED_AND_ENUMERATED_FEDERATED = "allManagedAndEnumeratedFederated";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

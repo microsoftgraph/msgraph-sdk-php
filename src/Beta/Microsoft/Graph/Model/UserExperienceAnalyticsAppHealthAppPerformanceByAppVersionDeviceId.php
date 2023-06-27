@@ -171,7 +171,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends
 
     /**
     * Gets the deviceDisplayName
-    * The name of the device.
+    * The name of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The deviceDisplayName
     */
@@ -186,7 +186,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends
 
     /**
     * Sets the deviceDisplayName
-    * The name of the device.
+    * The name of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The deviceDisplayName
     *
@@ -200,7 +200,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends
 
     /**
     * Gets the deviceId
-    * The id of the device.
+    * The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The deviceId
     */
@@ -215,7 +215,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends
 
     /**
     * Sets the deviceId
-    * The id of the device.
+    * The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The deviceId
     *
@@ -229,7 +229,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends
 
     /**
     * Gets the processedDateTime
-    * The date and time when the statistics were last computed.
+    * The date and time when the statistics were last computed. The value cannot be modified and is automatically populated when the statistics are computed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
     *
     * @return \DateTime|null The processedDateTime
     */
@@ -248,7 +248,7 @@ class UserExperienceAnalyticsAppHealthAppPerformanceByAppVersionDeviceId extends
 
     /**
     * Sets the processedDateTime
-    * The date and time when the statistics were last computed.
+    * The date and time when the statistics were last computed. The value cannot be modified and is automatically populated when the statistics are computed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
     *
     * @param \DateTime $val The processedDateTime
     *

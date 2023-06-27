@@ -25,7 +25,7 @@ class DeviceProtectionOverview extends Entity
 {
     /**
     * Gets the cleanDeviceCount
-    * Clean device count.
+    * Indicates number of devices reporting as clean
     *
     * @return int|null The cleanDeviceCount
     */
@@ -40,7 +40,7 @@ class DeviceProtectionOverview extends Entity
 
     /**
     * Sets the cleanDeviceCount
-    * Clean device count.
+    * Indicates number of devices reporting as clean
     *
     * @param int $val The value of the cleanDeviceCount
     *
@@ -53,7 +53,7 @@ class DeviceProtectionOverview extends Entity
     }
     /**
     * Gets the criticalFailuresDeviceCount
-    * Critical failures device count.
+    * Indicates number of devices with critical failures
     *
     * @return int|null The criticalFailuresDeviceCount
     */
@@ -68,7 +68,7 @@ class DeviceProtectionOverview extends Entity
 
     /**
     * Sets the criticalFailuresDeviceCount
-    * Critical failures device count.
+    * Indicates number of devices with critical failures
     *
     * @param int $val The value of the criticalFailuresDeviceCount
     *
@@ -81,7 +81,7 @@ class DeviceProtectionOverview extends Entity
     }
     /**
     * Gets the inactiveThreatAgentDeviceCount
-    * Device with inactive threat agent count
+    * Indicates number of devices with inactive threat agent
     *
     * @return int|null The inactiveThreatAgentDeviceCount
     */
@@ -96,7 +96,7 @@ class DeviceProtectionOverview extends Entity
 
     /**
     * Sets the inactiveThreatAgentDeviceCount
-    * Device with inactive threat agent count
+    * Indicates number of devices with inactive threat agent
     *
     * @param int $val The value of the inactiveThreatAgentDeviceCount
     *
@@ -109,7 +109,7 @@ class DeviceProtectionOverview extends Entity
     }
     /**
     * Gets the pendingFullScanDeviceCount
-    * Pending full scan device count.
+    * Indicates number of devices pending full scan
     *
     * @return int|null The pendingFullScanDeviceCount
     */
@@ -124,7 +124,7 @@ class DeviceProtectionOverview extends Entity
 
     /**
     * Sets the pendingFullScanDeviceCount
-    * Pending full scan device count.
+    * Indicates number of devices pending full scan
     *
     * @param int $val The value of the pendingFullScanDeviceCount
     *
@@ -137,7 +137,7 @@ class DeviceProtectionOverview extends Entity
     }
     /**
     * Gets the pendingManualStepsDeviceCount
-    * Pending manual steps device count.
+    * Indicates number of devices with pending manual steps
     *
     * @return int|null The pendingManualStepsDeviceCount
     */
@@ -152,7 +152,7 @@ class DeviceProtectionOverview extends Entity
 
     /**
     * Sets the pendingManualStepsDeviceCount
-    * Pending manual steps device count.
+    * Indicates number of devices with pending manual steps
     *
     * @param int $val The value of the pendingManualStepsDeviceCount
     *
@@ -165,7 +165,7 @@ class DeviceProtectionOverview extends Entity
     }
     /**
     * Gets the pendingOfflineScanDeviceCount
-    * Pending offline scan device count.
+    * Indicates number of pending offline scan devices
     *
     * @return int|null The pendingOfflineScanDeviceCount
     */
@@ -180,7 +180,7 @@ class DeviceProtectionOverview extends Entity
 
     /**
     * Sets the pendingOfflineScanDeviceCount
-    * Pending offline scan device count.
+    * Indicates number of pending offline scan devices
     *
     * @param int $val The value of the pendingOfflineScanDeviceCount
     *
@@ -193,7 +193,7 @@ class DeviceProtectionOverview extends Entity
     }
     /**
     * Gets the pendingQuickScanDeviceCount
-    * Pending quick scan device count. Valid values -2147483648 to 2147483647
+    * Indicates the number of devices that have a pending full scan. Valid values -2147483648 to 2147483647
     *
     * @return int|null The pendingQuickScanDeviceCount
     */
@@ -208,7 +208,7 @@ class DeviceProtectionOverview extends Entity
 
     /**
     * Sets the pendingQuickScanDeviceCount
-    * Pending quick scan device count. Valid values -2147483648 to 2147483647
+    * Indicates the number of devices that have a pending full scan. Valid values -2147483648 to 2147483647
     *
     * @param int $val The value of the pendingQuickScanDeviceCount
     *
@@ -221,7 +221,7 @@ class DeviceProtectionOverview extends Entity
     }
     /**
     * Gets the pendingRestartDeviceCount
-    * Pending restart device count.
+    * Indicates number of devices pending restart
     *
     * @return int|null The pendingRestartDeviceCount
     */
@@ -236,7 +236,7 @@ class DeviceProtectionOverview extends Entity
 
     /**
     * Sets the pendingRestartDeviceCount
-    * Pending restart device count.
+    * Indicates number of devices pending restart
     *
     * @param int $val The value of the pendingRestartDeviceCount
     *
@@ -249,7 +249,7 @@ class DeviceProtectionOverview extends Entity
     }
     /**
     * Gets the pendingSignatureUpdateDeviceCount
-    * Device with old signature count.
+    * Indicates number of devices with an old signature
     *
     * @return int|null The pendingSignatureUpdateDeviceCount
     */
@@ -264,7 +264,7 @@ class DeviceProtectionOverview extends Entity
 
     /**
     * Sets the pendingSignatureUpdateDeviceCount
-    * Device with old signature count.
+    * Indicates number of devices with an old signature
     *
     * @param int $val The value of the pendingSignatureUpdateDeviceCount
     *
@@ -305,7 +305,7 @@ class DeviceProtectionOverview extends Entity
     }
     /**
     * Gets the unknownStateThreatAgentDeviceCount
-    * Device with threat agent state as unknown count.
+    * Indicates number of devices with threat agent state as unknown
     *
     * @return int|null The unknownStateThreatAgentDeviceCount
     */
@@ -320,7 +320,7 @@ class DeviceProtectionOverview extends Entity
 
     /**
     * Sets the unknownStateThreatAgentDeviceCount
-    * Device with threat agent state as unknown count.
+    * Indicates number of devices with threat agent state as unknown
     *
     * @param int $val The value of the unknownStateThreatAgentDeviceCount
     *

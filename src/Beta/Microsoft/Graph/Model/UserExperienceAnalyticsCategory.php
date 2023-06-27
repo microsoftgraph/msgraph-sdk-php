@@ -27,7 +27,7 @@ class UserExperienceAnalyticsCategory extends Entity
 
      /**
      * Gets the insights
-    * The insights for the user experience analytics category.
+    * The insights for the category. Read-only.
      *
      * @return array|null The insights
      */
@@ -42,7 +42,7 @@ class UserExperienceAnalyticsCategory extends Entity
 
     /**
     * Sets the insights
-    * The insights for the user experience analytics category.
+    * The insights for the category. Read-only.
     *
     * @param UserExperienceAnalyticsInsight[] $val The insights
     *
@@ -57,7 +57,7 @@ class UserExperienceAnalyticsCategory extends Entity
 
      /**
      * Gets the metricValues
-    * The metric values for the user experience analytics category.
+    * The metric values for the user experience analytics category. Read-only.
      *
      * @return array|null The metricValues
      */
@@ -72,7 +72,7 @@ class UserExperienceAnalyticsCategory extends Entity
 
     /**
     * Sets the metricValues
-    * The metric values for the user experience analytics category.
+    * The metric values for the user experience analytics category. Read-only.
     *
     * @param UserExperienceAnalyticsMetric[] $val The metricValues
     *

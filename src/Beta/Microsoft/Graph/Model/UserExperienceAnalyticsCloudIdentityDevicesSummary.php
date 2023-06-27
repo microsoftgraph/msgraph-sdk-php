@@ -25,7 +25,7 @@ class UserExperienceAnalyticsCloudIdentityDevicesSummary extends Entity
 {
     /**
     * Gets the deviceWithoutCloudIdentityCount
-    * The count of devices that are not cloud identity.
+    * The count of devices that are not cloud identity. Read-only.
     *
     * @return int|null The deviceWithoutCloudIdentityCount
     */
@@ -40,7 +40,7 @@ class UserExperienceAnalyticsCloudIdentityDevicesSummary extends Entity
 
     /**
     * Sets the deviceWithoutCloudIdentityCount
-    * The count of devices that are not cloud identity.
+    * The count of devices that are not cloud identity. Read-only.
     *
     * @param int $val The value of the deviceWithoutCloudIdentityCount
     *

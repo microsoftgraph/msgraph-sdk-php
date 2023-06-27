@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* IntelligenceProfileSponsorState File
+* IntelligenceProfileCountryOrRegionOfOrigin File
 * PHP version 7
 *
 * @category  Library
@@ -13,7 +13,7 @@
 */
 namespace Beta\Microsoft\Graph\SecurityNamespace\Model;
 /**
-* IntelligenceProfileSponsorState class
+* IntelligenceProfileCountryOrRegionOfOrigin class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,11 +21,10 @@ namespace Beta\Microsoft\Graph\SecurityNamespace\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class IntelligenceProfileSponsorState extends \Beta\Microsoft\Graph\Model\Entity
+class IntelligenceProfileCountryOrRegionOfOrigin extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the code
-    * A codified representation for this sponsor state.
     *
     * @return string|null The code
     */
@@ -40,11 +39,10 @@ class IntelligenceProfileSponsorState extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the code
-    * A codified representation for this sponsor state.
     *
     * @param string $val The value of the code
     *
-    * @return IntelligenceProfileSponsorState
+    * @return IntelligenceProfileCountryOrRegionOfOrigin
     */
     public function setCode($val)
     {
@@ -53,7 +51,6 @@ class IntelligenceProfileSponsorState extends \Beta\Microsoft\Graph\Model\Entity
     }
     /**
     * Gets the label
-    * A display label for this sponsor state.
     *
     * @return string|null The label
     */
@@ -68,11 +65,10 @@ class IntelligenceProfileSponsorState extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the label
-    * A display label for this sponsor state.
     *
     * @param string $val The value of the label
     *
-    * @return IntelligenceProfileSponsorState
+    * @return IntelligenceProfileCountryOrRegionOfOrigin
     */
     public function setLabel($val)
     {

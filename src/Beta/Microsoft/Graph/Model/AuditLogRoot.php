@@ -57,6 +57,34 @@ class AuditLogRoot implements \JsonSerializable
 
 
      /**
+     * Gets the customSecurityAttributeAudits
+     *
+     * @return array|null The customSecurityAttributeAudits
+     */
+    public function getCustomSecurityAttributeAudits()
+    {
+        if (array_key_exists("customSecurityAttributeAudits", $this->_propDict)) {
+           return $this->_propDict["customSecurityAttributeAudits"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the customSecurityAttributeAudits
+    *
+    * @param CustomSecurityAttributeAudit[] $val The customSecurityAttributeAudits
+    *
+    * @return AuditLogRoot
+    */
+    public function setCustomSecurityAttributeAudits($val)
+    {
+        $this->_propDict["customSecurityAttributeAudits"] = $val;
+        return $this;
+    }
+
+
+     /**
      * Gets the directoryAudits
      *
      * @return array|null The directoryAudits

@@ -26,7 +26,7 @@ class UserExperienceAnalyticsBaseline extends Entity
 {
     /**
     * Gets the createdDateTime
-    * The date the custom baseline was created.
+    * The date the custom baseline was created. The value cannot be modified and is automatically populated when the baseline is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default.
     *
     * @return \DateTime|null The createdDateTime
     */
@@ -45,7 +45,7 @@ class UserExperienceAnalyticsBaseline extends Entity
 
     /**
     * Sets the createdDateTime
-    * The date the custom baseline was created.
+    * The date the custom baseline was created. The value cannot be modified and is automatically populated when the baseline is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Returned by default.
     *
     * @param \DateTime $val The createdDateTime
     *
@@ -59,7 +59,7 @@ class UserExperienceAnalyticsBaseline extends Entity
 
     /**
     * Gets the displayName
-    * The name of the user experience analytics baseline.
+    * The name of the baseline.
     *
     * @return string|null The displayName
     */
@@ -74,7 +74,7 @@ class UserExperienceAnalyticsBaseline extends Entity
 
     /**
     * Sets the displayName
-    * The name of the user experience analytics baseline.
+    * The name of the baseline.
     *
     * @param string $val The displayName
     *
@@ -88,7 +88,7 @@ class UserExperienceAnalyticsBaseline extends Entity
 
     /**
     * Gets the isBuiltIn
-    * Signifies if the current baseline is the commercial median baseline or a custom baseline.
+    * When TRUE, indicates the current baseline is the commercial median baseline. When FALSE, indicates it is a custom baseline. FALSE by default.
     *
     * @return bool|null The isBuiltIn
     */
@@ -103,7 +103,7 @@ class UserExperienceAnalyticsBaseline extends Entity
 
     /**
     * Sets the isBuiltIn
-    * Signifies if the current baseline is the commercial median baseline or a custom baseline.
+    * When TRUE, indicates the current baseline is the commercial median baseline. When FALSE, indicates it is a custom baseline. FALSE by default.
     *
     * @param bool $val The isBuiltIn
     *
@@ -117,7 +117,7 @@ class UserExperienceAnalyticsBaseline extends Entity
 
     /**
     * Gets the appHealthMetrics
-    * The user experience analytics app health metrics.
+    * The scores and insights for the application health metrics.
     *
     * @return UserExperienceAnalyticsCategory|null The appHealthMetrics
     */
@@ -136,7 +136,7 @@ class UserExperienceAnalyticsBaseline extends Entity
 
     /**
     * Sets the appHealthMetrics
-    * The user experience analytics app health metrics.
+    * The scores and insights for the application health metrics.
     *
     * @param UserExperienceAnalyticsCategory $val The appHealthMetrics
     *
@@ -150,7 +150,7 @@ class UserExperienceAnalyticsBaseline extends Entity
 
     /**
     * Gets the batteryHealthMetrics
-    * The user experience analytics battery health metrics.
+    * The scores and insights for the battery health metrics.
     *
     * @return UserExperienceAnalyticsCategory|null The batteryHealthMetrics
     */
@@ -169,7 +169,7 @@ class UserExperienceAnalyticsBaseline extends Entity
 
     /**
     * Sets the batteryHealthMetrics
-    * The user experience analytics battery health metrics.
+    * The scores and insights for the battery health metrics.
     *
     * @param UserExperienceAnalyticsCategory $val The batteryHealthMetrics
     *
@@ -183,7 +183,7 @@ class UserExperienceAnalyticsBaseline extends Entity
 
     /**
     * Gets the bestPracticesMetrics
-    * The user experience analytics best practices metrics.
+    * The scores and insights for the best practices metrics.
     *
     * @return UserExperienceAnalyticsCategory|null The bestPracticesMetrics
     */
@@ -202,7 +202,7 @@ class UserExperienceAnalyticsBaseline extends Entity
 
     /**
     * Sets the bestPracticesMetrics
-    * The user experience analytics best practices metrics.
+    * The scores and insights for the best practices metrics.
     *
     * @param UserExperienceAnalyticsCategory $val The bestPracticesMetrics
     *
@@ -216,7 +216,7 @@ class UserExperienceAnalyticsBaseline extends Entity
 
     /**
     * Gets the deviceBootPerformanceMetrics
-    * The user experience analytics device boot performance metrics.
+    * The scores and insights for the device boot performance metrics.
     *
     * @return UserExperienceAnalyticsCategory|null The deviceBootPerformanceMetrics
     */
@@ -235,7 +235,7 @@ class UserExperienceAnalyticsBaseline extends Entity
 
     /**
     * Sets the deviceBootPerformanceMetrics
-    * The user experience analytics device boot performance metrics.
+    * The scores and insights for the device boot performance metrics.
     *
     * @param UserExperienceAnalyticsCategory $val The deviceBootPerformanceMetrics
     *
@@ -249,7 +249,7 @@ class UserExperienceAnalyticsBaseline extends Entity
 
     /**
     * Gets the rebootAnalyticsMetrics
-    * The user experience analytics reboot analytics metrics.
+    * The scores and insights for the reboot analytics metrics.
     *
     * @return UserExperienceAnalyticsCategory|null The rebootAnalyticsMetrics
     */
@@ -268,7 +268,7 @@ class UserExperienceAnalyticsBaseline extends Entity
 
     /**
     * Sets the rebootAnalyticsMetrics
-    * The user experience analytics reboot analytics metrics.
+    * The scores and insights for the reboot analytics metrics.
     *
     * @param UserExperienceAnalyticsCategory $val The rebootAnalyticsMetrics
     *
@@ -282,7 +282,7 @@ class UserExperienceAnalyticsBaseline extends Entity
 
     /**
     * Gets the resourcePerformanceMetrics
-    * The user experience analytics resource performance metrics.
+    * The scores and insights for the resource performance metrics.
     *
     * @return UserExperienceAnalyticsCategory|null The resourcePerformanceMetrics
     */
@@ -301,7 +301,7 @@ class UserExperienceAnalyticsBaseline extends Entity
 
     /**
     * Sets the resourcePerformanceMetrics
-    * The user experience analytics resource performance metrics.
+    * The scores and insights for the resource performance metrics.
     *
     * @param UserExperienceAnalyticsCategory $val The resourcePerformanceMetrics
     *
@@ -315,7 +315,7 @@ class UserExperienceAnalyticsBaseline extends Entity
 
     /**
     * Gets the workFromAnywhereMetrics
-    * The user experience analytics work from anywhere metrics.
+    * The scores and insights for the work from anywhere metrics.
     *
     * @return UserExperienceAnalyticsCategory|null The workFromAnywhereMetrics
     */
@@ -334,7 +334,7 @@ class UserExperienceAnalyticsBaseline extends Entity
 
     /**
     * Sets the workFromAnywhereMetrics
-    * The user experience analytics work from anywhere metrics.
+    * The scores and insights for the work from anywhere metrics.
     *
     * @param UserExperienceAnalyticsCategory $val The workFromAnywhereMetrics
     *
