@@ -252,6 +252,68 @@ class AccessReviewScheduleSettings extends Entity
         $this->_propDict["mailNotificationsEnabled"] = $val;
         return $this;
     }
+
+    /**
+    * Gets the recommendationInsightSettings
+    *
+    * @return AccessReviewRecommendationInsightSetting|null The recommendationInsightSettings
+    */
+    public function getRecommendationInsightSettings()
+    {
+        if (array_key_exists("recommendationInsightSettings", $this->_propDict)) {
+            if (is_a($this->_propDict["recommendationInsightSettings"], "\Microsoft\Graph\Model\AccessReviewRecommendationInsightSetting") || is_null($this->_propDict["recommendationInsightSettings"])) {
+                return $this->_propDict["recommendationInsightSettings"];
+            } else {
+                $this->_propDict["recommendationInsightSettings"] = new AccessReviewRecommendationInsightSetting($this->_propDict["recommendationInsightSettings"]);
+                return $this->_propDict["recommendationInsightSettings"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the recommendationInsightSettings
+    *
+    * @param AccessReviewRecommendationInsightSetting $val The value to assign to the recommendationInsightSettings
+    *
+    * @return AccessReviewScheduleSettings The AccessReviewScheduleSettings
+    */
+    public function setRecommendationInsightSettings($val)
+    {
+        $this->_propDict["recommendationInsightSettings"] = $val;
+         return $this;
+    }
+
+    /**
+    * Gets the recommendationLookBackDuration
+    *
+    * @return \DateInterval|null The recommendationLookBackDuration
+    */
+    public function getRecommendationLookBackDuration()
+    {
+        if (array_key_exists("recommendationLookBackDuration", $this->_propDict)) {
+            if (is_a($this->_propDict["recommendationLookBackDuration"], "\DateInterval") || is_null($this->_propDict["recommendationLookBackDuration"])) {
+                return $this->_propDict["recommendationLookBackDuration"];
+            } else {
+                $this->_propDict["recommendationLookBackDuration"] = new \DateInterval($this->_propDict["recommendationLookBackDuration"]);
+                return $this->_propDict["recommendationLookBackDuration"];
+            }
+        }
+        return null;
+    }
+
+    /**
+    * Sets the recommendationLookBackDuration
+    *
+    * @param \DateInterval $val The value to assign to the recommendationLookBackDuration
+    *
+    * @return AccessReviewScheduleSettings The AccessReviewScheduleSettings
+    */
+    public function setRecommendationLookBackDuration($val)
+    {
+        $this->_propDict["recommendationLookBackDuration"] = $val;
+         return $this;
+    }
     /**
     * Gets the recommendationsEnabled
     * Indicates whether decision recommendations are enabled or disabled. NOTE: If the stageSettings of the accessReviewScheduleDefinition object is defined, its recommendationsEnabled setting will be used instead of the value of this property.

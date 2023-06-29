@@ -26,6 +26,7 @@ class RolesAssignedOutsidePrivilegedIdentityManagementAlertIncident extends Unif
 {
     /**
     * Gets the assigneeDisplayName
+    * Display name of the subject that the incident applies to.
     *
     * @return string|null The assigneeDisplayName
     */
@@ -40,6 +41,7 @@ class RolesAssignedOutsidePrivilegedIdentityManagementAlertIncident extends Unif
 
     /**
     * Sets the assigneeDisplayName
+    * Display name of the subject that the incident applies to.
     *
     * @param string $val The assigneeDisplayName
     *
@@ -53,6 +55,7 @@ class RolesAssignedOutsidePrivilegedIdentityManagementAlertIncident extends Unif
 
     /**
     * Gets the assigneeId
+    * The identifier of the subject that the incident applies to.
     *
     * @return string|null The assigneeId
     */
@@ -67,6 +70,7 @@ class RolesAssignedOutsidePrivilegedIdentityManagementAlertIncident extends Unif
 
     /**
     * Sets the assigneeId
+    * The identifier of the subject that the incident applies to.
     *
     * @param string $val The assigneeId
     *
@@ -80,6 +84,7 @@ class RolesAssignedOutsidePrivilegedIdentityManagementAlertIncident extends Unif
 
     /**
     * Gets the assigneeUserPrincipalName
+    * User principal name of the subject that the incident applies to. Applies to user principals.
     *
     * @return string|null The assigneeUserPrincipalName
     */
@@ -94,6 +99,7 @@ class RolesAssignedOutsidePrivilegedIdentityManagementAlertIncident extends Unif
 
     /**
     * Sets the assigneeUserPrincipalName
+    * User principal name of the subject that the incident applies to. Applies to user principals.
     *
     * @param string $val The assigneeUserPrincipalName
     *
@@ -138,6 +144,7 @@ class RolesAssignedOutsidePrivilegedIdentityManagementAlertIncident extends Unif
 
     /**
     * Gets the roleDefinitionId
+    * The identifier for the directory role definition that's in scope of this incident.
     *
     * @return string|null The roleDefinitionId
     */
@@ -152,6 +159,7 @@ class RolesAssignedOutsidePrivilegedIdentityManagementAlertIncident extends Unif
 
     /**
     * Sets the roleDefinitionId
+    * The identifier for the directory role definition that's in scope of this incident.
     *
     * @param string $val The roleDefinitionId
     *
@@ -165,6 +173,7 @@ class RolesAssignedOutsidePrivilegedIdentityManagementAlertIncident extends Unif
 
     /**
     * Gets the roleDisplayName
+    * The display name for the directory role.
     *
     * @return string|null The roleDisplayName
     */
@@ -179,6 +188,7 @@ class RolesAssignedOutsidePrivilegedIdentityManagementAlertIncident extends Unif
 
     /**
     * Sets the roleDisplayName
+    * The display name for the directory role.
     *
     * @param string $val The roleDisplayName
     *
@@ -192,6 +202,7 @@ class RolesAssignedOutsidePrivilegedIdentityManagementAlertIncident extends Unif
 
     /**
     * Gets the roleTemplateId
+    * The globally unique identifier for the directory role.
     *
     * @return string|null The roleTemplateId
     */
@@ -206,6 +217,7 @@ class RolesAssignedOutsidePrivilegedIdentityManagementAlertIncident extends Unif
 
     /**
     * Sets the roleTemplateId
+    * The globally unique identifier for the directory role.
     *
     * @param string $val The roleTemplateId
     *

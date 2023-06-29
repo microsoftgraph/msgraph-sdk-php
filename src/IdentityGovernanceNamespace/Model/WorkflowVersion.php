@@ -2,7 +2,7 @@
 /**
 * Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 * 
-* FileContentProperties File
+* WorkflowVersion File
 * PHP version 7
 *
 * @category  Library
@@ -11,9 +11,10 @@
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-namespace Beta\Microsoft\Graph\Model;
+namespace Microsoft\Graph\IdentityGovernanceNamespace\Model;
+
 /**
-* FileContentProperties class
+* WorkflowVersion class
 *
 * @category  Model
 * @package   Microsoft.Graph
@@ -21,32 +22,35 @@ namespace Beta\Microsoft\Graph\Model;
 * @license   https://opensource.org/licenses/MIT MIT License
 * @link      https://graph.microsoft.com
 */
-class FileContentProperties extends ContentProperties
+class WorkflowVersion extends WorkflowBase
 {
     /**
-    * Gets the isVisibleOnlyToOneDriveOwner
+    * Gets the versionNumber
+    * The version of the workflow.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
     *
-    * @return bool|null The isVisibleOnlyToOneDriveOwner
+    * @return int|null The versionNumber
     */
-    public function getIsVisibleOnlyToOneDriveOwner()
+    public function getVersionNumber()
     {
-        if (array_key_exists("isVisibleOnlyToOneDriveOwner", $this->_propDict)) {
-            return $this->_propDict["isVisibleOnlyToOneDriveOwner"];
+        if (array_key_exists("versionNumber", $this->_propDict)) {
+            return $this->_propDict["versionNumber"];
         } else {
             return null;
         }
     }
 
     /**
-    * Sets the isVisibleOnlyToOneDriveOwner
+    * Sets the versionNumber
+    * The version of the workflow.Supports $filter(lt, le, gt, ge, eq, ne) and $orderby.
     *
-    * @param bool $val The value of the isVisibleOnlyToOneDriveOwner
+    * @param int $val The versionNumber
     *
-    * @return FileContentProperties
+    * @return WorkflowVersion
     */
-    public function setIsVisibleOnlyToOneDriveOwner($val)
+    public function setVersionNumber($val)
     {
-        $this->_propDict["isVisibleOnlyToOneDriveOwner"] = $val;
+        $this->_propDict["versionNumber"] = intval($val);
         return $this;
     }
+
 }

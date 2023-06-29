@@ -113,7 +113,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
 
     /**
     * Gets the appActionIfAccountIsClockedOut
-    * Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time).
+    * Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time). Possible values are: block, wipe, warn.
     *
     * @return ManagedAppRemediationAction|null The appActionIfAccountIsClockedOut
     */
@@ -132,7 +132,7 @@ class DefaultManagedAppProtection extends ManagedAppProtection
 
     /**
     * Sets the appActionIfAccountIsClockedOut
-    * Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time).
+    * Defines a managed app behavior, either block or warn, if the user is clocked out (non-working time). Possible values are: block, wipe, warn.
     *
     * @param ManagedAppRemediationAction $val The appActionIfAccountIsClockedOut
     *

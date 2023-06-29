@@ -25,7 +25,7 @@ class ContentTypeOrder extends Entity
 {
     /**
     * Gets the default
-    * Whether this is the default Content Type
+    * Indicates whether this is the default content type
     *
     * @return bool|null The default
     */
@@ -40,7 +40,7 @@ class ContentTypeOrder extends Entity
 
     /**
     * Sets the default
-    * Whether this is the default Content Type
+    * Indicates whether this is the default content type
     *
     * @param bool $val The value of the default
     *
@@ -53,7 +53,7 @@ class ContentTypeOrder extends Entity
     }
     /**
     * Gets the position
-    * Specifies the position in which the Content Type appears in the selection UI.
+    * Specifies the position in which the content type appears in the selection UI.
     *
     * @return int|null The position
     */
@@ -68,7 +68,7 @@ class ContentTypeOrder extends Entity
 
     /**
     * Sets the position
-    * Specifies the position in which the Content Type appears in the selection UI.
+    * Specifies the position in which the content type appears in the selection UI.
     *
     * @param int $val The value of the position
     *

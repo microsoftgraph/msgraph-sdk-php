@@ -26,7 +26,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
 {
     /**
     * Gets the appReliabilityScore
-    * The user experience analytics device app reliability score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * Indicates a score calculated from application health data to indicate when a device is having problems running one or more applications. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @return float|null The appReliabilityScore
     */
@@ -41,7 +41,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
 
     /**
     * Sets the appReliabilityScore
-    * The user experience analytics device app reliability score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * Indicates a score calculated from application health data to indicate when a device is having problems running one or more applications. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @param float $val The appReliabilityScore
     *
@@ -55,7 +55,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
 
     /**
     * Gets the batteryHealthScore
-    * The user experience analytics device battery health score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * Indicates a calulated score indicating the health of the device's battery. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @return float|null The batteryHealthScore
     */
@@ -70,7 +70,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
 
     /**
     * Sets the batteryHealthScore
-    * The user experience analytics device battery health score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * Indicates a calulated score indicating the health of the device's battery. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @param float $val The batteryHealthScore
     *
@@ -84,7 +84,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
 
     /**
     * Gets the deviceName
-    * The user experience analytics device name.
+    * The name of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The deviceName
     */
@@ -99,7 +99,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
 
     /**
     * Sets the deviceName
-    * The user experience analytics device name.
+    * The name of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The deviceName
     *
@@ -113,7 +113,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
 
     /**
     * Gets the endpointAnalyticsScore
-    * The user experience analytics device score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * Indicates a weighted average of the various scores. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @return float|null The endpointAnalyticsScore
     */
@@ -128,7 +128,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
 
     /**
     * Sets the endpointAnalyticsScore
-    * The user experience analytics device score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * Indicates a weighted average of the various scores. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @param float $val The endpointAnalyticsScore
     *
@@ -142,7 +142,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
 
     /**
     * Gets the healthStatus
-    * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
+    * The health status of the device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. Unknown by default. Supports: $filter, $select, $OrderBy. Read-only. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
     *
     * @return UserExperienceAnalyticsHealthState|null The healthStatus
     */
@@ -161,7 +161,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
 
     /**
     * Sets the healthStatus
-    * The health state of the user experience analytics device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
+    * The health status of the device. Possible values are: unknown, insufficientData, needsAttention, meetingGoals. Unknown by default. Supports: $filter, $select, $OrderBy. Read-only. Possible values are: unknown, insufficientData, needsAttention, meetingGoals, unknownFutureValue.
     *
     * @param UserExperienceAnalyticsHealthState $val The healthStatus
     *
@@ -175,7 +175,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
 
     /**
     * Gets the manufacturer
-    * The user experience analytics device manufacturer.
+    * The manufacturer name of the device. Examples: Microsoft Corporation, HP, Lenovo. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The manufacturer
     */
@@ -190,7 +190,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
 
     /**
     * Sets the manufacturer
-    * The user experience analytics device manufacturer.
+    * The manufacturer name of the device. Examples: Microsoft Corporation, HP, Lenovo. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The manufacturer
     *
@@ -204,7 +204,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
 
     /**
     * Gets the model
-    * The user experience analytics device model.
+    * The model name of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The model
     */
@@ -219,7 +219,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
 
     /**
     * Sets the model
-    * The user experience analytics device model.
+    * The model name of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The model
     *
@@ -233,7 +233,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
 
     /**
     * Gets the startupPerformanceScore
-    * The user experience analytics device startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * Indicates a weighted average of boot score and logon score used for measuring startup performance. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @return float|null The startupPerformanceScore
     */
@@ -248,7 +248,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
 
     /**
     * Sets the startupPerformanceScore
-    * The user experience analytics device startup performance score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * Indicates a weighted average of boot score and logon score used for measuring startup performance. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @param float $val The startupPerformanceScore
     *
@@ -262,7 +262,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
 
     /**
     * Gets the workFromAnywhereScore
-    * The user experience analytics device work From anywhere score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * Indicates a weighted score of the work from anywhere on a device level. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @return float|null The workFromAnywhereScore
     */
@@ -277,7 +277,7 @@ class UserExperienceAnalyticsDeviceScores extends Entity
 
     /**
     * Sets the workFromAnywhereScore
-    * The user experience analytics device work From anywhere score. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
+    * Indicates a weighted score of the work from anywhere on a device level. Valid values range from 0-100. Value -1 means associated score is unavailable. A higher score indicates a healthier device. Read-only. Valid values -1.79769313486232E+308 to 1.79769313486232E+308
     *
     * @param float $val The workFromAnywhereScore
     *

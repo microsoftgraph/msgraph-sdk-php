@@ -26,6 +26,7 @@ class NoMfaOnRoleActivationAlertIncident extends UnifiedRoleManagementAlertIncid
 {
     /**
     * Gets the roleDisplayName
+    * The name of the Azure AD directory role.
     *
     * @return string|null The roleDisplayName
     */
@@ -40,6 +41,7 @@ class NoMfaOnRoleActivationAlertIncident extends UnifiedRoleManagementAlertIncid
 
     /**
     * Sets the roleDisplayName
+    * The name of the Azure AD directory role.
     *
     * @param string $val The roleDisplayName
     *
@@ -53,6 +55,7 @@ class NoMfaOnRoleActivationAlertIncident extends UnifiedRoleManagementAlertIncid
 
     /**
     * Gets the roleTemplateId
+    * The globally unique identifier for a directory role.
     *
     * @return string|null The roleTemplateId
     */
@@ -67,6 +70,7 @@ class NoMfaOnRoleActivationAlertIncident extends UnifiedRoleManagementAlertIncid
 
     /**
     * Sets the roleTemplateId
+    * The globally unique identifier for a directory role.
     *
     * @param string $val The roleTemplateId
     *

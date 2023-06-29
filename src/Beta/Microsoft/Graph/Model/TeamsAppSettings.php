@@ -82,4 +82,31 @@ class TeamsAppSettings extends Entity
         return $this;
     }
 
+    /**
+    * Gets the isUserPersonalScopeResourceSpecificConsentEnabled
+    *
+    * @return bool|null The isUserPersonalScopeResourceSpecificConsentEnabled
+    */
+    public function getIsUserPersonalScopeResourceSpecificConsentEnabled()
+    {
+        if (array_key_exists("isUserPersonalScopeResourceSpecificConsentEnabled", $this->_propDict)) {
+            return $this->_propDict["isUserPersonalScopeResourceSpecificConsentEnabled"];
+        } else {
+            return null;
+        }
+    }
+
+    /**
+    * Sets the isUserPersonalScopeResourceSpecificConsentEnabled
+    *
+    * @param bool $val The isUserPersonalScopeResourceSpecificConsentEnabled
+    *
+    * @return TeamsAppSettings
+    */
+    public function setIsUserPersonalScopeResourceSpecificConsentEnabled($val)
+    {
+        $this->_propDict["isUserPersonalScopeResourceSpecificConsentEnabled"] = boolval($val);
+        return $this;
+    }
+
 }

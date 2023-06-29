@@ -29,8 +29,8 @@ class IndicatorSource extends Enum
     /**
     * The Enum IndicatorSource
     */
-    const MICROSOFT_DEFENDER_THREAT_INTELLIGENCE = "microsoftDefenderThreatIntelligence";
-    const OPEN_SOURCE_INTELLIGENCE = "openSourceIntelligence";
+    const MICROSOFT = "microsoft";
+    const OSINT = "osint";
     const GRAPHPUBLIC = "public";
     const UNKNOWN_FUTURE_VALUE = "unknownFutureValue";
 }

@@ -26,7 +26,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
 {
     /**
     * Gets the appDisplayName
-    * The friendly name of the application for which the event occurred.
+    * The friendly name of the application for which the event occurred. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The appDisplayName
     */
@@ -41,7 +41,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
 
     /**
     * Sets the appDisplayName
-    * The friendly name of the application for which the event occurred.
+    * The friendly name of the application for which the event occurred. Possible values are: outlook.exe, excel.exe. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The appDisplayName
     *
@@ -55,7 +55,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
 
     /**
     * Gets the appPublisher
-    * The publisher of the application.
+    * The publisher of the application. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The appPublisher
     */
@@ -70,7 +70,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
 
     /**
     * Sets the appPublisher
-    * The publisher of the application.
+    * The publisher of the application. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The appPublisher
     *
@@ -84,7 +84,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
 
     /**
     * Gets the appVersion
-    * The version of the application.
+    * The version of the application. Possible values are: 1.0.0.1, 75.65.23.9. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The appVersion
     */
@@ -99,7 +99,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
 
     /**
     * Sets the appVersion
-    * The version of the application.
+    * The version of the application. Possible values are: 1.0.0.1, 75.65.23.9. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The appVersion
     *
@@ -113,7 +113,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
 
     /**
     * Gets the deviceDisplayName
-    * The name of the device.
+    * The name of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The deviceDisplayName
     */
@@ -128,7 +128,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
 
     /**
     * Sets the deviceDisplayName
-    * The name of the device.
+    * The name of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The deviceDisplayName
     *
@@ -142,7 +142,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
 
     /**
     * Gets the deviceId
-    * The id of the device.
+    * The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The deviceId
     */
@@ -157,7 +157,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
 
     /**
     * Sets the deviceId
-    * The id of the device.
+    * The Intune device id of the device. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The deviceId
     *
@@ -171,7 +171,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
 
     /**
     * Gets the eventDateTime
-    * The time the event occurred.
+    * The time the event occurred. The value cannot be modified and is automatically populated when the statistics are computed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
     *
     * @return \DateTime|null The eventDateTime
     */
@@ -190,7 +190,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
 
     /**
     * Sets the eventDateTime
-    * The time the event occurred.
+    * The time the event occurred. The value cannot be modified and is automatically populated when the statistics are computed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2022 would look like this: '2022-01-01T00:00:00Z'. Returned by default. Read-only.
     *
     * @param \DateTime $val The eventDateTime
     *
@@ -204,7 +204,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
 
     /**
     * Gets the eventType
-    * The type of the event.
+    * The type of the event. Supports: $select, $OrderBy. Read-only.
     *
     * @return string|null The eventType
     */
@@ -219,7 +219,7 @@ class UserExperienceAnalyticsAppHealthDevicePerformanceDetails extends Entity
 
     /**
     * Sets the eventType
-    * The type of the event.
+    * The type of the event. Supports: $select, $OrderBy. Read-only.
     *
     * @param string $val The eventType
     *

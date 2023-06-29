@@ -26,6 +26,7 @@ class RedundantAssignmentAlertConfiguration extends UnifiedRoleManagementAlertCo
 {
     /**
     * Gets the duration
+    * The number of days without activation to look back on from current timestamp.
     *
     * @return \DateInterval|null The duration
     */
@@ -44,6 +45,7 @@ class RedundantAssignmentAlertConfiguration extends UnifiedRoleManagementAlertCo
 
     /**
     * Sets the duration
+    * The number of days without activation to look back on from current timestamp.
     *
     * @param \DateInterval $val The duration
     *

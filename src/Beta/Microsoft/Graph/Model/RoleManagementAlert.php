@@ -27,6 +27,7 @@ class RoleManagementAlert extends Entity
 
      /**
      * Gets the alertConfigurations
+    * The various configurations of an alert for Azure AD roles. The configurations are pre-defined and cannot be created or deleted, but some of the configurations can be modified.
      *
      * @return array|null The alertConfigurations
      */
@@ -41,6 +42,7 @@ class RoleManagementAlert extends Entity
 
     /**
     * Sets the alertConfigurations
+    * The various configurations of an alert for Azure AD roles. The configurations are pre-defined and cannot be created or deleted, but some of the configurations can be modified.
     *
     * @param UnifiedRoleManagementAlertConfiguration[] $val The alertConfigurations
     *
@@ -55,6 +57,7 @@ class RoleManagementAlert extends Entity
 
      /**
      * Gets the alertDefinitions
+    * Defines an alert, its impact, and measures to mitigate or prevent it.
      *
      * @return array|null The alertDefinitions
      */
@@ -69,6 +72,7 @@ class RoleManagementAlert extends Entity
 
     /**
     * Sets the alertDefinitions
+    * Defines an alert, its impact, and measures to mitigate or prevent it.
     *
     * @param UnifiedRoleManagementAlertDefinition[] $val The alertDefinitions
     *
@@ -83,6 +87,7 @@ class RoleManagementAlert extends Entity
 
      /**
      * Gets the alerts
+    * Represents the alert entity.
      *
      * @return array|null The alerts
      */
@@ -97,6 +102,7 @@ class RoleManagementAlert extends Entity
 
     /**
     * Sets the alerts
+    * Represents the alert entity.
     *
     * @param UnifiedRoleManagementAlert[] $val The alerts
     *
@@ -111,6 +117,7 @@ class RoleManagementAlert extends Entity
 
      /**
      * Gets the operations
+    * Represents operations on resources that take a long time to complete and can run in the background until completion.
      *
      * @return array|null The operations
      */
@@ -125,6 +132,7 @@ class RoleManagementAlert extends Entity
 
     /**
     * Sets the operations
+    * Represents operations on resources that take a long time to complete and can run in the background until completion.
     *
     * @param LongRunningOperation[] $val The operations
     *

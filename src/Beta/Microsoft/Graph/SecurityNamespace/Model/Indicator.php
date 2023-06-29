@@ -26,7 +26,7 @@ class Indicator extends \Beta\Microsoft\Graph\Model\Entity
 {
     /**
     * Gets the source
-    * The source that provides this indicator. The possible values are: microsoftDefenderThreatIntelligence, openSourceIntelligence, public, unknownFutureValue.
+    * The source that provides this indicator. The possible values are: microsoft, osint, public, unknownFutureValue.
     *
     * @return IndicatorSource|null The source
     */
@@ -45,7 +45,7 @@ class Indicator extends \Beta\Microsoft\Graph\Model\Entity
 
     /**
     * Sets the source
-    * The source that provides this indicator. The possible values are: microsoftDefenderThreatIntelligence, openSourceIntelligence, public, unknownFutureValue.
+    * The source that provides this indicator. The possible values are: microsoft, osint, public, unknownFutureValue.
     *
     * @param IndicatorSource $val The source
     *
