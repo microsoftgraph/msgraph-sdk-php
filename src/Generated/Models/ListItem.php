@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ListItem extends BaseItem implements Parsable 
 {
@@ -30,7 +31,11 @@ class ListItem extends BaseItem implements Parsable
      * @return ItemAnalytics|null
     */
     public function getAnalytics(): ?ItemAnalytics {
-        return $this->getBackingStore()->get('analytics');
+        $val = $this->getBackingStore()->get('analytics');
+        if (is_null($val) || $val instanceof ItemAnalytics) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'analytics'");
     }
 
     /**
@@ -38,7 +43,11 @@ class ListItem extends BaseItem implements Parsable
      * @return ContentTypeInfo|null
     */
     public function getContentType(): ?ContentTypeInfo {
-        return $this->getBackingStore()->get('contentType');
+        $val = $this->getBackingStore()->get('contentType');
+        if (is_null($val) || $val instanceof ContentTypeInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentType'");
     }
 
     /**
@@ -46,7 +55,13 @@ class ListItem extends BaseItem implements Parsable
      * @return array<DocumentSetVersion>|null
     */
     public function getDocumentSetVersions(): ?array {
-        return $this->getBackingStore()->get('documentSetVersions');
+        $val = $this->getBackingStore()->get('documentSetVersions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DocumentSetVersion::class);
+            /** @var array<DocumentSetVersion>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'documentSetVersions'");
     }
 
     /**
@@ -54,12 +69,16 @@ class ListItem extends BaseItem implements Parsable
      * @return DriveItem|null
     */
     public function getDriveItem(): ?DriveItem {
-        return $this->getBackingStore()->get('driveItem');
+        $val = $this->getBackingStore()->get('driveItem');
+        if (is_null($val) || $val instanceof DriveItem) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'driveItem'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -79,7 +98,11 @@ class ListItem extends BaseItem implements Parsable
      * @return FieldValueSet|null
     */
     public function getFields(): ?FieldValueSet {
-        return $this->getBackingStore()->get('fields');
+        $val = $this->getBackingStore()->get('fields');
+        if (is_null($val) || $val instanceof FieldValueSet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fields'");
     }
 
     /**
@@ -87,7 +110,11 @@ class ListItem extends BaseItem implements Parsable
      * @return SharepointIds|null
     */
     public function getSharepointIds(): ?SharepointIds {
-        return $this->getBackingStore()->get('sharepointIds');
+        $val = $this->getBackingStore()->get('sharepointIds');
+        if (is_null($val) || $val instanceof SharepointIds) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sharepointIds'");
     }
 
     /**
@@ -95,7 +122,13 @@ class ListItem extends BaseItem implements Parsable
      * @return array<ListItemVersion>|null
     */
     public function getVersions(): ?array {
-        return $this->getBackingStore()->get('versions');
+        $val = $this->getBackingStore()->get('versions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ListItemVersion::class);
+            /** @var array<ListItemVersion>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'versions'");
     }
 
     /**

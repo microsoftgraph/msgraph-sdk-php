@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 /**
  * Contains content properties for a specific app version. Each mobileAppContent can have multiple mobileAppContentFile.
@@ -32,12 +33,18 @@ class MobileAppContent extends Entity implements Parsable
      * @return array<MobileContainedApp>|null
     */
     public function getContainedApps(): ?array {
-        return $this->getBackingStore()->get('containedApps');
+        $val = $this->getBackingStore()->get('containedApps');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, MobileContainedApp::class);
+            /** @var array<MobileContainedApp>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'containedApps'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -52,7 +59,13 @@ class MobileAppContent extends Entity implements Parsable
      * @return array<MobileAppContentFile>|null
     */
     public function getFiles(): ?array {
-        return $this->getBackingStore()->get('files');
+        $val = $this->getBackingStore()->get('files');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, MobileAppContentFile::class);
+            /** @var array<MobileAppContentFile>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'files'");
     }
 
     /**

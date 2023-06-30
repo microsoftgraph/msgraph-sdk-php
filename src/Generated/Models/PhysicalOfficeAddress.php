@@ -18,7 +18,7 @@ class PhysicalOfficeAddress implements AdditionalDataHolder, BackedModel, Parsab
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new PhysicalOfficeAddress and sets the default values.
+     * Instantiates a new physicalOfficeAddress and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -39,7 +39,12 @@ class PhysicalOfficeAddress implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +60,11 @@ class PhysicalOfficeAddress implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getCity(): ?string {
-        return $this->getBackingStore()->get('city');
+        $val = $this->getBackingStore()->get('city');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'city'");
     }
 
     /**
@@ -63,12 +72,16 @@ class PhysicalOfficeAddress implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getCountryOrRegion(): ?string {
-        return $this->getBackingStore()->get('countryOrRegion');
+        $val = $this->getBackingStore()->get('countryOrRegion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'countryOrRegion'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -88,7 +101,11 @@ class PhysicalOfficeAddress implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -96,7 +113,11 @@ class PhysicalOfficeAddress implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getOfficeLocation(): ?string {
-        return $this->getBackingStore()->get('officeLocation');
+        $val = $this->getBackingStore()->get('officeLocation');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'officeLocation'");
     }
 
     /**
@@ -104,7 +125,11 @@ class PhysicalOfficeAddress implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getPostalCode(): ?string {
-        return $this->getBackingStore()->get('postalCode');
+        $val = $this->getBackingStore()->get('postalCode');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'postalCode'");
     }
 
     /**
@@ -112,7 +137,11 @@ class PhysicalOfficeAddress implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getState(): ?string {
-        return $this->getBackingStore()->get('state');
+        $val = $this->getBackingStore()->get('state');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
     }
 
     /**
@@ -120,7 +149,11 @@ class PhysicalOfficeAddress implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getStreet(): ?string {
-        return $this->getBackingStore()->get('street');
+        $val = $this->getBackingStore()->get('street');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'street'");
     }
 
     /**

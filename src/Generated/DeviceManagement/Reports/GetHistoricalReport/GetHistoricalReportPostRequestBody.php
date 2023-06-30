@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class GetHistoricalReportPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class GetHistoricalReportPostRequestBody implements AdditionalDataHolder, Backed
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,17 +58,38 @@ class GetHistoricalReportPostRequestBody implements AdditionalDataHolder, Backed
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
             'filter' => fn(ParseNode $n) => $o->setFilter($n->getStringValue()),
-            'groupBy' => fn(ParseNode $n) => $o->setGroupBy($n->getCollectionOfPrimitiveValues()),
+            'groupBy' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setGroupBy($val);
+            },
             'name' => fn(ParseNode $n) => $o->setName($n->getStringValue()),
-            'orderBy' => fn(ParseNode $n) => $o->setOrderBy($n->getCollectionOfPrimitiveValues()),
+            'orderBy' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setOrderBy($val);
+            },
             'search' => fn(ParseNode $n) => $o->setSearch($n->getStringValue()),
-            'select' => fn(ParseNode $n) => $o->setSelect($n->getCollectionOfPrimitiveValues()),
+            'select' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setSelect($val);
+            },
             'skip' => fn(ParseNode $n) => $o->setSkip($n->getIntegerValue()),
             'top' => fn(ParseNode $n) => $o->setTop($n->getIntegerValue()),
         ];
@@ -73,7 +100,11 @@ class GetHistoricalReportPostRequestBody implements AdditionalDataHolder, Backed
      * @return string|null
     */
     public function getFilter(): ?string {
-        return $this->getBackingStore()->get('filter');
+        $val = $this->getBackingStore()->get('filter');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'filter'");
     }
 
     /**
@@ -81,7 +112,13 @@ class GetHistoricalReportPostRequestBody implements AdditionalDataHolder, Backed
      * @return array<string>|null
     */
     public function getGroupBy(): ?array {
-        return $this->getBackingStore()->get('groupBy');
+        $val = $this->getBackingStore()->get('groupBy');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'groupBy'");
     }
 
     /**
@@ -89,7 +126,11 @@ class GetHistoricalReportPostRequestBody implements AdditionalDataHolder, Backed
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -97,7 +138,13 @@ class GetHistoricalReportPostRequestBody implements AdditionalDataHolder, Backed
      * @return array<string>|null
     */
     public function getOrderBy(): ?array {
-        return $this->getBackingStore()->get('orderBy');
+        $val = $this->getBackingStore()->get('orderBy');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'orderBy'");
     }
 
     /**
@@ -105,7 +152,11 @@ class GetHistoricalReportPostRequestBody implements AdditionalDataHolder, Backed
      * @return string|null
     */
     public function getSearch(): ?string {
-        return $this->getBackingStore()->get('search');
+        $val = $this->getBackingStore()->get('search');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'search'");
     }
 
     /**
@@ -113,7 +164,13 @@ class GetHistoricalReportPostRequestBody implements AdditionalDataHolder, Backed
      * @return array<string>|null
     */
     public function getSelect(): ?array {
-        return $this->getBackingStore()->get('select');
+        $val = $this->getBackingStore()->get('select');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'select'");
     }
 
     /**
@@ -121,7 +178,11 @@ class GetHistoricalReportPostRequestBody implements AdditionalDataHolder, Backed
      * @return int|null
     */
     public function getSkip(): ?int {
-        return $this->getBackingStore()->get('skip');
+        $val = $this->getBackingStore()->get('skip');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'skip'");
     }
 
     /**
@@ -129,7 +190,11 @@ class GetHistoricalReportPostRequestBody implements AdditionalDataHolder, Backed
      * @return int|null
     */
     public function getTop(): ?int {
-        return $this->getBackingStore()->get('top');
+        $val = $this->getBackingStore()->get('top');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'top'");
     }
 
     /**

@@ -40,7 +40,12 @@ class CumPrincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,12 +61,16 @@ class CumPrincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @return Json|null
     */
     public function getEndPeriod(): ?Json {
-        return $this->getBackingStore()->get('endPeriod');
+        $val = $this->getBackingStore()->get('endPeriod');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'endPeriod'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -80,7 +89,11 @@ class CumPrincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @return Json|null
     */
     public function getNper(): ?Json {
-        return $this->getBackingStore()->get('nper');
+        $val = $this->getBackingStore()->get('nper');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'nper'");
     }
 
     /**
@@ -88,7 +101,11 @@ class CumPrincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @return Json|null
     */
     public function getPv(): ?Json {
-        return $this->getBackingStore()->get('pv');
+        $val = $this->getBackingStore()->get('pv');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'pv'");
     }
 
     /**
@@ -96,7 +113,11 @@ class CumPrincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @return Json|null
     */
     public function getRate(): ?Json {
-        return $this->getBackingStore()->get('rate');
+        $val = $this->getBackingStore()->get('rate');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rate'");
     }
 
     /**
@@ -104,7 +125,11 @@ class CumPrincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @return Json|null
     */
     public function getStartPeriod(): ?Json {
-        return $this->getBackingStore()->get('startPeriod');
+        $val = $this->getBackingStore()->get('startPeriod');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'startPeriod'");
     }
 
     /**
@@ -112,7 +137,11 @@ class CumPrincPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @return Json|null
     */
     public function getType(): ?Json {
-        return $this->getBackingStore()->get('type');
+        $val = $this->getBackingStore()->get('type');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
     }
 
     /**

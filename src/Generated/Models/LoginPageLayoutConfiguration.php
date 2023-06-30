@@ -39,7 +39,12 @@ class LoginPageLayoutConfiguration implements AdditionalDataHolder, BackedModel,
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +57,7 @@ class LoginPageLayoutConfiguration implements AdditionalDataHolder, BackedModel,
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -69,7 +74,11 @@ class LoginPageLayoutConfiguration implements AdditionalDataHolder, BackedModel,
      * @return bool|null
     */
     public function getIsFooterShown(): ?bool {
-        return $this->getBackingStore()->get('isFooterShown');
+        $val = $this->getBackingStore()->get('isFooterShown');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isFooterShown'");
     }
 
     /**
@@ -77,7 +86,11 @@ class LoginPageLayoutConfiguration implements AdditionalDataHolder, BackedModel,
      * @return bool|null
     */
     public function getIsHeaderShown(): ?bool {
-        return $this->getBackingStore()->get('isHeaderShown');
+        $val = $this->getBackingStore()->get('isHeaderShown');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isHeaderShown'");
     }
 
     /**
@@ -85,7 +98,11 @@ class LoginPageLayoutConfiguration implements AdditionalDataHolder, BackedModel,
      * @return LayoutTemplateType|null
     */
     public function getLayoutTemplateType(): ?LayoutTemplateType {
-        return $this->getBackingStore()->get('layoutTemplateType');
+        $val = $this->getBackingStore()->get('layoutTemplateType');
+        if (is_null($val) || $val instanceof LayoutTemplateType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'layoutTemplateType'");
     }
 
     /**
@@ -93,7 +110,11 @@ class LoginPageLayoutConfiguration implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

@@ -29,7 +29,11 @@ class AuthenticationFlowsPolicy extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -37,12 +41,16 @@ class AuthenticationFlowsPolicy extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -58,7 +66,11 @@ class AuthenticationFlowsPolicy extends Entity implements Parsable
      * @return SelfServiceSignUpAuthenticationFlowConfiguration|null
     */
     public function getSelfServiceSignUp(): ?SelfServiceSignUpAuthenticationFlowConfiguration {
-        return $this->getBackingStore()->get('selfServiceSignUp');
+        $val = $this->getBackingStore()->get('selfServiceSignUp');
+        if (is_null($val) || $val instanceof SelfServiceSignUpAuthenticationFlowConfiguration) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'selfServiceSignUp'");
     }
 
     /**

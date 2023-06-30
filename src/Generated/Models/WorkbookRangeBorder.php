@@ -29,12 +29,16 @@ class WorkbookRangeBorder extends Entity implements Parsable
      * @return string|null
     */
     public function getColor(): ?string {
-        return $this->getBackingStore()->get('color');
+        $val = $this->getBackingStore()->get('color');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'color'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -51,7 +55,11 @@ class WorkbookRangeBorder extends Entity implements Parsable
      * @return string|null
     */
     public function getSideIndex(): ?string {
-        return $this->getBackingStore()->get('sideIndex');
+        $val = $this->getBackingStore()->get('sideIndex');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sideIndex'");
     }
 
     /**
@@ -59,7 +67,11 @@ class WorkbookRangeBorder extends Entity implements Parsable
      * @return string|null
     */
     public function getStyle(): ?string {
-        return $this->getBackingStore()->get('style');
+        $val = $this->getBackingStore()->get('style');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'style'");
     }
 
     /**
@@ -67,7 +79,11 @@ class WorkbookRangeBorder extends Entity implements Parsable
      * @return string|null
     */
     public function getWeight(): ?string {
-        return $this->getBackingStore()->get('weight');
+        $val = $this->getBackingStore()->get('weight');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'weight'");
     }
 
     /**

@@ -41,7 +41,12 @@ class AddKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -54,7 +59,7 @@ class AddKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -70,7 +75,11 @@ class AddKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return KeyCredential|null
     */
     public function getKeyCredential(): ?KeyCredential {
-        return $this->getBackingStore()->get('keyCredential');
+        $val = $this->getBackingStore()->get('keyCredential');
+        if (is_null($val) || $val instanceof KeyCredential) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'keyCredential'");
     }
 
     /**
@@ -78,7 +87,11 @@ class AddKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return PasswordCredential|null
     */
     public function getPasswordCredential(): ?PasswordCredential {
-        return $this->getBackingStore()->get('passwordCredential');
+        $val = $this->getBackingStore()->get('passwordCredential');
+        if (is_null($val) || $val instanceof PasswordCredential) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordCredential'");
     }
 
     /**
@@ -86,7 +99,11 @@ class AddKeyPostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getProof(): ?string {
-        return $this->getBackingStore()->get('proof');
+        $val = $this->getBackingStore()->get('proof');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'proof'");
     }
 
     /**

@@ -29,7 +29,11 @@ class OnPremisesDirectorySynchronization extends Entity implements Parsable
      * @return OnPremisesDirectorySynchronizationConfiguration|null
     */
     public function getConfiguration(): ?OnPremisesDirectorySynchronizationConfiguration {
-        return $this->getBackingStore()->get('configuration');
+        $val = $this->getBackingStore()->get('configuration');
+        if (is_null($val) || $val instanceof OnPremisesDirectorySynchronizationConfiguration) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'configuration'");
     }
 
     /**
@@ -37,12 +41,16 @@ class OnPremisesDirectorySynchronization extends Entity implements Parsable
      * @return OnPremisesDirectorySynchronizationFeature|null
     */
     public function getFeatures(): ?OnPremisesDirectorySynchronizationFeature {
-        return $this->getBackingStore()->get('features');
+        $val = $this->getBackingStore()->get('features');
+        if (is_null($val) || $val instanceof OnPremisesDirectorySynchronizationFeature) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'features'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

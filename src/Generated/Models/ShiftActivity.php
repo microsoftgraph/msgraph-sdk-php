@@ -40,7 +40,12 @@ class ShiftActivity implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,7 +61,11 @@ class ShiftActivity implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getCode(): ?string {
-        return $this->getBackingStore()->get('code');
+        $val = $this->getBackingStore()->get('code');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'code'");
     }
 
     /**
@@ -64,7 +73,11 @@ class ShiftActivity implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
@@ -72,12 +85,16 @@ class ShiftActivity implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('endDateTime');
+        $val = $this->getBackingStore()->get('endDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'endDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -97,7 +114,11 @@ class ShiftActivity implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getIsPaid(): ?bool {
-        return $this->getBackingStore()->get('isPaid');
+        $val = $this->getBackingStore()->get('isPaid');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isPaid'");
     }
 
     /**
@@ -105,7 +126,11 @@ class ShiftActivity implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -113,7 +138,11 @@ class ShiftActivity implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('startDateTime');
+        $val = $this->getBackingStore()->get('startDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'startDateTime'");
     }
 
     /**
@@ -121,7 +150,11 @@ class ShiftActivity implements AdditionalDataHolder, BackedModel, Parsable
      * @return ScheduleEntityTheme|null
     */
     public function getTheme(): ?ScheduleEntityTheme {
-        return $this->getBackingStore()->get('theme');
+        $val = $this->getBackingStore()->get('theme');
+        if (is_null($val) || $val instanceof ScheduleEntityTheme) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'theme'");
     }
 
     /**

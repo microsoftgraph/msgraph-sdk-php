@@ -39,7 +39,12 @@ class SecurityVendorInformation implements AdditionalDataHolder, BackedModel, Pa
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +57,7 @@ class SecurityVendorInformation implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -70,7 +75,11 @@ class SecurityVendorInformation implements AdditionalDataHolder, BackedModel, Pa
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -78,7 +87,11 @@ class SecurityVendorInformation implements AdditionalDataHolder, BackedModel, Pa
      * @return string|null
     */
     public function getProvider(): ?string {
-        return $this->getBackingStore()->get('provider');
+        $val = $this->getBackingStore()->get('provider');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'provider'");
     }
 
     /**
@@ -86,7 +99,11 @@ class SecurityVendorInformation implements AdditionalDataHolder, BackedModel, Pa
      * @return string|null
     */
     public function getProviderVersion(): ?string {
-        return $this->getBackingStore()->get('providerVersion');
+        $val = $this->getBackingStore()->get('providerVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'providerVersion'");
     }
 
     /**
@@ -94,7 +111,11 @@ class SecurityVendorInformation implements AdditionalDataHolder, BackedModel, Pa
      * @return string|null
     */
     public function getSubProvider(): ?string {
-        return $this->getBackingStore()->get('subProvider');
+        $val = $this->getBackingStore()->get('subProvider');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'subProvider'");
     }
 
     /**
@@ -102,7 +123,11 @@ class SecurityVendorInformation implements AdditionalDataHolder, BackedModel, Pa
      * @return string|null
     */
     public function getVendor(): ?string {
-        return $this->getBackingStore()->get('vendor');
+        $val = $this->getBackingStore()->get('vendor');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'vendor'");
     }
 
     /**

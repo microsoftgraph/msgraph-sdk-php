@@ -39,7 +39,12 @@ class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +60,11 @@ class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getBrowser(): ?string {
-        return $this->getBackingStore()->get('browser');
+        $val = $this->getBackingStore()->get('browser');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'browser'");
     }
 
     /**
@@ -63,7 +72,11 @@ class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getDeviceId(): ?string {
-        return $this->getBackingStore()->get('deviceId');
+        $val = $this->getBackingStore()->get('deviceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceId'");
     }
 
     /**
@@ -71,12 +84,16 @@ class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -97,7 +114,11 @@ class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getIsCompliant(): ?bool {
-        return $this->getBackingStore()->get('isCompliant');
+        $val = $this->getBackingStore()->get('isCompliant');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isCompliant'");
     }
 
     /**
@@ -105,7 +126,11 @@ class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getIsManaged(): ?bool {
-        return $this->getBackingStore()->get('isManaged');
+        $val = $this->getBackingStore()->get('isManaged');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isManaged'");
     }
 
     /**
@@ -113,7 +138,11 @@ class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -121,7 +150,11 @@ class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOperatingSystem(): ?string {
-        return $this->getBackingStore()->get('operatingSystem');
+        $val = $this->getBackingStore()->get('operatingSystem');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operatingSystem'");
     }
 
     /**
@@ -129,7 +162,11 @@ class DeviceDetail implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getTrustType(): ?string {
-        return $this->getBackingStore()->get('trustType');
+        $val = $this->getBackingStore()->get('trustType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'trustType'");
     }
 
     /**

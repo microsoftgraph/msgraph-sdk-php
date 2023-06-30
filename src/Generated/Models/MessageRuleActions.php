@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +53,13 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string>|null
     */
     public function getAssignCategories(): ?array {
-        return $this->getBackingStore()->get('assignCategories');
+        $val = $this->getBackingStore()->get('assignCategories');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignCategories'");
     }
 
     /**
@@ -63,7 +75,11 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getCopyToFolder(): ?string {
-        return $this->getBackingStore()->get('copyToFolder');
+        $val = $this->getBackingStore()->get('copyToFolder');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'copyToFolder'");
     }
 
     /**
@@ -71,17 +87,28 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getDelete(): ?bool {
-        return $this->getBackingStore()->get('delete');
+        $val = $this->getBackingStore()->get('delete');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'delete'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'assignCategories' => fn(ParseNode $n) => $o->setAssignCategories($n->getCollectionOfPrimitiveValues()),
+            'assignCategories' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setAssignCategories($val);
+            },
             'copyToFolder' => fn(ParseNode $n) => $o->setCopyToFolder($n->getStringValue()),
             'delete' => fn(ParseNode $n) => $o->setDelete($n->getBooleanValue()),
             'forwardAsAttachmentTo' => fn(ParseNode $n) => $o->setForwardAsAttachmentTo($n->getCollectionOfObjectValues([Recipient::class, 'createFromDiscriminatorValue'])),
@@ -101,7 +128,13 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<Recipient>|null
     */
     public function getForwardAsAttachmentTo(): ?array {
-        return $this->getBackingStore()->get('forwardAsAttachmentTo');
+        $val = $this->getBackingStore()->get('forwardAsAttachmentTo');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Recipient::class);
+            /** @var array<Recipient>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'forwardAsAttachmentTo'");
     }
 
     /**
@@ -109,7 +142,13 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<Recipient>|null
     */
     public function getForwardTo(): ?array {
-        return $this->getBackingStore()->get('forwardTo');
+        $val = $this->getBackingStore()->get('forwardTo');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Recipient::class);
+            /** @var array<Recipient>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'forwardTo'");
     }
 
     /**
@@ -117,7 +156,11 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getMarkAsRead(): ?bool {
-        return $this->getBackingStore()->get('markAsRead');
+        $val = $this->getBackingStore()->get('markAsRead');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'markAsRead'");
     }
 
     /**
@@ -125,7 +168,11 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
      * @return Importance|null
     */
     public function getMarkImportance(): ?Importance {
-        return $this->getBackingStore()->get('markImportance');
+        $val = $this->getBackingStore()->get('markImportance');
+        if (is_null($val) || $val instanceof Importance) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'markImportance'");
     }
 
     /**
@@ -133,7 +180,11 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getMoveToFolder(): ?string {
-        return $this->getBackingStore()->get('moveToFolder');
+        $val = $this->getBackingStore()->get('moveToFolder');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'moveToFolder'");
     }
 
     /**
@@ -141,7 +192,11 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -149,7 +204,11 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getPermanentDelete(): ?bool {
-        return $this->getBackingStore()->get('permanentDelete');
+        $val = $this->getBackingStore()->get('permanentDelete');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'permanentDelete'");
     }
 
     /**
@@ -157,7 +216,13 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<Recipient>|null
     */
     public function getRedirectTo(): ?array {
-        return $this->getBackingStore()->get('redirectTo');
+        $val = $this->getBackingStore()->get('redirectTo');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Recipient::class);
+            /** @var array<Recipient>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'redirectTo'");
     }
 
     /**
@@ -165,7 +230,11 @@ class MessageRuleActions implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getStopProcessingRules(): ?bool {
-        return $this->getBackingStore()->get('stopProcessingRules');
+        $val = $this->getBackingStore()->get('stopProcessingRules');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'stopProcessingRules'");
     }
 
     /**

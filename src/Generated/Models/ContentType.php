@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ContentType extends Entity implements Parsable 
 {
@@ -29,7 +30,13 @@ class ContentType extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getAssociatedHubsUrls(): ?array {
-        return $this->getBackingStore()->get('associatedHubsUrls');
+        $val = $this->getBackingStore()->get('associatedHubsUrls');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'associatedHubsUrls'");
     }
 
     /**
@@ -37,7 +44,11 @@ class ContentType extends Entity implements Parsable
      * @return ContentType|null
     */
     public function getBase(): ?ContentType {
-        return $this->getBackingStore()->get('base');
+        $val = $this->getBackingStore()->get('base');
+        if (is_null($val) || $val instanceof ContentType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'base'");
     }
 
     /**
@@ -45,7 +56,13 @@ class ContentType extends Entity implements Parsable
      * @return array<ContentType>|null
     */
     public function getBaseTypes(): ?array {
-        return $this->getBackingStore()->get('baseTypes');
+        $val = $this->getBackingStore()->get('baseTypes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ContentType::class);
+            /** @var array<ContentType>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'baseTypes'");
     }
 
     /**
@@ -53,7 +70,13 @@ class ContentType extends Entity implements Parsable
      * @return array<ColumnLink>|null
     */
     public function getColumnLinks(): ?array {
-        return $this->getBackingStore()->get('columnLinks');
+        $val = $this->getBackingStore()->get('columnLinks');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ColumnLink::class);
+            /** @var array<ColumnLink>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'columnLinks'");
     }
 
     /**
@@ -61,7 +84,13 @@ class ContentType extends Entity implements Parsable
      * @return array<ColumnDefinition>|null
     */
     public function getColumnPositions(): ?array {
-        return $this->getBackingStore()->get('columnPositions');
+        $val = $this->getBackingStore()->get('columnPositions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ColumnDefinition::class);
+            /** @var array<ColumnDefinition>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'columnPositions'");
     }
 
     /**
@@ -69,7 +98,13 @@ class ContentType extends Entity implements Parsable
      * @return array<ColumnDefinition>|null
     */
     public function getColumns(): ?array {
-        return $this->getBackingStore()->get('columns');
+        $val = $this->getBackingStore()->get('columns');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ColumnDefinition::class);
+            /** @var array<ColumnDefinition>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'columns'");
     }
 
     /**
@@ -77,7 +112,11 @@ class ContentType extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -85,7 +124,11 @@ class ContentType extends Entity implements Parsable
      * @return DocumentSet|null
     */
     public function getDocumentSet(): ?DocumentSet {
-        return $this->getBackingStore()->get('documentSet');
+        $val = $this->getBackingStore()->get('documentSet');
+        if (is_null($val) || $val instanceof DocumentSet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'documentSet'");
     }
 
     /**
@@ -93,17 +136,28 @@ class ContentType extends Entity implements Parsable
      * @return DocumentSetContent|null
     */
     public function getDocumentTemplate(): ?DocumentSetContent {
-        return $this->getBackingStore()->get('documentTemplate');
+        $val = $this->getBackingStore()->get('documentTemplate');
+        if (is_null($val) || $val instanceof DocumentSetContent) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'documentTemplate'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'associatedHubsUrls' => fn(ParseNode $n) => $o->setAssociatedHubsUrls($n->getCollectionOfPrimitiveValues()),
+            'associatedHubsUrls' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setAssociatedHubsUrls($val);
+            },
             'base' => fn(ParseNode $n) => $o->setBase($n->getObjectValue([ContentType::class, 'createFromDiscriminatorValue'])),
             'baseTypes' => fn(ParseNode $n) => $o->setBaseTypes($n->getCollectionOfObjectValues([ContentType::class, 'createFromDiscriminatorValue'])),
             'columnLinks' => fn(ParseNode $n) => $o->setColumnLinks($n->getCollectionOfObjectValues([ColumnLink::class, 'createFromDiscriminatorValue'])),
@@ -130,7 +184,11 @@ class ContentType extends Entity implements Parsable
      * @return string|null
     */
     public function getGroup(): ?string {
-        return $this->getBackingStore()->get('group');
+        $val = $this->getBackingStore()->get('group');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'group'");
     }
 
     /**
@@ -138,7 +196,11 @@ class ContentType extends Entity implements Parsable
      * @return bool|null
     */
     public function getHidden(): ?bool {
-        return $this->getBackingStore()->get('hidden');
+        $val = $this->getBackingStore()->get('hidden');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hidden'");
     }
 
     /**
@@ -146,7 +208,11 @@ class ContentType extends Entity implements Parsable
      * @return ItemReference|null
     */
     public function getInheritedFrom(): ?ItemReference {
-        return $this->getBackingStore()->get('inheritedFrom');
+        $val = $this->getBackingStore()->get('inheritedFrom');
+        if (is_null($val) || $val instanceof ItemReference) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'inheritedFrom'");
     }
 
     /**
@@ -154,7 +220,11 @@ class ContentType extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsBuiltIn(): ?bool {
-        return $this->getBackingStore()->get('isBuiltIn');
+        $val = $this->getBackingStore()->get('isBuiltIn');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isBuiltIn'");
     }
 
     /**
@@ -162,7 +232,11 @@ class ContentType extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -170,7 +244,11 @@ class ContentType extends Entity implements Parsable
      * @return ContentTypeOrder|null
     */
     public function getOrder(): ?ContentTypeOrder {
-        return $this->getBackingStore()->get('order');
+        $val = $this->getBackingStore()->get('order');
+        if (is_null($val) || $val instanceof ContentTypeOrder) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'order'");
     }
 
     /**
@@ -178,7 +256,11 @@ class ContentType extends Entity implements Parsable
      * @return string|null
     */
     public function getParentId(): ?string {
-        return $this->getBackingStore()->get('parentId');
+        $val = $this->getBackingStore()->get('parentId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'parentId'");
     }
 
     /**
@@ -186,7 +268,11 @@ class ContentType extends Entity implements Parsable
      * @return bool|null
     */
     public function getPropagateChanges(): ?bool {
-        return $this->getBackingStore()->get('propagateChanges');
+        $val = $this->getBackingStore()->get('propagateChanges');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'propagateChanges'");
     }
 
     /**
@@ -194,7 +280,11 @@ class ContentType extends Entity implements Parsable
      * @return bool|null
     */
     public function getReadOnly(): ?bool {
-        return $this->getBackingStore()->get('readOnly');
+        $val = $this->getBackingStore()->get('readOnly');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'readOnly'");
     }
 
     /**
@@ -202,7 +292,11 @@ class ContentType extends Entity implements Parsable
      * @return bool|null
     */
     public function getSealed(): ?bool {
-        return $this->getBackingStore()->get('sealed');
+        $val = $this->getBackingStore()->get('sealed');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sealed'");
     }
 
     /**

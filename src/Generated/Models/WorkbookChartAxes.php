@@ -29,12 +29,16 @@ class WorkbookChartAxes extends Entity implements Parsable
      * @return WorkbookChartAxis|null
     */
     public function getCategoryAxis(): ?WorkbookChartAxis {
-        return $this->getBackingStore()->get('categoryAxis');
+        $val = $this->getBackingStore()->get('categoryAxis');
+        if (is_null($val) || $val instanceof WorkbookChartAxis) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'categoryAxis'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -50,7 +54,11 @@ class WorkbookChartAxes extends Entity implements Parsable
      * @return WorkbookChartAxis|null
     */
     public function getSeriesAxis(): ?WorkbookChartAxis {
-        return $this->getBackingStore()->get('seriesAxis');
+        $val = $this->getBackingStore()->get('seriesAxis');
+        if (is_null($val) || $val instanceof WorkbookChartAxis) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'seriesAxis'");
     }
 
     /**
@@ -58,7 +66,11 @@ class WorkbookChartAxes extends Entity implements Parsable
      * @return WorkbookChartAxis|null
     */
     public function getValueAxis(): ?WorkbookChartAxis {
-        return $this->getBackingStore()->get('valueAxis');
+        $val = $this->getBackingStore()->get('valueAxis');
+        if (is_null($val) || $val instanceof WorkbookChartAxis) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'valueAxis'");
     }
 
     /**

@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AndroidManagedAppProtection extends TargetedManagedAppProtection implements Parsable 
 {
@@ -30,7 +31,13 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
      * @return array<ManagedMobileApp>|null
     */
     public function getApps(): ?array {
-        return $this->getBackingStore()->get('apps');
+        $val = $this->getBackingStore()->get('apps');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ManagedMobileApp::class);
+            /** @var array<ManagedMobileApp>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'apps'");
     }
 
     /**
@@ -38,7 +45,11 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
      * @return string|null
     */
     public function getCustomBrowserDisplayName(): ?string {
-        return $this->getBackingStore()->get('customBrowserDisplayName');
+        $val = $this->getBackingStore()->get('customBrowserDisplayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customBrowserDisplayName'");
     }
 
     /**
@@ -46,7 +57,11 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
      * @return string|null
     */
     public function getCustomBrowserPackageId(): ?string {
-        return $this->getBackingStore()->get('customBrowserPackageId');
+        $val = $this->getBackingStore()->get('customBrowserPackageId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customBrowserPackageId'");
     }
 
     /**
@@ -54,7 +69,11 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
      * @return int|null
     */
     public function getDeployedAppCount(): ?int {
-        return $this->getBackingStore()->get('deployedAppCount');
+        $val = $this->getBackingStore()->get('deployedAppCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deployedAppCount'");
     }
 
     /**
@@ -62,7 +81,11 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
      * @return ManagedAppPolicyDeploymentSummary|null
     */
     public function getDeploymentSummary(): ?ManagedAppPolicyDeploymentSummary {
-        return $this->getBackingStore()->get('deploymentSummary');
+        $val = $this->getBackingStore()->get('deploymentSummary');
+        if (is_null($val) || $val instanceof ManagedAppPolicyDeploymentSummary) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deploymentSummary'");
     }
 
     /**
@@ -70,7 +93,11 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
      * @return bool|null
     */
     public function getDisableAppEncryptionIfDeviceEncryptionIsEnabled(): ?bool {
-        return $this->getBackingStore()->get('disableAppEncryptionIfDeviceEncryptionIsEnabled');
+        $val = $this->getBackingStore()->get('disableAppEncryptionIfDeviceEncryptionIsEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'disableAppEncryptionIfDeviceEncryptionIsEnabled'");
     }
 
     /**
@@ -78,12 +105,16 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
      * @return bool|null
     */
     public function getEncryptAppData(): ?bool {
-        return $this->getBackingStore()->get('encryptAppData');
+        $val = $this->getBackingStore()->get('encryptAppData');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'encryptAppData'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -106,7 +137,11 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
      * @return string|null
     */
     public function getMinimumRequiredPatchVersion(): ?string {
-        return $this->getBackingStore()->get('minimumRequiredPatchVersion');
+        $val = $this->getBackingStore()->get('minimumRequiredPatchVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minimumRequiredPatchVersion'");
     }
 
     /**
@@ -114,7 +149,11 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
      * @return string|null
     */
     public function getMinimumWarningPatchVersion(): ?string {
-        return $this->getBackingStore()->get('minimumWarningPatchVersion');
+        $val = $this->getBackingStore()->get('minimumWarningPatchVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minimumWarningPatchVersion'");
     }
 
     /**
@@ -122,7 +161,11 @@ class AndroidManagedAppProtection extends TargetedManagedAppProtection implement
      * @return bool|null
     */
     public function getScreenCaptureBlocked(): ?bool {
-        return $this->getBackingStore()->get('screenCaptureBlocked');
+        $val = $this->getBackingStore()->get('screenCaptureBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'screenCaptureBlocked'");
     }
 
     /**

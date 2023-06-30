@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ContactFolder extends Entity implements Parsable 
 {
@@ -29,7 +30,13 @@ class ContactFolder extends Entity implements Parsable
      * @return array<ContactFolder>|null
     */
     public function getChildFolders(): ?array {
-        return $this->getBackingStore()->get('childFolders');
+        $val = $this->getBackingStore()->get('childFolders');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ContactFolder::class);
+            /** @var array<ContactFolder>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'childFolders'");
     }
 
     /**
@@ -37,7 +44,13 @@ class ContactFolder extends Entity implements Parsable
      * @return array<Contact>|null
     */
     public function getContacts(): ?array {
-        return $this->getBackingStore()->get('contacts');
+        $val = $this->getBackingStore()->get('contacts');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Contact::class);
+            /** @var array<Contact>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contacts'");
     }
 
     /**
@@ -45,12 +58,16 @@ class ContactFolder extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -69,7 +86,13 @@ class ContactFolder extends Entity implements Parsable
      * @return array<MultiValueLegacyExtendedProperty>|null
     */
     public function getMultiValueExtendedProperties(): ?array {
-        return $this->getBackingStore()->get('multiValueExtendedProperties');
+        $val = $this->getBackingStore()->get('multiValueExtendedProperties');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, MultiValueLegacyExtendedProperty::class);
+            /** @var array<MultiValueLegacyExtendedProperty>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'multiValueExtendedProperties'");
     }
 
     /**
@@ -77,7 +100,11 @@ class ContactFolder extends Entity implements Parsable
      * @return string|null
     */
     public function getParentFolderId(): ?string {
-        return $this->getBackingStore()->get('parentFolderId');
+        $val = $this->getBackingStore()->get('parentFolderId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'parentFolderId'");
     }
 
     /**
@@ -85,7 +112,13 @@ class ContactFolder extends Entity implements Parsable
      * @return array<SingleValueLegacyExtendedProperty>|null
     */
     public function getSingleValueExtendedProperties(): ?array {
-        return $this->getBackingStore()->get('singleValueExtendedProperties');
+        $val = $this->getBackingStore()->get('singleValueExtendedProperties');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SingleValueLegacyExtendedProperty::class);
+            /** @var array<SingleValueLegacyExtendedProperty>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'singleValueExtendedProperties'");
     }
 
     /**

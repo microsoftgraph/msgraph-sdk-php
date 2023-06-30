@@ -40,7 +40,12 @@ class SumIfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,12 +61,16 @@ class SumIfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
      * @return Json|null
     */
     public function getCriteria(): ?Json {
-        return $this->getBackingStore()->get('criteria');
+        $val = $this->getBackingStore()->get('criteria');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'criteria'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -77,7 +86,11 @@ class SumIfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
      * @return Json|null
     */
     public function getRange(): ?Json {
-        return $this->getBackingStore()->get('range');
+        $val = $this->getBackingStore()->get('range');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'range'");
     }
 
     /**
@@ -85,7 +98,11 @@ class SumIfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsabl
      * @return Json|null
     */
     public function getSumRange(): ?Json {
-        return $this->getBackingStore()->get('sumRange');
+        $val = $this->getBackingStore()->get('sumRange');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sumRange'");
     }
 
     /**

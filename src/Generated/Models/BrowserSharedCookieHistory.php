@@ -40,7 +40,12 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,7 +61,11 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
      * @return string|null
     */
     public function getComment(): ?string {
-        return $this->getBackingStore()->get('comment');
+        $val = $this->getBackingStore()->get('comment');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'comment'");
     }
 
     /**
@@ -64,12 +73,16 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -91,7 +104,11 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
      * @return bool|null
     */
     public function getHostOnly(): ?bool {
-        return $this->getBackingStore()->get('hostOnly');
+        $val = $this->getBackingStore()->get('hostOnly');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hostOnly'");
     }
 
     /**
@@ -99,7 +116,11 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
      * @return string|null
     */
     public function getHostOrDomain(): ?string {
-        return $this->getBackingStore()->get('hostOrDomain');
+        $val = $this->getBackingStore()->get('hostOrDomain');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hostOrDomain'");
     }
 
     /**
@@ -107,7 +128,11 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
      * @return IdentitySet|null
     */
     public function getLastModifiedBy(): ?IdentitySet {
-        return $this->getBackingStore()->get('lastModifiedBy');
+        $val = $this->getBackingStore()->get('lastModifiedBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedBy'");
     }
 
     /**
@@ -115,7 +140,11 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -123,7 +152,11 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
      * @return string|null
     */
     public function getPath(): ?string {
-        return $this->getBackingStore()->get('path');
+        $val = $this->getBackingStore()->get('path');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'path'");
     }
 
     /**
@@ -131,7 +164,11 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
      * @return DateTime|null
     */
     public function getPublishedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('publishedDateTime');
+        $val = $this->getBackingStore()->get('publishedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'publishedDateTime'");
     }
 
     /**
@@ -139,7 +176,11 @@ class BrowserSharedCookieHistory implements AdditionalDataHolder, BackedModel, P
      * @return BrowserSharedCookieSourceEnvironment|null
     */
     public function getSourceEnvironment(): ?BrowserSharedCookieSourceEnvironment {
-        return $this->getBackingStore()->get('sourceEnvironment');
+        $val = $this->getBackingStore()->get('sourceEnvironment');
+        if (is_null($val) || $val instanceof BrowserSharedCookieSourceEnvironment) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sourceEnvironment'");
     }
 
     /**

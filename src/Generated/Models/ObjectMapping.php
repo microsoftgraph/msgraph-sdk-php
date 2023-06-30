@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +53,13 @@ class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<AttributeMapping>|null
     */
     public function getAttributeMappings(): ?array {
-        return $this->getBackingStore()->get('attributeMappings');
+        $val = $this->getBackingStore()->get('attributeMappings');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AttributeMapping::class);
+            /** @var array<AttributeMapping>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'attributeMappings'");
     }
 
     /**
@@ -63,12 +75,16 @@ class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getEnabled(): ?bool {
-        return $this->getBackingStore()->get('enabled');
+        $val = $this->getBackingStore()->get('enabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enabled'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -90,7 +106,11 @@ class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable
      * @return ObjectFlowTypes|null
     */
     public function getFlowTypes(): ?ObjectFlowTypes {
-        return $this->getBackingStore()->get('flowTypes');
+        $val = $this->getBackingStore()->get('flowTypes');
+        if (is_null($val) || $val instanceof ObjectFlowTypes) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'flowTypes'");
     }
 
     /**
@@ -98,7 +118,13 @@ class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<ObjectMappingMetadataEntry>|null
     */
     public function getMetadata(): ?array {
-        return $this->getBackingStore()->get('metadata');
+        $val = $this->getBackingStore()->get('metadata');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ObjectMappingMetadataEntry::class);
+            /** @var array<ObjectMappingMetadataEntry>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'metadata'");
     }
 
     /**
@@ -106,7 +132,11 @@ class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -114,7 +144,11 @@ class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -122,7 +156,11 @@ class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable
      * @return Filter|null
     */
     public function getScope(): ?Filter {
-        return $this->getBackingStore()->get('scope');
+        $val = $this->getBackingStore()->get('scope');
+        if (is_null($val) || $val instanceof Filter) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scope'");
     }
 
     /**
@@ -130,7 +168,11 @@ class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getSourceObjectName(): ?string {
-        return $this->getBackingStore()->get('sourceObjectName');
+        $val = $this->getBackingStore()->get('sourceObjectName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sourceObjectName'");
     }
 
     /**
@@ -138,7 +180,11 @@ class ObjectMapping implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getTargetObjectName(): ?string {
-        return $this->getBackingStore()->get('targetObjectName');
+        $val = $this->getBackingStore()->get('targetObjectName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'targetObjectName'");
     }
 
     /**

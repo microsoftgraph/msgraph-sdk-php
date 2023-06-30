@@ -30,7 +30,11 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
      * @return string|null
     */
     public function getActiveSignInUri(): ?string {
-        return $this->getBackingStore()->get('activeSignInUri');
+        $val = $this->getBackingStore()->get('activeSignInUri');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activeSignInUri'");
     }
 
     /**
@@ -38,12 +42,16 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
      * @return FederatedIdpMfaBehavior|null
     */
     public function getFederatedIdpMfaBehavior(): ?FederatedIdpMfaBehavior {
-        return $this->getBackingStore()->get('federatedIdpMfaBehavior');
+        $val = $this->getBackingStore()->get('federatedIdpMfaBehavior');
+        if (is_null($val) || $val instanceof FederatedIdpMfaBehavior) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'federatedIdpMfaBehavior'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -63,7 +71,11 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
      * @return bool|null
     */
     public function getIsSignedAuthenticationRequestRequired(): ?bool {
-        return $this->getBackingStore()->get('isSignedAuthenticationRequestRequired');
+        $val = $this->getBackingStore()->get('isSignedAuthenticationRequestRequired');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isSignedAuthenticationRequestRequired'");
     }
 
     /**
@@ -71,7 +83,11 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
      * @return string|null
     */
     public function getNextSigningCertificate(): ?string {
-        return $this->getBackingStore()->get('nextSigningCertificate');
+        $val = $this->getBackingStore()->get('nextSigningCertificate');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'nextSigningCertificate'");
     }
 
     /**
@@ -79,7 +95,11 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
      * @return PromptLoginBehavior|null
     */
     public function getPromptLoginBehavior(): ?PromptLoginBehavior {
-        return $this->getBackingStore()->get('promptLoginBehavior');
+        $val = $this->getBackingStore()->get('promptLoginBehavior');
+        if (is_null($val) || $val instanceof PromptLoginBehavior) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'promptLoginBehavior'");
     }
 
     /**
@@ -87,7 +107,11 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
      * @return SigningCertificateUpdateStatus|null
     */
     public function getSigningCertificateUpdateStatus(): ?SigningCertificateUpdateStatus {
-        return $this->getBackingStore()->get('signingCertificateUpdateStatus');
+        $val = $this->getBackingStore()->get('signingCertificateUpdateStatus');
+        if (is_null($val) || $val instanceof SigningCertificateUpdateStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'signingCertificateUpdateStatus'");
     }
 
     /**
@@ -95,7 +119,11 @@ class InternalDomainFederation extends SamlOrWsFedProvider implements Parsable
      * @return string|null
     */
     public function getSignOutUri(): ?string {
-        return $this->getBackingStore()->get('signOutUri');
+        $val = $this->getBackingStore()->get('signOutUri');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'signOutUri'");
     }
 
     /**

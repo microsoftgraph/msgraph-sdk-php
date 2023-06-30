@@ -29,7 +29,11 @@ class PlannerTaskDetails extends Entity implements Parsable
      * @return PlannerChecklistItems|null
     */
     public function getChecklist(): ?PlannerChecklistItems {
-        return $this->getBackingStore()->get('checklist');
+        $val = $this->getBackingStore()->get('checklist');
+        if (is_null($val) || $val instanceof PlannerChecklistItems) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'checklist'");
     }
 
     /**
@@ -37,12 +41,16 @@ class PlannerTaskDetails extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -59,7 +67,11 @@ class PlannerTaskDetails extends Entity implements Parsable
      * @return PlannerPreviewType|null
     */
     public function getPreviewType(): ?PlannerPreviewType {
-        return $this->getBackingStore()->get('previewType');
+        $val = $this->getBackingStore()->get('previewType');
+        if (is_null($val) || $val instanceof PlannerPreviewType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'previewType'");
     }
 
     /**
@@ -67,7 +79,11 @@ class PlannerTaskDetails extends Entity implements Parsable
      * @return PlannerExternalReferences|null
     */
     public function getReferences(): ?PlannerExternalReferences {
-        return $this->getBackingStore()->get('references');
+        $val = $this->getBackingStore()->get('references');
+        if (is_null($val) || $val instanceof PlannerExternalReferences) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'references'");
     }
 
     /**

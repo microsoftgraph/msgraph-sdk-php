@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +61,11 @@ class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getConferenceId(): ?string {
-        return $this->getBackingStore()->get('conferenceId');
+        $val = $this->getBackingStore()->get('conferenceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'conferenceId'");
     }
 
     /**
@@ -63,12 +73,16 @@ class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getDialinUrl(): ?string {
-        return $this->getBackingStore()->get('dialinUrl');
+        $val = $this->getBackingStore()->get('dialinUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dialinUrl'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -77,9 +91,23 @@ class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable
             'dialinUrl' => fn(ParseNode $n) => $o->setDialinUrl($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'tollFreeNumber' => fn(ParseNode $n) => $o->setTollFreeNumber($n->getStringValue()),
-            'tollFreeNumbers' => fn(ParseNode $n) => $o->setTollFreeNumbers($n->getCollectionOfPrimitiveValues()),
+            'tollFreeNumbers' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setTollFreeNumbers($val);
+            },
             'tollNumber' => fn(ParseNode $n) => $o->setTollNumber($n->getStringValue()),
-            'tollNumbers' => fn(ParseNode $n) => $o->setTollNumbers($n->getCollectionOfPrimitiveValues()),
+            'tollNumbers' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setTollNumbers($val);
+            },
         ];
     }
 
@@ -88,7 +116,11 @@ class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -96,7 +128,11 @@ class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getTollFreeNumber(): ?string {
-        return $this->getBackingStore()->get('tollFreeNumber');
+        $val = $this->getBackingStore()->get('tollFreeNumber');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tollFreeNumber'");
     }
 
     /**
@@ -104,7 +140,13 @@ class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string>|null
     */
     public function getTollFreeNumbers(): ?array {
-        return $this->getBackingStore()->get('tollFreeNumbers');
+        $val = $this->getBackingStore()->get('tollFreeNumbers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tollFreeNumbers'");
     }
 
     /**
@@ -112,7 +154,11 @@ class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getTollNumber(): ?string {
-        return $this->getBackingStore()->get('tollNumber');
+        $val = $this->getBackingStore()->get('tollNumber');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tollNumber'");
     }
 
     /**
@@ -120,7 +166,13 @@ class AudioConferencing implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string>|null
     */
     public function getTollNumbers(): ?array {
-        return $this->getBackingStore()->get('tollNumbers');
+        $val = $this->getBackingStore()->get('tollNumbers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tollNumbers'");
     }
 
     /**

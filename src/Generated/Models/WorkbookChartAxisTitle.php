@@ -26,7 +26,7 @@ class WorkbookChartAxisTitle extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -42,7 +42,11 @@ class WorkbookChartAxisTitle extends Entity implements Parsable
      * @return WorkbookChartAxisTitleFormat|null
     */
     public function getFormat(): ?WorkbookChartAxisTitleFormat {
-        return $this->getBackingStore()->get('format');
+        $val = $this->getBackingStore()->get('format');
+        if (is_null($val) || $val instanceof WorkbookChartAxisTitleFormat) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'format'");
     }
 
     /**
@@ -50,7 +54,11 @@ class WorkbookChartAxisTitle extends Entity implements Parsable
      * @return string|null
     */
     public function getText(): ?string {
-        return $this->getBackingStore()->get('text');
+        $val = $this->getBackingStore()->get('text');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'text'");
     }
 
     /**
@@ -58,7 +66,11 @@ class WorkbookChartAxisTitle extends Entity implements Parsable
      * @return bool|null
     */
     public function getVisible(): ?bool {
-        return $this->getBackingStore()->get('visible');
+        $val = $this->getBackingStore()->get('visible');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'visible'");
     }
 
     /**

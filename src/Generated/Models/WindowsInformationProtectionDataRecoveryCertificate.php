@@ -44,7 +44,12 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -60,7 +65,11 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
      * @return StreamInterface|null
     */
     public function getCertificate(): ?StreamInterface {
-        return $this->getBackingStore()->get('certificate');
+        $val = $this->getBackingStore()->get('certificate');
+        if (is_null($val) || $val instanceof StreamInterface) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'certificate'");
     }
 
     /**
@@ -68,7 +77,11 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -76,12 +89,16 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('expirationDateTime');
+        $val = $this->getBackingStore()->get('expirationDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'expirationDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -99,7 +116,11 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -107,7 +128,11 @@ class WindowsInformationProtectionDataRecoveryCertificate implements AdditionalD
      * @return string|null
     */
     public function getSubjectName(): ?string {
-        return $this->getBackingStore()->get('subjectName');
+        $val = $this->getBackingStore()->get('subjectName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'subjectName'");
     }
 
     /**

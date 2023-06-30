@@ -27,7 +27,7 @@ class TeamMembersNotificationRecipient extends TeamworkNotificationRecipient imp
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class TeamMembersNotificationRecipient extends TeamworkNotificationRecipient imp
      * @return string|null
     */
     public function getTeamId(): ?string {
-        return $this->getBackingStore()->get('teamId');
+        $val = $this->getBackingStore()->get('teamId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'teamId'");
     }
 
     /**

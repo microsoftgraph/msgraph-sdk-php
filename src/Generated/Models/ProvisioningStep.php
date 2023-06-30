@@ -18,7 +18,7 @@ class ProvisioningStep implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new ProvisioningStep and sets the default values.
+     * Instantiates a new provisioningStep and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -39,7 +39,12 @@ class ProvisioningStep implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +60,11 @@ class ProvisioningStep implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -63,12 +72,16 @@ class ProvisioningStep implements AdditionalDataHolder, BackedModel, Parsable
      * @return DetailsInfo|null
     */
     public function getDetails(): ?DetailsInfo {
-        return $this->getBackingStore()->get('details');
+        $val = $this->getBackingStore()->get('details');
+        if (is_null($val) || $val instanceof DetailsInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'details'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -87,7 +100,11 @@ class ProvisioningStep implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -95,7 +112,11 @@ class ProvisioningStep implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -103,7 +124,11 @@ class ProvisioningStep implements AdditionalDataHolder, BackedModel, Parsable
      * @return ProvisioningStepType|null
     */
     public function getProvisioningStepType(): ?ProvisioningStepType {
-        return $this->getBackingStore()->get('provisioningStepType');
+        $val = $this->getBackingStore()->get('provisioningStepType');
+        if (is_null($val) || $val instanceof ProvisioningStepType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'provisioningStepType'");
     }
 
     /**
@@ -111,7 +136,11 @@ class ProvisioningStep implements AdditionalDataHolder, BackedModel, Parsable
      * @return ProvisioningResult|null
     */
     public function getStatus(): ?ProvisioningResult {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof ProvisioningResult) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**

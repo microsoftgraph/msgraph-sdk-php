@@ -33,7 +33,11 @@ class DeviceManagementExchangeConnector extends Entity implements Parsable
      * @return string|null
     */
     public function getConnectorServerName(): ?string {
-        return $this->getBackingStore()->get('connectorServerName');
+        $val = $this->getBackingStore()->get('connectorServerName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'connectorServerName'");
     }
 
     /**
@@ -41,7 +45,11 @@ class DeviceManagementExchangeConnector extends Entity implements Parsable
      * @return string|null
     */
     public function getExchangeAlias(): ?string {
-        return $this->getBackingStore()->get('exchangeAlias');
+        $val = $this->getBackingStore()->get('exchangeAlias');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'exchangeAlias'");
     }
 
     /**
@@ -49,7 +57,11 @@ class DeviceManagementExchangeConnector extends Entity implements Parsable
      * @return DeviceManagementExchangeConnectorType|null
     */
     public function getExchangeConnectorType(): ?DeviceManagementExchangeConnectorType {
-        return $this->getBackingStore()->get('exchangeConnectorType');
+        $val = $this->getBackingStore()->get('exchangeConnectorType');
+        if (is_null($val) || $val instanceof DeviceManagementExchangeConnectorType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'exchangeConnectorType'");
     }
 
     /**
@@ -57,12 +69,16 @@ class DeviceManagementExchangeConnector extends Entity implements Parsable
      * @return string|null
     */
     public function getExchangeOrganization(): ?string {
-        return $this->getBackingStore()->get('exchangeOrganization');
+        $val = $this->getBackingStore()->get('exchangeOrganization');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'exchangeOrganization'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -84,7 +100,11 @@ class DeviceManagementExchangeConnector extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastSyncDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastSyncDateTime');
+        $val = $this->getBackingStore()->get('lastSyncDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastSyncDateTime'");
     }
 
     /**
@@ -92,7 +112,11 @@ class DeviceManagementExchangeConnector extends Entity implements Parsable
      * @return string|null
     */
     public function getPrimarySmtpAddress(): ?string {
-        return $this->getBackingStore()->get('primarySmtpAddress');
+        $val = $this->getBackingStore()->get('primarySmtpAddress');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'primarySmtpAddress'");
     }
 
     /**
@@ -100,7 +124,11 @@ class DeviceManagementExchangeConnector extends Entity implements Parsable
      * @return string|null
     */
     public function getServerName(): ?string {
-        return $this->getBackingStore()->get('serverName');
+        $val = $this->getBackingStore()->get('serverName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'serverName'");
     }
 
     /**
@@ -108,7 +136,11 @@ class DeviceManagementExchangeConnector extends Entity implements Parsable
      * @return DeviceManagementExchangeConnectorStatus|null
     */
     public function getStatus(): ?DeviceManagementExchangeConnectorStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof DeviceManagementExchangeConnectorStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**
@@ -116,7 +148,11 @@ class DeviceManagementExchangeConnector extends Entity implements Parsable
      * @return string|null
     */
     public function getVersion(): ?string {
-        return $this->getBackingStore()->get('version');
+        $val = $this->getBackingStore()->get('version');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'version'");
     }
 
     /**

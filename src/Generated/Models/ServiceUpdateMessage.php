@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 use Psr\Http\Message\StreamInterface;
 
 class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable 
@@ -32,7 +33,11 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
      * @return DateTime|null
     */
     public function getActionRequiredByDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('actionRequiredByDateTime');
+        $val = $this->getBackingStore()->get('actionRequiredByDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'actionRequiredByDateTime'");
     }
 
     /**
@@ -40,7 +45,13 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
      * @return array<ServiceAnnouncementAttachment>|null
     */
     public function getAttachments(): ?array {
-        return $this->getBackingStore()->get('attachments');
+        $val = $this->getBackingStore()->get('attachments');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ServiceAnnouncementAttachment::class);
+            /** @var array<ServiceAnnouncementAttachment>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'attachments'");
     }
 
     /**
@@ -48,7 +59,11 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
      * @return StreamInterface|null
     */
     public function getAttachmentsArchive(): ?StreamInterface {
-        return $this->getBackingStore()->get('attachmentsArchive');
+        $val = $this->getBackingStore()->get('attachmentsArchive');
+        if (is_null($val) || $val instanceof StreamInterface) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'attachmentsArchive'");
     }
 
     /**
@@ -56,7 +71,11 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
      * @return ItemBody|null
     */
     public function getBody(): ?ItemBody {
-        return $this->getBackingStore()->get('body');
+        $val = $this->getBackingStore()->get('body');
+        if (is_null($val) || $val instanceof ItemBody) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'body'");
     }
 
     /**
@@ -64,12 +83,16 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
      * @return ServiceUpdateCategory|null
     */
     public function getCategory(): ?ServiceUpdateCategory {
-        return $this->getBackingStore()->get('category');
+        $val = $this->getBackingStore()->get('category');
+        if (is_null($val) || $val instanceof ServiceUpdateCategory) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -81,9 +104,23 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
             'category' => fn(ParseNode $n) => $o->setCategory($n->getEnumValue(ServiceUpdateCategory::class)),
             'hasAttachments' => fn(ParseNode $n) => $o->setHasAttachments($n->getBooleanValue()),
             'isMajorChange' => fn(ParseNode $n) => $o->setIsMajorChange($n->getBooleanValue()),
-            'services' => fn(ParseNode $n) => $o->setServices($n->getCollectionOfPrimitiveValues()),
+            'services' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setServices($val);
+            },
             'severity' => fn(ParseNode $n) => $o->setSeverity($n->getEnumValue(ServiceUpdateSeverity::class)),
-            'tags' => fn(ParseNode $n) => $o->setTags($n->getCollectionOfPrimitiveValues()),
+            'tags' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setTags($val);
+            },
             'viewPoint' => fn(ParseNode $n) => $o->setViewPoint($n->getObjectValue([ServiceUpdateMessageViewpoint::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -93,7 +130,11 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
      * @return bool|null
     */
     public function getHasAttachments(): ?bool {
-        return $this->getBackingStore()->get('hasAttachments');
+        $val = $this->getBackingStore()->get('hasAttachments');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hasAttachments'");
     }
 
     /**
@@ -101,7 +142,11 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
      * @return bool|null
     */
     public function getIsMajorChange(): ?bool {
-        return $this->getBackingStore()->get('isMajorChange');
+        $val = $this->getBackingStore()->get('isMajorChange');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isMajorChange'");
     }
 
     /**
@@ -109,7 +154,13 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
      * @return array<string>|null
     */
     public function getServices(): ?array {
-        return $this->getBackingStore()->get('services');
+        $val = $this->getBackingStore()->get('services');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'services'");
     }
 
     /**
@@ -117,7 +168,11 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
      * @return ServiceUpdateSeverity|null
     */
     public function getSeverity(): ?ServiceUpdateSeverity {
-        return $this->getBackingStore()->get('severity');
+        $val = $this->getBackingStore()->get('severity');
+        if (is_null($val) || $val instanceof ServiceUpdateSeverity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'severity'");
     }
 
     /**
@@ -125,7 +180,13 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
      * @return array<string>|null
     */
     public function getTags(): ?array {
-        return $this->getBackingStore()->get('tags');
+        $val = $this->getBackingStore()->get('tags');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tags'");
     }
 
     /**
@@ -133,7 +194,11 @@ class ServiceUpdateMessage extends ServiceAnnouncementBase implements Parsable
      * @return ServiceUpdateMessageViewpoint|null
     */
     public function getViewPoint(): ?ServiceUpdateMessageViewpoint {
-        return $this->getBackingStore()->get('viewPoint');
+        $val = $this->getBackingStore()->get('viewPoint');
+        if (is_null($val) || $val instanceof ServiceUpdateMessageViewpoint) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'viewPoint'");
     }
 
     /**

@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models\Security;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class MailClusterEvidence extends AlertEvidence implements Parsable 
 {
@@ -29,7 +30,11 @@ class MailClusterEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getClusterBy(): ?string {
-        return $this->getBackingStore()->get('clusterBy');
+        $val = $this->getBackingStore()->get('clusterBy');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'clusterBy'");
     }
 
     /**
@@ -37,7 +42,11 @@ class MailClusterEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getClusterByValue(): ?string {
-        return $this->getBackingStore()->get('clusterByValue');
+        $val = $this->getBackingStore()->get('clusterByValue');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'clusterByValue'");
     }
 
     /**
@@ -45,12 +54,16 @@ class MailClusterEvidence extends AlertEvidence implements Parsable
      * @return int|null
     */
     public function getEmailCount(): ?int {
-        return $this->getBackingStore()->get('emailCount');
+        $val = $this->getBackingStore()->get('emailCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'emailCount'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -58,7 +71,14 @@ class MailClusterEvidence extends AlertEvidence implements Parsable
             'clusterBy' => fn(ParseNode $n) => $o->setClusterBy($n->getStringValue()),
             'clusterByValue' => fn(ParseNode $n) => $o->setClusterByValue($n->getStringValue()),
             'emailCount' => fn(ParseNode $n) => $o->setEmailCount($n->getIntegerValue()),
-            'networkMessageIds' => fn(ParseNode $n) => $o->setNetworkMessageIds($n->getCollectionOfPrimitiveValues()),
+            'networkMessageIds' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setNetworkMessageIds($val);
+            },
             'query' => fn(ParseNode $n) => $o->setQuery($n->getStringValue()),
             'urn' => fn(ParseNode $n) => $o->setUrn($n->getStringValue()),
         ]);
@@ -69,7 +89,13 @@ class MailClusterEvidence extends AlertEvidence implements Parsable
      * @return array<string>|null
     */
     public function getNetworkMessageIds(): ?array {
-        return $this->getBackingStore()->get('networkMessageIds');
+        $val = $this->getBackingStore()->get('networkMessageIds');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'networkMessageIds'");
     }
 
     /**
@@ -77,7 +103,11 @@ class MailClusterEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getQuery(): ?string {
-        return $this->getBackingStore()->get('query');
+        $val = $this->getBackingStore()->get('query');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'query'");
     }
 
     /**
@@ -85,7 +115,11 @@ class MailClusterEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getUrn(): ?string {
-        return $this->getBackingStore()->get('urn');
+        $val = $this->getBackingStore()->get('urn');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'urn'");
     }
 
     /**

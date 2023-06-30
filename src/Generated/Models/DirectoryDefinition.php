@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class DirectoryDefinition extends Entity implements Parsable 
 {
@@ -30,7 +31,11 @@ class DirectoryDefinition extends Entity implements Parsable
      * @return DirectoryDefinitionDiscoverabilities|null
     */
     public function getDiscoverabilities(): ?DirectoryDefinitionDiscoverabilities {
-        return $this->getBackingStore()->get('discoverabilities');
+        $val = $this->getBackingStore()->get('discoverabilities');
+        if (is_null($val) || $val instanceof DirectoryDefinitionDiscoverabilities) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'discoverabilities'");
     }
 
     /**
@@ -38,12 +43,16 @@ class DirectoryDefinition extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getDiscoveryDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('discoveryDateTime');
+        $val = $this->getBackingStore()->get('discoveryDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'discoveryDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -62,7 +71,11 @@ class DirectoryDefinition extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -70,7 +83,13 @@ class DirectoryDefinition extends Entity implements Parsable
      * @return array<ObjectDefinition>|null
     */
     public function getObjects(): ?array {
-        return $this->getBackingStore()->get('objects');
+        $val = $this->getBackingStore()->get('objects');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ObjectDefinition::class);
+            /** @var array<ObjectDefinition>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'objects'");
     }
 
     /**
@@ -78,7 +97,11 @@ class DirectoryDefinition extends Entity implements Parsable
      * @return bool|null
     */
     public function getReadOnly(): ?bool {
-        return $this->getBackingStore()->get('readOnly');
+        $val = $this->getBackingStore()->get('readOnly');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'readOnly'");
     }
 
     /**
@@ -86,7 +109,11 @@ class DirectoryDefinition extends Entity implements Parsable
      * @return string|null
     */
     public function getVersion(): ?string {
-        return $this->getBackingStore()->get('version');
+        $val = $this->getBackingStore()->get('version');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'version'");
     }
 
     /**

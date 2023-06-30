@@ -39,7 +39,12 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getAdditionalDetails(): ?string {
-        return $this->getBackingStore()->get('additionalDetails');
+        $val = $this->getBackingStore()->get('additionalDetails');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalDetails'");
     }
 
     /**
@@ -63,7 +72,11 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel, Parsab
      * @return ProvisioningStatusErrorCategory|null
     */
     public function getErrorCategory(): ?ProvisioningStatusErrorCategory {
-        return $this->getBackingStore()->get('errorCategory');
+        $val = $this->getBackingStore()->get('errorCategory');
+        if (is_null($val) || $val instanceof ProvisioningStatusErrorCategory) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'errorCategory'");
     }
 
     /**
@@ -71,12 +84,16 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getErrorCode(): ?string {
-        return $this->getBackingStore()->get('errorCode');
+        $val = $this->getBackingStore()->get('errorCode');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'errorCode'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -95,7 +112,11 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -103,7 +124,11 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getReason(): ?string {
-        return $this->getBackingStore()->get('reason');
+        $val = $this->getBackingStore()->get('reason');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reason'");
     }
 
     /**
@@ -111,7 +136,11 @@ class ProvisioningErrorInfo implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getRecommendedAction(): ?string {
-        return $this->getBackingStore()->get('recommendedAction');
+        $val = $this->getBackingStore()->get('recommendedAction');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recommendedAction'");
     }
 
     /**

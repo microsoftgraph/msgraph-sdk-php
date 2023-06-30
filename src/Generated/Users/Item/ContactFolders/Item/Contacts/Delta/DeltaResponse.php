@@ -7,6 +7,7 @@ use Microsoft\Graph\Generated\Models\Contact;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class DeltaResponse extends BaseDeltaFunctionResponse implements Parsable 
 {
@@ -28,7 +29,7 @@ class DeltaResponse extends BaseDeltaFunctionResponse implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -42,7 +43,13 @@ class DeltaResponse extends BaseDeltaFunctionResponse implements Parsable
      * @return array<Contact>|null
     */
     public function getValue(): ?array {
-        return $this->getBackingStore()->get('value');
+        $val = $this->getBackingStore()->get('value');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Contact::class);
+            /** @var array<Contact>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'value'");
     }
 
     /**

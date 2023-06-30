@@ -39,7 +39,12 @@ class TaskReportSummary implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,12 +60,16 @@ class TaskReportSummary implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getFailedTasks(): ?int {
-        return $this->getBackingStore()->get('failedTasks');
+        $val = $this->getBackingStore()->get('failedTasks');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'failedTasks'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -78,7 +87,11 @@ class TaskReportSummary implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -86,7 +99,11 @@ class TaskReportSummary implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getSuccessfulTasks(): ?int {
-        return $this->getBackingStore()->get('successfulTasks');
+        $val = $this->getBackingStore()->get('successfulTasks');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'successfulTasks'");
     }
 
     /**
@@ -94,7 +111,11 @@ class TaskReportSummary implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getTotalTasks(): ?int {
-        return $this->getBackingStore()->get('totalTasks');
+        $val = $this->getBackingStore()->get('totalTasks');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'totalTasks'");
     }
 
     /**
@@ -102,7 +123,11 @@ class TaskReportSummary implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getUnprocessedTasks(): ?int {
-        return $this->getBackingStore()->get('unprocessedTasks');
+        $val = $this->getBackingStore()->get('unprocessedTasks');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'unprocessedTasks'");
     }
 
     /**

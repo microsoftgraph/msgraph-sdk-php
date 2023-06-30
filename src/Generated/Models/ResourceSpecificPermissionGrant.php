@@ -30,7 +30,11 @@ class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsabl
      * @return string|null
     */
     public function getClientAppId(): ?string {
-        return $this->getBackingStore()->get('clientAppId');
+        $val = $this->getBackingStore()->get('clientAppId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'clientAppId'");
     }
 
     /**
@@ -38,12 +42,16 @@ class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsabl
      * @return string|null
     */
     public function getClientId(): ?string {
-        return $this->getBackingStore()->get('clientId');
+        $val = $this->getBackingStore()->get('clientId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'clientId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -61,7 +69,11 @@ class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsabl
      * @return string|null
     */
     public function getPermission(): ?string {
-        return $this->getBackingStore()->get('permission');
+        $val = $this->getBackingStore()->get('permission');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'permission'");
     }
 
     /**
@@ -69,7 +81,11 @@ class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsabl
      * @return string|null
     */
     public function getPermissionType(): ?string {
-        return $this->getBackingStore()->get('permissionType');
+        $val = $this->getBackingStore()->get('permissionType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'permissionType'");
     }
 
     /**
@@ -77,7 +93,11 @@ class ResourceSpecificPermissionGrant extends DirectoryObject implements Parsabl
      * @return string|null
     */
     public function getResourceAppId(): ?string {
-        return $this->getBackingStore()->get('resourceAppId');
+        $val = $this->getBackingStore()->get('resourceAppId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceAppId'");
     }
 
     /**

@@ -26,7 +26,7 @@ class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget implement
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -40,7 +40,11 @@ class SmsAuthenticationMethodTarget extends AuthenticationMethodTarget implement
      * @return bool|null
     */
     public function getIsUsableForSignIn(): ?bool {
-        return $this->getBackingStore()->get('isUsableForSignIn');
+        $val = $this->getBackingStore()->get('isUsableForSignIn');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isUsableForSignIn'");
     }
 
     /**

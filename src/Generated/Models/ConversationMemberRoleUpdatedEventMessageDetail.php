@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessageDetail implements Parsable 
 {
@@ -30,7 +31,13 @@ class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessageDetail
      * @return array<string>|null
     */
     public function getConversationMemberRoles(): ?array {
-        return $this->getBackingStore()->get('conversationMemberRoles');
+        $val = $this->getBackingStore()->get('conversationMemberRoles');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'conversationMemberRoles'");
     }
 
     /**
@@ -38,17 +45,28 @@ class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessageDetail
      * @return TeamworkUserIdentity|null
     */
     public function getConversationMemberUser(): ?TeamworkUserIdentity {
-        return $this->getBackingStore()->get('conversationMemberUser');
+        $val = $this->getBackingStore()->get('conversationMemberUser');
+        if (is_null($val) || $val instanceof TeamworkUserIdentity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'conversationMemberUser'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'conversationMemberRoles' => fn(ParseNode $n) => $o->setConversationMemberRoles($n->getCollectionOfPrimitiveValues()),
+            'conversationMemberRoles' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setConversationMemberRoles($val);
+            },
             'conversationMemberUser' => fn(ParseNode $n) => $o->setConversationMemberUser($n->getObjectValue([TeamworkUserIdentity::class, 'createFromDiscriminatorValue'])),
             'initiator' => fn(ParseNode $n) => $o->setInitiator($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -59,7 +77,11 @@ class ConversationMemberRoleUpdatedEventMessageDetail extends EventMessageDetail
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
-        return $this->getBackingStore()->get('initiator');
+        $val = $this->getBackingStore()->get('initiator');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'initiator'");
     }
 
     /**

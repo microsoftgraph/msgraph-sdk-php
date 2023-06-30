@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class BucketAggregationDefinition implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class BucketAggregationDefinition implements AdditionalDataHolder, BackedModel, 
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +58,7 @@ class BucketAggregationDefinition implements AdditionalDataHolder, BackedModel, 
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -71,7 +77,11 @@ class BucketAggregationDefinition implements AdditionalDataHolder, BackedModel, 
      * @return bool|null
     */
     public function getIsDescending(): ?bool {
-        return $this->getBackingStore()->get('isDescending');
+        $val = $this->getBackingStore()->get('isDescending');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isDescending'");
     }
 
     /**
@@ -79,7 +89,11 @@ class BucketAggregationDefinition implements AdditionalDataHolder, BackedModel, 
      * @return int|null
     */
     public function getMinimumCount(): ?int {
-        return $this->getBackingStore()->get('minimumCount');
+        $val = $this->getBackingStore()->get('minimumCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minimumCount'");
     }
 
     /**
@@ -87,7 +101,11 @@ class BucketAggregationDefinition implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -95,7 +113,11 @@ class BucketAggregationDefinition implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getPrefixFilter(): ?string {
-        return $this->getBackingStore()->get('prefixFilter');
+        $val = $this->getBackingStore()->get('prefixFilter');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'prefixFilter'");
     }
 
     /**
@@ -103,7 +125,13 @@ class BucketAggregationDefinition implements AdditionalDataHolder, BackedModel, 
      * @return array<BucketAggregationRange>|null
     */
     public function getRanges(): ?array {
-        return $this->getBackingStore()->get('ranges');
+        $val = $this->getBackingStore()->get('ranges');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, BucketAggregationRange::class);
+            /** @var array<BucketAggregationRange>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'ranges'");
     }
 
     /**
@@ -111,7 +139,11 @@ class BucketAggregationDefinition implements AdditionalDataHolder, BackedModel, 
      * @return BucketAggregationSortProperty|null
     */
     public function getSortBy(): ?BucketAggregationSortProperty {
-        return $this->getBackingStore()->get('sortBy');
+        $val = $this->getBackingStore()->get('sortBy');
+        if (is_null($val) || $val instanceof BucketAggregationSortProperty) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sortBy'");
     }
 
     /**

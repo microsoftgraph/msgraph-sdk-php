@@ -26,7 +26,7 @@ class Invitation extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -49,7 +49,11 @@ class Invitation extends Entity implements Parsable
      * @return User|null
     */
     public function getInvitedUser(): ?User {
-        return $this->getBackingStore()->get('invitedUser');
+        $val = $this->getBackingStore()->get('invitedUser');
+        if (is_null($val) || $val instanceof User) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'invitedUser'");
     }
 
     /**
@@ -57,7 +61,11 @@ class Invitation extends Entity implements Parsable
      * @return string|null
     */
     public function getInvitedUserDisplayName(): ?string {
-        return $this->getBackingStore()->get('invitedUserDisplayName');
+        $val = $this->getBackingStore()->get('invitedUserDisplayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'invitedUserDisplayName'");
     }
 
     /**
@@ -65,7 +73,11 @@ class Invitation extends Entity implements Parsable
      * @return string|null
     */
     public function getInvitedUserEmailAddress(): ?string {
-        return $this->getBackingStore()->get('invitedUserEmailAddress');
+        $val = $this->getBackingStore()->get('invitedUserEmailAddress');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'invitedUserEmailAddress'");
     }
 
     /**
@@ -73,7 +85,11 @@ class Invitation extends Entity implements Parsable
      * @return InvitedUserMessageInfo|null
     */
     public function getInvitedUserMessageInfo(): ?InvitedUserMessageInfo {
-        return $this->getBackingStore()->get('invitedUserMessageInfo');
+        $val = $this->getBackingStore()->get('invitedUserMessageInfo');
+        if (is_null($val) || $val instanceof InvitedUserMessageInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'invitedUserMessageInfo'");
     }
 
     /**
@@ -81,7 +97,11 @@ class Invitation extends Entity implements Parsable
      * @return string|null
     */
     public function getInvitedUserType(): ?string {
-        return $this->getBackingStore()->get('invitedUserType');
+        $val = $this->getBackingStore()->get('invitedUserType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'invitedUserType'");
     }
 
     /**
@@ -89,7 +109,11 @@ class Invitation extends Entity implements Parsable
      * @return string|null
     */
     public function getInviteRedeemUrl(): ?string {
-        return $this->getBackingStore()->get('inviteRedeemUrl');
+        $val = $this->getBackingStore()->get('inviteRedeemUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'inviteRedeemUrl'");
     }
 
     /**
@@ -97,7 +121,11 @@ class Invitation extends Entity implements Parsable
      * @return string|null
     */
     public function getInviteRedirectUrl(): ?string {
-        return $this->getBackingStore()->get('inviteRedirectUrl');
+        $val = $this->getBackingStore()->get('inviteRedirectUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'inviteRedirectUrl'");
     }
 
     /**
@@ -105,7 +133,11 @@ class Invitation extends Entity implements Parsable
      * @return bool|null
     */
     public function getResetRedemption(): ?bool {
-        return $this->getBackingStore()->get('resetRedemption');
+        $val = $this->getBackingStore()->get('resetRedemption');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resetRedemption'");
     }
 
     /**
@@ -113,7 +145,11 @@ class Invitation extends Entity implements Parsable
      * @return bool|null
     */
     public function getSendInvitationMessage(): ?bool {
-        return $this->getBackingStore()->get('sendInvitationMessage');
+        $val = $this->getBackingStore()->get('sendInvitationMessage');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sendInvitationMessage'");
     }
 
     /**
@@ -121,7 +157,11 @@ class Invitation extends Entity implements Parsable
      * @return string|null
     */
     public function getStatus(): ?string {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**

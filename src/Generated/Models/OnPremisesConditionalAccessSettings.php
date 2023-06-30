@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class OnPremisesConditionalAccessSettings extends Entity implements Parsable 
 {
@@ -29,7 +30,11 @@ class OnPremisesConditionalAccessSettings extends Entity implements Parsable
      * @return bool|null
     */
     public function getEnabled(): ?bool {
-        return $this->getBackingStore()->get('enabled');
+        $val = $this->getBackingStore()->get('enabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enabled'");
     }
 
     /**
@@ -37,19 +42,39 @@ class OnPremisesConditionalAccessSettings extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getExcludedGroups(): ?array {
-        return $this->getBackingStore()->get('excludedGroups');
+        $val = $this->getBackingStore()->get('excludedGroups');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'excludedGroups'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'enabled' => fn(ParseNode $n) => $o->setEnabled($n->getBooleanValue()),
-            'excludedGroups' => fn(ParseNode $n) => $o->setExcludedGroups($n->getCollectionOfPrimitiveValues()),
-            'includedGroups' => fn(ParseNode $n) => $o->setIncludedGroups($n->getCollectionOfPrimitiveValues()),
+            'excludedGroups' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setExcludedGroups($val);
+            },
+            'includedGroups' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setIncludedGroups($val);
+            },
             'overrideDefaultRule' => fn(ParseNode $n) => $o->setOverrideDefaultRule($n->getBooleanValue()),
         ]);
     }
@@ -59,7 +84,13 @@ class OnPremisesConditionalAccessSettings extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getIncludedGroups(): ?array {
-        return $this->getBackingStore()->get('includedGroups');
+        $val = $this->getBackingStore()->get('includedGroups');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'includedGroups'");
     }
 
     /**
@@ -67,7 +98,11 @@ class OnPremisesConditionalAccessSettings extends Entity implements Parsable
      * @return bool|null
     */
     public function getOverrideDefaultRule(): ?bool {
-        return $this->getBackingStore()->get('overrideDefaultRule');
+        $val = $this->getBackingStore()->get('overrideDefaultRule');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'overrideDefaultRule'");
     }
 
     /**

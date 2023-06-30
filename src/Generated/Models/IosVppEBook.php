@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class IosVppEBook extends ManagedEBook implements Parsable 
 {
@@ -30,18 +31,29 @@ class IosVppEBook extends ManagedEBook implements Parsable
      * @return string|null
     */
     public function getAppleId(): ?string {
-        return $this->getBackingStore()->get('appleId');
+        $val = $this->getBackingStore()->get('appleId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appleId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'appleId' => fn(ParseNode $n) => $o->setAppleId($n->getStringValue()),
-            'genres' => fn(ParseNode $n) => $o->setGenres($n->getCollectionOfPrimitiveValues()),
+            'genres' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setGenres($val);
+            },
             'language' => fn(ParseNode $n) => $o->setLanguage($n->getStringValue()),
             'seller' => fn(ParseNode $n) => $o->setSeller($n->getStringValue()),
             'totalLicenseCount' => fn(ParseNode $n) => $o->setTotalLicenseCount($n->getIntegerValue()),
@@ -56,7 +68,13 @@ class IosVppEBook extends ManagedEBook implements Parsable
      * @return array<string>|null
     */
     public function getGenres(): ?array {
-        return $this->getBackingStore()->get('genres');
+        $val = $this->getBackingStore()->get('genres');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'genres'");
     }
 
     /**
@@ -64,7 +82,11 @@ class IosVppEBook extends ManagedEBook implements Parsable
      * @return string|null
     */
     public function getLanguage(): ?string {
-        return $this->getBackingStore()->get('language');
+        $val = $this->getBackingStore()->get('language');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'language'");
     }
 
     /**
@@ -72,7 +94,11 @@ class IosVppEBook extends ManagedEBook implements Parsable
      * @return string|null
     */
     public function getSeller(): ?string {
-        return $this->getBackingStore()->get('seller');
+        $val = $this->getBackingStore()->get('seller');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'seller'");
     }
 
     /**
@@ -80,7 +106,11 @@ class IosVppEBook extends ManagedEBook implements Parsable
      * @return int|null
     */
     public function getTotalLicenseCount(): ?int {
-        return $this->getBackingStore()->get('totalLicenseCount');
+        $val = $this->getBackingStore()->get('totalLicenseCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'totalLicenseCount'");
     }
 
     /**
@@ -88,7 +118,11 @@ class IosVppEBook extends ManagedEBook implements Parsable
      * @return int|null
     */
     public function getUsedLicenseCount(): ?int {
-        return $this->getBackingStore()->get('usedLicenseCount');
+        $val = $this->getBackingStore()->get('usedLicenseCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'usedLicenseCount'");
     }
 
     /**
@@ -96,7 +130,11 @@ class IosVppEBook extends ManagedEBook implements Parsable
      * @return string|null
     */
     public function getVppOrganizationName(): ?string {
-        return $this->getBackingStore()->get('vppOrganizationName');
+        $val = $this->getBackingStore()->get('vppOrganizationName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'vppOrganizationName'");
     }
 
     /**
@@ -104,7 +142,11 @@ class IosVppEBook extends ManagedEBook implements Parsable
      * @return string|null
     */
     public function getVppTokenId(): ?string {
-        return $this->getBackingStore()->get('vppTokenId');
+        $val = $this->getBackingStore()->get('vppTokenId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'vppTokenId'");
     }
 
     /**

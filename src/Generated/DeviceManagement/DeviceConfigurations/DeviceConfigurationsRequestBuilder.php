@@ -53,10 +53,10 @@ class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the androidGeneralDeviceConfiguration objects.
+     * List properties and relationships of the windows81GeneralConfiguration objects.
      * @param DeviceConfigurationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-androidgeneraldeviceconfiguration-list?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-windows81generalconfiguration-list?view=graph-rest-1.0 Find more info here
     */
     public function get(?DeviceConfigurationsRequestBuilderGetRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toGetRequestInformation($requestConfiguration);
@@ -72,11 +72,11 @@ class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new windows81GeneralConfiguration object.
+     * Create a new windowsPhone81GeneralConfiguration object.
      * @param DeviceConfiguration $body The request body
      * @param DeviceConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return Promise
-     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-windows81generalconfiguration-create?view=graph-rest-1.0 Find more info here
+     * @link https://docs.microsoft.com/graph/api/intune-deviceconfig-windowsphone81generalconfiguration-create?view=graph-rest-1.0 Find more info here
     */
     public function post(DeviceConfiguration $body, ?DeviceConfigurationsRequestBuilderPostRequestConfiguration $requestConfiguration = null): Promise {
         $requestInfo = $this->toPostRequestInformation($body, $requestConfiguration);
@@ -92,7 +92,7 @@ class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * List properties and relationships of the androidGeneralDeviceConfiguration objects.
+     * List properties and relationships of the windows81GeneralConfiguration objects.
      * @param DeviceConfigurationsRequestBuilderGetRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation
     */
@@ -113,7 +113,7 @@ class DeviceConfigurationsRequestBuilder extends BaseRequestBuilder
     }
 
     /**
-     * Create a new windows81GeneralConfiguration object.
+     * Create a new windowsPhone81GeneralConfiguration object.
      * @param DeviceConfiguration $body The request body
      * @param DeviceConfigurationsRequestBuilderPostRequestConfiguration|null $requestConfiguration Configuration for the request such as headers, query parameters, and middleware options.
      * @return RequestInformation

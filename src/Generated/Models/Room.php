@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Room extends Place implements Parsable 
 {
@@ -30,7 +31,11 @@ class Room extends Place implements Parsable
      * @return string|null
     */
     public function getAudioDeviceName(): ?string {
-        return $this->getBackingStore()->get('audioDeviceName');
+        $val = $this->getBackingStore()->get('audioDeviceName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'audioDeviceName'");
     }
 
     /**
@@ -38,7 +43,11 @@ class Room extends Place implements Parsable
      * @return BookingType|null
     */
     public function getBookingType(): ?BookingType {
-        return $this->getBackingStore()->get('bookingType');
+        $val = $this->getBackingStore()->get('bookingType');
+        if (is_null($val) || $val instanceof BookingType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bookingType'");
     }
 
     /**
@@ -46,7 +55,11 @@ class Room extends Place implements Parsable
      * @return string|null
     */
     public function getBuilding(): ?string {
-        return $this->getBackingStore()->get('building');
+        $val = $this->getBackingStore()->get('building');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'building'");
     }
 
     /**
@@ -54,7 +67,11 @@ class Room extends Place implements Parsable
      * @return int|null
     */
     public function getCapacity(): ?int {
-        return $this->getBackingStore()->get('capacity');
+        $val = $this->getBackingStore()->get('capacity');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'capacity'");
     }
 
     /**
@@ -62,7 +79,11 @@ class Room extends Place implements Parsable
      * @return string|null
     */
     public function getDisplayDeviceName(): ?string {
-        return $this->getBackingStore()->get('displayDeviceName');
+        $val = $this->getBackingStore()->get('displayDeviceName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayDeviceName'");
     }
 
     /**
@@ -70,12 +91,16 @@ class Room extends Place implements Parsable
      * @return string|null
     */
     public function getEmailAddress(): ?string {
-        return $this->getBackingStore()->get('emailAddress');
+        $val = $this->getBackingStore()->get('emailAddress');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'emailAddress'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -91,7 +116,14 @@ class Room extends Place implements Parsable
             'isWheelChairAccessible' => fn(ParseNode $n) => $o->setIsWheelChairAccessible($n->getBooleanValue()),
             'label' => fn(ParseNode $n) => $o->setLabel($n->getStringValue()),
             'nickname' => fn(ParseNode $n) => $o->setNickname($n->getStringValue()),
-            'tags' => fn(ParseNode $n) => $o->setTags($n->getCollectionOfPrimitiveValues()),
+            'tags' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setTags($val);
+            },
             'videoDeviceName' => fn(ParseNode $n) => $o->setVideoDeviceName($n->getStringValue()),
         ]);
     }
@@ -101,7 +133,11 @@ class Room extends Place implements Parsable
      * @return string|null
     */
     public function getFloorLabel(): ?string {
-        return $this->getBackingStore()->get('floorLabel');
+        $val = $this->getBackingStore()->get('floorLabel');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'floorLabel'");
     }
 
     /**
@@ -109,7 +145,11 @@ class Room extends Place implements Parsable
      * @return int|null
     */
     public function getFloorNumber(): ?int {
-        return $this->getBackingStore()->get('floorNumber');
+        $val = $this->getBackingStore()->get('floorNumber');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'floorNumber'");
     }
 
     /**
@@ -117,7 +157,11 @@ class Room extends Place implements Parsable
      * @return bool|null
     */
     public function getIsWheelChairAccessible(): ?bool {
-        return $this->getBackingStore()->get('isWheelChairAccessible');
+        $val = $this->getBackingStore()->get('isWheelChairAccessible');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isWheelChairAccessible'");
     }
 
     /**
@@ -125,7 +169,11 @@ class Room extends Place implements Parsable
      * @return string|null
     */
     public function getLabel(): ?string {
-        return $this->getBackingStore()->get('label');
+        $val = $this->getBackingStore()->get('label');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'label'");
     }
 
     /**
@@ -133,7 +181,11 @@ class Room extends Place implements Parsable
      * @return string|null
     */
     public function getNickname(): ?string {
-        return $this->getBackingStore()->get('nickname');
+        $val = $this->getBackingStore()->get('nickname');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'nickname'");
     }
 
     /**
@@ -141,7 +193,13 @@ class Room extends Place implements Parsable
      * @return array<string>|null
     */
     public function getTags(): ?array {
-        return $this->getBackingStore()->get('tags');
+        $val = $this->getBackingStore()->get('tags');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tags'");
     }
 
     /**
@@ -149,7 +207,11 @@ class Room extends Place implements Parsable
      * @return string|null
     */
     public function getVideoDeviceName(): ?string {
-        return $this->getBackingStore()->get('videoDeviceName');
+        $val = $this->getBackingStore()->get('videoDeviceName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'videoDeviceName'");
     }
 
     /**

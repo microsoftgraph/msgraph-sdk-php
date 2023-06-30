@@ -10,6 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class GetSchedulePostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -40,7 +41,12 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -48,7 +54,11 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @return int|null
     */
     public function getAvailabilityViewInterval(): ?int {
-        return $this->getBackingStore()->get('availabilityViewInterval');
+        $val = $this->getBackingStore()->get('availabilityViewInterval');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'availabilityViewInterval'");
     }
 
     /**
@@ -64,19 +74,30 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @return DateTimeTimeZone|null
     */
     public function getEndTime(): ?DateTimeTimeZone {
-        return $this->getBackingStore()->get('endTime');
+        $val = $this->getBackingStore()->get('endTime');
+        if (is_null($val) || $val instanceof DateTimeTimeZone) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'endTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
             'availabilityViewInterval' => fn(ParseNode $n) => $o->setAvailabilityViewInterval($n->getIntegerValue()),
             'endTime' => fn(ParseNode $n) => $o->setEndTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
-            'schedules' => fn(ParseNode $n) => $o->setSchedules($n->getCollectionOfPrimitiveValues()),
+            'schedules' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setSchedules($val);
+            },
             'startTime' => fn(ParseNode $n) => $o->setStartTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
         ];
     }
@@ -86,7 +107,13 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @return array<string>|null
     */
     public function getSchedules(): ?array {
-        return $this->getBackingStore()->get('schedules');
+        $val = $this->getBackingStore()->get('schedules');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'schedules'");
     }
 
     /**
@@ -94,7 +121,11 @@ class GetSchedulePostRequestBody implements AdditionalDataHolder, BackedModel, P
      * @return DateTimeTimeZone|null
     */
     public function getStartTime(): ?DateTimeTimeZone {
-        return $this->getBackingStore()->get('startTime');
+        $val = $this->getBackingStore()->get('startTime');
+        if (is_null($val) || $val instanceof DateTimeTimeZone) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'startTime'");
     }
 
     /**

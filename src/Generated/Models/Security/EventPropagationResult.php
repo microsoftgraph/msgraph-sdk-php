@@ -18,7 +18,7 @@ class EventPropagationResult implements AdditionalDataHolder, BackedModel, Parsa
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new EventPropagationResult and sets the default values.
+     * Instantiates a new eventPropagationResult and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -39,7 +39,12 @@ class EventPropagationResult implements AdditionalDataHolder, BackedModel, Parsa
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +57,7 @@ class EventPropagationResult implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -70,7 +75,11 @@ class EventPropagationResult implements AdditionalDataHolder, BackedModel, Parsa
      * @return string|null
     */
     public function getLocation(): ?string {
-        return $this->getBackingStore()->get('location');
+        $val = $this->getBackingStore()->get('location');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'location'");
     }
 
     /**
@@ -78,7 +87,11 @@ class EventPropagationResult implements AdditionalDataHolder, BackedModel, Parsa
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -86,7 +99,11 @@ class EventPropagationResult implements AdditionalDataHolder, BackedModel, Parsa
      * @return string|null
     */
     public function getServiceName(): ?string {
-        return $this->getBackingStore()->get('serviceName');
+        $val = $this->getBackingStore()->get('serviceName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'serviceName'");
     }
 
     /**
@@ -94,7 +111,11 @@ class EventPropagationResult implements AdditionalDataHolder, BackedModel, Parsa
      * @return EventPropagationStatus|null
     */
     public function getStatus(): ?EventPropagationStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof EventPropagationStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**
@@ -102,7 +123,11 @@ class EventPropagationResult implements AdditionalDataHolder, BackedModel, Parsa
      * @return string|null
     */
     public function getStatusInformation(): ?string {
-        return $this->getBackingStore()->get('statusInformation');
+        $val = $this->getBackingStore()->get('statusInformation');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'statusInformation'");
     }
 
     /**

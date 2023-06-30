@@ -42,7 +42,11 @@ class SharedPCAccountManagerPolicy implements AdditionalDataHolder, BackedModel,
      * @return SharedPCAccountDeletionPolicyType|null
     */
     public function getAccountDeletionPolicy(): ?SharedPCAccountDeletionPolicyType {
-        return $this->getBackingStore()->get('accountDeletionPolicy');
+        $val = $this->getBackingStore()->get('accountDeletionPolicy');
+        if (is_null($val) || $val instanceof SharedPCAccountDeletionPolicyType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'accountDeletionPolicy'");
     }
 
     /**
@@ -50,7 +54,12 @@ class SharedPCAccountManagerPolicy implements AdditionalDataHolder, BackedModel,
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -66,12 +75,16 @@ class SharedPCAccountManagerPolicy implements AdditionalDataHolder, BackedModel,
      * @return int|null
     */
     public function getCacheAccountsAboveDiskFreePercentage(): ?int {
-        return $this->getBackingStore()->get('cacheAccountsAboveDiskFreePercentage');
+        $val = $this->getBackingStore()->get('cacheAccountsAboveDiskFreePercentage');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cacheAccountsAboveDiskFreePercentage'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -89,7 +102,11 @@ class SharedPCAccountManagerPolicy implements AdditionalDataHolder, BackedModel,
      * @return int|null
     */
     public function getInactiveThresholdDays(): ?int {
-        return $this->getBackingStore()->get('inactiveThresholdDays');
+        $val = $this->getBackingStore()->get('inactiveThresholdDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'inactiveThresholdDays'");
     }
 
     /**
@@ -97,7 +114,11 @@ class SharedPCAccountManagerPolicy implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -105,7 +126,11 @@ class SharedPCAccountManagerPolicy implements AdditionalDataHolder, BackedModel,
      * @return int|null
     */
     public function getRemoveAccountsBelowDiskFreePercentage(): ?int {
-        return $this->getBackingStore()->get('removeAccountsBelowDiskFreePercentage');
+        $val = $this->getBackingStore()->get('removeAccountsBelowDiskFreePercentage');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'removeAccountsBelowDiskFreePercentage'");
     }
 
     /**

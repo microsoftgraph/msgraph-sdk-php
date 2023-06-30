@@ -30,7 +30,11 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @return string|null
     */
     public function getAccessReviewId(): ?string {
-        return $this->getBackingStore()->get('accessReviewId');
+        $val = $this->getBackingStore()->get('accessReviewId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'accessReviewId'");
     }
 
     /**
@@ -38,7 +42,11 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @return UserIdentity|null
     */
     public function getAppliedBy(): ?UserIdentity {
-        return $this->getBackingStore()->get('appliedBy');
+        $val = $this->getBackingStore()->get('appliedBy');
+        if (is_null($val) || $val instanceof UserIdentity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appliedBy'");
     }
 
     /**
@@ -46,7 +54,11 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getAppliedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('appliedDateTime');
+        $val = $this->getBackingStore()->get('appliedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appliedDateTime'");
     }
 
     /**
@@ -54,7 +66,11 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @return string|null
     */
     public function getApplyResult(): ?string {
-        return $this->getBackingStore()->get('applyResult');
+        $val = $this->getBackingStore()->get('applyResult');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'applyResult'");
     }
 
     /**
@@ -62,12 +78,16 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @return string|null
     */
     public function getDecision(): ?string {
-        return $this->getBackingStore()->get('decision');
+        $val = $this->getBackingStore()->get('decision');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'decision'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -93,7 +113,11 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @return string|null
     */
     public function getJustification(): ?string {
-        return $this->getBackingStore()->get('justification');
+        $val = $this->getBackingStore()->get('justification');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'justification'");
     }
 
     /**
@@ -101,7 +125,11 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @return Identity|null
     */
     public function getPrincipal(): ?Identity {
-        return $this->getBackingStore()->get('principal');
+        $val = $this->getBackingStore()->get('principal');
+        if (is_null($val) || $val instanceof Identity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'principal'");
     }
 
     /**
@@ -109,7 +137,11 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @return string|null
     */
     public function getPrincipalLink(): ?string {
-        return $this->getBackingStore()->get('principalLink');
+        $val = $this->getBackingStore()->get('principalLink');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'principalLink'");
     }
 
     /**
@@ -117,7 +149,11 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @return string|null
     */
     public function getRecommendation(): ?string {
-        return $this->getBackingStore()->get('recommendation');
+        $val = $this->getBackingStore()->get('recommendation');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recommendation'");
     }
 
     /**
@@ -125,7 +161,11 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @return AccessReviewInstanceDecisionItemResource|null
     */
     public function getResource(): ?AccessReviewInstanceDecisionItemResource {
-        return $this->getBackingStore()->get('resource');
+        $val = $this->getBackingStore()->get('resource');
+        if (is_null($val) || $val instanceof AccessReviewInstanceDecisionItemResource) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resource'");
     }
 
     /**
@@ -133,7 +173,11 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @return string|null
     */
     public function getResourceLink(): ?string {
-        return $this->getBackingStore()->get('resourceLink');
+        $val = $this->getBackingStore()->get('resourceLink');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceLink'");
     }
 
     /**
@@ -141,7 +185,11 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @return UserIdentity|null
     */
     public function getReviewedBy(): ?UserIdentity {
-        return $this->getBackingStore()->get('reviewedBy');
+        $val = $this->getBackingStore()->get('reviewedBy');
+        if (is_null($val) || $val instanceof UserIdentity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reviewedBy'");
     }
 
     /**
@@ -149,7 +197,11 @@ class AccessReviewInstanceDecisionItem extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getReviewedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('reviewedDateTime');
+        $val = $this->getBackingStore()->get('reviewedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reviewedDateTime'");
     }
 
     /**

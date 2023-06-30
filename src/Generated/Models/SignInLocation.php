@@ -39,7 +39,12 @@ class SignInLocation implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +60,11 @@ class SignInLocation implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getCity(): ?string {
-        return $this->getBackingStore()->get('city');
+        $val = $this->getBackingStore()->get('city');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'city'");
     }
 
     /**
@@ -63,12 +72,16 @@ class SignInLocation implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getCountryOrRegion(): ?string {
-        return $this->getBackingStore()->get('countryOrRegion');
+        $val = $this->getBackingStore()->get('countryOrRegion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'countryOrRegion'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -86,7 +99,11 @@ class SignInLocation implements AdditionalDataHolder, BackedModel, Parsable
      * @return GeoCoordinates|null
     */
     public function getGeoCoordinates(): ?GeoCoordinates {
-        return $this->getBackingStore()->get('geoCoordinates');
+        $val = $this->getBackingStore()->get('geoCoordinates');
+        if (is_null($val) || $val instanceof GeoCoordinates) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'geoCoordinates'");
     }
 
     /**
@@ -94,7 +111,11 @@ class SignInLocation implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -102,7 +123,11 @@ class SignInLocation implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getState(): ?string {
-        return $this->getBackingStore()->get('state');
+        $val = $this->getBackingStore()->get('state');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
     }
 
     /**

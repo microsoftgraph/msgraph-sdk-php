@@ -40,7 +40,12 @@ class Norm_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,12 +61,16 @@ class Norm_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getCumulative(): ?Json {
-        return $this->getBackingStore()->get('cumulative');
+        $val = $this->getBackingStore()->get('cumulative');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cumulative'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -78,7 +87,11 @@ class Norm_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getMean(): ?Json {
-        return $this->getBackingStore()->get('mean');
+        $val = $this->getBackingStore()->get('mean');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mean'");
     }
 
     /**
@@ -86,7 +99,11 @@ class Norm_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getStandardDev(): ?Json {
-        return $this->getBackingStore()->get('standardDev');
+        $val = $this->getBackingStore()->get('standardDev');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'standardDev'");
     }
 
     /**
@@ -94,7 +111,11 @@ class Norm_DistPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return Json|null
     */
     public function getX(): ?Json {
-        return $this->getBackingStore()->get('x');
+        $val = $this->getBackingStore()->get('x');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'x'");
     }
 
     /**

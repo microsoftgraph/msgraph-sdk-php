@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ConnectedOrganization extends Entity implements Parsable 
 {
@@ -30,7 +31,11 @@ class ConnectedOrganization extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -38,7 +43,11 @@ class ConnectedOrganization extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -46,7 +55,11 @@ class ConnectedOrganization extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
@@ -54,12 +67,18 @@ class ConnectedOrganization extends Entity implements Parsable
      * @return array<DirectoryObject>|null
     */
     public function getExternalSponsors(): ?array {
-        return $this->getBackingStore()->get('externalSponsors');
+        $val = $this->getBackingStore()->get('externalSponsors');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DirectoryObject::class);
+            /** @var array<DirectoryObject>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'externalSponsors'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -80,7 +99,13 @@ class ConnectedOrganization extends Entity implements Parsable
      * @return array<IdentitySource>|null
     */
     public function getIdentitySources(): ?array {
-        return $this->getBackingStore()->get('identitySources');
+        $val = $this->getBackingStore()->get('identitySources');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, IdentitySource::class);
+            /** @var array<IdentitySource>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'identitySources'");
     }
 
     /**
@@ -88,7 +113,13 @@ class ConnectedOrganization extends Entity implements Parsable
      * @return array<DirectoryObject>|null
     */
     public function getInternalSponsors(): ?array {
-        return $this->getBackingStore()->get('internalSponsors');
+        $val = $this->getBackingStore()->get('internalSponsors');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DirectoryObject::class);
+            /** @var array<DirectoryObject>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'internalSponsors'");
     }
 
     /**
@@ -96,7 +127,11 @@ class ConnectedOrganization extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('modifiedDateTime');
+        $val = $this->getBackingStore()->get('modifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'modifiedDateTime'");
     }
 
     /**
@@ -104,7 +139,11 @@ class ConnectedOrganization extends Entity implements Parsable
      * @return ConnectedOrganizationState|null
     */
     public function getState(): ?ConnectedOrganizationState {
-        return $this->getBackingStore()->get('state');
+        $val = $this->getBackingStore()->get('state');
+        if (is_null($val) || $val instanceof ConnectedOrganizationState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
     }
 
     /**

@@ -30,7 +30,11 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
      * @return UnifiedRoleEligibilityScheduleInstance|null
     */
     public function getActivatedUsing(): ?UnifiedRoleEligibilityScheduleInstance {
-        return $this->getBackingStore()->get('activatedUsing');
+        $val = $this->getBackingStore()->get('activatedUsing');
+        if (is_null($val) || $val instanceof UnifiedRoleEligibilityScheduleInstance) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activatedUsing'");
     }
 
     /**
@@ -38,7 +42,11 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
      * @return string|null
     */
     public function getAssignmentType(): ?string {
-        return $this->getBackingStore()->get('assignmentType');
+        $val = $this->getBackingStore()->get('assignmentType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignmentType'");
     }
 
     /**
@@ -46,12 +54,16 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('endDateTime');
+        $val = $this->getBackingStore()->get('endDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'endDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -71,7 +83,11 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
      * @return string|null
     */
     public function getMemberType(): ?string {
-        return $this->getBackingStore()->get('memberType');
+        $val = $this->getBackingStore()->get('memberType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'memberType'");
     }
 
     /**
@@ -79,7 +95,11 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
      * @return string|null
     */
     public function getRoleAssignmentOriginId(): ?string {
-        return $this->getBackingStore()->get('roleAssignmentOriginId');
+        $val = $this->getBackingStore()->get('roleAssignmentOriginId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'roleAssignmentOriginId'");
     }
 
     /**
@@ -87,7 +107,11 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
      * @return string|null
     */
     public function getRoleAssignmentScheduleId(): ?string {
-        return $this->getBackingStore()->get('roleAssignmentScheduleId');
+        $val = $this->getBackingStore()->get('roleAssignmentScheduleId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'roleAssignmentScheduleId'");
     }
 
     /**
@@ -95,7 +119,11 @@ class UnifiedRoleAssignmentScheduleInstance extends UnifiedRoleScheduleInstanceB
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('startDateTime');
+        $val = $this->getBackingStore()->get('startDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'startDateTime'");
     }
 
     /**

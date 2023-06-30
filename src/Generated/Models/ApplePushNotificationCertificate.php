@@ -30,7 +30,11 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
      * @return string|null
     */
     public function getAppleIdentifier(): ?string {
-        return $this->getBackingStore()->get('appleIdentifier');
+        $val = $this->getBackingStore()->get('appleIdentifier');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appleIdentifier'");
     }
 
     /**
@@ -38,7 +42,11 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
      * @return string|null
     */
     public function getCertificate(): ?string {
-        return $this->getBackingStore()->get('certificate');
+        $val = $this->getBackingStore()->get('certificate');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'certificate'");
     }
 
     /**
@@ -46,7 +54,11 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
      * @return string|null
     */
     public function getCertificateSerialNumber(): ?string {
-        return $this->getBackingStore()->get('certificateSerialNumber');
+        $val = $this->getBackingStore()->get('certificateSerialNumber');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'certificateSerialNumber'");
     }
 
     /**
@@ -54,7 +66,11 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
      * @return string|null
     */
     public function getCertificateUploadFailureReason(): ?string {
-        return $this->getBackingStore()->get('certificateUploadFailureReason');
+        $val = $this->getBackingStore()->get('certificateUploadFailureReason');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'certificateUploadFailureReason'");
     }
 
     /**
@@ -62,7 +78,11 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
      * @return string|null
     */
     public function getCertificateUploadStatus(): ?string {
-        return $this->getBackingStore()->get('certificateUploadStatus');
+        $val = $this->getBackingStore()->get('certificateUploadStatus');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'certificateUploadStatus'");
     }
 
     /**
@@ -70,12 +90,16 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('expirationDateTime');
+        $val = $this->getBackingStore()->get('expirationDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'expirationDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -96,7 +120,11 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedDateTime');
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**
@@ -104,7 +132,11 @@ class ApplePushNotificationCertificate extends Entity implements Parsable
      * @return string|null
     */
     public function getTopicIdentifier(): ?string {
-        return $this->getBackingStore()->get('topicIdentifier');
+        $val = $this->getBackingStore()->get('topicIdentifier');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'topicIdentifier'");
     }
 
     /**

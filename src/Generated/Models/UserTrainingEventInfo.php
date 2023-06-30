@@ -39,7 +39,12 @@ class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,12 +60,16 @@ class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -79,7 +88,11 @@ class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel, Parsab
      * @return TrainingStatus|null
     */
     public function getLatestTrainingStatus(): ?TrainingStatus {
-        return $this->getBackingStore()->get('latestTrainingStatus');
+        $val = $this->getBackingStore()->get('latestTrainingStatus');
+        if (is_null($val) || $val instanceof TrainingStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'latestTrainingStatus'");
     }
 
     /**
@@ -87,7 +100,11 @@ class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -95,7 +112,11 @@ class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel, Parsab
      * @return UserTrainingContentEventInfo|null
     */
     public function getTrainingAssignedProperties(): ?UserTrainingContentEventInfo {
-        return $this->getBackingStore()->get('trainingAssignedProperties');
+        $val = $this->getBackingStore()->get('trainingAssignedProperties');
+        if (is_null($val) || $val instanceof UserTrainingContentEventInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'trainingAssignedProperties'");
     }
 
     /**
@@ -103,7 +124,11 @@ class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel, Parsab
      * @return UserTrainingContentEventInfo|null
     */
     public function getTrainingCompletedProperties(): ?UserTrainingContentEventInfo {
-        return $this->getBackingStore()->get('trainingCompletedProperties');
+        $val = $this->getBackingStore()->get('trainingCompletedProperties');
+        if (is_null($val) || $val instanceof UserTrainingContentEventInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'trainingCompletedProperties'");
     }
 
     /**
@@ -111,7 +136,11 @@ class UserTrainingEventInfo implements AdditionalDataHolder, BackedModel, Parsab
      * @return UserTrainingContentEventInfo|null
     */
     public function getTrainingUpdatedProperties(): ?UserTrainingContentEventInfo {
-        return $this->getBackingStore()->get('trainingUpdatedProperties');
+        $val = $this->getBackingStore()->get('trainingUpdatedProperties');
+        if (is_null($val) || $val instanceof UserTrainingContentEventInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'trainingUpdatedProperties'");
     }
 
     /**

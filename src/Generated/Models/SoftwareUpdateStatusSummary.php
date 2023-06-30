@@ -29,7 +29,11 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getCompliantDeviceCount(): ?int {
-        return $this->getBackingStore()->get('compliantDeviceCount');
+        $val = $this->getBackingStore()->get('compliantDeviceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'compliantDeviceCount'");
     }
 
     /**
@@ -37,7 +41,11 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getCompliantUserCount(): ?int {
-        return $this->getBackingStore()->get('compliantUserCount');
+        $val = $this->getBackingStore()->get('compliantUserCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'compliantUserCount'");
     }
 
     /**
@@ -45,7 +53,11 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getConflictDeviceCount(): ?int {
-        return $this->getBackingStore()->get('conflictDeviceCount');
+        $val = $this->getBackingStore()->get('conflictDeviceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'conflictDeviceCount'");
     }
 
     /**
@@ -53,7 +65,11 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getConflictUserCount(): ?int {
-        return $this->getBackingStore()->get('conflictUserCount');
+        $val = $this->getBackingStore()->get('conflictUserCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'conflictUserCount'");
     }
 
     /**
@@ -61,7 +77,11 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
@@ -69,7 +89,11 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getErrorDeviceCount(): ?int {
-        return $this->getBackingStore()->get('errorDeviceCount');
+        $val = $this->getBackingStore()->get('errorDeviceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'errorDeviceCount'");
     }
 
     /**
@@ -77,12 +101,16 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getErrorUserCount(): ?int {
-        return $this->getBackingStore()->get('errorUserCount');
+        $val = $this->getBackingStore()->get('errorUserCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'errorUserCount'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -110,7 +138,11 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getNonCompliantDeviceCount(): ?int {
-        return $this->getBackingStore()->get('nonCompliantDeviceCount');
+        $val = $this->getBackingStore()->get('nonCompliantDeviceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'nonCompliantDeviceCount'");
     }
 
     /**
@@ -118,7 +150,11 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getNonCompliantUserCount(): ?int {
-        return $this->getBackingStore()->get('nonCompliantUserCount');
+        $val = $this->getBackingStore()->get('nonCompliantUserCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'nonCompliantUserCount'");
     }
 
     /**
@@ -126,7 +162,11 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getNotApplicableDeviceCount(): ?int {
-        return $this->getBackingStore()->get('notApplicableDeviceCount');
+        $val = $this->getBackingStore()->get('notApplicableDeviceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'notApplicableDeviceCount'");
     }
 
     /**
@@ -134,7 +174,11 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getNotApplicableUserCount(): ?int {
-        return $this->getBackingStore()->get('notApplicableUserCount');
+        $val = $this->getBackingStore()->get('notApplicableUserCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'notApplicableUserCount'");
     }
 
     /**
@@ -142,7 +186,11 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getRemediatedDeviceCount(): ?int {
-        return $this->getBackingStore()->get('remediatedDeviceCount');
+        $val = $this->getBackingStore()->get('remediatedDeviceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'remediatedDeviceCount'");
     }
 
     /**
@@ -150,7 +198,11 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getRemediatedUserCount(): ?int {
-        return $this->getBackingStore()->get('remediatedUserCount');
+        $val = $this->getBackingStore()->get('remediatedUserCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'remediatedUserCount'");
     }
 
     /**
@@ -158,7 +210,11 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getUnknownDeviceCount(): ?int {
-        return $this->getBackingStore()->get('unknownDeviceCount');
+        $val = $this->getBackingStore()->get('unknownDeviceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'unknownDeviceCount'");
     }
 
     /**
@@ -166,7 +222,11 @@ class SoftwareUpdateStatusSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getUnknownUserCount(): ?int {
-        return $this->getBackingStore()->get('unknownUserCount');
+        $val = $this->getBackingStore()->get('unknownUserCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'unknownUserCount'");
     }
 
     /**

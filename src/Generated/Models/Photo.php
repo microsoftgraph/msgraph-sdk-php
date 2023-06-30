@@ -40,7 +40,12 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,7 +61,11 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getCameraMake(): ?string {
-        return $this->getBackingStore()->get('cameraMake');
+        $val = $this->getBackingStore()->get('cameraMake');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cameraMake'");
     }
 
     /**
@@ -64,7 +73,11 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getCameraModel(): ?string {
-        return $this->getBackingStore()->get('cameraModel');
+        $val = $this->getBackingStore()->get('cameraModel');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cameraModel'");
     }
 
     /**
@@ -72,7 +85,11 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getExposureDenominator(): ?float {
-        return $this->getBackingStore()->get('exposureDenominator');
+        $val = $this->getBackingStore()->get('exposureDenominator');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'exposureDenominator'");
     }
 
     /**
@@ -80,12 +97,16 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getExposureNumerator(): ?float {
-        return $this->getBackingStore()->get('exposureNumerator');
+        $val = $this->getBackingStore()->get('exposureNumerator');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'exposureNumerator'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -108,7 +129,11 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getFNumber(): ?float {
-        return $this->getBackingStore()->get('fNumber');
+        $val = $this->getBackingStore()->get('fNumber');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fNumber'");
     }
 
     /**
@@ -116,7 +141,11 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getFocalLength(): ?float {
-        return $this->getBackingStore()->get('focalLength');
+        $val = $this->getBackingStore()->get('focalLength');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'focalLength'");
     }
 
     /**
@@ -124,7 +153,11 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getIso(): ?int {
-        return $this->getBackingStore()->get('iso');
+        $val = $this->getBackingStore()->get('iso');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'iso'");
     }
 
     /**
@@ -132,7 +165,11 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -140,7 +177,11 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getOrientation(): ?int {
-        return $this->getBackingStore()->get('orientation');
+        $val = $this->getBackingStore()->get('orientation');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'orientation'");
     }
 
     /**
@@ -148,7 +189,11 @@ class Photo implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTime|null
     */
     public function getTakenDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('takenDateTime');
+        $val = $this->getBackingStore()->get('takenDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'takenDateTime'");
     }
 
     /**

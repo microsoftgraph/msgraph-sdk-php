@@ -31,7 +31,11 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getAppRoleId(): ?string {
-        return $this->getBackingStore()->get('appRoleId');
+        $val = $this->getBackingStore()->get('appRoleId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appRoleId'");
     }
 
     /**
@@ -39,12 +43,16 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -64,7 +72,11 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getPrincipalDisplayName(): ?string {
-        return $this->getBackingStore()->get('principalDisplayName');
+        $val = $this->getBackingStore()->get('principalDisplayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'principalDisplayName'");
     }
 
     /**
@@ -72,7 +84,11 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getPrincipalId(): ?string {
-        return $this->getBackingStore()->get('principalId');
+        $val = $this->getBackingStore()->get('principalId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'principalId'");
     }
 
     /**
@@ -80,7 +96,11 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getPrincipalType(): ?string {
-        return $this->getBackingStore()->get('principalType');
+        $val = $this->getBackingStore()->get('principalType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'principalType'");
     }
 
     /**
@@ -88,7 +108,11 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getResourceDisplayName(): ?string {
-        return $this->getBackingStore()->get('resourceDisplayName');
+        $val = $this->getBackingStore()->get('resourceDisplayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceDisplayName'");
     }
 
     /**
@@ -96,7 +120,11 @@ class AppRoleAssignment extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getResourceId(): ?string {
-        return $this->getBackingStore()->get('resourceId');
+        $val = $this->getBackingStore()->get('resourceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceId'");
     }
 
     /**

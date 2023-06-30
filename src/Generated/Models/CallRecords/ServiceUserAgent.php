@@ -27,7 +27,7 @@ class ServiceUserAgent extends UserAgent implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class ServiceUserAgent extends UserAgent implements Parsable
      * @return ServiceRole|null
     */
     public function getRole(): ?ServiceRole {
-        return $this->getBackingStore()->get('role');
+        $val = $this->getBackingStore()->get('role');
+        if (is_null($val) || $val instanceof ServiceRole) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'role'");
     }
 
     /**

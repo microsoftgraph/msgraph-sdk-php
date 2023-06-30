@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Types\Date;
 class PrintUsage extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new printUsage and sets the default values.
+     * Instantiates a new PrintUsage and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -38,7 +38,11 @@ class PrintUsage extends Entity implements Parsable
      * @return int|null
     */
     public function getCompletedBlackAndWhiteJobCount(): ?int {
-        return $this->getBackingStore()->get('completedBlackAndWhiteJobCount');
+        $val = $this->getBackingStore()->get('completedBlackAndWhiteJobCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'completedBlackAndWhiteJobCount'");
     }
 
     /**
@@ -46,12 +50,16 @@ class PrintUsage extends Entity implements Parsable
      * @return int|null
     */
     public function getCompletedColorJobCount(): ?int {
-        return $this->getBackingStore()->get('completedColorJobCount');
+        $val = $this->getBackingStore()->get('completedColorJobCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'completedColorJobCount'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -68,7 +76,11 @@ class PrintUsage extends Entity implements Parsable
      * @return int|null
     */
     public function getIncompleteJobCount(): ?int {
-        return $this->getBackingStore()->get('incompleteJobCount');
+        $val = $this->getBackingStore()->get('incompleteJobCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'incompleteJobCount'");
     }
 
     /**
@@ -76,7 +88,11 @@ class PrintUsage extends Entity implements Parsable
      * @return Date|null
     */
     public function getUsageDate(): ?Date {
-        return $this->getBackingStore()->get('usageDate');
+        $val = $this->getBackingStore()->get('usageDate');
+        if (is_null($val) || $val instanceof Date) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'usageDate'");
     }
 
     /**

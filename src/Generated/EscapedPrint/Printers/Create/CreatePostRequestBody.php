@@ -40,7 +40,12 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,7 +61,11 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return PrintCertificateSigningRequest|null
     */
     public function getCertificateSigningRequest(): ?PrintCertificateSigningRequest {
-        return $this->getBackingStore()->get('certificateSigningRequest');
+        $val = $this->getBackingStore()->get('certificateSigningRequest');
+        if (is_null($val) || $val instanceof PrintCertificateSigningRequest) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'certificateSigningRequest'");
     }
 
     /**
@@ -64,7 +73,11 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getConnectorId(): ?string {
-        return $this->getBackingStore()->get('connectorId');
+        $val = $this->getBackingStore()->get('connectorId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'connectorId'");
     }
 
     /**
@@ -72,12 +85,16 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -97,7 +114,11 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getHasPhysicalDevice(): ?bool {
-        return $this->getBackingStore()->get('hasPhysicalDevice');
+        $val = $this->getBackingStore()->get('hasPhysicalDevice');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hasPhysicalDevice'");
     }
 
     /**
@@ -105,7 +126,11 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getManufacturer(): ?string {
-        return $this->getBackingStore()->get('manufacturer');
+        $val = $this->getBackingStore()->get('manufacturer');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'manufacturer'");
     }
 
     /**
@@ -113,7 +138,11 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getModel(): ?string {
-        return $this->getBackingStore()->get('model');
+        $val = $this->getBackingStore()->get('model');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'model'");
     }
 
     /**
@@ -121,7 +150,11 @@ class CreatePostRequestBody implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getPhysicalDeviceId(): ?string {
-        return $this->getBackingStore()->get('physicalDeviceId');
+        $val = $this->getBackingStore()->get('physicalDeviceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'physicalDeviceId'");
     }
 
     /**

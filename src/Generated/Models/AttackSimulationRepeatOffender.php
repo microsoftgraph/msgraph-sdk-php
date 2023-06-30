@@ -39,7 +39,12 @@ class AttackSimulationRepeatOffender implements AdditionalDataHolder, BackedMode
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class AttackSimulationRepeatOffender implements AdditionalDataHolder, BackedMode
      * @return AttackSimulationUser|null
     */
     public function getAttackSimulationUser(): ?AttackSimulationUser {
-        return $this->getBackingStore()->get('attackSimulationUser');
+        $val = $this->getBackingStore()->get('attackSimulationUser');
+        if (is_null($val) || $val instanceof AttackSimulationUser) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'attackSimulationUser'");
     }
 
     /**
@@ -60,7 +69,7 @@ class AttackSimulationRepeatOffender implements AdditionalDataHolder, BackedMode
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -76,7 +85,11 @@ class AttackSimulationRepeatOffender implements AdditionalDataHolder, BackedMode
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -84,7 +97,11 @@ class AttackSimulationRepeatOffender implements AdditionalDataHolder, BackedMode
      * @return int|null
     */
     public function getRepeatOffenceCount(): ?int {
-        return $this->getBackingStore()->get('repeatOffenceCount');
+        $val = $this->getBackingStore()->get('repeatOffenceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'repeatOffenceCount'");
     }
 
     /**

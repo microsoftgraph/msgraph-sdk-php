@@ -40,7 +40,12 @@ class MirrPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -53,7 +58,7 @@ class MirrPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -69,7 +74,11 @@ class MirrPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return Json|null
     */
     public function getFinanceRate(): ?Json {
-        return $this->getBackingStore()->get('financeRate');
+        $val = $this->getBackingStore()->get('financeRate');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'financeRate'");
     }
 
     /**
@@ -77,7 +86,11 @@ class MirrPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return Json|null
     */
     public function getReinvestRate(): ?Json {
-        return $this->getBackingStore()->get('reinvestRate');
+        $val = $this->getBackingStore()->get('reinvestRate');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reinvestRate'");
     }
 
     /**
@@ -85,7 +98,11 @@ class MirrPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return Json|null
     */
     public function getValues(): ?Json {
-        return $this->getBackingStore()->get('values');
+        $val = $this->getBackingStore()->get('values');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'values'");
     }
 
     /**

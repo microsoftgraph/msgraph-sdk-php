@@ -39,7 +39,12 @@ class TopicModelingSettings implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,12 +60,16 @@ class TopicModelingSettings implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getDynamicallyAdjustTopicCount(): ?bool {
-        return $this->getBackingStore()->get('dynamicallyAdjustTopicCount');
+        $val = $this->getBackingStore()->get('dynamicallyAdjustTopicCount');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dynamicallyAdjustTopicCount'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -78,7 +87,11 @@ class TopicModelingSettings implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getIgnoreNumbers(): ?bool {
-        return $this->getBackingStore()->get('ignoreNumbers');
+        $val = $this->getBackingStore()->get('ignoreNumbers');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'ignoreNumbers'");
     }
 
     /**
@@ -86,7 +99,11 @@ class TopicModelingSettings implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
-        return $this->getBackingStore()->get('isEnabled');
+        $val = $this->getBackingStore()->get('isEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isEnabled'");
     }
 
     /**
@@ -94,7 +111,11 @@ class TopicModelingSettings implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -102,7 +123,11 @@ class TopicModelingSettings implements AdditionalDataHolder, BackedModel, Parsab
      * @return int|null
     */
     public function getTopicCount(): ?int {
-        return $this->getBackingStore()->get('topicCount');
+        $val = $this->getBackingStore()->get('topicCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'topicCount'");
     }
 
     /**

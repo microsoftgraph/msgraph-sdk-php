@@ -10,7 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AuthoredNote extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new AuthoredNote and sets the default values.
+     * Instantiates a new authoredNote and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -30,7 +30,11 @@ class AuthoredNote extends Entity implements Parsable
      * @return Identity|null
     */
     public function getAuthor(): ?Identity {
-        return $this->getBackingStore()->get('author');
+        $val = $this->getBackingStore()->get('author');
+        if (is_null($val) || $val instanceof Identity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'author'");
     }
 
     /**
@@ -38,7 +42,11 @@ class AuthoredNote extends Entity implements Parsable
      * @return ItemBody|null
     */
     public function getContent(): ?ItemBody {
-        return $this->getBackingStore()->get('content');
+        $val = $this->getBackingStore()->get('content');
+        if (is_null($val) || $val instanceof ItemBody) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'content'");
     }
 
     /**
@@ -46,12 +54,16 @@ class AuthoredNote extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

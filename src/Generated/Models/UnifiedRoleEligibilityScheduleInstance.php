@@ -30,12 +30,16 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('endDateTime');
+        $val = $this->getBackingStore()->get('endDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'endDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -52,7 +56,11 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
      * @return string|null
     */
     public function getMemberType(): ?string {
-        return $this->getBackingStore()->get('memberType');
+        $val = $this->getBackingStore()->get('memberType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'memberType'");
     }
 
     /**
@@ -60,7 +68,11 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
      * @return string|null
     */
     public function getRoleEligibilityScheduleId(): ?string {
-        return $this->getBackingStore()->get('roleEligibilityScheduleId');
+        $val = $this->getBackingStore()->get('roleEligibilityScheduleId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'roleEligibilityScheduleId'");
     }
 
     /**
@@ -68,7 +80,11 @@ class UnifiedRoleEligibilityScheduleInstance extends UnifiedRoleScheduleInstance
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('startDateTime');
+        $val = $this->getBackingStore()->get('startDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'startDateTime'");
     }
 
     /**

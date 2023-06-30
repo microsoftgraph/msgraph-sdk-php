@@ -42,7 +42,12 @@ class IosNotificationSettings implements AdditionalDataHolder, BackedModel, Pars
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -50,7 +55,11 @@ class IosNotificationSettings implements AdditionalDataHolder, BackedModel, Pars
      * @return IosNotificationAlertType|null
     */
     public function getAlertType(): ?IosNotificationAlertType {
-        return $this->getBackingStore()->get('alertType');
+        $val = $this->getBackingStore()->get('alertType');
+        if (is_null($val) || $val instanceof IosNotificationAlertType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'alertType'");
     }
 
     /**
@@ -58,7 +67,11 @@ class IosNotificationSettings implements AdditionalDataHolder, BackedModel, Pars
      * @return string|null
     */
     public function getAppName(): ?string {
-        return $this->getBackingStore()->get('appName');
+        $val = $this->getBackingStore()->get('appName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appName'");
     }
 
     /**
@@ -74,7 +87,11 @@ class IosNotificationSettings implements AdditionalDataHolder, BackedModel, Pars
      * @return bool|null
     */
     public function getBadgesEnabled(): ?bool {
-        return $this->getBackingStore()->get('badgesEnabled');
+        $val = $this->getBackingStore()->get('badgesEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'badgesEnabled'");
     }
 
     /**
@@ -82,7 +99,11 @@ class IosNotificationSettings implements AdditionalDataHolder, BackedModel, Pars
      * @return string|null
     */
     public function getBundleID(): ?string {
-        return $this->getBackingStore()->get('bundleID');
+        $val = $this->getBackingStore()->get('bundleID');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bundleID'");
     }
 
     /**
@@ -90,12 +111,16 @@ class IosNotificationSettings implements AdditionalDataHolder, BackedModel, Pars
      * @return bool|null
     */
     public function getEnabled(): ?bool {
-        return $this->getBackingStore()->get('enabled');
+        $val = $this->getBackingStore()->get('enabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enabled'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -118,7 +143,11 @@ class IosNotificationSettings implements AdditionalDataHolder, BackedModel, Pars
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -126,7 +155,11 @@ class IosNotificationSettings implements AdditionalDataHolder, BackedModel, Pars
      * @return string|null
     */
     public function getPublisher(): ?string {
-        return $this->getBackingStore()->get('publisher');
+        $val = $this->getBackingStore()->get('publisher');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'publisher'");
     }
 
     /**
@@ -134,7 +167,11 @@ class IosNotificationSettings implements AdditionalDataHolder, BackedModel, Pars
      * @return bool|null
     */
     public function getShowInNotificationCenter(): ?bool {
-        return $this->getBackingStore()->get('showInNotificationCenter');
+        $val = $this->getBackingStore()->get('showInNotificationCenter');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'showInNotificationCenter'");
     }
 
     /**
@@ -142,7 +179,11 @@ class IosNotificationSettings implements AdditionalDataHolder, BackedModel, Pars
      * @return bool|null
     */
     public function getShowOnLockScreen(): ?bool {
-        return $this->getBackingStore()->get('showOnLockScreen');
+        $val = $this->getBackingStore()->get('showOnLockScreen');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'showOnLockScreen'");
     }
 
     /**
@@ -150,7 +191,11 @@ class IosNotificationSettings implements AdditionalDataHolder, BackedModel, Pars
      * @return bool|null
     */
     public function getSoundsEnabled(): ?bool {
-        return $this->getBackingStore()->get('soundsEnabled');
+        $val = $this->getBackingStore()->get('soundsEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'soundsEnabled'");
     }
 
     /**

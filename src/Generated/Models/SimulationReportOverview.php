@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class SimulationReportOverview implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class SimulationReportOverview implements AdditionalDataHolder, BackedModel, Par
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +58,7 @@ class SimulationReportOverview implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -70,7 +76,11 @@ class SimulationReportOverview implements AdditionalDataHolder, BackedModel, Par
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -78,7 +88,13 @@ class SimulationReportOverview implements AdditionalDataHolder, BackedModel, Par
      * @return array<RecommendedAction>|null
     */
     public function getRecommendedActions(): ?array {
-        return $this->getBackingStore()->get('recommendedActions');
+        $val = $this->getBackingStore()->get('recommendedActions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, RecommendedAction::class);
+            /** @var array<RecommendedAction>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recommendedActions'");
     }
 
     /**
@@ -86,7 +102,11 @@ class SimulationReportOverview implements AdditionalDataHolder, BackedModel, Par
      * @return int|null
     */
     public function getResolvedTargetsCount(): ?int {
-        return $this->getBackingStore()->get('resolvedTargetsCount');
+        $val = $this->getBackingStore()->get('resolvedTargetsCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resolvedTargetsCount'");
     }
 
     /**
@@ -94,7 +114,11 @@ class SimulationReportOverview implements AdditionalDataHolder, BackedModel, Par
      * @return SimulationEventsContent|null
     */
     public function getSimulationEventsContent(): ?SimulationEventsContent {
-        return $this->getBackingStore()->get('simulationEventsContent');
+        $val = $this->getBackingStore()->get('simulationEventsContent');
+        if (is_null($val) || $val instanceof SimulationEventsContent) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'simulationEventsContent'");
     }
 
     /**
@@ -102,7 +126,11 @@ class SimulationReportOverview implements AdditionalDataHolder, BackedModel, Par
      * @return TrainingEventsContent|null
     */
     public function getTrainingEventsContent(): ?TrainingEventsContent {
-        return $this->getBackingStore()->get('trainingEventsContent');
+        $val = $this->getBackingStore()->get('trainingEventsContent');
+        if (is_null($val) || $val instanceof TrainingEventsContent) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'trainingEventsContent'");
     }
 
     /**

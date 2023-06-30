@@ -30,7 +30,11 @@ class ActivityHistoryItem extends Entity implements Parsable
      * @return int|null
     */
     public function getActiveDurationSeconds(): ?int {
-        return $this->getBackingStore()->get('activeDurationSeconds');
+        $val = $this->getBackingStore()->get('activeDurationSeconds');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activeDurationSeconds'");
     }
 
     /**
@@ -38,7 +42,11 @@ class ActivityHistoryItem extends Entity implements Parsable
      * @return UserActivity|null
     */
     public function getActivity(): ?UserActivity {
-        return $this->getBackingStore()->get('activity');
+        $val = $this->getBackingStore()->get('activity');
+        if (is_null($val) || $val instanceof UserActivity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activity'");
     }
 
     /**
@@ -46,7 +54,11 @@ class ActivityHistoryItem extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -54,12 +66,16 @@ class ActivityHistoryItem extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('expirationDateTime');
+        $val = $this->getBackingStore()->get('expirationDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'expirationDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -81,7 +97,11 @@ class ActivityHistoryItem extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastActiveDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastActiveDateTime');
+        $val = $this->getBackingStore()->get('lastActiveDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastActiveDateTime'");
     }
 
     /**
@@ -89,7 +109,11 @@ class ActivityHistoryItem extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedDateTime');
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**
@@ -97,7 +121,11 @@ class ActivityHistoryItem extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getStartedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('startedDateTime');
+        $val = $this->getBackingStore()->get('startedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'startedDateTime'");
     }
 
     /**
@@ -105,7 +133,11 @@ class ActivityHistoryItem extends Entity implements Parsable
      * @return Status|null
     */
     public function getStatus(): ?Status {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof Status) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**
@@ -113,7 +145,11 @@ class ActivityHistoryItem extends Entity implements Parsable
      * @return string|null
     */
     public function getUserTimezone(): ?string {
-        return $this->getBackingStore()->get('userTimezone');
+        $val = $this->getBackingStore()->get('userTimezone');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userTimezone'");
     }
 
     /**

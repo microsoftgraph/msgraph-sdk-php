@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class EscapedPrint implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class EscapedPrint implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,12 +61,18 @@ class EscapedPrint implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<PrintConnector>|null
     */
     public function getConnectors(): ?array {
-        return $this->getBackingStore()->get('connectors');
+        $val = $this->getBackingStore()->get('connectors');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, PrintConnector::class);
+            /** @var array<PrintConnector>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'connectors'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -81,7 +93,11 @@ class EscapedPrint implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -89,7 +105,13 @@ class EscapedPrint implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<PrintOperation>|null
     */
     public function getOperations(): ?array {
-        return $this->getBackingStore()->get('operations');
+        $val = $this->getBackingStore()->get('operations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, PrintOperation::class);
+            /** @var array<PrintOperation>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operations'");
     }
 
     /**
@@ -97,7 +119,13 @@ class EscapedPrint implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<Printer>|null
     */
     public function getPrinters(): ?array {
-        return $this->getBackingStore()->get('printers');
+        $val = $this->getBackingStore()->get('printers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Printer::class);
+            /** @var array<Printer>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'printers'");
     }
 
     /**
@@ -105,7 +133,13 @@ class EscapedPrint implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<PrintService>|null
     */
     public function getServices(): ?array {
-        return $this->getBackingStore()->get('services');
+        $val = $this->getBackingStore()->get('services');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, PrintService::class);
+            /** @var array<PrintService>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'services'");
     }
 
     /**
@@ -113,7 +147,11 @@ class EscapedPrint implements AdditionalDataHolder, BackedModel, Parsable
      * @return PrintSettings|null
     */
     public function getSettings(): ?PrintSettings {
-        return $this->getBackingStore()->get('settings');
+        $val = $this->getBackingStore()->get('settings');
+        if (is_null($val) || $val instanceof PrintSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'settings'");
     }
 
     /**
@@ -121,7 +159,13 @@ class EscapedPrint implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<PrinterShare>|null
     */
     public function getShares(): ?array {
-        return $this->getBackingStore()->get('shares');
+        $val = $this->getBackingStore()->get('shares');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, PrinterShare::class);
+            /** @var array<PrinterShare>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'shares'");
     }
 
     /**
@@ -129,7 +173,13 @@ class EscapedPrint implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<PrintTaskDefinition>|null
     */
     public function getTaskDefinitions(): ?array {
-        return $this->getBackingStore()->get('taskDefinitions');
+        $val = $this->getBackingStore()->get('taskDefinitions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, PrintTaskDefinition::class);
+            /** @var array<PrintTaskDefinition>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'taskDefinitions'");
     }
 
     /**

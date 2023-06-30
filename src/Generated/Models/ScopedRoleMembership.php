@@ -29,12 +29,16 @@ class ScopedRoleMembership extends Entity implements Parsable
      * @return string|null
     */
     public function getAdministrativeUnitId(): ?string {
-        return $this->getBackingStore()->get('administrativeUnitId');
+        $val = $this->getBackingStore()->get('administrativeUnitId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'administrativeUnitId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -50,7 +54,11 @@ class ScopedRoleMembership extends Entity implements Parsable
      * @return string|null
     */
     public function getRoleId(): ?string {
-        return $this->getBackingStore()->get('roleId');
+        $val = $this->getBackingStore()->get('roleId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'roleId'");
     }
 
     /**
@@ -58,7 +66,11 @@ class ScopedRoleMembership extends Entity implements Parsable
      * @return Identity|null
     */
     public function getRoleMemberInfo(): ?Identity {
-        return $this->getBackingStore()->get('roleMemberInfo');
+        $val = $this->getBackingStore()->get('roleMemberInfo');
+        if (is_null($val) || $val instanceof Identity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'roleMemberInfo'");
     }
 
     /**

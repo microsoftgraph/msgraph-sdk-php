@@ -35,7 +35,7 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -52,7 +52,11 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      * @return DateTime|null
     */
     public function getRecipientActionDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('recipientActionDateTime');
+        $val = $this->getBackingStore()->get('recipientActionDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recipientActionDateTime'");
     }
 
     /**
@@ -60,7 +64,11 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      * @return string|null
     */
     public function getRecipientActionMessage(): ?string {
-        return $this->getBackingStore()->get('recipientActionMessage');
+        $val = $this->getBackingStore()->get('recipientActionMessage');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recipientActionMessage'");
     }
 
     /**
@@ -68,7 +76,11 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      * @return string|null
     */
     public function getRecipientUserId(): ?string {
-        return $this->getBackingStore()->get('recipientUserId');
+        $val = $this->getBackingStore()->get('recipientUserId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recipientUserId'");
     }
 
     /**
@@ -76,7 +88,11 @@ class OfferShiftRequest extends ScheduleChangeRequest implements Parsable
      * @return string|null
     */
     public function getSenderShiftId(): ?string {
-        return $this->getBackingStore()->get('senderShiftId');
+        $val = $this->getBackingStore()->get('senderShiftId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'senderShiftId'");
     }
 
     /**

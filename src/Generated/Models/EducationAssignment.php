@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class EducationAssignment extends Entity implements Parsable 
 {
@@ -30,7 +31,11 @@ class EducationAssignment extends Entity implements Parsable
      * @return EducationAddedStudentAction|null
     */
     public function getAddedStudentAction(): ?EducationAddedStudentAction {
-        return $this->getBackingStore()->get('addedStudentAction');
+        $val = $this->getBackingStore()->get('addedStudentAction');
+        if (is_null($val) || $val instanceof EducationAddedStudentAction) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'addedStudentAction'");
     }
 
     /**
@@ -38,7 +43,11 @@ class EducationAssignment extends Entity implements Parsable
      * @return EducationAddToCalendarOptions|null
     */
     public function getAddToCalendarAction(): ?EducationAddToCalendarOptions {
-        return $this->getBackingStore()->get('addToCalendarAction');
+        $val = $this->getBackingStore()->get('addToCalendarAction');
+        if (is_null($val) || $val instanceof EducationAddToCalendarOptions) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'addToCalendarAction'");
     }
 
     /**
@@ -46,7 +55,11 @@ class EducationAssignment extends Entity implements Parsable
      * @return bool|null
     */
     public function getAllowLateSubmissions(): ?bool {
-        return $this->getBackingStore()->get('allowLateSubmissions');
+        $val = $this->getBackingStore()->get('allowLateSubmissions');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowLateSubmissions'");
     }
 
     /**
@@ -54,7 +67,11 @@ class EducationAssignment extends Entity implements Parsable
      * @return bool|null
     */
     public function getAllowStudentsToAddResourcesToSubmission(): ?bool {
-        return $this->getBackingStore()->get('allowStudentsToAddResourcesToSubmission');
+        $val = $this->getBackingStore()->get('allowStudentsToAddResourcesToSubmission');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowStudentsToAddResourcesToSubmission'");
     }
 
     /**
@@ -62,7 +79,11 @@ class EducationAssignment extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getAssignDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('assignDateTime');
+        $val = $this->getBackingStore()->get('assignDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignDateTime'");
     }
 
     /**
@@ -70,7 +91,11 @@ class EducationAssignment extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getAssignedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('assignedDateTime');
+        $val = $this->getBackingStore()->get('assignedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignedDateTime'");
     }
 
     /**
@@ -78,7 +103,11 @@ class EducationAssignment extends Entity implements Parsable
      * @return EducationAssignmentRecipient|null
     */
     public function getAssignTo(): ?EducationAssignmentRecipient {
-        return $this->getBackingStore()->get('assignTo');
+        $val = $this->getBackingStore()->get('assignTo');
+        if (is_null($val) || $val instanceof EducationAssignmentRecipient) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignTo'");
     }
 
     /**
@@ -86,7 +115,13 @@ class EducationAssignment extends Entity implements Parsable
      * @return array<EducationCategory>|null
     */
     public function getCategories(): ?array {
-        return $this->getBackingStore()->get('categories');
+        $val = $this->getBackingStore()->get('categories');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, EducationCategory::class);
+            /** @var array<EducationCategory>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'categories'");
     }
 
     /**
@@ -94,7 +129,11 @@ class EducationAssignment extends Entity implements Parsable
      * @return string|null
     */
     public function getClassId(): ?string {
-        return $this->getBackingStore()->get('classId');
+        $val = $this->getBackingStore()->get('classId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'classId'");
     }
 
     /**
@@ -102,7 +141,11 @@ class EducationAssignment extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCloseDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('closeDateTime');
+        $val = $this->getBackingStore()->get('closeDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'closeDateTime'");
     }
 
     /**
@@ -110,7 +153,11 @@ class EducationAssignment extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
-        return $this->getBackingStore()->get('createdBy');
+        $val = $this->getBackingStore()->get('createdBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdBy'");
     }
 
     /**
@@ -118,7 +165,11 @@ class EducationAssignment extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -126,7 +177,11 @@ class EducationAssignment extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
@@ -134,7 +189,11 @@ class EducationAssignment extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getDueDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('dueDateTime');
+        $val = $this->getBackingStore()->get('dueDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dueDateTime'");
     }
 
     /**
@@ -142,12 +201,16 @@ class EducationAssignment extends Entity implements Parsable
      * @return string|null
     */
     public function getFeedbackResourcesFolderUrl(): ?string {
-        return $this->getBackingStore()->get('feedbackResourcesFolderUrl');
+        $val = $this->getBackingStore()->get('feedbackResourcesFolderUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'feedbackResourcesFolderUrl'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -186,7 +249,11 @@ class EducationAssignment extends Entity implements Parsable
      * @return EducationAssignmentGradeType|null
     */
     public function getGrading(): ?EducationAssignmentGradeType {
-        return $this->getBackingStore()->get('grading');
+        $val = $this->getBackingStore()->get('grading');
+        if (is_null($val) || $val instanceof EducationAssignmentGradeType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'grading'");
     }
 
     /**
@@ -194,7 +261,11 @@ class EducationAssignment extends Entity implements Parsable
      * @return EducationItemBody|null
     */
     public function getInstructions(): ?EducationItemBody {
-        return $this->getBackingStore()->get('instructions');
+        $val = $this->getBackingStore()->get('instructions');
+        if (is_null($val) || $val instanceof EducationItemBody) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'instructions'");
     }
 
     /**
@@ -202,7 +273,11 @@ class EducationAssignment extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getLastModifiedBy(): ?IdentitySet {
-        return $this->getBackingStore()->get('lastModifiedBy');
+        $val = $this->getBackingStore()->get('lastModifiedBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedBy'");
     }
 
     /**
@@ -210,7 +285,11 @@ class EducationAssignment extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedDateTime');
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**
@@ -218,7 +297,11 @@ class EducationAssignment extends Entity implements Parsable
      * @return string|null
     */
     public function getNotificationChannelUrl(): ?string {
-        return $this->getBackingStore()->get('notificationChannelUrl');
+        $val = $this->getBackingStore()->get('notificationChannelUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'notificationChannelUrl'");
     }
 
     /**
@@ -226,7 +309,13 @@ class EducationAssignment extends Entity implements Parsable
      * @return array<EducationAssignmentResource>|null
     */
     public function getResources(): ?array {
-        return $this->getBackingStore()->get('resources');
+        $val = $this->getBackingStore()->get('resources');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, EducationAssignmentResource::class);
+            /** @var array<EducationAssignmentResource>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resources'");
     }
 
     /**
@@ -234,7 +323,11 @@ class EducationAssignment extends Entity implements Parsable
      * @return string|null
     */
     public function getResourcesFolderUrl(): ?string {
-        return $this->getBackingStore()->get('resourcesFolderUrl');
+        $val = $this->getBackingStore()->get('resourcesFolderUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourcesFolderUrl'");
     }
 
     /**
@@ -242,7 +335,11 @@ class EducationAssignment extends Entity implements Parsable
      * @return EducationRubric|null
     */
     public function getRubric(): ?EducationRubric {
-        return $this->getBackingStore()->get('rubric');
+        $val = $this->getBackingStore()->get('rubric');
+        if (is_null($val) || $val instanceof EducationRubric) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rubric'");
     }
 
     /**
@@ -250,7 +347,11 @@ class EducationAssignment extends Entity implements Parsable
      * @return EducationAssignmentStatus|null
     */
     public function getStatus(): ?EducationAssignmentStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof EducationAssignmentStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**
@@ -258,7 +359,13 @@ class EducationAssignment extends Entity implements Parsable
      * @return array<EducationSubmission>|null
     */
     public function getSubmissions(): ?array {
-        return $this->getBackingStore()->get('submissions');
+        $val = $this->getBackingStore()->get('submissions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, EducationSubmission::class);
+            /** @var array<EducationSubmission>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'submissions'");
     }
 
     /**
@@ -266,7 +373,11 @@ class EducationAssignment extends Entity implements Parsable
      * @return string|null
     */
     public function getWebUrl(): ?string {
-        return $this->getBackingStore()->get('webUrl');
+        $val = $this->getBackingStore()->get('webUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'webUrl'");
     }
 
     /**

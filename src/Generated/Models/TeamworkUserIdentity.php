@@ -27,7 +27,7 @@ class TeamworkUserIdentity extends Identity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class TeamworkUserIdentity extends Identity implements Parsable
      * @return TeamworkUserIdentityType|null
     */
     public function getUserIdentityType(): ?TeamworkUserIdentityType {
-        return $this->getBackingStore()->get('userIdentityType');
+        $val = $this->getBackingStore()->get('userIdentityType');
+        if (is_null($val) || $val instanceof TeamworkUserIdentityType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userIdentityType'");
     }
 
     /**

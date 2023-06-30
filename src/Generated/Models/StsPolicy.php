@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class StsPolicy extends PolicyBase implements Parsable 
 {
@@ -41,7 +42,13 @@ class StsPolicy extends PolicyBase implements Parsable
      * @return array<DirectoryObject>|null
     */
     public function getAppliesTo(): ?array {
-        return $this->getBackingStore()->get('appliesTo');
+        $val = $this->getBackingStore()->get('appliesTo');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DirectoryObject::class);
+            /** @var array<DirectoryObject>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appliesTo'");
     }
 
     /**
@@ -49,18 +56,31 @@ class StsPolicy extends PolicyBase implements Parsable
      * @return array<string>|null
     */
     public function getDefinition(): ?array {
-        return $this->getBackingStore()->get('definition');
+        $val = $this->getBackingStore()->get('definition');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'definition'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'appliesTo' => fn(ParseNode $n) => $o->setAppliesTo($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
-            'definition' => fn(ParseNode $n) => $o->setDefinition($n->getCollectionOfPrimitiveValues()),
+            'definition' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setDefinition($val);
+            },
             'isOrganizationDefault' => fn(ParseNode $n) => $o->setIsOrganizationDefault($n->getBooleanValue()),
         ]);
     }
@@ -70,7 +90,11 @@ class StsPolicy extends PolicyBase implements Parsable
      * @return bool|null
     */
     public function getIsOrganizationDefault(): ?bool {
-        return $this->getBackingStore()->get('isOrganizationDefault');
+        $val = $this->getBackingStore()->get('isOrganizationDefault');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isOrganizationDefault'");
     }
 
     /**

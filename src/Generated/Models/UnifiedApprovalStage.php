@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class UnifiedApprovalStage implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class UnifiedApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +53,11 @@ class UnifiedApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
      * @return int|null
     */
     public function getApprovalStageTimeOutInDays(): ?int {
-        return $this->getBackingStore()->get('approvalStageTimeOutInDays');
+        $val = $this->getBackingStore()->get('approvalStageTimeOutInDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'approvalStageTimeOutInDays'");
     }
 
     /**
@@ -63,7 +73,13 @@ class UnifiedApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
      * @return array<SubjectSet>|null
     */
     public function getEscalationApprovers(): ?array {
-        return $this->getBackingStore()->get('escalationApprovers');
+        $val = $this->getBackingStore()->get('escalationApprovers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SubjectSet::class);
+            /** @var array<SubjectSet>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'escalationApprovers'");
     }
 
     /**
@@ -71,12 +87,16 @@ class UnifiedApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
      * @return int|null
     */
     public function getEscalationTimeInMinutes(): ?int {
-        return $this->getBackingStore()->get('escalationTimeInMinutes');
+        $val = $this->getBackingStore()->get('escalationTimeInMinutes');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'escalationTimeInMinutes'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -96,7 +116,11 @@ class UnifiedApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
      * @return bool|null
     */
     public function getIsApproverJustificationRequired(): ?bool {
-        return $this->getBackingStore()->get('isApproverJustificationRequired');
+        $val = $this->getBackingStore()->get('isApproverJustificationRequired');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isApproverJustificationRequired'");
     }
 
     /**
@@ -104,7 +128,11 @@ class UnifiedApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
      * @return bool|null
     */
     public function getIsEscalationEnabled(): ?bool {
-        return $this->getBackingStore()->get('isEscalationEnabled');
+        $val = $this->getBackingStore()->get('isEscalationEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isEscalationEnabled'");
     }
 
     /**
@@ -112,7 +140,11 @@ class UnifiedApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -120,7 +152,13 @@ class UnifiedApprovalStage implements AdditionalDataHolder, BackedModel, Parsabl
      * @return array<SubjectSet>|null
     */
     public function getPrimaryApprovers(): ?array {
-        return $this->getBackingStore()->get('primaryApprovers');
+        $val = $this->getBackingStore()->get('primaryApprovers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SubjectSet::class);
+            /** @var array<SubjectSet>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'primaryApprovers'");
     }
 
     /**

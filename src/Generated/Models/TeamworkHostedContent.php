@@ -37,7 +37,11 @@ class TeamworkHostedContent extends Entity implements Parsable
      * @return StreamInterface|null
     */
     public function getContentBytes(): ?StreamInterface {
-        return $this->getBackingStore()->get('contentBytes');
+        $val = $this->getBackingStore()->get('contentBytes');
+        if (is_null($val) || $val instanceof StreamInterface) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentBytes'");
     }
 
     /**
@@ -45,12 +49,16 @@ class TeamworkHostedContent extends Entity implements Parsable
      * @return string|null
     */
     public function getContentType(): ?string {
-        return $this->getBackingStore()->get('contentType');
+        $val = $this->getBackingStore()->get('contentType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentType'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

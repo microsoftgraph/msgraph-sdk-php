@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class IosManagedAppProtection extends TargetedManagedAppProtection implements Parsable 
 {
@@ -30,7 +31,11 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
      * @return ManagedAppDataEncryptionType|null
     */
     public function getAppDataEncryptionType(): ?ManagedAppDataEncryptionType {
-        return $this->getBackingStore()->get('appDataEncryptionType');
+        $val = $this->getBackingStore()->get('appDataEncryptionType');
+        if (is_null($val) || $val instanceof ManagedAppDataEncryptionType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appDataEncryptionType'");
     }
 
     /**
@@ -38,7 +43,13 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
      * @return array<ManagedMobileApp>|null
     */
     public function getApps(): ?array {
-        return $this->getBackingStore()->get('apps');
+        $val = $this->getBackingStore()->get('apps');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ManagedMobileApp::class);
+            /** @var array<ManagedMobileApp>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'apps'");
     }
 
     /**
@@ -46,7 +57,11 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
      * @return string|null
     */
     public function getCustomBrowserProtocol(): ?string {
-        return $this->getBackingStore()->get('customBrowserProtocol');
+        $val = $this->getBackingStore()->get('customBrowserProtocol');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customBrowserProtocol'");
     }
 
     /**
@@ -54,7 +69,11 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
      * @return int|null
     */
     public function getDeployedAppCount(): ?int {
-        return $this->getBackingStore()->get('deployedAppCount');
+        $val = $this->getBackingStore()->get('deployedAppCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deployedAppCount'");
     }
 
     /**
@@ -62,7 +81,11 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
      * @return ManagedAppPolicyDeploymentSummary|null
     */
     public function getDeploymentSummary(): ?ManagedAppPolicyDeploymentSummary {
-        return $this->getBackingStore()->get('deploymentSummary');
+        $val = $this->getBackingStore()->get('deploymentSummary');
+        if (is_null($val) || $val instanceof ManagedAppPolicyDeploymentSummary) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deploymentSummary'");
     }
 
     /**
@@ -70,12 +93,16 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
      * @return bool|null
     */
     public function getFaceIdBlocked(): ?bool {
-        return $this->getBackingStore()->get('faceIdBlocked');
+        $val = $this->getBackingStore()->get('faceIdBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'faceIdBlocked'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -95,7 +122,11 @@ class IosManagedAppProtection extends TargetedManagedAppProtection implements Pa
      * @return string|null
     */
     public function getMinimumRequiredSdkVersion(): ?string {
-        return $this->getBackingStore()->get('minimumRequiredSdkVersion');
+        $val = $this->getBackingStore()->get('minimumRequiredSdkVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minimumRequiredSdkVersion'");
     }
 
     /**

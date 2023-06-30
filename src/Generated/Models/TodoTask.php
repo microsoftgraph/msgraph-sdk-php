@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class TodoTask extends Entity implements Parsable 
 {
@@ -30,7 +31,13 @@ class TodoTask extends Entity implements Parsable
      * @return array<AttachmentBase>|null
     */
     public function getAttachments(): ?array {
-        return $this->getBackingStore()->get('attachments');
+        $val = $this->getBackingStore()->get('attachments');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AttachmentBase::class);
+            /** @var array<AttachmentBase>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'attachments'");
     }
 
     /**
@@ -38,7 +45,13 @@ class TodoTask extends Entity implements Parsable
      * @return array<AttachmentSession>|null
     */
     public function getAttachmentSessions(): ?array {
-        return $this->getBackingStore()->get('attachmentSessions');
+        $val = $this->getBackingStore()->get('attachmentSessions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AttachmentSession::class);
+            /** @var array<AttachmentSession>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'attachmentSessions'");
     }
 
     /**
@@ -46,7 +59,11 @@ class TodoTask extends Entity implements Parsable
      * @return ItemBody|null
     */
     public function getBody(): ?ItemBody {
-        return $this->getBackingStore()->get('body');
+        $val = $this->getBackingStore()->get('body');
+        if (is_null($val) || $val instanceof ItemBody) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'body'");
     }
 
     /**
@@ -54,7 +71,11 @@ class TodoTask extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getBodyLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('bodyLastModifiedDateTime');
+        $val = $this->getBackingStore()->get('bodyLastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bodyLastModifiedDateTime'");
     }
 
     /**
@@ -62,7 +83,13 @@ class TodoTask extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getCategories(): ?array {
-        return $this->getBackingStore()->get('categories');
+        $val = $this->getBackingStore()->get('categories');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'categories'");
     }
 
     /**
@@ -70,7 +97,13 @@ class TodoTask extends Entity implements Parsable
      * @return array<ChecklistItem>|null
     */
     public function getChecklistItems(): ?array {
-        return $this->getBackingStore()->get('checklistItems');
+        $val = $this->getBackingStore()->get('checklistItems');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ChecklistItem::class);
+            /** @var array<ChecklistItem>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'checklistItems'");
     }
 
     /**
@@ -78,7 +111,11 @@ class TodoTask extends Entity implements Parsable
      * @return DateTimeTimeZone|null
     */
     public function getCompletedDateTime(): ?DateTimeTimeZone {
-        return $this->getBackingStore()->get('completedDateTime');
+        $val = $this->getBackingStore()->get('completedDateTime');
+        if (is_null($val) || $val instanceof DateTimeTimeZone) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'completedDateTime'");
     }
 
     /**
@@ -86,7 +123,11 @@ class TodoTask extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -94,7 +135,11 @@ class TodoTask extends Entity implements Parsable
      * @return DateTimeTimeZone|null
     */
     public function getDueDateTime(): ?DateTimeTimeZone {
-        return $this->getBackingStore()->get('dueDateTime');
+        $val = $this->getBackingStore()->get('dueDateTime');
+        if (is_null($val) || $val instanceof DateTimeTimeZone) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dueDateTime'");
     }
 
     /**
@@ -102,12 +147,18 @@ class TodoTask extends Entity implements Parsable
      * @return array<Extension>|null
     */
     public function getExtensions(): ?array {
-        return $this->getBackingStore()->get('extensions');
+        $val = $this->getBackingStore()->get('extensions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Extension::class);
+            /** @var array<Extension>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'extensions'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -116,7 +167,14 @@ class TodoTask extends Entity implements Parsable
             'attachmentSessions' => fn(ParseNode $n) => $o->setAttachmentSessions($n->getCollectionOfObjectValues([AttachmentSession::class, 'createFromDiscriminatorValue'])),
             'body' => fn(ParseNode $n) => $o->setBody($n->getObjectValue([ItemBody::class, 'createFromDiscriminatorValue'])),
             'bodyLastModifiedDateTime' => fn(ParseNode $n) => $o->setBodyLastModifiedDateTime($n->getDateTimeValue()),
-            'categories' => fn(ParseNode $n) => $o->setCategories($n->getCollectionOfPrimitiveValues()),
+            'categories' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setCategories($val);
+            },
             'checklistItems' => fn(ParseNode $n) => $o->setChecklistItems($n->getCollectionOfObjectValues([ChecklistItem::class, 'createFromDiscriminatorValue'])),
             'completedDateTime' => fn(ParseNode $n) => $o->setCompletedDateTime($n->getObjectValue([DateTimeTimeZone::class, 'createFromDiscriminatorValue'])),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
@@ -140,7 +198,11 @@ class TodoTask extends Entity implements Parsable
      * @return bool|null
     */
     public function getHasAttachments(): ?bool {
-        return $this->getBackingStore()->get('hasAttachments');
+        $val = $this->getBackingStore()->get('hasAttachments');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hasAttachments'");
     }
 
     /**
@@ -148,7 +210,11 @@ class TodoTask extends Entity implements Parsable
      * @return Importance|null
     */
     public function getImportance(): ?Importance {
-        return $this->getBackingStore()->get('importance');
+        $val = $this->getBackingStore()->get('importance');
+        if (is_null($val) || $val instanceof Importance) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'importance'");
     }
 
     /**
@@ -156,7 +222,11 @@ class TodoTask extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsReminderOn(): ?bool {
-        return $this->getBackingStore()->get('isReminderOn');
+        $val = $this->getBackingStore()->get('isReminderOn');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isReminderOn'");
     }
 
     /**
@@ -164,7 +234,11 @@ class TodoTask extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedDateTime');
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**
@@ -172,7 +246,13 @@ class TodoTask extends Entity implements Parsable
      * @return array<LinkedResource>|null
     */
     public function getLinkedResources(): ?array {
-        return $this->getBackingStore()->get('linkedResources');
+        $val = $this->getBackingStore()->get('linkedResources');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, LinkedResource::class);
+            /** @var array<LinkedResource>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'linkedResources'");
     }
 
     /**
@@ -180,7 +260,11 @@ class TodoTask extends Entity implements Parsable
      * @return PatternedRecurrence|null
     */
     public function getRecurrence(): ?PatternedRecurrence {
-        return $this->getBackingStore()->get('recurrence');
+        $val = $this->getBackingStore()->get('recurrence');
+        if (is_null($val) || $val instanceof PatternedRecurrence) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recurrence'");
     }
 
     /**
@@ -188,7 +272,11 @@ class TodoTask extends Entity implements Parsable
      * @return DateTimeTimeZone|null
     */
     public function getReminderDateTime(): ?DateTimeTimeZone {
-        return $this->getBackingStore()->get('reminderDateTime');
+        $val = $this->getBackingStore()->get('reminderDateTime');
+        if (is_null($val) || $val instanceof DateTimeTimeZone) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reminderDateTime'");
     }
 
     /**
@@ -196,7 +284,11 @@ class TodoTask extends Entity implements Parsable
      * @return DateTimeTimeZone|null
     */
     public function getStartDateTime(): ?DateTimeTimeZone {
-        return $this->getBackingStore()->get('startDateTime');
+        $val = $this->getBackingStore()->get('startDateTime');
+        if (is_null($val) || $val instanceof DateTimeTimeZone) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'startDateTime'");
     }
 
     /**
@@ -204,7 +296,11 @@ class TodoTask extends Entity implements Parsable
      * @return TaskStatus|null
     */
     public function getStatus(): ?TaskStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof TaskStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**
@@ -212,7 +308,11 @@ class TodoTask extends Entity implements Parsable
      * @return string|null
     */
     public function getTitle(): ?string {
-        return $this->getBackingStore()->get('title');
+        $val = $this->getBackingStore()->get('title');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'title'");
     }
 
     /**

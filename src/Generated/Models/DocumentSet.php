@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +53,13 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<ContentTypeInfo>|null
     */
     public function getAllowedContentTypes(): ?array {
-        return $this->getBackingStore()->get('allowedContentTypes');
+        $val = $this->getBackingStore()->get('allowedContentTypes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ContentTypeInfo::class);
+            /** @var array<ContentTypeInfo>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowedContentTypes'");
     }
 
     /**
@@ -63,12 +75,18 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<DocumentSetContent>|null
     */
     public function getDefaultContents(): ?array {
-        return $this->getBackingStore()->get('defaultContents');
+        $val = $this->getBackingStore()->get('defaultContents');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DocumentSetContent::class);
+            /** @var array<DocumentSetContent>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'defaultContents'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -89,7 +107,11 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -97,7 +119,11 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getPropagateWelcomePageChanges(): ?bool {
-        return $this->getBackingStore()->get('propagateWelcomePageChanges');
+        $val = $this->getBackingStore()->get('propagateWelcomePageChanges');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'propagateWelcomePageChanges'");
     }
 
     /**
@@ -105,7 +131,13 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<ColumnDefinition>|null
     */
     public function getSharedColumns(): ?array {
-        return $this->getBackingStore()->get('sharedColumns');
+        $val = $this->getBackingStore()->get('sharedColumns');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ColumnDefinition::class);
+            /** @var array<ColumnDefinition>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sharedColumns'");
     }
 
     /**
@@ -113,7 +145,11 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getShouldPrefixNameToFile(): ?bool {
-        return $this->getBackingStore()->get('shouldPrefixNameToFile');
+        $val = $this->getBackingStore()->get('shouldPrefixNameToFile');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'shouldPrefixNameToFile'");
     }
 
     /**
@@ -121,7 +157,13 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<ColumnDefinition>|null
     */
     public function getWelcomePageColumns(): ?array {
-        return $this->getBackingStore()->get('welcomePageColumns');
+        $val = $this->getBackingStore()->get('welcomePageColumns');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ColumnDefinition::class);
+            /** @var array<ColumnDefinition>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'welcomePageColumns'");
     }
 
     /**
@@ -129,7 +171,11 @@ class DocumentSet implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getWelcomePageUrl(): ?string {
-        return $this->getBackingStore()->get('welcomePageUrl');
+        $val = $this->getBackingStore()->get('welcomePageUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'welcomePageUrl'");
     }
 
     /**

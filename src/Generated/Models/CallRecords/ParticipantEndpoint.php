@@ -31,7 +31,11 @@ class ParticipantEndpoint extends Endpoint implements Parsable
      * @return int|null
     */
     public function getCpuCoresCount(): ?int {
-        return $this->getBackingStore()->get('cpuCoresCount');
+        $val = $this->getBackingStore()->get('cpuCoresCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cpuCoresCount'");
     }
 
     /**
@@ -39,7 +43,11 @@ class ParticipantEndpoint extends Endpoint implements Parsable
      * @return string|null
     */
     public function getCpuName(): ?string {
-        return $this->getBackingStore()->get('cpuName');
+        $val = $this->getBackingStore()->get('cpuName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cpuName'");
     }
 
     /**
@@ -47,7 +55,11 @@ class ParticipantEndpoint extends Endpoint implements Parsable
      * @return int|null
     */
     public function getCpuProcessorSpeedInMhz(): ?int {
-        return $this->getBackingStore()->get('cpuProcessorSpeedInMhz');
+        $val = $this->getBackingStore()->get('cpuProcessorSpeedInMhz');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cpuProcessorSpeedInMhz'");
     }
 
     /**
@@ -55,12 +67,16 @@ class ParticipantEndpoint extends Endpoint implements Parsable
      * @return UserFeedback|null
     */
     public function getFeedback(): ?UserFeedback {
-        return $this->getBackingStore()->get('feedback');
+        $val = $this->getBackingStore()->get('feedback');
+        if (is_null($val) || $val instanceof UserFeedback) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'feedback'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -79,7 +95,11 @@ class ParticipantEndpoint extends Endpoint implements Parsable
      * @return IdentitySet|null
     */
     public function getIdentity(): ?IdentitySet {
-        return $this->getBackingStore()->get('identity');
+        $val = $this->getBackingStore()->get('identity');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'identity'");
     }
 
     /**
@@ -87,7 +107,11 @@ class ParticipantEndpoint extends Endpoint implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**

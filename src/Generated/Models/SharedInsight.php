@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class SharedInsight extends Entity implements Parsable 
 {
@@ -26,7 +27,7 @@ class SharedInsight extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -45,7 +46,11 @@ class SharedInsight extends Entity implements Parsable
      * @return SharingDetail|null
     */
     public function getLastShared(): ?SharingDetail {
-        return $this->getBackingStore()->get('lastShared');
+        $val = $this->getBackingStore()->get('lastShared');
+        if (is_null($val) || $val instanceof SharingDetail) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastShared'");
     }
 
     /**
@@ -53,7 +58,11 @@ class SharedInsight extends Entity implements Parsable
      * @return Entity|null
     */
     public function getLastSharedMethod(): ?Entity {
-        return $this->getBackingStore()->get('lastSharedMethod');
+        $val = $this->getBackingStore()->get('lastSharedMethod');
+        if (is_null($val) || $val instanceof Entity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastSharedMethod'");
     }
 
     /**
@@ -61,7 +70,11 @@ class SharedInsight extends Entity implements Parsable
      * @return Entity|null
     */
     public function getResource(): ?Entity {
-        return $this->getBackingStore()->get('resource');
+        $val = $this->getBackingStore()->get('resource');
+        if (is_null($val) || $val instanceof Entity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resource'");
     }
 
     /**
@@ -69,7 +82,11 @@ class SharedInsight extends Entity implements Parsable
      * @return ResourceReference|null
     */
     public function getResourceReference(): ?ResourceReference {
-        return $this->getBackingStore()->get('resourceReference');
+        $val = $this->getBackingStore()->get('resourceReference');
+        if (is_null($val) || $val instanceof ResourceReference) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceReference'");
     }
 
     /**
@@ -77,7 +94,11 @@ class SharedInsight extends Entity implements Parsable
      * @return ResourceVisualization|null
     */
     public function getResourceVisualization(): ?ResourceVisualization {
-        return $this->getBackingStore()->get('resourceVisualization');
+        $val = $this->getBackingStore()->get('resourceVisualization');
+        if (is_null($val) || $val instanceof ResourceVisualization) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceVisualization'");
     }
 
     /**
@@ -85,7 +106,13 @@ class SharedInsight extends Entity implements Parsable
      * @return array<SharingDetail>|null
     */
     public function getSharingHistory(): ?array {
-        return $this->getBackingStore()->get('sharingHistory');
+        $val = $this->getBackingStore()->get('sharingHistory');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SharingDetail::class);
+            /** @var array<SharingDetail>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sharingHistory'");
     }
 
     /**

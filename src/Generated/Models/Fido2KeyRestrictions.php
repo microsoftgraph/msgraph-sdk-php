@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,13 @@ class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, Parsabl
      * @return array<string>|null
     */
     public function getAaGuids(): ?array {
-        return $this->getBackingStore()->get('aaGuids');
+        $val = $this->getBackingStore()->get('aaGuids');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'aaGuids'");
     }
 
     /**
@@ -47,7 +54,12 @@ class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, Parsabl
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -63,17 +75,28 @@ class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, Parsabl
      * @return Fido2RestrictionEnforcementType|null
     */
     public function getEnforcementType(): ?Fido2RestrictionEnforcementType {
-        return $this->getBackingStore()->get('enforcementType');
+        $val = $this->getBackingStore()->get('enforcementType');
+        if (is_null($val) || $val instanceof Fido2RestrictionEnforcementType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enforcementType'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'aaGuids' => fn(ParseNode $n) => $o->setAaGuids($n->getCollectionOfPrimitiveValues()),
+            'aaGuids' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setAaGuids($val);
+            },
             'enforcementType' => fn(ParseNode $n) => $o->setEnforcementType($n->getEnumValue(Fido2RestrictionEnforcementType::class)),
             'isEnforced' => fn(ParseNode $n) => $o->setIsEnforced($n->getBooleanValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
@@ -85,7 +108,11 @@ class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, Parsabl
      * @return bool|null
     */
     public function getIsEnforced(): ?bool {
-        return $this->getBackingStore()->get('isEnforced');
+        $val = $this->getBackingStore()->get('isEnforced');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isEnforced'");
     }
 
     /**
@@ -93,7 +120,11 @@ class Fido2KeyRestrictions implements AdditionalDataHolder, BackedModel, Parsabl
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

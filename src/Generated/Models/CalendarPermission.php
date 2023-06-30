@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class CalendarPermission extends Entity implements Parsable 
 {
@@ -29,7 +30,13 @@ class CalendarPermission extends Entity implements Parsable
      * @return array<CalendarRoleType>|null
     */
     public function getAllowedRoles(): ?array {
-        return $this->getBackingStore()->get('allowedRoles');
+        $val = $this->getBackingStore()->get('allowedRoles');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CalendarRoleType::class);
+            /** @var array<CalendarRoleType>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowedRoles'");
     }
 
     /**
@@ -37,12 +44,16 @@ class CalendarPermission extends Entity implements Parsable
      * @return EmailAddress|null
     */
     public function getEmailAddress(): ?EmailAddress {
-        return $this->getBackingStore()->get('emailAddress');
+        $val = $this->getBackingStore()->get('emailAddress');
+        if (is_null($val) || $val instanceof EmailAddress) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'emailAddress'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -60,7 +71,11 @@ class CalendarPermission extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsInsideOrganization(): ?bool {
-        return $this->getBackingStore()->get('isInsideOrganization');
+        $val = $this->getBackingStore()->get('isInsideOrganization');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isInsideOrganization'");
     }
 
     /**
@@ -68,7 +83,11 @@ class CalendarPermission extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsRemovable(): ?bool {
-        return $this->getBackingStore()->get('isRemovable');
+        $val = $this->getBackingStore()->get('isRemovable');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isRemovable'");
     }
 
     /**
@@ -76,7 +95,11 @@ class CalendarPermission extends Entity implements Parsable
      * @return CalendarRoleType|null
     */
     public function getRole(): ?CalendarRoleType {
-        return $this->getBackingStore()->get('role');
+        $val = $this->getBackingStore()->get('role');
+        if (is_null($val) || $val instanceof CalendarRoleType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'role'");
     }
 
     /**

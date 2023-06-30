@@ -40,7 +40,12 @@ class Rank_AvgPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -53,7 +58,7 @@ class Rank_AvgPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -69,7 +74,11 @@ class Rank_AvgPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @return Json|null
     */
     public function getNumber(): ?Json {
-        return $this->getBackingStore()->get('number');
+        $val = $this->getBackingStore()->get('number');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'number'");
     }
 
     /**
@@ -77,7 +86,11 @@ class Rank_AvgPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @return Json|null
     */
     public function getOrder(): ?Json {
-        return $this->getBackingStore()->get('order');
+        $val = $this->getBackingStore()->get('order');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'order'");
     }
 
     /**
@@ -85,7 +98,11 @@ class Rank_AvgPostRequestBody implements AdditionalDataHolder, BackedModel, Pars
      * @return Json|null
     */
     public function getRef(): ?Json {
-        return $this->getBackingStore()->get('ref');
+        $val = $this->getBackingStore()->get('ref');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'ref'");
     }
 
     /**

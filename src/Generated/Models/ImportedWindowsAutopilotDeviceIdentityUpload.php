@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity implements Parsable 
 {
@@ -30,7 +31,11 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity implements Par
      * @return DateTime|null
     */
     public function getCreatedDateTimeUtc(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTimeUtc');
+        $val = $this->getBackingStore()->get('createdDateTimeUtc');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTimeUtc'");
     }
 
     /**
@@ -38,12 +43,18 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity implements Par
      * @return array<ImportedWindowsAutopilotDeviceIdentity>|null
     */
     public function getDeviceIdentities(): ?array {
-        return $this->getBackingStore()->get('deviceIdentities');
+        $val = $this->getBackingStore()->get('deviceIdentities');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ImportedWindowsAutopilotDeviceIdentity::class);
+            /** @var array<ImportedWindowsAutopilotDeviceIdentity>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceIdentities'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -59,7 +70,11 @@ class ImportedWindowsAutopilotDeviceIdentityUpload extends Entity implements Par
      * @return ImportedWindowsAutopilotDeviceIdentityUploadStatus|null
     */
     public function getStatus(): ?ImportedWindowsAutopilotDeviceIdentityUploadStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof ImportedWindowsAutopilotDeviceIdentityUploadStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**

@@ -5,11 +5,12 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class CustomSecurityAttributeDefinition extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new customSecurityAttributeDefinition and sets the default values.
+     * Instantiates a new CustomSecurityAttributeDefinition and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -29,7 +30,13 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
      * @return array<AllowedValue>|null
     */
     public function getAllowedValues(): ?array {
-        return $this->getBackingStore()->get('allowedValues');
+        $val = $this->getBackingStore()->get('allowedValues');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AllowedValue::class);
+            /** @var array<AllowedValue>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowedValues'");
     }
 
     /**
@@ -37,7 +44,11 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
      * @return string|null
     */
     public function getAttributeSet(): ?string {
-        return $this->getBackingStore()->get('attributeSet');
+        $val = $this->getBackingStore()->get('attributeSet');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'attributeSet'");
     }
 
     /**
@@ -45,12 +56,16 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -72,7 +87,11 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsCollection(): ?bool {
-        return $this->getBackingStore()->get('isCollection');
+        $val = $this->getBackingStore()->get('isCollection');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isCollection'");
     }
 
     /**
@@ -80,7 +99,11 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsSearchable(): ?bool {
-        return $this->getBackingStore()->get('isSearchable');
+        $val = $this->getBackingStore()->get('isSearchable');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isSearchable'");
     }
 
     /**
@@ -88,7 +111,11 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -96,7 +123,11 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
      * @return string|null
     */
     public function getStatus(): ?string {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**
@@ -104,7 +135,11 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
      * @return string|null
     */
     public function getType(): ?string {
-        return $this->getBackingStore()->get('type');
+        $val = $this->getBackingStore()->get('type');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
     }
 
     /**
@@ -112,7 +147,11 @@ class CustomSecurityAttributeDefinition extends Entity implements Parsable
      * @return bool|null
     */
     public function getUsePreDefinedValuesOnly(): ?bool {
-        return $this->getBackingStore()->get('usePreDefinedValuesOnly');
+        $val = $this->getBackingStore()->get('usePreDefinedValuesOnly');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'usePreDefinedValuesOnly'");
     }
 
     /**

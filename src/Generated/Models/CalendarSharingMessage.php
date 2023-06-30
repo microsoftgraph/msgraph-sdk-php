@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class CalendarSharingMessage extends Message implements Parsable 
 {
@@ -30,12 +31,16 @@ class CalendarSharingMessage extends Message implements Parsable
      * @return bool|null
     */
     public function getCanAccept(): ?bool {
-        return $this->getBackingStore()->get('canAccept');
+        $val = $this->getBackingStore()->get('canAccept');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'canAccept'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -52,7 +57,11 @@ class CalendarSharingMessage extends Message implements Parsable
      * @return CalendarSharingMessageAction|null
     */
     public function getSharingMessageAction(): ?CalendarSharingMessageAction {
-        return $this->getBackingStore()->get('sharingMessageAction');
+        $val = $this->getBackingStore()->get('sharingMessageAction');
+        if (is_null($val) || $val instanceof CalendarSharingMessageAction) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sharingMessageAction'");
     }
 
     /**
@@ -60,7 +69,13 @@ class CalendarSharingMessage extends Message implements Parsable
      * @return array<CalendarSharingMessageAction>|null
     */
     public function getSharingMessageActions(): ?array {
-        return $this->getBackingStore()->get('sharingMessageActions');
+        $val = $this->getBackingStore()->get('sharingMessageActions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CalendarSharingMessageAction::class);
+            /** @var array<CalendarSharingMessageAction>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sharingMessageActions'");
     }
 
     /**
@@ -68,7 +83,11 @@ class CalendarSharingMessage extends Message implements Parsable
      * @return string|null
     */
     public function getSuggestedCalendarName(): ?string {
-        return $this->getBackingStore()->get('suggestedCalendarName');
+        $val = $this->getBackingStore()->get('suggestedCalendarName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'suggestedCalendarName'");
     }
 
     /**

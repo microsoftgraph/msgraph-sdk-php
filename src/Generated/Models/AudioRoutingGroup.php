@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AudioRoutingGroup extends Entity implements Parsable 
 {
@@ -26,14 +27,28 @@ class AudioRoutingGroup extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'receivers' => fn(ParseNode $n) => $o->setReceivers($n->getCollectionOfPrimitiveValues()),
+            'receivers' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setReceivers($val);
+            },
             'routingMode' => fn(ParseNode $n) => $o->setRoutingMode($n->getEnumValue(RoutingMode::class)),
-            'sources' => fn(ParseNode $n) => $o->setSources($n->getCollectionOfPrimitiveValues()),
+            'sources' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setSources($val);
+            },
         ]);
     }
 
@@ -42,7 +57,13 @@ class AudioRoutingGroup extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getReceivers(): ?array {
-        return $this->getBackingStore()->get('receivers');
+        $val = $this->getBackingStore()->get('receivers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'receivers'");
     }
 
     /**
@@ -50,7 +71,11 @@ class AudioRoutingGroup extends Entity implements Parsable
      * @return RoutingMode|null
     */
     public function getRoutingMode(): ?RoutingMode {
-        return $this->getBackingStore()->get('routingMode');
+        $val = $this->getBackingStore()->get('routingMode');
+        if (is_null($val) || $val instanceof RoutingMode) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'routingMode'");
     }
 
     /**
@@ -58,7 +83,13 @@ class AudioRoutingGroup extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getSources(): ?array {
-        return $this->getBackingStore()->get('sources');
+        $val = $this->getBackingStore()->get('sources');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sources'");
     }
 
     /**

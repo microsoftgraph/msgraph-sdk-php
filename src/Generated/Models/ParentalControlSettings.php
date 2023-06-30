@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ParentalControlSettings implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class ParentalControlSettings implements AdditionalDataHolder, BackedModel, Pars
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,17 +61,30 @@ class ParentalControlSettings implements AdditionalDataHolder, BackedModel, Pars
      * @return array<string>|null
     */
     public function getCountriesBlockedForMinors(): ?array {
-        return $this->getBackingStore()->get('countriesBlockedForMinors');
+        $val = $this->getBackingStore()->get('countriesBlockedForMinors');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'countriesBlockedForMinors'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'countriesBlockedForMinors' => fn(ParseNode $n) => $o->setCountriesBlockedForMinors($n->getCollectionOfPrimitiveValues()),
+            'countriesBlockedForMinors' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setCountriesBlockedForMinors($val);
+            },
             'legalAgeGroupRule' => fn(ParseNode $n) => $o->setLegalAgeGroupRule($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
@@ -76,7 +95,11 @@ class ParentalControlSettings implements AdditionalDataHolder, BackedModel, Pars
      * @return string|null
     */
     public function getLegalAgeGroupRule(): ?string {
-        return $this->getBackingStore()->get('legalAgeGroupRule');
+        $val = $this->getBackingStore()->get('legalAgeGroupRule');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'legalAgeGroupRule'");
     }
 
     /**
@@ -84,7 +107,11 @@ class ParentalControlSettings implements AdditionalDataHolder, BackedModel, Pars
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

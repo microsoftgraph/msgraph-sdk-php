@@ -30,7 +30,11 @@ class CallTranscriptEventMessageDetail extends EventMessageDetail implements Par
      * @return string|null
     */
     public function getCallId(): ?string {
-        return $this->getBackingStore()->get('callId');
+        $val = $this->getBackingStore()->get('callId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callId'");
     }
 
     /**
@@ -38,12 +42,16 @@ class CallTranscriptEventMessageDetail extends EventMessageDetail implements Par
      * @return string|null
     */
     public function getCallTranscriptICalUid(): ?string {
-        return $this->getBackingStore()->get('callTranscriptICalUid');
+        $val = $this->getBackingStore()->get('callTranscriptICalUid');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callTranscriptICalUid'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -59,7 +67,11 @@ class CallTranscriptEventMessageDetail extends EventMessageDetail implements Par
      * @return IdentitySet|null
     */
     public function getMeetingOrganizer(): ?IdentitySet {
-        return $this->getBackingStore()->get('meetingOrganizer');
+        $val = $this->getBackingStore()->get('meetingOrganizer');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'meetingOrganizer'");
     }
 
     /**

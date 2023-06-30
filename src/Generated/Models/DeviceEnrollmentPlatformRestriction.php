@@ -42,7 +42,12 @@ class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Backe
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +60,7 @@ class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Backe
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -73,7 +78,11 @@ class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Backe
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -81,7 +90,11 @@ class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Backe
      * @return string|null
     */
     public function getOsMaximumVersion(): ?string {
-        return $this->getBackingStore()->get('osMaximumVersion');
+        $val = $this->getBackingStore()->get('osMaximumVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'osMaximumVersion'");
     }
 
     /**
@@ -89,7 +102,11 @@ class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Backe
      * @return string|null
     */
     public function getOsMinimumVersion(): ?string {
-        return $this->getBackingStore()->get('osMinimumVersion');
+        $val = $this->getBackingStore()->get('osMinimumVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'osMinimumVersion'");
     }
 
     /**
@@ -97,7 +114,11 @@ class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Backe
      * @return bool|null
     */
     public function getPersonalDeviceEnrollmentBlocked(): ?bool {
-        return $this->getBackingStore()->get('personalDeviceEnrollmentBlocked');
+        $val = $this->getBackingStore()->get('personalDeviceEnrollmentBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'personalDeviceEnrollmentBlocked'");
     }
 
     /**
@@ -105,7 +126,11 @@ class DeviceEnrollmentPlatformRestriction implements AdditionalDataHolder, Backe
      * @return bool|null
     */
     public function getPlatformBlocked(): ?bool {
-        return $this->getBackingStore()->get('platformBlocked');
+        $val = $this->getBackingStore()->get('platformBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'platformBlocked'");
     }
 
     /**

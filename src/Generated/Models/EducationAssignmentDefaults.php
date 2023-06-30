@@ -30,7 +30,11 @@ class EducationAssignmentDefaults extends Entity implements Parsable
      * @return EducationAddedStudentAction|null
     */
     public function getAddedStudentAction(): ?EducationAddedStudentAction {
-        return $this->getBackingStore()->get('addedStudentAction');
+        $val = $this->getBackingStore()->get('addedStudentAction');
+        if (is_null($val) || $val instanceof EducationAddedStudentAction) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'addedStudentAction'");
     }
 
     /**
@@ -38,7 +42,11 @@ class EducationAssignmentDefaults extends Entity implements Parsable
      * @return EducationAddToCalendarOptions|null
     */
     public function getAddToCalendarAction(): ?EducationAddToCalendarOptions {
-        return $this->getBackingStore()->get('addToCalendarAction');
+        $val = $this->getBackingStore()->get('addToCalendarAction');
+        if (is_null($val) || $val instanceof EducationAddToCalendarOptions) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'addToCalendarAction'");
     }
 
     /**
@@ -46,12 +54,16 @@ class EducationAssignmentDefaults extends Entity implements Parsable
      * @return Time|null
     */
     public function getDueTime(): ?Time {
-        return $this->getBackingStore()->get('dueTime');
+        $val = $this->getBackingStore()->get('dueTime');
+        if (is_null($val) || $val instanceof Time) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dueTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -68,7 +80,11 @@ class EducationAssignmentDefaults extends Entity implements Parsable
      * @return string|null
     */
     public function getNotificationChannelUrl(): ?string {
-        return $this->getBackingStore()->get('notificationChannelUrl');
+        $val = $this->getBackingStore()->get('notificationChannelUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'notificationChannelUrl'");
     }
 
     /**

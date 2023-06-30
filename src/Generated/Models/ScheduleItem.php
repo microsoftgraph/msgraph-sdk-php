@@ -39,7 +39,12 @@ class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,12 +60,16 @@ class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTimeTimeZone|null
     */
     public function getEnd(): ?DateTimeTimeZone {
-        return $this->getBackingStore()->get('end');
+        $val = $this->getBackingStore()->get('end');
+        if (is_null($val) || $val instanceof DateTimeTimeZone) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'end'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -80,7 +89,11 @@ class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getIsPrivate(): ?bool {
-        return $this->getBackingStore()->get('isPrivate');
+        $val = $this->getBackingStore()->get('isPrivate');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isPrivate'");
     }
 
     /**
@@ -88,7 +101,11 @@ class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getLocation(): ?string {
-        return $this->getBackingStore()->get('location');
+        $val = $this->getBackingStore()->get('location');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'location'");
     }
 
     /**
@@ -96,7 +113,11 @@ class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -104,7 +125,11 @@ class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTimeTimeZone|null
     */
     public function getStart(): ?DateTimeTimeZone {
-        return $this->getBackingStore()->get('start');
+        $val = $this->getBackingStore()->get('start');
+        if (is_null($val) || $val instanceof DateTimeTimeZone) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'start'");
     }
 
     /**
@@ -112,7 +137,11 @@ class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return FreeBusyStatus|null
     */
     public function getStatus(): ?FreeBusyStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof FreeBusyStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**
@@ -120,7 +149,11 @@ class ScheduleItem implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getSubject(): ?string {
-        return $this->getBackingStore()->get('subject');
+        $val = $this->getBackingStore()->get('subject');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'subject'");
     }
 
     /**

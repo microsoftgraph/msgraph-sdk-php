@@ -27,7 +27,7 @@ class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implements Pars
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -42,7 +42,11 @@ class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implements Pars
      * @return int|null
     */
     public function getOffsetInDays(): ?int {
-        return $this->getBackingStore()->get('offsetInDays');
+        $val = $this->getBackingStore()->get('offsetInDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'offsetInDays'");
     }
 
     /**
@@ -50,7 +54,11 @@ class TimeBasedAttributeTrigger extends WorkflowExecutionTrigger implements Pars
      * @return WorkflowTriggerTimeBasedAttribute|null
     */
     public function getTimeBasedAttribute(): ?WorkflowTriggerTimeBasedAttribute {
-        return $this->getBackingStore()->get('timeBasedAttribute');
+        $val = $this->getBackingStore()->get('timeBasedAttribute');
+        if (is_null($val) || $val instanceof WorkflowTriggerTimeBasedAttribute) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'timeBasedAttribute'");
     }
 
     /**

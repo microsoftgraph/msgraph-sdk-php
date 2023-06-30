@@ -43,7 +43,12 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -51,7 +56,11 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getAllowRedirect(): ?bool {
-        return $this->getBackingStore()->get('allowRedirect');
+        $val = $this->getBackingStore()->get('allowRedirect');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowRedirect'");
     }
 
     /**
@@ -67,7 +76,11 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getComment(): ?string {
-        return $this->getBackingStore()->get('comment');
+        $val = $this->getBackingStore()->get('comment');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'comment'");
     }
 
     /**
@@ -75,12 +88,16 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
      * @return BrowserSiteCompatibilityMode|null
     */
     public function getCompatibilityMode(): ?BrowserSiteCompatibilityMode {
-        return $this->getBackingStore()->get('compatibilityMode');
+        $val = $this->getBackingStore()->get('compatibilityMode');
+        if (is_null($val) || $val instanceof BrowserSiteCompatibilityMode) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'compatibilityMode'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -101,7 +118,11 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
      * @return IdentitySet|null
     */
     public function getLastModifiedBy(): ?IdentitySet {
-        return $this->getBackingStore()->get('lastModifiedBy');
+        $val = $this->getBackingStore()->get('lastModifiedBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedBy'");
     }
 
     /**
@@ -109,7 +130,11 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
      * @return BrowserSiteMergeType|null
     */
     public function getMergeType(): ?BrowserSiteMergeType {
-        return $this->getBackingStore()->get('mergeType');
+        $val = $this->getBackingStore()->get('mergeType');
+        if (is_null($val) || $val instanceof BrowserSiteMergeType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mergeType'");
     }
 
     /**
@@ -117,7 +142,11 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -125,7 +154,11 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTime|null
     */
     public function getPublishedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('publishedDateTime');
+        $val = $this->getBackingStore()->get('publishedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'publishedDateTime'");
     }
 
     /**
@@ -133,7 +166,11 @@ class BrowserSiteHistory implements AdditionalDataHolder, BackedModel, Parsable
      * @return BrowserSiteTargetEnvironment|null
     */
     public function getTargetEnvironment(): ?BrowserSiteTargetEnvironment {
-        return $this->getBackingStore()->get('targetEnvironment');
+        $val = $this->getBackingStore()->get('targetEnvironment');
+        if (is_null($val) || $val instanceof BrowserSiteTargetEnvironment) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'targetEnvironment'");
     }
 
     /**

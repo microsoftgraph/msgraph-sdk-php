@@ -30,7 +30,11 @@ class ManagedIOSStoreApp extends ManagedApp implements Parsable
      * @return IosDeviceType|null
     */
     public function getApplicableDeviceType(): ?IosDeviceType {
-        return $this->getBackingStore()->get('applicableDeviceType');
+        $val = $this->getBackingStore()->get('applicableDeviceType');
+        if (is_null($val) || $val instanceof IosDeviceType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'applicableDeviceType'");
     }
 
     /**
@@ -38,7 +42,11 @@ class ManagedIOSStoreApp extends ManagedApp implements Parsable
      * @return string|null
     */
     public function getAppStoreUrl(): ?string {
-        return $this->getBackingStore()->get('appStoreUrl');
+        $val = $this->getBackingStore()->get('appStoreUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appStoreUrl'");
     }
 
     /**
@@ -46,12 +54,16 @@ class ManagedIOSStoreApp extends ManagedApp implements Parsable
      * @return string|null
     */
     public function getBundleId(): ?string {
-        return $this->getBackingStore()->get('bundleId');
+        $val = $this->getBackingStore()->get('bundleId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bundleId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -68,7 +80,11 @@ class ManagedIOSStoreApp extends ManagedApp implements Parsable
      * @return IosMinimumOperatingSystem|null
     */
     public function getMinimumSupportedOperatingSystem(): ?IosMinimumOperatingSystem {
-        return $this->getBackingStore()->get('minimumSupportedOperatingSystem');
+        $val = $this->getBackingStore()->get('minimumSupportedOperatingSystem');
+        if (is_null($val) || $val instanceof IosMinimumOperatingSystem) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minimumSupportedOperatingSystem'");
     }
 
     /**

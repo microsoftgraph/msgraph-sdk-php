@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AttributeSet extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new AttributeSet and sets the default values.
+     * Instantiates a new attributeSet and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -29,12 +29,16 @@ class AttributeSet extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -49,7 +53,11 @@ class AttributeSet extends Entity implements Parsable
      * @return int|null
     */
     public function getMaxAttributesPerSet(): ?int {
-        return $this->getBackingStore()->get('maxAttributesPerSet');
+        $val = $this->getBackingStore()->get('maxAttributesPerSet');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maxAttributesPerSet'");
     }
 
     /**

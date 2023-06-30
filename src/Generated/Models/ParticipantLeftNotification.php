@@ -29,12 +29,16 @@ class ParticipantLeftNotification extends Entity implements Parsable
      * @return Call|null
     */
     public function getCall(): ?Call {
-        return $this->getBackingStore()->get('call');
+        $val = $this->getBackingStore()->get('call');
+        if (is_null($val) || $val instanceof Call) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'call'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -49,7 +53,11 @@ class ParticipantLeftNotification extends Entity implements Parsable
      * @return string|null
     */
     public function getParticipantId(): ?string {
-        return $this->getBackingStore()->get('participantId');
+        $val = $this->getBackingStore()->get('participantId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'participantId'");
     }
 
     /**

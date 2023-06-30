@@ -39,7 +39,12 @@ class AttendeeAvailability implements AdditionalDataHolder, BackedModel, Parsabl
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class AttendeeAvailability implements AdditionalDataHolder, BackedModel, Parsabl
      * @return AttendeeBase|null
     */
     public function getAttendee(): ?AttendeeBase {
-        return $this->getBackingStore()->get('attendee');
+        $val = $this->getBackingStore()->get('attendee');
+        if (is_null($val) || $val instanceof AttendeeBase) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'attendee'");
     }
 
     /**
@@ -55,7 +64,11 @@ class AttendeeAvailability implements AdditionalDataHolder, BackedModel, Parsabl
      * @return FreeBusyStatus|null
     */
     public function getAvailability(): ?FreeBusyStatus {
-        return $this->getBackingStore()->get('availability');
+        $val = $this->getBackingStore()->get('availability');
+        if (is_null($val) || $val instanceof FreeBusyStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'availability'");
     }
 
     /**
@@ -68,7 +81,7 @@ class AttendeeAvailability implements AdditionalDataHolder, BackedModel, Parsabl
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -84,7 +97,11 @@ class AttendeeAvailability implements AdditionalDataHolder, BackedModel, Parsabl
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

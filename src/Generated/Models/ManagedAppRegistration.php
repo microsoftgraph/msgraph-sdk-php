@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 /**
  * The ManagedAppEntity is the base entity type for all other entity types under app management workflow.
@@ -41,7 +42,11 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return MobileAppIdentifier|null
     */
     public function getAppIdentifier(): ?MobileAppIdentifier {
-        return $this->getBackingStore()->get('appIdentifier');
+        $val = $this->getBackingStore()->get('appIdentifier');
+        if (is_null($val) || $val instanceof MobileAppIdentifier) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appIdentifier'");
     }
 
     /**
@@ -49,7 +54,11 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return string|null
     */
     public function getApplicationVersion(): ?string {
-        return $this->getBackingStore()->get('applicationVersion');
+        $val = $this->getBackingStore()->get('applicationVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'applicationVersion'");
     }
 
     /**
@@ -57,7 +66,13 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return array<ManagedAppPolicy>|null
     */
     public function getAppliedPolicies(): ?array {
-        return $this->getBackingStore()->get('appliedPolicies');
+        $val = $this->getBackingStore()->get('appliedPolicies');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ManagedAppPolicy::class);
+            /** @var array<ManagedAppPolicy>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appliedPolicies'");
     }
 
     /**
@@ -65,7 +80,11 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -73,7 +92,11 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceName(): ?string {
-        return $this->getBackingStore()->get('deviceName');
+        $val = $this->getBackingStore()->get('deviceName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceName'");
     }
 
     /**
@@ -81,7 +104,11 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceTag(): ?string {
-        return $this->getBackingStore()->get('deviceTag');
+        $val = $this->getBackingStore()->get('deviceTag');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceTag'");
     }
 
     /**
@@ -89,12 +116,16 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return string|null
     */
     public function getDeviceType(): ?string {
-        return $this->getBackingStore()->get('deviceType');
+        $val = $this->getBackingStore()->get('deviceType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceType'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -122,7 +153,13 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return array<ManagedAppFlaggedReason>|null
     */
     public function getFlaggedReasons(): ?array {
-        return $this->getBackingStore()->get('flaggedReasons');
+        $val = $this->getBackingStore()->get('flaggedReasons');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ManagedAppFlaggedReason::class);
+            /** @var array<ManagedAppFlaggedReason>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'flaggedReasons'");
     }
 
     /**
@@ -130,7 +167,13 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return array<ManagedAppPolicy>|null
     */
     public function getIntendedPolicies(): ?array {
-        return $this->getBackingStore()->get('intendedPolicies');
+        $val = $this->getBackingStore()->get('intendedPolicies');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ManagedAppPolicy::class);
+            /** @var array<ManagedAppPolicy>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'intendedPolicies'");
     }
 
     /**
@@ -138,7 +181,11 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastSyncDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastSyncDateTime');
+        $val = $this->getBackingStore()->get('lastSyncDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastSyncDateTime'");
     }
 
     /**
@@ -146,7 +193,11 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return string|null
     */
     public function getManagementSdkVersion(): ?string {
-        return $this->getBackingStore()->get('managementSdkVersion');
+        $val = $this->getBackingStore()->get('managementSdkVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'managementSdkVersion'");
     }
 
     /**
@@ -154,7 +205,13 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return array<ManagedAppOperation>|null
     */
     public function getOperations(): ?array {
-        return $this->getBackingStore()->get('operations');
+        $val = $this->getBackingStore()->get('operations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ManagedAppOperation::class);
+            /** @var array<ManagedAppOperation>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operations'");
     }
 
     /**
@@ -162,7 +219,11 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return string|null
     */
     public function getPlatformVersion(): ?string {
-        return $this->getBackingStore()->get('platformVersion');
+        $val = $this->getBackingStore()->get('platformVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'platformVersion'");
     }
 
     /**
@@ -170,7 +231,11 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return string|null
     */
     public function getUserId(): ?string {
-        return $this->getBackingStore()->get('userId');
+        $val = $this->getBackingStore()->get('userId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userId'");
     }
 
     /**
@@ -178,7 +243,11 @@ class ManagedAppRegistration extends Entity implements Parsable
      * @return string|null
     */
     public function getVersion(): ?string {
-        return $this->getBackingStore()->get('version');
+        $val = $this->getBackingStore()->get('version');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'version'");
     }
 
     /**

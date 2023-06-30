@@ -39,7 +39,12 @@ class IncomingContext implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +57,7 @@ class IncomingContext implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -70,7 +75,11 @@ class IncomingContext implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getObservedParticipantId(): ?string {
-        return $this->getBackingStore()->get('observedParticipantId');
+        $val = $this->getBackingStore()->get('observedParticipantId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'observedParticipantId'");
     }
 
     /**
@@ -78,7 +87,11 @@ class IncomingContext implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -86,7 +99,11 @@ class IncomingContext implements AdditionalDataHolder, BackedModel, Parsable
      * @return IdentitySet|null
     */
     public function getOnBehalfOf(): ?IdentitySet {
-        return $this->getBackingStore()->get('onBehalfOf');
+        $val = $this->getBackingStore()->get('onBehalfOf');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'onBehalfOf'");
     }
 
     /**
@@ -94,7 +111,11 @@ class IncomingContext implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getSourceParticipantId(): ?string {
-        return $this->getBackingStore()->get('sourceParticipantId');
+        $val = $this->getBackingStore()->get('sourceParticipantId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sourceParticipantId'");
     }
 
     /**
@@ -102,7 +123,11 @@ class IncomingContext implements AdditionalDataHolder, BackedModel, Parsable
      * @return IdentitySet|null
     */
     public function getTransferor(): ?IdentitySet {
-        return $this->getBackingStore()->get('transferor');
+        $val = $this->getBackingStore()->get('transferor');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'transferor'");
     }
 
     /**

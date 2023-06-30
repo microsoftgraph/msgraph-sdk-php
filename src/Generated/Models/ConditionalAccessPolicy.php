@@ -30,7 +30,11 @@ class ConditionalAccessPolicy extends Entity implements Parsable
      * @return ConditionalAccessConditionSet|null
     */
     public function getConditions(): ?ConditionalAccessConditionSet {
-        return $this->getBackingStore()->get('conditions');
+        $val = $this->getBackingStore()->get('conditions');
+        if (is_null($val) || $val instanceof ConditionalAccessConditionSet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'conditions'");
     }
 
     /**
@@ -38,7 +42,11 @@ class ConditionalAccessPolicy extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -46,7 +54,11 @@ class ConditionalAccessPolicy extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -54,12 +66,16 @@ class ConditionalAccessPolicy extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -80,7 +96,11 @@ class ConditionalAccessPolicy extends Entity implements Parsable
      * @return ConditionalAccessGrantControls|null
     */
     public function getGrantControls(): ?ConditionalAccessGrantControls {
-        return $this->getBackingStore()->get('grantControls');
+        $val = $this->getBackingStore()->get('grantControls');
+        if (is_null($val) || $val instanceof ConditionalAccessGrantControls) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'grantControls'");
     }
 
     /**
@@ -88,7 +108,11 @@ class ConditionalAccessPolicy extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('modifiedDateTime');
+        $val = $this->getBackingStore()->get('modifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'modifiedDateTime'");
     }
 
     /**
@@ -96,7 +120,11 @@ class ConditionalAccessPolicy extends Entity implements Parsable
      * @return ConditionalAccessSessionControls|null
     */
     public function getSessionControls(): ?ConditionalAccessSessionControls {
-        return $this->getBackingStore()->get('sessionControls');
+        $val = $this->getBackingStore()->get('sessionControls');
+        if (is_null($val) || $val instanceof ConditionalAccessSessionControls) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sessionControls'");
     }
 
     /**
@@ -104,7 +132,11 @@ class ConditionalAccessPolicy extends Entity implements Parsable
      * @return ConditionalAccessPolicyState|null
     */
     public function getState(): ?ConditionalAccessPolicyState {
-        return $this->getBackingStore()->get('state');
+        $val = $this->getBackingStore()->get('state');
+        if (is_null($val) || $val instanceof ConditionalAccessPolicyState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
     }
 
     /**

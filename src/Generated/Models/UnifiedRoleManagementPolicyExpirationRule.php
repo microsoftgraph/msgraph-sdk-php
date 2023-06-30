@@ -28,7 +28,7 @@ class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPol
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -43,7 +43,11 @@ class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPol
      * @return bool|null
     */
     public function getIsExpirationRequired(): ?bool {
-        return $this->getBackingStore()->get('isExpirationRequired');
+        $val = $this->getBackingStore()->get('isExpirationRequired');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isExpirationRequired'");
     }
 
     /**
@@ -51,7 +55,11 @@ class UnifiedRoleManagementPolicyExpirationRule extends UnifiedRoleManagementPol
      * @return DateInterval|null
     */
     public function getMaximumDuration(): ?DateInterval {
-        return $this->getBackingStore()->get('maximumDuration');
+        $val = $this->getBackingStore()->get('maximumDuration');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maximumDuration'");
     }
 
     /**

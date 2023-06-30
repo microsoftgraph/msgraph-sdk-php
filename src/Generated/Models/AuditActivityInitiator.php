@@ -39,7 +39,12 @@ class AuditActivityInitiator implements AdditionalDataHolder, BackedModel, Parsa
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class AuditActivityInitiator implements AdditionalDataHolder, BackedModel, Parsa
      * @return AppIdentity|null
     */
     public function getApp(): ?AppIdentity {
-        return $this->getBackingStore()->get('app');
+        $val = $this->getBackingStore()->get('app');
+        if (is_null($val) || $val instanceof AppIdentity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'app'");
     }
 
     /**
@@ -60,7 +69,7 @@ class AuditActivityInitiator implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -76,7 +85,11 @@ class AuditActivityInitiator implements AdditionalDataHolder, BackedModel, Parsa
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -84,7 +97,11 @@ class AuditActivityInitiator implements AdditionalDataHolder, BackedModel, Parsa
      * @return UserIdentity|null
     */
     public function getUser(): ?UserIdentity {
-        return $this->getBackingStore()->get('user');
+        $val = $this->getBackingStore()->get('user');
+        if (is_null($val) || $val instanceof UserIdentity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'user'");
     }
 
     /**

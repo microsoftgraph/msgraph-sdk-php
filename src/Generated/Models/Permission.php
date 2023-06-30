@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Permission extends Entity implements Parsable 
 {
@@ -30,12 +31,16 @@ class Permission extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('expirationDateTime');
+        $val = $this->getBackingStore()->get('expirationDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'expirationDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -49,7 +54,14 @@ class Permission extends Entity implements Parsable
             'inheritedFrom' => fn(ParseNode $n) => $o->setInheritedFrom($n->getObjectValue([ItemReference::class, 'createFromDiscriminatorValue'])),
             'invitation' => fn(ParseNode $n) => $o->setInvitation($n->getObjectValue([SharingInvitation::class, 'createFromDiscriminatorValue'])),
             'link' => fn(ParseNode $n) => $o->setLink($n->getObjectValue([SharingLink::class, 'createFromDiscriminatorValue'])),
-            'roles' => fn(ParseNode $n) => $o->setRoles($n->getCollectionOfPrimitiveValues()),
+            'roles' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setRoles($val);
+            },
             'shareId' => fn(ParseNode $n) => $o->setShareId($n->getStringValue()),
         ]);
     }
@@ -59,7 +71,11 @@ class Permission extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getGrantedTo(): ?IdentitySet {
-        return $this->getBackingStore()->get('grantedTo');
+        $val = $this->getBackingStore()->get('grantedTo');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'grantedTo'");
     }
 
     /**
@@ -67,7 +83,13 @@ class Permission extends Entity implements Parsable
      * @return array<IdentitySet>|null
     */
     public function getGrantedToIdentities(): ?array {
-        return $this->getBackingStore()->get('grantedToIdentities');
+        $val = $this->getBackingStore()->get('grantedToIdentities');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, IdentitySet::class);
+            /** @var array<IdentitySet>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'grantedToIdentities'");
     }
 
     /**
@@ -75,7 +97,13 @@ class Permission extends Entity implements Parsable
      * @return array<SharePointIdentitySet>|null
     */
     public function getGrantedToIdentitiesV2(): ?array {
-        return $this->getBackingStore()->get('grantedToIdentitiesV2');
+        $val = $this->getBackingStore()->get('grantedToIdentitiesV2');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SharePointIdentitySet::class);
+            /** @var array<SharePointIdentitySet>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'grantedToIdentitiesV2'");
     }
 
     /**
@@ -83,7 +111,11 @@ class Permission extends Entity implements Parsable
      * @return SharePointIdentitySet|null
     */
     public function getGrantedToV2(): ?SharePointIdentitySet {
-        return $this->getBackingStore()->get('grantedToV2');
+        $val = $this->getBackingStore()->get('grantedToV2');
+        if (is_null($val) || $val instanceof SharePointIdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'grantedToV2'");
     }
 
     /**
@@ -91,7 +123,11 @@ class Permission extends Entity implements Parsable
      * @return bool|null
     */
     public function getHasPassword(): ?bool {
-        return $this->getBackingStore()->get('hasPassword');
+        $val = $this->getBackingStore()->get('hasPassword');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hasPassword'");
     }
 
     /**
@@ -99,7 +135,11 @@ class Permission extends Entity implements Parsable
      * @return ItemReference|null
     */
     public function getInheritedFrom(): ?ItemReference {
-        return $this->getBackingStore()->get('inheritedFrom');
+        $val = $this->getBackingStore()->get('inheritedFrom');
+        if (is_null($val) || $val instanceof ItemReference) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'inheritedFrom'");
     }
 
     /**
@@ -107,7 +147,11 @@ class Permission extends Entity implements Parsable
      * @return SharingInvitation|null
     */
     public function getInvitation(): ?SharingInvitation {
-        return $this->getBackingStore()->get('invitation');
+        $val = $this->getBackingStore()->get('invitation');
+        if (is_null($val) || $val instanceof SharingInvitation) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'invitation'");
     }
 
     /**
@@ -115,7 +159,11 @@ class Permission extends Entity implements Parsable
      * @return SharingLink|null
     */
     public function getLink(): ?SharingLink {
-        return $this->getBackingStore()->get('link');
+        $val = $this->getBackingStore()->get('link');
+        if (is_null($val) || $val instanceof SharingLink) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'link'");
     }
 
     /**
@@ -123,7 +171,13 @@ class Permission extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getRoles(): ?array {
-        return $this->getBackingStore()->get('roles');
+        $val = $this->getBackingStore()->get('roles');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'roles'");
     }
 
     /**
@@ -131,7 +185,11 @@ class Permission extends Entity implements Parsable
      * @return string|null
     */
     public function getShareId(): ?string {
-        return $this->getBackingStore()->get('shareId');
+        $val = $this->getBackingStore()->get('shareId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'shareId'");
     }
 
     /**

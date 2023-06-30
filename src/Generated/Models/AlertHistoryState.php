@@ -10,6 +10,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -40,7 +41,12 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -48,7 +54,11 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getAppId(): ?string {
-        return $this->getBackingStore()->get('appId');
+        $val = $this->getBackingStore()->get('appId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appId'");
     }
 
     /**
@@ -56,7 +66,11 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getAssignedTo(): ?string {
-        return $this->getBackingStore()->get('assignedTo');
+        $val = $this->getBackingStore()->get('assignedTo');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignedTo'");
     }
 
     /**
@@ -72,7 +86,13 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string>|null
     */
     public function getComments(): ?array {
-        return $this->getBackingStore()->get('comments');
+        $val = $this->getBackingStore()->get('comments');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'comments'");
     }
 
     /**
@@ -80,19 +100,30 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
      * @return AlertFeedback|null
     */
     public function getFeedback(): ?AlertFeedback {
-        return $this->getBackingStore()->get('feedback');
+        $val = $this->getBackingStore()->get('feedback');
+        if (is_null($val) || $val instanceof AlertFeedback) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'feedback'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
             'appId' => fn(ParseNode $n) => $o->setAppId($n->getStringValue()),
             'assignedTo' => fn(ParseNode $n) => $o->setAssignedTo($n->getStringValue()),
-            'comments' => fn(ParseNode $n) => $o->setComments($n->getCollectionOfPrimitiveValues()),
+            'comments' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setComments($val);
+            },
             'feedback' => fn(ParseNode $n) => $o->setFeedback($n->getEnumValue(AlertFeedback::class)),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(AlertStatus::class)),
@@ -106,7 +137,11 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -114,7 +149,11 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
      * @return AlertStatus|null
     */
     public function getStatus(): ?AlertStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof AlertStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**
@@ -122,7 +161,11 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTime|null
     */
     public function getUpdatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('updatedDateTime');
+        $val = $this->getBackingStore()->get('updatedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'updatedDateTime'");
     }
 
     /**
@@ -130,7 +173,11 @@ class AlertHistoryState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getUser(): ?string {
-        return $this->getBackingStore()->get('user');
+        $val = $this->getBackingStore()->get('user');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'user'");
     }
 
     /**

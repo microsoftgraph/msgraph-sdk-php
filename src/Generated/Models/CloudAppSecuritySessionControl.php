@@ -30,12 +30,16 @@ class CloudAppSecuritySessionControl extends ConditionalAccessSessionControl imp
      * @return CloudAppSecuritySessionControlType|null
     */
     public function getCloudAppSecurityType(): ?CloudAppSecuritySessionControlType {
-        return $this->getBackingStore()->get('cloudAppSecurityType');
+        $val = $this->getBackingStore()->get('cloudAppSecurityType');
+        if (is_null($val) || $val instanceof CloudAppSecuritySessionControlType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cloudAppSecurityType'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

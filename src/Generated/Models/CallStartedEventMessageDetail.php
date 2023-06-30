@@ -30,7 +30,11 @@ class CallStartedEventMessageDetail extends EventMessageDetail implements Parsab
      * @return TeamworkCallEventType|null
     */
     public function getCallEventType(): ?TeamworkCallEventType {
-        return $this->getBackingStore()->get('callEventType');
+        $val = $this->getBackingStore()->get('callEventType');
+        if (is_null($val) || $val instanceof TeamworkCallEventType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callEventType'");
     }
 
     /**
@@ -38,12 +42,16 @@ class CallStartedEventMessageDetail extends EventMessageDetail implements Parsab
      * @return string|null
     */
     public function getCallId(): ?string {
-        return $this->getBackingStore()->get('callId');
+        $val = $this->getBackingStore()->get('callId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -59,7 +67,11 @@ class CallStartedEventMessageDetail extends EventMessageDetail implements Parsab
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
-        return $this->getBackingStore()->get('initiator');
+        $val = $this->getBackingStore()->get('initiator');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'initiator'");
     }
 
     /**

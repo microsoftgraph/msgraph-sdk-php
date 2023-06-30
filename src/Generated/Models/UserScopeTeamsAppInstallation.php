@@ -30,12 +30,16 @@ class UserScopeTeamsAppInstallation extends TeamsAppInstallation implements Pars
      * @return Chat|null
     */
     public function getChat(): ?Chat {
-        return $this->getBackingStore()->get('chat');
+        $val = $this->getBackingStore()->get('chat');
+        if (is_null($val) || $val instanceof Chat) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'chat'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

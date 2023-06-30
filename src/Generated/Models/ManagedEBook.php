@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 /**
  * An abstract class containing the base properties for Managed eBook.
@@ -40,7 +41,13 @@ class ManagedEBook extends Entity implements Parsable
      * @return array<ManagedEBookAssignment>|null
     */
     public function getAssignments(): ?array {
-        return $this->getBackingStore()->get('assignments');
+        $val = $this->getBackingStore()->get('assignments');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ManagedEBookAssignment::class);
+            /** @var array<ManagedEBookAssignment>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignments'");
     }
 
     /**
@@ -48,7 +55,11 @@ class ManagedEBook extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -56,7 +67,11 @@ class ManagedEBook extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -64,7 +79,13 @@ class ManagedEBook extends Entity implements Parsable
      * @return array<DeviceInstallState>|null
     */
     public function getDeviceStates(): ?array {
-        return $this->getBackingStore()->get('deviceStates');
+        $val = $this->getBackingStore()->get('deviceStates');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DeviceInstallState::class);
+            /** @var array<DeviceInstallState>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceStates'");
     }
 
     /**
@@ -72,12 +93,16 @@ class ManagedEBook extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -103,7 +128,11 @@ class ManagedEBook extends Entity implements Parsable
      * @return string|null
     */
     public function getInformationUrl(): ?string {
-        return $this->getBackingStore()->get('informationUrl');
+        $val = $this->getBackingStore()->get('informationUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'informationUrl'");
     }
 
     /**
@@ -111,7 +140,11 @@ class ManagedEBook extends Entity implements Parsable
      * @return EBookInstallSummary|null
     */
     public function getInstallSummary(): ?EBookInstallSummary {
-        return $this->getBackingStore()->get('installSummary');
+        $val = $this->getBackingStore()->get('installSummary');
+        if (is_null($val) || $val instanceof EBookInstallSummary) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'installSummary'");
     }
 
     /**
@@ -119,7 +152,11 @@ class ManagedEBook extends Entity implements Parsable
      * @return MimeContent|null
     */
     public function getLargeCover(): ?MimeContent {
-        return $this->getBackingStore()->get('largeCover');
+        $val = $this->getBackingStore()->get('largeCover');
+        if (is_null($val) || $val instanceof MimeContent) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'largeCover'");
     }
 
     /**
@@ -127,7 +164,11 @@ class ManagedEBook extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedDateTime');
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**
@@ -135,7 +176,11 @@ class ManagedEBook extends Entity implements Parsable
      * @return string|null
     */
     public function getPrivacyInformationUrl(): ?string {
-        return $this->getBackingStore()->get('privacyInformationUrl');
+        $val = $this->getBackingStore()->get('privacyInformationUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'privacyInformationUrl'");
     }
 
     /**
@@ -143,7 +188,11 @@ class ManagedEBook extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getPublishedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('publishedDateTime');
+        $val = $this->getBackingStore()->get('publishedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'publishedDateTime'");
     }
 
     /**
@@ -151,7 +200,11 @@ class ManagedEBook extends Entity implements Parsable
      * @return string|null
     */
     public function getPublisher(): ?string {
-        return $this->getBackingStore()->get('publisher');
+        $val = $this->getBackingStore()->get('publisher');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'publisher'");
     }
 
     /**
@@ -159,7 +212,13 @@ class ManagedEBook extends Entity implements Parsable
      * @return array<UserInstallStateSummary>|null
     */
     public function getUserStateSummary(): ?array {
-        return $this->getBackingStore()->get('userStateSummary');
+        $val = $this->getBackingStore()->get('userStateSummary');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserInstallStateSummary::class);
+            /** @var array<UserInstallStateSummary>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userStateSummary'");
     }
 
     /**

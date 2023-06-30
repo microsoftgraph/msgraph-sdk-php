@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ConditionalAccessRoot extends Entity implements Parsable 
 {
@@ -29,7 +30,13 @@ class ConditionalAccessRoot extends Entity implements Parsable
      * @return array<AuthenticationContextClassReference>|null
     */
     public function getAuthenticationContextClassReferences(): ?array {
-        return $this->getBackingStore()->get('authenticationContextClassReferences');
+        $val = $this->getBackingStore()->get('authenticationContextClassReferences');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AuthenticationContextClassReference::class);
+            /** @var array<AuthenticationContextClassReference>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'authenticationContextClassReferences'");
     }
 
     /**
@@ -37,12 +44,16 @@ class ConditionalAccessRoot extends Entity implements Parsable
      * @return AuthenticationStrengthRoot|null
     */
     public function getAuthenticationStrength(): ?AuthenticationStrengthRoot {
-        return $this->getBackingStore()->get('authenticationStrength');
+        $val = $this->getBackingStore()->get('authenticationStrength');
+        if (is_null($val) || $val instanceof AuthenticationStrengthRoot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'authenticationStrength'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -60,7 +71,13 @@ class ConditionalAccessRoot extends Entity implements Parsable
      * @return array<NamedLocation>|null
     */
     public function getNamedLocations(): ?array {
-        return $this->getBackingStore()->get('namedLocations');
+        $val = $this->getBackingStore()->get('namedLocations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, NamedLocation::class);
+            /** @var array<NamedLocation>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'namedLocations'");
     }
 
     /**
@@ -68,7 +85,13 @@ class ConditionalAccessRoot extends Entity implements Parsable
      * @return array<ConditionalAccessPolicy>|null
     */
     public function getPolicies(): ?array {
-        return $this->getBackingStore()->get('policies');
+        $val = $this->getBackingStore()->get('policies');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ConditionalAccessPolicy::class);
+            /** @var array<ConditionalAccessPolicy>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'policies'");
     }
 
     /**
@@ -76,7 +99,13 @@ class ConditionalAccessRoot extends Entity implements Parsable
      * @return array<ConditionalAccessTemplate>|null
     */
     public function getTemplates(): ?array {
-        return $this->getBackingStore()->get('templates');
+        $val = $this->getBackingStore()->get('templates');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ConditionalAccessTemplate::class);
+            /** @var array<ConditionalAccessTemplate>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'templates'");
     }
 
     /**

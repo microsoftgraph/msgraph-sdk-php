@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +61,11 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCallChainId(): ?string {
-        return $this->getBackingStore()->get('callChainId');
+        $val = $this->getBackingStore()->get('callChainId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'callChainId'");
     }
 
     /**
@@ -63,7 +73,11 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCloudServiceDeploymentEnvironment(): ?string {
-        return $this->getBackingStore()->get('cloudServiceDeploymentEnvironment');
+        $val = $this->getBackingStore()->get('cloudServiceDeploymentEnvironment');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cloudServiceDeploymentEnvironment'");
     }
 
     /**
@@ -71,7 +85,11 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCloudServiceDeploymentId(): ?string {
-        return $this->getBackingStore()->get('cloudServiceDeploymentId');
+        $val = $this->getBackingStore()->get('cloudServiceDeploymentId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cloudServiceDeploymentId'");
     }
 
     /**
@@ -79,7 +97,11 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCloudServiceInstanceName(): ?string {
-        return $this->getBackingStore()->get('cloudServiceInstanceName');
+        $val = $this->getBackingStore()->get('cloudServiceInstanceName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cloudServiceInstanceName'");
     }
 
     /**
@@ -87,7 +109,11 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCloudServiceName(): ?string {
-        return $this->getBackingStore()->get('cloudServiceName');
+        $val = $this->getBackingStore()->get('cloudServiceName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cloudServiceName'");
     }
 
     /**
@@ -95,7 +121,11 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getDeviceDescription(): ?string {
-        return $this->getBackingStore()->get('deviceDescription');
+        $val = $this->getBackingStore()->get('deviceDescription');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceDescription'");
     }
 
     /**
@@ -103,12 +133,16 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getDeviceName(): ?string {
-        return $this->getBackingStore()->get('deviceName');
+        $val = $this->getBackingStore()->get('deviceName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -132,7 +166,11 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getMediaLegId(): ?string {
-        return $this->getBackingStore()->get('mediaLegId');
+        $val = $this->getBackingStore()->get('mediaLegId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mediaLegId'");
     }
 
     /**
@@ -140,7 +178,13 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
      * @return array<TeleconferenceDeviceMediaQuality>|null
     */
     public function getMediaQualityList(): ?array {
-        return $this->getBackingStore()->get('mediaQualityList');
+        $val = $this->getBackingStore()->get('mediaQualityList');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TeleconferenceDeviceMediaQuality::class);
+            /** @var array<TeleconferenceDeviceMediaQuality>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mediaQualityList'");
     }
 
     /**
@@ -148,7 +192,11 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -156,7 +204,11 @@ class TeleconferenceDeviceQuality implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getParticipantId(): ?string {
-        return $this->getBackingStore()->get('participantId');
+        $val = $this->getBackingStore()->get('participantId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'participantId'");
     }
 
     /**

@@ -30,7 +30,11 @@ class Contract extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getContractType(): ?string {
-        return $this->getBackingStore()->get('contractType');
+        $val = $this->getBackingStore()->get('contractType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contractType'");
     }
 
     /**
@@ -38,7 +42,11 @@ class Contract extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getCustomerId(): ?string {
-        return $this->getBackingStore()->get('customerId');
+        $val = $this->getBackingStore()->get('customerId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customerId'");
     }
 
     /**
@@ -46,7 +54,11 @@ class Contract extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getDefaultDomainName(): ?string {
-        return $this->getBackingStore()->get('defaultDomainName');
+        $val = $this->getBackingStore()->get('defaultDomainName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'defaultDomainName'");
     }
 
     /**
@@ -54,12 +66,16 @@ class Contract extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

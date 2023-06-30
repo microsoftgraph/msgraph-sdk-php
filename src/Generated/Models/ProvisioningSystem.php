@@ -30,12 +30,16 @@ class ProvisioningSystem extends Identity implements Parsable
      * @return DetailsInfo|null
     */
     public function getDetails(): ?DetailsInfo {
-        return $this->getBackingStore()->get('details');
+        $val = $this->getBackingStore()->get('details');
+        if (is_null($val) || $val instanceof DetailsInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'details'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

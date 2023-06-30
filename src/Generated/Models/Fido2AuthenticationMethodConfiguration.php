@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable 
 {
@@ -27,7 +28,7 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -44,7 +45,13 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
      * @return array<AuthenticationMethodTarget>|null
     */
     public function getIncludeTargets(): ?array {
-        return $this->getBackingStore()->get('includeTargets');
+        $val = $this->getBackingStore()->get('includeTargets');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AuthenticationMethodTarget::class);
+            /** @var array<AuthenticationMethodTarget>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'includeTargets'");
     }
 
     /**
@@ -52,7 +59,11 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
      * @return bool|null
     */
     public function getIsAttestationEnforced(): ?bool {
-        return $this->getBackingStore()->get('isAttestationEnforced');
+        $val = $this->getBackingStore()->get('isAttestationEnforced');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isAttestationEnforced'");
     }
 
     /**
@@ -60,7 +71,11 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
      * @return bool|null
     */
     public function getIsSelfServiceRegistrationAllowed(): ?bool {
-        return $this->getBackingStore()->get('isSelfServiceRegistrationAllowed');
+        $val = $this->getBackingStore()->get('isSelfServiceRegistrationAllowed');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isSelfServiceRegistrationAllowed'");
     }
 
     /**
@@ -68,7 +83,11 @@ class Fido2AuthenticationMethodConfiguration extends AuthenticationMethodConfigu
      * @return Fido2KeyRestrictions|null
     */
     public function getKeyRestrictions(): ?Fido2KeyRestrictions {
-        return $this->getBackingStore()->get('keyRestrictions');
+        $val = $this->getBackingStore()->get('keyRestrictions');
+        if (is_null($val) || $val instanceof Fido2KeyRestrictions) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'keyRestrictions'");
     }
 
     /**

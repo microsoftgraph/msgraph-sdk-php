@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 use Psr\Http\Message\StreamInterface;
 
 class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration implements Parsable 
@@ -31,12 +32,16 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration impl
      * @return StreamInterface|null
     */
     public function getEncodedSettingXml(): ?StreamInterface {
-        return $this->getBackingStore()->get('encodedSettingXml');
+        $val = $this->getBackingStore()->get('encodedSettingXml');
+        if (is_null($val) || $val instanceof StreamInterface) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'encodedSettingXml'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -51,7 +56,13 @@ class IosMobileAppConfiguration extends ManagedDeviceMobileAppConfiguration impl
      * @return array<AppConfigurationSettingItem>|null
     */
     public function getSettings(): ?array {
-        return $this->getBackingStore()->get('settings');
+        $val = $this->getBackingStore()->get('settings');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AppConfigurationSettingItem::class);
+            /** @var array<AppConfigurationSettingItem>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'settings'");
     }
 
     /**

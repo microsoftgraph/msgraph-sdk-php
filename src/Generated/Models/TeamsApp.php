@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class TeamsApp extends Entity implements Parsable 
 {
@@ -29,7 +30,13 @@ class TeamsApp extends Entity implements Parsable
      * @return array<TeamsAppDefinition>|null
     */
     public function getAppDefinitions(): ?array {
-        return $this->getBackingStore()->get('appDefinitions');
+        $val = $this->getBackingStore()->get('appDefinitions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TeamsAppDefinition::class);
+            /** @var array<TeamsAppDefinition>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appDefinitions'");
     }
 
     /**
@@ -37,7 +44,11 @@ class TeamsApp extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
@@ -45,7 +56,11 @@ class TeamsApp extends Entity implements Parsable
      * @return TeamsAppDistributionMethod|null
     */
     public function getDistributionMethod(): ?TeamsAppDistributionMethod {
-        return $this->getBackingStore()->get('distributionMethod');
+        $val = $this->getBackingStore()->get('distributionMethod');
+        if (is_null($val) || $val instanceof TeamsAppDistributionMethod) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'distributionMethod'");
     }
 
     /**
@@ -53,12 +68,16 @@ class TeamsApp extends Entity implements Parsable
      * @return string|null
     */
     public function getExternalId(): ?string {
-        return $this->getBackingStore()->get('externalId');
+        $val = $this->getBackingStore()->get('externalId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'externalId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

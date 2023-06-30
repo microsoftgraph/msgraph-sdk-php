@@ -18,7 +18,7 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, BackedMod
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new SubjectRightsRequestStageDetail and sets the default values.
+     * Instantiates a new subjectRightsRequestStageDetail and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -39,7 +39,12 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, BackedMod
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,12 +60,16 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, BackedMod
      * @return PublicError|null
     */
     public function getError(): ?PublicError {
-        return $this->getBackingStore()->get('error');
+        $val = $this->getBackingStore()->get('error');
+        if (is_null($val) || $val instanceof PublicError) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'error'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -77,7 +86,11 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, BackedMod
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -85,7 +98,11 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, BackedMod
      * @return SubjectRightsRequestStage|null
     */
     public function getStage(): ?SubjectRightsRequestStage {
-        return $this->getBackingStore()->get('stage');
+        $val = $this->getBackingStore()->get('stage');
+        if (is_null($val) || $val instanceof SubjectRightsRequestStage) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'stage'");
     }
 
     /**
@@ -93,7 +110,11 @@ class SubjectRightsRequestStageDetail implements AdditionalDataHolder, BackedMod
      * @return SubjectRightsRequestStageStatus|null
     */
     public function getStatus(): ?SubjectRightsRequestStageStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof SubjectRightsRequestStageStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**

@@ -42,7 +42,12 @@ class RgbColor implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -50,7 +55,11 @@ class RgbColor implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getB(): ?string {
-        return $this->getBackingStore()->get('b');
+        $val = $this->getBackingStore()->get('b');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'b'");
     }
 
     /**
@@ -63,7 +72,7 @@ class RgbColor implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -80,7 +89,11 @@ class RgbColor implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getG(): ?string {
-        return $this->getBackingStore()->get('g');
+        $val = $this->getBackingStore()->get('g');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'g'");
     }
 
     /**
@@ -88,7 +101,11 @@ class RgbColor implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -96,7 +113,11 @@ class RgbColor implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getR(): ?string {
-        return $this->getBackingStore()->get('r');
+        $val = $this->getBackingStore()->get('r');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'r'");
     }
 
     /**

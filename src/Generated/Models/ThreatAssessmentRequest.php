@@ -6,11 +6,12 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ThreatAssessmentRequest extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new ThreatAssessmentRequest and sets the default values.
+     * Instantiates a new threatAssessmentRequest and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -40,7 +41,11 @@ class ThreatAssessmentRequest extends Entity implements Parsable
      * @return ThreatCategory|null
     */
     public function getCategory(): ?ThreatCategory {
-        return $this->getBackingStore()->get('category');
+        $val = $this->getBackingStore()->get('category');
+        if (is_null($val) || $val instanceof ThreatCategory) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category'");
     }
 
     /**
@@ -48,7 +53,11 @@ class ThreatAssessmentRequest extends Entity implements Parsable
      * @return ThreatAssessmentContentType|null
     */
     public function getContentType(): ?ThreatAssessmentContentType {
-        return $this->getBackingStore()->get('contentType');
+        $val = $this->getBackingStore()->get('contentType');
+        if (is_null($val) || $val instanceof ThreatAssessmentContentType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentType'");
     }
 
     /**
@@ -56,7 +65,11 @@ class ThreatAssessmentRequest extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
-        return $this->getBackingStore()->get('createdBy');
+        $val = $this->getBackingStore()->get('createdBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdBy'");
     }
 
     /**
@@ -64,7 +77,11 @@ class ThreatAssessmentRequest extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -72,12 +89,16 @@ class ThreatAssessmentRequest extends Entity implements Parsable
      * @return ThreatExpectedAssessment|null
     */
     public function getExpectedAssessment(): ?ThreatExpectedAssessment {
-        return $this->getBackingStore()->get('expectedAssessment');
+        $val = $this->getBackingStore()->get('expectedAssessment');
+        if (is_null($val) || $val instanceof ThreatExpectedAssessment) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'expectedAssessment'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -98,7 +119,11 @@ class ThreatAssessmentRequest extends Entity implements Parsable
      * @return ThreatAssessmentRequestSource|null
     */
     public function getRequestSource(): ?ThreatAssessmentRequestSource {
-        return $this->getBackingStore()->get('requestSource');
+        $val = $this->getBackingStore()->get('requestSource');
+        if (is_null($val) || $val instanceof ThreatAssessmentRequestSource) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'requestSource'");
     }
 
     /**
@@ -106,7 +131,13 @@ class ThreatAssessmentRequest extends Entity implements Parsable
      * @return array<ThreatAssessmentResult>|null
     */
     public function getResults(): ?array {
-        return $this->getBackingStore()->get('results');
+        $val = $this->getBackingStore()->get('results');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ThreatAssessmentResult::class);
+            /** @var array<ThreatAssessmentResult>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'results'");
     }
 
     /**
@@ -114,7 +145,11 @@ class ThreatAssessmentRequest extends Entity implements Parsable
      * @return ThreatAssessmentStatus|null
     */
     public function getStatus(): ?ThreatAssessmentStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof ThreatAssessmentStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**

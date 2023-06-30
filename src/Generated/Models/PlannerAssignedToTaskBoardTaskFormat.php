@@ -26,7 +26,7 @@ class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Parsable
      * @return PlannerOrderHintsByAssignee|null
     */
     public function getOrderHintsByAssignee(): ?PlannerOrderHintsByAssignee {
-        return $this->getBackingStore()->get('orderHintsByAssignee');
+        $val = $this->getBackingStore()->get('orderHintsByAssignee');
+        if (is_null($val) || $val instanceof PlannerOrderHintsByAssignee) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'orderHintsByAssignee'");
     }
 
     /**
@@ -49,7 +53,11 @@ class PlannerAssignedToTaskBoardTaskFormat extends Entity implements Parsable
      * @return string|null
     */
     public function getUnassignedOrderHint(): ?string {
-        return $this->getBackingStore()->get('unassignedOrderHint');
+        $val = $this->getBackingStore()->get('unassignedOrderHint');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'unassignedOrderHint'");
     }
 
     /**

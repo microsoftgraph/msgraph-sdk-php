@@ -46,12 +46,16 @@ class CommsOperation extends Entity implements Parsable
      * @return string|null
     */
     public function getClientContext(): ?string {
-        return $this->getBackingStore()->get('clientContext');
+        $val = $this->getBackingStore()->get('clientContext');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'clientContext'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -67,7 +71,11 @@ class CommsOperation extends Entity implements Parsable
      * @return ResultInfo|null
     */
     public function getResultInfo(): ?ResultInfo {
-        return $this->getBackingStore()->get('resultInfo');
+        $val = $this->getBackingStore()->get('resultInfo');
+        if (is_null($val) || $val instanceof ResultInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resultInfo'");
     }
 
     /**
@@ -75,7 +83,11 @@ class CommsOperation extends Entity implements Parsable
      * @return OperationStatus|null
     */
     public function getStatus(): ?OperationStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof OperationStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**

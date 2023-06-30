@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class EducationRubric extends Entity implements Parsable 
 {
@@ -30,7 +31,11 @@ class EducationRubric extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
-        return $this->getBackingStore()->get('createdBy');
+        $val = $this->getBackingStore()->get('createdBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdBy'");
     }
 
     /**
@@ -38,7 +43,11 @@ class EducationRubric extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -46,7 +55,11 @@ class EducationRubric extends Entity implements Parsable
      * @return EducationItemBody|null
     */
     public function getDescription(): ?EducationItemBody {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || $val instanceof EducationItemBody) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -54,12 +67,16 @@ class EducationRubric extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -81,7 +98,11 @@ class EducationRubric extends Entity implements Parsable
      * @return EducationAssignmentGradeType|null
     */
     public function getGrading(): ?EducationAssignmentGradeType {
-        return $this->getBackingStore()->get('grading');
+        $val = $this->getBackingStore()->get('grading');
+        if (is_null($val) || $val instanceof EducationAssignmentGradeType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'grading'");
     }
 
     /**
@@ -89,7 +110,11 @@ class EducationRubric extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getLastModifiedBy(): ?IdentitySet {
-        return $this->getBackingStore()->get('lastModifiedBy');
+        $val = $this->getBackingStore()->get('lastModifiedBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedBy'");
     }
 
     /**
@@ -97,7 +122,11 @@ class EducationRubric extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedDateTime');
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**
@@ -105,7 +134,13 @@ class EducationRubric extends Entity implements Parsable
      * @return array<RubricLevel>|null
     */
     public function getLevels(): ?array {
-        return $this->getBackingStore()->get('levels');
+        $val = $this->getBackingStore()->get('levels');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, RubricLevel::class);
+            /** @var array<RubricLevel>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'levels'");
     }
 
     /**
@@ -113,7 +148,13 @@ class EducationRubric extends Entity implements Parsable
      * @return array<RubricQuality>|null
     */
     public function getQualities(): ?array {
-        return $this->getBackingStore()->get('qualities');
+        $val = $this->getBackingStore()->get('qualities');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, RubricQuality::class);
+            /** @var array<RubricQuality>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'qualities'");
     }
 
     /**

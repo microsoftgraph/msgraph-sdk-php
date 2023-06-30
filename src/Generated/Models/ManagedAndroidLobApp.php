@@ -27,7 +27,7 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -44,7 +44,11 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsable
      * @return AndroidMinimumOperatingSystem|null
     */
     public function getMinimumSupportedOperatingSystem(): ?AndroidMinimumOperatingSystem {
-        return $this->getBackingStore()->get('minimumSupportedOperatingSystem');
+        $val = $this->getBackingStore()->get('minimumSupportedOperatingSystem');
+        if (is_null($val) || $val instanceof AndroidMinimumOperatingSystem) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minimumSupportedOperatingSystem'");
     }
 
     /**
@@ -52,7 +56,11 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsable
      * @return string|null
     */
     public function getPackageId(): ?string {
-        return $this->getBackingStore()->get('packageId');
+        $val = $this->getBackingStore()->get('packageId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'packageId'");
     }
 
     /**
@@ -60,7 +68,11 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsable
      * @return string|null
     */
     public function getVersionCode(): ?string {
-        return $this->getBackingStore()->get('versionCode');
+        $val = $this->getBackingStore()->get('versionCode');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'versionCode'");
     }
 
     /**
@@ -68,7 +80,11 @@ class ManagedAndroidLobApp extends ManagedMobileLobApp implements Parsable
      * @return string|null
     */
     public function getVersionName(): ?string {
-        return $this->getBackingStore()->get('versionName');
+        $val = $this->getBackingStore()->get('versionName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'versionName'");
     }
 
     /**

@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Alert extends Entity implements Parsable 
 {
@@ -30,7 +31,11 @@ class Alert extends Entity implements Parsable
      * @return string|null
     */
     public function getActivityGroupName(): ?string {
-        return $this->getBackingStore()->get('activityGroupName');
+        $val = $this->getBackingStore()->get('activityGroupName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activityGroupName'");
     }
 
     /**
@@ -38,7 +43,13 @@ class Alert extends Entity implements Parsable
      * @return array<AlertDetection>|null
     */
     public function getAlertDetections(): ?array {
-        return $this->getBackingStore()->get('alertDetections');
+        $val = $this->getBackingStore()->get('alertDetections');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AlertDetection::class);
+            /** @var array<AlertDetection>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'alertDetections'");
     }
 
     /**
@@ -46,7 +57,11 @@ class Alert extends Entity implements Parsable
      * @return string|null
     */
     public function getAssignedTo(): ?string {
-        return $this->getBackingStore()->get('assignedTo');
+        $val = $this->getBackingStore()->get('assignedTo');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignedTo'");
     }
 
     /**
@@ -54,7 +69,11 @@ class Alert extends Entity implements Parsable
      * @return string|null
     */
     public function getAzureSubscriptionId(): ?string {
-        return $this->getBackingStore()->get('azureSubscriptionId');
+        $val = $this->getBackingStore()->get('azureSubscriptionId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'azureSubscriptionId'");
     }
 
     /**
@@ -62,7 +81,11 @@ class Alert extends Entity implements Parsable
      * @return string|null
     */
     public function getAzureTenantId(): ?string {
-        return $this->getBackingStore()->get('azureTenantId');
+        $val = $this->getBackingStore()->get('azureTenantId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'azureTenantId'");
     }
 
     /**
@@ -70,7 +93,11 @@ class Alert extends Entity implements Parsable
      * @return string|null
     */
     public function getCategory(): ?string {
-        return $this->getBackingStore()->get('category');
+        $val = $this->getBackingStore()->get('category');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category'");
     }
 
     /**
@@ -78,7 +105,11 @@ class Alert extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getClosedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('closedDateTime');
+        $val = $this->getBackingStore()->get('closedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'closedDateTime'");
     }
 
     /**
@@ -86,7 +117,13 @@ class Alert extends Entity implements Parsable
      * @return array<CloudAppSecurityState>|null
     */
     public function getCloudAppStates(): ?array {
-        return $this->getBackingStore()->get('cloudAppStates');
+        $val = $this->getBackingStore()->get('cloudAppStates');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, CloudAppSecurityState::class);
+            /** @var array<CloudAppSecurityState>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cloudAppStates'");
     }
 
     /**
@@ -94,7 +131,13 @@ class Alert extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getComments(): ?array {
-        return $this->getBackingStore()->get('comments');
+        $val = $this->getBackingStore()->get('comments');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'comments'");
     }
 
     /**
@@ -102,7 +145,11 @@ class Alert extends Entity implements Parsable
      * @return int|null
     */
     public function getConfidence(): ?int {
-        return $this->getBackingStore()->get('confidence');
+        $val = $this->getBackingStore()->get('confidence');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'confidence'");
     }
 
     /**
@@ -110,7 +157,11 @@ class Alert extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -118,7 +169,11 @@ class Alert extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -126,7 +181,13 @@ class Alert extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getDetectionIds(): ?array {
-        return $this->getBackingStore()->get('detectionIds');
+        $val = $this->getBackingStore()->get('detectionIds');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'detectionIds'");
     }
 
     /**
@@ -134,7 +195,11 @@ class Alert extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getEventDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('eventDateTime');
+        $val = $this->getBackingStore()->get('eventDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'eventDateTime'");
     }
 
     /**
@@ -142,12 +207,16 @@ class Alert extends Entity implements Parsable
      * @return AlertFeedback|null
     */
     public function getFeedback(): ?AlertFeedback {
-        return $this->getBackingStore()->get('feedback');
+        $val = $this->getBackingStore()->get('feedback');
+        if (is_null($val) || $val instanceof AlertFeedback) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'feedback'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -160,17 +229,38 @@ class Alert extends Entity implements Parsable
             'category' => fn(ParseNode $n) => $o->setCategory($n->getStringValue()),
             'closedDateTime' => fn(ParseNode $n) => $o->setClosedDateTime($n->getDateTimeValue()),
             'cloudAppStates' => fn(ParseNode $n) => $o->setCloudAppStates($n->getCollectionOfObjectValues([CloudAppSecurityState::class, 'createFromDiscriminatorValue'])),
-            'comments' => fn(ParseNode $n) => $o->setComments($n->getCollectionOfPrimitiveValues()),
+            'comments' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setComments($val);
+            },
             'confidence' => fn(ParseNode $n) => $o->setConfidence($n->getIntegerValue()),
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
-            'detectionIds' => fn(ParseNode $n) => $o->setDetectionIds($n->getCollectionOfPrimitiveValues()),
+            'detectionIds' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setDetectionIds($val);
+            },
             'eventDateTime' => fn(ParseNode $n) => $o->setEventDateTime($n->getDateTimeValue()),
             'feedback' => fn(ParseNode $n) => $o->setFeedback($n->getEnumValue(AlertFeedback::class)),
             'fileStates' => fn(ParseNode $n) => $o->setFileStates($n->getCollectionOfObjectValues([FileSecurityState::class, 'createFromDiscriminatorValue'])),
             'historyStates' => fn(ParseNode $n) => $o->setHistoryStates($n->getCollectionOfObjectValues([AlertHistoryState::class, 'createFromDiscriminatorValue'])),
             'hostStates' => fn(ParseNode $n) => $o->setHostStates($n->getCollectionOfObjectValues([HostSecurityState::class, 'createFromDiscriminatorValue'])),
-            'incidentIds' => fn(ParseNode $n) => $o->setIncidentIds($n->getCollectionOfPrimitiveValues()),
+            'incidentIds' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setIncidentIds($val);
+            },
             'investigationSecurityStates' => fn(ParseNode $n) => $o->setInvestigationSecurityStates($n->getCollectionOfObjectValues([InvestigationSecurityState::class, 'createFromDiscriminatorValue'])),
             'lastEventDateTime' => fn(ParseNode $n) => $o->setLastEventDateTime($n->getDateTimeValue()),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
@@ -178,13 +268,34 @@ class Alert extends Entity implements Parsable
             'messageSecurityStates' => fn(ParseNode $n) => $o->setMessageSecurityStates($n->getCollectionOfObjectValues([MessageSecurityState::class, 'createFromDiscriminatorValue'])),
             'networkConnections' => fn(ParseNode $n) => $o->setNetworkConnections($n->getCollectionOfObjectValues([NetworkConnection::class, 'createFromDiscriminatorValue'])),
             'processes' => fn(ParseNode $n) => $o->setProcesses($n->getCollectionOfObjectValues([Process::class, 'createFromDiscriminatorValue'])),
-            'recommendedActions' => fn(ParseNode $n) => $o->setRecommendedActions($n->getCollectionOfPrimitiveValues()),
+            'recommendedActions' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setRecommendedActions($val);
+            },
             'registryKeyStates' => fn(ParseNode $n) => $o->setRegistryKeyStates($n->getCollectionOfObjectValues([RegistryKeyState::class, 'createFromDiscriminatorValue'])),
             'securityResources' => fn(ParseNode $n) => $o->setSecurityResources($n->getCollectionOfObjectValues([SecurityResource::class, 'createFromDiscriminatorValue'])),
             'severity' => fn(ParseNode $n) => $o->setSeverity($n->getEnumValue(AlertSeverity::class)),
-            'sourceMaterials' => fn(ParseNode $n) => $o->setSourceMaterials($n->getCollectionOfPrimitiveValues()),
+            'sourceMaterials' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setSourceMaterials($val);
+            },
             'status' => fn(ParseNode $n) => $o->setStatus($n->getEnumValue(AlertStatus::class)),
-            'tags' => fn(ParseNode $n) => $o->setTags($n->getCollectionOfPrimitiveValues()),
+            'tags' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setTags($val);
+            },
             'title' => fn(ParseNode $n) => $o->setTitle($n->getStringValue()),
             'triggers' => fn(ParseNode $n) => $o->setTriggers($n->getCollectionOfObjectValues([AlertTrigger::class, 'createFromDiscriminatorValue'])),
             'uriClickSecurityStates' => fn(ParseNode $n) => $o->setUriClickSecurityStates($n->getCollectionOfObjectValues([UriClickSecurityState::class, 'createFromDiscriminatorValue'])),
@@ -199,7 +310,13 @@ class Alert extends Entity implements Parsable
      * @return array<FileSecurityState>|null
     */
     public function getFileStates(): ?array {
-        return $this->getBackingStore()->get('fileStates');
+        $val = $this->getBackingStore()->get('fileStates');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, FileSecurityState::class);
+            /** @var array<FileSecurityState>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fileStates'");
     }
 
     /**
@@ -207,7 +324,13 @@ class Alert extends Entity implements Parsable
      * @return array<AlertHistoryState>|null
     */
     public function getHistoryStates(): ?array {
-        return $this->getBackingStore()->get('historyStates');
+        $val = $this->getBackingStore()->get('historyStates');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AlertHistoryState::class);
+            /** @var array<AlertHistoryState>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'historyStates'");
     }
 
     /**
@@ -215,7 +338,13 @@ class Alert extends Entity implements Parsable
      * @return array<HostSecurityState>|null
     */
     public function getHostStates(): ?array {
-        return $this->getBackingStore()->get('hostStates');
+        $val = $this->getBackingStore()->get('hostStates');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, HostSecurityState::class);
+            /** @var array<HostSecurityState>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hostStates'");
     }
 
     /**
@@ -223,7 +352,13 @@ class Alert extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getIncidentIds(): ?array {
-        return $this->getBackingStore()->get('incidentIds');
+        $val = $this->getBackingStore()->get('incidentIds');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'incidentIds'");
     }
 
     /**
@@ -231,7 +366,13 @@ class Alert extends Entity implements Parsable
      * @return array<InvestigationSecurityState>|null
     */
     public function getInvestigationSecurityStates(): ?array {
-        return $this->getBackingStore()->get('investigationSecurityStates');
+        $val = $this->getBackingStore()->get('investigationSecurityStates');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, InvestigationSecurityState::class);
+            /** @var array<InvestigationSecurityState>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'investigationSecurityStates'");
     }
 
     /**
@@ -239,7 +380,11 @@ class Alert extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastEventDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastEventDateTime');
+        $val = $this->getBackingStore()->get('lastEventDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastEventDateTime'");
     }
 
     /**
@@ -247,7 +392,11 @@ class Alert extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedDateTime');
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**
@@ -255,7 +404,13 @@ class Alert extends Entity implements Parsable
      * @return array<MalwareState>|null
     */
     public function getMalwareStates(): ?array {
-        return $this->getBackingStore()->get('malwareStates');
+        $val = $this->getBackingStore()->get('malwareStates');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, MalwareState::class);
+            /** @var array<MalwareState>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'malwareStates'");
     }
 
     /**
@@ -263,7 +418,13 @@ class Alert extends Entity implements Parsable
      * @return array<MessageSecurityState>|null
     */
     public function getMessageSecurityStates(): ?array {
-        return $this->getBackingStore()->get('messageSecurityStates');
+        $val = $this->getBackingStore()->get('messageSecurityStates');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, MessageSecurityState::class);
+            /** @var array<MessageSecurityState>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'messageSecurityStates'");
     }
 
     /**
@@ -271,7 +432,13 @@ class Alert extends Entity implements Parsable
      * @return array<NetworkConnection>|null
     */
     public function getNetworkConnections(): ?array {
-        return $this->getBackingStore()->get('networkConnections');
+        $val = $this->getBackingStore()->get('networkConnections');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, NetworkConnection::class);
+            /** @var array<NetworkConnection>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'networkConnections'");
     }
 
     /**
@@ -279,7 +446,13 @@ class Alert extends Entity implements Parsable
      * @return array<Process>|null
     */
     public function getProcesses(): ?array {
-        return $this->getBackingStore()->get('processes');
+        $val = $this->getBackingStore()->get('processes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Process::class);
+            /** @var array<Process>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'processes'");
     }
 
     /**
@@ -287,7 +460,13 @@ class Alert extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getRecommendedActions(): ?array {
-        return $this->getBackingStore()->get('recommendedActions');
+        $val = $this->getBackingStore()->get('recommendedActions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recommendedActions'");
     }
 
     /**
@@ -295,7 +474,13 @@ class Alert extends Entity implements Parsable
      * @return array<RegistryKeyState>|null
     */
     public function getRegistryKeyStates(): ?array {
-        return $this->getBackingStore()->get('registryKeyStates');
+        $val = $this->getBackingStore()->get('registryKeyStates');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, RegistryKeyState::class);
+            /** @var array<RegistryKeyState>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'registryKeyStates'");
     }
 
     /**
@@ -303,7 +488,13 @@ class Alert extends Entity implements Parsable
      * @return array<SecurityResource>|null
     */
     public function getSecurityResources(): ?array {
-        return $this->getBackingStore()->get('securityResources');
+        $val = $this->getBackingStore()->get('securityResources');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SecurityResource::class);
+            /** @var array<SecurityResource>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'securityResources'");
     }
 
     /**
@@ -311,7 +502,11 @@ class Alert extends Entity implements Parsable
      * @return AlertSeverity|null
     */
     public function getSeverity(): ?AlertSeverity {
-        return $this->getBackingStore()->get('severity');
+        $val = $this->getBackingStore()->get('severity');
+        if (is_null($val) || $val instanceof AlertSeverity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'severity'");
     }
 
     /**
@@ -319,7 +514,13 @@ class Alert extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getSourceMaterials(): ?array {
-        return $this->getBackingStore()->get('sourceMaterials');
+        $val = $this->getBackingStore()->get('sourceMaterials');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sourceMaterials'");
     }
 
     /**
@@ -327,7 +528,11 @@ class Alert extends Entity implements Parsable
      * @return AlertStatus|null
     */
     public function getStatus(): ?AlertStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof AlertStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**
@@ -335,7 +540,13 @@ class Alert extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getTags(): ?array {
-        return $this->getBackingStore()->get('tags');
+        $val = $this->getBackingStore()->get('tags');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tags'");
     }
 
     /**
@@ -343,7 +554,11 @@ class Alert extends Entity implements Parsable
      * @return string|null
     */
     public function getTitle(): ?string {
-        return $this->getBackingStore()->get('title');
+        $val = $this->getBackingStore()->get('title');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'title'");
     }
 
     /**
@@ -351,7 +566,13 @@ class Alert extends Entity implements Parsable
      * @return array<AlertTrigger>|null
     */
     public function getTriggers(): ?array {
-        return $this->getBackingStore()->get('triggers');
+        $val = $this->getBackingStore()->get('triggers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AlertTrigger::class);
+            /** @var array<AlertTrigger>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'triggers'");
     }
 
     /**
@@ -359,7 +580,13 @@ class Alert extends Entity implements Parsable
      * @return array<UriClickSecurityState>|null
     */
     public function getUriClickSecurityStates(): ?array {
-        return $this->getBackingStore()->get('uriClickSecurityStates');
+        $val = $this->getBackingStore()->get('uriClickSecurityStates');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UriClickSecurityState::class);
+            /** @var array<UriClickSecurityState>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'uriClickSecurityStates'");
     }
 
     /**
@@ -367,7 +594,13 @@ class Alert extends Entity implements Parsable
      * @return array<UserSecurityState>|null
     */
     public function getUserStates(): ?array {
-        return $this->getBackingStore()->get('userStates');
+        $val = $this->getBackingStore()->get('userStates');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserSecurityState::class);
+            /** @var array<UserSecurityState>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userStates'");
     }
 
     /**
@@ -375,7 +608,11 @@ class Alert extends Entity implements Parsable
      * @return SecurityVendorInformation|null
     */
     public function getVendorInformation(): ?SecurityVendorInformation {
-        return $this->getBackingStore()->get('vendorInformation');
+        $val = $this->getBackingStore()->get('vendorInformation');
+        if (is_null($val) || $val instanceof SecurityVendorInformation) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'vendorInformation'");
     }
 
     /**
@@ -383,7 +620,13 @@ class Alert extends Entity implements Parsable
      * @return array<VulnerabilityState>|null
     */
     public function getVulnerabilityStates(): ?array {
-        return $this->getBackingStore()->get('vulnerabilityStates');
+        $val = $this->getBackingStore()->get('vulnerabilityStates');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, VulnerabilityState::class);
+            /** @var array<VulnerabilityState>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'vulnerabilityStates'");
     }
 
     /**

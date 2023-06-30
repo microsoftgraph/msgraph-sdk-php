@@ -29,12 +29,16 @@ class WorkbookNamedItem extends Entity implements Parsable
      * @return string|null
     */
     public function getComment(): ?string {
-        return $this->getBackingStore()->get('comment');
+        $val = $this->getBackingStore()->get('comment');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'comment'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -54,7 +58,11 @@ class WorkbookNamedItem extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -62,7 +70,11 @@ class WorkbookNamedItem extends Entity implements Parsable
      * @return string|null
     */
     public function getScope(): ?string {
-        return $this->getBackingStore()->get('scope');
+        $val = $this->getBackingStore()->get('scope');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scope'");
     }
 
     /**
@@ -70,7 +82,11 @@ class WorkbookNamedItem extends Entity implements Parsable
      * @return string|null
     */
     public function getType(): ?string {
-        return $this->getBackingStore()->get('type');
+        $val = $this->getBackingStore()->get('type');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
     }
 
     /**
@@ -78,7 +94,11 @@ class WorkbookNamedItem extends Entity implements Parsable
      * @return Json|null
     */
     public function getValue(): ?Json {
-        return $this->getBackingStore()->get('value');
+        $val = $this->getBackingStore()->get('value');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'value'");
     }
 
     /**
@@ -86,7 +106,11 @@ class WorkbookNamedItem extends Entity implements Parsable
      * @return bool|null
     */
     public function getVisible(): ?bool {
-        return $this->getBackingStore()->get('visible');
+        $val = $this->getBackingStore()->get('visible');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'visible'");
     }
 
     /**
@@ -94,7 +118,11 @@ class WorkbookNamedItem extends Entity implements Parsable
      * @return WorkbookWorksheet|null
     */
     public function getWorksheet(): ?WorkbookWorksheet {
-        return $this->getBackingStore()->get('worksheet');
+        $val = $this->getBackingStore()->get('worksheet');
+        if (is_null($val) || $val instanceof WorkbookWorksheet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'worksheet'");
     }
 
     /**

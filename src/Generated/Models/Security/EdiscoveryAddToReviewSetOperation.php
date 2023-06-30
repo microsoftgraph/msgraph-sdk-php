@@ -26,7 +26,7 @@ class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsabl
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsabl
      * @return EdiscoveryReviewSet|null
     */
     public function getReviewSet(): ?EdiscoveryReviewSet {
-        return $this->getBackingStore()->get('reviewSet');
+        $val = $this->getBackingStore()->get('reviewSet');
+        if (is_null($val) || $val instanceof EdiscoveryReviewSet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reviewSet'");
     }
 
     /**
@@ -49,7 +53,11 @@ class EdiscoveryAddToReviewSetOperation extends CaseOperation implements Parsabl
      * @return EdiscoverySearch|null
     */
     public function getSearch(): ?EdiscoverySearch {
-        return $this->getBackingStore()->get('search');
+        $val = $this->getBackingStore()->get('search');
+        if (is_null($val) || $val instanceof EdiscoverySearch) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'search'");
     }
 
     /**

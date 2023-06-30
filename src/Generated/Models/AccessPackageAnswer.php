@@ -18,7 +18,7 @@ class AccessPackageAnswer implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new accessPackageAnswer and sets the default values.
+     * Instantiates a new AccessPackageAnswer and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -46,7 +46,12 @@ class AccessPackageAnswer implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -54,7 +59,11 @@ class AccessPackageAnswer implements AdditionalDataHolder, BackedModel, Parsable
      * @return AccessPackageQuestion|null
     */
     public function getAnsweredQuestion(): ?AccessPackageQuestion {
-        return $this->getBackingStore()->get('answeredQuestion');
+        $val = $this->getBackingStore()->get('answeredQuestion');
+        if (is_null($val) || $val instanceof AccessPackageQuestion) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'answeredQuestion'");
     }
 
     /**
@@ -70,12 +79,16 @@ class AccessPackageAnswer implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getDisplayValue(): ?string {
-        return $this->getBackingStore()->get('displayValue');
+        $val = $this->getBackingStore()->get('displayValue');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayValue'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -91,7 +104,11 @@ class AccessPackageAnswer implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

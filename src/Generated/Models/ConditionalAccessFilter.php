@@ -39,7 +39,12 @@ class ConditionalAccessFilter implements AdditionalDataHolder, BackedModel, Pars
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +57,7 @@ class ConditionalAccessFilter implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -68,7 +73,11 @@ class ConditionalAccessFilter implements AdditionalDataHolder, BackedModel, Pars
      * @return FilterMode|null
     */
     public function getMode(): ?FilterMode {
-        return $this->getBackingStore()->get('mode');
+        $val = $this->getBackingStore()->get('mode');
+        if (is_null($val) || $val instanceof FilterMode) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mode'");
     }
 
     /**
@@ -76,7 +85,11 @@ class ConditionalAccessFilter implements AdditionalDataHolder, BackedModel, Pars
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -84,7 +97,11 @@ class ConditionalAccessFilter implements AdditionalDataHolder, BackedModel, Pars
      * @return string|null
     */
     public function getRule(): ?string {
-        return $this->getBackingStore()->get('rule');
+        $val = $this->getBackingStore()->get('rule');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rule'");
     }
 
     /**

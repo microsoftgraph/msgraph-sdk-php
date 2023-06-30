@@ -26,7 +26,7 @@ class WorkbookChartGridlines extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class WorkbookChartGridlines extends Entity implements Parsable
      * @return WorkbookChartGridlinesFormat|null
     */
     public function getFormat(): ?WorkbookChartGridlinesFormat {
-        return $this->getBackingStore()->get('format');
+        $val = $this->getBackingStore()->get('format');
+        if (is_null($val) || $val instanceof WorkbookChartGridlinesFormat) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'format'");
     }
 
     /**
@@ -49,7 +53,11 @@ class WorkbookChartGridlines extends Entity implements Parsable
      * @return bool|null
     */
     public function getVisible(): ?bool {
-        return $this->getBackingStore()->get('visible');
+        $val = $this->getBackingStore()->get('visible');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'visible'");
     }
 
     /**

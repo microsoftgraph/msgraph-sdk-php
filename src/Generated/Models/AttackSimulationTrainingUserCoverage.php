@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AttackSimulationTrainingUserCoverage implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class AttackSimulationTrainingUserCoverage implements AdditionalDataHolder, Back
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +53,11 @@ class AttackSimulationTrainingUserCoverage implements AdditionalDataHolder, Back
      * @return AttackSimulationUser|null
     */
     public function getAttackSimulationUser(): ?AttackSimulationUser {
-        return $this->getBackingStore()->get('attackSimulationUser');
+        $val = $this->getBackingStore()->get('attackSimulationUser');
+        if (is_null($val) || $val instanceof AttackSimulationUser) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'attackSimulationUser'");
     }
 
     /**
@@ -60,7 +70,7 @@ class AttackSimulationTrainingUserCoverage implements AdditionalDataHolder, Back
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -76,7 +86,11 @@ class AttackSimulationTrainingUserCoverage implements AdditionalDataHolder, Back
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -84,7 +98,13 @@ class AttackSimulationTrainingUserCoverage implements AdditionalDataHolder, Back
      * @return array<UserTrainingStatusInfo>|null
     */
     public function getUserTrainings(): ?array {
-        return $this->getBackingStore()->get('userTrainings');
+        $val = $this->getBackingStore()->get('userTrainings');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserTrainingStatusInfo::class);
+            /** @var array<UserTrainingStatusInfo>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userTrainings'");
     }
 
     /**

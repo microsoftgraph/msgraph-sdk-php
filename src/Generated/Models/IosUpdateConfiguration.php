@@ -6,6 +6,7 @@ use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Types\Time;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class IosUpdateConfiguration extends DeviceConfiguration implements Parsable 
 {
@@ -31,7 +32,11 @@ class IosUpdateConfiguration extends DeviceConfiguration implements Parsable
      * @return Time|null
     */
     public function getActiveHoursEnd(): ?Time {
-        return $this->getBackingStore()->get('activeHoursEnd');
+        $val = $this->getBackingStore()->get('activeHoursEnd');
+        if (is_null($val) || $val instanceof Time) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activeHoursEnd'");
     }
 
     /**
@@ -39,12 +44,16 @@ class IosUpdateConfiguration extends DeviceConfiguration implements Parsable
      * @return Time|null
     */
     public function getActiveHoursStart(): ?Time {
-        return $this->getBackingStore()->get('activeHoursStart');
+        $val = $this->getBackingStore()->get('activeHoursStart');
+        if (is_null($val) || $val instanceof Time) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activeHoursStart'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -61,7 +70,13 @@ class IosUpdateConfiguration extends DeviceConfiguration implements Parsable
      * @return array<DayOfWeek>|null
     */
     public function getScheduledInstallDays(): ?array {
-        return $this->getBackingStore()->get('scheduledInstallDays');
+        $val = $this->getBackingStore()->get('scheduledInstallDays');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DayOfWeek::class);
+            /** @var array<DayOfWeek>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scheduledInstallDays'");
     }
 
     /**
@@ -69,7 +84,11 @@ class IosUpdateConfiguration extends DeviceConfiguration implements Parsable
      * @return int|null
     */
     public function getUtcTimeOffsetInMinutes(): ?int {
-        return $this->getBackingStore()->get('utcTimeOffsetInMinutes');
+        $val = $this->getBackingStore()->get('utcTimeOffsetInMinutes');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'utcTimeOffsetInMinutes'");
     }
 
     /**

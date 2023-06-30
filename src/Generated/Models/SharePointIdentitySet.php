@@ -27,7 +27,7 @@ class SharePointIdentitySet extends IdentitySet implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -43,7 +43,11 @@ class SharePointIdentitySet extends IdentitySet implements Parsable
      * @return Identity|null
     */
     public function getGroup(): ?Identity {
-        return $this->getBackingStore()->get('group');
+        $val = $this->getBackingStore()->get('group');
+        if (is_null($val) || $val instanceof Identity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'group'");
     }
 
     /**
@@ -51,7 +55,11 @@ class SharePointIdentitySet extends IdentitySet implements Parsable
      * @return SharePointIdentity|null
     */
     public function getSiteGroup(): ?SharePointIdentity {
-        return $this->getBackingStore()->get('siteGroup');
+        $val = $this->getBackingStore()->get('siteGroup');
+        if (is_null($val) || $val instanceof SharePointIdentity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'siteGroup'");
     }
 
     /**
@@ -59,7 +67,11 @@ class SharePointIdentitySet extends IdentitySet implements Parsable
      * @return SharePointIdentity|null
     */
     public function getSiteUser(): ?SharePointIdentity {
-        return $this->getBackingStore()->get('siteUser');
+        $val = $this->getBackingStore()->get('siteUser');
+        if (is_null($val) || $val instanceof SharePointIdentity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'siteUser'");
     }
 
     /**

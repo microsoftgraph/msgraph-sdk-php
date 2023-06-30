@@ -27,7 +27,7 @@ class Attendee extends AttendeeBase implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -42,7 +42,11 @@ class Attendee extends AttendeeBase implements Parsable
      * @return TimeSlot|null
     */
     public function getProposedNewTime(): ?TimeSlot {
-        return $this->getBackingStore()->get('proposedNewTime');
+        $val = $this->getBackingStore()->get('proposedNewTime');
+        if (is_null($val) || $val instanceof TimeSlot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'proposedNewTime'");
     }
 
     /**
@@ -50,7 +54,11 @@ class Attendee extends AttendeeBase implements Parsable
      * @return ResponseStatus|null
     */
     public function getStatus(): ?ResponseStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof ResponseStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**

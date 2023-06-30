@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 use Psr\Http\Message\StreamInterface;
 
 class OrganizationalBrandingProperties extends Entity implements Parsable 
@@ -38,7 +39,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return string|null
     */
     public function getBackgroundColor(): ?string {
-        return $this->getBackingStore()->get('backgroundColor');
+        $val = $this->getBackingStore()->get('backgroundColor');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'backgroundColor'");
     }
 
     /**
@@ -46,7 +51,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return StreamInterface|null
     */
     public function getBackgroundImage(): ?StreamInterface {
-        return $this->getBackingStore()->get('backgroundImage');
+        $val = $this->getBackingStore()->get('backgroundImage');
+        if (is_null($val) || $val instanceof StreamInterface) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'backgroundImage'");
     }
 
     /**
@@ -54,7 +63,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return string|null
     */
     public function getBackgroundImageRelativeUrl(): ?string {
-        return $this->getBackingStore()->get('backgroundImageRelativeUrl');
+        $val = $this->getBackingStore()->get('backgroundImageRelativeUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'backgroundImageRelativeUrl'");
     }
 
     /**
@@ -62,7 +75,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return StreamInterface|null
     */
     public function getBannerLogo(): ?StreamInterface {
-        return $this->getBackingStore()->get('bannerLogo');
+        $val = $this->getBackingStore()->get('bannerLogo');
+        if (is_null($val) || $val instanceof StreamInterface) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bannerLogo'");
     }
 
     /**
@@ -70,7 +87,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return string|null
     */
     public function getBannerLogoRelativeUrl(): ?string {
-        return $this->getBackingStore()->get('bannerLogoRelativeUrl');
+        $val = $this->getBackingStore()->get('bannerLogoRelativeUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bannerLogoRelativeUrl'");
     }
 
     /**
@@ -78,7 +99,13 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getCdnList(): ?array {
-        return $this->getBackingStore()->get('cdnList');
+        $val = $this->getBackingStore()->get('cdnList');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cdnList'");
     }
 
     /**
@@ -86,7 +113,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return string|null
     */
     public function getCustomAccountResetCredentialsUrl(): ?string {
-        return $this->getBackingStore()->get('customAccountResetCredentialsUrl');
+        $val = $this->getBackingStore()->get('customAccountResetCredentialsUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customAccountResetCredentialsUrl'");
     }
 
     /**
@@ -94,7 +125,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return string|null
     */
     public function getCustomCannotAccessYourAccountText(): ?string {
-        return $this->getBackingStore()->get('customCannotAccessYourAccountText');
+        $val = $this->getBackingStore()->get('customCannotAccessYourAccountText');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customCannotAccessYourAccountText'");
     }
 
     /**
@@ -102,7 +137,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return string|null
     */
     public function getCustomCannotAccessYourAccountUrl(): ?string {
-        return $this->getBackingStore()->get('customCannotAccessYourAccountUrl');
+        $val = $this->getBackingStore()->get('customCannotAccessYourAccountUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customCannotAccessYourAccountUrl'");
     }
 
     /**
@@ -110,7 +149,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return StreamInterface|null
     */
     public function getCustomCSS(): ?StreamInterface {
-        return $this->getBackingStore()->get('customCSS');
+        $val = $this->getBackingStore()->get('customCSS');
+        if (is_null($val) || $val instanceof StreamInterface) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customCSS'");
     }
 
     /**
@@ -118,7 +161,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return string|null
     */
     public function getCustomCSSRelativeUrl(): ?string {
-        return $this->getBackingStore()->get('customCSSRelativeUrl');
+        $val = $this->getBackingStore()->get('customCSSRelativeUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customCSSRelativeUrl'");
     }
 
     /**
@@ -126,7 +173,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return string|null
     */
     public function getCustomForgotMyPasswordText(): ?string {
-        return $this->getBackingStore()->get('customForgotMyPasswordText');
+        $val = $this->getBackingStore()->get('customForgotMyPasswordText');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customForgotMyPasswordText'");
     }
 
     /**
@@ -134,7 +185,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return string|null
     */
     public function getCustomPrivacyAndCookiesText(): ?string {
-        return $this->getBackingStore()->get('customPrivacyAndCookiesText');
+        $val = $this->getBackingStore()->get('customPrivacyAndCookiesText');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customPrivacyAndCookiesText'");
     }
 
     /**
@@ -142,7 +197,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return string|null
     */
     public function getCustomPrivacyAndCookiesUrl(): ?string {
-        return $this->getBackingStore()->get('customPrivacyAndCookiesUrl');
+        $val = $this->getBackingStore()->get('customPrivacyAndCookiesUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customPrivacyAndCookiesUrl'");
     }
 
     /**
@@ -150,7 +209,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return string|null
     */
     public function getCustomResetItNowText(): ?string {
-        return $this->getBackingStore()->get('customResetItNowText');
+        $val = $this->getBackingStore()->get('customResetItNowText');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customResetItNowText'");
     }
 
     /**
@@ -158,7 +221,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return string|null
     */
     public function getCustomTermsOfUseText(): ?string {
-        return $this->getBackingStore()->get('customTermsOfUseText');
+        $val = $this->getBackingStore()->get('customTermsOfUseText');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customTermsOfUseText'");
     }
 
     /**
@@ -166,7 +233,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return string|null
     */
     public function getCustomTermsOfUseUrl(): ?string {
-        return $this->getBackingStore()->get('customTermsOfUseUrl');
+        $val = $this->getBackingStore()->get('customTermsOfUseUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customTermsOfUseUrl'");
     }
 
     /**
@@ -174,7 +245,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return StreamInterface|null
     */
     public function getFavicon(): ?StreamInterface {
-        return $this->getBackingStore()->get('favicon');
+        $val = $this->getBackingStore()->get('favicon');
+        if (is_null($val) || $val instanceof StreamInterface) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'favicon'");
     }
 
     /**
@@ -182,12 +257,16 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return string|null
     */
     public function getFaviconRelativeUrl(): ?string {
-        return $this->getBackingStore()->get('faviconRelativeUrl');
+        $val = $this->getBackingStore()->get('faviconRelativeUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'faviconRelativeUrl'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -197,7 +276,14 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
             'backgroundImageRelativeUrl' => fn(ParseNode $n) => $o->setBackgroundImageRelativeUrl($n->getStringValue()),
             'bannerLogo' => fn(ParseNode $n) => $o->setBannerLogo($n->getBinaryContent()),
             'bannerLogoRelativeUrl' => fn(ParseNode $n) => $o->setBannerLogoRelativeUrl($n->getStringValue()),
-            'cdnList' => fn(ParseNode $n) => $o->setCdnList($n->getCollectionOfPrimitiveValues()),
+            'cdnList' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setCdnList($val);
+            },
             'customAccountResetCredentialsUrl' => fn(ParseNode $n) => $o->setCustomAccountResetCredentialsUrl($n->getStringValue()),
             'customCannotAccessYourAccountText' => fn(ParseNode $n) => $o->setCustomCannotAccessYourAccountText($n->getStringValue()),
             'customCannotAccessYourAccountUrl' => fn(ParseNode $n) => $o->setCustomCannotAccessYourAccountUrl($n->getStringValue()),
@@ -230,7 +316,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return string|null
     */
     public function getHeaderBackgroundColor(): ?string {
-        return $this->getBackingStore()->get('headerBackgroundColor');
+        $val = $this->getBackingStore()->get('headerBackgroundColor');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'headerBackgroundColor'");
     }
 
     /**
@@ -238,7 +328,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return StreamInterface|null
     */
     public function getHeaderLogo(): ?StreamInterface {
-        return $this->getBackingStore()->get('headerLogo');
+        $val = $this->getBackingStore()->get('headerLogo');
+        if (is_null($val) || $val instanceof StreamInterface) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'headerLogo'");
     }
 
     /**
@@ -246,7 +340,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return string|null
     */
     public function getHeaderLogoRelativeUrl(): ?string {
-        return $this->getBackingStore()->get('headerLogoRelativeUrl');
+        $val = $this->getBackingStore()->get('headerLogoRelativeUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'headerLogoRelativeUrl'");
     }
 
     /**
@@ -254,7 +352,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return LoginPageLayoutConfiguration|null
     */
     public function getLoginPageLayoutConfiguration(): ?LoginPageLayoutConfiguration {
-        return $this->getBackingStore()->get('loginPageLayoutConfiguration');
+        $val = $this->getBackingStore()->get('loginPageLayoutConfiguration');
+        if (is_null($val) || $val instanceof LoginPageLayoutConfiguration) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'loginPageLayoutConfiguration'");
     }
 
     /**
@@ -262,7 +364,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return LoginPageTextVisibilitySettings|null
     */
     public function getLoginPageTextVisibilitySettings(): ?LoginPageTextVisibilitySettings {
-        return $this->getBackingStore()->get('loginPageTextVisibilitySettings');
+        $val = $this->getBackingStore()->get('loginPageTextVisibilitySettings');
+        if (is_null($val) || $val instanceof LoginPageTextVisibilitySettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'loginPageTextVisibilitySettings'");
     }
 
     /**
@@ -270,7 +376,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return string|null
     */
     public function getSignInPageText(): ?string {
-        return $this->getBackingStore()->get('signInPageText');
+        $val = $this->getBackingStore()->get('signInPageText');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'signInPageText'");
     }
 
     /**
@@ -278,7 +388,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return StreamInterface|null
     */
     public function getSquareLogo(): ?StreamInterface {
-        return $this->getBackingStore()->get('squareLogo');
+        $val = $this->getBackingStore()->get('squareLogo');
+        if (is_null($val) || $val instanceof StreamInterface) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'squareLogo'");
     }
 
     /**
@@ -286,7 +400,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return StreamInterface|null
     */
     public function getSquareLogoDark(): ?StreamInterface {
-        return $this->getBackingStore()->get('squareLogoDark');
+        $val = $this->getBackingStore()->get('squareLogoDark');
+        if (is_null($val) || $val instanceof StreamInterface) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'squareLogoDark'");
     }
 
     /**
@@ -294,7 +412,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return string|null
     */
     public function getSquareLogoDarkRelativeUrl(): ?string {
-        return $this->getBackingStore()->get('squareLogoDarkRelativeUrl');
+        $val = $this->getBackingStore()->get('squareLogoDarkRelativeUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'squareLogoDarkRelativeUrl'");
     }
 
     /**
@@ -302,7 +424,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return string|null
     */
     public function getSquareLogoRelativeUrl(): ?string {
-        return $this->getBackingStore()->get('squareLogoRelativeUrl');
+        $val = $this->getBackingStore()->get('squareLogoRelativeUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'squareLogoRelativeUrl'");
     }
 
     /**
@@ -310,7 +436,11 @@ class OrganizationalBrandingProperties extends Entity implements Parsable
      * @return string|null
     */
     public function getUsernameHintText(): ?string {
-        return $this->getBackingStore()->get('usernameHintText');
+        $val = $this->getBackingStore()->get('usernameHintText');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'usernameHintText'");
     }
 
     /**

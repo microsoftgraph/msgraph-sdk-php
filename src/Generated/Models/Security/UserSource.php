@@ -30,12 +30,16 @@ class UserSource extends DataSource implements Parsable
      * @return string|null
     */
     public function getEmail(): ?string {
-        return $this->getBackingStore()->get('email');
+        $val = $this->getBackingStore()->get('email');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'email'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -51,7 +55,11 @@ class UserSource extends DataSource implements Parsable
      * @return SourceType|null
     */
     public function getIncludedSources(): ?SourceType {
-        return $this->getBackingStore()->get('includedSources');
+        $val = $this->getBackingStore()->get('includedSources');
+        if (is_null($val) || $val instanceof SourceType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'includedSources'");
     }
 
     /**
@@ -59,7 +67,11 @@ class UserSource extends DataSource implements Parsable
      * @return string|null
     */
     public function getSiteWebUrl(): ?string {
-        return $this->getBackingStore()->get('siteWebUrl');
+        $val = $this->getBackingStore()->get('siteWebUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'siteWebUrl'");
     }
 
     /**

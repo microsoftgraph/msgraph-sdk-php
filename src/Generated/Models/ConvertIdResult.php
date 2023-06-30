@@ -39,7 +39,12 @@ class ConvertIdResult implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,12 +60,16 @@ class ConvertIdResult implements AdditionalDataHolder, BackedModel, Parsable
      * @return GenericError|null
     */
     public function getErrorDetails(): ?GenericError {
-        return $this->getBackingStore()->get('errorDetails');
+        $val = $this->getBackingStore()->get('errorDetails');
+        if (is_null($val) || $val instanceof GenericError) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'errorDetails'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -77,7 +86,11 @@ class ConvertIdResult implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -85,7 +98,11 @@ class ConvertIdResult implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getSourceId(): ?string {
-        return $this->getBackingStore()->get('sourceId');
+        $val = $this->getBackingStore()->get('sourceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sourceId'");
     }
 
     /**
@@ -93,7 +110,11 @@ class ConvertIdResult implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getTargetId(): ?string {
-        return $this->getBackingStore()->get('targetId');
+        $val = $this->getBackingStore()->get('targetId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'targetId'");
     }
 
     /**

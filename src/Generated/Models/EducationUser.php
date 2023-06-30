@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class EducationUser extends Entity implements Parsable 
 {
@@ -30,7 +31,11 @@ class EducationUser extends Entity implements Parsable
      * @return bool|null
     */
     public function getAccountEnabled(): ?bool {
-        return $this->getBackingStore()->get('accountEnabled');
+        $val = $this->getBackingStore()->get('accountEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'accountEnabled'");
     }
 
     /**
@@ -38,7 +43,13 @@ class EducationUser extends Entity implements Parsable
      * @return array<AssignedLicense>|null
     */
     public function getAssignedLicenses(): ?array {
-        return $this->getBackingStore()->get('assignedLicenses');
+        $val = $this->getBackingStore()->get('assignedLicenses');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AssignedLicense::class);
+            /** @var array<AssignedLicense>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignedLicenses'");
     }
 
     /**
@@ -46,7 +57,13 @@ class EducationUser extends Entity implements Parsable
      * @return array<AssignedPlan>|null
     */
     public function getAssignedPlans(): ?array {
-        return $this->getBackingStore()->get('assignedPlans');
+        $val = $this->getBackingStore()->get('assignedPlans');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AssignedPlan::class);
+            /** @var array<AssignedPlan>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignedPlans'");
     }
 
     /**
@@ -54,7 +71,13 @@ class EducationUser extends Entity implements Parsable
      * @return array<EducationAssignment>|null
     */
     public function getAssignments(): ?array {
-        return $this->getBackingStore()->get('assignments');
+        $val = $this->getBackingStore()->get('assignments');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, EducationAssignment::class);
+            /** @var array<EducationAssignment>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignments'");
     }
 
     /**
@@ -62,7 +85,13 @@ class EducationUser extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getBusinessPhones(): ?array {
-        return $this->getBackingStore()->get('businessPhones');
+        $val = $this->getBackingStore()->get('businessPhones');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'businessPhones'");
     }
 
     /**
@@ -70,7 +99,13 @@ class EducationUser extends Entity implements Parsable
      * @return array<EducationClass>|null
     */
     public function getClasses(): ?array {
-        return $this->getBackingStore()->get('classes');
+        $val = $this->getBackingStore()->get('classes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, EducationClass::class);
+            /** @var array<EducationClass>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'classes'");
     }
 
     /**
@@ -78,7 +113,11 @@ class EducationUser extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
-        return $this->getBackingStore()->get('createdBy');
+        $val = $this->getBackingStore()->get('createdBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdBy'");
     }
 
     /**
@@ -86,7 +125,11 @@ class EducationUser extends Entity implements Parsable
      * @return string|null
     */
     public function getDepartment(): ?string {
-        return $this->getBackingStore()->get('department');
+        $val = $this->getBackingStore()->get('department');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'department'");
     }
 
     /**
@@ -94,7 +137,11 @@ class EducationUser extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
@@ -102,7 +149,11 @@ class EducationUser extends Entity implements Parsable
      * @return EducationExternalSource|null
     */
     public function getExternalSource(): ?EducationExternalSource {
-        return $this->getBackingStore()->get('externalSource');
+        $val = $this->getBackingStore()->get('externalSource');
+        if (is_null($val) || $val instanceof EducationExternalSource) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'externalSource'");
     }
 
     /**
@@ -110,12 +161,16 @@ class EducationUser extends Entity implements Parsable
      * @return string|null
     */
     public function getExternalSourceDetail(): ?string {
-        return $this->getBackingStore()->get('externalSourceDetail');
+        $val = $this->getBackingStore()->get('externalSourceDetail');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'externalSourceDetail'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -124,7 +179,14 @@ class EducationUser extends Entity implements Parsable
             'assignedLicenses' => fn(ParseNode $n) => $o->setAssignedLicenses($n->getCollectionOfObjectValues([AssignedLicense::class, 'createFromDiscriminatorValue'])),
             'assignedPlans' => fn(ParseNode $n) => $o->setAssignedPlans($n->getCollectionOfObjectValues([AssignedPlan::class, 'createFromDiscriminatorValue'])),
             'assignments' => fn(ParseNode $n) => $o->setAssignments($n->getCollectionOfObjectValues([EducationAssignment::class, 'createFromDiscriminatorValue'])),
-            'businessPhones' => fn(ParseNode $n) => $o->setBusinessPhones($n->getCollectionOfPrimitiveValues()),
+            'businessPhones' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setBusinessPhones($val);
+            },
             'classes' => fn(ParseNode $n) => $o->setClasses($n->getCollectionOfObjectValues([EducationClass::class, 'createFromDiscriminatorValue'])),
             'createdBy' => fn(ParseNode $n) => $o->setCreatedBy($n->getObjectValue([IdentitySet::class, 'createFromDiscriminatorValue'])),
             'department' => fn(ParseNode $n) => $o->setDepartment($n->getStringValue()),
@@ -166,7 +228,11 @@ class EducationUser extends Entity implements Parsable
      * @return string|null
     */
     public function getGivenName(): ?string {
-        return $this->getBackingStore()->get('givenName');
+        $val = $this->getBackingStore()->get('givenName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'givenName'");
     }
 
     /**
@@ -174,7 +240,11 @@ class EducationUser extends Entity implements Parsable
      * @return string|null
     */
     public function getMail(): ?string {
-        return $this->getBackingStore()->get('mail');
+        $val = $this->getBackingStore()->get('mail');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mail'");
     }
 
     /**
@@ -182,7 +252,11 @@ class EducationUser extends Entity implements Parsable
      * @return PhysicalAddress|null
     */
     public function getMailingAddress(): ?PhysicalAddress {
-        return $this->getBackingStore()->get('mailingAddress');
+        $val = $this->getBackingStore()->get('mailingAddress');
+        if (is_null($val) || $val instanceof PhysicalAddress) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mailingAddress'");
     }
 
     /**
@@ -190,7 +264,11 @@ class EducationUser extends Entity implements Parsable
      * @return string|null
     */
     public function getMailNickname(): ?string {
-        return $this->getBackingStore()->get('mailNickname');
+        $val = $this->getBackingStore()->get('mailNickname');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mailNickname'");
     }
 
     /**
@@ -198,7 +276,11 @@ class EducationUser extends Entity implements Parsable
      * @return string|null
     */
     public function getMiddleName(): ?string {
-        return $this->getBackingStore()->get('middleName');
+        $val = $this->getBackingStore()->get('middleName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'middleName'");
     }
 
     /**
@@ -206,7 +288,11 @@ class EducationUser extends Entity implements Parsable
      * @return string|null
     */
     public function getMobilePhone(): ?string {
-        return $this->getBackingStore()->get('mobilePhone');
+        $val = $this->getBackingStore()->get('mobilePhone');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mobilePhone'");
     }
 
     /**
@@ -214,7 +300,11 @@ class EducationUser extends Entity implements Parsable
      * @return string|null
     */
     public function getOfficeLocation(): ?string {
-        return $this->getBackingStore()->get('officeLocation');
+        $val = $this->getBackingStore()->get('officeLocation');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'officeLocation'");
     }
 
     /**
@@ -222,7 +312,11 @@ class EducationUser extends Entity implements Parsable
      * @return EducationOnPremisesInfo|null
     */
     public function getOnPremisesInfo(): ?EducationOnPremisesInfo {
-        return $this->getBackingStore()->get('onPremisesInfo');
+        $val = $this->getBackingStore()->get('onPremisesInfo');
+        if (is_null($val) || $val instanceof EducationOnPremisesInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'onPremisesInfo'");
     }
 
     /**
@@ -230,7 +324,11 @@ class EducationUser extends Entity implements Parsable
      * @return string|null
     */
     public function getPasswordPolicies(): ?string {
-        return $this->getBackingStore()->get('passwordPolicies');
+        $val = $this->getBackingStore()->get('passwordPolicies');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordPolicies'");
     }
 
     /**
@@ -238,7 +336,11 @@ class EducationUser extends Entity implements Parsable
      * @return PasswordProfile|null
     */
     public function getPasswordProfile(): ?PasswordProfile {
-        return $this->getBackingStore()->get('passwordProfile');
+        $val = $this->getBackingStore()->get('passwordProfile');
+        if (is_null($val) || $val instanceof PasswordProfile) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordProfile'");
     }
 
     /**
@@ -246,7 +348,11 @@ class EducationUser extends Entity implements Parsable
      * @return string|null
     */
     public function getPreferredLanguage(): ?string {
-        return $this->getBackingStore()->get('preferredLanguage');
+        $val = $this->getBackingStore()->get('preferredLanguage');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'preferredLanguage'");
     }
 
     /**
@@ -254,7 +360,11 @@ class EducationUser extends Entity implements Parsable
      * @return EducationUserRole|null
     */
     public function getPrimaryRole(): ?EducationUserRole {
-        return $this->getBackingStore()->get('primaryRole');
+        $val = $this->getBackingStore()->get('primaryRole');
+        if (is_null($val) || $val instanceof EducationUserRole) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'primaryRole'");
     }
 
     /**
@@ -262,7 +372,13 @@ class EducationUser extends Entity implements Parsable
      * @return array<ProvisionedPlan>|null
     */
     public function getProvisionedPlans(): ?array {
-        return $this->getBackingStore()->get('provisionedPlans');
+        $val = $this->getBackingStore()->get('provisionedPlans');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ProvisionedPlan::class);
+            /** @var array<ProvisionedPlan>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'provisionedPlans'");
     }
 
     /**
@@ -270,7 +386,11 @@ class EducationUser extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getRefreshTokensValidFromDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('refreshTokensValidFromDateTime');
+        $val = $this->getBackingStore()->get('refreshTokensValidFromDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'refreshTokensValidFromDateTime'");
     }
 
     /**
@@ -278,7 +398,13 @@ class EducationUser extends Entity implements Parsable
      * @return array<RelatedContact>|null
     */
     public function getRelatedContacts(): ?array {
-        return $this->getBackingStore()->get('relatedContacts');
+        $val = $this->getBackingStore()->get('relatedContacts');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, RelatedContact::class);
+            /** @var array<RelatedContact>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'relatedContacts'");
     }
 
     /**
@@ -286,7 +412,11 @@ class EducationUser extends Entity implements Parsable
      * @return PhysicalAddress|null
     */
     public function getResidenceAddress(): ?PhysicalAddress {
-        return $this->getBackingStore()->get('residenceAddress');
+        $val = $this->getBackingStore()->get('residenceAddress');
+        if (is_null($val) || $val instanceof PhysicalAddress) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'residenceAddress'");
     }
 
     /**
@@ -294,7 +424,13 @@ class EducationUser extends Entity implements Parsable
      * @return array<EducationRubric>|null
     */
     public function getRubrics(): ?array {
-        return $this->getBackingStore()->get('rubrics');
+        $val = $this->getBackingStore()->get('rubrics');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, EducationRubric::class);
+            /** @var array<EducationRubric>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rubrics'");
     }
 
     /**
@@ -302,7 +438,13 @@ class EducationUser extends Entity implements Parsable
      * @return array<EducationSchool>|null
     */
     public function getSchools(): ?array {
-        return $this->getBackingStore()->get('schools');
+        $val = $this->getBackingStore()->get('schools');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, EducationSchool::class);
+            /** @var array<EducationSchool>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'schools'");
     }
 
     /**
@@ -310,7 +452,11 @@ class EducationUser extends Entity implements Parsable
      * @return bool|null
     */
     public function getShowInAddressList(): ?bool {
-        return $this->getBackingStore()->get('showInAddressList');
+        $val = $this->getBackingStore()->get('showInAddressList');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'showInAddressList'");
     }
 
     /**
@@ -318,7 +464,11 @@ class EducationUser extends Entity implements Parsable
      * @return EducationStudent|null
     */
     public function getStudent(): ?EducationStudent {
-        return $this->getBackingStore()->get('student');
+        $val = $this->getBackingStore()->get('student');
+        if (is_null($val) || $val instanceof EducationStudent) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'student'");
     }
 
     /**
@@ -326,7 +476,11 @@ class EducationUser extends Entity implements Parsable
      * @return string|null
     */
     public function getSurname(): ?string {
-        return $this->getBackingStore()->get('surname');
+        $val = $this->getBackingStore()->get('surname');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'surname'");
     }
 
     /**
@@ -334,7 +488,13 @@ class EducationUser extends Entity implements Parsable
      * @return array<EducationClass>|null
     */
     public function getTaughtClasses(): ?array {
-        return $this->getBackingStore()->get('taughtClasses');
+        $val = $this->getBackingStore()->get('taughtClasses');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, EducationClass::class);
+            /** @var array<EducationClass>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'taughtClasses'");
     }
 
     /**
@@ -342,7 +502,11 @@ class EducationUser extends Entity implements Parsable
      * @return EducationTeacher|null
     */
     public function getTeacher(): ?EducationTeacher {
-        return $this->getBackingStore()->get('teacher');
+        $val = $this->getBackingStore()->get('teacher');
+        if (is_null($val) || $val instanceof EducationTeacher) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'teacher'");
     }
 
     /**
@@ -350,7 +514,11 @@ class EducationUser extends Entity implements Parsable
      * @return string|null
     */
     public function getUsageLocation(): ?string {
-        return $this->getBackingStore()->get('usageLocation');
+        $val = $this->getBackingStore()->get('usageLocation');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'usageLocation'");
     }
 
     /**
@@ -358,7 +526,11 @@ class EducationUser extends Entity implements Parsable
      * @return User|null
     */
     public function getUser(): ?User {
-        return $this->getBackingStore()->get('user');
+        $val = $this->getBackingStore()->get('user');
+        if (is_null($val) || $val instanceof User) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'user'");
     }
 
     /**
@@ -366,7 +538,11 @@ class EducationUser extends Entity implements Parsable
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
-        return $this->getBackingStore()->get('userPrincipalName');
+        $val = $this->getBackingStore()->get('userPrincipalName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userPrincipalName'");
     }
 
     /**
@@ -374,7 +550,11 @@ class EducationUser extends Entity implements Parsable
      * @return string|null
     */
     public function getUserType(): ?string {
-        return $this->getBackingStore()->get('userType');
+        $val = $this->getBackingStore()->get('userType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userType'");
     }
 
     /**

@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ConversationThread extends Entity implements Parsable 
 {
@@ -30,12 +31,18 @@ class ConversationThread extends Entity implements Parsable
      * @return array<Recipient>|null
     */
     public function getCcRecipients(): ?array {
-        return $this->getBackingStore()->get('ccRecipients');
+        $val = $this->getBackingStore()->get('ccRecipients');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Recipient::class);
+            /** @var array<Recipient>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'ccRecipients'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -48,7 +55,14 @@ class ConversationThread extends Entity implements Parsable
             'preview' => fn(ParseNode $n) => $o->setPreview($n->getStringValue()),
             'topic' => fn(ParseNode $n) => $o->setTopic($n->getStringValue()),
             'toRecipients' => fn(ParseNode $n) => $o->setToRecipients($n->getCollectionOfObjectValues([Recipient::class, 'createFromDiscriminatorValue'])),
-            'uniqueSenders' => fn(ParseNode $n) => $o->setUniqueSenders($n->getCollectionOfPrimitiveValues()),
+            'uniqueSenders' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setUniqueSenders($val);
+            },
         ]);
     }
 
@@ -57,7 +71,11 @@ class ConversationThread extends Entity implements Parsable
      * @return bool|null
     */
     public function getHasAttachments(): ?bool {
-        return $this->getBackingStore()->get('hasAttachments');
+        $val = $this->getBackingStore()->get('hasAttachments');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hasAttachments'");
     }
 
     /**
@@ -65,7 +83,11 @@ class ConversationThread extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsLocked(): ?bool {
-        return $this->getBackingStore()->get('isLocked');
+        $val = $this->getBackingStore()->get('isLocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isLocked'");
     }
 
     /**
@@ -73,7 +95,11 @@ class ConversationThread extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastDeliveredDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastDeliveredDateTime');
+        $val = $this->getBackingStore()->get('lastDeliveredDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastDeliveredDateTime'");
     }
 
     /**
@@ -81,7 +107,13 @@ class ConversationThread extends Entity implements Parsable
      * @return array<Post>|null
     */
     public function getPosts(): ?array {
-        return $this->getBackingStore()->get('posts');
+        $val = $this->getBackingStore()->get('posts');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Post::class);
+            /** @var array<Post>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'posts'");
     }
 
     /**
@@ -89,7 +121,11 @@ class ConversationThread extends Entity implements Parsable
      * @return string|null
     */
     public function getPreview(): ?string {
-        return $this->getBackingStore()->get('preview');
+        $val = $this->getBackingStore()->get('preview');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'preview'");
     }
 
     /**
@@ -97,7 +133,11 @@ class ConversationThread extends Entity implements Parsable
      * @return string|null
     */
     public function getTopic(): ?string {
-        return $this->getBackingStore()->get('topic');
+        $val = $this->getBackingStore()->get('topic');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'topic'");
     }
 
     /**
@@ -105,7 +145,13 @@ class ConversationThread extends Entity implements Parsable
      * @return array<Recipient>|null
     */
     public function getToRecipients(): ?array {
-        return $this->getBackingStore()->get('toRecipients');
+        $val = $this->getBackingStore()->get('toRecipients');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Recipient::class);
+            /** @var array<Recipient>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'toRecipients'");
     }
 
     /**
@@ -113,7 +159,13 @@ class ConversationThread extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getUniqueSenders(): ?array {
-        return $this->getBackingStore()->get('uniqueSenders');
+        $val = $this->getBackingStore()->get('uniqueSenders');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'uniqueSenders'");
     }
 
     /**

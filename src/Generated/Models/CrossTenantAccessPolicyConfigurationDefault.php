@@ -29,7 +29,11 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
      * @return InboundOutboundPolicyConfiguration|null
     */
     public function getAutomaticUserConsentSettings(): ?InboundOutboundPolicyConfiguration {
-        return $this->getBackingStore()->get('automaticUserConsentSettings');
+        $val = $this->getBackingStore()->get('automaticUserConsentSettings');
+        if (is_null($val) || $val instanceof InboundOutboundPolicyConfiguration) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'automaticUserConsentSettings'");
     }
 
     /**
@@ -37,7 +41,11 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
      * @return CrossTenantAccessPolicyB2BSetting|null
     */
     public function getB2bCollaborationInbound(): ?CrossTenantAccessPolicyB2BSetting {
-        return $this->getBackingStore()->get('b2bCollaborationInbound');
+        $val = $this->getBackingStore()->get('b2bCollaborationInbound');
+        if (is_null($val) || $val instanceof CrossTenantAccessPolicyB2BSetting) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'b2bCollaborationInbound'");
     }
 
     /**
@@ -45,7 +53,11 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
      * @return CrossTenantAccessPolicyB2BSetting|null
     */
     public function getB2bCollaborationOutbound(): ?CrossTenantAccessPolicyB2BSetting {
-        return $this->getBackingStore()->get('b2bCollaborationOutbound');
+        $val = $this->getBackingStore()->get('b2bCollaborationOutbound');
+        if (is_null($val) || $val instanceof CrossTenantAccessPolicyB2BSetting) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'b2bCollaborationOutbound'");
     }
 
     /**
@@ -53,7 +65,11 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
      * @return CrossTenantAccessPolicyB2BSetting|null
     */
     public function getB2bDirectConnectInbound(): ?CrossTenantAccessPolicyB2BSetting {
-        return $this->getBackingStore()->get('b2bDirectConnectInbound');
+        $val = $this->getBackingStore()->get('b2bDirectConnectInbound');
+        if (is_null($val) || $val instanceof CrossTenantAccessPolicyB2BSetting) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'b2bDirectConnectInbound'");
     }
 
     /**
@@ -61,12 +77,16 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
      * @return CrossTenantAccessPolicyB2BSetting|null
     */
     public function getB2bDirectConnectOutbound(): ?CrossTenantAccessPolicyB2BSetting {
-        return $this->getBackingStore()->get('b2bDirectConnectOutbound');
+        $val = $this->getBackingStore()->get('b2bDirectConnectOutbound');
+        if (is_null($val) || $val instanceof CrossTenantAccessPolicyB2BSetting) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'b2bDirectConnectOutbound'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -86,7 +106,11 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
      * @return CrossTenantAccessPolicyInboundTrust|null
     */
     public function getInboundTrust(): ?CrossTenantAccessPolicyInboundTrust {
-        return $this->getBackingStore()->get('inboundTrust');
+        $val = $this->getBackingStore()->get('inboundTrust');
+        if (is_null($val) || $val instanceof CrossTenantAccessPolicyInboundTrust) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'inboundTrust'");
     }
 
     /**
@@ -94,7 +118,11 @@ class CrossTenantAccessPolicyConfigurationDefault extends Entity implements Pars
      * @return bool|null
     */
     public function getIsServiceDefault(): ?bool {
-        return $this->getBackingStore()->get('isServiceDefault');
+        $val = $this->getBackingStore()->get('isServiceDefault');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isServiceDefault'");
     }
 
     /**

@@ -29,7 +29,11 @@ class AmazonResourceEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getAmazonAccountId(): ?string {
-        return $this->getBackingStore()->get('amazonAccountId');
+        $val = $this->getBackingStore()->get('amazonAccountId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'amazonAccountId'");
     }
 
     /**
@@ -37,12 +41,16 @@ class AmazonResourceEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getAmazonResourceId(): ?string {
-        return $this->getBackingStore()->get('amazonResourceId');
+        $val = $this->getBackingStore()->get('amazonResourceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'amazonResourceId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -59,7 +67,11 @@ class AmazonResourceEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getResourceName(): ?string {
-        return $this->getBackingStore()->get('resourceName');
+        $val = $this->getBackingStore()->get('resourceName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceName'");
     }
 
     /**
@@ -67,7 +79,11 @@ class AmazonResourceEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getResourceType(): ?string {
-        return $this->getBackingStore()->get('resourceType');
+        $val = $this->getBackingStore()->get('resourceType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceType'");
     }
 
     /**

@@ -29,7 +29,11 @@ class ConditionalAccessTemplate extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -37,12 +41,16 @@ class ConditionalAccessTemplate extends Entity implements Parsable
      * @return ConditionalAccessPolicyDetail|null
     */
     public function getDetails(): ?ConditionalAccessPolicyDetail {
-        return $this->getBackingStore()->get('details');
+        $val = $this->getBackingStore()->get('details');
+        if (is_null($val) || $val instanceof ConditionalAccessPolicyDetail) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'details'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -59,7 +67,11 @@ class ConditionalAccessTemplate extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -67,7 +79,11 @@ class ConditionalAccessTemplate extends Entity implements Parsable
      * @return TemplateScenarios|null
     */
     public function getScenarios(): ?TemplateScenarios {
-        return $this->getBackingStore()->get('scenarios');
+        $val = $this->getBackingStore()->get('scenarios');
+        if (is_null($val) || $val instanceof TemplateScenarios) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scenarios'");
     }
 
     /**

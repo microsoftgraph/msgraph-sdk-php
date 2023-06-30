@@ -30,7 +30,11 @@ class CrossCloudAzureActiveDirectoryTenant extends IdentitySource implements Par
      * @return string|null
     */
     public function getCloudInstance(): ?string {
-        return $this->getBackingStore()->get('cloudInstance');
+        $val = $this->getBackingStore()->get('cloudInstance');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cloudInstance'");
     }
 
     /**
@@ -38,12 +42,16 @@ class CrossCloudAzureActiveDirectoryTenant extends IdentitySource implements Par
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -59,7 +67,11 @@ class CrossCloudAzureActiveDirectoryTenant extends IdentitySource implements Par
      * @return string|null
     */
     public function getTenantId(): ?string {
-        return $this->getBackingStore()->get('tenantId');
+        $val = $this->getBackingStore()->get('tenantId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tenantId'");
     }
 
     /**

@@ -27,7 +27,7 @@ class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManagementPolic
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class UnifiedRoleManagementPolicyApprovalRule extends UnifiedRoleManagementPolic
      * @return ApprovalSettings|null
     */
     public function getSetting(): ?ApprovalSettings {
-        return $this->getBackingStore()->get('setting');
+        $val = $this->getBackingStore()->get('setting');
+        if (is_null($val) || $val instanceof ApprovalSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'setting'");
     }
 
     /**

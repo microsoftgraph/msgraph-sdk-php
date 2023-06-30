@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable 
 {
@@ -27,7 +28,7 @@ class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -46,7 +47,11 @@ class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable
      * @return Notebook|null
     */
     public function getParentNotebook(): ?Notebook {
-        return $this->getBackingStore()->get('parentNotebook');
+        $val = $this->getBackingStore()->get('parentNotebook');
+        if (is_null($val) || $val instanceof Notebook) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'parentNotebook'");
     }
 
     /**
@@ -54,7 +59,11 @@ class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable
      * @return SectionGroup|null
     */
     public function getParentSectionGroup(): ?SectionGroup {
-        return $this->getBackingStore()->get('parentSectionGroup');
+        $val = $this->getBackingStore()->get('parentSectionGroup');
+        if (is_null($val) || $val instanceof SectionGroup) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'parentSectionGroup'");
     }
 
     /**
@@ -62,7 +71,13 @@ class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable
      * @return array<SectionGroup>|null
     */
     public function getSectionGroups(): ?array {
-        return $this->getBackingStore()->get('sectionGroups');
+        $val = $this->getBackingStore()->get('sectionGroups');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SectionGroup::class);
+            /** @var array<SectionGroup>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sectionGroups'");
     }
 
     /**
@@ -70,7 +85,11 @@ class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable
      * @return string|null
     */
     public function getSectionGroupsUrl(): ?string {
-        return $this->getBackingStore()->get('sectionGroupsUrl');
+        $val = $this->getBackingStore()->get('sectionGroupsUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sectionGroupsUrl'");
     }
 
     /**
@@ -78,7 +97,13 @@ class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable
      * @return array<OnenoteSection>|null
     */
     public function getSections(): ?array {
-        return $this->getBackingStore()->get('sections');
+        $val = $this->getBackingStore()->get('sections');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, OnenoteSection::class);
+            /** @var array<OnenoteSection>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sections'");
     }
 
     /**
@@ -86,7 +111,11 @@ class SectionGroup extends OnenoteEntityHierarchyModel implements Parsable
      * @return string|null
     */
     public function getSectionsUrl(): ?string {
-        return $this->getBackingStore()->get('sectionsUrl');
+        $val = $this->getBackingStore()->get('sectionsUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sectionsUrl'");
     }
 
     /**

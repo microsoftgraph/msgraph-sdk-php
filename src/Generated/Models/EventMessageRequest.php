@@ -30,12 +30,16 @@ class EventMessageRequest extends EventMessage implements Parsable
      * @return bool|null
     */
     public function getAllowNewTimeProposals(): ?bool {
-        return $this->getBackingStore()->get('allowNewTimeProposals');
+        $val = $this->getBackingStore()->get('allowNewTimeProposals');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowNewTimeProposals'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -54,7 +58,11 @@ class EventMessageRequest extends EventMessage implements Parsable
      * @return MeetingRequestType|null
     */
     public function getMeetingRequestType(): ?MeetingRequestType {
-        return $this->getBackingStore()->get('meetingRequestType');
+        $val = $this->getBackingStore()->get('meetingRequestType');
+        if (is_null($val) || $val instanceof MeetingRequestType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'meetingRequestType'");
     }
 
     /**
@@ -62,7 +70,11 @@ class EventMessageRequest extends EventMessage implements Parsable
      * @return DateTimeTimeZone|null
     */
     public function getPreviousEndDateTime(): ?DateTimeTimeZone {
-        return $this->getBackingStore()->get('previousEndDateTime');
+        $val = $this->getBackingStore()->get('previousEndDateTime');
+        if (is_null($val) || $val instanceof DateTimeTimeZone) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'previousEndDateTime'");
     }
 
     /**
@@ -70,7 +82,11 @@ class EventMessageRequest extends EventMessage implements Parsable
      * @return Location|null
     */
     public function getPreviousLocation(): ?Location {
-        return $this->getBackingStore()->get('previousLocation');
+        $val = $this->getBackingStore()->get('previousLocation');
+        if (is_null($val) || $val instanceof Location) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'previousLocation'");
     }
 
     /**
@@ -78,7 +94,11 @@ class EventMessageRequest extends EventMessage implements Parsable
      * @return DateTimeTimeZone|null
     */
     public function getPreviousStartDateTime(): ?DateTimeTimeZone {
-        return $this->getBackingStore()->get('previousStartDateTime');
+        $val = $this->getBackingStore()->get('previousStartDateTime');
+        if (is_null($val) || $val instanceof DateTimeTimeZone) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'previousStartDateTime'");
     }
 
     /**
@@ -86,7 +106,11 @@ class EventMessageRequest extends EventMessage implements Parsable
      * @return bool|null
     */
     public function getResponseRequested(): ?bool {
-        return $this->getBackingStore()->get('responseRequested');
+        $val = $this->getBackingStore()->get('responseRequested');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'responseRequested'");
     }
 
     /**

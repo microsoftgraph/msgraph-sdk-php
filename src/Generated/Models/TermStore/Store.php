@@ -6,6 +6,7 @@ use Microsoft\Graph\Generated\Models\Entity;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Store extends Entity implements Parsable 
 {
@@ -30,19 +31,30 @@ class Store extends Entity implements Parsable
      * @return string|null
     */
     public function getDefaultLanguageTag(): ?string {
-        return $this->getBackingStore()->get('defaultLanguageTag');
+        $val = $this->getBackingStore()->get('defaultLanguageTag');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'defaultLanguageTag'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'defaultLanguageTag' => fn(ParseNode $n) => $o->setDefaultLanguageTag($n->getStringValue()),
             'groups' => fn(ParseNode $n) => $o->setGroups($n->getCollectionOfObjectValues([Group::class, 'createFromDiscriminatorValue'])),
-            'languageTags' => fn(ParseNode $n) => $o->setLanguageTags($n->getCollectionOfPrimitiveValues()),
+            'languageTags' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setLanguageTags($val);
+            },
             'sets' => fn(ParseNode $n) => $o->setSets($n->getCollectionOfObjectValues([Set::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -52,7 +64,13 @@ class Store extends Entity implements Parsable
      * @return array<Group>|null
     */
     public function getGroups(): ?array {
-        return $this->getBackingStore()->get('groups');
+        $val = $this->getBackingStore()->get('groups');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Group::class);
+            /** @var array<Group>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'groups'");
     }
 
     /**
@@ -60,7 +78,13 @@ class Store extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getLanguageTags(): ?array {
-        return $this->getBackingStore()->get('languageTags');
+        $val = $this->getBackingStore()->get('languageTags');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'languageTags'");
     }
 
     /**
@@ -68,7 +92,13 @@ class Store extends Entity implements Parsable
      * @return array<Set>|null
     */
     public function getSets(): ?array {
-        return $this->getBackingStore()->get('sets');
+        $val = $this->getBackingStore()->get('sets');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Set::class);
+            /** @var array<Set>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sets'");
     }
 
     /**

@@ -8,11 +8,12 @@ use Microsoft\Graph\Generated\Models\IdentitySet;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class CallRecord extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new CallRecord and sets the default values.
+     * Instantiates a new callRecord and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -32,12 +33,16 @@ class CallRecord extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('endDateTime');
+        $val = $this->getBackingStore()->get('endDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'endDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -60,7 +65,11 @@ class CallRecord extends Entity implements Parsable
      * @return string|null
     */
     public function getJoinWebUrl(): ?string {
-        return $this->getBackingStore()->get('joinWebUrl');
+        $val = $this->getBackingStore()->get('joinWebUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'joinWebUrl'");
     }
 
     /**
@@ -68,7 +77,11 @@ class CallRecord extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedDateTime');
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**
@@ -76,7 +89,13 @@ class CallRecord extends Entity implements Parsable
      * @return array<Modality>|null
     */
     public function getModalities(): ?array {
-        return $this->getBackingStore()->get('modalities');
+        $val = $this->getBackingStore()->get('modalities');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Modality::class);
+            /** @var array<Modality>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'modalities'");
     }
 
     /**
@@ -84,7 +103,11 @@ class CallRecord extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getOrganizer(): ?IdentitySet {
-        return $this->getBackingStore()->get('organizer');
+        $val = $this->getBackingStore()->get('organizer');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'organizer'");
     }
 
     /**
@@ -92,7 +115,13 @@ class CallRecord extends Entity implements Parsable
      * @return array<IdentitySet>|null
     */
     public function getParticipants(): ?array {
-        return $this->getBackingStore()->get('participants');
+        $val = $this->getBackingStore()->get('participants');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, IdentitySet::class);
+            /** @var array<IdentitySet>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'participants'");
     }
 
     /**
@@ -100,7 +129,13 @@ class CallRecord extends Entity implements Parsable
      * @return array<Session>|null
     */
     public function getSessions(): ?array {
-        return $this->getBackingStore()->get('sessions');
+        $val = $this->getBackingStore()->get('sessions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Session::class);
+            /** @var array<Session>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sessions'");
     }
 
     /**
@@ -108,7 +143,11 @@ class CallRecord extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('startDateTime');
+        $val = $this->getBackingStore()->get('startDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'startDateTime'");
     }
 
     /**
@@ -116,7 +155,11 @@ class CallRecord extends Entity implements Parsable
      * @return CallType|null
     */
     public function getType(): ?CallType {
-        return $this->getBackingStore()->get('type');
+        $val = $this->getBackingStore()->get('type');
+        if (is_null($val) || $val instanceof CallType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
     }
 
     /**
@@ -124,7 +167,11 @@ class CallRecord extends Entity implements Parsable
      * @return int|null
     */
     public function getVersion(): ?int {
-        return $this->getBackingStore()->get('version');
+        $val = $this->getBackingStore()->get('version');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'version'");
     }
 
     /**

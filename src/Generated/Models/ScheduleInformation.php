@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ScheduleInformation implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class ScheduleInformation implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +53,11 @@ class ScheduleInformation implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getAvailabilityView(): ?string {
-        return $this->getBackingStore()->get('availabilityView');
+        $val = $this->getBackingStore()->get('availabilityView');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'availabilityView'");
     }
 
     /**
@@ -63,12 +73,16 @@ class ScheduleInformation implements AdditionalDataHolder, BackedModel, Parsable
      * @return FreeBusyError|null
     */
     public function getError(): ?FreeBusyError {
-        return $this->getBackingStore()->get('error');
+        $val = $this->getBackingStore()->get('error');
+        if (is_null($val) || $val instanceof FreeBusyError) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'error'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -87,7 +101,11 @@ class ScheduleInformation implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -95,7 +113,11 @@ class ScheduleInformation implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getScheduleId(): ?string {
-        return $this->getBackingStore()->get('scheduleId');
+        $val = $this->getBackingStore()->get('scheduleId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scheduleId'");
     }
 
     /**
@@ -103,7 +125,13 @@ class ScheduleInformation implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<ScheduleItem>|null
     */
     public function getScheduleItems(): ?array {
-        return $this->getBackingStore()->get('scheduleItems');
+        $val = $this->getBackingStore()->get('scheduleItems');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ScheduleItem::class);
+            /** @var array<ScheduleItem>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scheduleItems'");
     }
 
     /**
@@ -111,7 +139,11 @@ class ScheduleInformation implements AdditionalDataHolder, BackedModel, Parsable
      * @return WorkingHours|null
     */
     public function getWorkingHours(): ?WorkingHours {
-        return $this->getBackingStore()->get('workingHours');
+        $val = $this->getBackingStore()->get('workingHours');
+        if (is_null($val) || $val instanceof WorkingHours) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'workingHours'");
     }
 
     /**

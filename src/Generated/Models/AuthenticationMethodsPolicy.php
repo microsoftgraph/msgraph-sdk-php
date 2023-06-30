@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AuthenticationMethodsPolicy extends Entity implements Parsable 
 {
@@ -30,7 +31,13 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
      * @return array<AuthenticationMethodConfiguration>|null
     */
     public function getAuthenticationMethodConfigurations(): ?array {
-        return $this->getBackingStore()->get('authenticationMethodConfigurations');
+        $val = $this->getBackingStore()->get('authenticationMethodConfigurations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AuthenticationMethodConfiguration::class);
+            /** @var array<AuthenticationMethodConfiguration>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'authenticationMethodConfigurations'");
     }
 
     /**
@@ -38,7 +45,11 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -46,12 +57,16 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -72,7 +87,11 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedDateTime');
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**
@@ -80,7 +99,11 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
      * @return AuthenticationMethodsPolicyMigrationState|null
     */
     public function getPolicyMigrationState(): ?AuthenticationMethodsPolicyMigrationState {
-        return $this->getBackingStore()->get('policyMigrationState');
+        $val = $this->getBackingStore()->get('policyMigrationState');
+        if (is_null($val) || $val instanceof AuthenticationMethodsPolicyMigrationState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'policyMigrationState'");
     }
 
     /**
@@ -88,7 +111,11 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
      * @return string|null
     */
     public function getPolicyVersion(): ?string {
-        return $this->getBackingStore()->get('policyVersion');
+        $val = $this->getBackingStore()->get('policyVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'policyVersion'");
     }
 
     /**
@@ -96,7 +123,11 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
      * @return int|null
     */
     public function getReconfirmationInDays(): ?int {
-        return $this->getBackingStore()->get('reconfirmationInDays');
+        $val = $this->getBackingStore()->get('reconfirmationInDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reconfirmationInDays'");
     }
 
     /**
@@ -104,7 +135,11 @@ class AuthenticationMethodsPolicy extends Entity implements Parsable
      * @return RegistrationEnforcement|null
     */
     public function getRegistrationEnforcement(): ?RegistrationEnforcement {
-        return $this->getBackingStore()->get('registrationEnforcement');
+        $val = $this->getBackingStore()->get('registrationEnforcement');
+        if (is_null($val) || $val instanceof RegistrationEnforcement) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'registrationEnforcement'");
     }
 
     /**

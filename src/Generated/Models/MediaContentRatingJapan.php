@@ -39,7 +39,12 @@ class MediaContentRatingJapan implements AdditionalDataHolder, BackedModel, Pars
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +57,7 @@ class MediaContentRatingJapan implements AdditionalDataHolder, BackedModel, Pars
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -68,7 +73,11 @@ class MediaContentRatingJapan implements AdditionalDataHolder, BackedModel, Pars
      * @return RatingJapanMoviesType|null
     */
     public function getMovieRating(): ?RatingJapanMoviesType {
-        return $this->getBackingStore()->get('movieRating');
+        $val = $this->getBackingStore()->get('movieRating');
+        if (is_null($val) || $val instanceof RatingJapanMoviesType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'movieRating'");
     }
 
     /**
@@ -76,7 +85,11 @@ class MediaContentRatingJapan implements AdditionalDataHolder, BackedModel, Pars
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -84,7 +97,11 @@ class MediaContentRatingJapan implements AdditionalDataHolder, BackedModel, Pars
      * @return RatingJapanTelevisionType|null
     */
     public function getTvRating(): ?RatingJapanTelevisionType {
-        return $this->getBackingStore()->get('tvRating');
+        $val = $this->getBackingStore()->get('tvRating');
+        if (is_null($val) || $val instanceof RatingJapanTelevisionType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tvRating'");
     }
 
     /**

@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ServiceAnnouncement extends Entity implements Parsable 
 {
@@ -26,7 +27,7 @@ class ServiceAnnouncement extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -42,7 +43,13 @@ class ServiceAnnouncement extends Entity implements Parsable
      * @return array<ServiceHealth>|null
     */
     public function getHealthOverviews(): ?array {
-        return $this->getBackingStore()->get('healthOverviews');
+        $val = $this->getBackingStore()->get('healthOverviews');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ServiceHealth::class);
+            /** @var array<ServiceHealth>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'healthOverviews'");
     }
 
     /**
@@ -50,7 +57,13 @@ class ServiceAnnouncement extends Entity implements Parsable
      * @return array<ServiceHealthIssue>|null
     */
     public function getIssues(): ?array {
-        return $this->getBackingStore()->get('issues');
+        $val = $this->getBackingStore()->get('issues');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ServiceHealthIssue::class);
+            /** @var array<ServiceHealthIssue>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'issues'");
     }
 
     /**
@@ -58,7 +71,13 @@ class ServiceAnnouncement extends Entity implements Parsable
      * @return array<ServiceUpdateMessage>|null
     */
     public function getMessages(): ?array {
-        return $this->getBackingStore()->get('messages');
+        $val = $this->getBackingStore()->get('messages');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ServiceUpdateMessage::class);
+            /** @var array<ServiceUpdateMessage>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'messages'");
     }
 
     /**

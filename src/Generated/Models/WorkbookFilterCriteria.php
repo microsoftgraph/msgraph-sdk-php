@@ -39,7 +39,12 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +60,11 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
      * @return string|null
     */
     public function getColor(): ?string {
-        return $this->getBackingStore()->get('color');
+        $val = $this->getBackingStore()->get('color');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'color'");
     }
 
     /**
@@ -63,7 +72,11 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
      * @return string|null
     */
     public function getCriterion1(): ?string {
-        return $this->getBackingStore()->get('criterion1');
+        $val = $this->getBackingStore()->get('criterion1');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'criterion1'");
     }
 
     /**
@@ -71,7 +84,11 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
      * @return string|null
     */
     public function getCriterion2(): ?string {
-        return $this->getBackingStore()->get('criterion2');
+        $val = $this->getBackingStore()->get('criterion2');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'criterion2'");
     }
 
     /**
@@ -79,12 +96,16 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
      * @return string|null
     */
     public function getDynamicCriteria(): ?string {
-        return $this->getBackingStore()->get('dynamicCriteria');
+        $val = $this->getBackingStore()->get('dynamicCriteria');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dynamicCriteria'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -106,7 +127,11 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
      * @return string|null
     */
     public function getFilterOn(): ?string {
-        return $this->getBackingStore()->get('filterOn');
+        $val = $this->getBackingStore()->get('filterOn');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'filterOn'");
     }
 
     /**
@@ -114,7 +139,11 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
      * @return WorkbookIcon|null
     */
     public function getIcon(): ?WorkbookIcon {
-        return $this->getBackingStore()->get('icon');
+        $val = $this->getBackingStore()->get('icon');
+        if (is_null($val) || $val instanceof WorkbookIcon) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'icon'");
     }
 
     /**
@@ -122,7 +151,11 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -130,7 +163,11 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
      * @return string|null
     */
     public function getOperator(): ?string {
-        return $this->getBackingStore()->get('operator');
+        $val = $this->getBackingStore()->get('operator');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operator'");
     }
 
     /**
@@ -138,7 +175,11 @@ class WorkbookFilterCriteria implements AdditionalDataHolder, BackedModel, Parsa
      * @return Json|null
     */
     public function getValues(): ?Json {
-        return $this->getBackingStore()->get('values');
+        $val = $this->getBackingStore()->get('values');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'values'");
     }
 
     /**

@@ -30,12 +30,16 @@ class EdgeSearchEngine extends EdgeSearchEngineBase implements Parsable
      * @return EdgeSearchEngineType|null
     */
     public function getEdgeSearchEngineType(): ?EdgeSearchEngineType {
-        return $this->getBackingStore()->get('edgeSearchEngineType');
+        $val = $this->getBackingStore()->get('edgeSearchEngineType');
+        if (is_null($val) || $val instanceof EdgeSearchEngineType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'edgeSearchEngineType'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

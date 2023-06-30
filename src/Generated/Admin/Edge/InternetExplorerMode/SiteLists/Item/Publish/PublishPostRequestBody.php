@@ -11,6 +11,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class PublishPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -41,7 +42,12 @@ class PublishPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -54,7 +60,7 @@ class PublishPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -70,7 +76,11 @@ class PublishPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @return string|null
     */
     public function getRevision(): ?string {
-        return $this->getBackingStore()->get('revision');
+        $val = $this->getBackingStore()->get('revision');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'revision'");
     }
 
     /**
@@ -78,7 +88,13 @@ class PublishPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @return array<BrowserSharedCookie>|null
     */
     public function getSharedCookies(): ?array {
-        return $this->getBackingStore()->get('sharedCookies');
+        $val = $this->getBackingStore()->get('sharedCookies');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, BrowserSharedCookie::class);
+            /** @var array<BrowserSharedCookie>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sharedCookies'");
     }
 
     /**
@@ -86,7 +102,13 @@ class PublishPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @return array<BrowserSite>|null
     */
     public function getSites(): ?array {
-        return $this->getBackingStore()->get('sites');
+        $val = $this->getBackingStore()->get('sites');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, BrowserSite::class);
+            /** @var array<BrowserSite>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sites'");
     }
 
     /**

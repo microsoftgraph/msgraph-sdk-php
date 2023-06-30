@@ -39,7 +39,12 @@ class InboundOutboundPolicyConfiguration implements AdditionalDataHolder, Backed
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +57,7 @@ class InboundOutboundPolicyConfiguration implements AdditionalDataHolder, Backed
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -68,7 +73,11 @@ class InboundOutboundPolicyConfiguration implements AdditionalDataHolder, Backed
      * @return bool|null
     */
     public function getInboundAllowed(): ?bool {
-        return $this->getBackingStore()->get('inboundAllowed');
+        $val = $this->getBackingStore()->get('inboundAllowed');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'inboundAllowed'");
     }
 
     /**
@@ -76,7 +85,11 @@ class InboundOutboundPolicyConfiguration implements AdditionalDataHolder, Backed
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -84,7 +97,11 @@ class InboundOutboundPolicyConfiguration implements AdditionalDataHolder, Backed
      * @return bool|null
     */
     public function getOutboundAllowed(): ?bool {
-        return $this->getBackingStore()->get('outboundAllowed');
+        $val = $this->getBackingStore()->get('outboundAllowed');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'outboundAllowed'");
     }
 
     /**

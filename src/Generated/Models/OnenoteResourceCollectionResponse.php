@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class OnenoteResourceCollectionResponse extends BaseCollectionPaginationCountResponse implements Parsable 
 {
@@ -26,7 +27,7 @@ class OnenoteResourceCollectionResponse extends BaseCollectionPaginationCountRes
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -40,7 +41,13 @@ class OnenoteResourceCollectionResponse extends BaseCollectionPaginationCountRes
      * @return array<OnenoteResource>|null
     */
     public function getValue(): ?array {
-        return $this->getBackingStore()->get('value');
+        $val = $this->getBackingStore()->get('value');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, OnenoteResource::class);
+            /** @var array<OnenoteResource>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'value'");
     }
 
     /**

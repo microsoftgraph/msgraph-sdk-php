@@ -30,7 +30,11 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration impleme
      * @return bool|null
     */
     public function getAllowPrinting(): ?bool {
-        return $this->getBackingStore()->get('allowPrinting');
+        $val = $this->getBackingStore()->get('allowPrinting');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowPrinting'");
     }
 
     /**
@@ -38,7 +42,11 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration impleme
      * @return bool|null
     */
     public function getAllowScreenCapture(): ?bool {
-        return $this->getBackingStore()->get('allowScreenCapture');
+        $val = $this->getBackingStore()->get('allowScreenCapture');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowScreenCapture'");
     }
 
     /**
@@ -46,7 +54,11 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration impleme
      * @return bool|null
     */
     public function getAllowTextSuggestion(): ?bool {
-        return $this->getBackingStore()->get('allowTextSuggestion');
+        $val = $this->getBackingStore()->get('allowTextSuggestion');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowTextSuggestion'");
     }
 
     /**
@@ -54,12 +66,16 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration impleme
      * @return string|null
     */
     public function getConfigurationAccount(): ?string {
-        return $this->getBackingStore()->get('configurationAccount');
+        $val = $this->getBackingStore()->get('configurationAccount');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'configurationAccount'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -77,7 +93,11 @@ class Windows10SecureAssessmentConfiguration extends DeviceConfiguration impleme
      * @return string|null
     */
     public function getLaunchUri(): ?string {
-        return $this->getBackingStore()->get('launchUri');
+        $val = $this->getBackingStore()->get('launchUri');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'launchUri'");
     }
 
     /**

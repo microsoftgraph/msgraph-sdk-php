@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class EducationSchool extends EducationOrganization implements Parsable 
 {
@@ -30,7 +31,11 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return PhysicalAddress|null
     */
     public function getAddress(): ?PhysicalAddress {
-        return $this->getBackingStore()->get('address');
+        $val = $this->getBackingStore()->get('address');
+        if (is_null($val) || $val instanceof PhysicalAddress) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'address'");
     }
 
     /**
@@ -38,7 +43,11 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return AdministrativeUnit|null
     */
     public function getAdministrativeUnit(): ?AdministrativeUnit {
-        return $this->getBackingStore()->get('administrativeUnit');
+        $val = $this->getBackingStore()->get('administrativeUnit');
+        if (is_null($val) || $val instanceof AdministrativeUnit) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'administrativeUnit'");
     }
 
     /**
@@ -46,7 +55,13 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return array<EducationClass>|null
     */
     public function getClasses(): ?array {
-        return $this->getBackingStore()->get('classes');
+        $val = $this->getBackingStore()->get('classes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, EducationClass::class);
+            /** @var array<EducationClass>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'classes'");
     }
 
     /**
@@ -54,7 +69,11 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return IdentitySet|null
     */
     public function getCreatedBy(): ?IdentitySet {
-        return $this->getBackingStore()->get('createdBy');
+        $val = $this->getBackingStore()->get('createdBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdBy'");
     }
 
     /**
@@ -62,7 +81,11 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return string|null
     */
     public function getExternalId(): ?string {
-        return $this->getBackingStore()->get('externalId');
+        $val = $this->getBackingStore()->get('externalId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'externalId'");
     }
 
     /**
@@ -70,7 +93,11 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return string|null
     */
     public function getExternalPrincipalId(): ?string {
-        return $this->getBackingStore()->get('externalPrincipalId');
+        $val = $this->getBackingStore()->get('externalPrincipalId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'externalPrincipalId'");
     }
 
     /**
@@ -78,12 +105,16 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return string|null
     */
     public function getFax(): ?string {
-        return $this->getBackingStore()->get('fax');
+        $val = $this->getBackingStore()->get('fax');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fax'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -110,7 +141,11 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return string|null
     */
     public function getHighestGrade(): ?string {
-        return $this->getBackingStore()->get('highestGrade');
+        $val = $this->getBackingStore()->get('highestGrade');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'highestGrade'");
     }
 
     /**
@@ -118,7 +153,11 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return string|null
     */
     public function getLowestGrade(): ?string {
-        return $this->getBackingStore()->get('lowestGrade');
+        $val = $this->getBackingStore()->get('lowestGrade');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lowestGrade'");
     }
 
     /**
@@ -126,7 +165,11 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return string|null
     */
     public function getPhone(): ?string {
-        return $this->getBackingStore()->get('phone');
+        $val = $this->getBackingStore()->get('phone');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'phone'");
     }
 
     /**
@@ -134,7 +177,11 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return string|null
     */
     public function getPrincipalEmail(): ?string {
-        return $this->getBackingStore()->get('principalEmail');
+        $val = $this->getBackingStore()->get('principalEmail');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'principalEmail'");
     }
 
     /**
@@ -142,7 +189,11 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return string|null
     */
     public function getPrincipalName(): ?string {
-        return $this->getBackingStore()->get('principalName');
+        $val = $this->getBackingStore()->get('principalName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'principalName'");
     }
 
     /**
@@ -150,7 +201,11 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return string|null
     */
     public function getSchoolNumber(): ?string {
-        return $this->getBackingStore()->get('schoolNumber');
+        $val = $this->getBackingStore()->get('schoolNumber');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'schoolNumber'");
     }
 
     /**
@@ -158,7 +213,13 @@ class EducationSchool extends EducationOrganization implements Parsable
      * @return array<EducationUser>|null
     */
     public function getUsers(): ?array {
-        return $this->getBackingStore()->get('users');
+        $val = $this->getBackingStore()->get('users');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, EducationUser::class);
+            /** @var array<EducationUser>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'users'");
     }
 
     /**

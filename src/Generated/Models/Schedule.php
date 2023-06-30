@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Schedule extends Entity implements Parsable 
 {
@@ -29,12 +30,16 @@ class Schedule extends Entity implements Parsable
      * @return bool|null
     */
     public function getEnabled(): ?bool {
-        return $this->getBackingStore()->get('enabled');
+        $val = $this->getBackingStore()->get('enabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enabled'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -57,7 +62,14 @@ class Schedule extends Entity implements Parsable
             'timeOffRequestsEnabled' => fn(ParseNode $n) => $o->setTimeOffRequestsEnabled($n->getBooleanValue()),
             'timesOff' => fn(ParseNode $n) => $o->setTimesOff($n->getCollectionOfObjectValues([TimeOff::class, 'createFromDiscriminatorValue'])),
             'timeZone' => fn(ParseNode $n) => $o->setTimeZone($n->getStringValue()),
-            'workforceIntegrationIds' => fn(ParseNode $n) => $o->setWorkforceIntegrationIds($n->getCollectionOfPrimitiveValues()),
+            'workforceIntegrationIds' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setWorkforceIntegrationIds($val);
+            },
         ]);
     }
 
@@ -66,7 +78,13 @@ class Schedule extends Entity implements Parsable
      * @return array<OfferShiftRequest>|null
     */
     public function getOfferShiftRequests(): ?array {
-        return $this->getBackingStore()->get('offerShiftRequests');
+        $val = $this->getBackingStore()->get('offerShiftRequests');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, OfferShiftRequest::class);
+            /** @var array<OfferShiftRequest>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'offerShiftRequests'");
     }
 
     /**
@@ -74,7 +92,11 @@ class Schedule extends Entity implements Parsable
      * @return bool|null
     */
     public function getOfferShiftRequestsEnabled(): ?bool {
-        return $this->getBackingStore()->get('offerShiftRequestsEnabled');
+        $val = $this->getBackingStore()->get('offerShiftRequestsEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'offerShiftRequestsEnabled'");
     }
 
     /**
@@ -82,7 +104,13 @@ class Schedule extends Entity implements Parsable
      * @return array<OpenShiftChangeRequest>|null
     */
     public function getOpenShiftChangeRequests(): ?array {
-        return $this->getBackingStore()->get('openShiftChangeRequests');
+        $val = $this->getBackingStore()->get('openShiftChangeRequests');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, OpenShiftChangeRequest::class);
+            /** @var array<OpenShiftChangeRequest>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'openShiftChangeRequests'");
     }
 
     /**
@@ -90,7 +118,13 @@ class Schedule extends Entity implements Parsable
      * @return array<OpenShift>|null
     */
     public function getOpenShifts(): ?array {
-        return $this->getBackingStore()->get('openShifts');
+        $val = $this->getBackingStore()->get('openShifts');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, OpenShift::class);
+            /** @var array<OpenShift>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'openShifts'");
     }
 
     /**
@@ -98,7 +132,11 @@ class Schedule extends Entity implements Parsable
      * @return bool|null
     */
     public function getOpenShiftsEnabled(): ?bool {
-        return $this->getBackingStore()->get('openShiftsEnabled');
+        $val = $this->getBackingStore()->get('openShiftsEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'openShiftsEnabled'");
     }
 
     /**
@@ -106,7 +144,11 @@ class Schedule extends Entity implements Parsable
      * @return OperationStatus|null
     */
     public function getProvisionStatus(): ?OperationStatus {
-        return $this->getBackingStore()->get('provisionStatus');
+        $val = $this->getBackingStore()->get('provisionStatus');
+        if (is_null($val) || $val instanceof OperationStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'provisionStatus'");
     }
 
     /**
@@ -114,7 +156,11 @@ class Schedule extends Entity implements Parsable
      * @return string|null
     */
     public function getProvisionStatusCode(): ?string {
-        return $this->getBackingStore()->get('provisionStatusCode');
+        $val = $this->getBackingStore()->get('provisionStatusCode');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'provisionStatusCode'");
     }
 
     /**
@@ -122,7 +168,13 @@ class Schedule extends Entity implements Parsable
      * @return array<SchedulingGroup>|null
     */
     public function getSchedulingGroups(): ?array {
-        return $this->getBackingStore()->get('schedulingGroups');
+        $val = $this->getBackingStore()->get('schedulingGroups');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SchedulingGroup::class);
+            /** @var array<SchedulingGroup>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'schedulingGroups'");
     }
 
     /**
@@ -130,7 +182,13 @@ class Schedule extends Entity implements Parsable
      * @return array<Shift>|null
     */
     public function getShifts(): ?array {
-        return $this->getBackingStore()->get('shifts');
+        $val = $this->getBackingStore()->get('shifts');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Shift::class);
+            /** @var array<Shift>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'shifts'");
     }
 
     /**
@@ -138,7 +196,13 @@ class Schedule extends Entity implements Parsable
      * @return array<SwapShiftsChangeRequest>|null
     */
     public function getSwapShiftsChangeRequests(): ?array {
-        return $this->getBackingStore()->get('swapShiftsChangeRequests');
+        $val = $this->getBackingStore()->get('swapShiftsChangeRequests');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SwapShiftsChangeRequest::class);
+            /** @var array<SwapShiftsChangeRequest>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'swapShiftsChangeRequests'");
     }
 
     /**
@@ -146,7 +210,11 @@ class Schedule extends Entity implements Parsable
      * @return bool|null
     */
     public function getSwapShiftsRequestsEnabled(): ?bool {
-        return $this->getBackingStore()->get('swapShiftsRequestsEnabled');
+        $val = $this->getBackingStore()->get('swapShiftsRequestsEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'swapShiftsRequestsEnabled'");
     }
 
     /**
@@ -154,7 +222,11 @@ class Schedule extends Entity implements Parsable
      * @return bool|null
     */
     public function getTimeClockEnabled(): ?bool {
-        return $this->getBackingStore()->get('timeClockEnabled');
+        $val = $this->getBackingStore()->get('timeClockEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'timeClockEnabled'");
     }
 
     /**
@@ -162,7 +234,13 @@ class Schedule extends Entity implements Parsable
      * @return array<TimeOffReason>|null
     */
     public function getTimeOffReasons(): ?array {
-        return $this->getBackingStore()->get('timeOffReasons');
+        $val = $this->getBackingStore()->get('timeOffReasons');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TimeOffReason::class);
+            /** @var array<TimeOffReason>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'timeOffReasons'");
     }
 
     /**
@@ -170,7 +248,13 @@ class Schedule extends Entity implements Parsable
      * @return array<TimeOffRequest>|null
     */
     public function getTimeOffRequests(): ?array {
-        return $this->getBackingStore()->get('timeOffRequests');
+        $val = $this->getBackingStore()->get('timeOffRequests');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TimeOffRequest::class);
+            /** @var array<TimeOffRequest>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'timeOffRequests'");
     }
 
     /**
@@ -178,7 +262,11 @@ class Schedule extends Entity implements Parsable
      * @return bool|null
     */
     public function getTimeOffRequestsEnabled(): ?bool {
-        return $this->getBackingStore()->get('timeOffRequestsEnabled');
+        $val = $this->getBackingStore()->get('timeOffRequestsEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'timeOffRequestsEnabled'");
     }
 
     /**
@@ -186,7 +274,13 @@ class Schedule extends Entity implements Parsable
      * @return array<TimeOff>|null
     */
     public function getTimesOff(): ?array {
-        return $this->getBackingStore()->get('timesOff');
+        $val = $this->getBackingStore()->get('timesOff');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TimeOff::class);
+            /** @var array<TimeOff>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'timesOff'");
     }
 
     /**
@@ -194,7 +288,11 @@ class Schedule extends Entity implements Parsable
      * @return string|null
     */
     public function getTimeZone(): ?string {
-        return $this->getBackingStore()->get('timeZone');
+        $val = $this->getBackingStore()->get('timeZone');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'timeZone'");
     }
 
     /**
@@ -202,7 +300,13 @@ class Schedule extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getWorkforceIntegrationIds(): ?array {
-        return $this->getBackingStore()->get('workforceIntegrationIds');
+        $val = $this->getBackingStore()->get('workforceIntegrationIds');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'workforceIntegrationIds'");
     }
 
     /**

@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Channel extends Entity implements Parsable 
 {
@@ -30,7 +31,11 @@ class Channel extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -38,7 +43,11 @@ class Channel extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -46,7 +55,11 @@ class Channel extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
@@ -54,12 +67,16 @@ class Channel extends Entity implements Parsable
      * @return string|null
     */
     public function getEmail(): ?string {
-        return $this->getBackingStore()->get('email');
+        $val = $this->getBackingStore()->get('email');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'email'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -85,7 +102,11 @@ class Channel extends Entity implements Parsable
      * @return DriveItem|null
     */
     public function getFilesFolder(): ?DriveItem {
-        return $this->getBackingStore()->get('filesFolder');
+        $val = $this->getBackingStore()->get('filesFolder');
+        if (is_null($val) || $val instanceof DriveItem) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'filesFolder'");
     }
 
     /**
@@ -93,7 +114,11 @@ class Channel extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsFavoriteByDefault(): ?bool {
-        return $this->getBackingStore()->get('isFavoriteByDefault');
+        $val = $this->getBackingStore()->get('isFavoriteByDefault');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isFavoriteByDefault'");
     }
 
     /**
@@ -101,7 +126,13 @@ class Channel extends Entity implements Parsable
      * @return array<ConversationMember>|null
     */
     public function getMembers(): ?array {
-        return $this->getBackingStore()->get('members');
+        $val = $this->getBackingStore()->get('members');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ConversationMember::class);
+            /** @var array<ConversationMember>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'members'");
     }
 
     /**
@@ -109,7 +140,11 @@ class Channel extends Entity implements Parsable
      * @return ChannelMembershipType|null
     */
     public function getMembershipType(): ?ChannelMembershipType {
-        return $this->getBackingStore()->get('membershipType');
+        $val = $this->getBackingStore()->get('membershipType');
+        if (is_null($val) || $val instanceof ChannelMembershipType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'membershipType'");
     }
 
     /**
@@ -117,7 +152,13 @@ class Channel extends Entity implements Parsable
      * @return array<ChatMessage>|null
     */
     public function getMessages(): ?array {
-        return $this->getBackingStore()->get('messages');
+        $val = $this->getBackingStore()->get('messages');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ChatMessage::class);
+            /** @var array<ChatMessage>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'messages'");
     }
 
     /**
@@ -125,7 +166,13 @@ class Channel extends Entity implements Parsable
      * @return array<SharedWithChannelTeamInfo>|null
     */
     public function getSharedWithTeams(): ?array {
-        return $this->getBackingStore()->get('sharedWithTeams');
+        $val = $this->getBackingStore()->get('sharedWithTeams');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SharedWithChannelTeamInfo::class);
+            /** @var array<SharedWithChannelTeamInfo>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sharedWithTeams'");
     }
 
     /**
@@ -133,7 +180,13 @@ class Channel extends Entity implements Parsable
      * @return array<TeamsTab>|null
     */
     public function getTabs(): ?array {
-        return $this->getBackingStore()->get('tabs');
+        $val = $this->getBackingStore()->get('tabs');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TeamsTab::class);
+            /** @var array<TeamsTab>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tabs'");
     }
 
     /**
@@ -141,7 +194,11 @@ class Channel extends Entity implements Parsable
      * @return string|null
     */
     public function getTenantId(): ?string {
-        return $this->getBackingStore()->get('tenantId');
+        $val = $this->getBackingStore()->get('tenantId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tenantId'");
     }
 
     /**
@@ -149,7 +206,11 @@ class Channel extends Entity implements Parsable
      * @return string|null
     */
     public function getWebUrl(): ?string {
-        return $this->getBackingStore()->get('webUrl');
+        $val = $this->getBackingStore()->get('webUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'webUrl'");
     }
 
     /**

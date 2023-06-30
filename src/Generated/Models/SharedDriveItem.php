@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class SharedDriveItem extends BaseItem implements Parsable 
 {
@@ -30,12 +31,16 @@ class SharedDriveItem extends BaseItem implements Parsable
      * @return DriveItem|null
     */
     public function getDriveItem(): ?DriveItem {
-        return $this->getBackingStore()->get('driveItem');
+        $val = $this->getBackingStore()->get('driveItem');
+        if (is_null($val) || $val instanceof DriveItem) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'driveItem'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -56,7 +61,13 @@ class SharedDriveItem extends BaseItem implements Parsable
      * @return array<DriveItem>|null
     */
     public function getItems(): ?array {
-        return $this->getBackingStore()->get('items');
+        $val = $this->getBackingStore()->get('items');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DriveItem::class);
+            /** @var array<DriveItem>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'items'");
     }
 
     /**
@@ -64,7 +75,11 @@ class SharedDriveItem extends BaseItem implements Parsable
      * @return EscapedList|null
     */
     public function getList(): ?EscapedList {
-        return $this->getBackingStore()->get('escapedList');
+        $val = $this->getBackingStore()->get('escapedList');
+        if (is_null($val) || $val instanceof EscapedList) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'escapedList'");
     }
 
     /**
@@ -72,7 +87,11 @@ class SharedDriveItem extends BaseItem implements Parsable
      * @return ListItem|null
     */
     public function getListItem(): ?ListItem {
-        return $this->getBackingStore()->get('listItem');
+        $val = $this->getBackingStore()->get('listItem');
+        if (is_null($val) || $val instanceof ListItem) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'listItem'");
     }
 
     /**
@@ -80,7 +99,11 @@ class SharedDriveItem extends BaseItem implements Parsable
      * @return IdentitySet|null
     */
     public function getOwner(): ?IdentitySet {
-        return $this->getBackingStore()->get('owner');
+        $val = $this->getBackingStore()->get('owner');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'owner'");
     }
 
     /**
@@ -88,7 +111,11 @@ class SharedDriveItem extends BaseItem implements Parsable
      * @return Permission|null
     */
     public function getPermission(): ?Permission {
-        return $this->getBackingStore()->get('permission');
+        $val = $this->getBackingStore()->get('permission');
+        if (is_null($val) || $val instanceof Permission) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'permission'");
     }
 
     /**
@@ -96,7 +123,11 @@ class SharedDriveItem extends BaseItem implements Parsable
      * @return DriveItem|null
     */
     public function getRoot(): ?DriveItem {
-        return $this->getBackingStore()->get('root');
+        $val = $this->getBackingStore()->get('root');
+        if (is_null($val) || $val instanceof DriveItem) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'root'");
     }
 
     /**
@@ -104,7 +135,11 @@ class SharedDriveItem extends BaseItem implements Parsable
      * @return Site|null
     */
     public function getSite(): ?Site {
-        return $this->getBackingStore()->get('site');
+        $val = $this->getBackingStore()->get('site');
+        if (is_null($val) || $val instanceof Site) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'site'");
     }
 
     /**

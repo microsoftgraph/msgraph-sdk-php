@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Todo extends Entity implements Parsable 
 {
@@ -26,7 +27,7 @@ class Todo extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -40,7 +41,13 @@ class Todo extends Entity implements Parsable
      * @return array<TodoTaskList>|null
     */
     public function getLists(): ?array {
-        return $this->getBackingStore()->get('lists');
+        $val = $this->getBackingStore()->get('lists');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TodoTaskList::class);
+            /** @var array<TodoTaskList>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lists'");
     }
 
     /**

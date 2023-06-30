@@ -30,7 +30,11 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
      * @return string|null
     */
     public function getComparisonValue(): ?string {
-        return $this->getBackingStore()->get('comparisonValue');
+        $val = $this->getBackingStore()->get('comparisonValue');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'comparisonValue'");
     }
 
     /**
@@ -38,7 +42,11 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
@@ -46,12 +54,16 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
      * @return bool|null
     */
     public function getEnforceSignatureCheck(): ?bool {
-        return $this->getBackingStore()->get('enforceSignatureCheck');
+        $val = $this->getBackingStore()->get('enforceSignatureCheck');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enforceSignatureCheck'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -72,7 +84,11 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
      * @return Win32LobAppPowerShellScriptRuleOperationType|null
     */
     public function getOperationType(): ?Win32LobAppPowerShellScriptRuleOperationType {
-        return $this->getBackingStore()->get('operationType');
+        $val = $this->getBackingStore()->get('operationType');
+        if (is_null($val) || $val instanceof Win32LobAppPowerShellScriptRuleOperationType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operationType'");
     }
 
     /**
@@ -80,7 +96,11 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
      * @return Win32LobAppRuleOperator|null
     */
     public function getOperator(): ?Win32LobAppRuleOperator {
-        return $this->getBackingStore()->get('operator');
+        $val = $this->getBackingStore()->get('operator');
+        if (is_null($val) || $val instanceof Win32LobAppRuleOperator) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operator'");
     }
 
     /**
@@ -88,7 +108,11 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
      * @return bool|null
     */
     public function getRunAs32Bit(): ?bool {
-        return $this->getBackingStore()->get('runAs32Bit');
+        $val = $this->getBackingStore()->get('runAs32Bit');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'runAs32Bit'");
     }
 
     /**
@@ -96,7 +120,11 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
      * @return RunAsAccountType|null
     */
     public function getRunAsAccount(): ?RunAsAccountType {
-        return $this->getBackingStore()->get('runAsAccount');
+        $val = $this->getBackingStore()->get('runAsAccount');
+        if (is_null($val) || $val instanceof RunAsAccountType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'runAsAccount'");
     }
 
     /**
@@ -104,7 +132,11 @@ class Win32LobAppPowerShellScriptRule extends Win32LobAppRule implements Parsabl
      * @return string|null
     */
     public function getScriptContent(): ?string {
-        return $this->getBackingStore()->get('scriptContent');
+        $val = $this->getBackingStore()->get('scriptContent');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scriptContent'");
     }
 
     /**

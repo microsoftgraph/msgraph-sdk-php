@@ -35,7 +35,7 @@ class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -53,7 +53,11 @@ class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable
      * @return string|null
     */
     public function getIssuerUri(): ?string {
-        return $this->getBackingStore()->get('issuerUri');
+        $val = $this->getBackingStore()->get('issuerUri');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'issuerUri'");
     }
 
     /**
@@ -61,7 +65,11 @@ class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable
      * @return string|null
     */
     public function getMetadataExchangeUri(): ?string {
-        return $this->getBackingStore()->get('metadataExchangeUri');
+        $val = $this->getBackingStore()->get('metadataExchangeUri');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'metadataExchangeUri'");
     }
 
     /**
@@ -69,7 +77,11 @@ class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable
      * @return string|null
     */
     public function getPassiveSignInUri(): ?string {
-        return $this->getBackingStore()->get('passiveSignInUri');
+        $val = $this->getBackingStore()->get('passiveSignInUri');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passiveSignInUri'");
     }
 
     /**
@@ -77,7 +89,11 @@ class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable
      * @return AuthenticationProtocol|null
     */
     public function getPreferredAuthenticationProtocol(): ?AuthenticationProtocol {
-        return $this->getBackingStore()->get('preferredAuthenticationProtocol');
+        $val = $this->getBackingStore()->get('preferredAuthenticationProtocol');
+        if (is_null($val) || $val instanceof AuthenticationProtocol) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'preferredAuthenticationProtocol'");
     }
 
     /**
@@ -85,7 +101,11 @@ class SamlOrWsFedProvider extends IdentityProviderBase implements Parsable
      * @return string|null
     */
     public function getSigningCertificate(): ?string {
-        return $this->getBackingStore()->get('signingCertificate');
+        $val = $this->getBackingStore()->get('signingCertificate');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'signingCertificate'");
     }
 
     /**

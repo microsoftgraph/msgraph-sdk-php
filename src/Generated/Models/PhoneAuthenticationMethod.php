@@ -27,7 +27,7 @@ class PhoneAuthenticationMethod extends AuthenticationMethod implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -43,7 +43,11 @@ class PhoneAuthenticationMethod extends AuthenticationMethod implements Parsable
      * @return string|null
     */
     public function getPhoneNumber(): ?string {
-        return $this->getBackingStore()->get('phoneNumber');
+        $val = $this->getBackingStore()->get('phoneNumber');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'phoneNumber'");
     }
 
     /**
@@ -51,7 +55,11 @@ class PhoneAuthenticationMethod extends AuthenticationMethod implements Parsable
      * @return AuthenticationPhoneType|null
     */
     public function getPhoneType(): ?AuthenticationPhoneType {
-        return $this->getBackingStore()->get('phoneType');
+        $val = $this->getBackingStore()->get('phoneType');
+        if (is_null($val) || $val instanceof AuthenticationPhoneType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'phoneType'");
     }
 
     /**
@@ -59,7 +67,11 @@ class PhoneAuthenticationMethod extends AuthenticationMethod implements Parsable
      * @return AuthenticationMethodSignInState|null
     */
     public function getSmsSignInState(): ?AuthenticationMethodSignInState {
-        return $this->getBackingStore()->get('smsSignInState');
+        $val = $this->getBackingStore()->get('smsSignInState');
+        if (is_null($val) || $val instanceof AuthenticationMethodSignInState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'smsSignInState'");
     }
 
     /**

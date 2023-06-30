@@ -39,7 +39,12 @@ class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getAddress(): ?string {
-        return $this->getBackingStore()->get('address');
+        $val = $this->getBackingStore()->get('address');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'address'");
     }
 
     /**
@@ -60,7 +69,7 @@ class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -78,7 +87,11 @@ class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getItemId(): ?string {
-        return $this->getBackingStore()->get('itemId');
+        $val = $this->getBackingStore()->get('itemId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'itemId'");
     }
 
     /**
@@ -86,7 +99,11 @@ class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -94,7 +111,11 @@ class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getRelevanceScore(): ?float {
-        return $this->getBackingStore()->get('relevanceScore');
+        $val = $this->getBackingStore()->get('relevanceScore');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'relevanceScore'");
     }
 
     /**
@@ -102,7 +123,11 @@ class ScoredEmailAddress implements AdditionalDataHolder, BackedModel, Parsable
      * @return SelectionLikelihoodInfo|null
     */
     public function getSelectionLikelihood(): ?SelectionLikelihoodInfo {
-        return $this->getBackingStore()->get('selectionLikelihood');
+        $val = $this->getBackingStore()->get('selectionLikelihood');
+        if (is_null($val) || $val instanceof SelectionLikelihoodInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'selectionLikelihood'");
     }
 
     /**

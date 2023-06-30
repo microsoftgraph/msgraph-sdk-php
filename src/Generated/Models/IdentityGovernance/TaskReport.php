@@ -7,6 +7,7 @@ use Microsoft\Graph\Generated\Models\Entity;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class TaskReport extends Entity implements Parsable 
 {
@@ -31,7 +32,11 @@ class TaskReport extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCompletedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('completedDateTime');
+        $val = $this->getBackingStore()->get('completedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'completedDateTime'");
     }
 
     /**
@@ -39,12 +44,16 @@ class TaskReport extends Entity implements Parsable
      * @return int|null
     */
     public function getFailedUsersCount(): ?int {
-        return $this->getBackingStore()->get('failedUsersCount');
+        $val = $this->getBackingStore()->get('failedUsersCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'failedUsersCount'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -69,7 +78,11 @@ class TaskReport extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastUpdatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastUpdatedDateTime');
+        $val = $this->getBackingStore()->get('lastUpdatedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastUpdatedDateTime'");
     }
 
     /**
@@ -77,7 +90,11 @@ class TaskReport extends Entity implements Parsable
      * @return LifecycleWorkflowProcessingStatus|null
     */
     public function getProcessingStatus(): ?LifecycleWorkflowProcessingStatus {
-        return $this->getBackingStore()->get('processingStatus');
+        $val = $this->getBackingStore()->get('processingStatus');
+        if (is_null($val) || $val instanceof LifecycleWorkflowProcessingStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'processingStatus'");
     }
 
     /**
@@ -85,7 +102,11 @@ class TaskReport extends Entity implements Parsable
      * @return string|null
     */
     public function getRunId(): ?string {
-        return $this->getBackingStore()->get('runId');
+        $val = $this->getBackingStore()->get('runId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'runId'");
     }
 
     /**
@@ -93,7 +114,11 @@ class TaskReport extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getStartedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('startedDateTime');
+        $val = $this->getBackingStore()->get('startedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'startedDateTime'");
     }
 
     /**
@@ -101,7 +126,11 @@ class TaskReport extends Entity implements Parsable
      * @return int|null
     */
     public function getSuccessfulUsersCount(): ?int {
-        return $this->getBackingStore()->get('successfulUsersCount');
+        $val = $this->getBackingStore()->get('successfulUsersCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'successfulUsersCount'");
     }
 
     /**
@@ -109,7 +138,11 @@ class TaskReport extends Entity implements Parsable
      * @return Task|null
     */
     public function getTask(): ?Task {
-        return $this->getBackingStore()->get('task');
+        $val = $this->getBackingStore()->get('task');
+        if (is_null($val) || $val instanceof Task) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'task'");
     }
 
     /**
@@ -117,7 +150,11 @@ class TaskReport extends Entity implements Parsable
      * @return TaskDefinition|null
     */
     public function getTaskDefinition(): ?TaskDefinition {
-        return $this->getBackingStore()->get('taskDefinition');
+        $val = $this->getBackingStore()->get('taskDefinition');
+        if (is_null($val) || $val instanceof TaskDefinition) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'taskDefinition'");
     }
 
     /**
@@ -125,7 +162,13 @@ class TaskReport extends Entity implements Parsable
      * @return array<TaskProcessingResult>|null
     */
     public function getTaskProcessingResults(): ?array {
-        return $this->getBackingStore()->get('taskProcessingResults');
+        $val = $this->getBackingStore()->get('taskProcessingResults');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TaskProcessingResult::class);
+            /** @var array<TaskProcessingResult>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'taskProcessingResults'");
     }
 
     /**
@@ -133,7 +176,11 @@ class TaskReport extends Entity implements Parsable
      * @return int|null
     */
     public function getTotalUsersCount(): ?int {
-        return $this->getBackingStore()->get('totalUsersCount');
+        $val = $this->getBackingStore()->get('totalUsersCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'totalUsersCount'");
     }
 
     /**
@@ -141,7 +188,11 @@ class TaskReport extends Entity implements Parsable
      * @return int|null
     */
     public function getUnprocessedUsersCount(): ?int {
-        return $this->getBackingStore()->get('unprocessedUsersCount');
+        $val = $this->getBackingStore()->get('unprocessedUsersCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'unprocessedUsersCount'");
     }
 
     /**

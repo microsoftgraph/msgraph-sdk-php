@@ -27,7 +27,7 @@ class EdiscoveryCaseSettings extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -43,7 +43,11 @@ class EdiscoveryCaseSettings extends Entity implements Parsable
      * @return OcrSettings|null
     */
     public function getOcr(): ?OcrSettings {
-        return $this->getBackingStore()->get('ocr');
+        $val = $this->getBackingStore()->get('ocr');
+        if (is_null($val) || $val instanceof OcrSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'ocr'");
     }
 
     /**
@@ -51,7 +55,11 @@ class EdiscoveryCaseSettings extends Entity implements Parsable
      * @return RedundancyDetectionSettings|null
     */
     public function getRedundancyDetection(): ?RedundancyDetectionSettings {
-        return $this->getBackingStore()->get('redundancyDetection');
+        $val = $this->getBackingStore()->get('redundancyDetection');
+        if (is_null($val) || $val instanceof RedundancyDetectionSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'redundancyDetection'");
     }
 
     /**
@@ -59,7 +67,11 @@ class EdiscoveryCaseSettings extends Entity implements Parsable
      * @return TopicModelingSettings|null
     */
     public function getTopicModeling(): ?TopicModelingSettings {
-        return $this->getBackingStore()->get('topicModeling');
+        $val = $this->getBackingStore()->get('topicModeling');
+        if (is_null($val) || $val instanceof TopicModelingSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'topicModeling'");
     }
 
     /**

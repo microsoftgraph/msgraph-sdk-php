@@ -27,7 +27,7 @@ class TeamJoiningEnabledEventMessageDetail extends EventMessageDetail implements
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -42,7 +42,11 @@ class TeamJoiningEnabledEventMessageDetail extends EventMessageDetail implements
      * @return IdentitySet|null
     */
     public function getInitiator(): ?IdentitySet {
-        return $this->getBackingStore()->get('initiator');
+        $val = $this->getBackingStore()->get('initiator');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'initiator'");
     }
 
     /**
@@ -50,7 +54,11 @@ class TeamJoiningEnabledEventMessageDetail extends EventMessageDetail implements
      * @return string|null
     */
     public function getTeamId(): ?string {
-        return $this->getBackingStore()->get('teamId');
+        $val = $this->getBackingStore()->get('teamId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'teamId'");
     }
 
     /**

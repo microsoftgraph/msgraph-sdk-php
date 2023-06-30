@@ -30,7 +30,11 @@ class AppleManagedIdentityProvider extends IdentityProviderBase implements Parsa
      * @return string|null
     */
     public function getCertificateData(): ?string {
-        return $this->getBackingStore()->get('certificateData');
+        $val = $this->getBackingStore()->get('certificateData');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'certificateData'");
     }
 
     /**
@@ -38,12 +42,16 @@ class AppleManagedIdentityProvider extends IdentityProviderBase implements Parsa
      * @return string|null
     */
     public function getDeveloperId(): ?string {
-        return $this->getBackingStore()->get('developerId');
+        $val = $this->getBackingStore()->get('developerId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'developerId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -60,7 +68,11 @@ class AppleManagedIdentityProvider extends IdentityProviderBase implements Parsa
      * @return string|null
     */
     public function getKeyId(): ?string {
-        return $this->getBackingStore()->get('keyId');
+        $val = $this->getBackingStore()->get('keyId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'keyId'");
     }
 
     /**
@@ -68,7 +80,11 @@ class AppleManagedIdentityProvider extends IdentityProviderBase implements Parsa
      * @return string|null
     */
     public function getServiceId(): ?string {
-        return $this->getBackingStore()->get('serviceId');
+        $val = $this->getBackingStore()->get('serviceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'serviceId'");
     }
 
     /**

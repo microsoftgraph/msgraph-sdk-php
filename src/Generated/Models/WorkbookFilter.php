@@ -29,12 +29,16 @@ class WorkbookFilter extends Entity implements Parsable
      * @return WorkbookFilterCriteria|null
     */
     public function getCriteria(): ?WorkbookFilterCriteria {
-        return $this->getBackingStore()->get('criteria');
+        $val = $this->getBackingStore()->get('criteria');
+        if (is_null($val) || $val instanceof WorkbookFilterCriteria) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'criteria'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

@@ -27,7 +27,7 @@ class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings implements
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -42,7 +42,11 @@ class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings implements
      * @return bool|null
     */
     public function getUseDeviceLicensing(): ?bool {
-        return $this->getBackingStore()->get('useDeviceLicensing');
+        $val = $this->getBackingStore()->get('useDeviceLicensing');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'useDeviceLicensing'");
     }
 
     /**
@@ -50,7 +54,11 @@ class IosVppAppAssignmentSettings extends MobileAppAssignmentSettings implements
      * @return string|null
     */
     public function getVpnConfigurationId(): ?string {
-        return $this->getBackingStore()->get('vpnConfigurationId');
+        $val = $this->getBackingStore()->get('vpnConfigurationId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'vpnConfigurationId'");
     }
 
     /**

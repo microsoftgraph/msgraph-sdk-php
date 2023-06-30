@@ -26,7 +26,7 @@ class WorkbookTableColumn extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -43,7 +43,11 @@ class WorkbookTableColumn extends Entity implements Parsable
      * @return WorkbookFilter|null
     */
     public function getFilter(): ?WorkbookFilter {
-        return $this->getBackingStore()->get('filter');
+        $val = $this->getBackingStore()->get('filter');
+        if (is_null($val) || $val instanceof WorkbookFilter) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'filter'");
     }
 
     /**
@@ -51,7 +55,11 @@ class WorkbookTableColumn extends Entity implements Parsable
      * @return int|null
     */
     public function getIndex(): ?int {
-        return $this->getBackingStore()->get('index');
+        $val = $this->getBackingStore()->get('index');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'index'");
     }
 
     /**
@@ -59,7 +67,11 @@ class WorkbookTableColumn extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -67,7 +79,11 @@ class WorkbookTableColumn extends Entity implements Parsable
      * @return Json|null
     */
     public function getValues(): ?Json {
-        return $this->getBackingStore()->get('values');
+        $val = $this->getBackingStore()->get('values');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'values'");
     }
 
     /**

@@ -39,7 +39,12 @@ class AssignUserToDevicePostRequestBody implements AdditionalDataHolder, BackedM
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class AssignUserToDevicePostRequestBody implements AdditionalDataHolder, BackedM
      * @return string|null
     */
     public function getAddressableUserName(): ?string {
-        return $this->getBackingStore()->get('addressableUserName');
+        $val = $this->getBackingStore()->get('addressableUserName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'addressableUserName'");
     }
 
     /**
@@ -60,7 +69,7 @@ class AssignUserToDevicePostRequestBody implements AdditionalDataHolder, BackedM
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -75,7 +84,11 @@ class AssignUserToDevicePostRequestBody implements AdditionalDataHolder, BackedM
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
-        return $this->getBackingStore()->get('userPrincipalName');
+        $val = $this->getBackingStore()->get('userPrincipalName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userPrincipalName'");
     }
 
     /**

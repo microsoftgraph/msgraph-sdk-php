@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Notebook extends OnenoteEntityHierarchyModel implements Parsable 
 {
@@ -27,7 +28,7 @@ class Notebook extends OnenoteEntityHierarchyModel implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -48,7 +49,11 @@ class Notebook extends OnenoteEntityHierarchyModel implements Parsable
      * @return bool|null
     */
     public function getIsDefault(): ?bool {
-        return $this->getBackingStore()->get('isDefault');
+        $val = $this->getBackingStore()->get('isDefault');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isDefault'");
     }
 
     /**
@@ -56,7 +61,11 @@ class Notebook extends OnenoteEntityHierarchyModel implements Parsable
      * @return bool|null
     */
     public function getIsShared(): ?bool {
-        return $this->getBackingStore()->get('isShared');
+        $val = $this->getBackingStore()->get('isShared');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isShared'");
     }
 
     /**
@@ -64,7 +73,11 @@ class Notebook extends OnenoteEntityHierarchyModel implements Parsable
      * @return NotebookLinks|null
     */
     public function getLinks(): ?NotebookLinks {
-        return $this->getBackingStore()->get('links');
+        $val = $this->getBackingStore()->get('links');
+        if (is_null($val) || $val instanceof NotebookLinks) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'links'");
     }
 
     /**
@@ -72,7 +85,13 @@ class Notebook extends OnenoteEntityHierarchyModel implements Parsable
      * @return array<SectionGroup>|null
     */
     public function getSectionGroups(): ?array {
-        return $this->getBackingStore()->get('sectionGroups');
+        $val = $this->getBackingStore()->get('sectionGroups');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SectionGroup::class);
+            /** @var array<SectionGroup>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sectionGroups'");
     }
 
     /**
@@ -80,7 +99,11 @@ class Notebook extends OnenoteEntityHierarchyModel implements Parsable
      * @return string|null
     */
     public function getSectionGroupsUrl(): ?string {
-        return $this->getBackingStore()->get('sectionGroupsUrl');
+        $val = $this->getBackingStore()->get('sectionGroupsUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sectionGroupsUrl'");
     }
 
     /**
@@ -88,7 +111,13 @@ class Notebook extends OnenoteEntityHierarchyModel implements Parsable
      * @return array<OnenoteSection>|null
     */
     public function getSections(): ?array {
-        return $this->getBackingStore()->get('sections');
+        $val = $this->getBackingStore()->get('sections');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, OnenoteSection::class);
+            /** @var array<OnenoteSection>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sections'");
     }
 
     /**
@@ -96,7 +125,11 @@ class Notebook extends OnenoteEntityHierarchyModel implements Parsable
      * @return string|null
     */
     public function getSectionsUrl(): ?string {
-        return $this->getBackingStore()->get('sectionsUrl');
+        $val = $this->getBackingStore()->get('sectionsUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sectionsUrl'");
     }
 
     /**
@@ -104,7 +137,11 @@ class Notebook extends OnenoteEntityHierarchyModel implements Parsable
      * @return OnenoteUserRole|null
     */
     public function getUserRole(): ?OnenoteUserRole {
-        return $this->getBackingStore()->get('userRole');
+        $val = $this->getBackingStore()->get('userRole');
+        if (is_null($val) || $val instanceof OnenoteUserRole) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userRole'");
     }
 
     /**

@@ -40,7 +40,12 @@ class SetDataPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -53,7 +58,7 @@ class SetDataPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -68,7 +73,11 @@ class SetDataPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @return string|null
     */
     public function getSeriesBy(): ?string {
-        return $this->getBackingStore()->get('seriesBy');
+        $val = $this->getBackingStore()->get('seriesBy');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'seriesBy'");
     }
 
     /**
@@ -76,7 +85,11 @@ class SetDataPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @return Json|null
     */
     public function getSourceData(): ?Json {
-        return $this->getBackingStore()->get('sourceData');
+        $val = $this->getBackingStore()->get('sourceData');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sourceData'");
     }
 
     /**

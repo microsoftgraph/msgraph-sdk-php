@@ -29,12 +29,16 @@ class WorkbookOperation extends Entity implements Parsable
      * @return WorkbookOperationError|null
     */
     public function getError(): ?WorkbookOperationError {
-        return $this->getBackingStore()->get('error');
+        $val = $this->getBackingStore()->get('error');
+        if (is_null($val) || $val instanceof WorkbookOperationError) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'error'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -50,7 +54,11 @@ class WorkbookOperation extends Entity implements Parsable
      * @return string|null
     */
     public function getResourceLocation(): ?string {
-        return $this->getBackingStore()->get('resourceLocation');
+        $val = $this->getBackingStore()->get('resourceLocation');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceLocation'");
     }
 
     /**
@@ -58,7 +66,11 @@ class WorkbookOperation extends Entity implements Parsable
      * @return WorkbookOperationStatus|null
     */
     public function getStatus(): ?WorkbookOperationStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof WorkbookOperationStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**

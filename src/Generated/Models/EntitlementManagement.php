@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class EntitlementManagement extends Entity implements Parsable 
 {
@@ -29,7 +30,13 @@ class EntitlementManagement extends Entity implements Parsable
      * @return array<Approval>|null
     */
     public function getAccessPackageAssignmentApprovals(): ?array {
-        return $this->getBackingStore()->get('accessPackageAssignmentApprovals');
+        $val = $this->getBackingStore()->get('accessPackageAssignmentApprovals');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Approval::class);
+            /** @var array<Approval>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'accessPackageAssignmentApprovals'");
     }
 
     /**
@@ -37,7 +44,13 @@ class EntitlementManagement extends Entity implements Parsable
      * @return array<AccessPackage>|null
     */
     public function getAccessPackages(): ?array {
-        return $this->getBackingStore()->get('accessPackages');
+        $val = $this->getBackingStore()->get('accessPackages');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessPackage::class);
+            /** @var array<AccessPackage>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'accessPackages'");
     }
 
     /**
@@ -45,7 +58,13 @@ class EntitlementManagement extends Entity implements Parsable
      * @return array<AccessPackageAssignmentPolicy>|null
     */
     public function getAssignmentPolicies(): ?array {
-        return $this->getBackingStore()->get('assignmentPolicies');
+        $val = $this->getBackingStore()->get('assignmentPolicies');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessPackageAssignmentPolicy::class);
+            /** @var array<AccessPackageAssignmentPolicy>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignmentPolicies'");
     }
 
     /**
@@ -53,7 +72,13 @@ class EntitlementManagement extends Entity implements Parsable
      * @return array<AccessPackageAssignmentRequest>|null
     */
     public function getAssignmentRequests(): ?array {
-        return $this->getBackingStore()->get('assignmentRequests');
+        $val = $this->getBackingStore()->get('assignmentRequests');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessPackageAssignmentRequest::class);
+            /** @var array<AccessPackageAssignmentRequest>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignmentRequests'");
     }
 
     /**
@@ -61,7 +86,13 @@ class EntitlementManagement extends Entity implements Parsable
      * @return array<AccessPackageAssignment>|null
     */
     public function getAssignments(): ?array {
-        return $this->getBackingStore()->get('assignments');
+        $val = $this->getBackingStore()->get('assignments');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessPackageAssignment::class);
+            /** @var array<AccessPackageAssignment>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignments'");
     }
 
     /**
@@ -69,7 +100,13 @@ class EntitlementManagement extends Entity implements Parsable
      * @return array<AccessPackageCatalog>|null
     */
     public function getCatalogs(): ?array {
-        return $this->getBackingStore()->get('catalogs');
+        $val = $this->getBackingStore()->get('catalogs');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessPackageCatalog::class);
+            /** @var array<AccessPackageCatalog>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'catalogs'");
     }
 
     /**
@@ -77,12 +114,18 @@ class EntitlementManagement extends Entity implements Parsable
      * @return array<ConnectedOrganization>|null
     */
     public function getConnectedOrganizations(): ?array {
-        return $this->getBackingStore()->get('connectedOrganizations');
+        $val = $this->getBackingStore()->get('connectedOrganizations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ConnectedOrganization::class);
+            /** @var array<ConnectedOrganization>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'connectedOrganizations'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -103,7 +146,11 @@ class EntitlementManagement extends Entity implements Parsable
      * @return EntitlementManagementSettings|null
     */
     public function getSettings(): ?EntitlementManagementSettings {
-        return $this->getBackingStore()->get('settings');
+        $val = $this->getBackingStore()->get('settings');
+        if (is_null($val) || $val instanceof EntitlementManagementSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'settings'");
     }
 
     /**

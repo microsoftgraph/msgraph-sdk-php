@@ -34,7 +34,11 @@ class MobileAppContentFile extends Entity implements Parsable
      * @return string|null
     */
     public function getAzureStorageUri(): ?string {
-        return $this->getBackingStore()->get('azureStorageUri');
+        $val = $this->getBackingStore()->get('azureStorageUri');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'azureStorageUri'");
     }
 
     /**
@@ -42,7 +46,11 @@ class MobileAppContentFile extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getAzureStorageUriExpirationDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('azureStorageUriExpirationDateTime');
+        $val = $this->getBackingStore()->get('azureStorageUriExpirationDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'azureStorageUriExpirationDateTime'");
     }
 
     /**
@@ -50,12 +58,16 @@ class MobileAppContentFile extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -77,7 +89,11 @@ class MobileAppContentFile extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsCommitted(): ?bool {
-        return $this->getBackingStore()->get('isCommitted');
+        $val = $this->getBackingStore()->get('isCommitted');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isCommitted'");
     }
 
     /**
@@ -85,7 +101,11 @@ class MobileAppContentFile extends Entity implements Parsable
      * @return StreamInterface|null
     */
     public function getManifest(): ?StreamInterface {
-        return $this->getBackingStore()->get('manifest');
+        $val = $this->getBackingStore()->get('manifest');
+        if (is_null($val) || $val instanceof StreamInterface) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'manifest'");
     }
 
     /**
@@ -93,7 +113,11 @@ class MobileAppContentFile extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -101,7 +125,11 @@ class MobileAppContentFile extends Entity implements Parsable
      * @return int|null
     */
     public function getSize(): ?int {
-        return $this->getBackingStore()->get('size');
+        $val = $this->getBackingStore()->get('size');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'size'");
     }
 
     /**
@@ -109,7 +137,11 @@ class MobileAppContentFile extends Entity implements Parsable
      * @return int|null
     */
     public function getSizeEncrypted(): ?int {
-        return $this->getBackingStore()->get('sizeEncrypted');
+        $val = $this->getBackingStore()->get('sizeEncrypted');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sizeEncrypted'");
     }
 
     /**
@@ -117,7 +149,11 @@ class MobileAppContentFile extends Entity implements Parsable
      * @return MobileAppContentFileUploadState|null
     */
     public function getUploadState(): ?MobileAppContentFileUploadState {
-        return $this->getBackingStore()->get('uploadState');
+        $val = $this->getBackingStore()->get('uploadState');
+        if (is_null($val) || $val instanceof MobileAppContentFileUploadState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'uploadState'");
     }
 
     /**

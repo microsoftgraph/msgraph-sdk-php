@@ -30,7 +30,11 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
      * @return string|null
     */
     public function getBinaryName(): ?string {
-        return $this->getBackingStore()->get('binaryName');
+        $val = $this->getBackingStore()->get('binaryName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'binaryName'");
     }
 
     /**
@@ -38,7 +42,11 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
      * @return string|null
     */
     public function getBinaryVersionHigh(): ?string {
-        return $this->getBackingStore()->get('binaryVersionHigh');
+        $val = $this->getBackingStore()->get('binaryVersionHigh');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'binaryVersionHigh'");
     }
 
     /**
@@ -46,12 +54,16 @@ class WindowsInformationProtectionDesktopApp extends WindowsInformationProtectio
      * @return string|null
     */
     public function getBinaryVersionLow(): ?string {
-        return $this->getBackingStore()->get('binaryVersionLow');
+        $val = $this->getBackingStore()->get('binaryVersionLow');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'binaryVersionLow'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

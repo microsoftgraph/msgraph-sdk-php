@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class MacOSLobApp extends MobileLobApp implements Parsable 
 {
@@ -30,7 +31,11 @@ class MacOSLobApp extends MobileLobApp implements Parsable
      * @return string|null
     */
     public function getBuildNumber(): ?string {
-        return $this->getBackingStore()->get('buildNumber');
+        $val = $this->getBackingStore()->get('buildNumber');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'buildNumber'");
     }
 
     /**
@@ -38,7 +43,11 @@ class MacOSLobApp extends MobileLobApp implements Parsable
      * @return string|null
     */
     public function getBundleId(): ?string {
-        return $this->getBackingStore()->get('bundleId');
+        $val = $this->getBackingStore()->get('bundleId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bundleId'");
     }
 
     /**
@@ -46,12 +55,18 @@ class MacOSLobApp extends MobileLobApp implements Parsable
      * @return array<MacOSLobChildApp>|null
     */
     public function getChildApps(): ?array {
-        return $this->getBackingStore()->get('childApps');
+        $val = $this->getBackingStore()->get('childApps');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, MacOSLobChildApp::class);
+            /** @var array<MacOSLobChildApp>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'childApps'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -61,7 +76,14 @@ class MacOSLobApp extends MobileLobApp implements Parsable
             'childApps' => fn(ParseNode $n) => $o->setChildApps($n->getCollectionOfObjectValues([MacOSLobChildApp::class, 'createFromDiscriminatorValue'])),
             'ignoreVersionDetection' => fn(ParseNode $n) => $o->setIgnoreVersionDetection($n->getBooleanValue()),
             'installAsManaged' => fn(ParseNode $n) => $o->setInstallAsManaged($n->getBooleanValue()),
-            'md5Hash' => fn(ParseNode $n) => $o->setMd5Hash($n->getCollectionOfPrimitiveValues()),
+            'md5Hash' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setMd5Hash($val);
+            },
             'md5HashChunkSize' => fn(ParseNode $n) => $o->setMd5HashChunkSize($n->getIntegerValue()),
             'minimumSupportedOperatingSystem' => fn(ParseNode $n) => $o->setMinimumSupportedOperatingSystem($n->getObjectValue([MacOSMinimumOperatingSystem::class, 'createFromDiscriminatorValue'])),
             'versionNumber' => fn(ParseNode $n) => $o->setVersionNumber($n->getStringValue()),
@@ -73,7 +95,11 @@ class MacOSLobApp extends MobileLobApp implements Parsable
      * @return bool|null
     */
     public function getIgnoreVersionDetection(): ?bool {
-        return $this->getBackingStore()->get('ignoreVersionDetection');
+        $val = $this->getBackingStore()->get('ignoreVersionDetection');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'ignoreVersionDetection'");
     }
 
     /**
@@ -81,7 +107,11 @@ class MacOSLobApp extends MobileLobApp implements Parsable
      * @return bool|null
     */
     public function getInstallAsManaged(): ?bool {
-        return $this->getBackingStore()->get('installAsManaged');
+        $val = $this->getBackingStore()->get('installAsManaged');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'installAsManaged'");
     }
 
     /**
@@ -89,7 +119,13 @@ class MacOSLobApp extends MobileLobApp implements Parsable
      * @return array<string>|null
     */
     public function getMd5Hash(): ?array {
-        return $this->getBackingStore()->get('md5Hash');
+        $val = $this->getBackingStore()->get('md5Hash');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'md5Hash'");
     }
 
     /**
@@ -97,7 +133,11 @@ class MacOSLobApp extends MobileLobApp implements Parsable
      * @return int|null
     */
     public function getMd5HashChunkSize(): ?int {
-        return $this->getBackingStore()->get('md5HashChunkSize');
+        $val = $this->getBackingStore()->get('md5HashChunkSize');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'md5HashChunkSize'");
     }
 
     /**
@@ -105,7 +145,11 @@ class MacOSLobApp extends MobileLobApp implements Parsable
      * @return MacOSMinimumOperatingSystem|null
     */
     public function getMinimumSupportedOperatingSystem(): ?MacOSMinimumOperatingSystem {
-        return $this->getBackingStore()->get('minimumSupportedOperatingSystem');
+        $val = $this->getBackingStore()->get('minimumSupportedOperatingSystem');
+        if (is_null($val) || $val instanceof MacOSMinimumOperatingSystem) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minimumSupportedOperatingSystem'");
     }
 
     /**
@@ -113,7 +157,11 @@ class MacOSLobApp extends MobileLobApp implements Parsable
      * @return string|null
     */
     public function getVersionNumber(): ?string {
-        return $this->getBackingStore()->get('versionNumber');
+        $val = $this->getBackingStore()->get('versionNumber');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'versionNumber'");
     }
 
     /**

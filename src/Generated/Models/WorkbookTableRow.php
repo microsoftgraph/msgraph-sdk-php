@@ -26,7 +26,7 @@ class WorkbookTableRow extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class WorkbookTableRow extends Entity implements Parsable
      * @return int|null
     */
     public function getIndex(): ?int {
-        return $this->getBackingStore()->get('index');
+        $val = $this->getBackingStore()->get('index');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'index'");
     }
 
     /**
@@ -49,7 +53,11 @@ class WorkbookTableRow extends Entity implements Parsable
      * @return Json|null
     */
     public function getValues(): ?Json {
-        return $this->getBackingStore()->get('values');
+        $val = $this->getBackingStore()->get('values');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'values'");
     }
 
     /**

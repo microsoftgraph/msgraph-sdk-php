@@ -41,12 +41,16 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
      * @return ScheduleChangeRequestActor|null
     */
     public function getAssignedTo(): ?ScheduleChangeRequestActor {
-        return $this->getBackingStore()->get('assignedTo');
+        $val = $this->getBackingStore()->get('assignedTo');
+        if (is_null($val) || $val instanceof ScheduleChangeRequestActor) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignedTo'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -67,7 +71,11 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
      * @return DateTime|null
     */
     public function getManagerActionDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('managerActionDateTime');
+        $val = $this->getBackingStore()->get('managerActionDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'managerActionDateTime'");
     }
 
     /**
@@ -75,7 +83,11 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
      * @return string|null
     */
     public function getManagerActionMessage(): ?string {
-        return $this->getBackingStore()->get('managerActionMessage');
+        $val = $this->getBackingStore()->get('managerActionMessage');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'managerActionMessage'");
     }
 
     /**
@@ -83,7 +95,11 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
      * @return string|null
     */
     public function getManagerUserId(): ?string {
-        return $this->getBackingStore()->get('managerUserId');
+        $val = $this->getBackingStore()->get('managerUserId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'managerUserId'");
     }
 
     /**
@@ -91,7 +107,11 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
      * @return DateTime|null
     */
     public function getSenderDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('senderDateTime');
+        $val = $this->getBackingStore()->get('senderDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'senderDateTime'");
     }
 
     /**
@@ -99,7 +119,11 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
      * @return string|null
     */
     public function getSenderMessage(): ?string {
-        return $this->getBackingStore()->get('senderMessage');
+        $val = $this->getBackingStore()->get('senderMessage');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'senderMessage'");
     }
 
     /**
@@ -107,7 +131,11 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
      * @return string|null
     */
     public function getSenderUserId(): ?string {
-        return $this->getBackingStore()->get('senderUserId');
+        $val = $this->getBackingStore()->get('senderUserId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'senderUserId'");
     }
 
     /**
@@ -115,7 +143,11 @@ class ScheduleChangeRequest extends ChangeTrackedEntity implements Parsable
      * @return ScheduleChangeState|null
     */
     public function getState(): ?ScheduleChangeState {
-        return $this->getBackingStore()->get('state');
+        $val = $this->getBackingStore()->get('state');
+        if (is_null($val) || $val instanceof ScheduleChangeState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
     }
 
     /**

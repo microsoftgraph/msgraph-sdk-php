@@ -19,7 +19,7 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, BackedModel, 
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new SubjectRightsRequestHistory and sets the default values.
+     * Instantiates a new subjectRightsRequestHistory and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -40,7 +40,12 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, BackedModel, 
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,7 +61,11 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, BackedModel, 
      * @return IdentitySet|null
     */
     public function getChangedBy(): ?IdentitySet {
-        return $this->getBackingStore()->get('changedBy');
+        $val = $this->getBackingStore()->get('changedBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'changedBy'");
     }
 
     /**
@@ -64,12 +73,16 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, BackedModel, 
      * @return DateTime|null
     */
     public function getEventDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('eventDateTime');
+        $val = $this->getBackingStore()->get('eventDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'eventDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -88,7 +101,11 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -96,7 +113,11 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, BackedModel, 
      * @return SubjectRightsRequestStage|null
     */
     public function getStage(): ?SubjectRightsRequestStage {
-        return $this->getBackingStore()->get('stage');
+        $val = $this->getBackingStore()->get('stage');
+        if (is_null($val) || $val instanceof SubjectRightsRequestStage) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'stage'");
     }
 
     /**
@@ -104,7 +125,11 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, BackedModel, 
      * @return SubjectRightsRequestStageStatus|null
     */
     public function getStageStatus(): ?SubjectRightsRequestStageStatus {
-        return $this->getBackingStore()->get('stageStatus');
+        $val = $this->getBackingStore()->get('stageStatus');
+        if (is_null($val) || $val instanceof SubjectRightsRequestStageStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'stageStatus'");
     }
 
     /**
@@ -112,7 +137,11 @@ class SubjectRightsRequestHistory implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getType(): ?string {
-        return $this->getBackingStore()->get('type');
+        $val = $this->getBackingStore()->get('type');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
     }
 
     /**

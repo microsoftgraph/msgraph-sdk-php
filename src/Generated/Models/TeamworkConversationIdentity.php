@@ -30,12 +30,16 @@ class TeamworkConversationIdentity extends Identity implements Parsable
      * @return TeamworkConversationIdentityType|null
     */
     public function getConversationIdentityType(): ?TeamworkConversationIdentityType {
-        return $this->getBackingStore()->get('conversationIdentityType');
+        $val = $this->getBackingStore()->get('conversationIdentityType');
+        if (is_null($val) || $val instanceof TeamworkConversationIdentityType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'conversationIdentityType'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

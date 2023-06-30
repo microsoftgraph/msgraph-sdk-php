@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AndroidCustomConfiguration extends DeviceConfiguration implements Parsable 
 {
@@ -27,7 +28,7 @@ class AndroidCustomConfiguration extends DeviceConfiguration implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +42,13 @@ class AndroidCustomConfiguration extends DeviceConfiguration implements Parsable
      * @return array<OmaSetting>|null
     */
     public function getOmaSettings(): ?array {
-        return $this->getBackingStore()->get('omaSettings');
+        $val = $this->getBackingStore()->get('omaSettings');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, OmaSetting::class);
+            /** @var array<OmaSetting>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'omaSettings'");
     }
 
     /**

@@ -39,7 +39,12 @@ class AttributeMapping implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +60,11 @@ class AttributeMapping implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getDefaultValue(): ?string {
-        return $this->getBackingStore()->get('defaultValue');
+        $val = $this->getBackingStore()->get('defaultValue');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'defaultValue'");
     }
 
     /**
@@ -63,12 +72,16 @@ class AttributeMapping implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getExportMissingReferences(): ?bool {
-        return $this->getBackingStore()->get('exportMissingReferences');
+        $val = $this->getBackingStore()->get('exportMissingReferences');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'exportMissingReferences'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -89,7 +102,11 @@ class AttributeMapping implements AdditionalDataHolder, BackedModel, Parsable
      * @return AttributeFlowBehavior|null
     */
     public function getFlowBehavior(): ?AttributeFlowBehavior {
-        return $this->getBackingStore()->get('flowBehavior');
+        $val = $this->getBackingStore()->get('flowBehavior');
+        if (is_null($val) || $val instanceof AttributeFlowBehavior) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'flowBehavior'");
     }
 
     /**
@@ -97,7 +114,11 @@ class AttributeMapping implements AdditionalDataHolder, BackedModel, Parsable
      * @return AttributeFlowType|null
     */
     public function getFlowType(): ?AttributeFlowType {
-        return $this->getBackingStore()->get('flowType');
+        $val = $this->getBackingStore()->get('flowType');
+        if (is_null($val) || $val instanceof AttributeFlowType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'flowType'");
     }
 
     /**
@@ -105,7 +126,11 @@ class AttributeMapping implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getMatchingPriority(): ?int {
-        return $this->getBackingStore()->get('matchingPriority');
+        $val = $this->getBackingStore()->get('matchingPriority');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'matchingPriority'");
     }
 
     /**
@@ -113,7 +138,11 @@ class AttributeMapping implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -121,7 +150,11 @@ class AttributeMapping implements AdditionalDataHolder, BackedModel, Parsable
      * @return AttributeMappingSource|null
     */
     public function getSource(): ?AttributeMappingSource {
-        return $this->getBackingStore()->get('source');
+        $val = $this->getBackingStore()->get('source');
+        if (is_null($val) || $val instanceof AttributeMappingSource) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'source'");
     }
 
     /**
@@ -129,7 +162,11 @@ class AttributeMapping implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getTargetAttributeName(): ?string {
-        return $this->getBackingStore()->get('targetAttributeName');
+        $val = $this->getBackingStore()->get('targetAttributeName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'targetAttributeName'");
     }
 
     /**

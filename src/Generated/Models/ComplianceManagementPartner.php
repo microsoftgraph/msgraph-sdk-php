@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 /**
  * Compliance management partner for all platforms
@@ -33,7 +34,13 @@ class ComplianceManagementPartner extends Entity implements Parsable
      * @return array<ComplianceManagementPartnerAssignment>|null
     */
     public function getAndroidEnrollmentAssignments(): ?array {
-        return $this->getBackingStore()->get('androidEnrollmentAssignments');
+        $val = $this->getBackingStore()->get('androidEnrollmentAssignments');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ComplianceManagementPartnerAssignment::class);
+            /** @var array<ComplianceManagementPartnerAssignment>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'androidEnrollmentAssignments'");
     }
 
     /**
@@ -41,7 +48,11 @@ class ComplianceManagementPartner extends Entity implements Parsable
      * @return bool|null
     */
     public function getAndroidOnboarded(): ?bool {
-        return $this->getBackingStore()->get('androidOnboarded');
+        $val = $this->getBackingStore()->get('androidOnboarded');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'androidOnboarded'");
     }
 
     /**
@@ -49,12 +60,16 @@ class ComplianceManagementPartner extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -76,7 +91,13 @@ class ComplianceManagementPartner extends Entity implements Parsable
      * @return array<ComplianceManagementPartnerAssignment>|null
     */
     public function getIosEnrollmentAssignments(): ?array {
-        return $this->getBackingStore()->get('iosEnrollmentAssignments');
+        $val = $this->getBackingStore()->get('iosEnrollmentAssignments');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ComplianceManagementPartnerAssignment::class);
+            /** @var array<ComplianceManagementPartnerAssignment>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'iosEnrollmentAssignments'");
     }
 
     /**
@@ -84,7 +105,11 @@ class ComplianceManagementPartner extends Entity implements Parsable
      * @return bool|null
     */
     public function getIosOnboarded(): ?bool {
-        return $this->getBackingStore()->get('iosOnboarded');
+        $val = $this->getBackingStore()->get('iosOnboarded');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'iosOnboarded'");
     }
 
     /**
@@ -92,7 +117,11 @@ class ComplianceManagementPartner extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastHeartbeatDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastHeartbeatDateTime');
+        $val = $this->getBackingStore()->get('lastHeartbeatDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastHeartbeatDateTime'");
     }
 
     /**
@@ -100,7 +129,13 @@ class ComplianceManagementPartner extends Entity implements Parsable
      * @return array<ComplianceManagementPartnerAssignment>|null
     */
     public function getMacOsEnrollmentAssignments(): ?array {
-        return $this->getBackingStore()->get('macOsEnrollmentAssignments');
+        $val = $this->getBackingStore()->get('macOsEnrollmentAssignments');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ComplianceManagementPartnerAssignment::class);
+            /** @var array<ComplianceManagementPartnerAssignment>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'macOsEnrollmentAssignments'");
     }
 
     /**
@@ -108,7 +143,11 @@ class ComplianceManagementPartner extends Entity implements Parsable
      * @return bool|null
     */
     public function getMacOsOnboarded(): ?bool {
-        return $this->getBackingStore()->get('macOsOnboarded');
+        $val = $this->getBackingStore()->get('macOsOnboarded');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'macOsOnboarded'");
     }
 
     /**
@@ -116,7 +155,11 @@ class ComplianceManagementPartner extends Entity implements Parsable
      * @return DeviceManagementPartnerTenantState|null
     */
     public function getPartnerState(): ?DeviceManagementPartnerTenantState {
-        return $this->getBackingStore()->get('partnerState');
+        $val = $this->getBackingStore()->get('partnerState');
+        if (is_null($val) || $val instanceof DeviceManagementPartnerTenantState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'partnerState'");
     }
 
     /**

@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class PrinterShare extends PrinterBase implements Parsable 
 {
@@ -31,7 +32,11 @@ class PrinterShare extends PrinterBase implements Parsable
      * @return bool|null
     */
     public function getAllowAllUsers(): ?bool {
-        return $this->getBackingStore()->get('allowAllUsers');
+        $val = $this->getBackingStore()->get('allowAllUsers');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowAllUsers'");
     }
 
     /**
@@ -39,7 +44,13 @@ class PrinterShare extends PrinterBase implements Parsable
      * @return array<Group>|null
     */
     public function getAllowedGroups(): ?array {
-        return $this->getBackingStore()->get('allowedGroups');
+        $val = $this->getBackingStore()->get('allowedGroups');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Group::class);
+            /** @var array<Group>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowedGroups'");
     }
 
     /**
@@ -47,7 +58,13 @@ class PrinterShare extends PrinterBase implements Parsable
      * @return array<User>|null
     */
     public function getAllowedUsers(): ?array {
-        return $this->getBackingStore()->get('allowedUsers');
+        $val = $this->getBackingStore()->get('allowedUsers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, User::class);
+            /** @var array<User>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowedUsers'");
     }
 
     /**
@@ -55,12 +72,16 @@ class PrinterShare extends PrinterBase implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -79,7 +100,11 @@ class PrinterShare extends PrinterBase implements Parsable
      * @return Printer|null
     */
     public function getPrinter(): ?Printer {
-        return $this->getBackingStore()->get('printer');
+        $val = $this->getBackingStore()->get('printer');
+        if (is_null($val) || $val instanceof Printer) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'printer'");
     }
 
     /**
@@ -87,7 +112,11 @@ class PrinterShare extends PrinterBase implements Parsable
      * @return PrinterShareViewpoint|null
     */
     public function getViewPoint(): ?PrinterShareViewpoint {
-        return $this->getBackingStore()->get('viewPoint');
+        $val = $this->getBackingStore()->get('viewPoint');
+        if (is_null($val) || $val instanceof PrinterShareViewpoint) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'viewPoint'");
     }
 
     /**

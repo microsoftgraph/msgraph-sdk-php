@@ -6,11 +6,12 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Device extends DirectoryObject implements Parsable 
 {
     /**
-     * Instantiates a new Device and sets the default values.
+     * Instantiates a new device and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -31,7 +32,11 @@ class Device extends DirectoryObject implements Parsable
      * @return bool|null
     */
     public function getAccountEnabled(): ?bool {
-        return $this->getBackingStore()->get('accountEnabled');
+        $val = $this->getBackingStore()->get('accountEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'accountEnabled'");
     }
 
     /**
@@ -39,7 +44,13 @@ class Device extends DirectoryObject implements Parsable
      * @return array<AlternativeSecurityId>|null
     */
     public function getAlternativeSecurityIds(): ?array {
-        return $this->getBackingStore()->get('alternativeSecurityIds');
+        $val = $this->getBackingStore()->get('alternativeSecurityIds');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AlternativeSecurityId::class);
+            /** @var array<AlternativeSecurityId>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'alternativeSecurityIds'");
     }
 
     /**
@@ -47,7 +58,11 @@ class Device extends DirectoryObject implements Parsable
      * @return DateTime|null
     */
     public function getApproximateLastSignInDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('approximateLastSignInDateTime');
+        $val = $this->getBackingStore()->get('approximateLastSignInDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'approximateLastSignInDateTime'");
     }
 
     /**
@@ -55,7 +70,11 @@ class Device extends DirectoryObject implements Parsable
      * @return DateTime|null
     */
     public function getComplianceExpirationDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('complianceExpirationDateTime');
+        $val = $this->getBackingStore()->get('complianceExpirationDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'complianceExpirationDateTime'");
     }
 
     /**
@@ -63,7 +82,11 @@ class Device extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getDeviceCategory(): ?string {
-        return $this->getBackingStore()->get('deviceCategory');
+        $val = $this->getBackingStore()->get('deviceCategory');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceCategory'");
     }
 
     /**
@@ -71,7 +94,11 @@ class Device extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getDeviceId(): ?string {
-        return $this->getBackingStore()->get('deviceId');
+        $val = $this->getBackingStore()->get('deviceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceId'");
     }
 
     /**
@@ -79,7 +106,11 @@ class Device extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getDeviceMetadata(): ?string {
-        return $this->getBackingStore()->get('deviceMetadata');
+        $val = $this->getBackingStore()->get('deviceMetadata');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceMetadata'");
     }
 
     /**
@@ -87,7 +118,11 @@ class Device extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getDeviceOwnership(): ?string {
-        return $this->getBackingStore()->get('deviceOwnership');
+        $val = $this->getBackingStore()->get('deviceOwnership');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceOwnership'");
     }
 
     /**
@@ -95,7 +130,11 @@ class Device extends DirectoryObject implements Parsable
      * @return int|null
     */
     public function getDeviceVersion(): ?int {
-        return $this->getBackingStore()->get('deviceVersion');
+        $val = $this->getBackingStore()->get('deviceVersion');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceVersion'");
     }
 
     /**
@@ -103,7 +142,11 @@ class Device extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
@@ -111,7 +154,11 @@ class Device extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getEnrollmentProfileName(): ?string {
-        return $this->getBackingStore()->get('enrollmentProfileName');
+        $val = $this->getBackingStore()->get('enrollmentProfileName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enrollmentProfileName'");
     }
 
     /**
@@ -119,12 +166,18 @@ class Device extends DirectoryObject implements Parsable
      * @return array<Extension>|null
     */
     public function getExtensions(): ?array {
-        return $this->getBackingStore()->get('extensions');
+        $val = $this->getBackingStore()->get('extensions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Extension::class);
+            /** @var array<Extension>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'extensions'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -149,12 +202,26 @@ class Device extends DirectoryObject implements Parsable
             'onPremisesSyncEnabled' => fn(ParseNode $n) => $o->setOnPremisesSyncEnabled($n->getBooleanValue()),
             'operatingSystem' => fn(ParseNode $n) => $o->setOperatingSystem($n->getStringValue()),
             'operatingSystemVersion' => fn(ParseNode $n) => $o->setOperatingSystemVersion($n->getStringValue()),
-            'physicalIds' => fn(ParseNode $n) => $o->setPhysicalIds($n->getCollectionOfPrimitiveValues()),
+            'physicalIds' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setPhysicalIds($val);
+            },
             'profileType' => fn(ParseNode $n) => $o->setProfileType($n->getStringValue()),
             'registeredOwners' => fn(ParseNode $n) => $o->setRegisteredOwners($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'registeredUsers' => fn(ParseNode $n) => $o->setRegisteredUsers($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'registrationDateTime' => fn(ParseNode $n) => $o->setRegistrationDateTime($n->getDateTimeValue()),
-            'systemLabels' => fn(ParseNode $n) => $o->setSystemLabels($n->getCollectionOfPrimitiveValues()),
+            'systemLabels' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setSystemLabels($val);
+            },
             'transitiveMemberOf' => fn(ParseNode $n) => $o->setTransitiveMemberOf($n->getCollectionOfObjectValues([DirectoryObject::class, 'createFromDiscriminatorValue'])),
             'trustType' => fn(ParseNode $n) => $o->setTrustType($n->getStringValue()),
         ]);
@@ -165,7 +232,11 @@ class Device extends DirectoryObject implements Parsable
      * @return bool|null
     */
     public function getIsCompliant(): ?bool {
-        return $this->getBackingStore()->get('isCompliant');
+        $val = $this->getBackingStore()->get('isCompliant');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isCompliant'");
     }
 
     /**
@@ -173,7 +244,11 @@ class Device extends DirectoryObject implements Parsable
      * @return bool|null
     */
     public function getIsManaged(): ?bool {
-        return $this->getBackingStore()->get('isManaged');
+        $val = $this->getBackingStore()->get('isManaged');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isManaged'");
     }
 
     /**
@@ -181,7 +256,11 @@ class Device extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getMdmAppId(): ?string {
-        return $this->getBackingStore()->get('mdmAppId');
+        $val = $this->getBackingStore()->get('mdmAppId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mdmAppId'");
     }
 
     /**
@@ -189,7 +268,13 @@ class Device extends DirectoryObject implements Parsable
      * @return array<DirectoryObject>|null
     */
     public function getMemberOf(): ?array {
-        return $this->getBackingStore()->get('memberOf');
+        $val = $this->getBackingStore()->get('memberOf');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DirectoryObject::class);
+            /** @var array<DirectoryObject>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'memberOf'");
     }
 
     /**
@@ -197,7 +282,11 @@ class Device extends DirectoryObject implements Parsable
      * @return DateTime|null
     */
     public function getOnPremisesLastSyncDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('onPremisesLastSyncDateTime');
+        $val = $this->getBackingStore()->get('onPremisesLastSyncDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'onPremisesLastSyncDateTime'");
     }
 
     /**
@@ -205,7 +294,11 @@ class Device extends DirectoryObject implements Parsable
      * @return bool|null
     */
     public function getOnPremisesSyncEnabled(): ?bool {
-        return $this->getBackingStore()->get('onPremisesSyncEnabled');
+        $val = $this->getBackingStore()->get('onPremisesSyncEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'onPremisesSyncEnabled'");
     }
 
     /**
@@ -213,7 +306,11 @@ class Device extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getOperatingSystem(): ?string {
-        return $this->getBackingStore()->get('operatingSystem');
+        $val = $this->getBackingStore()->get('operatingSystem');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operatingSystem'");
     }
 
     /**
@@ -221,7 +318,11 @@ class Device extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getOperatingSystemVersion(): ?string {
-        return $this->getBackingStore()->get('operatingSystemVersion');
+        $val = $this->getBackingStore()->get('operatingSystemVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operatingSystemVersion'");
     }
 
     /**
@@ -229,7 +330,13 @@ class Device extends DirectoryObject implements Parsable
      * @return array<string>|null
     */
     public function getPhysicalIds(): ?array {
-        return $this->getBackingStore()->get('physicalIds');
+        $val = $this->getBackingStore()->get('physicalIds');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'physicalIds'");
     }
 
     /**
@@ -237,7 +344,11 @@ class Device extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getProfileType(): ?string {
-        return $this->getBackingStore()->get('profileType');
+        $val = $this->getBackingStore()->get('profileType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'profileType'");
     }
 
     /**
@@ -245,7 +356,13 @@ class Device extends DirectoryObject implements Parsable
      * @return array<DirectoryObject>|null
     */
     public function getRegisteredOwners(): ?array {
-        return $this->getBackingStore()->get('registeredOwners');
+        $val = $this->getBackingStore()->get('registeredOwners');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DirectoryObject::class);
+            /** @var array<DirectoryObject>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'registeredOwners'");
     }
 
     /**
@@ -253,7 +370,13 @@ class Device extends DirectoryObject implements Parsable
      * @return array<DirectoryObject>|null
     */
     public function getRegisteredUsers(): ?array {
-        return $this->getBackingStore()->get('registeredUsers');
+        $val = $this->getBackingStore()->get('registeredUsers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DirectoryObject::class);
+            /** @var array<DirectoryObject>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'registeredUsers'");
     }
 
     /**
@@ -261,7 +384,11 @@ class Device extends DirectoryObject implements Parsable
      * @return DateTime|null
     */
     public function getRegistrationDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('registrationDateTime');
+        $val = $this->getBackingStore()->get('registrationDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'registrationDateTime'");
     }
 
     /**
@@ -269,7 +396,13 @@ class Device extends DirectoryObject implements Parsable
      * @return array<string>|null
     */
     public function getSystemLabels(): ?array {
-        return $this->getBackingStore()->get('systemLabels');
+        $val = $this->getBackingStore()->get('systemLabels');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'systemLabels'");
     }
 
     /**
@@ -277,7 +410,13 @@ class Device extends DirectoryObject implements Parsable
      * @return array<DirectoryObject>|null
     */
     public function getTransitiveMemberOf(): ?array {
-        return $this->getBackingStore()->get('transitiveMemberOf');
+        $val = $this->getBackingStore()->get('transitiveMemberOf');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DirectoryObject::class);
+            /** @var array<DirectoryObject>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'transitiveMemberOf'");
     }
 
     /**
@@ -285,7 +424,11 @@ class Device extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getTrustType(): ?string {
-        return $this->getBackingStore()->get('trustType');
+        $val = $this->getBackingStore()->get('trustType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'trustType'");
     }
 
     /**

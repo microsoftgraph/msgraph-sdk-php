@@ -26,7 +26,7 @@ class UsedInsight extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -43,7 +43,11 @@ class UsedInsight extends Entity implements Parsable
      * @return UsageDetails|null
     */
     public function getLastUsed(): ?UsageDetails {
-        return $this->getBackingStore()->get('lastUsed');
+        $val = $this->getBackingStore()->get('lastUsed');
+        if (is_null($val) || $val instanceof UsageDetails) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastUsed'");
     }
 
     /**
@@ -51,7 +55,11 @@ class UsedInsight extends Entity implements Parsable
      * @return Entity|null
     */
     public function getResource(): ?Entity {
-        return $this->getBackingStore()->get('resource');
+        $val = $this->getBackingStore()->get('resource');
+        if (is_null($val) || $val instanceof Entity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resource'");
     }
 
     /**
@@ -59,7 +67,11 @@ class UsedInsight extends Entity implements Parsable
      * @return ResourceReference|null
     */
     public function getResourceReference(): ?ResourceReference {
-        return $this->getBackingStore()->get('resourceReference');
+        $val = $this->getBackingStore()->get('resourceReference');
+        if (is_null($val) || $val instanceof ResourceReference) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceReference'");
     }
 
     /**
@@ -67,7 +79,11 @@ class UsedInsight extends Entity implements Parsable
      * @return ResourceVisualization|null
     */
     public function getResourceVisualization(): ?ResourceVisualization {
-        return $this->getBackingStore()->get('resourceVisualization');
+        $val = $this->getBackingStore()->get('resourceVisualization');
+        if (is_null($val) || $val instanceof ResourceVisualization) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceVisualization'");
     }
 
     /**

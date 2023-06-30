@@ -5,11 +5,12 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class SchemaExtension extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new SchemaExtension and sets the default values.
+     * Instantiates a new schemaExtension and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -29,12 +30,16 @@ class SchemaExtension extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -43,7 +48,14 @@ class SchemaExtension extends Entity implements Parsable
             'owner' => fn(ParseNode $n) => $o->setOwner($n->getStringValue()),
             'properties' => fn(ParseNode $n) => $o->setProperties($n->getCollectionOfObjectValues([ExtensionSchemaProperty::class, 'createFromDiscriminatorValue'])),
             'status' => fn(ParseNode $n) => $o->setStatus($n->getStringValue()),
-            'targetTypes' => fn(ParseNode $n) => $o->setTargetTypes($n->getCollectionOfPrimitiveValues()),
+            'targetTypes' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setTargetTypes($val);
+            },
         ]);
     }
 
@@ -52,7 +64,11 @@ class SchemaExtension extends Entity implements Parsable
      * @return string|null
     */
     public function getOwner(): ?string {
-        return $this->getBackingStore()->get('owner');
+        $val = $this->getBackingStore()->get('owner');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'owner'");
     }
 
     /**
@@ -60,7 +76,13 @@ class SchemaExtension extends Entity implements Parsable
      * @return array<ExtensionSchemaProperty>|null
     */
     public function getProperties(): ?array {
-        return $this->getBackingStore()->get('properties');
+        $val = $this->getBackingStore()->get('properties');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ExtensionSchemaProperty::class);
+            /** @var array<ExtensionSchemaProperty>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'properties'");
     }
 
     /**
@@ -68,7 +90,11 @@ class SchemaExtension extends Entity implements Parsable
      * @return string|null
     */
     public function getStatus(): ?string {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**
@@ -76,7 +102,13 @@ class SchemaExtension extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getTargetTypes(): ?array {
-        return $this->getBackingStore()->get('targetTypes');
+        $val = $this->getBackingStore()->get('targetTypes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'targetTypes'");
     }
 
     /**

@@ -5,11 +5,12 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AttributeMappingFunctionSchema extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new AttributeMappingFunctionSchema and sets the default values.
+     * Instantiates a new attributeMappingFunctionSchema and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -26,7 +27,7 @@ class AttributeMappingFunctionSchema extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -40,7 +41,13 @@ class AttributeMappingFunctionSchema extends Entity implements Parsable
      * @return array<AttributeMappingParameterSchema>|null
     */
     public function getParameters(): ?array {
-        return $this->getBackingStore()->get('parameters');
+        $val = $this->getBackingStore()->get('parameters');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AttributeMappingParameterSchema::class);
+            /** @var array<AttributeMappingParameterSchema>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'parameters'");
     }
 
     /**

@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class DirectoryRole extends DirectoryObject implements Parsable 
 {
@@ -30,7 +31,11 @@ class DirectoryRole extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -38,12 +43,16 @@ class DirectoryRole extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -61,7 +70,13 @@ class DirectoryRole extends DirectoryObject implements Parsable
      * @return array<DirectoryObject>|null
     */
     public function getMembers(): ?array {
-        return $this->getBackingStore()->get('members');
+        $val = $this->getBackingStore()->get('members');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DirectoryObject::class);
+            /** @var array<DirectoryObject>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'members'");
     }
 
     /**
@@ -69,7 +84,11 @@ class DirectoryRole extends DirectoryObject implements Parsable
      * @return string|null
     */
     public function getRoleTemplateId(): ?string {
-        return $this->getBackingStore()->get('roleTemplateId');
+        $val = $this->getBackingStore()->get('roleTemplateId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'roleTemplateId'");
     }
 
     /**
@@ -77,7 +96,13 @@ class DirectoryRole extends DirectoryObject implements Parsable
      * @return array<ScopedRoleMembership>|null
     */
     public function getScopedMembers(): ?array {
-        return $this->getBackingStore()->get('scopedMembers');
+        $val = $this->getBackingStore()->get('scopedMembers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ScopedRoleMembership::class);
+            /** @var array<ScopedRoleMembership>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scopedMembers'");
     }
 
     /**

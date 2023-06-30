@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ConditionalAccessApplications implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class ConditionalAccessApplications implements AdditionalDataHolder, BackedModel
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,20 +61,54 @@ class ConditionalAccessApplications implements AdditionalDataHolder, BackedModel
      * @return array<string>|null
     */
     public function getExcludeApplications(): ?array {
-        return $this->getBackingStore()->get('excludeApplications');
+        $val = $this->getBackingStore()->get('excludeApplications');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'excludeApplications'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
-            'excludeApplications' => fn(ParseNode $n) => $o->setExcludeApplications($n->getCollectionOfPrimitiveValues()),
-            'includeApplications' => fn(ParseNode $n) => $o->setIncludeApplications($n->getCollectionOfPrimitiveValues()),
-            'includeAuthenticationContextClassReferences' => fn(ParseNode $n) => $o->setIncludeAuthenticationContextClassReferences($n->getCollectionOfPrimitiveValues()),
-            'includeUserActions' => fn(ParseNode $n) => $o->setIncludeUserActions($n->getCollectionOfPrimitiveValues()),
+            'excludeApplications' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setExcludeApplications($val);
+            },
+            'includeApplications' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setIncludeApplications($val);
+            },
+            'includeAuthenticationContextClassReferences' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setIncludeAuthenticationContextClassReferences($val);
+            },
+            'includeUserActions' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setIncludeUserActions($val);
+            },
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
         ];
     }
@@ -78,7 +118,13 @@ class ConditionalAccessApplications implements AdditionalDataHolder, BackedModel
      * @return array<string>|null
     */
     public function getIncludeApplications(): ?array {
-        return $this->getBackingStore()->get('includeApplications');
+        $val = $this->getBackingStore()->get('includeApplications');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'includeApplications'");
     }
 
     /**
@@ -86,7 +132,13 @@ class ConditionalAccessApplications implements AdditionalDataHolder, BackedModel
      * @return array<string>|null
     */
     public function getIncludeAuthenticationContextClassReferences(): ?array {
-        return $this->getBackingStore()->get('includeAuthenticationContextClassReferences');
+        $val = $this->getBackingStore()->get('includeAuthenticationContextClassReferences');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'includeAuthenticationContextClassReferences'");
     }
 
     /**
@@ -94,7 +146,13 @@ class ConditionalAccessApplications implements AdditionalDataHolder, BackedModel
      * @return array<string>|null
     */
     public function getIncludeUserActions(): ?array {
-        return $this->getBackingStore()->get('includeUserActions');
+        $val = $this->getBackingStore()->get('includeUserActions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'includeUserActions'");
     }
 
     /**
@@ -102,7 +160,11 @@ class ConditionalAccessApplications implements AdditionalDataHolder, BackedModel
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

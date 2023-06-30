@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Onenote extends Entity implements Parsable 
 {
@@ -26,7 +27,7 @@ class Onenote extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -45,7 +46,13 @@ class Onenote extends Entity implements Parsable
      * @return array<Notebook>|null
     */
     public function getNotebooks(): ?array {
-        return $this->getBackingStore()->get('notebooks');
+        $val = $this->getBackingStore()->get('notebooks');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Notebook::class);
+            /** @var array<Notebook>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'notebooks'");
     }
 
     /**
@@ -53,7 +60,13 @@ class Onenote extends Entity implements Parsable
      * @return array<OnenoteOperation>|null
     */
     public function getOperations(): ?array {
-        return $this->getBackingStore()->get('operations');
+        $val = $this->getBackingStore()->get('operations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, OnenoteOperation::class);
+            /** @var array<OnenoteOperation>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operations'");
     }
 
     /**
@@ -61,7 +74,13 @@ class Onenote extends Entity implements Parsable
      * @return array<OnenotePage>|null
     */
     public function getPages(): ?array {
-        return $this->getBackingStore()->get('pages');
+        $val = $this->getBackingStore()->get('pages');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, OnenotePage::class);
+            /** @var array<OnenotePage>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'pages'");
     }
 
     /**
@@ -69,7 +88,13 @@ class Onenote extends Entity implements Parsable
      * @return array<OnenoteResource>|null
     */
     public function getResources(): ?array {
-        return $this->getBackingStore()->get('resources');
+        $val = $this->getBackingStore()->get('resources');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, OnenoteResource::class);
+            /** @var array<OnenoteResource>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resources'");
     }
 
     /**
@@ -77,7 +102,13 @@ class Onenote extends Entity implements Parsable
      * @return array<SectionGroup>|null
     */
     public function getSectionGroups(): ?array {
-        return $this->getBackingStore()->get('sectionGroups');
+        $val = $this->getBackingStore()->get('sectionGroups');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SectionGroup::class);
+            /** @var array<SectionGroup>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sectionGroups'");
     }
 
     /**
@@ -85,7 +116,13 @@ class Onenote extends Entity implements Parsable
      * @return array<OnenoteSection>|null
     */
     public function getSections(): ?array {
-        return $this->getBackingStore()->get('sections');
+        $val = $this->getBackingStore()->get('sections');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, OnenoteSection::class);
+            /** @var array<OnenoteSection>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sections'");
     }
 
     /**

@@ -39,7 +39,12 @@ class SharingInvitation implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,12 +60,16 @@ class SharingInvitation implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getEmail(): ?string {
-        return $this->getBackingStore()->get('email');
+        $val = $this->getBackingStore()->get('email');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'email'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -78,7 +87,11 @@ class SharingInvitation implements AdditionalDataHolder, BackedModel, Parsable
      * @return IdentitySet|null
     */
     public function getInvitedBy(): ?IdentitySet {
-        return $this->getBackingStore()->get('invitedBy');
+        $val = $this->getBackingStore()->get('invitedBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'invitedBy'");
     }
 
     /**
@@ -86,7 +99,11 @@ class SharingInvitation implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -94,7 +111,11 @@ class SharingInvitation implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getRedeemedBy(): ?string {
-        return $this->getBackingStore()->get('redeemedBy');
+        $val = $this->getBackingStore()->get('redeemedBy');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'redeemedBy'");
     }
 
     /**
@@ -102,7 +123,11 @@ class SharingInvitation implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getSignInRequired(): ?bool {
-        return $this->getBackingStore()->get('signInRequired');
+        $val = $this->getBackingStore()->get('signInRequired');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'signInRequired'");
     }
 
     /**

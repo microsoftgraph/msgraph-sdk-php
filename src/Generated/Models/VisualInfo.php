@@ -39,7 +39,12 @@ class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return ImageInfo|null
     */
     public function getAttribution(): ?ImageInfo {
-        return $this->getBackingStore()->get('attribution');
+        $val = $this->getBackingStore()->get('attribution');
+        if (is_null($val) || $val instanceof ImageInfo) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'attribution'");
     }
 
     /**
@@ -55,7 +64,11 @@ class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getBackgroundColor(): ?string {
-        return $this->getBackingStore()->get('backgroundColor');
+        $val = $this->getBackingStore()->get('backgroundColor');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'backgroundColor'");
     }
 
     /**
@@ -71,7 +84,11 @@ class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return Json|null
     */
     public function getContent(): ?Json {
-        return $this->getBackingStore()->get('content');
+        $val = $this->getBackingStore()->get('content');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'content'");
     }
 
     /**
@@ -79,7 +96,11 @@ class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -87,12 +108,16 @@ class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getDisplayText(): ?string {
-        return $this->getBackingStore()->get('displayText');
+        $val = $this->getBackingStore()->get('displayText');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayText'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -111,7 +136,11 @@ class VisualInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

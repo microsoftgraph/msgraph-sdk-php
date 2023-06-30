@@ -42,7 +42,12 @@ class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, BackedModel
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -58,7 +63,11 @@ class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, BackedModel
      * @return bool|null
     */
     public function getBlockCrossOrganizationWriteAccess(): ?bool {
-        return $this->getBackingStore()->get('blockCrossOrganizationWriteAccess');
+        $val = $this->getBackingStore()->get('blockCrossOrganizationWriteAccess');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'blockCrossOrganizationWriteAccess'");
     }
 
     /**
@@ -66,12 +75,16 @@ class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, BackedModel
      * @return BitLockerEncryptionMethod|null
     */
     public function getEncryptionMethod(): ?BitLockerEncryptionMethod {
-        return $this->getBackingStore()->get('encryptionMethod');
+        $val = $this->getBackingStore()->get('encryptionMethod');
+        if (is_null($val) || $val instanceof BitLockerEncryptionMethod) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'encryptionMethod'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -88,7 +101,11 @@ class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, BackedModel
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -96,7 +113,11 @@ class BitLockerRemovableDrivePolicy implements AdditionalDataHolder, BackedModel
      * @return bool|null
     */
     public function getRequireEncryptionForWriteAccess(): ?bool {
-        return $this->getBackingStore()->get('requireEncryptionForWriteAccess');
+        $val = $this->getBackingStore()->get('requireEncryptionForWriteAccess');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'requireEncryptionForWriteAccess'");
     }
 
     /**

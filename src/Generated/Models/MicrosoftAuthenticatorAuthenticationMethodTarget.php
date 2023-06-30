@@ -29,12 +29,16 @@ class MicrosoftAuthenticatorAuthenticationMethodTarget extends AuthenticationMet
      * @return MicrosoftAuthenticatorAuthenticationMode|null
     */
     public function getAuthenticationMode(): ?MicrosoftAuthenticatorAuthenticationMode {
-        return $this->getBackingStore()->get('authenticationMode');
+        $val = $this->getBackingStore()->get('authenticationMode');
+        if (is_null($val) || $val instanceof MicrosoftAuthenticatorAuthenticationMode) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'authenticationMode'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

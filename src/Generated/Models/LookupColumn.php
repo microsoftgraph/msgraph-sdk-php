@@ -39,7 +39,12 @@ class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getAllowMultipleValues(): ?bool {
-        return $this->getBackingStore()->get('allowMultipleValues');
+        $val = $this->getBackingStore()->get('allowMultipleValues');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowMultipleValues'");
     }
 
     /**
@@ -55,7 +64,11 @@ class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getAllowUnlimitedLength(): ?bool {
-        return $this->getBackingStore()->get('allowUnlimitedLength');
+        $val = $this->getBackingStore()->get('allowUnlimitedLength');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowUnlimitedLength'");
     }
 
     /**
@@ -71,12 +84,16 @@ class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getColumnName(): ?string {
-        return $this->getBackingStore()->get('columnName');
+        $val = $this->getBackingStore()->get('columnName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'columnName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -95,7 +112,11 @@ class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getListId(): ?string {
-        return $this->getBackingStore()->get('listId');
+        $val = $this->getBackingStore()->get('listId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'listId'");
     }
 
     /**
@@ -103,7 +124,11 @@ class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -111,7 +136,11 @@ class LookupColumn implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getPrimaryLookupColumnId(): ?string {
-        return $this->getBackingStore()->get('primaryLookupColumnId');
+        $val = $this->getBackingStore()->get('primaryLookupColumnId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'primaryLookupColumnId'");
     }
 
     /**

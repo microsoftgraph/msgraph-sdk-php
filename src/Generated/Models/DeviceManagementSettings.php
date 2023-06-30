@@ -39,7 +39,12 @@ class DeviceManagementSettings implements AdditionalDataHolder, BackedModel, Par
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,12 +60,16 @@ class DeviceManagementSettings implements AdditionalDataHolder, BackedModel, Par
      * @return int|null
     */
     public function getDeviceComplianceCheckinThresholdDays(): ?int {
-        return $this->getBackingStore()->get('deviceComplianceCheckinThresholdDays');
+        $val = $this->getBackingStore()->get('deviceComplianceCheckinThresholdDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceComplianceCheckinThresholdDays'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -77,7 +86,11 @@ class DeviceManagementSettings implements AdditionalDataHolder, BackedModel, Par
      * @return bool|null
     */
     public function getIsScheduledActionEnabled(): ?bool {
-        return $this->getBackingStore()->get('isScheduledActionEnabled');
+        $val = $this->getBackingStore()->get('isScheduledActionEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isScheduledActionEnabled'");
     }
 
     /**
@@ -85,7 +98,11 @@ class DeviceManagementSettings implements AdditionalDataHolder, BackedModel, Par
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -93,7 +110,11 @@ class DeviceManagementSettings implements AdditionalDataHolder, BackedModel, Par
      * @return bool|null
     */
     public function getSecureByDefault(): ?bool {
-        return $this->getBackingStore()->get('secureByDefault');
+        $val = $this->getBackingStore()->get('secureByDefault');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'secureByDefault'");
     }
 
     /**

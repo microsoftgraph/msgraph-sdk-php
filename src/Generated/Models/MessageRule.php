@@ -29,7 +29,11 @@ class MessageRule extends Entity implements Parsable
      * @return MessageRuleActions|null
     */
     public function getActions(): ?MessageRuleActions {
-        return $this->getBackingStore()->get('actions');
+        $val = $this->getBackingStore()->get('actions');
+        if (is_null($val) || $val instanceof MessageRuleActions) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'actions'");
     }
 
     /**
@@ -37,7 +41,11 @@ class MessageRule extends Entity implements Parsable
      * @return MessageRulePredicates|null
     */
     public function getConditions(): ?MessageRulePredicates {
-        return $this->getBackingStore()->get('conditions');
+        $val = $this->getBackingStore()->get('conditions');
+        if (is_null($val) || $val instanceof MessageRulePredicates) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'conditions'");
     }
 
     /**
@@ -45,7 +53,11 @@ class MessageRule extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
@@ -53,12 +65,16 @@ class MessageRule extends Entity implements Parsable
      * @return MessageRulePredicates|null
     */
     public function getExceptions(): ?MessageRulePredicates {
-        return $this->getBackingStore()->get('exceptions');
+        $val = $this->getBackingStore()->get('exceptions');
+        if (is_null($val) || $val instanceof MessageRulePredicates) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'exceptions'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -79,7 +95,11 @@ class MessageRule extends Entity implements Parsable
      * @return bool|null
     */
     public function getHasError(): ?bool {
-        return $this->getBackingStore()->get('hasError');
+        $val = $this->getBackingStore()->get('hasError');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hasError'");
     }
 
     /**
@@ -87,7 +107,11 @@ class MessageRule extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
-        return $this->getBackingStore()->get('isEnabled');
+        $val = $this->getBackingStore()->get('isEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isEnabled'");
     }
 
     /**
@@ -95,7 +119,11 @@ class MessageRule extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsReadOnly(): ?bool {
-        return $this->getBackingStore()->get('isReadOnly');
+        $val = $this->getBackingStore()->get('isReadOnly');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isReadOnly'");
     }
 
     /**
@@ -103,7 +131,11 @@ class MessageRule extends Entity implements Parsable
      * @return int|null
     */
     public function getSequence(): ?int {
-        return $this->getBackingStore()->get('sequence');
+        $val = $this->getBackingStore()->get('sequence');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sequence'");
     }
 
     /**

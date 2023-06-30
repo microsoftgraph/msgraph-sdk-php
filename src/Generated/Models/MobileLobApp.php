@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class MobileLobApp extends MobileApp implements Parsable 
 {
@@ -43,7 +44,11 @@ class MobileLobApp extends MobileApp implements Parsable
      * @return string|null
     */
     public function getCommittedContentVersion(): ?string {
-        return $this->getBackingStore()->get('committedContentVersion');
+        $val = $this->getBackingStore()->get('committedContentVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'committedContentVersion'");
     }
 
     /**
@@ -51,12 +56,18 @@ class MobileLobApp extends MobileApp implements Parsable
      * @return array<MobileAppContent>|null
     */
     public function getContentVersions(): ?array {
-        return $this->getBackingStore()->get('contentVersions');
+        $val = $this->getBackingStore()->get('contentVersions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, MobileAppContent::class);
+            /** @var array<MobileAppContent>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentVersions'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -73,7 +84,11 @@ class MobileLobApp extends MobileApp implements Parsable
      * @return string|null
     */
     public function getFileName(): ?string {
-        return $this->getBackingStore()->get('fileName');
+        $val = $this->getBackingStore()->get('fileName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fileName'");
     }
 
     /**
@@ -81,7 +96,11 @@ class MobileLobApp extends MobileApp implements Parsable
      * @return int|null
     */
     public function getSize(): ?int {
-        return $this->getBackingStore()->get('size');
+        $val = $this->getBackingStore()->get('size');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'size'");
     }
 
     /**

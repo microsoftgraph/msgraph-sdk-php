@@ -5,11 +5,12 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class LearningProvider extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new LearningProvider and sets the default values.
+     * Instantiates a new learningProvider and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -29,12 +30,16 @@ class LearningProvider extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -55,7 +60,11 @@ class LearningProvider extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsCourseActivitySyncEnabled(): ?bool {
-        return $this->getBackingStore()->get('isCourseActivitySyncEnabled');
+        $val = $this->getBackingStore()->get('isCourseActivitySyncEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isCourseActivitySyncEnabled'");
     }
 
     /**
@@ -63,7 +72,13 @@ class LearningProvider extends Entity implements Parsable
      * @return array<LearningContent>|null
     */
     public function getLearningContents(): ?array {
-        return $this->getBackingStore()->get('learningContents');
+        $val = $this->getBackingStore()->get('learningContents');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, LearningContent::class);
+            /** @var array<LearningContent>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'learningContents'");
     }
 
     /**
@@ -71,7 +86,11 @@ class LearningProvider extends Entity implements Parsable
      * @return string|null
     */
     public function getLoginWebUrl(): ?string {
-        return $this->getBackingStore()->get('loginWebUrl');
+        $val = $this->getBackingStore()->get('loginWebUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'loginWebUrl'");
     }
 
     /**
@@ -79,7 +98,11 @@ class LearningProvider extends Entity implements Parsable
      * @return string|null
     */
     public function getLongLogoWebUrlForDarkTheme(): ?string {
-        return $this->getBackingStore()->get('longLogoWebUrlForDarkTheme');
+        $val = $this->getBackingStore()->get('longLogoWebUrlForDarkTheme');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'longLogoWebUrlForDarkTheme'");
     }
 
     /**
@@ -87,7 +110,11 @@ class LearningProvider extends Entity implements Parsable
      * @return string|null
     */
     public function getLongLogoWebUrlForLightTheme(): ?string {
-        return $this->getBackingStore()->get('longLogoWebUrlForLightTheme');
+        $val = $this->getBackingStore()->get('longLogoWebUrlForLightTheme');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'longLogoWebUrlForLightTheme'");
     }
 
     /**
@@ -95,7 +122,11 @@ class LearningProvider extends Entity implements Parsable
      * @return string|null
     */
     public function getSquareLogoWebUrlForDarkTheme(): ?string {
-        return $this->getBackingStore()->get('squareLogoWebUrlForDarkTheme');
+        $val = $this->getBackingStore()->get('squareLogoWebUrlForDarkTheme');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'squareLogoWebUrlForDarkTheme'");
     }
 
     /**
@@ -103,7 +134,11 @@ class LearningProvider extends Entity implements Parsable
      * @return string|null
     */
     public function getSquareLogoWebUrlForLightTheme(): ?string {
-        return $this->getBackingStore()->get('squareLogoWebUrlForLightTheme');
+        $val = $this->getBackingStore()->get('squareLogoWebUrlForLightTheme');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'squareLogoWebUrlForLightTheme'");
     }
 
     /**

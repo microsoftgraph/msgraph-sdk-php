@@ -39,7 +39,12 @@ class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,12 +60,16 @@ class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getEnabled(): ?int {
-        return $this->getBackingStore()->get('enabled');
+        $val = $this->getBackingStore()->get('enabled');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enabled'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -78,7 +87,11 @@ class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getLockedOut(): ?int {
-        return $this->getBackingStore()->get('lockedOut');
+        $val = $this->getBackingStore()->get('lockedOut');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lockedOut'");
     }
 
     /**
@@ -86,7 +99,11 @@ class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -94,7 +111,11 @@ class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getSuspended(): ?int {
-        return $this->getBackingStore()->get('suspended');
+        $val = $this->getBackingStore()->get('suspended');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'suspended'");
     }
 
     /**
@@ -102,7 +123,11 @@ class LicenseUnitsDetail implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getWarning(): ?int {
-        return $this->getBackingStore()->get('warning');
+        $val = $this->getBackingStore()->get('warning');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'warning'");
     }
 
     /**

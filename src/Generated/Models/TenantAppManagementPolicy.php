@@ -30,12 +30,16 @@ class TenantAppManagementPolicy extends PolicyBase implements Parsable
      * @return AppManagementConfiguration|null
     */
     public function getApplicationRestrictions(): ?AppManagementConfiguration {
-        return $this->getBackingStore()->get('applicationRestrictions');
+        $val = $this->getBackingStore()->get('applicationRestrictions');
+        if (is_null($val) || $val instanceof AppManagementConfiguration) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'applicationRestrictions'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -51,7 +55,11 @@ class TenantAppManagementPolicy extends PolicyBase implements Parsable
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
-        return $this->getBackingStore()->get('isEnabled');
+        $val = $this->getBackingStore()->get('isEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isEnabled'");
     }
 
     /**
@@ -59,7 +67,11 @@ class TenantAppManagementPolicy extends PolicyBase implements Parsable
      * @return AppManagementConfiguration|null
     */
     public function getServicePrincipalRestrictions(): ?AppManagementConfiguration {
-        return $this->getBackingStore()->get('servicePrincipalRestrictions');
+        $val = $this->getBackingStore()->get('servicePrincipalRestrictions');
+        if (is_null($val) || $val instanceof AppManagementConfiguration) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'servicePrincipalRestrictions'");
     }
 
     /**

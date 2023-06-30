@@ -26,7 +26,7 @@ class GoogleCloudResourceEvidence extends AlertEvidence implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -45,7 +45,11 @@ class GoogleCloudResourceEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getLocation(): ?string {
-        return $this->getBackingStore()->get('location');
+        $val = $this->getBackingStore()->get('location');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'location'");
     }
 
     /**
@@ -53,7 +57,11 @@ class GoogleCloudResourceEvidence extends AlertEvidence implements Parsable
      * @return GoogleCloudLocationType|null
     */
     public function getLocationType(): ?GoogleCloudLocationType {
-        return $this->getBackingStore()->get('locationType');
+        $val = $this->getBackingStore()->get('locationType');
+        if (is_null($val) || $val instanceof GoogleCloudLocationType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'locationType'");
     }
 
     /**
@@ -61,7 +69,11 @@ class GoogleCloudResourceEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getProjectId(): ?string {
-        return $this->getBackingStore()->get('projectId');
+        $val = $this->getBackingStore()->get('projectId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'projectId'");
     }
 
     /**
@@ -69,7 +81,11 @@ class GoogleCloudResourceEvidence extends AlertEvidence implements Parsable
      * @return int|null
     */
     public function getProjectNumber(): ?int {
-        return $this->getBackingStore()->get('projectNumber');
+        $val = $this->getBackingStore()->get('projectNumber');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'projectNumber'");
     }
 
     /**
@@ -77,7 +93,11 @@ class GoogleCloudResourceEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getResourceName(): ?string {
-        return $this->getBackingStore()->get('resourceName');
+        $val = $this->getBackingStore()->get('resourceName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceName'");
     }
 
     /**
@@ -85,7 +105,11 @@ class GoogleCloudResourceEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getResourceType(): ?string {
-        return $this->getBackingStore()->get('resourceType');
+        $val = $this->getBackingStore()->get('resourceType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceType'");
     }
 
     /**

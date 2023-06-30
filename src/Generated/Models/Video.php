@@ -39,7 +39,12 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getAudioBitsPerSample(): ?int {
-        return $this->getBackingStore()->get('audioBitsPerSample');
+        $val = $this->getBackingStore()->get('audioBitsPerSample');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'audioBitsPerSample'");
     }
 
     /**
@@ -55,7 +64,11 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getAudioChannels(): ?int {
-        return $this->getBackingStore()->get('audioChannels');
+        $val = $this->getBackingStore()->get('audioChannels');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'audioChannels'");
     }
 
     /**
@@ -63,7 +76,11 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getAudioFormat(): ?string {
-        return $this->getBackingStore()->get('audioFormat');
+        $val = $this->getBackingStore()->get('audioFormat');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'audioFormat'");
     }
 
     /**
@@ -71,7 +88,11 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getAudioSamplesPerSecond(): ?int {
-        return $this->getBackingStore()->get('audioSamplesPerSecond');
+        $val = $this->getBackingStore()->get('audioSamplesPerSecond');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'audioSamplesPerSecond'");
     }
 
     /**
@@ -87,7 +108,11 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getBitrate(): ?int {
-        return $this->getBackingStore()->get('bitrate');
+        $val = $this->getBackingStore()->get('bitrate');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bitrate'");
     }
 
     /**
@@ -95,12 +120,16 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getDuration(): ?int {
-        return $this->getBackingStore()->get('duration');
+        $val = $this->getBackingStore()->get('duration');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'duration'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -124,7 +153,11 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getFourCC(): ?string {
-        return $this->getBackingStore()->get('fourCC');
+        $val = $this->getBackingStore()->get('fourCC');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fourCC'");
     }
 
     /**
@@ -132,7 +165,11 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getFrameRate(): ?float {
-        return $this->getBackingStore()->get('frameRate');
+        $val = $this->getBackingStore()->get('frameRate');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'frameRate'");
     }
 
     /**
@@ -140,7 +177,11 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getHeight(): ?int {
-        return $this->getBackingStore()->get('height');
+        $val = $this->getBackingStore()->get('height');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'height'");
     }
 
     /**
@@ -148,7 +189,11 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -156,7 +201,11 @@ class Video implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getWidth(): ?int {
-        return $this->getBackingStore()->get('width');
+        $val = $this->getBackingStore()->get('width');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'width'");
     }
 
     /**

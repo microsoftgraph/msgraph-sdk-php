@@ -39,7 +39,12 @@ class MediaContentRatingUnitedStates implements AdditionalDataHolder, BackedMode
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +57,7 @@ class MediaContentRatingUnitedStates implements AdditionalDataHolder, BackedMode
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -68,7 +73,11 @@ class MediaContentRatingUnitedStates implements AdditionalDataHolder, BackedMode
      * @return RatingUnitedStatesMoviesType|null
     */
     public function getMovieRating(): ?RatingUnitedStatesMoviesType {
-        return $this->getBackingStore()->get('movieRating');
+        $val = $this->getBackingStore()->get('movieRating');
+        if (is_null($val) || $val instanceof RatingUnitedStatesMoviesType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'movieRating'");
     }
 
     /**
@@ -76,7 +85,11 @@ class MediaContentRatingUnitedStates implements AdditionalDataHolder, BackedMode
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -84,7 +97,11 @@ class MediaContentRatingUnitedStates implements AdditionalDataHolder, BackedMode
      * @return RatingUnitedStatesTelevisionType|null
     */
     public function getTvRating(): ?RatingUnitedStatesTelevisionType {
-        return $this->getBackingStore()->get('tvRating');
+        $val = $this->getBackingStore()->get('tvRating');
+        if (is_null($val) || $val instanceof RatingUnitedStatesTelevisionType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tvRating'");
     }
 
     /**

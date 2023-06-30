@@ -30,7 +30,11 @@ class ItemActivity extends Entity implements Parsable
      * @return AccessAction|null
     */
     public function getAccess(): ?AccessAction {
-        return $this->getBackingStore()->get('access');
+        $val = $this->getBackingStore()->get('access');
+        if (is_null($val) || $val instanceof AccessAction) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'access'");
     }
 
     /**
@@ -38,7 +42,11 @@ class ItemActivity extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getActivityDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('activityDateTime');
+        $val = $this->getBackingStore()->get('activityDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activityDateTime'");
     }
 
     /**
@@ -46,7 +54,11 @@ class ItemActivity extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getActor(): ?IdentitySet {
-        return $this->getBackingStore()->get('actor');
+        $val = $this->getBackingStore()->get('actor');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'actor'");
     }
 
     /**
@@ -54,12 +66,16 @@ class ItemActivity extends Entity implements Parsable
      * @return DriveItem|null
     */
     public function getDriveItem(): ?DriveItem {
-        return $this->getBackingStore()->get('driveItem');
+        $val = $this->getBackingStore()->get('driveItem');
+        if (is_null($val) || $val instanceof DriveItem) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'driveItem'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

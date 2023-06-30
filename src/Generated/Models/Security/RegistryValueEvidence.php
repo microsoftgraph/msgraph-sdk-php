@@ -26,7 +26,7 @@ class RegistryValueEvidence extends AlertEvidence implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -45,7 +45,11 @@ class RegistryValueEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getMdeDeviceId(): ?string {
-        return $this->getBackingStore()->get('mdeDeviceId');
+        $val = $this->getBackingStore()->get('mdeDeviceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mdeDeviceId'");
     }
 
     /**
@@ -53,7 +57,11 @@ class RegistryValueEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getRegistryHive(): ?string {
-        return $this->getBackingStore()->get('registryHive');
+        $val = $this->getBackingStore()->get('registryHive');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'registryHive'");
     }
 
     /**
@@ -61,7 +69,11 @@ class RegistryValueEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getRegistryKey(): ?string {
-        return $this->getBackingStore()->get('registryKey');
+        $val = $this->getBackingStore()->get('registryKey');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'registryKey'");
     }
 
     /**
@@ -69,7 +81,11 @@ class RegistryValueEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getRegistryValue(): ?string {
-        return $this->getBackingStore()->get('registryValue');
+        $val = $this->getBackingStore()->get('registryValue');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'registryValue'");
     }
 
     /**
@@ -77,7 +93,11 @@ class RegistryValueEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getRegistryValueName(): ?string {
-        return $this->getBackingStore()->get('registryValueName');
+        $val = $this->getBackingStore()->get('registryValueName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'registryValueName'");
     }
 
     /**
@@ -85,7 +105,11 @@ class RegistryValueEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getRegistryValueType(): ?string {
-        return $this->getBackingStore()->get('registryValueType');
+        $val = $this->getBackingStore()->get('registryValueType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'registryValueType'");
     }
 
     /**

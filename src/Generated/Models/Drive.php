@@ -5,11 +5,12 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Drive extends BaseItem implements Parsable 
 {
     /**
-     * Instantiates a new drive and sets the default values.
+     * Instantiates a new Drive and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -30,7 +31,13 @@ class Drive extends BaseItem implements Parsable
      * @return array<DriveItem>|null
     */
     public function getBundles(): ?array {
-        return $this->getBackingStore()->get('bundles');
+        $val = $this->getBackingStore()->get('bundles');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DriveItem::class);
+            /** @var array<DriveItem>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bundles'");
     }
 
     /**
@@ -38,12 +45,16 @@ class Drive extends BaseItem implements Parsable
      * @return string|null
     */
     public function getDriveType(): ?string {
-        return $this->getBackingStore()->get('driveType');
+        $val = $this->getBackingStore()->get('driveType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'driveType'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -67,7 +78,13 @@ class Drive extends BaseItem implements Parsable
      * @return array<DriveItem>|null
     */
     public function getFollowing(): ?array {
-        return $this->getBackingStore()->get('following');
+        $val = $this->getBackingStore()->get('following');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DriveItem::class);
+            /** @var array<DriveItem>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'following'");
     }
 
     /**
@@ -75,7 +92,13 @@ class Drive extends BaseItem implements Parsable
      * @return array<DriveItem>|null
     */
     public function getItems(): ?array {
-        return $this->getBackingStore()->get('items');
+        $val = $this->getBackingStore()->get('items');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DriveItem::class);
+            /** @var array<DriveItem>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'items'");
     }
 
     /**
@@ -83,7 +106,11 @@ class Drive extends BaseItem implements Parsable
      * @return EscapedList|null
     */
     public function getList(): ?EscapedList {
-        return $this->getBackingStore()->get('escapedList');
+        $val = $this->getBackingStore()->get('escapedList');
+        if (is_null($val) || $val instanceof EscapedList) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'escapedList'");
     }
 
     /**
@@ -91,7 +118,11 @@ class Drive extends BaseItem implements Parsable
      * @return IdentitySet|null
     */
     public function getOwner(): ?IdentitySet {
-        return $this->getBackingStore()->get('owner');
+        $val = $this->getBackingStore()->get('owner');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'owner'");
     }
 
     /**
@@ -99,7 +130,11 @@ class Drive extends BaseItem implements Parsable
      * @return Quota|null
     */
     public function getQuota(): ?Quota {
-        return $this->getBackingStore()->get('quota');
+        $val = $this->getBackingStore()->get('quota');
+        if (is_null($val) || $val instanceof Quota) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'quota'");
     }
 
     /**
@@ -107,7 +142,11 @@ class Drive extends BaseItem implements Parsable
      * @return DriveItem|null
     */
     public function getRoot(): ?DriveItem {
-        return $this->getBackingStore()->get('root');
+        $val = $this->getBackingStore()->get('root');
+        if (is_null($val) || $val instanceof DriveItem) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'root'");
     }
 
     /**
@@ -115,7 +154,11 @@ class Drive extends BaseItem implements Parsable
      * @return SharepointIds|null
     */
     public function getSharePointIds(): ?SharepointIds {
-        return $this->getBackingStore()->get('sharePointIds');
+        $val = $this->getBackingStore()->get('sharePointIds');
+        if (is_null($val) || $val instanceof SharepointIds) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sharePointIds'");
     }
 
     /**
@@ -123,7 +166,13 @@ class Drive extends BaseItem implements Parsable
      * @return array<DriveItem>|null
     */
     public function getSpecial(): ?array {
-        return $this->getBackingStore()->get('special');
+        $val = $this->getBackingStore()->get('special');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DriveItem::class);
+            /** @var array<DriveItem>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'special'");
     }
 
     /**
@@ -131,7 +180,11 @@ class Drive extends BaseItem implements Parsable
      * @return SystemFacet|null
     */
     public function getSystem(): ?SystemFacet {
-        return $this->getBackingStore()->get('system');
+        $val = $this->getBackingStore()->get('system');
+        if (is_null($val) || $val instanceof SystemFacet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'system'");
     }
 
     /**

@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class PrintService extends Entity implements Parsable 
 {
@@ -29,12 +30,18 @@ class PrintService extends Entity implements Parsable
      * @return array<PrintServiceEndpoint>|null
     */
     public function getEndpoints(): ?array {
-        return $this->getBackingStore()->get('endpoints');
+        $val = $this->getBackingStore()->get('endpoints');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, PrintServiceEndpoint::class);
+            /** @var array<PrintServiceEndpoint>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'endpoints'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

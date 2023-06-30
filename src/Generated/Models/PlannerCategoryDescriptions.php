@@ -39,7 +39,12 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +60,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory1(): ?string {
-        return $this->getBackingStore()->get('category1');
+        $val = $this->getBackingStore()->get('category1');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category1'");
     }
 
     /**
@@ -63,7 +72,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory10(): ?string {
-        return $this->getBackingStore()->get('category10');
+        $val = $this->getBackingStore()->get('category10');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category10'");
     }
 
     /**
@@ -71,7 +84,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory11(): ?string {
-        return $this->getBackingStore()->get('category11');
+        $val = $this->getBackingStore()->get('category11');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category11'");
     }
 
     /**
@@ -79,7 +96,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory12(): ?string {
-        return $this->getBackingStore()->get('category12');
+        $val = $this->getBackingStore()->get('category12');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category12'");
     }
 
     /**
@@ -87,7 +108,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory13(): ?string {
-        return $this->getBackingStore()->get('category13');
+        $val = $this->getBackingStore()->get('category13');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category13'");
     }
 
     /**
@@ -95,7 +120,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory14(): ?string {
-        return $this->getBackingStore()->get('category14');
+        $val = $this->getBackingStore()->get('category14');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category14'");
     }
 
     /**
@@ -103,7 +132,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory15(): ?string {
-        return $this->getBackingStore()->get('category15');
+        $val = $this->getBackingStore()->get('category15');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category15'");
     }
 
     /**
@@ -111,7 +144,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory16(): ?string {
-        return $this->getBackingStore()->get('category16');
+        $val = $this->getBackingStore()->get('category16');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category16'");
     }
 
     /**
@@ -119,7 +156,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory17(): ?string {
-        return $this->getBackingStore()->get('category17');
+        $val = $this->getBackingStore()->get('category17');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category17'");
     }
 
     /**
@@ -127,7 +168,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory18(): ?string {
-        return $this->getBackingStore()->get('category18');
+        $val = $this->getBackingStore()->get('category18');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category18'");
     }
 
     /**
@@ -135,7 +180,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory19(): ?string {
-        return $this->getBackingStore()->get('category19');
+        $val = $this->getBackingStore()->get('category19');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category19'");
     }
 
     /**
@@ -143,7 +192,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory2(): ?string {
-        return $this->getBackingStore()->get('category2');
+        $val = $this->getBackingStore()->get('category2');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category2'");
     }
 
     /**
@@ -151,7 +204,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory20(): ?string {
-        return $this->getBackingStore()->get('category20');
+        $val = $this->getBackingStore()->get('category20');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category20'");
     }
 
     /**
@@ -159,7 +216,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory21(): ?string {
-        return $this->getBackingStore()->get('category21');
+        $val = $this->getBackingStore()->get('category21');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category21'");
     }
 
     /**
@@ -167,7 +228,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory22(): ?string {
-        return $this->getBackingStore()->get('category22');
+        $val = $this->getBackingStore()->get('category22');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category22'");
     }
 
     /**
@@ -175,7 +240,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory23(): ?string {
-        return $this->getBackingStore()->get('category23');
+        $val = $this->getBackingStore()->get('category23');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category23'");
     }
 
     /**
@@ -183,7 +252,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory24(): ?string {
-        return $this->getBackingStore()->get('category24');
+        $val = $this->getBackingStore()->get('category24');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category24'");
     }
 
     /**
@@ -191,7 +264,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory25(): ?string {
-        return $this->getBackingStore()->get('category25');
+        $val = $this->getBackingStore()->get('category25');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category25'");
     }
 
     /**
@@ -199,7 +276,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory3(): ?string {
-        return $this->getBackingStore()->get('category3');
+        $val = $this->getBackingStore()->get('category3');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category3'");
     }
 
     /**
@@ -207,7 +288,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory4(): ?string {
-        return $this->getBackingStore()->get('category4');
+        $val = $this->getBackingStore()->get('category4');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category4'");
     }
 
     /**
@@ -215,7 +300,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory5(): ?string {
-        return $this->getBackingStore()->get('category5');
+        $val = $this->getBackingStore()->get('category5');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category5'");
     }
 
     /**
@@ -223,7 +312,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory6(): ?string {
-        return $this->getBackingStore()->get('category6');
+        $val = $this->getBackingStore()->get('category6');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category6'");
     }
 
     /**
@@ -231,7 +324,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory7(): ?string {
-        return $this->getBackingStore()->get('category7');
+        $val = $this->getBackingStore()->get('category7');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category7'");
     }
 
     /**
@@ -239,7 +336,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory8(): ?string {
-        return $this->getBackingStore()->get('category8');
+        $val = $this->getBackingStore()->get('category8');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category8'");
     }
 
     /**
@@ -247,12 +348,16 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getCategory9(): ?string {
-        return $this->getBackingStore()->get('category9');
+        $val = $this->getBackingStore()->get('category9');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category9'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -291,7 +396,11 @@ class PlannerCategoryDescriptions implements AdditionalDataHolder, BackedModel, 
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

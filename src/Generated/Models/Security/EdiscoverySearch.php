@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models\Security;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class EdiscoverySearch extends Search implements Parsable 
 {
@@ -30,7 +31,13 @@ class EdiscoverySearch extends Search implements Parsable
      * @return array<DataSource>|null
     */
     public function getAdditionalSources(): ?array {
-        return $this->getBackingStore()->get('additionalSources');
+        $val = $this->getBackingStore()->get('additionalSources');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DataSource::class);
+            /** @var array<DataSource>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalSources'");
     }
 
     /**
@@ -38,7 +45,11 @@ class EdiscoverySearch extends Search implements Parsable
      * @return EdiscoveryAddToReviewSetOperation|null
     */
     public function getAddToReviewSetOperation(): ?EdiscoveryAddToReviewSetOperation {
-        return $this->getBackingStore()->get('addToReviewSetOperation');
+        $val = $this->getBackingStore()->get('addToReviewSetOperation');
+        if (is_null($val) || $val instanceof EdiscoveryAddToReviewSetOperation) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'addToReviewSetOperation'");
     }
 
     /**
@@ -46,7 +57,13 @@ class EdiscoverySearch extends Search implements Parsable
      * @return array<DataSource>|null
     */
     public function getCustodianSources(): ?array {
-        return $this->getBackingStore()->get('custodianSources');
+        $val = $this->getBackingStore()->get('custodianSources');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DataSource::class);
+            /** @var array<DataSource>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'custodianSources'");
     }
 
     /**
@@ -54,12 +71,16 @@ class EdiscoverySearch extends Search implements Parsable
      * @return DataSourceScopes|null
     */
     public function getDataSourceScopes(): ?DataSourceScopes {
-        return $this->getBackingStore()->get('dataSourceScopes');
+        $val = $this->getBackingStore()->get('dataSourceScopes');
+        if (is_null($val) || $val instanceof DataSourceScopes) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dataSourceScopes'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -78,7 +99,11 @@ class EdiscoverySearch extends Search implements Parsable
      * @return EdiscoveryEstimateOperation|null
     */
     public function getLastEstimateStatisticsOperation(): ?EdiscoveryEstimateOperation {
-        return $this->getBackingStore()->get('lastEstimateStatisticsOperation');
+        $val = $this->getBackingStore()->get('lastEstimateStatisticsOperation');
+        if (is_null($val) || $val instanceof EdiscoveryEstimateOperation) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastEstimateStatisticsOperation'");
     }
 
     /**
@@ -86,7 +111,13 @@ class EdiscoverySearch extends Search implements Parsable
      * @return array<EdiscoveryNoncustodialDataSource>|null
     */
     public function getNoncustodialSources(): ?array {
-        return $this->getBackingStore()->get('noncustodialSources');
+        $val = $this->getBackingStore()->get('noncustodialSources');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, EdiscoveryNoncustodialDataSource::class);
+            /** @var array<EdiscoveryNoncustodialDataSource>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'noncustodialSources'");
     }
 
     /**

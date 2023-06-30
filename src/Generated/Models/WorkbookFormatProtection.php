@@ -26,7 +26,7 @@ class WorkbookFormatProtection extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class WorkbookFormatProtection extends Entity implements Parsable
      * @return bool|null
     */
     public function getFormulaHidden(): ?bool {
-        return $this->getBackingStore()->get('formulaHidden');
+        $val = $this->getBackingStore()->get('formulaHidden');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'formulaHidden'");
     }
 
     /**
@@ -49,7 +53,11 @@ class WorkbookFormatProtection extends Entity implements Parsable
      * @return bool|null
     */
     public function getLocked(): ?bool {
-        return $this->getBackingStore()->get('locked');
+        $val = $this->getBackingStore()->get('locked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'locked'");
     }
 
     /**

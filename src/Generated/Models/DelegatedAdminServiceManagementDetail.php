@@ -26,7 +26,7 @@ class DelegatedAdminServiceManagementDetail extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class DelegatedAdminServiceManagementDetail extends Entity implements Parsable
      * @return string|null
     */
     public function getServiceManagementUrl(): ?string {
-        return $this->getBackingStore()->get('serviceManagementUrl');
+        $val = $this->getBackingStore()->get('serviceManagementUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'serviceManagementUrl'");
     }
 
     /**
@@ -49,7 +53,11 @@ class DelegatedAdminServiceManagementDetail extends Entity implements Parsable
      * @return string|null
     */
     public function getServiceName(): ?string {
-        return $this->getBackingStore()->get('serviceName');
+        $val = $this->getBackingStore()->get('serviceName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'serviceName'");
     }
 
     /**

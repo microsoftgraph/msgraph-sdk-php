@@ -6,6 +6,7 @@ use DateInterval;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ManagedAppProtection extends ManagedAppPolicy implements Parsable 
 {
@@ -41,7 +42,13 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return array<ManagedAppDataStorageLocation>|null
     */
     public function getAllowedDataStorageLocations(): ?array {
-        return $this->getBackingStore()->get('allowedDataStorageLocations');
+        $val = $this->getBackingStore()->get('allowedDataStorageLocations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ManagedAppDataStorageLocation::class);
+            /** @var array<ManagedAppDataStorageLocation>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowedDataStorageLocations'");
     }
 
     /**
@@ -49,7 +56,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return ManagedAppDataTransferLevel|null
     */
     public function getAllowedInboundDataTransferSources(): ?ManagedAppDataTransferLevel {
-        return $this->getBackingStore()->get('allowedInboundDataTransferSources');
+        $val = $this->getBackingStore()->get('allowedInboundDataTransferSources');
+        if (is_null($val) || $val instanceof ManagedAppDataTransferLevel) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowedInboundDataTransferSources'");
     }
 
     /**
@@ -57,7 +68,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return ManagedAppClipboardSharingLevel|null
     */
     public function getAllowedOutboundClipboardSharingLevel(): ?ManagedAppClipboardSharingLevel {
-        return $this->getBackingStore()->get('allowedOutboundClipboardSharingLevel');
+        $val = $this->getBackingStore()->get('allowedOutboundClipboardSharingLevel');
+        if (is_null($val) || $val instanceof ManagedAppClipboardSharingLevel) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowedOutboundClipboardSharingLevel'");
     }
 
     /**
@@ -65,7 +80,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return ManagedAppDataTransferLevel|null
     */
     public function getAllowedOutboundDataTransferDestinations(): ?ManagedAppDataTransferLevel {
-        return $this->getBackingStore()->get('allowedOutboundDataTransferDestinations');
+        $val = $this->getBackingStore()->get('allowedOutboundDataTransferDestinations');
+        if (is_null($val) || $val instanceof ManagedAppDataTransferLevel) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowedOutboundDataTransferDestinations'");
     }
 
     /**
@@ -73,7 +92,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getContactSyncBlocked(): ?bool {
-        return $this->getBackingStore()->get('contactSyncBlocked');
+        $val = $this->getBackingStore()->get('contactSyncBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contactSyncBlocked'");
     }
 
     /**
@@ -81,7 +104,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getDataBackupBlocked(): ?bool {
-        return $this->getBackingStore()->get('dataBackupBlocked');
+        $val = $this->getBackingStore()->get('dataBackupBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dataBackupBlocked'");
     }
 
     /**
@@ -89,7 +116,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getDeviceComplianceRequired(): ?bool {
-        return $this->getBackingStore()->get('deviceComplianceRequired');
+        $val = $this->getBackingStore()->get('deviceComplianceRequired');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceComplianceRequired'");
     }
 
     /**
@@ -97,12 +128,16 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getDisableAppPinIfDevicePinIsSet(): ?bool {
-        return $this->getBackingStore()->get('disableAppPinIfDevicePinIsSet');
+        $val = $this->getBackingStore()->get('disableAppPinIfDevicePinIsSet');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'disableAppPinIfDevicePinIsSet'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -142,7 +177,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getFingerprintBlocked(): ?bool {
-        return $this->getBackingStore()->get('fingerprintBlocked');
+        $val = $this->getBackingStore()->get('fingerprintBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fingerprintBlocked'");
     }
 
     /**
@@ -150,7 +189,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return ManagedBrowserType|null
     */
     public function getManagedBrowser(): ?ManagedBrowserType {
-        return $this->getBackingStore()->get('managedBrowser');
+        $val = $this->getBackingStore()->get('managedBrowser');
+        if (is_null($val) || $val instanceof ManagedBrowserType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'managedBrowser'");
     }
 
     /**
@@ -158,7 +201,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getManagedBrowserToOpenLinksRequired(): ?bool {
-        return $this->getBackingStore()->get('managedBrowserToOpenLinksRequired');
+        $val = $this->getBackingStore()->get('managedBrowserToOpenLinksRequired');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'managedBrowserToOpenLinksRequired'");
     }
 
     /**
@@ -166,7 +213,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return int|null
     */
     public function getMaximumPinRetries(): ?int {
-        return $this->getBackingStore()->get('maximumPinRetries');
+        $val = $this->getBackingStore()->get('maximumPinRetries');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maximumPinRetries'");
     }
 
     /**
@@ -174,7 +225,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return int|null
     */
     public function getMinimumPinLength(): ?int {
-        return $this->getBackingStore()->get('minimumPinLength');
+        $val = $this->getBackingStore()->get('minimumPinLength');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minimumPinLength'");
     }
 
     /**
@@ -182,7 +237,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return string|null
     */
     public function getMinimumRequiredAppVersion(): ?string {
-        return $this->getBackingStore()->get('minimumRequiredAppVersion');
+        $val = $this->getBackingStore()->get('minimumRequiredAppVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minimumRequiredAppVersion'");
     }
 
     /**
@@ -190,7 +249,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return string|null
     */
     public function getMinimumRequiredOsVersion(): ?string {
-        return $this->getBackingStore()->get('minimumRequiredOsVersion');
+        $val = $this->getBackingStore()->get('minimumRequiredOsVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minimumRequiredOsVersion'");
     }
 
     /**
@@ -198,7 +261,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return string|null
     */
     public function getMinimumWarningAppVersion(): ?string {
-        return $this->getBackingStore()->get('minimumWarningAppVersion');
+        $val = $this->getBackingStore()->get('minimumWarningAppVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minimumWarningAppVersion'");
     }
 
     /**
@@ -206,7 +273,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return string|null
     */
     public function getMinimumWarningOsVersion(): ?string {
-        return $this->getBackingStore()->get('minimumWarningOsVersion');
+        $val = $this->getBackingStore()->get('minimumWarningOsVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minimumWarningOsVersion'");
     }
 
     /**
@@ -214,7 +285,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getOrganizationalCredentialsRequired(): ?bool {
-        return $this->getBackingStore()->get('organizationalCredentialsRequired');
+        $val = $this->getBackingStore()->get('organizationalCredentialsRequired');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'organizationalCredentialsRequired'");
     }
 
     /**
@@ -222,7 +297,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return DateInterval|null
     */
     public function getPeriodBeforePinReset(): ?DateInterval {
-        return $this->getBackingStore()->get('periodBeforePinReset');
+        $val = $this->getBackingStore()->get('periodBeforePinReset');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'periodBeforePinReset'");
     }
 
     /**
@@ -230,7 +309,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return DateInterval|null
     */
     public function getPeriodOfflineBeforeAccessCheck(): ?DateInterval {
-        return $this->getBackingStore()->get('periodOfflineBeforeAccessCheck');
+        $val = $this->getBackingStore()->get('periodOfflineBeforeAccessCheck');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'periodOfflineBeforeAccessCheck'");
     }
 
     /**
@@ -238,7 +321,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return DateInterval|null
     */
     public function getPeriodOfflineBeforeWipeIsEnforced(): ?DateInterval {
-        return $this->getBackingStore()->get('periodOfflineBeforeWipeIsEnforced');
+        $val = $this->getBackingStore()->get('periodOfflineBeforeWipeIsEnforced');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'periodOfflineBeforeWipeIsEnforced'");
     }
 
     /**
@@ -246,7 +333,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return DateInterval|null
     */
     public function getPeriodOnlineBeforeAccessCheck(): ?DateInterval {
-        return $this->getBackingStore()->get('periodOnlineBeforeAccessCheck');
+        $val = $this->getBackingStore()->get('periodOnlineBeforeAccessCheck');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'periodOnlineBeforeAccessCheck'");
     }
 
     /**
@@ -254,7 +345,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return ManagedAppPinCharacterSet|null
     */
     public function getPinCharacterSet(): ?ManagedAppPinCharacterSet {
-        return $this->getBackingStore()->get('pinCharacterSet');
+        $val = $this->getBackingStore()->get('pinCharacterSet');
+        if (is_null($val) || $val instanceof ManagedAppPinCharacterSet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'pinCharacterSet'");
     }
 
     /**
@@ -262,7 +357,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getPinRequired(): ?bool {
-        return $this->getBackingStore()->get('pinRequired');
+        $val = $this->getBackingStore()->get('pinRequired');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'pinRequired'");
     }
 
     /**
@@ -270,7 +369,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getPrintBlocked(): ?bool {
-        return $this->getBackingStore()->get('printBlocked');
+        $val = $this->getBackingStore()->get('printBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'printBlocked'");
     }
 
     /**
@@ -278,7 +381,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getSaveAsBlocked(): ?bool {
-        return $this->getBackingStore()->get('saveAsBlocked');
+        $val = $this->getBackingStore()->get('saveAsBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'saveAsBlocked'");
     }
 
     /**
@@ -286,7 +393,11 @@ class ManagedAppProtection extends ManagedAppPolicy implements Parsable
      * @return bool|null
     */
     public function getSimplePinBlocked(): ?bool {
-        return $this->getBackingStore()->get('simplePinBlocked');
+        $val = $this->getBackingStore()->get('simplePinBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'simplePinBlocked'");
     }
 
     /**

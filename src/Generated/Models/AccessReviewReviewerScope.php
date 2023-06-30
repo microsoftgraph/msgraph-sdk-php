@@ -39,7 +39,12 @@ class AccessReviewReviewerScope implements AdditionalDataHolder, BackedModel, Pa
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +57,7 @@ class AccessReviewReviewerScope implements AdditionalDataHolder, BackedModel, Pa
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -69,7 +74,11 @@ class AccessReviewReviewerScope implements AdditionalDataHolder, BackedModel, Pa
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -77,7 +86,11 @@ class AccessReviewReviewerScope implements AdditionalDataHolder, BackedModel, Pa
      * @return string|null
     */
     public function getQuery(): ?string {
-        return $this->getBackingStore()->get('query');
+        $val = $this->getBackingStore()->get('query');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'query'");
     }
 
     /**
@@ -85,7 +98,11 @@ class AccessReviewReviewerScope implements AdditionalDataHolder, BackedModel, Pa
      * @return string|null
     */
     public function getQueryRoot(): ?string {
-        return $this->getBackingStore()->get('queryRoot');
+        $val = $this->getBackingStore()->get('queryRoot');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'queryRoot'");
     }
 
     /**
@@ -93,7 +110,11 @@ class AccessReviewReviewerScope implements AdditionalDataHolder, BackedModel, Pa
      * @return string|null
     */
     public function getQueryType(): ?string {
-        return $this->getBackingStore()->get('queryType');
+        $val = $this->getBackingStore()->get('queryType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'queryType'");
     }
 
     /**

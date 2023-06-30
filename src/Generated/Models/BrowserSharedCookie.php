@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class BrowserSharedCookie extends Entity implements Parsable 
 {
@@ -30,7 +31,11 @@ class BrowserSharedCookie extends Entity implements Parsable
      * @return string|null
     */
     public function getComment(): ?string {
-        return $this->getBackingStore()->get('comment');
+        $val = $this->getBackingStore()->get('comment');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'comment'");
     }
 
     /**
@@ -38,7 +43,11 @@ class BrowserSharedCookie extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -46,7 +55,11 @@ class BrowserSharedCookie extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getDeletedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('deletedDateTime');
+        $val = $this->getBackingStore()->get('deletedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deletedDateTime'");
     }
 
     /**
@@ -54,12 +67,16 @@ class BrowserSharedCookie extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -84,7 +101,13 @@ class BrowserSharedCookie extends Entity implements Parsable
      * @return array<BrowserSharedCookieHistory>|null
     */
     public function getHistory(): ?array {
-        return $this->getBackingStore()->get('history');
+        $val = $this->getBackingStore()->get('history');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, BrowserSharedCookieHistory::class);
+            /** @var array<BrowserSharedCookieHistory>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'history'");
     }
 
     /**
@@ -92,7 +115,11 @@ class BrowserSharedCookie extends Entity implements Parsable
      * @return bool|null
     */
     public function getHostOnly(): ?bool {
-        return $this->getBackingStore()->get('hostOnly');
+        $val = $this->getBackingStore()->get('hostOnly');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hostOnly'");
     }
 
     /**
@@ -100,7 +127,11 @@ class BrowserSharedCookie extends Entity implements Parsable
      * @return string|null
     */
     public function getHostOrDomain(): ?string {
-        return $this->getBackingStore()->get('hostOrDomain');
+        $val = $this->getBackingStore()->get('hostOrDomain');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hostOrDomain'");
     }
 
     /**
@@ -108,7 +139,11 @@ class BrowserSharedCookie extends Entity implements Parsable
      * @return IdentitySet|null
     */
     public function getLastModifiedBy(): ?IdentitySet {
-        return $this->getBackingStore()->get('lastModifiedBy');
+        $val = $this->getBackingStore()->get('lastModifiedBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedBy'");
     }
 
     /**
@@ -116,7 +151,11 @@ class BrowserSharedCookie extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedDateTime');
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**
@@ -124,7 +163,11 @@ class BrowserSharedCookie extends Entity implements Parsable
      * @return string|null
     */
     public function getPath(): ?string {
-        return $this->getBackingStore()->get('path');
+        $val = $this->getBackingStore()->get('path');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'path'");
     }
 
     /**
@@ -132,7 +175,11 @@ class BrowserSharedCookie extends Entity implements Parsable
      * @return BrowserSharedCookieSourceEnvironment|null
     */
     public function getSourceEnvironment(): ?BrowserSharedCookieSourceEnvironment {
-        return $this->getBackingStore()->get('sourceEnvironment');
+        $val = $this->getBackingStore()->get('sourceEnvironment');
+        if (is_null($val) || $val instanceof BrowserSharedCookieSourceEnvironment) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sourceEnvironment'");
     }
 
     /**
@@ -140,7 +187,11 @@ class BrowserSharedCookie extends Entity implements Parsable
      * @return BrowserSharedCookieStatus|null
     */
     public function getStatus(): ?BrowserSharedCookieStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof BrowserSharedCookieStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**

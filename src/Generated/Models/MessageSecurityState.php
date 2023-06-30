@@ -19,7 +19,7 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new messageSecurityState and sets the default values.
+     * Instantiates a new MessageSecurityState and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -40,7 +40,12 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,7 +61,11 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
      * @return string|null
     */
     public function getConnectingIP(): ?string {
-        return $this->getBackingStore()->get('connectingIP');
+        $val = $this->getBackingStore()->get('connectingIP');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'connectingIP'");
     }
 
     /**
@@ -64,7 +73,11 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
      * @return string|null
     */
     public function getDeliveryAction(): ?string {
-        return $this->getBackingStore()->get('deliveryAction');
+        $val = $this->getBackingStore()->get('deliveryAction');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deliveryAction'");
     }
 
     /**
@@ -72,7 +85,11 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
      * @return string|null
     */
     public function getDeliveryLocation(): ?string {
-        return $this->getBackingStore()->get('deliveryLocation');
+        $val = $this->getBackingStore()->get('deliveryLocation');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deliveryLocation'");
     }
 
     /**
@@ -80,12 +97,16 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
      * @return string|null
     */
     public function getDirectionality(): ?string {
-        return $this->getBackingStore()->get('directionality');
+        $val = $this->getBackingStore()->get('directionality');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'directionality'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -108,7 +129,11 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
      * @return string|null
     */
     public function getInternetMessageId(): ?string {
-        return $this->getBackingStore()->get('internetMessageId');
+        $val = $this->getBackingStore()->get('internetMessageId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'internetMessageId'");
     }
 
     /**
@@ -116,7 +141,11 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
      * @return string|null
     */
     public function getMessageFingerprint(): ?string {
-        return $this->getBackingStore()->get('messageFingerprint');
+        $val = $this->getBackingStore()->get('messageFingerprint');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'messageFingerprint'");
     }
 
     /**
@@ -124,7 +153,11 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
      * @return DateTime|null
     */
     public function getMessageReceivedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('messageReceivedDateTime');
+        $val = $this->getBackingStore()->get('messageReceivedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'messageReceivedDateTime'");
     }
 
     /**
@@ -132,7 +165,11 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
      * @return string|null
     */
     public function getMessageSubject(): ?string {
-        return $this->getBackingStore()->get('messageSubject');
+        $val = $this->getBackingStore()->get('messageSubject');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'messageSubject'");
     }
 
     /**
@@ -140,7 +177,11 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
      * @return string|null
     */
     public function getNetworkMessageId(): ?string {
-        return $this->getBackingStore()->get('networkMessageId');
+        $val = $this->getBackingStore()->get('networkMessageId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'networkMessageId'");
     }
 
     /**
@@ -148,7 +189,11 @@ class MessageSecurityState implements AdditionalDataHolder, BackedModel, Parsabl
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

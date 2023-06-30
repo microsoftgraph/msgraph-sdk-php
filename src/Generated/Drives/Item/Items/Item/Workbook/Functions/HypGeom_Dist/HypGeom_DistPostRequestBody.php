@@ -40,7 +40,12 @@ class HypGeom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,12 +61,16 @@ class HypGeom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * @return Json|null
     */
     public function getCumulative(): ?Json {
-        return $this->getBackingStore()->get('cumulative');
+        $val = $this->getBackingStore()->get('cumulative');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cumulative'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -79,7 +88,11 @@ class HypGeom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * @return Json|null
     */
     public function getNumberPop(): ?Json {
-        return $this->getBackingStore()->get('numberPop');
+        $val = $this->getBackingStore()->get('numberPop');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'numberPop'");
     }
 
     /**
@@ -87,7 +100,11 @@ class HypGeom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * @return Json|null
     */
     public function getNumberSample(): ?Json {
-        return $this->getBackingStore()->get('numberSample');
+        $val = $this->getBackingStore()->get('numberSample');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'numberSample'");
     }
 
     /**
@@ -95,7 +112,11 @@ class HypGeom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * @return Json|null
     */
     public function getPopulationS(): ?Json {
-        return $this->getBackingStore()->get('populationS');
+        $val = $this->getBackingStore()->get('populationS');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'populationS'");
     }
 
     /**
@@ -103,7 +124,11 @@ class HypGeom_DistPostRequestBody implements AdditionalDataHolder, BackedModel, 
      * @return Json|null
     */
     public function getSampleS(): ?Json {
-        return $this->getBackingStore()->get('sampleS');
+        $val = $this->getBackingStore()->get('sampleS');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sampleS'");
     }
 
     /**

@@ -30,12 +30,16 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implemen
      * @return Win32LobAppDeliveryOptimizationPriority|null
     */
     public function getDeliveryOptimizationPriority(): ?Win32LobAppDeliveryOptimizationPriority {
-        return $this->getBackingStore()->get('deliveryOptimizationPriority');
+        $val = $this->getBackingStore()->get('deliveryOptimizationPriority');
+        if (is_null($val) || $val instanceof Win32LobAppDeliveryOptimizationPriority) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deliveryOptimizationPriority'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -52,7 +56,11 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implemen
      * @return MobileAppInstallTimeSettings|null
     */
     public function getInstallTimeSettings(): ?MobileAppInstallTimeSettings {
-        return $this->getBackingStore()->get('installTimeSettings');
+        $val = $this->getBackingStore()->get('installTimeSettings');
+        if (is_null($val) || $val instanceof MobileAppInstallTimeSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'installTimeSettings'");
     }
 
     /**
@@ -60,7 +68,11 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implemen
      * @return Win32LobAppNotification|null
     */
     public function getNotifications(): ?Win32LobAppNotification {
-        return $this->getBackingStore()->get('notifications');
+        $val = $this->getBackingStore()->get('notifications');
+        if (is_null($val) || $val instanceof Win32LobAppNotification) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'notifications'");
     }
 
     /**
@@ -68,7 +80,11 @@ class Win32LobAppAssignmentSettings extends MobileAppAssignmentSettings implemen
      * @return Win32LobAppRestartSettings|null
     */
     public function getRestartSettings(): ?Win32LobAppRestartSettings {
-        return $this->getBackingStore()->get('restartSettings');
+        $val = $this->getBackingStore()->get('restartSettings');
+        if (is_null($val) || $val instanceof Win32LobAppRestartSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'restartSettings'");
     }
 
     /**

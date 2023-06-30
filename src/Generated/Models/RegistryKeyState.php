@@ -18,7 +18,7 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new registryKeyState and sets the default values.
+     * Instantiates a new RegistryKeyState and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -39,7 +39,12 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +57,7 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -76,7 +81,11 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
      * @return RegistryHive|null
     */
     public function getHive(): ?RegistryHive {
-        return $this->getBackingStore()->get('hive');
+        $val = $this->getBackingStore()->get('hive');
+        if (is_null($val) || $val instanceof RegistryHive) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'hive'");
     }
 
     /**
@@ -84,7 +93,11 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getKey(): ?string {
-        return $this->getBackingStore()->get('key');
+        $val = $this->getBackingStore()->get('key');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'key'");
     }
 
     /**
@@ -92,7 +105,11 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -100,7 +117,11 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOldKey(): ?string {
-        return $this->getBackingStore()->get('oldKey');
+        $val = $this->getBackingStore()->get('oldKey');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'oldKey'");
     }
 
     /**
@@ -108,7 +129,11 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOldValueData(): ?string {
-        return $this->getBackingStore()->get('oldValueData');
+        $val = $this->getBackingStore()->get('oldValueData');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'oldValueData'");
     }
 
     /**
@@ -116,7 +141,11 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOldValueName(): ?string {
-        return $this->getBackingStore()->get('oldValueName');
+        $val = $this->getBackingStore()->get('oldValueName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'oldValueName'");
     }
 
     /**
@@ -124,7 +153,11 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
      * @return RegistryOperation|null
     */
     public function getOperation(): ?RegistryOperation {
-        return $this->getBackingStore()->get('operation');
+        $val = $this->getBackingStore()->get('operation');
+        if (is_null($val) || $val instanceof RegistryOperation) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operation'");
     }
 
     /**
@@ -132,7 +165,11 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getProcessId(): ?int {
-        return $this->getBackingStore()->get('processId');
+        $val = $this->getBackingStore()->get('processId');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'processId'");
     }
 
     /**
@@ -140,7 +177,11 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getValueData(): ?string {
-        return $this->getBackingStore()->get('valueData');
+        $val = $this->getBackingStore()->get('valueData');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'valueData'");
     }
 
     /**
@@ -148,7 +189,11 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getValueName(): ?string {
-        return $this->getBackingStore()->get('valueName');
+        $val = $this->getBackingStore()->get('valueName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'valueName'");
     }
 
     /**
@@ -156,7 +201,11 @@ class RegistryKeyState implements AdditionalDataHolder, BackedModel, Parsable
      * @return RegistryValueType|null
     */
     public function getValueType(): ?RegistryValueType {
-        return $this->getBackingStore()->get('valueType');
+        $val = $this->getBackingStore()->get('valueType');
+        if (is_null($val) || $val instanceof RegistryValueType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'valueType'");
     }
 
     /**

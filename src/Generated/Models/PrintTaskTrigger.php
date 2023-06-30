@@ -29,7 +29,11 @@ class PrintTaskTrigger extends Entity implements Parsable
      * @return PrintTaskDefinition|null
     */
     public function getDefinition(): ?PrintTaskDefinition {
-        return $this->getBackingStore()->get('definition');
+        $val = $this->getBackingStore()->get('definition');
+        if (is_null($val) || $val instanceof PrintTaskDefinition) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'definition'");
     }
 
     /**
@@ -37,12 +41,16 @@ class PrintTaskTrigger extends Entity implements Parsable
      * @return PrintEvent|null
     */
     public function getEvent(): ?PrintEvent {
-        return $this->getBackingStore()->get('event');
+        $val = $this->getBackingStore()->get('event');
+        if (is_null($val) || $val instanceof PrintEvent) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'event'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

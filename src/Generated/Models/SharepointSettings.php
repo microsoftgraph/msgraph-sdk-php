@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class SharepointSettings extends Entity implements Parsable 
 {
@@ -29,7 +30,13 @@ class SharepointSettings extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getAllowedDomainGuidsForSyncApp(): ?array {
-        return $this->getBackingStore()->get('allowedDomainGuidsForSyncApp');
+        $val = $this->getBackingStore()->get('allowedDomainGuidsForSyncApp');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowedDomainGuidsForSyncApp'");
     }
 
     /**
@@ -37,7 +44,13 @@ class SharepointSettings extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getAvailableManagedPathsForSiteCreation(): ?array {
-        return $this->getBackingStore()->get('availableManagedPathsForSiteCreation');
+        $val = $this->getBackingStore()->get('availableManagedPathsForSiteCreation');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'availableManagedPathsForSiteCreation'");
     }
 
     /**
@@ -45,7 +58,11 @@ class SharepointSettings extends Entity implements Parsable
      * @return int|null
     */
     public function getDeletedUserPersonalSiteRetentionPeriodInDays(): ?int {
-        return $this->getBackingStore()->get('deletedUserPersonalSiteRetentionPeriodInDays');
+        $val = $this->getBackingStore()->get('deletedUserPersonalSiteRetentionPeriodInDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deletedUserPersonalSiteRetentionPeriodInDays'");
     }
 
     /**
@@ -53,20 +70,47 @@ class SharepointSettings extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getExcludedFileExtensionsForSyncApp(): ?array {
-        return $this->getBackingStore()->get('excludedFileExtensionsForSyncApp');
+        $val = $this->getBackingStore()->get('excludedFileExtensionsForSyncApp');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'excludedFileExtensionsForSyncApp'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'allowedDomainGuidsForSyncApp' => fn(ParseNode $n) => $o->setAllowedDomainGuidsForSyncApp($n->getCollectionOfPrimitiveValues()),
-            'availableManagedPathsForSiteCreation' => fn(ParseNode $n) => $o->setAvailableManagedPathsForSiteCreation($n->getCollectionOfPrimitiveValues()),
+            'allowedDomainGuidsForSyncApp' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setAllowedDomainGuidsForSyncApp($val);
+            },
+            'availableManagedPathsForSiteCreation' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setAvailableManagedPathsForSiteCreation($val);
+            },
             'deletedUserPersonalSiteRetentionPeriodInDays' => fn(ParseNode $n) => $o->setDeletedUserPersonalSiteRetentionPeriodInDays($n->getIntegerValue()),
-            'excludedFileExtensionsForSyncApp' => fn(ParseNode $n) => $o->setExcludedFileExtensionsForSyncApp($n->getCollectionOfPrimitiveValues()),
+            'excludedFileExtensionsForSyncApp' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setExcludedFileExtensionsForSyncApp($val);
+            },
             'idleSessionSignOut' => fn(ParseNode $n) => $o->setIdleSessionSignOut($n->getObjectValue([IdleSessionSignOut::class, 'createFromDiscriminatorValue'])),
             'imageTaggingOption' => fn(ParseNode $n) => $o->setImageTaggingOption($n->getEnumValue(ImageTaggingChoice::class)),
             'isCommentingOnSitePagesEnabled' => fn(ParseNode $n) => $o->setIsCommentingOnSitePagesEnabled($n->getBooleanValue()),
@@ -85,8 +129,22 @@ class SharepointSettings extends Entity implements Parsable
             'isSyncButtonHiddenOnPersonalSite' => fn(ParseNode $n) => $o->setIsSyncButtonHiddenOnPersonalSite($n->getBooleanValue()),
             'isUnmanagedSyncAppForTenantRestricted' => fn(ParseNode $n) => $o->setIsUnmanagedSyncAppForTenantRestricted($n->getBooleanValue()),
             'personalSiteDefaultStorageLimitInMB' => fn(ParseNode $n) => $o->setPersonalSiteDefaultStorageLimitInMB($n->getIntegerValue()),
-            'sharingAllowedDomainList' => fn(ParseNode $n) => $o->setSharingAllowedDomainList($n->getCollectionOfPrimitiveValues()),
-            'sharingBlockedDomainList' => fn(ParseNode $n) => $o->setSharingBlockedDomainList($n->getCollectionOfPrimitiveValues()),
+            'sharingAllowedDomainList' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setSharingAllowedDomainList($val);
+            },
+            'sharingBlockedDomainList' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setSharingBlockedDomainList($val);
+            },
             'sharingCapability' => fn(ParseNode $n) => $o->setSharingCapability($n->getEnumValue(SharingCapabilities::class)),
             'sharingDomainRestrictionMode' => fn(ParseNode $n) => $o->setSharingDomainRestrictionMode($n->getEnumValue(SharingDomainRestrictionMode::class)),
             'siteCreationDefaultManagedPath' => fn(ParseNode $n) => $o->setSiteCreationDefaultManagedPath($n->getStringValue()),
@@ -100,7 +158,11 @@ class SharepointSettings extends Entity implements Parsable
      * @return IdleSessionSignOut|null
     */
     public function getIdleSessionSignOut(): ?IdleSessionSignOut {
-        return $this->getBackingStore()->get('idleSessionSignOut');
+        $val = $this->getBackingStore()->get('idleSessionSignOut');
+        if (is_null($val) || $val instanceof IdleSessionSignOut) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'idleSessionSignOut'");
     }
 
     /**
@@ -108,7 +170,11 @@ class SharepointSettings extends Entity implements Parsable
      * @return ImageTaggingChoice|null
     */
     public function getImageTaggingOption(): ?ImageTaggingChoice {
-        return $this->getBackingStore()->get('imageTaggingOption');
+        $val = $this->getBackingStore()->get('imageTaggingOption');
+        if (is_null($val) || $val instanceof ImageTaggingChoice) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'imageTaggingOption'");
     }
 
     /**
@@ -116,7 +182,11 @@ class SharepointSettings extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsCommentingOnSitePagesEnabled(): ?bool {
-        return $this->getBackingStore()->get('isCommentingOnSitePagesEnabled');
+        $val = $this->getBackingStore()->get('isCommentingOnSitePagesEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isCommentingOnSitePagesEnabled'");
     }
 
     /**
@@ -124,7 +194,11 @@ class SharepointSettings extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsFileActivityNotificationEnabled(): ?bool {
-        return $this->getBackingStore()->get('isFileActivityNotificationEnabled');
+        $val = $this->getBackingStore()->get('isFileActivityNotificationEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isFileActivityNotificationEnabled'");
     }
 
     /**
@@ -132,7 +206,11 @@ class SharepointSettings extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsLegacyAuthProtocolsEnabled(): ?bool {
-        return $this->getBackingStore()->get('isLegacyAuthProtocolsEnabled');
+        $val = $this->getBackingStore()->get('isLegacyAuthProtocolsEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isLegacyAuthProtocolsEnabled'");
     }
 
     /**
@@ -140,7 +218,11 @@ class SharepointSettings extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsLoopEnabled(): ?bool {
-        return $this->getBackingStore()->get('isLoopEnabled');
+        $val = $this->getBackingStore()->get('isLoopEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isLoopEnabled'");
     }
 
     /**
@@ -148,7 +230,11 @@ class SharepointSettings extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsMacSyncAppEnabled(): ?bool {
-        return $this->getBackingStore()->get('isMacSyncAppEnabled');
+        $val = $this->getBackingStore()->get('isMacSyncAppEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isMacSyncAppEnabled'");
     }
 
     /**
@@ -156,7 +242,11 @@ class SharepointSettings extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsRequireAcceptingUserToMatchInvitedUserEnabled(): ?bool {
-        return $this->getBackingStore()->get('isRequireAcceptingUserToMatchInvitedUserEnabled');
+        $val = $this->getBackingStore()->get('isRequireAcceptingUserToMatchInvitedUserEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isRequireAcceptingUserToMatchInvitedUserEnabled'");
     }
 
     /**
@@ -164,7 +254,11 @@ class SharepointSettings extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsResharingByExternalUsersEnabled(): ?bool {
-        return $this->getBackingStore()->get('isResharingByExternalUsersEnabled');
+        $val = $this->getBackingStore()->get('isResharingByExternalUsersEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isResharingByExternalUsersEnabled'");
     }
 
     /**
@@ -172,7 +266,11 @@ class SharepointSettings extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsSharePointMobileNotificationEnabled(): ?bool {
-        return $this->getBackingStore()->get('isSharePointMobileNotificationEnabled');
+        $val = $this->getBackingStore()->get('isSharePointMobileNotificationEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isSharePointMobileNotificationEnabled'");
     }
 
     /**
@@ -180,7 +278,11 @@ class SharepointSettings extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsSharePointNewsfeedEnabled(): ?bool {
-        return $this->getBackingStore()->get('isSharePointNewsfeedEnabled');
+        $val = $this->getBackingStore()->get('isSharePointNewsfeedEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isSharePointNewsfeedEnabled'");
     }
 
     /**
@@ -188,7 +290,11 @@ class SharepointSettings extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsSiteCreationEnabled(): ?bool {
-        return $this->getBackingStore()->get('isSiteCreationEnabled');
+        $val = $this->getBackingStore()->get('isSiteCreationEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isSiteCreationEnabled'");
     }
 
     /**
@@ -196,7 +302,11 @@ class SharepointSettings extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsSiteCreationUIEnabled(): ?bool {
-        return $this->getBackingStore()->get('isSiteCreationUIEnabled');
+        $val = $this->getBackingStore()->get('isSiteCreationUIEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isSiteCreationUIEnabled'");
     }
 
     /**
@@ -204,7 +314,11 @@ class SharepointSettings extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsSitePagesCreationEnabled(): ?bool {
-        return $this->getBackingStore()->get('isSitePagesCreationEnabled');
+        $val = $this->getBackingStore()->get('isSitePagesCreationEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isSitePagesCreationEnabled'");
     }
 
     /**
@@ -212,7 +326,11 @@ class SharepointSettings extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsSitesStorageLimitAutomatic(): ?bool {
-        return $this->getBackingStore()->get('isSitesStorageLimitAutomatic');
+        $val = $this->getBackingStore()->get('isSitesStorageLimitAutomatic');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isSitesStorageLimitAutomatic'");
     }
 
     /**
@@ -220,7 +338,11 @@ class SharepointSettings extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsSyncButtonHiddenOnPersonalSite(): ?bool {
-        return $this->getBackingStore()->get('isSyncButtonHiddenOnPersonalSite');
+        $val = $this->getBackingStore()->get('isSyncButtonHiddenOnPersonalSite');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isSyncButtonHiddenOnPersonalSite'");
     }
 
     /**
@@ -228,7 +350,11 @@ class SharepointSettings extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsUnmanagedSyncAppForTenantRestricted(): ?bool {
-        return $this->getBackingStore()->get('isUnmanagedSyncAppForTenantRestricted');
+        $val = $this->getBackingStore()->get('isUnmanagedSyncAppForTenantRestricted');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isUnmanagedSyncAppForTenantRestricted'");
     }
 
     /**
@@ -236,7 +362,11 @@ class SharepointSettings extends Entity implements Parsable
      * @return int|null
     */
     public function getPersonalSiteDefaultStorageLimitInMB(): ?int {
-        return $this->getBackingStore()->get('personalSiteDefaultStorageLimitInMB');
+        $val = $this->getBackingStore()->get('personalSiteDefaultStorageLimitInMB');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'personalSiteDefaultStorageLimitInMB'");
     }
 
     /**
@@ -244,7 +374,13 @@ class SharepointSettings extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getSharingAllowedDomainList(): ?array {
-        return $this->getBackingStore()->get('sharingAllowedDomainList');
+        $val = $this->getBackingStore()->get('sharingAllowedDomainList');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sharingAllowedDomainList'");
     }
 
     /**
@@ -252,7 +388,13 @@ class SharepointSettings extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getSharingBlockedDomainList(): ?array {
-        return $this->getBackingStore()->get('sharingBlockedDomainList');
+        $val = $this->getBackingStore()->get('sharingBlockedDomainList');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sharingBlockedDomainList'");
     }
 
     /**
@@ -260,7 +402,11 @@ class SharepointSettings extends Entity implements Parsable
      * @return SharingCapabilities|null
     */
     public function getSharingCapability(): ?SharingCapabilities {
-        return $this->getBackingStore()->get('sharingCapability');
+        $val = $this->getBackingStore()->get('sharingCapability');
+        if (is_null($val) || $val instanceof SharingCapabilities) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sharingCapability'");
     }
 
     /**
@@ -268,7 +414,11 @@ class SharepointSettings extends Entity implements Parsable
      * @return SharingDomainRestrictionMode|null
     */
     public function getSharingDomainRestrictionMode(): ?SharingDomainRestrictionMode {
-        return $this->getBackingStore()->get('sharingDomainRestrictionMode');
+        $val = $this->getBackingStore()->get('sharingDomainRestrictionMode');
+        if (is_null($val) || $val instanceof SharingDomainRestrictionMode) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sharingDomainRestrictionMode'");
     }
 
     /**
@@ -276,7 +426,11 @@ class SharepointSettings extends Entity implements Parsable
      * @return string|null
     */
     public function getSiteCreationDefaultManagedPath(): ?string {
-        return $this->getBackingStore()->get('siteCreationDefaultManagedPath');
+        $val = $this->getBackingStore()->get('siteCreationDefaultManagedPath');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'siteCreationDefaultManagedPath'");
     }
 
     /**
@@ -284,7 +438,11 @@ class SharepointSettings extends Entity implements Parsable
      * @return int|null
     */
     public function getSiteCreationDefaultStorageLimitInMB(): ?int {
-        return $this->getBackingStore()->get('siteCreationDefaultStorageLimitInMB');
+        $val = $this->getBackingStore()->get('siteCreationDefaultStorageLimitInMB');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'siteCreationDefaultStorageLimitInMB'");
     }
 
     /**
@@ -292,7 +450,11 @@ class SharepointSettings extends Entity implements Parsable
      * @return string|null
     */
     public function getTenantDefaultTimezone(): ?string {
-        return $this->getBackingStore()->get('tenantDefaultTimezone');
+        $val = $this->getBackingStore()->get('tenantDefaultTimezone');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tenantDefaultTimezone'");
     }
 
     /**

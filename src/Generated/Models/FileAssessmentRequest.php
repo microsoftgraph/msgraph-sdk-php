@@ -30,12 +30,16 @@ class FileAssessmentRequest extends ThreatAssessmentRequest implements Parsable
      * @return string|null
     */
     public function getContentData(): ?string {
-        return $this->getBackingStore()->get('contentData');
+        $val = $this->getBackingStore()->get('contentData');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentData'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -50,7 +54,11 @@ class FileAssessmentRequest extends ThreatAssessmentRequest implements Parsable
      * @return string|null
     */
     public function getFileName(): ?string {
-        return $this->getBackingStore()->get('fileName');
+        $val = $this->getBackingStore()->get('fileName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fileName'");
     }
 
     /**

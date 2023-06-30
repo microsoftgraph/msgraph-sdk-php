@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class RiskyUser extends Entity implements Parsable 
 {
@@ -34,7 +35,7 @@ class RiskyUser extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -56,7 +57,13 @@ class RiskyUser extends Entity implements Parsable
      * @return array<RiskyUserHistoryItem>|null
     */
     public function getHistory(): ?array {
-        return $this->getBackingStore()->get('history');
+        $val = $this->getBackingStore()->get('history');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, RiskyUserHistoryItem::class);
+            /** @var array<RiskyUserHistoryItem>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'history'");
     }
 
     /**
@@ -64,7 +71,11 @@ class RiskyUser extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsDeleted(): ?bool {
-        return $this->getBackingStore()->get('isDeleted');
+        $val = $this->getBackingStore()->get('isDeleted');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isDeleted'");
     }
 
     /**
@@ -72,7 +83,11 @@ class RiskyUser extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsProcessing(): ?bool {
-        return $this->getBackingStore()->get('isProcessing');
+        $val = $this->getBackingStore()->get('isProcessing');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isProcessing'");
     }
 
     /**
@@ -80,7 +95,11 @@ class RiskyUser extends Entity implements Parsable
      * @return RiskDetail|null
     */
     public function getRiskDetail(): ?RiskDetail {
-        return $this->getBackingStore()->get('riskDetail');
+        $val = $this->getBackingStore()->get('riskDetail');
+        if (is_null($val) || $val instanceof RiskDetail) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'riskDetail'");
     }
 
     /**
@@ -88,7 +107,11 @@ class RiskyUser extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getRiskLastUpdatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('riskLastUpdatedDateTime');
+        $val = $this->getBackingStore()->get('riskLastUpdatedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'riskLastUpdatedDateTime'");
     }
 
     /**
@@ -96,7 +119,11 @@ class RiskyUser extends Entity implements Parsable
      * @return RiskLevel|null
     */
     public function getRiskLevel(): ?RiskLevel {
-        return $this->getBackingStore()->get('riskLevel');
+        $val = $this->getBackingStore()->get('riskLevel');
+        if (is_null($val) || $val instanceof RiskLevel) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'riskLevel'");
     }
 
     /**
@@ -104,7 +131,11 @@ class RiskyUser extends Entity implements Parsable
      * @return RiskState|null
     */
     public function getRiskState(): ?RiskState {
-        return $this->getBackingStore()->get('riskState');
+        $val = $this->getBackingStore()->get('riskState');
+        if (is_null($val) || $val instanceof RiskState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'riskState'");
     }
 
     /**
@@ -112,7 +143,11 @@ class RiskyUser extends Entity implements Parsable
      * @return string|null
     */
     public function getUserDisplayName(): ?string {
-        return $this->getBackingStore()->get('userDisplayName');
+        $val = $this->getBackingStore()->get('userDisplayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userDisplayName'");
     }
 
     /**
@@ -120,7 +155,11 @@ class RiskyUser extends Entity implements Parsable
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
-        return $this->getBackingStore()->get('userPrincipalName');
+        $val = $this->getBackingStore()->get('userPrincipalName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userPrincipalName'");
     }
 
     /**

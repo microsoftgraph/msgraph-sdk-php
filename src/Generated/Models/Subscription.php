@@ -30,7 +30,11 @@ class Subscription extends Entity implements Parsable
      * @return string|null
     */
     public function getApplicationId(): ?string {
-        return $this->getBackingStore()->get('applicationId');
+        $val = $this->getBackingStore()->get('applicationId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'applicationId'");
     }
 
     /**
@@ -38,7 +42,11 @@ class Subscription extends Entity implements Parsable
      * @return string|null
     */
     public function getChangeType(): ?string {
-        return $this->getBackingStore()->get('changeType');
+        $val = $this->getBackingStore()->get('changeType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'changeType'");
     }
 
     /**
@@ -46,7 +54,11 @@ class Subscription extends Entity implements Parsable
      * @return string|null
     */
     public function getClientState(): ?string {
-        return $this->getBackingStore()->get('clientState');
+        $val = $this->getBackingStore()->get('clientState');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'clientState'");
     }
 
     /**
@@ -54,7 +66,11 @@ class Subscription extends Entity implements Parsable
      * @return string|null
     */
     public function getCreatorId(): ?string {
-        return $this->getBackingStore()->get('creatorId');
+        $val = $this->getBackingStore()->get('creatorId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'creatorId'");
     }
 
     /**
@@ -62,7 +78,11 @@ class Subscription extends Entity implements Parsable
      * @return string|null
     */
     public function getEncryptionCertificate(): ?string {
-        return $this->getBackingStore()->get('encryptionCertificate');
+        $val = $this->getBackingStore()->get('encryptionCertificate');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'encryptionCertificate'");
     }
 
     /**
@@ -70,7 +90,11 @@ class Subscription extends Entity implements Parsable
      * @return string|null
     */
     public function getEncryptionCertificateId(): ?string {
-        return $this->getBackingStore()->get('encryptionCertificateId');
+        $val = $this->getBackingStore()->get('encryptionCertificateId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'encryptionCertificateId'");
     }
 
     /**
@@ -78,12 +102,16 @@ class Subscription extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('expirationDateTime');
+        $val = $this->getBackingStore()->get('expirationDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'expirationDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -110,7 +138,11 @@ class Subscription extends Entity implements Parsable
      * @return bool|null
     */
     public function getIncludeResourceData(): ?bool {
-        return $this->getBackingStore()->get('includeResourceData');
+        $val = $this->getBackingStore()->get('includeResourceData');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'includeResourceData'");
     }
 
     /**
@@ -118,7 +150,11 @@ class Subscription extends Entity implements Parsable
      * @return string|null
     */
     public function getLatestSupportedTlsVersion(): ?string {
-        return $this->getBackingStore()->get('latestSupportedTlsVersion');
+        $val = $this->getBackingStore()->get('latestSupportedTlsVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'latestSupportedTlsVersion'");
     }
 
     /**
@@ -126,7 +162,11 @@ class Subscription extends Entity implements Parsable
      * @return string|null
     */
     public function getLifecycleNotificationUrl(): ?string {
-        return $this->getBackingStore()->get('lifecycleNotificationUrl');
+        $val = $this->getBackingStore()->get('lifecycleNotificationUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lifecycleNotificationUrl'");
     }
 
     /**
@@ -134,7 +174,11 @@ class Subscription extends Entity implements Parsable
      * @return string|null
     */
     public function getNotificationQueryOptions(): ?string {
-        return $this->getBackingStore()->get('notificationQueryOptions');
+        $val = $this->getBackingStore()->get('notificationQueryOptions');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'notificationQueryOptions'");
     }
 
     /**
@@ -142,7 +186,11 @@ class Subscription extends Entity implements Parsable
      * @return string|null
     */
     public function getNotificationUrl(): ?string {
-        return $this->getBackingStore()->get('notificationUrl');
+        $val = $this->getBackingStore()->get('notificationUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'notificationUrl'");
     }
 
     /**
@@ -150,7 +198,11 @@ class Subscription extends Entity implements Parsable
      * @return string|null
     */
     public function getNotificationUrlAppId(): ?string {
-        return $this->getBackingStore()->get('notificationUrlAppId');
+        $val = $this->getBackingStore()->get('notificationUrlAppId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'notificationUrlAppId'");
     }
 
     /**
@@ -158,7 +210,11 @@ class Subscription extends Entity implements Parsable
      * @return string|null
     */
     public function getResource(): ?string {
-        return $this->getBackingStore()->get('resource');
+        $val = $this->getBackingStore()->get('resource');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resource'");
     }
 
     /**

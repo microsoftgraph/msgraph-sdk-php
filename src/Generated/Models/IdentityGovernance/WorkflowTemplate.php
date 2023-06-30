@@ -6,6 +6,7 @@ use Microsoft\Graph\Generated\Models\Entity;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class WorkflowTemplate extends Entity implements Parsable 
 {
@@ -30,7 +31,11 @@ class WorkflowTemplate extends Entity implements Parsable
      * @return LifecycleWorkflowCategory|null
     */
     public function getCategory(): ?LifecycleWorkflowCategory {
-        return $this->getBackingStore()->get('category');
+        $val = $this->getBackingStore()->get('category');
+        if (is_null($val) || $val instanceof LifecycleWorkflowCategory) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'category'");
     }
 
     /**
@@ -38,7 +43,11 @@ class WorkflowTemplate extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -46,7 +55,11 @@ class WorkflowTemplate extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
@@ -54,12 +67,16 @@ class WorkflowTemplate extends Entity implements Parsable
      * @return WorkflowExecutionConditions|null
     */
     public function getExecutionConditions(): ?WorkflowExecutionConditions {
-        return $this->getBackingStore()->get('executionConditions');
+        $val = $this->getBackingStore()->get('executionConditions');
+        if (is_null($val) || $val instanceof WorkflowExecutionConditions) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'executionConditions'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -77,7 +94,13 @@ class WorkflowTemplate extends Entity implements Parsable
      * @return array<Task>|null
     */
     public function getTasks(): ?array {
-        return $this->getBackingStore()->get('tasks');
+        $val = $this->getBackingStore()->get('tasks');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Task::class);
+            /** @var array<Task>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tasks'");
     }
 
     /**

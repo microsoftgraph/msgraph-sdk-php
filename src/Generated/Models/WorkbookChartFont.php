@@ -29,7 +29,11 @@ class WorkbookChartFont extends Entity implements Parsable
      * @return bool|null
     */
     public function getBold(): ?bool {
-        return $this->getBackingStore()->get('bold');
+        $val = $this->getBackingStore()->get('bold');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bold'");
     }
 
     /**
@@ -37,12 +41,16 @@ class WorkbookChartFont extends Entity implements Parsable
      * @return string|null
     */
     public function getColor(): ?string {
-        return $this->getBackingStore()->get('color');
+        $val = $this->getBackingStore()->get('color');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'color'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -61,7 +69,11 @@ class WorkbookChartFont extends Entity implements Parsable
      * @return bool|null
     */
     public function getItalic(): ?bool {
-        return $this->getBackingStore()->get('italic');
+        $val = $this->getBackingStore()->get('italic');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'italic'");
     }
 
     /**
@@ -69,7 +81,11 @@ class WorkbookChartFont extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -77,7 +93,11 @@ class WorkbookChartFont extends Entity implements Parsable
      * @return float|null
     */
     public function getSize(): ?float {
-        return $this->getBackingStore()->get('size');
+        $val = $this->getBackingStore()->get('size');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'size'");
     }
 
     /**
@@ -85,7 +105,11 @@ class WorkbookChartFont extends Entity implements Parsable
      * @return string|null
     */
     public function getUnderline(): ?string {
-        return $this->getBackingStore()->get('underline');
+        $val = $this->getBackingStore()->get('underline');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'underline'");
     }
 
     /**

@@ -40,7 +40,12 @@ class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Backed
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -48,7 +53,11 @@ class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Backed
      * @return AttachmentItem|null
     */
     public function getAttachmentItem(): ?AttachmentItem {
-        return $this->getBackingStore()->get('attachmentItem');
+        $val = $this->getBackingStore()->get('attachmentItem');
+        if (is_null($val) || $val instanceof AttachmentItem) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'attachmentItem'");
     }
 
     /**
@@ -61,7 +70,7 @@ class CreateUploadSessionPostRequestBody implements AdditionalDataHolder, Backed
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

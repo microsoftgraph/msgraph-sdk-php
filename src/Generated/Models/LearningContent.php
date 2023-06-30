@@ -7,6 +7,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class LearningContent extends Entity implements Parsable 
 {
@@ -31,7 +32,13 @@ class LearningContent extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getAdditionalTags(): ?array {
-        return $this->getBackingStore()->get('additionalTags');
+        $val = $this->getBackingStore()->get('additionalTags');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalTags'");
     }
 
     /**
@@ -39,7 +46,11 @@ class LearningContent extends Entity implements Parsable
      * @return string|null
     */
     public function getContentWebUrl(): ?string {
-        return $this->getBackingStore()->get('contentWebUrl');
+        $val = $this->getBackingStore()->get('contentWebUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentWebUrl'");
     }
 
     /**
@@ -47,7 +58,13 @@ class LearningContent extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getContributors(): ?array {
-        return $this->getBackingStore()->get('contributors');
+        $val = $this->getBackingStore()->get('contributors');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contributors'");
     }
 
     /**
@@ -55,7 +72,11 @@ class LearningContent extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -63,7 +84,11 @@ class LearningContent extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -71,7 +96,11 @@ class LearningContent extends Entity implements Parsable
      * @return DateInterval|null
     */
     public function getDuration(): ?DateInterval {
-        return $this->getBackingStore()->get('duration');
+        $val = $this->getBackingStore()->get('duration');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'duration'");
     }
 
     /**
@@ -79,19 +108,37 @@ class LearningContent extends Entity implements Parsable
      * @return string|null
     */
     public function getExternalId(): ?string {
-        return $this->getBackingStore()->get('externalId');
+        $val = $this->getBackingStore()->get('externalId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'externalId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
-            'additionalTags' => fn(ParseNode $n) => $o->setAdditionalTags($n->getCollectionOfPrimitiveValues()),
+            'additionalTags' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setAdditionalTags($val);
+            },
             'contentWebUrl' => fn(ParseNode $n) => $o->setContentWebUrl($n->getStringValue()),
-            'contributors' => fn(ParseNode $n) => $o->setContributors($n->getCollectionOfPrimitiveValues()),
+            'contributors' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setContributors($val);
+            },
             'createdDateTime' => fn(ParseNode $n) => $o->setCreatedDateTime($n->getDateTimeValue()),
             'description' => fn(ParseNode $n) => $o->setDescription($n->getStringValue()),
             'duration' => fn(ParseNode $n) => $o->setDuration($n->getDateIntervalValue()),
@@ -103,7 +150,14 @@ class LearningContent extends Entity implements Parsable
             'languageTag' => fn(ParseNode $n) => $o->setLanguageTag($n->getStringValue()),
             'lastModifiedDateTime' => fn(ParseNode $n) => $o->setLastModifiedDateTime($n->getDateTimeValue()),
             'numberOfPages' => fn(ParseNode $n) => $o->setNumberOfPages($n->getIntegerValue()),
-            'skillTags' => fn(ParseNode $n) => $o->setSkillTags($n->getCollectionOfPrimitiveValues()),
+            'skillTags' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setSkillTags($val);
+            },
             'sourceName' => fn(ParseNode $n) => $o->setSourceName($n->getStringValue()),
             'thumbnailWebUrl' => fn(ParseNode $n) => $o->setThumbnailWebUrl($n->getStringValue()),
             'title' => fn(ParseNode $n) => $o->setTitle($n->getStringValue()),
@@ -115,7 +169,11 @@ class LearningContent extends Entity implements Parsable
      * @return string|null
     */
     public function getFormat(): ?string {
-        return $this->getBackingStore()->get('format');
+        $val = $this->getBackingStore()->get('format');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'format'");
     }
 
     /**
@@ -123,7 +181,11 @@ class LearningContent extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsActive(): ?bool {
-        return $this->getBackingStore()->get('isActive');
+        $val = $this->getBackingStore()->get('isActive');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isActive'");
     }
 
     /**
@@ -131,7 +193,11 @@ class LearningContent extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsPremium(): ?bool {
-        return $this->getBackingStore()->get('isPremium');
+        $val = $this->getBackingStore()->get('isPremium');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isPremium'");
     }
 
     /**
@@ -139,7 +205,11 @@ class LearningContent extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsSearchable(): ?bool {
-        return $this->getBackingStore()->get('isSearchable');
+        $val = $this->getBackingStore()->get('isSearchable');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isSearchable'");
     }
 
     /**
@@ -147,7 +217,11 @@ class LearningContent extends Entity implements Parsable
      * @return string|null
     */
     public function getLanguageTag(): ?string {
-        return $this->getBackingStore()->get('languageTag');
+        $val = $this->getBackingStore()->get('languageTag');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'languageTag'");
     }
 
     /**
@@ -155,7 +229,11 @@ class LearningContent extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedDateTime');
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**
@@ -163,7 +241,11 @@ class LearningContent extends Entity implements Parsable
      * @return int|null
     */
     public function getNumberOfPages(): ?int {
-        return $this->getBackingStore()->get('numberOfPages');
+        $val = $this->getBackingStore()->get('numberOfPages');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'numberOfPages'");
     }
 
     /**
@@ -171,7 +253,13 @@ class LearningContent extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getSkillTags(): ?array {
-        return $this->getBackingStore()->get('skillTags');
+        $val = $this->getBackingStore()->get('skillTags');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'skillTags'");
     }
 
     /**
@@ -179,7 +267,11 @@ class LearningContent extends Entity implements Parsable
      * @return string|null
     */
     public function getSourceName(): ?string {
-        return $this->getBackingStore()->get('sourceName');
+        $val = $this->getBackingStore()->get('sourceName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sourceName'");
     }
 
     /**
@@ -187,7 +279,11 @@ class LearningContent extends Entity implements Parsable
      * @return string|null
     */
     public function getThumbnailWebUrl(): ?string {
-        return $this->getBackingStore()->get('thumbnailWebUrl');
+        $val = $this->getBackingStore()->get('thumbnailWebUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'thumbnailWebUrl'");
     }
 
     /**
@@ -195,7 +291,11 @@ class LearningContent extends Entity implements Parsable
      * @return string|null
     */
     public function getTitle(): ?string {
-        return $this->getBackingStore()->get('title');
+        $val = $this->getBackingStore()->get('title');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'title'");
     }
 
     /**

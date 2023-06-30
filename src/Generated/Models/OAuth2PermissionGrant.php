@@ -29,7 +29,11 @@ class OAuth2PermissionGrant extends Entity implements Parsable
      * @return string|null
     */
     public function getClientId(): ?string {
-        return $this->getBackingStore()->get('clientId');
+        $val = $this->getBackingStore()->get('clientId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'clientId'");
     }
 
     /**
@@ -37,12 +41,16 @@ class OAuth2PermissionGrant extends Entity implements Parsable
      * @return string|null
     */
     public function getConsentType(): ?string {
-        return $this->getBackingStore()->get('consentType');
+        $val = $this->getBackingStore()->get('consentType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'consentType'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -60,7 +68,11 @@ class OAuth2PermissionGrant extends Entity implements Parsable
      * @return string|null
     */
     public function getPrincipalId(): ?string {
-        return $this->getBackingStore()->get('principalId');
+        $val = $this->getBackingStore()->get('principalId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'principalId'");
     }
 
     /**
@@ -68,7 +80,11 @@ class OAuth2PermissionGrant extends Entity implements Parsable
      * @return string|null
     */
     public function getResourceId(): ?string {
-        return $this->getBackingStore()->get('resourceId');
+        $val = $this->getBackingStore()->get('resourceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceId'");
     }
 
     /**
@@ -76,7 +92,11 @@ class OAuth2PermissionGrant extends Entity implements Parsable
      * @return string|null
     */
     public function getScope(): ?string {
-        return $this->getBackingStore()->get('scope');
+        $val = $this->getBackingStore()->get('scope');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scope'");
     }
 
     /**

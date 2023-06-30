@@ -29,12 +29,16 @@ class FileEvidence extends AlertEvidence implements Parsable
      * @return DetectionStatus|null
     */
     public function getDetectionStatus(): ?DetectionStatus {
-        return $this->getBackingStore()->get('detectionStatus');
+        $val = $this->getBackingStore()->get('detectionStatus');
+        if (is_null($val) || $val instanceof DetectionStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'detectionStatus'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -50,7 +54,11 @@ class FileEvidence extends AlertEvidence implements Parsable
      * @return FileDetails|null
     */
     public function getFileDetails(): ?FileDetails {
-        return $this->getBackingStore()->get('fileDetails');
+        $val = $this->getBackingStore()->get('fileDetails');
+        if (is_null($val) || $val instanceof FileDetails) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fileDetails'");
     }
 
     /**
@@ -58,7 +66,11 @@ class FileEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getMdeDeviceId(): ?string {
-        return $this->getBackingStore()->get('mdeDeviceId');
+        $val = $this->getBackingStore()->get('mdeDeviceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mdeDeviceId'");
     }
 
     /**

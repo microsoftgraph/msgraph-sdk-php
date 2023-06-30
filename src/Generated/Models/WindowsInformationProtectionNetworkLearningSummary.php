@@ -32,12 +32,16 @@ class WindowsInformationProtectionNetworkLearningSummary extends Entity implemen
      * @return int|null
     */
     public function getDeviceCount(): ?int {
-        return $this->getBackingStore()->get('deviceCount');
+        $val = $this->getBackingStore()->get('deviceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceCount'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -52,7 +56,11 @@ class WindowsInformationProtectionNetworkLearningSummary extends Entity implemen
      * @return string|null
     */
     public function getUrl(): ?string {
-        return $this->getBackingStore()->get('url');
+        $val = $this->getBackingStore()->get('url');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'url'");
     }
 
     /**

@@ -34,7 +34,7 @@ class ListItemVersion extends BaseItemVersion implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -48,7 +48,11 @@ class ListItemVersion extends BaseItemVersion implements Parsable
      * @return FieldValueSet|null
     */
     public function getFields(): ?FieldValueSet {
-        return $this->getBackingStore()->get('fields');
+        $val = $this->getBackingStore()->get('fields');
+        if (is_null($val) || $val instanceof FieldValueSet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fields'");
     }
 
     /**

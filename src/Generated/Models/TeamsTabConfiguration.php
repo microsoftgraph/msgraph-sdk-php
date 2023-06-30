@@ -39,7 +39,12 @@ class TeamsTabConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +60,11 @@ class TeamsTabConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getContentUrl(): ?string {
-        return $this->getBackingStore()->get('contentUrl');
+        $val = $this->getBackingStore()->get('contentUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentUrl'");
     }
 
     /**
@@ -63,12 +72,16 @@ class TeamsTabConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getEntityId(): ?string {
-        return $this->getBackingStore()->get('entityId');
+        $val = $this->getBackingStore()->get('entityId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'entityId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -86,7 +99,11 @@ class TeamsTabConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -94,7 +111,11 @@ class TeamsTabConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getRemoveUrl(): ?string {
-        return $this->getBackingStore()->get('removeUrl');
+        $val = $this->getBackingStore()->get('removeUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'removeUrl'");
     }
 
     /**
@@ -102,7 +123,11 @@ class TeamsTabConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getWebsiteUrl(): ?string {
-        return $this->getBackingStore()->get('websiteUrl');
+        $val = $this->getBackingStore()->get('websiteUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'websiteUrl'");
     }
 
     /**

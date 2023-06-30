@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +61,11 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getCollate(): ?bool {
-        return $this->getBackingStore()->get('collate');
+        $val = $this->getBackingStore()->get('collate');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'collate'");
     }
 
     /**
@@ -63,7 +73,11 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return PrintColorMode|null
     */
     public function getColorMode(): ?PrintColorMode {
-        return $this->getBackingStore()->get('colorMode');
+        $val = $this->getBackingStore()->get('colorMode');
+        if (is_null($val) || $val instanceof PrintColorMode) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'colorMode'");
     }
 
     /**
@@ -71,7 +85,11 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return int|null
     */
     public function getCopies(): ?int {
-        return $this->getBackingStore()->get('copies');
+        $val = $this->getBackingStore()->get('copies');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'copies'");
     }
 
     /**
@@ -79,7 +97,11 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return int|null
     */
     public function getDpi(): ?int {
-        return $this->getBackingStore()->get('dpi');
+        $val = $this->getBackingStore()->get('dpi');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dpi'");
     }
 
     /**
@@ -87,7 +109,11 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return PrintDuplexMode|null
     */
     public function getDuplexMode(): ?PrintDuplexMode {
-        return $this->getBackingStore()->get('duplexMode');
+        $val = $this->getBackingStore()->get('duplexMode');
+        if (is_null($val) || $val instanceof PrintDuplexMode) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'duplexMode'");
     }
 
     /**
@@ -95,12 +121,16 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return PrinterFeedOrientation|null
     */
     public function getFeedOrientation(): ?PrinterFeedOrientation {
-        return $this->getBackingStore()->get('feedOrientation');
+        $val = $this->getBackingStore()->get('feedOrientation');
+        if (is_null($val) || $val instanceof PrinterFeedOrientation) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'feedOrientation'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -133,7 +163,13 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<PrintFinishing>|null
     */
     public function getFinishings(): ?array {
-        return $this->getBackingStore()->get('finishings');
+        $val = $this->getBackingStore()->get('finishings');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, PrintFinishing::class);
+            /** @var array<PrintFinishing>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'finishings'");
     }
 
     /**
@@ -141,7 +177,11 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getFitPdfToPage(): ?bool {
-        return $this->getBackingStore()->get('fitPdfToPage');
+        $val = $this->getBackingStore()->get('fitPdfToPage');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fitPdfToPage'");
     }
 
     /**
@@ -149,7 +189,11 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getInputBin(): ?string {
-        return $this->getBackingStore()->get('inputBin');
+        $val = $this->getBackingStore()->get('inputBin');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'inputBin'");
     }
 
     /**
@@ -157,7 +201,11 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return PrintMargin|null
     */
     public function getMargin(): ?PrintMargin {
-        return $this->getBackingStore()->get('margin');
+        $val = $this->getBackingStore()->get('margin');
+        if (is_null($val) || $val instanceof PrintMargin) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'margin'");
     }
 
     /**
@@ -165,7 +213,11 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getMediaSize(): ?string {
-        return $this->getBackingStore()->get('mediaSize');
+        $val = $this->getBackingStore()->get('mediaSize');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mediaSize'");
     }
 
     /**
@@ -173,7 +225,11 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getMediaType(): ?string {
-        return $this->getBackingStore()->get('mediaType');
+        $val = $this->getBackingStore()->get('mediaType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mediaType'");
     }
 
     /**
@@ -181,7 +237,11 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return PrintMultipageLayout|null
     */
     public function getMultipageLayout(): ?PrintMultipageLayout {
-        return $this->getBackingStore()->get('multipageLayout');
+        $val = $this->getBackingStore()->get('multipageLayout');
+        if (is_null($val) || $val instanceof PrintMultipageLayout) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'multipageLayout'");
     }
 
     /**
@@ -189,7 +249,11 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -197,7 +261,11 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return PrintOrientation|null
     */
     public function getOrientation(): ?PrintOrientation {
-        return $this->getBackingStore()->get('orientation');
+        $val = $this->getBackingStore()->get('orientation');
+        if (is_null($val) || $val instanceof PrintOrientation) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'orientation'");
     }
 
     /**
@@ -205,7 +273,11 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getOutputBin(): ?string {
-        return $this->getBackingStore()->get('outputBin');
+        $val = $this->getBackingStore()->get('outputBin');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'outputBin'");
     }
 
     /**
@@ -213,7 +285,13 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<IntegerRange>|null
     */
     public function getPageRanges(): ?array {
-        return $this->getBackingStore()->get('pageRanges');
+        $val = $this->getBackingStore()->get('pageRanges');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, IntegerRange::class);
+            /** @var array<IntegerRange>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'pageRanges'");
     }
 
     /**
@@ -221,7 +299,11 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return int|null
     */
     public function getPagesPerSheet(): ?int {
-        return $this->getBackingStore()->get('pagesPerSheet');
+        $val = $this->getBackingStore()->get('pagesPerSheet');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'pagesPerSheet'");
     }
 
     /**
@@ -229,7 +311,11 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return PrintQuality|null
     */
     public function getQuality(): ?PrintQuality {
-        return $this->getBackingStore()->get('quality');
+        $val = $this->getBackingStore()->get('quality');
+        if (is_null($val) || $val instanceof PrintQuality) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'quality'");
     }
 
     /**
@@ -237,7 +323,11 @@ class PrintJobConfiguration implements AdditionalDataHolder, BackedModel, Parsab
      * @return PrintScaling|null
     */
     public function getScaling(): ?PrintScaling {
-        return $this->getBackingStore()->get('scaling');
+        $val = $this->getBackingStore()->get('scaling');
+        if (is_null($val) || $val instanceof PrintScaling) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scaling'");
     }
 
     /**

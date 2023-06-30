@@ -31,7 +31,11 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -39,7 +43,11 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
      * @return Device|null
     */
     public function getDevice(): ?Device {
-        return $this->getBackingStore()->get('device');
+        $val = $this->getBackingStore()->get('device');
+        if (is_null($val) || $val instanceof Device) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'device'");
     }
 
     /**
@@ -47,7 +55,11 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
      * @return string|null
     */
     public function getDeviceTag(): ?string {
-        return $this->getBackingStore()->get('deviceTag');
+        $val = $this->getBackingStore()->get('deviceTag');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceTag'");
     }
 
     /**
@@ -55,12 +67,16 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -78,7 +94,11 @@ class MicrosoftAuthenticatorAuthenticationMethod extends AuthenticationMethod im
      * @return string|null
     */
     public function getPhoneAppVersion(): ?string {
-        return $this->getBackingStore()->get('phoneAppVersion');
+        $val = $this->getBackingStore()->get('phoneAppVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'phoneAppVersion'");
     }
 
     /**

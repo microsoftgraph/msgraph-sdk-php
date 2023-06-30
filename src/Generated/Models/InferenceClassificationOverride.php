@@ -29,12 +29,16 @@ class InferenceClassificationOverride extends Entity implements Parsable
      * @return InferenceClassificationType|null
     */
     public function getClassifyAs(): ?InferenceClassificationType {
-        return $this->getBackingStore()->get('classifyAs');
+        $val = $this->getBackingStore()->get('classifyAs');
+        if (is_null($val) || $val instanceof InferenceClassificationType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'classifyAs'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -49,7 +53,11 @@ class InferenceClassificationOverride extends Entity implements Parsable
      * @return EmailAddress|null
     */
     public function getSenderEmailAddress(): ?EmailAddress {
-        return $this->getBackingStore()->get('senderEmailAddress');
+        $val = $this->getBackingStore()->get('senderEmailAddress');
+        if (is_null($val) || $val instanceof EmailAddress) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'senderEmailAddress'");
     }
 
     /**

@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class MailTips implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class MailTips implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +53,11 @@ class MailTips implements AdditionalDataHolder, BackedModel, Parsable
      * @return AutomaticRepliesMailTips|null
     */
     public function getAutomaticReplies(): ?AutomaticRepliesMailTips {
-        return $this->getBackingStore()->get('automaticReplies');
+        $val = $this->getBackingStore()->get('automaticReplies');
+        if (is_null($val) || $val instanceof AutomaticRepliesMailTips) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'automaticReplies'");
     }
 
     /**
@@ -63,7 +73,11 @@ class MailTips implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getCustomMailTip(): ?string {
-        return $this->getBackingStore()->get('customMailTip');
+        $val = $this->getBackingStore()->get('customMailTip');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customMailTip'");
     }
 
     /**
@@ -71,7 +85,11 @@ class MailTips implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getDeliveryRestricted(): ?bool {
-        return $this->getBackingStore()->get('deliveryRestricted');
+        $val = $this->getBackingStore()->get('deliveryRestricted');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deliveryRestricted'");
     }
 
     /**
@@ -79,7 +97,11 @@ class MailTips implements AdditionalDataHolder, BackedModel, Parsable
      * @return EmailAddress|null
     */
     public function getEmailAddress(): ?EmailAddress {
-        return $this->getBackingStore()->get('emailAddress');
+        $val = $this->getBackingStore()->get('emailAddress');
+        if (is_null($val) || $val instanceof EmailAddress) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'emailAddress'");
     }
 
     /**
@@ -87,7 +109,11 @@ class MailTips implements AdditionalDataHolder, BackedModel, Parsable
      * @return MailTipsError|null
     */
     public function getError(): ?MailTipsError {
-        return $this->getBackingStore()->get('error');
+        $val = $this->getBackingStore()->get('error');
+        if (is_null($val) || $val instanceof MailTipsError) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'error'");
     }
 
     /**
@@ -95,12 +121,16 @@ class MailTips implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getExternalMemberCount(): ?int {
-        return $this->getBackingStore()->get('externalMemberCount');
+        $val = $this->getBackingStore()->get('externalMemberCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'externalMemberCount'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -126,7 +156,11 @@ class MailTips implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getIsModerated(): ?bool {
-        return $this->getBackingStore()->get('isModerated');
+        $val = $this->getBackingStore()->get('isModerated');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isModerated'");
     }
 
     /**
@@ -134,7 +168,11 @@ class MailTips implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getMailboxFull(): ?bool {
-        return $this->getBackingStore()->get('mailboxFull');
+        $val = $this->getBackingStore()->get('mailboxFull');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mailboxFull'");
     }
 
     /**
@@ -142,7 +180,11 @@ class MailTips implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getMaxMessageSize(): ?int {
-        return $this->getBackingStore()->get('maxMessageSize');
+        $val = $this->getBackingStore()->get('maxMessageSize');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maxMessageSize'");
     }
 
     /**
@@ -150,7 +192,11 @@ class MailTips implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -158,7 +204,11 @@ class MailTips implements AdditionalDataHolder, BackedModel, Parsable
      * @return RecipientScopeType|null
     */
     public function getRecipientScope(): ?RecipientScopeType {
-        return $this->getBackingStore()->get('recipientScope');
+        $val = $this->getBackingStore()->get('recipientScope');
+        if (is_null($val) || $val instanceof RecipientScopeType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recipientScope'");
     }
 
     /**
@@ -166,7 +216,13 @@ class MailTips implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<Recipient>|null
     */
     public function getRecipientSuggestions(): ?array {
-        return $this->getBackingStore()->get('recipientSuggestions');
+        $val = $this->getBackingStore()->get('recipientSuggestions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Recipient::class);
+            /** @var array<Recipient>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recipientSuggestions'");
     }
 
     /**
@@ -174,7 +230,11 @@ class MailTips implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getTotalMemberCount(): ?int {
-        return $this->getBackingStore()->get('totalMemberCount');
+        $val = $this->getBackingStore()->get('totalMemberCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'totalMemberCount'");
     }
 
     /**

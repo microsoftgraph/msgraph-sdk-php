@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class TemporaryAccessPassAuthenticationMethodConfiguration extends AuthenticationMethodConfiguration implements Parsable 
 {
@@ -30,7 +31,11 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
      * @return int|null
     */
     public function getDefaultLength(): ?int {
-        return $this->getBackingStore()->get('defaultLength');
+        $val = $this->getBackingStore()->get('defaultLength');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'defaultLength'");
     }
 
     /**
@@ -38,12 +43,16 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
      * @return int|null
     */
     public function getDefaultLifetimeInMinutes(): ?int {
-        return $this->getBackingStore()->get('defaultLifetimeInMinutes');
+        $val = $this->getBackingStore()->get('defaultLifetimeInMinutes');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'defaultLifetimeInMinutes'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -62,7 +71,13 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
      * @return array<AuthenticationMethodTarget>|null
     */
     public function getIncludeTargets(): ?array {
-        return $this->getBackingStore()->get('includeTargets');
+        $val = $this->getBackingStore()->get('includeTargets');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AuthenticationMethodTarget::class);
+            /** @var array<AuthenticationMethodTarget>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'includeTargets'");
     }
 
     /**
@@ -70,7 +85,11 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
      * @return bool|null
     */
     public function getIsUsableOnce(): ?bool {
-        return $this->getBackingStore()->get('isUsableOnce');
+        $val = $this->getBackingStore()->get('isUsableOnce');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isUsableOnce'");
     }
 
     /**
@@ -78,7 +97,11 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
      * @return int|null
     */
     public function getMaximumLifetimeInMinutes(): ?int {
-        return $this->getBackingStore()->get('maximumLifetimeInMinutes');
+        $val = $this->getBackingStore()->get('maximumLifetimeInMinutes');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maximumLifetimeInMinutes'");
     }
 
     /**
@@ -86,7 +109,11 @@ class TemporaryAccessPassAuthenticationMethodConfiguration extends Authenticatio
      * @return int|null
     */
     public function getMinimumLifetimeInMinutes(): ?int {
-        return $this->getBackingStore()->get('minimumLifetimeInMinutes');
+        $val = $this->getBackingStore()->get('minimumLifetimeInMinutes');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minimumLifetimeInMinutes'");
     }
 
     /**

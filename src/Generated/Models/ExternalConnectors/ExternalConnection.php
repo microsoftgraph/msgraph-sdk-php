@@ -6,11 +6,12 @@ use Microsoft\Graph\Generated\Models\Entity;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ExternalConnection extends Entity implements Parsable 
 {
     /**
-     * Instantiates a new externalConnection and sets the default values.
+     * Instantiates a new ExternalConnection and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -30,7 +31,11 @@ class ExternalConnection extends Entity implements Parsable
      * @return ActivitySettings|null
     */
     public function getActivitySettings(): ?ActivitySettings {
-        return $this->getBackingStore()->get('activitySettings');
+        $val = $this->getBackingStore()->get('activitySettings');
+        if (is_null($val) || $val instanceof ActivitySettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activitySettings'");
     }
 
     /**
@@ -38,7 +43,11 @@ class ExternalConnection extends Entity implements Parsable
      * @return Configuration|null
     */
     public function getConfiguration(): ?Configuration {
-        return $this->getBackingStore()->get('configuration');
+        $val = $this->getBackingStore()->get('configuration');
+        if (is_null($val) || $val instanceof Configuration) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'configuration'");
     }
 
     /**
@@ -46,12 +55,16 @@ class ExternalConnection extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -74,7 +87,13 @@ class ExternalConnection extends Entity implements Parsable
      * @return array<ExternalGroup>|null
     */
     public function getGroups(): ?array {
-        return $this->getBackingStore()->get('groups');
+        $val = $this->getBackingStore()->get('groups');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ExternalGroup::class);
+            /** @var array<ExternalGroup>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'groups'");
     }
 
     /**
@@ -82,7 +101,13 @@ class ExternalConnection extends Entity implements Parsable
      * @return array<ExternalItem>|null
     */
     public function getItems(): ?array {
-        return $this->getBackingStore()->get('items');
+        $val = $this->getBackingStore()->get('items');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ExternalItem::class);
+            /** @var array<ExternalItem>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'items'");
     }
 
     /**
@@ -90,7 +115,11 @@ class ExternalConnection extends Entity implements Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -98,7 +127,13 @@ class ExternalConnection extends Entity implements Parsable
      * @return array<ConnectionOperation>|null
     */
     public function getOperations(): ?array {
-        return $this->getBackingStore()->get('operations');
+        $val = $this->getBackingStore()->get('operations');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, ConnectionOperation::class);
+            /** @var array<ConnectionOperation>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operations'");
     }
 
     /**
@@ -106,7 +141,11 @@ class ExternalConnection extends Entity implements Parsable
      * @return Schema|null
     */
     public function getSchema(): ?Schema {
-        return $this->getBackingStore()->get('schema');
+        $val = $this->getBackingStore()->get('schema');
+        if (is_null($val) || $val instanceof Schema) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'schema'");
     }
 
     /**
@@ -114,7 +153,11 @@ class ExternalConnection extends Entity implements Parsable
      * @return SearchSettings|null
     */
     public function getSearchSettings(): ?SearchSettings {
-        return $this->getBackingStore()->get('searchSettings');
+        $val = $this->getBackingStore()->get('searchSettings');
+        if (is_null($val) || $val instanceof SearchSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'searchSettings'");
     }
 
     /**
@@ -122,7 +165,11 @@ class ExternalConnection extends Entity implements Parsable
      * @return ConnectionState|null
     */
     public function getState(): ?ConnectionState {
-        return $this->getBackingStore()->get('state');
+        $val = $this->getBackingStore()->get('state');
+        if (is_null($val) || $val instanceof ConnectionState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
     }
 
     /**

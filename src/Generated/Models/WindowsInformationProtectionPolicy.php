@@ -30,12 +30,16 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
      * @return int|null
     */
     public function getDaysWithoutContactBeforeUnenroll(): ?int {
-        return $this->getBackingStore()->get('daysWithoutContactBeforeUnenroll');
+        $val = $this->getBackingStore()->get('daysWithoutContactBeforeUnenroll');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'daysWithoutContactBeforeUnenroll'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -60,7 +64,11 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
      * @return string|null
     */
     public function getMdmEnrollmentUrl(): ?string {
-        return $this->getBackingStore()->get('mdmEnrollmentUrl');
+        $val = $this->getBackingStore()->get('mdmEnrollmentUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'mdmEnrollmentUrl'");
     }
 
     /**
@@ -68,7 +76,11 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
      * @return int|null
     */
     public function getMinutesOfInactivityBeforeDeviceLock(): ?int {
-        return $this->getBackingStore()->get('minutesOfInactivityBeforeDeviceLock');
+        $val = $this->getBackingStore()->get('minutesOfInactivityBeforeDeviceLock');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minutesOfInactivityBeforeDeviceLock'");
     }
 
     /**
@@ -76,7 +88,11 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
      * @return int|null
     */
     public function getNumberOfPastPinsRemembered(): ?int {
-        return $this->getBackingStore()->get('numberOfPastPinsRemembered');
+        $val = $this->getBackingStore()->get('numberOfPastPinsRemembered');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'numberOfPastPinsRemembered'");
     }
 
     /**
@@ -84,7 +100,11 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
      * @return int|null
     */
     public function getPasswordMaximumAttemptCount(): ?int {
-        return $this->getBackingStore()->get('passwordMaximumAttemptCount');
+        $val = $this->getBackingStore()->get('passwordMaximumAttemptCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordMaximumAttemptCount'");
     }
 
     /**
@@ -92,7 +112,11 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
      * @return int|null
     */
     public function getPinExpirationDays(): ?int {
-        return $this->getBackingStore()->get('pinExpirationDays');
+        $val = $this->getBackingStore()->get('pinExpirationDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'pinExpirationDays'");
     }
 
     /**
@@ -100,7 +124,11 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
      * @return WindowsInformationProtectionPinCharacterRequirements|null
     */
     public function getPinLowercaseLetters(): ?WindowsInformationProtectionPinCharacterRequirements {
-        return $this->getBackingStore()->get('pinLowercaseLetters');
+        $val = $this->getBackingStore()->get('pinLowercaseLetters');
+        if (is_null($val) || $val instanceof WindowsInformationProtectionPinCharacterRequirements) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'pinLowercaseLetters'");
     }
 
     /**
@@ -108,7 +136,11 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
      * @return int|null
     */
     public function getPinMinimumLength(): ?int {
-        return $this->getBackingStore()->get('pinMinimumLength');
+        $val = $this->getBackingStore()->get('pinMinimumLength');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'pinMinimumLength'");
     }
 
     /**
@@ -116,7 +148,11 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
      * @return WindowsInformationProtectionPinCharacterRequirements|null
     */
     public function getPinSpecialCharacters(): ?WindowsInformationProtectionPinCharacterRequirements {
-        return $this->getBackingStore()->get('pinSpecialCharacters');
+        $val = $this->getBackingStore()->get('pinSpecialCharacters');
+        if (is_null($val) || $val instanceof WindowsInformationProtectionPinCharacterRequirements) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'pinSpecialCharacters'");
     }
 
     /**
@@ -124,7 +160,11 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
      * @return WindowsInformationProtectionPinCharacterRequirements|null
     */
     public function getPinUppercaseLetters(): ?WindowsInformationProtectionPinCharacterRequirements {
-        return $this->getBackingStore()->get('pinUppercaseLetters');
+        $val = $this->getBackingStore()->get('pinUppercaseLetters');
+        if (is_null($val) || $val instanceof WindowsInformationProtectionPinCharacterRequirements) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'pinUppercaseLetters'");
     }
 
     /**
@@ -132,7 +172,11 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
      * @return bool|null
     */
     public function getRevokeOnMdmHandoffDisabled(): ?bool {
-        return $this->getBackingStore()->get('revokeOnMdmHandoffDisabled');
+        $val = $this->getBackingStore()->get('revokeOnMdmHandoffDisabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'revokeOnMdmHandoffDisabled'");
     }
 
     /**
@@ -140,7 +184,11 @@ class WindowsInformationProtectionPolicy extends WindowsInformationProtection im
      * @return bool|null
     */
     public function getWindowsHelloForBusinessBlocked(): ?bool {
-        return $this->getBackingStore()->get('windowsHelloForBusinessBlocked');
+        $val = $this->getBackingStore()->get('windowsHelloForBusinessBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'windowsHelloForBusinessBlocked'");
     }
 
     /**

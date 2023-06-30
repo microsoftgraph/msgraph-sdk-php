@@ -40,7 +40,12 @@ class ProtectPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -53,7 +58,7 @@ class ProtectPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -67,7 +72,11 @@ class ProtectPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @return WorkbookWorksheetProtectionOptions|null
     */
     public function getOptions(): ?WorkbookWorksheetProtectionOptions {
-        return $this->getBackingStore()->get('options');
+        $val = $this->getBackingStore()->get('options');
+        if (is_null($val) || $val instanceof WorkbookWorksheetProtectionOptions) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'options'");
     }
 
     /**

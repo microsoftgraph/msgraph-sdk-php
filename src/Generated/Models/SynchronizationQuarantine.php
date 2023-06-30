@@ -40,7 +40,12 @@ class SynchronizationQuarantine implements AdditionalDataHolder, BackedModel, Pa
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,7 +61,11 @@ class SynchronizationQuarantine implements AdditionalDataHolder, BackedModel, Pa
      * @return DateTime|null
     */
     public function getCurrentBegan(): ?DateTime {
-        return $this->getBackingStore()->get('currentBegan');
+        $val = $this->getBackingStore()->get('currentBegan');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'currentBegan'");
     }
 
     /**
@@ -64,12 +73,16 @@ class SynchronizationQuarantine implements AdditionalDataHolder, BackedModel, Pa
      * @return SynchronizationError|null
     */
     public function getError(): ?SynchronizationError {
-        return $this->getBackingStore()->get('error');
+        $val = $this->getBackingStore()->get('error');
+        if (is_null($val) || $val instanceof SynchronizationError) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'error'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -89,7 +102,11 @@ class SynchronizationQuarantine implements AdditionalDataHolder, BackedModel, Pa
      * @return DateTime|null
     */
     public function getNextAttempt(): ?DateTime {
-        return $this->getBackingStore()->get('nextAttempt');
+        $val = $this->getBackingStore()->get('nextAttempt');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'nextAttempt'");
     }
 
     /**
@@ -97,7 +114,11 @@ class SynchronizationQuarantine implements AdditionalDataHolder, BackedModel, Pa
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -105,7 +126,11 @@ class SynchronizationQuarantine implements AdditionalDataHolder, BackedModel, Pa
      * @return QuarantineReason|null
     */
     public function getReason(): ?QuarantineReason {
-        return $this->getBackingStore()->get('reason');
+        $val = $this->getBackingStore()->get('reason');
+        if (is_null($val) || $val instanceof QuarantineReason) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reason'");
     }
 
     /**
@@ -113,7 +138,11 @@ class SynchronizationQuarantine implements AdditionalDataHolder, BackedModel, Pa
      * @return DateTime|null
     */
     public function getSeriesBegan(): ?DateTime {
-        return $this->getBackingStore()->get('seriesBegan');
+        $val = $this->getBackingStore()->get('seriesBegan');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'seriesBegan'");
     }
 
     /**
@@ -121,7 +150,11 @@ class SynchronizationQuarantine implements AdditionalDataHolder, BackedModel, Pa
      * @return int|null
     */
     public function getSeriesCount(): ?int {
-        return $this->getBackingStore()->get('seriesCount');
+        $val = $this->getBackingStore()->get('seriesCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'seriesCount'");
     }
 
     /**

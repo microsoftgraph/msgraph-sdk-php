@@ -40,7 +40,11 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getAccountName(): ?string {
-        return $this->getBackingStore()->get('accountName');
+        $val = $this->getBackingStore()->get('accountName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'accountName'");
     }
 
     /**
@@ -48,7 +52,12 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -64,7 +73,11 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getCommandLine(): ?string {
-        return $this->getBackingStore()->get('commandLine');
+        $val = $this->getBackingStore()->get('commandLine');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'commandLine'");
     }
 
     /**
@@ -72,12 +85,16 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -103,7 +120,11 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
      * @return FileHash|null
     */
     public function getFileHash(): ?FileHash {
-        return $this->getBackingStore()->get('fileHash');
+        $val = $this->getBackingStore()->get('fileHash');
+        if (is_null($val) || $val instanceof FileHash) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fileHash'");
     }
 
     /**
@@ -111,7 +132,11 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
      * @return ProcessIntegrityLevel|null
     */
     public function getIntegrityLevel(): ?ProcessIntegrityLevel {
-        return $this->getBackingStore()->get('integrityLevel');
+        $val = $this->getBackingStore()->get('integrityLevel');
+        if (is_null($val) || $val instanceof ProcessIntegrityLevel) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'integrityLevel'");
     }
 
     /**
@@ -119,7 +144,11 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getIsElevated(): ?bool {
-        return $this->getBackingStore()->get('isElevated');
+        $val = $this->getBackingStore()->get('isElevated');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isElevated'");
     }
 
     /**
@@ -127,7 +156,11 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -135,7 +168,11 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -143,7 +180,11 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTime|null
     */
     public function getParentProcessCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('parentProcessCreatedDateTime');
+        $val = $this->getBackingStore()->get('parentProcessCreatedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'parentProcessCreatedDateTime'");
     }
 
     /**
@@ -151,7 +192,11 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getParentProcessId(): ?int {
-        return $this->getBackingStore()->get('parentProcessId');
+        $val = $this->getBackingStore()->get('parentProcessId');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'parentProcessId'");
     }
 
     /**
@@ -159,7 +204,11 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getParentProcessName(): ?string {
-        return $this->getBackingStore()->get('parentProcessName');
+        $val = $this->getBackingStore()->get('parentProcessName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'parentProcessName'");
     }
 
     /**
@@ -167,7 +216,11 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getPath(): ?string {
-        return $this->getBackingStore()->get('path');
+        $val = $this->getBackingStore()->get('path');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'path'");
     }
 
     /**
@@ -175,7 +228,11 @@ class Process implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getProcessId(): ?int {
-        return $this->getBackingStore()->get('processId');
+        $val = $this->getBackingStore()->get('processId');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'processId'");
     }
 
     /**

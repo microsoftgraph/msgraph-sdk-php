@@ -39,7 +39,12 @@ class ServicePlanInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class ServicePlanInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getAppliesTo(): ?string {
-        return $this->getBackingStore()->get('appliesTo');
+        $val = $this->getBackingStore()->get('appliesTo');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appliesTo'");
     }
 
     /**
@@ -60,7 +69,7 @@ class ServicePlanInfo implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -78,7 +87,11 @@ class ServicePlanInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -86,7 +99,11 @@ class ServicePlanInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getProvisioningStatus(): ?string {
-        return $this->getBackingStore()->get('provisioningStatus');
+        $val = $this->getBackingStore()->get('provisioningStatus');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'provisioningStatus'");
     }
 
     /**
@@ -94,7 +111,11 @@ class ServicePlanInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getServicePlanId(): ?string {
-        return $this->getBackingStore()->get('servicePlanId');
+        $val = $this->getBackingStore()->get('servicePlanId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'servicePlanId'");
     }
 
     /**
@@ -102,7 +123,11 @@ class ServicePlanInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getServicePlanName(): ?string {
-        return $this->getBackingStore()->get('servicePlanName');
+        $val = $this->getBackingStore()->get('servicePlanName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'servicePlanName'");
     }
 
     /**

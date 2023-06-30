@@ -47,7 +47,12 @@ class EducationAssignmentGrade implements AdditionalDataHolder, BackedModel, Par
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -60,7 +65,7 @@ class EducationAssignmentGrade implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -76,7 +81,11 @@ class EducationAssignmentGrade implements AdditionalDataHolder, BackedModel, Par
      * @return IdentitySet|null
     */
     public function getGradedBy(): ?IdentitySet {
-        return $this->getBackingStore()->get('gradedBy');
+        $val = $this->getBackingStore()->get('gradedBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'gradedBy'");
     }
 
     /**
@@ -84,7 +93,11 @@ class EducationAssignmentGrade implements AdditionalDataHolder, BackedModel, Par
      * @return DateTime|null
     */
     public function getGradedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('gradedDateTime');
+        $val = $this->getBackingStore()->get('gradedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'gradedDateTime'");
     }
 
     /**
@@ -92,7 +105,11 @@ class EducationAssignmentGrade implements AdditionalDataHolder, BackedModel, Par
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

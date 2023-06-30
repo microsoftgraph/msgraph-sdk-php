@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class TodoTaskList extends Entity implements Parsable 
 {
@@ -29,7 +30,11 @@ class TodoTaskList extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
@@ -37,12 +42,18 @@ class TodoTaskList extends Entity implements Parsable
      * @return array<Extension>|null
     */
     public function getExtensions(): ?array {
-        return $this->getBackingStore()->get('extensions');
+        $val = $this->getBackingStore()->get('extensions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Extension::class);
+            /** @var array<Extension>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'extensions'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -61,7 +72,11 @@ class TodoTaskList extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsOwner(): ?bool {
-        return $this->getBackingStore()->get('isOwner');
+        $val = $this->getBackingStore()->get('isOwner');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isOwner'");
     }
 
     /**
@@ -69,7 +84,11 @@ class TodoTaskList extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsShared(): ?bool {
-        return $this->getBackingStore()->get('isShared');
+        $val = $this->getBackingStore()->get('isShared');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isShared'");
     }
 
     /**
@@ -77,7 +96,13 @@ class TodoTaskList extends Entity implements Parsable
      * @return array<TodoTask>|null
     */
     public function getTasks(): ?array {
-        return $this->getBackingStore()->get('tasks');
+        $val = $this->getBackingStore()->get('tasks');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TodoTask::class);
+            /** @var array<TodoTask>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tasks'");
     }
 
     /**
@@ -85,7 +110,11 @@ class TodoTaskList extends Entity implements Parsable
      * @return WellknownListName|null
     */
     public function getWellknownListName(): ?WellknownListName {
-        return $this->getBackingStore()->get('wellknownListName');
+        $val = $this->getBackingStore()->get('wellknownListName');
+        if (is_null($val) || $val instanceof WellknownListName) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'wellknownListName'");
     }
 
     /**

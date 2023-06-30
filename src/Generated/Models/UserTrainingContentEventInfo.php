@@ -40,7 +40,12 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, BackedModel,
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,7 +61,11 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getBrowser(): ?string {
-        return $this->getBackingStore()->get('browser');
+        $val = $this->getBackingStore()->get('browser');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'browser'");
     }
 
     /**
@@ -64,12 +73,16 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, BackedModel,
      * @return DateTime|null
     */
     public function getContentDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('contentDateTime');
+        $val = $this->getBackingStore()->get('contentDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -88,7 +101,11 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getIpAddress(): ?string {
-        return $this->getBackingStore()->get('ipAddress');
+        $val = $this->getBackingStore()->get('ipAddress');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'ipAddress'");
     }
 
     /**
@@ -96,7 +113,11 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -104,7 +125,11 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, BackedModel,
      * @return string|null
     */
     public function getOsPlatformDeviceDetails(): ?string {
-        return $this->getBackingStore()->get('osPlatformDeviceDetails');
+        $val = $this->getBackingStore()->get('osPlatformDeviceDetails');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'osPlatformDeviceDetails'");
     }
 
     /**
@@ -112,7 +137,11 @@ class UserTrainingContentEventInfo implements AdditionalDataHolder, BackedModel,
      * @return float|null
     */
     public function getPotentialScoreImpact(): ?float {
-        return $this->getBackingStore()->get('potentialScoreImpact');
+        $val = $this->getBackingStore()->get('potentialScoreImpact');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'potentialScoreImpact'");
     }
 
     /**

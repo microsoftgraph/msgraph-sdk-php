@@ -27,7 +27,7 @@ class TokenMeetingInfo extends MeetingInfo implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class TokenMeetingInfo extends MeetingInfo implements Parsable
      * @return string|null
     */
     public function getToken(): ?string {
-        return $this->getBackingStore()->get('token');
+        $val = $this->getBackingStore()->get('token');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'token'");
     }
 
     /**

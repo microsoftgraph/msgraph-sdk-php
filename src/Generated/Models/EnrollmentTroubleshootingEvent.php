@@ -29,7 +29,11 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
      * @return string|null
     */
     public function getDeviceId(): ?string {
-        return $this->getBackingStore()->get('deviceId');
+        $val = $this->getBackingStore()->get('deviceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceId'");
     }
 
     /**
@@ -37,7 +41,11 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
      * @return DeviceEnrollmentType|null
     */
     public function getEnrollmentType(): ?DeviceEnrollmentType {
-        return $this->getBackingStore()->get('enrollmentType');
+        $val = $this->getBackingStore()->get('enrollmentType');
+        if (is_null($val) || $val instanceof DeviceEnrollmentType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enrollmentType'");
     }
 
     /**
@@ -45,7 +53,11 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
      * @return DeviceEnrollmentFailureReason|null
     */
     public function getFailureCategory(): ?DeviceEnrollmentFailureReason {
-        return $this->getBackingStore()->get('failureCategory');
+        $val = $this->getBackingStore()->get('failureCategory');
+        if (is_null($val) || $val instanceof DeviceEnrollmentFailureReason) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'failureCategory'");
     }
 
     /**
@@ -53,12 +65,16 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
      * @return string|null
     */
     public function getFailureReason(): ?string {
-        return $this->getBackingStore()->get('failureReason');
+        $val = $this->getBackingStore()->get('failureReason');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'failureReason'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -79,7 +95,11 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
      * @return string|null
     */
     public function getManagedDeviceIdentifier(): ?string {
-        return $this->getBackingStore()->get('managedDeviceIdentifier');
+        $val = $this->getBackingStore()->get('managedDeviceIdentifier');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'managedDeviceIdentifier'");
     }
 
     /**
@@ -87,7 +107,11 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
      * @return string|null
     */
     public function getOperatingSystem(): ?string {
-        return $this->getBackingStore()->get('operatingSystem');
+        $val = $this->getBackingStore()->get('operatingSystem');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operatingSystem'");
     }
 
     /**
@@ -95,7 +119,11 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
      * @return string|null
     */
     public function getOsVersion(): ?string {
-        return $this->getBackingStore()->get('osVersion');
+        $val = $this->getBackingStore()->get('osVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'osVersion'");
     }
 
     /**
@@ -103,7 +131,11 @@ class EnrollmentTroubleshootingEvent extends DeviceManagementTroubleshootingEven
      * @return string|null
     */
     public function getUserId(): ?string {
-        return $this->getBackingStore()->get('userId');
+        $val = $this->getBackingStore()->get('userId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userId'");
     }
 
     /**

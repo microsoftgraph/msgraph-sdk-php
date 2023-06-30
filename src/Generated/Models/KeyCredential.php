@@ -41,7 +41,12 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -57,7 +62,11 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
      * @return StreamInterface|null
     */
     public function getCustomKeyIdentifier(): ?StreamInterface {
-        return $this->getBackingStore()->get('customKeyIdentifier');
+        $val = $this->getBackingStore()->get('customKeyIdentifier');
+        if (is_null($val) || $val instanceof StreamInterface) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'customKeyIdentifier'");
     }
 
     /**
@@ -65,7 +74,11 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
@@ -73,12 +86,16 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTime|null
     */
     public function getEndDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('endDateTime');
+        $val = $this->getBackingStore()->get('endDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'endDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -100,7 +117,11 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
      * @return StreamInterface|null
     */
     public function getKey(): ?StreamInterface {
-        return $this->getBackingStore()->get('key');
+        $val = $this->getBackingStore()->get('key');
+        if (is_null($val) || $val instanceof StreamInterface) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'key'");
     }
 
     /**
@@ -108,7 +129,11 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getKeyId(): ?string {
-        return $this->getBackingStore()->get('keyId');
+        $val = $this->getBackingStore()->get('keyId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'keyId'");
     }
 
     /**
@@ -116,7 +141,11 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -124,7 +153,11 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTime|null
     */
     public function getStartDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('startDateTime');
+        $val = $this->getBackingStore()->get('startDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'startDateTime'");
     }
 
     /**
@@ -132,7 +165,11 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getType(): ?string {
-        return $this->getBackingStore()->get('type');
+        $val = $this->getBackingStore()->get('type');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'type'");
     }
 
     /**
@@ -140,7 +177,11 @@ class KeyCredential implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getUsage(): ?string {
-        return $this->getBackingStore()->get('usage');
+        $val = $this->getBackingStore()->get('usage');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'usage'");
     }
 
     /**

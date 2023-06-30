@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +53,11 @@ class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getAnswer(): ?string {
-        return $this->getBackingStore()->get('answer');
+        $val = $this->getBackingStore()->get('answer');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'answer'");
     }
 
     /**
@@ -55,7 +65,11 @@ class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsab
      * @return AnswerInputType|null
     */
     public function getAnswerInputType(): ?AnswerInputType {
-        return $this->getBackingStore()->get('answerInputType');
+        $val = $this->getBackingStore()->get('answerInputType');
+        if (is_null($val) || $val instanceof AnswerInputType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'answerInputType'");
     }
 
     /**
@@ -63,7 +77,13 @@ class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string>|null
     */
     public function getAnswerOptions(): ?array {
-        return $this->getBackingStore()->get('answerOptions');
+        $val = $this->getBackingStore()->get('answerOptions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'answerOptions'");
     }
 
     /**
@@ -76,19 +96,33 @@ class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsab
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
             'answer' => fn(ParseNode $n) => $o->setAnswer($n->getStringValue()),
             'answerInputType' => fn(ParseNode $n) => $o->setAnswerInputType($n->getEnumValue(AnswerInputType::class)),
-            'answerOptions' => fn(ParseNode $n) => $o->setAnswerOptions($n->getCollectionOfPrimitiveValues()),
+            'answerOptions' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setAnswerOptions($val);
+            },
             'isRequired' => fn(ParseNode $n) => $o->setIsRequired($n->getBooleanValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
             'question' => fn(ParseNode $n) => $o->setQuestion($n->getStringValue()),
             'questionId' => fn(ParseNode $n) => $o->setQuestionId($n->getStringValue()),
-            'selectedOptions' => fn(ParseNode $n) => $o->setSelectedOptions($n->getCollectionOfPrimitiveValues()),
+            'selectedOptions' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setSelectedOptions($val);
+            },
         ];
     }
 
@@ -97,7 +131,11 @@ class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsab
      * @return bool|null
     */
     public function getIsRequired(): ?bool {
-        return $this->getBackingStore()->get('isRequired');
+        $val = $this->getBackingStore()->get('isRequired');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isRequired'");
     }
 
     /**
@@ -105,7 +143,11 @@ class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -113,7 +155,11 @@ class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getQuestion(): ?string {
-        return $this->getBackingStore()->get('question');
+        $val = $this->getBackingStore()->get('question');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'question'");
     }
 
     /**
@@ -121,7 +167,11 @@ class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsab
      * @return string|null
     */
     public function getQuestionId(): ?string {
-        return $this->getBackingStore()->get('questionId');
+        $val = $this->getBackingStore()->get('questionId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'questionId'");
     }
 
     /**
@@ -129,7 +179,13 @@ class BookingQuestionAnswer implements AdditionalDataHolder, BackedModel, Parsab
      * @return array<string>|null
     */
     public function getSelectedOptions(): ?array {
-        return $this->getBackingStore()->get('selectedOptions');
+        $val = $this->getBackingStore()->get('selectedOptions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'selectedOptions'");
     }
 
     /**

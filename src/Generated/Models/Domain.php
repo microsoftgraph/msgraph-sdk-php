@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Domain extends Entity implements Parsable 
 {
@@ -29,7 +30,11 @@ class Domain extends Entity implements Parsable
      * @return string|null
     */
     public function getAuthenticationType(): ?string {
-        return $this->getBackingStore()->get('authenticationType');
+        $val = $this->getBackingStore()->get('authenticationType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'authenticationType'");
     }
 
     /**
@@ -37,7 +42,11 @@ class Domain extends Entity implements Parsable
      * @return string|null
     */
     public function getAvailabilityStatus(): ?string {
-        return $this->getBackingStore()->get('availabilityStatus');
+        $val = $this->getBackingStore()->get('availabilityStatus');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'availabilityStatus'");
     }
 
     /**
@@ -45,7 +54,13 @@ class Domain extends Entity implements Parsable
      * @return array<DirectoryObject>|null
     */
     public function getDomainNameReferences(): ?array {
-        return $this->getBackingStore()->get('domainNameReferences');
+        $val = $this->getBackingStore()->get('domainNameReferences');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DirectoryObject::class);
+            /** @var array<DirectoryObject>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'domainNameReferences'");
     }
 
     /**
@@ -53,12 +68,18 @@ class Domain extends Entity implements Parsable
      * @return array<InternalDomainFederation>|null
     */
     public function getFederationConfiguration(): ?array {
-        return $this->getBackingStore()->get('federationConfiguration');
+        $val = $this->getBackingStore()->get('federationConfiguration');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, InternalDomainFederation::class);
+            /** @var array<InternalDomainFederation>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'federationConfiguration'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -78,7 +99,14 @@ class Domain extends Entity implements Parsable
             'passwordValidityPeriodInDays' => fn(ParseNode $n) => $o->setPasswordValidityPeriodInDays($n->getIntegerValue()),
             'serviceConfigurationRecords' => fn(ParseNode $n) => $o->setServiceConfigurationRecords($n->getCollectionOfObjectValues([DomainDnsRecord::class, 'createFromDiscriminatorValue'])),
             'state' => fn(ParseNode $n) => $o->setState($n->getObjectValue([DomainState::class, 'createFromDiscriminatorValue'])),
-            'supportedServices' => fn(ParseNode $n) => $o->setSupportedServices($n->getCollectionOfPrimitiveValues()),
+            'supportedServices' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setSupportedServices($val);
+            },
             'verificationDnsRecords' => fn(ParseNode $n) => $o->setVerificationDnsRecords($n->getCollectionOfObjectValues([DomainDnsRecord::class, 'createFromDiscriminatorValue'])),
         ]);
     }
@@ -88,7 +116,11 @@ class Domain extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsAdminManaged(): ?bool {
-        return $this->getBackingStore()->get('isAdminManaged');
+        $val = $this->getBackingStore()->get('isAdminManaged');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isAdminManaged'");
     }
 
     /**
@@ -96,7 +128,11 @@ class Domain extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsDefault(): ?bool {
-        return $this->getBackingStore()->get('isDefault');
+        $val = $this->getBackingStore()->get('isDefault');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isDefault'");
     }
 
     /**
@@ -104,7 +140,11 @@ class Domain extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsInitial(): ?bool {
-        return $this->getBackingStore()->get('isInitial');
+        $val = $this->getBackingStore()->get('isInitial');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isInitial'");
     }
 
     /**
@@ -112,7 +152,11 @@ class Domain extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsRoot(): ?bool {
-        return $this->getBackingStore()->get('isRoot');
+        $val = $this->getBackingStore()->get('isRoot');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isRoot'");
     }
 
     /**
@@ -120,7 +164,11 @@ class Domain extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsVerified(): ?bool {
-        return $this->getBackingStore()->get('isVerified');
+        $val = $this->getBackingStore()->get('isVerified');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isVerified'");
     }
 
     /**
@@ -128,7 +176,11 @@ class Domain extends Entity implements Parsable
      * @return string|null
     */
     public function getManufacturer(): ?string {
-        return $this->getBackingStore()->get('manufacturer');
+        $val = $this->getBackingStore()->get('manufacturer');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'manufacturer'");
     }
 
     /**
@@ -136,7 +188,11 @@ class Domain extends Entity implements Parsable
      * @return string|null
     */
     public function getModel(): ?string {
-        return $this->getBackingStore()->get('model');
+        $val = $this->getBackingStore()->get('model');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'model'");
     }
 
     /**
@@ -144,7 +200,11 @@ class Domain extends Entity implements Parsable
      * @return int|null
     */
     public function getPasswordNotificationWindowInDays(): ?int {
-        return $this->getBackingStore()->get('passwordNotificationWindowInDays');
+        $val = $this->getBackingStore()->get('passwordNotificationWindowInDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordNotificationWindowInDays'");
     }
 
     /**
@@ -152,7 +212,11 @@ class Domain extends Entity implements Parsable
      * @return int|null
     */
     public function getPasswordValidityPeriodInDays(): ?int {
-        return $this->getBackingStore()->get('passwordValidityPeriodInDays');
+        $val = $this->getBackingStore()->get('passwordValidityPeriodInDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'passwordValidityPeriodInDays'");
     }
 
     /**
@@ -160,7 +224,13 @@ class Domain extends Entity implements Parsable
      * @return array<DomainDnsRecord>|null
     */
     public function getServiceConfigurationRecords(): ?array {
-        return $this->getBackingStore()->get('serviceConfigurationRecords');
+        $val = $this->getBackingStore()->get('serviceConfigurationRecords');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DomainDnsRecord::class);
+            /** @var array<DomainDnsRecord>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'serviceConfigurationRecords'");
     }
 
     /**
@@ -168,7 +238,11 @@ class Domain extends Entity implements Parsable
      * @return DomainState|null
     */
     public function getState(): ?DomainState {
-        return $this->getBackingStore()->get('state');
+        $val = $this->getBackingStore()->get('state');
+        if (is_null($val) || $val instanceof DomainState) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'state'");
     }
 
     /**
@@ -176,7 +250,13 @@ class Domain extends Entity implements Parsable
      * @return array<string>|null
     */
     public function getSupportedServices(): ?array {
-        return $this->getBackingStore()->get('supportedServices');
+        $val = $this->getBackingStore()->get('supportedServices');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'supportedServices'");
     }
 
     /**
@@ -184,7 +264,13 @@ class Domain extends Entity implements Parsable
      * @return array<DomainDnsRecord>|null
     */
     public function getVerificationDnsRecords(): ?array {
-        return $this->getBackingStore()->get('verificationDnsRecords');
+        $val = $this->getBackingStore()->get('verificationDnsRecords');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DomainDnsRecord::class);
+            /** @var array<DomainDnsRecord>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'verificationDnsRecords'");
     }
 
     /**

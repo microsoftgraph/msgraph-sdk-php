@@ -30,12 +30,16 @@ class IosHomeScreenApp extends IosHomeScreenItem implements Parsable
      * @return string|null
     */
     public function getBundleID(): ?string {
-        return $this->getBackingStore()->get('bundleID');
+        $val = $this->getBackingStore()->get('bundleID');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bundleID'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

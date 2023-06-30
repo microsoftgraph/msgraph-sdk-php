@@ -28,7 +28,7 @@ class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope impleme
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -42,7 +42,11 @@ class AccessReviewInactiveUsersQueryScope extends AccessReviewQueryScope impleme
      * @return DateInterval|null
     */
     public function getInactiveDuration(): ?DateInterval {
-        return $this->getBackingStore()->get('inactiveDuration');
+        $val = $this->getBackingStore()->get('inactiveDuration');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'inactiveDuration'");
     }
 
     /**

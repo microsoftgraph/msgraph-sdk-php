@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Workflow extends WorkflowBase implements Parsable 
 {
@@ -31,7 +32,11 @@ class Workflow extends WorkflowBase implements Parsable
      * @return DateTime|null
     */
     public function getDeletedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('deletedDateTime');
+        $val = $this->getBackingStore()->get('deletedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deletedDateTime'");
     }
 
     /**
@@ -39,12 +44,18 @@ class Workflow extends WorkflowBase implements Parsable
      * @return array<UserProcessingResult>|null
     */
     public function getExecutionScope(): ?array {
-        return $this->getBackingStore()->get('executionScope');
+        $val = $this->getBackingStore()->get('executionScope');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserProcessingResult::class);
+            /** @var array<UserProcessingResult>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'executionScope'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -66,7 +77,11 @@ class Workflow extends WorkflowBase implements Parsable
      * @return string|null
     */
     public function getId(): ?string {
-        return $this->getBackingStore()->get('id');
+        $val = $this->getBackingStore()->get('id');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'id'");
     }
 
     /**
@@ -74,7 +89,11 @@ class Workflow extends WorkflowBase implements Parsable
      * @return DateTime|null
     */
     public function getNextScheduleRunDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('nextScheduleRunDateTime');
+        $val = $this->getBackingStore()->get('nextScheduleRunDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'nextScheduleRunDateTime'");
     }
 
     /**
@@ -82,7 +101,13 @@ class Workflow extends WorkflowBase implements Parsable
      * @return array<Run>|null
     */
     public function getRuns(): ?array {
-        return $this->getBackingStore()->get('runs');
+        $val = $this->getBackingStore()->get('runs');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Run::class);
+            /** @var array<Run>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'runs'");
     }
 
     /**
@@ -90,7 +115,13 @@ class Workflow extends WorkflowBase implements Parsable
      * @return array<TaskReport>|null
     */
     public function getTaskReports(): ?array {
-        return $this->getBackingStore()->get('taskReports');
+        $val = $this->getBackingStore()->get('taskReports');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, TaskReport::class);
+            /** @var array<TaskReport>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'taskReports'");
     }
 
     /**
@@ -98,7 +129,13 @@ class Workflow extends WorkflowBase implements Parsable
      * @return array<UserProcessingResult>|null
     */
     public function getUserProcessingResults(): ?array {
-        return $this->getBackingStore()->get('userProcessingResults');
+        $val = $this->getBackingStore()->get('userProcessingResults');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserProcessingResult::class);
+            /** @var array<UserProcessingResult>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userProcessingResults'");
     }
 
     /**
@@ -106,7 +143,11 @@ class Workflow extends WorkflowBase implements Parsable
      * @return int|null
     */
     public function getVersion(): ?int {
-        return $this->getBackingStore()->get('version');
+        $val = $this->getBackingStore()->get('version');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'version'");
     }
 
     /**
@@ -114,7 +155,13 @@ class Workflow extends WorkflowBase implements Parsable
      * @return array<WorkflowVersion>|null
     */
     public function getVersions(): ?array {
-        return $this->getBackingStore()->get('versions');
+        $val = $this->getBackingStore()->get('versions');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WorkflowVersion::class);
+            /** @var array<WorkflowVersion>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'versions'");
     }
 
     /**

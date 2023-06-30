@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class RubricQuality implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class RubricQuality implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +61,13 @@ class RubricQuality implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<RubricCriterion>|null
     */
     public function getCriteria(): ?array {
-        return $this->getBackingStore()->get('criteria');
+        $val = $this->getBackingStore()->get('criteria');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, RubricCriterion::class);
+            /** @var array<RubricCriterion>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'criteria'");
     }
 
     /**
@@ -63,7 +75,11 @@ class RubricQuality implements AdditionalDataHolder, BackedModel, Parsable
      * @return EducationItemBody|null
     */
     public function getDescription(): ?EducationItemBody {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || $val instanceof EducationItemBody) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -71,12 +87,16 @@ class RubricQuality implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -95,7 +115,11 @@ class RubricQuality implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -103,7 +127,11 @@ class RubricQuality implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getQualityId(): ?string {
-        return $this->getBackingStore()->get('qualityId');
+        $val = $this->getBackingStore()->get('qualityId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'qualityId'");
     }
 
     /**
@@ -111,7 +139,11 @@ class RubricQuality implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getWeight(): ?float {
-        return $this->getBackingStore()->get('weight');
+        $val = $this->getBackingStore()->get('weight');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'weight'");
     }
 
     /**

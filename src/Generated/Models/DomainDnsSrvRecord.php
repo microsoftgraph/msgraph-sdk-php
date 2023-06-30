@@ -26,7 +26,7 @@ class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -45,7 +45,11 @@ class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable
      * @return string|null
     */
     public function getNameTarget(): ?string {
-        return $this->getBackingStore()->get('nameTarget');
+        $val = $this->getBackingStore()->get('nameTarget');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'nameTarget'");
     }
 
     /**
@@ -53,7 +57,11 @@ class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable
      * @return int|null
     */
     public function getPort(): ?int {
-        return $this->getBackingStore()->get('port');
+        $val = $this->getBackingStore()->get('port');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'port'");
     }
 
     /**
@@ -61,7 +69,11 @@ class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable
      * @return int|null
     */
     public function getPriority(): ?int {
-        return $this->getBackingStore()->get('priority');
+        $val = $this->getBackingStore()->get('priority');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'priority'");
     }
 
     /**
@@ -69,7 +81,11 @@ class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable
      * @return string|null
     */
     public function getProtocol(): ?string {
-        return $this->getBackingStore()->get('protocol');
+        $val = $this->getBackingStore()->get('protocol');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'protocol'");
     }
 
     /**
@@ -77,7 +93,11 @@ class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable
      * @return string|null
     */
     public function getService(): ?string {
-        return $this->getBackingStore()->get('service');
+        $val = $this->getBackingStore()->get('service');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'service'");
     }
 
     /**
@@ -85,7 +105,11 @@ class DomainDnsSrvRecord extends DomainDnsRecord implements Parsable
      * @return int|null
     */
     public function getWeight(): ?int {
-        return $this->getBackingStore()->get('weight');
+        $val = $this->getBackingStore()->get('weight');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'weight'");
     }
 
     /**

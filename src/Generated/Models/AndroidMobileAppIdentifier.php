@@ -27,7 +27,7 @@ class AndroidMobileAppIdentifier extends MobileAppIdentifier implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -41,7 +41,11 @@ class AndroidMobileAppIdentifier extends MobileAppIdentifier implements Parsable
      * @return string|null
     */
     public function getPackageId(): ?string {
-        return $this->getBackingStore()->get('packageId');
+        $val = $this->getBackingStore()->get('packageId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'packageId'");
     }
 
     /**

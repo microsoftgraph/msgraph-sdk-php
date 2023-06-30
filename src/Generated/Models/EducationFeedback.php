@@ -40,7 +40,12 @@ class EducationFeedback implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -56,7 +61,11 @@ class EducationFeedback implements AdditionalDataHolder, BackedModel, Parsable
      * @return IdentitySet|null
     */
     public function getFeedbackBy(): ?IdentitySet {
-        return $this->getBackingStore()->get('feedbackBy');
+        $val = $this->getBackingStore()->get('feedbackBy');
+        if (is_null($val) || $val instanceof IdentitySet) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'feedbackBy'");
     }
 
     /**
@@ -64,12 +73,16 @@ class EducationFeedback implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTime|null
     */
     public function getFeedbackDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('feedbackDateTime');
+        $val = $this->getBackingStore()->get('feedbackDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'feedbackDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -86,7 +99,11 @@ class EducationFeedback implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -94,7 +111,11 @@ class EducationFeedback implements AdditionalDataHolder, BackedModel, Parsable
      * @return EducationItemBody|null
     */
     public function getText(): ?EducationItemBody {
-        return $this->getBackingStore()->get('text');
+        $val = $this->getBackingStore()->get('text');
+        if (is_null($val) || $val instanceof EducationItemBody) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'text'");
     }
 
     /**

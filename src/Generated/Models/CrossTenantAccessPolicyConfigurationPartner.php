@@ -39,7 +39,12 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
      * @return InboundOutboundPolicyConfiguration|null
     */
     public function getAutomaticUserConsentSettings(): ?InboundOutboundPolicyConfiguration {
-        return $this->getBackingStore()->get('automaticUserConsentSettings');
+        $val = $this->getBackingStore()->get('automaticUserConsentSettings');
+        if (is_null($val) || $val instanceof InboundOutboundPolicyConfiguration) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'automaticUserConsentSettings'");
     }
 
     /**
@@ -55,7 +64,11 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
      * @return CrossTenantAccessPolicyB2BSetting|null
     */
     public function getB2bCollaborationInbound(): ?CrossTenantAccessPolicyB2BSetting {
-        return $this->getBackingStore()->get('b2bCollaborationInbound');
+        $val = $this->getBackingStore()->get('b2bCollaborationInbound');
+        if (is_null($val) || $val instanceof CrossTenantAccessPolicyB2BSetting) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'b2bCollaborationInbound'");
     }
 
     /**
@@ -63,7 +76,11 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
      * @return CrossTenantAccessPolicyB2BSetting|null
     */
     public function getB2bCollaborationOutbound(): ?CrossTenantAccessPolicyB2BSetting {
-        return $this->getBackingStore()->get('b2bCollaborationOutbound');
+        $val = $this->getBackingStore()->get('b2bCollaborationOutbound');
+        if (is_null($val) || $val instanceof CrossTenantAccessPolicyB2BSetting) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'b2bCollaborationOutbound'");
     }
 
     /**
@@ -71,7 +88,11 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
      * @return CrossTenantAccessPolicyB2BSetting|null
     */
     public function getB2bDirectConnectInbound(): ?CrossTenantAccessPolicyB2BSetting {
-        return $this->getBackingStore()->get('b2bDirectConnectInbound');
+        $val = $this->getBackingStore()->get('b2bDirectConnectInbound');
+        if (is_null($val) || $val instanceof CrossTenantAccessPolicyB2BSetting) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'b2bDirectConnectInbound'");
     }
 
     /**
@@ -79,7 +100,11 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
      * @return CrossTenantAccessPolicyB2BSetting|null
     */
     public function getB2bDirectConnectOutbound(): ?CrossTenantAccessPolicyB2BSetting {
-        return $this->getBackingStore()->get('b2bDirectConnectOutbound');
+        $val = $this->getBackingStore()->get('b2bDirectConnectOutbound');
+        if (is_null($val) || $val instanceof CrossTenantAccessPolicyB2BSetting) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'b2bDirectConnectOutbound'");
     }
 
     /**
@@ -92,7 +117,7 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -115,7 +140,11 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
      * @return CrossTenantIdentitySyncPolicyPartner|null
     */
     public function getIdentitySynchronization(): ?CrossTenantIdentitySyncPolicyPartner {
-        return $this->getBackingStore()->get('identitySynchronization');
+        $val = $this->getBackingStore()->get('identitySynchronization');
+        if (is_null($val) || $val instanceof CrossTenantIdentitySyncPolicyPartner) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'identitySynchronization'");
     }
 
     /**
@@ -123,7 +152,11 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
      * @return CrossTenantAccessPolicyInboundTrust|null
     */
     public function getInboundTrust(): ?CrossTenantAccessPolicyInboundTrust {
-        return $this->getBackingStore()->get('inboundTrust');
+        $val = $this->getBackingStore()->get('inboundTrust');
+        if (is_null($val) || $val instanceof CrossTenantAccessPolicyInboundTrust) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'inboundTrust'");
     }
 
     /**
@@ -131,7 +164,11 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
      * @return bool|null
     */
     public function getIsServiceProvider(): ?bool {
-        return $this->getBackingStore()->get('isServiceProvider');
+        $val = $this->getBackingStore()->get('isServiceProvider');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isServiceProvider'");
     }
 
     /**
@@ -139,7 +176,11 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -147,7 +188,11 @@ class CrossTenantAccessPolicyConfigurationPartner implements AdditionalDataHolde
      * @return string|null
     */
     public function getTenantId(): ?string {
-        return $this->getBackingStore()->get('tenantId');
+        $val = $this->getBackingStore()->get('tenantId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tenantId'");
     }
 
     /**

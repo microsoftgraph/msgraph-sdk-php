@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AttendanceRecord extends Entity implements Parsable 
 {
@@ -29,7 +30,13 @@ class AttendanceRecord extends Entity implements Parsable
      * @return array<AttendanceInterval>|null
     */
     public function getAttendanceIntervals(): ?array {
-        return $this->getBackingStore()->get('attendanceIntervals');
+        $val = $this->getBackingStore()->get('attendanceIntervals');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AttendanceInterval::class);
+            /** @var array<AttendanceInterval>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'attendanceIntervals'");
     }
 
     /**
@@ -37,12 +44,16 @@ class AttendanceRecord extends Entity implements Parsable
      * @return string|null
     */
     public function getEmailAddress(): ?string {
-        return $this->getBackingStore()->get('emailAddress');
+        $val = $this->getBackingStore()->get('emailAddress');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'emailAddress'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -60,7 +71,11 @@ class AttendanceRecord extends Entity implements Parsable
      * @return Identity|null
     */
     public function getIdentity(): ?Identity {
-        return $this->getBackingStore()->get('identity');
+        $val = $this->getBackingStore()->get('identity');
+        if (is_null($val) || $val instanceof Identity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'identity'");
     }
 
     /**
@@ -68,7 +83,11 @@ class AttendanceRecord extends Entity implements Parsable
      * @return string|null
     */
     public function getRole(): ?string {
-        return $this->getBackingStore()->get('role');
+        $val = $this->getBackingStore()->get('role');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'role'");
     }
 
     /**
@@ -76,7 +95,11 @@ class AttendanceRecord extends Entity implements Parsable
      * @return int|null
     */
     public function getTotalAttendanceInSeconds(): ?int {
-        return $this->getBackingStore()->get('totalAttendanceInSeconds');
+        $val = $this->getBackingStore()->get('totalAttendanceInSeconds');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'totalAttendanceInSeconds'");
     }
 
     /**

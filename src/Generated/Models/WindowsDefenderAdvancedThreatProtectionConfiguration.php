@@ -30,7 +30,11 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
      * @return bool|null
     */
     public function getAllowSampleSharing(): ?bool {
-        return $this->getBackingStore()->get('allowSampleSharing');
+        $val = $this->getBackingStore()->get('allowSampleSharing');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowSampleSharing'");
     }
 
     /**
@@ -38,12 +42,16 @@ class WindowsDefenderAdvancedThreatProtectionConfiguration extends DeviceConfigu
      * @return bool|null
     */
     public function getEnableExpeditedTelemetryReporting(): ?bool {
-        return $this->getBackingStore()->get('enableExpeditedTelemetryReporting');
+        $val = $this->getBackingStore()->get('enableExpeditedTelemetryReporting');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'enableExpeditedTelemetryReporting'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

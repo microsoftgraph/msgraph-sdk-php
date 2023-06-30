@@ -30,7 +30,11 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
      * @return string|null
     */
     public function getAppIconWebUrl(): ?string {
-        return $this->getBackingStore()->get('appIconWebUrl');
+        $val = $this->getBackingStore()->get('appIconWebUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appIconWebUrl'");
     }
 
     /**
@@ -38,12 +42,16 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
      * @return string|null
     */
     public function getAppId(): ?string {
-        return $this->getBackingStore()->get('appId');
+        $val = $this->getBackingStore()->get('appId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -60,7 +68,11 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
      * @return string|null
     */
     public function getTeamsEmbeddedContentUrl(): ?string {
-        return $this->getBackingStore()->get('teamsEmbeddedContentUrl');
+        $val = $this->getBackingStore()->get('teamsEmbeddedContentUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'teamsEmbeddedContentUrl'");
     }
 
     /**
@@ -68,7 +80,11 @@ class EducationTeamsAppResource extends EducationResource implements Parsable
      * @return string|null
     */
     public function getWebUrl(): ?string {
-        return $this->getBackingStore()->get('webUrl');
+        $val = $this->getBackingStore()->get('webUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'webUrl'");
     }
 
     /**

@@ -33,12 +33,16 @@ class WindowsInformationProtectionAppLockerFile extends Entity implements Parsab
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -55,7 +59,11 @@ class WindowsInformationProtectionAppLockerFile extends Entity implements Parsab
      * @return StreamInterface|null
     */
     public function getFile(): ?StreamInterface {
-        return $this->getBackingStore()->get('file');
+        $val = $this->getBackingStore()->get('file');
+        if (is_null($val) || $val instanceof StreamInterface) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'file'");
     }
 
     /**
@@ -63,7 +71,11 @@ class WindowsInformationProtectionAppLockerFile extends Entity implements Parsab
      * @return string|null
     */
     public function getFileHash(): ?string {
-        return $this->getBackingStore()->get('fileHash');
+        $val = $this->getBackingStore()->get('fileHash');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fileHash'");
     }
 
     /**
@@ -71,7 +83,11 @@ class WindowsInformationProtectionAppLockerFile extends Entity implements Parsab
      * @return string|null
     */
     public function getVersion(): ?string {
-        return $this->getBackingStore()->get('version');
+        $val = $this->getBackingStore()->get('version');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'version'");
     }
 
     /**

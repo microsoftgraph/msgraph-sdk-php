@@ -30,12 +30,16 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
      * @return DeviceEnrollmentPlatformRestriction|null
     */
     public function getAndroidRestriction(): ?DeviceEnrollmentPlatformRestriction {
-        return $this->getBackingStore()->get('androidRestriction');
+        $val = $this->getBackingStore()->get('androidRestriction');
+        if (is_null($val) || $val instanceof DeviceEnrollmentPlatformRestriction) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'androidRestriction'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -53,7 +57,11 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
      * @return DeviceEnrollmentPlatformRestriction|null
     */
     public function getIosRestriction(): ?DeviceEnrollmentPlatformRestriction {
-        return $this->getBackingStore()->get('iosRestriction');
+        $val = $this->getBackingStore()->get('iosRestriction');
+        if (is_null($val) || $val instanceof DeviceEnrollmentPlatformRestriction) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'iosRestriction'");
     }
 
     /**
@@ -61,7 +69,11 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
      * @return DeviceEnrollmentPlatformRestriction|null
     */
     public function getMacOSRestriction(): ?DeviceEnrollmentPlatformRestriction {
-        return $this->getBackingStore()->get('macOSRestriction');
+        $val = $this->getBackingStore()->get('macOSRestriction');
+        if (is_null($val) || $val instanceof DeviceEnrollmentPlatformRestriction) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'macOSRestriction'");
     }
 
     /**
@@ -69,7 +81,11 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
      * @return DeviceEnrollmentPlatformRestriction|null
     */
     public function getWindowsMobileRestriction(): ?DeviceEnrollmentPlatformRestriction {
-        return $this->getBackingStore()->get('windowsMobileRestriction');
+        $val = $this->getBackingStore()->get('windowsMobileRestriction');
+        if (is_null($val) || $val instanceof DeviceEnrollmentPlatformRestriction) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'windowsMobileRestriction'");
     }
 
     /**
@@ -77,7 +93,11 @@ class DeviceEnrollmentPlatformRestrictionsConfiguration extends DeviceEnrollment
      * @return DeviceEnrollmentPlatformRestriction|null
     */
     public function getWindowsRestriction(): ?DeviceEnrollmentPlatformRestriction {
-        return $this->getBackingStore()->get('windowsRestriction');
+        $val = $this->getBackingStore()->get('windowsRestriction');
+        if (is_null($val) || $val instanceof DeviceEnrollmentPlatformRestriction) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'windowsRestriction'");
     }
 
     /**

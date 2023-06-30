@@ -40,7 +40,12 @@ class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -53,7 +58,7 @@ class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -69,7 +74,11 @@ class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return Json|null
     */
     public function getLogicalTest(): ?Json {
-        return $this->getBackingStore()->get('logicalTest');
+        $val = $this->getBackingStore()->get('logicalTest');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'logicalTest'");
     }
 
     /**
@@ -77,7 +86,11 @@ class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return Json|null
     */
     public function getValueIfFalse(): ?Json {
-        return $this->getBackingStore()->get('valueIfFalse');
+        $val = $this->getBackingStore()->get('valueIfFalse');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'valueIfFalse'");
     }
 
     /**
@@ -85,7 +98,11 @@ class IfPostRequestBody implements AdditionalDataHolder, BackedModel, Parsable
      * @return Json|null
     */
     public function getValueIfTrue(): ?Json {
-        return $this->getBackingStore()->get('valueIfTrue');
+        $val = $this->getBackingStore()->get('valueIfTrue');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'valueIfTrue'");
     }
 
     /**

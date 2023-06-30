@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class UnifiedRoleManagementPolicy extends Entity implements Parsable 
 {
@@ -30,7 +31,11 @@ class UnifiedRoleManagementPolicy extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -38,7 +43,11 @@ class UnifiedRoleManagementPolicy extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
@@ -46,12 +55,18 @@ class UnifiedRoleManagementPolicy extends Entity implements Parsable
      * @return array<UnifiedRoleManagementPolicyRule>|null
     */
     public function getEffectiveRules(): ?array {
-        return $this->getBackingStore()->get('effectiveRules');
+        $val = $this->getBackingStore()->get('effectiveRules');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UnifiedRoleManagementPolicyRule::class);
+            /** @var array<UnifiedRoleManagementPolicyRule>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'effectiveRules'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -73,7 +88,11 @@ class UnifiedRoleManagementPolicy extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsOrganizationDefault(): ?bool {
-        return $this->getBackingStore()->get('isOrganizationDefault');
+        $val = $this->getBackingStore()->get('isOrganizationDefault');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isOrganizationDefault'");
     }
 
     /**
@@ -81,7 +100,11 @@ class UnifiedRoleManagementPolicy extends Entity implements Parsable
      * @return Identity|null
     */
     public function getLastModifiedBy(): ?Identity {
-        return $this->getBackingStore()->get('lastModifiedBy');
+        $val = $this->getBackingStore()->get('lastModifiedBy');
+        if (is_null($val) || $val instanceof Identity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedBy'");
     }
 
     /**
@@ -89,7 +112,11 @@ class UnifiedRoleManagementPolicy extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedDateTime');
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**
@@ -97,7 +124,13 @@ class UnifiedRoleManagementPolicy extends Entity implements Parsable
      * @return array<UnifiedRoleManagementPolicyRule>|null
     */
     public function getRules(): ?array {
-        return $this->getBackingStore()->get('rules');
+        $val = $this->getBackingStore()->get('rules');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UnifiedRoleManagementPolicyRule::class);
+            /** @var array<UnifiedRoleManagementPolicyRule>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rules'");
     }
 
     /**
@@ -105,7 +138,11 @@ class UnifiedRoleManagementPolicy extends Entity implements Parsable
      * @return string|null
     */
     public function getScopeId(): ?string {
-        return $this->getBackingStore()->get('scopeId');
+        $val = $this->getBackingStore()->get('scopeId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scopeId'");
     }
 
     /**
@@ -113,7 +150,11 @@ class UnifiedRoleManagementPolicy extends Entity implements Parsable
      * @return string|null
     */
     public function getScopeType(): ?string {
-        return $this->getBackingStore()->get('scopeType');
+        $val = $this->getBackingStore()->get('scopeType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scopeType'");
     }
 
     /**

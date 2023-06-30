@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class BookingStaffMember extends BookingStaffMemberBase implements Parsable 
 {
@@ -30,7 +31,11 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
      * @return bool|null
     */
     public function getAvailabilityIsAffectedByPersonalCalendar(): ?bool {
-        return $this->getBackingStore()->get('availabilityIsAffectedByPersonalCalendar');
+        $val = $this->getBackingStore()->get('availabilityIsAffectedByPersonalCalendar');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'availabilityIsAffectedByPersonalCalendar'");
     }
 
     /**
@@ -38,7 +43,11 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
@@ -46,12 +55,16 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
      * @return string|null
     */
     public function getEmailAddress(): ?string {
-        return $this->getBackingStore()->get('emailAddress');
+        $val = $this->getBackingStore()->get('emailAddress');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'emailAddress'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -72,7 +85,11 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
      * @return bool|null
     */
     public function getIsEmailNotificationEnabled(): ?bool {
-        return $this->getBackingStore()->get('isEmailNotificationEnabled');
+        $val = $this->getBackingStore()->get('isEmailNotificationEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isEmailNotificationEnabled'");
     }
 
     /**
@@ -80,7 +97,11 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
      * @return BookingStaffRole|null
     */
     public function getRole(): ?BookingStaffRole {
-        return $this->getBackingStore()->get('role');
+        $val = $this->getBackingStore()->get('role');
+        if (is_null($val) || $val instanceof BookingStaffRole) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'role'");
     }
 
     /**
@@ -88,7 +109,11 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
      * @return string|null
     */
     public function getTimeZone(): ?string {
-        return $this->getBackingStore()->get('timeZone');
+        $val = $this->getBackingStore()->get('timeZone');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'timeZone'");
     }
 
     /**
@@ -96,7 +121,11 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
      * @return bool|null
     */
     public function getUseBusinessHours(): ?bool {
-        return $this->getBackingStore()->get('useBusinessHours');
+        $val = $this->getBackingStore()->get('useBusinessHours');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'useBusinessHours'");
     }
 
     /**
@@ -104,7 +133,13 @@ class BookingStaffMember extends BookingStaffMemberBase implements Parsable
      * @return array<BookingWorkHours>|null
     */
     public function getWorkingHours(): ?array {
-        return $this->getBackingStore()->get('workingHours');
+        $val = $this->getBackingStore()->get('workingHours');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, BookingWorkHours::class);
+            /** @var array<BookingWorkHours>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'workingHours'");
     }
 
     /**

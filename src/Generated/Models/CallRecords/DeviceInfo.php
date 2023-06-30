@@ -39,7 +39,12 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +60,11 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getCaptureDeviceDriver(): ?string {
-        return $this->getBackingStore()->get('captureDeviceDriver');
+        $val = $this->getBackingStore()->get('captureDeviceDriver');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'captureDeviceDriver'");
     }
 
     /**
@@ -63,7 +72,11 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getCaptureDeviceName(): ?string {
-        return $this->getBackingStore()->get('captureDeviceName');
+        $val = $this->getBackingStore()->get('captureDeviceName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'captureDeviceName'");
     }
 
     /**
@@ -71,7 +84,11 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getCaptureNotFunctioningEventRatio(): ?float {
-        return $this->getBackingStore()->get('captureNotFunctioningEventRatio');
+        $val = $this->getBackingStore()->get('captureNotFunctioningEventRatio');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'captureNotFunctioningEventRatio'");
     }
 
     /**
@@ -79,7 +96,11 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getCpuInsufficentEventRatio(): ?float {
-        return $this->getBackingStore()->get('cpuInsufficentEventRatio');
+        $val = $this->getBackingStore()->get('cpuInsufficentEventRatio');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cpuInsufficentEventRatio'");
     }
 
     /**
@@ -87,7 +108,11 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getDeviceClippingEventRatio(): ?float {
-        return $this->getBackingStore()->get('deviceClippingEventRatio');
+        $val = $this->getBackingStore()->get('deviceClippingEventRatio');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceClippingEventRatio'");
     }
 
     /**
@@ -95,12 +120,16 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getDeviceGlitchEventRatio(): ?float {
-        return $this->getBackingStore()->get('deviceGlitchEventRatio');
+        $val = $this->getBackingStore()->get('deviceGlitchEventRatio');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceGlitchEventRatio'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -135,7 +164,11 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getHowlingEventCount(): ?int {
-        return $this->getBackingStore()->get('howlingEventCount');
+        $val = $this->getBackingStore()->get('howlingEventCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'howlingEventCount'");
     }
 
     /**
@@ -143,7 +176,11 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getInitialSignalLevelRootMeanSquare(): ?float {
-        return $this->getBackingStore()->get('initialSignalLevelRootMeanSquare');
+        $val = $this->getBackingStore()->get('initialSignalLevelRootMeanSquare');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'initialSignalLevelRootMeanSquare'");
     }
 
     /**
@@ -151,7 +188,11 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getLowSpeechLevelEventRatio(): ?float {
-        return $this->getBackingStore()->get('lowSpeechLevelEventRatio');
+        $val = $this->getBackingStore()->get('lowSpeechLevelEventRatio');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lowSpeechLevelEventRatio'");
     }
 
     /**
@@ -159,7 +200,11 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getLowSpeechToNoiseEventRatio(): ?float {
-        return $this->getBackingStore()->get('lowSpeechToNoiseEventRatio');
+        $val = $this->getBackingStore()->get('lowSpeechToNoiseEventRatio');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lowSpeechToNoiseEventRatio'");
     }
 
     /**
@@ -167,7 +212,11 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getMicGlitchRate(): ?float {
-        return $this->getBackingStore()->get('micGlitchRate');
+        $val = $this->getBackingStore()->get('micGlitchRate');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'micGlitchRate'");
     }
 
     /**
@@ -175,7 +224,11 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -183,7 +236,11 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getReceivedNoiseLevel(): ?int {
-        return $this->getBackingStore()->get('receivedNoiseLevel');
+        $val = $this->getBackingStore()->get('receivedNoiseLevel');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'receivedNoiseLevel'");
     }
 
     /**
@@ -191,7 +248,11 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getReceivedSignalLevel(): ?int {
-        return $this->getBackingStore()->get('receivedSignalLevel');
+        $val = $this->getBackingStore()->get('receivedSignalLevel');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'receivedSignalLevel'");
     }
 
     /**
@@ -199,7 +260,11 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getRenderDeviceDriver(): ?string {
-        return $this->getBackingStore()->get('renderDeviceDriver');
+        $val = $this->getBackingStore()->get('renderDeviceDriver');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'renderDeviceDriver'");
     }
 
     /**
@@ -207,7 +272,11 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getRenderDeviceName(): ?string {
-        return $this->getBackingStore()->get('renderDeviceName');
+        $val = $this->getBackingStore()->get('renderDeviceName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'renderDeviceName'");
     }
 
     /**
@@ -215,7 +284,11 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getRenderMuteEventRatio(): ?float {
-        return $this->getBackingStore()->get('renderMuteEventRatio');
+        $val = $this->getBackingStore()->get('renderMuteEventRatio');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'renderMuteEventRatio'");
     }
 
     /**
@@ -223,7 +296,11 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getRenderNotFunctioningEventRatio(): ?float {
-        return $this->getBackingStore()->get('renderNotFunctioningEventRatio');
+        $val = $this->getBackingStore()->get('renderNotFunctioningEventRatio');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'renderNotFunctioningEventRatio'");
     }
 
     /**
@@ -231,7 +308,11 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getRenderZeroVolumeEventRatio(): ?float {
-        return $this->getBackingStore()->get('renderZeroVolumeEventRatio');
+        $val = $this->getBackingStore()->get('renderZeroVolumeEventRatio');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'renderZeroVolumeEventRatio'");
     }
 
     /**
@@ -239,7 +320,11 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getSentNoiseLevel(): ?int {
-        return $this->getBackingStore()->get('sentNoiseLevel');
+        $val = $this->getBackingStore()->get('sentNoiseLevel');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sentNoiseLevel'");
     }
 
     /**
@@ -247,7 +332,11 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return int|null
     */
     public function getSentSignalLevel(): ?int {
-        return $this->getBackingStore()->get('sentSignalLevel');
+        $val = $this->getBackingStore()->get('sentSignalLevel');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sentSignalLevel'");
     }
 
     /**
@@ -255,7 +344,11 @@ class DeviceInfo implements AdditionalDataHolder, BackedModel, Parsable
      * @return float|null
     */
     public function getSpeakerGlitchRate(): ?float {
-        return $this->getBackingStore()->get('speakerGlitchRate');
+        $val = $this->getBackingStore()->get('speakerGlitchRate');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'speakerGlitchRate'");
     }
 
     /**

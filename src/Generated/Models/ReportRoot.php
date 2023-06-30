@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,24 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
+    }
+
+    /**
+     * Gets the authenticationMethods property value. The authenticationMethods property
+     * @return AuthenticationMethodsRoot|null
+    */
+    public function getAuthenticationMethods(): ?AuthenticationMethodsRoot {
+        $val = $this->getBackingStore()->get('authenticationMethods');
+        if (is_null($val) || $val instanceof AuthenticationMethodsRoot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'authenticationMethods'");
     }
 
     /**
@@ -55,7 +73,13 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<PrintUsageByPrinter>|null
     */
     public function getDailyPrintUsageByPrinter(): ?array {
-        return $this->getBackingStore()->get('dailyPrintUsageByPrinter');
+        $val = $this->getBackingStore()->get('dailyPrintUsageByPrinter');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, PrintUsageByPrinter::class);
+            /** @var array<PrintUsageByPrinter>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dailyPrintUsageByPrinter'");
     }
 
     /**
@@ -63,16 +87,23 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<PrintUsageByUser>|null
     */
     public function getDailyPrintUsageByUser(): ?array {
-        return $this->getBackingStore()->get('dailyPrintUsageByUser');
+        $val = $this->getBackingStore()->get('dailyPrintUsageByUser');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, PrintUsageByUser::class);
+            /** @var array<PrintUsageByUser>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'dailyPrintUsageByUser'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return  [
+            'authenticationMethods' => fn(ParseNode $n) => $o->setAuthenticationMethods($n->getObjectValue([AuthenticationMethodsRoot::class, 'createFromDiscriminatorValue'])),
             'dailyPrintUsageByPrinter' => fn(ParseNode $n) => $o->setDailyPrintUsageByPrinter($n->getCollectionOfObjectValues([PrintUsageByPrinter::class, 'createFromDiscriminatorValue'])),
             'dailyPrintUsageByUser' => fn(ParseNode $n) => $o->setDailyPrintUsageByUser($n->getCollectionOfObjectValues([PrintUsageByUser::class, 'createFromDiscriminatorValue'])),
             'monthlyPrintUsageByPrinter' => fn(ParseNode $n) => $o->setMonthlyPrintUsageByPrinter($n->getCollectionOfObjectValues([PrintUsageByPrinter::class, 'createFromDiscriminatorValue'])),
@@ -87,7 +118,13 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<PrintUsageByPrinter>|null
     */
     public function getMonthlyPrintUsageByPrinter(): ?array {
-        return $this->getBackingStore()->get('monthlyPrintUsageByPrinter');
+        $val = $this->getBackingStore()->get('monthlyPrintUsageByPrinter');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, PrintUsageByPrinter::class);
+            /** @var array<PrintUsageByPrinter>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'monthlyPrintUsageByPrinter'");
     }
 
     /**
@@ -95,7 +132,13 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<PrintUsageByUser>|null
     */
     public function getMonthlyPrintUsageByUser(): ?array {
-        return $this->getBackingStore()->get('monthlyPrintUsageByUser');
+        $val = $this->getBackingStore()->get('monthlyPrintUsageByUser');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, PrintUsageByUser::class);
+            /** @var array<PrintUsageByUser>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'monthlyPrintUsageByUser'");
     }
 
     /**
@@ -103,7 +146,11 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -111,7 +158,11 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
      * @return SecurityReportsRoot|null
     */
     public function getSecurity(): ?SecurityReportsRoot {
-        return $this->getBackingStore()->get('security');
+        $val = $this->getBackingStore()->get('security');
+        if (is_null($val) || $val instanceof SecurityReportsRoot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'security'");
     }
 
     /**
@@ -119,6 +170,7 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
      * @param SerializationWriter $writer Serialization writer to use to serialize this model
     */
     public function serialize(SerializationWriter $writer): void {
+        $writer->writeObjectValue('authenticationMethods', $this->getAuthenticationMethods());
         $writer->writeCollectionOfObjectValues('dailyPrintUsageByPrinter', $this->getDailyPrintUsageByPrinter());
         $writer->writeCollectionOfObjectValues('dailyPrintUsageByUser', $this->getDailyPrintUsageByUser());
         $writer->writeCollectionOfObjectValues('monthlyPrintUsageByPrinter', $this->getMonthlyPrintUsageByPrinter());
@@ -134,6 +186,14 @@ class ReportRoot implements AdditionalDataHolder, BackedModel, Parsable
     */
     public function setAdditionalData(?array $value): void {
         $this->getBackingStore()->set('additionalData', $value);
+    }
+
+    /**
+     * Sets the authenticationMethods property value. The authenticationMethods property
+     * @param AuthenticationMethodsRoot|null $value Value to set for the authenticationMethods property.
+    */
+    public function setAuthenticationMethods(?AuthenticationMethodsRoot $value): void {
+        $this->getBackingStore()->set('authenticationMethods', $value);
     }
 
     /**

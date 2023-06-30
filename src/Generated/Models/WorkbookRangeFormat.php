@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class WorkbookRangeFormat extends Entity implements Parsable 
 {
@@ -29,7 +30,13 @@ class WorkbookRangeFormat extends Entity implements Parsable
      * @return array<WorkbookRangeBorder>|null
     */
     public function getBorders(): ?array {
-        return $this->getBackingStore()->get('borders');
+        $val = $this->getBackingStore()->get('borders');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, WorkbookRangeBorder::class);
+            /** @var array<WorkbookRangeBorder>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'borders'");
     }
 
     /**
@@ -37,12 +44,16 @@ class WorkbookRangeFormat extends Entity implements Parsable
      * @return float|null
     */
     public function getColumnWidth(): ?float {
-        return $this->getBackingStore()->get('columnWidth');
+        $val = $this->getBackingStore()->get('columnWidth');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'columnWidth'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -64,7 +75,11 @@ class WorkbookRangeFormat extends Entity implements Parsable
      * @return WorkbookRangeFill|null
     */
     public function getFill(): ?WorkbookRangeFill {
-        return $this->getBackingStore()->get('fill');
+        $val = $this->getBackingStore()->get('fill');
+        if (is_null($val) || $val instanceof WorkbookRangeFill) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fill'");
     }
 
     /**
@@ -72,7 +87,11 @@ class WorkbookRangeFormat extends Entity implements Parsable
      * @return WorkbookRangeFont|null
     */
     public function getFont(): ?WorkbookRangeFont {
-        return $this->getBackingStore()->get('font');
+        $val = $this->getBackingStore()->get('font');
+        if (is_null($val) || $val instanceof WorkbookRangeFont) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'font'");
     }
 
     /**
@@ -80,7 +99,11 @@ class WorkbookRangeFormat extends Entity implements Parsable
      * @return string|null
     */
     public function getHorizontalAlignment(): ?string {
-        return $this->getBackingStore()->get('horizontalAlignment');
+        $val = $this->getBackingStore()->get('horizontalAlignment');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'horizontalAlignment'");
     }
 
     /**
@@ -88,7 +111,11 @@ class WorkbookRangeFormat extends Entity implements Parsable
      * @return WorkbookFormatProtection|null
     */
     public function getProtection(): ?WorkbookFormatProtection {
-        return $this->getBackingStore()->get('protection');
+        $val = $this->getBackingStore()->get('protection');
+        if (is_null($val) || $val instanceof WorkbookFormatProtection) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'protection'");
     }
 
     /**
@@ -96,7 +123,11 @@ class WorkbookRangeFormat extends Entity implements Parsable
      * @return float|null
     */
     public function getRowHeight(): ?float {
-        return $this->getBackingStore()->get('rowHeight');
+        $val = $this->getBackingStore()->get('rowHeight');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rowHeight'");
     }
 
     /**
@@ -104,7 +135,11 @@ class WorkbookRangeFormat extends Entity implements Parsable
      * @return string|null
     */
     public function getVerticalAlignment(): ?string {
-        return $this->getBackingStore()->get('verticalAlignment');
+        $val = $this->getBackingStore()->get('verticalAlignment');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'verticalAlignment'");
     }
 
     /**
@@ -112,7 +147,11 @@ class WorkbookRangeFormat extends Entity implements Parsable
      * @return bool|null
     */
     public function getWrapText(): ?bool {
-        return $this->getBackingStore()->get('wrapText');
+        $val = $this->getBackingStore()->get('wrapText');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'wrapText'");
     }
 
     /**

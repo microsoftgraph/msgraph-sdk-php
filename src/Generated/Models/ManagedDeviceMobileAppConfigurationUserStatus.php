@@ -33,12 +33,16 @@ class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implements Pa
      * @return int|null
     */
     public function getDevicesCount(): ?int {
-        return $this->getBackingStore()->get('devicesCount');
+        $val = $this->getBackingStore()->get('devicesCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'devicesCount'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -56,7 +60,11 @@ class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implements Pa
      * @return DateTime|null
     */
     public function getLastReportedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastReportedDateTime');
+        $val = $this->getBackingStore()->get('lastReportedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastReportedDateTime'");
     }
 
     /**
@@ -64,7 +72,11 @@ class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implements Pa
      * @return ComplianceStatus|null
     */
     public function getStatus(): ?ComplianceStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof ComplianceStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**
@@ -72,7 +84,11 @@ class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implements Pa
      * @return string|null
     */
     public function getUserDisplayName(): ?string {
-        return $this->getBackingStore()->get('userDisplayName');
+        $val = $this->getBackingStore()->get('userDisplayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userDisplayName'");
     }
 
     /**
@@ -80,7 +96,11 @@ class ManagedDeviceMobileAppConfigurationUserStatus extends Entity implements Pa
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
-        return $this->getBackingStore()->get('userPrincipalName');
+        $val = $this->getBackingStore()->get('userPrincipalName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userPrincipalName'");
     }
 
     /**

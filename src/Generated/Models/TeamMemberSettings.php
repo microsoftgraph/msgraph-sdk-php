@@ -39,7 +39,12 @@ class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -47,7 +52,11 @@ class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getAllowAddRemoveApps(): ?bool {
-        return $this->getBackingStore()->get('allowAddRemoveApps');
+        $val = $this->getBackingStore()->get('allowAddRemoveApps');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowAddRemoveApps'");
     }
 
     /**
@@ -55,7 +64,11 @@ class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getAllowCreatePrivateChannels(): ?bool {
-        return $this->getBackingStore()->get('allowCreatePrivateChannels');
+        $val = $this->getBackingStore()->get('allowCreatePrivateChannels');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowCreatePrivateChannels'");
     }
 
     /**
@@ -63,7 +76,11 @@ class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getAllowCreateUpdateChannels(): ?bool {
-        return $this->getBackingStore()->get('allowCreateUpdateChannels');
+        $val = $this->getBackingStore()->get('allowCreateUpdateChannels');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowCreateUpdateChannels'");
     }
 
     /**
@@ -71,7 +88,11 @@ class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getAllowCreateUpdateRemoveConnectors(): ?bool {
-        return $this->getBackingStore()->get('allowCreateUpdateRemoveConnectors');
+        $val = $this->getBackingStore()->get('allowCreateUpdateRemoveConnectors');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowCreateUpdateRemoveConnectors'");
     }
 
     /**
@@ -79,7 +100,11 @@ class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getAllowCreateUpdateRemoveTabs(): ?bool {
-        return $this->getBackingStore()->get('allowCreateUpdateRemoveTabs');
+        $val = $this->getBackingStore()->get('allowCreateUpdateRemoveTabs');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowCreateUpdateRemoveTabs'");
     }
 
     /**
@@ -87,7 +112,11 @@ class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getAllowDeleteChannels(): ?bool {
-        return $this->getBackingStore()->get('allowDeleteChannels');
+        $val = $this->getBackingStore()->get('allowDeleteChannels');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'allowDeleteChannels'");
     }
 
     /**
@@ -100,7 +129,7 @@ class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -120,7 +149,11 @@ class TeamMemberSettings implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**

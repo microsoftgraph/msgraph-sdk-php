@@ -30,7 +30,11 @@ class ApprovalStage extends Entity implements Parsable
      * @return bool|null
     */
     public function getAssignedToMe(): ?bool {
-        return $this->getBackingStore()->get('assignedToMe');
+        $val = $this->getBackingStore()->get('assignedToMe');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignedToMe'");
     }
 
     /**
@@ -38,12 +42,16 @@ class ApprovalStage extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -63,7 +71,11 @@ class ApprovalStage extends Entity implements Parsable
      * @return string|null
     */
     public function getJustification(): ?string {
-        return $this->getBackingStore()->get('justification');
+        $val = $this->getBackingStore()->get('justification');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'justification'");
     }
 
     /**
@@ -71,7 +83,11 @@ class ApprovalStage extends Entity implements Parsable
      * @return Identity|null
     */
     public function getReviewedBy(): ?Identity {
-        return $this->getBackingStore()->get('reviewedBy');
+        $val = $this->getBackingStore()->get('reviewedBy');
+        if (is_null($val) || $val instanceof Identity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reviewedBy'");
     }
 
     /**
@@ -79,7 +95,11 @@ class ApprovalStage extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getReviewedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('reviewedDateTime');
+        $val = $this->getBackingStore()->get('reviewedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reviewedDateTime'");
     }
 
     /**
@@ -87,7 +107,11 @@ class ApprovalStage extends Entity implements Parsable
      * @return string|null
     */
     public function getReviewResult(): ?string {
-        return $this->getBackingStore()->get('reviewResult');
+        $val = $this->getBackingStore()->get('reviewResult');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reviewResult'");
     }
 
     /**
@@ -95,7 +119,11 @@ class ApprovalStage extends Entity implements Parsable
      * @return string|null
     */
     public function getStatus(): ?string {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**

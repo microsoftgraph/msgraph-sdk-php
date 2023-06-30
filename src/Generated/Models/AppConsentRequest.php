@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AppConsentRequest extends Entity implements Parsable 
 {
@@ -29,7 +30,11 @@ class AppConsentRequest extends Entity implements Parsable
      * @return string|null
     */
     public function getAppDisplayName(): ?string {
-        return $this->getBackingStore()->get('appDisplayName');
+        $val = $this->getBackingStore()->get('appDisplayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appDisplayName'");
     }
 
     /**
@@ -37,12 +42,16 @@ class AppConsentRequest extends Entity implements Parsable
      * @return string|null
     */
     public function getAppId(): ?string {
-        return $this->getBackingStore()->get('appId');
+        $val = $this->getBackingStore()->get('appId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -59,7 +68,13 @@ class AppConsentRequest extends Entity implements Parsable
      * @return array<AppConsentRequestScope>|null
     */
     public function getPendingScopes(): ?array {
-        return $this->getBackingStore()->get('pendingScopes');
+        $val = $this->getBackingStore()->get('pendingScopes');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AppConsentRequestScope::class);
+            /** @var array<AppConsentRequestScope>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'pendingScopes'");
     }
 
     /**
@@ -67,7 +82,13 @@ class AppConsentRequest extends Entity implements Parsable
      * @return array<UserConsentRequest>|null
     */
     public function getUserConsentRequests(): ?array {
-        return $this->getBackingStore()->get('userConsentRequests');
+        $val = $this->getBackingStore()->get('userConsentRequests');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, UserConsentRequest::class);
+            /** @var array<UserConsentRequest>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userConsentRequests'");
     }
 
     /**

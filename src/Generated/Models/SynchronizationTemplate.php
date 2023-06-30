@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class SynchronizationTemplate extends Entity implements Parsable 
 {
@@ -29,7 +30,11 @@ class SynchronizationTemplate extends Entity implements Parsable
      * @return string|null
     */
     public function getApplicationId(): ?string {
-        return $this->getBackingStore()->get('applicationId');
+        $val = $this->getBackingStore()->get('applicationId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'applicationId'");
     }
 
     /**
@@ -37,7 +42,11 @@ class SynchronizationTemplate extends Entity implements Parsable
      * @return bool|null
     */
     public function getDefault(): ?bool {
-        return $this->getBackingStore()->get('escapedDefault');
+        $val = $this->getBackingStore()->get('escapedDefault');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'escapedDefault'");
     }
 
     /**
@@ -45,7 +54,11 @@ class SynchronizationTemplate extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -53,7 +66,11 @@ class SynchronizationTemplate extends Entity implements Parsable
      * @return bool|null
     */
     public function getDiscoverable(): ?bool {
-        return $this->getBackingStore()->get('discoverable');
+        $val = $this->getBackingStore()->get('discoverable');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'discoverable'");
     }
 
     /**
@@ -61,12 +78,16 @@ class SynchronizationTemplate extends Entity implements Parsable
      * @return string|null
     */
     public function getFactoryTag(): ?string {
-        return $this->getBackingStore()->get('factoryTag');
+        $val = $this->getBackingStore()->get('factoryTag');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'factoryTag'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -86,7 +107,13 @@ class SynchronizationTemplate extends Entity implements Parsable
      * @return array<SynchronizationMetadataEntry>|null
     */
     public function getMetadata(): ?array {
-        return $this->getBackingStore()->get('metadata');
+        $val = $this->getBackingStore()->get('metadata');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SynchronizationMetadataEntry::class);
+            /** @var array<SynchronizationMetadataEntry>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'metadata'");
     }
 
     /**
@@ -94,7 +121,11 @@ class SynchronizationTemplate extends Entity implements Parsable
      * @return SynchronizationSchema|null
     */
     public function getSchema(): ?SynchronizationSchema {
-        return $this->getBackingStore()->get('schema');
+        $val = $this->getBackingStore()->get('schema');
+        if (is_null($val) || $val instanceof SynchronizationSchema) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'schema'");
     }
 
     /**

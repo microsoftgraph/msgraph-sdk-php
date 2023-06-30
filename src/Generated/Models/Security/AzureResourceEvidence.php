@@ -26,7 +26,7 @@ class AzureResourceEvidence extends AlertEvidence implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -42,7 +42,11 @@ class AzureResourceEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getResourceId(): ?string {
-        return $this->getBackingStore()->get('resourceId');
+        $val = $this->getBackingStore()->get('resourceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceId'");
     }
 
     /**
@@ -50,7 +54,11 @@ class AzureResourceEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getResourceName(): ?string {
-        return $this->getBackingStore()->get('resourceName');
+        $val = $this->getBackingStore()->get('resourceName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceName'");
     }
 
     /**
@@ -58,7 +66,11 @@ class AzureResourceEvidence extends AlertEvidence implements Parsable
      * @return string|null
     */
     public function getResourceType(): ?string {
-        return $this->getBackingStore()->get('resourceType');
+        $val = $this->getBackingStore()->get('resourceType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceType'");
     }
 
     /**

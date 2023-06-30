@@ -10,6 +10,7 @@ use Microsoft\Graph\Generated\Models\SecureScoreControlProfile;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Security extends Entity implements Parsable 
 {
@@ -34,7 +35,13 @@ class Security extends Entity implements Parsable
      * @return array<Alert>|null
     */
     public function getAlerts(): ?array {
-        return $this->getBackingStore()->get('alerts');
+        $val = $this->getBackingStore()->get('alerts');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Alert::class);
+            /** @var array<Alert>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'alerts'");
     }
 
     /**
@@ -42,7 +49,13 @@ class Security extends Entity implements Parsable
      * @return array<Alert>|null
     */
     public function getAlertsV2(): ?array {
-        return $this->getBackingStore()->get('alerts_v2');
+        $val = $this->getBackingStore()->get('alerts_v2');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Alert::class);
+            /** @var array<Alert>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'alerts_v2'");
     }
 
     /**
@@ -50,7 +63,11 @@ class Security extends Entity implements Parsable
      * @return AttackSimulationRoot|null
     */
     public function getAttackSimulation(): ?AttackSimulationRoot {
-        return $this->getBackingStore()->get('attackSimulation');
+        $val = $this->getBackingStore()->get('attackSimulation');
+        if (is_null($val) || $val instanceof AttackSimulationRoot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'attackSimulation'");
     }
 
     /**
@@ -58,12 +75,16 @@ class Security extends Entity implements Parsable
      * @return CasesRoot|null
     */
     public function getCases(): ?CasesRoot {
-        return $this->getBackingStore()->get('cases');
+        $val = $this->getBackingStore()->get('cases');
+        if (is_null($val) || $val instanceof CasesRoot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'cases'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -75,6 +96,7 @@ class Security extends Entity implements Parsable
             'incidents' => fn(ParseNode $n) => $o->setIncidents($n->getCollectionOfObjectValues([Incident::class, 'createFromDiscriminatorValue'])),
             'secureScoreControlProfiles' => fn(ParseNode $n) => $o->setSecureScoreControlProfiles($n->getCollectionOfObjectValues([SecureScoreControlProfile::class, 'createFromDiscriminatorValue'])),
             'secureScores' => fn(ParseNode $n) => $o->setSecureScores($n->getCollectionOfObjectValues([SecureScore::class, 'createFromDiscriminatorValue'])),
+            'threatIntelligence' => fn(ParseNode $n) => $o->setThreatIntelligence($n->getObjectValue([ThreatIntelligence::class, 'createFromDiscriminatorValue'])),
             'triggers' => fn(ParseNode $n) => $o->setTriggers($n->getObjectValue([TriggersRoot::class, 'createFromDiscriminatorValue'])),
             'triggerTypes' => fn(ParseNode $n) => $o->setTriggerTypes($n->getObjectValue([TriggerTypesRoot::class, 'createFromDiscriminatorValue'])),
         ]);
@@ -85,7 +107,13 @@ class Security extends Entity implements Parsable
      * @return array<Incident>|null
     */
     public function getIncidents(): ?array {
-        return $this->getBackingStore()->get('incidents');
+        $val = $this->getBackingStore()->get('incidents');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, Incident::class);
+            /** @var array<Incident>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'incidents'");
     }
 
     /**
@@ -93,7 +121,13 @@ class Security extends Entity implements Parsable
      * @return array<SecureScoreControlProfile>|null
     */
     public function getSecureScoreControlProfiles(): ?array {
-        return $this->getBackingStore()->get('secureScoreControlProfiles');
+        $val = $this->getBackingStore()->get('secureScoreControlProfiles');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SecureScoreControlProfile::class);
+            /** @var array<SecureScoreControlProfile>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'secureScoreControlProfiles'");
     }
 
     /**
@@ -101,7 +135,25 @@ class Security extends Entity implements Parsable
      * @return array<SecureScore>|null
     */
     public function getSecureScores(): ?array {
-        return $this->getBackingStore()->get('secureScores');
+        $val = $this->getBackingStore()->get('secureScores');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SecureScore::class);
+            /** @var array<SecureScore>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'secureScores'");
+    }
+
+    /**
+     * Gets the threatIntelligence property value. The threatIntelligence property
+     * @return ThreatIntelligence|null
+    */
+    public function getThreatIntelligence(): ?ThreatIntelligence {
+        $val = $this->getBackingStore()->get('threatIntelligence');
+        if (is_null($val) || $val instanceof ThreatIntelligence) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'threatIntelligence'");
     }
 
     /**
@@ -109,7 +161,11 @@ class Security extends Entity implements Parsable
      * @return TriggersRoot|null
     */
     public function getTriggers(): ?TriggersRoot {
-        return $this->getBackingStore()->get('triggers');
+        $val = $this->getBackingStore()->get('triggers');
+        if (is_null($val) || $val instanceof TriggersRoot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'triggers'");
     }
 
     /**
@@ -117,7 +173,11 @@ class Security extends Entity implements Parsable
      * @return TriggerTypesRoot|null
     */
     public function getTriggerTypes(): ?TriggerTypesRoot {
-        return $this->getBackingStore()->get('triggerTypes');
+        $val = $this->getBackingStore()->get('triggerTypes');
+        if (is_null($val) || $val instanceof TriggerTypesRoot) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'triggerTypes'");
     }
 
     /**
@@ -133,6 +193,7 @@ class Security extends Entity implements Parsable
         $writer->writeCollectionOfObjectValues('incidents', $this->getIncidents());
         $writer->writeCollectionOfObjectValues('secureScoreControlProfiles', $this->getSecureScoreControlProfiles());
         $writer->writeCollectionOfObjectValues('secureScores', $this->getSecureScores());
+        $writer->writeObjectValue('threatIntelligence', $this->getThreatIntelligence());
         $writer->writeObjectValue('triggers', $this->getTriggers());
         $writer->writeObjectValue('triggerTypes', $this->getTriggerTypes());
     }
@@ -191,6 +252,14 @@ class Security extends Entity implements Parsable
     */
     public function setSecureScores(?array $value): void {
         $this->getBackingStore()->set('secureScores', $value);
+    }
+
+    /**
+     * Sets the threatIntelligence property value. The threatIntelligence property
+     * @param ThreatIntelligence|null $value Value to set for the threatIntelligence property.
+    */
+    public function setThreatIntelligence(?ThreatIntelligence $value): void {
+        $this->getBackingStore()->set('threatIntelligence', $value);
     }
 
     /**

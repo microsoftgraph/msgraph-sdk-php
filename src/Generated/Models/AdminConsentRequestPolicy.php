@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class AdminConsentRequestPolicy extends Entity implements Parsable 
 {
@@ -26,7 +27,7 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -45,7 +46,11 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsEnabled(): ?bool {
-        return $this->getBackingStore()->get('isEnabled');
+        $val = $this->getBackingStore()->get('isEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isEnabled'");
     }
 
     /**
@@ -53,7 +58,11 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
      * @return bool|null
     */
     public function getNotifyReviewers(): ?bool {
-        return $this->getBackingStore()->get('notifyReviewers');
+        $val = $this->getBackingStore()->get('notifyReviewers');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'notifyReviewers'");
     }
 
     /**
@@ -61,7 +70,11 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
      * @return bool|null
     */
     public function getRemindersEnabled(): ?bool {
-        return $this->getBackingStore()->get('remindersEnabled');
+        $val = $this->getBackingStore()->get('remindersEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'remindersEnabled'");
     }
 
     /**
@@ -69,7 +82,11 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
      * @return int|null
     */
     public function getRequestDurationInDays(): ?int {
-        return $this->getBackingStore()->get('requestDurationInDays');
+        $val = $this->getBackingStore()->get('requestDurationInDays');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'requestDurationInDays'");
     }
 
     /**
@@ -77,7 +94,13 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
      * @return array<AccessReviewReviewerScope>|null
     */
     public function getReviewers(): ?array {
-        return $this->getBackingStore()->get('reviewers');
+        $val = $this->getBackingStore()->get('reviewers');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AccessReviewReviewerScope::class);
+            /** @var array<AccessReviewReviewerScope>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'reviewers'");
     }
 
     /**
@@ -85,7 +108,11 @@ class AdminConsentRequestPolicy extends Entity implements Parsable
      * @return int|null
     */
     public function getVersion(): ?int {
-        return $this->getBackingStore()->get('version');
+        $val = $this->getBackingStore()->get('version');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'version'");
     }
 
     /**

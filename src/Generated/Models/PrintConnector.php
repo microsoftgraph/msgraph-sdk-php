@@ -30,7 +30,11 @@ class PrintConnector extends Entity implements Parsable
      * @return string|null
     */
     public function getAppVersion(): ?string {
-        return $this->getBackingStore()->get('appVersion');
+        $val = $this->getBackingStore()->get('appVersion');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'appVersion'");
     }
 
     /**
@@ -38,12 +42,16 @@ class PrintConnector extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -62,7 +70,11 @@ class PrintConnector extends Entity implements Parsable
      * @return string|null
     */
     public function getFullyQualifiedDomainName(): ?string {
-        return $this->getBackingStore()->get('fullyQualifiedDomainName');
+        $val = $this->getBackingStore()->get('fullyQualifiedDomainName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'fullyQualifiedDomainName'");
     }
 
     /**
@@ -70,7 +82,11 @@ class PrintConnector extends Entity implements Parsable
      * @return PrinterLocation|null
     */
     public function getLocation(): ?PrinterLocation {
-        return $this->getBackingStore()->get('location');
+        $val = $this->getBackingStore()->get('location');
+        if (is_null($val) || $val instanceof PrinterLocation) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'location'");
     }
 
     /**
@@ -78,7 +94,11 @@ class PrintConnector extends Entity implements Parsable
      * @return string|null
     */
     public function getOperatingSystem(): ?string {
-        return $this->getBackingStore()->get('operatingSystem');
+        $val = $this->getBackingStore()->get('operatingSystem');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'operatingSystem'");
     }
 
     /**
@@ -86,7 +106,11 @@ class PrintConnector extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getRegisteredDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('registeredDateTime');
+        $val = $this->getBackingStore()->get('registeredDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'registeredDateTime'");
     }
 
     /**

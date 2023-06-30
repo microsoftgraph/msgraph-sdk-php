@@ -29,12 +29,16 @@ class RiskyUserHistoryItem extends RiskyUser implements Parsable
      * @return RiskUserActivity|null
     */
     public function getActivity(): ?RiskUserActivity {
-        return $this->getBackingStore()->get('activity');
+        $val = $this->getBackingStore()->get('activity');
+        if (is_null($val) || $val instanceof RiskUserActivity) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'activity'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -50,7 +54,11 @@ class RiskyUserHistoryItem extends RiskyUser implements Parsable
      * @return string|null
     */
     public function getInitiatedBy(): ?string {
-        return $this->getBackingStore()->get('initiatedBy');
+        $val = $this->getBackingStore()->get('initiatedBy');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'initiatedBy'");
     }
 
     /**
@@ -58,7 +66,11 @@ class RiskyUserHistoryItem extends RiskyUser implements Parsable
      * @return string|null
     */
     public function getUserId(): ?string {
-        return $this->getBackingStore()->get('userId');
+        $val = $this->getBackingStore()->get('userId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userId'");
     }
 
     /**

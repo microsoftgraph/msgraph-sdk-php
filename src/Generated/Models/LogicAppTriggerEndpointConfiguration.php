@@ -27,7 +27,7 @@ class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpointConfig
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -44,7 +44,11 @@ class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpointConfig
      * @return string|null
     */
     public function getLogicAppWorkflowName(): ?string {
-        return $this->getBackingStore()->get('logicAppWorkflowName');
+        $val = $this->getBackingStore()->get('logicAppWorkflowName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'logicAppWorkflowName'");
     }
 
     /**
@@ -52,7 +56,11 @@ class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpointConfig
      * @return string|null
     */
     public function getResourceGroupName(): ?string {
-        return $this->getBackingStore()->get('resourceGroupName');
+        $val = $this->getBackingStore()->get('resourceGroupName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'resourceGroupName'");
     }
 
     /**
@@ -60,7 +68,11 @@ class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpointConfig
      * @return string|null
     */
     public function getSubscriptionId(): ?string {
-        return $this->getBackingStore()->get('subscriptionId');
+        $val = $this->getBackingStore()->get('subscriptionId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'subscriptionId'");
     }
 
     /**
@@ -68,7 +80,11 @@ class LogicAppTriggerEndpointConfiguration extends CustomExtensionEndpointConfig
      * @return string|null
     */
     public function getUrl(): ?string {
-        return $this->getBackingStore()->get('url');
+        $val = $this->getBackingStore()->get('url');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'url'");
     }
 
     /**

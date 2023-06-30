@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 /**
  * Device Configuration.
@@ -65,7 +66,13 @@ class DeviceConfiguration extends Entity implements Parsable
      * @return array<DeviceConfigurationAssignment>|null
     */
     public function getAssignments(): ?array {
-        return $this->getBackingStore()->get('assignments');
+        $val = $this->getBackingStore()->get('assignments');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DeviceConfigurationAssignment::class);
+            /** @var array<DeviceConfigurationAssignment>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'assignments'");
     }
 
     /**
@@ -73,7 +80,11 @@ class DeviceConfiguration extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getCreatedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('createdDateTime');
+        $val = $this->getBackingStore()->get('createdDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdDateTime'");
     }
 
     /**
@@ -81,7 +92,11 @@ class DeviceConfiguration extends Entity implements Parsable
      * @return string|null
     */
     public function getDescription(): ?string {
-        return $this->getBackingStore()->get('description');
+        $val = $this->getBackingStore()->get('description');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'description'");
     }
 
     /**
@@ -89,7 +104,13 @@ class DeviceConfiguration extends Entity implements Parsable
      * @return array<SettingStateDeviceSummary>|null
     */
     public function getDeviceSettingStateSummaries(): ?array {
-        return $this->getBackingStore()->get('deviceSettingStateSummaries');
+        $val = $this->getBackingStore()->get('deviceSettingStateSummaries');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, SettingStateDeviceSummary::class);
+            /** @var array<SettingStateDeviceSummary>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceSettingStateSummaries'");
     }
 
     /**
@@ -97,7 +118,13 @@ class DeviceConfiguration extends Entity implements Parsable
      * @return array<DeviceConfigurationDeviceStatus>|null
     */
     public function getDeviceStatuses(): ?array {
-        return $this->getBackingStore()->get('deviceStatuses');
+        $val = $this->getBackingStore()->get('deviceStatuses');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DeviceConfigurationDeviceStatus::class);
+            /** @var array<DeviceConfigurationDeviceStatus>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceStatuses'");
     }
 
     /**
@@ -105,7 +132,11 @@ class DeviceConfiguration extends Entity implements Parsable
      * @return DeviceConfigurationDeviceOverview|null
     */
     public function getDeviceStatusOverview(): ?DeviceConfigurationDeviceOverview {
-        return $this->getBackingStore()->get('deviceStatusOverview');
+        $val = $this->getBackingStore()->get('deviceStatusOverview');
+        if (is_null($val) || $val instanceof DeviceConfigurationDeviceOverview) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'deviceStatusOverview'");
     }
 
     /**
@@ -113,12 +144,16 @@ class DeviceConfiguration extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -142,7 +177,11 @@ class DeviceConfiguration extends Entity implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedDateTime');
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**
@@ -150,7 +189,13 @@ class DeviceConfiguration extends Entity implements Parsable
      * @return array<DeviceConfigurationUserStatus>|null
     */
     public function getUserStatuses(): ?array {
-        return $this->getBackingStore()->get('userStatuses');
+        $val = $this->getBackingStore()->get('userStatuses');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, DeviceConfigurationUserStatus::class);
+            /** @var array<DeviceConfigurationUserStatus>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userStatuses'");
     }
 
     /**
@@ -158,7 +203,11 @@ class DeviceConfiguration extends Entity implements Parsable
      * @return DeviceConfigurationUserOverview|null
     */
     public function getUserStatusOverview(): ?DeviceConfigurationUserOverview {
-        return $this->getBackingStore()->get('userStatusOverview');
+        $val = $this->getBackingStore()->get('userStatusOverview');
+        if (is_null($val) || $val instanceof DeviceConfigurationUserOverview) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userStatusOverview'");
     }
 
     /**
@@ -166,7 +215,11 @@ class DeviceConfiguration extends Entity implements Parsable
      * @return int|null
     */
     public function getVersion(): ?int {
-        return $this->getBackingStore()->get('version');
+        $val = $this->getBackingStore()->get('version');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'version'");
     }
 
     /**

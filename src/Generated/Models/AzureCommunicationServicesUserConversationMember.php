@@ -9,7 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 class AzureCommunicationServicesUserConversationMember extends ConversationMember implements Parsable 
 {
     /**
-     * Instantiates a new AzureCommunicationServicesUserConversationMember and sets the default values.
+     * Instantiates a new azureCommunicationServicesUserConversationMember and sets the default values.
     */
     public function __construct() {
         parent::__construct();
@@ -30,12 +30,16 @@ class AzureCommunicationServicesUserConversationMember extends ConversationMembe
      * @return string|null
     */
     public function getAzureCommunicationServicesId(): ?string {
-        return $this->getBackingStore()->get('azureCommunicationServicesId');
+        $val = $this->getBackingStore()->get('azureCommunicationServicesId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'azureCommunicationServicesId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

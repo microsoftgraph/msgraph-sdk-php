@@ -32,7 +32,11 @@ class SettingStateDeviceSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getCompliantDeviceCount(): ?int {
-        return $this->getBackingStore()->get('compliantDeviceCount');
+        $val = $this->getBackingStore()->get('compliantDeviceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'compliantDeviceCount'");
     }
 
     /**
@@ -40,7 +44,11 @@ class SettingStateDeviceSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getConflictDeviceCount(): ?int {
-        return $this->getBackingStore()->get('conflictDeviceCount');
+        $val = $this->getBackingStore()->get('conflictDeviceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'conflictDeviceCount'");
     }
 
     /**
@@ -48,12 +56,16 @@ class SettingStateDeviceSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getErrorDeviceCount(): ?int {
-        return $this->getBackingStore()->get('errorDeviceCount');
+        $val = $this->getBackingStore()->get('errorDeviceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'errorDeviceCount'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -75,7 +87,11 @@ class SettingStateDeviceSummary extends Entity implements Parsable
      * @return string|null
     */
     public function getInstancePath(): ?string {
-        return $this->getBackingStore()->get('instancePath');
+        $val = $this->getBackingStore()->get('instancePath');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'instancePath'");
     }
 
     /**
@@ -83,7 +99,11 @@ class SettingStateDeviceSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getNonCompliantDeviceCount(): ?int {
-        return $this->getBackingStore()->get('nonCompliantDeviceCount');
+        $val = $this->getBackingStore()->get('nonCompliantDeviceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'nonCompliantDeviceCount'");
     }
 
     /**
@@ -91,7 +111,11 @@ class SettingStateDeviceSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getNotApplicableDeviceCount(): ?int {
-        return $this->getBackingStore()->get('notApplicableDeviceCount');
+        $val = $this->getBackingStore()->get('notApplicableDeviceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'notApplicableDeviceCount'");
     }
 
     /**
@@ -99,7 +123,11 @@ class SettingStateDeviceSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getRemediatedDeviceCount(): ?int {
-        return $this->getBackingStore()->get('remediatedDeviceCount');
+        $val = $this->getBackingStore()->get('remediatedDeviceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'remediatedDeviceCount'");
     }
 
     /**
@@ -107,7 +135,11 @@ class SettingStateDeviceSummary extends Entity implements Parsable
      * @return string|null
     */
     public function getSettingName(): ?string {
-        return $this->getBackingStore()->get('settingName');
+        $val = $this->getBackingStore()->get('settingName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'settingName'");
     }
 
     /**
@@ -115,7 +147,11 @@ class SettingStateDeviceSummary extends Entity implements Parsable
      * @return int|null
     */
     public function getUnknownDeviceCount(): ?int {
-        return $this->getBackingStore()->get('unknownDeviceCount');
+        $val = $this->getBackingStore()->get('unknownDeviceCount');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'unknownDeviceCount'");
     }
 
     /**

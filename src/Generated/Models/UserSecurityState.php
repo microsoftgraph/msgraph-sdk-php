@@ -19,7 +19,7 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
     private BackingStore $backingStore;
     
     /**
-     * Instantiates a new UserSecurityState and sets the default values.
+     * Instantiates a new userSecurityState and sets the default values.
     */
     public function __construct() {
         $this->backingStore = BackingStoreFactorySingleton::getInstance()->createBackingStore();
@@ -40,7 +40,11 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getAadUserId(): ?string {
-        return $this->getBackingStore()->get('aadUserId');
+        $val = $this->getBackingStore()->get('aadUserId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'aadUserId'");
     }
 
     /**
@@ -48,7 +52,11 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getAccountName(): ?string {
-        return $this->getBackingStore()->get('accountName');
+        $val = $this->getBackingStore()->get('accountName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'accountName'");
     }
 
     /**
@@ -56,7 +64,12 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -72,7 +85,11 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getDomainName(): ?string {
-        return $this->getBackingStore()->get('domainName');
+        $val = $this->getBackingStore()->get('domainName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'domainName'");
     }
 
     /**
@@ -80,12 +97,16 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return EmailRole|null
     */
     public function getEmailRole(): ?EmailRole {
-        return $this->getBackingStore()->get('emailRole');
+        $val = $this->getBackingStore()->get('emailRole');
+        if (is_null($val) || $val instanceof EmailRole) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'emailRole'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -113,7 +134,11 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getIsVpn(): ?bool {
-        return $this->getBackingStore()->get('isVpn');
+        $val = $this->getBackingStore()->get('isVpn');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isVpn'");
     }
 
     /**
@@ -121,7 +146,11 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return DateTime|null
     */
     public function getLogonDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('logonDateTime');
+        $val = $this->getBackingStore()->get('logonDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'logonDateTime'");
     }
 
     /**
@@ -129,7 +158,11 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getLogonId(): ?string {
-        return $this->getBackingStore()->get('logonId');
+        $val = $this->getBackingStore()->get('logonId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'logonId'");
     }
 
     /**
@@ -137,7 +170,11 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getLogonIp(): ?string {
-        return $this->getBackingStore()->get('logonIp');
+        $val = $this->getBackingStore()->get('logonIp');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'logonIp'");
     }
 
     /**
@@ -145,7 +182,11 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getLogonLocation(): ?string {
-        return $this->getBackingStore()->get('logonLocation');
+        $val = $this->getBackingStore()->get('logonLocation');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'logonLocation'");
     }
 
     /**
@@ -153,7 +194,11 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return LogonType|null
     */
     public function getLogonType(): ?LogonType {
-        return $this->getBackingStore()->get('logonType');
+        $val = $this->getBackingStore()->get('logonType');
+        if (is_null($val) || $val instanceof LogonType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'logonType'");
     }
 
     /**
@@ -161,7 +206,11 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -169,7 +218,11 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOnPremisesSecurityIdentifier(): ?string {
-        return $this->getBackingStore()->get('onPremisesSecurityIdentifier');
+        $val = $this->getBackingStore()->get('onPremisesSecurityIdentifier');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'onPremisesSecurityIdentifier'");
     }
 
     /**
@@ -177,7 +230,11 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getRiskScore(): ?string {
-        return $this->getBackingStore()->get('riskScore');
+        $val = $this->getBackingStore()->get('riskScore');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'riskScore'");
     }
 
     /**
@@ -185,7 +242,11 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return UserAccountSecurityType|null
     */
     public function getUserAccountType(): ?UserAccountSecurityType {
-        return $this->getBackingStore()->get('userAccountType');
+        $val = $this->getBackingStore()->get('userAccountType');
+        if (is_null($val) || $val instanceof UserAccountSecurityType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userAccountType'");
     }
 
     /**
@@ -193,7 +254,11 @@ class UserSecurityState implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getUserPrincipalName(): ?string {
-        return $this->getBackingStore()->get('userPrincipalName');
+        $val = $this->getBackingStore()->get('userPrincipalName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userPrincipalName'");
     }
 
     /**

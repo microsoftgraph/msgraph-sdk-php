@@ -30,12 +30,16 @@ class TeamworkApplicationIdentity extends Identity implements Parsable
      * @return TeamworkApplicationIdentityType|null
     */
     public function getApplicationIdentityType(): ?TeamworkApplicationIdentityType {
-        return $this->getBackingStore()->get('applicationIdentityType');
+        $val = $this->getBackingStore()->get('applicationIdentityType');
+        if (is_null($val) || $val instanceof TeamworkApplicationIdentityType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'applicationIdentityType'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

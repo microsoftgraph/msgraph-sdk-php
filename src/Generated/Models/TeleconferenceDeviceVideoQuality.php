@@ -37,7 +37,11 @@ class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQuality 
      * @return float|null
     */
     public function getAverageInboundBitRate(): ?float {
-        return $this->getBackingStore()->get('averageInboundBitRate');
+        $val = $this->getBackingStore()->get('averageInboundBitRate');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'averageInboundBitRate'");
     }
 
     /**
@@ -45,7 +49,11 @@ class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQuality 
      * @return float|null
     */
     public function getAverageInboundFrameRate(): ?float {
-        return $this->getBackingStore()->get('averageInboundFrameRate');
+        $val = $this->getBackingStore()->get('averageInboundFrameRate');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'averageInboundFrameRate'");
     }
 
     /**
@@ -53,7 +61,11 @@ class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQuality 
      * @return float|null
     */
     public function getAverageOutboundBitRate(): ?float {
-        return $this->getBackingStore()->get('averageOutboundBitRate');
+        $val = $this->getBackingStore()->get('averageOutboundBitRate');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'averageOutboundBitRate'");
     }
 
     /**
@@ -61,12 +73,16 @@ class TeleconferenceDeviceVideoQuality extends TeleconferenceDeviceMediaQuality 
      * @return float|null
     */
     public function getAverageOutboundFrameRate(): ?float {
-        return $this->getBackingStore()->get('averageOutboundFrameRate');
+        $val = $this->getBackingStore()->get('averageOutboundFrameRate');
+        if (is_null($val) || is_float($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'averageOutboundFrameRate'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

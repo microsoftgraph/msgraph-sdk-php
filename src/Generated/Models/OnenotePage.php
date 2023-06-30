@@ -6,6 +6,7 @@ use DateTime;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 use Psr\Http\Message\StreamInterface;
 
 class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable 
@@ -32,7 +33,11 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
      * @return StreamInterface|null
     */
     public function getContent(): ?StreamInterface {
-        return $this->getBackingStore()->get('content');
+        $val = $this->getBackingStore()->get('content');
+        if (is_null($val) || $val instanceof StreamInterface) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'content'");
     }
 
     /**
@@ -40,7 +45,11 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
      * @return string|null
     */
     public function getContentUrl(): ?string {
-        return $this->getBackingStore()->get('contentUrl');
+        $val = $this->getBackingStore()->get('contentUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'contentUrl'");
     }
 
     /**
@@ -48,12 +57,16 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
      * @return string|null
     */
     public function getCreatedByAppId(): ?string {
-        return $this->getBackingStore()->get('createdByAppId');
+        $val = $this->getBackingStore()->get('createdByAppId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'createdByAppId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -68,7 +81,14 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
             'parentNotebook' => fn(ParseNode $n) => $o->setParentNotebook($n->getObjectValue([Notebook::class, 'createFromDiscriminatorValue'])),
             'parentSection' => fn(ParseNode $n) => $o->setParentSection($n->getObjectValue([OnenoteSection::class, 'createFromDiscriminatorValue'])),
             'title' => fn(ParseNode $n) => $o->setTitle($n->getStringValue()),
-            'userTags' => fn(ParseNode $n) => $o->setUserTags($n->getCollectionOfPrimitiveValues()),
+            'userTags' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setUserTags($val);
+            },
         ]);
     }
 
@@ -77,7 +97,11 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
      * @return DateTime|null
     */
     public function getLastModifiedDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('lastModifiedDateTime');
+        $val = $this->getBackingStore()->get('lastModifiedDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lastModifiedDateTime'");
     }
 
     /**
@@ -85,7 +109,11 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
      * @return int|null
     */
     public function getLevel(): ?int {
-        return $this->getBackingStore()->get('level');
+        $val = $this->getBackingStore()->get('level');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'level'");
     }
 
     /**
@@ -93,7 +121,11 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
      * @return PageLinks|null
     */
     public function getLinks(): ?PageLinks {
-        return $this->getBackingStore()->get('links');
+        $val = $this->getBackingStore()->get('links');
+        if (is_null($val) || $val instanceof PageLinks) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'links'");
     }
 
     /**
@@ -101,7 +133,11 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
      * @return int|null
     */
     public function getOrder(): ?int {
-        return $this->getBackingStore()->get('order');
+        $val = $this->getBackingStore()->get('order');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'order'");
     }
 
     /**
@@ -109,7 +145,11 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
      * @return Notebook|null
     */
     public function getParentNotebook(): ?Notebook {
-        return $this->getBackingStore()->get('parentNotebook');
+        $val = $this->getBackingStore()->get('parentNotebook');
+        if (is_null($val) || $val instanceof Notebook) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'parentNotebook'");
     }
 
     /**
@@ -117,7 +157,11 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
      * @return OnenoteSection|null
     */
     public function getParentSection(): ?OnenoteSection {
-        return $this->getBackingStore()->get('parentSection');
+        $val = $this->getBackingStore()->get('parentSection');
+        if (is_null($val) || $val instanceof OnenoteSection) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'parentSection'");
     }
 
     /**
@@ -125,7 +169,11 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
      * @return string|null
     */
     public function getTitle(): ?string {
-        return $this->getBackingStore()->get('title');
+        $val = $this->getBackingStore()->get('title');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'title'");
     }
 
     /**
@@ -133,7 +181,13 @@ class OnenotePage extends OnenoteEntitySchemaObjectModel implements Parsable
      * @return array<string>|null
     */
     public function getUserTags(): ?array {
-        return $this->getBackingStore()->get('userTags');
+        $val = $this->getBackingStore()->get('userTags');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userTags'");
     }
 
     /**

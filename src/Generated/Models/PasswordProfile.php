@@ -39,7 +39,12 @@ class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +57,7 @@ class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -69,7 +74,11 @@ class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getForceChangePasswordNextSignIn(): ?bool {
-        return $this->getBackingStore()->get('forceChangePasswordNextSignIn');
+        $val = $this->getBackingStore()->get('forceChangePasswordNextSignIn');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'forceChangePasswordNextSignIn'");
     }
 
     /**
@@ -77,7 +86,11 @@ class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsable
      * @return bool|null
     */
     public function getForceChangePasswordNextSignInWithMfa(): ?bool {
-        return $this->getBackingStore()->get('forceChangePasswordNextSignInWithMfa');
+        $val = $this->getBackingStore()->get('forceChangePasswordNextSignInWithMfa');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'forceChangePasswordNextSignInWithMfa'");
     }
 
     /**
@@ -85,7 +98,11 @@ class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -93,7 +110,11 @@ class PasswordProfile implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getPassword(): ?string {
-        return $this->getBackingStore()->get('password');
+        $val = $this->getBackingStore()->get('password');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'password'");
     }
 
     /**

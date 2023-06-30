@@ -31,7 +31,11 @@ class IosLobApp extends MobileLobApp implements Parsable
      * @return IosDeviceType|null
     */
     public function getApplicableDeviceType(): ?IosDeviceType {
-        return $this->getBackingStore()->get('applicableDeviceType');
+        $val = $this->getBackingStore()->get('applicableDeviceType');
+        if (is_null($val) || $val instanceof IosDeviceType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'applicableDeviceType'");
     }
 
     /**
@@ -39,7 +43,11 @@ class IosLobApp extends MobileLobApp implements Parsable
      * @return string|null
     */
     public function getBuildNumber(): ?string {
-        return $this->getBackingStore()->get('buildNumber');
+        $val = $this->getBackingStore()->get('buildNumber');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'buildNumber'");
     }
 
     /**
@@ -47,7 +55,11 @@ class IosLobApp extends MobileLobApp implements Parsable
      * @return string|null
     */
     public function getBundleId(): ?string {
-        return $this->getBackingStore()->get('bundleId');
+        $val = $this->getBackingStore()->get('bundleId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'bundleId'");
     }
 
     /**
@@ -55,12 +67,16 @@ class IosLobApp extends MobileLobApp implements Parsable
      * @return DateTime|null
     */
     public function getExpirationDateTime(): ?DateTime {
-        return $this->getBackingStore()->get('expirationDateTime');
+        $val = $this->getBackingStore()->get('expirationDateTime');
+        if (is_null($val) || $val instanceof DateTime) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'expirationDateTime'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -79,7 +95,11 @@ class IosLobApp extends MobileLobApp implements Parsable
      * @return IosMinimumOperatingSystem|null
     */
     public function getMinimumSupportedOperatingSystem(): ?IosMinimumOperatingSystem {
-        return $this->getBackingStore()->get('minimumSupportedOperatingSystem');
+        $val = $this->getBackingStore()->get('minimumSupportedOperatingSystem');
+        if (is_null($val) || $val instanceof IosMinimumOperatingSystem) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'minimumSupportedOperatingSystem'");
     }
 
     /**
@@ -87,7 +107,11 @@ class IosLobApp extends MobileLobApp implements Parsable
      * @return string|null
     */
     public function getVersionNumber(): ?string {
-        return $this->getBackingStore()->get('versionNumber');
+        $val = $this->getBackingStore()->get('versionNumber');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'versionNumber'");
     }
 
     /**

@@ -30,7 +30,11 @@ class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource exte
      * @return string|null
     */
     public function getAccessPackageDisplayName(): ?string {
-        return $this->getBackingStore()->get('accessPackageDisplayName');
+        $val = $this->getBackingStore()->get('accessPackageDisplayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'accessPackageDisplayName'");
     }
 
     /**
@@ -38,12 +42,16 @@ class AccessReviewInstanceDecisionItemAccessPackageAssignmentPolicyResource exte
      * @return string|null
     */
     public function getAccessPackageId(): ?string {
-        return $this->getBackingStore()->get('accessPackageId');
+        $val = $this->getBackingStore()->get('accessPackageId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'accessPackageId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;

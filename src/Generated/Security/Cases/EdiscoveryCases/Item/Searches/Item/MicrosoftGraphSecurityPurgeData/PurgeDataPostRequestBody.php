@@ -41,7 +41,12 @@ class PurgeDataPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -54,7 +59,7 @@ class PurgeDataPostRequestBody implements AdditionalDataHolder, BackedModel, Par
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -69,7 +74,11 @@ class PurgeDataPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return PurgeAreas|null
     */
     public function getPurgeAreas(): ?PurgeAreas {
-        return $this->getBackingStore()->get('purgeAreas');
+        $val = $this->getBackingStore()->get('purgeAreas');
+        if (is_null($val) || $val instanceof PurgeAreas) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'purgeAreas'");
     }
 
     /**
@@ -77,7 +86,11 @@ class PurgeDataPostRequestBody implements AdditionalDataHolder, BackedModel, Par
      * @return PurgeType|null
     */
     public function getPurgeType(): ?PurgeType {
-        return $this->getBackingStore()->get('purgeType');
+        $val = $this->getBackingStore()->get('purgeType');
+        if (is_null($val) || $val instanceof PurgeType) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'purgeType'");
     }
 
     /**

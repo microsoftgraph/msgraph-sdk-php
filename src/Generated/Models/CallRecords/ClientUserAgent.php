@@ -30,7 +30,11 @@ class ClientUserAgent extends UserAgent implements Parsable
      * @return string|null
     */
     public function getAzureADAppId(): ?string {
-        return $this->getBackingStore()->get('azureADAppId');
+        $val = $this->getBackingStore()->get('azureADAppId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'azureADAppId'");
     }
 
     /**
@@ -38,12 +42,16 @@ class ClientUserAgent extends UserAgent implements Parsable
      * @return string|null
     */
     public function getCommunicationServiceId(): ?string {
-        return $this->getBackingStore()->get('communicationServiceId');
+        $val = $this->getBackingStore()->get('communicationServiceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'communicationServiceId'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -60,7 +68,11 @@ class ClientUserAgent extends UserAgent implements Parsable
      * @return ClientPlatform|null
     */
     public function getPlatform(): ?ClientPlatform {
-        return $this->getBackingStore()->get('platform');
+        $val = $this->getBackingStore()->get('platform');
+        if (is_null($val) || $val instanceof ClientPlatform) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'platform'");
     }
 
     /**
@@ -68,7 +80,11 @@ class ClientUserAgent extends UserAgent implements Parsable
      * @return ProductFamily|null
     */
     public function getProductFamily(): ?ProductFamily {
-        return $this->getBackingStore()->get('productFamily');
+        $val = $this->getBackingStore()->get('productFamily');
+        if (is_null($val) || $val instanceof ProductFamily) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'productFamily'");
     }
 
     /**

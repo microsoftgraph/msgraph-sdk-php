@@ -9,6 +9,7 @@ use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
 use Microsoft\Kiota\Abstractions\Store\BackedModel;
 use Microsoft\Kiota\Abstractions\Store\BackingStore;
 use Microsoft\Kiota\Abstractions\Store\BackingStoreFactorySingleton;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class WebApplication implements AdditionalDataHolder, BackedModel, Parsable 
 {
@@ -39,7 +40,12 @@ class WebApplication implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +58,7 @@ class WebApplication implements AdditionalDataHolder, BackedModel, Parsable
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -61,7 +67,14 @@ class WebApplication implements AdditionalDataHolder, BackedModel, Parsable
             'implicitGrantSettings' => fn(ParseNode $n) => $o->setImplicitGrantSettings($n->getObjectValue([ImplicitGrantSettings::class, 'createFromDiscriminatorValue'])),
             'logoutUrl' => fn(ParseNode $n) => $o->setLogoutUrl($n->getStringValue()),
             '@odata.type' => fn(ParseNode $n) => $o->setOdataType($n->getStringValue()),
-            'redirectUris' => fn(ParseNode $n) => $o->setRedirectUris($n->getCollectionOfPrimitiveValues()),
+            'redirectUris' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setRedirectUris($val);
+            },
             'redirectUriSettings' => fn(ParseNode $n) => $o->setRedirectUriSettings($n->getCollectionOfObjectValues([RedirectUriSettings::class, 'createFromDiscriminatorValue'])),
         ];
     }
@@ -71,7 +84,11 @@ class WebApplication implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getHomePageUrl(): ?string {
-        return $this->getBackingStore()->get('homePageUrl');
+        $val = $this->getBackingStore()->get('homePageUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'homePageUrl'");
     }
 
     /**
@@ -79,7 +96,11 @@ class WebApplication implements AdditionalDataHolder, BackedModel, Parsable
      * @return ImplicitGrantSettings|null
     */
     public function getImplicitGrantSettings(): ?ImplicitGrantSettings {
-        return $this->getBackingStore()->get('implicitGrantSettings');
+        $val = $this->getBackingStore()->get('implicitGrantSettings');
+        if (is_null($val) || $val instanceof ImplicitGrantSettings) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'implicitGrantSettings'");
     }
 
     /**
@@ -87,7 +108,11 @@ class WebApplication implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getLogoutUrl(): ?string {
-        return $this->getBackingStore()->get('logoutUrl');
+        $val = $this->getBackingStore()->get('logoutUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'logoutUrl'");
     }
 
     /**
@@ -95,7 +120,11 @@ class WebApplication implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -103,7 +132,13 @@ class WebApplication implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string>|null
     */
     public function getRedirectUris(): ?array {
-        return $this->getBackingStore()->get('redirectUris');
+        $val = $this->getBackingStore()->get('redirectUris');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'redirectUris'");
     }
 
     /**
@@ -111,7 +146,13 @@ class WebApplication implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<RedirectUriSettings>|null
     */
     public function getRedirectUriSettings(): ?array {
-        return $this->getBackingStore()->get('redirectUriSettings');
+        $val = $this->getBackingStore()->get('redirectUriSettings');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, RedirectUriSettings::class);
+            /** @var array<RedirectUriSettings>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'redirectUriSettings'");
     }
 
     /**

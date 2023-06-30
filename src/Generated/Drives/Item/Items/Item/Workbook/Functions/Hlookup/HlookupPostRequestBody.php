@@ -40,7 +40,12 @@ class HlookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -53,7 +58,7 @@ class HlookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -70,7 +75,11 @@ class HlookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @return Json|null
     */
     public function getLookupValue(): ?Json {
-        return $this->getBackingStore()->get('lookupValue');
+        $val = $this->getBackingStore()->get('lookupValue');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'lookupValue'");
     }
 
     /**
@@ -78,7 +87,11 @@ class HlookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @return Json|null
     */
     public function getRangeLookup(): ?Json {
-        return $this->getBackingStore()->get('rangeLookup');
+        $val = $this->getBackingStore()->get('rangeLookup');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rangeLookup'");
     }
 
     /**
@@ -86,7 +99,11 @@ class HlookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @return Json|null
     */
     public function getRowIndexNum(): ?Json {
-        return $this->getBackingStore()->get('rowIndexNum');
+        $val = $this->getBackingStore()->get('rowIndexNum');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'rowIndexNum'");
     }
 
     /**
@@ -94,7 +111,11 @@ class HlookupPostRequestBody implements AdditionalDataHolder, BackedModel, Parsa
      * @return Json|null
     */
     public function getTableArray(): ?Json {
-        return $this->getBackingStore()->get('tableArray');
+        $val = $this->getBackingStore()->get('tableArray');
+        if (is_null($val) || $val instanceof Json) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'tableArray'");
     }
 
     /**

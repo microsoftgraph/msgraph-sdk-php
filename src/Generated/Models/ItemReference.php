@@ -39,7 +39,12 @@ class ItemReference implements AdditionalDataHolder, BackedModel, Parsable
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -55,7 +60,11 @@ class ItemReference implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getDriveId(): ?string {
-        return $this->getBackingStore()->get('driveId');
+        $val = $this->getBackingStore()->get('driveId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'driveId'");
     }
 
     /**
@@ -63,12 +72,16 @@ class ItemReference implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getDriveType(): ?string {
-        return $this->getBackingStore()->get('driveType');
+        $val = $this->getBackingStore()->get('driveType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'driveType'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -90,7 +103,11 @@ class ItemReference implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getId(): ?string {
-        return $this->getBackingStore()->get('id');
+        $val = $this->getBackingStore()->get('id');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'id'");
     }
 
     /**
@@ -98,7 +115,11 @@ class ItemReference implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getName(): ?string {
-        return $this->getBackingStore()->get('name');
+        $val = $this->getBackingStore()->get('name');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'name'");
     }
 
     /**
@@ -106,7 +127,11 @@ class ItemReference implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -114,7 +139,11 @@ class ItemReference implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getPath(): ?string {
-        return $this->getBackingStore()->get('path');
+        $val = $this->getBackingStore()->get('path');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'path'");
     }
 
     /**
@@ -122,7 +151,11 @@ class ItemReference implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getShareId(): ?string {
-        return $this->getBackingStore()->get('shareId');
+        $val = $this->getBackingStore()->get('shareId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'shareId'");
     }
 
     /**
@@ -130,7 +163,11 @@ class ItemReference implements AdditionalDataHolder, BackedModel, Parsable
      * @return SharepointIds|null
     */
     public function getSharepointIds(): ?SharepointIds {
-        return $this->getBackingStore()->get('sharepointIds');
+        $val = $this->getBackingStore()->get('sharepointIds');
+        if (is_null($val) || $val instanceof SharepointIds) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'sharepointIds'");
     }
 
     /**
@@ -138,7 +175,11 @@ class ItemReference implements AdditionalDataHolder, BackedModel, Parsable
      * @return string|null
     */
     public function getSiteId(): ?string {
-        return $this->getBackingStore()->get('siteId');
+        $val = $this->getBackingStore()->get('siteId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'siteId'");
     }
 
     /**

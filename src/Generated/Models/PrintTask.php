@@ -29,12 +29,16 @@ class PrintTask extends Entity implements Parsable
      * @return PrintTaskDefinition|null
     */
     public function getDefinition(): ?PrintTaskDefinition {
-        return $this->getBackingStore()->get('definition');
+        $val = $this->getBackingStore()->get('definition');
+        if (is_null($val) || $val instanceof PrintTaskDefinition) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'definition'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -51,7 +55,11 @@ class PrintTask extends Entity implements Parsable
      * @return string|null
     */
     public function getParentUrl(): ?string {
-        return $this->getBackingStore()->get('parentUrl');
+        $val = $this->getBackingStore()->get('parentUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'parentUrl'");
     }
 
     /**
@@ -59,7 +67,11 @@ class PrintTask extends Entity implements Parsable
      * @return PrintTaskStatus|null
     */
     public function getStatus(): ?PrintTaskStatus {
-        return $this->getBackingStore()->get('status');
+        $val = $this->getBackingStore()->get('status');
+        if (is_null($val) || $val instanceof PrintTaskStatus) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'status'");
     }
 
     /**
@@ -67,7 +79,11 @@ class PrintTask extends Entity implements Parsable
      * @return PrintTaskTrigger|null
     */
     public function getTrigger(): ?PrintTaskTrigger {
-        return $this->getBackingStore()->get('trigger');
+        $val = $this->getBackingStore()->get('trigger');
+        if (is_null($val) || $val instanceof PrintTaskTrigger) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'trigger'");
     }
 
     /**

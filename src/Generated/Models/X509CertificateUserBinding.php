@@ -39,7 +39,12 @@ class X509CertificateUserBinding implements AdditionalDataHolder, BackedModel, P
      * @return array<string, mixed>|null
     */
     public function getAdditionalData(): ?array {
-        return $this->getBackingStore()->get('additionalData');
+        $val = $this->getBackingStore()->get('additionalData');
+        if (is_null($val) || is_array($val)) {
+            /** @var array<string, mixed>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'additionalData'");
     }
 
     /**
@@ -52,7 +57,7 @@ class X509CertificateUserBinding implements AdditionalDataHolder, BackedModel, P
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -69,7 +74,11 @@ class X509CertificateUserBinding implements AdditionalDataHolder, BackedModel, P
      * @return string|null
     */
     public function getOdataType(): ?string {
-        return $this->getBackingStore()->get('odataType');
+        $val = $this->getBackingStore()->get('odataType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'odataType'");
     }
 
     /**
@@ -77,7 +86,11 @@ class X509CertificateUserBinding implements AdditionalDataHolder, BackedModel, P
      * @return int|null
     */
     public function getPriority(): ?int {
-        return $this->getBackingStore()->get('priority');
+        $val = $this->getBackingStore()->get('priority');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'priority'");
     }
 
     /**
@@ -85,7 +98,11 @@ class X509CertificateUserBinding implements AdditionalDataHolder, BackedModel, P
      * @return string|null
     */
     public function getUserProperty(): ?string {
-        return $this->getBackingStore()->get('userProperty');
+        $val = $this->getBackingStore()->get('userProperty');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userProperty'");
     }
 
     /**
@@ -93,7 +110,11 @@ class X509CertificateUserBinding implements AdditionalDataHolder, BackedModel, P
      * @return string|null
     */
     public function getX509CertificateField(): ?string {
-        return $this->getBackingStore()->get('x509CertificateField');
+        $val = $this->getBackingStore()->get('x509CertificateField');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'x509CertificateField'");
     }
 
     /**

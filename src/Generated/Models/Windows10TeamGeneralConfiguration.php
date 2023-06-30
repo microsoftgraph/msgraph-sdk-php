@@ -31,7 +31,11 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
      * @return bool|null
     */
     public function getAzureOperationalInsightsBlockTelemetry(): ?bool {
-        return $this->getBackingStore()->get('azureOperationalInsightsBlockTelemetry');
+        $val = $this->getBackingStore()->get('azureOperationalInsightsBlockTelemetry');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'azureOperationalInsightsBlockTelemetry'");
     }
 
     /**
@@ -39,7 +43,11 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
      * @return string|null
     */
     public function getAzureOperationalInsightsWorkspaceId(): ?string {
-        return $this->getBackingStore()->get('azureOperationalInsightsWorkspaceId');
+        $val = $this->getBackingStore()->get('azureOperationalInsightsWorkspaceId');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'azureOperationalInsightsWorkspaceId'");
     }
 
     /**
@@ -47,7 +55,11 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
      * @return string|null
     */
     public function getAzureOperationalInsightsWorkspaceKey(): ?string {
-        return $this->getBackingStore()->get('azureOperationalInsightsWorkspaceKey');
+        $val = $this->getBackingStore()->get('azureOperationalInsightsWorkspaceKey');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'azureOperationalInsightsWorkspaceKey'");
     }
 
     /**
@@ -55,12 +67,16 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
      * @return bool|null
     */
     public function getConnectAppBlockAutoLaunch(): ?bool {
-        return $this->getBackingStore()->get('connectAppBlockAutoLaunch');
+        $val = $this->getBackingStore()->get('connectAppBlockAutoLaunch');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'connectAppBlockAutoLaunch'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -93,7 +109,11 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
      * @return bool|null
     */
     public function getMaintenanceWindowBlocked(): ?bool {
-        return $this->getBackingStore()->get('maintenanceWindowBlocked');
+        $val = $this->getBackingStore()->get('maintenanceWindowBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maintenanceWindowBlocked'");
     }
 
     /**
@@ -101,7 +121,11 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
      * @return int|null
     */
     public function getMaintenanceWindowDurationInHours(): ?int {
-        return $this->getBackingStore()->get('maintenanceWindowDurationInHours');
+        $val = $this->getBackingStore()->get('maintenanceWindowDurationInHours');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maintenanceWindowDurationInHours'");
     }
 
     /**
@@ -109,7 +133,11 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
      * @return Time|null
     */
     public function getMaintenanceWindowStartTime(): ?Time {
-        return $this->getBackingStore()->get('maintenanceWindowStartTime');
+        $val = $this->getBackingStore()->get('maintenanceWindowStartTime');
+        if (is_null($val) || $val instanceof Time) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'maintenanceWindowStartTime'");
     }
 
     /**
@@ -117,7 +145,11 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
      * @return bool|null
     */
     public function getMiracastBlocked(): ?bool {
-        return $this->getBackingStore()->get('miracastBlocked');
+        $val = $this->getBackingStore()->get('miracastBlocked');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'miracastBlocked'");
     }
 
     /**
@@ -125,7 +157,11 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
      * @return MiracastChannel|null
     */
     public function getMiracastChannel(): ?MiracastChannel {
-        return $this->getBackingStore()->get('miracastChannel');
+        $val = $this->getBackingStore()->get('miracastChannel');
+        if (is_null($val) || $val instanceof MiracastChannel) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'miracastChannel'");
     }
 
     /**
@@ -133,7 +169,11 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
      * @return bool|null
     */
     public function getMiracastRequirePin(): ?bool {
-        return $this->getBackingStore()->get('miracastRequirePin');
+        $val = $this->getBackingStore()->get('miracastRequirePin');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'miracastRequirePin'");
     }
 
     /**
@@ -141,7 +181,11 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
      * @return bool|null
     */
     public function getSettingsBlockMyMeetingsAndFiles(): ?bool {
-        return $this->getBackingStore()->get('settingsBlockMyMeetingsAndFiles');
+        $val = $this->getBackingStore()->get('settingsBlockMyMeetingsAndFiles');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'settingsBlockMyMeetingsAndFiles'");
     }
 
     /**
@@ -149,7 +193,11 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
      * @return bool|null
     */
     public function getSettingsBlockSessionResume(): ?bool {
-        return $this->getBackingStore()->get('settingsBlockSessionResume');
+        $val = $this->getBackingStore()->get('settingsBlockSessionResume');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'settingsBlockSessionResume'");
     }
 
     /**
@@ -157,7 +205,11 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
      * @return bool|null
     */
     public function getSettingsBlockSigninSuggestions(): ?bool {
-        return $this->getBackingStore()->get('settingsBlockSigninSuggestions');
+        $val = $this->getBackingStore()->get('settingsBlockSigninSuggestions');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'settingsBlockSigninSuggestions'");
     }
 
     /**
@@ -165,7 +217,11 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
      * @return int|null
     */
     public function getSettingsDefaultVolume(): ?int {
-        return $this->getBackingStore()->get('settingsDefaultVolume');
+        $val = $this->getBackingStore()->get('settingsDefaultVolume');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'settingsDefaultVolume'");
     }
 
     /**
@@ -173,7 +229,11 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
      * @return int|null
     */
     public function getSettingsScreenTimeoutInMinutes(): ?int {
-        return $this->getBackingStore()->get('settingsScreenTimeoutInMinutes');
+        $val = $this->getBackingStore()->get('settingsScreenTimeoutInMinutes');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'settingsScreenTimeoutInMinutes'");
     }
 
     /**
@@ -181,7 +241,11 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
      * @return int|null
     */
     public function getSettingsSessionTimeoutInMinutes(): ?int {
-        return $this->getBackingStore()->get('settingsSessionTimeoutInMinutes');
+        $val = $this->getBackingStore()->get('settingsSessionTimeoutInMinutes');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'settingsSessionTimeoutInMinutes'");
     }
 
     /**
@@ -189,7 +253,11 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
      * @return int|null
     */
     public function getSettingsSleepTimeoutInMinutes(): ?int {
-        return $this->getBackingStore()->get('settingsSleepTimeoutInMinutes');
+        $val = $this->getBackingStore()->get('settingsSleepTimeoutInMinutes');
+        if (is_null($val) || is_int($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'settingsSleepTimeoutInMinutes'");
     }
 
     /**
@@ -197,7 +265,11 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
      * @return string|null
     */
     public function getWelcomeScreenBackgroundImageUrl(): ?string {
-        return $this->getBackingStore()->get('welcomeScreenBackgroundImageUrl');
+        $val = $this->getBackingStore()->get('welcomeScreenBackgroundImageUrl');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'welcomeScreenBackgroundImageUrl'");
     }
 
     /**
@@ -205,7 +277,11 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
      * @return bool|null
     */
     public function getWelcomeScreenBlockAutomaticWakeUp(): ?bool {
-        return $this->getBackingStore()->get('welcomeScreenBlockAutomaticWakeUp');
+        $val = $this->getBackingStore()->get('welcomeScreenBlockAutomaticWakeUp');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'welcomeScreenBlockAutomaticWakeUp'");
     }
 
     /**
@@ -213,7 +289,11 @@ class Windows10TeamGeneralConfiguration extends DeviceConfiguration implements P
      * @return WelcomeScreenMeetingInformation|null
     */
     public function getWelcomeScreenMeetingInformation(): ?WelcomeScreenMeetingInformation {
-        return $this->getBackingStore()->get('welcomeScreenMeetingInformation');
+        $val = $this->getBackingStore()->get('welcomeScreenMeetingInformation');
+        if (is_null($val) || $val instanceof WelcomeScreenMeetingInformation) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'welcomeScreenMeetingInformation'");
     }
 
     /**

@@ -26,7 +26,7 @@ class WindowsDefenderScanActionResult extends DeviceActionResult implements Pars
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -40,7 +40,11 @@ class WindowsDefenderScanActionResult extends DeviceActionResult implements Pars
      * @return string|null
     */
     public function getScanType(): ?string {
-        return $this->getBackingStore()->get('scanType');
+        $val = $this->getBackingStore()->get('scanType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'scanType'");
     }
 
     /**

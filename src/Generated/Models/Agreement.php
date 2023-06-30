@@ -6,6 +6,7 @@ use DateInterval;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class Agreement extends Entity implements Parsable 
 {
@@ -30,7 +31,13 @@ class Agreement extends Entity implements Parsable
      * @return array<AgreementAcceptance>|null
     */
     public function getAcceptances(): ?array {
-        return $this->getBackingStore()->get('acceptances');
+        $val = $this->getBackingStore()->get('acceptances');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AgreementAcceptance::class);
+            /** @var array<AgreementAcceptance>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'acceptances'");
     }
 
     /**
@@ -38,12 +45,16 @@ class Agreement extends Entity implements Parsable
      * @return string|null
     */
     public function getDisplayName(): ?string {
-        return $this->getBackingStore()->get('displayName');
+        $val = $this->getBackingStore()->get('displayName');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'displayName'");
     }
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
@@ -64,7 +75,11 @@ class Agreement extends Entity implements Parsable
      * @return AgreementFile|null
     */
     public function getFile(): ?AgreementFile {
-        return $this->getBackingStore()->get('file');
+        $val = $this->getBackingStore()->get('file');
+        if (is_null($val) || $val instanceof AgreementFile) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'file'");
     }
 
     /**
@@ -72,7 +87,13 @@ class Agreement extends Entity implements Parsable
      * @return array<AgreementFileLocalization>|null
     */
     public function getFiles(): ?array {
-        return $this->getBackingStore()->get('files');
+        $val = $this->getBackingStore()->get('files');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, AgreementFileLocalization::class);
+            /** @var array<AgreementFileLocalization>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'files'");
     }
 
     /**
@@ -80,7 +101,11 @@ class Agreement extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsPerDeviceAcceptanceRequired(): ?bool {
-        return $this->getBackingStore()->get('isPerDeviceAcceptanceRequired');
+        $val = $this->getBackingStore()->get('isPerDeviceAcceptanceRequired');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isPerDeviceAcceptanceRequired'");
     }
 
     /**
@@ -88,7 +113,11 @@ class Agreement extends Entity implements Parsable
      * @return bool|null
     */
     public function getIsViewingBeforeAcceptanceRequired(): ?bool {
-        return $this->getBackingStore()->get('isViewingBeforeAcceptanceRequired');
+        $val = $this->getBackingStore()->get('isViewingBeforeAcceptanceRequired');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isViewingBeforeAcceptanceRequired'");
     }
 
     /**
@@ -96,7 +125,11 @@ class Agreement extends Entity implements Parsable
      * @return TermsExpiration|null
     */
     public function getTermsExpiration(): ?TermsExpiration {
-        return $this->getBackingStore()->get('termsExpiration');
+        $val = $this->getBackingStore()->get('termsExpiration');
+        if (is_null($val) || $val instanceof TermsExpiration) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'termsExpiration'");
     }
 
     /**
@@ -104,7 +137,11 @@ class Agreement extends Entity implements Parsable
      * @return DateInterval|null
     */
     public function getUserReacceptRequiredFrequency(): ?DateInterval {
-        return $this->getBackingStore()->get('userReacceptRequiredFrequency');
+        $val = $this->getBackingStore()->get('userReacceptRequiredFrequency');
+        if (is_null($val) || $val instanceof DateInterval) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'userReacceptRequiredFrequency'");
     }
 
     /**

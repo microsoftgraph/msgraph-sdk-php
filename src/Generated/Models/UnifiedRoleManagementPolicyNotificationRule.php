@@ -5,6 +5,7 @@ namespace Microsoft\Graph\Generated\Models;
 use Microsoft\Kiota\Abstractions\Serialization\Parsable;
 use Microsoft\Kiota\Abstractions\Serialization\ParseNode;
 use Microsoft\Kiota\Abstractions\Serialization\SerializationWriter;
+use Microsoft\Kiota\Abstractions\Types\TypeUtils;
 
 class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementPolicyRule implements Parsable 
 {
@@ -27,14 +28,21 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
 
     /**
      * The deserialization information for the current model
-     * @return array<string, callable>
+     * @return array<string, callable(ParseNode): void>
     */
     public function getFieldDeserializers(): array {
         $o = $this;
         return array_merge(parent::getFieldDeserializers(), [
             'isDefaultRecipientsEnabled' => fn(ParseNode $n) => $o->setIsDefaultRecipientsEnabled($n->getBooleanValue()),
             'notificationLevel' => fn(ParseNode $n) => $o->setNotificationLevel($n->getStringValue()),
-            'notificationRecipients' => fn(ParseNode $n) => $o->setNotificationRecipients($n->getCollectionOfPrimitiveValues()),
+            'notificationRecipients' => function (ParseNode $n) {
+                $val = $n->getCollectionOfPrimitiveValues();
+                if (is_array($val)) {
+                    TypeUtils::validateCollectionValues($val, 'string');
+                }
+                /** @var array<string>|null $val */
+                $this->setNotificationRecipients($val);
+            },
             'notificationType' => fn(ParseNode $n) => $o->setNotificationType($n->getStringValue()),
             'recipientType' => fn(ParseNode $n) => $o->setRecipientType($n->getStringValue()),
         ]);
@@ -45,7 +53,11 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
      * @return bool|null
     */
     public function getIsDefaultRecipientsEnabled(): ?bool {
-        return $this->getBackingStore()->get('isDefaultRecipientsEnabled');
+        $val = $this->getBackingStore()->get('isDefaultRecipientsEnabled');
+        if (is_null($val) || is_bool($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'isDefaultRecipientsEnabled'");
     }
 
     /**
@@ -53,7 +65,11 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
      * @return string|null
     */
     public function getNotificationLevel(): ?string {
-        return $this->getBackingStore()->get('notificationLevel');
+        $val = $this->getBackingStore()->get('notificationLevel');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'notificationLevel'");
     }
 
     /**
@@ -61,7 +77,13 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
      * @return array<string>|null
     */
     public function getNotificationRecipients(): ?array {
-        return $this->getBackingStore()->get('notificationRecipients');
+        $val = $this->getBackingStore()->get('notificationRecipients');
+        if (is_array($val) || is_null($val)) {
+            TypeUtils::validateCollectionValues($val, 'string');
+            /** @var array<string>|null $val */
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'notificationRecipients'");
     }
 
     /**
@@ -69,7 +91,11 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
      * @return string|null
     */
     public function getNotificationType(): ?string {
-        return $this->getBackingStore()->get('notificationType');
+        $val = $this->getBackingStore()->get('notificationType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'notificationType'");
     }
 
     /**
@@ -77,7 +103,11 @@ class UnifiedRoleManagementPolicyNotificationRule extends UnifiedRoleManagementP
      * @return string|null
     */
     public function getRecipientType(): ?string {
-        return $this->getBackingStore()->get('recipientType');
+        $val = $this->getBackingStore()->get('recipientType');
+        if (is_null($val) || is_string($val)) {
+            return $val;
+        }
+        throw new \UnexpectedValueException("Invalid type found in backing store for 'recipientType'");
     }
 
     /**
